@@ -1,0 +1,18 @@
+# +T What's Next for Security Testing
+
+## Establish Continuous Application Security Testing
+
+
+Building code securely is important. But it’s critical to verify that the security you intended to build is actually present, correctly implemented, and used everywhere it was supposed to be. The goal of application security testing is to provide this evidence. The work is difficult and complex, and modern high-speed development processes like Agile and DevOps have put extreme pressure on traditional approaches and tools. So we strongly encourage you to put some thought into how you are going to focus on what’s important across your entire application portfolio, and do it cost-effectively.
+
+Modern risks move quickly, so the days of scanning or penetration testing an application for vulnerabilities once every year or so are long gone. Modern software development requires continuous application security testing across the entire software development lifecycle. Look to enhance existing development pipelines with security automation that doesn’t slow development. Whatever approach you choose, consider the annual cost to test, triage, remediate, retest, and redeploy a single application, multiplied by the size of your application portfolio.
+
+| Activity | Description | 
+| --- | --- | 
+| Understand the Threat Model | Before you start testing, be sure you understand what’s important to spend time on. Priorities come from the threat model, so if you don’t have one, you need to create one before testing. Consider using OWASP ASVS and the OWASP Testing Guide as an input and don’t rely on tool vendors to decide what’s important for your business.|
+| Understand Your SDLC | Your approach to application security testing must be highly compatible with the people, processes, and tools you use in your software development lifecycle (SDLC). Attempts to force extra steps, gates, and reviews are likely to cause friction, get bypassed, and struggle to scale. Look for natural opportunities to gather security information and feed it back into your process.|
+| Testing Strategies | Choose the simplest, fastest, most accurate technique to verify each requirement. The OWASP Benchmark Project, which helps measure the ability of security tools to detect many OWASP Top 10 risks, may be helpful in selecting the best tools for your specific needs. Be sure to consider the human resources required to deal with false positives as well as the serious dangers of false negatives.|
+| Achieving Coverage and Accuracy | You don’t have to start out testing everything. Focus on what’s important and expand your verification program over time. That means expanding the set of security defenses and risks that are being automatically verified, as well as expanding the set of applications and APIs being covered. The goal is to get to where the essential security of all your applications and APIs is verified continuously.|
+| Making Findings Awesome | No matter how good you are at testing, it won’t make any difference unless you communicate it effectively. Build trust by showing you understand how the application works. Describe clearly how it can be abused without “lingo” and include an attack scenario to make it real. Make a realistic estimation of how hard the vulnerability is to discover and exploit, and how bad that would be. Finally, deliver findings in the tools development teams are already using, not PDF files.|
+
+
