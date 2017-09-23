@@ -4,6 +4,8 @@ This is the current working draft. Please do not use for day to day activities.
 
 Please review for content, context, accuracy, links, spelling, and examples, and [log issues](https://github.com/OWASP/Top10/issues).
 
+** The markdown, Word, and PDF versions is not pretty or final. We are working on content, not formatting **
+
 ## How to generate the PDF and Word documents
 
 If using Windows, install Windows Subsystem for Linux, which is an optional install for the Win10 Creator's Update. 
@@ -30,3 +32,5 @@ $ apt-get install texlive
 </code>
 
 It currently looks for `xelatex`, which is one of the sub-packages of TexLive
+
+
