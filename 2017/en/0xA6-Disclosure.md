@@ -29,7 +29,7 @@ The full perils of unsafe cryptography, SSL/TLS usage, and data protection are w
 ## Example Scenarios
 Scenario #1: An application encrypts credit card numbers in a database using automatic database encryption. However, this data is automatically decrypted when retrieved, allowing an SQL injection flaw to retrieve credit card numbers in clear text. Alternatives include not storing credit card numbers, using tokenization, or using public key encryption.
 
-Scenario #2: A site simply doesn’t use TLS for all authenticated pages. An attacker simply monitors network traffic (like an open wireless network), and steals the user’s session cookie. The attacker then replays this cookie and hijacks the user’s session, accessing the user’s private data.
+Scenario #2: A site simply doesn’t use or enforce TLS for all authenticated pages. An attacker simply monitors network traffic or strips the TLS (like an open wireless network), and steals the user’s session cookie. The attacker then replays this cookie and hijacks the user’s session, accessing the user’s private data.
 
 Scenario #3: The password database uses unsalted hashes to store everyone’s passwords. A file upload flaw allows an attacker to retrieve the password database. All of the unsalted hashes can be exposed with a rainbow table of precalculated hashes.
 
