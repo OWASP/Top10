@@ -8,10 +8,10 @@
 ## Am I vulnerable to attack?
 The first thing you have to determine is which data is sensitive enough to require extra protection. For example, passwords, credit card numbers, health records, and personal information should be protected. For all such data:
 * Is any of this data stored in clear text long term, including backups of this data?
-* Is any of this data transmitted in clear text, internally or externally? Internet traffic is especially dangerous.
-* Are any old / weak cryptographic algorithms used?
+* Is any data of a site transmitted in clear text, internally or externally? Internet traffic is especially dangerous.
+* Are any old / weak cryptographic algorithms used? E.g. that may be provided by standard configs (see A5)
 * Are weak crypto keys generated, or is proper key management or rotation missing?
-* Are any browser security directives or headers missing when sensitive data is provided by / sent to the browser?
+* Is encryption not enforced, e.g. are any (browser) security directives or headers missing?
 
 And more … For a more complete set of problems to avoid, see ASVS areas Crypto (V7), Data Prot (V9), and SSL/TLS (V10).
 
