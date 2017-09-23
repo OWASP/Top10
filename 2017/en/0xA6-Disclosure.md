@@ -16,15 +16,6 @@ The first thing you have to determine is which data is sensitive enough to requi
 And more … For a more complete set of problems to avoid, see ASVS areas Crypto (V7), Data Prot (V9), and SSL/TLS (V10).
 
 ## How do I prevent
-
-Scenario #1: An application encrypts credit card numbers in a database using automatic database encryption. However, this data is automatically decrypted when retrieved, allowing an SQL injection flaw to retrieve credit card numbers in clear text. Alternatives include not storing credit card numbers, using tokenization, or using public key encryption.
-
-Scenario #2: A site simply doesn’t use TLS for all authenticated pages. An attacker simply monitors network traffic (like an open wireless network), and steals the user’s session cookie. The attacker then replays this cookie and hijacks the user’s session, accessing the user’s private data.
-
-Scenario #3: The password database uses unsalted hashes to store everyone’s passwords. A file upload flaw allows an attacker to retrieve the password database. All of the unsalted hashes can be exposed with a rainbow table of precalculated hashes.
-
-## Example Scenarios
-
 The full perils of unsafe cryptography, SSL/TLS usage, and data protection are well beyond the scope of the Top 10. That said, for all sensitive data, do the following, at a minimum:
 
 * Considering the threats you plan to protect this data from (e.g., insider attack, external user), make sure you encrypt all sensitive data at rest and in transit in a manner that defends against these threats.
@@ -32,6 +23,14 @@ The full perils of unsafe cryptography, SSL/TLS usage, and data protection are w
 * Ensure strong standard algorithms and strong keys are used, and proper key management is in place. Consider using FIPS 140 validated cryptographic modules.
 * Ensure passwords are stored with an algorithm specifically designed for password protection, such as bcrypt, PBKDF2, or scrypt.
 * Disable autocomplete on forms requesting sensitive data and disable caching for pages that contain sensitive data.
+
+
+## Example Scenarios
+Scenario #1: An application encrypts credit card numbers in a database using automatic database encryption. However, this data is automatically decrypted when retrieved, allowing an SQL injection flaw to retrieve credit card numbers in clear text. Alternatives include not storing credit card numbers, using tokenization, or using public key encryption.
+
+Scenario #2: A site simply doesn’t use TLS for all authenticated pages. An attacker simply monitors network traffic (like an open wireless network), and steals the user’s session cookie. The attacker then replays this cookie and hijacks the user’s session, accessing the user’s private data.
+
+Scenario #3: The password database uses unsalted hashes to store everyone’s passwords. A file upload flaw allows an attacker to retrieve the password database. All of the unsalted hashes can be exposed with a rainbow table of precalculated hashes.
 
 ## References
 
