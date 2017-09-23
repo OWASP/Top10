@@ -9,17 +9,18 @@
 
 Is your application missing the proper security hardening across any part of the application stack? Including:
 
-Are any unnecessary features enabled or installed (e.g., ports, services, pages, accounts, privileges)?
+1. Are any unnecessary features enabled or installed (e.g., ports, services, pages, accounts, privileges)?
 
-Are default accounts and their passwords still enabled and unchanged?
-Does your error handling reveal stack traces or other overly informative error messages to users?
+2. Are default accounts and their passwords still enabled and unchanged?
 
-Do you still use ancient configs with updated software?
+3. Does your error handling reveal stack traces or other overly informative error messages to users?
+
+4. Do you still use ancient configs with updated software?
 Do you adhere on obsolete backward compatibility?
 
-Are the security settings in your application servers, application frameworks (e.g., Struts, Spring, ASP.NET), libraries, databases, etc. not set to secure values?
+5. Are the security settings in your application servers, application frameworks (e.g., Struts, Spring, ASP.NET), libraries, databases, etc. not set to secure values?
 
-Is any of your software out of date? (see 2017-A9)
+6. Is any of your software out of date? (see 2017-A9)
 
 Without a concerted, repeatable application security configuration process, systems are at a higher risk.
 
