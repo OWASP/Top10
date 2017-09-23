@@ -1,4 +1,4 @@
-# A2 Security Misconfiguration
+# A5 Security Misconfiguration
 
 | Threat agents | Exploitability | Prevalance | Detectability | Technical Impact | Business Impacts |
 | --- | --- | --- | --- | --- | --- |
