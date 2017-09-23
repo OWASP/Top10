@@ -27,13 +27,13 @@ Without a concerted, repeatable application security configuration process, syst
 ## How do I prevent
 
 The primary recommendations are to establish all of the following:
-A repeatable hardening process that makes it fast and easy to deploy another environment that is properly locked down. Development, QA, and production environments should all be configured identically (with different passwords used in each environment). This process should be automated to minimize the effort required to setup a new secure environment.
+1. A repeatable hardening process that makes it fast and easy to deploy another environment that is properly locked down. Development, QA, and production environments should all be configured identically (with different passwords used in each environment). This process should be automated to minimize the effort required to setup a new secure environment.
 
-A process for keeping abreast of and deploying all new software updates and patches in a timely manner to each deployed environment. This process needs to include all components and libraries as well (see 2017-A9).
+2. A process for keeping abreast of and deploying all new software updates and patches in a timely manner to each deployed environment. This process needs to include all components and libraries as well (see 2017-A9).
 
-A strong application architecture that provides effective, secure separation between components.
+3. A strong application architecture that provides effective, secure separation between components.
 
-An automated process to verify that configurations and settings are properly configured in all environments.
+4. An automated process to verify that configurations and settings are properly configured in all environments.
 
 ## Example Scenarios
 
