@@ -21,7 +21,7 @@ To avoid Server XSS, the preferred option is to properly escape untrusted data b
 To avoid Client XSS, the preferred option is to avoid passing untrusted data to JavaScript and other browser APIs that can generate active content. When this cannot be avoided, similar context sensitive escaping techniques can be applied to browser APIs as described in the OWASP DOM based XSS Prevention Cheat Sheet.
 
 For rich content, consider auto-sanitization libraries like OWASP’s AntiSamy or the Java HTML Sanitizer Project.
-Consider Content Security Policy (CSP) to defend against XSS across your entire site.
+Use [Content Security Policy](https://www.owasp.org/index.php/Content_Security_Policy) (CSP) to mitigate the impact of potential XSS across your entire site.
 
 ## Example Scenarios
 
