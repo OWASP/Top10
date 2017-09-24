@@ -20,7 +20,7 @@ Preventing injection requires keeping untrusted data separate from commands and 
 The preferred option is to use a safe API which avoids the use of the interpreter entirely or provides a parameterized interface.  Be careful with APIs, such as stored procedures, that are parameterized, but can still introduce injection under the hood.
 
 If a parameterized API is not available, you should carefully escape special characters using the specific escape syntax for that interpreter. OWASP’s Java Encoder and similar libraries provide such escaping routines.
-Positive or “white list” input validation is also recommended, but is not a complete defense as many situations require special characters be allowed. If special characters are required, only approaches (1) and (2) above will make their use safe. OWASP’s ESAPI has an extensible library of white list input validation routines. 
+Positive or “white list” input validation is also recommended, but is not a complete defense as many situations require special characters be allowed. If special characters are required, only approaches (1) and (2) above will make their use safe.
 
 ## Example Scenarios 
 Scenario #1: An application uses untrusted data in the construction of the following vulnerable SQL call:

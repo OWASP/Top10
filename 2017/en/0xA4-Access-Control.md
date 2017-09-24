@@ -20,7 +20,7 @@ Preventing access control flaws requires selecting an approach for protecting ea
 
 Check access. Each use of a direct reference from an untrusted source must include an access control check to ensure the user is authorized for the requested resource.
 
-Use per user or session indirect object references. This coding pattern prevents attackers from directly targeting unauthorized resources. For example, instead of using the resource’s database key, a drop down list of six resources authorized for the current user could use the numbers 1 to 6 to indicate which value the user selected. OWASP’s ESAPI includes both sequential and random access reference maps that developers can use to eliminate direct object references.
+Use per user or session indirect object references. This coding pattern prevents attackers from directly targeting unauthorized resources. For example, instead of using the resource’s database key, a drop down list of six resources authorized for the current user could use the numbers 1 to 6 to indicate which value the user selected. 
 
 Automated verification. Leverage automation to verify proper authorization deployment. This is often custom.
 
