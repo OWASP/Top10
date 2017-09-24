@@ -10,7 +10,7 @@ The Open Web Application Security Project (OWASP) is an open community dedicated
 * Extensive conferences worldwide
 * Mailing lists
 
-Learn more at: https://www.owasp.org  
+Learn more at: [https://www.owasp.org](https://www.owasp.org)
 
 All of the OWASP tools, documents, forums, and chapters are free and open to anyone interested in improving application security. We advocate approaching application security as a people, process, and technology problem, because the most effective approaches to application security require improvements in all of these areas.
 
