@@ -6,7 +6,7 @@
 | TBA | TBA | TBA | TBA. | TBA |
 
 ## Am I vulnerable to attack?
-The first thing you have to determine is which data is sensitive enough to require extra protection. For example, passwords, credit card numbers, health records, and personal information should be protected. For all such data:
+Do the following, at a minimum and consult the references:
 * Is any of this data stored in clear text long term, including backups of this data?
 * Is any data of a site transmitted in clear text, internally or externally? Internet traffic is especially dangerous.
 * Are any old / weak cryptographic algorithms used? E.g. that may be provided by standard configs (see A5)
