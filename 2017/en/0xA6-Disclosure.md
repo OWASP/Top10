@@ -6,7 +6,7 @@
 | TBA | TBA | TBA | TBA. | TBA |
 
 ## Am I vulnerable to attack?
-Do the following, at a minimum and consult the references:
+The first thing you have to determine is which data is sensitive enough to require extra protection. For example, passwords, credit card numbers, health records, and personal information should be protected. For all such data:
 * Is any of this data stored in clear text long term, including backups of this data?
 * Is any data of a site transmitted in clear text, internally or externally? Internet traffic is especially dangerous.
 * Are any old / weak cryptographic algorithms used? E.g. that may be provided by standard configs (see A5)
@@ -16,8 +16,7 @@ Do the following, at a minimum and consult the references:
 And more … For a more complete set of problems to avoid, see ASVS areas Crypto (V7), Data Prot (V9), and SSL/TLS (V10).
 
 ## How do I prevent
-The full perils of unsafe cryptography, SSL/TLS usage, and data protection are well beyond the scope of the Top 10. That said, for all sensitive data, do the following, at a minimum:
-
+Do the following, at a minimum and consult the references:
 * Make sure you encrypt all sensitive data at rest or transferred via clients, e.g. cookies, tokens.
 * Encrypt all data in transit on application layer at least if any sensitive data may be transferred, e.g using TLS. Enforce this using directives like HTTP Strict Transport Security (HSTS).
 * Don’t store sensitive data unnecessarily. Discard it as soon as possible. Data you don’t retain can’t be stolen.
