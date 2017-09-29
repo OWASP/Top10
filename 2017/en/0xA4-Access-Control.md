@@ -1,4 +1,4 @@
-# A3 Access Control
+# A4 Access Control
 
 | Threat agents | Exploitability | Prevalance | Detectability | Technical Impact | Business Impacts |
 | --- | --- | --- | --- | --- | --- |
@@ -15,16 +15,16 @@ Common access control vulnerabilities include:
 * Missing or ineffective controller access control, such as not checking that the web, mobile or API caller has privileges or capability to access that function
 * Missing or ineffective model access control, where the primary key can be changed to another's users record, such as viewing or editing someone else's account 
 * Missing or ineffective domain model access control, where the business logic should enforce limits, such as cinema booking system not permitting individuals from booking out an entire cinema
-* Elevation of privilege - acting as a user without being logged in, or acting as an admin whilst logged in as a user
-* Segregation of duty violations, such as initating and approving a business flow not normally visible to the original user
-* Metadata manipulation, where a JWT access control token can be replayed or modified, or a cookie or hidden field manipulated to elevate privileges (such as changing `role=user` cookie to `admin`)
+* Elevation of privilege. Acting as a user without being logged in, or acting as an admin whilst logged in as a user
+* Segregation of duty violations. Such as initating and approving a business flow not normally visible to the original user
+* Metadata manipulation. Where a JWT access control token can be replayed or modified, or a cookie or hidden field manipulated to elevate privileges (such as changing `role=user` cookie to `admin`)
 * Spidering an application using a proxy such as OWASP Zap, whilst logged on as a high privilege user, and then testing each page and controller whilst not logged in, or logged in as a low privilege user, or if directory browsing, revision control system files and thumbnails might be available to the tool
 
-Access control testing is not currently amenable to automated static or dynamic testing, but when identified, it is a severe attack as the attacker has spent considerable time manually testing the access control matrix before mounting an attack. Such attackers are usually highly competent and malicous in nature.
+Access control testing is not currently amenable to automated static or dynamic testing, but when identified, it is a severe attack as the attacker has spent considerable effort manually testing the access control matrix before mounting an attack. Such attackers are usually highly competent, effective, and malicous in nature.
 
 ## How do I prevent
 
-Access control is only effective if enforced in trusted server-side or server-less API, where the attacker cannot modify the access control check or metadata. 
+Access control is only effective if enforced in trusted server-side code or server-less API, where the attacker cannot modify the access control check or metadata.
 
 * Implement the priciples of deny by default and principle of complete mediation in your architecture, with the exception of public resources
 * Centralized Implementation. Implement access control mechanisms once and re-use them throughout the application.
@@ -32,8 +32,8 @@ Access control is only effective if enforced in trusted server-side or server-le
 * Controllers should enforce role-based, claims, or capability based access controls
 * Model access controls should enforce record ownership, rather than accepting that the user can create, read, update or delete any record
 * Domain access controls are unique to each application, but business limit requirements should be enforced by domain models
-* Log access control failures, such that alerting adminsitrators of unauthorized access is possible
 * Disable web server directory listing, and ensure file metadata such as `.git`, `.Thumbs.db` or `.DS_Store` is not present within web roots
+* Log access control failures, such that alerting adminsitrators of unauthorized access is possible
 
 Large and high performing organizations should consider:
 
@@ -41,9 +41,9 @@ Large and high performing organizations should consider:
 * Rate limiting API and controller access to minimize the harm from automated attack tooling
 * Monitoring and escalate access control failures to operational staff as quickly as possible, particularly where access control failures are occuring extremely rapidly, such as with a scraping tool or similar
 
-Automated access control testing by SAST and DAST tools is not currently possible without providing human context. Such testing should not be relied upon to validate access controls are in place, in use and effective.
+Developers and QA staff should include functional access control unit and integration tests to demonstrate that access controls are in place, in use, and effective using a variety of user principals, including anonymous access, users acting within their rights, direct object reference attacks - including creating, reading, updating and deleting records, users attempting to elevate privileges or acting outside their authority, and access control metadata attacks.
 
-Developers and QA staff should include functional access control unit and integration tests to demonstrate that access controls are in place, in use, and effective using a variety of user principals, including anonymous access, users acting within their rights, direct object reference attacks - including creating, reading, updating and deleting records, users attempting to elevate privileges or acting outside their authority, and access control metadata attacks. 
+NB: Automated access control testing by SAST and DAST tools is not currently possible without providing human context. Such testing should not be relied upon to validate access controls are in place, in use and effective.
 
 ## Example Scenarios
 

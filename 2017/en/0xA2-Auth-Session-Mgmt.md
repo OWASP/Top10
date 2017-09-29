@@ -9,28 +9,29 @@ Evidence of identity, authentication and session management are critical for sep
 
 ## Am I vulnerable to attack?
 
-Common authentication attacks vulnerabilities include:
+Common authentication vulnerabilities include:
 
-* does not have multi-factor authentication, such as TOTP, token, or risk based authentication
+* missing multi-factor authentication, such as TOTP, token, or risk based authentication
 * permits credential stuffing, which is where the attacker has a list of valid usernames and passwords. Applications should monitor and block many login attempts
 * permits brute force attacks against default and well known passwords
 * permits weak or well known passwords, such as "Password1" or "admin/admin"
-* has weak credential recovery and forgot password processes, such as "knowledge-based answers", which cannot be made safe
-* Password recovery tools allow the rapid recovery of plain text, encrypted, or weakly hashed passwords in case of password hash disclosure
+* weak or ineffectual credential recovery and forgot password processes, such as "knowledge-based answers", which cannot be made safe
+* plain text, encrypted, or weakly hashed passwords permit the rapid recovery of passwords using GPU crackers or brute force tools
 
-Common session vulnerabilities include:
+Common session management vulnerabilities include:
 
-* Not providing a logout function
+* Not providing an effective logout function
 * Not revoking server side session tokens (a common oAuth and JWT pattern)
 
 ## How do I prevent
 
 * [Store passwords using a modern one way hash function](https://www.owasp.org/index.php/Password_Storage_Cheat_Sheet#Leverage_an_adaptive_one-way_function), such as Argon2, with sufficient work factor to prevent realistic GPU cracking attacks
-* Implement multi-factor authentication where possible to prevent credential stuffing, brute force, and stolen credential attacks. 
+* Implement multi-factor authentication where possible to prevent credential stuffing, brute force, and stolen credential attacks
 * Implement rate limiting to limit the impact of credential stuffing, brute force, and default password attacks
-* Implement weak password checks to prevent users using weak passwords
+* Implement weak password checks, such as testing a new password against a list of the top 10000 worst passwords
 * Do not ship with default credentials, particularly for admin users
 * Permit users to logout, and enforce logout on the server
+* Log authentication failures, such that alerting administrators when credential stuffing, brute force or other attacks
 
 Larger organizations should consider using a federated identity product or service that includes evidence of identity, common identity attack protections, multi-factor authentication, monitoring and alerting of identity misuse.
 
