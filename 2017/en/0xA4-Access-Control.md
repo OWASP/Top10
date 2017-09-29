@@ -27,6 +27,7 @@ Access control testing is not currently amenable to automated static or dynamic 
 Access control is only effective if enforced in trusted server-side or server-less API, where the attacker cannot modify the access control check or metadata. 
 
 * Implement the priciples of deny by default and principle of complete mediation in your architecture, with the exception of public resources
+* Centralized Implementation. Implement access control mechanisms once and re-use them throughout the application.
 * Presentation layer access control must be enforced on trusted API endpoints or with server-side access control checks
 * Controllers should enforce role-based, claims, or capability based access controls
 * Model access controls should enforce record ownership, rather than accepting that the user can create, read, update or delete any record
