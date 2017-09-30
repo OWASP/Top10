@@ -45,6 +45,8 @@ Scenario #3: App server configuration allows stack traces to be returned to user
 
 Scenario #4: App server comes with sample applications that are not removed from your production server. These sample applications have well known security flaws attackers can use to compromise your server.
 
+Scenario #5: The default configuration or a copied old one activates old vulnerable protocol versions or options that can be misused by an attacker or malware.
+
 ## References
 
 ### OWASP
