@@ -1,4 +1,4 @@
-# A6 Sensitive Information Disclosure
+# A6 Sensitive Data Exposure
 
 | Threat agents | Exploitability | Prevalance | Detectability | Technical Impact | Business Impacts |
 | --- | --- | --- | --- | --- | --- |
@@ -10,7 +10,7 @@ The first thing you have to determine is which data is sensitive enough to requi
 * Is any of this data stored in clear text long term, including backups of this data?
 * Is any data of a site transmitted in clear text, internally or externally? Internet traffic is especially dangerous.
 * Are any old / weak cryptographic algorithms used? E.g. that may be provided by standard configs (see A5)
-* Are weak crypto keys generated, or is proper key management or rotation missing?
+* Are default crypto keys in use, weak crypto keys generated, or is proper key management or rotation missing?
 * Is encryption not enforced, e.g. are any (browser) security directives or headers missing?
 
 And more … For a more complete set of problems to avoid, see ASVS areas Crypto (V7), Data Prot (V9), and SSL/TLS (V10).
