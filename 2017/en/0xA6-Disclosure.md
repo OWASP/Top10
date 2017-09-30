@@ -20,7 +20,7 @@ Do the following, at a minimum and consult the references:
 * Make sure you encrypt all sensitive data at rest or transferred via clients, e.g. cookies, tokens.
 * Encrypt all data in transit on application layer at least if any sensitive data may be transferred, e.g using TLS. Enforce this using directives like HTTP Strict Transport Security (HSTS).
 * Don’t store sensitive data unnecessarily. Discard it as soon as possible. Data you don’t retain can’t be stolen.
-* Ensure strong standard algorithms or ciphers, parameters, protocols and keys are used, and proper key management is in place. Consider using FIPS 140 validated cryptographic modules.
+* Ensure up-to-date and strong standard algorithms or ciphers, parameters, protocols and keys are used, and proper key management is in place. Consider using FIPS 140 validated cryptographic modules.
 * Ensure passwords are stored with a strong adaptive algorithm appropriate for password protection, such as Argon2i, scrypt, bcrypt and PBKDF2. Also be sure to set the work factor (delay factor) as high as you can tolerate.
 * Disable autocomplete on forms requesting sensitive data and disable caching for pages that contain sensitive data.
 * Verify independently the efficiency of your settings.
