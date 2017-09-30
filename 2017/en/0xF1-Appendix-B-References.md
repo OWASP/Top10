@@ -7,10 +7,11 @@ The following OWASP projects are most likely to be useful to users/adopters of t
 
 - OWASP Application Security Verification Standard -[https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project)
 
+- OWASP Testing Guide - []()
+
 - OWASP Privacy Top 10 Risks -[https://www.owasp.org/index.php/OWASP_Top_10_Privacy_Risks_Project](https://www.owasp.org/index.php/OWASP_Top_10_Privacy_Risks_Project)
 
 - OWASP Mobile Top 10 Risks -[https://www.owasp.org/index.php/Projects/OWASP_Mobile_Security_Project_-_Top_Ten_Mobile_Risks](https://www.owasp.org/index.php/Projects/OWASP_Mobile_Security_Project_-_Top_Ten_Mobile_Risks)
-
 
 Similarly, the following web sites are most likely to be useful to users/adopters of this standard:
 

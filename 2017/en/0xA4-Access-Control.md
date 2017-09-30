@@ -76,5 +76,7 @@ If an unauthenticated user can access either page, it’s a flaw. If a non-admin
 
 ### External
 
-* [CWE Entry 284 on Improper Access Control (Authorization)](https://cwe.mitre.org/data/definitions/284.html)
-* [CWE Entry 639 on Insecure Direct Object References](https://cwe.mitre.org/data/definitions/639.html)
+* [CWE-22: Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')]()
+* [CWE-284: Improper Access Control (Authorization)](https://cwe.mitre.org/data/definitions/284.html)
+* [CWE-285: Improper Authorization](https://cwe.mitre.org/data/definitions/285.html)
+* [CWE-639: Authorization Bypass Through User-Controlled Key](https://cwe.mitre.org/data/definitions/639.html)

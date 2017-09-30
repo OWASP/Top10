@@ -1,4 +1,4 @@
-## Foreword by OWASP Top 10 Project Leadership
+# Foreword by OWASP Top 10 Project Leadership
 
 TBA
 
@@ -6,4 +6,3 @@ TBA
 - Brian Glas
 - Neil Smithline
 - Andrew van der Stock
-

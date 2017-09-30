@@ -25,7 +25,7 @@ generate_pdf() {
 }
 
 generate_docx() {
-    pandoc -f markdown_github --columns 10000 -t docx -o "../OWASP-Top-10-2017-$1.docx" *.md
+    pandoc -f markdown_github --reference-docx=../reference.docx --columns 10000 -t docx -o "../OWASP-Top-10-2017-$1.docx" *.md
 }
 
 generate() {

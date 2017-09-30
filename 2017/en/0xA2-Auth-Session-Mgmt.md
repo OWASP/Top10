@@ -59,5 +59,5 @@ Please review the [OWASP Proactive Controls](https://www.owasp.org/index.php/OWA
 * [OWASP Session Management Cheat Sheet](https://www.owasp.org/index.php/Session_Management_Cheat_Sheet)
 
 ### External
-* [CWE Entry 287 on Improper Authentication](https://cwe.mitre.org/data/definitions/287.html)
-* [CWE Entry 384 on Session Fixation](https://cwe.mitre.org/data/definitions/384.html)
+* [CWE-287: Improper Authentication](https://cwe.mitre.org/data/definitions/287.html)
+* [CWE-384: Session Fixation](https://cwe.mitre.org/data/definitions/384.html)
