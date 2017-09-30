@@ -20,7 +20,9 @@ Do you adhere on obsolete backward compatibility?
 
 5. Are the security settings in your application servers, application frameworks (e.g., Struts, Spring, ASP.NET), libraries, databases, etc. not set to secure values?
 
-6. Is any of your software out of date? (see 2017-A9)
+6. Does the server not send any security directives to client agents (e.g. in headers) or are they not set to secure values?
+
+7. Is any of your software out of date? (see 2017-A9)
 
 Without a concerted, repeatable application security configuration process, systems are at a higher risk.
 
@@ -52,6 +54,7 @@ Scenario #5: The default configuration or a copied old one activates old vulnera
 ### OWASP
 
 * [OWASP Proactive Controls - TBA]()
+* [OWASP Secure Headers Project - TBA]()
 * [OWASP Application Security Verification Standard - TBA]()
 * [OWASP Testing Guide - TBA]()
 * [OWASP Cheat Sheet - TBA]()
