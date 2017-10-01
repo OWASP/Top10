@@ -55,3 +55,4 @@ This changes the meaning of both queries to return all the records from the acco
 * [CWE Entry 564 on Hibernate Injection]()
 * [CWE Entry 611 on Improper Restriction of XXE]()
 * [CWE Entry 917 on Expression Language Injection]()
+* Do we have a non-vendor reference for this? [Server-side template injection](https://portswigger.net/knowledgebase/issues/details/00101080_serversidetemplateinjection)
