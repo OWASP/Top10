@@ -8,7 +8,7 @@
 | Threat agents/Attack vectors | Security Weakness           | Impacts               |
 | ---------------------------- | --------------------------- | --------------------- |
 | Access Lvl \| Exploitability | Prevalance \| Detectability | Technical \| Business |
-| Even anonymous attackers typically don’t break crypto directly. They break something else, such as steal keys, do man-in-the-middle attacks, or steal clear text data off the server, while in transit, or from the user’s browser. | The most common flaw is simply not encrypting sensitive data. When crypto is employed, weak key generation and management, and weak algorithm usage is common, particularly weak password hashing techniques. For data in transit server side weaknesses are mainly easy to detect, but hard for data in rest. Both with very varying exploitability. Browser weaknesses are easy to detect, but hard to exploit on a large scale. | Failure frequently compromises all data that should have been protected. Typically, this information includes sensitive data such as health records, credentials, personal data, credit cards, etc. The business impact depends on the protection needs of your application and data. |
+| Even anonymous attackers typically don’t break crypto directly. They break something else, such as steal keys, do man-in-the-middle attacks, or steal clear text data off the server, while in transit, or from the user’s client, e.g. browser. | The most common flaw is simply not encrypting sensitive data. When crypto is employed, weak key generation and management, and weak algorithm usage is common, particularly weak password hashing techniques. For data in transit server side weaknesses are mainly easy to detect, but hard for data in rest. Both with very varying exploitability. User agent (e.g. browser) weaknesses are easy to detect, but hard to exploit on a large scale. | Failure frequently compromises all data that should have been protected. Typically, this information includes sensitive data such as health records, credentials, personal data, credit cards, etc. The business impact depends on the protection needs of your application and data. |
 
 ## Am I vulnerable to attack?
 The first thing you have to determine is which data is sensitive enough to require extra protection. For example, passwords, credit card numbers, health records, and personal information should be protected. For all such data:
@@ -16,7 +16,7 @@ The first thing you have to determine is which data is sensitive enough to requi
 * Is any data of a site transmitted in clear text, internally or externally? Internet traffic is especially dangerous.
 * Are any old / weak cryptographic algorithms used? E.g. that may be provided by standard configs (see A5)
 * Are default crypto keys in use, weak crypto keys generated, or is proper key management or rotation missing?
-* Is encryption not enforced, e.g. are any (browser) security directives or headers missing?
+* Is encryption not enforced, e.g. are any user agent (browser) security directives or headers missing?
 
 And more … For a more complete set of problems to avoid, see ASVS areas Crypto (V7), Data Prot (V9), and SSL/TLS (V10).
 
