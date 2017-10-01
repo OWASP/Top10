@@ -38,13 +38,14 @@ Note that attackers can also use XSS to defeat any  automated CSRF defense the a
 
 ## References
 
-OWASP
+### OWASP
 * [OWASP Proactive Controls - TBA]()
 * [OWASP Application Security Verification Standard - TBA]()
 * [OWASP Testing Guide: 1st 3 Chapters on Data Validation Testing]()
- OWASP Types of Cross-Site Scripting
- OWASP XSS Prevention Cheat Sheet
- OWASP DOM based XSS Prevention Cheat Sheet
- OWASP XSS Filter Evasion Cheat Sheet
-External
- CWE Entry 79 on Cross-Site Scripting
+* OWASP Types of Cross-Site Scripting
+* OWASP XSS Prevention Cheat Sheet
+* OWASP DOM based XSS Prevention Cheat Sheet
+* OWASP XSS Filter Evasion Cheat Sheet
+### External
+* CWE Entry 79 on Cross-Site Scripting
+* Do we have a non-vendor reference for this? [PortSwigger: Client-side template injection](https://portswigger.net/knowledgebase/issues/details/00200308_clientsidetemplateinjection)
