@@ -5,7 +5,7 @@
 | App Specific |  EASY | COMMON | AVERAGE | SEVERE | App Specific | 
 | TBA | TBA | TBA | TBA. | TBA | --->
 
-| Treat agents/Attack vector   | Security Weakness           | Impacts               |
+| Threat agents/Attack vectors | Security Weakness           | Impacts               |
 | ---------------------------- | --------------------------- | --------------------- |
 | Access Lvl \| Exploitability | Prevalance \| Detectability | Technical \| Business |
 | Even anonymous attackers typically don’t break crypto directly. They break something else, such as steal keys, do man-in-the-middle attacks, or steal clear text data off the server, while in transit, or from the user’s browser. | The most common flaw is simply not encrypting sensitive data. When crypto is employed, weak key generation and management, and weak algorithm usage is common, particularly weak password hashing techniques. For data in transit server side weaknesses are mainly easy to detect, but hard for data in rest. Both with very varying exploitability. Browser weaknesses are easy to detect, but hard to exploit on a large scale. | Failure frequently compromises all data that should have been protected. Typically, this information includes sensitive data such as health records, credentials, personal data, credit cards, etc. The business impact depends on the protection needs of your application and data. |
