@@ -17,6 +17,7 @@ The first thing you have to determine is which data is sensitive enough to requi
 * Are any old / weak cryptographic algorithms used? E.g. that may be provided by standard configs (see A5)
 * Are default crypto keys in use, weak crypto keys generated, or is proper key management or rotation missing?
 * Is encryption not enforced, e.g. are any user agent (browser) security directives or headers missing?
+* Does the user agent (e.g. app, mail client) not verify if the received certificate is valid. 
 
 And more … For a more complete set of problems to avoid, see ASVS areas Crypto (V7), Data Prot (V9), and SSL/TLS (V10).
 
