@@ -21,7 +21,7 @@ Preventing injection requires keeping untrusted data separate from commands and 
 
 2. If (1) is not available, you should escape special characters using the specific escape syntax for that interpreter. OWASP’s Java Encoder and similar libraries provide such escaping routines.
 
-3. Positive or “white list” input validation is also recommended, but is not a complete defense as many situations require special characters be allowed. If special characters are required, only approaches (1) and (2) above will make their use safe. OWASP’s ESAPI has an extensible library of white list input validation routines. 
+3. Positive or “white list” input validation is also recommended, but is not a complete defense as many situations require special characters be allowed. If special characters are required, only approaches (1) and (2) above will make their use safe. 
 
 ## Example Scenarios
 
