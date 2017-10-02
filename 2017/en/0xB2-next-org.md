@@ -21,9 +21,9 @@ Application security is no longer optional. Between increasing attacks and regul
 * Establish an application security training curriculum that is required and targeted to different development roles and topics.
 
 ### Integrate Security into Existing Processes
-* Define and integrate secure implementation and verification activities into existing development and operational processes.  Activities include Threat Modeling, Secure Design & Review, Secure Coding & Code Review, Penetration Testing, and Remediation.
+* Define and integrate secure implementation and verification activities into existing development and operational processes.  Activities include threat modeling, secure design & review, secure coding & code review, penetration testing and remediation.
 * Provide subject matter experts and support services for development and project teams to be successful.
 
-### Provide Management Visibility 
+### Provide Management Visibility
 * Manage with metrics. Drive improvement and funding decisions based on the metrics and analysis data captured. Metrics include adherence to security practices / activities, vulnerabilities introduced, vulnerabilities mitigated, application coverage, defect density by type and instance counts, etc.
 * Analyze data from the implementation and verification activities to look for root cause and vulnerability patterns to drive strategic and systemic improvements across the enterprise. Learn from mistakes and offer positive incentives to promote improvements.
