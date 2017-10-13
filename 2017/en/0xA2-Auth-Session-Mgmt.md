@@ -2,8 +2,8 @@
 
 | Threat agents | Exploitability | Prevalance | Detectability | Technical Impact | Business Impacts |
 | --- | --- | --- | --- | --- | --- |
-| App Specific |  EASY | COMMON | AVERAGE | SEVERE | App Specific | 
-| TBA | TBA | TBA | TBA. | TBA |
+| App Specific |  2 | 2 | 2 | 2 | App Specific | 
+
 
 Evidence of identity, authentication and session management are critical for separating malicious unauthenticated attackers with users who you might have a legal relationship. 
 

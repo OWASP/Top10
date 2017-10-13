@@ -2,8 +2,7 @@
 
 | Threat agents | Exploitability | Prevalance | Detectability | Technical Impact | Business Impacts |
 | --- | --- | --- | --- | --- | --- |
-| App Specific |  EASY | COMMON | AVERAGE | SEVERE | App Specific | 
-| TBA | TBA | TBA | TBA. | TBA |
+| App Specific |  2 | 2 | 2 | 3 | App Specific | 
 
 Access control is the process of ensuring that users cannot act outside of their role or granted permissions, such that they can only access secured information and functionality that they are explicitly granted access. Commonly, applications fail to enforce access control in a wide variety of ways, but typically this can lead to critical unauthorized information disclosure, modification or destruction of all data within a system, or performing a business function well outside of the limits of the user. 
 
