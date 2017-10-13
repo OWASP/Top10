@@ -3,4 +3,6 @@
 
 ## OWASP Top 10 2017-master (DRAFT)
 
-September 2017
+October 12 2017
+
+DRAFT STANDARD. DO NOT USE.
