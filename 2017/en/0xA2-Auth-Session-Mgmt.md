@@ -4,10 +4,11 @@
 | --- | --- | --- | --- | --- | --- |
 | App Specific |  2 | 2 | 2 | 2 | App Specific | 
 
-
-Evidence of identity, authentication and session management are critical for separating malicious unauthenticated attackers with users who you might have a legal relationship. 
+This issue is easily exploitable by manual means using freely available off the self tools and techniques. This issue is found in 40% of all assessments. The impact of exploitation is compromise of at least one targeted account, and often millions of accounts for undirected attacks.
 
 ## Am I vulnerable to attack?
+
+Evidence of identity, authentication and session management are critical for separating malicious unauthenticated attackers with users who you might have a legal relationship. 
 
 Common authentication vulnerabilities include:
 

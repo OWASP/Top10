@@ -4,6 +4,7 @@
 | --- | --- | --- | --- | --- | --- |
 | App Specific |  2 | 2 | 3 | 3 | App Specific | 
 
+Exploitation of deserialization is somewhat difficult, as although there are off the shelf exploits, these rarely work without changes or tweaks to the underlying exploit code. There is little data on the prevalence of this issue, and so this issue has been selected by the community. The impact of this issue is severe, with remote code execution on the server where the object is de-serialized. 
 
 ## Am I vulnerable to attack?
 
@@ -35,10 +36,9 @@ Larger and high performing organizations should also consider:
 ## References
 
 ### OWASP
-* [OWASP Proactive Controls - TBA]()
+* [OWASP Proactive Controls - Validate All Inputs](https://www.owasp.org/index.php/OWASP_Proactive_Controls#4:_Validate_All_Inputs)
 * [OWASP Application Security Verification Standard - TBA](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
-* [OWASP Testing Guide - TBA]()
-* [OWASP Cheat Sheet - TBA](https://www.owasp.org/index.php/Deserialization_Cheat_Sheet)
+* [OWASP Cheat Sheet - Deserialization](https://www.owasp.org/index.php/Deserialization_Cheat_Sheet)
 
 ### External
 

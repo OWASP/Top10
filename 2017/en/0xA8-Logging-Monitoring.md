@@ -4,6 +4,8 @@
 | --- | --- | --- | --- | --- | --- |
 | App Specific |  2 | 3 | 1 | 2 | App Specific | 
 
+Exploitation of insufficient logging and monitoring is the bedrock of every major incident. Attackers rely on the lack of monitoring to achieve their goals without being detected. There is little data on the prevalence of this issue, and so this issue has been selected by the community. The impact of this issue is moderate to severe, due to delays in activating incident response, allowing the attacker more time to attack, and impairs understanding of what was disclosed or breached.
+
 ## Am I vulnerable to attack?
 
 Insufficient logging and monitoring occurs anytime:
