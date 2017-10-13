@@ -1,9 +1,9 @@
-# A7 TBA
+# A7 Deserialization
 
 | Threat agents | Exploitability | Prevalance | Detectability | Technical Impact | Business Impacts |
 | --- | --- | --- | --- | --- | --- |
-| App Specific |  EASY | COMMON | AVERAGE | SEVERE | App Specific | 
-| TBA | TBA | TBA | TBA. | TBA |
+| App Specific |  2 | 2 | 3 | 3 | App Specific | 
+
 
 ## Am I vulnerable to attack?
 
@@ -36,10 +36,10 @@ Larger and high performing organizations should also consider:
 
 ### OWASP
 * [OWASP Proactive Controls - TBA]()
-* [OWASP Application Security Verification Standard - TBA]()
+* [OWASP Application Security Verification Standard - TBA](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
 * [OWASP Testing Guide - TBA]()
-* [OWASP Cheat Sheet - TBA]()
+* [OWASP Cheat Sheet - TBA](https://www.owasp.org/index.php/Deserialization_Cheat_Sheet)
 
 ### External
 
-TBA
+* [CWE-502: Deserialization of Untrusted Data](https://cwe.mitre.org/data/definitions/502.html)
