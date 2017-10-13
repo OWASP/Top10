@@ -19,13 +19,21 @@ fi
 echo ""
 
 generate_pdf() {
-    if command_exists xelatex; then
-        pandoc --latex-engine=xelatex -o "../OWASP-Top-10-2017-$1.pdf" *.md
+    if command_exists pdflatex; then
+        pandoc -fmarkdown-implicit_figures --template ../templates/default.latex -o "../OWASP-Top-10-2017-$1.tex" *.md
+	    sed -i -e 's/figure}.*/marginfigure}/' "../OWASP-Top-10-2017-$1.tex"
+        pdflatex "../OWASP-Top-10-2017-$1.tex"
+    else
+        echo " could not generate PDF, missing pdflatex"
     fi
 }
 
 generate_docx() {
-    pandoc -f markdown_github --reference-docx=../reference.docx --columns 10000 -t docx -o "../OWASP-Top-10-2017-$1.docx" *.md
+    pandoc -s -f markdown_github --reference-docx=../templates/reference.docx --columns 10000 -t docx -o "../OWASP-Top-10-2017-$1.docx" *.md
+}
+
+generate_html() {
+    pandoc -s -f markdown_github -t html5 -o "../OWASP-Top-10-2017-$1.html" *.md
 }
 
 generate() {
@@ -35,6 +43,7 @@ generate() {
         cd "$1"
         generate_docx $1
         generate_pdf $1
+        generate_html $1
         cd ..
         echo " done."
     else

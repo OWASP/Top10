@@ -1,0 +1,178 @@
+% Based on tufte-handout.tex - DESC
+% Iago Mosqueira - JRC. 2013
+% https://gist.github.com/reinholdsson/7426608/566d8104363cd2fef2d6dd50e90aceab377b4a45
+
+% Example input file: https://t.co/Jl73l6p8rA
+% Example output file: https://t.co/udpLlvml8X
+
+\documentclass{tufte-handout}
+ 
+\providecommand{\note}{\textsf}
+\renewcommand{\large}{\normalsize}
+\renewcommand{\huge}{\normalsize}
+\renewcommand{\Huge}{\normalsize}
+
+% optionally, change all figures to margin figures (Caleb McDaniel)
+$if(marginfigures)$
+\renewenvironment{figure}[1][]{\begin{marginfigure}}{\end{marginfigure}}
+$endif$
+
+% optionally, make links footnotes instead of hotlinks
+$if(links-as-notes)$
+\renewcommand{\href}[2]{#2\footnote{\url{#1}}}
+$endif$
+
+% ams
+\usepackage{amssymb,amsmath}
+
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\fi
+ 
+% add line numbers (Caleb McDaniel)
+$if(linenos)$
+\usepackage[modulo]{lineno}
+\linenumbers
+% Uncomment next line to make line numbers font match text font (Andrew Dunning)
+% \def\linenumberfont{\normalfont\small}
+$endif$
+
+% use symbols instead of numbers for footnotes (Caleb McDaniel)
+% http://tex.stackexchange.com/questions/826/symbols-instead-of-numbers-as-footnote-markers
+$if(symbol)$
+\usepackage{perpage}
+\MakePerPage{footnote}
+\renewcommand*{\thefootnote}{\fnsymbol{footnote}}
+$endif$
+
+% Set up the images/graphics package
+\usepackage{graphicx}
+\setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
+\graphicspath{{graphics/}}
+ 
+% \let\Oldincludegraphics\includegraphics
+% \renewcommand{\includegraphics}[1]{\Oldincludegraphics[trim={0 3in 0 0},clip,width=\textwidth]{#1}}
+
+% natbib
+\usepackage{natbib}
+\bibliographystyle{plainnat}
+ 
+% biblatex
+$if(biblatex)$
+\usepackage{biblatex}
+$if(biblio-files)$
+\bibliography{$biblio-files$}
+$endif$
+$endif$
+ 
+% booktabs
+\usepackage{longtable,booktabs}
+ 
+% url
+\usepackage{url}
+ 
+% hyperref
+\usepackage{hyperref}
+ 
+% units.
+\usepackage{units}
+ 
+% fancyvrb
+\usepackage{fancyvrb}
+\fvset{fontsize=\normalsize}
+\DefineShortVerb[commandchars=\\\{\}]{\|}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+ 
+ 
+% multiplecol
+\usepackage{multicol}
+ 
+% lipsum
+\usepackage{lipsum}
+ 
+% These commands are used to pretty-print LaTeX commands
+\newcommand{\doccmd}[1]{\texttt{\textbackslash#1}}% command name -- adds backslash automatically
+\newcommand{\docopt}[1]{\ensuremath{\langle}\textrm{\textit{#1}}\ensuremath{\rangle}}% optional command argument
+\newcommand{\docarg}[1]{\textrm{\textit{#1}}}% (required) command argument
+\newenvironment{docspec}{\begin{quote}\noindent}{\end{quote}}% command specification environment
+\newcommand{\docenv}[1]{\textsf{#1}}% environment name
+\newcommand{\docpkg}[1]{\texttt{#1}}% package name
+\newcommand{\doccls}[1]{\texttt{#1}}% document class name
+\newcommand{\docclsopt}[1]{\texttt{#1}}% document class option name
+ 
+% Shaded
+\newenvironment{Shaded}{}{}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{{#1}}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{{#1}}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{{#1}}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{{#1}}}
+\newcommand{\RegionMarkerTok}[1]{{#1}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+\newcommand{\NormalTok}[1]{{#1}}
+
+% Support pandoc's -H/--include-in-header option
+$for(header-includes)$
+$header-includes$
+$endfor$
+
+$if(title)$
+\title{$title$}
+$endif$
+$if(author)$
+\author{$for(author)$$author$$sep$ \and $endfor$}
+$endif$
+$if(date)$
+\date{$date$}
+$endif$
+ 
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\begin{document}
+$if(title)$
+\maketitle
+$endif$
+ 
+\bigskip
+
+$if(abstract)$
+\begin{abstract}
+$abstract$
+\end{abstract}
+$endif$
+
+$body$
+ 
+$if(natbib)$
+$if(biblio-files)$
+$if(biblio-title)$
+$if(book-class)$
+\renewcommand\bibname{$biblio-title$}
+$else$
+\renewcommand\refname{$biblio-title$}
+$endif$
+$endif$
+\bibliography{$biblio-files$}
+\bibliographystyle{plainnat}
+ 
+$endif$
+$endif$
+$if(biblatex)$
+\printbibliography$if(biblio-title)$[title=$biblio-title$]$endif$
+ 
+$endif$
+$for(include-after)$
+$include-after$
+ 
+$endfor$
+\end{document}
