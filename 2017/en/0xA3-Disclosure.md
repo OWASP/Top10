@@ -1,4 +1,4 @@
-# A6 Sensitive Data Exposure
+# A3 Sensitive Data Exposure
 
 <!--- | Threat agents | Exploitability | Prevalance | Detectability | Technical Impact | Business Impacts |
 | --- | --- | --- | --- | --- | --- |

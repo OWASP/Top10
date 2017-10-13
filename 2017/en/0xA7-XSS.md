@@ -1,4 +1,4 @@
-# A3 Cross Site Scripting
+# A7 Cross Site Scripting
 
 | Threat agents | Exploitability | Prevalance | Detectability | Technical Impact | Business Impacts |
 | --- | --- | --- | --- | --- | --- |

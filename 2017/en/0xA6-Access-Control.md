@@ -1,4 +1,4 @@
-# A4 Access Control
+# A6 Access Control
 
 | Threat agents | Exploitability | Prevalance | Detectability | Technical Impact | Business Impacts |
 | --- | --- | --- | --- | --- | --- |

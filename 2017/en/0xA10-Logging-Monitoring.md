@@ -1,4 +1,4 @@
-# A8 Insufficient Logging and Monitoring
+# A10 Insufficient Logging and Monitoring
 
 | Threat agents | Exploitability | Prevalance | Detectability | Technical Impact | Business Impacts |
 | --- | --- | --- | --- | --- | --- |

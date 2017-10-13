@@ -1,4 +1,4 @@
-# A7 Deserialization
+# A8 Deserialization
 
 | Threat agents | Exploitability | Prevalance | Detectability | Technical Impact | Business Impacts |
 | --- | --- | --- | --- | --- | --- |

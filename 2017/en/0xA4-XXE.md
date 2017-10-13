@@ -1,4 +1,4 @@
-# A10 TBA
+# A4 XML External Entities (XXE)
 
 | Threat agents | Exploitability | Prevalance | Detectability | Technical Impact | Business Impacts |
 | --- | --- | --- | --- | --- | --- |
