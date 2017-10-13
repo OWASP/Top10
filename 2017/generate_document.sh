@@ -19,10 +19,8 @@ fi
 echo ""
 
 generate_pdf() {
-    if command_exists pdflatex; then
-        pandoc -fmarkdown-implicit_figures --template ../templates/default.latex -o "../OWASP-Top-10-2017-$1.tex" *.md
-	    sed -i -e 's/figure}.*/marginfigure}/' "../OWASP-Top-10-2017-$1.tex"
-        pdflatex "../OWASP-Top-10-2017-$1.tex"
+    if command_exists xelatex; then
+	pandoc -N --template ../templates/template.tex --variable mainfont="Merriweather" --variable sansfont="Roboto" --variable monofont="Menlo" --variable fontsize=10pt --variable version=1.17.2 --latex-engine=xelatex --toc -fmarkdown-implicit_figures -o "../OWASP-Top-10-2017-$1.pdf" *.md
     else
         echo " could not generate PDF, missing pdflatex"
     fi
