@@ -44,6 +44,8 @@ Every Top 10 requires us to make a judgement call as to what is included, and ho
 * [Cleartext Transmission of Sensitive Information (CWE-319)](https://cwe.mitre.org/data/definitions/319.html)
 * [Cleartext Storage of Sensitive Information (CWE-312)](https://cwe.mitre.org/data/definitions/312.html)
 
+See the [OWASP Top 10 Privacy Risks](https://www.owasp.org/index.php/OWASP_Top_10_Privacy_Risks_Project) for more information. 
+
 **High technical impacts**
 
 We do not have strong evidence for these issues, but the impact can be high:
@@ -53,7 +55,7 @@ We do not have strong evidence for these issues, but the impact can be high:
 
 **Technical impacts**
 
-* Clickjacking (No CWE)
+* [Clickjacking (CWE-451)](https://cwe.mitre.org/data/definitions/451.html) or [CAPEC 103](https://capec.mitre.org/data/definitions/103.html)
 * [Cross-Site Request Forgery (CSRF) (CWE-352)](https://cwe.mitre.org/data/definitions/352.html)
 * [Session Fixation (CWE-384)](https://cwe.mitre.org/data/definitions/384.html)
 * [Path Traversal (CWE-22)](https://cwe.mitre.org/data/definitions/22.html)
