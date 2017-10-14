@@ -2,7 +2,7 @@
 
 | Threat agents | Exploitability | Prevalance | Detectability | Technical Impact | Business Impacts |
 | --- | --- | --- | --- | --- | --- |
-| App Specific |  2 | 2 | 2 | 2 | App Specific | 
+| App Specific |  3 | 2 | 2 | 3 | App Specific | 
 
 This issue is easily exploitable by manual means using freely available off the self tools and techniques. This issue is found in 40% of all assessments. The impact of exploitation is compromise of at least one targeted account, and often millions of accounts for undirected attacks.
 
@@ -42,7 +42,7 @@ Please review the [OWASP Proactive Controls](https://www.owasp.org/index.php/OWA
 
 *Scenario #1:* The primary authentication attack in 2017 is [credential stuffing](https://www.owasp.org/index.php/Credential_stuffing), where billions of valid usernames and passwords are known to attackers. If an application does not rate limit authentication attempts, the application can be used as a password oracle to determine if the credentials are valid within the application, which can then be sold or misused easily.
 
-*Scenario #2:* Most authentication attacks occur due to the continued use of passwords. Common issues with passwords include password rotation and complexity requirements, which encourages users to use weak passwords they use everywhere. Organizations are strongly recommended to stop password rotation and complexity requirements as per NIST 800-63, and mandating the use of multi-factor authentication.
+*Scenario #2:* Most authentication attacks occur due to the continued use of passwords as a sole factor. Common issues with passwords include password rotation and complexity requirements, which encourages users to use weak passwords they reuse everywhere. Organizations are strongly recommended to stop password rotation and complexity requirements as per NIST 800-63, and mandating the use of multi-factor authentication.
 
 *Scenario #3:* One the issues with storage of passwords is the use of plain text, reversibly encrypted passwords, and weakly hashed passwords (such as using MD5/SHA1 with or without a salt). GPU crackers are immensely powerful and cheap. A recent effort by a small group of researchers cracked [320 million passwords in less than three weeks](https://cynosureprime.blogspot.com.au/2017/08/320-million-hashes-exposed.html), including 60 character passwords. The solution to this is the use of adaptive modern hashing algorithms such as Argon2, with salting and sufficient workfactor to prevent the use of rainbow tables, word lists, and realistic recovery of even weak passwords. 
 
