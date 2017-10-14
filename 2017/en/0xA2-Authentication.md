@@ -12,23 +12,19 @@ Evidence of identity, authentication and session management are critical for sep
 
 Common authentication vulnerabilities include:
 
-* missing multi-factor authentication, such as TOTP, token, or risk based authentication
-* permits credential stuffing, which is where the attacker has a list of valid usernames and passwords. Applications should monitor and block many login attempts
-* permits brute force attacks against default and well known passwords
-* permits weak or well known passwords, such as "Password1" or "admin/admin"
+* permits credential stuffing, which is where the attacker has a list of valid usernames and passwords
+* permits brute force or other automated attacks
+* permits default, weak or well-known passwords, such as "Password1" or "admin/admin"
 * weak or ineffectual credential recovery and forgot password processes, such as "knowledge-based answers", which cannot be made safe
 * plain text, encrypted, or weakly hashed passwords permit the rapid recovery of passwords using GPU crackers or brute force tools
+* Missing or ineffective multi-factor authentication
 
-Common session management vulnerabilities include:
-
-* Not providing an effective logout function
-* Not revoking server side session tokens (a common oAuth and JWT pattern)
 
 ## How do I prevent
 
 * [Store passwords using a modern one way hash function](https://www.owasp.org/index.php/Password_Storage_Cheat_Sheet#Leverage_an_adaptive_one-way_function), such as Argon2, with sufficient work factor to prevent realistic GPU cracking attacks
-* Implement multi-factor authentication where possible to prevent credential stuffing, brute force, and stolen credential attacks
-* Implement rate limiting to limit the impact of credential stuffing, brute force, and default password attacks
+* Implement multi-factor authentication where possible to prevent credential stuffing, brute force, automated, and stolen credential attacks
+* Implement rate limiting to limit the impact of automated attacks, credential stuffing, brute force, and default password attacks
 * Implement weak password checks, such as testing a new password against a list of the top 10000 worst passwords
 * Do not ship with default credentials, particularly for admin users
 * Permit users to logout, and enforce logout on the server
