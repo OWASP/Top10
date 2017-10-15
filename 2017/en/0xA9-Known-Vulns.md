@@ -14,7 +14,7 @@
 
 You are likely vulnerable:
 
-1. If you do not know the versions of all components you use (both client-side and server-side). This includes components you directly use as well as nested dependencies.
+* If you do not know the versions of all components you use (both client-side and server-side). This includes components you directly use as well as nested dependencies.
 
 * If any of your software out of date? This includes the OS, Web/App Server, DBMS, applications, APIs and all components, runtime environments and libraries.
 * If you do not know if they are vulnerable. Either if you don’t research for this information or if you don’t scan them for vulnerabilities on a regular base.
@@ -27,6 +27,7 @@ Most component projects do not create vulnerability patches for old versions. So
 * Continuously inventory the versions of both client-side and server-side components and their dependencies using tools like [versions](http://www.mojohaus.org/versions-maven-plugin/), [DependencyCheck](https://www.owasp.org/index.php/OWASP_Dependency_Check), [retire.js](https://github.com/retirejs/retire.js/), etc.
 * Continuously monitor sources like [CVE](https://cve.mitre.org/) and [NVD](https://nvd.nist.gov/) for vulnerabilities in your components. Use software composition analysis tools to automate the process.
 * Analyze libraries to be sure they are actually invoked at runtime before making changes, as many components are never loaded or invoked.
+* Only obtain your components from official sources and, when possible, prefer signed packages to reduce the chance of getting a modified, malicious component.
 * Most component projects do not create security patches for old versions. So you may need to upgrade to the next version (and rewrite the application to match, if needed). If this is not possible, deploy a [virtual patch](https://www.owasp.org/index.php/Virtual_Patching_Best_Practices#What_is_a_Virtual_Patch.3F) that analyzes HTTP traffic, data flow, or code execution and prevents vulnerabilities from being exploited.
 
 Additionally, you should ensure that there is an ongoing plan for monitoring the security of components for the lifetime of the application.
