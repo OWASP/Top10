@@ -14,9 +14,13 @@
 
 If your application accepts XML input, especially from untrusted sources, you may be vulnerable to XXE. You need to identify each XML processor in your application and determine if [document type definitions (DTDs)](https://en.wikipedia.org/wiki/Document_type_definition) has been disabled. As the exact mechanism for disabling DTD processing varies by processor, it is recommended that you consult a reference such as the [OWASP XXE Prevention Cheat Sheet](https://www.owasp.org/index.php/XML_External_Entity_(XXE)_Prevention_Cheat_Sheet).
 
+_This statement seems weak, can we do better?_ If your application is using SOAP prior to version 1.2 it is susceptible to XXE attacks unless you have implemented specific remediations to ensure that XML entities are not being passed to the SOAP framework.  
+
 ## How do I prevent
 
-Preventing XXE requires disabling XML DTD processing in all XML parsers in your application. 
+Preventing XXE requires disabling XML DTD processing in all XML parsers in your application. Protecting against XXE attacks also protects against billion laughs denial-of-service attacks.
+
+_This statement seems weak, can we do better?_ If you are using SOAP, be sure that you are using version 1.2 or better.
 
 ## Example Scenarios
 
@@ -49,7 +53,8 @@ Scenario #3: An attacker attempts a denial-of-service attack by including a pote
 * [OWASP Testing Guide - Testing for XML Injection](https://www.owasp.org/index.php/Testing_for_XML_Injection_(OTG-INPVAL-008))
 * [OWASP XXE Vulnerability](https://www.owasp.org/index.php/XML_External_Entity_(XXE)_Processing)
 * [OWASP XXE Prevention Cheat Sheet](https://www.owasp.org/index.php/XML_External_Entity_(XXE)_Prevention_Cheat_Sheet)
+* [OWASP XML Security Cheat Sheet](https://www.owasp.org/index.php/XML_Security_Cheat_Sheet)
 
 ### External
 
-TBA
+* [Billion Laughs Attack](https://en.wikipedia.org/wiki/Billion_laughs_attack)
