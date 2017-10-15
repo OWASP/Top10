@@ -12,7 +12,7 @@
 
 ## Am I vulnerable to attack?
 
-You may be vulnerable to XXE if your application processes XML input without explicitly disabling [document type definitions (DTDs)](https://en.wikipedia.org/wiki/Document_type_definition).
+If your application accepts XML input, especially from untrusted sources, you may be vulnerable to XXE. You need to identify each XML processor in your application and determine if [document type definitions (DTDs)](https://en.wikipedia.org/wiki/Document_type_definition) has been disabled. As the exact mechanism for disabling DTD processing varies by processor, it is recommended that you consult a reference such as the [OWASP XXE Prevention Cheat Sheet](https://www.owasp.org/index.php/XML_External_Entity_(XXE)_Prevention_Cheat_Sheet).
 
 ## How do I prevent
 
@@ -44,9 +44,9 @@ Scenario #3: An attacker attempts a denial-of-service attack by including a pote
 ## References
 
 ### OWASP
-* [OWASP Proactive Controls - TBA]()
-* [OWASP Application Security Verification Standard - TBA]()
-* [OWASP Testing Guide - TBA]()
+* [OWASP Proactive Controls - TBA](https://www.owasp.org/index.php/OWASP_Proactive_Controls#3:_Encode_Data) - is this a good reference? Maybe there's no strong proactive controls reference for XXE?
+* [OWASP Application Security Verification Standard](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
+* [OWASP Testing Guide - Testing for XML Injection](https://www.owasp.org/index.php/Testing_for_XML_Injection_(OTG-INPVAL-008))
 * [OWASP XXE Vulnerability](https://www.owasp.org/index.php/XML_External_Entity_(XXE)_Processing)
 * [OWASP XXE Prevention Cheat Sheet](https://www.owasp.org/index.php/XML_External_Entity_(XXE)_Prevention_Cheat_Sheet)
 
