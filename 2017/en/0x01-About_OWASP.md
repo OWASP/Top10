@@ -1,4 +1,6 @@
-# Foreword by OWASP Top 10 Project Leadership
+# O About OWASP
+
+## Foreword
 
 Insecure software is undermining our financial, healthcare, defense, energy, and other critical infrastructure. As our software becomes increasingly critical, complex, and connected, the difficulty of achieving application security increases exponentially. The rapid pace of modern software development processes makes risks even more critical to discover quickly and accurately. We can no longer afford to tolerate relatively simple security problems like those presented in this OWASP Top 10.
 
@@ -20,3 +22,43 @@ Lastly, we wish to thank the founding leadership of the OWASP Top 10 project, Da
 - Brian Glas
 - Neil Smithline
 - Andrew van der Stock
+
+## About OWASP
+
+The Open Web Application Security Project (OWASP) is an open community dedicated to enabling organizations to develop, purchase, and maintain applications and APIs that can be trusted.  At OWASP you'll find free and open ...
+
+* Application security tools and standards
+* Complete books on application security testing, secure code development, and secure code review
+* Standard security controls and libraries
+* Local chapters worldwide
+* Cutting edge research
+* Extensive conferences worldwide
+* Mailing lists
+
+Learn more at: [https://www.owasp.org](https://www.owasp.org)
+
+All of the OWASP tools, documents, forums, and chapters are free and open to anyone interested in improving application security. We advocate approaching application security as a people, process, and technology problem, because the most effective approaches to application security require improvements in all of these areas.
+
+OWASP is a new kind of organization. Our freedom from commercial pressures allows us to provide unbiased, practical, cost-effective information about application security. OWASP is not affiliated with any technology company, although we support the informed use of commercial security technology. Similar to many open source software projects, OWASP produces many types of materials in a collaborative, open way.
+
+The OWASP Foundation is the non-profit entity that ensures the project's long-term success. Almost everyone associated with OWASP is a volunteer, including the OWASP Board, Chapter Leaders, Project Leaders, and project members. We support innovative security research with grants and infrastructure.
+
+Come join us!
+
+## Copyright and License
+
+![license](images/license.png)
+
+Copyright © 2003-2017 The OWASP Foundation. This document is released under the Creative Commons Attribution ShareAlike 3.0 license. For any reuse or distribution, you must make clear to others the license terms of this work.
+
+Project Leads, OWASP Top 10 2017 post RC1 to Final
+
+| Project Leads | Lead Authors | Contributors and Reviewers |
+| --- | --- | --- |
+| Torsten Gigler, Brian Glas, Neil Smithline, Andrew van der Stock | TBA | TBA |
+
+Project Leads, OWASP Top 10 2017 to RC1
+
+| Project Leads | Lead Authors | Contributors and Reviewers |
+| --- | --- | --- |
+| Dave Wichers | Dave Wichers, Jeff Williams | TBA |
