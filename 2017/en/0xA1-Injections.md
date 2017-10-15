@@ -44,7 +44,7 @@ Scenario #2: Similarly, an application's blind trust in frameworks may result in
 
 `Query HQLQuery = session.createQuery("FROM accounts WHERE custID='" + request.getParameter("id") + "'");`
 
-In both cases, the attacker modifies the ‘id' parameter value in her browser to send:  `' or '1'='1`. For example: 
+In both cases, the attacker modifies the 'id' parameter value in her browser to send:  `' or '1'='1`. For example: 
 
 `http://example.com/app/accountView?id=' or '1'='1`
 

