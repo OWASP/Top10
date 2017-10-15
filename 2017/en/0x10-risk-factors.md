@@ -1,18 +1,5 @@
 # +F Details about Risk factors
 
-## About risks
-
-During the creation of the OWASP Top 10 2017, we asked the community how they would like the issues to be presented. The overwhelming majority of respondants asked for risk-based ranking. It would be simpler for us to use prevalance only, or breach only ordering, because we have solid access data on that, but then we wouldn't be presenting risks. 
-
-ISO 31000 is the international standard for risk management. We aim to adhere to that standard, but we only include technical impact, and not business impact. Every organization adopting the OWASP Top 10 will need to add their business impact to our calculations. Why is this important? Consider the case where a CMS is used as a public website by one organization, and as a health records system by another. The data asset, risks and threats are very different, and yet the software is the same. 
-
-We present three likelihood factors:
-* Exploitability - based upon our combined experience of if the issue is difficult to exploit requiring advanced skills uncommon in the industry, average, or easy (automated)
-* Prevalence - comes unmodified from the 114,000 application data set
-* Detectability - difficult or blind, average or easy (automated) detection
-
-Impact is purely a technical impact, which we based upon our experience, history of breaches using this issue, and sources such as the Verizon Data Breach Incident Report.
-
 ## Top 10 Risk Factor Summary
 
 The following table presents a summary of the 2017 Top 10 Application Security Risks, and the risk factors we have assigned to each risk. These factors were determined based on the available statistics and the experience of the OWASP Top 10 team. 
