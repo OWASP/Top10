@@ -2,9 +2,15 @@
 
 ## What changed from 2013 to 2017?
 
-The threat landscape for applications and APIs constantly changes. Key factors in this evolution are the rapid adoption of new technologies (including cloud, containers, and APIs), the acceleration and automation of software development processes like Agile and DevOps, the explosion of third-party libraries and frameworks, and advances made by attackers. These factors frequently make applications and APIs more difficult to analyze, and can significantly change the threat landscape.
+Over the last decade, and in particularly these last few years, the fundamental architecture of applications has changed significantly:
 
-To keep pace, we completely renovated the OWASP Top 10. In this 2017 release, we made the following changes:
+* JavaScript is now the primary language of the web. node.js and modern web frameworks such as Bootstrap, Electron, Angular, React amongst many others, means source that was once on the server is now running on untrusted browsers. 
+* Single page applications. Modern frameworks such as Angular and React allow the creation of highly modular front end user experiences, which integrate with...
+* microservices. Older enterprise service bus applications using EJBs and so on, have been ported to node.js and Spring Boot microservices. Old code that never expected to be communicated directly from the Internet is now an API or RESTful web service. The assumptions that underlie this code, such as trusted callers, is simply not valid. 
+
+Change has accelerated over the last five years, and the OWASP Top 10 needed to change. We've completely refactored the OWASP Top 10, revamped the methodology, tested a new data call process, worked with the community, re-ordered our risks, re-written each risk from the ground up, and added in modern references to frameworks and languages that are now commonly used. 
+
+In this 2017 release, we made the following changes:
 
 | OWASP Top 10 2013 | OWASP Top 10 2017 |
 | -- | -- |
