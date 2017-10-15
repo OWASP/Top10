@@ -1,9 +1,14 @@
 # A7 Cross Site Scripting
 
-| Threat agents | Exploitability | Prevalance | Detectability | Technical Impact | Business Impacts |
-| --- | --- | --- | --- | --- | --- |
-| App Specific |  EASY | COMMON | AVERAGE | SEVERE | App Specific | 
-| TBA | TBA | TBA | TBA. | TBA |
+| Factor | Score | Description |
+| -- | -- | -- |
+| Threat agent | ? | The threat agent is app specific, and depends on access, motive, and goals against the data asset. |
+| Exploitability | EASY (3) | Automated tools can exploit all three forms of XSS, and there are freely available exploitation frameworks. |
+| Prevalence | WIDESPREAD (3) | XSS is the second most prevalent issue in the OWASP Top 10, and is found in around two thirds of all applications. |
+| Detectability | EASY (3) | XSS can be discovered by SAST and DAST tools, as well as anyone with a browser. |
+| Impact | MODERATE (2) | The impact of XSS is moderate for reflected and DOM XSS, and severe for stored XSS, with remote code execution on the victim's browser, such as stealing credentials, sessions, or delivering malware to the victim. |
+| Business impacts | ? | The business impact is application specific, and depends on the classification and protection needs of your application and data. |
+| Score | 6.0 | MEDIUM |
 
 ## Am I vulnerable to attack?
 

@@ -1,10 +1,14 @@
 # A10 Insufficient Logging and Monitoring
 
-| Threat agents | Exploitability | Prevalance | Detectability | Technical Impact | Business Impacts |
-| --- | --- | --- | --- | --- | --- |
-| App Specific |  2 | 3 | 1 | 2 | App Specific | 
-
-Exploitation of insufficient logging and monitoring is the bedrock of every major incident. Attackers rely on the lack of monitoring to achieve their goals without being detected. There is little data on the prevalence of this issue, and so this issue has been selected by the community. The impact of this issue is moderate to severe, due to delays in activating incident response, allowing the attacker more time to attack, and impairs understanding of what was disclosed or breached.
+| Factor | Score | Description | 
+| -- | -- | -- | 
+| Threat agent | ? | The threat agent is app specific, and depends on access, motive, and goals against the data asset. |
+| Exploitability | AVERAGE (2) | Exploitation of insufficient logging and monitoring is the bedrock of every major incident. Attackers rely on the lack of monitoring to achieve their goals without being detected. |
+| Prevalence | WIDESPREAD (3) | There is little data on the prevalence of this issue, and so this issue has been selected by the community. |
+| Detectability | DIFFICULT (1) | This issue is not easily detectable. Generally, dynamic testing would detect active response, such as being blocked. This is often not visible to tools. |
+| Impact | MODERATE (2) | The impact of this issue is moderate to severe, due to delays in activating incident response, allowing the attacker more time to attack, and impairs understanding of what was disclosed or breached. |
+| Business impacts | ? | The business impact is application specific, and depends on the classification and protection needs of your application and data. |
+| Score | 4.0 | MEDIUM |
 
 ## Am I vulnerable to attack?
 
@@ -24,7 +28,7 @@ As per the risk of the data stored or processed by the application:
 * Ensure logs cannot easily be deleted or cleared without authorization
 * Establish effective monitoring and alerting, such that suspicious activities such as brute force attacks or business loss are detected and responded within acceptable time periods.
 
-Large or high performing organizations may wish to invest in log correlation and analysis or security event incident management (SIEM) software or services. Open source and commercial offerings should be considered in light of organizational objectives.
+Large or high performing organizations should have application security incident response plans in place, and tested across web apps and API services, with tooling integrated into processes, people and training. Such organizations may wish to invest in log correlation and analysis or security event incident management (SIEM) software or services. Open source and commercial offerings should be considered in light of organizational objectives and budget. 
 
 ## Example Scenarios
 

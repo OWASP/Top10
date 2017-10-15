@@ -5,6 +5,17 @@
 | Application Specific |  EASY | COMMON | AVERAGE | Impact Severe | Application Business Specific | 
 | Consider anyone who can send untrusted data to the system, including external users, business partners, other systems, internal users, and administrators. | Attackers send simple text-based attacks that exploit the syntax of the targeted interpreter. Almost any source of data can be an injection vector, including internal sources. | Injection flaws occur when an application sends untrusted data to an interpreter. Injection flaws are very prevalent, particularly in legacy code.  They are often found in SQL, LDAP, XPath, or NoSQL queries; OS commands; XML parsers, SMTP Headers, expression languages, etc. Injection flaws are easy to discover when examining code, but frequently hard to discover via testing. Scanners and fuzzers can help attackers find injection flaws. | TBA. | Injection can result in data loss or corruption, lack of accountability, or denial of access. Injection can sometimes lead to complete host takeover. | Consider the business value of the affected data and the platform running the interpreter. All data could be stolen, modified, or deleted.  Could your reputation be harmed? |
 
+| Factor | Score | Description |
+| -- | -- | -- |
+| Threat agent | ? | The threat agent is app specific, and depends on access, motive, and goals against the data asset. |
+| Exploitability | EASY (3) | Automated tools can exploit all three forms of XSS, and there are freely available exploitation frameworks. |
+| Prevalence | WIDESPREAD (3) | XSS is the second most prevalent issue in the OWASP Top 10, and is found in around two thirds of all applications. |
+| Detectability | EASY (3) | XSS can be discovered by SAST and DAST tools, as well as anyone with a browser. |
+| Impact | MODERATE (2) | The impact of XSS is moderate for reflected and DOM XSS, and severe for stored XSS, with remote code execution on the victim's browser, such as stealing credentials, sessions, or delivering malware to the victim. |
+| Business impacts | ? | The business impact is application specific, and depends on the classification and protection needs of your application and data. |
+| Score | 6.0 | MEDIUM |
+
+
 ## Am I vulnerable to attack?
 
 The best way to find out if an application is vulnerable to injection is to verify that all use of interpreters clearly separates untrusted data from the command or query. In many cases, it is recommended to avoid the interpreter, or disable it (e.g., XXE), if possible. For SQL calls, use bind variables in all prepared statements and stored procedures, or avoid dynamic queries.

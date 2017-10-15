@@ -1,9 +1,14 @@
 # A9 Using Compenents with Known Vulnerabilities
 
-| Threat agents | Exploitability | Prevalance | Detectability | Technical Impact | Business Impacts |
-| --- | --- | --- | --- | --- | --- |
-| App Specific |  EASY | COMMON | AVERAGE | SEVERE | App Specific | 
-| TBA | TBA | TBA | TBA. | TBA |
+| Factor | Score | Description |
+| -- | -- | -- |
+| Threat agent | ? | The threat agent is app specific, and depends on access, motive, and goals against the data asset. |
+| Exploitability | AVERAGE (2) | There are off the shelf exploits for certain platforms, but typically this issue requires authentication or access to specific platform functionality. |
+| Prevalence | WIDESPREAD (3) | This issue is widespread, with most applications and APIs containing 200-1000+ dependencies depending on platform. |
+| Detectability | AVERAGE (2) | This issue is not easily detectable. due to backported patches or hidden headers. The best place to detect this issue is using dependency checkers in the CI/CD platform. |
+| Impact | MODERATE (2) | Some of the largest breaches in history abused this risk, and so depending on the data asset under protection, this might even rise to SEVERE. |
+| Business impacts | ? | The business impact is application specific, and depends on the classification and protection needs of your application and data. |
+| Score | 4.7 | MEDIUM |
 
 ## Am I vulnerable to attack?
 

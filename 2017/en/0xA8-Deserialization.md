@@ -1,10 +1,14 @@
 # A8 Deserialization
 
-| Threat agents | Exploitability | Prevalance | Detectability | Technical Impact | Business Impacts |
-| --- | --- | --- | --- | --- | --- |
-| App Specific |  2 | 2 | 3 | 3 | App Specific | 
-
-Exploitation of deserialization is somewhat difficult, as although there are off the shelf exploits, these rarely work without changes or tweaks to the underlying exploit code. There is little data on the prevalence of this issue, and so this issue has been selected by the community. The impact of this issue is severe, with remote code execution on the server where the object is de-serialized. 
+| Factor | Score | Description |
+| -- | -- | -- |
+| Threat agent | ? | The threat agent is app specific, and depends on access, motive, and goals against the data asset. |
+| Exploitability | DIFFICULT (1) | Exploitation of deserialization is somewhat difficult, as although there are off the shelf exploits, these rarely work without changes or tweaks to the underlying exploit code. |
+| Prevalence | COMMON (2) | There is little data on the prevalence of this issue, and so this issue has been selected by the community. |
+| Detectability | AVERAGE (2) | This issue can be discovered by tools, but is not easily verifiable due to backported patches or hidden headers. The best place to detect this issue is using dependency checkers in the CI/CD platform. |
+| Impact | SEVERE (3) | The impact of this issue is severe, with remote code execution on the server where the object is de-serialized. |
+| Business impacts | ? | The business impact is application specific, and depends on the classification and protection needs of your application and data. |
+| Score | 5.0 | MEDIUM |
 
 ## Am I vulnerable to attack?
 
