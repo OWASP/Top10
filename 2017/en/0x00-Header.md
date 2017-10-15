@@ -1,8 +1,10 @@
 ![OWASP LOGO](images/OWASP_logo.png)
 
 
-## OWASP Top 10 2017-master (DRAFT)
+## OWASP Top 10 2017-master (pre-RC2)
 
-October 12 2017
+October 15, 2017
 
-DRAFT STANDARD. DO NOT USE.
+DRAFT STANDARD.
+
+Comments welcome - https://github.com/OWASP/Top10/issues
