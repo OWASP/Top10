@@ -27,7 +27,7 @@ And more … For a more complete set of problems to avoid, see ASVS areas Crypto
 Do the following, at a minimum and consult the references:
 * Make sure you encrypt all sensitive data at rest or transferred via clients, e.g. cookies, tokens.
 * Encrypt all data in transit on application layer at least if any sensitive data may be transferred, e.g using TLS. Enforce this using directives like HTTP Strict Transport Security (HSTS).
-* Don’t store sensitive data unnecessarily. Discard it as soon as possible. Data you don’t retain can’t be stolen.
+* Don't store sensitive data unnecessarily. Discard it as soon as possible. Data you don't retain can't be stolen.
 * Ensure up-to-date and strong standard algorithms or ciphers, parameters, protocols and keys are used, and proper key management is in place. Consider using FIPS 140 validated cryptographic modules.
 * Ensure passwords are stored with a strong adaptive algorithm appropriate for password protection, such as Argon2i, scrypt, bcrypt and PBKDF2. Also be sure to set the work factor (delay factor) as high as you can tolerate.
 * Disable autocomplete on forms requesting sensitive data and disable caching for pages that contain sensitive data.
@@ -37,9 +37,9 @@ Do the following, at a minimum and consult the references:
 
 Scenario #1: An application encrypts credit card numbers in a database using automatic database encryption. However, this data is automatically decrypted when retrieved, allowing an SQL injection flaw to retrieve credit card numbers in clear text. Alternatives include not storing credit card numbers, using tokenization, or using public key encryption.
 
-Scenario #2: A site simply doesn’t use or enforce TLS for all pages, or if it supports weak encryption. An attacker simply monitors network traffic, strips or intercepts the TLS (like an open wireless network), and steals the user’s session cookie. The attacker then replays this cookie and hijacks the user’s (authenticated) session, accessing or modifying the user’s private data. Instead of the above he could also alter all transported data, e.g. the recipient of a money transfer.
+Scenario #2: A site simply doesn't use or enforce TLS for all pages, or if it supports weak encryption. An attacker simply monitors network traffic, strips or intercepts the TLS (like an open wireless network), and steals the user's session cookie. The attacker then replays this cookie and hijacks the user's (authenticated) session, accessing or modifying the user's private data. Instead of the above he could also alter all transported data, e.g. the recipient of a money transfer.
 
-Scenario #3: The password database uses unsalted hashes to store everyone’s passwords. A file upload flaw allows an attacker to retrieve the password database. All of the unsalted hashes can be exposed with a rainbow table of precalculated hashes.
+Scenario #3: The password database uses unsalted hashes to store everyone's passwords. A file upload flaw allows an attacker to retrieve the password database. All of the unsalted hashes can be exposed with a rainbow table of precalculated hashes.
 
 ## References
 

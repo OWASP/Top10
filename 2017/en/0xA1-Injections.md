@@ -30,9 +30,9 @@ Preventing injection requires keeping untrusted data separate from commands and 
 
 1. The preferred option is to use a safe API which avoids the use of the interpreter entirely or provides a parameterized interface.  Be careful with APIs, such as stored procedures, that are parameterized, but can still introduce injection under the hood.
 
-2. If (1) is not available, you should escape special characters using the specific escape syntax for that interpreter. OWASP’s Java Encoder and similar libraries provide such escaping routines.
+2. If (1) is not available, you should escape special characters using the specific escape syntax for that interpreter. OWASP's Java Encoder and similar libraries provide such escaping routines.
 
-3. Positive or “white list” input validation is also recommended, but is not a complete defense as many situations require special characters be allowed. If special characters are required, only approaches (1) and (2) above will make their use safe. 
+3. Positive or "white list" input validation is also recommended, but is not a complete defense as many situations require special characters be allowed. If special characters are required, only approaches (1) and (2) above will make their use safe. 
 
 ## Example Scenarios
 
@@ -40,11 +40,11 @@ Scenario #1: An application uses untrusted data in the construction of the follo
 
 `String query = "SELECT * FROM accounts WHERE custID='" + request.getParameter("id") + "'";`
 
-Scenario #2: Similarly, an application’s blind trust in frameworks may result in queries that are still vulnerable, (e.g., Hibernate Query Language (HQL)):
+Scenario #2: Similarly, an application's blind trust in frameworks may result in queries that are still vulnerable, (e.g., Hibernate Query Language (HQL)):
 
 `Query HQLQuery = session.createQuery("FROM accounts WHERE custID='" + request.getParameter("id") + "'");`
 
-In both cases, the attacker modifies the ‘id’ parameter value in her browser to send:  `' or '1'='1`. For example: 
+In both cases, the attacker modifies the ‘id' parameter value in her browser to send:  `' or '1'='1`. For example: 
 
 `http://example.com/app/accountView?id=' or '1'='1`
 

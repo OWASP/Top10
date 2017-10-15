@@ -8,9 +8,9 @@ To help organizations and developers reduce their application security risks in 
 
 | Activity | Description |
 | --- | --- |
-| Application Security Requirements | To produce a secure web application, you must define what secure means for that application. OWASP recommends you use the OWASP Application Security Verification Standard (ASVS), as a guide for setting the security requirements for your application(s). ASVS has been updated significantly in the past few years, with version 3.0.1 being released mid 2016. If you’re outsourcing, consider the OWASP Secure Software Contract Annex.|
+| Application Security Requirements | To produce a secure web application, you must define what secure means for that application. OWASP recommends you use the OWASP Application Security Verification Standard (ASVS), as a guide for setting the security requirements for your application(s). ASVS has been updated significantly in the past few years, with version 3.0.1 being released mid 2016. If you're outsourcing, consider the OWASP Secure Software Contract Annex.|
 | --- | --- |
-| Application Security Architecture | Rather than retrofitting security into your applications and APIs, it is far more cost effective to design the security in from the start. OWASP recommends the OWASP Prevention Cheat Sheets and the OWASP Developer’s Guide as good starting points for guidance on how to design security in from the beginning. The Cheat Sheets have been updated and expanded significantly since the 2013 Top 10 was released. |
+| Application Security Architecture | Rather than retrofitting security into your applications and APIs, it is far more cost effective to design the security in from the start. OWASP recommends the OWASP Prevention Cheat Sheets and the OWASP Developer's Guide as good starting points for guidance on how to design security in from the beginning. The Cheat Sheets have been updated and expanded significantly since the 2013 Top 10 was released. |
 | --- | --- |
 | Security Standard Controls | Building strong and usable security controls is difficult. Using a set of standard security controls radically simplifies the development of secure applications and APIs. Many popular frameworks come with standard security controls for authorization, validation, CSRF, etc.|
 | --- | --- |

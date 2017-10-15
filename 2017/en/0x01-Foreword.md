@@ -8,9 +8,9 @@ We have taken steps in this release to firm up the definition of issues, and imp
 
 Since 2010 the Top 10 have been prioritized by risk, not just by prevalence or any other single metric or factor. In this latest version, we have continued to rank issues by risk based upon community feedback. Our risk model takes in exploitability, pervasiveness based upon 114,000 apps, detectability and technical impact, as measured by recent breaches. You may want to add your own business impacts to each of the OWASP Top 10, and so we encourage internal forking of the OWASP Top 10 to help your appsec program align with ISO 31000 and business imperiatives, as well as improve the recommendations to align with your architecture, platform and integrations. All of our materials are freely available on GitHub, including the data, so please use the OWASP Top 10 rather than try to craft your own internal checklists. 
 
-In the long term, we encourage you to create an application security program that is compatible with your culture and technology. These programs come in all shapes and sizes, and you should avoid attempting to do everything prescribed in some process model. Instead, leverage your organization’s existing strengths to do and measure what works for you.
+In the long term, we encourage you to create an application security program that is compatible with your culture and technology. These programs come in all shapes and sizes, and you should avoid attempting to do everything prescribed in some process model. Instead, leverage your organization's existing strengths to do and measure what works for you.
 
-We hope that the OWASP Top 10 is useful to your application security efforts. Please don’t hesitate to contact OWASP with your questions, comments, and ideas at our Github repo:
+We hope that the OWASP Top 10 is useful to your application security efforts. Please don't hesitate to contact OWASP with your questions, comments, and ideas at our Github repo:
 
 * https://github.com/OWASP/Top10/issues
 
