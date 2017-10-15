@@ -15,25 +15,25 @@ In this 2017 release, we made the following changes:
 | OWASP Top 10 2013 | OWASP Top 10 2017 |
 | -- | -- |
 | A1 - Injection | A1:2017 Injection |
-| A2 - Broken authentication and session management | A2:2017 Authentication |
-| A3 - Cross-site scripting | A3:2017 Sensitive Information Disclosure |
-| A4 - Insecure direct object references | A4:2017 XML External Entities (NEW) |
-| A5 - Security Misconfiguration | A5:2017 Security Misconfiguration |
-| A6 - Sensitive Data Exposure | A6:2017 Access Control |
-| A7 - Missing Function Level Access Control | A7:2017 XSS |
-| A8 - Cross-site Request Forgery (CSRF) | A8:2017 Deserialization (New, Community) |
-| A9 - Known Vulnerabilities | A9:2017 Known Vulnerabilities |
-| A10 - Unvalidated redirects and forwards | A10:2017 Insufficient Logging and Monitoring (NEW, Community) |
+| A2 - Broken authentication and session management | A2:2017-Authentication |
+| A3 - Cross-site scripting | A3:2017-Sensitive Information Disclosure |
+| A4 - Insecure direct object references | A4:2017-XML External Entities [NEW] |
+| A5 - Security Misconfiguration | A5:2017-Security Misconfiguration |
+| A6 - Sensitive Data Exposure | A6:2017-Access Control |
+| A7 - Missing Function Level Access Control | A7:2017-XSS |
+| A8 - Cross-site Request Forgery (CSRF) | A8:2017-Deserialization [NEW, Community] |
+| A9 - Known Vulnerabilities | A9:2017-Known Vulnerabilities |
+| A10 - Unvalidated redirects and forwards | A10:2017-Insufficient Logging and Monitoring [NEW, Community] |
 
 NB: Although most of these issues are weaknesses, the last one is missing or ineffective controls. It has two CWE entries, but in this case, not only did the community rank this issue, we felt if we didn't include detection and response in the OWASP Top 10 2017, we'd be negligent in our duties to the wider development community. With firewalls, logging, network IPS and endpoint protection systems unable to detect web hacks, it falls on web apps themselves to be the new firewall, especially for cloud-based microservices, where there is no firewall, no IPS, and no end points.
 
 ## New issues, supported by data
 
-XXE is a new category primarily supported by SAST data sets, but when discovered by penetration testers and dynamic tools, this new issue allows attackers to disclose internal information, scan internal systems, and possibly perform denial of service attacks.
+A4:2017-XML External Entity (XXE) is a new category primarily supported by SAST data sets, but when discovered by penetration testers and dynamic tools, this new issue allows attackers to disclose internal information, scan internal systems, and possibly perform denial of service attacks.
 
 ## New issues, supported by the community
 
-We asked the community to provide insight into two forward looking weakness categories. After 550 peer submissions, and after removing issues that were already supported by data (such as Sensitive Data Exposure and XXE), the two new issues are A8:2017 Deserialization, responsible for one of the worst breaches of all time, and A10:2017 Insufficient Logging and Monitoring, the lack of which can prevent or significantly delay malicious activity and breach detection, incident response and digital forensics.
+We asked the community to provide insight into two forward looking weakness categories. After 550 peer submissions, and after removing issues that were already supported by data (such as Sensitive Data Exposure and XXE), the two new issues are A8:2017-Deserialization, responsible for one of the worst breaches of all time, and A10:2017-Insufficient Logging and Monitoring, the lack of which can prevent or significantly delay malicious activity and breach detection, incident response and digital forensics.
 
 ## Retired, but not forgotten
 
