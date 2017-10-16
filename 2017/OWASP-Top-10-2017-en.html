@@ -91,7 +91,7 @@
 | Dave Wichers | Dave Wichers, Jeff Williams | TBA |</p>
 <h1 id="introduction">Introduction</h1>
 <h2 id="welcome">Welcome</h2>
-<p>Welcome to the OWASP Top 10 2017! This major update adds several new issues, including two issues selected by the community - A8:2017 Deserialization and A10:2017 Insufficient logging and monitoring. Community feedback also drove the collection of the most amount of data ever assembled in the preparation of an application security standard, and so we are confident that the remaining 8 issues are the most important for organizations to address, particularly the A3: Exposure of Sensitive Data in the age of the EU's General Data Protection Regulation, A5:2017 Misconfiguration especially around cloud and API services, and A9:2017 Known Vulnerabilities, which can be especially challenging for those on modern platforms, like node.js.</p>
+<p>Welcome to the OWASP Top 10 2017! This major update adds several new issues, including two issues selected by the community - A8:2017-Deserialization and A10:2017-Insufficient logging and monitoring. Community feedback also drove the collection of the most amount of data ever assembled in the preparation of an application security standard, and so we are confident that the remaining 8 issues are the most important for organizations to address, particularly the A3:2017-Exposure of Sensitive Data in the age of the EU's General Data Protection Regulation, A5:2017-Misconfiguration especially around cloud and API services, and A9:2017 Known Vulnerabilities, which can be especially challenging for those on modern platforms, like node.js.</p>
 <p>The OWASP Top 10 for 2017 is based primarily on TBA large datasets from firms that specialize in application security, including TBA consulting companies and TBA product vendors. This data spans vulnerabilities gathered from hundreds of organizations and over 114,000 real-world applications and APIs. The Top 10 items are selected and prioritized according to this prevalence data, in combination with consensus estimates of exploitability, detectability, and impact.</p>
 <p>A primary aim of the OWASP Top 10 is to educate developers, designers, architects, managers, and organizations about the consequences of the most common and most important web application security weaknesses. The Top 10 provides basic techniques to protect against these high risk problem areas – and also provides guidance on where to go from here.</p>
 <h2 id="warnings">Warnings</h2>
@@ -139,47 +139,47 @@
 </tr>
 <tr class="even">
 <td style="text-align: left;">A2 - Broken authentication and session management</td>
-<td style="text-align: left;">A2:2017 Authentication</td>
+<td style="text-align: left;">A2:2017-Authentication</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">A3 - Cross-site scripting</td>
-<td style="text-align: left;">A3:2017 Sensitive Information Disclosure</td>
+<td style="text-align: left;">A3:2017-Sensitive Information Disclosure</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">A4 - Insecure direct object references</td>
-<td style="text-align: left;">A4:2017 XML External Entities (NEW)</td>
+<td style="text-align: left;">A4:2017-XML External Entities [NEW]</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">A5 - Security Misconfiguration</td>
-<td style="text-align: left;">A5:2017 Security Misconfiguration</td>
+<td style="text-align: left;">A5:2017-Security Misconfiguration</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">A6 - Sensitive Data Exposure</td>
-<td style="text-align: left;">A6:2017 Access Control</td>
+<td style="text-align: left;">A6:2017-Access Control</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">A7 - Missing Function Level Access Control</td>
-<td style="text-align: left;">A7:2017 XSS</td>
+<td style="text-align: left;">A7:2017-XSS</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">A8 - Cross-site Request Forgery (CSRF)</td>
-<td style="text-align: left;">A8:2017 Deserialization (New, Community)</td>
+<td style="text-align: left;">A8:2017-Deserialization [NEW, Community]</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">A9 - Known Vulnerabilities</td>
-<td style="text-align: left;">A9:2017 Known Vulnerabilities</td>
+<td style="text-align: left;">A9:2017-Known Vulnerabilities</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">A10 - Unvalidated redirects and forwards</td>
-<td style="text-align: left;">A10:2017 Insufficient Logging and Monitoring (NEW, Community)</td>
+<td style="text-align: left;">A10:2017-Insufficient Logging and Monitoring [NEW, Community]</td>
 </tr>
 </tbody>
 </table>
 <p>NB: Although most of these issues are weaknesses, the last one is missing or ineffective controls. It has two CWE entries, but in this case, not only did the community rank this issue, we felt if we didn't include detection and response in the OWASP Top 10 2017, we'd be negligent in our duties to the wider development community. With firewalls, logging, network IPS and endpoint protection systems unable to detect web hacks, it falls on web apps themselves to be the new firewall, especially for cloud-based microservices, where there is no firewall, no IPS, and no end points.</p>
 <h2 id="new-issues-supported-by-data">New issues, supported by data</h2>
-<p>XXE is a new category primarily supported by SAST data sets, but when discovered by penetration testers and dynamic tools, this new issue allows attackers to disclose internal information, scan internal systems, and possibly perform denial of service attacks.</p>
+<p>A4:2017-XML External Entity (XXE) is a new category primarily supported by SAST data sets, but when discovered by penetration testers and dynamic tools, this new issue allows attackers to disclose internal information, scan internal systems, and possibly perform denial of service attacks.</p>
 <h2 id="new-issues-supported-by-the-community">New issues, supported by the community</h2>
-<p>We asked the community to provide insight into two forward looking weakness categories. After 550 peer submissions, and after removing issues that were already supported by data (such as Sensitive Data Exposure and XXE), the two new issues are A8:2017 Deserialization, responsible for one of the worst breaches of all time, and A10:2017 Insufficient Logging and Monitoring, the lack of which can prevent or significantly delay malicious activity and breach detection, incident response and digital forensics.</p>
+<p>We asked the community to provide insight into two forward looking weakness categories. After 550 peer submissions, and after removing issues that were already supported by data (such as Sensitive Data Exposure and XXE), the two new issues are A8:2017-Deserialization, responsible for one of the worst breaches of all time, and A10:2017-Insufficient Logging and Monitoring, the lack of which can prevent or significantly delay malicious activity and breach detection, incident response and digital forensics.</p>
 <h2 id="retired-but-not-forgotten">Retired, but not forgotten</h2>
 <ul>
 <li><strong>A4 Insecure direct object references</strong> and A7 Missing function level access control. We have merged these two issues into a single access control finding, as the impacts and prevention recommendations are more or less identical. This allows us to free up an additional issue, which is XXE.</li>
@@ -369,44 +369,6 @@
 <p>Note that this approach does not take the likelihood of the threat agent into account. Nor does it account for any of the various technical details associated with your particular application. Any of these factors could significantly affect the overall likelihood of an attacker finding and exploiting a particular vulnerability. This rating also does not take into account the actual impact on your business. Your organization will have to decide how much security risk from applications and APIs the organization is willing to accept given your culture, industry, and regulatory environment. The purpose of the OWASP Top 10 is not to do this risk analysis for you.</p>
 <p>The following illustrates our calculation of the risk for A5:2017 Security Misconfiguration, as an example. Misconfiguration is so prevalent it warranted the only 'PREVALENT' prevalence value of 4. All other risks ranged from uncommon to common (values 1 to 3).</p>
 <h1 id="a1-injections">A1 Injections</h1>
-<table style="width:33%;">
-<colgroup>
-<col style="width: 5%" />
-<col style="width: 5%" />
-<col style="width: 5%" />
-<col style="width: 5%" />
-<col style="width: 5%" />
-<col style="width: 5%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Threat agents</th>
-<th style="text-align: left;">Exploitability</th>
-<th style="text-align: left;">Prevalance</th>
-<th style="text-align: left;">Detectability</th>
-<th style="text-align: left;">Technical Impact</th>
-<th style="text-align: left;">Business Impacts</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Application Specific</td>
-<td style="text-align: left;">EASY</td>
-<td style="text-align: left;">COMMON</td>
-<td style="text-align: left;">AVERAGE</td>
-<td style="text-align: left;">Impact Severe</td>
-<td style="text-align: left;">Application Business Specific</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Consider anyone who can send untrusted data to the system, including external users, business partners, other systems, internal users, and administrators.</td>
-<td style="text-align: left;">Attackers send simple text-based attacks that exploit the syntax of the targeted interpreter. Almost any source of data can be an injection vector, including internal sources.</td>
-<td style="text-align: left;">Injection flaws occur when an application sends untrusted data to an interpreter. Injection flaws are very prevalent, particularly in legacy code. They are often found in SQL, LDAP, XPath, or NoSQL queries; OS commands; XML parsers, SMTP Headers, expression languages, etc. Injection flaws are easy to discover when examining code, but frequently hard to discover via testing. Scanners and fuzzers can help attackers find injection flaws.</td>
-<td style="text-align: left;">TBA.</td>
-<td style="text-align: left;">Injection can result in data loss or corruption, lack of accountability, or denial of access. Injection can sometimes lead to complete host takeover.</td>
-<td style="text-align: left;">Consider the business value of the affected data and the platform running the interpreter. All data could be stolen, modified, or deleted. Could your reputation be harmed?</td>
-</tr>
-</tbody>
-</table>
 <table style="width:12%;">
 <colgroup>
 <col style="width: 4%" />
@@ -415,46 +377,21 @@
 </colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: left;">Factor</th>
-<th style="text-align: left;">Score</th>
-<th style="text-align: left;">Description</th>
+<th style="text-align: left;">Threat agents/Attack vectors</th>
+<th style="text-align: left;">Security Weakness</th>
+<th style="text-align: left;">Impacts</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">Threat agent</td>
-<td style="text-align: left;">?</td>
-<td style="text-align: left;">The threat agent is app specific, and depends on access, motive, and goals against the data asset.</td>
-</tr>
-<tr class="even">
+<td style="text-align: left;">Access Lvl \</td>
 <td style="text-align: left;">Exploitability</td>
-<td style="text-align: left;">EASY (3)</td>
-<td style="text-align: left;">Automated tools can exploit all three forms of XSS, and there are freely available exploitation frameworks.</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Prevalence</td>
-<td style="text-align: left;">WIDESPREAD (3)</td>
-<td style="text-align: left;">XSS is the second most prevalent issue in the OWASP Top 10, and is found in around two thirds of all applications.</td>
+<td style="text-align: left;">Prevalance \</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Detectability</td>
-<td style="text-align: left;">EASY (3)</td>
-<td style="text-align: left;">XSS can be discovered by SAST and DAST tools, as well as anyone with a browser.</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Impact</td>
-<td style="text-align: left;">MODERATE (2)</td>
-<td style="text-align: left;">The impact of XSS is moderate for reflected and DOM XSS, and severe for stored XSS, with remote code execution on the victim's browser, such as stealing credentials, sessions, or delivering malware to the victim.</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Business impacts</td>
-<td style="text-align: left;">?</td>
-<td style="text-align: left;">The business impact is application specific, and depends on the classification and protection needs of your application and data.</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Score</td>
-<td style="text-align: left;">6.0</td>
-<td style="text-align: left;">MEDIUM</td>
+<td style="text-align: left;">Consider anyone who can send untrusted data to the system, including external users, business partners, other systems, internal users, and administrators.</td>
+<td style="text-align: left;">Attackers send simple text-based attacks that exploit the syntax of the targeted interpreter. Almost any source of data can be an injection vector, including internal sources.</td>
+<td style="text-align: left;">Injection flaws occur when an application sends untrusted data to an interpreter. Injection flaws are very prevalent, particularly in legacy code. They are often found in SQL, LDAP, XPath, or NoSQL queries; OS commands; XML parsers, SMTP Headers, expression languages, etc. Injection flaws are easy to discover when examining code, but frequently hard to discover via testing. Scanners and fuzzers can help attackers find injection flaws.</td>
 </tr>
 </tbody>
 </table>
@@ -497,17 +434,33 @@
 <li><a href="">CWE Entry 917 on Expression Language Injection</a></li>
 <li>Do we have a non-vendor reference for this? <a href="https://portswigger.net/knowledgebase/issues/details/00101080_serversidetemplateinjection">PortSwigger: Server-side template injection</a></li>
 </ul>
-<h1 id="a2-authentication-and-session-management">A2 Authentication and Session Management</h1>
-<p>| Factor | Score | Description |<br />
-| -- | -- | -- |<br />
-| Threat agent | ? | The threat agent is app specific, and depends on access, motive, and goals against the data asset. |<br />
-| Exploitability | EASY (3) | Automated tools can exploit all three forms of XSS, and there are freely available exploitation frameworks. |<br />
-| Prevalence | WIDESPREAD (3) | XSS is the second most prevalent issue in the OWASP Top 10, and is found in around two thirds of all applications. |<br />
-| Detectability | EASY (3) | XSS can be discovered by SAST and DAST tools, as well as anyone with a browser. |<br />
-| Impact | MODERATE (2) | The impact of XSS is moderate for reflected and DOM XSS, and severe for stored XSS, with remote code execution on the victim's browser, such as stealing credentials, sessions, or delivering malware to the victim. |<br />
-| Business impacts | ? | The business impact is application specific, and depends on the classification and protection needs of your application and data. |<br />
-| Score | 6.0 | MEDIUM |<br />
-This issue is easily exploitable by manual means using freely available off the self tools and techniques. This issue is found in 40% of all assessments. The impact of exploitation is compromise of at least one targeted account, and often millions of accounts for undirected attacks.</p>
+<h1 id="a2-authentication">A2 Authentication</h1>
+<table style="width:12%;">
+<colgroup>
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Threat agents/Attack vectors</th>
+<th style="text-align: left;">Security Weakness</th>
+<th style="text-align: left;">Impacts</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Access Lvl \</td>
+<td style="text-align: left;">Exploitability</td>
+<td style="text-align: left;">Prevalance \</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Attackers have access to hundreds of millions of valid username and password combinations for credential stuffing, default administrative account lists, automated brute force and dictionary attack tools, and advanced GPU cracking tools.</td>
+<td style="text-align: left;">Every application that does not support multi-factor authentication, rate limit login calls, or risk based login controls is vulnerable to attack</td>
+<td style="text-align: left;">Attackers only have to crack access to a few accounts, or even just one administrator level account to access the data held by the system. For financial apps, this may allow money laundering; for tax apps, this might allow social security fraud or identity theft; for health apps, this might disclose legally protected highly sensitive information.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="am-i-vulnerable-to-attack-1">Am I vulnerable to attack?</h2>
 <p>Evidence of identity, authentication and session management are critical for separating malicious unauthenticated attackers with users who you might have a legal relationship.</p>
 <p>Common authentication vulnerabilities include:</p>
@@ -562,46 +515,21 @@ This issue is easily exploitable by manual means using freely available off the 
 </colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: left;">Factor</th>
-<th style="text-align: left;">Score</th>
-<th style="text-align: left;">Description</th>
+<th style="text-align: left;">Threat agents/Attack vectors</th>
+<th style="text-align: left;">Security Weakness</th>
+<th style="text-align: left;">Impacts</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">Threat agent</td>
-<td style="text-align: left;">?</td>
-<td style="text-align: left;">The threat agent is app specific, and depends on access, motive, and goals against the data asset.</td>
-</tr>
-<tr class="even">
+<td style="text-align: left;">Access Lvl \</td>
 <td style="text-align: left;">Exploitability</td>
-<td style="text-align: left;">AVERAGE (2)</td>
+<td style="text-align: left;">Prevalance \</td>
+</tr>
+<tr class="even">
 <td style="text-align: left;">Manual attack is generally required. This is a core skill of penetration testers and motivated attackers.</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Prevalence</td>
-<td style="text-align: left;">WIDESPREAD (3)</td>
-<td style="text-align: left;">Over the last few years, this has been the most common impactful attack, with credit reporting agency breaches of over 150 million records of the most sensitive data possible, the Yahoo breach of over a billion accounts.</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Detectability</td>
-<td style="text-align: left;">AVERAGE (2)</td>
-<td style="text-align: left;">Manual steps are required to characterize sensitive or legally controlled personally identifiable information, but automated tools can be used to find likely issues.</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Impact</td>
-<td style="text-align: left;">SEVERE (3)</td>
+<td style="text-align: left;">Over the last few years, this has been the most common impactful attack, with credit reporting agency breaches of over 150 million records of the most sensitive data possible, the Yahoo breach of over a billion accounts. Manual steps are required to characterize sensitive or legally controlled personally identifiable information, but automated tools can be used to find likely issues.</td>
 <td style="text-align: left;">Failure frequently compromises all data that should have been protected. Typically, this information includes sensitive personal information (PII) data such as health records, credentials, personal data, credit cards, which often requires protection as defined by laws or regulations such as the EU GDPR or local privacy laws.</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Business impacts</td>
-<td style="text-align: left;">?</td>
-<td style="text-align: left;">The business impact is application specific, and depends on the classification and protection needs of your application and data.</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Score</td>
-<td style="text-align: left;">7.0</td>
-<td style="text-align: left;">HIGH</td>
 </tr>
 </tbody>
 </table>
@@ -655,53 +583,37 @@ This issue is easily exploitable by manual means using freely available off the 
 </colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: left;">Factor</th>
-<th style="text-align: left;">Score</th>
-<th style="text-align: left;">Description</th>
+<th style="text-align: left;">Threat agents/Attack vectors</th>
+<th style="text-align: left;">Security Weakness</th>
+<th style="text-align: left;">Impacts</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">Threat agent</td>
-<td style="text-align: left;">?</td>
-<td style="text-align: left;">The threat agent is app specific, and depends on access, motive, and goals against the data asset.</td>
-</tr>
-<tr class="even">
+<td style="text-align: left;">Access Lvl \</td>
 <td style="text-align: left;">Exploitability</td>
-<td style="text-align: left;">AVERAGE (2)</td>
-<td style="text-align: left;">Penetration testers should be capable of exploiting XXE once trained. DAST tools require additional manual steps to exploit this issue.</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Prevalence</td>
-<td style="text-align: left;">COMMON (2)</td>
-<td style="text-align: left;">XXE was found in a significant number of apps and web services.</td>
+<td style="text-align: left;">Prevalance \</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Detectability</td>
-<td style="text-align: left;">EASY (3)</td>
-<td style="text-align: left;">Automated detection of XXE is possible by DAST tools by inspecting for XML documents or data used, or by setting up a web server or tool to receive connections from the victim XML processor. SAST tools can discover this issue by inspecting dependencies and configuration.</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Impact</td>
-<td style="text-align: left;">SEVERE (3)</td>
-<td style="text-align: left;">XXE can be used for internal port scanning, internal remote and local file inclusion, and for denial of service.</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Business impacts</td>
-<td style="text-align: left;">?</td>
-<td style="text-align: left;">The business impact is application specific, and depends on the classification and protection needs of your application and data.</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Score</td>
-<td style="text-align: left;">7.0</td>
-<td style="text-align: left;">HIGH</td>
+<td style="text-align: left;">Attackers who can access web pages or web services, particularly SOAP web services, that process XML. Penetration testers should be capable of exploiting XXE once trained. DAST tools require additional manual steps to exploit this issue. SAST tools can discover this issue by inspecting dependencies and configuration.</td>
+<td style="text-align: left;">By default, many older XML processors allow specification of an external entity, a URI that is derefenced and evaluated during XML processing.</td>
+<td style="text-align: left;">These flaws can be used to extract data, execute a remote request from the server, scan internal systems, perform a denial-of-service attack, and other attacks.</td>
 </tr>
 </tbody>
 </table>
 <h2 id="am-i-vulnerable-to-attack-3">Am I vulnerable to attack?</h2>
-<p>You may be vulnerable to XXE if your application processes XML input without explicitly disabling <a href="https://en.wikipedia.org/wiki/Document_type_definition">document type definitions (DTDs)</a>.</p>
+<p>If your application accepts XML input, especially from untrusted sources, you may be vulnerable to XXE. You need to identify each XML processor in your application and determine if <a href="https://en.wikipedia.org/wiki/Document_type_definition">document type definitions (DTDs)</a> has been disabled. As the exact mechanism for disabling DTD processing varies by processor, it is recommended that you consult a reference such as the <a href="https://www.owasp.org/index.php/XML_External_Entity_(XXE)_Prevention_Cheat_Sheet">OWASP XXE Prevention Cheat Sheet</a>.</p>
+<p><em>This statement seems weak, can we do better?</em> If your application is using SOAP prior to version 1.2 it is susceptible to XXE attacks unless you have implemented specific remediations to ensure that XML entities are not being passed to the SOAP framework.</p>
 <h2 id="how-do-i-prevent-3">How do I prevent</h2>
-<p>Preventing XXE requires disabling XML DTD processing in all XML parsers in your application.</p>
+<p>Preventing XXE requires:</p>
+<ul>
+<li>Ensure the latest XML processors and libraries are in use. Co</li>
+<li>Ensure the XML processor is configured by default to not parse external entities</li>
+<li>Use SOAP 1.2 or later</li>
+<li>Consider disabling XML DTD processing in all XML parsers in your application.</li>
+</ul>
+<p>Protecting against XXE attacks also protects against billion laughs denial-of-service attacks.</p>
+<p><em>This statement seems weak, can we do better?</em> If you are using SOAP, be sure that you are using version 1.2 or better.</p>
 <h2 id="example-scenarios-3">Example Scenarios</h2>
 <p>Scenario #1: The attacker attempts to extract data from the server:</p>
 <pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;ISO-8859-1&quot;?&gt;
@@ -716,14 +628,17 @@ This issue is easily exploitable by manual means using freely available off the 
 <h2 id="references-3">References</h2>
 <h3 id="owasp-3">OWASP</h3>
 <ul>
-<li><a href="">OWASP Proactive Controls - TBA</a></li>
-<li><a href="">OWASP Application Security Verification Standard - TBA</a></li>
-<li><a href="">OWASP Testing Guide - TBA</a></li>
+<li><a href="https://www.owasp.org/index.php/OWASP_Proactive_Controls#3:_Encode_Data">OWASP Proactive Controls - TBA</a> - is this a good reference? Maybe there's no strong proactive controls reference for XXE?</li>
+<li><a href="https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home">OWASP Application Security Verification Standard</a></li>
+<li><a href="https://www.owasp.org/index.php/Testing_for_XML_Injection_(OTG-INPVAL-008)">OWASP Testing Guide - Testing for XML Injection</a></li>
 <li><a href="https://www.owasp.org/index.php/XML_External_Entity_(XXE)_Processing">OWASP XXE Vulnerability</a></li>
 <li><a href="https://www.owasp.org/index.php/XML_External_Entity_(XXE)_Prevention_Cheat_Sheet">OWASP XXE Prevention Cheat Sheet</a></li>
+<li><a href="https://www.owasp.org/index.php/XML_Security_Cheat_Sheet">OWASP XML Security Cheat Sheet</a></li>
 </ul>
 <h3 id="external-3">External</h3>
-<p>TBA</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Billion_laughs_attack">Billion Laughs Attack</a></li>
+</ul>
 <h1 id="a5-security-misconfiguration">A5 Security Misconfiguration</h1>
 <table style="width:12%;">
 <colgroup>
@@ -733,46 +648,21 @@ This issue is easily exploitable by manual means using freely available off the 
 </colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: left;">Factor</th>
-<th style="text-align: left;">Score</th>
-<th style="text-align: left;">Description</th>
+<th style="text-align: left;">Threat agents/Attack vectors</th>
+<th style="text-align: left;">Security Weakness</th>
+<th style="text-align: left;">Impacts</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">Threat agent</td>
-<td style="text-align: left;">?</td>
-<td style="text-align: left;">Anonymous attackers can access default accounts, unused pages, unpatched flaws, unprotected files and directories, etc. to gain unauthorized access to or knowledge of the system.</td>
-</tr>
-<tr class="even">
+<td style="text-align: left;">Access Lvl \</td>
 <td style="text-align: left;">Exploitability</td>
-<td style="text-align: left;">EASY (3)</td>
-<td style="text-align: left;">Security misconfiguration can happen at any level of an application stack, including the platform, web server, application server, database, frameworks, and custom code.</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Prevalence</td>
-<td style="text-align: left;">PERVASIVE (4)</td>
-<td style="text-align: left;">Misconfiguration is the top issue in our data.</td>
+<td style="text-align: left;">Prevalance \</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Detectability</td>
-<td style="text-align: left;">EASY (3)</td>
-<td style="text-align: left;">Automated scanners are useful for detecting misconfigurations, use of default accounts or configs, unnecessary services, or legacy systems.</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Impact</td>
-<td style="text-align: left;">MODERATE (2)</td>
-<td style="text-align: left;">Such flaws frequently give attackers unauthorized access to some system data or functionality. Occasionally, such flaws result in a complete system compromise.</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Business impacts</td>
-<td style="text-align: left;">?</td>
-<td style="text-align: left;">The business impact is application specific, and depends on the classification and protection needs of your application and data.</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Score</td>
-<td style="text-align: left;">6.0</td>
-<td style="text-align: left;">MEDIUM</td>
+<td style="text-align: left;">Even Anonymous attackers access default accounts, unused pages, unpatched flaws, unprotected files and directories, etc. to gain unauthorized access to or knowledge of the system.</td>
+<td style="text-align: left;">Security misconfiguration can happen at any level of an application stack, including the platform, web server, application server, database, frameworks, and custom code. Automated scanners are useful for detecting misconfigurations, use of default accounts or configs, unnecessary services, legacy options etc.</td>
+<td style="text-align: left;">Such flaws frequently give attackers unauthorized access to some system data or functionality. Occasionally, such flaws result in a complete system compromise. The business impact depends on the protection needs of your application and data.</td>
 </tr>
 </tbody>
 </table>
@@ -827,46 +717,21 @@ Do you adhere on obsolete backward compatibility?</p></li>
 </colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: left;">Factor</th>
-<th style="text-align: left;">Score</th>
-<th style="text-align: left;">Description</th>
+<th style="text-align: left;">Threat agents/Attack vectors</th>
+<th style="text-align: left;">Security Weakness</th>
+<th style="text-align: left;">Impacts</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">Threat agent</td>
-<td style="text-align: left;">?</td>
-<td style="text-align: left;">The threat agent is app specific, and depends on access, motive, and goals against the data asset.</td>
-</tr>
-<tr class="even">
+<td style="text-align: left;">Access Lvl \</td>
 <td style="text-align: left;">Exploitability</td>
-<td style="text-align: left;">MODERATE (2)</td>
-<td style="text-align: left;">Exploitation of access control is a core skill of penetration testers. SAST and DAST tools can detect the abscense of access control, but not verify if it is functional.</td>
+<td style="text-align: left;">Prevalance \</td>
 </tr>
-<tr class="odd">
-<td style="text-align: left;">Prevalence</td>
-<td style="text-align: left;">COMMON (2)</td>
+<tr class="even">
+<td style="text-align: left;">Exploitation of access control is a core skill of penetration testers. SAST and DAST tools can detect the abscense of access control, but not verify if it is functional. Access control is detectable using manual means, or possibly through automation for the abscence of access controls in certain frameworks.</td>
 <td style="text-align: left;">Access control weaknesses are common due to the lack of automated detection, and lack of effective functional testing by application developers.</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Detectability</td>
-<td style="text-align: left;">AVERAGE (2)</td>
-<td style="text-align: left;">Access control is detectable using manual means, or possibly through automation for the abscence of access controls in certain frameworks.</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Impact</td>
-<td style="text-align: left;">SEVERE (3)</td>
 <td style="text-align: left;">The technical impact is anonymous attackers acting as users or administrators, users using privileged functions, or creating, accessing, updating or deleting every record.</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Business impacts</td>
-<td style="text-align: left;">?</td>
-<td style="text-align: left;">The business impact is application specific, and depends on the classification and protection needs of your application and data.</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Score</td>
-<td style="text-align: left;">6.0</td>
-<td style="text-align: left;">MEDIUM</td>
 </tr>
 </tbody>
 </table>
@@ -944,55 +809,35 @@ ResultSet results = pstmt.executeQuery( );<br />
 </colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: left;">Factor</th>
-<th style="text-align: left;">Score</th>
-<th style="text-align: left;">Description</th>
+<th style="text-align: left;">Threat agents/Attack vectors</th>
+<th style="text-align: left;">Security Weakness</th>
+<th style="text-align: left;">Impacts</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">Threat agent</td>
-<td style="text-align: left;">?</td>
-<td style="text-align: left;">The threat agent is app specific, and depends on access, motive, and goals against the data asset.</td>
-</tr>
-<tr class="even">
+<td style="text-align: left;">Access Lvl \</td>
 <td style="text-align: left;">Exploitability</td>
-<td style="text-align: left;">EASY (3)</td>
-<td style="text-align: left;">Automated tools can exploit all three forms of XSS, and there are freely available exploitation frameworks.</td>
+<td style="text-align: left;">Prevalance \</td>
 </tr>
-<tr class="odd">
-<td style="text-align: left;">Prevalence</td>
-<td style="text-align: left;">WIDESPREAD (3)</td>
+<tr class="even">
+<td style="text-align: left;">Automated tools can detect and exploit all three forms of XSS, and there are freely available exploitation frameworks.</td>
 <td style="text-align: left;">XSS is the second most prevalent issue in the OWASP Top 10, and is found in around two thirds of all applications.</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Detectability</td>
-<td style="text-align: left;">EASY (3)</td>
-<td style="text-align: left;">XSS can be discovered by SAST and DAST tools, as well as anyone with a browser.</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Impact</td>
-<td style="text-align: left;">MODERATE (2)</td>
 <td style="text-align: left;">The impact of XSS is moderate for reflected and DOM XSS, and severe for stored XSS, with remote code execution on the victim's browser, such as stealing credentials, sessions, or delivering malware to the victim.</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Business impacts</td>
-<td style="text-align: left;">?</td>
-<td style="text-align: left;">The business impact is application specific, and depends on the classification and protection needs of your application and data.</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Score</td>
-<td style="text-align: left;">6.0</td>
-<td style="text-align: left;">MEDIUM</td>
 </tr>
 </tbody>
 </table>
 <h2 id="am-i-vulnerable-to-attack-6">Am I vulnerable to attack?</h2>
-<p>You are vulnerable to Server XSS if your server-side code uses user-supplied input as part of the HTML output, and you don't use context-sensitive escaping to ensure it cannot run. If a web page uses JavaScript to dynamically add attacker-controllable data to a page, you may have Client XSS. Ideally, you would avoid sending attacker-controllable data to unsafe JavaScript APIs, but escaping (and to a lesser extent) input validation can be used to make this safe.</p>
-<p>Automated tools can find some XSS problems automatically.<br />
-However, each application builds output pages differently and uses different browser side interpreters such as JavaScript, ActiveX, Flash, and Silverlight, usually using 3rd party libraries built on top of these technologies.<br />
-This diveristy makes automated detection difficult, particularly when using modern single-page applications and powerful JavaScript frameworks and libraries.<br />
-Therefore, complete coverage requires a combination of manual code review and penetration testing, in addition to automated approaches.</p>
+<p>Three are three forms of XSS:</p>
+<ul>
+<li><strong>Reflected XSS</strong>. If your application or API includes unsanitized user input as part of HTML output, and this is not validated or escaped, or there is no content security policy, the victim's browser will execute the attacker's arbitrary HTML or JavaScript content. Typically the user will need to interact with a link, or some other attacker controlled page, such as a watering hole attack such as malvertizing or similar.</li>
+<li><strong>Stored XSS</strong> If your application or API stores unsanitized user input, and then this is viewed at a later time by another user or an administrator, the attacker can run arbitrary HTML or JavaScript on the victim user or administrator's browser. As the impact is higher, stored XSS is often considered a high or critical risk.</li>
+<li><strong>DOM XSS</strong>. Modern JavaScript frameworks and single page applications and APIs that dynamically include attacker-controllable data to a page, are vulnerable to DOM XSS. Ideally, you would avoid sending attacker-controllable data to unsafe JavaScript APIs, but context aware escaping, input validation and content security policies can reduce the likelihood of all three forms of XSS.</li>
+</ul>
+<p>Typical XSS attacks include session stealing, account takeover, MFA bypass, DIV replacement or defacement (such as trojan login DIVs), attacks against the user's browser such as malicious software downloads, key logging, and other client side attacks.</p>
+<p>Automated tools can find some XSS problems automatically, particularly in mature technologies such as PHP, J2EE / JSP, and ASP.NET. However, each application builds output pages differently and uses different browser side interpreters such as JavaScript, usually using third party libraries built on top of these technologies. This diversity makes automated detection difficult, particularly when using single-page applications and modern JavaScript frameworks and libraries, particularly if automated tools have not caught up with the new library, or if testers are unfamiliar with DOM XSS.</p>
+<p>Development teams seeking to assess if they have cross site scripting should always use the latest frameworks, which typically aim to prevent XSS as a bug class. Deeper verification requires a combination of skilled penetration testing and manual source code review.</p>
+<p>Large and high performing organizations should consider the use of automated SAST tools to inspect their source integrated into the CI/CD pipeline, along with automated scripted DAST tools such as OWASP Zap, scanning every build of every application in the portfolio to discover easily discovered flaws with every build. Although not a complete panacea, automated testing has a place in larger organizations where penetration tests after each build or manual source code review is impractical.</p>
 <h2 id="how-do-i-prevent-6">How do I prevent</h2>
 <p>Preventing XSS requires separation of untrusted data from active browser content.</p>
 <ol>
@@ -1010,16 +855,20 @@ Note that attackers can also use XSS to defeat any automated CSRF defense the ap
 <h2 id="references-6">References</h2>
 <h3 id="owasp-6">OWASP</h3>
 <ul>
-<li><a href="">OWASP Proactive Controls - TBA</a></li>
-<li><a href="">OWASP Application Security Verification Standard - TBA</a></li>
-<li><a href="">OWASP Testing Guide: 1st 3 Chapters on Data Validation Testing</a></li>
-<li>OWASP Types of Cross-Site Scripting</li>
-<li>OWASP XSS Prevention Cheat Sheet</li>
-<li>OWASP DOM based XSS Prevention Cheat Sheet</li>
-<li><p>OWASP XSS Filter Evasion Cheat Sheet</p>
-<h3 id="external-6">External</h3></li>
-<li>CWE Entry 79 on Cross-Site Scripting</li>
-<li><p>Do we have a non-vendor reference for this? <a href="https://portswigger.net/knowledgebase/issues/details/00200308_clientsidetemplateinjection">PortSwigger: Client-side template injection</a></p></li>
+<li><a href="https://www.owasp.org/index.php/OWASP_Proactive_Controls#tab=OWASP_Proactive_Controls_2016">OWASP Proactive Controls - #3 Encode Data</a></li>
+<li><a href="https://www.owasp.org/index.php/OWASP_Proactive_Controls#tab=OWASP_Proactive_Controls_2016">OWASP Proactive Controls - #4 Validate Data</a></li>
+<li><a href="https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project">OWASP Application Security Verification Standard - V5</a></li>
+<li><a href="https://www.owasp.org/index.php/Testing_for_Reflected_Cross_site_scripting_(OTG-INPVAL-001)">OWASP Testing Guide: Testing for Reflected XSS</a></li>
+<li><a href="https://www.owasp.org/index.php/Testing_for_Stored_Cross_site_scripting_(OTG-INPVAL-002)">OWASP Testing Guide: Testing for Stored XSS</a></li>
+<li><a href="https://www.owasp.org/index.php/Testing_for_DOM-based_Cross_site_scripting_(OTG-CLIENT-001)">OWASP Testing Guide: Testing for DOM XSS</a></li>
+<li><a href="https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet">OWASP XSS Prevention Cheat Sheet</a></li>
+<li><a href="https://www.owasp.org/index.php/DOM_based_XSS_Prevention_Cheat_Sheet">OWASP DOM based XSS Prevention Cheat Sheet</a></li>
+<li><a href="https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet">OWASP XSS Filter Evasion Cheat Sheet</a></li>
+</ul>
+<h3 id="external-6">External</h3>
+<ul>
+<li><a href="https://cwe.mitre.org/data/definitions/79.html">CWE-79: Improper neutralization of user supplied input</a></li>
+<li><a href="https://portswigger.net/knowledgebase/issues/details/00200308_clientsidetemplateinjection">PortSwigger: Client-side template injection</a></li>
 </ul>
 <h1 id="a8-deserialization">A8 Deserialization</h1>
 <table style="width:12%;">
@@ -1030,46 +879,21 @@ Note that attackers can also use XSS to defeat any automated CSRF defense the ap
 </colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: left;">Factor</th>
-<th style="text-align: left;">Score</th>
-<th style="text-align: left;">Description</th>
+<th style="text-align: left;">Threat agents/Attack vectors</th>
+<th style="text-align: left;">Security Weakness</th>
+<th style="text-align: left;">Impacts</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">Threat agent</td>
-<td style="text-align: left;">?</td>
-<td style="text-align: left;">The threat agent is app specific, and depends on access, motive, and goals against the data asset.</td>
-</tr>
-<tr class="even">
+<td style="text-align: left;">Access Lvl \</td>
 <td style="text-align: left;">Exploitability</td>
-<td style="text-align: left;">DIFFICULT (1)</td>
-<td style="text-align: left;">Exploitation of deserialization is somewhat difficult, as although there are off the shelf exploits, these rarely work without changes or tweaks to the underlying exploit code.</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Prevalence</td>
-<td style="text-align: left;">COMMON (2)</td>
-<td style="text-align: left;">There is little data on the prevalence of this issue, and so this issue has been selected by the community.</td>
+<td style="text-align: left;">Prevalance \</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Detectability</td>
-<td style="text-align: left;">AVERAGE (2)</td>
-<td style="text-align: left;">This issue can be discovered by tools, but is not easily verifiable due to backported patches or hidden headers. The best place to detect this issue is using dependency checkers in the CI/CD platform.</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Impact</td>
-<td style="text-align: left;">SEVERE (3)</td>
-<td style="text-align: left;">The impact of this issue is severe, with remote code execution on the server where the object is de-serialized.</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Business impacts</td>
-<td style="text-align: left;">?</td>
-<td style="text-align: left;">The business impact is application specific, and depends on the classification and protection needs of your application and data.</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Score</td>
-<td style="text-align: left;">5.0</td>
-<td style="text-align: left;">MEDIUM</td>
+<td style="text-align: left;">Exploitation of deserialization is somewhat difficult, as although there are off the shelf exploits, these rarely work without changes or tweaks to the underlying exploit code. This issue can be discovered by tools, but is not easily verifiable due to backported patches or hidden headers.</td>
+<td style="text-align: left;">There is currently little data on deserialization as yet, but if it was tested more frequently, this issue could easily be a future A1:2020 risk.</td>
+<td style="text-align: left;">The impact of deserialization cannot be understated - it is responsible for the Equifax breach affecting the sensitive personal identifying and financial information of over 150 million people. Deserialization typically allows the attacker to run arbitrary code on the server.</td>
 </tr>
 </tbody>
 </table>
@@ -1110,7 +934,7 @@ Note that attackers can also use XSS to defeat any automated CSRF defense the ap
 <ul>
 <li><a href="https://cwe.mitre.org/data/definitions/502.html">CWE-502: Deserialization of Untrusted Data</a></li>
 </ul>
-<h1 id="a9-using-compenents-with-known-vulnerabilities">A9 Using Compenents with Known Vulnerabilities</h1>
+<h1 id="a9-using-components-with-known-vulnerabilities">A9 Using Components with Known Vulnerabilities</h1>
 <table style="width:12%;">
 <colgroup>
 <col style="width: 4%" />
@@ -1119,67 +943,48 @@ Note that attackers can also use XSS to defeat any automated CSRF defense the ap
 </colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: left;">Factor</th>
-<th style="text-align: left;">Score</th>
-<th style="text-align: left;">Description</th>
+<th style="text-align: left;">Threat agents/Attack vectors</th>
+<th style="text-align: left;">Security Weakness</th>
+<th style="text-align: left;">Impacts</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">Threat agent</td>
-<td style="text-align: left;">?</td>
-<td style="text-align: left;">The threat agent is app specific, and depends on access, motive, and goals against the data asset.</td>
-</tr>
-<tr class="even">
+<td style="text-align: left;">Access Lvl \</td>
 <td style="text-align: left;">Exploitability</td>
-<td style="text-align: left;">AVERAGE (2)</td>
-<td style="text-align: left;">There are off the shelf exploits for certain platforms, but typically this issue requires authentication or access to specific platform functionality.</td>
+<td style="text-align: left;">Prevalance \</td>
 </tr>
-<tr class="odd">
-<td style="text-align: left;">Prevalence</td>
-<td style="text-align: left;">WIDESPREAD (3)</td>
+<tr class="even">
+<td style="text-align: left;">There are off the shelf exploits for certain platforms, but typically this issue requires authentication or access to specific platform functionality. This issue is not easily detectable. due to backported patches or hidden headers. The best place to detect this issue is using dependency checkers in the CI/CD platform.</td>
 <td style="text-align: left;">This issue is widespread, with most applications and APIs containing 200-1000+ dependencies depending on platform.</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Detectability</td>
-<td style="text-align: left;">AVERAGE (2)</td>
-<td style="text-align: left;">This issue is not easily detectable. due to backported patches or hidden headers. The best place to detect this issue is using dependency checkers in the CI/CD platform.</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Impact</td>
-<td style="text-align: left;">MODERATE (2)</td>
 <td style="text-align: left;">Some of the largest breaches in history abused this risk, and so depending on the data asset under protection, this might even rise to SEVERE.</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Business impacts</td>
-<td style="text-align: left;">?</td>
-<td style="text-align: left;">The business impact is application specific, and depends on the classification and protection needs of your application and data.</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Score</td>
-<td style="text-align: left;">4.7</td>
-<td style="text-align: left;">MEDIUM</td>
 </tr>
 </tbody>
 </table>
 <h2 id="am-i-vulnerable-to-attack-8">Am I vulnerable to attack?</h2>
-<p>The challenge is to continuously monitor the components (both client-side and server-side) you are using for new vulnerability reports. This monitoring can be very difficult because vulnerability reports are not standardized, making them hard to find and search for the details you need (e.g., the exact component in a product family that has the vulnerability). Worst of all, many vulnerabilities never get reported to central clearinghouses like <a href="">CVE</a> and <a href="">NVD</a>.</p>
-<p>Determining if you are vulnerable requires searching these databases, as well as keeping abreast of project mailing lists and announcements for anything that might be a vulnerability. This process can be done manually, or with automated tools. If a vulnerability in a component is discovered, carefully evaluate whether you are actually vulnerable. Check to see if your code uses the vulnerable part of the component and whether the flaw could result in an impact you care about. Both checks can be difficult to perform as vulnerability reports can be deliberately vague.</p>
+<p>You are likely vulnerable:</p>
+<ul>
+<li>If you do not know the versions of all components you use (both client-side and server-side). This includes components you directly use as well as nested dependencies.</li>
+<li>If any of your software out of date? This includes the OS, Web/App Server, DBMS, applications, APIs and all components, runtime environments and libraries.</li>
+<li>If you do not know if they are vulnerable. Either if you don’t research for this information or if you don’t scan them for vulnerabilities on a regular base.</li>
+<li>If you do not fix nor upgrade the software. E.g. if you don’t update your software to work together with this fixes. But also if you fix severe vulnerabilities too slowly.</li>
+<li>If you do not secure the components' configurations (see <a href="">A5:2017-TBD</a>).</li>
+</ul>
 <h2 id="how-do-i-prevent-8">How do I prevent</h2>
 <p>Most component projects do not create vulnerability patches for old versions. So the only way to fix the problem is to upgrade to the next version, which can require other code changes. Software projects should have a process in place to:</p>
 <ul>
 <li>Continuously inventory the versions of both client-side and server-side components and their dependencies using tools like <a href="http://www.mojohaus.org/versions-maven-plugin/">versions</a>, <a href="https://www.owasp.org/index.php/OWASP_Dependency_Check">DependencyCheck</a>, <a href="https://github.com/retirejs/retire.js/">retire.js</a>, etc.</li>
-<li>Continuously monitor sources like <a href="https://nvd.nist.gov/">National Vulnerability Database (NVD)</a> for vulnerabilities in your components. Use software composition analysis tools to automate the process.</li>
-<li>Analyze libraries to be sure they are actually invoked at runtime before making changes, as the majority of components are never loaded or invoked.</li>
-<li>Decide whether to upgrade component (and rewrite application to match if needed) or deploy a <a href="https://www.owasp.org/index.php/Virtual_Patching_Best_Practices#What_is_a_Virtual_Patch.3F">virtual patch</a> that analyzes HTTP traffic, data flow, or code execution and prevents vulnerabilities from being exploited.</li>
+<li>Continuously monitor sources like <a href="https://cve.mitre.org/">CVE</a> and <a href="https://nvd.nist.gov/">NVD</a> for vulnerabilities in your components. Use software composition analysis tools to automate the process.</li>
+<li>Analyze libraries to be sure they are actually invoked at runtime before making changes, as many components are never loaded or invoked.</li>
+<li>Only obtain your components from official sources and, when possible, prefer signed packages to reduce the chance of getting a modified, malicious component.</li>
+<li>Most component projects do not create security patches for old versions. So you may need to upgrade to the next version (and rewrite the application to match, if needed). If this is not possible, deploy a <a href="https://www.owasp.org/index.php/Virtual_Patching_Best_Practices#What_is_a_Virtual_Patch.3F">virtual patch</a> that analyzes HTTP traffic, data flow, or code execution and prevents vulnerabilities from being exploited.</li>
 </ul>
+<p>Additionally, you should ensure that there is an ongoing plan for monitoring the security of components for the lifetime of the application.</p>
 <h2 id="example-scenarios-7">Example Scenarios</h2>
-<p>Components almost always run with the full privilege of the application, so flaws in any component can result in serious impact. Such flaws can be accidental (e.g., coding error) or intentional (e.g., backdoor in component). Some example exploitable component vulnerabilities discovered are:</p>
-<ul>
-<li>Apache CXF Authentication Bypass – By failing to provide an identity token, attackers could invoke any web service with full permission. (Apache CXF is a services framework, not to be confused with the Apache Application Server.)</li>
-<li>Struts 2 Remote Code Execution – Sending an attack in the Content-Type header causes the content of that header to be evaluated as an OGNL expression, which enables execution of arbitrary code on the server.</li>
-<li>Applications using a vulnerable version of either component are susceptible to attack as both components are directly accessible by application users. Other vulnerable libraries, used deeper in an application, may be harder to exploit</li>
-</ul>
+<p>Components almost always run with the full privilege of the application, so flaws in any component can result in serious impact. Such flaws can be accidental (e.g., coding error) or intentional (e.g., backdoor in component).</p>
+<p>The <a href="https://arstechnica.com/information-technology/2017/09/massive-equifax-breach-caused-by-failure-to-patch-two-month-old-bug/">2017 Equifax breach</a> was caused by <a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5638">CVE-2017-5638</a>, a Struts 2 remote code execution vulnerability that enables execution of arbitrary code on the server.</p>
+<p>While <a href="https://en.wikipedia.org/wiki/Internet_of_things">internet of things (IoT)</a> are frequently difficult to patch, the importance of patching them can be great (eg: <a href="http://www.zdnet.com/article/fda-forces-st-jude-pacemaker-recall-to-patch-security-vulnerabilities/">St. Jude pacemakers</a>).</p>
+<p>There are now tools to help attackers find unpatched systems. For example, the Shodan IoT search engine can help you <a href="https://www.shodan.io/report/89bnfUyJ">find devices</a> that still suffer from the <a href="https://en.wikipedia.org/wiki/Heartbleed">Heartbleed vulnerability</a> that was patched in April 2014.</p>
 <h2 id="references-8">References</h2>
 <h3 id="owasp-8">OWASP</h3>
 <ul>
@@ -1190,7 +995,7 @@ Note that attackers can also use XSS to defeat any automated CSRF defense the ap
 <li><a href="https://www.owasp.org/index.php/OWASP_Dependency_Check">OWASP Dependency Check (for Java and .NET libraries)</a></li>
 <li><a href="https://www.owasp.org/index.php/Virtual_Patching_Best_Practices">OWASP Virtual Patching Best Practices</a></li>
 </ul>
-<p>External</p>
+<h3 id="external-8">External</h3>
 <ul>
 <li><a href="http://www.aspectsecurity.com/research-presentations/the-unfortunate-reality-of-insecure-libraries">The Unfortunate Reality of Insecure Libraries</a></li>
 <li><a href="https://www.cvedetails.com/version-search.php">MITRE Common Vulnerabilities and Exposures (CVE) search</a></li>
@@ -1208,46 +1013,21 @@ Note that attackers can also use XSS to defeat any automated CSRF defense the ap
 </colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: left;">Factor</th>
-<th style="text-align: left;">Score</th>
-<th style="text-align: left;">Description</th>
+<th style="text-align: left;">Threat agents/Attack vectors</th>
+<th style="text-align: left;">Security Weakness</th>
+<th style="text-align: left;">Impacts</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">Threat agent</td>
-<td style="text-align: left;">?</td>
-<td style="text-align: left;">The threat agent is app specific, and depends on access, motive, and goals against the data asset.</td>
-</tr>
-<tr class="even">
+<td style="text-align: left;">Access Lvl \</td>
 <td style="text-align: left;">Exploitability</td>
-<td style="text-align: left;">AVERAGE (2)</td>
-<td style="text-align: left;">Exploitation of insufficient logging and monitoring is the bedrock of every major incident. Attackers rely on the lack of monitoring to achieve their goals without being detected.</td>
+<td style="text-align: left;">Prevalance \</td>
 </tr>
-<tr class="odd">
-<td style="text-align: left;">Prevalence</td>
-<td style="text-align: left;">WIDESPREAD (3)</td>
+<tr class="even">
+<td style="text-align: left;">Exploitation of insufficient logging and monitoring is the bedrock of every major incident. Attackers rely on the lack of monitoring to achieve their goals without being detected. This issue is not easily detectable. Generally, dynamic testing would detect active response, such as being blocked. This is often not visible to tools.</td>
 <td style="text-align: left;">There is little data on the prevalence of this issue, and so this issue has been selected by the community.</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Detectability</td>
-<td style="text-align: left;">DIFFICULT (1)</td>
-<td style="text-align: left;">This issue is not easily detectable. Generally, dynamic testing would detect active response, such as being blocked. This is often not visible to tools.</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Impact</td>
-<td style="text-align: left;">MODERATE (2)</td>
 <td style="text-align: left;">The impact of this issue is moderate to severe, due to delays in activating incident response, allowing the attacker more time to attack, and impairs understanding of what was disclosed or breached.</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Business impacts</td>
-<td style="text-align: left;">?</td>
-<td style="text-align: left;">The business impact is application specific, and depends on the classification and protection needs of your application and data.</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Score</td>
-<td style="text-align: left;">4.0</td>
-<td style="text-align: left;">MEDIUM</td>
 </tr>
 </tbody>
 </table>
@@ -1276,10 +1056,10 @@ Note that attackers can also use XSS to defeat any automated CSRF defense the ap
 <ul>
 <li><a href="https://www.owasp.org/index.php/OWASP_Proactive_Controls#8:_Implement_Logging_and_Intrusion_Detection">OWASP Proactive Controls - Implement Logging and Intrusion Detection</a></li>
 <li><a href="https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home">OWASP Application Security Verification Standard - V7 Logging and Monitoring</a></li>
-<li><a href="https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home">OWASP Testing Guide - Testing for Error Code</a></li>
+<li><a href="https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home">OWASP Testing Guide - Testing for Detailed Error Code</a></li>
 <li><a href="https://www.owasp.org/index.php/Logging_Cheat_Sheet">OWASP Cheat Sheet - Logging</a></li>
 </ul>
-<h3 id="external-8">External</h3>
+<h3 id="external-9">External</h3>
 <ul>
 <li><a href="https://cwe.mitre.org/data/definitions/223.html">CWE-223: Omission of Security-relevant Information</a></li>
 <li><a href="https://cwe.mitre.org/data/definitions/778.html">CWE-778: Insufficient Logging</a></li>
@@ -1441,6 +1221,55 @@ Note that attackers can also use XSS to defeat any automated CSRF defense the ap
 <p>There are many forms of metrics that can be found. Be careful of metrics that don't align business and security, but instead aim to reduce costs - such as cost per bug. At a certain point, KPIs need to be aligned with enabling secure business, not cost reductions.</p>
 <h2 id="this-is-just-the-start">This is just the start</h2>
 <p>Starting the application security journey can feel overwhelming. A key takeaway is that you can't review your way to building a bridge; at some point you must build it. Let's ensure that security is deeply esconced within the organization, and aligned with organizational objectives.</p>
+<h1 id="a-whats-next-for-application-managers">+A: What's next for Application Managers</h1>
+<h2 id="manage-the-full-application-lifecycle">Manage the full Application Lifecycle</h2>
+<p>Applications are quite complex today. So the IT management for an application should be done by an IT specialist who is responsible for the overall IT lifecycle of an application. OWASP recommends that organizations establish a role of application managers for every application. He is the technical counterpart of the application owner from business perspective and manages the full application lifecycle, he is also in charge of the security of an application and its documentation. Therefore he works together with the organizations security specialists. The following lists some of the key activities focusing on security related activities.<br />
+All activities are generic and should be adopted to your local situation. Sometimes the first five activities are also named Project Manager:</p>
+<h3 id="requirements-and-resource-mgmt">Requirements and Resource Mgmt</h3>
+<ul>
+<li>Collect and negotiate the business requirements for an application with the future application owner, including receiving the protection requirements in regard to confidentiality, integrity and availability</li>
+<li>Compile the technical requirements including functional and non functional security requirements.</li>
+<li>Plan and negotiate the budget that the future application owner spends</li>
+</ul>
+<h3 id="request-for-proposals-rfp-and-contracting">Request for Proposals (RFP) and Contracting</h3>
+<ul>
+<li>Negotiate with internal or external developers the requirements, including guidelines and security requirements with respect to your security program, e.g. SDLC, best practices</li>
+<li>Rate the fulfillment of all technical requirements including a rough planning and design</li>
+<li>Negotiate all technical requirements including design, security and service level agreements (SLA)</li>
+<li>Consider to use templates and checklists, e.g. OWASP Secure Software Contract Annex</li>
+</ul>
+<h3 id="planning-and-design">Planning and Design</h3>
+<ul>
+<li>Negotiate planning and design with the developers and internal shareholders, e.g. security specialists</li>
+<li>Compile a security concept (e.g. architecture, measures) according the protection needs and the planned environmental security level. This should be supported by security specialists. Get the application owner to assume remaining risks or to provide additional resources.</li>
+<li>Plan the quality gates for the development including security gates</li>
+</ul>
+<h3 id="development">Development</h3>
+<ul>
+<li>Accompany the development (see +D)</li>
+</ul>
+<h3 id="deployment-testing-and-rollout">Deployment, Testing and Rollout</h3>
+<ul>
+<li>Coordinate the secure setup of the application, interfaces and of all further components needed, including required authorizations</li>
+<li>Test the technical functions and integration to the IT architecture, coordinate business tests. Consider to test use and abuse cases from technical and business perspectives.</li>
+<li>Manage security tests according to internal processes, the protection needs and the level of security where the application is going to be</li>
+<li>Put the application in operation and migrate form previously used applications</li>
+<li>Finalize all documentation, including in CMDB and the security concept.  </li>
+</ul>
+<h3 id="operating-and-changes">Operating and Changes</h3>
+<ul>
+<li>Operating including the security management for the application (e.g. patch management)</li>
+<li>Regularly report all users and authorizations to the application owner and get them acknowledged</li>
+<li>Raise the security awareness of users and manage conflicts about usability vs security</li>
+<li>Plan and manage changes, e.g. migrate to new versions of the application or other components like OS, middleware and libraries</li>
+<li>Update all documentation, including in CMDB and the security concept.</li>
+</ul>
+<h3 id="closing-down">Closing Down</h3>
+<ul>
+<li>Regard any requirements for archiving data</li>
+<li>Securely close down the application, incl. delete unused accounts and authorization</li>
+<li>Set your application’s state to retired in the CMDB</li>
+</ul>
 <p>\newpage</p>
 <h1 id="appendix-a-glossary">Appendix A: Glossary</h1>
 <ul>
