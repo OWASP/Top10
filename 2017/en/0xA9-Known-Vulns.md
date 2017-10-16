@@ -35,11 +35,13 @@ Additionally, you should ensure that there is an ongoing plan for monitoring the
 
 ## Example Scenarios
 
-Components almost always run with the full privilege of the application, so flaws in any component can result in serious impact. Such flaws can be accidental (e.g., coding error) or intentional (e.g., backdoor in component). Some example exploitable component vulnerabilities discovered are:
-* Apache CXF Authentication Bypass – By failing to provide an identity token, attackers could invoke any web service with full permission. (Apache CXF is a services framework, not to be confused with the Apache Application Server.)
-* Struts 2 Remote Code Execution – Sending an attack in the Content-Type header causes the content of that header to be evaluated as an OGNL expression, which enables execution of arbitrary code on the server.
-* Applications using a vulnerable version of either component are susceptible to attack as both components are directly accessible by application users. Other vulnerable libraries, used deeper in an application, may be harder to exploit
+Components almost always run with the full privilege of the application, so flaws in any component can result in serious impact. Such flaws can be accidental (e.g., coding error) or intentional (e.g., backdoor in component). 
 
+The [2017 Equifax breach](https://arstechnica.com/information-technology/2017/09/massive-equifax-breach-caused-by-failure-to-patch-two-month-old-bug/) was caused by [CVE-2017-5638](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5638), a Struts 2 remote code execution vulnerability that enables execution of arbitrary code on the server.
+
+While [internet of things (IoT)](https://en.wikipedia.org/wiki/Internet_of_things) are frequently difficult to patch the importance of patching them can be great (eg: [St. Jude pacemakers](http://www.zdnet.com/article/fda-forces-st-jude-pacemaker-recall-to-patch-security-vulnerabilities/)).
+
+There are now tools to help attackers find unpatched systems. For example, the Shodan IoT search engine can help you [find devices](https://www.shodan.io/report/89bnfUyJ) that still suffer from the [Heartbleed vulnerability](https://en.wikipedia.org/wiki/Heartbleed) that was patched in April 2014.
 ## References
 
 ### OWASP
