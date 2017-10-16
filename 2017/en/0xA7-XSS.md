@@ -2,7 +2,7 @@
 
 | Threat agents/Attack vectors | Security Weakness           | Impacts               |
 | -- | -- | -- |
-| Access Lvl \| Exploitability | Prevalance \| Detectability | Technical \| Business |
+| Access Lvl \| Exploitability | Prevalence \| Detectability | Technical \| Business |
 | Automated tools can detect and exploit all three forms of XSS, and there are freely available exploitation frameworks. | XSS is the second most prevalent issue in the OWASP Top 10, and is found in around two thirds of all applications. | The impact of XSS is moderate for reflected and DOM XSS, and severe for stored XSS, with remote code execution on the victim's browser, such as stealing credentials, sessions, or delivering malware to the victim. |
 
 ## Am I vulnerable to attack?

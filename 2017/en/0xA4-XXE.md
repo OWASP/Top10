@@ -2,7 +2,7 @@
 
 | Threat agents/Attack vectors | Security Weakness           | Impacts               |
 | -- | -- | -- |
-| Access Lvl \| Exploitability | Prevalance \| Detectability | Technical \| Business |
+| Access Lvl \| Exploitability | Prevalence \| Detectability | Technical \| Business |
 | Attackers who can access web pages or web services, particularly SOAP web services, that process XML. Penetration testers should be capable of exploiting XXE once trained. DAST tools require additional manual steps to exploit this issue. SAST tools can discover this issue by inspecting dependencies and configuration. | By default, many older XML processors allow specification of an external entity, a URI that is derefenced and evaluated during XML processing. | These flaws can be used to extract data, execute a remote request from the server, scan internal systems, perform a denial-of-service attack, and other attacks. |
 
 ## Am I vulnerable to attack?

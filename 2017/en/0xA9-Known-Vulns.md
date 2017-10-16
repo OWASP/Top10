@@ -2,7 +2,7 @@
 
 | Threat agents/Attack vectors | Security Weakness           | Impacts               |
 | -- | -- | -- |
-| Access Lvl \| Exploitability | Prevalance \| Detectability | Technical \| Business |
+| Access Lvl \| Exploitability | Prevalence \| Detectability | Technical \| Business |
 | There are off the shelf exploits for certain platforms, but typically this issue requires authentication or access to specific platform functionality. This issue is not easily detectable. due to backported patches or hidden headers. The best place to detect this issue is using dependency checkers in the CI/CD platform. | This issue is widespread, with most applications and APIs containing 200-1000+ dependencies depending on platform.| Some of the largest breaches in history abused this risk, and so depending on the data asset under protection, this might even rise to SEVERE. |
 
 ## Am I vulnerable to attack?

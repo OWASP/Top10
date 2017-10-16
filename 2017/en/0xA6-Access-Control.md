@@ -2,7 +2,7 @@
 
 | Threat agents/Attack vectors | Security Weakness           | Impacts               |
 | -- | -- | -- |
-| Access Lvl \| Exploitability | Prevalance \| Detectability | Technical \| Business |
+| Access Lvl \| Exploitability | Prevalence \| Detectability | Technical \| Business |
 | Exploitation of access control is a core skill of penetration testers. SAST and DAST tools can detect the abscense of access control, but not verify if it is functional. Access control is detectable using manual means, or possibly through automation for the abscence of access controls in certain frameworks. | Access control weaknesses are common due to the lack of automated detection, and lack of effective functional testing by application developers. | The technical impact is anonymous attackers acting as users or administrators, users using privileged functions, or creating, accessing, updating or deleting every record. |
 
 ## Am I vulnerable to attack?

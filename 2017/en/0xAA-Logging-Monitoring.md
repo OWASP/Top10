@@ -2,7 +2,7 @@
 
 | Threat agents/Attack vectors | Security Weakness           | Impacts               |
 | -- | -- | -- |
-| Access Lvl \| Exploitability | Prevalance \| Detectability | Technical \| Business |
+| Access Lvl \| Exploitability | Prevalence \| Detectability | Technical \| Business |
 | Exploitation of insufficient logging and monitoring is the bedrock of every major incident. Attackers rely on the lack of monitoring to achieve their goals without being detected. This issue is not easily detectable. Generally, dynamic testing would detect active response, such as being blocked. This is often not visible to tools. | There is little data on the prevalence of this issue, and so this issue has been selected by the community. | The impact of this issue is moderate to severe, due to delays in activating incident response, allowing the attacker more time to attack, and impairs understanding of what was disclosed or breached. |
 
 ## Am I vulnerable to attack?

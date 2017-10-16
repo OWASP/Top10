@@ -2,7 +2,7 @@
 
 | Threat agents/Attack vectors | Security Weakness           | Impacts               |
 | -- | -- | -- |
-| Access Lvl \| Exploitability | Prevalance \| Detectability | Technical \| Business |
+| Access Lvl \| Exploitability | Prevalence \| Detectability | Technical \| Business |
 | Exploitation of deserialization is somewhat difficult, as although there are off the shelf exploits, these rarely work without changes or tweaks to the underlying exploit code. This issue can be discovered by tools, but is not easily verifiable due to backported patches or hidden headers. | There is currently little data on deserialization as yet, but if it was tested more frequently, this issue could easily be a future A1:2020 risk. | The impact of deserialization cannot be understated - it is responsible for the Equifax breach affecting the sensitive personal identifying and financial information of over 150 million people. Deserialization typically allows the attacker to run arbitrary code on the server. |
 
 ## Am I vulnerable to attack?

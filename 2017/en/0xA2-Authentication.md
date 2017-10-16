@@ -2,7 +2,7 @@
 
 | Threat agents/Attack vectors | Security Weakness           | Impacts               |
 | -- | -- | -- |
-| Access Lvl \| Exploitability | Prevalance \| Detectability | Technical \| Business |
+| Access Lvl \| Exploitability | Prevalence \| Detectability | Technical \| Business |
 | Attackers have access to hundreds of millions of valid username and password combinations for credential stuffing, default administrative account lists, automated brute force and dictionary attack tools, and advanced GPU cracking tools. | Every application that does not support multi-factor authentication, rate limit login calls, or risk based login controls is vulnerable to attack | Attackers only have to crack access to a few accounts, or even just one administrator level account to access the data held by the system. For financial apps, this may allow money laundering; for tax apps, this might allow social security fraud or identity theft; for health apps, this might disclose legally protected highly sensitive information. |
 
 ## Am I vulnerable to attack?

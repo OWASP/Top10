@@ -2,7 +2,7 @@
 
 ## About risks
 
-During the creation of the OWASP Top 10 2017, we asked the community how they would like the issues to be presented. The overwhelming majority of respondants asked for risk-based ranking. It would be simpler for us to use prevalance only, or breach only ordering, because we have solid access data on that, but then we wouldn't be presenting risks.
+During the creation of the OWASP Top 10 2017, we asked the community how they would like the issues to be presented. The overwhelming majority of respondents asked for risk-based ranking. It would be simpler for us to use prevalence only, or breach only ordering, because we have solid access data on that, but then we wouldn't be presenting risks.
 
 ISO 31000 is the international standard for risk management. We aim to adhere to that standard, but we only include technical impact, and not business impact. Every ISO 31000 compliant organization adopting the OWASP Top 10 should add their business impact to our calculations. Why is this important? Consider the case where a CMS is used as a public website by one organization, and as a health records system by another. The data asset, risks and threats are very different, and yet the software is the same.
 
@@ -21,7 +21,7 @@ One of the long standing tensions within the information security industry is th
 | --- | --- |
 | Data asset | A data asset is something tangible processed and stored by an application or API, such as an identity store, customer database, health records, tax returns, bank or mortgage accounts, and so on. |  
 | Threat agent | Threat agents can be humans, with or or without motives, or even in some cases, scripts (such as botnets or worms). Outside of criminal prosecutions and state response, the identity of a threat actor is only important in terms of understanding the sorts of targets and actions the threat agent is likely to target to assist in forensics and incident response. |
-| Weakness | A weakness is a software architectural or design flaw or technical defect that allows a threat agent to exploit a vulnerability within the code. The likelihood of this occuring is well understood within the application security industry. |
+| Weakness | A weakness is a software architectural or design flaw or technical defect that allows a threat agent to exploit a vulnerability within the code. The likelihood of this occurring is well understood within the application security industry. |
 | Flaw | A flaw is a requirements, architecture, or design mistake that will take considerable effort to refactor or mitigate |
 | Defect | A defect is a bug or a piece of code that fails to properly use an effective control |
 | Control | A control is a piece of code, process or people that mitigates  
