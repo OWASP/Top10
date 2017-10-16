@@ -47,6 +47,7 @@ Scenario #3: An attacker attempts a denial-of-service attack by including a pote
 ```
   <!ENTITY xxe SYSTEM "file:///dev/random" >]>
 ```
+
 ## References
 
 ### OWASP
@@ -59,4 +60,5 @@ Scenario #3: An attacker attempts a denial-of-service attack by including a pote
 
 ### External
 
+* [CWE-611 Improper Restriction of XXE](https://cwe.mitre.org/data/definitions/611.html)
 * [Billion Laughs Attack](https://en.wikipedia.org/wiki/Billion_laughs_attack)
