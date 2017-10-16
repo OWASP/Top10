@@ -1,14 +1,10 @@
 # A5 Security Misconfiguration
 
-| Factor | Score | Description |
+| Threat agents/Attack vectors | Security Weakness           | Impacts               |
 | -- | -- | -- |
-| Threat agent | ? | Anonymous attackers can access default accounts, unused pages, unpatched flaws, unprotected files and directories, etc. to gain unauthorized access to or knowledge of the system. |
-| Exploitability | EASY (3) | Security misconfiguration can happen at any level of an application stack, including the platform, web server, application server, database, frameworks, and custom code. |
-| Prevalence | PERVASIVE (4) | Misconfiguration is the top issue in our data. |
-| Detectability | EASY (3) | Automated scanners are useful for detecting misconfigurations, use of default accounts or configs, unnecessary services, or legacy systems. |
-| Impact | MODERATE (2) | Such flaws frequently give attackers unauthorized access to some system data or functionality. Occasionally, such flaws result in a complete system compromise. |
-| Business impacts | ? | The business impact is application specific, and depends on the classification and protection needs of your application and data. |
-| Score | 6.0 | MEDIUM |
+| Access Lvl \| Exploitability | Prevalance \| Detectability | Technical \| Business |
+| Even Anonymous attackers access default accounts, unused pages, unpatched flaws, unprotected files and directories, etc. to gain unauthorized access to or knowledge of the system. | Security misconfiguration can happen at any level of an application stack, including the platform, web server, application server, database, frameworks, and custom code. Automated scanners are useful for detecting  misconfigurations, use of default accounts or configs, unnecessary services, legacy options etc. | Such flaws frequently give attackers unauthorized access to some system data or functionality. Occasionally, such flaws result in a complete system compromise. The business impact depends on the protection needs of your application and data. |
+
 
 ## Am I vulnerable to attack?
 

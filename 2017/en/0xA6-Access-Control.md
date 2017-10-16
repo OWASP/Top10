@@ -1,14 +1,9 @@
 # A6 Access Control
 
-| Factor | Score | Description |
+| Threat agents/Attack vectors | Security Weakness           | Impacts               |
 | -- | -- | -- |
-| Threat agent | ? | The threat agent is app specific, and depends on access, motive, and goals against the data asset. |
-| Exploitability | MODERATE (2) | Exploitation of access control is a core skill of penetration testers. SAST and DAST tools can detect the abscense of access control, but not verify if it is functional. |
-| Prevalence | COMMON (2) | Access control weaknesses are common due to the lack of automated detection, and lack of effective functional testing by application developers. |
-| Detectability | AVERAGE (2) | Access control is detectable using manual means, or possibly through automation for the abscence of access controls in certain frameworks. |
-| Impact | SEVERE (3) | The technical impact is anonymous attackers acting as users or administrators, users using privileged functions, or creating, accessing, updating or deleting every record. |
-| Business impacts | ? | The business impact is application specific, and depends on the classification and protection needs of your application and data. |
-| Score | 6.0 | MEDIUM |
+| Access Lvl \| Exploitability | Prevalance \| Detectability | Technical \| Business |
+| Exploitation of access control is a core skill of penetration testers. SAST and DAST tools can detect the abscense of access control, but not verify if it is functional. Access control is detectable using manual means, or possibly through automation for the abscence of access controls in certain frameworks. | Access control weaknesses are common due to the lack of automated detection, and lack of effective functional testing by application developers. | The technical impact is anonymous attackers acting as users or administrators, users using privileged functions, or creating, accessing, updating or deleting every record. |
 
 ## Am I vulnerable to attack?
 

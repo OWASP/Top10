@@ -1,18 +1,13 @@
 # A8 Deserialization
 
-| Factor | Score | Description |
+| Threat agents/Attack vectors | Security Weakness           | Impacts               |
 | -- | -- | -- |
-| Threat agent | ? | The threat agent is app specific, and depends on access, motive, and goals against the data asset. |
-| Exploitability | DIFFICULT (1) | Exploitation of deserialization is somewhat difficult, as although there are off the shelf exploits, these rarely work without changes or tweaks to the underlying exploit code. |
-| Prevalence | COMMON (2) | There is little data on the prevalence of this issue, and so this issue has been selected by the community. |
-| Detectability | AVERAGE (2) | This issue can be discovered by tools, but is not easily verifiable due to backported patches or hidden headers. The best place to detect this issue is using dependency checkers in the CI/CD platform. |
-| Impact | SEVERE (3) | The impact of this issue is severe, with remote code execution on the server where the object is de-serialized. |
-| Business impacts | ? | The business impact is application specific, and depends on the classification and protection needs of your application and data. |
-| Score | 5.0 | MEDIUM |
+| Access Lvl \| Exploitability | Prevalance \| Detectability | Technical \| Business |
+| Exploitation of deserialization is somewhat difficult, as although there are off the shelf exploits, these rarely work without changes or tweaks to the underlying exploit code. This issue can be discovered by tools, but is not easily verifiable due to backported patches or hidden headers. | There is currently little data on deserialization as yet, but if it was tested more frequently, this issue could easily be a future A1:2020 risk. | The impact of deserialization cannot be understated - it is responsible for the Equifax breach affecting the sensitive personal identifying and financial information of over 150 million people. Deserialization typically allows the attacker to run arbitrary code on the server. |
 
 ## Am I vulnerable to attack?
 
-Application architecture has changed dramatically over the last few years, with the move to "server-less" API driven mobile and single page applications, with the associated rise of functional programming frameworks and languages. This seismic shift in application architecture were accompanied by the idea of the client maintaining state, to allow theoretical simpler and more scalable functional code. However, the hallmark of application security is the location of trusted state. Security state cannot be sent to the client without some form of integrity promise. 
+Application architecture has changed dramatically over the last few years, with the move to "server-less" API driven mobile and single page applications, with the associated rise of functional programming frameworks and languages. This seismic shift in application architecture were accompanied by the idea of the client maintaining state, to allow theoretical simpler and more scalable functional code. However, the hallmark of application security is the location of trusted state. Security state cannot be sent to the client without some form of integrity promise.
 
 Applications and APIs will be vulnerable if the code:
 
@@ -40,6 +35,7 @@ Larger and high performing organizations should also consider:
 ## References
 
 ### OWASP
+
 * [OWASP Proactive Controls - Validate All Inputs](https://www.owasp.org/index.php/OWASP_Proactive_Controls#4:_Validate_All_Inputs)
 * [OWASP Application Security Verification Standard - TBA](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
 * [OWASP Cheat Sheet - Deserialization](https://www.owasp.org/index.php/Deserialization_Cheat_Sheet)

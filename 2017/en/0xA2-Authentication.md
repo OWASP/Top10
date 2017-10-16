@@ -1,15 +1,9 @@
-# A2 Authentication and Session Management
+# A2 Authentication
 
-| Factor | Score | Description |
+| Threat agents/Attack vectors | Security Weakness           | Impacts               |
 | -- | -- | -- |
-| Threat agent | ? | The threat agent is app specific, and depends on access, motive, and goals against the data asset. |
-| Exploitability | EASY (3) | Automated tools can exploit all three forms of XSS, and there are freely available exploitation frameworks. |
-| Prevalence | WIDESPREAD (3) | XSS is the second most prevalent issue in the OWASP Top 10, and is found in around two thirds of all applications. |
-| Detectability | EASY (3) | XSS can be discovered by SAST and DAST tools, as well as anyone with a browser. |
-| Impact | MODERATE (2) | The impact of XSS is moderate for reflected and DOM XSS, and severe for stored XSS, with remote code execution on the victim's browser, such as stealing credentials, sessions, or delivering malware to the victim. |
-| Business impacts | ? | The business impact is application specific, and depends on the classification and protection needs of your application and data. |
-| Score | 6.0 | MEDIUM |
-This issue is easily exploitable by manual means using freely available off the self tools and techniques. This issue is found in 40% of all assessments. The impact of exploitation is compromise of at least one targeted account, and often millions of accounts for undirected attacks.
+| Access Lvl \| Exploitability | Prevalance \| Detectability | Technical \| Business |
+| Attackers have access to hundreds of millions of valid username and password combinations for credential stuffing, default administrative account lists, automated brute force and dictionary attack tools, and advanced GPU cracking tools. | Every application that does not support multi-factor authentication, rate limit login calls, or risk based login controls is vulnerable to attack | Attackers only have to crack access to a few accounts, or even just one administrator level account to access the data held by the system. For financial apps, this may allow money laundering; for tax apps, this might allow social security fraud or identity theft; for health apps, this might disclose legally protected highly sensitive information. |
 
 ## Am I vulnerable to attack?
 

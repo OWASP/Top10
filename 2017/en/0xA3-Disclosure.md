@@ -1,14 +1,9 @@
 # A3 Sensitive Data Exposure
 
-| Factor | Score | Description |
+| Threat agents/Attack vectors | Security Weakness           | Impacts               |
 | -- | -- | -- |
-| Threat agent | ? | The threat agent is app specific, and depends on access, motive, and goals against the data asset. |
-| Exploitability | AVERAGE (2) | Manual attack is generally required. This is a core skill of penetration testers and motivated attackers. |
-| Prevalence | WIDESPREAD (3) | Over the last few years, this has been the most common impactful attack, with credit reporting agency breaches of over 150 million records of the most sensitive data possible, the Yahoo breach of over a billion accounts. |
-| Detectability | AVERAGE (2) | Manual steps are required to characterize sensitive or legally controlled personally identifiable information, but automated tools can be used to find likely issues. |
-| Impact | SEVERE (3) | Failure frequently compromises all data that should have been protected. Typically, this information includes sensitive personal information (PII) data such as health records, credentials, personal data, credit cards, which often requires protection as defined by laws or regulations such as the EU GDPR or local privacy laws. |
-| Business impacts | ? | The business impact is application specific, and depends on the classification and protection needs of your application and data. |
-| Score | 7.0 | HIGH |
+| Access Lvl \| Exploitability | Prevalance \| Detectability | Technical \| Business |
+| Manual attack is generally required. This is a core skill of penetration testers and motivated attackers.| Over the last few years, this has been the most common impactful attack, with credit reporting agency breaches of over 150 million records of the most sensitive data possible, the Yahoo breach of over a billion accounts. Manual steps are required to characterize sensitive or legally controlled personally identifiable information, but automated tools can be used to find likely issues. | Failure frequently compromises all data that should have been protected. Typically, this information includes sensitive personal information (PII) data such as health records, credentials, personal data, credit cards, which often requires protection as defined by laws or regulations such as the EU GDPR or local privacy laws. |
 
 ## Am I vulnerable to attack?
 
@@ -24,7 +19,9 @@ The first thing you have to determine are the protection needs of all applicatio
 And more … For a more complete set of problems to avoid, see ASVS areas Crypto (V7), Data Protection (V9), and SSL/TLS (V10).
 
 ## How do I prevent
+
 Do the following, at a minimum and consult the references:
+
 * Make sure you encrypt all sensitive data at rest or transferred via clients, e.g. cookies, tokens.
 * Encrypt all data in transit on application layer at least if any sensitive data may be transferred, e.g using TLS. Enforce this using directives like HTTP Strict Transport Security (HSTS).
 * Don't store sensitive data unnecessarily. Discard it as soon as possible. Data you don't retain can't be stolen.

@@ -1,23 +1,25 @@
 # A7 Cross Site Scripting
 
-| Factor | Score | Description |
+| Threat agents/Attack vectors | Security Weakness           | Impacts               |
 | -- | -- | -- |
-| Threat agent | ? | The threat agent is app specific, and depends on access, motive, and goals against the data asset. |
-| Exploitability | EASY (3) | Automated tools can exploit all three forms of XSS, and there are freely available exploitation frameworks. |
-| Prevalence | WIDESPREAD (3) | XSS is the second most prevalent issue in the OWASP Top 10, and is found in around two thirds of all applications. |
-| Detectability | EASY (3) | XSS can be discovered by SAST and DAST tools, as well as anyone with a browser. |
-| Impact | MODERATE (2) | The impact of XSS is moderate for reflected and DOM XSS, and severe for stored XSS, with remote code execution on the victim's browser, such as stealing credentials, sessions, or delivering malware to the victim. |
-| Business impacts | ? | The business impact is application specific, and depends on the classification and protection needs of your application and data. |
-| Score | 6.0 | MEDIUM |
+| Access Lvl \| Exploitability | Prevalance \| Detectability | Technical \| Business |
+| Automated tools can detect and exploit all three forms of XSS, and there are freely available exploitation frameworks. | XSS is the second most prevalent issue in the OWASP Top 10, and is found in around two thirds of all applications. | The impact of XSS is moderate for reflected and DOM XSS, and severe for stored XSS, with remote code execution on the victim's browser, such as stealing credentials, sessions, or delivering malware to the victim. |
 
 ## Am I vulnerable to attack?
 
-You are vulnerable to Server XSS if your server-side code uses user-supplied input as part of the HTML output, and you don't use context-sensitive escaping to ensure it cannot run. If a web page uses JavaScript to dynamically add attacker-controllable data to a page, you may have Client XSS. Ideally, you would avoid sending attacker-controllable data to unsafe JavaScript APIs, but escaping (and to a lesser extent) input validation can be used to make this safe.
+Three are three forms of XSS:
 
-Automated tools can find some XSS problems automatically. 
-However, each application builds output pages differently and uses different browser side interpreters such as JavaScript, ActiveX, Flash, and Silverlight, usually using 3rd party libraries built on top of these technologies. 
-This diveristy makes automated detection difficult, particularly when using modern single-page applications and powerful JavaScript frameworks and libraries. 
-Therefore, complete coverage requires a combination of manual code review and penetration testing, in addition to automated approaches.
+* **Reflected XSS**. If your application or API includes unsanitized user input as part of HTML output, and this is not validated or escaped, or there is no content security policy, the victim's browser will execute the attacker's arbitrary HTML or JavaScript content. Typically the user will need to interact with a link, or some other attacker controlled page, such as a watering hole attack such as malvertizing or similar. 
+* **Stored XSS** If your application or API stores unsanitized user input, and then this is viewed at a later time by another user or an administrator, the attacker can run arbitrary HTML or JavaScript on the victim user or administrator's browser. As the impact is higher, stored XSS is often considered a high or critical risk. 
+* **DOM XSS**. Modern JavaScript frameworks and single page applications and APIs that dynamically include attacker-controllable data to a page, are vulnerable to DOM XSS. Ideally, you would avoid sending attacker-controllable data to unsafe JavaScript APIs, but context aware escaping, input validation and content security policies can reduce the likelihood of all three forms of XSS.
+
+Typical XSS attacks include session stealing, account takeover, MFA bypass, DIV replacement or defacement (such as trojan login DIVs), attacks against the user's browser such as malicious software downloads, key logging, and other client side attacks.
+
+Automated tools can find some XSS problems automatically, particularly in mature technologies such as PHP, J2EE / JSP, and ASP.NET. However, each application builds output pages differently and uses different browser side interpreters such as JavaScript, usually using third party libraries built on top of these technologies. This diversity makes automated detection difficult, particularly when using single-page applications and modern JavaScript frameworks and libraries, particularly if automated tools have not caught up with the new library, or if testers are unfamiliar with DOM XSS.
+
+Development teams seeking to assess if they have cross site scripting should always use the latest frameworks, which typically aim to prevent XSS as a bug class. Deeper verification requires a combination of skilled penetration testing and manual source code review.
+
+Large and high performing organizations should consider the use of automated SAST tools to inspect their source integrated into the CI/CD pipeline, along with automated scripted DAST tools such as OWASP Zap, scanning every build of every application in the portfolio to discover easily discovered flaws with every build. Although not a complete panacea, automated testing has a place in larger organizations where penetration tests after each build or manual source code review is impractical.
 
 ## How do I prevent
 
@@ -45,13 +47,18 @@ Note that attackers can also use XSS to defeat any automated CSRF defense the ap
 ## References
 
 ### OWASP
-* [OWASP Proactive Controls - TBA]()
-* [OWASP Application Security Verification Standard - TBA]()
-* [OWASP Testing Guide: 1st 3 Chapters on Data Validation Testing]()
-* OWASP Types of Cross-Site Scripting
-* OWASP XSS Prevention Cheat Sheet
-* OWASP DOM based XSS Prevention Cheat Sheet
-* OWASP XSS Filter Evasion Cheat Sheet
+
+* [OWASP Proactive Controls - #3 Encode Data](https://www.owasp.org/index.php/OWASP_Proactive_Controls#tab=OWASP_Proactive_Controls_2016)
+* [OWASP Proactive Controls - #4 Validate Data](https://www.owasp.org/index.php/OWASP_Proactive_Controls#tab=OWASP_Proactive_Controls_2016)
+* [OWASP Application Security Verification Standard - V5](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project)
+* [OWASP Testing Guide: Testing for Reflected XSS](https://www.owasp.org/index.php/Testing_for_Reflected_Cross_site_scripting_(OTG-INPVAL-001))
+* [OWASP Testing Guide: Testing for Stored XSS](https://www.owasp.org/index.php/Testing_for_Stored_Cross_site_scripting_(OTG-INPVAL-002))
+* [OWASP Testing Guide: Testing for DOM XSS](https://www.owasp.org/index.php/Testing_for_DOM-based_Cross_site_scripting_(OTG-CLIENT-001))
+* [OWASP XSS Prevention Cheat Sheet](https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet)
+* [OWASP DOM based XSS Prevention Cheat Sheet](https://www.owasp.org/index.php/DOM_based_XSS_Prevention_Cheat_Sheet)
+* [OWASP XSS Filter Evasion Cheat Sheet](https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet)
+
 ### External
-* CWE Entry 79 on Cross-Site Scripting
-* Do we have a non-vendor reference for this? [PortSwigger: Client-side template injection](https://portswigger.net/knowledgebase/issues/details/00200308_clientsidetemplateinjection)
+
+* [CWE-79: Improper neutralization of user supplied input](https://cwe.mitre.org/data/definitions/79.html)
+* [PortSwigger: Client-side template injection](https://portswigger.net/knowledgebase/issues/details/00200308_clientsidetemplateinjection)
