@@ -42,18 +42,21 @@ This changes the meaning of both queries to return all the records from the acco
 ## References
 
 ### OWASP
-* [OWASP Proactive Controls - TBA]()
-* [OWASP Application Security Verification Standard - TBA]()
-* [OWASP Testing Guide: Chapter on SQL Injection Testing]()
-* [OWASP SQL Injection Prevention Cheat Sheet]()
-* [OWASP Query Parameterization Cheat Sheet]()
-* [OWASP Command Injection Article]()
-* [OWASP XXE Prevention Cheat Sheet]()
+
+* [OWASP Proactive Controls - Parameterize Queries](https://www.owasp.org/index.php/OWASP_Proactive_Controls#2:_Parameterize_Queries)
+* [OWASP Application Security Verification Standard - V5 Input Validation and Encoding](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project)
+* [OWASP Testing Guide: Testing for SQL Injection](https://www.owasp.org/index.php/Testing_for_SQL_Injection_(OTG-INPVAL-005))
+* [OWASP Testing Guide: Testing for Command Injection](https://www.owasp.org/index.php/Testing_for_Command_Injection_(OTG-INPVAL-013))
+* [OWASP Testing Guide: Testing for ORM injection](https://www.owasp.org/index.php/Testing_for_ORM_Injection_(OTG-INPVAL-007))
+* [OWASP SQL Injection Prevention Cheat Sheet](https://www.owasp.org/index.php/SQL_Injection_Prevention_Cheat_Sheet)
+* [OWASP Injection Cheat Sheet for Java](https://www.owasp.org/index.php/Injection_Prevention_Cheat_Sheet_in_Java)
+* [OWASP Query Parameterization Cheat Sheet](https://www.owasp.org/index.php/Query_Parameterization_Cheat_Sheet)
+* [OWASP Command Injection Defense Cheat Sheet](https://www.owasp.org/index.php/Command_Injection_Defense_Cheat_Sheet)
 
 ### External
-* [CWE Entry 77 on Command Injection]()
-* [CWE Entry 89 on SQL Injection]()
-* [CWE Entry 564 on Hibernate Injection]()
-* [CWE Entry 611 on Improper Restriction of XXE]()
-* [CWE Entry 917 on Expression Language Injection]()
-* Do we have a non-vendor reference for this? [PortSwigger: Server-side template injection](https://portswigger.net/knowledgebase/issues/details/00101080_serversidetemplateinjection)
+
+* [CWE-77 Command Injection](https://cwe.mitre.org/data/definitions/77.html)
+* [CWE-89 SQL Injection](https://cwe.mitre.org/data/definitions/89.html)
+* [CWE-564 Hibernate Injection](https://cwe.mitre.org/data/definitions/564.html)
+* [CWE-917 Expression Language Injection](https://cwe.mitre.org/data/definitions/917.html)
+* [PortSwigger: Server-side template injection](https://portswigger.net/knowledgebase/issues/details/00101080_serversidetemplateinjection)
