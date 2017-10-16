@@ -417,22 +417,23 @@
 <h2 id="references">References</h2>
 <h3 id="owasp">OWASP</h3>
 <ul>
-<li><a href="">OWASP Proactive Controls - TBA</a></li>
-<li><a href="">OWASP Application Security Verification Standard - TBA</a></li>
-<li><a href="">OWASP Testing Guide: Chapter on SQL Injection Testing</a></li>
-<li><a href="">OWASP SQL Injection Prevention Cheat Sheet</a></li>
-<li><a href="">OWASP Query Parameterization Cheat Sheet</a></li>
-<li><a href="">OWASP Command Injection Article</a></li>
-<li><a href="">OWASP XXE Prevention Cheat Sheet</a></li>
+<li><a href="https://www.owasp.org/index.php/OWASP_Proactive_Controls#2:_Parameterize_Queries">OWASP Proactive Controls - Parameterize Queries</a></li>
+<li><a href="https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project">OWASP Application Security Verification Standard - V5 Input Validation and Encoding</a></li>
+<li><a href="https://www.owasp.org/index.php/Testing_for_SQL_Injection_(OTG-INPVAL-005)">OWASP Testing Guide: Testing for SQL Injection</a></li>
+<li><a href="https://www.owasp.org/index.php/Testing_for_Command_Injection_(OTG-INPVAL-013)">OWASP Testing Guide: Testing for Command Injection</a></li>
+<li><a href="https://www.owasp.org/index.php/Testing_for_ORM_Injection_(OTG-INPVAL-007)">OWASP Testing Guide: Testing for ORM injection</a></li>
+<li><a href="https://www.owasp.org/index.php/SQL_Injection_Prevention_Cheat_Sheet">OWASP SQL Injection Prevention Cheat Sheet</a></li>
+<li><a href="https://www.owasp.org/index.php/Injection_Prevention_Cheat_Sheet_in_Java">OWASP Injection Cheat Sheet for Java</a></li>
+<li><a href="https://www.owasp.org/index.php/Query_Parameterization_Cheat_Sheet">OWASP Query Parameterization Cheat Sheet</a></li>
+<li><a href="https://www.owasp.org/index.php/Command_Injection_Defense_Cheat_Sheet">OWASP Command Injection Defense Cheat Sheet</a></li>
 </ul>
 <h3 id="external">External</h3>
 <ul>
-<li><a href="">CWE Entry 77 on Command Injection</a></li>
-<li><a href="">CWE Entry 89 on SQL Injection</a></li>
-<li><a href="">CWE Entry 564 on Hibernate Injection</a></li>
-<li><a href="">CWE Entry 611 on Improper Restriction of XXE</a></li>
-<li><a href="">CWE Entry 917 on Expression Language Injection</a></li>
-<li>Do we have a non-vendor reference for this? <a href="https://portswigger.net/knowledgebase/issues/details/00101080_serversidetemplateinjection">PortSwigger: Server-side template injection</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/77.html">CWE-77 Command Injection</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/89.html">CWE-89 SQL Injection</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/564.html">CWE-564 Hibernate Injection</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/917.html">CWE-917 Expression Language Injection</a></li>
+<li><a href="https://portswigger.net/knowledgebase/issues/details/00101080_serversidetemplateinjection">PortSwigger: Server-side template injection</a></li>
 </ul>
 <h1 id="a2-authentication">A2 Authentication</h1>
 <table style="width:12%;">
@@ -559,7 +560,7 @@
 <h2 id="example-scenarios-2">Example Scenarios</h2>
 <p>Scenario #1: An application encrypts credit card numbers in a database using automatic database encryption. However, this data is automatically decrypted when retrieved, allowing an SQL injection flaw to retrieve credit card numbers in clear text. Alternatives include not storing credit card numbers, using tokenization, or using public key encryption.</p>
 <p>Scenario #2: A site simply doesn't use or enforce TLS for all pages, or if it supports weak encryption. An attacker simply monitors network traffic, strips or intercepts the TLS (like an open wireless network), and steals the user's session cookie. The attacker then replays this cookie and hijacks the user's (authenticated) session, accessing or modifying the user's private data. Instead of the above he could also alter all transported data, e.g. the recipient of a money transfer.</p>
-<p>Scenario #3: The password database uses unsalted hashes to store everyone's passwords. A file upload flaw allows an attacker to retrieve the password database. All of the unsalted hashes can be exposed with a rainbow table of precalculated hashes.</p>
+<p>Scenario #3: The password database uses unsalted hashes to store everyone's passwords. A file upload flaw allows an attacker to retrieve the password database. All the unsalted hashes can be exposed with a rainbow table of pre-calculated hashes.</p>
 <h2 id="references-2">References</h2>
 <h3 id="owasp-2">OWASP</h3>
 <ul>
@@ -649,6 +650,7 @@
 </ul>
 <h3 id="external-3">External</h3>
 <ul>
+<li><a href="https://cwe.mitre.org/data/definitions/611.html">CWE-611 Improper Restriction of XXE</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Billion_laughs_attack">Billion Laughs Attack</a></li>
 </ul>
 <h1 id="a5-security-misconfiguration">A5 Security Misconfiguration</h1>
@@ -1223,40 +1225,44 @@ Note that attackers can also use XSS to defeat any automated CSRF defense the ap
 <p>Starting the application security journey can feel overwhelming. A key takeaway is that you can't review your way to building a bridge; at some point you must build it. Let's ensure that security is deeply esconced within the organization, and aligned with organizational objectives.</p>
 <h1 id="a-whats-next-for-application-managers">+A: What's next for Application Managers</h1>
 <h2 id="manage-the-full-application-lifecycle">Manage the full Application Lifecycle</h2>
-<p>Applications are quite complex today. So the IT management for an application should be done by an IT specialist who is responsible for the overall IT lifecycle of an application. OWASP recommends that organizations establish a role of application managers for every application. He is the technical counterpart of the application owner from business perspective and manages the full application lifecycle, he is also in charge of the security of an application and its documentation. Therefore he works together with the organizations security specialists. The following lists some of the key activities focusing on security related activities.<br />
-All activities are generic and should be adopted to your local situation. Sometimes the first five activities are also named Project Manager:</p>
-<h3 id="requirements-and-resource-mgmt">Requirements and Resource Mgmt</h3>
+<p>Applications are some of the most complex systems humans regularly create and maintain. IT management for an application should be performed by IT specialists who are responsible for the overall IT lifecycle of an application. Today's use of continuous integration and continuous deployment, with DevSecOps, often pushing many builds every day, is a far cry from waterfall staged practices common during the original OWASP Top 10 in 2003.</p>
+<p>It might be tempting to build a huge security organization, but generally, we consider embedding security as team members who are peers to developers, architects, and business owners is the fastest way to build and enable secure business. Application security must scale and become agile, by adopting the tools and practices already universal in most organizations.</p>
+<p>OWASP recommends that organizations include security - building it in - rather than trying to test for security issues at the end. Advisory security - where security teams sit to the side and tell developers how their applications is a failed paradigm, and one of the reasons we have had such terrible breaches - we simply can't scale to the number of applications present in most organizations, and so few are built securely, let alone tested.</p>
+<h2 id="responsible-accountability-informed-and-consulted">Responsible, accountability, informed and consulted</h2>
+<p>Security needs to be the responsibility of a single individual or group, whether that's the application owner, application managers, security team or for small teams, a developer with interest in security. Whomever is responsible needs to have the authority to add security functional and non-functional requirements into the application, ensure that they are verified throughout the development, build, and operational phases. Where agile is used, the DevSecOps team might take over the operational aspects, but without some form of responsibility and authority, security is doomed to fail.</p>
+<p>We suggest establishing application managers and or application owners for every application. The application manager is the technical counterpart of the application owner from business perspective and manages the full application lifecycle, including the security of an application, associate data assets, and documentation. Application managers work together with the organization's security specialists.</p>
+<h2 id="requirements-and-resource-management">Requirements and Resource Management</h2>
 <ul>
-<li>Collect and negotiate the business requirements for an application with the future application owner, including receiving the protection requirements in regard to confidentiality, integrity and availability</li>
-<li>Compile the technical requirements including functional and non functional security requirements.</li>
-<li>Plan and negotiate the budget that the future application owner spends</li>
+<li>Collect and negotiate the business requirements for an application with the business, including receiving the protection requirements in regard to confidentiality, integrity and availability of all data assets</li>
+<li>Compile the technical requirements including functional and non functional security requirements</li>
+<li>Plan and negotiate the budget that covers all aspects of design, build, testing and operation, including security activities.</li>
 </ul>
-<h3 id="request-for-proposals-rfp-and-contracting">Request for Proposals (RFP) and Contracting</h3>
+<h2 id="request-for-proposals-rfp-and-contracting">Request for Proposals (RFP) and Contracting</h2>
 <ul>
 <li>Negotiate with internal or external developers the requirements, including guidelines and security requirements with respect to your security program, e.g. SDLC, best practices</li>
 <li>Rate the fulfillment of all technical requirements including a rough planning and design</li>
 <li>Negotiate all technical requirements including design, security and service level agreements (SLA)</li>
-<li>Consider to use templates and checklists, e.g. OWASP Secure Software Contract Annex</li>
+<li>Consider to use templates and checklists, such as <a href="https://www.owasp.org/index.php/OWASP_Secure_Software_Contract_Annex">OWASP Secure Software Contract Annex</a>.</li>
 </ul>
-<h3 id="planning-and-design">Planning and Design</h3>
+<p><strong>NB:</strong> Please note that the Annex is a sample specific to US contract law, and is likely to need legal review in your jurisdiction. Please consult qualified legal advice before using the Annex.</p>
+<h2 id="planning-and-design">Planning and Design</h2>
 <ul>
 <li>Negotiate planning and design with the developers and internal shareholders, e.g. security specialists</li>
 <li>Compile a security concept (e.g. architecture, measures) according the protection needs and the planned environmental security level. This should be supported by security specialists. Get the application owner to assume remaining risks or to provide additional resources.</li>
 <li>Plan the quality gates for the development including security gates</li>
 </ul>
-<h3 id="development">Development</h3>
+<h2 id="development">Development</h2>
+<p>Please review the +D &quot;What's next for developers&quot; for guidance.</p>
+<h2 id="deployment-testing-and-rollout">Deployment, Testing and Rollout</h2>
+<p>It's critical that security tasks</p>
 <ul>
-<li>Accompany the development (see +D)</li>
-</ul>
-<h3 id="deployment-testing-and-rollout">Deployment, Testing and Rollout</h3>
-<ul>
-<li>Coordinate the secure setup of the application, interfaces and of all further components needed, including required authorizations</li>
+<li>Automated the secure setup of the application, interfaces and of all further components needed, including required authorizations</li>
 <li>Test the technical functions and integration to the IT architecture, coordinate business tests. Consider to test use and abuse cases from technical and business perspectives.</li>
 <li>Manage security tests according to internal processes, the protection needs and the level of security where the application is going to be</li>
 <li>Put the application in operation and migrate form previously used applications</li>
-<li>Finalize all documentation, including in CMDB and the security concept.  </li>
+<li>Finalize all documentation, including the CMDB and security architecture.</li>
 </ul>
-<h3 id="operating-and-changes">Operating and Changes</h3>
+<h2 id="operating-and-changes">Operating and Changes</h2>
 <ul>
 <li>Operating including the security management for the application (e.g. patch management)</li>
 <li>Regularly report all users and authorizations to the application owner and get them acknowledged</li>
@@ -1264,15 +1270,18 @@ All activities are generic and should be adopted to your local situation. Someti
 <li>Plan and manage changes, e.g. migrate to new versions of the application or other components like OS, middleware and libraries</li>
 <li>Update all documentation, including in CMDB and the security concept.</li>
 </ul>
-<h3 id="closing-down">Closing Down</h3>
+<h2 id="retiring-systems">Retiring systems</h2>
+<p>An often overlooked system</p>
 <ul>
 <li>Regard any requirements for archiving data</li>
 <li>Securely close down the application, incl. delete unused accounts and authorization</li>
 <li>Set your application’s state to retired in the CMDB</li>
 </ul>
-<p>\newpage</p>
-<h1 id="appendix-a-glossary">Appendix A: Glossary</h1>
+<h2 id="references-10">References</h2>
 <ul>
+<li><p>Agile Application Security - Enabling Security in a Continuous Delivery Pipeline, Bell, Bruntun-Spall, Bird, and Smith. September 2017. O'Reilly. <a href="http://shop.oreilly.com/product/0636920045106.do" class="uri">http://shop.oreilly.com/product/0636920045106.do</a><br />
+\newpage</p>
+<h1 id="appendix-a-glossary">Appendix A: Glossary</h1></li>
 <li><strong>2FA</strong> – Two-factor authentication(2FA) adds a second level of authentication to an account log-in.</li>
 <li><strong>Address Space Layout Randomization (ASLR)</strong> – A technique to make exploiting memory corruption bugs more difficult.</li>
 <li><strong>Application Security</strong> – Application-level security focuses on the analysis of components that comprise the application layer of the Open Systems Interconnection Reference Model (OSI Model), rather than focusing on for example the underlying operating system or connected networks.</li>
@@ -1312,7 +1321,7 @@ All activities are generic and should be adopted to your local situation. Someti
 <li><strong>User acceptance testing (UAT)</strong>– Traditionally a test environment that behaves like the production environment where all software testing is performed before going live.</li>
 <li><strong>Verifier</strong> – The person or team that is reviewing an application against the OWASP ASVS requirements.</li>
 <li><strong>Whitelist</strong> – A list of permitted data or operations, for example a list of characters that are allowed to perform input validation.</li>
-<li><strong>X.509 Certificate</strong> – An X.509 certificate is a digital certificate that uses the widely accepted international X.509 public key infrastructure (PKI) standard to verify that a public key belongs to the user, computer or service identity contained within the certificate.</li>
+<li><p><strong>X.509 Certificate</strong> – An X.509 certificate is a digital certificate that uses the widely accepted international X.509 public key infrastructure (PKI) standard to verify that a public key belongs to the user, computer or service identity contained within the certificate.</p></li>
 </ul>
 <p>\newpage</p>
 <h1 id="appendix-b-references">Appendix B: References</h1>
