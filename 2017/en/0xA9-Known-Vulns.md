@@ -39,7 +39,7 @@ Components almost always run with the full privilege of the application, so flaw
 
 The [2017 Equifax breach](https://arstechnica.com/information-technology/2017/09/massive-equifax-breach-caused-by-failure-to-patch-two-month-old-bug/) was caused by [CVE-2017-5638](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5638), a Struts 2 remote code execution vulnerability that enables execution of arbitrary code on the server.
 
-While [internet of things (IoT)](https://en.wikipedia.org/wiki/Internet_of_things) are frequently difficult to patch the importance of patching them can be great (eg: [St. Jude pacemakers](http://www.zdnet.com/article/fda-forces-st-jude-pacemaker-recall-to-patch-security-vulnerabilities/)).
+While [internet of things (IoT)](https://en.wikipedia.org/wiki/Internet_of_things) are frequently difficult to patch, the importance of patching them can be great (eg: [St. Jude pacemakers](http://www.zdnet.com/article/fda-forces-st-jude-pacemaker-recall-to-patch-security-vulnerabilities/)).
 
 There are now tools to help attackers find unpatched systems. For example, the Shodan IoT search engine can help you [find devices](https://www.shodan.io/report/89bnfUyJ) that still suffer from the [Heartbleed vulnerability](https://en.wikipedia.org/wiki/Heartbleed) that was patched in April 2014.
 ## References
