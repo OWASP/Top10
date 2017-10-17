@@ -3,25 +3,30 @@
 | Threat agents/Attack vectors | Security Weakness           | Impacts               |
 | -- | -- | -- |
 | Access Lvl \| Exploitability | Prevalence \| Detectability | Technical \| Business |
-| Consider anyone who can send untrusted data to the system sends simple text-based attacks that exploit the syntax of the targeted interpreter. Almost any source of data can be an injection vector, including internal sources. | Injection flaws occur when an application sends untrusted data to an interpreter. Injection flaws are very prevalent, particularly in legacy code.  They are often found in SQL, LDAP, XPath, or NoSQL queries; OS commands; XML parsers, SMTP Headers, expression languages, etc. Injection flaws are easy to discover when examining code, but frequently hard to discover via testing. Scanners and fuzzers can help attackers find injection flaws. | Injection can result in data loss or corruption, lack of accountability, or denial of access. Injection can sometimes lead to complete host takeover. The business impact depends on the protection needs of your application and data. |
+| Almost any source of data can be an injection vector, including users, parameters, external and internal web services, and all types of users. | Injection flaws occur when an attacker can send hostile data to an interpreter. Injection flaws are very prevalent, particularly in legacy code. They are often found in SQL, LDAP, XPath, or NoSQL queries; OS commands; XML parsers, SMTP Headers, expression languages, etc. Injection flaws are easy to discover when examining code, but frequently hard to discover via testing. Scanners and fuzzers can help attackers find injection flaws. | Injection can result in data loss or corruption, lack of accountability, or denial of access. Injection can sometimes lead to complete host takeover. The business impact depends on the protection needs of your application and data. |
 
 ## Am I vulnerable to attack?
 
-The best way to find out if an application is vulnerable to injection is to verify that all use of interpreters clearly separates untrusted data from the command or query. In many cases, it is recommended to avoid the interpreter, or disable it (e.g., XXE), if possible. For SQL calls, use bind variables in all prepared statements and stored procedures, or avoid dynamic queries.
+An application is vulnerable to attack where:
 
-Checking the code is a fast and accurate way to see if the application uses interpreters safely. Code analysis tools can help a security analyst find use of interpreters and trace data flow through the application. Penetration testers can validate these issues by crafting exploits that confirm the vulnerability.
+* User suppled data is not validated, filtered or sanitized by the application
+* Hostile data is used directly with dynamic queries or non-parameterized calls for the interpreter without context-aware escaping
+* Hostile data is directly used or concenated, such that the SQL or command contains both structure and hostile data either in dynamic queries or in stored procedures. 
 
-Automated dynamic scanning which exercises the application may provide insight into whether some exploitable injection flaws exist. Scanners cannot always reach interpreters and have difficulty detecting whether an attack was successful. Poor error handling makes injection flaws easier to discover.
+Large organizations and high performing organizations should include SAST and DAST tooling into the CI/CD pipeline, to alert if existing or newly checked in code has injection prior to production deployment. Manual and automated source code is the best method of detecting if you are vulnerable to injections, closely followed by thorough DAST scans of all parameters, fields, headers, cookies, JSON, and XML data inputs. 
 
 ## How do I prevent 
 
-Preventing injection requires keeping untrusted data separate from commands and queries.
+Preventing injection requires keeping data separate from commands and queries.
 
-1. The preferred option is to use a safe API which avoids the use of the interpreter entirely or provides a parameterized interface.  Be careful with APIs, such as stored procedures, that are parameterized, but can still introduce injection under the hood.
+1. The preferred option is to use a safe API which avoids the use of the interpreter entirely or provides a parameterized interface, or uses ORMs or similar. **NB:** Whilst parameterized, stored procedures can still introduce SQL injection if PL/SQL or T-SQL concatenates queries and data, or executes hostile data with EXECUTE IMMEDIATE or exec()
 
-2. If (1) is not available, you should escape special characters using the specific escape syntax for that interpreter. OWASP's Java Encoder and similar libraries provide such escaping routines.
+2. Positive or "white list" input validation, but this is not a complete defense as many applications require special characters, such as text areas or APIs for mobile applications
 
-3. Positive or "white list" input validation is also recommended, but is not a complete defense as many situations require special characters be allowed. If special characters are required, only approaches (1) and (2) above will make their use safe. 
+3. For any residual dynamic queries, escape special characters using the specific escape syntax for that interpreter. OWASP's Java Encoder and similar libraries provide such escaping routines. **NB**: SQL structure such as table names, column names, and so on cannot be escaped, and thus user-supplied structure names are dangerous. This is a common issue in report writing software. 
+
+4. Use LIMIT and other SQL controls within queries to prevent mass disclosure of records in case of SQL injection.
+
 
 ## Example Scenarios
 
