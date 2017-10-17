@@ -6,7 +6,7 @@ Application Security is not the Dark Arts, it's a highly repeatable facet of sof
 
 To that end, we suggest:
 
-* Consider reviewing your application security program against the [OWASP OpenSAMM](https://www.owasp.org/index.php/OWASP_SAMM_Project) project. This project has 12 major domains, each of which can assist with maturing any appsec program, regardless of size
+* Consider reviewing your application security program against the [OWASP SAMM](https://www.owasp.org/index.php/OWASP_SAMM_Project) project. This project has 12 major domains, each of which can assist with maturing any appsec program, regardless of size
 
 * Move left; by this we mean the old days of performing a penetration test just before (or usually after) you go live is not particularly effective if that's the entireity of your application security program. Implement security into your agile SDLC, and ensure security is just another team member that helps to enable secure business.
 

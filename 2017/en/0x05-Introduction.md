@@ -18,7 +18,7 @@ A primary aim of the OWASP Top 10 is to educate developers, designers, architect
 
 **Use tools wisely**. Security vulnerabilities can be quite complex and buried in mountains of code. In many cases, the most cost-effective approach for finding and eliminating these weaknesses is human experts armed with good tools.
 
-**Push left, right, and everywhere**. Focus on making security an integral part of your culture throughout your development organization. Find out more in the [OWASP Software Assurance Maturity Model (OpenSAMM)]().
+**Push left, right, and everywhere**. Focus on making security an integral part of your culture throughout your development organization. Find out more in the [OWASP Software Assurance Maturity Model (SAMM)]().
 
 ## Attribution
 
