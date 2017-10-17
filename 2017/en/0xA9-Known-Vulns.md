@@ -3,7 +3,7 @@
 | Threat agents/Attack vectors | Security Weakness           | Impacts               |
 | -- | -- | -- |
 | Access Lvl \| Exploitability | Prevalence \| Detectability | Technical \| Business |
-| There are off the shelf exploits for certain platforms, but typically this issue requires authentication or access to specific platform functionality. This issue is not easily detectable. due to backported patches or hidden headers. The best place to detect this issue is using dependency checkers in the CI/CD platform. | This issue is widespread, with most applications and APIs containing 200-1000+ dependencies depending on platform.| Some of the largest breaches in history abused this risk, and so depending on the data asset under protection, this might even rise to SEVERE. |
+| There are off the shelf exploits for certain platforms, but typically this issue requires authentication or access to specific platform functionality. This issue is not easily detectable due to backported patches or hidden dependencies. The best place to detect this issue is using dependency checkers in the CI/CD platform. | This issue is widespread, with most applications and APIs containing 200-1000+ dependencies depending on platform.| Some of the largest breaches in history abused this risk, and so depending on the data asset under protection, this might even rise to SEVERE. |
 
 ## Am I vulnerable to attack?
 
@@ -25,7 +25,7 @@ Most component projects do not create vulnerability patches for old versions. So
 * Only obtain your components from official sources and, when possible, prefer signed packages to reduce the chance of getting a modified, malicious component.
 * Most component projects do not create security patches for old versions. So you may need to upgrade to the next version (and rewrite the application to match, if needed). If this is not possible, deploy a [virtual patch](https://www.owasp.org/index.php/Virtual_Patching_Best_Practices#What_is_a_Virtual_Patch.3F) that analyzes HTTP traffic, data flow, or code execution and prevents vulnerabilities from being exploited.
 
-Additionally, you should ensure that there is an ongoing plan for monitoring the security of components for the lifetime of the application.
+Additionally, you should ensure that there is an ongoing plan for monitoring the security of components for the lifetime of the application. Putting in place a virtual patch solution before it is needed will minimize your time to respond.
 
 ## Example Scenarios
 
