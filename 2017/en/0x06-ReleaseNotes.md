@@ -37,6 +37,6 @@ We asked the community to provide insight into two forward looking weakness cate
 
 ## Retired, but not forgotten
 
-* **A4 Insecure direct object references** and A7 Missing function level access control. We have merged these two issues into a single access control finding, as the impacts and prevention recommendations are more or less identical. This allows us to free up room ro an additional issue, which is XXE.
+* **A4 Insecure direct object references** and A7 Missing function level access control. We have merged these two issues into a single access control finding, as the impacts and prevention recommendations are more or less identical. This allows us to free up room for an additional issue, which is XXE.
 * **A8 CSRF** - When added to the OWASP Top 10 2007, nearly every application was vulnerable to CSRF. As the weakness is now found in less than 2% of all applications, it has fallen off the bottom of the list. 
 * **A10 Unvalidated redirects and forwards**. Although this issue is a relative of XSS, and injections more broadly, the actual CWE issue has fallen out of the 10 positions available. As this issue is automatically detected by both DAST and SAST tools, we encourage organizations and vendors to keep on reporting on this issue.
