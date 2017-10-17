@@ -3,7 +3,7 @@
 
 ## OWASP Top 10 2017-master (pre-RC2)
 
-October 15, 2017
+October 17, 2017 (Andrew's birthday)
 
 DRAFT STANDARD.
 
