@@ -9,22 +9,26 @@
 
 If your application accepts XML input, especially from untrusted sources, you may be vulnerable to XXE. You need to identify each XML processor in your application and determine if [document type definitions (DTDs)](https://en.wikipedia.org/wiki/Document_type_definition) has been disabled. As the exact mechanism for disabling DTD processing varies by processor, it is recommended that you consult a reference such as the [OWASP XXE Prevention Cheat Sheet](https://www.owasp.org/index.php/XML_External_Entity_(XXE)_Prevention_Cheat_Sheet).
 
-_This statement seems weak, can we do better?_ If your application is using SOAP prior to version 1.2 it is susceptible to XXE attacks unless you have implemented specific remediations to ensure that XML entities are not being passed to the SOAP framework.
+If your application is using SOAP prior to version 1.2 it is susceptible to XXE attacks unless you have implemented specific remediations to ensure that XML entities are not being passed to the SOAP framework.
 
 ## How do I prevent
 
 Preventing XXE requires:
 
-* Ensure the latest XML processors and libraries are in use. Co
+* Implement positive ("white listing") input validation, filtering, or sanitization to prevent hostile data used within XML documents, headers, or nodes
+* Verify that XML or XSL file upload functionality validates incoming XML prior to attempt to use it
+* Ensure the latest XML processors and libraries are in use. The use of dependency checkers is critical in managing the risk from necessary libraries and components
 * Ensure the XML processor is configured by default to not parse external entities
 * Use SOAP 1.2 or later
 * Consider disabling XML DTD processing in all XML parsers in your application.
 
 Protecting against XXE attacks also protects against billion laughs denial-of-service attacks.
 
-_This statement seems weak, can we do better?_ If you are using SOAP, be sure that you are using version 1.2 or better.
+For large or high performing organizations, embedding dependency checks that break the build when a critical security vulnerability is found in a dependency is the easiest way to manage the risk from XXE in vulnerable components. Additionally, the use of SAST tools can help detect XXE in code, although manual code review and developer training is essential to identify and mitigate XXE completely. The use of advanced API gateways and WAFs that can detect XXE attack strings can also help.
 
 ## Example Scenarios
+
+Numerous public XXE issues have been discovered, including attacking embedded devices, such as the [Dell SonicWall security appliances](https://www.digitaldefense.com/ddi-six-discoveries/). XXE occurs in a lot of unexpected places, including deeply nested dependencies.
 
 Scenario #1: The attacker attempts to extract data from the server:
 
@@ -51,7 +55,7 @@ Scenario #3: An attacker attempts a denial-of-service attack by including a pote
 ## References
 
 ### OWASP
-* [OWASP Proactive Controls - TBA](https://www.owasp.org/index.php/OWASP_Proactive_Controls#3:_Encode_Data) - is this a good reference? Maybe there's no strong proactive controls reference for XXE?
+* [OWASP Proactive Controls - TBA](https://www.owasp.org/index.php/OWASP_Proactive_Controls#3:_Encode_Data) 
 * [OWASP Application Security Verification Standard](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
 * [OWASP Testing Guide - Testing for XML Injection](https://www.owasp.org/index.php/Testing_for_XML_Injection_(OTG-INPVAL-008))
 * [OWASP XXE Vulnerability](https://www.owasp.org/index.php/XML_External_Entity_(XXE)_Processing)
