@@ -7,29 +7,29 @@
 
 ## Am I vulnerable to attack?
 
-Evidence of identity, authentication and session management are critical for separating malicious unauthenticated attackers with users who you might have a legal relationship. 
+Evidence of identity, authentication and session management are critical for separating malicious unauthenticated attackers with authorized users. 
 
 Common authentication vulnerabilities include:
 
-* permits credential stuffing, which is where the attacker has a list of valid usernames and passwords
+* permits [credential stuffing](https://www.owasp.org/index.php/Credential_stuffing), which is where the attacker has a list of valid usernames and passwords
 * permits brute force or other automated attacks
 * permits default, weak or well-known passwords, such as "Password1" or "admin/admin"
 * weak or ineffectual credential recovery and forgot password processes, such as "knowledge-based answers", which cannot be made safe
 * plain text, encrypted, or weakly hashed passwords permit the rapid recovery of passwords using GPU crackers or brute force tools
-* Missing or ineffective multi-factor authentication
-
+* Missing or ineffective multi-factor authentication.
 
 ## How do I prevent
 
-* [Store passwords using a modern one way hash function](https://www.owasp.org/index.php/Password_Storage_Cheat_Sheet#Leverage_an_adaptive_one-way_function), such as Argon2, with sufficient work factor to prevent realistic GPU cracking attacks
-* Implement multi-factor authentication where possible to prevent credential stuffing, brute force, automated, and stolen credential attacks
-* Implement rate limiting to limit the impact of automated attacks, credential stuffing, brute force, and default password attacks
-* Implement weak password checks, such as testing a new password against a list of the top 10000 worst passwords
-* Do not ship with default credentials, particularly for admin users
+* Do not ship or deploy with any default credentials, particularly for admin users
+* [Store passwords using a modern one way hash function](https://www.owasp.org/index.php/Password_Storage_Cheat_Sheet#Leverage_an_adaptive_one-way_function), such as Argon2 or PBKDF2, with sufficient work factor to prevent realistic GPU cracking attacks
+* Implement weak password checks, such as testing new or changed passwords against a list of the [top 10000 worst passwords](https://github.com/danielmiessler/SecLists/tree/master/Passwords)
+* Remove outdated complexity rules and password rotation controls, replacing with NIST 800-63 controls (minimum 8 and at least 64 character length passwords. The use of password managers should not be blocked to allow advanced users to use long, random passwords 
+* Ensure registration, credential recovery, and API pathways are hardened against account enumeration attacks by using the same messages for all outcomes. 
+* Where possible, implement multi-factor authentication to prevent credential stuffing, brute force, automated, and stolen credential attacks, or as per NIST 800-63 require longer passwords (at least 12-16 characters minimum) if MFA is not an option
 * Permit users to logout, and enforce logout on the server
 * Log authentication failures, such that alerting administrators when credential stuffing, brute force or other attacks
 
-Larger organizations should consider using a federated identity product or service that includes evidence of identity, common identity attack protections, multi-factor authentication, monitoring and alerting of identity misuse.
+Large and high performing organizations should consider using a federated identity product or service that includes evidence of identity, common identity attack protections, multi-factor authentication, monitoring and alerting of identity misuse. Additionally, they may wish to implement rate limiting to limit the impact of automated attacks against APIs, such, credential oracles, credential stuffing, brute force, and default password attacks. Where the use of MFA is universal, the use of weak credential recovery such as "Questions and Answers" should be retired and data expunged from the system. 
 
 Please review the [OWASP Proactive Controls](https://www.owasp.org/index.php/OWASP_Proactive_Controls#5:_Implement_Identity_and_Authentication_Controls) for high level overview of authentication controls, or the [OWASP Application Security Verification Standard](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home), chapters V2 and V3 for a detailed set of requirements as per the risk level of your application
 
@@ -50,10 +50,15 @@ Please review the [OWASP Proactive Controls](https://www.owasp.org/index.php/OWA
 * [OWASP Testing Guide: Identity](https://www.owasp.org/index.php/Testing_Identity_Management)
 * [OWASP Testing Guide: Authentication](https://www.owasp.org/index.php/Testing_for_authentication)
 * [OWASP Authentication Cheat Sheet](https://www.owasp.org/index.php/Authentication_Cheat_Sheet)
+* [OWASP Credential Stuffing Cheat Sheet](https://www.owasp.org/index.php/Credential_Stuffing_Prevention_Cheat_Sheet)
 * [OWASP Forgot Password Cheat Sheet](https://www.owasp.org/index.php/Forgot_Password_Cheat_Sheet)
 * [OWASP Password Storage Cheat Sheet](https://www.owasp.org/index.php/Password_Storage_Cheat_Sheet)
 * [OWASP Session Management Cheat Sheet](https://www.owasp.org/index.php/Session_Management_Cheat_Sheet)
 
 ### External
+
 * [CWE-287: Improper Authentication](https://cwe.mitre.org/data/definitions/287.html)
+* [Daniel Messier - SecLists - Passwords (find the Top 10000 worst passwords here)] (https://github.com/danielmiessler/SecLists/tree/master/Passwords)
+
+Whilst no longer the main risk in this chapter, session management is foundational that must be right:
 * [CWE-384: Session Fixation](https://cwe.mitre.org/data/definitions/384.html)
