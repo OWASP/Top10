@@ -11,7 +11,10 @@ An application is vulnerable to attack where:
 
 * User suppled data is not validated, filtered or sanitized by the application
 * Hostile data is used directly with dynamic queries or non-parameterized calls for the interpreter without context-aware escaping
+* Hostile data is used within ORM search parameters such that the search evaluates out to include sensitive or all records
 * Hostile data is directly used or concenated, such that the SQL or command contains both structure and hostile data either in dynamic queries or in stored procedures. 
+
+The most common injections are SQL injection, OS command injection, ORM injection, LDAP injection, Expression Language (EL) or OGNL injection, and many more. The concept is identical between all interpreters, including HTML / JavaScript injection, also known as XSS. 
 
 Large organizations and high performing organizations should include SAST and DAST tooling into the CI/CD pipeline, to alert if existing or newly checked in code has injection prior to production deployment. Manual and automated source code is the best method of detecting if you are vulnerable to injections, closely followed by thorough DAST scans of all parameters, fields, headers, cookies, JSON, and XML data inputs. 
 
