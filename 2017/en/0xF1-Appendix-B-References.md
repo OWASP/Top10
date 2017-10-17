@@ -36,7 +36,6 @@ For a full list of projects, please see [OWASP Projects](https://www.owasp.org/i
 
 The following external sites reference the OWASP Top 10, and would likely be relevant to adopters.
 
-- [MITRE Common Weakness Enumeration - [[http://cwe.mitre.org/](http://cwe.mitre.org/)
-- [PCI Security Standards Council - [[https://www.pcisecuritystandards.org](https://www.pcisecuritystandards.org)
-- [PCI Data Security Standard (DSS) [https://www.pcisecuritystandards.org/document_library](https://www.pcisecuritystandards.org/document_library)
-
+- [MITRE Common Weakness Enumeration](http://cwe.mitre.org/)
+- [PCI Security Standards Council](https://www.pcisecuritystandards.org)
+- [PCI Data Security Standard (DSS)](https://www.pcisecuritystandards.org/document_library)
