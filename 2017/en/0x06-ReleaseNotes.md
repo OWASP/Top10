@@ -25,8 +25,6 @@ In this 2017 release, we made the following changes:
 | A9 - Known Vulnerabilities | A9:2017-Known Vulnerabilities |
 | A10 - Unvalidated redirects and forwards | A10:2017-Insufficient Logging and Monitoring [NEW, Community] |
 
-NB: Although most of these issues are weaknesses, Insufficient Logging and Monitoring is a missing or ineffective controls. It has two CWE entries, but in this case, not only did the community rank this issue, we felt if we did not include detection and response in the OWASP Top 10 2017, we'd be negligent in our duties to the wider development community. With firewalls, logging, network IPS and endpoint protection systems unable to detect web hacks, it falls on web apps themselves to be the new firewall, especially for cloud-based microservices, where there is no firewall, no IPS, and no end points.
-
 ## New issues, supported by data
 
 A4:2017-XML External Entity (XXE) is a new category primarily supported by SAST data sets, but when discovered by penetration testers and dynamic tools, this new issue allows attackers to disclose internal information, scan internal systems, and possibly perform denial of service attacks.
