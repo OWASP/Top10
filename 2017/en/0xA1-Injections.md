@@ -16,7 +16,7 @@ An application is vulnerable to attack where:
 
 The most common injections are SQL injection, OS command injection, ORM injection, LDAP injection, Expression Language (EL) or OGNL injection, and many more. The concept is identical between all interpreters, including HTML / JavaScript injection, also known as XSS. 
 
-Large organizations and high performing organizations should include SAST and DAST tooling into the CI/CD pipeline, to alert if existing or newly checked in code has injection prior to production deployment. Manual and automated source code is the best method of detecting if you are vulnerable to injections, closely followed by thorough DAST scans of all parameters, fields, headers, cookies, JSON, and XML data inputs. 
+Large organizations and high performing organizations should include SAST and DAST tooling into the CI/CD pipeline, to alert if existing or newly checked in code has injection prior to production deployment. Manual and automated source code review is the best method of detecting if you are vulnerable to injections, closely followed by thorough DAST scans of all parameters, fields, headers, cookies, JSON, and XML data inputs. 
 
 ## How do I prevent 
 
