@@ -3,7 +3,7 @@
 | Threat agents/Attack vectors | Security Weakness           | Impacts               |
 | -- | -- | -- |
 | Access Lvl \| Exploitability | Prevalence \| Detectability | Technical \| Business |
-| Even Anonymous attackers access default accounts, unused pages, unpatched flaws, unprotected files and directories, etc. to gain unauthorized access to or knowledge of the system. | Security misconfiguration can happen at any level of an application stack, including the platform, web server, application server, database, frameworks, and custom code. Automated scanners are useful for detecting  misconfigurations, use of default accounts or configurations, unnecessary services, legacy options etc. | Such flaws frequently give attackers unauthorized access to some system data or functionality. Occasionally, such flaws result in a complete system compromise. The business impact depends on the protection needs of your application and data. |
+| Even anonymous attackers can try to access default accounts, unused pages, unpatched flaws, unprotected files and directories, etc. to gain unauthorized access to or knowledge of the system. | Security misconfiguration can happen at any level of an application stack, including the platform, web server, application server, database, frameworks, and custom code. Automated scanners are useful for detecting  misconfigurations, use of default accounts or configurations, unnecessary services, legacy options etc. | Such flaws frequently give attackers unauthorized access to some system data or functionality. Occasionally, such flaws result in a complete system compromise. The business impact depends on the protection needs of your application and data. |
 
 
 ## Am I vulnerable to attack?
@@ -17,13 +17,13 @@ Is your application missing the proper security hardening across any part of the
 3. Does your error handling reveal stack traces or other overly informative error messages to users?
 
 4. Do you still use ancient configs with updated software?
-Do you adhere on obsolete backward compatibility?
+Do you continue to support obsolete backward compatibility?
 
 5. Are the security settings in your application servers, application frameworks (e.g., Struts, Spring, ASP.NET), libraries, databases, etc. not set to secure values?
 
-6. Does the server not send any security directives to client agents (e.g. in headers) or are they not set to secure values?
+6. For web applications, does the server not send security directives to client agents (e.g. [HSTS](https://www.owasp.org/index.php/HTTP_Strict_Transport_Security_Cheat_Sheet)) or are they not set to secure values?
 
-7. Is any of your software out of date? (see 2017-A9)
+7. Is any of your software out of date? (see A9:2017)
 
 Without a concerted, repeatable application security configuration process, systems are at a higher risk.
 
@@ -32,7 +32,7 @@ Without a concerted, repeatable application security configuration process, syst
 The primary recommendations are to establish all of the following:
 1. A repeatable hardening process that makes it fast and easy to deploy another environment that is properly locked down. Development, QA, and production environments should all be configured identically (with different passwords used in each environment). This process should be automated to minimize the effort required to setup a new secure environment.
 
-2. A process for keeping abreast of and deploying all new software updates and patches in a timely manner to each deployed environment. This process needs to include all components and libraries as well (see 2017-A9). Get get accustomed to new security features.
+2. A process for keeping abreast of and deploying all new software updates and patches in a timely manner to each deployed environment. This process needs to include all components and libraries as well (see A9:2017). Get get accustomed to new security features.
 
 3. A strong application architecture that provides effective, secure separation between components.
 
