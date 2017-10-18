@@ -7,7 +7,7 @@
 
 ## Am I vulnerable to attack?
 
-The first thing is to determine the protection needs of data in transit and at rest. For example, passwords, credit card numbers, health records, and personal information require extra protection, particularly if that data falls under the EU's General Data Protection Regulation (GDPR), local privacy laws or regulations, financial data protection regulations and laws, such as PCI Data Security Standard (PCI DSS) or the US Gramm-Leach-Bliley Act, or health records laws, such as the US Health Insurance and Portability Act (HIIPA).
+The first thing is to determine the protection needs of data in transit and at rest. For example, passwords, credit card numbers, health records, and personal information require extra protection, particularly if that data falls under the EU's General Data Protection Regulation (GDPR), local privacy laws or regulations, financial data protection regulations and laws, such as PCI Data Security Standard (PCI DSS) or the US Gramm-Leach-Bliley Act, or health records laws, such as the US Health Insurance and Portability Act (HIPAA).
 
 For all such data:
 
@@ -25,18 +25,18 @@ Do the following, at a minimum and consult the references:
 
 * Classify data processed, stored or transmitted by a system, for example sensitive personal information, health records, PCI DSS in scope data. Apply controls as per the classification.
 * Do not collect or store unnecessary sensitive data, or have a data retention plan in place to age out old or unused records. Data you don't retain can't be stolen.
-* Encrypt all sensitive data in rest 
-* Encrypt all data in transit, such as using TLS. Enforce this using directives like HTTP Strict Transport Security (HSTS). This is a requirement that modern browsers will start enforcing by the time the OWASP Top 10 2017 is released. They are currently alerting to unencrypted sites, and most now prevent login form submissions over clear text.
+* Encrypt all data in transit, by using TLS. Enforce this using directives like HTTP Strict Transport Security (HSTS). TLS is becoming mandatory with modern browsers, such as [enforcing the use of TLS for many sensitive forms by late 2017](https://blog.chromium.org/2017/04/next-steps-toward-more-connection.html). They are already as alerting users when they attempt to submit login forms over unencrypted links. [Let's Encrypt](https://letsencrypt.org/) provides free renewable 90-day TLS certificates, and there are many commercial certificate authorities to provide standard and extended validation certificates.
+* Encrypt all sensitive data at rest 
 * Ensure up-to-date and strong standard algorithms or ciphers, parameters, protocols and keys are used, and proper key management is in place. Consider using FIPS 140 validated cryptographic modules.
 * Ensure passwords are stored with a strong adaptive algorithm appropriate for password protection, such as Argon2i, scrypt, bcrypt and PBKDF2. Also be sure to set the work factor (delay factor) as high as you can tolerate.
-* Disable browser caching of pages and API responses that contain sensitive data.
-* Verify independently the efficacy of your settings.
+* Disable browser caching of pages and API responses that contain sensitive data. Refer to [OWASP Secure Headers Project](https://www.owasp.org/index.php/OWASP_Secure_Headers_Project) for more details.
+* Verify independently the efficacy of your settings using services such as [Security Headers](https://securityheaders.io) and [SSL Labs TLS test suite](https://dev.ssllabs.com/ssltest/).
 
 ## Example Scenarios
 
-Scenario #1: An application encrypts credit card numbers in a database using automatic database encryption. However, this data is automatically decrypted when retrieved, allowing an SQL injection flaw to retrieve credit card numbers in clear text. Alternatives include not storing credit card numbers, using tokenization, or using public key encryption.
+Scenario #1: An application encrypts credit card numbers in a database using automatic database encryption. However, this data is automatically decrypted when retrieved, allowing an SQL injection flaw to retrieve credit card numbers in clear text. Alternatives include not storing credit card numbers or using PCI DSS compliant tokenization and encryption.
 
-Scenario #2: A site simply doesn't use or enforce TLS for all pages, or if it supports weak encryption. An attacker simply monitors network traffic, strips or intercepts the TLS (like an open wireless network), and steals the user's session cookie. The attacker then replays this cookie and hijacks the user's (authenticated) session, accessing or modifying the user's private data. Instead of the above he could also alter all transported data, e.g. the recipient of a money transfer.
+Scenario #2: A site doesn't use or enforce TLS for all pages, or if it supports weak encryption. An attacker simply monitors network traffic, strips or intercepts the TLS (like an open wireless network), and steals the user's session cookie. The attacker then replays this cookie and hijacks the user's (authenticated) session, accessing or modifying the user's private data. Instead of the above he could also alter all transported data, e.g. the recipient of a money transfer.
 
 Scenario #3: The password database uses unsalted hashes to store everyone's passwords. A file upload flaw allows an attacker to retrieve the password database. All the unsalted hashes can be exposed with a rainbow table of pre-calculated hashes.
 
@@ -49,6 +49,7 @@ Scenario #3: The password database uses unsalted hashes to store everyone's pass
 * [OWASP Testing Guide - Testing for weak cryptography](https://www.owasp.org/index.php/Testing_for_weak_Cryptography)
 * [OWASP Cheat Sheet - User Privacy Protection](https://www.owasp.org/index.php/User_Privacy_Protection_Cheat_Sheet)
 * [OWASP Cheat Sheet - Password Storage](https://www.owasp.org/index.php/Password_Storage_Cheat_Sheet)
+* [OWASP Security Headers Project](https://www.owasp.org/index.php/OWASP_Secure_Headers_Project)
 
 ### External
 
