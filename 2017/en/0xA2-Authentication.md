@@ -23,11 +23,9 @@ You may have authentication weaknesses if your application:
 * Do not ship or deploy with any default credentials, particularly for admin users
 * [Store passwords using a modern one way hash function](https://www.owasp.org/index.php/Password_Storage_Cheat_Sheet#Leverage_an_adaptive_one-way_function), such as Argon2 or PBKDF2, with sufficient work factor to prevent realistic GPU cracking attacks.
 * Implement weak password checks, such as testing new or changed passwords against a list of the [top 10000 worst passwords](https://github.com/danielmiessler/SecLists/tree/master/Passwords).
-* Remove outdated complexity rules and password rotation controls, replacing with NIST 800-63 controls (minimum 8 and at least 64 character length passwords).
-* Password managers should not be blocked to facilitate advanced users to use long, random passwords. 
-* Ensure registration, credential recovery, and API pathways are hardened against account enumeration attacks by using the same messages for all outcomes. 
-* Where possible, implement multi-factor authentication to prevent credential stuffing, brute force, automated, and stolen credential attacks, or as per NIST 800-63 require longer passwords (at least 12-16 characters minimum) if MFA is not an option
-* Permit users to logout and enforce the logout on the server.
+* Align password length, complexity and rotation policies  with [NIST 800-63 B's guidelines in section 5.1.1 for Memorized Secrets](https://pages.nist.gov/800-63-3/sp800-63b.html#memsecret) or other modern, evidence based password policies
+* Ensure registration, credential recovery, and API pathways are hardened against account enumeration attacks by using the same messages for all outcomes
+* Where possible, implement multi-factor authentication to prevent credential stuffing, brute force, automated, and stolen credential attacks
 * Log authentication failures and alert administrators when credential stuffing, brute force, other attacks are detected.
 
 Large and high performing organizations should consider using a federated identity product or service that includes common identity attack protections, multi-factor authentication, monitoring, and alerting of identity misuse. Additionally, they may wish to implement rate limiting to limit the impact of automated attacks against APIs from credential stuffing, brute force, and default password attacks. The use of weak credential recovery such as "Questions and Answers" should be retired and data expunged from the system. 
@@ -40,7 +38,7 @@ The [OWASP Proactive Controls](https://www.owasp.org/index.php/OWASP_Proactive_C
 
 *Scenario #2:* Most authentication attacks occur due to the continued use of passwords as a sole factor. Common issues with passwords include password rotation and complexity requirements, which encourages users to use weak passwords they reuse everywhere. Organizations are strongly recommended to stop password rotation and complexity requirements as per NIST 800-63 and mandate the use of multi-factor authentication.
 
-*Scenario #3:* One the issues with storage of passwords is the use of plain text, reversibly encrypted passwords, and weakly hashed passwords (such as using MD5/SHA1 with or without a salt). GPU crackers are immensely powerful and cheap. A recent effort by a small group of researchers cracked [320 million passwords in less than three weeks](https://cynosureprime.blogspot.com.au/2017/08/320-million-hashes-exposed.html), including 60 character passwords. The solution to this is the use of adaptive modern hashing algorithms such as Argon2, with salting and sufficient workfactor to prevent the use of rainbow tables, word lists, and realistic recovery of even weak passwords. 
+*Scenario #3:* One the issues with storage of passwords is the use of plain text, reversibly encrypted passwords, and weakly hashed passwords (such as using MD5/SHA1 with or without a salt). GPU crackers are immensely powerful and cheap. A recent effort by a small group of researchers cracked [320 million passwords in less than three weeks](https://cynosureprime.blogspot.com.au/2017/08/320-million-hashes-exposed.html), including 60 character passwords. The solution to this is the use of adaptive modern hashing algorithms such as Argon2, with salting and sufficient work factor to prevent the use of rainbow tables, word lists, and realistic recovery of even weak passwords. 
 
 ## References
 
@@ -58,8 +56,12 @@ The [OWASP Proactive Controls](https://www.owasp.org/index.php/OWASP_Proactive_C
 
 ### External
 
+Of all these references, the NIST document is at the time of writing (late 2017), the most thorough, modern, evidence based advice on authentication. 
+
+* [NIST 800-63b 5.1.1 Memorized Secrets](https://pages.nist.gov/800-63-3/sp800-63b.html#memsecret)
+* [Daniel Messier - SecLists - Worst 10000 Passwords] (https://github.com/danielmiessler/SecLists/tree/master/Passwords)
 * [CWE-287: Improper Authentication](https://cwe.mitre.org/data/definitions/287.html)
-* [Daniel Messier - SecLists - Passwords (find the Top 10000 worst passwords here)] (https://github.com/danielmiessler/SecLists/tree/master/Passwords)
 
 Whilst no longer the main risk in this chapter, session management is foundational that must be right:
+
 * [CWE-384: Session Fixation](https://cwe.mitre.org/data/definitions/384.html)
