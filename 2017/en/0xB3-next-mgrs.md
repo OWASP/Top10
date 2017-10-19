@@ -8,7 +8,7 @@ To that end, we suggest:
 
 * Consider reviewing your application security program against the [OWASP SAMM](https://www.owasp.org/index.php/OWASP_SAMM_Project) project. This project has 12 major domains, each of which can assist with maturing any appsec program, regardless of size
 
-* Move left; by this we mean the old days of performing a penetration test just before (or usually after) you go live is not particularly effective if that's the entireity of your application security program. Implement security into your agile SDLC, and ensure security is just another team member that helps to enable secure business.
+* Move left; by this we mean the old days of performing a penetration test just before (or usually after) you go live is not particularly effective if that's the entirety of your application security program. Implement security into your agile SDLC, and ensure security is just another team member that helps to enable secure business.
 
 * Ensure you have an effective data asset list, so you can ensure that all applications have appropriate controls, risk management and safeguards. The growth of software as a service places special burdens on organizations, as often the data is outside the traditional security boundary, and yet you cannot outsource responsibility for issues such as privacy or compliance. With the EU GDPR and other regulations containing significant penalties for mishandling data, it's more critical than ever to understand where your data is, and the controls over it. 
 
@@ -36,4 +36,4 @@ There are many forms of metrics that can be found. Be careful of metrics that do
 
 ## This is just the start
 
-Starting the application security journey can feel overwhelming. A key takeaway is that you can't review your way to building a bridge; at some point you must build it. Let's ensure that security is deeply esconced within the organization, and aligned with organizational objectives. 
+Starting the application security journey can feel overwhelming. A key takeaway is that you can't review your way to building a bridge; at some point you must build it. Let's ensure that security is deeply ensconced within the organization, and aligned with organizational objectives. 
