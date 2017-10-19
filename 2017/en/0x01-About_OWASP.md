@@ -16,6 +16,10 @@ We hope that the OWASP Top 10 is useful to your application security efforts. Pl
 
 * https://github.com/OWASP/Top10/issues
 
+You can find OWASP Top 10 project and translations here:
+
+* https://www.owasp.org/index.php/top10
+
 Lastly, we wish to thank the founding leadership of the OWASP Top 10 project, Dave Wichers and Jeff Williams for all their efforts, and believing in us to get this finished with the community's help. Thank you!
 
 - Torsten Gigler
