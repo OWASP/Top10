@@ -7,30 +7,43 @@
 
 ## Am I vulnerable to attack?
 
-Application architecture has changed dramatically over the last few years, with the move to "server-less" API driven mobile and single page applications, with the associated rise of functional programming frameworks and languages. This seismic shift in application architecture were accompanied by the idea of the client maintaining state, to allow theoretical simpler and more scalable functional code. However, the hallmark of application security is the location of trusted state. Security state cannot be sent to the client without some form of integrity promise.
+Application architecture has changed dramatically over the last few years, with the move to "server-less" API driven mobile and single page applications, with the associated rise of functional programming frameworks and languages. This seismic shift in application architecture were accompanied by the idea of the client maintaining state, to allow theoretical simpler and more scalable functional code. However, the hallmark of application security is the location of trusted state. Security state cannot be sent to the client without some form of integrity promise.​
 
-Applications and APIs will be vulnerable if the code:
+Applications and APIs will be vulnerable if the code:​
 
-* The client can create, replay, tamper, or chain existing serialized state (gadgets), AND
-* The server or API deserializes hostile objects supplied by an attacker, AND
-* The objects contain a constructor, destructor, callbacks, auto-instantiation (such as rehydration calls) OR
+* The application or API accepts and deserializes hostile objects supplied by an attacker without validation, AND​
+
+* The objects contain a constructor, destructor, callbacks, auto-instantiation (such as rehydration calls) OR​
+
 * The objects override protected or private member fields that contain sensitive state, such as role or similar
 
 ## How do I prevent
 
-* The only safe architectural pattern is to not send or accept serialized objects from untrusted sources
+The only safe architectural pattern is to not send or accept serialized objects from untrusted sources, such as adopting JSON-based RESTful or XML-based SOAP web services.​
 
-If this not possible
+If that is not possible​:
 
-* Implement integrity checks or encryption of the serialized objects to prevent hostile creation, tampering, replay and gadget calls
-* Isolate code that deserializes, such that it runs in very low privilege environments, such as temporary containers
-* Enforce type constraints over serialized objects; typically code is expecting a particular class
-* Log deserialization exceptions and failures, such as where the incoming type is not the expected type, or the deserialization throws exceptions.
-
-Larger and high performing organizations should also consider:
-* Rate limit API or methods that deserialize
-* Restrict or monitor incoming and outgoing network connectivity from containers or servers that deserialize
+* Implement integrity checks or encryption of the serialized objects to prevent hostile creation, tampering, replay and gadget calls​
+* Isolate code that deserializes, such that it runs in very low privilege environments, such as temporary containers.​
+* Enforce type constraints over serialized objects; typically code is expecting a particular class.​
+* Log deserialization exceptions and failures, such as where the incoming type is not the expected type, or the deserialization throws exceptions.​
+* Rate limit API or methods that deserialize.​
+* Restrict or monitor incoming and outgoing network connectivity from containers or servers that deserialize.​
 * Monitor deserialization, alerting if a user deserializes constantly.
+
+## Example Scenarios
+
+Example Attack Scenarios​
+
+Scenario #1: A React app calls a set of Spring Boot microservices. Being functional programmers, they tried to ensure that their code is immutable. The solution they came up with is serializing user state and passing it back and forth with each request. An attacker notices the "R00" Java object signature, and uses the Java Serial Killer tool to gain remote code execution on the application server.​
+
+Scenario #2: A PHP forum uses PHP object serialization to save a "super" cookie, containing the user's user ID, role, password hash, and other state: 
+`a:4:{i:0;i:132;i:1;s:7:"Mallory";i:2;s:4:"user";i:3;s:32:"b6a8b3bea87fe0e05022f8f3c88bc960";}​`
+
+
+An attacker changes the serialized object to give themselves admin privileges:​
+
+`a:4:{i:0;i:1;i:1;s:5:"Alice";i:2;s:5:"admin";i:3;s:32:"b6a8b3bea87fe0e05022f8f3c88bc960";}​`
 
 ## References
 
