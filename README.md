@@ -1,12 +1,15 @@
 # Top10
 Official OWASP Top 10 Document Repository
 
+We pleased to annouce the Release Candidate 2 version:
+
+* [OWASP Top 10 2017 (PPTX)](https://github.com/OWASP/Top10/blob/master/2017/OWASP%20Top%2010%202017%20RC2%20Final.pptx)
+* [OWASP Top 10 2017 (PDF)](https://github.com/OWASP/Top10/blob/master/2017/OWASP%20Top%2010%202017%20RC2%20Final.pdf)
+
+Please review for content, context, accuracy, links, spelling, and examples, and [log issues](https://github.com/OWASP/Top10/issues).
+
 We are asking for comments to be filed as [GitHub issues](https://github.com/OWASP/Top10/issues). 
 Please feel free to browse the issues, comment on them, or file a new one.
-
-Please participate in the 2017 data call and survey (closes September 18):
-* Data call https://docs.google.com/forms/d/e/1FAIpQLSe-fitqC6TD8ueeujpsN8ijxNXTSXd_L3jGrB0jncxqjVsSvQ/viewform
-* Survey https://docs.google.com/forms/d/e/1FAIpQLSdy-ok2o_BBHsZn0r5WfwxOkCv1CQ4nKZ8VSmD6bYq-du22hg/viewform
 
 # OWASP Top 10 Leadership
 
