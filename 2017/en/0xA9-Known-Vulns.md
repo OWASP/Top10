@@ -54,3 +54,4 @@ There are automated tools to help attackers find unpatched or misconfigured syst
 * [Retire.js for detecting known vulnerable JavaScript libraries](https://github.com/retirejs/retire.js/)
 * [Node Libraries Security Advisories](https://nodesecurity.io/advisories)
 * [Ruby Libraries Security Advisory Database and Tools](https://rubysec.com/)
+* [Snyk: Node/JS, Ruby, Java and Python Vulnerability Database and Tool](https://snyk.io/vuln)
