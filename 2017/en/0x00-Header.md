@@ -1,10 +1,22 @@
 ![OWASP LOGO](images/OWASP_logo.png)
 
+## OWASP Top 10 2017 RC2
 
-## OWASP Top 10 2017-master (pre-RC2)
+The Ten Most Critical Web Application Security Risks
 
-October 17, 2017 (Andrew's birthday)
+October 20, 2017
 
-DRAFT STANDARD.
+### Release Candidate 2
 
-Comments welcome - https://github.com/OWASP/Top10/issues
+Comments requested per instructions within
+
+![WASP Logo URL TBA](images/front-wasp.png)
+
+|  | ![Creative Commons License Logo](images/front-cc.png) |
+| -- | -- |
+| https://owasp.org | This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License |
+
+
+
+
+

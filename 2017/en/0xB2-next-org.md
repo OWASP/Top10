@@ -4,41 +4,37 @@
 
 Application security is no longer optional. Between increasing attacks and regulatory pressures, organizations must establish effective processes and capabilities for securing their applications and APIs. Given the staggering amount of code in the numerous applications and APIs already in production, many organizations are struggling to get a handle on the enormous volume of vulnerabilities.
 
-OWASP recommends that organizations establish an application security program to gain insight and improve security across their application portfolio. This should include vendor application security testing governance, policies, verification and deployment, such that leading or organizations who use any combination of internal, managed security service providers, or out-tasked vendor security testing, can directly compare results from multiple vendors by using agreed metrics, test plans, risk management frameworks, and so on. 
-
-Achieving application security requires many different parts of an organization to work together efficiently, including security and audit, software development, and business and executive management. It requires security to be visible, so that all the different players can see and understand the organization's application security posture. It also requires focus on the activities and outcomes that actually help improve enterprise security by reducing risk in the most cost effective manner.
-
-Some of the key activities in effective application security programs include:
+OWASP recommends organizations establish an application security program to gain insight and improve security across their app and API portfolio. Achieving application security requires many different parts of an organization to work together efficiently, including security and audit, software development, business, and executive management. Security should be visible and measurable, so that all the different players can see and understand the organization’s application security posture. Focus on the activities and outcomes that actually help improve enterprise security by eliminating or reducing risk. Key activities include:
 
 ### Get Started
 
-* Establish an application security program and drive adoption.
-* Conduct a capability gap analysis comparing your organization to your peers to define key improvement areas and an execution plan.
-* Gain management approval and establish an application security awareness campaign for the entire IT organization.
-* Document all your IT assets (e.g. applications) in a Configuration Management Database (CMDB).
+* Document all applications and associated data assets in a Configuration Management Database (CMDB).
+* Establish an [application security program](https://www.owasp.org/index.php/SAMM_-_Strategy_&_Metrics_-_1) and drive adoption.
+* Conduct a [capability gap analysis](https://www.owasp.org/index.php/SAMM_-_Strategy_&_Metrics_-_3) comparing your organization to your peers to define key improvement areas and an execution plan.
+* Gain management approval and establish an [application security awareness campaign](https://www.owasp.org/index.php/SAMM_-_Education_&_Guidance_-_1) for the entireIT organization.
 
 ### Risk Based Portfolio Approach
 
-* Identify the protection needs of your application portfolio from a business and regulatory perspective. Add the results to your CMDB.
-* Establish a common risk rating model with a consistent set of likelihood and impact factors reflective of your organization's tolerance for risk.
+* Identify the [protection needs](https://www.owasp.org/index.php/SAMM_-_Strategy_&_Metrics_-_2) of your [application portfolio](https://www.owasp.org/index.php/SAMM_-_Strategy_&_Metrics_-_2) from a business perspective. This should be driven in part by privacy laws and other regulations relevant to the data asset being protected.
+* Establish a common [risk rating model](https://www.owasp.org/index.php/OWASP_Risk_Rating_Methodology) with a consistent set of likelihood and impact factors reflective of your organization's tolerance for risk.
 * Accordingly measure and prioritize all your applications and APIs. Add the results to your CMDB.
 * Establish assurance guidelines to properly define coverage and level of rigor required.
 
 ### Enable with a Strong Foundation
 
-* Establish a set of focused policies and minimum standards that outsourced development or custom development partners must demonstrate in your software supply chain. 
-* Establish a set of focused policies and standards that provide an application security baseline for all development teams.
-* Define a common set of reusable security controls that complement these policies and standards and provide design and development guidance on their use.
-* Establish an application security training curriculum that is required and targeted to different development roles and topics.
+* Establish a set of focused [policies and standards](https://www.owasp.org/index.php/SAMM_-_Policy_&_Compliance_-_2) that provide an application security baseline for all development teams to adhere to.
+* Define a common set of [reusable security controls](https://www.owasp.org/index.php/OWASP_Security_Knowledge_Framework) that complement these policies and standards and provide design and development guidance on their use.
+* Establish an [application security training curriculum](https://www.owasp.org/index.php/SAMM_-_Education_&_Guidance_-_2) that is required and targeted to different development roles and topics.
+
 
 ### Integrate Security into Existing Processes
 
-* Define and integrate secure implementation and verification activities into existing development and operational processes. Activities include threat modeling, secure design & review, secure coding & code review, penetration testing and remediation.
-* Provide subject matter experts and support services for development and project teams to be successful.
+*  Define and integrate [secure implementation](https://www.owasp.org/index.php/SAMM_-_Construction) and [verification](https://www.owasp.org/index.php/SAMM_-_Verification) activities into existing development and operational processes. Activities include [threat modeling](https://www.owasp.org/index.php/SAMM_-_Threat_Assessment_-_1), secure [design & review](https://www.owasp.org/index.php/SAMM_-_Design_Review_-_1), secure coding and [code review](https://www.owasp.org/index.php/SAMM_-_Code_Review_-_1), [penetration testing](https://www.owasp.org/index.php/SAMM_-_Security_Testing_-_1), and remediation.
+* Provide subject matter experts and [support services for development and project teams](https://www.owasp.org/index.php/SAMM_-_Education_&_Guidance_-_3) to be successful.
 
 ### Provide Management Visibility
 
-* Manage with metrics. Drive improvement and funding decisions based on the metrics and analysis data captured. Metrics include adherence to security practices / activities, vulnerabilities introduced, vulnerabilities mitigated, application coverage, defect density by type and instance counts, etc.
+*  Manage with metrics. Drive improvement and funding decisions based on the metrics and analysis data captured. Metrics include adherence to security practices / activities, vulnerabilities introduced, vulnerabilities mitigated, application coverage, defect density by type and instance counts, etc.
 * Analyze data from the implementation and verification activities to look for root cause and vulnerability patterns to drive strategic and systemic improvements across the enterprise. Learn from mistakes and offer positive incentives to promote improvements.
 
 ### Examples of such programs

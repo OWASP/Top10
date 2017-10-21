@@ -1,5 +1,7 @@
 # References
 
+NB: This section is not part of RC2, but might make it into the Golden Master. Comments welcome.
+
 ## OWASP Flagship Projects (Documents)
 
 The following OWASP Flagship documentation projects are most likely to be useful to users/adopters of this standard:
