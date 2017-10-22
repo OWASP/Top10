@@ -1,4 +1,4 @@
-# A10 Insufficient Logging, Detection and Active Response
+# A10:2017 Insufficient Logging, Detection and Active Response
 
 | Threat agents/Attack vectors | Security Weakness           | Impacts               |
 | -- | -- | -- |
@@ -47,4 +47,3 @@ There are commercial and open source application protection frameworks such as 
 
 * [CWE-223 Omission of Security-relevant Information](https://cwe.mitre.org/data/definitions/223.html)
 * [CWE-778 Insufficient Logging](https://cwe.mitre.org/data/definitions/778.html)
-
