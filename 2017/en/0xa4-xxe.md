@@ -8,8 +8,9 @@
 ## Am I Vulnerable to XXE?
 
 Applications and in particular XML-based web services or downstream integrations might be vulnerable to attack if:
+
 * Your application accepts XML directly or XML uploads, especially from untrusted sources, or inserts untrusted data into XML documents, which is then parsed by an XML processor
-* Any of the XML processors in the application or SOAP based web services has document type definitions (DTDs) enabled. As the exact mechanism for disabling DTD processing varies by processor, it is recommended that you consult a reference such as the OWASP XXE Prevention Cheat Sheet.
+* Any of the XML processors in the application or SOAP based web services has [document type definitions (DTDs)](https://en.wikipedia.org/wiki/Document_type_definition) enabled. As the exact mechanism for disabling DTD processing varies by processor, it is recommended that you consult a reference such as the [OWASP XXE Prevention Cheat Sheet](https://www.owasp.org/index.php/XML_External_Entity_(XXE)_Prevention_Cheat_Sheet).
 * If your application uses SOAP prior to version 1.2, it is likely susceptible to XXE attacks if XML entities are being passed to the SOAP framework.
 * SAST tools can help detect XXE in source code, although manual code review is the best alternative in large, complex apps with many integrations.
 * Being vulnerable to XXE attacks likely means that you are vulnerable to other billion laughs denial-of-service attacks.
@@ -18,7 +19,7 @@ Applications and in particular XML-based web services or downstream integrations
 
 Developer training is essential to identify and mitigate XXE completely. Besides that, preventing XXE requires:
 
-* Disable XML external entity and DTD processing in all XML parsers in your application, as per the OWASP XXE Prevention Cheat Sheet.
+* Disable XML external entity and DTD processing in all XML parsers in your application, as per the [OWASP XXE Prevention Cheat Sheet](https://www.owasp.org/index.php/XML_External_Entity_(XXE)_Prevention_Cheat_Sheet).
 * Implement positive ("white listing") input validation, filtering, or sanitization to prevent hostile data within XML documents, headers, or nodes.
 * Verify that XML or XSL file upload functionality validates incoming XML using XSD validation or similar.
 * Patch or upgrade all the latest XML processors and libraries in use by the app or on the underlying operating system. The use of dependency checkers is critical in managing the risk from necessary libraries and components in not only your app, but any downstream integrations.
@@ -30,7 +31,7 @@ If these controls are not possible, consider using virtual patching, API securi
 
 Numerous public XXE issues have been discovered, including attacking embedded devices. XXE occurs in a lot of unexpected places, including deeply nested dependencies. The easiest way is to upload a malicious XML file, if accepted:
 
-**Scenario #1: The attacker  attempts to extract data from the server:
+**Scenario #1**: The attacker  attempts to extract data from the server:
 
 ```
   <?xml version="1.0" encoding="ISO-8859-1"?>
