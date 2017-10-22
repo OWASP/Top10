@@ -1,4 +1,4 @@
-# A3 Sensitive Data Exposure
+# A3:2017 Sensitive Data Exposure
 
 | Threat agents/Attack vectors | Security Weakness           | Impacts               |
 | -- | -- | -- |
@@ -15,7 +15,7 @@ Are any old or weak cryptographic algorithms used either by default or in older 
 * Are default crypto keys in use, weak crypto keys generated or re-used, or is proper key management or rotation missing?
 * Is encryption not enforced, e.g. are any user agent (browser) security directives or headers missing?
 
-See ASVS areas Crypto (V7), Data Protection (V9) and SSL/TLS (V10)
+See ASVS areas [Crypto (V7), Data Protection (V9) and SSL/TLS (V10)](https://www.owasp.org/index.php/ASVS)
 
 ## How Do I Prevent This?
 
@@ -25,9 +25,9 @@ Do the following, at a minimum and consult the references:
 Review the privacy laws or regulations applicable to sensitive data, and protect as per regulatory requirements
 * Don’t store sensitive data unnecessarily. Discard it as soon as possible or use PCI DSS compliant tokenization or even truncation. Data you don’t retain can’t be stolen.
 * Make sure you encrypt all sensitive data at rest 
-Encrypt all data in transit, such as using TLS. Enforce this using directives like HTTP Strict Transport Security (HSTS).
-* Ensure up-to-date and strong standard algorithms or ciphers, parameters, protocols and keys are used, and proper key management is in place. Consider using crypto modules.
-* Ensure passwords are stored with a strong adaptive algorithm appropriate for password protection, such as Argon2, scrypt, bcrypt and PBKDF2. Configure the work factor (delay factor) as high as you can tolerate.
+* Encrypt all data in transit, such as using TLS. Enforce this using directives like HTTP Strict Transport Security (HSTS).
+* Ensure up-to-date and strong standard algorithms or ciphers, parameters, protocols and keys are used, and proper key management is in place. Consider using [crypto modules](http://csrc.nist.gov/groups/STM/cmvp/documents/140-1/140val-all.htm).
+* Ensure passwords are stored with a strong adaptive algorithm appropriate for password protection, such as [Argon2](https://www.cryptolux.org/index.php/Argon2), [scrypt](http://en.wikipedia.org/wiki/Scrypt), [bcrypt](http://en.wikipedia.org/wiki/Bcrypt) and [PBKDF2](http://en.wikipedia.org/wiki/PBKDF2). Configure the work factor (delay factor) as high as you can tolerate.
 * Disable caching for response that contain sensitive data.
 Verify independently the effectiveness of your settings.
 
