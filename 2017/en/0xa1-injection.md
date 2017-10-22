@@ -3,7 +3,7 @@
 | Threat agents/Attack vectors | Security Weakness           | Impacts               |
 | -- | -- | -- |
 | Access Lvl \| Exploitability 3 | Prevalence 2 \| Detectability 3 | Technical 3 \| Business |
-| Almost any source of data can be an injection vector, including users, parameters, external and internal web services, and all types of users. Injection flaws occur when an attacker can send hostile data to an interpreter. | Injection flaws are very prevalent, particularly in legacy code. They are often found in SQL, LDAP, XPath, or NoSQL queries; OS commands; XML parsers, SMTP Headers, expression languages, ORM queries. Injection flaws are easy to discover when examining code. Scanners and fuzzers can help attackers find injection flaws. | Injection can result in data loss or corruption, lack of accountability, or denial of access. Injection can sometimes lead to complete host takeover. The business impact depends on the protection needs of your application and data. |
+| Almost any source of data can be an injection vector, including users, parameters, external and internal web services, and all types of users. [Injection flaws](http://www.owasp.org/index.php/Injection_Flaws) occur when an attacker can send hostile data to an interpreter. | Injection flaws are very prevalent, particularly in legacy code. They are often found in SQL, LDAP, XPath, or NoSQL queries; OS commands; XML parsers, SMTP Headers, expression languages, ORM queries. Injection flaws are easy to discover when examining code. Scanners and fuzzers can help attackers find injection flaws. | Injection can result in data loss or corruption, lack of accountability, or denial of access. Injection can sometimes lead to complete host takeover. The business impact depends on the protection needs of your application and data. |
 
 ## Am I vulnerable to Injection?
 
@@ -13,13 +13,14 @@ An application is vulnerable to attack when:
 * Hostile data is used directly with dynamic queries or non-parameterized calls for the interpreter without context-aware escaping.
 * Hostile data is used within ORM search parameters such that the search evaluates out to include sensitive or all records.
 * Hostile data is directly used or concatenated, such that the SQL or command contains both structure and hostile data in dynamic queries, commands, or in stored procedures.
+
 Some of the more common injections are SQL, OS command, ORM, LDAP, and Expression Language (EL) or OGNL injection.. The concept is identical between all interpreters. Organizations can include SAST and DAST tooling into the CI/CD pipeline to alert if existing or newly checked in code has injection prior to production deployment. Manual and automated source code review is the best method of detecting if you are vulnerable to injections, closely followed by thorough DAST scans of all parameters, fields, headers, cookies, JSON, and XML data inputs.
 
 ## How Do I Prevent Injection?
 
 Preventing injection requires keeping data separate from commands and queries.
 
-* The preferred option is to use a safe API which avoids the use of the interpreter entirely or provides a parameterized interface, or migrate to use ORMs or Entity Framework. NB: When parameterized, stored procedures can still introduce SQL injection if PL/SQL or T-SQL concatenates queries and data, or executes hostile data with EXECUTE IMMEDIATE or exec().
+* The preferred option is to use a safe API which avoids the use of the interpreter entirely or provides a parameterized interface, or migrate to use ORMs or Entity Framework. **NB**: When parameterized, stored procedures can still introduce SQL injection if PL/SQL or T-SQL concatenates queries and data, or executes hostile data with EXECUTE IMMEDIATE or exec().
 * Positive or "white list" input validation, but this is not a complete defense as many applications require special characters, such as text areas or APIs for mobile applications
 * For any residual dynamic queries, escape special characters using the specific escape syntax for that interpreter. OWASP's Java Encoder and similar libraries provide such escaping routines. NB: SQL structure such as table names, column names, and so on cannot be escaped, and thus user-supplied structure names are dangerous. This is a common issue in report writing software.
 * Use LIMIT and other SQL controls within queries to prevent mass disclosure of records in case of SQL injection.
