@@ -64,4 +64,4 @@ If an unauthenticated user can access either page, it’s a flaw. If a non-admin
 * [CWE-284 Improper Access Control (Authorization)](https://cwe.mitre.org/data/definitions/284.html)
 * [CWE-285 Improper Authorization](https://cwe.mitre.org/data/definitions/285.html)
 * [CWE-639 Authorization Bypass Through User-Controlled Key](https://cwe.mitre.org/data/definitions/639.html)
-* [Exploiting CORS misconfiguration](https://blog.portswigger.net/2016/10/exploiting-cors-misconfigurations-for.html)
+* [Exploiting CORS misconfiguration](http://blog.portswigger.net/2016/10/exploiting-cors-misconfigurations-for.html)
