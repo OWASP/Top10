@@ -1,13 +1,24 @@
-# Important Notice
+# GM Golden Master
+
+Important Notice
+---
+
 ## Request for Comments
 
-This version is not a final draft.
+This is the Golden Master, and once released, only high priority changes and small typos will be fixed. 
 
-The first release candidate received a great deal of push back, which caused a leadership change, involving the community in re-evaluating what the OWASP Top 10 is, the methodology, the data collection and analysis, and how we provide transparency and governance over the project. Most of all, the push back showed us how much passion the community has for the OWASP Top 10, and thus how critical it is for OWASP to get the Top 10 right for the majority of use cases.
+At this stage, we are asking for:
 
-We have worked extensively to validate the methodology, obtained a great deal of data on over 114,000 apps, and obtained qualitative data via survey by 550 community members on the two new categories – insecure deserialization and insufficient logging and monitoring.
+* Translations - we have some teams working already, but do reach out to us if you can help
+* Very close review of the wording
+* Review diagrams and tables to make sure they are clear and useful
+* if risk factors (exploitability, prevalence, detectability, impact) are concise and accurate
+* Vulnerability and Scenarios boxes are clear in meaning
+* Recommendations must be actionable
+* Any OWASP or External links are high quality and agree in concept and tone with the Top 10’s content
+* CWE links must cover the content discussed in each risk. Do we need to add, change, or remove CWEs? Does the CWE need updating? If so, we have a very small window to work with MITRE to make it better
 
-We strongly urge for any corrections or issues to be logged at GitHub
+We strongly urge for any corrections or issues to be logged at GitHub:
 
 * https://github.com/OWASP/Top10/issues
 
