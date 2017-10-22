@@ -1,4 +1,4 @@
-# A4 XML External Entities (XXE)
+# A4:2017 XML External Entities (XXE)
 
 | Threat agents/Attack vectors | Security Weakness           | Impacts               |
 | -- | -- | -- |
