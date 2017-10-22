@@ -13,7 +13,7 @@ We strongly urge for any corrections or issues to be logged at GitHub
 
 Through public transparency, we provide traceability and ensure that all voices are heard during this final month before publication.
 
-Andrew van der Stock
-Brian Glas
-Neil Smithline
-Torsten Gigler
+* Andrew van der Stock
+* Brian Glas
+* Neil Smithline
+* Torsten Gigler
