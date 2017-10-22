@@ -9,7 +9,7 @@
 
 Three are three forms of XSS, usually targeting users' browsers:
 
-* **Reflected XSS**: Your app or API includes unvalidated and  unescaped user input as part of HTML output or there is no content security policy ([CSP](https://www.owasp.org/index.php/Content_Security_Policy)) header. A successful attack can allow the attacker to execute arbitrary HTML and JavaScript in the victim’s browser. Typically the user will need to interact with a link, or some other attacker controlled page, such as a watering hole attack, malvertizing, or similar.
+* **Reflected XSS**: Your app or API includes unvalidated and  unescaped user input as part of HTML output or there is no content security policy ([CSP](https://www.owasp.org/index.php/Content_Security_Policy)) header. A successful attack can allow the attacker to execute arbitrary HTML and JavaScript in the victim’s browser. Typically the user will need to interact with a link, or some other attacker controlled page, such as a watering hole attack, malicious advertisements, or similar.
 * **Stored XSS**: Your app or API stores unsanitized user input that is viewed at a later time by another user or an administrator. Stored XSS is often considered a high or critical risk.
 * **DOM XSS**: JavaScript frameworks, single page apps, and APIs that dynamically include attacker-controllable data to a page are vulnerable to DOM XSS. Ideally, you would avoid sending attacker-controllable data to unsafe JavaScript APIs.
 
