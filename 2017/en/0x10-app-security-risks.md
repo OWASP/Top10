@@ -10,7 +10,7 @@ Sometimes, these paths are trivial to find and exploit and sometimes they are ex
 
 ## What's My Risk
 
-The OWASP Top 10 focuses on identifying the most serious risks for a broad array of organizations. For each of these risks, we provide generic information about likelihood and technical impact using the following simple ratings scheme, which is based on the OWASP Risk Rating Methodology.  
+The [OWASP Top 10](https://www.owasp.org/index.php/Top10) focuses on identifying the most serious risks for a broad array of organizations. For each of these risks, we provide generic information about likelihood and technical impact using the following simple ratings scheme, which is based on the OWASP Risk Rating Methodology.  
 
 | Threat Agents | Exploitability | Weakness Prevalence | Weakness Detectability | Technical Impacts | Business Impacts |
 | -- | -- | -- | -- | -- | -- |
