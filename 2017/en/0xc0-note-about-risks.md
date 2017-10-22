@@ -16,3 +16,8 @@ The following illustrates our calculation of the risk for A6:2017 Security Misco
 
 ![Risk Calculation for A6:2017 Security Misconfiguration](images/0xc0-risk-explanation.png)
 
+## Additional Risks to Consider
+
+The Top 10 covers a lot of ground, but there are many other risks you should consider and evaluate in your organization. Some of these have appeared in previous versions of the Top 10, and others have not, including new attack techniques that are being identified all the time.  Other important application security risks (in alphabetical order) that you should additionally consider include:
+
+* TBD - This will be added post-RC2 after further data analysis is completed
