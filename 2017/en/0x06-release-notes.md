@@ -24,6 +24,6 @@ We asked the community to provide insight into two forward looking weakness cate
 
 * **A4 Insecure direct object references** and **A7 Missing function level access control** merged into **A5:2017-Broken Access Control**.
 * **A8 CSRF**. Less than 5% of the data set supports CSRF today, which places it around #13 
-* **A10 Unvalidated redirects and forwards**. Less than 1% of the data set supports this issue today, as it’s now #25
+* **A10 Unvalidated redirects and forwards**. Less than 1% of the data set supports this issue today, as it-s now #25
 
 ![0x06-release-notes-1](images/0x06-release-notes-1.png)

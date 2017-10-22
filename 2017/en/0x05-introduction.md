@@ -11,7 +11,7 @@ A primary aim of the OWASP Top 10 is to educate developers, designers, architect
 
 **Don't stop at 10**. There are hundreds of issues that could affect the overall security of a web application as discussed in the [OWASP Developer's Guide](https://www.owasp.org/index.php/OWASP_Guide_Project) and the [OWASP Cheat Sheet Series](https://www.owasp.org/index.php/Category:Cheatsheets). These are essential reading for anyone developing web applications and APIs. Guidance on how to effectively find vulnerabilities in web applications and APIs is provided in the [OWASP Testing Guide](https://www.owasp.org/index.php/OWASP_Testing_Project).
 
-**Constant change**. The OWASP Top 10 will continue to change. Even without changing a single line of your application's code, you may become vulnerable as new flaws are discovered and attack methods are refined. Please review the advice at the end of the Top 10 in “What's Next For Developers, Testers, and Organizations” for more information.
+**Constant change**. The OWASP Top 10 will continue to change. Even without changing a single line of your application's code, you may become vulnerable as new flaws are discovered and attack methods are refined. Please review the advice at the end of the Top 10 in "What's Next For Developers, Testers, and Organizations" for more information.
 
 **Think positive**. When you're ready to stop chasing vulnerabilities and focus on establishing strong application security controls, OWASP is maintaining and promoting the [OWASP Application Security Verification Standard (ASVS)](https://www.owasp.org/index.php/ASVS) as a guide to organizations and application reviewers on what to verify.
 
@@ -27,6 +27,6 @@ As there are more contributors than space here, we have created a dedicated page
 
 A big thank you to the 516 individuals who took the time to complete the industry ranked survey. Your voice helped determine two new additions to the Top 10. The additional comments, notes of encouragement (and criticisms), were all appreciated. We know your time is valuable and we wanted to say thanks.
 
-We would like to thank in advance those individuals who contribute significant constructive comments and time reviewing this update to the Top 10. As much as possible, we have listed them on the attribution page '+Ack’.
+We would like to thank in advance those individuals who contribute significant constructive comments and time reviewing this update to the Top 10. As much as possible, we have listed them on the attribution page '+Ack-.
 
 And finally, we'd like to thank in advance all the translators out there that will translate this release of the Top 10 into numerous different languages, helping to make the OWASP Top 10 more accessible to the entire planet.

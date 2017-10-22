@@ -50,4 +50,4 @@ We suggest establishing application owners and application managers for every ap
 
 * Implement business requirements for data retention (deletion) policies and securely archiving data
 * Securely close down the application, including deleting unused accounts and roles and permissions
-* Set your application’s state to retired in the CMDB
+* Set your application-s state to retired in the CMDB
