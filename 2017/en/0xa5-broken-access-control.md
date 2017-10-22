@@ -1,4 +1,4 @@
-# A5 Access Control
+# A5:2017 Broken Access Control
 
 | Threat agents/Attack vectors | Security Weakness           | Impacts               |
 | -- | -- | -- |
@@ -8,6 +8,7 @@
 ## Am I Vulnerable to Broken Access Ctl?
 
 Access control enforces policy such that users cannot act outside of their intended permissions. Failures typically lead to unauthorized information disclosure, modification or destruction of all data, or performing a business function outside of the limits of the user. Common access control vulnerabilities include:
+
 * Bypassing access control checks by modifying the URL, internal app state, or the HTML page, or simply using a custom API attack tool.
 * Allowing the primary key to be changed to another's users record, such as viewing or editing someone else's account.
 * Elevation of privilege. Acting as a user without being logged in, or acting as an admin when logged in as a user.
@@ -63,4 +64,4 @@ If an unauthenticated user can access either page, it’s a flaw. If a non-admin
 * [CWE-284 Improper Access Control (Authorization)](https://cwe.mitre.org/data/definitions/284.html)
 * [CWE-285 Improper Authorization](https://cwe.mitre.org/data/definitions/285.html)
 * [CWE-639 Authorization Bypass Through User-Controlled Key](https://cwe.mitre.org/data/definitions/639.html)
-* [Exploiting CORS misconfiguration]()http://blog.portswigger.net/2016/10/exploiting-cors-misconfigurations-for.html 
+* [Exploiting CORS misconfiguration](https://blog.portswigger.net/2016/10/exploiting-cors-misconfigurations-for.html)
