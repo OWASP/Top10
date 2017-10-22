@@ -39,7 +39,7 @@ You may have authentication weaknesses if your application:
 
 ### OWASP
 
-* [OWASP Proactive Controls - Implement Identity and Authentication Controls]((https://www.owasp.org/index.php/OWASP_Proactive_Controls#5:_Implement_Identity_and_Authentication_Controls))
+* [OWASP Proactive Controls - Implement Identity and Authentication Controls](https://www.owasp.org/index.php/OWASP_Proactive_Controls#5:_Implement_Identity_and_Authentication_Controls)
 * [OWASP Application Security Verification Standard V2 Authentication](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
 * [OWASP Application Security Verification Standard V3 Session Management](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
 * [OWASP Testing Guide: Identity](https://www.owasp.org/index.php/Testing_Identity_Management)
