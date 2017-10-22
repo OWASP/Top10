@@ -12,7 +12,7 @@ Our methodology includes three likelihood factors for each weakness (prevalence,
 
 Note that this approach does not take the likelihood of the threat agent into account. Nor does it account for any of the various technical details associated with your particular application. Any of these factors could significantly affect the overall likelihood of an attacker finding and exploiting a particular vulnerability. This rating does not take into account the actual impact on your business. _Your organization_ will have to decide how much security risk from applications and APIs the _organization_ is willing to accept given your culture, industry, and regulatory environment. The purpose of the OWASP Top 10 is not to do this risk analysis for you.
 
-The following illustrates our calculation of the risk for A6:2017 Security Misconfiguration.
+The following illustrates our calculation of the risk for **A6:2017-Security Misconfiguration**.
 
-![Risk Calculation for A6:2017 Security Misconfiguration](images/0xc0-risk-explanation.png)
+![Risk Calculation for A6:2017-Security Misconfiguration](images/0xc0-risk-explanation.png)
 

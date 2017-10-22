@@ -11,7 +11,7 @@ The first thing is to determine the protection needs of data in transit and at r
 
 * Is any data of a site transmitted in clear text, internally or externally? Internet traffic is especially dangerous, but from load balancers to web servers or from web servers to back end systems can be problematic.
 * Is sensitive data stored in clear text, including backups?
-Are any old or weak cryptographic algorithms used either by default or in older code? (see A6:2017 Security Misconfiguration)
+Are any old or weak cryptographic algorithms used either by default or in older code? (see **A6:2017 Security Misconfiguration**)
 * Are default crypto keys in use, weak crypto keys generated or re-used, or is proper key management or rotation missing?
 * Is encryption not enforced, e.g. are any user agent (browser) security directives or headers missing?
 
