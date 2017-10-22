@@ -11,14 +11,14 @@ Over the last decade, and in particularly these last few years, the fundamental 
 
 **New issues, supported by data**
 
-* A4:2017 XML External Entity (XXE) is a new category primarily supported by SAST data sets. 
+* **A4:2017 - XML External Entity (XXE)** is a new category primarily supported by SAST data sets. 
 
 **New issues, supported by the community**
 
 We asked the community to provide insight into two forward looking weakness categories. After 516 peer submissions, and  removing issues that were already supported by data (such as Sensitive Data Exposure and XXE), the two new issues are 
 
-* A8:2017-Insecure Deserialization, responsible for one of the worst breaches of all time, and
-* A10:2017-Insufficient Logging and Monitoring, the lack of which can prevent or significantly delay malicious activity and breach detection, incident response and digital forensics.
+* **A8:2017 - Insecure Deserialization**, responsible for one of the worst breaches of all time, and
+* **A10:2017 - Insufficient Logging and Monitoring**, the lack of which can prevent or significantly delay malicious activity and breach detection, incident response and digital forensics.
 
 **Retired, but not forgotten**
 
@@ -26,15 +26,4 @@ We asked the community to provide insight into two forward looking weakness cate
 * **A8 CSRF**. Less than 5% of the data set supports CSRF today, which places it around #13 
 * **A10 Unvalidated redirects and forwards**. Less than 1% of the data set supports this issue today, as it’s now #25
 
-| OWASP Top 10 2013 | +/- |OWASP Top 10 2017 |
-| -- | -- | -- |
-| A1 - Injection | -> | A1:2017 – Injection |
-| A2 - Broken authentication and Session Management | -> | A2:2017 – Broken Authentication |
-| A3 – Cross-Site Scripting (XSS) | v | A3:2013 – Sensitive Data Exposure |
-| A4 – Insecure Direct Object References [Merged+A7] | M | A4:2017 – XML External Entity (XXE) [NEW] |
-| A5 – Security Misconfiguration | v | A5:2017 – Broken Access Control [Merged] |
-| A6 – Sensitive Data Exposure | ^ | A6:2017 – Security Misconfiguration |
-| A7 – Missing Function Level Access Control [Merged+A4] | M | A7:2017 – Cross-Site Scripting (XSS) |
-| A8 – Cross-Site Request Forgery (CSRF) | X | A8:2017 – Insecure Deserialization [NEW, Community] |
-| A9 – Using Components with Known Vulnerabilities | -> | A9:2017 – Using Components with Known Vulnerabilities |
-| A10 – Unvalidated Redirects and Forwards | X | A10:2017 – Insufficient Logging & Monitoring [NEW, Comm.] |
+![0x06-release-notes-1](images/0x06-release-notes-1.png)
