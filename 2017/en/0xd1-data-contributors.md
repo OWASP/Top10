@@ -46,7 +46,7 @@ We’d like to thank the many organizations that contributed their vulnerability
 * SHCP
 
 
-For the first time, all the data contributed to a Top 10 release, and the full list of contributors, is publicly available.
+For the first time, all the data contributed to a Top 10 release, and the full list of contributors, is [publicly available](https://github.com/OWASP/Top10/tree/master/2017/datacall/submissions).
 
 ## Acknowledgements to Individual Contributors
 
