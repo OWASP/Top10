@@ -25,7 +25,7 @@ Software projects should have a process in place to:
 * Only obtain your components from official sources and, when possible, prefer signed packages to reduce the chance of getting a modified, malicious component.
 * Many libraries and components do not create security patches for out of support or old versions, or it simply be unmaintained. If patching is not possible, consider deploying a [virtual patch](https://www.owasp.org/index.php/Virtual_Patching_Best_Practices#What_is_a_Virtual_Patch.3F) to monitor, detect or protect against the discovered issue.
 
-Every organization must ensure that there is an ongoing plan for monitoring, triaging, and applying updates or configuration changes for the lifetime of the application or portfolio. 
+Every organization must ensure that there is an ongoing plan for monitoring, triaging, and applying updates or configuration changes for the lifetime of the application or portfolio.
 
 ## Example Attack Scenarios
 
