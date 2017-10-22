@@ -1,4 +1,4 @@
-# A9 Using Components with Known Vulnerabilities
+# A9:2017 Using Components with Known Vulnerabilities
 
 | Threat agents/Attack vectors | Security Weakness           | Impacts               |
 | -- | -- | -- |
@@ -8,19 +8,20 @@
 ## Am I Vulnerable to Known Vulnerabilities?
 
 You are likely vulnerable:
+
 * If you do not know the versions of all components you use (both client-side and server-side). This includes components you directly use as well as nested dependencies.
 * If any of your software out of date? This includes the OS, Web/App Server, DBMS, applications, APIs and all components, runtime environments and libraries.
 * If you do not know if they are vulnerable. Either if you don’t research for this information or if you don’t scan them for vulnerabilities on a regular base.
 * If you do not fix nor upgrade the underlying platform, frameworks and dependencies in a timely fashion. This commonly happens is environments when patching is a monthly or quarterly task under change control, which leaves organizations open to many days or months of unnecessary exposure to fixed vulnerabilities. This is likely the root cause of one of the largest breaches of all time. 
 * If you do not secure the components' configurations (see A6:2017-Security Misconfiguration).
-
+
 ## How Do I Prevent This?
 
 Software projects should have a process in place to:
 
 * Remove unused dependencies, unnecessary features, components, files, and documentation
-* Continuously inventory the versions of both client-side and server-side components and their dependencies using tools like versions], [DependencyCheck](https://www.owasp.org/index.php/OWASP_Dependency_Check), [retire.js](https://github.com/retirejs/retire.js/), etc.
-* Continuously monitor sources like [CVE](https://cve.mitre.org/) and [NVD](https://cve.mitre.org/) for vulnerabilities in your components. Use software composition analysis tools to automate the process.
+* Continuously inventory the versions of both client-side and server-side components and their dependencies using tools like [versions](http://www.mojohaus.org/versions-maven-plugin/), [DependencyCheck](https://www.owasp.org/index.php/OWASP_Dependency_Check), [retire.js](https://github.com/retirejs/retire.js/), etc.
+* Continuously monitor sources like [CVE](https://cve.mitre.org/) and [NVD](https://nvd.nist.gov/) for vulnerabilities in your components. Use software composition analysis tools to automate the process.
 * Only obtain your components from official sources and, when possible, prefer signed packages to reduce the chance of getting a modified, malicious component.
 * Many libraries and components do not create security patches for out of support or old versions, or it simply be unmaintained. If patching is not possible, consider deploying a [virtual patch](https://www.owasp.org/index.php/Virtual_Patching_Best_Practices#What_is_a_Virtual_Patch.3F) to monitor, detect or protect against the discovered issue.
 
@@ -34,7 +35,7 @@ Components typically run with the same privileges as the application itself, so 
 * While [internet of things (IoT)](https://en.wikipedia.org/wiki/Internet_of_things)are frequently difficult or impossible to patch, the importance of patching them can be great (eg: [St. Jude pacemakers]((http://www.zdnet.com/article/fda-forces-st-jude-pacemaker-recall-to-patch-security-vulnerabilities/)).
 
 There are automated tools to help attackers find unpatched or misconfigured systems. For example, the [Shodan IoT search engine](https://www.shodan.io/report/89bnfUyJ) can help you find devices that still suffer from the [Heartbleed](https://en.wikipedia.org/wiki/Heartbleed) vulnerability that was patched in April 2014.
-
+
 ## References
 
 ### OWASP
