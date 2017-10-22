@@ -12,10 +12,10 @@
 </head>
 <body>
 <p><img src="images/OWASP_logo.png" alt="OWASP LOGO" /></p>
-<h2 id="owasp-top-10-2017-rc2">OWASP Top 10 2017 RC2</h2>
+<h2 id="owasp-top-10-2017">OWASP Top 10 2017</h2>
 <p>The Ten Most Critical Web Application Security Risks</p>
-<p>October 20, 2017</p>
-<h3 id="release-candidate-2">Release Candidate 2</h3>
+<p>October 22, 2017</p>
+<h3 id="golden-master-golden-master-post-rc2">Golden Master (golden-master, post RC2)</h3>
 <p>Comments requested per instructions within</p>
 <p><img src="images/front-wasp.png" alt="WASP Logo URL TBA" /></p>
 <table style="width:8%;">
@@ -128,13 +128,13 @@
 </ul>
 <p><strong>New issues, supported by data</strong></p>
 <ul>
-<li>A4:2017 XML External Entity (XXE) is a new category primarily supported by SAST data sets. </li>
+<li><strong>A4:2017 - XML External Entity (XXE)</strong> is a new category primarily supported by SAST data sets. </li>
 </ul>
 <p><strong>New issues, supported by the community</strong></p>
 <p>We asked the community to provide insight into two forward looking weakness categories. After 516 peer submissions, and  removing issues that were already supported by data (such as Sensitive Data Exposure and XXE), the two new issues are </p>
 <ul>
-<li>A8:2017-Insecure Deserialization, responsible for one of the worst breaches of all time, and</li>
-<li>A10:2017-Insufficient Logging and Monitoring, the lack of which can prevent or significantly delay malicious activity and breach detection, incident response and digital forensics.</li>
+<li><strong>A8:2017 - Insecure Deserialization</strong>, responsible for one of the worst breaches of all time, and</li>
+<li><strong>A10:2017 - Insufficient Logging and Monitoring</strong>, the lack of which can prevent or significantly delay malicious activity and breach detection, incident response and digital forensics.</li>
 </ul>
 <p><strong>Retired, but not forgotten</strong></p>
 <ul>
@@ -142,72 +142,7 @@
 <li><strong>A8 CSRF</strong>. Less than 5% of the data set supports CSRF today, which places it around #13 </li>
 <li><strong>A10 Unvalidated redirects and forwards</strong>. Less than 1% of the data set supports this issue today, as it’s now #25</li>
 </ul>
-<table style="width:12%;">
-<colgroup>
-<col style="width: 4%" />
-<col style="width: 4%" />
-<col style="width: 4%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">OWASP Top 10 2013</th>
-<th style="text-align: left;">+/-</th>
-<th style="text-align: left;">OWASP Top 10 2017</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">A1 - Injection</td>
-<td style="text-align: left;">-&gt;</td>
-<td style="text-align: left;">A1:2017 – Injection</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">A2 - Broken authentication and Session Management</td>
-<td style="text-align: left;">-&gt;</td>
-<td style="text-align: left;">A2:2017 – Broken Authentication</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">A3 – Cross-Site Scripting (XSS)</td>
-<td style="text-align: left;">v</td>
-<td style="text-align: left;">A3:2013 – Sensitive Data Exposure</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">A4 – Insecure Direct Object References [Merged+A7]</td>
-<td style="text-align: left;">M</td>
-<td style="text-align: left;">A4:2017 – XML External Entity (XXE) [NEW]</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">A5 – Security Misconfiguration</td>
-<td style="text-align: left;">v</td>
-<td style="text-align: left;">A5:2017 – Broken Access Control [Merged]</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">A6 – Sensitive Data Exposure</td>
-<td style="text-align: left;">^</td>
-<td style="text-align: left;">A6:2017 – Security Misconfiguration</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">A7 – Missing Function Level Access Control [Merged+A4]</td>
-<td style="text-align: left;">M</td>
-<td style="text-align: left;">A7:2017 – Cross-Site Scripting (XSS)</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">A8 – Cross-Site Request Forgery (CSRF)</td>
-<td style="text-align: left;">X</td>
-<td style="text-align: left;">A8:2017 – Insecure Deserialization [NEW, Community]</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">A9 – Using Components with Known Vulnerabilities</td>
-<td style="text-align: left;">-&gt;</td>
-<td style="text-align: left;">A9:2017 – Using Components with Known Vulnerabilities</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">A10 – Unvalidated Redirects and Forwards</td>
-<td style="text-align: left;">X</td>
-<td style="text-align: left;">A10:2017 – Insufficient Logging &amp; Monitoring [NEW, Comm.]</td>
-</tr>
-</tbody>
-</table>
+<p><img src="images/0x06-release-notes-1.png" alt="0x06-release-notes-1" /></p>
 <h1 id="risk---application-security-risks">Risk - Application Security Risks</h1>
 <h2 id="what-are-application-security-risks">What Are Application Security Risks?</h2>
 <p>Attackers can potentially use many different paths through your application to do harm to your business or organization. Each of these paths represents a risk that may, or may not, be serious enough to warrant attention.</p>
@@ -279,7 +214,7 @@
 <li><a href="https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator">NIST CVSS 3.0</a></li>
 <li><a href="https://www.microsoft.com/en-us/download/details.aspx?id=49168">Microsoft Threat Modelling Tool</a></li>
 </ul>
-<h1 id="t10-owasp-top-10-application-security-risks-2017">T10 OWASP Top 10 Application Security Risks – 2017</h1>
+<h1 id="t10-owasp-top-10-2017-application-security-risks">T10 OWASP Top 10 2017 Application Security Risks</h1>
 <table style="width:8%;">
 <colgroup>
 <col style="width: 4%" />
@@ -355,7 +290,7 @@
 <td style="text-align: left;">Prevalence 2 \</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Almost any source of data can be an injection vector, including users, parameters, external and internal web services, and all types of users. <a href="http://www.owasp.org/index.php/Injection_Flaws">Injection flaws</a> occur when an attacker can send hostile data to an interpreter. </td>
+<td style="text-align: left;">Almost any source of data can be an injection vector, including users, parameters, external and internal web services, and all types of users. <a href="https://www.owasp.org/index.php/Injection_Flaws">Injection flaws</a> occur when an attacker can send hostile data to an interpreter. </td>
 <td style="text-align: left;">Injection flaws are very prevalent, particularly in legacy code. They are often found in SQL, LDAP, XPath, or NoSQL queries; OS commands; XML parsers, SMTP Headers, expression languages, ORM queries. Injection flaws are easy to discover when examining code. Scanners and fuzzers can help attackers find injection flaws.</td>
 <td style="text-align: left;">Injection can result in data loss or corruption, lack of accountability, or denial of access. Injection can sometimes lead to complete host takeover. The business impact depends on the protection needs of your application and data.</td>
 </tr>
@@ -524,10 +459,10 @@ Review the privacy laws or regulations applicable to sensitive data, and protec
 <li>Don’t store sensitive data unnecessarily. Discard it as soon as possible or use PCI DSS compliant tokenization or even truncation. Data you don’t retain can’t be stolen.</li>
 <li>Make sure you encrypt all sensitive data at rest </li>
 <li>Encrypt all data in transit, such as using TLS. Enforce this using directives like HTTP Strict Transport Security (HSTS).</li>
-<li>Ensure up-to-date and strong standard algorithms or ciphers, parameters, protocols and keys are used, and proper key management is in place. Consider using <a href="http://csrc.nist.gov/groups/STM/cmvp/documents/140-1/140val-all.htm">crypto modules</a>.</li>
-<li>Ensure passwords are stored with a strong adaptive algorithm appropriate for password protection, such as <a href="https://www.cryptolux.org/index.php/Argon2">Argon2</a>, <a href="http://en.wikipedia.org/wiki/Scrypt">scrypt</a>, <a href="http://en.wikipedia.org/wiki/Bcrypt">bcrypt</a> and <a href="http://en.wikipedia.org/wiki/PBKDF2">PBKDF2</a>. Configure the work factor (delay factor) as high as you can tolerate.</li>
-<li>Disable caching for response that contain sensitive data.<br />
-Verify independently the effectiveness of your settings.</li>
+<li>Ensure up-to-date and strong standard algorithms or ciphers, parameters, protocols and keys are used, and proper key management is in place. Consider using <a href="https://csrc.nist.gov/projects/cryptographic-module-validation-program/validated-modules/search">crypto modules</a>.</li>
+<li>Ensure passwords are stored with a strong adaptive algorithm appropriate for password protection, such as <a href="https://www.cryptolux.org/index.php/Argon2">Argon2</a>, <a href="https://wikipedia.org/wiki/Scrypt">scrypt</a>, <a href="https://wikipedia.org/wiki/Bcrypt">bcrypt</a> and <a href="https://wikipedia.org/wiki/PBKDF2">PBKDF2</a>. Configure the work factor (delay factor) as high as you can tolerate.</li>
+<li>Disable caching for response that contain sensitive data.</li>
+<li>Verify independently the effectiveness of your settings.</li>
 </ul>
 <h2 id="example-attack-scenarios-2">Example Attack Scenarios</h2>
 <p><strong>Scenario #1</strong>:  An application encrypts credit card numbers in a database using automatic database encryption. However, this data is automatically decrypted when retrieved, allowing an SQL injection flaw to retrieve credit card numbers in clear text. </p>
@@ -767,9 +702,9 @@ Implement access control mechanisms once and re-use them throughout the applicat
 <p>For additional requirements in this area, see the <a href="https://www.owasp.org/index.php/ASVS">ASVS requirements areas for Security Configuration (V11 and V19)</a>.</p>
 <h3 id="external-6">External</h3>
 <ul>
-<li><a href="http://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-123.pdf">NIST Guide to General Server Hardening</a></li>
-<li><a href="http://cwe.mitre.org/data/definitions/2.html">CWE Entry 2 on Environmental Security Flaws</a></li>
-<li><a href="http://benchmarks.cisecurity.org/downloads/benchmarks/">CIS Security Configuration Guides/Benchmarks</a></li>
+<li><a href="https://csrc.nist.gov/publications/detail/sp/800-123/final">NIST Guide to General Server Hardening</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/2.html">CWE Entry 2 on Environmental Security Flaws</a></li>
+<li><a href="https://www.cisecurity.org/cis-benchmarks/">CIS Security Configuration Guides/Benchmarks</a></li>
 </ul>
 <h1 id="a72017-cross-site-scripting-xss">A7:2017 Cross-Site Scripting (XSS)</h1>
 <table style="width:12%;">
@@ -955,7 +890,7 @@ Implement access control mechanisms once and re-use them throughout the applicat
 <p>Components typically run with the same privileges as the application itself, so flaws in any component can result in serious impact. Such flaws can be accidental (e.g. coding error) or intentional (e.g. backdoor in component). Some example exploitable component vulnerabilities discovered are:</p>
 <ul>
 <li><a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5638">CVE-2017-5638</a>, a Struts 2 remote code execution vulnerability that enables execution of arbitrary code on the server, has been blamed for significant breaches.</li>
-<li>While <a href="https://en.wikipedia.org/wiki/Internet_of_things">internet of things (IoT)</a> are frequently difficult or impossible to patch, the importance of patching them can be great (eg: <a href="(http://www.zdnet.com/article/fda-forces-st-jude-pacemaker-recall-to-patch-security-vulnerabilities/)">St. Jude pacemakers</a>.</li>
+<li>While <a href="https://en.wikipedia.org/wiki/Internet_of_things">internet of things (IoT)</a> are frequently difficult or impossible to patch, the importance of patching them can be great (eg: <a href="https://arstechnica.com/information-technology/2017/08/465k-patients-need-a-firmware-update-to-prevent-serious-pacemaker-hacks/">St. Jude pacemakers</a>).</li>
 </ul>
 <p>There are automated tools to help attackers find unpatched or misconfigured systems. For example, the <a href="https://www.shodan.io/report/89bnfUyJ">Shodan IoT search engine</a> can help you find devices that still suffer from the <a href="https://en.wikipedia.org/wiki/Heartbleed">Heartbleed</a> vulnerability that was patched in April 2014.</p>
 <h2 id="references-9">References</h2>
@@ -1165,7 +1100,7 @@ Implement access control mechanisms once and re-use them throughout the applicat
 <li>Negotiate with internal or external developers the requirements, including guidelines and security requirements with respect to your security program, e.g. SDLC, best practices</li>
 <li>Rate the fulfillment of all technical requirements including a rough planning and design</li>
 <li>Negotiate all technical requirements including design, security and service level agreements (SLA)</li>
-<li>Consider adopting templates and checklists, such as <a href="https://www.owasp.org/index.php/OWASP_Secure_Software_Contract_Annex">OWASP Secure Software Contract Annex</a> <strong>NB</strong>: The Annex is a sample specific to US contract law, and is likely to need legal review in your jurisdiction. Please consult qualified legal advice before using the Annex.</li>
+<li>Adopt templates and checklists, such as <a href="https://www.owasp.org/index.php/OWASP_Secure_Software_Contract_Annex">OWASP Secure Software Contract Annex</a> <strong>NB</strong>: The Annex is a sample specific to US contract law, and is likely to need legal review in your jurisdiction. Please consult qualified legal advice before using the Annex.</li>
 </ul>
 <h2 id="planning-and-design">Planning and Design</h2>
 <ul>
@@ -1181,7 +1116,7 @@ Implement access control mechanisms once and re-use them throughout the applicat
 <h2 id="deployment-testing-and-rollout">Deployment, Testing and Rollout</h2>
 <ul>
 <li>It's critical that security tasks automated the secure setup of the application, interfaces and of all further components needed, including required authorizations</li>
-<li>Test the technical functions and integration to the IT architecture, and coordinate business tests. Consider to test use and abuse cases from technical and business perspectives.</li>
+<li>Test the technical functions and integration to the IT architecture, and coordinate business tests. Create &quot;use&quot; and &quot;abuse&quot; test cases from technical and business perspectives.</li>
 <li>Manage security tests according to internal processes, the protection needs and the level of security where the application is going to be deployed</li>
 <li>Put the application in operation and migrate from previously used applications</li>
 <li>Finalize all documentation, including the CMDB and security architecture</li>

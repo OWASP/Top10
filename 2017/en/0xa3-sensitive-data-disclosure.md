@@ -26,10 +26,10 @@ Review the privacy laws or regulations applicable to sensitive data, and protec
 * Don’t store sensitive data unnecessarily. Discard it as soon as possible or use PCI DSS compliant tokenization or even truncation. Data you don’t retain can’t be stolen.
 * Make sure you encrypt all sensitive data at rest 
 * Encrypt all data in transit, such as using TLS. Enforce this using directives like HTTP Strict Transport Security (HSTS).
-* Ensure up-to-date and strong standard algorithms or ciphers, parameters, protocols and keys are used, and proper key management is in place. Consider using [crypto modules](http://csrc.nist.gov/groups/STM/cmvp/documents/140-1/140val-all.htm).
-* Ensure passwords are stored with a strong adaptive algorithm appropriate for password protection, such as [Argon2](https://www.cryptolux.org/index.php/Argon2), [scrypt](http://en.wikipedia.org/wiki/Scrypt), [bcrypt](http://en.wikipedia.org/wiki/Bcrypt) and [PBKDF2](http://en.wikipedia.org/wiki/PBKDF2). Configure the work factor (delay factor) as high as you can tolerate.
+* Ensure up-to-date and strong standard algorithms or ciphers, parameters, protocols and keys are used, and proper key management is in place. Consider using [crypto modules](https://csrc.nist.gov/projects/cryptographic-module-validation-program/validated-modules/search).
+* Ensure passwords are stored with a strong adaptive algorithm appropriate for password protection, such as [Argon2](https://www.cryptolux.org/index.php/Argon2), [scrypt](https://wikipedia.org/wiki/Scrypt), [bcrypt](https://wikipedia.org/wiki/Bcrypt) and [PBKDF2](https://wikipedia.org/wiki/PBKDF2). Configure the work factor (delay factor) as high as you can tolerate.
 * Disable caching for response that contain sensitive data.
-Verify independently the effectiveness of your settings.
+* Verify independently the effectiveness of your settings.
 
 ## Example Attack Scenarios
 

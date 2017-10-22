@@ -1,12 +1,12 @@
 ![OWASP LOGO](images/OWASP_logo.png)
 
-## OWASP Top 10 2017 RC2
+## OWASP Top 10 2017
 
 The Ten Most Critical Web Application Security Risks
 
-October 20, 2017
+October 22, 2017
 
-### Release Candidate 2
+### Golden Master (golden-master, post RC2)
 
 Comments requested per instructions within
 
