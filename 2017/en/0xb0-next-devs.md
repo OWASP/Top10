@@ -2,8 +2,6 @@
 
 ## Establish &amp; Use Repeatable Security Processes and Standard Security Controls
 
-Establish & Use Repeatable Security Processes and Standard Security Controls
-
 Whether you are new to web application security or are already very familiar with these risks, the task of producing a secure web application or fixing an existing one can be difficult. If you have to manage a large application portfolio, this task can be daunting.
 
 To help organizations and developers reduce their application security risks in a cost effective manner, OWASP has produced numerous free and open resources that you can use to address application security in your organization. The following are some of the many resources OWASP has produced to help organizations produce secure web applications and APIs. On the next page, we present additional OWASP resources that can assist organizations in verifying the security of their applications and APIs.
