@@ -1,4 +1,4 @@
-# A6 Security Misconfiguration
+# A6:2017 Security Misconfiguration
 
 | Threat agents/Attack vectors | Security Weakness           | Impacts               |
 | -- | -- | -- |
