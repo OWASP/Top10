@@ -9,7 +9,7 @@
 
 An application is vulnerable to attack when:
 
-* User suppled data is not validated, filtered or sanitized by the application.
+* User-supplied data is not validated, filtered or sanitized by the application.
 * Hostile data is used directly with dynamic queries or non-parameterized calls for the interpreter without context-aware escaping.
 * Hostile data is used within ORM search parameters such that the search evaluates out to include sensitive or all records.
 * Hostile data is directly used or concatenated, such that the SQL or command contains both structure and hostile data in dynamic queries, commands, or in stored procedures.
