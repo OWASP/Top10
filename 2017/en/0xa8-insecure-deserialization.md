@@ -7,7 +7,7 @@
 
 ## Am I Vulnerable to Insecure Deserialization?
 
-Distributed applications or those that need to store state on clients or the filesystem may be using object serialization. Distributed applications with public listeners or applications that rely on the client maintaining state, are likely to allow for tampering of serialized data. This attack is possible with binary formats like Java Serialization or text based formats like Json.Net. Applications and APIs will be vulnerable if the when:
+Distributed applications or those that need to store state on clients or the filesystem may be using object serialization. Distributed applications with public listeners or applications that rely on the client maintaining state, are likely to allow for tampering of serialized data. This attack is possible with binary formats like Java Serialization or text based formats like JSON. Applications and APIs will be vulnerable if the when:
 * The serialization mechanism allows for the creation of arbitrary data types, AND
 * There are classes available to the application that can be chained together to change application behavior during or after deserialization, or unintended content can be used to influence application behavior, AND
 * The application or API accepts and deserializes hostile objects supplied by an attacker, or an application uses serialized opaque client side state without appropriate tamper resistant controls. OR
