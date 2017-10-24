@@ -25,7 +25,7 @@ If that is not possible:
 * Restrict or monitor incoming and outgoing network connectivity from containers or servers that deserialize.
 * Monitor deserialization, alerting if a user deserializes constantly.
 
-## Example Attack Scenarios​
+## Example Attack Scenarios
 
 **Scenario #1**: A React app calls a set of Spring Boot microservices. Being functional programmers, they tried to ensure that their code is immutable. The solution they came up with is serializing user state and passing it back and forth with each request. An attacker notices the "R00" Java object signature, and uses the Java Serial Killer tool to gain remote code execution on the application server.
 
