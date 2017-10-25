@@ -3,7 +3,7 @@
 | Threat agents/Attack vectors | Security Weakness           | Impacts               |
 | -- | -- | -- |
 | Access Lvl \| Exploitability 3 | Prevalence 3 \| Detectability 3 | Technical 2 \| Business |
-| Even anonymous attackers can try to access default accounts, unused pages, unpatched flaws, unprotected files and directories, etc. to gain unauthorized access to or knowledge of the system. | Security misconfiguration can happen at any level of an application stack, including the platform, web server, application server, database, frameworks, and custom code. Automated scanners are useful for detecting  misconfigurations, use of default accounts or configurations, unnecessary services, legacy options etc. | Such flaws frequently give attackers unauthorized access to some system data or functionality. Occasionally, such flaws result in a complete system compromise. The business impact depends on the protection needs of your application and data. |
+| Attackers will often attempt to access default accounts, unused pages, unpatched flaws, unprotected files and directories, etc. to gain unauthorized access to or knowledge of the system. | Security misconfiguration can happen at any level of an application stack, including the platform, web server, application server, database, frameworks, and custom code. Automated scanners are useful for detecting  misconfigurations, use of default accounts or configurations, unnecessary services, legacy options etc. | Such flaws frequently give attackers unauthorized access to some system data or functionality. Occasionally, such flaws result in a complete system compromise. The business impact depends on the protection needs of your application and data. |
 
 ## Am I Vulnerable to Security Misconfig?
 
@@ -11,8 +11,8 @@ Is your application missing the proper security hardening across any part of the
 
 * Are any unnecessary features enabled or installed (e.g. ports, services, pages, accounts, privileges)?
 * Are default accounts and their passwords still enabled and unchanged?
-* Does your error handling reveal stack traces or other overly informative error messages to users?
-* Do you still use ancient configs with updated software? Do you continue to support obsolete backward compatibility?
+* Will error handling reveal stack traces or other overly informative error messages to users?
+* On upgraded systems, are the latest security features disabled or not configured securely?
 * Are the security settings in your application servers, application frameworks (e.g. Struts, Spring, ASP.NET), libraries, databases, etc. not set to secure values?
 * For web applications, does the server not send security directives to client agents (e.g. [HSTS](https://www.owasp.org/index.php/HTTP_Strict_Transport_Security_Cheat_Sheet)) or are they not set to secure values?
 * Is any of your software out of date? (see **A9:2017-Using Components with Known Vulnerabilities**)
@@ -21,12 +21,12 @@ Without a concerted, repeatable application security configuration process, syst
 
 ## How Do I Prevent This?
 
-The primary recommendations are to establish all of the following:
+Is your application missing the proper security hardening across any part of the application stack? Including:
 
-* A repeatable hardening process that makes it fast and easy to deploy another environment that is properly locked down. Development, QA, and production environments should all be configured identically (with different credentials used in each environment). This process should be automated to minimize the effort required to setup a new secure environment.
+* A repeatable hardening process that makes it fast and easy to deploy another environment that is properly locked down. Development, QA, and production environments should all be configured identically, with different credentials used in each environment. This process should be automated to minimize the effort required to setup a new secure environment.
 * Remove or do not install any unnecessary features, components, documentation and samples. Remove unused dependencies and frameworks.
 * A process to triage and deploy all updates and patches in a timely manner to each deployed environment. This process needs to include all frameworks, dependencies, components, and libraries (see **A9:2017 Using Components with Known Vulnerabilities**).
-* A strong application architecture that provides effective, secure separation between components, with segmentation, containerization, or cloud security groups (ACLs). 
+* A strong application architecture that provides effective, secure separation between components, with segmentation, containerization, or cloud security groups (ACLs).
 * An automated process to verify the effectiveness of the configurations and settings in all environments.
 
 ## Example Attack Scenarios
