@@ -15,7 +15,7 @@ At this stage, we are asking for:
 * if risk factors (exploitability, prevalence, detectability, impact) are concise and accurate
 * Vulnerability and Scenarios boxes are clear in meaning
 * Recommendations must be actionable
-* Any OWASP or External links are high quality and agree in concept and tone with the Top 10-s content
+* Any OWASP or External links are high quality and agree in concept and tone with the Top 10’s content
 * CWE links must cover the content discussed in each risk. Do we need to add, change, or remove CWEs? Does the CWE need updating? If so, we have a very small window to work with MITRE to make it better
 
 We strongly urge for any corrections or issues to be logged at GitHub:

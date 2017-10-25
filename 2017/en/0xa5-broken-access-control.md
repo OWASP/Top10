@@ -47,7 +47,7 @@ An attacker simply modifies the 'acct' parameter in the browser to send whatever
 * `http://example.com/app/getappInfo`
 * `http://example.com/app/admin_getappInfo`
 
-If an unauthenticated user can access either page, it-s a flaw. If a non-admin can access the admin page, this is a flaw.
+If an unauthenticated user can access either page, it’s a flaw. If a non-admin can access the admin page, this is a flaw.
 
 ## References
 
