@@ -9,21 +9,17 @@
 
 There are three forms of XSS, usually targeting users' browsers:
 
-<<<<<<< HEAD
-* **Reflected XSS**: Your application or API includes unvalidated and  unescaped user input as part of HTML output or there is no content security policy ([CSP](https://www.owasp.org/index.php/Content_Security_Policy)) header. A successful attack can allow the attacker to execute arbitrary HTML and JavaScript in the victim-s browser. Typically the user will need to interact with a link, or some other attacker controlled page, such as a watering hole attack, malicious advertisements, or similar.
-=======
 * **Reflected XSS**: Your app or API includes unvalidated and  unescaped user input as part of HTML output or there is no content security policy ([CSP](https://www.owasp.org/index.php/Content_Security_Policy)) header. A successful attack can allow the attacker to execute arbitrary HTML and JavaScript in the victim’s browser. Typically the user will need to interact with a link, or some other attacker controlled page, such as a watering hole attack, malicious advertisements, or similar.
->>>>>>> parent of 8d231e1... Remove smart quotes from the markdown version
 * **Stored XSS**: Your app or API stores unsanitized user input that is viewed at a later time by another user or an administrator. Stored XSS is often considered a high or critical risk.
 * **DOM XSS**: JavaScript frameworks, single page apps, and APIs that dynamically include attacker-controllable data to a page are vulnerable to DOM XSS. Ideally, you would avoid sending attacker-controllable data to unsafe JavaScript APIs.
 
-Typical XSS attacks include session stealing, account takeover, MFA bypass, DIV replacement or defacement (such as trojan login DIVs), attacks against the user's browser such as malicious software downloads, key logging, and other client side attacks.
+Typical XSS attacks include session stealing, account takeover, MFA bypass, DOM node replacement or defacement (such as trojan login panels), attacks against the user's browser such as malicious software downloads, key logging, and other client side attacks.
 
 ## How Do I Prevent This?
 
 Preventing XSS requires separation of untrusted data from active browser content.
 
-* Use safer frameworks that automatically escape for XSS by design, such as in Ruby 3.0 or React JS.
+* Use safer frameworks that automatically escape for XSS by design, such as in Ruby 3.0 or React JS, or leverage framework XSS protections.
 * Escaping untrusted HTTP request data based on the context in the HTML output (body, attribute, JavaScript, CSS, or URL) will resolve Reflected and Stored XSS vulnerabilities. The [OWASP XSS Prevention Cheat Sheet](https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet) has details on the required data escaping techniques.
 * Applying context sensitive encoding when modifying the browser document on the client side acts against DOM XSS. When this cannot be avoided, similar context sensitive escaping techniques can be applied to browser APIs as described in the [OWASP DOM based XSS Prevention Cheat Sheet](https://www.owasp.org/index.php/DOM_based_XSS_Prevention_Cheat_Sheet).
 * Enabling a [Content Security Policy (CSP)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) is a defense in depth mitigating control against XSS, assuming no other vulnerabilities exist that would allow placing malicious code via local file include such as path traversal overwrites, or vulnerable libraries in permitted sources, such as content delivery network or local libraries. 
@@ -59,6 +55,7 @@ Note that attackers can use XSS to defeat any automated CSRF defense the applic
 * [OWASP XSS Prevention Cheat Sheet](https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet)
 * [OWASP DOM based XSS Prevention Cheat Sheet](https://www.owasp.org/index.php/DOM_based_XSS_Prevention_Cheat_Sheet)
 * [OWASP XSS Filter Evasion Cheat Sheet](https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet)
+* [OWASP Java Encoder Project](https://www.owasp.org/index.php/OWASP_Java_Encoder_Project)
 
 ### External
 
