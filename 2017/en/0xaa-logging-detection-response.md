@@ -39,7 +39,7 @@ There are commercial and open source application protection frameworks such as 
 ### OWASP
 
 * [OWASP Proactive Controls - Implement Logging and Intrusion Detection](https://www.owasp.org/index.php/OWASP_Proactive_Controls#8:_Implement_Logging_and_Intrusion_Detection)
-* [OWASP Application Security Verification Standard - V7 Logging and Monitoring](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
+* [OWASP Application Security Verification Standard - V8 Logging and Monitoring](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
 * [OWASP Testing Guide - Testing for Detailed Error Code](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
 * [OWASP Cheat Sheet - Logging](https://www.owasp.org/index.php/Logging_Cheat_Sheet)
 
