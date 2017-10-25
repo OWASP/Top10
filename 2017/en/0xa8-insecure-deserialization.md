@@ -20,7 +20,7 @@ The only safe architectural pattern is to not accept serialized objects from unt
 If that is not possible:
 * Implement integrity checks or encryption of the serialized objects to prevent hostile object creation or data tampering.
 * Enforce strict type constraints during deserialization before object creation; typically code is expecting a definable set of classes. Bypasses to this technique have been demonstrated.
-* Isolate code that deserializes, such that it runs in very low privilege environments, such as temporary containers.
+* Isolate code that deserializes, such that it runs in very low privilege environments.
 * Log deserialization exceptions and failures, such as where the incoming type is not the expected type, or the deserialization throws exceptions.
 * Restrict or monitor incoming and outgoing network connectivity from containers or servers that deserialize.
 * Monitor deserialization, alerting if a user deserializes constantly.
