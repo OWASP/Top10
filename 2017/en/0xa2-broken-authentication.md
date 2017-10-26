@@ -12,7 +12,7 @@ You may have authentication weaknesses if your application:
 
 * Permits [credential stuffing](https://www.owasp.org/index.php/Credential_stuffing), which is where the attacker has a list of valid usernames and passwords.
 * Permits brute force or other automated attacks.
-* Permits default, weak or well-known passwords, such as "Password1" or "admin/admin“.
+* Permits default, weak or well-known passwords, such as "Password1" or "admin/admin".
 * Uses weak or ineffectual credential recovery and forgot password processes, such as "knowledge-based answers", which cannot be made safe.
 * Uses plain text, encrypted, or weakly hashed passwords permit the rapid recovery of passwords using GPU crackers or brute force tools.
 * Has missing or ineffective multi-factor authentication.

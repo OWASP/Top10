@@ -33,13 +33,13 @@ Preventing injection requires keeping data separate from commands and queries.
 String query = "SELECT * FROM accounts WHERE custID='" + request.getParameter("id") + "'";
 ```
 
-**Scenario #2**: Similarly, an application’s blind trust in frameworks may result in queries that are still vulnerable, (e.g. Hibernate Query Language (HQL):
+**Scenario #2**: Similarly, an application's blind trust in frameworks may result in queries that are still vulnerable, (e.g. Hibernate Query Language (HQL):
 
 ```
 Query HQLQuery = session.createQuery("FROM accounts WHERE custID='" + request.getParameter("id") + "'");
 ```
 
-In both cases, the attacker modifies the 'id’ parameter value in her browser to send:  ' or '1'='1. For example:
+In both cases, the attacker modifies the 'id' parameter value in her browser to send:  ' or '1'='1. For example:
 * `http://example.com/app/accountView?id=' or '1'='1`
 
 This changes the meaning of both queries to return all the records from the accounts table.  More dangerous attacks could modify data or even invoke stored procedures.

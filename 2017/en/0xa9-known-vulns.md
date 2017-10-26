@@ -11,7 +11,7 @@ You are likely vulnerable:
 
 * If you do not know the versions of all components you use (both client-side and server-side). This includes components you directly use as well as nested dependencies.
 * If any of your software out of date? This includes the OS, Web/App Server, DBMS, applications, APIs and all components, runtime environments and libraries.
-* If you do not know if they are vulnerable. Either if you don’t research for this information or if you don’t scan them for vulnerabilities on a regular base.
+* If you do not know if they are vulnerable. Either if you don't research for this information or if you don't scan them for vulnerabilities on a regular base.
 * If you do not fix or upgrade the underlying platform, frameworks and dependencies in a timely fashion. This commonly happens is environments when patching is a monthly or quarterly task under change control, which leaves organizations open to many days or months of unnecessary exposure to fixed vulnerabilities. This is likely the root cause of one of the largest breaches of all time. 
 * If you do not secure the components' configurations (see **A6:2017-Security Misconfiguration**).
 
