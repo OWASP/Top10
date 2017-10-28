@@ -9,12 +9,12 @@ At OWASP you'll find free and open:
 * Application security tools and standards
 * Complete books on application security testing, secure code development, and secure code review
 * Presentations and videos
-* Cheat sheets on many common topics
+* [Cheat sheets](https://www.owasp.org/index.php/OWASP_Cheat_Sheet_Series) on many common topics
 * Standard security controls and libraries
-* Local chapters worldwide
+* [Local chapters worldwide](https://www.owasp.org/index.php/OWASP_Chapter)
 * Cutting edge research
-* Extensive conferences worldwide
-* Mailing lists
+* Extensive [conferences worldwide](https://www.owasp.org/index.php/Category:OWASP_AppSec_Conference)
+* [Mailing lists](https://lists.owasp.org/mailman/listinfo)
 
 Learn more at: https://www.owasp.org.
 
