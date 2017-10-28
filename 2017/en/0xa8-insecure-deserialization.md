@@ -5,7 +5,7 @@
 | Access Lvl \| Exploitability 1 | Prevalence 2 \| Detectability 2 | Technical 3 \| Business |
 | Exploitation of deserialization is somewhat difficult, as off the shelf exploits rarely work without changes or tweaks to the underlying exploit code. | This issue is included in the Top 10 based on an [industry survey](https://owasp.blogspot.com/2017/08/owasp-top-10-2017-project-update.html) and not on quantifiable data. Some tools can discover deserialization flaws, but human assistance is frequently needed to validate the problem. It is expected that prevalence data for deserialization flaws will increase as tooling is developed to help identify and address it. | The impact of deserialization flaws cannot be understated. They can lead to remote code execution attacks, one of the most serious attacks possible. |
 
-## Am I Vulnerable to Insecure Deserialization?
+## Is the Application Vulnerable?
 
 Distributed applications or those that need to store state on clients or the filesystem may be using object serialization. Distributed applications with public listeners or applications that rely on the client maintaining state, are likely to allow for tampering of serialized data. This attack is possible with binary formats like Java Serialization or text based formats like JSON. Applications and APIs will be vulnerable if the when:
 * The serialization mechanism allows for the creation of arbitrary data types, AND
@@ -13,7 +13,7 @@ Distributed applications or those that need to store state on clients or the fil
 * The application or API accepts and deserializes hostile objects supplied by an attacker, or an application uses serialized opaque client side state without appropriate tamper resistant controls. OR
 * Security state sent to an untrusted client without some form of integrity control is likely vulnerable to deserialization.
 
-## How Do I Prevent This?
+## How To Prevent?
 
 The only safe architectural pattern is to not accept serialized objects from untrusted sources or to use serialization mediums that only permit primitive data types.
 
