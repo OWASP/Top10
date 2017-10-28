@@ -5,7 +5,7 @@
 | Access Lvl \| Exploitability 2 | Prevalence 3 \| Detectability 1 | Technical 2 \| Business |
 | Exploitation of insufficient logging and monitoring is the bedrock of nearly every major incident. Attackers rely on the lack of monitoring and timely response to achieve their goals without being detected. | This issue is included in the Top 10 based on an [industry survey](https://owasp.blogspot.com/2017/08/owasp-top-10-2017-project-update.html). One strategy for determining if you have sufficient monitoring is to examine your logs following penetration testing. The testers actions should be recorded sufficiently to understand what damages they may have inflicted. | Most successful attacks start with vulnerability probing. Allowing such probes to continue can raise the likelihood of successful exploit to nearly 100%. |
 
-## Am I Vulnerable to Insufficient Logging & Monitoring?
+## Is the Application Vulnerable?
 
 Insufficient logging, detection, monitoring and active response occurs any time:
 
@@ -15,7 +15,7 @@ Insufficient logging, detection, monitoring and active response occurs any time:
 
 For larger and high performing organizations, the lack of active response, such as real time alerting and response activities such as blocking automated attacks on web apps and particularly APIs would place the organization at risk from extended compromise. The response does not necessarily need to be visible to the attacker, only that the application and associated infrastructure, frameworks, service layers, etc. can detect and alert humans or tools to respond in near real time.
 
-## How Do I Prevent This?
+## How To Prevent?
 
 As per the risk of the data stored or processed by the application:
 
