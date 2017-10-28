@@ -5,7 +5,7 @@
 | Access Lvl \| Exploitability 3 | Prevalence 2 \| Detectability 2 | Technical 3 \| Business |
 | Attackers have access to hundreds of millions of valid username and password combinations for credential stuffing, default administrative account lists, automated brute force and dictionary attack tools, and advanced GPU cracking tools.  | The prevalence of broken authentication is widespread due to the design and implementation of most identity and access management systems. Attackers can detect broken authentication using manual means, but are often attracted by password dumps, or after a social engineering attack such as phishing or similar. | Attackers only have to gain access to a few accounts, or just one admin  account to compromise the system. Depending on the domain of the application, this may allow money laundering social security fraud and identity theft; or disclose legally protected highly sensitive information. |
 
-## Am I Vulnerable to Broken Auth?
+## Is the Application Vulnerable?
 
 Confirmation of the user's identity, authentication, and session management are critical for separating malicious unauthenticated attackers from authorized users.
 You may have authentication weaknesses if your application:
@@ -17,7 +17,7 @@ You may have authentication weaknesses if your application:
 * Uses plain text, encrypted, or weakly hashed passwords permit the rapid recovery of passwords using GPU crackers or brute force tools.
 * Has missing or ineffective multi-factor authentication.
 
-## How Do I Prevent This?
+## How To Prevent?
 
 * Do not ship or deploy with any default credentials, particularly for admin users
 * [Store passwords using a modern one way hash function](https://www.owasp.org/index.php/Password_Storage_Cheat_Sheet#Leverage_an_adaptive_one-way_function), such as Argon2 or PBKDF2, with sufficient work factor to prevent realistic GPU cracking attacks.
