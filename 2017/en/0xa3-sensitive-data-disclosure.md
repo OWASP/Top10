@@ -5,7 +5,7 @@
 | Access Lvl \| Exploitability 2 | Prevalence 3 \| Detectability 2 | Technical 3 \| Business |
 | Even anonymous attackers typically don't break crypto directly. They break something else, such as steal keys, do man-in-the-middle attacks, or steal clear text data off the server, while in transit, or from the user's client, e.g. browser. Manual attack is generally required. | Over the last few years, this has been the most common impactful attack. The most common flaw is simply not encrypting sensitive data. When crypto is employed, weak key generation and management, and weak algorithm usage is common, particularly weak password hashing techniques. For data in transit server side weaknesses are mainly easy to detect, but hard for data at rest. Both with very varying exploitability. | Failure frequently compromises all data that should have been protected. Typically, this information includes sensitive personal information (PII) data such as health records, credentials, personal data, credit cards, which often requires protection as defined by laws or regulations such as the EU GDPR or local privacy laws. |
 
-## Am I Vulnerable to Data Exposure?
+## Is the Application Vulnerable?
 
 The first thing is to determine the protection needs of data in transit and at rest. For example, passwords, credit card numbers, health records, and personal information require extra protection, particularly if that data falls under the EU's General Data Protection Regulation (GDPR), local privacy laws or regulations, financial data protection regulations and laws, such as PCI Data Security Standard (PCI DSS), or health records laws, such as the Health Insurance Portability Act (HIPAA). For all such data:
 
@@ -17,7 +17,7 @@ The first thing is to determine the protection needs of data in transit and at r
 
 See ASVS areas [Crypto (V7), Data Protection (V9) and SSL/TLS (V10)](https://www.owasp.org/index.php/ASVS).
 
-## How Do I Prevent This?
+## How To Prevent?
 
 Do the following, at a minimum and consult the references:
 
