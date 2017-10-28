@@ -1,5 +1,5 @@
 # I Introduction
-## Welcome to the OWASP Top 10 2017
+## Welcome to the OWASP Top 10 - 2017
 
 This major update adds several new issues, including two issues selected by the community - **A8:2017-Insecure Deserialization** and **A10:2017-Insufficient Logging and Monitoring**. Community feedback drove the collection of the most amount of data ever assembled in the preparation of an application security standard, and so we are confident that the remaining 8 issues are the most important for organizations to address, particularly the **A3:2017-Sensitive Data Exposure** in the age of the EU's General Data Protection Regulation, **A6:2017-Security Misconfiguration** especially around cloud and API services, and **A9:2017-Using Components with Known Vulnerabilities**, which can be especially challenging for those on modern platforms, like node.js.
 
