@@ -5,7 +5,7 @@
 | Access Lvl \| Exploitability 2 | Prevalence 3 \| Detectability 2 | Technical 2 \| Business |
 | While it is easy to find already-written exploits for many known vulnerabilities, other vulnerabilities require concentrated effort to develop a custom exploit. | Prevalence of this issue is very widespread. Component-heavy development patterns can lead to development teams not even understanding which components they use in their application or API, much less keeping them up to date. This issue is detectable by the use of scanners such as retire.js and header inspection, but verifying if it is exploitable requires an attack of some description. | While some known vulnerabilities lead to only minor impacts, some of the largest breaches to date have relied on exploiting known vulnerabilities in components. Depending on the assets you are protecting, perhaps this risk should be at the top of your list. |
 
-## Am I Vulnerable to Known Vulnerabilities?
+## Is the Application Vulnerable?
 
 You are likely vulnerable:
 
@@ -15,7 +15,7 @@ You are likely vulnerable:
 * If you do not fix or upgrade the underlying platform, frameworks and dependencies in a timely fashion. This commonly happens is environments when patching is a monthly or quarterly task under change control, which leaves organizations open to many days or months of unnecessary exposure to fixed vulnerabilities. This is likely the root cause of one of the largest breaches of all time. 
 * If you do not secure the components' configurations (see **A6:2017-Security Misconfiguration**).
 
-## How Do I Prevent This?
+## How To Prevent?
 
 Software projects should have a process in place to:
 
