@@ -5,7 +5,7 @@
 | Access Lvl \| Exploitability 3 | Prevalence 3 \| Detectability 3 | Technical 2 \| Business |
 | Attackers will often attempt to access default accounts, unused pages, unpatched flaws, unprotected files and directories, etc. to gain unauthorized access to or knowledge of the system. | Security misconfiguration can happen at any level of an application stack, including the platform, web server, application server, database, frameworks, and custom code. Automated scanners are useful for detecting  misconfigurations, use of default accounts or configurations, unnecessary services, legacy options etc. | Such flaws frequently give attackers unauthorized access to some system data or functionality. Occasionally, such flaws result in a complete system compromise. The business impact depends on the protection needs of your application and data. |
 
-## Am I Vulnerable to Security Misconfig?
+## Is the Application Vulnerable?
 
 Is your application missing the proper security hardening across any part of the application stack? Including:
 
@@ -19,7 +19,7 @@ Is your application missing the proper security hardening across any part of the
 
 Without a concerted, repeatable application security configuration process, systems are at a higher risk.
 
-## How Do I Prevent This?
+## How To Prevent?
 
 Is your application missing the proper security hardening across any part of the application stack? Including:
 
