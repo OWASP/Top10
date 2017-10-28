@@ -5,7 +5,7 @@
 | Access Lvl \| Exploitability 2 | Prevalence 2 \| Detectability 3 | Technical 3 \| Business |
 | Attackers can exploit vulnerable XML processors if they can upload XML or include hostile content in an XML document, exploiting vulnerable code, dependencies or integrations. Penetration testers can exploit XXE. DAST tools require additional manual steps to exploit this issue. | By default, many older XML processors allow specification of an external entity, a URI that is dereferenced and evaluated during XML processing. SAST tools can discover this issue by inspecting dependencies and configuration. | These flaws can be used to extract data, execute a remote request from the server, scan internal systems, perform a denial-of-service attack, and other attacks. The business impact depends on the protection needs of all affected applications and data. |
 
-## Am I Vulnerable to XXE?
+## Is the Application Vulnerable?
 
 Applications and in particular XML-based web services or downstream integrations might be vulnerable to attack if:
 
@@ -15,7 +15,7 @@ Applications and in particular XML-based web services or downstream integrations
 * SAST tools can help detect XXE in source code, although manual code review is the best alternative in large, complex applications with many integrations.
 * Being vulnerable to XXE attacks likely means that you are vulnerable to other billion laughs denial-of-service attacks.
 
-## How Do I Prevent This?
+## How To Prevent?
 
 Developer training is essential to identify and mitigate XXE completely. Besides that, preventing XXE requires:
 
