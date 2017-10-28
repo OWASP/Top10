@@ -25,7 +25,7 @@ If that is not possible:
 * Restrict or monitor incoming and outgoing network connectivity from containers or servers that deserialize.
 * Monitor deserialization, alerting if a user deserializes constantly.
 
-## Example Attack Scenarios​
+## Example Attack Scenarios
 
 **Scenario #1**: A React app calls a set of Spring Boot microservices. Being functional programmers, they tried to ensure that their code is immutable. The solution they came up with is serializing user state and passing it back and forth with each request. An attacker notices the "R00" Java object signature, and uses the Java Serial Killer tool to gain remote code execution on the application server.
 
@@ -44,11 +44,14 @@ An attacker changes the serialized object to give themselves admin privileges:
 * [OWASP Deserialization Cheat Sheet](https://www.owasp.org/index.php/Deserialization_Cheat_Sheet)
 * [OWASP Proactive Controls - Validate All Inputs](https://www.owasp.org/index.php/OWASP_Proactive_Controls#4:_Validate_All_Inputs)
 * [OWASP Application Security Verification Standard - TBA](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
+<<<<<<< HEAD
 * [OWASP AppSecEU 2016: Surviving the Java Deserialization Apocalypse](https://www.slideshare.net/cschneider4711/surviving-the-java-deserialization-apocalypse-owasp-appseceu-2016)
+=======
+* [OWASP AppSecEU 2016: Surviving the Java Deserialization Apocalypse](https://speakerdeck.com/pwntester/surviving-the-java-deserialization-apocalypse)
+>>>>>>> master
 * [OWASP AppSecUSA 2017: Friday the 13th JSON Attacks](https://speakerdeck.com/pwntester/friday-the-13th-json-attacks)
 
 ### External
 
 * [CWE-502 Deserialization of Untrusted Data](https://cwe.mitre.org/data/definitions/502.html)
-* https://www.blackhat.com/docs/us-17/thursday/us-17-Munoz-Friday-The-13th-Json-Attacks.pdf
 * https://github.com/mbechler/marshalsec
