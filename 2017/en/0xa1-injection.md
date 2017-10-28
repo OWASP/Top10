@@ -5,7 +5,7 @@
 | Access Lvl \| Exploitability 3 | Prevalence 2 \| Detectability 3 | Technical 3 \| Business |
 | Almost any source of data can be an injection vector, including users, parameters, external and internal web services, and all types of users. [Injection flaws](https://www.owasp.org/index.php/Injection_Flaws) occur when an attacker can send hostile data to an interpreter. | Injection flaws are very prevalent, particularly in legacy code. They are often found in SQL, LDAP, XPath, or NoSQL queries; OS commands; XML parsers, SMTP Headers, expression languages, ORM queries. Injection flaws are easy to discover when examining code. Scanners and fuzzers can help attackers find injection flaws. | Injection can result in data loss or corruption, lack of accountability, or denial of access. Injection can sometimes lead to complete host takeover. The business impact depends on the protection needs of your application and data. |
 
-## Am I vulnerable to Injection?
+## Is the Application Vulnerable?
 
 An application is vulnerable to attack when:
 
@@ -16,7 +16,7 @@ An application is vulnerable to attack when:
 
 Some of the more common injections are SQL, OS command, ORM, LDAP, and Expression Language (EL) or OGNL injection.. The concept is identical between all interpreters. Organizations can include SAST and DAST tooling into the CI/CD pipeline to alert if existing or newly checked in code has injection prior to production deployment. Manual and automated source code review is the best method of detecting if you are vulnerable to injections, closely followed by thorough DAST scans of all parameters, fields, headers, cookies, JSON, and XML data inputs.
 
-## How Do I Prevent Injection?
+## How To Prevent?
 
 Preventing injection requires keeping data separate from commands and queries.
 
