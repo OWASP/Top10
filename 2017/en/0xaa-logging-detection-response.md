@@ -19,7 +19,7 @@ For larger and high performing organizations, the lack of active response, such 
 
 As per the risk of the data stored or processed by the application:
 
-* Ensure all login, access control failures, input validation failures can be logged with sufficient user context to identify suspicious or malicious accounts, and held for sufficient time to allow delayed forensic analysis.
+* Ensure all login, access control failures, server-side input validation failures can be logged with sufficient user context to identify suspicious or malicious accounts, and held for sufficient time to allow delayed forensic analysis.
 * Ensure high value transactions have an audit trail with integrity controls to prevent tampering or deletion, such as append only database tables or similar.
 * Establish effective monitoring and alerting such that suspicious activities are detected and responded within acceptable time periods.
 * Establish or adopt an incident response and recovery plan, such as [NIST 800-61 rev 2](https://csrc.nist.gov/publications/detail/sp/800-61/rev-2/final) or later.
