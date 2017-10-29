@@ -1,8 +1,8 @@
-# A1:2017 Injection
+# A1:2017 Inyección
 
-| Threat agents/Attack vectors | Security Weakness           | Impacts               |
+| Agentes de amenaza/Vectores de ataque | Debilidades de seguridad           | Impacto               |
 | -- | -- | -- |
-| Access Lvl \| Exploitability 3 | Prevalence 2 \| Detectability 3 | Technical 3 \| Business |
+| Nivel de acceso \| Explotabilidad 3 | Prevalencia 2 \| Detección 3 | Impacto técnico 3 \| Impacto al negocio |
 | Almost any source of data can be an injection vector, including users, parameters, external and internal web services, and all types of users. [Injection flaws](http://www.owasp.org/index.php/Injection_Flaws) occur when an attacker can send hostile data to an interpreter. | Injection flaws are very prevalent, particularly in legacy code. They are often found in SQL, LDAP, XPath, or NoSQL queries; OS commands; XML parsers, SMTP Headers, expression languages, ORM queries. Injection flaws are easy to discover when examining code. Scanners and fuzzers can help attackers find injection flaws. | Injection can result in data loss or corruption, lack of accountability, or denial of access. Injection can sometimes lead to complete host takeover. The business impact depends on the protection needs of your application and data. |
 
 ## Am I vulnerable to Injection?
@@ -16,14 +16,14 @@ An application is vulnerable to attack when:
 
 Some of the more common injections are SQL, OS command, ORM, LDAP, and Expression Language (EL) or OGNL injection.. The concept is identical between all interpreters. Organizations can include SAST and DAST tooling into the CI/CD pipeline to alert if existing or newly checked in code has injection prior to production deployment. Manual and automated source code review is the best method of detecting if you are vulnerable to injections, closely followed by thorough DAST scans of all parameters, fields, headers, cookies, JSON, and XML data inputs.
 
-## How Do I Prevent Injection?
+## ¿Cómo prevenirlo?
 
-Preventing injection requires keeping data separate from commands and queries.
+Evitar una inyección requiere mantener los datos separados de los comandos y consultas.
 
-* The preferred option is to use a safe API which avoids the use of the interpreter entirely or provides a parameterized interface, or migrate to use ORMs or Entity Framework. **NB**: When parameterized, stored procedures can still introduce SQL injection if PL/SQL or T-SQL concatenates queries and data, or executes hostile data with EXECUTE IMMEDIATE or exec().
-* Positive or "white list" input validation, but this is not a complete defense as many applications require special characters, such as text areas or APIs for mobile applications
-* For any residual dynamic queries, escape special characters using the specific escape syntax for that interpreter. OWASP's Java Encoder and similar libraries provide such escaping routines. NB: SQL structure such as table names, column names, and so on cannot be escaped, and thus user-supplied structure names are dangerous. This is a common issue in report writing software.
-* Use LIMIT and other SQL controls within queries to prevent mass disclosure of records in case of SQL injection.
+* La opción preferida es usar una API segura la cual evite el uso de interpretes por cmpleto o provea una interfaz parametrizada, o realizar una migración para utilizar ORMs o Entity Framework. **NB**: Aunque estén parametrizados, los procedimientos almacenados (stored procedures) igualmente pueden permitir inyección SQL si PL/SQL o T-SQL concatena las consultas y los datos, o ejecuta código malicioso utilizando EXECUTE IMMEDIATE() o exec().
+* La validación de entradas positiva o de "lista blanca" también se recomienda, pero no es una defensa integral dado que muchas aplicaciones requieren caracteres especiales en sus entradas.
+* Para las consultas dinámicas restantes, excluya caracteres especiales usando la sintaxis específica para su intérprete. El Codificador JAVA de OWASP y librerías similares proveen las rutinas de exclusión. **NB** La estructura SQL como por ejemplo nombres de tabla o columna y demás no pueden ser excluidas, por lo que nombres de estructura proporcionados por el usuario son peligrosos. Este es un problema común en software de generación de reportes.
+* Use LIMIT y otros controles SQL en las consultas para prevenir la divulgación masiva de registros en caso de ser atacados mediante inyección SQL.
 
 ## Example Attack Scenarios
 
