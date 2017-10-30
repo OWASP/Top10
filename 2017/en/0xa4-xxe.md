@@ -57,12 +57,12 @@ Numerous public XXE issues have been discovered, including attacking embedded de
 ### OWASP
 
 * [OWASP Application Security Verification Standard](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
-* [OWASP Testing Guide - Testing for XML Injection](https://www.owasp.org/index.php/Testing_for_XML_Injection_(OTG-INPVAL-008))
+* [OWASP Testing Guide: Testing for XML Injection](https://www.owasp.org/index.php/Testing_for_XML_Injection_(OTG-INPVAL-008))
 * [OWASP XXE Vulnerability](https://www.owasp.org/index.php/XML_External_Entity_(XXE)_Processing)
-* [OWASP XXE Prevention Cheat Sheet](https://www.owasp.org/index.php/XML_External_Entity_(XXE)_Prevention_Cheat_Sheet)
-* [OWASP XML Security Cheat Sheet](https://www.owasp.org/index.php/XML_Security_Cheat_Sheet)
+* [OWASP Cheat Sheet: XXE Prevention](https://www.owasp.org/index.php/XML_External_Entity_(XXE)_Prevention_Cheat_Sheet)
+* [OWASP Cheat Sheet: XML Security](https://www.owasp.org/index.php/XML_Security_Cheat_Sheet)
 
 ### External
 
-* [CWE-611 Improper Restriction of XXE](https://cwe.mitre.org/data/definitions/611.html)
+* [CWE-611: Improper Restriction of XXE](https://cwe.mitre.org/data/definitions/611.html)
 * [Billion Laughs Attack](https://en.wikipedia.org/wiki/Billion_laughs_attack)
