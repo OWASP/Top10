@@ -58,8 +58,8 @@ This changes the meaning of both queries to return all the records from the acco
 
 ### External
 
-* [CWE-77 Command Injection](https://cwe.mitre.org/data/definitions/77.html)
-* [CWE-89 SQL Injection](https://cwe.mitre.org/data/definitions/89.html)
-* [CWE-564 Hibernate Injection](https://cwe.mitre.org/data/definitions/564.html)
-* [CWE-917 Expression Language Injection](https://cwe.mitre.org/data/definitions/917.html)
+* [CWE-77: Command Injection](https://cwe.mitre.org/data/definitions/77.html)
+* [CWE-89: SQL Injection](https://cwe.mitre.org/data/definitions/89.html)
+* [CWE-564: Hibernate Injection](https://cwe.mitre.org/data/definitions/564.html)
+* [CWE-917: Expression Language Injection](https://cwe.mitre.org/data/definitions/917.html)
 * [PortSwigger: Server-side template injection](https://portswigger.net/knowledgebase/issues/details/00101080_serversidetemplateinjection)
