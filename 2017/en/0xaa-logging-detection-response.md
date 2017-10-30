@@ -38,12 +38,12 @@ There are commercial and open source application protection frameworks such as [
 
 ### OWASP
 
-* [OWASP Proactive Controls - Implement Logging and Intrusion Detection](https://www.owasp.org/index.php/OWASP_Proactive_Controls#8:_Implement_Logging_and_Intrusion_Detection)
-* [OWASP Application Security Verification Standard - V8 Logging and Monitoring](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
-* [OWASP Testing Guide - Testing for Detailed Error Code](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
-* [OWASP Cheat Sheet - Logging](https://www.owasp.org/index.php/Logging_Cheat_Sheet)
+* [OWASP Proactive Controls: Implement Logging and Intrusion Detection](https://www.owasp.org/index.php/OWASP_Proactive_Controls#8:_Implement_Logging_and_Intrusion_Detection)
+* [OWASP Application Security Verification Standard: V8 Logging and Monitoring](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
+* [OWASP Testing Guide: Testing for Detailed Error Code](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
+* [OWASP Cheat Sheet: Logging](https://www.owasp.org/index.php/Logging_Cheat_Sheet)
 
 ### External
 
-* [CWE-223 Omission of Security-relevant Information](https://cwe.mitre.org/data/definitions/223.html)
-* [CWE-778 Insufficient Logging](https://cwe.mitre.org/data/definitions/778.html)
+* [CWE-223: Omission of Security-relevant Information](https://cwe.mitre.org/data/definitions/223.html)
+* [CWE-778: Insufficient Logging](https://cwe.mitre.org/data/definitions/778.html)
