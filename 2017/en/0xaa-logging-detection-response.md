@@ -24,7 +24,7 @@ As per the risk of the data stored or processed by the application:
 * Establish effective monitoring and alerting such that suspicious activities are detected and responded within acceptable time periods.
 * Establish or adopt an incident response and recovery plan, such as [NIST 800-61 rev 2](https://csrc.nist.gov/publications/detail/sp/800-61/rev-2/final) or later.
 
-There are commercial and open source application protection frameworks such as [OWASP AppSensor](https://www.owasp.org/index.php/OWASP_AppSensor_Project), web application firewalls such as [mod_security with the OWASP Core Rule Set](https://www.owasp.org/index.php/Category:OWASP_ModSecurity_Core_Rule_Set_Project), and log correlation software such as [ELK](https://www.elastic.co/products) with custom dashboards and alerting. Penetration testing and scans by DAST tools (such as OWASP ZAP) should always trigger alerts.
+There are commercial and open source application protection frameworks such as [OWASP AppSensor](https://www.owasp.org/index.php/OWASP_AppSensor_Project), web application firewalls such as [mod_security with the OWASP Core Rule Set](https://www.owasp.org/index.php/Category:OWASP_ModSecurity_Core_Rule_Set_Project), and log correlation software with custom dashboards and alerting. Penetration testing and scans by DAST tools (such as OWASP ZAP) should always trigger alerts.
 
 ## Example Attack Scenarios
 
