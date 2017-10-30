@@ -14,7 +14,7 @@ Is your application missing the proper security hardening across any part of the
 * Will error handling reveal stack traces or other overly informative error messages to users?
 * On upgraded systems, are the latest security features disabled or not configured securely?
 * Are the security settings in your application servers, application frameworks (e.g. Struts, Spring, ASP.NET), libraries, databases, etc. not set to secure values?
-* For web applications, does the server not send security directives to client agents (e.g. [HSTS](https://www.owasp.org/index.php/HTTP_Strict_Transport_Security_Cheat_Sheet)) or are they not set to secure values?
+* For web applications, does the server not send security directives to client agents (e.g. [Security Headers](https://www.owasp.org/index.php/OWASP_Secure_Headers_Project)) or are they not set to secure values?
 * Is any of your software out of date? (see **A9:2017-Using Components with Known Vulnerabilities**)
 
 Without a concerted, repeatable application security configuration process, systems are at a higher risk.
@@ -48,6 +48,7 @@ Is your application missing the proper security hardening across any part of the
 
 * [OWASP Testing Guide: Configuration Management](https://www.owasp.org/index.php/Testing_for_configuration_management)
 * [OWASP Testing Guide: Testing for Error Codes](https://www.owasp.org/index.php/Testing_for_Error_Code_(OWASP-IG-006))
+* [OWASP Security Headers Project](https://www.owasp.org/index.php/OWASP_Secure_Headers_Project)
 
 For additional requirements in this area, see the [ASVS requirements areas for Security Configuration (V11 and V19)](https://www.owasp.org/index.php/ASVS).
 
