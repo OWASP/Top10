@@ -53,15 +53,15 @@ If an unauthenticated user can access either page, it's a flaw. If a non-admin c
 
 ### OWASP
 
-* [OWASP Proactive Controls - Access Controls](https://www.owasp.org/index.php/OWASP_Proactive_Controls#6:_Implement_Access_Controls)
-* [OWASP Application Security Verification Standard - V4 Access Control](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
-* [OWASP Testing Guide - Access Control](https://www.owasp.org/index.php/Testing_for_Authorization)
-* [OWASP Cheat Sheet - Access Control](https://www.owasp.org/index.php/Access_Control_Cheat_Sheet)
+* [OWASP Proactive Controls: Access Controls](https://www.owasp.org/index.php/OWASP_Proactive_Controls#6:_Implement_Access_Controls)
+* [OWASP Application Security Verification Standard: V4 Access Control](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
+* [OWASP Testing Guide: Access Control](https://www.owasp.org/index.php/Testing_for_Authorization)
+* [OWASP Cheat Sheet: Access Control](https://www.owasp.org/index.php/Access_Control_Cheat_Sheet)
 
 ### External
 
-* [CWE-22 Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')]()
-* [CWE-284 Improper Access Control (Authorization)](https://cwe.mitre.org/data/definitions/284.html)
-* [CWE-285 Improper Authorization](https://cwe.mitre.org/data/definitions/285.html)
-* [CWE-639 Authorization Bypass Through User-Controlled Key](https://cwe.mitre.org/data/definitions/639.html)
-* [Exploiting CORS misconfiguration](http://blog.portswigger.net/2016/10/exploiting-cors-misconfigurations-for.html)
+* [CWE-22: Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')]()
+* [CWE-284: Improper Access Control (Authorization)](https://cwe.mitre.org/data/definitions/284.html)
+* [CWE-285: Improper Authorization](https://cwe.mitre.org/data/definitions/285.html)
+* [CWE-639: Authorization Bypass Through User-Controlled Key](https://cwe.mitre.org/data/definitions/639.html)
+* [Portswigger: Exploiting CORS misconfiguration](http://blog.portswigger.net/2016/10/exploiting-cors-misconfigurations-for.html)
