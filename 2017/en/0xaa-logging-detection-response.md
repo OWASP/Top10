@@ -1,4 +1,4 @@
-# A10:2017 Insufficient Logging, Detection and Active Response
+# A10:2017 Insufficient Logging and Monitoring
 
 | Threat agents/Attack vectors | Security Weakness           | Impacts               |
 | -- | -- | -- |
