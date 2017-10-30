@@ -40,9 +40,9 @@ There are automated tools to help attackers find unpatched or misconfigured syst
 
 ### OWASP
 
-* [OWASP Proactive Controls - TBA]()
-* [OWASP Application Security Verification Standard - TBA]()
-* [OWASP Testing Guide - TBA]()
+* [OWASP Proactive Controls: TBA]()
+* [OWASP Application Security Verification Standard: TBA]()
+* [OWASP Testing Guide: TBA]()
 * [OWASP Cheat Sheet - TBA]()
 * [OWASP Dependency Check (for Java and .NET libraries)](https://www.owasp.org/index.php/OWASP_Dependency_Check)
 * [OWASP Virtual Patching Best Practices](https://www.owasp.org/index.php/Virtual_Patching_Best_Practices)
@@ -55,4 +55,4 @@ There are automated tools to help attackers find unpatched or misconfigured syst
 * [Retire.js for detecting known vulnerable JavaScript libraries](https://github.com/retirejs/retire.js/)
 * [Node Libraries Security Advisories](https://nodesecurity.io/advisories)
 * [Ruby Libraries Security Advisory Database and Tools](https://rubysec.com/)
-* [Snyk: Node/JS, Ruby, Java and Python Vulnerability Database and Tool](https://snyk.io/vuln)
+
