@@ -26,3 +26,10 @@ Lastly, we wish to thank the founding leadership of the OWASP Top 10 project, Da
 * Brian Glas
 * Neil Smithline
 * Andrew van der Stock
+
+## Attribution
+Thanks to [Autodesk](https://www.autodesk.com) for sponsoring the OWASP Top 10 2017.
+
+[![Autodesk](images/Autodesk-logo.png)](https://www.autodesk.com)
+
+Organizations and individuals that have provided vulnerability prevalence data or other assistance are listed on the [Acknowledgements page](0xd1-data-contributors.md).
