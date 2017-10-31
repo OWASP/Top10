@@ -13,8 +13,8 @@ Access control enforces policy such that users cannot act outside of their inten
 * Allowing the primary key to be changed to another's users record, such as viewing or editing someone else's account.
 * Elevation of privilege. Acting as a user without being logged in, or acting as an admin when logged in as a user.
 * Metadata manipulation, such as replaying or tampering with a JWT access control token or a cookie or hidden field manipulated to elevate privileges.
-* CORS misconfiguration allows unauthorized API access
-* Force browsing to authenticated pages as an unauthenticated user, or to privileged pages as a standard user or API not enforcing access controls for POST, PUT and DELETE
+* CORS misconfiguration allows unauthorized API access.
+* Force browsing to authenticated pages as an unauthenticated user, or to privileged pages as a standard user or API not enforcing access controls for POST, PUT and DELETE.
 
 ## How To Prevent?
 
@@ -23,10 +23,10 @@ Access control is only effective if enforced in trusted server-side code or serv
 * With the exception of public resources, deny by default.
 Implement access control mechanisms once and re-use them throughout the application.
 * Model access controls should enforce record ownership, rather than accepting that the user can create, read, update or delete any record.
-* Domain access controls are unique to each application, but business limit requirements should be enforced by domain models
-* Disable web server directory listing, and ensure file metadata such (e.g. .git) is not present within web roots
-* Log access control failures, alert admins when appropriate (e.g. repeated failures)
-* Rate limiting API and controller access to minimize the harm from automated attack tooling
+* Domain access controls are unique to each application, but business limit requirements should be enforced by domain models.
+* Disable web server directory listing, and ensure file metadata such (e.g. .git) is not present within web roots.
+* Log access control failures, alert admins when appropriate (e.g. repeated failures).
+* Rate limiting API and controller access to minimize the harm from automated attack tooling.
 * Developers and QA staff should include functional access control unit and integration tests.
 
 ## Example Attack Scenarios
