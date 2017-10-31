@@ -15,7 +15,7 @@ Is your application missing the proper security hardening across any part of the
 * On upgraded systems, are the latest security features disabled or not configured securely?
 * Are the security settings in your application servers, application frameworks (e.g. Struts, Spring, ASP.NET), libraries, databases, etc. not set to secure values?
 * For web applications, does the server not send security directives to client agents (e.g. [Security Headers](https://www.owasp.org/index.php/OWASP_Secure_Headers_Project)) or are they not set to secure values?
-* Is any of your software out of date? (see **A9:2017-Using Components with Known Vulnerabilities**)
+* Is any of your software out of date? (see **A9:2017-Using Components with Known Vulnerabilities**).
 
 Without a concerted, repeatable application security configuration process, systems are at a higher risk.
 
