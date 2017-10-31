@@ -22,9 +22,9 @@ You may have authentication weaknesses if your application:
 * Do not ship or deploy with any default credentials, particularly for admin users
 * [Store passwords using a modern one way hash function](https://www.owasp.org/index.php/Password_Storage_Cheat_Sheet#Leverage_an_adaptive_one-way_function), such as Argon2 or PBKDF2, with sufficient work factor to prevent realistic GPU cracking attacks.
 * Implement weak password checks, such as testing new or changed passwords against a list of the [top 10000 worst passwords](https://github.com/danielmiessler/SecLists/tree/master/Passwords).
-* Align password length, complexity and rotation policies with [NIST 800-63 B's guidelines in section 5.1.1 for Memorized Secrets](https://pages.nist.gov/800-63-3/sp800-63b.html#memsecret) or other modern, evidence based password policies
-* Ensure registration, credential recovery, and API pathways are hardened against account enumeration attacks by using the same messages for all outcomes
-* Where possible, implement multi-factor authentication to prevent credential stuffing, brute force, automated, and stolen credential attacks
+* Align password length, complexity and rotation policies with [NIST 800-63 B's guidelines in section 5.1.1 for Memorized Secrets](https://pages.nist.gov/800-63-3/sp800-63b.html#memsecret) or other modern, evidence based password policies.
+* Ensure registration, credential recovery, and API pathways are hardened against account enumeration attacks by using the same messages for all outcomes.
+* Where possible, implement multi-factor authentication to prevent credential stuffing, brute force, automated, and stolen credential attacks.
 * Log authentication failures and alert administrators when credential stuffing, brute force, other attacks are detected.
 
 ## Example Attack Scenarios
