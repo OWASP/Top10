@@ -1,26 +1,26 @@
-## Foreword
+## Prefácio
 
-Insecure software is undermining our financial, healthcare, defense, energy, and other critical infrastructure. As our software becomes increasingly critical, complex, and connected, the difficulty of achieving application security increases exponentially. The rapid pace of modern software development processes makes risks even more critical to discover quickly and accurately. We can no longer afford to tolerate relatively simple security problems like those presented in this OWASP Top 10.
+O software inseguro está a minar a nossa infraestrutura financeira, de saúde, de defesa, energia ou outras infraestruturas críticas. À medida que o nosso software se vai tornando cada vez mais crítico, complexo e interligado, a dificuldade em garantir a segurança do software cresce exponencialmente. O ritmo acelerado dos processos modernos de desenvolvimento de software torna os riscos um factor mais crítico que importa descobrir com rapidez e precisão. Não podemos mais tolerar problemas de segurança relativamente simples, como aqueles que são apresentados neste OWASP Top 10.
 
-A great deal of feedback was received during the creation of the OWASP Top 10 2017, more than for any other equivalent OWASP effort. This shows how much passion the community has for the OWASP Top 10, and thus how critical it is for OWASP to get the Top 10 right for the majority of use cases.
+Uma quantidade enorme de feedback foi recebido durante a criação do OWASP Top 10 2017, mais do que para qualquer outro esforço semelhante da OWASP. Isso demonstra quanta paixão a comunidade tem para com o OWASP Top 10 e, portanto, como é crítico para a OWASP conceber este Top 10 de forma correcta para a maioria dos casos de utilização.
 
-Although the original goal of the OWASP Top 10 project was simply to raise awareness amongst developers, it has become the de facto application security standard. 
+Apesar do objectivo inicial do projecto OWASP Top 10 tenha sido simplesmente o desenvolvimento de uma consciencialização de segurança junto dos programadores, este tornou-se um standard "de facto" na área da segurança aplicacional. 
 
-We have taken steps in this release to firm up the definition of issues, and improve the recommendations to be leading practices that may be adopted as an application security standard that covers off around 80-90% of all common attacks and threats. We encourage large and high performing organizations to use the [OWASP Application Security Verification Standard](https://www.owasp.org/index.php/ASVS) if a true standard is required, but for most, the OWASP Top 10 is a great start on the application security journey.
+Tomamos medidas nesta versão para afinar a definição dos problemas e melhorar as recomendações por forma a que as mesmas sejam práticas comuns a adoptar como um standard de segurança aplicacional que cobre cerca de 80% a 90% dos ataques e ameaças mais comuns. Encorajamos as organizações de maior dimensão a usarem o [Standard OWASP para Verificação da Segurança Aplicacional](https://www.owasp.org/index.php/ASVS) caso um verdadeiro standard seja necessário, maas para a grande maioria, o OWASP Top 10 é um excelente ponto de partida para a viagem na segurança aplicacional.
 
-We have written up a range of suggested next steps for different users of the OWASP Top 10, including "What's next for developers", "What's next for testers", "What's next for organizations" which is suitable for CIO's and CISO's, "What's next for application managers", which is suitable for application owners.
+Escrevemos um conjunto de próximos passos sugeridos para diferentes utilizadores do OWASP Top 10, incluíndo "O que se segue para os programadores", "O que se segue para os profissionais de testes de software", "O que se segue para as organizações" que é mais adequado para CIO's e CISO's, "O que se segue para gestores de aplicações", que é adequado para os donos das aplicações.
 
-In the long term, we encourage all software development teams and organizations to create an application security program that is compatible with your culture and technology. These programs come in all shapes and sizes. Leverage your organization's existing strengths to do and measure what works for you.
+A longo prazo, encorajamos todas as equipas de desenvolvimento de software e organizações a criarem programas de segurança aplicacional que sejam compatíveis com a sua cultura e tecnologia. Estes programas de segurança existem em todas as dimensões e formas. Analize a sua organização e escolha aquele que melhor se adequa à mesma.
 
-We hope that the OWASP Top 10 is useful to your application security efforts. Please don't hesitate to contact OWASP with your questions, comments, and ideas at our GitHub project repository:
+Esperamos que o OWASP Top 10 seja útil nos seus esforços de segurança aplicacional. Não hesite em contactar a OWASP com as suas questões, comentários e ideias no nosso repositório de projecto no GitHub:
 
 * https://github.com/OWASP/Top10/issues
 
-You can find OWASP Top 10 project and translations here:
+Pode encontrar mais informação sobre o OWASP Top 10 e correspondentes traduções aqui:
 
 * https://www.owasp.org/index.php/top10
 
-Lastly, we wish to thank the founding leadership of the OWASP Top 10 project, Dave Wichers and Jeff Williams for all their efforts, and believing in us to get this finished with the community's help. Thank you!
+Por último, queremos agradecer aos fundadores do projecto OWASP Top 10, Dave Wichers e Jeff Williams por todo o seu esforço, e por acreditarem em nós para concluirmos esta tarefa com o suporte da comunidade. Obrigado!
 
 * Torsten Gigler
 * Brian Glas
