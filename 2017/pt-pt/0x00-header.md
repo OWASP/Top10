@@ -2,13 +2,13 @@
 
 ## OWASP Top 10 2017
 
-Os Dez Riscos de Segurança Aplicacional Web Mais Críticos
+Os dez riscos mais críticos de Segurança Aplicacional Web
 
 1 de Novembro de 2017
 
 ### Golden Master (golden-master, post RC2)
 
-Comentários solicitados de acordo com as instruções contidas no documento
+São solicitados comentários solicitados de acordo com as instruções contidas neste documento
 
 ![WASP Logo URL TBA](images/front-wasp.png)
 
