@@ -1,28 +1,28 @@
 # GM Golden Master
 
-Important Notice
+Aviso importante
 ---
 
-## Request for Comments
+## Pedido de Comentários
 
-This is the Golden Master, and once released, only high priority changes and small typos will be fixed. 
+Esta é a versão Golden Master, e uma vez lançada, apenas mudanças de elevada prioridade e pequenas correções ortográficas serão realizadas. 
 
-At this stage, we are asking for:
+Nesta fase, estamos a solicitar:
 
-* Translations - we have some teams working already, but do reach out to us if you can help
-* Very close review of the wording
-* Review diagrams and tables to make sure they are clear and useful
-* if risk factors (exploitability, prevalence, detectability, impact) are concise and accurate
-* Vulnerability and Scenarios boxes are clear in meaning
-* Recommendations must be actionable
-* Any OWASP or External links are high quality and agree in concept and tone with the Top 10's content
-* CWE links must cover the content discussed in each risk. Do we need to add, change, or remove CWEs? Does the CWE need updating? If so, we have a very small window to work with MITRE to make it better
+* Traduções - existem já algumas equipas a trabalhar, mas contacte-nos se puder contribuir
+* Revisão profunda da escrita
+* Revisão dos diagramas e das tabelas para ter a certeza que as mesmas estão claras e são úteis
+* Se os factores de risco (exploração, predomínio, detecção, impacto) são concisos e precisos
+* Se as caixas de Vulnerabilidades e Cenários são estão claras no seu significado
+* As recomendações devem poder ser contestáveis
+* Qualquer ligação da OWASP ou externa é de elevada qualidade e que está de acordo com o conceito e tom do conteúdo do Top 10
+* As ligações do CWE devem cobrir o conteúdo discutido em cada risco. Precisamos de acrescentar, alterar ou remover CWE? O CWE precisa de ser actualizado? Se sim, temos uma pequena janela para poder trabalhar com o MITRE para o tornarm melhor
 
-We strongly urge for any corrections or issues to be logged at GitHub:
+Sugerimos que as alterações realizadas sejam realizados através do GitHub:
 
 * https://github.com/OWASP/Top10/issues
 
-Through public transparency, we provide traceability and ensure that all voices are heard during this final month before publication.
+Através de transparência pública, oferecemos rastreabilidade e asseguramos que todas as vozes sejam ouvidas durante este último mês antes da publicação final.
 
 * Andrew van der Stock
 * Brian Glas
