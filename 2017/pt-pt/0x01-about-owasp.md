@@ -1,36 +1,36 @@
-# O About OWASP
+# O Sobre o OWASP
 
-## About OWASP
+## Sobre o OWASP
 
-The Open Web Application Security Project (OWASP) is an open community dedicated to enabling organizations to develop, purchase, and maintain applications and APIs that can be trusted.
+O Open Web Application Security Project (OWASP) é uma comunidade aberta dedicada a permitir que as organizações desenvolvam, adquiram e mantenham aplicações e APIs que possam ser de confiança.
 
-At OWASP you'll find free and open:
+No OWASP encontra de forma livre e aberta:
 
-* Application security tools and standards
-* Complete books on application security testing, secure code development, and secure code review
-* Presentations and videos
-* [Cheat sheets](https://www.owasp.org/index.php/OWASP_Cheat_Sheet_Series) on many common topics
-* Standard security controls and libraries
-* [Local chapters worldwide](https://www.owasp.org/index.php/OWASP_Chapter)
-* Cutting edge research
-* Extensive [conferences worldwide](https://www.owasp.org/index.php/Category:OWASP_AppSec_Conference)
+* Ferramentas e normas de segurança aplicacional
+* Livros completos sobre testes de segurança aplicacional, desenvolvimento seguro de código e revisão se segurança de código
+* Apresentações e vídeos
+* [Cheat sheets](https://www.owasp.org/index.php/OWASP_Cheat_Sheet_Series) em múltiplos tópicos
+* Controlos e bibliotecas de segurança standard
+* [Capítulos locais espalhados por todo o mundo](https://www.owasp.org/index.php/OWASP_Chapter)
+* Investigação avançada
+* Múltiplas [conferências a nível global](https://www.owasp.org/index.php/Category:OWASP_AppSec_Conference)
 * [Mailing lists](https://lists.owasp.org/mailman/listinfo)
 
-Learn more at: https://www.owasp.org.
+Mais informação em: https://www.owasp.org.
 
-All of the OWASP tools, documents, videos, presentations, and chapters are free and open to anyone interested in improving application security.
+Todas as ferramentas, documentos, vídeos, apresentações e capítulos da OWASP são livres e abertos a todos interessados em melhorar a segurança aplicacional.
 
-We advocate approaching application security as a people, process, and technology problem, because the most effective approaches to application security require improvements in these areas.
+Aconselhamos uma abordagem à segurança aplicacional como sendo um problema de pessoas, processos e tecnologia, porque as abordagens mais eficazes  à segurança aplicacional necessitam de melhoras em todas estas áreas.
 
-OWASP is a new kind of organization. Our freedom from commercial pressures allows us to provide unbiased, practical, cost-effective information about application security. OWASP is not affiliated with any technology company, although we support the informed use of commercial security technology. OWASP produces many types of materials in a collaborative, transparent and open way.
+O OWASP é um novo tipo de organização. A nossa independência de pressões comerciais permite-nos fornecer informação imparcial, prática e economicamente adequada sobre a segurança aplicacional. O OWASP não está afiliado com nenhuma empresa tecnológica, embora suportemos o uso informado de tecnologias de segurança comerciais. O OWASP produz muitos tipos de materiais de uma forma colaborativa, transparente e aberta.
 
-The OWASP Foundation is the non-profit entity that ensures the project's long-term success. Almost everyone associated with OWASP is a volunteer, including the OWASP Board, Chapter Leaders, Project Leaders, and project members. We support innovative security research with grants and infrastructure.
+A fundação OWASP é uma entidade sem fins lucrativos o que assegura o sucesso a longo prazo do projecto. Quase todas as pessoas associadas com a OWASP é voluntária, incluindo a Direção da OWASP, os líderos dos vários capítulos, os líderes dos projectos e os seus membros. Suportamos a investigação inovadora em segurança através de bolsas e infraestrutura.
 
-Come join us!
+Junte-se a nós!
 
-## Copyright and License
+## Copyright e Licença
 
 ![license](images/license.png)
 
-Copyright © 2003-2017 The OWASP Foundation. This document is released under the Creative Commons Attribution ShareAlike 3.0 license. For any reuse or distribution, you must make clear to others the license terms of this work.
+Copyright © 2003-2017 Fundação OWASP. Este documento está licenciado de acordo com uma licença Creative Commons Attribution ShareAlike 3.0. Para algum tipo de reutilização ou distribuição, deve deixar claro para terceiros os termos da licença deste trabalho.
 
