@@ -1,50 +1,50 @@
-# A1:2017 Injection
+# A1:2017 Inyección
 
-| Threat agents/Attack vectors | Security Weakness           | Impacts               |
+| Agentes de amenaza/Vectores de ataque | Debilidades de seguridad           | Impacto               |
 | -- | -- | -- |
-| Access Lvl \| Exploitability 3 | Prevalence 2 \| Detectability 3 | Technical 3 \| Business |
-| Almost any source of data can be an injection vector, including users, parameters, external and internal web services, and all types of users. [Injection flaws](http://www.owasp.org/index.php/Injection_Flaws) occur when an attacker can send hostile data to an interpreter. | Injection flaws are very prevalent, particularly in legacy code. They are often found in SQL, LDAP, XPath, or NoSQL queries; OS commands; XML parsers, SMTP Headers, expression languages, ORM queries. Injection flaws are easy to discover when examining code. Scanners and fuzzers can help attackers find injection flaws. | Injection can result in data loss or corruption, lack of accountability, or denial of access. Injection can sometimes lead to complete host takeover. The business impact depends on the protection needs of your application and data. |
+| Nivel de acceso \| Explotabilidad FÁCIL | Prevalencia COMÚN \| Detección PROMEDIO | Impacto técnico SEVERO \| Impacto al negocio |
+| Cualquier fuente de información puede ser un vector de inyección, incluyendo usuarios, parámetros, web services internos y externos, y todos los tipos de usuarios. [Las fallas de inyección](http://www.owasp.org/index.php/Injection_Flaws) ocurren cuando un atacante puede enviar información maliciosa a un intérprete. | Las fallas de inyección son muy prevamentes, especialmente en código legado. Habitualmente son halladas en SQL, LDAP, XPath o consultas NoSQL, comandos del sistema operativo, parsers XML, cabezales SMTP, lenguajes de expresiones, consultas ORM. Las fallas de inyección son fáciles de descubrir al examinar el código. Los analizadores y "fuzzers" pueden ayudar a encontrar fallas de inyección. | Una inyección puede causar pérdida o corrupción de datos, pérdida de responsabilidad o negación de acceso. A veces una inyección puede llevar al compromiso total del servidor. El impacto en el negocio depende de las necesidades de protección de su aplicación e información. |
 
-## Am I vulnerable to Injection?
+## ¿Soy vulnerable?
 
-An application is vulnerable to attack when:
+Una aplicación es vulnerable cuando:
 
-* User suppled data is not validated, filtered or sanitized by the application.
-* Hostile data is used directly with dynamic queries or non-parameterized calls for the interpreter without context-aware escaping.
-* Hostile data is used within ORM search parameters such that the search evaluates out to include sensitive or all records.
-* Hostile data is directly used or concatenated, such that the SQL or command contains both structure and hostile data in dynamic queries, commands, or in stored procedures.
+* La información proporcionada por el usuario no es validada, filtrada o sanitizada por la aplicación.
+* Se utiliza información maliciosa directamente en consultas dinámicas o llamadas no parametrizadas en el intérprete, sin utilizar exclusiones dependientes del contexto.
+* Se utiliza información maliciosa en parámetros de búsqueda ORM con el fin que la búsqueda incluya registros sensibles o todos los registros.
+* Se utiliza información maliciosa directamente o concatenada, para que el código SQL incluya datos de estructura e información maliciosa en las consultas dinámicas, comandos, o procedimientos almacenados. 
 
-Some of the more common injections are SQL, OS command, ORM, LDAP, and Expression Language (EL) or OGNL injection.. The concept is identical between all interpreters. Organizations can include SAST and DAST tooling into the CI/CD pipeline to alert if existing or newly checked in code has injection prior to production deployment. Manual and automated source code review is the best method of detecting if you are vulnerable to injections, closely followed by thorough DAST scans of all parameters, fields, headers, cookies, JSON, and XML data inputs.
+Algunas de las inyecciones más frecuentes son SQL, comandos del sistema operativo, ORM, LDAP y lenguaje de expresión (EL) o inyección OGNL. El concepto es idéntico para todos los intérpretes. Las organiaciones pueden incluir herramientas SAST o DAST en el pipeline CI/CD para notificar si el código existente o nuevo contiene fallas de inyección previo a la puesta en producción. La revisión de código manual y automática es el mejor método para detectar si se es vulnerable a inyecciones, seguido por el análisis DAST minucioso de todos los parámetros, campos, cabezales, cookies, y entradas JSON y XML.
 
-## How Do I Prevent Injection?
+## ¿Cómo prevenirlo?
 
-Preventing injection requires keeping data separate from commands and queries.
+Evitar una inyección requiere mantener los datos separados de los comandos y consultas.
 
-* The preferred option is to use a safe API which avoids the use of the interpreter entirely or provides a parameterized interface, or migrate to use ORMs or Entity Framework. **NB**: When parameterized, stored procedures can still introduce SQL injection if PL/SQL or T-SQL concatenates queries and data, or executes hostile data with EXECUTE IMMEDIATE or exec().
-* Positive or "white list" input validation, but this is not a complete defense as many applications require special characters, such as text areas or APIs for mobile applications
-* For any residual dynamic queries, escape special characters using the specific escape syntax for that interpreter. OWASP's Java Encoder and similar libraries provide such escaping routines. NB: SQL structure such as table names, column names, and so on cannot be escaped, and thus user-supplied structure names are dangerous. This is a common issue in report writing software.
-* Use LIMIT and other SQL controls within queries to prevent mass disclosure of records in case of SQL injection.
+* La opción preferida es usar una API segura la cual evite el uso de interpretes por cmpleto o provea una interfaz parametrizada, o realizar una migración para utilizar ORMs o Entity Framework. **NB**: Aunque estén parametrizados, los procedimientos almacenados (stored procedures) igualmente pueden permitir inyección SQL si PL/SQL o T-SQL concatena las consultas y los datos, o ejecuta código malicioso utilizando EXECUTE IMMEDIATE() o exec().
+* La validación de entradas positiva o de "lista blanca" también se recomienda, pero no es una defensa integral dado que muchas aplicaciones requieren caracteres especiales en sus entradas.
+* Para las consultas dinámicas restantes, excluya caracteres especiales usando la sintaxis específica para su intérprete. El Codificador JAVA de OWASP y librerías similares proveen las rutinas de exclusión. **NB** La estructura SQL como por ejemplo nombres de tabla o columna y demás no pueden ser excluidas, por lo que nombres de estructura proporcionados por el usuario son peligrosos. Este es un problema común en software de generación de reportes.
+* Use LIMIT y otros controles SQL en las consultas para prevenir la divulgación masiva de registros en caso de ser atacados mediante inyección SQL.
 
-## Example Attack Scenarios
+## Ejemplos de escenarios de ataques
 
-**Scenario #1**: An application uses untrusted data in the construction of the following vulnerable SQL call:
-
-```
-String query = "SELECT * FROM accounts WHERE custID='" + request.getParameter("id") + "'";
-```
-
-**Scenario #2**: Similarly, an application’s blind trust in frameworks may result in queries that are still vulnerable, (e.g. Hibernate Query Language (HQL)):
+**Escenario #1**: Una aplicación usa información no confiable en la construcción de la siguiente consulta SQL vulnerable a inyección::
 
 ```
-Query HQLQuery = session.createQuery("FROM accounts WHERE custID='" + request.getParameter("id") + "'");
+Consulta SQLQuery= "SELECT * FROM accounts WHERE custID='" + request.getParameter("id") + "'";
 ```
 
-In both cases, the attacker modifies the 'id’ parameter value in her browser to send:  ' or '1'='1. For example:
+**Escenario #2**: En forma similar, la confianza total de una aplicación en frameworks puede resultar en consultas que aún son vulnerables a inyección (por ejemplo Hibernate Query Language (HQL)):
+
+```
+Consulta HQLQuery = session.createQuery("FROM accounts WHERE custID='" + request.getParameter("id") + "'");
+```
+
+En ambos casos, un atacante modifica el parámetro 'id' en su navegador para enviar ' o '1'='1. Por ejemplo:
 * `http://example.com/app/accountView?id=' or '1'='1`
 
-This changes the meaning of both queries to return all the records from the accounts table.  More dangerous attacks could modify data or even invoke stored procedures.
+Esto modifica ambas consultas para que retornen todos los registros de la tabla accounts. Ataques más peligrosos podrían modificar información o invocar procedimientos almacenados.
 
-## References
+## Referencias
 
 ### OWASP
 
@@ -56,7 +56,7 @@ This changes the meaning of both queries to return all the records from the acco
 * [OWASP Cheat Sheet: Query Parameterization](https://www.owasp.org/index.php/Query_Parameterization_Cheat_Sheet)
 * [OWASP Cheat Sheet: Command Injection Defense](https://www.owasp.org/index.php/Command_Injection_Defense_Cheat_Sheet)
 
-### External
+### Externas
 
 * [CWE-77 Command Injection](https://cwe.mitre.org/data/definitions/77.html)
 * [CWE-89 SQL Injection](https://cwe.mitre.org/data/definitions/89.html)
