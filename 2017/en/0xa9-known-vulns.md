@@ -15,7 +15,7 @@ You are likely vulnerable:
 * If you do not fix or upgrade the underlying platform, frameworks and dependencies in a timely fashion. This commonly happens is environments when patching is a monthly or quarterly task under change control, which leaves organizations open to many days or months of unnecessary exposure to fixed vulnerabilities. This is likely the root cause of one of the largest breaches of all time. 
 * If you do not secure the components' configurations (see **A6:2017-Security Misconfiguration**).
 
-## How To Prevent?
+## How To Prevent
 
 Software projects should have a process in place to:
 
