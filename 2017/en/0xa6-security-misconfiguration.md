@@ -19,7 +19,7 @@ Is your application missing the proper security hardening across any part of the
 
 Without a concerted, repeatable application security configuration process, systems are at a higher risk.
 
-## How To Prevent?
+## How To Prevent
 
 Is your application missing the proper security hardening across any part of the application stack? Including:
 
