@@ -14,7 +14,7 @@ Applications and in particular XML-based web services or downstream integrations
 * If your application uses SOAP prior to version 1.2, it is likely susceptible to XXE attacks if XML entities are being passed to the SOAP framework.
 * Being vulnerable to XXE attacks likely means that you are vulnerable to denial of service attacks including the billion laughs attack.
 
-## How To Prevent?
+## How To Prevent
 
 Developer training is essential to identify and mitigate XXE. Besides that, preventing XXE requires:
 
