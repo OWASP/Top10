@@ -15,7 +15,7 @@ Insufficient logging, detection, monitoring and active response occurs any time:
 
 For larger and high performing organizations, the lack of active response, such as real time alerting and response activities such as blocking automated attacks on web apps and particularly APIs would place the organization at risk from extended compromise. The response does not necessarily need to be visible to the attacker, only that the application and associated infrastructure, frameworks, service layers, etc. can detect and alert humans or tools to respond in near real time.
 
-## How To Prevent?
+## How To Prevent
 
 As per the risk of the data stored or processed by the application:
 
