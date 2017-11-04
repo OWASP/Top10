@@ -16,7 +16,7 @@ Access control enforces policy such that users cannot act outside of their inten
 * CORS misconfiguration allows unauthorized API access.
 * Force browsing to authenticated pages as an unauthenticated user, or to privileged pages as a standard user or API not enforcing access controls for POST, PUT and DELETE.
 
-## How To Prevent?
+## How To Prevent
 
 Access control is only effective if enforced in trusted server-side code or server-less API, where the attacker cannot modify the access control check or metadata.
 
