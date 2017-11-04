@@ -16,7 +16,7 @@ An application is vulnerable to attack when:
 
 Some of the more common injections are SQL, OS command, ORM, LDAP, and Expression Language (EL) or OGNL injection. The concept is identical between all interpreters. Organizations can include SAST and DAST tooling into the CI/CD pipeline to alert if existing or newly checked in code has injection prior to production deployment. Manual and automated source code review is the best method of detecting if you are vulnerable to injections, closely followed by thorough DAST scans of all parameters, fields, headers, cookies, JSON, and XML data inputs.
 
-## How To Prevent?
+## How To Prevent
 
 Preventing injection requires keeping data separate from commands and queries.
 
