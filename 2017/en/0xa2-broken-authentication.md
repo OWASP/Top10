@@ -17,7 +17,7 @@ You may have authentication weaknesses if your application:
 * Uses plain text, encrypted, or weakly hashed passwords permit the rapid recovery of passwords using GPU crackers or brute force tools.
 * Has missing or ineffective multi-factor authentication.
 
-## How To Prevent?
+## How To Prevent
 
 * Do not ship or deploy with any default credentials, particularly for admin users
 * [Store passwords using a modern one way hash function](https://www.owasp.org/index.php/Password_Storage_Cheat_Sheet#Leverage_an_adaptive_one-way_function), such as Argon2 or PBKDF2, with sufficient work factor to prevent realistic GPU cracking attacks.
