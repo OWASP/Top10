@@ -13,7 +13,7 @@ Distributed applications or those that need to store state on clients or the fil
 * The application or API accepts and deserializes hostile objects supplied by an attacker, or an application uses serialized opaque client side state without appropriate tamper resistant controls. OR
 * Security state sent to an untrusted client without some form of integrity control is likely vulnerable to deserialization.
 
-## How To Prevent?
+## How To Prevent
 
 The only safe architectural pattern is to not accept serialized objects from untrusted sources or to use serialization mediums that only permit primitive data types.
 
