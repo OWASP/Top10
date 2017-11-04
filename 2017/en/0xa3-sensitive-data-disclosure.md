@@ -17,7 +17,7 @@ The first thing is to determine the protection needs of data in transit and at r
 
 See ASVS areas [Crypto (V7), Data Protection (V9) and SSL/TLS (V10)](https://www.owasp.org/index.php/ASVS).
 
-## How To Prevent?
+## How To Prevent
 
 Do the following, at a minimum and consult the references:
 
