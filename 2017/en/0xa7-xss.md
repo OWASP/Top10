@@ -15,7 +15,7 @@ There are three forms of XSS, usually targeting users' browsers:
 
 Typical XSS attacks include session stealing, account takeover, MFA bypass, DOM node replacement or defacement (such as trojan login panels), attacks against the user's browser such as malicious software downloads, key logging, and other client side attacks.
 
-## How To Prevent?
+## How To Prevent
 
 Preventing XSS requires separation of untrusted data from active browser content.
 
