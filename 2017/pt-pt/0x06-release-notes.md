@@ -1,29 +1,29 @@
-# RN Release Notes
-## What changed from 2013 to 2017?
+# RN Notas da Versão
+## O que mudou de 2013 para 2017?
 
-Change has accelerated over the last four years, and the OWASP Top 10 needed to change. We've completely refactored the OWASP Top 10, revamped the methodology, utilized a new data call process, worked with the community, re-ordered our risks, re-written each risk from the ground up, and added references to frameworks and languages that are now commonly used. 
+A mudança acelerou ao longo dos passados 4 anos, e o OWASP Top 10 precisava de mudar. Refactorizamos por completo o OWASP Top 10, actualizamos a metodologia, utilizou um novo processo de chamada de dados, trabalhou com a comunidade, reordenou os riscos, reescreveu cada risco e adicionou referências a frameworks e linguagens que são agora largamente usadas. 
 
-Over the last decade, and in particularly these last few years, the fundamental architecture of applications has changed significantly:
+Durante a década que passou, e em particular nestes últimos anos, a arquitectura fundamental das aplicações alterou-se de forma significativa:
 
-* JavaScript is now the primary language of the web. node.js and modern web frameworks such as Bootstrap, Electron, Angular, React amongst many others, means source that was once on the server is now running on untrusted browsers.
-* Single page applications, written in JavaScript frameworks such as Angular and React, allow the creation of highly modular front end user experiences, not to mention the rise and rise of mobile applicationss using the same APIs as single page applications.
-* Microservices written in node.js and Spring Boot are replacing older enterprise service bus applications using EJBs and so on. Old code that never expected to be communicated with directly from the Internet is now sitting behind an API or RESTful web service. The assumptions that underlie this code, such as trusted callers, are simply not valid.
+* O JavaScript é agora a principal linguagem na web. O node.js e outras frameworks web modernas como Bootstrap, Electron, Angular, React entre outras, significa que código fonte que antes corria no servidor é agora executado em browsers pouco confiáveis.
+* Aplicações de página única, escritas em frameworks de JavaScript tais como Angular e React, permitem a criação de experiências de utilização extremamente modulares, sem referir o crescimento de aplicações móveis que usam as mesmas APIs como aplicações de página única.
+* Microserviços desenvolvidos em node.js e Spring Boot estão a substituir as antigas aplicações empresariais baseadas em serviços de barramento que usavam EJBs e outros semelhantes. Código antigo que nunca tinha sido desenhado para ser aberto à Internet está agora exposto através de uma API ou serviço REST. Os pressupostos que foram usados para a criação deste código, tais como invocadores de confiança, simplesmente já não são válidos.
 
-**New issues, supported by data**
+**Novos problemas, suportados por dados**
 
-* **A4:2017 - XML External Entity (XXE)** is a new category primarily supported by SAST data sets. 
+* **A4:2017 - Entidades Externas de XML (XXE)** é uma nova categoria que é suportada principalmente pelos conjuntos de dados da SASTs. 
 
-**New issues, supported by the community**
+**Novos problemas, suportados pela comunidade**
 
-We asked the community to provide insight into two forward looking weakness categories. After 516 peer submissions, and  removing issues that were already supported by data (such as Sensitive Data Exposure and XXE), the two new issues are 
+Solicitamos à comunidade que fornecesse a sua opinião sobre duas categorias de fraquezas voltadas para o futuro. Após 516 submissões por pares e removendo alguns problemas que já eram suportados por dados (como Exposição de Dados Sensíveis e XXE), os dois novos problemas são
 
-* **A8:2017 - Insecure Deserialization**, responsible for one of the worst breaches of all time, and
-* **A10:2017 - Insufficient Logging and Monitoring**, the lack of which can prevent or significantly delay malicious activity and breach detection, incident response and digital forensics.
+* **A8:2017 - De-serialização Insegura**, responsible for one of the worst breaches of all time, and
+* **A10:2017 - Registo e Monitorização Insuficiente**, the lack of which can prevent or significantly delay malicious activity and breach detection, incident response and digital forensics.
 
-**Retired, but not forgotten**
+**Removidos, mas não esquecidos**
 
-* **A4 Insecure direct object references** and **A7 Missing function level access control** merged into **A5:2017-Broken Access Control**.
-* **A8 CSRF**. Less than 5% of the data set supports CSRF today, which places it around #13 
-* **A10 Unvalidated redirects and forwards**. Less than 1% of the data set supports this issue today, as it's now #25
+* **A4 Referências Directas Inseguras a Objectos** e **A7 Falta de Controlo de Acesso ao Nível das Funções** juntaram-se dando origem a **A5:2017 - Quebra de Controlo de Acesso**.
+* **A8 CSRF**. Menos de 5% dos dados obtidos suportam actualmente o CSRF, o que o coloca na posição #13 
+* **A10 Redireccionamentos e Encaminhamentos Não Validados**. Menos de 1% dos dados obtidos suportam actualmente este problema, pelo que está agora na posição #25
 
 ![0x06-release-notes-1](images/0x06-release-notes-1.png)
