@@ -1,41 +1,53 @@
-# Risk - Application Security Risks
+# Risco - Riscos de Segurança Aplicacional
 
-## What Are Application Security Risks?
+## O que são os riscos de Segurança Aplicacional?
 
-Attackers can potentially use many different paths through your application to do harm to your business or organization. Each of these paths represents a risk that may, or may not, be serious enough to warrant attention.
+Os atacantes podem usar potencialmente muitos caminhos diferentes através da sua aplicação para afectar o seu negócio ou organização. Cada um destes caminhos representa um risco que pode, ou não, ser suficientemente sério para requerer atenção.
 
-![App Security Risks](images/0x10-risk-1.png)
+![App Security Risks][image-1]
 
-Sometimes, these paths are trivial to find and exploit and sometimes they are extremely difficult. Similarly, the harm that is caused may be of no consequence, or it may put you out of business. To determine the risk to your organization, you can evaluate the likelihood associated with each threat agent, attack vector, and security weakness and combine it with an estimate of the technical and business impact to your organization.  Together, these factors determine your overall risk.
+Por vezes, estes caminhos são triviais de encontrar e explorar e por outras são extremamente difíceis. De forma semelhante, o dano causado pode não ter consequências, ou pode destruir o seu negócio. Para determinar o risco para a sua organização, pode avaliar a probabilidade associada com cada agente de ameaça, vector de ataque, e fraquezas de segurança e combiná-las com a estimativa do impacto técnico e de negócio na organização.  Em conjunto, estes factores determinam o risco global.
 
-## What's My Risk
+## Qual o meu Risco
 
-The [OWASP Top 10](https://www.owasp.org/index.php/Top10) focuses on identifying the most serious risks for a broad array of organizations. For each of these risks, we provide generic information about likelihood and technical impact using the following simple ratings scheme, which is based on the OWASP Risk Rating Methodology.  
+O [Top 10 da OWASP][1] faca-se na identificação dos riscos mais sérios para um conjunto alargado de organizações. Para cada um desses riscos, oferecemos informação genérica sobre a probabilidade e impacto técnico usando o seguinte esquema de classificação simples, baseado na Metodologia de Classificação de Risco da OWASP.  
 
-| Threat Agents | Exploitability | Weakness Prevalence | Weakness Detectability | Technical Impacts | Business Impacts |
+| Agentes de Ameaça | Exploração | Prevalência das Fraquezas | Detecção das Fraquezas | Impactos Técnicos | Impactos de Negócio |
 | -- | -- | -- | -- | -- | -- |
-| App Specific | Easy 3 | Widespread 3 | Easy 3 | Severe 3 | App / Business Specific |
-| App Specific | Average 2 | Common 2 | Average 2 | Moderate 2 | App / Business Specific |
-| App Specific | Difficult 1 | Uncommon 1 | Difficult 1 | Minor 1 | App / Business Specific |
+| Específico da Aplicação | Fácil 3 | Generalizada 3 | Fácil 3 | Sevara 3 | Específica da Aplicação/Negócio |
+| Específico da Aplicação | Médio 2 | Comum 2 | Médio 2 | Moderado 2 | Específica da Aplicação/Negócio |
+| Específico da Aplicação | Difícil 1 | Pouco comum 1 | Difícil 1 | Menor 1 | Específica da Aplicação/Negócio |
 
-In this edition, we have changed the risk rating system around compared to previous version to assist with our ranking of likelihoods and impacts. This is not an issue within the document, but is clear in the public data analysis (see '+R').
+Nesta edição, alteramos o sistema de classificação de riscos, quando comparado com as edições anteriores, para ajudar com a nossa classificação de probabilidades e impactos. Este não é um problema para este documento, mas fica claro na análise publica dos dados (ver '+R').
 
-Each organization is unique, and so are the threat actors for that organization, their goals, and the impact of any breach. If a public interest organization uses a CMS for public information and a health system uses that same exact CMS for sensitive health records, the threat actors and business impacts are very different for the same exact software. It is critical that you apply your custom threat agents and business impacts based upon the data asset criticality.
+Cada organização é única, assim como os actores de ameaça para cada organização, os seus objectivos, e o impacto de cada falha. Se uma organização de interesse público usa um software CMS para informações públicas e um sistema de saúde usa esse mesmo CMS para registos de saúde sensíveis, os atores de ameaça e os impactos de negócios são muito diferentes para o mesmo software. É fundamental que aplique os seus agentes de ameaças específicos e impactos de negócio com base na criatividade de ativos de dados.
 
-Where possible, the names of the risks in the Top 10 are aligned with CWE weaknesses to promote generally accepted security practices and to reduce confusion. 
+Quando possível, os nomes dos riscos no Top 10 do OWASP estão alinhados com as fraquezas CWE para promover práticas de segurança comumente aceites e para reduzir a confusão. 
 
-## References
+## Referências
 
 ### OWASP
 
-* [OWASP Risk Rating Methodology](https://www.owasp.org/index.php/OWASP_Risk_Rating_Methodology)
-* [Article on Threat/Risk Modeling](https://www.owasp.org/index.php/Threat_Risk_Modeling)
+* [OWASP Risk Rating Methodology][2]
+* [Article on Threat/Risk Modeling][3]
 
-### External
+### Externas
 
-* [ISO 31000: Risk Management Std](https://www.iso.org/iso-31000-risk-management.html)
-* [ISO 27001: ISMS](https://www.iso.org/isoiec-27001-information-security.html)
-* [NIST Cyber Framework (US)](https://www.nist.gov/cyberframework)
-* [ASD Strategic Mitigations (AU)](https://www.asd.gov.au/infosec/mitigationstrategies.htm)
-* [NIST CVSS 3.0](https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator)
-* [Microsoft Threat Modelling Tool](https://www.microsoft.com/en-us/download/details.aspx?id=49168)
+* [ISO 31000: Risk Management Std][4]
+* [ISO 27001: ISMS][5]
+* [NIST Cyber Framework (US)][6]
+* [ASD Strategic Mitigations (AU)][7]
+* [NIST CVSS 3.0][8]
+* [Microsoft Threat Modelling Tool][9]
+
+[1]:	https://www.owasp.org/index.php/Top10
+[2]:	https://www.owasp.org/index.php/OWASP_Risk_Rating_Methodology
+[3]:	https://www.owasp.org/index.php/Threat_Risk_Modeling
+[4]:	https://www.iso.org/iso-31000-risk-management.html
+[5]:	https://www.iso.org/isoiec-27001-information-security.html
+[6]:	https://www.nist.gov/cyberframework
+[7]:	https://www.asd.gov.au/infosec/mitigationstrategies.htm
+[8]:	https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator
+[9]:	https://www.microsoft.com/en-us/download/details.aspx?id=49168
+
+[image-1]:	images/0x10-risk-1.png
