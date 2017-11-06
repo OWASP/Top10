@@ -10,4 +10,11 @@ The following table presents a summary of the 2017 Top 10 Application Security R
 
 The Top 10 covers a lot of ground, but there are many other risks you should consider and evaluate in your organization. Some of these have appeared in previous versions of the Top 10, and others have not, including new attack techniques that are being identified all the time.  Other important application security risks (in alphabetical order) that you should additionally consider include:
 
-* TBD - GOLDEN MASTER
+* Application Denial of Service (AppDoS) [CWE-400]
+* Cross-Site Request Forgery (CSRF) [CWE-352]
+* Improper Control of Interaction Frequency (Anti-Automation) [CWE-799]
+* Inclusion of Functionality from Untrusted Control Sphere (3rd Party Content) [CWE-829]
+* Server-Side Request Forgery (SSRF) [CWE-918]
+* Unvalidated Forward and Redirects [CWE-601]
+* User Interface (UI) Misrepresentation of Critical Information (Clickjacking and others) [CWE-451]
+
