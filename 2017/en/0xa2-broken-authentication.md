@@ -14,7 +14,7 @@ You may have authentication weaknesses if your application:
 * Permits brute force or other automated attacks.
 * Permits default, weak or well-known passwords, such as "Password1" or "admin/admin".
 * Uses weak or ineffectual credential recovery and forgot password processes, such as "knowledge-based answers", which cannot be made safe.
-* Uses plain text, encrypted, or weakly hashed passwords permit the rapid recovery of passwords using GPU crackers or brute force tools.
+* Uses plain text, encrypted, or weakly hashed passwords (see A3:2017-Sensitive Data Exposure).
 * Has missing or ineffective multi-factor authentication.
 
 ## How To Prevent
