@@ -1,43 +1,63 @@
-# References
+# Referências
 
-NB: This section is not part of RC2, but might make it into the Golden Master. Comments welcome.
+NB: Esta secção não faz parte do RC2, mas poderá ser incluída na versão Golden Master. Os comentários são bem vindos.
 
-## OWASP Flagship Projects (Documents)
+## Projectos bandeira da OWASP (Documentos)
 
-The following OWASP Flagship documentation projects are most likely to be useful to users/adopters of this standard:
+Os seguintes projectos bandeira de documentação da OWASP são aqueles que serão provavelmente mais úteis para os utilizadores e para aqueles que pensem adoptar este standard:
 
-- [OWASP Cheat Sheets](https://www.owasp.org/index.php/OWASP_Cheat_Sheet_Series)
-- [OWASP Proactive Controls](https://www.owasp.org/index.php/OWASP_Proactive_Controls)
-- [OWASP Application Security Verification Standard](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project)
-- [OWASP Testing Guide](https://www.owasp.org/index.php/OWASP_Testing_Project)
-- [OWASP Privacy Top 10 Risks](https://www.owasp.org/index.php/OWASP_Top_10_Privacy_Risks_Project)
-- [OWASP Mobile Top 10 Risks](https://www.owasp.org/index.php/Projects/OWASP_Mobile_Security_Project_-_Top_Ten_Mobile_Risks)
-- [OWASP SAMM](https://www.owasp.org/index.php/OWASP_SAMM_Project)
+- [OWASP Cheat Sheets][1]
+- [OWASP Proactive Controls][2]
+- [OWASP Application Security Verification Standard][3]
+- [OWASP Testing Guide][4]
+- [OWASP Privacy Top 10 Risks][5]
+- [OWASP Mobile Top 10 Risks][6]
+- [OWASP SAMM][7]
 
-## OWASP Flagship Projects (Tools)
+## Projectos bandeira da OWASP (Ferramentas)
 
-The following projects are highly likely to be useful to adopters of the OWASP Top 10:
+Os seguintes projectos são aqueles que serão provavelmente mais úteis para aqueles que pretendam adoptar o OWASP Top 10:
 
-- [OWASP AppSensor](https://www.owasp.org/index.php/OWASP_AppSensor_Project)
-- [OWASP Dependency Check](https://www.owasp.org/index.php/OWASP_Dependency_Check)
-- [OWASP mod_security WAF Core Rule Set](https://www.owasp.org/index.php/Category:OWASP_ModSecurity_Core_Rule_Set_Project)
-- [OWASP Open Web Testing Framework](https://www.owasp.org/index.php/OWASP_OWTF)
-- [OWASP ZAP](https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project)
+- [OWASP AppSensor][8]
+- [OWASP Dependency Check][9]
+- [OWASP mod\_security WAF Core Rule Set][10]
+- [OWASP Open Web Testing Framework][11]
+- [OWASP ZAP][12]
 
-## OWASP Lab Projects
+## Projectos de laboratório da OWASP
 
-These projects are working towards Flagship status, and might well achieve it before 2020.
+Estes projectos estão a caminha no sentido de se tornarem projectos bandeira da OWASP, e podem atingir esse estado antes de 2020.
 
-- [OWASP Developer Guide](https://www.owasp.org/index.php/OWASP_Guide_Project)
-- [OWASP Juice Shop](https://www.owasp.org/index.php/OWASP_Juice_Shop_Project)
-- [OWASP Secure Contract Annex](https://www.owasp.org/index.php/OWASP_Secure_Software_Contract_Annex)
+- [OWASP Developer Guide][13]
+- [OWASP Juice Shop][14]
+- [OWASP Secure Contract Annex][15]
 
-For a full list of projects, please see [OWASP Projects](https://www.owasp.org/index.php/Category:OWASP_Project)
+Para uma lista completa de projectos, por favor consulte [Projectos OWASP][16]
 
-## External references
+## Referências externas
 
-The following external sites reference the OWASP Top 10, and would likely be relevant to adopters.
+Os seguintes sites externos referenciam o OWASP Top 10, e serão úteis para quem pretenda adoptar o Top 10.
 
-- [MITRE Common Weakness Enumeration](https://cwe.mitre.org/)
-- [PCI Security Standards Council](https://www.pcisecuritystandards.org)
-- [PCI Data Security Standard (DSS)](https://www.pcisecuritystandards.org/document_library)
+- [MITRE Common Weakness Enumeration][17]
+- [PCI Security Standards Council][18]
+- [PCI Data Security Standard (DSS)][19]
+
+[1]:	https://www.owasp.org/index.php/OWASP_Cheat_Sheet_Series
+[2]:	https://www.owasp.org/index.php/OWASP_Proactive_Controls
+[3]:	https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project
+[4]:	https://www.owasp.org/index.php/OWASP_Testing_Project
+[5]:	https://www.owasp.org/index.php/OWASP_Top_10_Privacy_Risks_Project
+[6]:	https://www.owasp.org/index.php/Projects/OWASP_Mobile_Security_Project_-_Top_Ten_Mobile_Risks
+[7]:	https://www.owasp.org/index.php/OWASP_SAMM_Project
+[8]:	https://www.owasp.org/index.php/OWASP_AppSensor_Project
+[9]:	https://www.owasp.org/index.php/OWASP_Dependency_Check
+[10]:	https://www.owasp.org/index.php/Category:OWASP_ModSecurity_Core_Rule_Set_Project
+[11]:	https://www.owasp.org/index.php/OWASP_OWTF
+[12]:	https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project
+[13]:	https://www.owasp.org/index.php/OWASP_Guide_Project
+[14]:	https://www.owasp.org/index.php/OWASP_Juice_Shop_Project
+[15]:	https://www.owasp.org/index.php/OWASP_Secure_Software_Contract_Annex
+[16]:	https://www.owasp.org/index.php/Category:OWASP_Project
+[17]:	https://cwe.mitre.org/
+[18]:	https://www.pcisecuritystandards.org
+[19]:	https://www.pcisecuritystandards.org/document_library

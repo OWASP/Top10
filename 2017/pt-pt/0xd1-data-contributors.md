@@ -1,8 +1,8 @@
-# Acknowledgements
+# Reconhecimento
 
-## Acknowledgements to Data Contributors
+## Reconhecimento a quem contribuiu com dados
 
-We'd like to thank the many organizations that contributed their vulnerability data to support the 2017 update:
+Gostaríamos de agradecer a muitas organizações que contribuíram com os seus dados de vulnerabilidades para suportar esta actualização de 2017:
 
 * MicroFocus Fortify
 * Veracode
@@ -46,11 +46,11 @@ We'd like to thank the many organizations that contributed their vulnerability d
 * SHCP
 
 
-For the first time, all the data contributed to a Top 10 release, and the full list of contributors, is [publicly available](https://github.com/OWASP/Top10/tree/master/2017/datacall/submissions).
+Pela primeira vez, todos os dados contribuídos para uma versão do Top 10, e a lista completa de contribuidores, é [tornada pública][1].
 
-## Acknowledgements to Individual Contributors
+## Reconhecimento a contribuidores individuais 
 
-We'd like to thank the individual contributors who spent many hours collectively contributing to the Top 10 in GitHub.
+Gostaríamos de agradecer aos contribuidores individuais que investiram muitas horas a contribuírem para esta versão do Top 10 no GitHub.
 
 * ak47gen    
 * alonergan  
@@ -93,3 +93,5 @@ We'd like to thank the individual contributors who spent many hours collectively
 * yohgaki 
 * Chris Frohoff 
 * Gabriel Lawrence 
+
+[1]:	https://github.com/OWASP/Top10/tree/master/2017/datacall/submissions

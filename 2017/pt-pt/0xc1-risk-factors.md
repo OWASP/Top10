@@ -1,13 +1,15 @@
-# +RF Details About Risk Factors
+# +RF Detalhes sobre os Factores de Risco
 
-## Top 10 Risk Factor Summary
+## Sumário dos Riscos do Top 10
 
-The following table presents a summary of the 2017 Top 10 Application Security Risks, and the risk factors we have assigned to each risk. These factors were determined based on the available statistics and the experience of the OWASP Top 10 team. To understand these risks for a particular application or organization, *you must consider your own specific threat agents and business impacts*. Even severe software weaknesses may not present a serious risk if there are no threat agents in a position to perform the necessary attack or the business impact is negligible for the assets involved.
+A tabela seguinte apresenta um sumário do Top 10 de Riscos de Segurança Aplicacional de 2017, e os factores de risco que foram atribuídos a cada risco. Estes factores foram determinados com base nas estatísticas disponíveis e a experiência da equipa do OWASP Top 10. Para perceber estes riscos para uma aplicação ou organização específica, *deve considerar os seus agentes de ameaça e impactos no negócio específicos*. Até mesmo fraquezas severas de software podem não apresentar um risco sério se não existirem agentes de ameaça numa posição em que possam realizar um ataque ou se o impacto no negócio for negligenciável para os activos envolvidos.
 
-![Risk Factor Table](images/0xc1-risk-factor-table.png)
+![Risk Factor Table][image-1]
 
-## Additional Risks To Consider
+## Riscos adicionais a considerar
 
-The Top 10 covers a lot of ground, but there are many other risks you should consider and evaluate in your organization. Some of these have appeared in previous versions of the Top 10, and others have not, including new attack techniques that are being identified all the time.  Other important application security risks (in alphabetical order) that you should additionally consider include:
+O Top 10 cobre um longo caminho, mas existem muitos outros riscos a considerar e avaliar na sua organização. Alguns destes apareceram em versões anteriores do Top 10, e outros não, incluindo novas técnicas de ataque que estão a ser identificadas a toda a hora.  Outros riscos de segurança aplicacionais (por ordem alfabética) que devem ser considerados, incluem:
 
 * TBD - GOLDEN MASTER
+
+[image-1]:	images/0xc1-risk-factor-table.png
