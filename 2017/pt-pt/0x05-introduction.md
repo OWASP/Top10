@@ -1,32 +1,38 @@
-# I Introduction
-## Welcome to the OWASP Top 10 - 2017
+# I Introdução
+## Seja bem vindo ao OWASP Top 10 - 2017
 
-This major update adds several new issues, including two issues selected by the community - **A8:2017-Insecure Deserialization** and **A10:2017-Insufficient Logging and Monitoring**. Community feedback drove the collection of the most amount of data ever assembled in the preparation of an application security standard, and so we are confident that the remaining 8 issues are the most important for organizations to address, particularly the **A3:2017-Sensitive Data Exposure** in the age of the EU's General Data Protection Regulation, **A6:2017-Security Misconfiguration** especially around cloud and API services, and **A9:2017-Using Components with Known Vulnerabilities**, which can be especially challenging for those on modern platforms, like node.js.
+Esta nova actualização acrescenta um conjunto de novos problemas, incluindo dois problemas selecionados pela comunidade - **A8:2017 - De-serialização Insegura** and **A10:2017 - Registo e Monitorização Insuficiente**. A opinião da comunidade guiou a coleção do maior conjunto de dados alguma vez recolhido na preparação de um standard de segurança aplicacional, e por isso estamos confiantes  que os restantes 8 problemas são os mais importantes para as organizações enfrentarem, em particular o **A3:2017 - Exposição de Dados Sensíveis** importante na era da Regulamentação Geral da Protecção de Dados (GDPR) da UE, **A6:2017 - Más Configurações de Segurança** em particular no que respeita a serviços de APIs e cloud, e **A9:2017 -Utilização de Componentes com Vulnerabilidades Conhecidas**, que pode ser particularmente desafiante para plataformas mais modernas, como o  node.js.
 
-The OWASP Top 10 for 2017 is based primarily on 40+ data submissions from firms that specialize in application security and an industry survey that was completed by 515 individuals. This data spans vulnerabilities gathered from hundreds of organizations and over 100,000 real-world applications and APIs. The Top 10 items are selected and prioritized according to this prevalence data, in combination with consensus estimates of exploitability, detectability, and impact.
+O OWASP Top 10 de 2017 é baseado principalmente em mais de 40 submissões de dados de empresas que são especializadas na área da segurança aplicacional e um inquérito realizado à indústria que obteve  515 respostas individuais. Estes dados refletem vulnerabilidades colecionadas de centenas de organizações e cerca de 100,000 aplicações e APIs reais. O itens do Top 10 foram selecionados e ordenados de acordo com a sua prevalência, combinadas com estimativas consensualizadas sobre a sua exploração, detecção e impacto.
 
-A primary aim of the OWASP Top 10 is to educate developers, designers, architects, managers, and organizations about the consequences of the most common and most important web application security weaknesses. The Top 10 provides basic techniques to protect against these high risk problem areas, and provides guidance on where to go from here.
+O principal objectivo do OWASP Top 10 é o de educar programadores, desenhadores e arquitectos de aplicações, gestores e organizações sobre as consequências das mais comuns e mais importantes fraquezas de segurança em aplicações web. O Top 10 oferece técnicas básicas para proteger contra estas áreas problemáticas de elevado risco, e oferece direções sobre onde pode encontrar informação adicional sobre estes aspectos.
 
-## Roadmap for future activities
+## Planeamento para actividades futuras
 
-**Don't stop at 10**. There are hundreds of issues that could affect the overall security of a web application as discussed in the [OWASP Developer's Guide](https://www.owasp.org/index.php/OWASP_Guide_Project) and the [OWASP Cheat Sheet Series](https://www.owasp.org/index.php/Category:Cheatsheets). These are essential reading for anyone developing web applications and APIs. Guidance on how to effectively find vulnerabilities in web applications and APIs is provided in the [OWASP Testing Guide](https://www.owasp.org/index.php/OWASP_Testing_Project).
+**Não pare no 10**. Existem centenas de problemas que podem afectar a segurança geral de uma aplicação web tal como discutido no [Guia de Programadores da OWASP][1] e nas [Séries de Cheat Sheets da OWASP][2]. Isto é leitura essencial para alguém que esteja a desenvolver aplicações web e APIs. Informação sobre como enThese are essential reading for anyone developing web applications and APIs. Guidance on how to effectively find vulnerabilities in web applications and APIs is provided in the [OWASP Testing Guide][3].
 
-**Constant change**. The OWASP Top 10 will continue to change. Even without changing a single line of your application's code, you may become vulnerable as new flaws are discovered and attack methods are refined. Please review the advice at the end of the Top 10 in "What's Next For Developers, Testers, and Organizations" for more information.
+**Mudança constante**. O OWASP Top 10 vai continuar a mudar. Mesmo sem mudar uma única linha no código da sua aplicação, pode ficar vulnerável à medida que novas falhas são descobertas e métodos de ataque são refinados. Por favor, reveja os conselhos no final do Top 10 na parte “O que se se segue para Programadores, profissionais de Testes e Organizações” para mais informação.
 
-**Think positive**. When you're ready to stop chasing vulnerabilities and focus on establishing strong application security controls, OWASP is maintaining and promoting the [OWASP Application Security Verification Standard (ASVS)](https://www.owasp.org/index.php/ASVS) as a guide to organizations and application reviewers on what to verify.
+**Pense positivo**. Quando estiver pronto para parar de perseguir vulnerabilidades e focar-se  no estabelecimento de controlos fortes de segurança aplicacional, a OWASP mantém e promove o [Standard de Verificação de Segurança Aplicacional da OWASP (ASVS)][4] como guia de aspectos a verificar para as organizações e revisores de aplicações.
 
-**Use tools wisely**. Security vulnerabilities can be quite complex and deeply buried in code. In many cases, the most cost-effective approach for finding and eliminating these weaknesses is human experts armed with good tools.
+**Use as ferramentas de forma inteligente**. As vulnerabilidades de segurança podem ser bastante complexas e muito intrincadas no meio do código. Em muitos casos, a abordagem mais eficiente para encontrar e eliminar estas fraquezas, consiste na utilização de especialistas humanos munidos de boas ferramentas.
 
-**Push left, right, and everywhere**. Focus on making security an integral part of your culture throughout your development organization. Find out more in the [OWASP Software Assurance Maturity Model (SAMM)](https://www.owasp.org/index.php/OWASP_SAMM_Project).
+**Empurre para esquerda, para a direita e para todo o lado**. Foco deve estar em tornar a segurança uma parte integral da cultura da sua organização em particular no departamento de desenvolvimento. Pode encontrar mais informação em [Modelo de Garantia da Maturidade do Software da OWASP (SAMM)][5].
 
-## Attribution
+## Reconhecimento
 
-We'd like to thank the organizations that contributed their vulnerability data to support the 2017 update. We received more than 40 responses to the call for data. For the first time, all the data contributed to a Top 10 release, and the full list of contributors, is publicly available. We believe this is one of the larger, more diverse collections of vulnerability data yet collected publicly.
+Gostaríamos de agradecer às organizações que contribuíram com os seus dados de vulnerabilidades para suportar esta actualização de 2017. Recebemos mais de 40 respostas à nossa solicitação de dados. Pela primeira vez, todos os dados que contribuíram para este Top 10, e a lista completa de contribuidores, é tornada pública. Acreditamos que esta é uma das maiores e mais heterogéneas coleções de dados de vulnerabilidades alguma vez recolhida publicamente.
 
-As there are more contributors than space here, we have created a dedicated page to recognize the contributions made. We wish to give heartfelt thanks to these organizations for being willing to be on the front lines of publicly sharing vulnerability data from their efforts. We hope this will continue to grow and encourage more organizations to do the same and possibly be seen as one of the key milestones of evidence based security. The OWASP Top 10 would not be possible without these amazing contributions.
+Uma vez que existem mais organizações do que espaço aqui, criamos uma página dedicada a reconhecer as contribuições que foram realizadas. Queremos agradecer fortemente a estas organizações por estarem na linha da frente ao partilharem publicamente estes dados de vulnerabilidades resultante dos seus esforços. Esperamos que esta tendência continue a crescer e encoraje mais organizações a fazerem o mesmo e possivelmente serem vistas como um dos principais marcos da segurança baseada em provas. O OWASP Top 10 não seria possível sem estas contribuições incríveis.
 
-A big thank you to the 516 individuals who took the time to complete the industry ranked survey. Your voice helped determine two new additions to the Top 10. The additional comments, notes of encouragement (and criticisms), were all appreciated. We know your time is valuable and we wanted to say thanks.
+Um agradecimento especial aos 516 indivíduos que gastaram o seu tempo a completar o inquérito de indústria. A voz deles ajudou a determinar duas novas adições ao Top 10. Os comentários adicionais, as notas de encorajamento (i críticas) foram todos devidamente apreciados. Sabemos que o vosso tempo é valioso e por isso queremos agradecer-lhes.
 
-We would like to thank in advance those individuals who contribute significant constructive comments and time reviewing this update to the Top 10. As much as possible, we have listed them on the attribution page '+Ack'.
+Gostaríamos de agradecer antecipadamente a todos os indivíduos que contribuíram com comentários construtivos significativos e pelo tempo que gastaram na revisão desta actualização do Top 10. Tanto quanto possível, estão todos listados na página de agradecimentos '+Ack'.
 
-And finally, we'd like to thank in advance all the translators out there that will translate this release of the Top 10 into numerous different languages, helping to make the OWASP Top 10 more accessible to the entire planet.
+Finalmente, gostaríamos de agradecer antecipadamente a todos os tradutores que irão traduzir esta actualização do Top 10 em múltiplas línguas, ajudando a tornar o OWASP Top 10 mais acessível a todo o planeta.
+
+[1]:	https://www.owasp.org/index.php/OWASP_Guide_Project
+[2]:	https://www.owasp.org/index.php/Category:Cheatsheets
+[3]:	https://www.owasp.org/index.php/OWASP_Testing_Project
+[4]:	https://www.owasp.org/index.php/ASVS
+[5]:	https://www.owasp.org/index.php/OWASP_SAMM_Project
