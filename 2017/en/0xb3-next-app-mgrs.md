@@ -18,7 +18,7 @@ We suggest establishing application owners and application managers for every ap
 * Rate the fulfillment of all technical requirements including a rough planning and design phase.
 * Negotiate all technical requirements including design, security and service level agreements (SLA).
 * Adopt templates and checklists, such as [OWASP Secure Software Contract Annex](https://www.owasp.org/index.php/OWASP_Secure_Software_Contract_Annex).
-**NB**: Please note that the Annex is a sample specific to US contract law, and is likely to need legal review in your jurisdiction. Please consult qualified legal advice before using the Annex.
+**Note**: Please note that the Annex is a sample specific to US contract law, and is likely to need legal review in your jurisdiction. Please consult qualified legal advice before using the Annex.
 
 ## Planning and Design
 
