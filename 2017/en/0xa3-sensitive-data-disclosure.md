@@ -24,8 +24,8 @@ Do the following, at a minimum and consult the references:
 
 * Classify data processed, stored or transmitted by a system. Apply controls as per the classification.
 Review the privacy laws or regulations applicable to sensitive data, and protect as per regulatory requirements.
-* Don't store sensitive data unnecessarily. Discard it as soon as possible or use PCI DSS compliant tokenization or even truncation. Data you don't retain can't be stolen.
-* Make sure you encrypt all sensitive data at rest.
+* Don't store sensitive data unnecessarily. Discard it as soon as possible or use PCI DSS compliant tokenization or even truncation. Data that is not retained cannot be stolen.
+* Make sure to encrypt all sensitive data at rest.
 * Encrypt all data in transit, such as using TLS. Enforce this using directives like HTTP Strict Transport Security ([HSTS](https://www.owasp.org/index.php/HTTP_Strict_Transport_Security_Cheat_Sheet)).
 * Ensure up-to-date and strong standard algorithms or ciphers, parameters, protocols and keys are used, and proper key management is in place. Consider using [crypto modules](https://csrc.nist.gov/projects/cryptographic-module-validation-program/validated-modules/search).
 * Store passwords using strong adaptive algorithms appropriate for password protection, such as [Argon2](https://www.cryptolux.org/index.php/Argon2), [scrypt](https://wikipedia.org/wiki/Scrypt), [bcrypt](https://wikipedia.org/wiki/Bcrypt) and [PBKDF2](https://wikipedia.org/wiki/PBKDF2) with sufficient work factor (delay factor) to prevent realistic GPU cracking attacks.
