@@ -42,7 +42,7 @@ An attacker simply modifies the 'acct' parameter in the browser to send whatever
 
 * `http://example.com/app/accountInfo?acct=notmyacct`
 
-**Scenario #2**:  An attacker simply force browsers to target URLs. Admin rights are required for access to the admin page.
+**Scenario #2**:  An attacker simply force browses to target URLs. Admin rights are required for access to the admin page.
 
 * `http://example.com/app/getappInfo`
 * `http://example.com/app/admin_getappInfo`
