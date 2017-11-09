@@ -28,7 +28,7 @@ Review the privacy laws or regulations applicable to sensitive data, and protec
 * Make sure to encrypt all sensitive data at rest.
 * Encrypt all data in transit, such as using TLS. Enforce this using directives like HTTP Strict Transport Security ([HSTS](https://www.owasp.org/index.php/HTTP_Strict_Transport_Security_Cheat_Sheet)).
 * Ensure up-to-date and strong standard algorithms or ciphers, parameters, protocols and keys are used, and proper key management is in place. Consider using [crypto modules](https://csrc.nist.gov/projects/cryptographic-module-validation-program/validated-modules/search).
-* Store passwords using strong adaptive algorithms appropriate for password protection, such as [Argon2](https://www.cryptolux.org/index.php/Argon2), [scrypt](http://www.tarsnap.com/scrypt.html), [bcrypt](https://wikipedia.org/wiki/Bcrypt) and [PBKDF2](https://wikipedia.org/wiki/PBKDF2) with sufficient work factor (delay factor) to prevent realistic GPU cracking attacks.
+* Store passwords using strong adaptive algorithms appropriate for password protection, such as [Argon2](https://www.cryptolux.org/index.php/Argon2), [scrypt](https://wikipedia.org/wiki/Scrypt), [bcrypt](https://wikipedia.org/wiki/Bcrypt) and [PBKDF2](https://wikipedia.org/wiki/PBKDF2) with sufficient work factor (delay factor) to prevent realistic GPU cracking attacks.
 * Disable caching for response that contain sensitive data.
 * Verify independently the effectiveness of your settings.
 
