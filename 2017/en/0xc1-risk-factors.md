@@ -15,6 +15,7 @@ The Top 10 covers a lot of ground, but there are many other risks you should con
 * Improper Control of Interaction Frequency (Anti-Automation) [CWE-799]
 * Inclusion of Functionality from Untrusted Control Sphere (3rd Party Content) [CWE-829]
 * Server-Side Request Forgery (SSRF) [CWE-918]
+* Unrestricted Upload of File with Dangerous Type [CWE-434]
 * Unvalidated Forward and Redirects [CWE-601]
 * User Interface (UI) Misrepresentation of Critical Information (Clickjacking and others) [CWE-451]
 
