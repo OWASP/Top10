@@ -4,46 +4,49 @@
 
 We'd like to thank the many organizations that contributed their vulnerability data to support the 2017 update:
 
-* MicroFocus Fortify
-* Veracode
-* Synopsis
-* Checkmarx
-* ContextIS
-* CDAC
-* Hidden
-* Colegio LaSalle Monteria
-* Linden Lab
-* ITsec Security Services bv
-* EZI
-* Edgescan
-* Purpletalk
-* AsTech Consulting
-* Network Test Labs Inc.
-* Derek Weeks
-* TCS
-* Easybss
-* I4 Consulting
 * ANCAP
-* Branding Brand
-* Vantage Point
-* EVRY
-* iBLISS Digital Security
-* Shape Security
-* Paladion Networks
-* Secure Network
-* Web
-* Contrast Security
-* Hamed
-* Khallaagh
-* DDoS.com
-* Minded Security
-* BUGemot
-* Softtek
-* M. Limacher IT Dienstleistungen
-* Osampa
+* Aspect Security
+* AsTech Consulting
 * Atos
+* Branding Brand
+* BUGemot
+* CDAC
+* Checkmarx
+* Colegio LaSalle Monteria
+* Company
+* ContextIS
+* Contrast Security
+* DDoS.com
+* Derek Weeks
+* Easybss
+* edgescan
+* EVRY
+* EZI
+* hamed
+* Hidden
+* I4 Consulting
+* iBLISS Seguran̤a & Intelig̻ncia
+* ITsec Security Services bv
+* Khallaagh
+* khallagh
+* Linden Lab
+* M. Limacher IT Dienstleistungen
+* Micro Focus Fortify
+* Minded Security
 * National Center for Cyber Security Technology
+* Network Test Labs Inc.
+* Osampa
+* Paladion Networks
+* Purpletalk
+* Secure Network
+* Shape Security
 * SHCP
+* Softtek
+* Synopsis
+* TCS
+* Vantage Point
+* Veracode
+* Web
 
 
 For the first time, all the data contributed to a Top 10 release, and the full list of contributors, is [publicly available](https://github.com/OWASP/Top10/tree/master/2017/datacall/submissions).
