@@ -3,15 +3,15 @@
 | Threat agents/Attack vectors | Security Weakness           | Impacts               |
 | -- | -- | -- |
 | Access Lvl \| Exploitability 2 | Prevalence 3 \| Detectability 2 | Technical 2 \| Business |
-| While it is easy to find already-written exploits for many known vulnerabilities, other vulnerabilities require concentrated effort to develop a custom exploit. | Prevalence of this issue is very widespread. Component-heavy development patterns can lead to development teams not even understanding which components they use in their application or API, much less keeping them up to date. This issue is detectable by the use of scanners such as retire.js and header inspection, but verifying if it is exploitable requires an attack of some description. | While some known vulnerabilities lead to only minor impacts, some of the largest breaches to date have relied on exploiting known vulnerabilities in components. Depending on the assets you are protecting, perhaps this risk should be at the top of your list. |
+| While it is easy to find already-written exploits for many known vulnerabilities, other vulnerabilities require concentrated effort to develop a custom exploit. | Prevalence of this issue is very widespread. Component-heavy development patterns can lead to development teams not even understanding which components they use in their application or API, much less keeping them up to date. Some scanners such as retire.js help in detection but determining exploitability requires additional effort. | While some known vulnerabilities lead to only minor impacts, some of the largest breaches to date have relied on exploiting known vulnerabilities in components. Depending on the assets you are protecting, perhaps this risk should be at the top of your list. |
 
 ## Is the Application Vulnerable?
 
 You are likely vulnerable:
 
 * If you do not know the versions of all components you use (both client-side and server-side). This includes components you directly use as well as nested dependencies.
-* If any of your software out of date? This includes the OS, Web/App Server, DBMS, applications, APIs and all components, runtime environments and libraries.
-* If you do not know if they are vulnerable. Either if you don't research for this information or if you don't scan them for vulnerabilities on a regular base.
+* If any of your software is out of date. This includes the OS, Web/App Server, DBMS, applications, APIs and all components, runtime environments and libraries.
+* If do not scan for vulnerabilities regularly and subscribe to security bulletins related to the components you use.
 * If you do not fix or upgrade the underlying platform, frameworks and dependencies in a timely fashion. This commonly happens is environments when patching is a monthly or quarterly task under change control, which leaves organizations open to many days or months of unnecessary exposure to fixed vulnerabilities.  
 * If you do not secure the components' configurations (see **A6:2017-Security Misconfiguration**).
 
@@ -21,7 +21,7 @@ Software projects should have a process in place to:
 
 * Remove unused dependencies, unnecessary features, components, files, and documentation.
 * Continuously inventory the versions of both client-side and server-side components and their dependencies using tools like [versions](http://www.mojohaus.org/versions-maven-plugin/), [DependencyCheck](https://www.owasp.org/index.php/OWASP_Dependency_Check), [retire.js](https://github.com/retirejs/retire.js/), etc.
-* Continuously monitor sources like [CVE](https://cve.mitre.org/) and [NVD](https://nvd.nist.gov/) for vulnerabilities in your components. Use software composition analysis tools to automate the process.
+* Continuously monitor sources like [CVE](https://cve.mitre.org/) and [NVD](https://nvd.nist.gov/) for vulnerabilities in your components. Use software composition analysis tools to automate the process. Subscribe to email alerts for security vulnerabilities related to components you use.
 * Only obtain your components from official sources and, when possible, prefer signed packages to reduce the chance of getting a modified, malicious component.
 * Many libraries and components do not create security patches for out of support or old versions, or it simply be unmaintained. If patching is not possible, consider deploying a [virtual patch](https://www.owasp.org/index.php/Virtual_Patching_Best_Practices#What_is_a_Virtual_Patch.3F) to monitor, detect or protect against the discovered issue.
 
