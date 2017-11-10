@@ -14,7 +14,7 @@ An application is vulnerable to attack when:
 * Hostile data is used within ORM search parameters such that the search includes additional, sensitive records.
 * Hostile data is directly used or concatenated, such that the SQL or command contains both structure and hostile data in dynamic queries, commands, or in stored procedures.
 
-Some of the more common injections are SQL, NoSQL, OS command, ORM, LDAP, and Expression Language (EL) or OGNL injection. The concept is identical between all interpreters. Source code review is the best method of detecting if your applications are vulnerable to injections, closely followed by thorough automated testing of all parameters, headers, URL, cookies, JSON, SOAP, and XML data inputs. Organizations can include static source (SAST) and dynamic application test (DAST) tools into the CI/CD pipeline to identify newly introduced injection flaws prior to production deployment. 
+Some of the more common injections are SQL, NoSQL, OS command, ORM, LDAP, and Expression Language (EL) or OGNL injection. The concept is identical between all interpreters. Source code review is the best method of detecting if your applications are vulnerable to injections, closely followed by thorough automated testing of all parameters, headers, URL, cookies, JSON, SOAP, and XML data inputs. Organizations can include static source ([SAST](https://www.owasp.org/index.php/Source_Code_Analysis_Tools)) and dynamic application test ([DAST](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools)) tools into the CI/CD pipeline to identify newly introduced injection flaws prior to production deployment. 
 
 ## How To Prevent
 
