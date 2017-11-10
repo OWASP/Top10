@@ -7,7 +7,7 @@ Applications belong to the most complex systems humans regularly create and main
 ## Requirements and Resource Management
 
 * Collect and negotiate the business requirements for an application with the business, including the
-protection requirements with regard to confidentiality, authenticity, integrity and availability of all data assets.
+protection requirements with regard to confidentiality, authenticity, integrity and availability of all data assets, and the expected business logic.
 * Compile the technical requirements including functional and non functional security requirements.
 * Plan and negotiate the budget that covers all aspects of design, build, testing and operation, including security activities.
 
