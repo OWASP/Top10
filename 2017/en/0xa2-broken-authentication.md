@@ -26,6 +26,8 @@ There may be authentication weaknesses if your application:
 * Ensure registration, credential recovery, and API pathways are hardened against account enumeration attacks by using the same messages for all outcomes.
 * Where possible, implement multi-factor authentication to prevent credential stuffing, brute force, automated, and stolen credential attacks.
 * Log authentication failures and alert administrators when credential stuffing, brute force, other attacks are detected.
+* Use a server-side, secure, built-in session manager that generates a new random session ID with high entropy after login. The session IDs should be securely stored and invalidated after logout, inactive, and total timeouts.
+
 
 ## Example Attack Scenarios
 
