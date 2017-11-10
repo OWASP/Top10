@@ -25,7 +25,7 @@ The primary recommendations are to establish all of the following:
 
 * A repeatable hardening process that makes it fast and easy to deploy another environment that is properly locked down. Development, QA, and production environments should all be configured identically (with different credentials used in each environment). This process should be automated to minimize the effort required to setup a new secure environment.
 * Remove or do not install any unnecessary features, components, documentation and samples. Remove unused dependencies and frameworks.
-* A process to triage and deploy all updates and patches in a timely manner to each deployed environment. This process needs to include all frameworks, dependencies, components, and libraries (see A9:2017 Using Components with Known Vulnerabilities). 
+* A task to review and update the configurations appropriate to all security notes, updates and patches as part of the patching process (see A9:2017 Using Components with Known Vulnerabilities). 
 * A strong application architecture that provides effective, secure separation between components, with segmentation, containerization, or cloud security groups (ACLs). 
 * An automated process to verify the effectiveness of the configurations and settings in all environments.
 
