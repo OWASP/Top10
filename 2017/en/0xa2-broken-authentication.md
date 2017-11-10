@@ -3,12 +3,12 @@
 | Threat agents/Attack vectors | Security Weakness           | Impacts               |
 | -- | -- | -- |
 | Access Lvl \| Exploitability 3 | Prevalence 2 \| Detectability 2 | Technical 3 \| Business |
-| Attackers have access to hundreds of millions of valid username and password combinations for credential stuffing, default administrative account lists, automated brute force and dictionary attack tools.  | The prevalence of broken authentication is widespread due to the design and implementation of most identity and access management systems. Attackers can detect broken authentication using manual means, but are often attracted by password dumps, or after a social engineering attack such as phishing or similar. | Attackers only have to gain access to a few accounts, or just one admin  account to compromise the system. Depending on the domain of the application, this may allow money laundering social security fraud and identity theft; or disclose legally protected highly sensitive information. |
+| Attackers have access to hundreds of millions of valid username and password combinations for credential stuffing, default administrative account lists, automated brute force and dictionary attack tools.  | The prevalence of broken authentication is widespread due to the design and implementation of most identity and access controls. Attackers can detect broken authentication using manual means, but are often attracted by password dumps, or after a social engineering attack such as phishing or similar. | Attackers only have to gain access to a few accounts, or just one admin  account to compromise the system. Depending on the domain of the application, this may allow money laundering social security fraud and identity theft; or disclose legally protected highly sensitive information. |
 
 ## Is the Application Vulnerable?
 
-Confirmation of the user's identity, authentication, and session management are critical for separating malicious unauthenticated attackers from authorized users.
-You may have authentication weaknesses if your application:
+Confirmation of the user's identity, authentication, and session management are critical to protect against authentication-related attacks.
+There may be authentication weaknesses if your application:
 
 * Permits [credential stuffing](https://www.owasp.org/index.php/Credential_stuffing), which is where the attacker has a list of valid usernames and passwords.
 * Permits brute force or other automated attacks.
