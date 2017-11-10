@@ -13,7 +13,7 @@ We'd like to thank the many organizations that contributed their vulnerability d
 * CDAC
 * Checkmarx
 * Colegio LaSalle Monteria
-* Company
+* Company.com
 * ContextIS
 * Contrast Security
 * DDoS.com
@@ -46,7 +46,7 @@ We'd like to thank the many organizations that contributed their vulnerability d
 * TCS
 * Vantage Point
 * Veracode
-* Web
+* Web.com
 
 
 For the first time, all the data contributed to a Top 10 release, and the full list of contributors, is [publicly available](https://github.com/OWASP/Top10/tree/master/2017/datacall/submissions).
