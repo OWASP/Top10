@@ -97,6 +97,6 @@ We'd like to thank the individual contributors who spent many hours collectively
 
 In particular, Dirk Wetter, Jim Manico, and Osama Elnaggar have provided extensive assistance. 
 
-Also, Chris Frohoff and Gabriel Lawrence provided invaluable support in the writing of the new A7:2017 Insecure Deserialization risk.
+Also, Chris Frohoff and Gabriel Lawrence provided invaluable support in the writing of the new A8:2017 Insecure Deserialization risk.
 
 
