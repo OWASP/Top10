@@ -55,48 +55,79 @@ For the first time, all the data contributed to a Top 10 release, and the full l
 
 We'd like to thank the individual contributors who spent many hours collectively contributing to the Top 10 in GitHub.
 
-* ak47gen    
-* alonergan  
-* anantshri  
-* bchurchill 
-* bkimminich 
-* boberski   
-* borischen  
-* calico90   
-* D00gs      
-* davewichers 
-* drwetter    
-* ecbftw      
-* gilzow      
-* h3xstream   
-* HoLyVieR    
-* ilatypov    
-* irbishop    
-* itscooper   
-* jeremylong  
-* jmanico     
-* joaomatosf  
-* jrmithdobbs 
-* jsteven     
-* jvehent     
-* koto        
-* ossie-git   
-* PauloASilva 
-* pontocom 
-* psiinon  
-* raesene  
-* riramar  
-* stefanb  
-* taprootsec 
-* tghosth   
-* thesp0nge   
-* toddgrotenhuis 
-* tsohlacol 
-* vdbaan 
-* yohgaki 
+* ak47gen
+* alonergan
+* ameft
+* anantshri
+* bandrzej
+* bchurchill
+* binarious
+* bkimminich
+* Boberski
+* borischen
+* Calico90
+* chrish
+* clerkendweller
+* D00gs
+* davewichers
+* drkknight
+* drwetter
+* ecbftw
+* einsweniger
+* ekobrin
+* eoftedal
+* frohoff
+* fzipi
+* gebl
+* gilzow
+* global4g
+* grnd
+* h3xstream
+* hiralph
+* HoLyVieR
+* ilatypov
+* irbishop
+* itscooper
+* ivanr
+* jeremylong
+* jhaddix
+* jmanico
+* joaomatosf
+* jrmithdobbs
+* jsteven
+* jvehent
+* kerberosmansour
+* koto
+* m8urnett
+* mwcoates
+* neo00
+* nickthetait
+* ninedter
+* ossie-git
+* PauloASilva
+* PeterMosmans
+* pontocom
+* psiinon
+* pwntester
+* raesene
+* riramar
+* ruroot
+* securestep9
+* SPoint42
+* sreenathsasikumar
+* starbuck3000
+* stefanb
+* sumitagarwalusa
+* taprootsec
+* tghosth
+* thesp0nge
+* toddgrotenhuis
+* tsohlacol
+* vdbaan
+* yohgaki
 
-In particular, Dirk Wetter, Jim Manico, and Osama Elnaggar have provided extensive assistance. 
+And everyone else who provided feedback via Twitter, email, and other means.
 
-Also, Chris Frohoff and Gabriel Lawrence provided invaluable support in the writing of the new A8:2017 Insecure Deserialization risk.
+We would be remis not to mention that Dirk Wetter, Jim Manico, and Osama Elnaggar have provided extensive assistance. Also, Chris Frohoff and Gabriel Lawrence provided invaluable support in the writing of the new A8:2017 Insecure Deserialization risk.
 
 
