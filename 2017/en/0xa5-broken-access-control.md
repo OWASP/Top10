@@ -3,7 +3,7 @@
 | Threat agents/Attack vectors | Security Weakness           | Impacts               |
 | -- | -- | -- |
 | Access Lvl \| Exploitability 2 | Prevalence 2 \| Detectability 2 | Technical 3 \| Business |
-| Exploitation of access control is a core skill of penetration testers. SAST and DAST tools can detect the absence of access control, but not verify if it is functional. Access control is detectable using manual means, or possibly through automation for the absence of access controls in certain frameworks. | Access control weaknesses are common due to the lack of automated detection, and lack of effective functional testing by application developers. Access control detection is not typically amenable to automated static or dynamic testing. | The technical impact is anonymous attackers acting as users or administrators, users using privileged functions, or creating, accessing, updating or deleting every record. |
+| Exploitation of access control is a core skill of penetration testers. SAST and DAST tools can detect the absence of access control but can not verify if it is functional when it is present. Access control is detectable using manual means, or possibly through automation for the absence of access controls in certain frameworks. | Access control weaknesses are common due to the lack of automated detection, and lack of effective functional testing by application developers. Access control detection is not typically amenable to automated static or dynamic testing. | The technical impact is attackers acting as users or administrators, users using privileged functions, or creating, accessing, updating or deleting every record. |
 
 ## Is the Application Vulnerable?
 
@@ -64,4 +64,4 @@ If an unauthenticated user can access either page, it's a flaw. If a non-admin c
 * [CWE-284: Improper Access Control (Authorization)](https://cwe.mitre.org/data/definitions/284.html)
 * [CWE-285: Improper Authorization](https://cwe.mitre.org/data/definitions/285.html)
 * [CWE-639: Authorization Bypass Through User-Controlled Key](https://cwe.mitre.org/data/definitions/639.html)
-* [Portswigger: Exploiting CORS misconfiguration](http://blog.portswigger.net/2016/10/exploiting-cors-misconfigurations-for.html)
+* [Portswigger: Exploiting CORS misconfiguration](https://portswigger.net/blog/exploiting-cors-misconfigurations-for-bitcoins-and-bounties)
