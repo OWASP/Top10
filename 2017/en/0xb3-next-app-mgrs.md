@@ -23,7 +23,7 @@ protection requirements with regard to confidentiality, authenticity, integrity 
 
 * Negotiate planning and design with the developers and internal shareholders, e.g. security specialists
 * Define the security architecture, controls, and countermeasures appropriate to the protection needs and the expected threat level. This should be supported by security specialists.
-* Get the application owner to accept remaining risks or to provide additional resources.
+* Ensure that the application owner accepts remaining risks or provides additional resources.
 * Each sprint, ensure security stories are created for functional requirements, and constraints added for non-functional requirements.
 
 ## Deployment, Testing and Rollout
