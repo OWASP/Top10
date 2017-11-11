@@ -13,7 +13,7 @@ A primary aim of the OWASP Top 10 is to educate developers, designers, architect
 
 **Constant change**. The OWASP Top 10 will continue to change. Even without changing a single line of your application's code, you may become vulnerable as new flaws are discovered and attack methods are refined. Please review the advice at the end of the Top 10 in "What's Next For Developers, Testers, and Organizations" for more information.
 
-**Think positive**. When you're ready to stop chasing vulnerabilities and focus on establishing strong application security controls, OWASP is maintaining and promoting the [OWASP Application Security Verification Standard (ASVS)](https://www.owasp.org/index.php/ASVS) as a guide to organizations and application reviewers on what to verify.
+**Think positive**. When you're ready to stop chasing vulnerabilities and focus on establishing strong application security controls, the [OWASP Proactive Controls](https://www.owasp.org/index.php/OWASP_Proactive_Controls) project provides a starting point to help developers build security in and OWASP maintains and promotes the [OWASP Application Security Verification Standard (ASVS)](https://www.owasp.org/index.php/ASVS) as a guide to organizations and application reviewers on what to verify.
 
 **Use tools wisely**. Security vulnerabilities can be quite complex and deeply buried in code. In many cases, the most cost-effective approach for finding and eliminating these weaknesses is human experts armed with good tools.
 
