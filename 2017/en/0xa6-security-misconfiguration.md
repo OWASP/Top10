@@ -25,7 +25,7 @@ Is your application missing the proper security hardening across any part of the
 
 * A repeatable hardening process that makes it fast and easy to deploy another environment that is properly locked down. Development, QA, and production environments should all be configured identically, with different credentials used in each environment. This process should be automated to minimize the effort required to setup a new secure environment.
 * Remove or do not install any unnecessary features, components, documentation and samples. Remove unused dependencies and frameworks.
-* A task to review and update the configurations appropriate to all security notes, updates and patches as part of the patching process (see **A9:2017 Using Components with Known Vulnerabilities**).
+* A task to review and update the configurations appropriate to all security notes, updates and patches as part of the patch management process (see **A9:2017-Using Components with Known Vulnerabilities**).
 * A strong application architecture that provides effective, secure separation between components, or tenants, with segmentation, containerization, or cloud security groups (ACLs).
 * Send security directives to client abents, e.g. [Security Headers](https://www.owasp.org/index.php/OWASP_Secure_Headers_Project)).
 * An automated process to verify the effectiveness of the configurations and settings in all environments.
