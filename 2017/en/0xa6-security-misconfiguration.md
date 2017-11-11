@@ -54,7 +54,7 @@ For additional requirements in this area, see the [ASVS requirements areas for S
 ### External
 
 * [NIST Guide to General Server Hardening](https://csrc.nist.gov/publications/detail/sp/800-123/final)
-* [CWE Entry 2 on Environmental Security Flaws](https://cwe.mitre.org/data/definitions/2.html)
-* [CWE Entry 16 on Configuration](https://cwe.mitre.org/data/definitions/16.html)
-* [CWE Entry 388 on Error Handling](https://cwe.mitre.org/data/definitions/388.html)
+* [CWE-2: Environmental Security Flaws](https://cwe.mitre.org/data/definitions/2.html)
+* [CWE-16: Configuration](https://cwe.mitre.org/data/definitions/16.html)
+* [CWE-388: Error Handling](https://cwe.mitre.org/data/definitions/388.html)
 * [CIS Security Configuration Guides/Benchmarks](https://www.cisecurity.org/cis-benchmarks/)
