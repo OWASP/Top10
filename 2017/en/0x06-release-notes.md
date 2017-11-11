@@ -11,7 +11,7 @@ Over the last decade, and in particularly these last few years, the fundamental 
 
 **New issues, supported by data**
 
-* **A4:2017 - XML External Entity (XXE)** is a new category primarily supported by [SAST](https://www.owasp.org/index.php/Source_Code_Analysis_Tools) data sets. 
+* **A4:2017 - XML External Entities (XXE)** is a new category primarily supported by [SAST](https://www.owasp.org/index.php/Source_Code_Analysis_Tools) data sets. 
 
 **New issues, supported by the community**
 
