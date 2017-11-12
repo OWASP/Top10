@@ -18,7 +18,7 @@ The [OWASP Top 10](https://www.owasp.org/index.php/Top10) focuses on identifying
 | App Specific | Average 2 | Common 2 | Average 2 | Moderate 2 | App / Business Specific |
 | App Specific | Difficult 1 | Uncommon 1 | Difficult 1 | Minor 1 | App / Business Specific |
 
-In this edition, we have updated the risk rating system to assist in calculating the likelihood and impact of any given risk. This is not an issue within the document, but is clear in the public data analysis (see '+R').
+In this edition, we have updated the risk rating system to assist in calculating the likelihood and impact of any given risk. For more details, please see ‘+R’.
 
 Each organization is unique, and so are the threat actors for that organization, their goals, and the impact of any breach. If a public interest organization uses a CMS for public information and a health system uses that same exact CMS for sensitive health records, the threat actors and business impacts can be very different for the same software. It is critical that to understand the risk to your organization based on applicable threat agents and business impacts.
 
