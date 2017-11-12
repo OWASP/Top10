@@ -39,7 +39,7 @@ String query = "SELECT * FROM accounts WHERE custID='" + request.getParameter("i
 Query HQLQuery = session.createQuery("FROM accounts WHERE custID='" + request.getParameter("id") + "'");
 ```
 
-In both cases, the attacker modifies the 'id' parameter value in their browser to send:  ' or '1'='1. For example:
+In both cases, the attacker modifies the 'id' parameter value in his browser to send:  ' or '1'='1. For example:
 * `http://example.com/app/accountView?id=' or '1'='1`
 
 This changes the meaning of both queries to return all the records from the accounts table.  More dangerous attacks could modify or delete data, or even invoke stored procedures.
