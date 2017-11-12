@@ -4,7 +4,7 @@ Insecure software is undermining our financial, healthcare, defense, energy, and
 
 A great deal of feedback was received during the creation of the OWASP Top 10-2017, more than for any other equivalent OWASP effort. This shows how much passion the community has for the OWASP Top 10, and thus how critical it is for OWASP to get the Top 10 right for the majority of use cases.
 
-Although the original goal of the OWASP Top 10 project was simply to raise awareness amongst developers, it has become the de facto application security standard. 
+Although the original goal of the OWASP Top 10 project was simply to raise awareness amongst developers and managers, it has become the de facto application security standard. 
 
 We have taken steps in this release to firm up the definition of issues, and improve the recommendations to be leading practices that may be adopted as an application security standard that covers off around 80-90% of all common attacks and threats. We encourage large and high performing organizations to use the [OWASP Application Security Verification Standard (ASVS)](https://www.owasp.org/index.php/ASVS) if a true standard is required, but for most, the OWASP Top 10 is a great start on the application security journey.
 
