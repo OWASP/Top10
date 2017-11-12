@@ -3,7 +3,7 @@
 | Threat agents/Attack vectors | Security Weakness           | Impacts               |
 | -- | -- | -- |
 | Access Lvl \| Exploitability 2 | Prevalence 2 \| Detectability 2 | Technical 3 \| Business |
-| Exploitation of access control is a core skill of penetration testers. [SAST](https://www.owasp.org/index.php/Source_Code_Analysis_Tools) and [DAST](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools) tools can detect the absence of access control but can not verify if it is functional when it is present. Access control is detectable using manual means, or possibly through automation for the absence of access controls in certain frameworks. | Access control weaknesses are common due to the lack of automated detection, and lack of effective functional testing by application developers. Access control detection is not typically amenable to automated static or dynamic testing. | The technical impact is attackers acting as users or administrators, users using privileged functions, or creating, accessing, updating or deleting every record. The business impact depends on the protection needs of your application and data. |
+| Exploitation of access control is a core skill of attackers. [SAST](https://www.owasp.org/index.php/Source_Code_Analysis_Tools) and [DAST](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools) tools can detect the absence of access control but can not verify if it is functional when it is present. Access control is detectable using manual means, or possibly through automation for the absence of access controls in certain frameworks. | Access control weaknesses are common due to the lack of automated detection, and lack of effective functional testing by application developers. Access control detection is not typically amenable to automated static or dynamic testing. | The technical impact is attackers acting as users or administrators, users using privileged functions, or creating, accessing, updating or deleting every record. The business impact depends on the protection needs of your application and data. |
 
 ## Is the Application Vulnerable?
 
@@ -24,7 +24,7 @@ Access control is only effective if enforced in trusted server-side code or serv
 Implement access control mechanisms once and re-use them throughout the application.
 * Model access controls should enforce record ownership, rather than accepting that the user can create, read, update or delete any record.
 * Domain access controls are unique to each application, but business limit requirements should be enforced by domain models.
-* Disable web server directory listing, and ensure file metadata such (e.g. .git) is not present within web roots.
+* Disable web server directory listing, and ensure file metadata (e.g. .git) and backup files are not present within web roots.
 * Log access control failures, alert admins when appropriate (e.g. repeated failures).
 * Rate limiting API and controller access to minimize the harm from automated attack tooling.
 * Developers and QA staff should include functional access control unit and integration tests.
