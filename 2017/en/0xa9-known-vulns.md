@@ -11,7 +11,7 @@ You are likely vulnerable:
 
 * If you do not know the versions of all components you use (both client-side and server-side). This includes components you directly use as well as nested dependencies.
 * If any of your software is out of date. This includes the OS, Web/App Server, DBMS, applications, APIs and all components, runtime environments and libraries.
-* If do not scan for vulnerabilities regularly and subscribe to security bulletins related to the components you use.
+* If you do not scan for vulnerabilities regularly and subscribe to security bulletins related to the components you use.
 * If you do not fix or upgrade the underlying platform, frameworks and dependencies in a timely fashion. This commonly happens is environments when patching is a monthly or quarterly task under change control, which leaves organizations open to many days or months of unnecessary exposure to fixed vulnerabilities.  
 * If you do not secure the components' configurations (see **A6:2017-Security Misconfiguration**).
 
@@ -23,7 +23,7 @@ Software projects should have a process in place to:
 * Continuously inventory the versions of both client-side and server-side components (e.g. frameworks, libraries) and their dependencies using tools like [versions](http://www.mojohaus.org/versions-maven-plugin/), [DependencyCheck](https://www.owasp.org/index.php/OWASP_Dependency_Check), [retire.js](https://github.com/retirejs/retire.js/), etc.
 * Continuously monitor sources like [CVE](https://cve.mitre.org/) and [NVD](https://nvd.nist.gov/) for vulnerabilities in your components. Use software composition analysis tools to automate the process. Subscribe to email alerts for security vulnerabilities related to components you use.
 * Only obtain your components from official sources and, when possible, prefer signed packages to reduce the chance of getting a modified, malicious component.
-* Many libraries and components do not create security patches for out of support or old versions, or it simply be unmaintained. If patching is not possible, consider deploying a [virtual patch](https://www.owasp.org/index.php/Virtual_Patching_Best_Practices#What_is_a_Virtual_Patch.3F) to monitor, detect or protect against the discovered issue.
+* Monitor for libraries and components which do not create security patches for out of support or old versions, or are simply unmaintained. If patching is not possible, consider deploying a [virtual patch](https://www.owasp.org/index.php/Virtual_Patching_Best_Practices#What_is_a_Virtual_Patch.3F) to monitor, detect or protect against the discovered issue.
 
 Every organization must ensure that there is an ongoing plan for monitoring, triaging, and applying updates or configuration changes for the lifetime of the application or portfolio.
 

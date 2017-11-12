@@ -6,7 +6,7 @@ Change has accelerated over the last four years, and the OWASP Top 10 needed to 
 Over the last decade, and in particularly these last few years, the fundamental architecture of applications has changed significantly:
 
 * JavaScript is now the primary language of the web. node.js and modern web frameworks such as Bootstrap, Electron, Angular, React amongst many others, means source that was once on the server is now running on untrusted browsers.
-* Single page applications, written in JavaScript frameworks such as Angular and React, allow the creation of highly modular front end user experiences, not to mention the rise and rise of mobile applicationss using the same APIs as single page applications.
+* Single page applications, written in JavaScript frameworks such as Angular and React, allow the creation of highly modular front end user experiences, not to mention the rise and rise of mobile applications using the same APIs as single page applications.
 * Microservices written in node.js and Spring Boot are replacing older enterprise service bus applications using EJBs and so on. Old code that never expected to be communicated with directly from the Internet is now sitting behind an API or RESTful web service. The assumptions that underlie this code, such as trusted callers, are simply not valid.
 
 **New issues, supported by data**
