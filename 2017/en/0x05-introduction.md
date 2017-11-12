@@ -11,7 +11,7 @@ A primary aim of the OWASP Top 10 is to educate developers, designers, architect
 
 **Don't stop at 10**. There are hundreds of issues that could affect the overall security of a web application as discussed in the [OWASP Developer's Guide](https://www.owasp.org/index.php/OWASP_Guide_Project) and the [OWASP Cheat Sheet Series](https://www.owasp.org/index.php/Category:Cheatsheets). These are essential reading for anyone developing web applications and APIs. Guidance on how to effectively find vulnerabilities in web applications and APIs is provided in the [OWASP Testing Guide](https://www.owasp.org/index.php/OWASP_Testing_Project).
 
-**Constant change**. The OWASP Top 10 will continue to change. Even without changing a single line of your application's code, you may become vulnerable as new flaws are discovered and attack methods are refined. Please review the advice at the end of the Top 10 in "What's Next For Developers, Testers, and Organizations" for more information.
+**Constant change**. The OWASP Top 10 will continue to change. Even without changing a single line of your application's code, you may become vulnerable as new flaws are discovered and attack methods are refined. Please review the advice at the end of the Top 10 in What's Next For Developers, Testers, Organizations and Application Managers for more information.
 
 **Think positive**. When you're ready to stop chasing vulnerabilities and focus on establishing strong application security controls, OWASP is maintaining and promoting the [OWASP Application Security Verification Standard (ASVS)](https://www.owasp.org/index.php/ASVS) as a guide to organizations and application reviewers on what to verify.
 
