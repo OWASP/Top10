@@ -21,7 +21,7 @@ A primary aim of the OWASP Top 10 is to educate developers, designers, architect
 
 ## Attribution
 
-We'd like to thank the organizations that contributed their vulnerability data to support the 2017 update. We received more than 40 responses to the call for data. For the first time, all the data contributed to a Top 10 release, and the full list of contributors, is publicly available. We believe this is one of the larger, more diverse collections of vulnerability data yet collected publicly.
+We'd like to thank the organizations that contributed their vulnerability data to support the 2017 update. We received more than 40 responses to the call for data. For the first time, all the data contributed to a Top 10 release, and the full list of contributors, is publicly available. We believe this is one of the larger, more diverse collections of vulnerability data ever collected publicly.
 
 As there are more contributors than space here, we have created a dedicated page to recognize the contributions made. We wish to give heartfelt thanks to these organizations for being willing to be on the front lines of publicly sharing vulnerability data from their efforts. We hope this will continue to grow and encourage more organizations to do the same and possibly be seen as one of the key milestones of evidence based security. The OWASP Top 10 would not be possible without these amazing contributions.
 
