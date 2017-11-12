@@ -1,4 +1,4 @@
-# +T What's Next for Security Testing
+# +T What's Next for Security Testers
 
 ## Establish Continuous Application Security Testing
 Building code securely is important. But it's critical to verify that the security you intended to build is actually present, correctly implemented, and used everywhere it was supposed to be. The goal of application security testing is to provide this evidence. The work is difficult and complex, and modern high-speed development processes like Agile and DevOps have put extreme pressure on traditional approaches and tools. So we strongly encourage you to put some thought into how you are going to focus on what's important across your entire application portfolio, and do it cost-effectively.
