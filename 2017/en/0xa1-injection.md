@@ -11,7 +11,7 @@ An application is vulnerable to attack when:
 
 * User-supplied data is not validated, filtered or sanitized by the application.
 * Hostile data is used directly with dynamic queries or non-parameterized calls for the interpreter without context-aware escaping.
-* Hostile data is used within ORM search parameters such that the search includes additional, sensitive records.
+* Hostile data is used within ORM (object-relational mapping) search parameters to extract additional, sensitive records.
 * Hostile data is directly used or concatenated, such that the SQL or command contains both structure and hostile data in dynamic queries, commands, or in stored procedures.
 
 Some of the more common injections are SQL, NoSQL, OS command, ORM, LDAP, and Expression Language (EL) or OGNL injection. The concept is identical between all interpreters. Source code review is the best method of detecting if your applications are vulnerable to injections, closely followed by thorough automated testing of all parameters, headers, URL, cookies, JSON, SOAP, and XML data inputs. Organizations can include static source ([SAST](https://www.owasp.org/index.php/Source_Code_Analysis_Tools)) and dynamic application test ([DAST](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools)) tools into the CI/CD pipeline to identify newly introduced injection flaws prior to production deployment. 
@@ -42,7 +42,7 @@ Query HQLQuery = session.createQuery("FROM accounts WHERE custID='" + request.ge
 In both cases, the attacker modifies the 'id' parameter value in her browser to send:  ' or '1'='1. For example:
 * `http://example.com/app/accountView?id=' or '1'='1`
 
-This changes the meaning of both queries to return all the records from the accounts table.  More dangerous attacks could modify data or even invoke stored procedures.
+This changes the meaning of both queries to return all the records from the accounts table.  More dangerous attacks could modify or delete data, or even invoke stored procedures.
 
 ## References
 
