@@ -8,7 +8,7 @@ OWASP recommends organizations establish an application security program to gain
 
 ### Get Started
 
-* Document all applications and associated data assets in a Configuration Management Database (CMDB).
+* Document all applications and associated data assets. Larger organizations should consider implementing a Configuration Management Database (CMDB) for this purpose.
 * Establish an [application security program](https://www.owasp.org/index.php/SAMM_-_Strategy_&_Metrics_-_1) and drive adoption.
 * Conduct a [capability gap analysis](https://www.owasp.org/index.php/SAMM_-_Strategy_&_Metrics_-_3) comparing your organization to your peers to define key improvement areas and an execution plan.
 * Gain management approval and establish an [application security awareness campaign](https://www.owasp.org/index.php/SAMM_-_Education_&_Guidance_-_1) for the entire IT organization.
