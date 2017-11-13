@@ -12,6 +12,7 @@ Insufficient logging, detection, monitoring and active response occurs any time:
 * Auditable events, such as logins, failed logins, and high value transactions are not logged.
 * Logs of applications and APIs are not monitored for suspicious activity.
 * Alerting thresholds and response escalation as per the risk of the data held by the application is not in place or effective.
+* Penetration testing and scans by [DAST](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools) tools (such as [OWASP ZAP](https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project)) do not trigger alerts.
 
 For larger and high performing organizations, the lack of active response, such as real time alerting and response activities such as blocking automated attacks on web apps and particularly APIs would place the organization at risk from extended compromise. The response does not necessarily need to be visible to the attacker, only that the application and associated infrastructure, frameworks, service layers, etc. can detect and alert humans or tools to respond in near real time.
 
@@ -20,11 +21,12 @@ For larger and high performing organizations, the lack of active response, such 
 As per the risk of the data stored or processed by the application:
 
 * Ensure all login, access control failures, server-side input validation failures can be logged with sufficient user context to identify suspicious or malicious accounts, and held for sufficient time to allow delayed forensic analysis.
+* Ensure that logs are generated in a format that can be easily consumed by a centralized log management solutions.
 * Ensure high value transactions have an audit trail with integrity controls to prevent tampering or deletion, such as append only database tables or similar.
-* Establish effective monitoring and alerting such that suspicious activities are detected and responded within acceptable time periods.
+* Establish effective monitoring and alerting such that suspicious activities are detected and responded to in a timely fashion.
 * Establish or adopt an incident response and recovery plan, such as [NIST 800-61 rev 2](https://csrc.nist.gov/publications/detail/sp/800-61/rev-2/final) or later.
 
-There are commercial and open source application protection frameworks such as [OWASP AppSensor](https://www.owasp.org/index.php/OWASP_AppSensor_Project), web application firewalls such as [mod_security with the OWASP Core Rule Set](https://www.owasp.org/index.php/Category:OWASP_ModSecurity_Core_Rule_Set_Project), and log correlation software with custom dashboards and alerting. Penetration testing and scans by [DAST](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools) tools (such as [OWASP ZAP](https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project)) should always trigger alerts.
+There are commercial and open source application protection frameworks such as [OWASP AppSensor](https://www.owasp.org/index.php/OWASP_AppSensor_Project), web application firewalls such as [mod_security with the OWASP Core Rule Set](https://www.owasp.org/index.php/Category:OWASP_ModSecurity_Core_Rule_Set_Project), and log correlation software with custom dashboards and alerting.
 
 ## Example Attack Scenarios
 

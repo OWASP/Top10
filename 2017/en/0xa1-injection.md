@@ -11,7 +11,7 @@ An application is vulnerable to attack when:
 
 * User-supplied data is not validated, filtered or sanitized by the application.
 * Hostile data is used directly with dynamic queries or non-parameterized calls for the interpreter without context-aware escaping.
-* Hostile data is used within ORM search parameters such that the search includes additional, sensitive records.
+* Hostile data is used within ORM (object-relational mapping) search parameters to extract additional, sensitive records.
 * Hostile data is directly used or concatenated, such that the SQL or command contains both structure and hostile data in dynamic queries, commands, or in stored procedures.
 
 Some of the more common injections are SQL, NoSQL, OS command, ORM, LDAP, and Expression Language (EL) or OGNL injection. The concept is identical between all interpreters. Source code review is the best method of detecting if your applications are vulnerable to injections, closely followed by thorough automated testing of all parameters, headers, URL, cookies, JSON, SOAP, and XML data inputs. Organizations can include static source ([SAST](https://www.owasp.org/index.php/Source_Code_Analysis_Tools)) and dynamic application test ([DAST](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools)) tools into the CI/CD pipeline to identify newly introduced injection flaws prior to production deployment. 
@@ -21,7 +21,7 @@ Some of the more common injections are SQL, NoSQL, OS command, ORM, LDAP, and Ex
 Preventing injection requires keeping data separate from commands and queries.
 
 * The preferred option is to use a safe API which avoids the use of the interpreter entirely or provides a parameterized interface, or migrate to use Object Relational Mapping Tools (ORMs). **Note**: When parameterized, stored procedures can still introduce SQL injection if PL/SQL or T-SQL concatenates queries and data, or executes hostile data with EXECUTE IMMEDIATE or exec().
-* Positive or "whitelist" server-side input validation, but this is not a complete defense as many applications require special characters, such as text areas or APIs for mobile applications.
+* Use positive or "whitelist" server-side input validation, but this is not a complete defense as many applications require special characters, such as text areas or APIs for mobile applications.
 * For any residual dynamic queries, escape special characters using the specific escape syntax for that interpreter. **Note**: SQL structure such as table names, column names, and so on cannot be escaped, and thus user-supplied structure names are dangerous. This is a common issue in report writing software.
 * Use LIMIT and other SQL controls within queries to prevent mass disclosure of records in case of SQL injection.
 
@@ -39,10 +39,10 @@ String query = "SELECT * FROM accounts WHERE custID='" + request.getParameter("i
 Query HQLQuery = session.createQuery("FROM accounts WHERE custID='" + request.getParameter("id") + "'");
 ```
 
-In both cases, the attacker modifies the 'id' parameter value in her browser to send:  ' or '1'='1. For example:
+In both cases, the attacker modifies the 'id' parameter value in his browser to send:  ' or '1'='1. For example:
 * `http://example.com/app/accountView?id=' or '1'='1`
 
-This changes the meaning of both queries to return all the records from the accounts table.  More dangerous attacks could modify data or even invoke stored procedures.
+This changes the meaning of both queries to return all the records from the accounts table.  More dangerous attacks could modify or delete data, or even invoke stored procedures.
 
 ## References
 
