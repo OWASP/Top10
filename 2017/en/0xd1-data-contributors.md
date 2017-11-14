@@ -5,11 +5,12 @@
 We'd like to thank the many organizations that contributed their vulnerability data to support the 2017 update:
 
 * ANCAP
-* Aspect Security
 * AsTech Consulting
+* Aspect Security
 * Atos
-* Branding Brand
 * BUGemot
+* Bugcrowd
+* Branding Brand
 * CDAC
 * Checkmarx
 * Colegio LaSalle Monteria
@@ -18,17 +19,16 @@ We'd like to thank the many organizations that contributed their vulnerability d
 * Contrast Security
 * DDoS.com
 * Derek Weeks
-* Easybss
-* edgescan
 * EVRY
 * EZI
-* hamed
+* Easybss
+* Edgescan
+* Hamed
 * Hidden
 * I4 Consulting
 * iBLISS Seguran̤a & Intelig̻ncia
 * ITsec Security Services bv
-* Khallaagh
-* khallagh
+* Khallagh
 * Linden Lab
 * M. Limacher IT Dienstleistungen
 * Micro Focus Fortify
@@ -38,9 +38,9 @@ We'd like to thank the many organizations that contributed their vulnerability d
 * Osampa
 * Paladion Networks
 * Purpletalk
+* SHCP
 * Secure Network
 * Shape Security
-* SHCP
 * Softtek
 * Synopsis
 * TCS
@@ -48,12 +48,11 @@ We'd like to thank the many organizations that contributed their vulnerability d
 * Veracode
 * Web.com
 
-
-For the first time, all the data contributed to a Top 10 release, and the full list of contributors, is [publicly available](https://github.com/OWASP/Top10/tree/master/2017/datacall/submissions).
+For the first time, all the data contributed to a Top 10 release, and the full list of contributors is [publicly available](https://github.com/OWASP/Top10/tree/master/2017/datacall/submissions).
 
 ## Acknowledgements to Individual Contributors
 
-We'd like to thank the individual contributors who spent many hours collectively contributing to the Top 10 in GitHub.
+We’d like to thank the individual contributors who spent many hours collectively contributing to the Top 10 in GitHub.
 
 * ak47gen
 * alonergan
@@ -128,6 +127,4 @@ We'd like to thank the individual contributors who spent many hours collectively
 
 And everyone else who provided feedback via Twitter, email, and other means.
 
-We would be remis not to mention that Dirk Wetter, Jim Manico, and Osama Elnaggar have provided extensive assistance. Also, Chris Frohoff and Gabriel Lawrence provided invaluable support in the writing of the new A8:2017 Insecure Deserialization risk.
-
-
+We would be remiss not to mention that Dirk Wetter, Jim Manico, and Osama Elnaggar have provided extensive assistance. Also, Chris Frohoff and Gabriel Lawrence provided invaluable support in the writing of the new A8:2017-Insecure Deserialization risk.
