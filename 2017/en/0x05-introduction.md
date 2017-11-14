@@ -1,4 +1,5 @@
 # I Introduction
+
 ## Welcome to the OWASP Top 10 - 2017
 
 This major update adds several new issues, including two issues selected by the community - A8:2017-Insecure Deserialization and A10:2017-Insufficient Logging and Monitoring. Two key differentiators from previous OWASP Top 10 editions are the substantial community feedback in addition to the extensive data assembled from dozens of organizations (possibly the largest amount of data ever assembled in the preparation of an application security standard). This provides us with additional confidence that the new OWASP Top 10 addresses the most urgent application security issues currently facing organizations.
