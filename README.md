@@ -1,12 +1,14 @@
 # Top10
 Official OWASP Top 10 Document Repository
 
-We pleased to announce the OWASP Top 10 Release Candidate 2:
+We pleased to announce the OWASP Top 10 - 2017 Golden Master:
 
-* [OWASP Top 10 2017 (PPTX)](https://github.com/OWASP/Top10/blob/master/2017/OWASP%20Top%2010%202017%20RC2%20Final.pptx)
-* [OWASP Top 10 2017 (PDF)](https://github.com/OWASP/Top10/blob/master/2017/OWASP%20Top%2010%202017%20RC2%20Final.pdf)
+* [OWASP Top 10 2017 (PPTX)](https://github.com/OWASP/Top10/blob/master/2017/OWASP%20Top%2010%202017%20GM%20(en).pptx)
+* [OWASP Top 10 2017 (PDF)](https://github.com/OWASP/Top10/blob/master/2017/OWASP%20Top%2010%202017%20GM%20(en).pdf)
 
 Please review for content, context, accuracy, links, spelling, and examples, and [log issues](https://github.com/OWASP/Top10/issues).
+
+The final version will be released on November 20, 2017. 
 
 We are asking for comments to be filed as [GitHub issues](https://github.com/OWASP/Top10/issues).
 Please feel free to browse the issues, comment on them, or file a new one.
