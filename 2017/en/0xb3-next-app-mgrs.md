@@ -6,8 +6,7 @@ Applications belong to the most complex systems humans regularly create and main
 
 ## Requirements and Resource Management
 
-* Collect and negotiate the business requirements for an application with the business, including the
-protection requirements with regard to confidentiality, authenticity, integrity and availability of all data assets, and the expected business logic.
+* Collect and negotiate the business requirements for an application with the business, including the protection requirements with regard to confidentiality, authenticity, integrity and availability of all data assets, and the expected business logic.
 * Compile the technical requirements including functional and non functional security requirements.
 * Plan and negotiate the budget that covers all aspects of design, build, testing and operation, including security activities.
 
@@ -16,15 +15,14 @@ protection requirements with regard to confidentiality, authenticity, integrity 
 * Negotiate with internal or external developers the requirements, including guidelines and security requirements with respect to your security program, e.g. SDLC, best practices.
 * Rate the fulfillment of all technical requirements including a planning and design phase.
 * Negotiate all technical requirements including design, security and service level agreements (SLA).
-* Adopt templates and checklists, such as [OWASP Secure Software Contract Annex](https://www.owasp.org/index.php/OWASP_Secure_Software_Contract_Annex).
-**Note**: Please note that the Annex is a sample specific to US contract law, and is likely to need legal review in your jurisdiction. Please consult qualified legal advice before using the Annex.
+* Adopt templates and checklists, such as [OWASP Secure Software Contract Annex](https://www.owasp.org/index.php/OWASP_Secure_Software_Contract_Annex). **Note**: The Annex is a sample specific to US contract law, and is likely to need legal review in your jurisdiction. Please consult qualified legal advice before using the Annex
 
 ## Planning and Design
 
-* Negotiate planning and design with the developers and internal shareholders, e.g. security specialists
+* Negotiate planning and design with the developers and internal shareholders, e.g. security specialists.
 * Define the security architecture, controls, and countermeasures appropriate to the protection needs and the expected threat level. This should be supported by security specialists.
 * Ensure that the application owner accepts remaining risks or provides additional resources.
-* Each sprint, ensure security stories are created for functional requirements, and constraints added for non-functional requirements.
+* In each sprint, ensure security stories are created including constraints added for non-functional requirements.
 
 ## Deployment, Testing and Rollout
 
