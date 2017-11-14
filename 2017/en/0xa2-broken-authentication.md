@@ -3,28 +3,28 @@
 | Threat agents/Attack vectors | Security Weakness           | Impacts               |
 | -- | -- | -- |
 | Access Lvl \| Exploitability 3 | Prevalence 2 \| Detectability 2 | Technical 3 \| Business |
-| Attackers have access to hundreds of millions of valid username and password combinations for credential stuffing, default administrative account lists, automated brute force and dictionary attack tools.  | The prevalence of broken authentication is widespread due to the design and implementation of most identity and access controls. Attackers can detect broken authentication using manual means, but are often attracted by password dumps, or after a social engineering attack such as phishing or similar. | Attackers only have to gain access to a few accounts, or just one admin  account to compromise the system. Depending on the domain of the application, this may allow money laundering social security fraud and identity theft; or disclose legally protected highly sensitive information. |
+| Attackers have access to hundreds of millions of valid username and password combinations for credential stuffing, default administrative account lists, automated brute force, and dictionary attack tools. Session management attacks are well understood, particularly in relation to unexpired session tokens. | The prevalence of broken authentication is widespread due to the design and implementation of most identity and access controls. Session management is the bedrock of authentication and access controls, and is present in all stateful apps. Attackers can detect broken authentication using manual means and exploit them using automated tools with password lists and dictionary attacks. | Attackers only have to gain access to a few accounts, or just one admin account to compromise the system. Depending on the domain of the application, this may allow money laundering, social security fraud, and identity theft, or disclose legally protected highly sensitive information. |
 
 ## Is the Application Vulnerable?
 
 Confirmation of the user's identity, authentication, and session management are critical to protect against authentication-related attacks.
+
 There may be authentication weaknesses if your application:
 
 * Permits automated attacks such as [credential stuffing](https://www.owasp.org/index.php/Credential_stuffing), where the attacker has a list of valid usernames and passwords.
 * Permits brute force or other automated attacks.
-* Permits default, weak or well-known passwords, such as "Password1" or "admin/admin“.
-* Uses weak or ineffectual credential recovery and forgot password processes, such as "knowledge-based answers", which cannot be made safe.
+* Permits default, weak, or well-known passwords, such as "Password1" or "admin/admin“.
+* Uses weak or ineffective credential recovery and forgot-password processes, such as "knowledge-based answers", which cannot be made safe.
 * Uses plain text, encrypted, or weakly hashed passwords (see **A3:2017-Sensitive Data Exposure**).
 * Has missing or ineffective multi-factor authentication.
-* Exposes Session IDs in the URL (e.g., URL rewriting),
+* Exposes Session IDs in the URL (e.g., URL rewriting).
 * Does not rotate Session IDs after successful login.
-* Does not properly invalidate Session IDs. User sessions or authentication tokens (particularly single sign-on (SSO) tokens) aren’t properly invalidated during logout or a period of inactivity.
+* Does not properly invalidate Session IDs. User sessions or authentication tokens (particularly single sign-on (SSO) tokens) aren’t properly invalidated during logout or a period of inactivity
 
 ## How To Prevent
 
-* Where possible, implement multi-factor authentication to prevent credential stuffing, brute force, automated, and stolen credential attacks.
+* Where possible, implement multi-factor authentication to prevent automated, credential stuffing, brute force, and stolen credential re-use attacks. 
 * Do not ship or deploy with any default credentials, particularly for admin users
-* [Store passwords using a modern one way hash function](https://www.owasp.org/index.php/Password_Storage_Cheat_Sheet#Leverage_an_adaptive_one-way_function), such as Argon2 or PBKDF2, with sufficient work factor to prevent realistic GPU cracking attacks.
 * Implement weak password checks, such as testing new or changed passwords against a list of the [top 10000 worst passwords](https://github.com/danielmiessler/SecLists/tree/master/Passwords).
 * Align password length, complexity and rotation policies with [NIST 800-63 B's guidelines in section 5.1.1 for Memorized Secrets](https://pages.nist.gov/800-63-3/sp800-63b.html#memsecret) or other modern, evidence based password policies.
 * Ensure registration, credential recovery, and API pathways are hardened against account enumeration attacks by using the same messages for all outcomes.
@@ -33,7 +33,7 @@ There may be authentication weaknesses if your application:
 
 ## Example Attack Scenarios
 
-**Scenario #1**: [credential stuffing](https://www.owasp.org/index.php/Credential_stuffing), the use of [lists of known passwords](https://github.com/danielmiessler/SecLists), is a common attack. If an application does not implement automated threat or credential stuffing protections, the application can be used as a password oracle to determine if the credentials are valid.
+Scenario #1: [credential stuffing](https://www.owasp.org/index.php/Credential_stuffing), the use of [lists of known passwords](https://github.com/danielmiessler/SecLists), is a common attack. If an application does not implement automated threat or credential stuffing protections, the application can be used as a password oracle to determine if the credentials are valid.
 
 **Scenario #2**: Most authentication attacks occur due to the continued use of passwords as a sole factor. Once considered best practices, password rotation and complexity requirements are viewed as encouraging users to use, and reuse, weak passwords. Organizations are recommended to stop these practices per NIST 800-63 and use multi-factor authentication.
 
