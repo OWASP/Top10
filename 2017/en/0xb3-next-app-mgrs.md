@@ -44,4 +44,4 @@ Applications belong to the most complex systems humans regularly create and main
 
 * Any required data should be archived. All other data should be securely wiped.
 * Securely retire the application, including deleting unused accounts and roles and permissions.
-* Set your application’s state to retired in the CMDB.
+* Set your application's state to retired in the CMDB.

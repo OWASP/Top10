@@ -3,7 +3,7 @@
 | Threat agents/Attack vectors | Security Weakness           | Impacts               |
 | -- | -- | -- |
 | Access Lvl \| Exploitability 2 | Prevalence 3 \| Detectability 2 | Technical 3 \| Business |
-| Attackers typically don’t break crypto directly. Instead attackers steal keys, execute man-in-the-middle attacks, or steal clear text data off the server, while in transit, or from the user’s client, e.g. browser. A manual attack is generally required. Previously retrieved password databases could be brute forced or cracked by GPUs. | Over the last few years, this has been the most common impactful attack. The most common flaw is simply not encrypting sensitive data. When crypto is employed, weak key generation and management, and weak algorithm, protocol and cipher usage is common, particularly for data at rest weak password hashing techniques. For data in transit server side weaknesses are mainly easy to detect, but hard for data at rest. The exploitability of both varies. | Failure frequently compromises all data that should have been protected. Typically, this information includes sensitive personal information (PII) data such as health records, cre-dentials, personal data, credit cards, which often requires protection as defined by laws or regulations such as the EU GDPR or local privacy laws. |
+| Attackers typically don't break crypto directly. Instead attackers steal keys, execute man-in-the-middle attacks, or steal clear text data off the server, while in transit, or from the user's client, e.g. browser. A manual attack is generally required. Previously retrieved password databases could be brute forced or cracked by GPUs. | Over the last few years, this has been the most common impactful attack. The most common flaw is simply not encrypting sensitive data. When crypto is employed, weak key generation and management, and weak algorithm, protocol and cipher usage is common, particularly for data at rest weak password hashing techniques. For data in transit server side weaknesses are mainly easy to detect, but hard for data at rest. The exploitability of both varies. | Failure frequently compromises all data that should have been protected. Typically, this information includes sensitive personal information (PII) data such as health records, cre-dentials, personal data, credit cards, which often requires protection as defined by laws or regulations such as the EU GDPR or local privacy laws. |
 
 ## Is the Application Vulnerable?
 
@@ -24,7 +24,7 @@ Do the following, at a minimum and consult the references:
 
 * Classify data processed, stored or transmitted by an application. Identify which data is sensitive according privacy laws, regulatory requirements, or business needs.
 * Apply controls as per the classification.
-* Don’t store sensitive data unnecessarily. Discard it as soon as possible or use PCI DSS compliant tokenization or even truncation. Data that is not retained cannot be stolen.
+* Don't store sensitive data unnecessarily. Discard it as soon as possible or use PCI DSS compliant tokenization or even truncation. Data that is not retained cannot be stolen.
 * Make sure to encrypt all sensitive data at rest.
 * Ensure up-to-date and strong standard algorithms, protocols, keys and proper key management is in place.
 * Encrypt all data in transit with secure protocols such as TLS with perfect forward secrecy (PFS) ciphers, cipher prioritization by the server, and secure parameters. Enforce encryption using directives like HTTP Strict Transport Security (HSTS).

@@ -32,11 +32,11 @@ Secure installation processes should be implemented, including:
 
 ## Example Attack Scenarios
 
-**Scenario #1**: The application server comes with sample apps that are not removed from your production server. These sample apps have known security flaws attackers use to compromise your server. If one of these apps is the admin console, and default accounts weren’t changed the attacker logs in with default passwords and takes over.
+**Scenario #1**: The application server comes with sample apps that are not removed from your production server. These sample apps have known security flaws attackers use to compromise your server. If one of these apps is the admin console, and default accounts weren't changed the attacker logs in with default passwords and takes over.
 
 **Scenario #2**: Directory listing is not disabled on your server. An attacker discovers they can simply list directories. The attacker finds and downloads your compiled Java classes, which they decompile and reverse engineer to view your code. The attacker then finds a serious access control flaw in your application.
 
-**Scenario #3**: The app server’s configuration allows detailederror messages e.g. stack traces to be returned to users. This potentially exposes sensitive information or underlying flaws such as component versions that are known to be vulnerable.
+**Scenario #3**: The app server's configuration allows detailed error messages e.g. stack traces to be returned to users. This potentially exposes sensitive information or underlying flaws such as component versions that are known to be vulnerable.
 
 **Scenario #4**: The default configuration or a copied old one activates old vulnerable protocol versions or options that can be misused by an attacker or malware.
 

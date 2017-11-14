@@ -8,7 +8,7 @@ Although the original goal of the OWASP Top 10 project was simply to raise aware
 
 In this release, issues and recommendations are written concisely and in a testable way to assist with the adoption of the OWASP Top 10 in application security programs. We encourage large and high performing organizations to use the [OWASP Application Security Verification Standard (ASVS)](https://www.owasp.org/index.php/ASVS) if a true standard is required, but for most, the OWASP Top 10 is a great start on the application security journey.
 
-We have written up a range of suggested next steps for different users of the OWASP Top 10, including "What’s Next for Developers", "What’s Next for Security Testers", "What’s Next for Organizations“, which is suitable for CIOs and CISOs, and "What’s Next for Application Managers", which is suitable for application managers or anyone responsible for the lifecycle of the application.
+We have written up a range of suggested next steps for different users of the OWASP Top 10, including "What's Next for Developers", "What's Next for Security Testers", "What's Next for Organizations“, which is suitable for CIOs and CISOs, and "What's Next for Application Managers", which is suitable for application managers or anyone responsible for the lifecycle of the application.
 
 In the long term, we encourage all software development teams and organizations to create an application security program that is compatible with your culture and technology. These programs come in all shapes and sizes. Leverage your organization's existing strengths to measure and improve your application security program using the Software Assurance Maturity Model.
 
