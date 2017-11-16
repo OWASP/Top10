@@ -3,18 +3,19 @@
 | Threat agents/Attack vectors | Security Weakness           | Impacts               |
 | -- | -- | -- |
 | Access Lvl \| Exploitability 2 | Prevalence 2 \| Detectability 2 | Technical 3 \| Business |
-| Exploitation of access control is a core skill of attackers. [SAST](https://www.owasp.org/index.php/Source_Code_Analysis_Tools) and [DAST](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools) tools can detect the absence of access control but can not verify if it is functional when it is present. Access control is detectable using manual means, or possibly through automation for the absence of access controls in certain frameworks. | Access control weaknesses are common due to the lack of automated detection, and lack of effective functional testing by application developers. Access control detection is not typically amenable to automated static or dynamic testing. | The technical impact is attackers acting as users or administrators, users using privileged functions, or creating, accessing, updating or deleting every record. The business impact depends on the protection needs of your application and data. |
+| Exploitation of access control is a core skill of attackers. [SAST](https://www.owasp.org/index.php/Source_Code_Analysis_Tools) and [DAST](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools) tools can detect the absence of access control but cannot verify if it is functional when it is present. Access control is detectable using manual means, or possibly through automation for the absence of access controls in certain frameworks. | Access control weaknesses are common due to the lack of automated detection, and lack of effective functional testing by application developers. Access control detection is not typically amenable to automated static or dynamic testing. | The technical impact is attackers acting as users or administrators, or users using privileged functions, or creating, accessing, updating or deleting every record.
+The business impact depends on the protection needs of your application and data. |
 
 ## Is the Application Vulnerable?
 
 Access control enforces policy such that users cannot act outside of their intended permissions. Failures typically lead to unauthorized information disclosure, modification or destruction of all data, or performing a business function outside of the limits of the user. Common access control vulnerabilities include:
 
 * Bypassing access control checks by modifying the URL, internal application state, or the HTML page, or simply using a custom API attack tool.
-* Allowing the primary key to be changed to another's users record, such as viewing or editing someone else's account.
+* Allowing the primary key to be changed to another's users record, permitting viewing or editing someone else's account.
 * Elevation of privilege. Acting as a user without being logged in, or acting as an admin when logged in as a user.
 * Metadata manipulation, such as replaying or tampering with a JWT access control token or a cookie or hidden field manipulated to elevate privileges, or abusing JWT invalidation
 * CORS misconfiguration allows unauthorized API access.
-* Force browsing to authenticated pages as an unauthenticated user, or to privileged pages as a standard user or accessing API with missing access controls for POST, PUT and DELETE.
+* Force browsing to authenticated pages as an unauthenticated user or to privileged pages as a standard user. Accessing API with missing access controls for POST, PUT and DELETE.
 
 ## How To Prevent
 
@@ -22,9 +23,9 @@ Access control is only effective if enforced in trusted server-side code or serv
 
 * With the exception of public resources, deny by default.
 * Implement access control mechanisms once and re-use them throughout the application, including CORS.
-* Model access controls should enforce record ownership, rather than accepting that the user can create, read, update or delete any record.
+* Model access controls should enforce record ownership, rather than accepting that the user can create, read, update, or delete any record.
 * Unique application business limit requirements should be enforced by domain models.
-* Disable web server directory listing, and ensure file metadata (e.g. .git) and backup files are not present within web roots.
+* Disable web server directory listing and ensure file metadata (e.g. .git) and backup files are not present within web roots.
 * Log access control failures, alert admins when appropriate (e.g. repeated failures).
 * Rate limit API and controller access to minimize the harm from automated attack tooling.
 * JWT tokens should be invalidated on the server after logout.
