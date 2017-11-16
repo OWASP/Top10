@@ -3,7 +3,7 @@
 | Threat agents/Attack vectors | Security Weakness           | Impacts               |
 | -- | -- | -- |
 | Access Lvl \| Exploitability 2 | Prevalence 2 \| Detectability 3 | Technical 3 \| Business |
-| Attackers can exploit vulnerable XML processors if they can upload XML or include hostile content in an XML document, exploiting vulnerable code, dependencies or integrations. | By default, many older XML processors allow specification of an external entity, a URI that is dereferenced and evaluated during XML processing. [SAST](https://www.owasp.org/index.php/Source_Code_Analysis_Tools) tools can discover this issue by inspecting dependencies and configuration. [DAST](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools) tools require additional manual steps to detect and exploit this issue. | These flaws can be used to extract data, execute a remote request from the server, scan internal systems, perform a denial-of-service attack, and other attacks. The business impact depends on the protection needs of all affected application and data. |
+| Attackers can exploit vulnerable XML processors if they can upload XML or include hostile content in an XML document, exploiting vulnerable code, dependencies or integrations. | By default, many older XML processors allow specification of an external entity, a URI that is dereferenced and evaluated during XML processing. [SAST](https://www.owasp.org/index.php/Source_Code_Analysis_Tools) tools can discover this issue by inspecting dependencies and configuration. [DAST](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools) tools require additional manual steps to detect and exploit this issue. | These flaws can be used to extract data, execute a remote request from the server, scan internal systems, perform a denial-of-service attack, as well as execute other attacks. |
 
 ## Is the Application Vulnerable?
 
@@ -13,7 +13,7 @@ Applications and in particular XML-based web services or downstream integrations
 * Any of the XML processors in the application or SOAP based web services has [document type definitions (DTDs)](https://en.wikipedia.org/wiki/Document_type_definition) (DTDs) enabled. As the exact mechanism for disabling DTD processing varies by processor, it is good practice to consult a reference such as the [OWASP Cheat Sheet 'XXE Prevention'](https://www.owasp.org/index.php/XML_External_Entity_(XXE)_Prevention_Cheat_Sheet). 
 * If your application uses SAML for identity processing within federated security or single sign on (SSO) purposes. SAML uses XML for identity assertions, and may be vulnerable.
 * If your application uses SOAP prior to version 1.2, it is likely susceptible to XXE attacks if XML entities are being passed to the SOAP framework.
-* Being vulnerable to XXE attacks likely means that your application is vulnerable to denial of service attacks including the billion laughs attack
+* Being vulnerable to XXE attacks likely means that your application is vulnerable to denial of service attacks including the Billion Laughs attack
 
 ## How To Prevent
 
