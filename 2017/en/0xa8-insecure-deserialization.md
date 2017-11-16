@@ -12,11 +12,11 @@ Applications and APIs will be vulnerable if they deserialize hostile or tampered
 This can result in two primary types of attacks:
 
 * Object and data structure related attacks where the attacker modifies application logic or achieves arbitrary remote code execution if there are classes available to the application that can change behavior during or after deserialization.
-* Typical data tampering attacks such as access control-related attacks where existing data structures are used but the content is changed.
+* Typical data tampering attacks such as access-control-related attacks where existing data structures are used but the content is changed.
 
 Serialization may be used in applications for:
 
-* Remote/Inter-process Communication (RPC/IPC) 
+* Remote- and inter-process communication (RPC/IPC) 
 * Wire protocols, web services, message brokers
 * Caching/Persistence
 * Databases, cache servers, file systems 
@@ -24,16 +24,16 @@ Serialization may be used in applications for:
 
 ## How To Prevent
 
-The only safe architectural pattern is to not accept serialized objects from untrusted sources or to use serialization mediums that only permit primitive data types.
+The only safe architectural pattern is not to accept serialized objects from untrusted sources or to use serialization mediums that only permit primitive data types.
 
-If that is not possible:
+If thaIf that is not possible, consider one of more of the following:
 
-* Implement integrity checks such as digital signatures on any serialized objects to prevent hostile object creation or data tampering.
-* Enforce strict type constraints during deserialization before object creation as your code typically expects a definable set of classes. Bypasses to this technique have been demonstrated so reliance solely on this is not advisable.
-* Isolate and run code that deserializes in low privilege environments when possible.
+* Implementing integrity checks such as digital signatures on any serialized objects to prevent hostile object creation or data tampering.
+* Enforcing strict type constraints during deserialization before object creation as your code typically expects a definable set of classes. Bypasses to this technique have been demonstrated so reliance solely on this is not advisable.
+* Isolating and running code that deserializes in low privilege environments when possible.
 * Log deserialization exceptions and failures, such as where the incoming type is not the expected type, or the deserialization throws exceptions.
-* Restrict or monitor incoming and outgoing network connectivity from containers or servers that deserialize.
-* Monitor deserialization, alerting if a user deserializes constantly.
+* Restricting or monitoring incoming and outgoing network connectivity from containers or servers that deserialize.
+* Monitoring deserialization, alerting if a user deserializes constantly.
 
 
 ## Example Attack Scenarios
