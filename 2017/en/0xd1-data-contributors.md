@@ -47,7 +47,7 @@ We'd like to thank the many organizations that contributed their vulnerability d
 * Vantage Point
 * Veracode
 * Web.com
-
+w
 For the first time, all the data contributed to a Top 10 release, and the full list of contributors is [publicly available](https://github.com/OWASP/Top10/tree/master/2017/datacall/submissions).
 
 ## Acknowledgements to Individual Contributors
@@ -71,6 +71,7 @@ We’d like to thank the individual contributors who spent many hours collective
 * davewichers
 * drkknight
 * drwetter
+* dune73
 * ecbftw
 * einsweniger
 * ekobrin
@@ -78,6 +79,7 @@ We’d like to thank the individual contributors who spent many hours collective
 * frohoff
 * fzipi
 * gebl
+* Gilc83
 * gilzow
 * global4g
 * grnd
@@ -95,6 +97,7 @@ We’d like to thank the individual contributors who spent many hours collective
 * jrmithdobbs
 * jsteven
 * jvehent
+* katyanton
 * kerberosmansour
 * koto
 * m8urnett
@@ -112,6 +115,7 @@ We’d like to thank the individual contributors who spent many hours collective
 * riramar
 * ruroot
 * securestep9
+* securitybits
 * SPoint42
 * sreenathsasikumar
 * starbuck3000
@@ -119,8 +123,10 @@ We’d like to thank the individual contributors who spent many hours collective
 * sumitagarwalusa
 * taprootsec
 * tghosth
+* TheJambo
 * thesp0nge
 * toddgrotenhuis
+* troymarshall
 * tsohlacol
 * vdbaan
 * yohgaki
