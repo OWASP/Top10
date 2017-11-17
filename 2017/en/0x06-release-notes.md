@@ -21,7 +21,7 @@ We asked the community to provide insight into two forward looking weakness cate
 * **A8:2017-Insecure Deserialization**, which permits remote code execution or sensitive object manipulation on affected platforms.
 * **A10:2017-Insufficient Logging and Monitoring**, the lack of which can prevent or significantly delay malicious activity and breach detection, incident response, and digital forensics.
 
-## Retired, but not forgotten
+## Merged or retired, but not forgotten
 
 * **A4-Insecure Direct Object References** and **A7-Missing Function Level Access Control** merged into **A5:2017-Broken Access Control**.
 * **A8-Cross-Site Request Forgery (CSRF)**, Frameworks commonly include CSRF defenses, with < 5% of all apps, now #13.
