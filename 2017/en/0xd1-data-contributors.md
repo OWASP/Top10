@@ -26,7 +26,7 @@ We'd like to thank the many organizations that contributed their vulnerability d
 * Hamed
 * Hidden
 * I4 Consulting
-* iBLISS Seguran̤a & Intelig̻ncia
+* iBLISS Seguran̤a & Intelig̻encia
 * ITsec Security Services bv
 * Khallagh
 * Linden Lab
