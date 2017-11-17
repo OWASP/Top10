@@ -5,12 +5,12 @@
 We'd like to thank the many organizations that contributed their vulnerability data to support the 2017 update:
 
 * ANCAP
-* AsTech Consulting
 * Aspect Security
+* AsTech Consulting
 * Atos
-* BUGemot
-* Bugcrowd
 * Branding Brand
+* Bugcrowd
+* BUGemot
 * CDAC
 * Checkmarx
 * Colegio LaSalle Monteria
@@ -19,10 +19,10 @@ We'd like to thank the many organizations that contributed their vulnerability d
 * Contrast Security
 * DDoS.com
 * Derek Weeks
-* EVRY
-* EZI
 * Easybss
 * Edgescan
+* EVRY
+* EZI
 * Hamed
 * Hidden
 * I4 Consulting
@@ -38,9 +38,9 @@ We'd like to thank the many organizations that contributed their vulnerability d
 * Osampa
 * Paladion Networks
 * Purpletalk
-* SHCP
 * Secure Network
 * Shape Security
+* SHCP
 * Softtek
 * Synopsis
 * TCS
