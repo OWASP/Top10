@@ -14,9 +14,9 @@ The [OWASP Top 10](https://www.owasp.org/index.php/Top10) focuses on identifying
 
 | Threat Agents | Exploitability | Weakness Prevalence | Weakness Detectability | Technical Impacts | Business Impacts |
 | -- | -- | -- | -- | -- | -- |
-| App Specific | Easy 3 | Widespread 3 | Easy 3 | Severe 3 | App / Business Specific |
-| App Specific | Average 2 | Common 2 | Average 2 | Moderate 2 | App / Business Specific |
-| App Specific | Difficult 1 | Uncommon 1 | Difficult 1 | Minor 1 | App / Business Specific |
+| Appli-   | Easy 3 | Widespread 3 | Easy 3 | Severe 3 | Business     |
+| cation   | Average 2 | Common 2 | Average 2 | Moderate 2 | Specific |
+| Specific | Difficult 1 | Uncommon 1 | Difficult 1 | Minor 1 |       |
 
 In this edition, we have updated the risk rating system to assist in calculating the likelihood and impact of any given risk. For more details, please see [Note About Risks](0xc0-note-about-risks.md). 
 
