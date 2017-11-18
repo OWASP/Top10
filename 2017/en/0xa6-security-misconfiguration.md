@@ -15,7 +15,7 @@ The application might be vulnerable if the application is:
 * Error handling reveals stack traces or other overly informative error messages to users.
 * For upgraded systems, latest security features are disabled or not configured securely.
 * The security settings in the application servers, application frameworks (e.g. Struts, Spring, ASP.NET), libraries, databases, etc. not set to secure values.
-* The server does not send security headers or directives or are not set to secure values.
+* The server does not send security headers or directives or they are not set to secure values.
 * The software is out of date or vulnerable (see **A9:2017-Using Components with Known Vulnerabilities**).
 
 Without a concerted, repeatable application security configuration process, systems are at a higher risk.
