@@ -19,7 +19,7 @@ There may be authentication weaknesses if your application:
 * Has missing or ineffective multi-factor authentication.
 * Exposes Session IDs in the URL (e.g., URL rewriting).
 * Does not rotate Session IDs after successful login.
-* Does not properly invalidate Session IDs. User sessions or authentication tokens (particularly single sign-on (SSO) tokens) aren't properly invalidated during logout or a period of inactivity
+* Does not properly invalidate Session IDs. User sessions or authentication tokens (particularly single sign-on (SSO) tokens) aren't properly invalidated during logout or a period of inactivity.
 
 ## How To Prevent
 
