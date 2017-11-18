@@ -36,8 +36,8 @@ Access control is only effective if enforced in trusted server-side code or serv
 **Scenario #1**: The application uses unverified data in a SQL call that is accessing account information:
 
 ```
-  pstmt.setString(1, request.ge arameter("acct"));
-  ResultSet results = pstmt.executeQuery( );
+  pstmt.setString(1, request.getParameter("acct"));
+  ResultSet results = pstmt.executeQuery();
 ```
 
 An attacker simply modifies the 'acct' parameter in the browser to send whatever account number they want. If not properly verified, the attacker can access any user's account.
