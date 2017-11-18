@@ -10,11 +10,14 @@
 Insufficient logging, detection, monitoring and active response occurs any time:
 
 * Auditable events, such as logins, failed logins, and high-value transactions are not logged.
+* Warnings and errors generate no, inadequate, or unclear log messages.
 * Logs of applications and APIs are not monitored for suspicious activity.
+* Logs are only stored locally.
 * Appropriate alerting thresholds and response escalation processes are not in place or effective.
 * Penetration testing and scans by [DAST](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools) tools (such as [OWASP ZAP](https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project)) do not trigger alerts.
+* The application is unable to detect, escalate, or alert for active attacks in real time or near real time.
 
-For larger and high-performing organizations, the lack of active responses, such as real time alerting and blocking automated attacks on web applications and APIs, would place the organization at risk from extended compromise. The response does not necessarily need to be visible to the attacker, only that the application and associated infrastructure, frameworks, service layers, etc. can detect and alert humans or tools to respond in near real time.
+You are vulnerable to information leakage if you make logging and alerting events visible to a user or an attacker (see A3:2017-Sensitive Information Exposure).
 
 ## How To Prevent
 
