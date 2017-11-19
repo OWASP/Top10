@@ -9,7 +9,7 @@
 
 Confirmation of the user's identity, authentication, and session management are critical to protect against authentication-related attacks.
 
-There may be authentication weaknesses if your application:
+There may be authentication weaknesses if the application:
 
 * Permits automated attacks such as [credential stuffing](https://www.owasp.org/index.php/Credential_stuffing), where the attacker has a list of valid usernames and passwords.
 * Permits brute force or other automated attacks.

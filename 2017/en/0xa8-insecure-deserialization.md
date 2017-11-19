@@ -3,7 +3,7 @@
 | Threat agents/Attack vectors | Security Weakness           | Impacts               |
 | -- | -- | -- |
 | Access Lvl : Exploitability 1 | Prevalence 2 : Detectability 2 | Technical 3 : Business |
-| Exploitation of deserialization is somewhat difficult, as off the shelf exploits rarely work without changes or tweaks to the underlying exploit code. | This issue is included in the Top 10 based on an [industry survey](https://owasp.blogspot.com/2017/08/owasp-top-10-2017-project-update.html) and not on quantifiable data. Some tools can discover deserialization flaws, but human assistance is frequently needed to validate the problem. It is expected that prevalence data for deserialization flaws will increase as tooling is developed to help identify and address it. | The impact of deserialization flaws cannot be overstated. These flaws can lead to remote code execution attacks, one of the most serious attacks possible. The business impact depends on the protection needs of your application and data. |
+| Exploitation of deserialization is somewhat difficult, as off the shelf exploits rarely work without changes or tweaks to the underlying exploit code. | This issue is included in the Top 10 based on an [industry survey](https://owasp.blogspot.com/2017/08/owasp-top-10-2017-project-update.html) and not on quantifiable data. Some tools can discover deserialization flaws, but human assistance is frequently needed to validate the problem. It is expected that prevalence data for deserialization flaws will increase as tooling is developed to help identify and address it. | The impact of deserialization flaws cannot be overstated. These flaws can lead to remote code execution attacks, one of the most serious attacks possible. The business impact depends on the protection needs of the application and data. |
 
 ## Is the Application Vulnerable?
 
@@ -29,7 +29,7 @@ The only safe architectural pattern is not to accept serialized objects from unt
 If thaIf that is not possible, consider one of more of the following:
 
 * Implementing integrity checks such as digital signatures on any serialized objects to prevent hostile object creation or data tampering.
-* Enforcing strict type constraints during deserialization before object creation as your code typically expects a definable set of classes. Bypasses to this technique have been demonstrated so reliance solely on this is not advisable.
+* Enforcing strict type constraints during deserialization before object creation as the code typically expects a definable set of classes. Bypasses to this technique have been demonstrated so reliance solely on this is not advisable.
 * Isolating and running code that deserializes in low privilege environments when possible.
 * Log deserialization exceptions and failures, such as where the incoming type is not the expected type, or the deserialization throws exceptions.
 * Restricting or monitoring incoming and outgoing network connectivity from containers or servers that deserialize.

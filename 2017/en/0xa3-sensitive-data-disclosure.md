@@ -29,7 +29,7 @@ Do the following, at a minimum, and consult the references:
 * Encrypt all data in transit with secure protocols such as TLS with perfect forward secrecy (PFS) ciphers, cipher prioritization by the server, and secure parameters. Enforce encryption using directives like HTTP Strict Transport Security (HSTS).
 * Disable caching for response that contain sensitive data.
 * Store passwords using strong adaptive and salted hashing functions with a work factor (delay factor), such as [Argon2](https://www.cryptolux.org/index.php/Argon2), [scrypt](https://wikipedia.org/wiki/Scrypt), [bcrypt](https://wikipedia.org/wiki/Bcrypt) or [PBKDF2](https://wikipedia.org/wiki/PBKDF2).
-* Verify independently the effectiveness of your settings.
+* Verify independently the effectiveness of configuration and settings.
 
 ## Example Attack Scenarios
 
