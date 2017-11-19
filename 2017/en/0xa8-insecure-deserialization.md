@@ -26,7 +26,7 @@ Serialization may be used in applications for:
 
 The only safe architectural pattern is not to accept serialized objects from untrusted sources or to use serialization mediums that only permit primitive data types.
 
-If thaIf that is not possible, consider one of more of the following:
+If that is not possible, consider one of more of the following:
 
 * Implementing integrity checks such as digital signatures on any serialized objects to prevent hostile object creation or data tampering.
 * Enforcing strict type constraints during deserialization before object creation as the code typically expects a definable set of classes. Bypasses to this technique have been demonstrated, so reliance solely on this is not advisable.
