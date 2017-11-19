@@ -9,7 +9,7 @@
 
 The first thing is to determine the protection needs of data in transit and at rest. For example, passwords, credit card numbers, health records, personal information and business secrets require extra protection, particularly if that data falls under privacy laws, e.g. EU's General Data Protection Regulation (GDPR), or regulations, e.g. financial data protection such as PCI Data Security Standard (PCI DSS). For all such data:
 
-* Is any data transmitted in clear text? This concerns protocols such as HTTP, SMTP, and FTP. External internet traffic is especially dangerous, but also verify all internal traffic e.g. between load balancers, web servers, or back-end systems.
+* Is any data transmitted in clear text? This concerns protocols such as HTTP, SMTP, and FTP. External internet traffic is especially dangerous. Verify all internal traffic e.g. between load balancers, web servers, or back-end systems.
 * Are any old or weak cryptographic algorithms used either by default or in older code? 
 * Are default crypto keys in use, weak crypto keys generated or re-used, or is proper key management or rotation missing?
 * Is encryption not enforced, e.g. are any user agent (browser) security directives or headers missing?
