@@ -2,7 +2,7 @@
 
 ## Welcome to the OWASP Top 10 - 2017
 
-This major update adds several new issues, including two issues selected by the community - A8:2017-Insecure Deserialization and A10:2017-Insufficient Logging and Monitoring. Two key differentiators from previous OWASP Top 10 editions are the substantial community feedback in addition to the extensive data assembled from dozens of organizations (possibly the largest amount of data ever assembled in the preparation of an application security standard). This provides us with additional confidence that the new OWASP Top 10 addresses the most urgent application security issues currently facing organizations.
+This major update adds several new issues, including two issues selected by the community - A8:2017-Insecure Deserialization and A10:2017-Insufficient Logging and Monitoring. Two key differentiators from previous OWASP Top 10 releases are the substantial community feedback and extensive data assembled from dozens of organizations, possibly the largest amount of data ever assembled in the preparation of an application security standard. This provides us with confidence that the new OWASP Top 10 addresses the most impactful application security risks currently facing organizations.
 
 The OWASP Top 10 for 2017 is based primarily on 40+ data submissions from firms that specialize in application security and an industry survey that was completed by over 500 individuals. This data spans vulnerabilities gathered from hundreds of organizations and over 100,000 real-world applications and APIs. The Top 10 items are selected and prioritized according to this prevalence data, in combination with consensus estimates of exploitability, detectability, and impact.
 
@@ -16,7 +16,7 @@ A primary aim of the OWASP Top 10 is to educate developers, designers, architect
 
 **Think positive**. When you're ready to stop chasing vulnerabilities and focus on establishing strong application security controls, the [OWASP Proactive Controls](https://www.owasp.org/index.php/OWASP_Proactive_Controls) project provides a starting point to help developers build security into their applications and the [OWASP Application Security Verification Standard (ASVS)](https://www.owasp.org/index.php/ASVS) is a guide for organizations and application reviewers on what to verify.
 
-**Use tools wisely**. Security vulnerabilities can be quite complex and deeply buried in code. In many cases, the most cost-effective approach for finding and eliminating these weaknesses is human experts armed with good tools. Relying on tools alone provides a false sense of security and is not recommended.
+**Use tools wisely**. Security vulnerabilities can be quite complex and deeply buried in code. In many cases, the most cost-effective approach for finding and eliminating these weaknesses is human experts armed with advanced tools. Relying on tools alone provides a false sense of security and is not recommended.
 
 **Push left, right, and everywhere**. Focus on making security an integral part of your culture throughout your development organization. Find out more in the [OWASP Software Assurance Maturity Model (SAMM)](https://www.owasp.org/index.php/OWASP_SAMM_Project).
 
