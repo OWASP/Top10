@@ -26,7 +26,7 @@ Preventing XSS requires separation of untrusted data from active browser content
 
 ## Example Attack Scenario
 
-**Scenario 1**: The application uses untrusted data in the construction of the following HTML snippet without validation or escaping:
+**Scenario #1**: The application uses untrusted data in the construction of the following HTML snippet without validation or escaping:
 
 `(String) page += "<input name='creditcard' type='TEXT' value='" + request.getParameter("CC") + "'>";`
 The attacker modifies the ‘CC’ parameter in the browser to:
@@ -35,7 +35,7 @@ The attacker modifies the ‘CC’ parameter in the browser to:
 
 This attack causes the victim’s session ID to be sent to the attacker’s website, allowing the attacker to hijack the user’s current session.
 
-**Note**: Attackers can use XSS to defeat any automated CSRF defense the application might employ.
+**Note**: Attackers can use XSS to defeat any automated Cross-Site Request Forgery (CSRF) defense the application might employ.
 
 ## References
 

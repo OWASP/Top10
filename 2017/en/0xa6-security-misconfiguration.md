@@ -28,16 +28,16 @@ Secure installation processes should be implemented, including:
 * A minimal platform without any unnecessary features, components, documentation, and samples. Remove or do not install unused features and frameworks.
 * A task to review and update the configurations appropriate to all security notes, updates and patches as part of the patch management process (see **A9:2017-Using Components with Known Vulnerabilities**).
 * A segmented application architecture that provides effective, secure separation between components or tenants, with segmentation, containerization, or cloud security groups (ACLs).
-* Send security directives to client agents, e.g. [Security Headers](https://www.owasp.org/index.php/OWASP_Secure_Headers_Project).
+* Sending security directives to clients, e.g. [Security Headers](https://www.owasp.org/index.php/OWASP_Secure_Headers_Project).
 * An automated process to verify the effectiveness of the configurations and settings in all environments
 
 ## Example Attack Scenarios
 
-**Scenario #1**: The application server comes with sample apps that are not removed from your production server. These sample apps have known security flaws attackers use to compromise your server. If one of these apps is the admin console, and default accounts weren't changed the attacker logs in with default passwords and takes over.
+**Scenario #1**: The application server comes with sample applications that are not removed from your production server. These sample applications have known security flaws attackers use to compromise your server. If one of these applications is the admin console, and default accounts weren't changed the attacker logs in with default passwords and takes over.
 
 **Scenario #2**: Directory listing is not disabled on your server. An attacker discovers they can simply list directories. The attacker finds and downloads your compiled Java classes, which they decompile and reverse engineer to view your code. The attacker then finds a serious access control flaw in your application.
 
-**Scenario #3**: The app server's configuration allows detailed error messages, e.g. stack traces, to be returned to users. This potentially exposes sensitive information or underlying flaws such as component versions that are known to be vulnerable.
+**Scenario #3**: The application server's configuration allows detailed error messages, e.g. stack traces, to be returned to users. This potentially exposes sensitive information or underlying flaws such as component versions that are known to be vulnerable.
 
 **Scenario #4**: The default configuration or a copied old one activates old vulnerable protocol versions or options that can be misused by an attacker or malware.
 
