@@ -24,7 +24,7 @@ We asked the community to provide insight into two forward looking weakness cate
 ## Merged or retired, but not forgotten
 
 * **A4-Insecure Direct Object References** and **A7-Missing Function Level Access Control** merged into **A5:2017-Broken Access Control**.
-* **A8-Cross-Site Request Forgery (CSRF)**, Frameworks commonly include CSRF defenses, in approximately 5% of applications.
-* **A10-Unvalidated Redirects and Forwards**, while approximately in 8% of applications, was edged out overall by XXE.
+* **A8-Cross-Site Request Forgery (CSRF)**, as many frameworks include [CSRF defenses](https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)), it was found in only 5% of applications.
+* **A10-Unvalidated Redirects and Forwards**, while found in approximately in 8% of applications, it was edged out overall by XXE.
 
 ![0x06-release-notes-1](images/0x06-release-notes-1.png)
