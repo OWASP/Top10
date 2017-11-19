@@ -19,7 +19,7 @@ Applications and in particular XML-based web services or downstream integrations
 
 Developer training is essential to identify and mitigate XXE. Besides that, preventing XXE requires:
 
-* Whenever possible, use a less complicated data format such as JSON.
+* Whenever possible, use less complex data formats such as JSON, and avoiding serialization of sensitive data.
 * Patch or upgrade all XML processors and libraries in use by the application or on the underlying operating system. Use dependency checkers. Update SOAP to SOAP 1.2 or higher.
 * Disable XML external entity and DTD processing in all XML parsers in your application, as per the [OWASP Cheat Sheet 'XXE Prevention'](https://www.owasp.org/index.php/XML_External_Entity_(XXE)_Prevention_Cheat_Sheet). 
 * Implement positive ("whitelisting") server-side input validation, filtering, or sanitization to prevent hostile data within XML documents, headers, or nodes.
