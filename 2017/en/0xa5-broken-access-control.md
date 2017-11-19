@@ -12,7 +12,7 @@ Access control enforces policy such that users cannot act outside of their inten
 * Bypassing access control checks by modifying the URL, internal application state, or the HTML page, or simply using a custom API attack tool.
 * Allowing the primary key to be changed to another's users record, permitting viewing or editing someone else's account.
 * Elevation of privilege. Acting as a user without being logged in, or acting as an admin when logged in as a user.
-* Metadata manipulation, such as replaying or tampering with a JWT access control token or a cookie or hidden field manipulated to elevate privileges, or abusing JWT invalidation
+* Metadata manipulation, such as replaying or tampering with a JSON Web Token (JWT) access control token or a cookie or hidden field manipulated to elevate privileges, or abusing JWT invalidation
 * CORS misconfiguration allows unauthorized API access.
 * Force browsing to authenticated pages as an unauthenticated user or to privileged pages as a standard user. Accessing API with missing access controls for POST, PUT and DELETE.
 
