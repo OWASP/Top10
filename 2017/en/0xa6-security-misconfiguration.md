@@ -49,7 +49,7 @@ Secure installation processes should be implemented, including:
 * [OWASP Testing Guide: Testing for Error Codes](https://www.owasp.org/index.php/Testing_for_Error_Code_(OWASP-IG-006))
 * [OWASP Security Headers Project](https://www.owasp.org/index.php/OWASP_Secure_Headers_Project)
 
-For additional requirements in this area, see the [ASVS requirements areas for Security Configuration (V11 and V19)](https://www.owasp.org/index.php/ASVS).
+For additional requirements in this area, see the ASVS [V19 Configuration](https://www.owasp.org/index.php/ASVS_V19_Configuration).
 
 ### External
 
