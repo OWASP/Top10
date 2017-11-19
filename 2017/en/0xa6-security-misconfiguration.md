@@ -9,7 +9,7 @@
 
 The application might be vulnerable if the application is:
 
-* Missing appropriate security hardening across any part of the application stack.
+* Missing appropriate security hardening across any part of the application stack, or improperly configured permissions on cloud services.
 * Unnecessary features are enabled or installed (e.g. unnecessary ports, services, pages, accounts, or privileges).
 * Default accounts and their passwords still enabled and unchanged.
 * Error handling reveals stack traces or other overly informative error messages to users.
@@ -26,10 +26,10 @@ Secure installation processes should be implemented, including:
 
 * A repeatable hardening process that makes it fast and easy to deploy another environment that is properly locked down. Development, QA, and production environments should all be configured identically, with different credentials used in each environment. This process should be automated to minimize the effort required to setup a new secure environment.
 * A minimal platform without any unnecessary features, components, documentation, and samples. Remove or do not install unused features and frameworks.
-* A task to review and update the configurations appropriate to all security notes, updates and patches as part of the patch management process (see **A9:2017-Using Components with Known Vulnerabilities**).
+* A task to review and update the configurations appropriate to all security notes, updates and patches as part of the patch management process (see **A9:2017-Using Components with Known Vulnerabilities**). In particular, review cloud storage permissions (e.g. S3 bucket permissions).
 * A segmented application architecture that provides effective, secure separation between components or tenants, with segmentation, containerization, or cloud security groups (ACLs).
 * Sending security directives to clients, e.g. [Security Headers](https://www.owasp.org/index.php/OWASP_Secure_Headers_Project).
-* An automated process to verify the effectiveness of the configurations and settings in all environments
+* An automated process to verify the effectiveness of the configurations and settings in all environments.
 
 ## Example Attack Scenarios
 
@@ -39,7 +39,7 @@ Secure installation processes should be implemented, including:
 
 **Scenario #3**: The application server's configuration allows detailed error messages, e.g. stack traces, to be returned to users. This potentially exposes sensitive information or underlying flaws such as component versions that are known to be vulnerable.
 
-**Scenario #4**: The default configuration or a copied old one activates old vulnerable protocol versions or options that can be misused by an attacker or malware.
+**Scenario #4**: A cloud service provider has default sharing permissions open to the Internet by other CSP users. This allows sensitive data stored within cloud storage to be accessed.
 
 ## References
 
@@ -49,7 +49,7 @@ Secure installation processes should be implemented, including:
 * [OWASP Testing Guide: Testing for Error Codes](https://www.owasp.org/index.php/Testing_for_Error_Code_(OWASP-IG-006))
 * [OWASP Security Headers Project](https://www.owasp.org/index.php/OWASP_Secure_Headers_Project)
 
-For additional requirements in this area, see the ASVS [V19 Configuration](https://www.owasp.org/index.php/ASVS_V19_Configuration).
+For additional requirements in this area, see the Application Security Verification Standard [V19 Configuration](https://www.owasp.org/index.php/ASVS_V19_Configuration).
 
 ### External
 
@@ -58,3 +58,4 @@ For additional requirements in this area, see the ASVS [V19 Configuration](https
 * [CWE-16: Configuration](https://cwe.mitre.org/data/definitions/16.html)
 * [CWE-388: Error Handling](https://cwe.mitre.org/data/definitions/388.html)
 * [CIS Security Configuration Guides/Benchmarks](https://www.cisecurity.org/cis-benchmarks/)
+* [Amazon S3 Bucket Discovery and Enumeration](https://blog.websecurify.com/2017/10/aws-s3-bucket-discovery.html)
