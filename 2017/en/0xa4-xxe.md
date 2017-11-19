@@ -26,7 +26,7 @@ Developer training is essential to identify and mitigate XXE. Besides that, prev
 * Verify that XML or XSL file upload functionality validates incoming XML using XSD validation or similar.
 * SAST tools can help detect XXE in source code, although manual code review is the best alternative in large, complex applications with many integrations.
 
-If these controls are not possible, consider using virtual patching, API security gateways, or WAFs to detect, monitor, and block XXE attacks.
+If these controls are not possible, consider using virtual patching, API security gateways, or Web Application Firewalls (WAFs) to detect, monitor, and block XXE attacks.
 
 ## Example Attack Scenarios
 
