@@ -35,7 +35,7 @@ The attacker modifies the ‘CC’ parameter in the browser to:
 
 This attack causes the victim’s session ID to be sent to the attacker’s website, allowing the attacker to hijack the user’s current session.
 
-**Note**: Attackers can use XSS to defeat any automated CSRF defense the application might employ.
+**Note**: Attackers can use XSS to defeat any automated Cross-Site Request Forgery (CSRF) defense the application might employ.
 
 ## References
 
