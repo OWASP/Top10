@@ -29,7 +29,7 @@ Applications belong to the most complex systems humans regularly create and main
 * Automate the secure deployment of the application, interfaces and all required components, including needed authorizations.
 * Test the technical functions and integration with the IT architecture and coordinate business tests.
 * Create "use" and "abuse" test cases from technical and business perspectives.
-* Manage security tests according to internal processes, the protection needs, and the level of security required by the application.
+* Manage security tests according to internal processes, the protection needs, and the assumed threat level by the application.
 * Put the application in operation and migrate from previously used applications if needed.
 * Finalize all documentation, including the CMDB and security architecture.
 
