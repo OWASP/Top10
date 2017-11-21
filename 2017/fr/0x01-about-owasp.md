@@ -1,6 +1,6 @@
-# O About OWASP
+# O A propos de l'OWASP
 
-## About OWASP
+## A propos de l'OWASP
 
 The Open Web Application Security Project (OWASP) is an open community dedicated to enabling organizations to develop, purchase, and maintain applications and APIs that can be trusted.
 
@@ -28,11 +28,11 @@ OWASP is not affiliated with any technology company, although we support the inf
 
 The OWASP Foundation is the non-profit entity that ensures the project's long-term success. Almost everyone associated with OWASP is a volunteer, including the OWASP board, chapter leaders, project leaders, and project members. We support innovative security research with grants and infrastructure.
 
-Come join us!
+Rejoignez nous!
 
 ## Copyright and License
 
 ![license](images/license.png)
 
-Copyright © 2003-2017 The OWASP Foundation. This document is released under the Creative Commons Attribution Share-Alike 4.0 license. For any reuse or distribution, you must make it clear to others the license terms of this work.
-
+Copyright © 2003 – 2017 The OWASP Foundation
+Ce document est publié sous licence Creative Commons Attribution ShareAlike 4.0. A chaque réutilisation ou distribution, vous devez en faire clairement apparaître les conditions contractuelles
