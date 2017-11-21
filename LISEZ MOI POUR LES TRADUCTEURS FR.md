@@ -1,10 +1,12 @@
-#SOURCES DE LA TRADUCTION 
+# SOURCES DE LA TRADUCTION 
 Le projet OWASP/Top10 a été forké le 21/11/2017. de la le repository FR a été crée depuis ces sources
 un repertoire FR2013 PPTX version a été crée et comporte les sources initiaux de la traduction du 2013 depuis lequel nous allons repartir.
 Une fois les éléments et les personnes identifiées, il faudra donc repartir de cette version (en corrigeant les coquilles) pour traduire 
 
-#Correction etc...
+# Correction etc...
 Tout va passer par github, car la génération est automatique dans ce cas. Merci donc de remonter tout en issue github
+Merci d'utiliser ce repository et de ne pas pousser dans la répository OWASP 
+
 
 # OWASP Top 10 FR Leadership
 
