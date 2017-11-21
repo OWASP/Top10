@@ -2,9 +2,9 @@
 
 ## OWASP Top 10 2017
 
-The Ten Most Critical Web Application Security Risks
+Les Dix Risques de Sécurité Applicatifs Web les Plus Critiques
 
-November 20, 2017
+20 Novembre 2017
 
 ### Release
 
