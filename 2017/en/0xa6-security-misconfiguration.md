@@ -1,46 +1,45 @@
-# A6 Security Misconfiguration
+# A6:2017 Security Misconfiguration
 
 | Threat agents/Attack vectors | Security Weakness           | Impacts               |
 | -- | -- | -- |
-| Access Lvl \| Exploitability 3 | Prevalence 3 \| Detectability 3 | Technical 2 \| Business |
-| Even anonymous attackers can try to access default accounts, unused pages, unpatched flaws, unprotected files and directories, etc. to gain unauthorized access to or knowledge of the system. | Security misconfiguration can happen at any level of an application stack, including the platform, web server, application server, database, frameworks, and custom code. Automated scanners are useful for detecting  misconfigurations, use of default accounts or configurations, unnecessary services, legacy options etc. | Such flaws frequently give attackers unauthorized access to some system data or functionality. Occasionally, such flaws result in a complete system compromise. The business impact depends on the protection needs of your application and data. |
+| Access Lvl : Exploitability 3 | Prevalence 3 : Detectability 3 | Technical 2 : Business |
+| Attackers will often attempt to exploit unpatched flaws or access default accounts, unused pages, unprotected files and directories, etc to gain unauthorized access or knowledge of the system. | Security misconfiguration can happen at any level of an application stack, including the network services, platform, web server, application server, database, frameworks, custom code, and pre-installed virtual machines, containers, or storage. Automated scanners are useful for detecting misconfigurations, use of default accounts or configurations, unnecessary services, legacy options, etc. | Such flaws frequently give attackers unauthorized access to some system data or functionality. Occasionally, such flaws result in a complete system compromise. The business impact depends on the protection needs of the application and data. |
 
-## Am I Vulnerable to Security Misconfig?
+## Is the Application Vulnerable?
 
-Is your application missing the proper security hardening across any part of the application stack? Including:
+The application might be vulnerable if the application is:
 
-* Are any unnecessary features enabled or installed (e.g. ports, services, pages, accounts, privileges)?
-* Are default accounts and their passwords still enabled and unchanged?
-* Does your error handling reveal stack traces or other overly informative error messages to users?
-* Do you still use ancient configs with updated software? Do you continue to support obsolete backward compatibility?
-* Are the security settings in your application servers, application frameworks (e.g. Struts, Spring, ASP.NET), libraries, databases, etc. not set to secure values?
-* For web applications, does the server not send security directives to client agents (e.g. HSTS) or are they not set to secure values?
-* Is any of your software out of date? (see A9:2017 Using Components with Known Vulnerabilities)
+* Missing appropriate security hardening across any part of the application stack, or improperly configured permissions on cloud services.
+* Unnecessary features are enabled or installed (e.g. unnecessary ports, services, pages, accounts, or privileges).
+* Default accounts and their passwords still enabled and unchanged.
+* Error handling reveals stack traces or other overly informative error messages to users.
+* For upgraded systems, latest security features are disabled or not configured securely.
+* The security settings in the application servers, application frameworks (e.g. Struts, Spring, ASP.NET), libraries, databases, etc. not set to secure values.
+* The server does not send security headers or directives or they are not set to secure values.
+* The software is out of date or vulnerable (see **A9:2017-Using Components with Known Vulnerabilities**).
 
 Without a concerted, repeatable application security configuration process, systems are at a higher risk.
 
-## How Do I Prevent This?
+## How To Prevent
 
-The primary recommendations are to establish all of the following:
+Secure installation processes should be implemented, including:
 
-* A repeatable hardening process that makes it fast and easy to deploy another environment that is properly locked down. Development, QA, and production environments should all be configured identically (with different credentials used in each environment). This process should be automated to minimize the effort required to setup a new secure environment.
-* Remove or do not install any unnecessary features, components, documentation and samples. Remove unused dependencies and frameworks.
-* A process to triage and deploy all updates and patches in a timely manner to each deployed environment. This process needs to include all frameworks, dependencies, components, and libraries (see A9:2017 Using Components with Known Vulnerabilities). 
-* A strong application architecture that provides effective, secure separation between components, with segmentation, containerization, or cloud security groups (ACLs). 
+* A repeatable hardening process that makes it fast and easy to deploy another environment that is properly locked down. Development, QA, and production environments should all be configured identically, with different credentials used in each environment. This process should be automated to minimize the effort required to setup a new secure environment.
+* A minimal platform without any unnecessary features, components, documentation, and samples. Remove or do not install unused features and frameworks.
+* A task to review and update the configurations appropriate to all security notes, updates and patches as part of the patch management process (see **A9:2017-Using Components with Known Vulnerabilities**). In particular, review cloud storage permissions (e.g. S3 bucket permissions).
+* A segmented application architecture that provides effective, secure separation between components or tenants, with segmentation, containerization, or cloud security groups (ACLs).
+* Sending security directives to clients, e.g. [Security Headers](https://www.owasp.org/index.php/OWASP_Secure_Headers_Project).
 * An automated process to verify the effectiveness of the configurations and settings in all environments.
 
 ## Example Attack Scenarios
 
-**Scenario #1**: The app server admin console is automatically installed and not removed. Default accounts aren't changed. Attacker discovers the standard admin pages are on your server, logs in with default passwords, and takes over.
+**Scenario #1**: The application server comes with sample applications that are not removed from the production server. These sample applications have known security flaws attackers use to compromise the server. If one of these applications is the admin console, and default accounts weren't changed the attacker logs in with default passwords and takes over.
 
-**Scenario #2**: Directory listing is not disabled on your server. An attacker discovers they can simply list directories to find file. The attacker finds and downloads your compiled Java classes, which they decompile and reverse engineer to get your custom code. Attacker then finds a serious access control flaw in your app.
+**Scenario #2**: Directory listing is not disabled on the server. An attacker discovers they can simply list directories. The attacker finds and downloads the compiled Java classes, which they decompile and reverse engineer to view the code. The attacker then finds a serious access control flaw in the application.
 
-**Scenario #3**: App server configuration allows stack traces to be returned to users, potentially exposing underlying flaws such as framework versions that are known to be vulnerable.
+**Scenario #3**: The application server's configuration allows detailed error messages, e.g. stack traces, to be returned to users. This potentially exposes sensitive information or underlying flaws such as component versions that are known to be vulnerable.
 
-**Scenario #4**: App server comes with sample apps that are not removed from your production server. These sample apps have known security flaws attackers use to compromise your server.
-
-**Scenario #5**: The default configuration or a copied old one activates old vulnerable protocol versions or options that can be misused by an attacker or malware.
-
+**Scenario #4**: A cloud service provider has default sharing permissions open to the Internet by other CSP users. This allows sensitive data stored within cloud storage to be accessed.
 
 ## References
 
@@ -48,11 +47,15 @@ The primary recommendations are to establish all of the following:
 
 * [OWASP Testing Guide: Configuration Management](https://www.owasp.org/index.php/Testing_for_configuration_management)
 * [OWASP Testing Guide: Testing for Error Codes](https://www.owasp.org/index.php/Testing_for_Error_Code_(OWASP-IG-006))
+* [OWASP Security Headers Project](https://www.owasp.org/index.php/OWASP_Secure_Headers_Project)
 
-For additional requirements in this area, see the ASVS requirements areas for Security Configuration (V11 and V19).
+For additional requirements in this area, see the Application Security Verification Standard [V19 Configuration](https://www.owasp.org/index.php/ASVS_V19_Configuration).
 
 ### External
 
-* [NIST Guide to General Server Hardening](http://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-123.pdf)
-* [CWE Entry 2 on Environmental Security Flaws](http://cwe.mitre.org/data/definitions/2.html)
-* [CIS Security Configuration Guides/Benchmarks](http://benchmarks.cisecurity.org/downloads/benchmarks/)
+* [NIST Guide to General Server Hardening](https://csrc.nist.gov/publications/detail/sp/800-123/final)
+* [CWE-2: Environmental Security Flaws](https://cwe.mitre.org/data/definitions/2.html)
+* [CWE-16: Configuration](https://cwe.mitre.org/data/definitions/16.html)
+* [CWE-388: Error Handling](https://cwe.mitre.org/data/definitions/388.html)
+* [CIS Security Configuration Guides/Benchmarks](https://www.cisecurity.org/cis-benchmarks/)
+* [Amazon S3 Bucket Discovery and Enumeration](https://blog.websecurify.com/2017/10/aws-s3-bucket-discovery.html)
