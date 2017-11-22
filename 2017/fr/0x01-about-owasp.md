@@ -28,7 +28,7 @@ OWASP is not affiliated with any technology company, although we support the inf
 
 The OWASP Foundation is the non-profit entity that ensures the project's long-term success. Almost everyone associated with OWASP is a volunteer, including the OWASP board, chapter leaders, project leaders, and project members. We support innovative security research with grants and infrastructure.
 
-Rejoignez nous!
+Rejoignez nous !
 
 ## Copyright and License
 
