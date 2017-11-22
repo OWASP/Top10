@@ -13,3 +13,6 @@ Avant tout début de traduction, merci de contacter @SPoint42 pour être ajouter
 
 * Olivier Caleff (https://github.com/caleff) 	caleff@ceciestmonmail.com								
   - https://github.com/SPoint42/Top10/tree/FR-2017-translation/2017/fr/0xa6-security-misconfiguration.md => Traduction depuis Top10 2013
+
+* JulienCayssol
+  - https://github.com/SPoint42/Top10/tree/FR-2017-translation/2017/fr/0xa2-broken-authentication.md => Traduction depuis Top10 2013
