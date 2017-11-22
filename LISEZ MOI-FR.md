@@ -13,7 +13,7 @@ Merci d'utiliser ce repository et de ne pas pousser dans la répository OWASP
 
 # OWASP Top 10 FR Leadership
 
-En cas de doute, merci de contacter la liste OWASP-FRANCE ou les personnes suivantesThere
+En cas de doute, merci de contacter la liste OWASP-FRANCE ou les personnes suivantes
 * Sebastien Gioria [@SPoint42](https://github.com/Spoint42)
 
 # OWASP T10 References
