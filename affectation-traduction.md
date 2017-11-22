@@ -1,6 +1,6 @@
 Avant tout début de traduction, merci de contacter @SPoint42 pour être ajouter a ce fichier
 
-# Liste des traducteurs (account Git, mail et fichier en cours)
+# Liste des traducteurs et  affectation en cours
 
 * Sebastien Gioria (https://github.com/Spoint42) 	sebastien.gioria@owasp.org 				
   - HEAD
