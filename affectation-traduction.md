@@ -16,3 +16,7 @@ Avant tout début de traduction, merci de contacter @SPoint42 pour être ajouter
 
 * JulienCayssol
   - https://github.com/SPoint42/Top10/tree/FR-2017-translation/2017/fr/0xa2-broken-authentication.md => Traduction depuis Top10 2013
+  
+* Paul Molin
+    - https://github.com/SPoint42/Top10/tree/FR-2017-translation/2017/fr/0xa3-sensitive-data-disclosure.md => Traduction depuis Top10 2013
+
