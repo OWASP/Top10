@@ -1,42 +1,60 @@
-# +O What's Next for Organizations
+# +O O que se segue para as Organizações
 
-## Start Your Application Security Program Now
+## Inicie o seu Programa de Segurança Aplicacional hoje
 
-Application security is no longer optional. Between increasing attacks and regulatory pressures, organizations must establish effective processes and capabilities for securing their applications and APIs. Given the staggering amount of code in the numerous applications and APIs already in production, many organizations are struggling to get a handle on the enormous volume of vulnerabilities.
+A segurança aplicacional já não é opcional. Entre o aumento dos ataques e pressões por parte dos reguladores, as organizações devem estabelecer processos e capacidades efectivas para segurar as suas aplicações e APIs. Dado o volume de código sofrível em múltiplas aplicações e APIs em produção, muitas organizações estão a sofrer para conseguirem enfrentar o volume enorme de vulnerabilidades.
 
-OWASP recommends organizations establish an application security program to gain insight and improve security across their app and API portfolio. Achieving application security requires many different parts of an organization to work together efficiently, including security and audit, software development, business, and executive management. Security should be visible and measurable, so that all the different players can see and understand the organization's application security posture. Focus on the activities and outcomes that actually help improve enterprise security by eliminating or reducing risk. Key activities include:
+A OWASP recomenda as organizações a estabelecerem um programa de segurança aplicacional para ganhar visibilidade e melhorar a segurança no seu portfolio de aplicações e APIs. Atingir segurança aplicacional requer que muitas áreas distintas da organização trabalhem em conjunto de forma eficiente, incluindo segurança e auditoria, desenho de software, negócio e gestão. A segurança deve ser visível e mensurável, de forma a que todos os diferentes actores possam ver e perceber a postura de segurança aplicacional da organização. Deve existir um enfoque em actividades e resultados que melhorem a segurança da empresa através da eliminação ou redução do risco. As actividades principais são:
 
-### Get Started
+### Começar
 
-* Document all applications and associated data assets in a Configuration Management Database (CMDB).
-* Establish an [application security program](https://www.owasp.org/index.php/SAMM_-_Strategy_&_Metrics_-_1) and drive adoption.
-* Conduct a [capability gap analysis](https://www.owasp.org/index.php/SAMM_-_Strategy_&_Metrics_-_3) comparing your organization to your peers to define key improvement areas and an execution plan.
-* Gain management approval and establish an [application security awareness campaign](https://www.owasp.org/index.php/SAMM_-_Education_&_Guidance_-_1) for the entireIT organization.
+* Documentar todas as aplicações e activos de dados associados numa Base de Dados de Gestão de Configurações (CMDB - _Configuration Management Database_).
+* Estabelecer um [programa de segurança aplicacional][1] e promover a sua adopção.
+* Realizar uma [análise diferencial de capacidades][2] comparando a sua organização com a dos seus pares para definir áreas importantes de melhoria e um plano para a sua execução.
+* Obter a aprovação da gestão e estabelecer uma [campanha de consciencialização de segurança aplicacional][3] para toda a TI da organização.
 
-### Risk Based Portfolio Approach
+### Abordagem ao Portfolio baseada em Risco
 
-* Identify the [protection needs](https://www.owasp.org/index.php/SAMM_-_Strategy_&_Metrics_-_2) of your [application portfolio](https://www.owasp.org/index.php/SAMM_-_Strategy_&_Metrics_-_2) from a business perspective. This should be driven in part by privacy laws and other regulations relevant to the data asset being protected.
-* Establish a common [risk rating model](https://www.owasp.org/index.php/OWASP_Risk_Rating_Methodology) with a consistent set of likelihood and impact factors reflective of your organization's tolerance for risk.
-* Accordingly measure and prioritize all your applications and APIs. Add the results to your CMDB.
-* Establish assurance guidelines to properly define coverage and level of rigor required.
+* Identificar as [ necessidades de proteção ][4] do seu [portfolio aplicacional][5] numa perspectiva de negócio. Isto deve ser alinhado com legislação de privacidade ou outro tipo de regulamentação relevante para o activo de dados a ser protegido.
+* Estabelecer [modelo de classificação de riscos][6] comum, com um conjunto consistente de factores de probabilidade e de impacto que reflita a tolerância da organização ao risco.
+* De igual forma, meça e estabeleça prioridades em todas as suas aplicações e APIs. Acrescente os resultados ao seu CMDB.
+* Estabeleça guiões de confiança para definir de forma adequada a cobertura e nível de rigor necessários.
 
-### Enable with a Strong Foundation
+### Operar com uma Base Sólida
 
-* Establish a set of focused [policies and standards](https://www.owasp.org/index.php/SAMM_-_Policy_&_Compliance_-_2) that provide an application security baseline for all development teams to adhere to.
-* Define a common set of [reusable security controls](https://www.owasp.org/index.php/OWASP_Security_Knowledge_Framework) that complement these policies and standards and provide design and development guidance on their use.
-* Establish an [application security training curriculum](https://www.owasp.org/index.php/SAMM_-_Education_&_Guidance_-_2) that is required and targeted to different development roles and topics.
+* Estabelecer um conjunto de [políticas e standards][7] que ofereçam a linha base de segurança aplicacional para que todas as equipas e desenvolvimento as possam adoptar.
+* Definir um conjunto comum de [controlos de segurança reutilizáveis][8] que complementem essas políticas e standards e ofereçam direções de desenho e desenvolvimento para quem as use.
+* Estabelecer um [currículo de treino em segurança aplicacional][9] que seja necessário e direcionado para diferentes papéis e tópicos de desenvolvimento.
 
 
-### Integrate Security into Existing Processes
+### Integrar a Segurança em Processos Existentes
 
-*  Define and integrate [secure implementation](https://www.owasp.org/index.php/SAMM_-_Construction) and [verification](https://www.owasp.org/index.php/SAMM_-_Verification) activities into existing development and operational processes. Activities include [threat modeling](https://www.owasp.org/index.php/SAMM_-_Threat_Assessment_-_1), secure [design & review](https://www.owasp.org/index.php/SAMM_-_Design_Review_-_1), secure coding and [code review](https://www.owasp.org/index.php/SAMM_-_Code_Review_-_1), [penetration testing](https://www.owasp.org/index.php/SAMM_-_Security_Testing_-_1), and remediation.
-* Provide subject matter experts and [support services for development and project teams](https://www.owasp.org/index.php/SAMM_-_Education_&_Guidance_-_3) to be successful.
+*  Definir e integrar actividades de [implementação segura][10] e de [verificação][11] nos processes de desenvolvimento e operacionais. Nestas actividades incluem-se [modelação de ameaças][12], secure [desenho e revisão][13] segura, codificação segura e [revisão de código][14], [testes de intrusão][15], e remediação.
+* Oferecer  especialistas e [serviços de suporte para o desenvolvimento e equipas de projecto ][16] para ser bem sucedido.
 
-### Provide Management Visibility
+### Oferecer Visibilidade para a Gestão
 
-*  Manage with metrics. Drive improvement and funding decisions based on the metrics and analysis data captured. Metrics include adherence to security practices / activities, vulnerabilities introduced, vulnerabilities mitigated, application coverage, defect density by type and instance counts, etc.
-* Analyze data from the implementation and verification activities to look for root cause and vulnerability patterns to drive strategic and systemic improvements across the enterprise. Learn from mistakes and offer positive incentives to promote improvements.
+*  Gerir usando métricas. Influencie as melhorias e decisões de investimento baseadas em métricas e na análise de dados recolhidos. As métricas incluem a aderência às práticas e actividades de segurança, vulnerabilidades introduzidas, vulnerabilidades mitigadas, cobertura da aplicação, densidade de defeitos por tipo e por número de instâncias, entre outros.
+* Analise os dados das actividades de implementação e de verificação para encontrar a causa principal e os padrões de vulnerabilidades para realizar melhorias sistemáticas e estratégicas em toda a empresa. Aprenda com os erros e promova incentivos positivos para estimular melhorias.
 
-### Examples of such programs
+### Exemplos de alguns destes programas
 
-* US Department of Veteran's Affairs [OIS Software Assurance](https://wiki.mobilehealth.va.gov/display/OISSWA/OIS+Software+Assurance)
+* Departamento dos EUA dos Assuntos dos Veteranos [OIS Software Assurance][17]
+
+[1]:	https://www.owasp.org/index.php/SAMM_-_Strategy_&_Metrics_-_1
+[2]:	https://www.owasp.org/index.php/SAMM_-_Strategy_&_Metrics_-_3
+[3]:	https://www.owasp.org/index.php/SAMM_-_Education_&_Guidance_-_1
+[4]:	https://www.owasp.org/index.php/SAMM_-_Strategy_&_Metrics_-_2
+[5]:	https://www.owasp.org/index.php/SAMM_-_Strategy_&_Metrics_-_2
+[6]:	https://www.owasp.org/index.php/OWASP_Risk_Rating_Methodology
+[7]:	https://www.owasp.org/index.php/SAMM_-_Policy_&_Compliance_-_2
+[8]:	https://www.owasp.org/index.php/OWASP_Security_Knowledge_Framework
+[9]:	https://www.owasp.org/index.php/SAMM_-_Education_&_Guidance_-_2
+[10]:	https://www.owasp.org/index.php/SAMM_-_Construction
+[11]:	https://www.owasp.org/index.php/SAMM_-_Verification
+[12]:	https://www.owasp.org/index.php/SAMM_-_Threat_Assessment_-_1
+[13]:	https://www.owasp.org/index.php/SAMM_-_Design_Review_-_1
+[14]:	https://www.owasp.org/index.php/SAMM_-_Code_Review_-_1
+[15]:	https://www.owasp.org/index.php/SAMM_-_Security_Testing_-_1
+[16]:	https://www.owasp.org/index.php/SAMM_-_Education_&_Guidance_-_3
+[17]:	https://wiki.mobilehealth.va.gov/display/OISSWA/OIS+Software+Assurance

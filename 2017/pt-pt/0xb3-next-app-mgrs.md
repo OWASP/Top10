@@ -4,7 +4,7 @@
 
 As aplicações são alguns dos sistemas mais complexos que os humanos criam e mantêm regularmente. A gestão de TI para uma aplicação deve ser realizada por especialistas de TI que são responsáveis pelo ciclo de vida global de TI de uma aplicação.
 
-Sugerimos que se definam donos e gestores de aplicações para cada aplicação para oferecer responsabilização, prestação de contas, consultada e informada (RACI), para permitir que a organização possa descartar riscos, identificar quem é responsável pelo desenho de segurança, construção, teste e instalação da aplicação.
+Sugerimos que se definam donos e gestores de aplicações para cada aplicação para oferecer responsabilização, prestação de contas, de forma consultada e informada (RACI), para permitir que a organização possa descartar riscos, identificar quem é responsável pelo desenho de segurança, construção, teste e instalação da aplicação.
 
 ## Requisitos e Gestão de Recursos
 
@@ -47,7 +47,7 @@ Para assegurar as operações e alterações seguras, deve ser realizado o segui
 * Planear e gerir alterações, por exemplo, migrar para novas versões da aplicação ou outros componentes como o SO, middleware ou bibliotecas.
 * Actualizar toda a documentação, incluindo o CMDB e a arquitectura de segurança, controlos e contramedidas, incluindo quaisquer cadernos ou documentação de projecto.
 
-## Retirada de Sistemas 
+## Retirada de Sistemas
 
 O processo de retirada do sistemas é muitas vezes ignorado. Deve assegurar que:
 * Quaisquer dados importantes são arquivados. Todos os outros dados são apagados em segurança.
