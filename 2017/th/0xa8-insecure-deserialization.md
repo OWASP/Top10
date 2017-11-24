@@ -1,55 +1,54 @@
 # A8:2017 Insecure Deserialization
 
-| Threat agents/Attack vectors | Security Weakness           | Impacts               |
+| ผู้โจมตี/ช่องทาง | จุดอ่อนด้านความปลอดภัย           | ผลกระทบ               |
 | -- | -- | -- |
-| Access Lvl : Exploitability 1 | Prevalence 2 : Detectability 2 | Technical 3 : Business |
-| Exploitation of deserialization is somewhat difficult, as off the shelf exploits rarely work without changes or tweaks to the underlying exploit code. | This issue is included in the Top 10 based on an [industry survey](https://owasp.blogspot.com/2017/08/owasp-top-10-2017-project-update.html) and not on quantifiable data. Some tools can discover deserialization flaws, but human assistance is frequently needed to validate the problem. It is expected that prevalence data for deserialization flaws will increase as tooling is developed to help identify and address it. | The impact of deserialization flaws cannot be overstated. These flaws can lead to remote code execution attacks, one of the most serious attacks possible. The business impact depends on the protection needs of the application and data. |
+| เฉพาะแอพฯ : โจมตีง่าย 1 | แพร่กระจายง่าย 2 : ตรวจพบได้ง่าย 2 | ผลกระทบรุนแรง 3 : Business ? |
+| การโจมตีด้วยการทำ deserialize ค่อนข้างทำได้ยาก เพราะเครื่องมือที่ใช้โจมตีแบบสำเร็จรูปมักจะทำงานไม่ค่อยได้ผลถ้าไม่ได้มีการแก้ไขเปลี่ยนแปลงโค้ดภายในของมัน | ปัญหานี้ถูกเพิ่มเข้ามาอยู่ใน Top 10 โดยนำมาจาก [แบบสอบถามจากทางภาคธุรกิจ](https://owasp.blogspot.com/2017/08/owasp-top-10-2017-project-update.html) แต่ไม่ได้มาจากข้อมูลที่มีการตรวจวัดมาได้ ในปัจจุบันเครื่องมือบางตัวสามารถที่จะตรวจพบช่องโหว่ประเภท deserialization ได้ก็จริง แต่มักจะยังต้องใช้คนในการช่วยยืนยันว่าเป็นช่องโหว่จริงๆ เราคาดว่าข้อมูลการแพร่กระจายของช่องโหว่ประเภทนี้จะมีมากขึ้นเมื่อมีการพัฒนาเครื่องมือเพื่อช่วยตรวจหาและแก้ไขปัญหานี้ | ผลกระทบของช่องโหว่แบบ deserialization นี้รุนแรงมาก มันสามารถนำไปสู่การเกิดการโจมตีแบบที่สามารถส่งคำสั่งควบคุมจากระยะไกลได้ ซึ่งเป็นหนึ่งในการโจมตีที่รุนแรงมากที่สุด ส่วนผลกระทบทางธุรกิจนั้นขึ้นอยู่กับว่าแอพพลิเคชั่นและข้อมูลมีความสำคัญและต้องการการป้องกันแค่ไหน |
 
-## Is the Application Vulnerable?
+## แอพพลิเคชั่นนี้มีช่องโหว่หรือไม่?
 
-Applications and APIs will be vulnerable if they deserialize hostile or tampered objects supplied by an attacker.
+แอพพลิเคชั่นและ API จะสามารถถูกโจมตีได้ถ้ามีการทำการ deserialize ข้อมูลออบเจ็กต์ที่มีเจตนาไม่ดีหรือถูกแก้ไขมาแล้วโดยผู้โจมตี
 
-This can result in two primary types of attacks:
+สามารถแบ่งการโจมตีได้เป็นสองประเภทหลักๆ คือ
 
-* Object and data structure related attacks where the attacker modifies application logic or achieves arbitrary remote code execution if there are classes available to the application that can change behavior during or after deserialization.
-* Typical data tampering attacks such as access-control-related attacks where existing data structures are used but the content is changed.
+* การโจมตีที่เกี่ยวข้องกับออบเจ็กต์และโครงสร้างข้อมูล โดยที่ผู้โจมตีจะแก้ไขเปลี่ยนแปลงตรรกะการทำงานของแอพพลิเคชั่น หรือสามารถทำการส่งคำสั่งโจมตีจากระยะไกล ถ้ามีคลาสที่สามารถเรียกได้ในแอพพลิเคชั่นที่สามารถเปลี่ยนพฤติกรรมการทำงานระหว่างหรือหลังจากที่ทำการ deserialize แล้ว
+* การโจมตีด้วยการแก้ไขข้อมูลแบบทั่วไป เช่น การโจมตีที่เกี่ยวข้องกับการควบคุมสิทธิ์ โดยที่จะใช้งานโครงสร้างของข้อมูลที่มีอยู่แล้วแต่เพียงแก้ไขเปลี่ยนแปลงเนื้อหาข้างใน
 
-Serialization may be used in applications for:
+การทำ serialize อาจจะถูกใช้อยู่ในแอพพลิเคชั่นโดยมีจุดประสงค์เพื่อ:
 
-* Remote- and inter-process communication (RPC/IPC) 
-* Wire protocols, web services, message brokers
-* Caching/Persistence
-* Databases, cache servers, file systems 
-* HTTP cookies, HTML form parameters, API authentication tokens 
+* ทำการติดต่อสื่อสารทางไกลหรือระหว่างโปรเซส (RPC/IPC)
+* การส่งข้อมูลผ่านสายสัญญาณ, เว็บเซอร์วิส, message brokers
+* การทำแคช/การเก็บข้อมูลแบบถาวร
+* ดาต้าเบส, เซิร์ฟเวอร์สำหรับแคช, ระบบไฟล์ซิสเต็ม
+* เว็บคุกกี้, พารามิเตอร์ของฟอร์มใน HTML, โทเค็นของการยืนยันตัวตนของ API
 
-## How To Prevent
+## ป้องกันอย่างไร
 
-The only safe architectural pattern is not to accept serialized objects from untrusted sources or to use serialization mediums that only permit primitive data types.
+รูปแบบในทางสถาปัตยกรรมที่ปลอดภัยเพียงอย่างเดียวคือการที่ไม่รับออบเจ็กต์ที่ถูกทำการ serialize มาจากแหล่งที่ไม่น่าเชื่อถือ หรือใช้การ serialize ลงไปในสื่อเก็บข้อมูลที่รองรับเพียงแค่ประเภทข้อมูลแบบพื้นฐานเท่านั้น (primitive types)
 
-If that is not possible, consider one of more of the following:
+แต่ถ้าทำสิ่งข้างต้นนี้ไม่ได้ ควรที่จะเลือกพิจารณาสิ่งต่อไปนี้:
 
-* Implementing integrity checks such as digital signatures on any serialized objects to prevent hostile object creation or data tampering.
-* Enforcing strict type constraints during deserialization before object creation as the code typically expects a definable set of classes. Bypasses to this technique have been demonstrated, so reliance solely on this is not advisable.
-* Isolating and running code that deserializes in low privilege environments when possible.
-* Log deserialization exceptions and failures, such as where the incoming type is not the expected type, or the deserialization throws exceptions.
-* Restricting or monitoring incoming and outgoing network connectivity from containers or servers that deserialize.
-* Monitoring deserialization, alerting if a user deserializes constantly.
+* ทำการตรวจสอบความถูกต้องของข้อมูล เช่น การใช้ digital signature กับข้อมูลออบเจ็กต์ที่ถูกทำการ serialize แล้ว เพื่อป้องกันไม่ให้มีการสร้างออบเจ็กต์ใหม่จากผู้ไม่ประสงค์ดี หรือ แก้ไขข้อมูลภายใน
+* บังคับประเภทของข้อมูลระหว่างทำการ deserialize ก่อนที่จะมีการสร้างเป็นออบเจ็กต์ขึ้นมา เพราะโค้ดมักจะคาดหวังว่าออบเจ็กต์จะต้องมาจากเซ็ตของคลาสที่ระบุไว้เท่านั้น แต่ว่าการบายพาสเทคนิคนี้นั้นเป็นไปได้ ฉะนั้นไม่ควรที่จะพึ่งพาการป้องกันในรูปแบบนี้แต่เพียงอย่างเดียว
+* แยกและรันโค้ดที่ทำการ deserialize ในสภาวะที่มีสิทธิ์ต่ำที่สุดถ้าเป็นไปได้
+* ทำการเก็บ log ที่เป็นข้อผิดพลาดต่างๆ ที่เกิดจากการทำ deserialize เช่น ข้อผิดพลาดพวกประเภทของข้อมูลไม่ใช่จากที่ควรจะเป็น หรือเมื่อกระบวนการทำ deserialize มีการ throws exceptions
+* บังคับและคอยตรวจสอบการเชื่อมต่อเน็ตเวิร์คทั้งฝั่งขาเข้าและขาออกของเครื่องเซิร์ฟเวอร์หรือคอนเทนเนอร์ที่ทำกระบวนการ deserialize
+* คอยตรวจสอบกระบวนการทำ deserialize และแจ้งเตือนถ้ามีผู้ใช้คนใดคนหนึ่งทำการ deserialize บ่อยจนเกินไป
 
+## ตัวอย่างของกระบวนการโจมตี
 
-## Example Attack Scenarios
+**Scenario #1**: แอพพลิเคชั่นที่เขียนด้วย React เรียกไปหาไมโครเซอร์วิสที่เขียนด้วย Spring Boot. ด้วยความที่เป็นโปรแกรมเมอร์ที่ถนัดเขียนแบบฟังก์ชั่น เขาจึงพยายามที่จะทำให้โค้ดของเขาไม่สามารถเปลี่ยนแปลงได้ โดยวิธีการที่เขาเลือกคือการใช้การทำ serialize เพื่อแปลงสภาวะของผู้ใช้ให้เป็นข้อมูลที่จะส่งไปกลับได้ในแต่ละครั้งที่มีการรีเควสกับระบบ ผู้โจมตีนั้นสังเกตเห็นว่าจะมีคำว่า "R00" อยู่เป็นลักษณะพิเศษของออบเจ็กต์ในภาษาจาวา เขาจึงใช้เครื่องมือ Serial Killer เพื่อให้ได้มาซึ่งการที่สามารถส่งคำสั่งควบคุมเครื่องแอพพลิเคชั่นเซิร์ฟเวอร์จากระยะไกลได้
 
-**Scenario #1**: A React application calls a set of Spring Boot microservices. Being functional programmers, they tried to ensure that their code is immutable. The solution they came up with is serializing user state and passing it back and forth with each request. An attacker notices the "R00" Java object signature, and uses the Java Serial Killer tool to gain remote code execution on the application server.
-
-**Scenario #2**: A PHP forum uses PHP object serialization to save a "super" cookie, containing the user's user ID, role, password hash, and other state:
+**Scenario #2**: เว็บบอร์ดแห่งหนึ่งที่เขียนด้วยภาษา PHP มีการทำ serialize เพื่อเก็บออบเจ็กต์ให้เป็น "ซุปเปอร์" คุกกี้ ที่จะเก็บข้อมูลของผู้ใช้ทั้งไอดี สิทธิ์ แฮชของรหัสผ่าน และสถานะอื่นๆ:
 
 `a:4:{i:0;i:132;i:1;s:7:"Mallory";i:2;s:4:"user";i:3;s:32:"b6a8b3bea87fe0e05022f8f3c88bc960";}`
 
-An attacker changes the serialized object to give themselves admin privileges:
+ผู้โจมตีจึงทำการเปลี่ยนออบเจ็กต์ที่ถูกทำการ serialize นี้เพื่อยกระดับสิทธิ์ของเขาให้เป็นผู้ดูแลระบบ(admin):
 `a:4:{i:0;i:1;i:1;s:5:"Alice";i:2;s:5:"admin";i:3;s:32:"b6a8b3bea87fe0e05022f8f3c88bc960";}`
 
-## References
+## อ้างอิง
 
-### OWASP
+### จาก OWASP
 
 * [OWASP Cheat Sheet: Deserialization](https://www.owasp.org/index.php/Deserialization_Cheat_Sheet)
 * [OWASP Proactive Controls: Validate All Inputs](https://www.owasp.org/index.php/OWASP_Proactive_Controls#4:_Validate_All_Inputs)
@@ -57,7 +56,7 @@ An attacker changes the serialized object to give themselves admin privileges:
 * [OWASP AppSecEU 2016: Surviving the Java Deserialization Apocalypse](https://speakerdeck.com/pwntester/surviving-the-java-deserialization-apocalypse)
 * [OWASP AppSecUSA 2017: Friday the 13th JSON Attacks](https://speakerdeck.com/pwntester/friday-the-13th-json-attacks)
 
-### External
+### จากแหล่งอื่น
 
 * [CWE-502: Deserialization of Untrusted Data](https://cwe.mitre.org/data/definitions/502.html)
 * [Java Unmarshaller Security](https://github.com/mbechler/marshalsec)
