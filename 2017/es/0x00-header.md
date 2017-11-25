@@ -1,12 +1,12 @@
 ![OWASP LOGO](images/OWASP_logo.png)
 
-## OWASP Top 10 2017 RC2
+## OWASP Top 10 2017
 
 Los diez riesgos más críticos en Aplicaciones Web
 
-22 de Octubre de 2017
+20 de Noviembre de 2017
 
-### Release Candidate 2
+### Release
 
 Instrucciones para el envío de comentarios dentro del documento
 
