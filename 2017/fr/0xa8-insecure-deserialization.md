@@ -7,44 +7,45 @@
 
 ## Is the Application Vulnerable?
 
-Applications and APIs will be vulnerable if they deserialize hostile or tampered objects supplied by an attacker.
+Les applications et les API sont vulnérables si elles désérialisent des objets sous le contrôle d'un attaquant.
 
-This can result in two primary types of attacks:
+Cela peut entraîner deux principaux types d'attaques:
 
-* Object and data structure related attacks where the attacker modifies application logic or achieves arbitrary remote code execution if there are classes available to the application that can change behavior during or after deserialization.
-* Typical data tampering attacks such as access-control-related attacks where existing data structures are used but the content is changed.
+* Attaques liées aux objets et à la structure de données où l'attaquant modifie la logique de l'application ou exécute du code arbitraire. Pour cela, il doit exister des classes dans l'application qui peuvent modifier le comportement pendant ou après la désérialisation.
+* Attaques par falsification de données lorsque des structures sérialisées sont utilisées pour du contrôle d'accès et que le contenu est modifié par l'attaquant.
 
-Serialization may be used in applications for:
+La sérialisation peut être utilisée dans des applications pour:
 
-* Remote- and inter-process communication (RPC/IPC) 
-* Wire protocols, web services, message brokers
-* Caching/Persistence
-* Databases, cache servers, file systems 
-* HTTP cookies, HTML form parameters, API authentication tokens 
+* Communication distante- et inter-processus (RPC/IPC)
+* Protocoles connectés, Web services, message brokers
+* Mise en cache / Persistance
+* Bases de données, serveurs de cache, systèmes de fichiers
+* Cookies HTTP, paramètres de formulaire HTML, jetons d'authentification API
 
 ## How To Prevent
 
-The only safe architectural pattern is not to accept serialized objects from untrusted sources or to use serialization mediums that only permit primitive data types.
+La seule architecture logiciel sûr est de ne pas accepter les objets sérialisés provenant de sources non fiables ou d'utiliser des supports de sérialisation qui autorisent uniquement les types de données de bases.
 
-If that is not possible, consider one of more of the following:
+Si ce n'est pas possible, envisagez l'une des solutions suivantes:
 
-* Implementing integrity checks such as digital signatures on any serialized objects to prevent hostile object creation or data tampering.
-* Enforcing strict type constraints during deserialization before object creation as the code typically expects a definable set of classes. Bypasses to this technique have been demonstrated, so reliance solely on this is not advisable.
-* Isolating and running code that deserializes in low privilege environments when possible.
-* Log deserialization exceptions and failures, such as where the incoming type is not the expected type, or the deserialization throws exceptions.
-* Restricting or monitoring incoming and outgoing network connectivity from containers or servers that deserialize.
-* Monitoring deserialization, alerting if a user deserializes constantly.
-
+* Implémenter des contrôles d'intégrité tels que des signatures numériques sur tous les objets sérialisés pour empêcher la création d'objets dangereux ou la falsification de données.
+* Appliquer des contraintes de typage fort lors de la désérialisation avant la création de l'objet car le code attend généralement un ensemble définissable de classes. Les contournements de cette technique ont été démontrés[REF?], il est donc déconseillé de se fier uniquement à cette technique.
+* Isoler et exécuter le code qui désérialise dans des environnements à faible privilège lorsque cela est possible.
+* Journaliser les exceptions et échecs de désérialisation, par exemple lorsque le type entrant n'est pas le type attendu, ou que la désérialisation génère des exceptions.
+* Restriction ou surveillance de la connectivité réseau entrante et sortante à partir de conteneurs ou de serveurs utilisé pour la  désérialisation.
+* Suivi de la désérialisation, alert si un utilisateur désérialise constamment.
 
 ## Example Attack Scenarios
 
-**Scenario #1**: A React application calls a set of Spring Boot microservices. Being functional programmers, they tried to ensure that their code is immutable. The solution they came up with is serializing user state and passing it back and forth with each request. An attacker notices the "R00" Java object signature, and uses the Java Serial Killer tool to gain remote code execution on the application server.
+**Scenario #1**: Une application React appelle un ensemble de microservices Spring Boot. En tant que programmeurs fonctionnels, ils essaient de s'assurer que leur code est immuable. La solution qu'ils ont trouvée consiste à sérialiser l'état de l'utilisateur et à le transmettre à chaque requête. Un attaquant remarque la signature d'objet Java "R00" et utilise [l'outil Java Serial Killer](https://github.com/NetSPI/JavaSerialKiller) pour effectuer une exécution de code à distance sur le serveur d'applications.
 
-**Scenario #2**: A PHP forum uses PHP object serialization to save a "super" cookie, containing the user's user ID, role, password hash, and other state:
+
+
+**Scenario #2**: Un forum PHP utilise la sérialisation des objets PHP pour enregistrer un cookie "super", contenant l'ID utilisateur, le rôle, le condensat du mot de passe et les autre attributs de l'utilisateur.
 
 `a:4:{i:0;i:132;i:1;s:7:"Mallory";i:2;s:4:"user";i:3;s:32:"b6a8b3bea87fe0e05022f8f3c88bc960";}`
 
-An attacker changes the serialized object to give themselves admin privileges:
+Un attaquant modifie l'objet sérialisé pour se donner des privilèges d'administrateur:
 `a:4:{i:0;i:1;i:1;s:5:"Alice";i:2;s:5:"admin";i:3;s:32:"b6a8b3bea87fe0e05022f8f3c88bc960";}`
 
 ## References
