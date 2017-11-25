@@ -46,6 +46,7 @@ Si ce n'est pas possible, envisagez l'une des solutions suivantes:
 `a:4:{i:0;i:132;i:1;s:7:"Mallory";i:2;s:4:"user";i:3;s:32:"b6a8b3bea87fe0e05022f8f3c88bc960";}`
 
 Un attaquant modifie l'objet sérialisé pour se donner des privilèges d'administrateur:
+
 `a:4:{i:0;i:1;i:1;s:5:"Alice";i:2;s:5:"admin";i:3;s:32:"b6a8b3bea87fe0e05022f8f3c88bc960";}`
 
 ## References
