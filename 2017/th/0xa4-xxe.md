@@ -1,38 +1,38 @@
 # A4:2017 XML External Entities (XXE)
 
-| Threat agents/Attack vectors | Security Weakness           | Impacts               |
+| ผู้โจมตี/ช่องทาง | จุดอ่อนด้านความปลอดภัย           | ผลกระทบ               |
 | -- | -- | -- |
-| Access Lvl : Exploitability 2 | Prevalence 2 : Detectability 3 | Technical 3 : Business |
-| Attackers can exploit vulnerable XML processors if they can upload XML or include hostile content in an XML document, exploiting vulnerable code, dependencies or integrations. | By default, many older XML processors allow specification of an external entity, a URI that is dereferenced and evaluated during XML processing. [SAST](https://www.owasp.org/index.php/Source_Code_Analysis_Tools) tools can discover this issue by inspecting dependencies and configuration. [DAST](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools) tools require additional manual steps to detect and exploit this issue. Manual testers need to be trained in how to test for XXE, as it not commonly tested as of 2017. | These flaws can be used to extract data, execute a remote request from the server, scan internal systems, perform a denial-of-service attack, as well as execute other attacks. |
+| การเข้าถึงช่องโหว่ : ความยากในการโจมตี 2 | แพร่กระจายง่าย 2 : ตรวจพบได้ง่าย 3 | ผลกระทบทางเทคนิค 3 : ผลกระทบทางธุรกิจ ? |
+| ผู้โจมตีสามารถโจมตีตัวประมวลผล XML ในกรณีที่สามารถอัพโหลดหรือใส่ค่าประเภท XML ไปประมวลผลฝั่งเซิร์ฟเวอร์ได้ เทคนิคการโจมตีช่องโหว่ XXE ขึ้นอยู่กับหลายปัจจัยทั้งระบบปฏิบัติการณ์และการทำงานของตัวประมวลผล XML ที่ถูกโจมตี | โดยทั่วไปแล้ว ตัวประมวลผล XML ยอมให้ใส่ค่าที่เรียกว่า external entity ได้ ซึ่งคือ URI ที่ถูกอ้างอิงถึงและนำมาประมวลผลเป็นส่วนนึงของเอกสาร XML และทำให้เกิดอันตรายได้ โปรแกรมหาช่องโหว่อัตโนมัติในระดับโค้ด ([SAST](https://www.owasp.org/index.php/Source_Code_Analysis_Tools)) สามารถหาช่องโหว่และการตั้งค่าที่ยอมให้ใช้ external entity ได้ดี  ส่วนโปรแกรมหาช่องโหว่อัตโนมัติในขณะที่โปรแกรมทำงานอยู่ ([DAST](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools)) จะต้องมีการยืนยันเพิ่มเติมโดยใช้ผู้ทดสอบระบบที่เชี่ยวชาญเพื่อให้แน่ใจว่ามีช่องโหว่จริง  และสุดท้าย การทดสอบหาช่องโหว่แบบ manual ผู้ทดสอบระบบควรจะต้องมีการศึกษาเรียนรู้เพิ่มเติมว่าจะทดสอบ XXE ยังไง เนื่องจาก เป็นช่องโหว่ที่มักจะถูกมองข้ามจากสถิติในปี 2017 | ช่องโหว่ XXE สามารถใช้ในการอ่านข้อมูลจากไฟล์บนเครื่องเซิร์ฟเวอร์, ใช้ส่ง network packet จากเซิร์ฟเวอร์ที่มีช่องโหว่, ใช้สแกนเน็ตเวิร์คฝั่งภายในของเซิร์ฟเวอร์ที่มีช่องโหว่, ใช้โจมตีให้ระบบไม่สามารถใช้งานได้ ได้ |
 
-## Is the Application Vulnerable?
+## แอพพลิเคชั่นนี้มีช่องโหว่หรือไม่?
 
-Applications and in particular XML-based web services or downstream integrations might be vulnerable to attack if:
+แอพพลิเคชั่นต่าง ๆ โดยเฉพาะ web service แบบ SOAP ที่ส่งข้อมูลในรูปแบบ XML อาจจะมีช่องโหว่ XXE ได้ในกรณีที่:
 
-* The application accepts XML directly or XML uploads, especially from untrusted sources, or inserts untrusted data into XML documents, which is then parsed by an XML processor.
-* Any of the XML processors in the application or SOAP based web services has [document type definitions (DTDs)](https://en.wikipedia.org/wiki/Document_type_definition) enabled. As the exact mechanism for disabling DTD processing varies by processor, it is good practice to consult a reference such as the [OWASP Cheat Sheet 'XXE Prevention'](https://www.owasp.org/index.php/XML_External_Entity_(XXE)_Prevention_Cheat_Sheet). 
-* If the application uses SAML for identity processing within federated security or single sign on (SSO) purposes. SAML uses XML for identity assertions, and may be vulnerable.
-* If the application uses SOAP prior to version 1.2, it is likely susceptible to XXE attacks if XML entities are being passed to the SOAP framework.
-* Being vulnerable to XXE attacks likely means that the application is vulnerable to denial of service attacks including the Billion Laughs attack
+* แอพพลิเคชั่นรับค่า XML โดยตรงผ่านการอัพโหลดจากผู้ใช้งานเข้ามาถึงตัวประมวลผล XML โดยไม่ได้มีการตรวจสอบหรือทำให้ปลอดภัยจากการใช้งาน external entity ก่อน
+* เนื่องจากตัวประมวลผล XML ในแอพพลิเคชั่น โดยเฉพาะ web service แบบ SOAP มักจะมีฟีเจอร์ [document type definitions (DTDs)](https://en.wikipedia.org/wiki/Document_type_definition) เปิดอบู่ แต่ว่าวิธีการปิดฟีเจอร์ DTD แตกต่างกันขึ้นกับตัวประมวลผล XML ในแต่ละตัว ซึ่งที่ควรทำคือลองอ่านเอกสาร [OWASP Cheat Sheet 'XXE Prevention'](https://www.owasp.org/index.php/XML_External_Entity_(XXE)_Prevention_Cheat_Sheet) เพื่อหาวิธีปิดฟีเจอร์ DTD และปิดการใช้งาน external entity
+* ถ้าแอพพลิเคชั่นมีการใช้งาน SAML เพื่อยืนยันตัวตนของผู้ใช้งานแบบ single sign on (SSO) อาจมีช่องโหว่ XXE ได้ เพราะว่า SAML รับ-ส่ง ข้อมูลแบบ XML เช่นกัน
+* ถ้สแอพพลิเคชั่นใช้ web service แบบ SOAP เวอร์ชั่นก่อน 1.2 จะมีโอกาสเป็นไปได้สูงมาก ว่าจะมีช่องโหว่ XXE ถ้ารับค่าจากผู้ใช้งานเข้ามาประมวลผล
+* การที่แอพพลิเคชั่นใด ๆ มีช่องโหว่ XXE มีความเป็นไปได้ว่าแอพพลิเคชั่นนั้น ๆ จะมีช่องโหว่ที่ทำให้ระบบไม่สามารถใช้งานได้ ได้ เพราะว่าหนึ่งในเทคนิคที่ใช้โจมตีของ XXE ชื่อว่า Billion Laughs อาจทำให้ระบบไม่สามารถใช้งานได้นั้นเอง
 
-## How To Prevent
+## ป้องกันอย่างไร
 
-Developer training is essential to identify and mitigate XXE. Besides that, preventing XXE requires:
+ผู้พัฒนาโปรแกรมจำเป็นต้องศึกษาวิธีการตรวจสอบและป้องกันช่องโหว่ XXE โดยสรุปแล้ว สิ่งที่จะต้องทำคือ:
 
-* Whenever possible, use less complex data formats such as JSON, and avoiding serialization of sensitive data.
-* Patch or upgrade all XML processors and libraries in use by the application or on the underlying operating system. Use dependency checkers. Update SOAP to SOAP 1.2 or higher.
-* Disable XML external entity and DTD processing in all XML parsers in the application, as per the [OWASP Cheat Sheet 'XXE Prevention'](https://www.owasp.org/index.php/XML_External_Entity_(XXE)_Prevention_Cheat_Sheet). 
-* Implement positive ("whitelisting") server-side input validation, filtering, or sanitization to prevent hostile data within XML documents, headers, or nodes.
-* Verify that XML or XSL file upload functionality validates incoming XML using XSD validation or similar.
-* SAST tools can help detect XXE in source code, although manual code review is the best alternative in large, complex applications with many integrations.
+* ถ้าเลือกได้ ควรเลือกใช้รูปแบบข้อมูลที่ไม่ใช่ XML เช่น JSON แทน และควรเลี่ยงรูปแบบข้อมูลที่มีการยอมให้ทำ serialization กับข้อมูลโดยเฉพาะข้อมูลที่มีความสำคัญ
+* ปรับปรุงเวอร์ชั่นของตัวประมวลผล XML และ library ต่าง ๆ ที่แอพพลิเคชั่นใช้รวมถึงที่ระบบปฏิบัติการณ์ใช้ เป็นเวอร์ชั่นใหม่เสมอ และควรตรวจ SOAP ที่ใช้ว่าเป็นเวอร์ชั่น 1.2 หรือใหม่กว่า
+* ปิดฟีเจอร์การทำงานของ XML external entity และ DTD ในโค้ดหรือการตั้งค่าของแอพพลิเคชั่น ตามเอกสาร [OWASP Cheat Sheet 'XXE Prevention'](https://www.owasp.org/index.php/XML_External_Entity_(XXE)_Prevention_Cheat_Sheet). 
+* ตรวจสอบข้อมูลฝั่งเซิรืฟเวอร์แบบ whitelisting และแปลงข้อมูลที่อยู่ในเอกสาร XML ให้ปลอดภัยจากการเรียกใช้งานฟีเจอร์ XML external entity และ DTD ทั้งใน XML document, header และ node ต่าง ๆ
+* ตรวจสอบให้แน่ใจว่า ฟีเจอร์ของแอพพลิเคชั่นที่ยอมให้อัพโหลดไฟล์ประเภท XML หรือ XSL มีการตรวจสอบไฟล์ว่ามีข้อมูลที่ปลอดภัยเท่านั้นด้วยการใช้ฟีเจอร์ XSD 
+* ถึงแม้ว่าโปรแกรมหาช่องโหว่อัตโนมัติในระดับโค้ด สามารถช่วยหาช่องโหว่ XXE ในโค้ดได้ แต่การทดสอบหาช่องโหว่ในโค้ดด้วยการใช้คนมาอ่านโค้ดก็ยังคงเป็นทางเลือกที่ดีที่สุดสำหรับแอพพลิเคชั่นที่มีความซับซ้อนสูง
 
-If these controls are not possible, consider using virtual patching, API security gateways, or Web Application Firewalls (WAFs) to detect, monitor, and block XXE attacks.
+ถ้าวิธีการป้องกันที่อ้างอิงถึงนี้ไม่สามารถใช้งานได้ ควรเลือกใช้เทคนิคอื่นเช่น virtual patching, API security gateways หรือใช้ Web Application Firewalls (WAFs) ในการช่วยตรวจจับ เฝ้าระวังและป้องกันการโจมตีแบบ XXE
 
-## Example Attack Scenarios
+## ตัวอย่างของกระบวนการโจมตี
 
-Numerous public XXE issues have been discovered, including attacking embedded devices. XXE occurs in a lot of unexpected places, including deeply nested dependencies. The easiest way is to upload a malicious XML file, if accepted:
+ช่องโหว่ XXE ที่ถูกค้นพบมีเยอะขึ้นมาก และบางส่วนถูกพบในระบบที่อยู่ในอุปกรณ์ประเภท embeded device (อุปกรณ์ขนาดเล็กที่มีคอมพิวเตอร์เช่นเร้าเตอร์และอุปกรณ์ IoT ต่าง ๆ) เนื่องจากใช้ XML และไม่ได้มีการตรวจสอบค่าที่ดีพอ  ตัวอย่างที่ง่ายที่สุดคือเกิดจากการที่ยอมให้อัพโหลดไฟล์ XML ได้:
 
-**Scenario #1**: The attacker attempts to extract data from the server:
+**Scenario #1**: ผู้โจมตีต้องการจะอ่านไฟล์ /etc/passwd จากเครื่องเซิร์ฟเวอร์ด้วยช่องโหว่ XXE สามารถทดลองส่ง XML ต่อไปนี้:
 
 ```
   <?xml version="1.0" encoding="ISO-8859-1"?>
@@ -42,20 +42,20 @@ Numerous public XXE issues have been discovered, including attacking embedded de
     <foo>&xxe;</foo>
 ```
 
-**Scenario #2**: An attacker probes the server's private network by changing the above ENTITY line to:
+**Scenario #2**: ผู้โจมตีต้องการจะส่ง HTTP request ไปยัง private network ของเครื่องเซิร์ฟเวอร์ที่มีช่องโหว่ XXE สามารถทำได้โดยเปลี่ยนค่าบรรทัด ENTITY ไปเป็น:
 ```
    <!ENTITY xxe SYSTEM "https://192.168.1.1/private" >]>
 ```
 
-**Scenario #3**: An attacker attempts a denial-of-service attack by including a potentially endless file:
+**Scenario #3**: ผู้โจมตีต้องการจะทำการโจมตีให้เซิร์ฟเวอร์ไม่สามารถใช้งานได้โดยการลองอ่านค่าไฟล์ที่มีเนื้อหาไม่สิ้นสุดอย่าง /dev/random ทำได้โดยใส่ค่าเป็น:
 
 ```
    <!ENTITY xxe SYSTEM "file:///dev/random" >]>
 ```
 
-## References
+## อ้างอิง
 
-### OWASP
+### จาก OWASP
 
 * [OWASP Application Security Verification Standard](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
 * [OWASP Testing Guide: Testing for XML Injection](https://www.owasp.org/index.php/Testing_for_XML_Injection_(OTG-INPVAL-008))
@@ -63,7 +63,7 @@ Numerous public XXE issues have been discovered, including attacking embedded de
 * [OWASP Cheat Sheet: XXE Prevention](https://www.owasp.org/index.php/XML_External_Entity_(XXE)_Prevention_Cheat_Sheet)
 * [OWASP Cheat Sheet: XML Security](https://www.owasp.org/index.php/XML_Security_Cheat_Sheet)
 
-### External
+### จากแหล่งอื่น
 
 * [CWE-611: Improper Restriction of XXE](https://cwe.mitre.org/data/definitions/611.html)
 * [Billion Laughs Attack](https://en.wikipedia.org/wiki/Billion_laughs_attack)
