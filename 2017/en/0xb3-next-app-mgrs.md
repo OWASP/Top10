@@ -17,7 +17,7 @@ We suggest establishing application owners and application managers for every ap
 * Negotiate with internal or external developers the requirements, including guidelines and security requirements with respect to your security program, e.g. SDLC, best practices
 * Rate the fulfillment of all technical requirements including a rough planning and design
 * Negotiate all technical requirements including design, security and service level agreements (SLA)
-* Consider adopting templates and checklists, such as [OWASP Secure Software Contract Annex](https://www.owasp.org/index.php/OWASP_Secure_Software_Contract_Annex) **NB**: The Annex is a sample specific to US contract law, and is likely to need legal review in your jurisdiction. Please consult qualified legal advice before using the Annex.
+* Adopt templates and checklists, such as [OWASP Secure Software Contract Annex](https://www.owasp.org/index.php/OWASP_Secure_Software_Contract_Annex) **NB**: The Annex is a sample specific to US contract law, and is likely to need legal review in your jurisdiction. Please consult qualified legal advice before using the Annex.
 
 ## Planning and Design
 
@@ -33,7 +33,7 @@ We suggest establishing application owners and application managers for every ap
 ## Deployment, Testing and Rollout
 
 * It's critical that security tasks automated the secure setup of the application, interfaces and of all further components needed, including required authorizations
-* Test the technical functions and integration to the IT architecture, and coordinate business tests. Consider to test use and abuse cases from technical and business perspectives.
+* Test the technical functions and integration to the IT architecture, and coordinate business tests. Create "use" and "abuse" test cases from technical and business perspectives.
 * Manage security tests according to internal processes, the protection needs and the level of security where the application is going to be deployed
 * Put the application in operation and migrate from previously used applications
 * Finalize all documentation, including the CMDB and security architecture
