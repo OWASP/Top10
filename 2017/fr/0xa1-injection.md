@@ -1,20 +1,16 @@
 # A1:2017 Injection
 
-| Threat agents/Attack vectors | Security Weakness           | Impacts               |
-| -- | -- | -- |
-| Access Lvl : Exploitability 3 | Prevalence 2 : Detectability 3 | Technical 3 : Business |
-| Almost any source of data can be an injection vector, environment variables, parameters, external and internal web services, and all types of users. [Injection flaws](https://www.owasp.org/index.php/Injection_Flaws) occur when an attacker can send hostile data to an interpreter. | Injection flaws are very prevalent, particularly in legacy code. Injection vulnerabilities are often found in SQL, LDAP, XPath, or NoSQL queries, OS commands, XML parsers, SMTP headers, expression languages, and ORM queries. Injection flaws are easy to discover when examining code. Scanners and fuzzers can help attackers find injection flaws. |Injection can result in data loss, corruption, or disclosure to unauthorized parties, loss of accountability, or denial of access. Injection can sometimes lead to complete host takeover. The business impact depends on the needs of the application and data.|
+| Facteurs de Menace/Vecteurs d'Attaque | Vulnérabilité           | Impacts Techniques               |
+| Impacts Métiers | -- | -- |
+| Accès Lvl : Exploitation 3 | Fréquence 2 : Détection 3 | Impact 3 : Business |
+| Considérez que n’importe qui peut envoyer des données non fiables au système, y compris les utilisateurs externes, internes, et administrateurs. Presque toute source de données peut être un vecteur d’injection, y compris des sources internes.[Les failles d'injection](https://www.owasp.org/index.php/Injection_Flaws) surviennent lorsqu’une application envoie des données non fiable à un interpréteur.  | Les failles d’injection sont très fréquentes, surtout dans le code ancien. On les retrouve souvent dans les requêtes SQL, LDAP, XPath, commandes OS, parseurs XML, arguments de programme, etc. Les failles d’Injection sont faciles à découvrir lors d’un audit de code, mais plus difficilement via test. Scanners et Fuzzers aident les attaquants à les trouver. |L’Injection peut résulter en une perte ou une corruption de données, une perte de droits, ou un refus d’accès. L’Injection peut parfois mener à une prise de contrôle totale du serveur. Considérez la valeur métier de la donnée impactée et la plateforme exécutant l’interpréteur. Toute donnée pourrait être volée, modifiée ou supprimée. Votre réputation pourrait-elle en pâtir?|
 
 
-## Is the Application Vulnerable?
+## Suis-je vulnérable à l’Injection?
 
-An application is vulnerable to attack when:
-
-* User-supplied data is not validated, filtered, or sanitized by the application.
-* Dynamic queries or non-parameterized calls without context-aware escaping are used directly in the interpreter.  
-* Hostile data is used within object-relational mapping (ORM) search parameters to extract additional, sensitive records.
-* Hostile data is directly used or concatenated, such that the SQL or command contains both structure and hostile data in dynamic queries, commands, or stored procedures.
-* Some of the more common injections are SQL, NoSQL, OS command, Object Relational Mapping (ORM), LDAP, and Expression Language (EL) or Object Graph Navigation Library (OGNL) injection. The concept is identical among all interpreters. Source code review is the best method of detecting if applications are vulnerable to injections, closely followed by thorough automated testing of all parameters, headers, URL, cookies, JSON, SOAP, and XML data inputs. Organizations can include static source ([SAST](https://www.owasp.org/index.php/Source_Code_Analysis_Tools)) and dynamic application test ([DAST](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools)) tools into the CI/CD pipeline to identify newly introduced injection flaws prior to production deployment.
+Le meilleur moyen de savoir si une application est vulnérable à l’Injection est de vérifier que toute utilisation d’interpréteurs sépare explicitement les données non fiables de la commande ou de la requête. Pour les appels SQL, cela signifie utiliser des variables liées dans toutes les instructions préparées et procédures stockées, en évitant les requêtes dynamiques.
+Vérifier le code est un moyen rapide et adéquat pour s’assurer que l’application utilise sainement les interpréteurs. Les outils d’analyse de code peuvent aider à localiser l’usage des interpréteurs et tracer leur flux de données à travers l’application. Les Pentesters peuvent valider ces problèmes en concevant des exploits qui confirment la vulnérabilité.
+Le scan dynamique peut donner un aperçu des failles d’Injection existantes. Les scanners ne savent pas toujours atteindre les interpréteurs, ni si une attaque a réussi. Une mauvaise gestion d’erreur aide à trouver les failles.
 
 ## How To Prevent
 
