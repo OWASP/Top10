@@ -1,29 +1,33 @@
 ## Prefacio
 
-El software inseguro está debilitando las finanzas, salud, defensa, energía, y otras infraestructuras críticas. A medida que el software se convierte en algo crítico, complejo e interconectado, la dificultad de lograr seguridad en las aplicaciones aumenta exponencialmente. El ritmo vertiginoso de los procesos de desarrollo de software actuales incrementan aún mas el riesgo de no descubrir vulnerabilidades de forma rápida y precisa. No se puede dar el lujo de tolerar problemas de seguridad rela=vamente sencillos, como los que se presentan en este OWASP Top 10.
+El software inseguro está debilitando las finanzas, salud, defensa, energía, y otras infraestructuras críticas. A medida que el software se convierte en algo crítico, complejo e interconectado, la dificultad de lograr seguridad en las aplicaciones aumenta exponencialmente. El ritmo vertiginoso de los procesos de desarrollo de software actuales incrementan aún mas el riesgo de no descubrir vulnerabilidades de forma rápida y precisa. No se puede dar el lujo de tolerar problemas de seguridad relativamente sencillos, como los que se presentan en este OWASP Top 10.
 
-Durante la creación del OWASP Top 10 2017 se recibieron una gran cantidad de opiniones,muchas mas que cualquier otro proyecto de OWASP equivalente. Esto demostró la pasión que la comunidad posee por el OWASP Top 10, y lo crítico que es para OWASP obtener el Top 10 correcto para la mayoría de los casos de uso.
+Durante la creación del OWASP Top 10 - 2017 se recibieron una gran cantidad de opiniones,muchas mas que cualquier otro proyecto de OWASP equivalente. Esto demostró la pasión que la comunidad posee por el OWASP Top 10, y lo crítico que es para OWASP obtener el Top 10 correcto para la mayoría de los casos de uso.
 
+Aunque el objetivo original del proyecto OWASP Top 10 fue simplemente concientizar a los desarrolladores y gerentes, se ha convertido en un standard de seguridad de facto. 
 
-Although the original goal of the OWASP Top 10 project was simply to raise awareness amongst developers, it has become the de facto application security standard. 
+En la presente versión, los problemas y recomendaciones fueron escritos de manera concisa y verificable con el fin de favorecer  a la adopción del OWASP Top 10 en los programas de seguridad de aplicaciones. Recomendamos a las organizaciones de mayor porte a utilizar el [Estándar de Verificación de Seguridad en Aplicaciones de OWASP (ASVS)] (https://www.owasp.org/index.php/ASVS) si un verdadero estandar es requerido, aunque, para la mayoría, el OWASP Top 10 es un gran comienzo en el viaje de seguridad de aplicaciones.
 
-We have taken steps in this release to firm up the definition of issues, and improve the recommendations to be leading practices that may be adopted as an application security standard that covers off around 80-90% of all common attacks and threats. We encourage large and high performing organizations to use the [OWASP Application Security Verification Standard](https://www.owasp.org/index.php/ASVS) if a true standard is required, but for most, the OWASP Top 10 is a great start on the application security journey.
+Hemos escrito un rango de sugerencias para los diferentes usuarios del OWASP Top 10, incluyendo "Qué más hay para los desarrolladores", "Qué más hay para testers de seguridad", "Qué más hay para las organizaciones", lo cual es apropiado tanto para CIOs y CISOs, "Qué más hay para los administradores de aplicaciones", lo cual es aplicable por administradores u otros a cargo del ciclo de vida de la aplicación.
 
-We have written up a range of suggested next steps for different users of the OWASP Top 10, including "What's next for developers", "What's next for testers", "What's next for organizations" which is suitable for CIO's and CISO's, "What's next for application managers", which is suitable for application owners.
+En el largo plazo, hemos cubierto todo el proceso de desarrollo de software que los equipos y organizaciones necesitan para crear una programa de aplicaciones seguras y que sea compatible con vuestra cultura y tecnología. Estos programas vienen en todas las formas y tamaños. Dejando a vuestra organización las fortalezas existentes que trabajen para usted para medir y mejorar su programa de seguridad de aplicaciones utilizando el Modelo de Madurez de Aseguramiento del Software.
 
-In the long term, we encourage all software development teams and organizations to create an application security program that is compatible with your culture and technology. These programs come in all shapes and sizes. Leverage your organization's existing strengths to do and measure what works for you.
+Esperamos que el OWASP Top 10 sea útil para redoblar los esfuerzos de seguridad en aplicaciones. No dude en contactar con OWASP acerca de sus cuestiones, comentarios e ideas en nuestro repositorio de Github:
 
-We hope that the OWASP Top 10 is useful to your application security efforts. Please don't hesitate to contact OWASP with your questions, comments, and ideas at our GitHub project repository:
+* [https://www.owasp.org/index.php/top10](https://www.owasp.org/index.php/top10)
 
-* https://github.com/OWASP/Top10/issues
+Puede encontrar las traducciones del OWASP Top 10 aquí:
 
-You can find OWASP Top 10 project and translations here:
+* [https://www.owasp.org/index.php/top10](https://www.owasp.org/index.php/top10)
 
-* https://www.owasp.org/index.php/top10
+Por último, queremos agradecer a la fundación y dirección del proyecto del OWASP Top 10, Dave Wichers y Jeff Williams, por todos sus esfuerzos y creer en nosotros para poder finalizar con la ayuda de la comunidad. ¡Gracias!
 
-Lastly, we wish to thank the founding leadership of the OWASP Top 10 project, Dave Wichers and Jeff Williams for all their efforts, and believing in us to get this finished with the community's help. Thank you!
-
-* Torsten Gigler
+* Andrew van der Stock
 * Brian Glas
 * Neil Smithline
-* Andrew van der Stock
+* Torsten Gigler
+
+## Atribuciones
+Gracias a[Autodesk](https://www.autodesk.com) por patrocinar el OWASP Top 10 - 2017.
+
+Las organizaciones e individuos que han proporcionado datos sobre prevalencia de la vulnerabilidad u otra asistencia se enumeran en la [página de agradecimientos](0xd1-data-contributors.md).
