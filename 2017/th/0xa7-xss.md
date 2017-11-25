@@ -52,7 +52,7 @@
 * [OWASP Cheat Sheet: XSS Filter Evasion](https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet)
 * [OWASP Java Encoder Project](https://www.owasp.org/index.php/OWASP_Java_Encoder_Project)
 
-### External
+### จากแหล่งอื่น
 
 * [CWE-79: Improper neutralization of user supplied input](https://cwe.mitre.org/data/definitions/79.html)
 * [PortSwigger: Client-side template injection](https://portswigger.net/kb/issues/00200308_clientsidetemplateinjection)
