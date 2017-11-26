@@ -1,28 +1,33 @@
-# Introducción.
-## Bienvenido al Top 10 de OWASP Top 10 - 2017.
+# I Introducción
 
-Esta actualización agrega nuevas fallas, incluyendo dos inconvenientes elegidos por la comunidad – A8:2017 Deserialización insegura y A10:2017 Monitoreo y logeo insuficiente.
-La retroalimentación de la comunidad trajo la colección de la mayor cantidad de datos nunca ensamblados, para la preparación de un estándar de seguridad en una aplicación web, por tanto tenemos confianza que las restantes 8 fallas son las más importantes para una organización, particularmente A3:2017- Exposición de datos sensibles en la era que los EU’s tienen regulación general sobre la protección de datos. A6: Mala configuración de seguridad, especialmente en el entorno a los Cloud y servicios de API’s, A9:2017 Uso de componentes con vulnerabilidades conocidas, los cuales pueden ser específicamente un desafío para aquellos en nuevas plataformas como Node.Js.
-El top 10 de Owasp del 2017 está basado primeramente en más de 40 datos presentados desde firmas que se especializan en la seguridad de aplicaciones y en la industria, fueron completados por 515 personas.
-Este objetivo expande vulnerabilidades obtenidas desde cientos de organizaciones y más de 100.000 aplicaciones ejecutadas en el entorno real actual. Los 10 items del Top 10 son elegidos y priorizados de acuerdo al predominio de información, combinados con las estimaciones de explotabilidad, detectabilidad e impacto.
-Un primer acercamiento al Top 10 de Owasp es orientar a desarrolladores, diseñadores, arquitectos, administradores y organizaciones sobre las consecuencias de las más comunes y más importantes debilidades de seguridad web. El top 10 provee técnicas básicas para protegerse contra éstos elevados riesgos en diferentes áreas.
+## Bienvenido al OWASP Top 10 - 2017.
 
-El camino para futuras actividades.
+Esta actualización agrega nuevos puntos, incluyendo dos seleccionados por la comunidad – A8:2017 Deserialización insegura y A10:2017 Registro, Detección y Respuestas Activas Insuficientes. Dos diferenciadores clave de las anteriores versiones del OWASP Top 10 son la sustanciales devoluciones de la comunidad y los extensos datos recopilados de docenas de organizaciones, siendo posiblemente la mayor cantidad de datos jamás reunidos en la preparación de un estándar de seguridad de aplicaciones.Esto nos da la confianza de que el nuevo OWASP Top 10 aborda los riesgos de seguridad de aplicaciones más impactantes que enfrentan las organizaciones en la actualidad.
 
-No se detenga en el Top 10. Hay centenares de fallas que pueden afectar la seguridad de una aplicación web como se ha debatido en Guía para desarrollares por OWASP  y en Hoja rápida de códigos de OWASP. Estos son lecturas básicas para cualquier desarrollador de aplicaciones web y API’s. Guiándolo en una forma efectiva para encontrar vulnerabilidades en aplicaciones web y API’s como se provee en Guía de testeo de  OWASP.
+El OWASP Top 10 de del 2017 se basa principalmente en más de 40 envíos de datos de empresas que se especializan en seguridad de aplicaciones y una encuesta de la industria que fue completada por más de 500 personas. Estos datos abarcan vulnerabilidades recopiladas de cientos de organizaciones y más de 100.000 aplicaciones y APIs del mundo real. Los 10 ítems principales fueron seleccionados y priorizados de acuerdo con estos datos de prevalencia, en combinación con estimaciones consensuadas de explotabilidad, detectabilidad e impacto.
 
-Cambios constantes. El Top 10 de Owasp continuará cambiando. Aun sin cambiar una simple línea en el código fuente de su aplicación, podría volverse vulnerable a medida que se encuentren nuevas fallas y métodos de ataques. Revise los consejos al final del Top 10 en “Que es lo próximo para desarrolladores, testeadores, y organizaciones” para más información.
+Uno de los principales objetivos del Top 10 de OWASP es educar a los desarrolladores, diseñadores, arquitectos, gerentes y organizaciones sobre las consecuencias de las debilidades más comunes y más importantes de la seguridad de las aplicaciones web. El Top 10 proporciona técnicas básicas para protegerse contra estas áreas problemáticas de alto riesgo, y proporciona orientación sobre cómo continuar desde 
 
-Pensamientos positivos. Cuando no busque más vulnerabilidades y se enfoque en establecer controles de seguridad en su aplicación. OWASP continúa manteniendo y promoviendo el Estandar de verificación y seguridad de aplicaciones de OWASP.(ASVS) como guía para las organizaciones y verificación de aplicaciones.
+## Hoja de ruta para las futuras actividades
 
-Utilice las herramientas sabiamente. La seguridad en las vulnerabilidades pueden ser complejas y abrumadoras, en muchos casos, la aproximación costo-eficiencia para encontrar es eliminar las debilidades humanas, dejando a expertos con buenas herramientas.
+**No se detenga en el Top 10**. Hay cientos de fallas que podrían afectar la seguridad general de una aplicación web, como se discute en la [Guía de desarrollado de OWASP](https://www.owasp.org/index.php/OWASP_Guide_Project) y en las[Hojas de ayuda de OWASP](https://www.owasp.org/index.php/Category:Cheatsheets). Estas son lecturas esenciales para cualquier persona que desarrolle aplicaciones web y APIs. En la [Guía de pruebas de OWASP](https://www.owasp.org/index.php/OWASP_Testing_Project) encontrará orientación sobre cómo encontrar vulnerabilidades de forma efectiva en aplicaciones web y APIs.
 
-Izquierda, derecha, en todos lados. Enfocarse en hacer de la seguridad una parte integral de la cultura a través de los desarrolladores de la organización. Encuentre más en Modelo de madurez de calidad del Software por OWASP (SAMM)
+**Cambio constante**. El OWASP Top 10 continuará cambiando. Aun sin cambiar una simple línea en el código fuente de su aplicación, podría volverse vulnerable a medida que se encuentren nuevas fallas y métodos de ataques. Revise los consejos al final del Top 10 en “Siguientes pasos para desarrolladores, verificadores y organizaciones” para obtener más información.
 
+**Piense positivo**. Cuando esté listo para dejar de perseguir vulnerabilidades y centrarse en establecer fuertes controles de seguridad de aplicaciones, el proyecto [Controles Proactivos de OWASP](https://www.owasp.org/index.php/OWASP_Proactive_Controls) proporciona un punto de partida para ayudar a los desarrolladores a incorporar la seguridad en sus aplicaciones y el [Estándar de Verificación de Seguridad en Aplicaciones de OWASP (ASVS)] (https://www.owasp.org/index.php/ASVS) a organizaciones y revisores de aplicaciones sobre qué verificar.
 
-Atribución.
-Queremos agradecer a las organizaciones que contribuyen con la información de las vulnerabilidades para actualizar el Top 10 del 2017. Hemos recibido más de 40 respuestas al llamado de documentos. Por primera vez, toda la información contribuida al lanzamiento del Top 10, y la lista completa de los contribuyentes, estará pública. Creemos que es una de las más amplias colecciones de información sobre vulnerabilidades.
-Como hay más ayudantes, hemos creado una página dedicada a reconocer las contribuciones hechas. Queremos brindar un cálido agradecimiento a las organizaciones por estar en las primeras líneas de la publicidad al compartir las vulnerabilidades.
-Esperamos que continúe creciendo y cubriendo más organizaciones a realizar lo mismo y posiblemente ser vistas como una. El Top 10 de Owasp no sería posible sin todos éstos increíbles contribuyentes.
-Un gran agradecimiento a las 516 personas que se toman el tiempo para completar el ranking. Su incentivo ayuda a determinar las nuevas dos secciones del Top 10. Como comentario adicional, notas de cobertura (y críticas), son todas bien recibidas.
-Sabemos que su tiempo es preciado y queremos agradecerlo.
+**Utilice las herramientas sabiamente**. Las vulnerabilidades de seguridad pueden ser bastante complejas y enterradas en el código. En muchos casos, el enfoque más eficaz en función de los costos para encontrar y eliminar esas debilidades es recurrir a expertos humanos dotados de herramientas avanzadas. Confiar sólo en las herramientas proporciona una falsa sensación de seguridad y no se recomienda.
+
+**Izquierda, derecha y todos lados**. Enfóquese en hacer de la seguridad una parte integral de la cultura en su organización de desarrollo. Obtenga más información en [OWASP Modelo de Madurez de Aseguramiento del Software](https://www.owasp.org/index.php/OWASP_SAMM_Project).
+
+##Atribución
+
+Quisiéramos agradecer a las organizaciones que contribuyeron con sus datos de vulnerabilidades para apoyar la actualización de 2017. Recibimos más de 40 respuestas a la llamada de datos. Por primera vez, todos los datos que han contribuido a una publicación del Top 10, así como la lista completa de colaboradores, están a disposición del público. Creemos que esta es una de las colecciones más grandes y diversas de datos sobre vulnerabilidades que se hayan recopilado públicamente.
+
+Como hay más contribuyentes que espacio, hemos creado una página dedicada para reconocer las contribuciones hechas. Deseamos dar las gracias de todo corazón a estas organizaciones por estar dispuestas a estar en primera línea al compartir públicamente los datos sobre vulnerabilidad de sus esfuerzos. Esperamos que esto continúe creciendo y animando a más organizaciones a hacer lo mismo y posiblemente sea visto como uno de los hitos clave de la seguridad basada en evidencia. El OWASP Top 10 no sería posible sin estas contribuciones asombrosas. 
+
+Un gran agradecimiento a los más de 500 individuos que se tomaron tiempo para completar la encuesta dirigida a la industria. Su opinión ayudó a determinar dos nuevas adiciones al Top 10. Los comentarios adicionales, notas de aliento y críticas fueron apreciadas. Sabemos que su tiempo es valioso y queríamos darle las gracias.
+
+Nos gustaría agradecer a aquellas personas que contribuyeron con comentarios constructivos y tiempo para revisar la presente actualización del Top 10. En la medida de lo posible, los hemos enumerado en la página de "Agradecimientos".
+
+Y por último, queremos agradecer de antemano a todos los traductores que traducirán este lanzamiento del Top 10 a numerosos idiomas, ayudando a hacer el OWASP Top 10 más accesible para el planeta entero.
