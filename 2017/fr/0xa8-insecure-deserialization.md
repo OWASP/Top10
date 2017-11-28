@@ -1,8 +1,8 @@
 # A8:2017 Insecure Deserialization
 
-| Threat agents/Attack vectors | Security Weakness           | Impacts               |
+| Agents de menaces/Vecteurs d'attaques | Security Weakness           | Impacts               |
 | -- | -- | -- |
-| Access Lvl : Exploitability 1 | Prevalence 2 : Detectability 2 | Technical 3 : Business |
+| Accès Lvl : Exploitability 1 | Prevalence 2 : Detectability 2 | Technical 3 : Métier |
 | Il arrive que l'exploitation d'une désérialisation soit difficile car les codes d'exploitations génériques fonctionnent rarement sans une adaptation à l'application ciblé. | Cette vulnérabilité est incluse dans le Top 10 [sur la base d'un questionnaire rempli par des proféssionnels de la sécurité](https://owasp.blogspot.com/2017/08/owasp-top-10-2017-project-update.html) et non sur des données quantifiables. Certains outils peuvent détecter des erreurs de désérialisation, mais une assistance humaine est souvent nécessaire pour valider le problème. Il faut s'attendre à ce qu'une augmentation les défauts de désérialisation trouvés dans les applications augmentent à mesure que des outils sont développés pour aider à les identifier et à y remédier. | L'impact des erreurs de désérialisation ne doit pas être sous estimé. Ces failles peuvent conduire à des attaques d'exécution de code à distance, l'une des attaques les plus graves qui soit. L'impact métier dépend des besoins de protection de l'application et des données. |
 
 ## Is the Application Vulnerable?
