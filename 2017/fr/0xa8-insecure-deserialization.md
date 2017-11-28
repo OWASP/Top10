@@ -5,7 +5,7 @@
 | Niveau d'accès : Exploitation 1 | Fréquence 2 : Détection 2 | Technique 3 : Métier |
 | Il arrive que l'exploitation d'une désérialisation soit difficile car les codes d'exploitation génériques fonctionnent rarement sans une adaptation à l'application ciblée. | Cette vulnérabilité est incluse dans le Top 10 [sur la base d'un questionnaire rempli par des professionnels de la sécurité](https://owasp.blogspot.com/2017/08/owasp-top-10-2017-project-update.html) et non sur des données quantifiables. Certains outils peuvent détecter des erreurs de désérialisation, mais une assistance humaine est souvent nécessaire pour valider le problème. Il faut s'attendre à une augmentation des défauts de désérialisation trouvés dans les applications à mesure que des outils sont développés pour aider à les identifier et à y remédier. | L'impact des erreurs de désérialisation ne doit pas être sous-estimé. Ces failles peuvent conduire à des attaques d'exécution de code à distance, l'une des attaques les plus graves qui soient. L'impact métier dépend des besoins de protection de l'application et des données. |
 
-## Suis-je vulnérable à .....? 
+## Suis-je vulnérable aux défauts de désérialisation? 
 
 Les applications et les API sont vulnérables si elles désérialisent des objets sous le contrôle d'un attaquant.
 
