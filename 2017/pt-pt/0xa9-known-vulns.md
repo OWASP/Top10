@@ -1,11 +1,11 @@
-# A9:2017 Using Components with Known Vulnerabilities
+# A9:2017 Utilização de Componentes com Vulnerabilidades Conhecidas
 
-| Threat agents/Attack vectors | Security Weakness           | Impacts               |
+| Agentes de Ameaça/Vectores de Ataque | Fraquezas de Segurança           | Impactos               |
 | -- | -- | -- |
-| Access Lvl \| Exploitability 2 | Prevalence 3 \| Detectability 2 | Technical 2 \| Business |
+| Nível de Acesso \| Exploração 2 | Prevalência 3 \| Deteção 2 | Técnico 2 \| Negócio |
 | While it is easy to find already-written exploits for many known vulnerabilities, other vulnerabilities require concentrated effort to develop a custom exploit. | Prevalence of this issue is very widespread. Component-heavy development patterns can lead to development teams not even understanding which components they use in their application or API, much less keeping them up to date. This issue is detectable by the use of scanners such as retire.js and header inspection, but verifying if it is exploitable requires an attack of some description. | While some known vulnerabilities lead to only minor impacts, some of the largest breaches to date have relied on exploiting known vulnerabilities in components. Depending on the assets you are protecting, perhaps this risk should be at the top of your list. |
 
-## Is the Application Vulnerable?
+## Está a Aplicação Vulnerável?
 
 You are likely vulnerable:
 
@@ -15,7 +15,7 @@ You are likely vulnerable:
 * If you do not fix or upgrade the underlying platform, frameworks and dependencies in a timely fashion. This commonly happens is environments when patching is a monthly or quarterly task under change control, which leaves organizations open to many days or months of unnecessary exposure to fixed vulnerabilities. This is likely the root cause of one of the largest breaches of all time. 
 * If you do not secure the components' configurations (see **A6:2017-Security Misconfiguration**).
 
-## How To Prevent?
+## Como Prevenir?
 
 Software projects should have a process in place to:
 
@@ -27,7 +27,7 @@ Software projects should have a process in place to:
 
 Every organization must ensure that there is an ongoing plan for monitoring, triaging, and applying updates or configuration changes for the lifetime of the application or portfolio.
 
-## Example Attack Scenarios
+## Exemplos de Cenários de Ataque
 
 Components typically run with the same privileges as the application itself, so flaws in any component can result in serious impact. Such flaws can be accidental (e.g. coding error) or intentional (e.g. backdoor in component). Some example exploitable component vulnerabilities discovered are:
 
@@ -36,7 +36,7 @@ Components typically run with the same privileges as the application itself, so 
 
 There are automated tools to help attackers find unpatched or misconfigured systems. For example, the [Shodan IoT search engine](https://www.shodan.io/report/89bnfUyJ) can help you find devices that still suffer from the [Heartbleed](https://en.wikipedia.org/wiki/Heartbleed) vulnerability that was patched in April 2014.
 
-## References
+## Referências
 
 ### OWASP
 
@@ -45,7 +45,7 @@ There are automated tools to help attackers find unpatched or misconfigured syst
 * [OWASP Dependency Check (for Java and .NET libraries)](https://www.owasp.org/index.php/OWASP_Dependency_Check)
 * [OWASP Virtual Patching Best Practices](https://www.owasp.org/index.php/Virtual_Patching_Best_Practices)
 
-### External
+### Externas
 
 * [The Unfortunate Reality of Insecure Libraries](https://www.aspectsecurity.com/research-presentations/the-unfortunate-reality-of-insecure-libraries)
 * [MITRE Common Vulnerabilities and Exposures (CVE) search](https://www.cvedetails.com/version-search.php)

@@ -1,11 +1,11 @@
-# A6:2017 Security Misconfiguration
+# A6:2017 Más Configurações de Segurança
 
-| Threat agents/Attack vectors | Security Weakness           | Impacts               |
+| Agentes de Ameaça/Vectores de Ataque | Fraquezas de Segurança           | Impactos               |
 | -- | -- | -- |
-| Access Lvl \| Exploitability 3 | Prevalence 3 \| Detectability 3 | Technical 2 \| Business |
+| Nível de Acesso \| Exploração 3 | Prevalência 3 \| Deteção 3 | Técnico 2 \| Negócio |
 | Attackers will often attempt to access default accounts, unused pages, unpatched flaws, unprotected files and directories, etc. to gain unauthorized access to or knowledge of the system. | Security misconfiguration can happen at any level of an application stack, including the platform, web server, application server, database, frameworks, and custom code. Automated scanners are useful for detecting  misconfigurations, use of default accounts or configurations, unnecessary services, legacy options etc. | Such flaws frequently give attackers unauthorized access to some system data or functionality. Occasionally, such flaws result in a complete system compromise. The business impact depends on the protection needs of your application and data. |
 
-## Is the Application Vulnerable?
+## Está a Aplicação Vulnerável?
 
 Is your application missing the proper security hardening across any part of the application stack? Including:
 
@@ -19,7 +19,7 @@ Is your application missing the proper security hardening across any part of the
 
 Without a concerted, repeatable application security configuration process, systems are at a higher risk.
 
-## How To Prevent?
+## Como Prevenir?
 
 Is your application missing the proper security hardening across any part of the application stack? Including:
 
@@ -29,20 +29,20 @@ Is your application missing the proper security hardening across any part of the
 * A strong application architecture that provides effective, secure separation between components, with segmentation, containerization, or cloud security groups (ACLs).
 * An automated process to verify the effectiveness of the configurations and settings in all environments.
 
-## Example Attack Scenarios
+## Exemplos de Cenários de Ataque
 
-**Scenario #1**: The app server admin console is automatically installed and not removed. Default accounts aren't changed. Attacker discovers the standard admin pages are on your server, logs in with default passwords, and takes over.
+**Cenário #1**: The app server admin console is automatically installed and not removed. Default accounts aren't changed. Attacker discovers the standard admin pages are on your server, logs in with default passwords, and takes over.
 
-**Scenario #2**: Directory listing is not disabled on your server. An attacker discovers they can simply list directories to find file. The attacker finds and downloads your compiled Java classes, which they decompile and reverse engineer to get your custom code. Attacker then finds a serious access control flaw in your application.
+**Cenário #2**: Directory listing is not disabled on your server. An attacker discovers they can simply list directories to find file. The attacker finds and downloads your compiled Java classes, which they decompile and reverse engineer to get your custom code. Attacker then finds a serious access control flaw in your application.
 
-**Scenario #3**: App server configuration allows stack traces to be returned to users, potentially exposing underlying flaws such as framework versions that are known to be vulnerable.
+**Cenário #3**: App server configuration allows stack traces to be returned to users, potentially exposing underlying flaws such as framework versions that are known to be vulnerable.
 
-**Scenario #4**: App server comes with sample apps that are not removed from your production server. These sample apps have known security flaws attackers use to compromise your server.
+**Cenário #4**: App server comes with sample apps that are not removed from your production server. These sample apps have known security flaws attackers use to compromise your server.
 
-**Scenario #5**: The default configuration or a copied old one activates old vulnerable protocol versions or options that can be misused by an attacker or malware.
+**Cenário #5**: The default configuration or a copied old one activates old vulnerable protocol versions or options that can be misused by an attacker or malware.
 
 
-## References
+## Referências
 
 ### OWASP
 
@@ -52,7 +52,7 @@ Is your application missing the proper security hardening across any part of the
 
 For additional requirements in this area, see the [ASVS requirements areas for Security Configuration (V11 and V19)](https://www.owasp.org/index.php/ASVS).
 
-### External
+### Externas
 
 * [NIST Guide to General Server Hardening](https://csrc.nist.gov/publications/detail/sp/800-123/final)
 * [CWE Entry 2 on Environmental Security Flaws](https://cwe.mitre.org/data/definitions/2.html)

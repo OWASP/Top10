@@ -1,11 +1,11 @@
 # A7:2017 Cross-Site Scripting (XSS)
 
-| Threat agents/Attack vectors | Security Weakness           | Impacts               |
+| Agentes de Ameaça/Vectores de Ataque | Fraquezas de Segurança           | Impactos               |
 | -- | -- | -- |
-| Access Lvl \| Exploitability 3 | Prevalence 3 \| Detectability 3 | Technical 2 \| Business |
+| Nível de Acesso \| Exploração 3 | Prevalência 3 \| Deteção 3 | Técnico 2 \| Negócio |
 | Automated tools can detect and exploit all three forms of XSS, and there are freely available exploitation frameworks. | XSS is the second most prevalent issue in the OWASP Top 10, and is found in around two thirds of all applications. Automated tools can find some XSS problems automatically, particularly in mature technologies such as PHP, J2EE / JSP, and ASP.NET. | The impact of XSS is moderate for reflected and DOM XSS, and severe for stored XSS, with remote code execution on the victim's browser, such as stealing credentials, sessions, or delivering malware to the victim. |
 
-## Is the Application Vulnerable?
+## Está a Aplicação Vulnerável?
 
 There are three forms of XSS, usually targeting users' browsers:
 
@@ -15,7 +15,7 @@ There are three forms of XSS, usually targeting users' browsers:
 
 Typical XSS attacks include session stealing, account takeover, MFA bypass, DOM node replacement or defacement (such as trojan login panels), attacks against the user's browser such as malicious software downloads, key logging, and other client side attacks.
 
-## How To Prevent?
+## Como Prevenir?
 
 Preventing XSS requires separation of untrusted data from active browser content.
 
@@ -24,7 +24,7 @@ Preventing XSS requires separation of untrusted data from active browser content
 * Applying context sensitive encoding when modifying the browser document on the client side acts against DOM XSS. When this cannot be avoided, similar context sensitive escaping techniques can be applied to browser APIs as described in the [OWASP DOM based XSS Prevention Cheat Sheet](https://www.owasp.org/index.php/DOM_based_XSS_Prevention_Cheat_Sheet).
 * Enabling a [Content Security Policy (CSP)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) is a defense in depth mitigating control against XSS, assuming no other vulnerabilities exist that would allow placing malicious code via local file include such as path traversal overwrites, or vulnerable libraries in permitted sources, such as content delivery network or local libraries. 
 
-## Example Attack Scenario
+## Exemplos de Cenários de Ataque
 
 **Scenario 1**: The application uses untrusted data in the construction of the following HTML snippet without validation or escaping:
 
@@ -42,7 +42,7 @@ This attack causes the victim's session ID to be sent to the attacker's website,
 
 Note that attackers can use XSS to defeat any automated CSRF defense the application might employ. 
 
-## References
+## Referências
 
 ### OWASP
 
@@ -57,7 +57,7 @@ Note that attackers can use XSS to defeat any automated CSRF defense the applic
 * [OWASP Cheat Sheet: XSS Filter Evasion](https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet)
 * [OWASP Java Encoder Project](https://www.owasp.org/index.php/OWASP_Java_Encoder_Project)
 
-### External
+### Externas
 
 * [CWE-79: Improper neutralization of user supplied input](https://cwe.mitre.org/data/definitions/79.html)
 * [PortSwigger: Client-side template injection](https://portswigger.net/knowledgebase/issues/details/00200308_clientsidetemplateinjection)
