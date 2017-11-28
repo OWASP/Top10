@@ -3,7 +3,7 @@
 | Agents de menaces/Vecteurs d'attaques | Vulnérabilité | Impacts               |
 | -- | -- | -- |
 | Niveau d'accès : Exploitation 1 | Fréquence 2 : Détection 2 | Technique 3 : Métier |
-| Il arrive que l'exploitation d'une désérialisation soit difficile car les codes d'exploitations génériques fonctionnent rarement sans une adaptation à l'application ciblé. | Cette vulnérabilité est incluse dans le Top 10 [sur la base d'un questionnaire rempli par des proféssionnels de la sécurité](https://owasp.blogspot.com/2017/08/owasp-top-10-2017-project-update.html) et non sur des données quantifiables. Certains outils peuvent détecter des erreurs de désérialisation, mais une assistance humaine est souvent nécessaire pour valider le problème. Il faut s'attendre à ce qu'une augmentation les défauts de désérialisation trouvés dans les applications augmentent à mesure que des outils sont développés pour aider à les identifier et à y remédier. | L'impact des erreurs de désérialisation ne doit pas être sous estimé. Ces failles peuvent conduire à des attaques d'exécution de code à distance, l'une des attaques les plus graves qui soit. L'impact métier dépend des besoins de protection de l'application et des données. |
+| Il arrive que l'exploitation d'une désérialisation soit difficile car les codes d'exploitation génériques fonctionnent rarement sans une adaptation à l'application ciblée. | Cette vulnérabilité est incluse dans le Top 10 [sur la base d'un questionnaire rempli par des professionnels de la sécurité](https://owasp.blogspot.com/2017/08/owasp-top-10-2017-project-update.html) et non sur des données quantifiables. Certains outils peuvent détecter des erreurs de désérialisation, mais une assistance humaine est souvent nécessaire pour valider le problème. Il faut s'attendre à une augmentation des défauts de désérialisation trouvés dans les applications à mesure que des outils sont développés pour aider à les identifier et à y remédier. | L'impact des erreurs de désérialisation ne doit pas être sous-estimé. Ces failles peuvent conduire à des attaques d'exécution de code à distance, l'une des attaques les plus graves qui soient. L'impact métier dépend des besoins de protection de l'application et des données. |
 
 ## Suis-je vulnérable à .....? 
 
@@ -16,7 +16,7 @@ Cela peut entraîner deux principaux types d'attaques:
 
 La sérialisation peut être utilisée dans des applications pour:
 
-* Communication distante- et inter-processus (RPC/IPC)
+* Communication distante et inter-processus (RPC/IPC)
 * Protocoles connectés, Web services, message brokers
 * Mise en cache / Persistance
 * Bases de données, serveurs de cache, systèmes de fichiers
@@ -24,7 +24,7 @@ La sérialisation peut être utilisée dans des applications pour:
 
 ## Comment l'empêcher
 
-La seule architecture logiciel sûr est de ne pas accepter les objets sérialisés provenant de sources non fiables ou d'utiliser des supports de sérialisation qui autorisent uniquement les types de données de bases.
+La seule architecture logicielle sûre est de ne pas accepter les objets sérialisés provenant de sources non fiables ou d'utiliser des supports de sérialisation qui autorisent uniquement les types de données de bases.
 
 Si ce n'est pas possible, envisagez l'une des solutions suivantes:
 
@@ -32,8 +32,8 @@ Si ce n'est pas possible, envisagez l'une des solutions suivantes:
 * Appliquer des contraintes de typage fort lors de la désérialisation avant la création de l'objet car le code attend généralement un ensemble définissable de classes. Les contournements de cette technique ont été démontrés, il est donc déconseillé de se fier uniquement à cette technique.
 * Isoler et exécuter le code qui désérialise dans des environnements à faible privilège lorsque cela est possible.
 * Journaliser les exceptions et échecs de désérialisation, par exemple lorsque le type entrant n'est pas le type attendu, ou que la désérialisation génère des exceptions.
-* Restriction ou surveillance de la connectivité réseau entrante et sortante à partir de conteneurs ou de serveurs utilisé pour la  désérialisation.
-* Suivi de la désérialisation, alert si un utilisateur désérialise constamment.
+* Restriction ou surveillance de la connectivité réseau entrante et sortante à partir de conteneurs ou de serveurs utilisés pour la  désérialisation.
+* Suivi de la désérialisation, alerter si un utilisateur désérialise constamment.
 
 ## Exemples de scénarios d'attaque
 
@@ -41,7 +41,7 @@ Si ce n'est pas possible, envisagez l'une des solutions suivantes:
 
 
 
-**Scenario #2**: Un forum utilise la sérialisation des objets PHP pour enregistrer un cookie, contenant l'ID utilisateur, le rôle, le condensat du mot de passe et les autre attributs de l'utilisateur.
+**Scenario #2**: Un forum utilise la sérialisation des objets PHP pour enregistrer un cookie, contenant l'ID utilisateur, le rôle, le condensat du mot de passe et les autres attributs de l'utilisateur.
 
 `a:4:{i:0;i:132;i:1;s:7:"Mallory";i:2;s:4:"user";i:3;s:32:"b6a8b3bea87fe0e05022f8f3c88bc960";}`
 
