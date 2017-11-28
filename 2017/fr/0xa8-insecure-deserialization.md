@@ -1,11 +1,11 @@
 # A8:2017 Insecure Deserialization
 
-| Agents de menaces/Vecteurs d'attaques | Security Weakness           | Impacts               |
+| Agents de menaces/Vecteurs d'attaques | Vulnérabilité | Impacts               |
 | -- | -- | -- |
-| Accès Lvl : Exploitability 1 | Prevalence 2 : Detectability 2 | Technical 3 : Métier |
+| Niveau d'accès : Exploitation 1 | Fréquence 2 : Détection 2 | Technique 3 : Métier |
 | Il arrive que l'exploitation d'une désérialisation soit difficile car les codes d'exploitations génériques fonctionnent rarement sans une adaptation à l'application ciblé. | Cette vulnérabilité est incluse dans le Top 10 [sur la base d'un questionnaire rempli par des proféssionnels de la sécurité](https://owasp.blogspot.com/2017/08/owasp-top-10-2017-project-update.html) et non sur des données quantifiables. Certains outils peuvent détecter des erreurs de désérialisation, mais une assistance humaine est souvent nécessaire pour valider le problème. Il faut s'attendre à ce qu'une augmentation les défauts de désérialisation trouvés dans les applications augmentent à mesure que des outils sont développés pour aider à les identifier et à y remédier. | L'impact des erreurs de désérialisation ne doit pas être sous estimé. Ces failles peuvent conduire à des attaques d'exécution de code à distance, l'une des attaques les plus graves qui soit. L'impact métier dépend des besoins de protection de l'application et des données. |
 
-## Is the Application Vulnerable?
+## Suis-je vulnérable à .....? 
 
 Les applications et les API sont vulnérables si elles désérialisent des objets sous le contrôle d'un attaquant.
 
@@ -22,7 +22,7 @@ La sérialisation peut être utilisée dans des applications pour:
 * Bases de données, serveurs de cache, systèmes de fichiers
 * Cookies HTTP, paramètres de formulaire HTML, jetons d'authentification API
 
-## How To Prevent
+## Comment l'empêcher
 
 La seule architecture logiciel sûr est de ne pas accepter les objets sérialisés provenant de sources non fiables ou d'utiliser des supports de sérialisation qui autorisent uniquement les types de données de bases.
 
@@ -35,7 +35,7 @@ Si ce n'est pas possible, envisagez l'une des solutions suivantes:
 * Restriction ou surveillance de la connectivité réseau entrante et sortante à partir de conteneurs ou de serveurs utilisé pour la  désérialisation.
 * Suivi de la désérialisation, alert si un utilisateur désérialise constamment.
 
-## Example Attack Scenarios
+## Exemples de scénarios d'attaque
 
 **Scenario #1**: Une application React appelle un ensemble de microservices Spring Boot. En tant que programmeurs fonctionnels, ils essaient de s'assurer que leur code est immuable. La solution qu'ils ont trouvée consiste à sérialiser l'état de l'utilisateur et à le transmettre à chaque requête. Un attaquant remarque la signature d'objet Java "R00" et utilise [l'outil Java Serial Killer](https://github.com/NetSPI/JavaSerialKiller) pour effectuer une exécution de code à distance sur le serveur d'applications.
 
@@ -49,7 +49,7 @@ Un attaquant modifie l'objet sérialisé pour se donner des privilèges d'admini
 
 `a:4:{i:0;i:1;i:1;s:5:"Alice";i:2;s:5:"admin";i:3;s:32:"b6a8b3bea87fe0e05022f8f3c88bc960";}`
 
-## References
+## Références
 
 ### OWASP
 
