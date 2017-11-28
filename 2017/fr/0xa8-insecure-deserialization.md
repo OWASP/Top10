@@ -29,7 +29,7 @@ La seule architecture logiciel sûr est de ne pas accepter les objets sérialis�
 Si ce n'est pas possible, envisagez l'une des solutions suivantes:
 
 * Implémenter des contrôles d'intégrité tels que des signatures numériques sur tous les objets sérialisés pour empêcher la création d'objets dangereux ou la falsification de données.
-* Appliquer des contraintes de typage fort lors de la désérialisation avant la création de l'objet car le code attend généralement un ensemble définissable de classes. Les contournements de cette technique ont été démontrés[REF?], il est donc déconseillé de se fier uniquement à cette technique.
+* Appliquer des contraintes de typage fort lors de la désérialisation avant la création de l'objet car le code attend généralement un ensemble définissable de classes. Les contournements de cette technique ont été démontrés, il est donc déconseillé de se fier uniquement à cette technique.
 * Isoler et exécuter le code qui désérialise dans des environnements à faible privilège lorsque cela est possible.
 * Journaliser les exceptions et échecs de désérialisation, par exemple lorsque le type entrant n'est pas le type attendu, ou que la désérialisation génère des exceptions.
 * Restriction ou surveillance de la connectivité réseau entrante et sortante à partir de conteneurs ou de serveurs utilisé pour la  désérialisation.
@@ -41,7 +41,7 @@ Si ce n'est pas possible, envisagez l'une des solutions suivantes:
 
 
 
-**Scenario #2**: Un forum PHP utilise la sérialisation des objets PHP pour enregistrer un cookie "super", contenant l'ID utilisateur, le rôle, le condensat du mot de passe et les autre attributs de l'utilisateur.
+**Scenario #2**: Un forum utilise la sérialisation des objets PHP pour enregistrer un cookie, contenant l'ID utilisateur, le rôle, le condensat du mot de passe et les autre attributs de l'utilisateur.
 
 `a:4:{i:0;i:132;i:1;s:7:"Mallory";i:2;s:4:"user";i:3;s:32:"b6a8b3bea87fe0e05022f8f3c88bc960";}`
 
