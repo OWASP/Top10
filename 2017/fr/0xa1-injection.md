@@ -15,7 +15,7 @@ Une application est vulnérable quand :
 * des données hostiles sont utilisées directement ou concaténées, par exemple lors de la construction de requête dynamiques, de commandes ou de procédures stockées pour des requêtes SQL ou des commandes OS ;
 * les injections les plus courantes se font dans le SQL, le NoSQL, les commandes OS, le mapping objet - relationnel, le LDAP, l'Expression Language et le Object Graph Navigation Library (OGNL). La façon de faire est la même pour tous les interpréteurs. La revue de code source est la meilleure manière de détecter si une application est vulnérable à l'Injection, suivie de près par le test automatique de toutes les données d'entrée via les paramètres, en-têtes, URL, cookies, JSON, SOAP et XML. Les organisations peuvent tirer profit de la puissance des outils d'analyse statique de code (SAST) ou d'analyse dynamique de l'application (DAST) en les intégrant dans leur chaine d'intégration continue (CI / CD) pour identifier avant déploiement en production les vulnérabilités liées aux injections. 
 
-## Comment prévenir l'injection?
+## Comment empêcher l'injection?
 
 Prévenir l’Injection exige de séparer les données non fiables des commandes et requêtes.
 
@@ -24,7 +24,7 @@ Prévenir l’Injection exige de séparer les données non fiables des commandes
 * Pour les requêtes dynamiques restantes, vous devriez soigneusement échapper les caractères spéciaux en utilisant la syntaxe d’échappement spécifique à l’interpréteur. **Note**: Les structures SQL  telles que les noms de table, les noms de colonne, et d'autres ne peuvent pas être échappées et les noms de structures venant de l'utilisateur doivent donc être considérés comme dangereux. Ceci est un problème courant dans les logiciels d'aide à l'écriture de rapports.
 * Il est conseillé d'utiliser LIMIT et autres contrôles SQL à l'intérieur des requêtes pour empêcher les divulgations massives de données dans le cas d'injection SQL.
 
-## Exemples de scenarios d'attaque
+## Exemples de scénarios d'attaque
 
 **Scenario #1**: L’application utilise des données non fiables dans la construction de l’appel SQL vulnérable suivant:
 
@@ -40,7 +40,7 @@ Dans les deux cas, l'attaquant modifie le paramètre ‘id’ dans son navigateu
 
 Ceci change le sens de chacune des requêtes pour récupérer tous les enregistrements de la table des comptes. Dans le pire des cas, l’attaquant exploite cette faiblesse pour modifier ou détruire des données, ou appeler des procédures stockées de la base de données.
 
-## References
+## Références
 
 ### OWASP
 
