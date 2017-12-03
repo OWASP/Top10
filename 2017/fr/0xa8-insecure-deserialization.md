@@ -11,7 +11,8 @@ Les applications et les API seront vulnérables si elles désérialisent des obj
 
 Cela peut entraîner deux principaux types d'attaques:
 
-* Attaques liées à la structure des données et de l'objet, dans lesquelles l'attaquant modifie la logique de l'application ou parvient à éxécuter du code à distance. Pour cela, il doit exister des classes dans l'application qui peuvent changer de comportement pendant ou après la désérialisation.
+* Attaques liées aux objets et à la structure de données où l'attaquant modifie la logique de l'application ou exécute du code arbitraire. Pour cela, il doit exister des classes dans l'application qui peuvent modifier le comportement pendant ou après la désérialisation.
+
 * Attaques par falsification de données lorsque des structures sérialisées sont utilisées pour du contrôle d'accès et que le contenu est modifié par l'attaquant.
 
 La sérialisation peut être utilisée dans des applications pour:
