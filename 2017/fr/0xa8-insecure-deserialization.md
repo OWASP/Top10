@@ -5,13 +5,13 @@
 | Niveau d'accès : Exploitation 1 | Fréquence 2 : Détection 2 | Technique 3 : Métier |
 | Il arrive que l'exploitation d'une désérialisation soit difficile car les codes d'exploitation génériques fonctionnent rarement sans une adaptation à l'application ciblée. | Cette vulnérabilité est incluse dans le Top 10 [sur la base d'un questionnaire rempli par des professionnels de la sécurité](https://owasp.blogspot.com/2017/08/owasp-top-10-2017-project-update.html) et non sur des données quantifiables. Certains outils peuvent détecter des erreurs de désérialisation, mais une assistance humaine est souvent nécessaire pour valider le problème. Il faut s'attendre à une augmentation des défauts de désérialisation trouvés dans les applications à mesure que des outils sont développés pour aider à les identifier et à y remédier. | L'impact des erreurs de désérialisation ne doit pas être sous-estimé. Ces failles peuvent conduire à des attaques d'exécution de code à distance, l'une des attaques les plus graves qui soient. L'impact métier dépend des besoins de protection de l'application et des données. |
 
-## Suis-je vulnérable aux défauts de désérialisation? 
+## Suis-je vulnérable aux défauts de désérialisation?
 
-Les applications et les API sont vulnérables si elles désérialisent des objets sous le contrôle d'un attaquant.
+Les applications et les API seront vulnérables si elles désérialisent des objets hostiles ou altérés fournis par un attaquant.
 
 Cela peut entraîner deux principaux types d'attaques:
 
-* Attaques liées aux objets et à la structure de données où l'attaquant modifie la logique de l'application ou exécute du code arbitraire. Pour cela, il doit exister des classes dans l'application qui peuvent modifier le comportement pendant ou après la désérialisation.
+* Attaques liées à la structure des données et de l'objet, dans lesquelles l'attaquant modifie la logique de l'application ou parvient à éxécuter du code à distance. Pour cela, il doit exister des classes dans l'application qui peuvent changer de comportement pendant ou après la désérialisation.
 * Attaques par falsification de données lorsque des structures sérialisées sont utilisées pour du contrôle d'accès et que le contenu est modifié par l'attaquant.
 
 La sérialisation peut être utilisée dans des applications pour:
@@ -24,20 +24,20 @@ La sérialisation peut être utilisée dans des applications pour:
 
 ## Comment l'empêcher
 
-La seule architecture logicielle sûre est de ne pas accepter les objets sérialisés provenant de sources non fiables ou d'utiliser des supports de sérialisation qui autorisent uniquement les types de données de bases.
+La seule architecture logicielle sûre est de ne pas accepter les objets sérialisés provenant de sources non fiables ou d'utiliser des supports de sérialisation qui autorisent uniquement les types de données primitifs.
 
 Si ce n'est pas possible, envisagez l'une des solutions suivantes:
 
 * Implémenter des contrôles d'intégrité tels que des signatures numériques sur tous les objets sérialisés pour empêcher la création d'objets dangereux ou la falsification de données.
-* Appliquer des contraintes de typage fort lors de la désérialisation avant la création de l'objet car le code attend généralement un ensemble définissable de classes. Les contournements de cette technique ont été démontrés, il est donc déconseillé de se fier uniquement à cette technique.
+* Appliquer des contraintes de typage fort lors de la désérialisation avant la création de l'objet car le code attend généralement un ensemble définissable de classes. Des contournements de cette technique ont été démontrés, il est donc déconseillé de se fier uniquement à elle.
 * Isoler et exécuter le code qui désérialise dans des environnements à faible privilège lorsque cela est possible.
 * Journaliser les exceptions et échecs de désérialisation, par exemple lorsque le type entrant n'est pas le type attendu, ou que la désérialisation génère des exceptions.
-* Restriction ou surveillance de la connectivité réseau entrante et sortante à partir de conteneurs ou de serveurs utilisés pour la  désérialisation.
-* Suivi de la désérialisation, alerter si un utilisateur désérialise constamment.
+* Restreindre ou surveiller la connectivité réseau entrante et sortante des conteneurs ou des serveurs utilisés pour la désérialisation.
+* Faire une surveillance des désérialisations, alerter si un utilisateur désérialise constamment.
 
 ## Exemples de scénarios d'attaque
 
-**Scenario #1**: Une application React appelle un ensemble de microservices Spring Boot. En tant que programmeurs fonctionnels, ils essaient de s'assurer que leur code est immuable. La solution qu'ils ont trouvée consiste à sérialiser l'état de l'utilisateur et à le transmettre à chaque requête. Un attaquant remarque la signature d'objet Java "R00" et utilise [l'outil Java Serial Killer](https://github.com/NetSPI/JavaSerialKiller) pour effectuer une exécution de code à distance sur le serveur d'applications.
+**Scenario #1**: Une application React appelle un ensemble de microservices Spring Boot. Sensibles à la programmation fonctionnelle, les développeurs essaient de s'assurer que leur code est immutable. La solution qu'ils ont trouvée consiste à sérialiser l'état de l'utilisateur et à le transmettre à chaque requête. Un attaquant remarque la signature d'objet Java "R00" et utilise [l'outil Java Serial Killer](https://github.com/NetSPI/JavaSerialKiller) pour effectuer une exécution de code à distance sur le serveur d'applications.
 
 
 
