@@ -3,12 +3,12 @@
 | Threat agents/Attack vectors | Security Weakness           | Impacts               |
 | -- | -- | -- |
 | Access Lvl : Exploitability 3 | Prevalence 2 : Detectability 2 | Technical 3 : Business |
-| Les attaques ont des accès à des centaines de millions de combinaisons de logins et mot de passe, des comptes par défaut d’administration, d’outils de brute force automatisés, Les attaques de gestion de session sont bien comprises, en particulier en ce qui concerne les jetons de sessions non expirés. |
-Le prévalence de la violation de l’authentification  est généralement liée à une erreur de conception ou de mise en œuvre dans la plupart des contrôles d’identités et d’accès. La gestion des sessions est la base  de l’authentification et du contrôle d’accès. Les attaquants peuvent détecteur une violation de l’authentification avec des tests manuels et les exploiter avec des outils automatisés utilisant des listes de mots de passe et des attaques par dictionnaires. | Les attaquants doivent avoir accès à seulement quelques comptes ou à un seul compte admin pour compromettre le système. Selon le domaine de l'application, cela peut permettre le blanchiment d'argent, la fraude à la sécurité sociale et le vol d'identité, ou divulguer des informations hautement sensibles protégées par la loi. |
+| Les attaquants ont des accès à des centaines de millions de combinaisons de logins et mot de passe, des comptes par défaut d’administration, d’outils de brute force automatisés, Les attaques de gestion de session sont bien connues, en particulier en ce qui concerne les jetons de sessions non expirés. |
+Le prévalence de la violation de l’authentification est généralement liée à une erreur de conception ou de mise en œuvre dans la plupart des contrôles d’identités et d’accès. La gestion des sessions est la base  de l’authentification et du contrôle d’accès. Les attaquants peuvent détecter une violation de l’authentification avec des tests manuels et les exploiter avec des outils automatisés utilisant des listes de mots de passe et des attaques par dictionnaires. | Les attaquants doivent avoir accès à seulement quelques comptes ou à un seul compte admin pour compromettre le système. Selon le domaine de l'application, cela peut permettre le blanchiment d'argent, une fraude à la sécurité sociale et le vol d'identité, ou divulguer des informations hautement sensibles protégées par la loi. |
 
 ## Is the Application Vulnerable?
 
-La confirmation de l'identité, de l'authentification et de la session de l'utilisateur est essentielle pour protéger attaques liées à l'authentification. 
+La confirmation de l'identité, de l'authentification et de la session de l'utilisateur est essentielle pour se protéger des attaques liées à l'authentification. 
 
 Il peut y avoir des faiblesses d'authentification si l'application:
 
@@ -16,7 +16,6 @@ Il peut y avoir des faiblesses d'authentification si l'application:
 * Permet le force brute ou d'autres attaques automatisées
 * Autorise les mots de passe par défaut, faibles ou bien connus, tels que "Password1" ou "admin / admin".
 * Utilise des processus de récupération des informations d'identification faibles ou inefficaces et des processus de mot de passe oublié, tels que « "knowledge-based answers" », qui ne peuvent être sécurisées.
-
 * Utilise des mots de passe en texte brut, cryptés ou faiblement hachés (voir A3: Exposition de données sensibles 2017).
 * Absence ou utilisation inefficace de l’authentification multi-facteur.
 * Exposition des IDs de session dans l'URL. (ex: réécriture)
@@ -30,16 +29,15 @@ Il peut y avoir des faiblesses d'authentification si l'application:
 * Intégrer des tests de mots de passes faibles, à la création ou au changement. Comparé ce mot de passe avec la liste des [top 10000 mots de passe faibles](https://github.com/danielmiessler/SecLists/tree/master/Passwords).  
 * Respecter la longueur, la complexité et la rotation des mots de passe par rapport aux directives [NIST 800-63 B à la section 5.1.1](https://pages.nist.gov/800-63-3/sp800-63b.html#memsecret) 
 NIST 800-63 B à la section 5.1.1 ou autre directives modernes
-Align password length, complexity and rotation policies with or other modern, evidence based password policies.
 * Assurez-vous que l'inscription, la récupération des informations d'identification et les chemins d'accès aux API sont durci contre les attaques d'énumération de compte en utilisant le mêmes messages pour tous les résultats
 * Limiter ou retarder de plus en plus les tentatives de connexions infructueuses. Enregistrer tous les échecs et alerter les administrateurs lors du bourrage des informations d'identification, de brute force ou d'autres attaques détectées.
  * Utilisez un gestionnaire de session intégré et sécurisé côté serveur qui génère un nouvel ID de session aléatoire avec une entropie élevée après la connexion. Les ID de session ne doivent pas se trouver dans l'URL, ils doivent être stockés de manière sécurisée et être invalidés après la déconnexion, inactivité et une certaine durée. 
  
 ## Example Attack Scenarios
 
-Scenario #1: La réutilisation de mots de passe, l’utilisation de mots de passe connus, est une attaque classique. Si une application n’implémente une protection automatisée contre cela XXXXX oracle XXXX ?[Credential stuffing](https://www.owasp.org/index.php/Credential_stuffing), the use of [lists of known passwords](https://github.com/danielmiessler/SecLists), is a common attack. If an application does not implement automated threat or credential stuffing protections, the application can be used as a password oracle to determine if the credentials are valid.
+Scenario #1: La réutilisation de mots de passe, l’utilisation de mots de passe connus, est une attaque classique. Si une application n’implémente une protection automatisée contre cela XXXXX oracle????? XXXX ?[Credential stuffing](https://www.owasp.org/index.php/Credential_stuffing), the use of [lists of known passwords](https://github.com/danielmiessler/SecLists), TO REMOVE // is a common attack. If an application does not implement automated threat or credential stuffing protections, the application can be used as a password oracle to determine if the credentials are valid. TO REMOVE
 
-**Scenario #2**: La plupart des attaques d’authentification se produisent en raison de l’utilisation contenu de mots de passe comme facteur unique. Une fois considéré, les exigences de rotation et de complexité des mots de passe sont considérées comme encourageant les utilisateur à utiliser et réutiliser des mots de passe faibles. Il est maintenant recommandé d’arrèter ces pratiques NIST 800-63 et d’utiliser du multifacteur.
+**Scenario #2**: La plupart des attaques d’authentification se produisent en raison de l’utilisation de mots de passe comme facteur unique. Une fois considéré, les exigences de rotation et de complexité des mots de passe sont considérées comme encourageant les utilisateur à utiliser et réutiliser des mots de passe faibles. Il est maintenant recommandé d’arrèter ces pratiques NIST 800-63 et d’utiliser du multifacteur.
 
 **Scenario #3**: Les timeouts de session d’application ne sont pas paramétrés correctement. Un utilisateur utilise un ordinateur public pour accéder à une application. A la place de se déconnecter correctement, l’utilisateur ferme le navigateur et quitte l’ordinateur. Un attaques utilise ensuite le même navigateur quelques temps après et l’utilisateur est toujours authentifié. 
 
