@@ -1,13 +1,13 @@
-# A3:2017 Sensitive Data Exposure
+# A3:2017 Exposition de données sensibles
 
-| Threat agents/Attack vectors | Security Weakness | Impacts |
+| Facteurs de Menace/Vecteurs d'Attaque | Vulnérabilité | Impacts Techniques |
 | -- | -- | -- |
-| Access Lvl : Exploitability 2 | Prevalence 3 : Detectability 2 | Technical 3 : Business |
-| Rather than directly attacking crypto, attackers steal keys, execute man-in-the-middle attacks, or steal clear text data off the server, while in transit, or from the user’s client, e.g. browser. A manual attack is generally required. Previously retrieved password databases could be brute forced by Graphics Processing Units (GPUs). | Over the last few years, this has been the most common impactful attack. The most common flaw is simply not encrypting sensitive data. When crypto is employed, weak key generation and management, and weak algorithm, protocol and cipher usage is common, particularly for weak password hashing storage techniques. For data in transit, server side weaknesses are mainly easy to detect, but hard for data at rest. | Failure frequently compromises all data that should have been protected. Typically, this information includes sensitive personal information (PII) data such as health records, credentials, personal data, and credit cards, which often require protection as defined by laws or regulations such as the EU GDPR or local privacy laws. |
+| Niveau d'accès : Exploitation 2 | Fréquence 3 : Détection 2 | Impact 3 : Métier |
+| La cryptanalyse (cassage de l’algorithme ou de la clé) reste rare. On préfère obtenir les clefs, effectuer des attaques du type man-in-the-middle, accéder aux données en clair sur le serveur, en transit, ou depuis le client de l'utilisateur, par exemple le navigateur. Une attaque manuelle est requise dans la majorité des cas. Des bases de données de mots de passe précédemment récupérées peuvent étre brute forcées par des processeurs graphiques (GPU). | Au cours des dernières années, cela a été l'attaque impactante la plus courante. La principale erreur est de ne pas chiffrer les données sensibles. Les autres erreurs fréquentes sont: génération de clés faibles, choix et configuration incorrects des algorithmes et protection insuffisante des mots de passe. En ce qui concerne les données en transit, les faiblesses côté serveur sont pour la plupart faciles à détecter. C'est plus difficile pour les données déjà stockées. | L’exploitation peut résulter en la compromission ou la perte de données personnelles, médicales, financières, d’éléments de cartes de crédit ou d’authentification. Ces données nécessitent souvent une protection telle que définie par le Règlement Général sur la Protection des Données ou les lois locales sur la vie privée. |
 
-## Is the Application Vulnerable?
+## Suis-je vulnérable ?
 
-The first thing is to determine the protection needs of data in transit and at rest. For example, passwords, credit card numbers, health records, personal information and business secrets require extra protection, particularly if that data falls under privacy laws, e.g. EU's General Data Protection Regulation (GDPR), or regulations, e.g. financial data protection such as PCI Data Security Standard (PCI DSS). For all such data:
+Déterminer d’abord quelles données doivent bénéficier d’une protection cryptographique (mots de passe, données patient, numéros de cartes, données personnelles, etc.), lors de leur transfert et/ou leur stockage. Pour chacune de ces données :
 
 * Is any data transmitted in clear text? This concerns protocols such as HTTP, SMTP, and FTP. External internet traffic is especially dangerous. Verify all internal traffic e.g. between load balancers, web servers, or back-end systems.
 * Are any old or weak cryptographic algorithms used either by default or in older code? 
