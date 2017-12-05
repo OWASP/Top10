@@ -1,26 +1,29 @@
-## Foreword
+## 前書き
 
-Insecure software is undermining our financial, healthcare, defense, energy, and other critical infrastructure. As our software becomes increasingly complex, and connected, the difficulty of achieving application security increases exponentially. The rapid pace of modern software development processes makes the most common risks essential to discover and resolve quickly and accurately. We can no longer afford to tolerate relatively simple security problems like those presented in this OWASP Top 10.
+セキュアでないソフトウェアは財務、医療、防衛、エネルギーおよびその他の重要なインフラを損ないます。ソフトウェアはますます複雑になり、つながるにつれて、アプリケーションセキュリティを成し遂げることの難しさは、いわば指数関数的に増加しています。モダンなソフトウェア開発プロセスの急速な進歩は、最も共通するリスクを迅速かつ正確に発見し解決することを不可欠なものとしたのです。我々にはもはや、このOWASP Top 10に示されるような比較的シンプルなセキュリティ問題に耐える余裕などありません。
 
-A great deal of feedback was received during the creation of the OWASP Top 10 - 2017, more than for any other equivalent OWASP effort. This shows how much passion the community has for the OWASP Top 10, and thus how critical it is for OWASP to get the Top 10 right for the majority of use cases.
 
-Although the original goal of the OWASP Top 10 project was simply to raise awareness amongst developers and managers, it has become the de facto application security standard. 
+OWASP Top 10 - 2017の制作中に、多くのフィードバックを受け取りました。それらは、他の同様のOWASPプロジェクトに関する努力に勝るものでした。これは、コミュニティがこのOWASP Top 10にどれほどの情熱があるかを示しており、したがってOWASPにとって、大多数の活用にとってTop 10が適切なものにすることがどれほど重要なことであるかを示しています。
 
-In this release, issues and recommendations are written concisely and in a testable way to assist with the adoption of the OWASP Top 10 in application security programs. We encourage large and high performing organizations to use the [OWASP Application Security Verification Standard (ASVS)](https://www.owasp.org/index.php/ASVS) if a true standard is required, but for most, the OWASP Top 10 is a great start on the application security journey.
+OWASP Top 10プロジェクトの当初の目標は、シンプルに開発者やマネージャーの意識を高めることでしたが、いまやTop 10は事実上のアプリケーションセキュリティのスタンダードとなってきました。
 
-We have written up a range of suggested next steps for different users of the OWASP Top 10, including "What's Next for Developers", "What's Next for Security Testers", "What's Next for Organizations“, which is suitable for CIOs and CISOs, and "What's Next for Application Managers", which is suitable for application managers or anyone responsible for the lifecycle of the application.
+このリリースにおいて、アプリケーションセキュリティにかかわる問題や改善提案は、簡潔かつ確認できる方法で記載されており、さまざまなアプリケーションセキュリティ計画において、OWASP Top 10の採用を促進するものとなっています。
 
-In the long term, we encourage all software development teams and organizations to create an application security program that is compatible with your culture and technology. These programs come in all shapes and sizes. Leverage your organization's existing strengths to measure and improve your application security program using the Software Assurance Maturity Model.
+大規模な組織や、セキュリティの取り組みにおいて高いレベルの組織において、本当に標準が求められているような場合には、[OWASP Application Security Verification Standard (ASVS)](https://www.owasp.org/index.php/ASVS) を使うようお勧めします。しかし、ほとんどの場合、OWASP Top 10がアプリケーションセキュリティを始めるのに良いスタートとなります。
 
-We hope that the OWASP Top 10 is useful to your application security efforts. Please don't hesitate to contact OWASP with your questions, comments, and ideas at our GitHub project repository:
+OWASP Top 10のさまざまなユーザーに対して、次のステップを提案しています。「開発者の次のステップ」、「セキュリティチームの次のステップ」、「セキュリティテストチームの次のステップ」、CIOやCISOに適した「組織にとっての次のステップ」、アプリケーションマネージャやアプリケーションのライフサイクルの責任を持つ人に適した「アプリケーションマネージャの次のステップ」です。
+
+長期的には、あらゆるソフトウェア開発チームと組織が、それぞれのカルチャーとテクノロジーに適合したアプリケーションセキュリティプログラムを創造していくようお勧めします。さまざまな形や規模のプログラムがあります。組織が今持っている強みを活かしながら、SAMM (ソフトウェア品質成熟度モデル)を用いてアプリケーションセキュリティプログラムを計測し、改善してください。
+
+OWASP Top 10がアプリケーションセキュリティに関わる努力に役立って欲しいと考えています。質問やコメント、またアイデアがあればOWASPに遠慮なくお知らせください。Githubプロジェクトレポジトリはこちらです: 
 
 * [https://github.com/OWASP/Top10/issues](https://github.com/OWASP/Top10/issues)
 
-You can find the OWASP Top 10 project and translations here:
+OWASP Top 10プロジェクトと翻訳はこちらです:
 
 * [https://www.owasp.org/index.php/top10](https://www.owasp.org/index.php/top10)
 
-Lastly, we wish to thank the founding leadership of the OWASP Top 10 project, Dave Wichers and Jeff Williams, for all their efforts, and believing in us to get this finished with the community's help. Thank you!
+最後に、OWASP Top 10 プロジェクトのリーダーシップを創設した Dave Wichers とJeff Williamsのすべてのご尽力と、コミュニティの助けがあればこれをやり遂げられると私たちチームを信じてくれたことに感謝を述べたいと思います。
 
 * Andrew van der Stock
 * Brian Glas
@@ -28,6 +31,6 @@ Lastly, we wish to thank the founding leadership of the OWASP Top 10 project, Da
 * Torsten Gigler
 
 ## Attribution
-Thanks to [Autodesk](https://www.autodesk.com) for sponsoring the OWASP Top 10 - 2017.
+OWASP Top 10 - 2017のスポンサー [Autodesk](https://www.autodesk.com) 社に感謝します。
 
-Organizations and individuals that have provided vulnerability prevalence data or other assistance are listed on the [Acknowledgements page](0xd1-data-contributors.md).
+脆弱性の蔓延状況を示すデータやその他のご助力を提供してくださった組織ならびに個人はこちらのリストに記載しました。 [Acknowledgements page](0xd1-data-contributors.md).
