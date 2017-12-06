@@ -1,8 +1,6 @@
-# Acknowledgements
-
-## Acknowledgements to Data Contributors
-
-We'd like to thank the many organizations that contributed their vulnerability data to support the 2017 update:
+# +ACK 謝辞
+## データコントリビューターに対する謝辞
+Top 10 2017の作成に際して、脆弱性の情報を提供してくださった以下の組織に対して感謝の意を表します。
 
 * ANCAP
 * Aspect Security
@@ -47,12 +45,11 @@ We'd like to thank the many organizations that contributed their vulnerability d
 * Vantage Point
 * Veracode
 * Web.com
-w
-For the first time, all the data contributed to a Top 10 release, and the full list of contributors is [publicly available](https://github.com/OWASP/Top10/tree/master/2017/datacall/submissions).
 
-## Acknowledgements to Individual Contributors
+データコントリビューターの一覧は一般公開されています。	
 
-We’d like to thank the individual contributors who spent many hours collectively contributing to the Top 10 in GitHub.
+##個人のコントリビューターに対する謝辞
+GitHubにおいてTop 10に貢献するために多くの時間を費やした以下の個人のコントリビューター及びTwitter、電子メール、その他の手段で貢献してくださった方々に感謝の意を表します。
 
 * ak47gen
 * alonergan
@@ -131,6 +128,4 @@ We’d like to thank the individual contributors who spent many hours collective
 * vdbaan
 * yohgaki
 
-And everyone else who provided feedback via Twitter, email, and other means.
-
-We would be remiss not to mention that Dirk Wetter, Jim Manico, and Osama Elnaggar have provided extensive assistance. Also, Chris Frohoff and Gabriel Lawrence provided invaluable support in the writing of the new A8:2017-Insecure Deserialization risk.
+Dirk Wetter、Jim Manico、Osama Elnaggarhaveからは多大なる支援をしていただきました。また、Chris Frohoffand Gabriel LawrenceはA8：2017-Insecure Deserialization riskの執筆において貴重なサポートをしていただきました。
