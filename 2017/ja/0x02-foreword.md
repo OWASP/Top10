@@ -30,7 +30,7 @@ OWASP Top 10プロジェクトと翻訳はこちらです:
 * Neil Smithline
 * Torsten Gigler
 
-## Attribution
+## プロジェクトのスポンサー
 OWASP Top 10 - 2017のスポンサー [Autodesk](https://www.autodesk.com) 社に感謝します。
 
 脆弱性の蔓延状況を示すデータやその他のご助力を提供してくださった組織ならびに個人はこちらのリストに記載しました。 [Acknowledgements page](0xd1-data-contributors.md).

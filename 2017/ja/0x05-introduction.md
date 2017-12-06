@@ -1,6 +1,6 @@
-# I Introduction
+# I 導入
 
-## Welcome to the OWASP Top 10 - 2017
+## OWASP Top 10 - 2017へようこそ
 
 This major update adds several new issues, including two issues selected by the community - A8:2017-Insecure Deserialization and A10:2017-Insufficient Logging and Monitoring. Two key differentiators from previous OWASP Top 10 releases are the substantial community feedback and extensive data assembled from dozens of organizations, possibly the largest amount of data ever assembled in the preparation of an application security standard. This provides us with confidence that the new OWASP Top 10 addresses the most impactful application security risks currently facing organizations.
 
@@ -8,19 +8,19 @@ The OWASP Top 10 for 2017 is based primarily on 40+ data submissions from firms 
 
 A primary aim of the OWASP Top 10 is to educate developers, designers, architects, managers, and organizations about the consequences of the most common and most important web application security weaknesses. The Top 10 provides basic techniques to protect against these high risk problem areas, and provides guidance on where to go from here.
 
-## Roadmap for future activities
+## 将来版へのロードマップ
 
-**Don't stop at 10**. There are hundreds of issues that could affect the overall security of a web application as discussed in the [OWASP Developer's Guide](https://www.owasp.org/index.php/OWASP_Guide_Project) and the [OWASP Cheat Sheet Series](https://www.owasp.org/index.php/Category:Cheatsheets). These are essential reading for anyone developing web applications and APIs. Guidance on how to effectively find vulnerabilities in web applications and APIs is provided in the [OWASP Testing Guide](https://www.owasp.org/index.php/OWASP_Testing_Project).
+**10までで止めない**. There are hundreds of issues that could affect the overall security of a web application as discussed in the [OWASP Developer's Guide](https://www.owasp.org/index.php/OWASP_Guide_Project) and the [OWASP Cheat Sheet Series](https://www.owasp.org/index.php/Category:Cheatsheets). These are essential reading for anyone developing web applications and APIs. Guidance on how to effectively find vulnerabilities in web applications and APIs is provided in the [OWASP Testing Guide](https://www.owasp.org/index.php/OWASP_Testing_Project).
 
-**Constant change**. The OWASP Top 10 will continue to change. Even without changing a single line of your application's code, you may become vulnerable as new flaws are discovered and attack methods are refined. Please review the advice at the end of the Top 10 in What's Next For Developers, Testers, Organizations and Application Managers for more information.
+**定期的な変更**. The OWASP Top 10 will continue to change. Even without changing a single line of your application's code, you may become vulnerable as new flaws are discovered and attack methods are refined. Please review the advice at the end of the Top 10 in What's Next For Developers, Testers, Organizations and Application Managers for more information.
 
-**Think positive**. When you're ready to stop chasing vulnerabilities and focus on establishing strong application security controls, the [OWASP Proactive Controls](https://www.owasp.org/index.php/OWASP_Proactive_Controls) project provides a starting point to help developers build security into their applications and the [OWASP Application Security Verification Standard (ASVS)](https://www.owasp.org/index.php/ASVS) is a guide for organizations and application reviewers on what to verify.
+**積極的な思考**. When you're ready to stop chasing vulnerabilities and focus on establishing strong application security controls, the [OWASP Proactive Controls](https://www.owasp.org/index.php/OWASP_Proactive_Controls) project provides a starting point to help developers build security into their applications and the [OWASP Application Security Verification Standard (ASVS)](https://www.owasp.org/index.php/ASVS) is a guide for organizations and application reviewers on what to verify.
 
-**Use tools wisely**. Security vulnerabilities can be quite complex and deeply buried in code. In many cases, the most cost-effective approach for finding and eliminating these weaknesses is human experts armed with advanced tools. Relying on tools alone provides a false sense of security and is not recommended.
+**賢明なツール活用**. Security vulnerabilities can be quite complex and deeply buried in code. In many cases, the most cost-effective approach for finding and eliminating these weaknesses is human experts armed with advanced tools. Relying on tools alone provides a false sense of security and is not recommended.
 
-**Push left, right, and everywhere**. Focus on making security an integral part of your culture throughout your development organization. Find out more in the [OWASP Software Assurance Maturity Model (SAMM)](https://www.owasp.org/index.php/OWASP_SAMM_Project).
+**左へ右へ、どこへでも進める**. Focus on making security an integral part of your culture throughout your development organization. Find out more in the [OWASP Software Assurance Maturity Model (SAMM)](https://www.owasp.org/index.php/OWASP_SAMM_Project).
 
-## Attribution
+## 謝辞
 
 We'd like to thank the organizations that contributed their vulnerability data to support the 2017 update. We received more than 40 responses to the call for data. For the first time, all the data contributed to a Top 10 release, and the full list of contributors, is publicly available. We believe this is one of the larger, more diverse collections of vulnerability data ever collected publicly.
 
