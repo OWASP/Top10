@@ -1,30 +1,30 @@
-# RN Release Notes
+# RN リリースノート
 
-## What changed from 2013 to 2017?
+## 2013年版から2017年版への変更点
 
-Change has accelerated over the last four years, and the OWASP Top 10 needed to change. We've completely refactored the OWASP Top 10, revamped the methodology, utilized a new data call process, worked with the community, re-ordered our risks, re-written each risk from the ground up, and added references to frameworks and languages that are now commonly used.
+前のバージョンから4年以上、世の中の変化は加速してきたため、OWASP Top 10 は変更を必要とされています。我々は、OWASP Top 10をすっかりリファクタリングし、手法を改良し、新しいデータ募集のプロセスを活用し、コミュニティと協働し、リスクを評価し直し、それぞれのリスクを一から書き直し、一般に利用されているフレームワークや言語への参照を追加しています。
 
-Over the last few years, the fundamental technology and architecture of applications has changed significantly:
+ここ数年で、アプリケーションの基本的な技術とアーキテクチャは大きく変わりました:
 
-* Microservices written in node.js and Spring Boot are replacing traditional monolithic applications. Microservices come with their own security challenges including establishing trust between microservices, containers, secret management, etc. Old code never expected to be accessible from the Internet is now sitting behind an API or RESTful web service to be consumed by Single Page Applications (SPAs) and mobile applications. Architectural assumptions by the code, such as trusted callers, are no longer valid.
-* Single page applications, written in JavaScript frameworks such as Angular and React, allow the creation of highly modular feature-rich front ends. Client-side functionality that has traditionally been delivered server-side brings its own security challenges.
-* JavaScript is now the primary language of the web with node.js running server side and modern web frameworks such as Bootstrap, Electron, Angular, and React running on the client.
+* 従来のモノリシックアプリケーションからnode.jsやSpring Bootで書かれたマイクロサービスに置き換わっています。 マイクロサービスには独自のセキュリティ上の課題があります。例えば、マイクロサービス、コンテナ、機密管理などの間の信頼関係の確立、などがあります。インターネットからアクセス不可能だと期待されている古いコードは、現在、シングルページアプリケーション（SPA）やモバイルアプリケーションによって使いまくられているAPI や RESTful Webサービスの背後に居座っています。コードによるアーキテクチャの前提、たとえば信頼できる発信者のような前提はもはや有効ではありません。
+* AngularやReactなどのJavaScriptフレームワークで書かれたシングルページアプリケーションによって、モジュール化された機能豊富なフロントエンドの開発ができるようになりました。従来、サーバー側で提供されてきた機能がクライアント側の機能に移るため、それはそれで独自のセキュリティ上の課題となります。
+* JavaScriptはいまやWebの主要言語であり、サーバー側で実行されるnode.jsや、クライアントで動作するBootstrap、Electron、Angular、Reactなどの今どきのWebフレームワークで用いられています。
 
-## New issues, supported by data
+## データに裏付けられた新しい問題
 
-* **A4:2017-XML External Entities (XXE)** is a new category primarily supported by source code analysis security testing tools ([SAST](https://www.owasp.org/index.php/Source_Code_Analysis_Tools)) data sets.
+* **A4:2017-XML 外部エンティティ参照 (XXE)** は、新しいカテゴリです。主にソースコード分析を行うセキュリティテストツール([SAST](https://www.owasp.org/index.php/Source_Code_Analysis_Tools))から寄せられたデータが根拠となっています。
 
-## New issues, supported by the community
+## コミュニティにより裏付けられた新しい問題
 
-We asked the community to provide insight into two forward looking weakness categories. After over 500 peer submissions, and removing issues that were already supported by data (such as Sensitive Data Exposure and XXE), the two new issues are: 
+コミュニティに向けて、2つのセキュリティ上の弱点に関する見識を提供してくれるよう求めました。500を超える意見をいただき、すでにデータによる裏付けのある問題(機微情報の漏洩とXXE)を除き、二つの新しい問題があります: 
 
-* **A8:2017-Insecure Deserialization**, which permits remote code execution or sensitive object manipulation on affected platforms.
-* **A10:2017-Insufficient Logging and Monitoring**, the lack of which can prevent or significantly delay malicious activity and breach detection, incident response, and digital forensics.
+* **A8:2017-安全でないデシリアライズ**, この問題のある環境ではリモートからのコード実行や機微なオブジェクト操作が可能になります。
+* **A10:2017-不十分なログ取得とモニタリング**, この機能の欠落は、不正な活動やセキュリティ違反の検知、インシデント対応、デジタルフォレンジックを妨げるか、あるいは大幅に遅延させる可能性があります。
 
-## Merged or retired, but not forgotten
+## 統合、引退。ただし、忘れて良いという意味ではない
 
-* **A4-Insecure Direct Object References** and **A7-Missing Function Level Access Control** merged into **A5:2017-Broken Access Control**.
-* **A8-Cross-Site Request Forgery (CSRF)**, as many frameworks include [CSRF defenses](https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)), it was found in only 5% of applications.
-* **A10-Unvalidated Redirects and Forwards**, while found in approximately in 8% of applications, it was edged out overall by XXE.
+* **A4-安全でないオブジェクト直接参照** と **A7-機能レベルアクセス制御の欠落** は、**A5:2017-不完全なアクセスコントロール**にマージされました。
+* **A8-クロスサイトリクエストフォージェリ (CSRF)**は、多くのフレームワークがこの対策を講じており [CSRF defenses](https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF))、アプリケーションの5%程度でのみ観察されています。
+* **A10-未検証のリダクレクトとフォワード**は、アプリケーションのおよそ8%で観察されており、XXEが入ったことにより、外れることになりました。
 
 ![0x06-release-notes-1](images/0x06-release-notes-1.png)

@@ -1,41 +1,30 @@
-# Risk - Application Security Risks
+# アプリケーションのセキュリティリスク
 
-## What Are Application Security Risks?
+## アプリケーションのセキュリティリスクについて
+攻撃者はアプリケーションを介して様々な経路で、ビジネスや組織に被害を及ぼします。それぞれの経路は、注意を喚起すべき深刻なリスクやそれほど深刻ではないリスクを表しています。 
 
-Attackers can potentially use many different paths through your application to do harm to your business or organization. Each of these paths represents a risk that may, or may not, be serious enough to warrant attention.
+これらの経路の中には、検出や悪用がしやすいものと、検出や悪用がしにくいのもあります。同様に、引き起こされる被害についても、ビジネスに影響がないこともあれば、破産にまで追い込まれることもあります。組織におけるリスクを判断するためにまず、それぞれの「脅威となるエージェント」、「攻撃手法」、「セキュリティ上の弱点」などに関する可能性を評価し、組織に対する「技術的影響」と「ビシネスへの影響」を考慮してみてください。最後に、これら全てのファクターに基づき、リスクの全体像を決定してください。 
 
-![App Security Risks](images/0x10-risk-1.png)
 
-Sometimes these paths are trivial to find and exploit, and sometimes they are extremely difficult. Similarly, the harm that is caused may be of no consequence, or it may put you out of business. To determine the risk to your organization, you can evaluate the likelihood associated with each threat agent, attack vector, and security weakness and combine it with an estimate of the technical and business impact to your organization. Together, these factors determine your overall risk.
+## あなたにとってのリスク
 
-## What's My Risk
+OWASP Top 10は、多様な組織のために、最も重大なウェブアプリケーションセキュリティリスクを特定することに焦点を当てています。これらのリスクに関して、OWASP Risk Rating Methodologyに基づいた以下の格付手法により、発生可能性と技術的な影響について評価します。  
 
-The [OWASP Top 10](https://www.owasp.org/index.php/Top10) focuses on identifying the most serious web application security risks for a broad array of organizations. For each of these risks, we provide generic information about likelihood and technical impact using the following simple ratings scheme, which is based on the OWASP Risk Rating Methodology.  
+OWASP Risk Rating Methodologyでは、各リスクに関する発生可能性や影響度を算出するリスク格付方法をアップデートしています。詳細は「リスクについて」を参照してください。
+各組織はユニークであるため、侵害において脅威を引き起こすアクター、目標、影響度も各組織でユニークでしょう。
+公共の利益団体において公開情報をCMSにより管理している場合や、医療システムにおいてセンシティブな健康記録を管理するために同じようなCMSを利用している場合に、同じソフトウェアであっても脅威を引き起こすアクターやビジネスへの影響は大きく異なります。そのため、脅威エージェントやビジネスへの影響に基づき、組織におけるリスクを理解することが重要です。
+Top 10におけるリスクは、理解の促進及び混乱を招くことを避けるため、可能な限りCWEに沿った名称としています。
 
-| Threat Agents | Exploitability | Weakness Prevalence | Weakness Detectability | Technical Impacts | Business Impacts |
-| -- | -- | -- | -- | -- | -- |
-| Appli-   | Easy 3 | Widespread 3 | Easy 3 | Severe 3 | Business     |
-| cation   | Average 2 | Common 2 | Average 2 | Moderate 2 | Specific |
-| Specific | Difficult 1 | Uncommon 1 | Difficult 1 | Minor 1 |       |
-
-In this edition, we have updated the risk rating system to assist in calculating the likelihood and impact of any given risk. For more details, please see [Note About Risks](0xc0-note-about-risks.md). 
-
-Each organization is unique, and so are the threat actors for that organization, their goals, and the impact of any breach. If a public interest organization uses a content management system (CMS) for public information and a health system uses that same exact CMS for sensitive health records, the threat actors and business impacts can be very different for the same software. It is critical to understand the risk to your organization based on applicable threat agents and business impacts.
-
-Where possible, the names of the risks in the Top 10 are aligned with [Common Weakness Enumeration](https://cwe.mitre.org/) (CWE) weaknesses to promote generally accepted naming conventions and to reduce confusion.
-
-## References
-
+## 参考資料
 ### OWASP
+* OWASP Risk Rating Methodology 
+* Article on Threat/Risk Modeling
 
-* [OWASP Risk Rating Methodology](https://www.owasp.org/index.php/OWASP_Risk_Rating_Methodology)
-* [Article on Threat/Risk Modeling](https://www.owasp.org/index.php/Threat_Risk_Modeling)
 
-### External
-
-* [ISO 31000: Risk Management Std](https://www.iso.org/iso-31000-risk-management.html)
-* [ISO 27001: ISMS](https://www.iso.org/isoiec-27001-information-security.html)
-* [NIST Cyber Framework (US)](https://www.nist.gov/cyberframework)
-* [ASD Strategic Mitigations (AU)](https://www.asd.gov.au/infosec/mitigationstrategies.htm)
-* [NIST CVSS 3.0](https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator)
-* [Microsoft Threat Modelling Tool](https://www.microsoft.com/en-us/download/details.aspx?id=49168)
+### その他
+* ISO 31000: Risk Management Std
+* ISO 27001: ISMS
+* NIST Cyber Framework (US)
+* ASD Strategic Mitigations (AU)
+* NIST CVSS 3.0
+* Microsoft Threat Modelling Tool
