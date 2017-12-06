@@ -14,7 +14,7 @@
 
 * [https://github.com/OWASP/Top10/issues](https://github.com/OWASP/Top10/issues)
 
-この広い透明性により、出版する前の最終月間にも寄せられた多くの声が聞かれたかどうかの追跡性を提供しています。
+この広い透明性により、リリース前の最終段階に寄せられた多くの声をどのように聞き届けたかについても追跡できるようになっています。
 
 * Andrew van der Stock
 * Brian Glas
