@@ -10,7 +10,7 @@
 
 * 翻訳者 - すでに作業しているチームもありますが、もし手伝えるならご連絡ください。
 
-訂正、問題点などを記録するためGithubを使うことを強く勧めています:
+訂正、問題点などをログとして記録するためGithubを使うことを強く勧めています:
 
 * [https://github.com/OWASP/Top10/issues](https://github.com/OWASP/Top10/issues)
 
