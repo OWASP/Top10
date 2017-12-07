@@ -35,7 +35,6 @@
 * Apache Struts 2においてリモートで任意のコードが実行される脆弱性[CVE-2017-5638](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5638)は、重大な侵害をもたらしている。
 * [internet of things (IoT)](https://en.wikipedia.org/wiki/Internet_of_things)は、頻繁なパッチ適用が困難もしくは不可能だが、パッチ適用の重要性はますます高まっている。（例：医療機器）
 
-There are automated tools to help attackers find unpatched or misconfigured systems. For example, the [Shodan IoT search engine](https://www.shodan.io/report/89bnfUyJ) can help you find devices that still suffer from [Heartbleed](https://en.wikipedia.org/wiki/Heartbleed) vulnerability that was patched in April 2014.
 攻撃者を助けるような、パッチが未適用もしくはシステムの設定ミスを自動的に見つけるツールが存在する。例えば、[Shodan IoT search engine](https://www.shodan.io/report/89bnfUyJ)は、2014年4月にパッチが適用された[Heartbleed](https://en.wikipedia.org/wiki/Heartbleed)の脆弱性などセキュリティに問題のある機器を見つけることができる。
 
 ## 参照
