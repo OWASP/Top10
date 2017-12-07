@@ -1,17 +1,31 @@
-# +T What's Next for Security Testers
+# セキュリティテスト担当者のための次のステップ
 
-## Establish Continuous Application Security Testing
+## 継続的なアプリケーションセキュリティテストを確立する
 
-Building code securely is important. But it’s critical to verify that the security you intended to build is actually present, correctly implemented, and used everywhere it is supposed to be. The goal of application security testing is to provide this evidence. The work is difficult and complex, and modern high-speed development processes like Agile and DevOps have put extreme pressure on traditional approaches and tools. So we strongly encourage you to put some thought into how you are going to focus on what’s important across your entire application portfolio, and do it cost-effectively.
-
-Modern risks move quickly, so the days of scanning or penetration testing an application for vulnerabilities once every year or so are long gone. Modern software development requires continuous application security testing across the entire software development lifecycle. Look to enhance existing development pipelines with security automation that doesn’t slow development. Whatever approach you choose, consider the annual cost to test, triage, remediate, retest, and redeploy a single application, multiplied by the size of your application portfolio.
+セキュアにコードを実装することは重要です。
+しかし、セキュアな実装が実際に存在し、正しく実装され、あらゆる箇所に適用されていることを確認することが重要です。
+アプリケーションセキュリティテストの目的は、セキュアな実装がなされていることの証跡を得ることです。
+アプリケーションセキュリティテストは難しく、複雑であり、アジャイルはDevOpsのような最新の高速な開発プロセスにおいては、従来のアプローチやツールでは立ち行かなくなっています。
+そのため、アプリケーションポートフォリオの全体において、重要と考えられることにどのように焦点をあて、費用対効果の高い手法をとるべきかを考慮することを強く推奨します。
+昨今、リスクは急速に変化を遂げており、毎年1回程度、脆弱性スキャンや侵入テストが行われています。
+また昨今のソフトウェア開発においては、ソフトウェア開発ライフサイクル全体での継続的なアプリケーションセキュリティテストが要求されています。
+開発スピードを損なうことのないようセキュリティの自動化を施し、既存の開発プロセスを強化してください。
+どのアプローチを選択したとしても、アプリケーションポートフォリオの規模に応じたテスト、トリアージ、修復、再テスト、再デプロイに係る年間コストを考慮してください。
 
 | Activity | Description |
 | --- | --- |
-| Understand the Threat Model | Before you start testing, be sure you understand what’s important to spend time on. Priorities come from the threat model, so if you don’t have one, you need to create one before testing. Consider using [OWASP ASVS](https://www.owasp.org/index.php/ASVS) and the [OWASP Testing Guide](https://www.owasp.org/index.php/OWASP_Testing_Project) as an input and don’t rely on tool vendors to decide what’s important for your business. |
-| Understand Your SDLC | Your approach to application security testing must be highly compatible with the people, processes, and tools you use in your software development lifecycle (SDLC). Attempts to force extra steps, gates, and reviews are likely to cause friction, get bypassed, and struggle to scale. Look for natural opportunities to gather security information and feed it back into your process. |
-| Testing Strategies | Choose the simplest, fastest, most accurate technique to verify each requirement. The [OWASP Security Knowledge Framework](https://www.owasp.org/index.php/OWASP_Security_Knowledge_Framework) and [OWASP Application Security Verification Standard](https://www.owasp.org/index.php/ASVS) can be great sources of functional and nonfunctional security requirements in your unit and integration testing. Be sure to consider the human resources required to deal with false positives from the use of automated tooling as well as the serious dangers of false negatives.
-| Achieving Coverage and Accuracy | You don’t have to start out testing everything. Focus on what’s important and expand your verification program over time. That means expanding the set of security defenses and risks that are being automatically verified as well as expanding the set of applications and APIs being covered. The goal is to achieve a state where the essential security of all your applications and APIs is verified continuously. |
-| Clearly Communicate Findings | No matter how good you are at testing, it won’t make any difference unless you communicate it effectively. Build trust by showing you understand how the application works. Describe clearly how it can be abused without “lingo” and include an attack scenario to make it real. Make a realistic estimation of how hard the vulnerability is to discover and exploit, and how bad that would be. Finally, deliver findings in the tools development teams are already using, not PDF files. |
+| 脅威モデルの理解 | Bテストを開始する前に、何に対して時間を費やすべきか理解していることを確認してください。
+優先順位は脅威モデルに基づき決定できます。そのため、脅威モデルが検討されていない場合には、テストを実施する前に検討する必要があります。脅威モデルの検討にあたっては、[OWASP ASVS](https://www.owasp.org/index.php/ASVS) と [OWASP Testing Guide](https://www.owasp.org/index.php/OWASP_Testing_Project) を活用することを検討し、ツールベンダーに依存することなく、ビジネスにおいて重要視されることを決定してください。 |
+| SDLC（ソフトウェア開発ライフサイクル）の理解 | アプリケーションセキュリティテストのアプローチは、ソフトウェア開発ライフサイクルにおける、人材、プロセス及び使用するツールに馴染みがある必要があります。
+余計なステップ、ゲート、レビューを強制することで、軋轢を生み、バイパスされ、失敗する可能性があります。
+セキュリティ情報を収集し、プロセスにフィードバックする機会を探しましょう。 |
+| テスト戦略 | 各要件を検証するための最も簡単で、高速、かつ、正確な方法を選択してください。[OWASP Security Knowledge Framework](https://www.owasp.org/index.php/OWASP_Security_Knowledge_Framework) と[OWASP Application Security Verification Standard](https://www.owasp.org/index.php/ASVS) を単体・総合テストにおける機能及び非機能のセキュリティ要件を策定する際に参照することができます。
+自動化したツールを利用したことによるfalse-positiveに対処することに加え、重大なfalse-negativeに対処するための人的リソースの確保を考慮してください。|
 
-
+| 範囲と正確さの達成 | すべてをテストする必要はありません。まずは重要なことに焦点をあて、段階的に検証プログラムの範囲を拡張していきます。つまり、自動的に検証されている一連のセキュリティ実装とリスクの範囲を拡張し、適用される一連のアプリケーションとAPIの範囲を拡張していくことを意図しています。
+すべてのアプリケーションとAPIが本質的にセキュアであることを継続的に検証される状態とすることを目的にしています。|
+| 明確な結果の伝達 | どんなに良いテストを行ったとしても、それを効果的に伝えなければ何の違いもありません。
+アプリケーションの仕組みを理解していることを示すことにより、信頼を築きましょう。
+専門用語を羅列せず明確に記述し、実際に悪用する際の攻撃シナリオを含めましょう。
+脆弱性がどの程度悪用され得るか、どの程度の被害を受けるのかを現実的に評価してください。
+最後に、PDFファイルではなく、開発チームがすでに使用しているツールで結果を提供しましょう。|
