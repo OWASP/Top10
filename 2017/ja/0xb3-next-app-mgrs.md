@@ -1,47 +1,47 @@
-# +A: What's next for Application Managers
+# +A: アプリケーションマネージャのための次のステップ
 
-## Manage the Full Application Lifecycle
+## 完全なアプリケーションライフサイクルを管理する
 
-Applications belong to the most complex systems humans regularly create and maintain. IT management for an application should be performed by IT specialists who are responsible for the overall IT lifecycle of an application. We suggest establishing the role of application manager as technical counterpart to the application owner. The application manager is in charge of the whole application lifecycle from the IT perspective, from collecting the requirements until the process of retiring systems, which is often overlooked. 
+アプリケーションは、人が定期的に作成し、維持する最も複雑なシステムです。アプリケーションにおけるITマネジメントは、アプリケーションのITライフサイクル全体の責任を有するITスペシャリストにより実施されるべきです。アプリケーションオーナーと技術的に同等な立場の者としてアプリケーションマネージャを確立することをお勧めします。アプリケーションマネージャは、ITの観点から、要件策定からシステムの廃棄に至るまでのアプリケーションライフサイクル全体を担当します。
 
-## Requirements and Resource Management
+## リソース管理の要件
 
-* Collect and negotiate the business requirements for an application with the business, including the protection requirements with regard to confidentiality, authenticity, integrity and availability of all data assets, and the expected business logic.
-* Compile the technical requirements including functional and nonfunctional security requirements.
-* Plan and negotiate the budget that covers all aspects of design, build, testing and operation, including security activities.
+* 全てのデータ資産における機密性、真正性、完全性及び可用性や予想されるビジネスロジックにか関する保護要件を含む、アプリケーションに対するビジネス要件を収集し、交渉する。
+* 機能及び非機能のセキュリティ要件を含む、技術的な要件を蓄積する。
+* セキュリティに関する活動を含む、設計、ビルド、テスト及び運用の全ての側面をカバー可能な予算を計画し、交渉する。
 
-## Request for Proposals (RFP) and Contracting
+## 提案依頼書 (RFP)と契約
 
-* Negotiate the requirements with internal or external developers, including guidelines and security requirements with respect to your security program, e.g. SDLC, best practices.
-* Rate the fulfillment of all technical requirements, including a planning and design phase.
-* Negotiate all technical requirements, including design, security, and service level agreements (SLA).
-* Adopt templates and checklists, such as [OWASP Secure Software Contract Annex](https://www.owasp.org/index.php/OWASP_Secure_Software_Contract_Annex). **Note**: The annex is for US contract law, so please consult qualified legal advice before using the sample annex.
+* 例えば、ソフトウェア開発ライフサイクルにおけるベストプラクディスといったセキュリティプログラムに関するガイドラインやセキュリティ要件をなど、社内外の開発者と要件を交渉します。
+* 計画と設計工程を含む、全ての技術要件の達成を評価します。
+* 設計、セキュリティ、サービスレベルアグリーメント（SLA）を含む技術的な要件を交渉します。
+* [OWASP Secure Software Contract Annex](https://www.owasp.org/index.php/OWASP_Secure_Software_Contract_Annex)のような様式やチェックリストを適用します。 **Note**: OWASP Secure Software Contract Annexは米国の契約法に基づいています。そのため、参照するに当たっては、法律の専門家から助言を受けるようにしてください。
 
-## Planning and Design
+## 計画と設計
 
-* Negotiate planning and design with the developers and internal shareholders, e.g. security specialists.
-* Define the security architecture, controls, and countermeasures appropriate to the protection needs and the expected threat level. This should be supported by security specialists.
-* Ensure that the application owner accepts remaining risks or provides additional resources.
-* In each sprint, ensure security stories are created that include constraints added for non-functional requirements.
+* 開発者や社内の株主や例えばセキュリティと計画や設計を交渉します。
+* 保護の必要性と予想される脅威レベルに応じたセキュリティアーキテクチャ、制御及び対策を定義します。定義に当たっては、セキュリティ専門家がサポートをするべきです。
+* アプリケーションオーナーが残存するリスクを受容するか、追加のリソースを提供するようにしてください。
+* 各スプリントにおいて、非機能要件に対して追加された制約を含むセキュリティストーリーが作成されるようにしてください。
 
-## Deployment, Testing, and Rollout
+## デプロイ、テスト及び公開
 
-* Automate the secure deployment of the application, interfaces and all required components, including needed authorizations.
-* Test the technical functions and integration with the IT architecture and coordinate business tests.
-* Create "use" and "abuse" test cases from technical and business perspectives.
-* Manage security tests according to internal processes, the protection needs, and the assumed threat level by the application.
-* Put the application in operation and migrate from previously used applications if needed.
-* Finalize all documentation, including the CMDB and security architecture.
+* 必要な権限を含む、アプリケーション、インタフェース、必要な全てのコンポネントのセキュアなデプロイを自動化します。
+* 技術的な機能とITアーキテクチャとの統合をテストし、ビジネステストを調整します。
+* 技術的かつビジネス的な観点から、正常系と異常系のテストケースを作成します。
+* アプリケーションによる内部プロセス、保護の必要性、想定される脅威レベルに応じて、セキュリティテストを管理します。
+* アプリケーションを起動し、適宜以前に使用していたアプリケーションからの移行を行います。
+* 構成管理データベース（CMDB）やセキュリティアーキテクチャを含む、全ての文書を最終化します。
 
-## Operations and Change Management
+## 運用及びチェンジマネジメント
 
-* Operations must include guidelines for the security management of the application (e.g. patch management).
-* Raise the security awareness of users and manage conflicts about usability vs. security.
-* Plan and manage changes, e.g. migrate to new versions of the application or other components like OS, middleware, and libraries.
-* Update all documentation, including in the change management data base (CMDB) and the security architecture, controls, and countermeasures, including any runbooks or project documentation.
+* 運用には、例えばパッチ管理といったアプリケーションのセキュリティ管理に関するガイドラインを含めなければなりません、
+* 利用者のセキュリティ意識を高め、セキュリティとユーザビリティのバランスを管理します。
+* 例えばアプリケーションやOS、ミドルウェア、ライブラリのバージョンアップに関する変更の計画と管理を実施します。
+* 変更管理データベースや運用手順書、プロジェクトに関する文書を含む全ての文書を更新します。
 
-## Retiring Systems
+## システムの廃棄
 
-* Any required data should be archived. All other data should be securely wiped.
-* Securely retire the application, including deleting unused accounts and roles and permissions.
-* Set your application's state to retired in the CMDB.
+* 必要なデータを全てアーカイブし、その他のデータを全て安全に消去します。
+* 未使用のアカウント、役割、権限の削除などを実施し、アプリケーションを安全に廃棄します。
+* 構成管理データベースにおいてアプリケーションのステータスを廃棄にします。
