@@ -1,12 +1,12 @@
-# +Dat Methodology and Data
+# +Dat 方法論とデータ
 
-At the OWASP Project Summit, active participants and community members decided on a vulnerability view, with up to two (2) forward looking vulnerability classes, with ordering defined partially by quantitative data, and partially by qualitative surveys.
+OWASP Project Summitにおいて、参加者とコミュニティメンバーは、データの量と調査の質の2つの観点から脆弱性の評価を実施することを決定しました。
  
-## Industry Ranked Survey
+## 調査
 
-For the survey, we collected the vulnerability categories that had been previously identified as being “on the cusp” or were mentioned in feedback to 2017 RC1 on the Top 10 mailing list. We put them into a ranked survey and asked respondents to rank the top four vulnerabilities that they felt should be included in the OWASP Top 10 - 2017. The survey was open from Aug 2 – Sep 18, 2017. 516 responses were collected and the vulnerabilities were ranked.
+調査のために、これまでに"最先端"であると特定されたか、Top10メーリングリストの2017 RC1へのフィードバックにおいて言及された脆弱性のカテゴリーを収集しました。それらのカテゴリーを調査内容に含め、回答者にOWASP Top10 - 2017に含めるべきと考える上位4つの脆弱性を選択するよう促しました。調査は、2017年8月2日〜9月18日まで実施され、516の回答を得ました。
 
-| Rank | Survey Vulnerability Categories | Score |
+| ランク | 脆弱性カテゴリ | スコア |
 | -- | -- | -- |
 | 1 | Exposure of Private Information ('Privacy Violation') [CWE-359] | 748 |
 | 2 | Cryptographic Failures [CWE-310/311/312/326/327]| 584 |
@@ -14,12 +14,11 @@ For the survey, we collected the vulnerability categories that had been previous
 | 4 | Authorization Bypass Through User-Controlled Key (IDOR & Path Traversal) [CWE-639] | 493 |
 | 5 | Insufficient Logging and Monitoring [CWE-223 / CWE-778]| 440 |
 
-Exposure of Private Information is clearly the highest-ranking vulnerability, but fits very easily as an additional emphasis into the existing **A3:2017-Sensitive Data Exposure**. Cryptographic Failures can fit within Sensitive Data Exposure. Insecure deserialization was ranked at number three, so it was added to the Top 10 as **A8:2017-Insecure Deserialization** after risk rating. The fourth ranked User-Controlled Key is included in **A5:2017-Broken Access Control**; it is good to see it rank highly on the survey, as there is not much data relating to authorization vulnerabilities. The number five ranked category in the survey is Insufficient Logging and Monitoring, which we believe is a good fit for the Top 10 list, which is why it has become **A10:2017-Insufficient Logging & Monitoring**. We have moved to a point where applications need to be able to define what may be an attack and generate appropriate logging, alerting, escalation and response. 
+Exposure of Private Informationは、明確に重大な脆弱性ですが、既存の **A3:2017-Sensitive Data Exposure** に含まれています。Cryptographic Failuresは **A3:2017-Sensitive Data Exposure** に含まれています。 Deserialization of Untrusted Dataは、 **A8:2017-Insecure Deserialization** として位置付けました。4番目のUser-Controlled Keyは、 **A5:2017-Broken Access Control** に含めています。調査においてはより上位のランクとすべきといった意見もありましたが、認可の脆弱性に関連するデータが十分ではなかったためA5としています。5番目のInsufficient Logging and Monitoringは、 **A10:2017-Insufficient Logging & Monitoring** として位置付けました。 アプリケーションは何が攻撃になり得るのか定義し、適切なロギング、アラート、エスカレーション、レスポンスを生成できる必要があり、その点を考慮しました。
 
-## Public Data Call
+## データ提供依頼
 
-Traditionally, the data collected and analyzed was more along the lines of frequency data: how many vulnerabilities were found in tested applications. As is well known, tools traditionally report all instances found of a vulnerability and humans traditionally report a single finding with a number of examples. This makes it very difficult to aggregate the two styles of reporting in a comparable manner.
+一般的に、収集され分析されたデータはテストしたアプリケーションで検出した脆弱性の数の頻データに沿っています。よく知られているように、ツールは脆弱性のすべてのインスタンスを報告し、人がその中から単一の結果を報告します。この2つの種類のレポートを同等の方法で集計するのは非常に困難です。
+2017においては、与えられたデータセットのうち1つまたは複数の特定のデータ・セットを持つアプリケーションの数に基づき、発生率を計算しました。より多くの貢献者から2つの観点で情報を提供いただきました。1つ目は、脆弱性のすべてのインスタンスを数える従来の頻度スタイルであり、2つ目は、脆弱性が1回またはそれ以上検出されたアプリケーションの数です。完璧ではありませんが、これにより、ツールの結果と人の結果の双方を比較することができます。ローデータ及び分析作業結果は[GitHubでご確認いただけます](https://github.com/OWASP/Top10/tree/master/2017/datacall)。次以降のTop10のバージョンに向け、この方法をさらに拡張していく予定です。
 
-For 2017, the incidence rate was calculated by how many applications in a given data set had one or more of a specific vulnerability type. The data from many larger contributors was provided in two views. The first was the traditional frequency style of counting every instance found of a vulnerability, while the second was the count of applications in which each vulnerability was found in (one or more times). While not perfect, this reasonably allows us to compare the data from Human Assisted Tools and Tool Assisted Humans. The raw data and analysis work is [available in GitHub](https://github.com/OWASP/Top10/tree/master/2017/datacall). We intend to expand on this with additional structure for future versions of the Top 10.
-
-We received 40+ submissions in the call for data, and because many were from the original data call that was focused on frequency, we were able to use data from 23 contributors covering ~114,000 applications. We used a one-year block of time where possible and identified by the contributor. The majority of applications are unique, though we acknowledge the likelihood of some repeat applications between the yearly data from Veracode. The 23 data sets used were either identified as tool assisted human testing or specifically provided incidence rate from human assisted tools. Anomalies in the selected data of 100%+ incidence were adjusted down to 100% max. To calculate the incidence rate, we calculated the percentage of the total applications there were found to contain each vulnerability type. The ranking of incidence was used for the prevalence calculation in the overall risk for ranking the Top 10.
+コールフォーデータ（CFD）においては、40以上の情報を提供いただきました。これらのほとんどは、頻度に焦点を当てたデータだったため、23の貢献者からの114,000以上のアプリケーションをカバーする情報を利用することができました。 1年かけて貢献者の特定を行いました。Veracodeからの年間のデータには繰り返し登場するアプリケーションがあることを認識していましたが、大半のアプリケーションは独自のものでした。使用した23のデータは、ツールの結果または人の結果のいずれかに区別しました。 100%以上の発生率となったデータは最大値が100%となるよう調整しました。発生率を計算するために、各脆弱性が含まれていることが判明したアプリケーションの割合を計算しました。発生率のランキングは、Top10に位置付けられている全てのリスクの計算のために使いました。
