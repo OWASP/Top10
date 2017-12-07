@@ -2,32 +2,33 @@
 
 ## OWASP Top 10 - 2017へようこそ
 
-This major update adds several new issues, including two issues selected by the community - A8:2017-Insecure Deserialization and A10:2017-Insufficient Logging and Monitoring. Two key differentiators from previous OWASP Top 10 releases are the substantial community feedback and extensive data assembled from dozens of organizations, possibly the largest amount of data ever assembled in the preparation of an application security standard. This provides us with confidence that the new OWASP Top 10 addresses the most impactful application security risks currently facing organizations.
+今回のメジャーアップデートでは、A8：2017-安全でないデシリアライズ操作とA10：2017-ロギングとモニタリングの不足の2つの問題を含む、いくつかの新しい問題が追加されています。以前のOWASP Top 10リリースからの2つの重要な差別化要素は、相当なコミュニティからのフィードバックと、数多くの組織から集められた広範囲のデータです。アプリケーションセキュリティ標準を準備する上では、おそらく最大量のデータが集められたと考えられます。このことは、新しい版のOWASP Top 10が、現在数々の組織が直面している最も影響の大きなアプリケーションセキュリティリスクに向けられているという確信が得られます。
 
-The OWASP Top 10 for 2017 is based primarily on 40+ data submissions from firms that specialize in application security and an industry survey that was completed by over 500 individuals. This data spans vulnerabilities gathered from hundreds of organizations and over 100,000 real-world applications and APIs. The Top 10 items are selected and prioritized according to this prevalence data, in combination with consensus estimates of exploitability, detectability, and impact.
+2017年版のOWASP Top 10は、主に、アプリケーションのセキュリティを専門とする企業から寄せられた40以上のデータと、500人以上の個人による業界調査に基づいています。データは、数百の組織の、10万以上の実在するアプリケーションおよびAPIから集められた脆弱性にまたがるものです。Top 10の項目は、この流行を反映しているデータに従って、攻撃しやすさ、検知しやすさ、および影響についての共通認識の推計を組み合わせた上で、選択し、優先順位を付けます。
 
-A primary aim of the OWASP Top 10 is to educate developers, designers, architects, managers, and organizations about the consequences of the most common and most important web application security weaknesses. The Top 10 provides basic techniques to protect against these high risk problem areas, and provides guidance on where to go from here.
+OWASP Top10の主要な目的は、開発者、デザイナー、アーキテクト、マネージャー、組織に、最も一般的かつ最も重要なWebアプリケーションセキュリティの弱点の影響について教育することです。また、これらのリスクの高い問題のある領域を守るための基本的なテクニックを提供し、現時点からどこへ進めるべきなかについてのガイダンスを提供します。
 
-## 将来版へのロードマップ
+## 将来への道筋
 
-**10までで止めない**. There are hundreds of issues that could affect the overall security of a web application as discussed in the [OWASP Developer's Guide](https://www.owasp.org/index.php/OWASP_Guide_Project) and the [OWASP Cheat Sheet Series](https://www.owasp.org/index.php/Category:Cheatsheets). These are essential reading for anyone developing web applications and APIs. Guidance on how to effectively find vulnerabilities in web applications and APIs is provided in the [OWASP Testing Guide](https://www.owasp.org/index.php/OWASP_Testing_Project).
+**10まででやめない**. [OWASP Developer's Guide](https://www.owasp.org/index.php/OWASP_Guide_Project)や [OWASP Cheat Sheet Series](https://www.owasp.org/index.php/Category:Cheatsheets)で説明されているように、Webアプリケーションの全体的なセキュリティに影響を与える可能性のある問題は数多くあります。これらは、WebアプリケーションやAPIを開発するどんな人にとっても、不可欠な情報です。WebアプリケーションおよびAPIの脆弱性を効果的に見つける方法に関するガイダンスは、[OWASP Testing Guide](https://www.owasp.org/index.php/OWASP_Testing_Project) に記載されています。
 
-**定期的な変更**. The OWASP Top 10 will continue to change. Even without changing a single line of your application's code, you may become vulnerable as new flaws are discovered and attack methods are refined. Please review the advice at the end of the Top 10 in What's Next For Developers, Testers, Organizations and Application Managers for more information.
+**定期的に変更する**. OWASPトップ10はこれからも変化し続けます。また、あなたのアプリケーションコードの、1行も変更していなくても、脆弱になる可能性があります。新しい欠陥が発見され、攻撃方法が洗練されるからです。詳細については、Top 10の最後に掲載した、開発者、テスター、組織、アプリケーションマネージャのための次のステップの項にあるアドバイスを見直してみてください。
 
-**積極的な思考**. When you're ready to stop chasing vulnerabilities and focus on establishing strong application security controls, the [OWASP Proactive Controls](https://www.owasp.org/index.php/OWASP_Proactive_Controls) project provides a starting point to help developers build security into their applications and the [OWASP Application Security Verification Standard (ASVS)](https://www.owasp.org/index.php/ASVS) is a guide for organizations and application reviewers on what to verify.
+**積極的に思考する**. 脆弱性を追いかけるのをやめ、アプリケーションセキュリティコントロールを強力なものに確立する準備ができたら、以下の文書を参照してください。[OWASP Proactive Controls](https://www.owasp.org/index.php/OWASP_Proactive_Controls) プロジェクトは、開発者がセキュリティをアプリケーションに組み込むための出発点を提供します。また、[OWASP Application Security Verification Standard (ASVS)](https://www.owasp.org/index.php/ASVS)は、組織にとって、またアプリケーションレビュワーにとって何を検証したら良いかを示すガイドです。
 
-**賢明なツール活用**. Security vulnerabilities can be quite complex and deeply buried in code. In many cases, the most cost-effective approach for finding and eliminating these weaknesses is human experts armed with advanced tools. Relying on tools alone provides a false sense of security and is not recommended.
+**賢くツールを活用する**. 
+セキュリティ脆弱性は、非常に複雑で深刻なコードに埋もれていることがあります。多くの場合、そのような弱点を発見して排除するための最も費用対効果の高いアプローチは、高度なツールを手元に備えている専門家です。ツールのみに依存することは、セキュリティに関する誤った感覚をもたらしてしまうので、お勧めしません。
 
-**左へ右へ、どこへでも進める**. Focus on making security an integral part of your culture throughout your development organization. Find out more in the [OWASP Software Assurance Maturity Model (SAMM)](https://www.owasp.org/index.php/OWASP_SAMM_Project).
+**左へ右へ、どこへでも進める**. セキュリティをソフトウェア開発の組織全体のカルチャーにかかわる不可欠なものとすることに集中してください。詳しい情報は、 [OWASP Software Assurance Maturity Model (SAMM)](https://www.owasp.org/index.php/OWASP_SAMM_Project)にあります。
 
 ## 謝辞
 
-We'd like to thank the organizations that contributed their vulnerability data to support the 2017 update. We received more than 40 responses to the call for data. For the first time, all the data contributed to a Top 10 release, and the full list of contributors, is publicly available. We believe this is one of the larger, more diverse collections of vulnerability data ever collected publicly.
+2017年版へのアップデートを支援するために、脆弱性データを寄稿した多くの組織に感謝したいと思います。私たちはデータの募集に対して40以上の回答を頂きました。初めて、Top 10リリースに貢献した全てのデータと寄稿者の全リストを明らかにしました。これは、これまでに公に収集されたものより大規模で多様な脆弱性データのコレクションの1つであると考えています。
 
-As there are more contributors than space here, we have created a dedicated page to recognize the contributions made. We wish to give heartfelt thanks to these organizations for being willing to be on the front lines by publicly sharing vulnerability data from their efforts. We hope this will continue to grow and encourage more organizations to do the same and possibly be seen as one of the key milestones of evidence based security. The OWASP Top 10 would not be possible without these amazing contributions. 
+このドキュメントのスペースに記載できる以上のさらに多くの貢献者がおられますので、その貢献に感謝するための専用ページを作成しました。これらの組織の皆さんが、ご自身たちの努力の結晶である脆弱性データを公に共有することで、喜んで最前線に立ってくれたことに感謝したいと思います。このような活動が成長し続けてより多くの組織において同様の協力が奨励されること、ひいては、これが証拠に基づくセキュリティの重要なマイルストーンの1つとみなされることを願っています。これらのすばらしい貢献がなければ、OWASP Top 10を作ることはできないからです。
 
-A big thank you to the more than 500 individuals who took the time to complete the industry ranked survey. Your voice helped determine two new additions to the Top 10. The additional comments, notes of encouragement, and criticisms were all appreciated. We know your time is valuable and we wanted to say thanks.
+業界ランキングの調査を仕上げるために時間を費やしてくれた500人以上の個人に本当に感謝します。皆さんの声は、Top 10に2つの新しい追加を決定する助けになりました。コメント、励まし、批判もすべて感謝しています。 貴重なお時間をいただき、感謝したいと思います。
 
-We would like to thank those individuals who contributed significant constructive comments and time reviewing this update to the Top 10. As much as possible, we have listed them on the "Acknowledgements" page.
+非常に建設的なコメントを寄せて頂き、トップ10にこのアップデートを見直す時間をいただいた人たちに感謝します。皆さんのことは、可能な限り「謝辞」のページに記載しています。
 
-And finally, we'd like to thank in advance all the translators out there who will translate this release of the Top 10 into numerous different languages, helping to make the OWASP Top 10 more accessible to the entire planet.
+そして最後に、世界中でOWASP Top 10にもっと手に取りやすくするため、Top 10のこのリリースを多数の言語に翻訳なさる翻訳者の皆さんに前もって感謝したいと思います。
