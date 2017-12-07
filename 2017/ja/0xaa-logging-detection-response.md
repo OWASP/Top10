@@ -1,45 +1,45 @@
-# A10:2017 Insufficient Logging and Monitoring
+# A10:2017 ロギングとモニタリングの不足
 
-| Threat agents/Attack vectors | Security Weakness           | Impacts               |
+| 脅威エージェント/攻撃手法 | セキュリティ上の弱点           | 影響               |
 | -- | -- | -- |
-| Access Lvl : Exploitability 2 | Prevalence 3 : Detectability 1 | Technical 2 : Business |
-| Exploitation of insufficient logging and monitoring is the bedrock of nearly every major incident. Attackers rely on the lack of monitoring and timely response to achieve their goals without being detected. | This issue is included in the Top 10 based on an [industry survey](https://owasp.blogspot.com/2017/08/owasp-top-10-2017-project-update.html). One strategy for determining if you have sufficient monitoring is to examine the logs following penetration testing. The testers' actions should be recorded sufficiently to understand what damages they may have inflicted. | Most successful attacks start with vulnerability probing. Allowing such probes to continue can raise the likelihood of successful exploit to nearly 100%. In 2016, identifying a breach took an [average of 191 days](https://www-01.ibm.com/common/ssi/cgi-bin/ssialias?htmlfid=SEL03130WWEN&) – plenty of time for damage to be inflicted. |
+| Access Lvl : 悪用難易度 2 | 普及度 3 : 検出難易度 1 | 技術的影響度 2 : ビジネス的影響度 |
+|ほぼすべての重大なインシデントの背後にはロギングとモニタリングの不足があります。監視及びタイムリーな対応の欠如を利用することで、攻撃者は攻撃を検出されることなく目標を達成します。|[業界調査](https://owasp.blogspot.com/2017/08/owasp-top-10-2017-project-update.html)に基づいてこの問題はトップ10に追加されました。十分な監視があるかどうかを判断するための方法の1つは、侵入テスト後のログを調べることです。 テスターの行動がどのような損害を引き起すのかを理解するために十分なログが記録される必要があります。 | 成功した攻撃の多くは脆弱性の調査から始まります。 このような調査を続けることによって、脆弱性攻撃の成功率がほぼ100％になる可能性があります。2016年には侵害を特定するのに[平均191日](https://www-01.ibm.com/common/ssi/cgi-bin/ssialias?htmlfid=SEL03130WWEN&)かかりました 。 |
 
-## Is the Application Vulnerable?
+## 脆弱性有無の確認
 
-Insufficient logging, detection, monitoring and active response occurs any time:
+ロギングや検出、監視、アクティブな応答の不足は、いつでも発生します:
 
-* Auditable events, such as logins, failed logins, and high-value transactions are not logged.
-* Warnings and errors generate no, inadequate, or unclear log messages.
-* Logs of applications and APIs are not monitored for suspicious activity.
-* Logs are only stored locally.
-* Appropriate alerting thresholds and response escalation processes are not in place or effective.
-* Penetration testing and scans by [DAST](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools) tools (such as [OWASP ZAP](https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project)) do not trigger alerts.
-* The application is unable to detect, escalate, or alert for active attacks in real time or near real time.
+* ログイン、失敗したログイン、重要なトランザクションなどの監査可能なイベントがログに記録されていない。
+* 警告とエラーが発生してもログメッセージが生成されない、または不十分、不明確なメッセージが生成されている。
+* アプリケーションとAPIのログが、疑わしいアクティビティを監視していない。
+* ログがローカルにのみ格納されている。
+* 適切なアラートのしきい値とレスポンスのエスカレーションプロセスが適切でない、または有効ではない。
+* [DAST](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools)ツール（[OWASP ZAP](https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project)など）による侵入テストとスキャンがアラートをあげない。
+* アプリケーションがリアルタイム、準リアルタイムのアクティブな攻撃を検出、エスカレート、またはアラートすることができない。
 
-You are vulnerable to information leakage if you make logging and alerting events visible to a user or an attacker (see A3:2017-Sensitive Information Exposure).
+ユーザーまたは攻撃者がログやアラートのイベントを閲覧できると、情報の漏えいが発生する可能性があります（A3：2017 - 機密情報の公開を参照）。
 
-## How To Prevent
+## 防止方法
 
-As per the risk of the data stored or processed by the application:
+アプリケーションによって保存または処理されるデータのリスクに応じて：
 
-* Ensure all login, access control failures, and server-side input validation failures can be logged with sufficient user context to identify suspicious or malicious accounts, and held for sufficient time to allow delayed forensic analysis.
-* Ensure that logs are generated in a format that can be easily consumed by a centralized log management solutions.
-* Ensure high-value transactions have an audit trail with integrity controls to prevent tampering or deletion, such as append-only database tables or similar.
-* Establish effective monitoring and alerting such that suspicious activities are detected and responded to in a timely fashion.
-* Establish or adopt an incident response and recovery plan, such as [NIST 800-61 rev 2](https://csrc.nist.gov/publications/detail/sp/800-61/rev-2/final) or later.
+* ログイン、アクセス制御の失敗、サーバー側の入力検証の失敗をユーザーコンテクストに応じて不審なアカウントや悪意のあるアカウントを識別するのに十分なだけ記録し、後日、フォレンジック分析を行うのに十分な時間分保持します。
+* 集中ログ管理ソリューションで簡単に使用できる形式でログが生成されていることを確認する。
+* 付加価値の高いデータベース・テーブルなどの改ざんや削除を防止するために、価値の高いトランザクションに整合性制御による監査証跡が設けられていることを確認する。
+* 疑わしい活動が適時に検出され、対応されるように、効果的な監視とアラートを確立する。
+* [NIST 800-61 rev 2](https://csrc.nist.gov/publications/detail/sp/800-61/rev-2/final)以降などのインシデント対応および復旧計画を策定または採用する。
 
-There are commercial and open source application protection frameworks such as [OWASP AppSensor](https://www.owasp.org/index.php/OWASP_AppSensor_Project), web application firewalls such as [ModSecurity with the OWASP ModSecurity Core Rule Set](https://www.owasp.org/index.php/Category:OWASP_ModSecurity_Core_Rule_Set_Project), and log correlation software with custom dashboards and alerting. 
+[OWASP AppSensor](https://www.owasp.org/index.php/OWASP_AppSensor_Project)、[OWASP ModSecurity Core Rule Set](https://www.owasp.org/index.php/Category:OWASP_ModSecurity_Core_Rule_Set_Project)を使用したModSecurityなどのWebアプリケーションファイアウォール、カスタムダッシュボードとアラートを使用したログ相関ソフトウェアなど、商用およびオープンソースのアプリケーション保護フレームワークがあります。
 
-## Example Attack Scenarios
+## 攻撃シナリオの例
 
-**Scenario #1**: An open source project forum software run by a small team was hacked using a flaw in its software. The attackers managed to wipe out the internal source code repository containing the next version, and all of the forum contents. Although source could be recovered, the lack of monitoring, logging or alerting led to a far worse breach. The forum software project is no longer active as a result of this issue.
+**シナリオ #1**: 小さなチームが運営するオープンソースのプロジェクトフォーラムソフトウェアが、ソフトウェアの欠陥を突かれてハッキングされました。攻撃者は、次のバージョンとすべてのフォーラムの内容を含む内部のソースコードリポジトリを削除しました。ソースは回復することができましたが、監視、ロギング、アラートの不足によって問題が悪化してしまいました。この問題の発生により、フォーラムソフトウェアプロジェクトはアクティブではなくなってしまいました。
 
-**Scenario #2**: An attacker uses scans for users using a common password. They can take over all accounts using this password. For all other users, this scan leaves only one false login behind. After some days, this may be repeated with a different password.
+**シナリオ #2**: 同じパスワードを使用するユーザーに対して、攻撃者はスキャンを実施します。彼らは、このパスワードを使用しているすべてのアカウントを利用できるようになります。他のユーザーに対しては、このスキャンは1回だけ失敗したログインとなります。数日後、スキャンは異なるパスワードで繰り返される場合があります。
 
-**Scenario #3**: A major US retailer reportedly had an internal malware analysis sandbox analyzing attachments. The sandbox software had detected potentially unwanted software, but no one responded to this detection. The sandbox had been producing warnings for some time before the breach was detected due to fraudulent card transactions by an external bank.
+**シナリオ #3**: 米国の大手小売業者が、添付ファイルを分析する内部マルウェア分析サンドボックスを持っていたと言われています。サンドボックスソフトウェアは、望ましくないと思われるソフトウェアを検出しましたが、誰もこの検出に応答しませんでした。サンドボックスは、外部銀行による不正なカード取引によって侵害が検出されるまでにしばらくの間警告を発していました。
 
-## References
+## 参考資料
 
 ### OWASP
 
@@ -48,7 +48,7 @@ There are commercial and open source application protection frameworks such as 
 * [OWASP Testing Guide: Testing for Detailed Error Code](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
 * [OWASP Cheat Sheet: Logging](https://www.owasp.org/index.php/Logging_Cheat_Sheet)
 
-### External
+### その他
 
 * [CWE-223: Omission of Security-relevant Information](https://cwe.mitre.org/data/definitions/223.html)
 * [CWE-778: Insufficient Logging](https://cwe.mitre.org/data/definitions/778.html)
