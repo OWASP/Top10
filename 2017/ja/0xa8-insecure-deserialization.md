@@ -1,53 +1,57 @@
-# A8:2017 Insecure Deserialization
+# A8:2017 安全ではないデシリアライゼーション
 
-| Threat agents/Attack vectors | Security Weakness           | Impacts               |
+| 脅威エージェント/攻撃ベクター | セキュリティ上の弱点           | 影響度               |
 | -- | -- | -- |
-| Access Lvl : Exploitability 1 | Prevalence 2 : Detectability 2 | Technical 3 : Business |
-| Exploitation of deserialization is somewhat difficult, as off the shelf exploits rarely work without changes or tweaks to the underlying exploit code. | This issue is included in the Top 10 based on an [industry survey](https://owasp.blogspot.com/2017/08/owasp-top-10-2017-project-update.html) and not on quantifiable data. Some tools can discover deserialization flaws, but human assistance is frequently needed to validate the problem. It is expected that prevalence data for deserialization flaws will increase as tooling is developed to help identify and address it. | The impact of deserialization flaws cannot be overstated. These flaws can lead to remote code execution attacks, one of the most serious attacks possible. The business impact depends on the protection needs of the application and data. |
+| アクセス Lvl : 悪用難易度 1 | 流行度 2 : 攻撃検知のしやすさ 2 | 技術的 3 : ビジネス的 |
+| 市販されているエクスプロイト手法は、元のエクスプロイトコードに変更や調整を加えずに攻撃が成功する事はまれなので、デシリアライゼーションの悪用は、少々困難です。 | この問題は、OWASPが行った[業界調査](https://owasp.blogspot.com/2017/08/owasp-top-10-2017-project-update.html)において上位10に含まれていたものですが、定量的なデータに基づいたものではありません。
+ツールによっては、デシリアライゼーションに関する欠陥を発見する事ができますが、問題を検証する為に、しばしば人手による支援を必要とします。 デシリアライゼーションに関する欠陥が、広く広まっているというデータは、問題の特定と対応を支援するツールが開発された事から予想されたものでした。 | デシリアライゼーションの欠陥による影響は、憂慮すべきものです。 これらの欠陥は、最も深刻な攻撃の一つであるリモートコード実行攻撃を可能にします。 ビジネスへの影響は、アプリケーションとデータを保護する必要性に依存します。 |
 
-## Is the Application Vulnerable?
+## アプリケーションは脆弱か？
 
-Applications and APIs will be vulnerable if they deserialize hostile or tampered objects supplied by an attacker.
+攻撃者により敵意のあるデシリアライズまたは改ざんされたオブジェクトの供給により、アプリケーションとAPIは、脆弱になります。
 
-This can result in two primary types of attacks:
+これによる攻撃は、主に2種類あります:
 
-* Object and data structure related attacks where the attacker modifies application logic or achieves arbitrary remote code execution if there are classes available to the application that can change behavior during or after deserialization.
-* Typical data tampering attacks such as access-control-related attacks where existing data structures are used but the content is changed.
+* オブジェクトとデータ構造に関連した攻撃：デシリアライズ中またはデシリアライズ後に、振る舞いを変更できるクラスがアプリケーションで使用可能な場合、攻撃者は、アプリケーションロジックの変更または、任意のリモートコード実行を行う事が出来ます。
+* 典型的なデータ改ざん攻撃：既存のデータ構造が内容を変えられて使われるようなアクセス制御関連の攻撃
 
-Serialization may be used in applications for:
+シリアライゼーションが、以下のような用途にアプリケーションで使用される場合：
 
-* Remote- and inter-process communication (RPC/IPC) 
-* Wire protocols, web services, message brokers
-* Caching/Persistence
-* Databases, cache servers, file systems 
-* HTTP cookies, HTML form parameters, API authentication tokens 
+* リモートプロシージャコールとプロセス間通信 (RPC/IPC) 
+* ワイヤプロトコル、Webサービス、メッセージブローカ
+* キャッシュ/永続化
+* データベース、キャッシュサーバ、ファイルシステム
+* HTTPクッキー、HTMLフォームのパラメータ、API認証トークン
 
-## How To Prevent
+## 対策
 
-The only safe architectural pattern is not to accept serialized objects from untrusted sources or to use serialization mediums that only permit primitive data types.
+安全なアーキテクチャのパターンは、信頼できないソースからシリアライズされたオブジェクトを受け入れない、もしくは、シリアライズ対象のデータをプリミティブなデータ型のみにします。
 
-If that is not possible, consider one of more of the following:
+上記の対策を取れない場合、以下の内、一つ以上を検討する：
 
-* Implementing integrity checks such as digital signatures on any serialized objects to prevent hostile object creation or data tampering.
-* Enforcing strict type constraints during deserialization before object creation as the code typically expects a definable set of classes. Bypasses to this technique have been demonstrated, so reliance solely on this is not advisable.
-* Isolating and running code that deserializes in low privilege environments when possible.
-* Log deserialization exceptions and failures, such as where the incoming type is not the expected type, or the deserialization throws exceptions.
-* Restricting or monitoring incoming and outgoing network connectivity from containers or servers that deserialize.
-* Monitoring deserialization, alerting if a user deserializes constantly.
+* 敵対的なオブジェクトの生成やデータの改ざんを防ぐために、シリアライズされたオブジェクトにデジタル署名などの整合性チェックを実装する。
+* コードは、定義可能なクラスを想定する為、オブジェクトを生成する前に、デシリアライゼーションにおいて厳密な型制約を強制する。ただし、この手法を回避する方法は実証されているので、この手法頼みにする事はお勧め出来ません。
+* 悪意あるコードが埋め込まれていた場合に備え、可能であればデシリアライズに関するコードは分離して、低い権限の環境下で実行する。
+* 型の不整合やデシリアライズ時に生じた例外など、デシリアライゼーションで発生した失敗や例外はログに記録する。
+* デシリアライズするコンテナやサーバーからの、送受信に関するネットワーク接続は、制限もしくは監視する。
+* ユーザーが絶えずデシリアライズする事がないか、デシリアライゼーションをモニタリングし、警告する。
 
 
-## Example Attack Scenarios
+## 攻撃シナリオの例
 
-**Scenario #1**: A React application calls a set of Spring Boot microservices. Being functional programmers, they tried to ensure that their code is immutable. The solution they came up with is serializing user state and passing it back and forth with each request. An attacker notices the "R00" Java object signature, and uses the Java Serial Killer tool to gain remote code execution on the application server.
+**シナリオ #1**: Reactアプリケーションは、Spring Bootマイクロサービスを呼び出す。
+優秀なプログラマであろうとする為、彼らのコードはイミュータブルであろうとする。
+彼らが思いついた解決策は、呼び出しの前後でシリアライズしたユーザーの状態を渡す。
+攻撃者は base64でエンコードされている事を示す"R00"と言うJavaオブジェクトのシグネチャに気づき、Java Serial Killerツールを使用してアプリケーションサーバー上でリモートコードを実行する。
 
-**Scenario #2**: A PHP forum uses PHP object serialization to save a "super" cookie, containing the user's user ID, role, password hash, and other state:
+**シナリオ #2**: あるPHPフォーラムでは、PHPオブジェクトのシリアライゼーションを使用して、ユーザーのユーザーID、ロール、パスワードハッシュやその他の状態を含むいわゆるSuper Cookieを保存：
 
 `a:4:{i:0;i:132;i:1;s:7:"Mallory";i:2;s:4:"user";i:3;s:32:"b6a8b3bea87fe0e05022f8f3c88bc960";}`
 
-An attacker changes the serialized object to give themselves admin privileges:
+攻撃者は、シリアライズされたオブジェクトを変更して攻撃者自身に管理者権限を与える。
 `a:4:{i:0;i:1;i:1;s:5:"Alice";i:2;s:5:"admin";i:3;s:32:"b6a8b3bea87fe0e05022f8f3c88bc960";}`
 
-## References
+## 参照
 
 ### OWASP
 
@@ -57,7 +61,7 @@ An attacker changes the serialized object to give themselves admin privileges:
 * [OWASP AppSecEU 2016: Surviving the Java Deserialization Apocalypse](https://speakerdeck.com/pwntester/surviving-the-java-deserialization-apocalypse)
 * [OWASP AppSecUSA 2017: Friday the 13th JSON Attacks](https://speakerdeck.com/pwntester/friday-the-13th-json-attacks)
 
-### External
+### OWASP外
 
 * [CWE-502: Deserialization of Untrusted Data](https://cwe.mitre.org/data/definitions/502.html)
 * [Java Unmarshaller Security](https://github.com/mbechler/marshalsec)
