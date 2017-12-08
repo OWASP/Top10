@@ -1,58 +1,59 @@
-# A5:2017 Broken Access Control
+# A5:2017 アクセス制御の不備
 
-| Threat agents/Attack vectors | Security Weakness  | Impacts |
+| 脅威エージェント/攻撃手法 | セキュリティ上の弱点  | 影響 |
 | -- | -- | -- |
-| Access Lvl : Exploitability 2 | Prevalence 2 : Detectability 2 | Technical 3 : Business |
-| Exploitation of access control is a core skill of attackers. [SAST](https://www.owasp.org/index.php/Source_Code_Analysis_Tools) and [DAST](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools) tools can detect the absence of access control but cannot verify if it is functional when it is present. Access control is detectable using manual means, or possibly through automation for the absence of access controls in certain frameworks. | Access control weaknesses are common due to the lack of automated detection, and lack of effective functional testing by application developers. Access control detection is not typically amenable to automated static or dynamic testing. Manual testing is the best way to detect missing or ineffective access control, including HTTP method (GET vs PUT, etc), controller, direct object references, etc. | The technical impact is attackers acting as users or administrators, or users using privileged functions, or creating, accessing, updating or deleting every record. The business impact depends on the protection needs of the application and data. |
+| Access Lvl : 悪用難易度 2 | 流行度 2 : 検出難易度 2 | 技術への影響 3 : ビジネスへの影響 |
+| アクセスコントロールの悪用は攻撃者の基本スキルです。 静的ソースコード解析ツール([SAST](https://www.owasp.org/index.php/Source_Code_Analysis_Tools))と動的アプリケーションテストツール([DAST](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools))はアクセス制御の不存在を検出できますが、それが存在する場合にアクセス制御が有効に機能しているかどうかを検証することはできません。アクセス制御は、手作業で、場合によっては特定のフレームワークにおけるアクセス制御の不存在の自動チェックによって発見することができます。 | アクセス制御上の欠陥は、一般に、自動検出の欠如とアプリケーション開発者による有効な機能テストの欠如によって生じてしまいます。 アクセス制御の検出は、通常は自動化された静的または動的テストには適していません。 手動テストは、HTTPメソッド（GET対PUTなど）、コントローラ、オブジェクト直接参照などでの欠落している、もしくは機能していないアクセス制御を検出するための最良の方法です。 | 技術への影響は、攻撃者が一般ユーザー、管理者、または特権機能を持ったユーザーとして振る舞ったり、すべてのレコードの作成、アクセス、更新、削除を行ってしまうことです。ビジネスへの影響は、アプリケーションとデータの保護のニーズに依存します。 |
 
-## Is the Application Vulnerable?
+## 脆弱性有無の確認
 
-Access control enforces policy such that users cannot act outside of their intended permissions. Failures typically lead to unauthorized information disclosure, modification or destruction of all data, or performing a business function outside of the limits of the user. Common access control vulnerabilities include:
+アクセス制御はユーザーが予め与えられた権限から外れた行動をしないようにポリシーを適用します。ポリシー適用の失敗は、許可されていない情報の公開、すべてのデータの変更または破壊、またはユーザー制限から外れたビジネス機能の実行につながることが多いです。一般的なアクセス制御の脆弱性は以下のような場合に発生します:
 
-* Bypassing access control checks by modifying the URL, internal application state, or the HTML page, or simply using a custom API attack tool.
-* Allowing the primary key to be changed to another's users record, permitting viewing or editing someone else's account.
-* Elevation of privilege. Acting as a user without being logged in, or acting as an admin when logged in as a user.
-* Metadata manipulation, such as replaying or tampering with a JSON Web Token (JWT) access control token or a cookie or hidden field manipulated to elevate privileges, or abusing JWT invalidation
-* CORS misconfiguration allows unauthorized API access.
-* Force browsing to authenticated pages as an unauthenticated user or to privileged pages as a standard user. Accessing API with missing access controls for POST, PUT and DELETE.
+* URL、内部のアプリケーションの状態、HTMLページを変更することやカスタムAPI攻撃ツールを単純に使用することによって、アクセス制御のチェックを迂回できてしまう。
+* 主キーを他のユーザーのレコードに変更することができ、他のユーザーのアカウントを表示または編集できてしまう。
+* 権限昇格。ログインすることなしにユーザーとして行動したり、一般ユーザーとしてログインした時に管理者として行動できてしまう。
+* メタデータの操作。JSON Web Token（JWT）アクセス制御トークンや権限昇格するために操作されるCookieやhiddenフィールドを再生成または改ざんできたり、JWTの無効化を悪用できるなど。
+* CORSの誤設定によって権限のないAPIアクセスが許可されてしまう。
+* 認証されていないユーザーを要認証ページへ、一般ユーザーを要権限ページへ強制ブラウズできてしまう。 POST、PUT、DELETEメソッドへのアクセス制御がないAPIへアクセスができてしまう。
 
-## How To Prevent
+## 防止方法
 
-Access control is only effective if enforced in trusted server-side code or server-less API, where the attacker cannot modify the access control check or metadata.
+攻撃者がアクセス制御のチェックやメタデータを変更することができず、信頼できるサーバーサイドのコードまたはサーバーレスAPIで実施される場合にのみ、アクセス制御は機能します。
 
-* With the exception of public resources, deny by default.
-* Implement access control mechanisms once and re-use them throughout the application, including minimizing CORS usage.
-* Model access controls should enforce record ownership, rather than accepting that the user can create, read, update, or delete any record.
-* Unique application business limit requirements should be enforced by domain models.
-* Disable web server directory listing and ensure file metadata (e.g. .git) and backup files are not present within web roots.
-* Log access control failures, alert admins when appropriate (e.g. repeated failures).
-* Rate limit API and controller access to minimize the harm from automated attack tooling.
-* JWT tokens should be invalidated on the server after logout.
-* Developers and QA staff should include functional access control unit and integration tests.
+* 公開リソースへのアクセスを除いて、アクセスを原則として拒否する。
+* CORSの使用を最小限に抑えるように、アクセス制御メカニズムを一度実装し、アプリケーション全体で再利用する。
+* アクセス制御モデルは、ユーザーがどのようなレコードでも作成、読取、更新、または削除できるようにするのではなく、レコードの所有権があることを前提としなければならない。
+* アプリケーション独自のビジネス上の制約要求はドメインモデルに表現される必要がある。
+* Webサーバーのディレクトリリスティングを無効にし、ファイルのメタデータ（.gitなど）とバックアップファイルがウェブルートに存在しないことを確認する。
+* アクセス制御の失敗をログに記録し、必要に応じて管理者に警告する（繰返して失敗しているなど）。
+* レート制限するAPIとコントローラは自動攻撃ツールによる被害を最小限に抑えるための手段である。
+* JWTトークンはログアウト後にはサーバー上で無効とされるべきである。
 
-## Example Attack Scenarios
+開発者とQAスタッフは、アクセス制御に関する機能面での単体及び結合テストを取り入れるべきです。
 
-**Scenario #1**: The application uses unverified data in a SQL call that is accessing account information:
+## 攻撃シナリオの例
+
+**シナリオ #1**: アプリケーションが、アカウント情報にアクセスするSQL呼出しに未検証のデータを使用しています。
 
 ```
   pstmt.setString(1, request.getParameter("acct"));
   ResultSet results = pstmt.executeQuery();
 ```
 
-An attacker simply modifies the 'acct' parameter in the browser to send whatever account number they want. If not properly verified, the attacker can access any user's account.
+攻撃者は、単にブラウザでパラメータ'acct'を任意のアカウント番号に改変して送信します。適切な検証がない場合、攻撃者は任意のアカウントにアクセスできます。
 
 `http://example.com/app/accountInfo?acct=notmyacct`
 
-**Scenario #2**: An attacker simply force browses to target URLs. Admin rights are required for access to the admin page.
+**シナリオ #2**: ある攻撃者は、ブラウザでURLを指定してアクセスします。管理者ページにアクセスするには管理者権限が必要です。
 
 ```
   http://example.com/app/getappInfo
   http://example.com/app/admin_getappInfo
 ```
 
-If an unauthenticated user can access either page, it’s a flaw. If a non-admin can access the admin page, this is a flaw.
+認証されていないユーザーがこれからのページにアクセス出来たら欠陥があります。非管理者が管理者ページにアクセス出来ても欠陥があります。
 
-## References
+## 参考資料
 
 ### OWASP
 
@@ -61,7 +62,7 @@ If an unauthenticated user can access either page, it’s a flaw. If a non-admin
 * [OWASP Testing Guide: Authorization Testing](https://www.owasp.org/index.php/Testing_for_Authorization)
 * [OWASP Cheat Sheet: Access Control](https://www.owasp.org/index.php/Access_Control_Cheat_Sheet)
 
-### External
+### その他
 
 * [CWE-22: Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')](https://cwe.mitre.org/data/definitions/22.html)
 * [CWE-284: Improper Access Control (Authorization)](https://cwe.mitre.org/data/definitions/284.html)
