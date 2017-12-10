@@ -1,45 +1,45 @@
-# A2:2017 Broken Authentication
+# A2:2017 認証の不備
 
-| Threat agents/Attack vectors | Security Weakness           | Impacts               |
+| 脅威エージェント/攻撃手法 | セキュリティ上の弱点           | 影響               |
 | -- | -- | -- |
-| Access Lvl : Exploitability 3 | Prevalence 2 : Detectability 2 | Technical 3 : Business |
-| Attackers have access to hundreds of millions of valid username and password combinations for credential stuffing, default administrative account lists, automated brute force, and dictionary attack tools. Session management attacks are well understood, particularly in relation to unexpired session tokens. | The prevalence of broken authentication is widespread due to the design and implementation of most identity and access controls. Session management is the bedrock of authentication and access controls, and is present in all stateful applications. Attackers can detect broken authentication using manual means and exploit them using automated tools with password lists and dictionary attacks. | Attackers have to gain access to only a few accounts, or just one admin account to compromise the system. Depending on the domain of the application, this may allow money laundering, social security fraud, and identity theft, or disclose legally protected highly sensitive information. |
+| アクセス Lvl : 悪用難易度 3 | 普及度 2 : 検出難易度 2 | 技術的影響 3 : ビジネスへの影響 |
+| 攻撃者は、credential stuffing に使える数十億にのぼる有効なユーザ名とパスワードの組み合わせ、初期設定の管理者アカウントリスト、自動化された総当たり攻撃、辞書攻撃ツールを悪用してきます。そして、彼らはセッション管理における攻撃手法、特に有効期限が切れたセッショントークンに関連したものをよく理解しています。 | 一般的にユーザ認証とアクセス制御を設計・実装するため、認証の不備が広く流行しています。セッション管理はユーザ認証とアクセス制御の基盤であり、ステートフルなアプリケーションすべてがセッション管理を実装しています。攻撃者は手動で認証の不備を発見し、自動化ツールによるパスワードリスト攻撃や辞書攻撃を仕掛けて、それらを攻撃できます。 | 攻撃者は、システムを侵害するために、いくつかのアカウントまたはたった一つの管理者アカウントのアクセス権限を奪取すれば十分です。アプリケーション次第で、この攻撃はマネーロンダリング、社会的な不正行為、個人情報の侵害、法的に保護された重要な機密情報の漏えいにつながる恐れがあります。 |
 
-## Is the Application Vulnerable?
+## 脆弱性有無の確認
 
-Confirmation of the user's identity, authentication, and session management are critical to protect against authentication-related attacks.
+認証に関連した攻撃を防ぐためには、ユーザ認証、セッション管理の設計・実装を確認することが重要です。
 
-There may be authentication weaknesses if the application:
+アプリケーションが下記の条件を満たす場合、認証の設計・実装に問題があるかもしれません:
 
-* Permits automated attacks such as [credential stuffing](https://www.owasp.org/index.php/Credential_stuffing), where the attacker has a list of valid usernames and passwords.
-* Permits brute force or other automated attacks.
-* Permits default, weak, or well-known passwords, such as "Password1" or "admin/admin“.
-* Uses weak or ineffective credential recovery and forgot-password processes, such as "knowledge-based answers", which cannot be made safe.
-* Uses plain text, encrypted, or weakly hashed passwords (see **A3:2017-Sensitive Data Exposure**).
-* Has missing or ineffective multi-factor authentication.
-* Exposes Session IDs in the URL (e.g., URL rewriting).
-* Does not rotate Session IDs after successful login.
-* Does not properly invalidate Session IDs. User sessions or authentication tokens (particularly single sign-on (SSO) tokens) aren't properly invalidated during logout or a period of inactivity.
+* 有効なユーザ名とパスワードのリストを持つ攻撃者による[credential stuffing](https://www.owasp.org/index.php/Credential_stuffing)のような自動化された攻撃が成功する
+* 総当たり攻撃や、その他の自動化された攻撃が成功する
+* "Password1"や"admin/admin"のような初期設定と同じパスワード、強度の弱いパスワード、よく使われるパスワードを登録できる
+* 安全に実装できない"秘密の質問"のように、脆弱または効果的でないパスワード復旧手順やパスワードリマインダを実装している
+* 平文のパスワード、暗号化したパスワード、または脆弱なハッシュ関数でハッシュ化したパスワードを保存している(**A3:2017-機密データの露出**を参照)
+* 多要素認証を実装していない、または効果的な多要素認証を実装していない
+* URLからセッションIDが露見する(例: URLリライト)
+* ログインに成功した後でセッションIDを変更しない
+* 適切にセッションIDを無効にしない。ログアウトまたは一定時間操作がないとき、ユーザのセッションや認証トークン(特に、シングルサインオン(SSO)トークン)が適切に無効にならない
 
-## How To Prevent
+## 防止方法
 
-* Where possible, implement multi-factor authentication to prevent automated, credential stuffing, brute force, and stolen credential re-use attacks. 
-* Do not ship or deploy with any default credentials, particularly for admin users.
-* Implement weak-password checks, such as testing new or changed passwords against a list of the [top 10000 worst passwords](https://github.com/danielmiessler/SecLists/tree/master/Passwords).
-* Align password length, complexity and rotation policies with [NIST 800-63 B's guidelines in section 5.1.1 for Memorized Secrets](https://pages.nist.gov/800-63-3/sp800-63b.html#memsecret) or other modern, evidence based password policies.
-* Ensure registration, credential recovery, and API pathways are hardened against account enumeration attacks by using the same messages for all outcomes.
-* Limit or increasingly delay failed login attempts. Log all failures and alert administrators when credential stuffing, brute force, or other attacks are detected.
-* Use a server-side, secure, built-in session manager that generates a new random session ID with high entropy after login. Session IDs should not be in the URL, be securely stored and invalidated after logout, idle, and absolute timeouts.
+* 自動化された攻撃、credential stuffing、総当たり攻撃、盗まれたユーザ名/パスワードを再利用した攻撃を防ぐために、できる限り多要素認証を実装する
+* 初期アカウント(特に管理者ユーザ)を残したまま出荷およびリリースしない
+* 新しいパスワードまたは変更後のパスワードが[top 10000 worst passwords](https://github.com/danielmiessler/SecLists/tree/master/Passwords)のリストにないか照合するようなパスワード検証を実装する
+* [NIST 800-63 B's guidelines in section 5.1.1 for Memorized Secrets](https://pages.nist.gov/800-63-3/sp800-63b.html#memsecret)やパスワードポリシーの基になるドキュメントにしたがい、パスワード長、パスワードの複雑性や定期変更までの期間を決める
+* すべて同じメッセージを出力することで、ユーザ登録、パスワード復旧、API でaccount enumeration attacksに対策する
+* パスワード入力の失敗回数に制限を設ける、またはパスワード入力に失敗したらログインできるまでに待ち時間を設けること。credential stuffing、総当たり攻撃、または他の攻撃を検知したとき、すべてのログイン失敗を記録し、アプリケーション管理者に通知する
+* フレームワークなどが標準で提供するセッション管理機構をサーバサイドで採用して、ログイン後に高いエントロピーを持つランダムなセッションIDを生成する。セッションIDはURLを含めず、セキュアに保存し、ログアウト・一定時間操作がない・一定期間のタイムアウトした後に無効にすべきである
 
-## Example Attack Scenarios
+## 攻撃シナリオの例
 
-Scenario #1: [Credential stuffing](https://www.owasp.org/index.php/Credential_stuffing), the use of [lists of known passwords](https://github.com/danielmiessler/SecLists), is a common attack. If an application does not implement automated threat or credential stuffing protections, the application can be used as a password oracle to determine if the credentials are valid.
+シナリオ #1: [Credential stuffing](https://www.owasp.org/index.php/Credential_stuffing)や[lists of known passwords](https://github.com/danielmiessler/SecLists)を用いた攻撃は、広く知られた攻撃手法です。アプリケーションが自動化された攻撃やcredential stuffingに対策していない場合、そのアプリケーションがID/パスワードの組み合わせが正しいか検証するパスワードオラクルとして悪用されるかもしれません。
 
-**Scenario #2**: Most authentication attacks occur due to the continued use of passwords as a sole factor. Once considered best practices, password rotation and complexity requirements are viewed as encouraging users to use, and reuse, weak passwords. Organizations are recommended to stop these practices per NIST 800-63 and use multi-factor authentication.
+**シナリオ #2**: パスワードが認証の一要素として使われ続けていることから、ほとんどの認証に関連する攻撃が起こっています。ユーザが脆弱なパスワードを設定、または再利用しやすい状況にないか、かつてのベストプラクティス、パスワード変更および複雑性の要件をレビューしてください。組織には、NIST 800-63におけるプラクティスの実装をやめること、多要素認証を採用することを推奨します。
 
-**Scenario #3**: Application session timeouts aren't set properly. A user uses a public computer to access an application. Instead of selecting “logout” the user simply closes the browser tab and walks away. An attacker uses the same browser an hour later, and the user is still authenticated.
+**シナリオ #3**: アプリケーションにセッションタイムアウトが適切に実装されていません。ユーザが公共の場のコンピュータでそのアプリケーションにアクセスします。そのユーザは、アプリケーションからログアウトする代わりに単純にブラウザでそのタブを閉じて、その場を立ち去ります。一時間後、攻撃者が同じコンピュータでブラウザを起動すると、まだそのユーザでログインしたままになっています。
 
-## References
+## 参考資料
 
 ### OWASP
 
@@ -47,15 +47,15 @@ Scenario #1: [Credential stuffing](https://www.owasp.org/index.php/Credential_st
 * [OWASP Application Security Verification Standard: V2 Authentication](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
 * [OWASP Application Security Verification Standard: V3 Session Management](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
 * [OWASP Testing Guide: Identity](https://www.owasp.org/index.php/Testing_Identity_Management)
- and [Authentication](https://www.owasp.org/index.php/Testing_for_authentication)
+ と [Authentication](https://www.owasp.org/index.php/Testing_for_authentication)
 * [OWASP Cheat Sheet: Authentication](https://www.owasp.org/index.php/Authentication_Cheat_Sheet)
 * [OWASP Cheat Sheet: Credential Stuffing](https://www.owasp.org/index.php/Credential_Stuffing_Prevention_Cheat_Sheet)
 * [OWASP Cheat Sheet: Forgot Password](https://www.owasp.org/index.php/Forgot_Password_Cheat_Sheet)
 * [OWASP Cheat Sheet: Session Management](https://www.owasp.org/index.php/Session_Management_Cheat_Sheet)
 * [OWASP Automated Threats Handbook](https://www.owasp.org/index.php/OWASP_Automated_Threats_to_Web_Applications)
 
-### External
+### その他
 
-* [NIST 800-63b: 5.1.1 Memorized Secrets](https://pages.nist.gov/800-63-3/sp800-63b.html#memsecret) - for thorough, modern, evidence-based advice on authentication. 
+* [NIST 800-63b: 5.1.1 Memorized Secrets](https://pages.nist.gov/800-63-3/sp800-63b.html#memsecret) - 緻密な調査に基づく最新の認証に関するアドバイス
 * [CWE-287: Improper Authentication](https://cwe.mitre.org/data/definitions/287.html)
 * [CWE-384: Session Fixation](https://cwe.mitre.org/data/definitions/384.html)
