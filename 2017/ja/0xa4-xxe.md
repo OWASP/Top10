@@ -2,15 +2,15 @@
 
 | 脅威エージェント/攻撃手法 | セキュリティ上の弱点           | 影響               |
 | -- | -- | -- |
-| Access Lvl : 悪用難易度 2 | 流行度 2 : 検出難易度 3 | 技術的影響 3 : ビジネスへの影響 |
+| アクセスレベル : 悪用難易度 2 | 流行度 2 : 検出難易度 3 | 技術的影響度 3 : ビジネスへの影響 |
 | 攻撃者は、脆弱なコード、依存関係、または統合を利用して、XMLをアップロードしたり、悪意のあるコンテンツをXML文書に含めることができる場合、その脆弱なXMLプロセッサを悪用することができます。 | 多くの古いXMLプロセッサにおいて、デフォルトでは、外部エンティティ（XML処理中に参照先のデータを取得しevalされるURI）の指定が可能です。 [SAST](https://www.owasp.org/index.php/Source_Code_Analysis_Tools) ツールで依存関係と構成を調べることでこの問題を発見できます。 [DAST](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools) ツールでこの問題を検出しエクスプロイトを見つけるには手作業を加える必要があります。マニュアルテストをするなら、XXEのテスト方法を習得する必要があります。これは、2017年の時点では一般にテストされていないためです。 | これらの欠陥は、データの抽出、サーバからのリモート要求の実行、内部システムのスキャン、サービス不能攻撃の実行、その他の攻撃の実行に使用できます。 |
 
-## どんなアプリケーションが脆弱ですか？
+## 脆弱性有無の確認
 
 アプリケーション、特にXMLベースのWebサービスやダウンストリーム統合では、次のような攻撃を受ける可能性があります:
 
 * アプリケーションは、特に信頼できないソースからXMLを直接またはXMLアップロードを受け入れるか、信頼できないデータをXMLドキュメントに挿入し、XMLプロセッサによって解析されます。
-* アプリケーションまたはSOAPベースのWebサービスのXMLプロセッサにおいて、[ドキュメントタイプ定義（DTD）]（https://en.wikipedia.org/wiki/Document_type_definition）が有効になっています。 DTD処理を無効にする実際のメカニズムはプロセッサによって異なるため、[OWASP Cheat Sheet 'XXE Prevention'](https://www.owasp.org/index.php/XML_External_Entity_(XXE)_Prevention_Cheat_Sheet)のようなリファレンスを調べると良いでしょう。 
+* アプリケーションまたはSOAPベースのWebサービスのXMLプロセッサにおいて、[ドキュメントタイプ定義（DTD）]（https://en.wikipedia.org/wiki/Document_type_definition）が有効になっています。 DTD処理を無効にする実際のメカニズムはプロセッサによって異なるため、[OWASP Cheat Sheet 'XXE Prevention'](https://www.owasp.org/index.php/XML_External_Entity_(XXE)_Prevention_Cheat_Sheet)のようなリファレンスを調べると良いでしょう。
 * アプリケーションが統合されたセキュリティあるいはシングルサインオン（SSO）の目的でIDの処理にSAMLを使用する場合、SAMLはIDアサーションにXMLを使用しているため、脆弱である可能性があります。
 * アプリケーションがバージョン1.2より前のSOAPを使用する場合、XMLエンティティがSOAPフレームワークに渡されていると、XXE攻撃の影響を受けやすくなります。
 * XXE攻撃に対して脆弱であるということは、アプリケーションがDoS攻撃に脆弱である可能性が高いということになります。
@@ -63,7 +63,7 @@
 * [OWASP Cheat Sheet: XXE Prevention](https://www.owasp.org/index.php/XML_External_Entity_(XXE)_Prevention_Cheat_Sheet)
 * [OWASP Cheat Sheet: XML Security](https://www.owasp.org/index.php/XML_Security_Cheat_Sheet)
 
-### 外部資料
+### その他
 
 * [CWE-611: Improper Restriction of XXE](https://cwe.mitre.org/data/definitions/611.html)
 * [Billion Laughs Attack](https://en.wikipedia.org/wiki/Billion_laughs_attack)
