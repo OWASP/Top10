@@ -1,47 +1,47 @@
-# A6:2017 Security Misconfiguration
+# A6:2017 セキュリティの設定が適切ではない
 
-| Threat agents/Attack vectors | Security Weakness           | Impacts               |
+| 脅威エージェント/攻撃手法 | セキュリティ上の弱点           | 影響               |
 | -- | -- | -- |
-| Access Lvl : Exploitability 3 | Prevalence 3 : Detectability 3 | Technical 2 : Business |
-| Attackers will often attempt to exploit unpatched flaws or access default accounts, unused pages, unprotected files and directories, etc to gain unauthorized access or knowledge of the system. | Security misconfiguration can happen at any level of an application stack, including the network services, platform, web server, application server, database, frameworks, custom code, and pre-installed virtual machines, containers, or storage. Automated scanners are useful for detecting misconfigurations, use of default accounts or configurations, unnecessary services, legacy options, etc. | Such flaws frequently give attackers unauthorized access to some system data or functionality. Occasionally, such flaws result in a complete system compromise. The business impact depends on the protection needs of the application and data. |
+| Access Lvl : 悪用難易度 3 | 流行度 3 : 検出難易度 3 | 技術的影響 2 : ビジネスへの影響 |
+| 攻撃者は、パッチを当てていない穴を悪用したり、デフォルトのアカウントや使われていないページ、保護されていないファイルやディレクトリなどにアクセスし、権限無しにアクセスしたり、システム情報を取得したりします。| 不適切なセキュリティの設定は、どのレベルのアプリケーションスタックにも起こりえます。それはネットワークサービスやプラットフォーム、Webサーバ、アプリケーションサーバ、データベース、フレームワーク、カスタムコード、プレインストールしてある仮想マシンやコンテナ、ストレージです。自動化したスキャナーは、不適切な設定、つまりデフォルトのアカウントや設定、必要のないサービスやレガシーなオプションなどが使われているのを見つけるのに便利です。 | この欠陥によって、攻撃者は得てして権限無しにシステムのデータや機能にアクセスしてしまいます。場合によっては、そのような欠陥によってシステム全体が損なわれてしまいます。 ビジネスへの影響は、アプリケーションとデータにどの程度保護が必要とされているかによります。 |
 
-## Is the Application Vulnerable?
+## どんなアプリケーションが脆弱ですか？
 
-The application might be vulnerable if the application is:
+アプリケーションが下記のようなら、恐らく脆弱です。
 
-* Missing appropriate security hardening across any part of the application stack, or improperly configured permissions on cloud services.
-* Unnecessary features are enabled or installed (e.g. unnecessary ports, services, pages, accounts, or privileges).
-* Default accounts and their passwords still enabled and unchanged.
-* Error handling reveals stack traces or other overly informative error messages to users.
-* For upgraded systems, latest security features are disabled or not configured securely.
-* The security settings in the application servers, application frameworks (e.g. Struts, Spring, ASP.NET), libraries, databases, etc. not set to secure values.
-* The server does not send security headers or directives or they are not set to secure values.
-* The software is out of date or vulnerable (see **A9:2017-Using Components with Known Vulnerabilities**).
+* アプリケーションスタックのあらゆる部分に渡って、適切にセキュリティを強化していない。クラウドサービス上でパーミッションを適切に設定していない
+* 必要のない機能が有効になっていたり、インストールされていたりする(例えば、必要のないポートやサービス、ページ、アカウント、特権)
+* デフォルトのアカウントとパスワードが有効になったまま変更されていない
+* エラー処理がユーザーに対して、スタックトレースやその他余計な情報を含むエラーメッセージを見せる
+* アップグレードしたシステムでは、最新のセキュリティ機能が無効になっているか正しく設定されていない
+* アプリケーションサーバやアプリケーションフレームワーク(例えば、Struts、Spring、 ASP.NET)、ライブラリ、データベース等のセキュリティの設定が、安全な値に設定されていない
+* サーバがセキュリテイヘッダーやディレクティブを送らなかったり、安全な値に設定されていなかったりする
+* ソフトウェアが古いか脆弱である (**A9:2017-既知の脆弱性を持つコンポーネントの使用** を参照)
 
-Without a concerted, repeatable application security configuration process, systems are at a higher risk.
+アプリケーションのセキュリティを設定するプロセスを一致協力して繰り返さないと、システムのリスクはより高くなります。
 
-## How To Prevent
+## 防止方法
 
-Secure installation processes should be implemented, including:
+安全にインストールするプロセスにおいては、下記を実施してください。
 
-* A repeatable hardening process that makes it fast and easy to deploy another environment that is properly locked down. Development, QA, and production environments should all be configured identically, with different credentials used in each environment. This process should be automated to minimize the effort required to setup a new secure environment.
-* A minimal platform without any unnecessary features, components, documentation, and samples. Remove or do not install unused features and frameworks.
-* A task to review and update the configurations appropriate to all security notes, updates and patches as part of the patch management process (see **A9:2017-Using Components with Known Vulnerabilities**). In particular, review cloud storage permissions (e.g. S3 bucket permissions).
-* A segmented application architecture that provides effective, secure separation between components or tenants, with segmentation, containerization, or cloud security groups (ACLs).
-* Sending security directives to clients, e.g. [Security Headers](https://www.owasp.org/index.php/OWASP_Secure_Headers_Project).
-* An automated process to verify the effectiveness of the configurations and settings in all environments.
+* 繰り返し強化するプロセスは、簡単にすぐ他の環境に展開され、正しくロックダウンすること。開発やQA、本番環境は完全に同じように設定し、それぞれの環境で別々の認証情報を使用すること。このプロセスを自動化し、新しい安全な環境をセットアップする際には、手間を最小限にすること
+* プラットフォームは最小限のものとし、必要のない機能やコンポーネント、ドキュメント、サンプルを除くこと。使用しない機能とフレームワークは、削除もしくはインストールしないこと
+* レビューを実施して、セキュリティ関連の記録と更新の全てに加え、パッチを管理するプロセスの一環としてパッチの設定を適切に更新すること(**A9:2017-既知の脆弱性を持つコンポーネントの使用** を参照)。クラウドストレージのパーミッションは、詳細にレビューすること (例えば、S3 バケットのパーミッション)
+* セグメント化したアプリケーションアーキテクチャは、セグメンテーションやコンテナリゼーション、クラウドのセキュリティグループ(ACL)をともなったコンポーネントやテナント間に、効果的で安全な仕切りをもたらす
+* セキュリティディレクティブをクライアントへ送ること。例えば [セキュリティヘッダー](https://www.owasp.org/index.php/OWASP_Secure_Headers_Project)
+* プロセスを自動化して設定の有効性を検証し、環境全てに適用すること
 
-## Example Attack Scenarios
+## 攻撃シナリオの例
 
-**Scenario #1**: The application server comes with sample applications that are not removed from the production server. These sample applications have known security flaws attackers use to compromise the server. If one of these applications is the admin console, and default accounts weren't changed the attacker logs in with default passwords and takes over.
+**シナリオ #1**: アプリケーションのサンプルが付属しているアプリケーションサーバであるにもかかわらず、プロダクションサーバからサンプルが削除されていない。このサンプルアプリケーションには、攻撃者がサーバに侵入する際によく使う既知の脆弱性がある。そのアプリケーションが管理用のコンソールでデフォルトのアカウントが変更されていないと、攻撃者はデフォルトのパスワードを使ってログインし、乗っ取ってしまう
 
-**Scenario #2**: Directory listing is not disabled on the server. An attacker discovers they can simply list directories. The attacker finds and downloads the compiled Java classes, which they decompile and reverse engineer to view the code. The attacker then finds a serious access control flaw in the application.
+**シナリオ #2**: ディレクトリリスティングがサーバ上で無効になっていない。攻撃者はそれを見つけ出し、やすやすとディレクトリを表示してしまう。攻撃者はコンパイル済みのJavaクラスを見つけてダウンロードし、デコンパイルしてからリバースエンジニアリングしてコードを見る。そして攻撃者は、そのアプリケーションの深刻なアクセス制御上の穴を見つける
 
-**Scenario #3**: The application server's configuration allows detailed error messages, e.g. stack traces, to be returned to users. This potentially exposes sensitive information or underlying flaws such as component versions that are known to be vulnerable.
+**シナリオ #3**: アプリケーションサーバの設定が、詳細なエラーメッセージ(例えば、スタックトレース)をユーザーに返すようにになっている。これによって機密情報や脆弱であるとされているコンポーネントのバージョンといった潜在的な欠陥がさらされる恐れがある
 
-**Scenario #4**: A cloud service provider has default sharing permissions open to the Internet by other CSP users. This allows sensitive data stored within cloud storage to be accessed.
+**シナリオ #4**: クラウドサービスプロバイダは、他のCSPユーザーによるデフォルトでインターネットに公開された共有パーミッションを用意している。こうなると、機密情報がクラウドストレージに保存され、アクセスされてしまう
 
-## References
+## 参考資料
 
 ### OWASP
 
@@ -49,9 +49,9 @@ Secure installation processes should be implemented, including:
 * [OWASP Testing Guide: Testing for Error Codes](https://www.owasp.org/index.php/Testing_for_Error_Code_(OWASP-IG-006))
 * [OWASP Security Headers Project](https://www.owasp.org/index.php/OWASP_Secure_Headers_Project)
 
-For additional requirements in this area, see the Application Security Verification Standard [V19 Configuration](https://www.owasp.org/index.php/ASVS_V19_Configuration).
+この分野でさらに知りたいのなら、 Application Security Verification Standard [V19 Configuration](https://www.owasp.org/index.php/ASVS_V19_Configuration)を参照してください。
 
-### External
+### 外部資料
 
 * [NIST Guide to General Server Hardening](https://csrc.nist.gov/publications/detail/sp/800-123/final)
 * [CWE-2: Environmental Security Flaws](https://cwe.mitre.org/data/definitions/2.html)

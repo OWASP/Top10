@@ -1,14 +1,14 @@
-# +RF Details About Risk Factors
+# +RF リスクファクターに関する詳細
 
-## Top 10 Risk Factor Summary
+## Top 10 リスクファクターのまとめ
 
-The following table presents a summary of the 2017 Top 10 Application Security Risks, and the risk factors we have assigned to each risk. These factors were determined based on the available statistics and the experience of the OWASP Top 10 team. To understand these risks for a particular application or organization, you must consider your own specific threat agents and business impacts. Even severe software weaknesses may not present a serious risk if there are no threat agents in a position to perform the necessary attack or the business impact is negligible for the assets involved.
+下の表は、2017 Top 10アプリケーションのセキュリティリスクと各リスクに紐付けたリスクファクターのまとめです。これらのファクターは、OWASP Top 10チームが持つ統計資料と経験に基づき決定しました。それぞれのアプリケーションや組織におけるリスクを理解するために、「脅威エージェント」と「ビジネスへの影響」を考慮しないといけません。ソフトウェアに甚大な弱点があったとしても、攻撃をする「脅威エージェント」がいない、或いは関連資産への「ビジネスへの影響」が極めて少ない場合、重大なリスクにはなりません。
 
 ![Risk Factor Table](images/0xc1-risk-factor-table.png)
 
-## Additional Risks To Consider
+## その他の考慮すべきリスク
 
-The Top 10 covers a lot of ground, but there are many other risks you should consider and evaluate in your organization. Some of these have appeared in previous versions of the Top 10, and others have not, including new attack techniques that are being identified all the time. Other important application security risks (ordered by CWE-ID) that you should additionally consider include:
+Top 10は、幅広く含めていますが、考慮・評価すべきリスクは、他に多数あります。以前のTop 10に含まれていたリスクもありますが、まだ識別されていない新たな攻撃手法もあります。他に考慮すべき重要なアプリケーションのセキュリティリスクを以下に示します（CWE-ID順）：
 
 * [CWE-352: Cross-Site Request Forgery (CSRF)](https://cwe.mitre.org/data/definitions/352.html)
 * [CWE-400: Uncontrolled Resource Consumption ('Resource Exhaustion', 'AppDoS')](https://cwe.mitre.org/data/definitions/400.html)
@@ -18,4 +18,3 @@ The Top 10 covers a lot of ground, but there are many other risks you should con
 * [CWE-799: Improper Control of Interaction Frequency (Anti-Automation)](https://cwe.mitre.org/data/definitions/799.html)
 * [CWE-829: Inclusion of Functionality from Untrusted Control Sphere (3rd Party Content)](https://cwe.mitre.org/data/definitions/829.html)
 * [CWE-918: Server-Side Request Forgery (SSRF)](https://cwe.mitre.org/data/definitions/918.html)
-
