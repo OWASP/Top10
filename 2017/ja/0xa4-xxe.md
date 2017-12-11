@@ -10,7 +10,7 @@
 アプリケーション、特にXMLベースのWebサービスやダウンストリーム統合では、次のような攻撃を受ける可能性があります:
 
 * アプリケーションは、特に信頼できないソースからXMLを直接またはXMLアップロードを受け入れるか、信頼できないデータをXMLドキュメントに挿入し、XMLプロセッサによって解析されます。
-* アプリケーションまたはSOAPベースのWebサービスのXMLプロセッサにおいて、[ドキュメントタイプ定義（DTD）]（https://en.wikipedia.org/wiki/Document_type_definition)が有効になっています。 DTD処理を無効にする実際のメカニズムはプロセッサによって異なるため、[OWASP Cheat Sheet 'XXE Prevention'](https://www.owasp.org/index.php/XML_External_Entity_(XXE)_Prevention_Cheat_Sheet)のようなリファレンスを調べると良いでしょう。
+* アプリケーションまたはSOAPベースのWebサービスのXMLプロセッサにおいて、[ドキュメントタイプ定義（DTD）](https://en.wikipedia.org/wiki/Document_type_definition)が有効になっています。 DTD処理を無効にする実際のメカニズムはプロセッサによって異なるため、[OWASP Cheat Sheet 'XXE Prevention'](https://www.owasp.org/index.php/XML_External_Entity_(XXE)_Prevention_Cheat_Sheet)のようなリファレンスを調べると良いでしょう。
 * アプリケーションが統合されたセキュリティあるいはシングルサインオン（SSO）の目的でIDの処理にSAMLを使用する場合、SAMLはIDアサーションにXMLを使用しているため、脆弱である可能性があります。
 * アプリケーションがバージョン1.2より前のSOAPを使用する場合、XMLエンティティがSOAPフレームワークに渡されていると、XXE攻撃の影響を受けやすくなります。
 * XXE攻撃に対して脆弱であるということは、アプリケーションがDoS攻撃に脆弱である可能性が高いということになります。
