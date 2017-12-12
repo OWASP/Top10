@@ -63,13 +63,13 @@ generate() {
 #generate "cz"
 
 # English
-generate "en"
+#generate "en"
 
 # French 
 #generate "fr"
 
 # German
-generate "de"
+#generate "de"
 
 # Hebrew
 #generate "heb"
@@ -79,12 +79,13 @@ generate "de"
 
 # Japanese
 #generate "jp"
+generate "ja"
 
 # Korean
 #generate "kr"
 
 # Spanish
-generate "es"
+#generate "es"
 
 # Ukraine
 #generate "ukr"
