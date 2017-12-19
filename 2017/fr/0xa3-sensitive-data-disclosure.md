@@ -7,29 +7,29 @@
 
 ## Suis-je vulnérable ?
 
-Déterminer d’abord quelles données doivent bénéficier d’une protection cryptographique (mots de passe, données patient, numéros de cartes, données personnelles, etc.), lors de leur transfert et/ou leur stockage. Pour chacune de ces données :
+Déterminer d’abord quelles données doivent bénéficier d’une protection chiffrée (mots de passe, données patient, numéros de cartes, données personnelles, etc.), lors de leur transfert et/ou leur stockage. Pour chacune de ces données :
 
-* Is any data transmitted in clear text? This concerns protocols such as HTTP, SMTP, and FTP. External internet traffic is especially dangerous. Verify all internal traffic e.g. between load balancers, web servers, or back-end systems.
-* Are any old or weak cryptographic algorithms used either by default or in older code? 
-* Are default crypto keys in use, weak crypto keys generated or re-used, or is proper key management or rotation missing?
-* Is encryption not enforced, e.g. are any user agent (browser) security directives or headers missing?
-* Does the user agent (e.g. app, mail client) not verify if the received server certificate is valid?
+* Les données circulent-elles en clair ? Ceci concerne les protocoles tels que HTTP, SMTP, et FTP. Le trafic externe sur inernet est particulièrement dangereux. Vérifiez tout le réseau interne, par exemple entre les équilibreurs de charge, les serveurs Web, ou les systèmes backend.
+* Des algorithmes faibles ou désuets sont-ils utilisés, soit par défaut, soit dans le code source existant ?
+* Est-ce que des clefs de chiffrement par défaut sont utilisées ? Des clefs de chiffrement faibles sont-elles générées ou réutilisées ? Leur gestion et rotation sont-elles prises en charge?
+* Les réponses transmises au navigateur incluent-elles les directives/en-têtes de sécurité adéquats ?
+* Est-ce que l'agent utilisateur (l'application ou le client mail, par exemple) vérifie que le certificat envoyé par le serveur est valide ?
 
-See ASVS [Crypto (V7)](https://www.owasp.org/index.php/ASVS_V7_Cryptography), [Data Protection (V9)](https://www.owasp.org/index.php/ASVS_V9_Data_Protection) and [SSL/TLS (V10)](https://www.owasp.org/index.php/ASVS_V10_Communications).
+Pour une liste complète de contrôles, se référer à l’ASVS : [Crypto (V7)](https://www.owasp.org/index.php/ASVS_V7_Cryptography), [Data Protection (V9)](https://www.owasp.org/index.php/ASVS_V9_Data_Protection) et [SSL/TLS (V10)](https://www.owasp.org/index.php/ASVS_V10_Communications).
 
-## How To Prevent
+## Comment s'en prémunir ?
 
-Do the following, at a minimum, and consult the references:
+On veillera au minimum à suivre les recommandations suivantes, mais il reste nécessaire de consulter les références.
 
-* Classify data processed, stored or transmitted by an application. Identify which data is sensitive according to privacy laws, regulatory requirements, or business needs.
-* Apply controls as per the classification.
-* Don't store sensitive data unnecessarily. Discard it as soon as possible or use PCI DSS compliant tokenization or even truncation. Data that is not retained cannot be stolen.
-* Make sure to encrypt all sensitive data at rest.
-* Ensure up-to-date and strong standard algorithms, protocols, and keys are in place; use proper key management.
-* Encrypt all data in transit with secure protocols such as TLS with perfect forward secrecy (PFS) ciphers, cipher prioritization by the server, and secure parameters. Enforce encryption using directives like HTTP Strict Transport Security (HSTS).
-* Disable caching for response that contain sensitive data.
-* Store passwords using strong adaptive and salted hashing functions with a work factor (delay factor), such as [Argon2](https://www.cryptolux.org/index.php/Argon2), [scrypt](https://wikipedia.org/wiki/Scrypt), [bcrypt](https://wikipedia.org/wiki/Bcrypt) or [PBKDF2](https://wikipedia.org/wiki/PBKDF2).
-* Verify independently the effectiveness of configuration and settings.
+* Classifier les données traitées, stockées ou transmises par l'application. Identifier quelles données sont sensibles selon les lois concernant la protection de la vie privée, les exigances réglementaires, ou les besoins métier.
+* Appliquer des contrôles selon la classification.
+* Ne pas stocker de données sensibles sans que cela ne soit nécessaire. Les rejeter ou utiliser une tokenisation conforme à la norme de sécurité de l’industrie des cartes de paiement (PCI DSS) ou même une troncature. Les données que l’on ne possède pas ne peuvent être volées!
+* S'assurer de chiffrer toutes les données sensibles au repos.
+* Choisir des algorithmes éprouvés et générer des clés robustes. S'assurer qu'une gestion des clés est en place.
+* Chiffrer toutes les données transmises avec des protocoles sécurisés tels que TLS avec des chiffres à confidentialité persistante (perfect forward secrecy - PFS). Chiffrer en priorité sur le serveur. Utiliser des paramètres sécurisés. Forcer le chiffrement en utilisant des directives comme HTTP Strict Transport Security (HSTS).
+* Désactiver le cache pour les réponses contenant des données sensibles.
+* Stocker les mots de passe au moyen de puissantes fonctions de hachage adaptatives, avec sel et facteur de travail (ou facteur de retard), comme [Argon2](https://www.cryptolux.org/index.php/Argon2), [scrypt](https://wikipedia.org/wiki/Scrypt), [bcrypt](https://wikipedia.org/wiki/Bcrypt) ou [PBKDF2](https://wikipedia.org/wiki/PBKDF2).
+* Vérifier indépendamment l'efficacité de la configuration et des paramètres.
 
 ## Example Attack Scenarios
 
