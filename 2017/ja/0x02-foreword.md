@@ -30,4 +30,4 @@ OWASP Top 10プロジェクトと翻訳はこちらです:
 ## プロジェクトのスポンサー
 OWASP Top 10 - 2017のスポンサー [Autodesk](https://www.autodesk.com) 社に感謝します。
 
-脆弱性の蔓延状況を示すデータやその他のご助力を提供してくださった組織ならびに個人はこちらのリストに記載しました。 [Acknowledgements page](0xd1-data-contributors.md).
+脆弱性の蔓延状況を示すデータやその他のご助力を提供してくださった組織ならびに個人は[謝辞](0xd1-data-contributors.md)のリストに記載しました。
