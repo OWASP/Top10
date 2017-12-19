@@ -10,16 +10,16 @@ OWASP Top10の主要な目的は、開発者、デザイナー、アーキテク
 
 ## 将来への道筋
 
-**10まででやめない**. [OWASP Developer's Guide](https://www.owasp.org/index.php/OWASP_Guide_Project)や [OWASP Cheat Sheet Series](https://www.owasp.org/index.php/Category:Cheatsheets)で説明されているように、Webアプリケーションの全体的なセキュリティに影響を与える可能性のある問題は数多くあります。これらは、WebアプリケーションやAPIを開発するどんな人にとっても、不可欠な情報です。WebアプリケーションおよびAPIの脆弱性を効果的に見つける方法に関するガイダンスは、[OWASP Testing Guide](https://www.owasp.org/index.php/OWASP_Testing_Project) に記載されています。
+**10まででやめない** [OWASP Developer's Guide](https://www.owasp.org/index.php/OWASP_Guide_Project)や [OWASP Cheat Sheet Series](https://www.owasp.org/index.php/Category:Cheatsheets)で説明されているように、Webアプリケーションの全体的なセキュリティに影響を与える可能性のある問題は数多くあります。これらは、WebアプリケーションやAPIを開発するどんな人にとっても、不可欠な情報です。WebアプリケーションおよびAPIの脆弱性を効果的に見つける方法に関するガイダンスは、[OWASP Testing Guide](https://www.owasp.org/index.php/OWASP_Testing_Project) に記載されています。
 
-**定期的に変更する**. OWASP Top 10はこれからも変化し続けます。また、あなたのアプリケーションコードの、1行も変更していなくても、脆弱になる可能性があります。新しい欠陥が発見され、攻撃方法が洗練されるからです。詳細については、Top 10の最後に掲載した、開発者、テスター、組織、アプリケーションマネージャのための次のステップの項にあるアドバイスを見直してみてください。
+**定期的に変更する** OWASP Top 10はこれからも変化し続けます。また、あなたのアプリケーションコードの、1行も変更していなくても、脆弱になる可能性があります。新しい欠陥が発見され、攻撃方法が洗練されるからです。詳細については、Top 10の最後に掲載した、開発者、テスター、組織、アプリケーションマネージャのための次のステップの項にあるアドバイスを見直してみてください。
 
-**積極的に思考する**. 脆弱性を追いかけるのをやめ、アプリケーションセキュリティコントロールを強力なものに確立する準備ができたら、以下の文書を参照してください。[OWASP Proactive Controls](https://www.owasp.org/index.php/OWASP_Proactive_Controls) プロジェクトは、開発者がセキュリティをアプリケーションに組み込むための出発点を提供します。また、[OWASP Application Security Verification Standard (ASVS)](https://www.owasp.org/index.php/ASVS)は、組織にとって、またアプリケーションレビュワーにとって何を検証したら良いかを示すガイドです。
+**積極的に思考する** 脆弱性を追いかけるのをやめ、アプリケーションセキュリティコントロールを強力なものに確立する準備ができたら、以下の文書を参照してください。[OWASP Proactive Controls](https://www.owasp.org/index.php/OWASP_Proactive_Controls) プロジェクトは、開発者がセキュリティをアプリケーションに組み込むための出発点を提供します。また、[OWASP Application Security Verification Standard (ASVS)](https://www.owasp.org/index.php/ASVS)は、組織にとって、またアプリケーションレビュワーにとって何を検証したら良いかを示すガイドです。
 
-**賢くツールを活用する**. 
+**賢くツールを活用する** 
 セキュリティ脆弱性は、非常に複雑で深刻なコードに埋もれていることがあります。多くの場合、そのような弱点を発見して排除するための最も費用対効果の高いアプローチは、高度なツールを手元に備えている専門家です。ツールのみに依存することは、セキュリティに関する誤った感覚をもたらしてしまうので、お勧めしません。
 
-**左へ右へ、どこへでも進める**. セキュリティをソフトウェア開発の組織全体のカルチャーにかかわる不可欠なものとすることに集中してください。詳しい情報は、 [OWASP Software Assurance Maturity Model (SAMM)](https://www.owasp.org/index.php/OWASP_SAMM_Project)にあります。
+**左へ右へ、どこへでも進める** セキュリティをソフトウェア開発の組織全体のカルチャーにかかわる不可欠なものとすることに集中してください。詳しい情報は、 [OWASP Software Assurance Maturity Model (SAMM)](https://www.owasp.org/index.php/OWASP_SAMM_Project)にあります。
 
 ## 謝辞
 
