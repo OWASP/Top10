@@ -7,7 +7,7 @@
 
 ## 脆弱性発見のポイント
 
-下記に該当する場合、脆弱と言えます:
+以下に該当する場合、脆弱と言えます:
 
 * 使用しているすべてのコンポーネントのバージョンを知らない場合（クライアントサイド・サーバーサイドの両方について）。これには直接使用するコンポーネントだけでなく、ネストされた依存関係も含む。
 * ソフトウェアが脆弱な場合やサポートがない場合、また使用期限が切れている場合。これには、OSやWebサーバー、アプリケーションサーバー、データベース管理システム（DBMS）、アプリケーション、API、すべてのコンポーネント、ランタイム環境とライブラリを含む場合。
@@ -42,8 +42,8 @@
 
 ### OWASP
 
-* [OWASPアプリケーションセキュリティ検証標準: V1 アーキテクチャ、設計、脅威モデリング](https://www.owasp.org/index.php/ASVS_V1_Architecture)
-* [OWASP Dependency Check (Javaと.NET libraries)](https://www.owasp.org/index.php/OWASP_Dependency_Check)
+* [OWASP Application Security Verification Standard: V1 Architecture, design and threat modelling](https://www.owasp.org/index.php/ASVS_V1_Architecture)
+* [OWASP Dependency Check (for Java and .NET libraries)](https://www.owasp.org/index.php/OWASP_Dependency_Check)
 * [OWASP Testing Guide - Map Application Architecture (OTG-INFO-010)](https://www.owasp.org/index.php/Map_Application_Architecture_(OTG-INFO-010))
 * [OWASP Virtual Patching Best Practices](https://www.owasp.org/index.php/Virtual_Patching_Best_Practices)
 
