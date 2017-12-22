@@ -8,7 +8,7 @@ OWASPはアプリケーションとAPIにおけるセキュリティを改良す
 アプリケーションセキュリティを実現するには、セキュリティと監査、ソフトウェア開発、ビジネス及びエグゼクティブマネジメントを含む、組織のさまざまな部門が効率的に連携する必要があります。
 各部門において組織におけるアプリケーションセキュリティの実態を把握できるよう、セキュリティの見える化を図り、計測可能な状態にすべきです。
 リスクを排除または低減することにより企業のセキュリティを向上させるような活動や成果に集中しましょう。
-以下のリストに示す活動のほとんどは、OWASP SAMMとOWASP Application Security Guide for CISOsに掲載されています。
+以下のリストに示す活動のほとんどは、[OWASP SAMM](https://www.owasp.org/index.php/OWASP_SAMM_Project)と[OWASP Application Security Guide for CISOs](https://www.owasp.org/index.php/Application_Security_Guide_For_CISOs)に掲載されています。
 
 ### はじめに
 * 全てのアプリケーションと関連するデータ資産を文書化します。より大きな組織においては、文書化を実現するために構成管理データベース（CMDB）を実装することを検討すべきです。
