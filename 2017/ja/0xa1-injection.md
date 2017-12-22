@@ -14,8 +14,7 @@
 * コンテキストに応じたエスケープが行われず、動的クエリまたはパラメータ化されていない呼出しがインタープリタに直接使用される。
 * オブジェクト・リレーショナル・マッピング（ORM）の検索パラメータに悪意を持ったデータが使用され、重要なレコードを追加で抽出してしまう。
 * 悪意を持ったデータを直接または連結して使う。例えば、動的クエリ、コマンド、ストアド・プロシージャにおいて構文に悪意を持ったデータを組み合わせる形でSQLやコマンドが組み立てられる。
-
-より一般的なインジェクションとしては、SQL、NoSQL、OSコマンド、オブジェクト・リレーショナル・マッピング（ORM）、LDAP、およびEL式（Expression Language）またはOGNL式（Object Graph Navigation Library）のインジェクションがあります。コンセプトはすべてのインタープリタで同じです。ソースコードをレビューすれば、インジェクションに対してアプリケーションが脆弱であるか最も効果的に検出できます。そして、すべてのパラメータ、ヘッダー、URL、Cookie、JSON、SOAP、およびXMLデータ入力の完全な自動テストも効果的です。また、組織は静的ソースコード解析ツール([SAST](https://www.owasp.org/index.php/Source_Code_Analysis_Tools))と動的アプリケーションテストツール([DAST](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools))をCI/CDパイプラインに導入できます。これにより、新たに作られてしまったインジェクション欠陥を稼働環境に展開する前に検出できます。
+* より一般的なインジェクションとしては、SQL、NoSQL、OSコマンド、オブジェクト・リレーショナル・マッピング（ORM）、LDAP、およびEL式（Expression Language）またはOGNL式（Object Graph Navigation Library）のインジェクションがあります。コンセプトはすべてのインタープリタで同じです。ソースコードをレビューすれば、インジェクションに対してアプリケーションが脆弱であるか最も効果的に検出できます。そして、すべてのパラメータ、ヘッダー、URL、Cookie、JSON、SOAP、およびXMLデータ入力の完全な自動テストも効果的です。また、組織は静的ソースコード解析ツール([SAST](https://www.owasp.org/index.php/Source_Code_Analysis_Tools))と動的アプリケーションテストツール([DAST](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools))をCI/CDパイプラインに導入できます。これにより、新たに作られてしまったインジェクション欠陥を稼働環境に展開する前に検出できます。
 
 ## 防止方法
 
