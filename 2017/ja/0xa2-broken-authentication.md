@@ -33,7 +33,7 @@
 
 ## 攻撃シナリオの例
 
-**シナリオ #1**: [アカウントリスト攻撃](https://www.owasp.org/index.php/Credential_stuffing)や[lists of known passwords](https://github.com/danielmiessler/SecLists)を用いた攻撃は、広く知られた攻撃手法です。アプリケーションが自動化された攻撃やアカウントリスト攻撃に対策していない場合、そのアプリケーションがID/パスワードの組み合わせが正しいか検証するパスワードオラクルとして悪用されるかもしれません。
+**シナリオ #1**: [アカウントリスト攻撃](https://www.owasp.org/index.php/Credential_stuffing)や[よく知られたパスワードのリスト](https://github.com/danielmiessler/SecLists)を用いた攻撃は、広く知られた攻撃手法です。アプリケーションが自動化された攻撃やアカウントリスト攻撃に対策していない場合、そのアプリケーションがID/パスワードの組み合わせが正しいか検証するパスワードオラクルとして悪用されるかもしれません。
 
 **シナリオ #2**: パスワードが認証の一要素として使われ続けていることから、ほとんどの認証に関連する攻撃が起こっています。ユーザが脆弱なパスワードを設定、または再利用しやすい状況にないか、かつてのベストプラクティス、パスワード変更および複雑性の要件をレビューしてください。組織には、NIST 800-63におけるプラクティスの実装をやめること、多要素認証を採用することを推奨します。
 
@@ -56,6 +56,6 @@
 
 ### その他
 
-* [NIST 800-63b: 5.1.1 Memorized Secrets](https://pages.nist.gov/800-63-3/sp800-63b.html#memsecret) - 緻密な調査に基づく最新の認証に関するアドバイス
+* [NIST 800-63b: 5.1.1 Memorized Secrets](https://pages.nist.gov/800-63-3/sp800-63b.html#memsecret) - 認証に関して徹底的、現代的かつエビデンスに基づくアドバイスを提供
 * [CWE-287: Improper Authentication](https://cwe.mitre.org/data/definitions/287.html)
 * [CWE-384: Session Fixation](https://cwe.mitre.org/data/definitions/384.html)
