@@ -21,7 +21,7 @@ XSSを防止するには、信頼できないデータを動的なブラウザ�
 
 * 最新のRuby on RailsやReact JSなど、XSSに悪用されうるデータを自動的にエスケープするよう設計されたフレームワークを使用する。各フレームワークにおけるXSS対策の限界を確認し、対策の範囲外となるデータ使用については、適切な処理を行う。
 * ボディ、属性、JavaScript、CSSやURLなどHTML出力のコンテキストに基づいて、信頼出来ないHTTPリクエストデータをエスケープすることで、リフレクトおよびストアドXSS脆弱性を解消できる。要求されるデータの詳細なエスケープ手法は [OWASP  Cheat Sheet 'XSS Prevention'](https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet) を参照のこと。
-* クライアント側でのブラウザドキュメント改変時に、コンテキスト依存のエンコーディングを適用することで、DOMベースXSSへの対策となる。これが行えない場合には、OWASP Cheat Sheet 'DOM based XSS Prevention'で説明されている、同様のコンテキスト依存のエスケープ手法をブラウザAPIに適用することもできる。
+* クライアント側でのブラウザドキュメント改変時に、コンテキスト依存のエンコーディングを適用することで、DOMベースXSSへの対策となる。これが行えない場合には、[OWASP Cheat Sheet 'DOM based XSS Prevention'](https://www.owasp.org/index.php/DOM_based_XSS_Prevention_Cheat_Sheet)で説明されている、同様のコンテキスト依存のエスケープ手法をブラウザAPIに適用することもできる。
 * XSSに対する多層防御措置の一環として [Content Security Policy (CSP)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) を有効に設定する。これは、ローカルファイルインクルードを介して悪意のあるコードを設置可能にする他の脆弱性（例：パストラバーサルを悪用したファイルの上書き、許可されたコンテンツ配信ネットワークから提供された脆弱なライブラリ等）が存在しない場合に効果的である。
 
 ## 攻撃シナリオの例

@@ -128,4 +128,4 @@ GitHubにおいてTop 10に貢献するために多くの時間を費やした�
 * vdbaan
 * yohgaki
 
-Dirk Wetter、Jim Manico、Osama Elnaggarhaveからは多大なる支援をしていただきました。また、Chris Frohoffand Gabriel LawrenceはA8：2017-Insecure Deserialization riskの執筆において貴重なサポートをしていただきました。
+Dirk Wetter、Jim Manico、Osama Elnaggarhaveからは多大なる支援をしていただきました。また、Chris Frohoffand Gabriel Lawrenceは**A8:2017-安全でないデシリアライゼーション**の執筆において貴重なサポートをしていただきました。

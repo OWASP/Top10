@@ -24,7 +24,7 @@
 ## 統合、引退。ただし、忘れて良いという意味ではない
 
 * **A4-安全でないオブジェクト直接参照** と **A7-機能レベルアクセス制御の欠落** は、**A5:2017-アクセス制御の不備**にマージされました。
-* **A8-クロスサイトリクエストフォージェリ (CSRF)**は、多くのフレームワークがこの対策を講じており [CSRF defenses](https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF))、アプリケーションの5%程度でのみ観察されています。
+* **A8-クロスサイトリクエストフォージェリ (CSRF)** は、多くのフレームワークがこの対策を講じており [CSRF defenses](https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF))、アプリケーションの5%程度でのみ観察されています。
 * **A10-未検証のリダクレクトとフォワード**は、アプリケーションのおよそ8%で観察されており、XXEが入ったことにより、外れることになりました。
 
 ![0x06-release-notes-1](images/0x06-release-notes-1.png)
