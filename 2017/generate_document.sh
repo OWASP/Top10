@@ -31,6 +31,10 @@ generate_docx() {
     pandoc -s -f markdown_github --reference-docx=../templates/reference.docx --columns 10000 -t docx -o "../OWASP-Top-10-2017-$1.docx" *.md
 }
 
+generate_doc() {
+    pandoc -s -f gfm --reference-doc=../templates/reference.docx --columns 10000 -t docx -o "../OWASP-Top-10-2017-$1.docx" *.md
+}
+
 generate_html() {
     pandoc -s -f markdown_github -t html5 -o "../OWASP-Top-10-2017-$1.html" *.md
 }
@@ -40,7 +44,8 @@ generate() {
     if [ -d "$1" ]; 
     then
         cd "$1"
-        generate_docx $1
+        generate_doc $1
+        #generate_docx $1
         generate_pdf $1
         generate_html $1
         cd ..
