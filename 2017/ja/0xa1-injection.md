@@ -55,7 +55,7 @@
 * [OWASP Cheat Sheet: Query Parameterization](https://www.owasp.org/index.php/Query_Parameterization_Cheat_Sheet)
 * [OWASP Automated Threats to Web Applications – OAT-014](https://www.owasp.org/index.php/OWASP_Automated_Threats_to_Web_Applications)
 
-### その他
+### 外部資料
 
 * [CWE-77: Command Injection](https://cwe.mitre.org/data/definitions/77.html)
 * [CWE-89: SQL Injection](https://cwe.mitre.org/data/definitions/89.html)

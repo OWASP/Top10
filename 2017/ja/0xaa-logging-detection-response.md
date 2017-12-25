@@ -23,7 +23,7 @@
 
 アプリケーションによって保存または処理されるデータのリスクに応じて対応する：
 
-* ログイン、アクセス制御の失敗、サーバーサイドの入力検証の失敗を全てログとして記録するようにする。ログは、不審なアカウントや悪意のあるアカウントを特定するために十分なユーザコンテキストを持ち、後日、フォレンジック分析を行うのに十分な期間分保持するようにする。
+* ログイン、アクセス制御の失敗、サーバサイドの入力検証の失敗を全てログとして記録するようにする。ログは、不審なアカウントや悪意のあるアカウントを特定するために十分なユーザコンテキストを持ち、後日、フォレンジック分析を行うのに十分な期間分保持するようにする。
 * 統合ログ管理ソリューションで簡単に使用できる形式でログが生成されていることを確認する。
 * 価値の高いトランザクションにおいて、監査証跡が取得されていること。その際、追記型データベースのテーブルなどのような、完全性を保つコントロールを用いて、改ざんや削除を防止する。
 * 疑わしい活動がタイムリーに検知されて対応されるように、効果的なモニタリングとアラートを確立する。
@@ -48,7 +48,7 @@
 * [OWASP Testing Guide: Testing for Detailed Error Code](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
 * [OWASP Cheat Sheet: Logging](https://www.owasp.org/index.php/Logging_Cheat_Sheet)
 
-### その他
+### 外部資料
 
 * [CWE-223: Omission of Security-relevant Information](https://cwe.mitre.org/data/definitions/223.html)
 * [CWE-778: Insufficient Logging](https://cwe.mitre.org/data/definitions/778.html)

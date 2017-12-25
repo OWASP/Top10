@@ -42,7 +42,7 @@
     <foo>&xxe;</foo>
 ```
 
-**シナリオ #2**: 攻撃者は、上記のENTITY行を次のように変更して、サーバーのプライベートネットワークを調べようとします:
+**シナリオ #2**: 攻撃者は、上記のENTITY行を次のように変更して、サーバのプライベートネットワークを調べようとします:
 ```
    <!ENTITY xxe SYSTEM "https://192.168.1.1/private" >]>
 ```
@@ -63,7 +63,7 @@
 * [OWASP Cheat Sheet: XXE Prevention](https://www.owasp.org/index.php/XML_External_Entity_(XXE)_Prevention_Cheat_Sheet)
 * [OWASP Cheat Sheet: XML Security](https://www.owasp.org/index.php/XML_Security_Cheat_Sheet)
 
-### その他
+### 外部資料
 
 * [CWE-611: Improper Restriction of XXE](https://cwe.mitre.org/data/definitions/611.html)
 * [Billion Laughs Attack](https://en.wikipedia.org/wiki/Billion_laughs_attack)
