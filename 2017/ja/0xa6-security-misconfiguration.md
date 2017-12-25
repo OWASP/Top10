@@ -51,7 +51,7 @@
 
 この分野でさらに知りたいのなら、 Application Security Verification Standard [V19 Configuration](https://www.owasp.org/index.php/ASVS_V19_Configuration)を参照してください。
 
-### その他
+### 外部資料
 
 * [NIST Guide to General Server Hardening](https://csrc.nist.gov/publications/detail/sp/800-123/final)
 * [CWE-2: Environmental Security Flaws](https://cwe.mitre.org/data/definitions/2.html)
