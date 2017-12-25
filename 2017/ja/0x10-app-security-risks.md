@@ -13,6 +13,7 @@
 OWASP Top 10は、多様な組織のために、最も重大なウェブアプリケーションセキュリティリスクを特定することに焦点を当てています。これらのリスクに関して、以下に示すOWASP Risk Rating Methodologyに基づいた格付手法により、発生可能性と技術面への影響について評価します。  
 
 ![0x10-risk-2](images/0x10-risk-2.png)
+In this edition, we have updated the risk rating system to assist in calculating the likelihood and impact of any given risk. For more details, please see Note About Risks. 
 
 [OWASP Risk Rating Methodology](https://www.owasp.org/index.php/OWASP_Risk_Rating_Methodology)では、各リスクに関する発生可能性や影響度を算出するリスク格付方法をアップデートしています。詳細は「リスクに関する注記」を参照してください。
 各組織はユニークであるため、侵害において脅威を引き起こすアクター、目標、影響度も各組織でユニークでしょう。
