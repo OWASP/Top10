@@ -44,8 +44,7 @@
 ### OWASP
 
 * [OWASP Proactive Controls: Implement Identity and Authentication Controls](https://www.owasp.org/index.php/OWASP_Proactive_Controls#5:_Implement_Identity_and_Authentication_Controls)
-* [OWASP Application Security Verification Standard: V2 Authentication](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
-* [OWASP Application Security Verification Standard: V3 Session Management](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
+* [OWASP ASVS: V2 Authentication](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home), [V3 Session Management](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
 * [OWASP Testing Guide: Identity](https://www.owasp.org/index.php/Testing_Identity_Management)
  と [Authentication](https://www.owasp.org/index.php/Testing_for_authentication)
 * [OWASP Cheat Sheet: Authentication](https://www.owasp.org/index.php/Authentication_Cheat_Sheet)
@@ -56,6 +55,6 @@
 
 ### その他
 
-* [NIST 800-63b: 5.1.1 Memorized Secrets](https://pages.nist.gov/800-63-3/sp800-63b.html#memsecret) - 認証に関して徹底的、現代的かつエビデンスに基づくアドバイスを提供
+* [NIST 800-63b: 5.1.1 Memorized Secrets](https://pages.nist.gov/800-63-3/sp800-63b.html#memsecret) 
 * [CWE-287: Improper Authentication](https://cwe.mitre.org/data/definitions/287.html)
 * [CWE-384: Session Fixation](https://cwe.mitre.org/data/definitions/384.html)
