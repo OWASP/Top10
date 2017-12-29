@@ -2,7 +2,7 @@
 
 | Agentes de amenaza/Vectores de ataque | Debilidades de seguridad         |      Impactos       |
 | -- | -- | -- |
-| Nivel de acceso : Explotabilidad 2    | Prevalencia 2 : Detectabilidad 2 | Técnico 3 : Negocio |
+| Nivel de Acceso \| Exploitabilidad 2 | Prevalencia 2 \| Detección 2 | Técnico 3 \| Negocio |
 |La explotación del Control de Acceso es una habilidad central de los atacantes. Las herramientas [SAST](https://www.owasp.org/index.php/Source_Code_Analysis_Tools) y [DAST](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools) pueden detectar la ausencia de control de acceso, pero no verificar si es correcto en el caso de estar presente. El control de acceso es detectable utilizando medios manuales, o posiblemente a través de la automatización por la ausencia de controles de acceso en ciertos frameworks.|Las debilidades del control de acceso son comunes debido a la falta de detección automática y a la falta de pruebas funcionales efectivas por parte de los desarrolladores de aplicaciones. La detección de fallas en el control de acceso no suele ser cubierto por pruebas automatizadas, tanto estáticas o dinámicas. | El impacto técnico son los atacantes anónimos actuando como usuarios o administradores, los usuarios que utilizan funciones privilegiadas o crean, acceden, actualizan o eliminan cualquier registro. El impacto al negocio depende de la protección necesaria por la aplicación o sus datos. | 
 
 ## ¿La aplicación es vulnerable?
