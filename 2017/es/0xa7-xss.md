@@ -1,19 +1,19 @@
 # A7:2017 Secuencia de Comandos en Sitios Cruzados (XSS)
 
-| Agentes de Amenaza /Vectores de Ataque | Debilidades de Seguridad           | Impactos               |
+| Agentes de amenaza/Vectores de ataque | Debilidades de seguridad         |      Impactos       |
 | -- | -- | -- |
-| Nivel de Acceso \| Explotabilidad 3 | Prevalencia 3 \| Detección 3 | Técnicos 2 \| al negocio |
+| Nivel de acceso : Explotabilidad 3    | Prevalencia 3 : Detectabilidad 3 | Técnico 2 : Negocio |
 | Existen herramientas automatizadas pueden detectar y explotar las tres formas de XSS, y también se encuentran disponibles kits de explotación gratuitos. | XSS es la segunda vulnerablidad más frecuente en OWASP Top 10, y se encuentra en alrededor de dos tercios de todas las aplicaciones. Las herramientas automatizadas pueden detectar algunos problemas XSS en forma automática, particularmente en tecnologías maduras como PHP, J2EE / JSP, y ASP.NET. | El impacto de XSS es moderado para el caso de XSS Reflejado y XSS en DOM, y severa para XSS Almacenado, que permite ejecutar secuencias de comandos en el navegador de la víctima, para robar credenciales, secuestrar sesiones, o la instlación de software malicioso en el equipo de la víctima. |
 
 ## ¿Soy vulnetable a XSS?
 
 Existen tres formas usuales de XSS para atacar a los navegadores de los usuarios:
 
-* **XSS Reflejado**: La aplicación o API utiliza datos suministrados por un usuario sin ser validados o codificados apropiadamente como parte del HTML de salida o cuando no hay un cabezal que establezca la política de seguridad de contenido ([CSP](https://www.owasp.org/index.php/Content_Security_Policy)). Un ataque exitoso puede permitir al atacante ejecutar comandos arbitrarios HTML y Javascript en el navegador de la víctima. Típicamente el usuario deberá interactuar con un enlace, o alguna otra página controlada por el atacante, como un ataque del tipo pozo de agua, publicidad maliciosa, o similar.
+* **XSS Reflejado**: La aplicación o API utiliza datos suministrados por un usuario sin ser validados o codificados apropiadamente como parte del HTML de salida o cuando no existe un cabezal que establezca la política de seguridad de contenido ([CSP](https://www.owasp.org/index.php/Content_Security_Policy)). Un ataque exitoso puede permitir al atacante ejecutar comandos arbitrarios HTML y Javascript en el navegador de la víctima. Típicamente el usuario deberá interactuar con un enlace, o alguna otra página controlada por el atacante, como un ataque del tipo pozo de agua, publicidad maliciosa, o similar.
 * **XSS Almacenado**: La aplicación o API almacena datos proporcionados por el usuario sin validar ni sanear, la que posteriormente es entregada a otro usuario o un administrador. XSS Almacenado es usualmente considerado como de riesgo de nivel alto o crítico.
-* **XSS Basados en DOM**: Marcos de trabajo en JavaScript, aplicaciones de página única y API que dinámicamente incluyen datos controlables por un atacante son vulnerables al DOM XSS. Idealmente, se debe evitar enviar datos controlables por el atacante a APIs no seguras.
+* **XSS Basados en DOM**: Frameworks en JavaScript, aplicaciones de página única o APIs que dinámicamente incluyen datos controlables por un atacante son vulnerables al DOM XSS. Idealmente, se debe evitar enviar datos controlables por el atacante a APIs no seguras.
 
-Típicamente los ataques XSS incluyen el robo de la sesión, apropiación de la cuenta, salteo de autentificación de múltiples pasos, reemplazo de DIV o degradación (como troyanos de autentificación), ataques contra el navegador del usuario como la descarga de software malicioso, grabadores de tecleo, y otros tipos de ataques al lado cliente.
+Típicamente los ataques XSS incluyen el robo de la sesión, apropiación de la cuenta, evasión de autentificación de múltiples pasos, reemplazo de DIV o degradación (como troyanos de autentificación), ataques contra el navegador del usuario como la descarga de software malicioso, grabadores de tecleo, y otros tipos de ataques al lado cliente.
 
 
 ## ¿Como prevenirlo?
@@ -28,7 +28,7 @@ Prevenir XSS requiere mantener los datos no confiables separados del contenido a
 
 ## Ejemplos de escenarios de ataques
 
-**Escenario 1**: La aplicación utiliza datos no confiables en la construcción del siguiente código HTML sin validarlos o codificarlos:
+**Escenario #1**: La aplicación utiliza datos no confiables en la construcción del siguiente código HTML sin validarlos o codificarlos:
 
 ```
    (String) page += "<input name='creditcard' type='TEXT' value='" + request.getParameter("CC") + "'>";
@@ -42,7 +42,7 @@ El atacante modifica el parámetro “CC” en el navegador a:
 
 Este ataque causa que el identificador de sesión de la víctima sea enviado al sitio web del atacante, permitiendo al atacante secuestrar la sesión actual del usuario.
 
-Notar que los atacantes pueden también utilizar XSS para anular cualquier defensa CSRF que la aplicación pueda utilizar.
+**Note**: Atacantes pueden también utilizar XSS para anular cualquier defensa contra Falsificación de Peticiones en Sitios Cruzados (CSRF) que la aplicación pueda utilizar.
 
 ## Referencias (en Inglés)
 

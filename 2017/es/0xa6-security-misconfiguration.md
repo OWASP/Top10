@@ -1,8 +1,8 @@
 # A6:2017 Configuración de Seguridad Incorrecta
 
-| Agentes de Amenaza	/Vectores de Ataque | Debilidades en Seguridad | Impactos               |
+| Agentes de amenaza/Vectores de ataque | Debilidades de seguridad         |      Impactos       |
 | -- | -- | -- |
-| Nivel de Acceso \| Exploitabilidad 3 | Prevalencia 3 \| Detección 3 | Técnico 2 \| Negocio |
+| Nivel de acceso : Explotabilidad 3    | Prevalencia 3 : Detectabilidad 3 | Técnico 2 : Negocio |
 Los atacantes a menudo intentarán explotar defectos sin parchear o acceder a cuentas predeterminadas, páginas no utilizadas, archivos y directorios desprotegidos, etc. para obtener acceso o conocimiento no autorizado del sistema. | Configuraciones incorrectas de seguridad puede nocurrir en cualquier nivel del stack tecnológico, incluidos los servicios de red, la plataforma, el servidor web, el servidor de aplicaciones, la base de datos, frameworks, el código personalizado y máquinas virtuales preinstaladas, contenedores o almacenamiento. Los escáneres automatizados son útiles para detectar configuraciones erróneas, el uso de cuentas o configuraciones predeterminadas, servicios innecesarios, opciones heredadas, etc. | Tales defectos frecuentemente dan a los atacantes acceso no autorizado a algunos datos o funciones del sistema. Ocasionalmente, tales defectos resultan en un completo compromiso del sistema. El impacto de negocio depende de las necesidades de protección de la aplicación y los datos. |
 
 ## ¿La aplicación es vulnerable?
