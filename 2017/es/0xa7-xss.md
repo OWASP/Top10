@@ -5,7 +5,7 @@
 | Nivel de acceso : Explotabilidad 3    | Prevalencia 3 : Detectabilidad 3 | Técnico 2 : Negocio |
 | Existen herramientas automatizadas pueden detectar y explotar las tres formas de XSS, y también se encuentran disponibles kits de explotación gratuitos. | XSS es la segunda vulnerablidad más frecuente en OWASP Top 10, y se encuentra en alrededor de dos tercios de todas las aplicaciones. Las herramientas automatizadas pueden detectar algunos problemas XSS en forma automática, particularmente en tecnologías maduras como PHP, J2EE / JSP, y ASP.NET. | El impacto de XSS es moderado para el caso de XSS Reflejado y XSS en DOM, y severa para XSS Almacenado, que permite ejecutar secuencias de comandos en el navegador de la víctima, para robar credenciales, secuestrar sesiones, o la instlación de software malicioso en el equipo de la víctima. |
 
-## ¿Soy vulnetable a XSS?
+## ¿La aplicación es vulnerable?
 
 Existen tres formas usuales de XSS para atacar a los navegadores de los usuarios:
 
@@ -48,17 +48,17 @@ Este ataque causa que el identificador de sesión de la víctima sea enviado al 
 
 ### OWASP
 
-* [OWASP Proactive Controls - #3 Encode Data](https://www.owasp.org/index.php/OWASP_Proactive_Controls#tab=OWASP_Proactive_Controls_2016)
-* [OWASP Proactive Controls - #4 Validate Data](https://www.owasp.org/index.php/OWASP_Proactive_Controls#tab=OWASP_Proactive_Controls_2016)
-* [OWASP Application Security Verification Standard - V5](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project)
-* [OWASP Testing Guide: Testing for Reflected XSS](https://www.owasp.org/index.php/Testing_for_Reflected_Cross_site_scripting_(OTG-INPVAL-001))
-* [OWASP Testing Guide: Testing for Stored XSS](https://www.owasp.org/index.php/Testing_for_Stored_Cross_site_scripting_(OTG-INPVAL-002))
-* [OWASP Testing Guide: Testing for DOM XSS](https://www.owasp.org/index.php/Testing_for_DOM-based_Cross_site_scripting_(OTG-CLIENT-001))
-* [OWASP XSS Prevention Cheat Sheet](https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet)
-* [OWASP DOM based XSS Prevention Cheat Sheet](https://www.owasp.org/index.php/DOM_based_XSS_Prevention_Cheat_Sheet)
-* [OWASP XSS Filter Evasion Cheat Sheet](https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet)
+* [Controles Proactivos de OWASP - #3 Codificación de datos](https://www.owasp.org/index.php/OWASP_Proactive_Controls#tab=OWASP_Proactive_Controls_2016)
+* [Controles Proactivos de OWASP - #4 Validación de datos](https://www.owasp.org/index.php/OWASP_Proactive_Controls#tab=OWASP_Proactive_Controls_2016)
+* [Estándar de Verificación de Seguridad en Aplicaciones de OWASP - V5](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project)
+* [Guía de Pruebas de OWASP: Pruebas para XSS Reflejados](https://www.owasp.org/index.php/Testing_for_Reflected_Cross_site_scripting_(OTG-INPVAL-001))
+* [Guía de Pruebas de OWASP: Pruebas para XSS Almacenados](https://www.owasp.org/index.php/Testing_for_Stored_Cross_site_scripting_(OTG-INPVAL-002))
+* [Guía de Pruebas de OWASP: Pruebas para XSS basados en DMO](https://www.owasp.org/index.php/Testing_for_DOM-based_Cross_site_scripting_(OTG-CLIENT-001))
+* [Hoja de ayuda de OWASP - Prevención de XSS](https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet)
+* [Hoja de ayuda de OWASP - Prevención de XSS basado en DOM](https://www.owasp.org/index.php/DOM_based_XSS_Prevention_Cheat_Sheet)
+* [Hoja de ayuda de OWASP - Evación de filtros de XSS](https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet)
 
 ### Externas
 
-* [CWE-79 Improper neutralization of user supplied input](https://cwe.mitre.org/data/definitions/79.html)
-* [PortSwigger: Client-side template injection](https://portswigger.net/knowledgebase/issues/details/00200308_clientsidetemplateinjection)
+* [CWE-79 Inapropiada neutralización de entradas de datos suministradas por usuarios](https://cwe.mitre.org/data/definitions/79.html)
+* [PortSwigger: Plantillas para la inyección del lado del cliente](https://portswigger.net/knowledgebase/issues/details/00200308_clientsidetemplateinjection)
