@@ -43,20 +43,20 @@ Realice como mínimo las siguientes recomendaciones y consulte las referencias:
 
 ### OWASP
 
-* [Controles Proactivos de OWASP - Protección de Datos](https://www.owasp.org/index.php/OWASP_Proactive_Controls#7:_Protect_Data)
-* [Estándar de Verificación de Seguridad en Aplicaciones de OWASP - V9, V10, V11](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project)
-* [Hoja de ayuda de OWASP - Protección de Capa Transporte](https://www.owasp.org/index.php/Transport_Layer_Protection_Cheat_Sheet)
-* [Hoja de ayuda de OWASP - Protección de Seguridad de Usuario](https://www.owasp.org/index.php/User_Privacy_Protection_Cheat_Sheet)
-* [Hoja de ayuda de OWASP - Almacenamiento de Contraseña](https://www.owasp.org/index.php/Password_Storage_Cheat_Sheet)
-* [Hoja de ayuda de OWASP - Almacenamiento Criptográfico](https://www.owasp.org/index.php/Cryptographic_Storage_Cheat_Sheet)
+* [Controles Proactivos de OWASP: Protección de Datos](https://www.owasp.org/index.php/OWASP_Proactive_Controls#7:_Protect_Data)
+* [Estándar de Verificación de Seguridad en Aplicaciones de OWASP: V9, V10, V11](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project)
+* [Hoja de ayuda de OWASP: Protección de Capa Transporte](https://www.owasp.org/index.php/Transport_Layer_Protection_Cheat_Sheet)
+* [Hoja de ayuda de OWASP: Protección de Seguridad de Usuario](https://www.owasp.org/index.php/User_Privacy_Protection_Cheat_Sheet)
+* [Hoja de ayuda de OWASP: Almacenamiento de Contraseña](https://www.owasp.org/index.php/Password_Storage_Cheat_Sheet)
+* [Hoja de ayuda de OWASP: Almacenamiento Criptográfico](https://www.owasp.org/index.php/Cryptographic_Storage_Cheat_Sheet)
 * [Proyecto de Cabezales de Seguridad de OWASP](https://www.owasp.org/index.php/OWASP_Secure_Headers_Project)
-* [Guía de Pruebas de OWASP - Pruebas de Criptografía débil](https://www.owasp.org/index.php/Testing_for_weak_Cryptography)
+* [Guía de Pruebas de OWASP: Pruebas de Criptografía débil](https://www.owasp.org/index.php/Testing_for_weak_Cryptography)
 
 ### Externas
 
-* [CWE-359 Exposición de Información Privada - Violación de Privacidad](https://cwe.mitre.org/data/definitions/359.html)
-* [CWE-220 Exposición de Información Sensible a Través de Consultas de Datos](https://cwe.mitre.org/data/definitions/220.html)
-* [CWE-310 Problemas Criptográficos](https://cwe.mitre.org/data/definitions/310.html)
-* [CWE-312 Almacenamiento en Texto Plano de Información Sensible](https://cwe.mitre.org/data/definitions/312.html)
-* [CWE-319 Transmisión en Texto Plano de Información Sensible](https://cwe.mitre.org/data/definitions/319.html)
-* [CWE-326 Cifrado Débil](https://cwe.mitre.org/data/definitions/326.html)
+* [CWE-359: Exposición de Información Privada - Violación de Privacidad](https://cwe.mitre.org/data/definitions/359.html)
+* [CWE-220: Exposición de Información Sensible a Través de Consultas de Datos](https://cwe.mitre.org/data/definitions/220.html)
+* [CWE-310: Problemas Criptográficos](https://cwe.mitre.org/data/definitions/310.html)
+* [CWE-312: Almacenamiento en Texto Plano de Información Sensible](https://cwe.mitre.org/data/definitions/312.html)
+* [CWE-319: Transmisión en Texto Plano de Información Sensible](https://cwe.mitre.org/data/definitions/319.html)
+* [CWE-326: Cifrado Débil](https://cwe.mitre.org/data/definitions/326.html)

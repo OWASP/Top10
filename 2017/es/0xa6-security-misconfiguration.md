@@ -46,8 +46,8 @@ Deben implementarse procesos seguros de instalación, incluyendo:
 
 ### OWASP
 
-* [Guía de Pruebas de OWASP - Gestión de la Configuración](https://www.owasp.org/index.php/Testing_for_configuration_management)
-* [Guía de Pruebas de OWASP - Prueba de Error de Código](https://www.owasp.org/index.php/Testing_for_Error_Code_(OWASP-IG-006))
+* [Guía de Pruebas de OWASP: Gestión de la Configuración](https://www.owasp.org/index.php/Testing_for_configuration_management)
+* [Guía de Pruebas de OWASP: Prueba de Error de Código](https://www.owasp.org/index.php/Testing_for_Error_Code_(OWASP-IG-006))
 * [Proyecto de Cabezalez de Seguridad de OWASP](https://www.owasp.org/index.php/OWASP_Secure_Headers_Project)
 
 Para conocer más sobre requisitos adicionales en esta área, consulte el Estándar de Verificación de Seguridad en Aplicaciones [V19 Configuración](https://www.owasp.org/index.php/ASVS_V19_Configuration).

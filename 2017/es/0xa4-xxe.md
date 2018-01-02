@@ -58,7 +58,7 @@ Numerosos XXE han sido publicados, incluyendo el ataque a dispositivos embebidos
 ### OWASP
 
 * [Estándar de Verificación de Seguridad en Aplicaciones de OWASP](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
-* [Guía de Pruebas de OWASP - Pruebas para Inyección XML](https://www.owasp.org/index.php/Testing_for_XML_Injection_(OTG-INPVAL-008))
+* [Guía de Pruebas de OWASP: Pruebas para Inyección XML](https://www.owasp.org/index.php/Testing_for_XML_Injection_(OTG-INPVAL-008))
 * [Vulnerabilidad XXE de OWASP](https://www.owasp.org/index.php/XML_External_Entity_(XXE)_Processing)
 * [Hojas de ayuda de Prevención de XXE de OWASP](https://www.owasp.org/index.php/XML_External_Entity_(XXE)_Prevention_Cheat_Sheet)
 * [Hojas de ayuda de Seguridad XML de OWASP](https://www.owasp.org/index.php/XML_Security_Cheat_Sheet)

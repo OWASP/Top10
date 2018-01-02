@@ -56,10 +56,10 @@ Si un usuario no autenticado puede acceder a cualquiera de las páginas, es un e
 
 ### OWASP
 
-* [Controles Proactivos de OWASP - Control de Acceso](https://www.owasp.org/index.php/OWASP_Proactive_Controls#6:_Implement_Access_Controls)
-* [Estándar de Verificación de Seguridad en Aplicaciones de OWASP - V4 Control de Acceso](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
-* [Guía de Pruebas de OWASP - Control de Acceso](https://www.owasp.org/index.php/Testing_for_Authorization)
-* [Hojas de ayuda de OWASP - Control de Acceso](https://www.owasp.org/index.php/Access_Control_Cheat_Sheet)
+* [Controles Proactivos de OWASP: Control de Acceso](https://www.owasp.org/index.php/OWASP_Proactive_Controls#6:_Implement_Access_Controls)
+* [Estándar de Verificación de Seguridad en Aplicaciones de OWASP: V4 Control de Acceso](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
+* [Guía de Pruebas de OWASP: Control de Acceso](https://www.owasp.org/index.php/Testing_for_Authorization)
+* [Hojas de ayuda de OWASP: Control de Acceso](https://www.owasp.org/index.php/Access_Control_Cheat_Sheet)
 
 ### Externas
 

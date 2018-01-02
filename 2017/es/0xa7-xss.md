@@ -48,15 +48,15 @@ Este ataque causa que el identificador de sesión de la víctima sea enviado al 
 
 ### OWASP
 
-* [Controles Proactivos de OWASP - #3 Codificación de datos](https://www.owasp.org/index.php/OWASP_Proactive_Controls#tab=OWASP_Proactive_Controls_2016)
-* [Controles Proactivos de OWASP - #4 Validación de datos](https://www.owasp.org/index.php/OWASP_Proactive_Controls#tab=OWASP_Proactive_Controls_2016)
-* [Estándar de Verificación de Seguridad en Aplicaciones de OWASP - V5](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project)
+* [Controles Proactivos de OWASP: #3 Codificación de datos](https://www.owasp.org/index.php/OWASP_Proactive_Controls#tab=OWASP_Proactive_Controls_2016)
+* [Controles Proactivos de OWASP: #4 Validación de datos](https://www.owasp.org/index.php/OWASP_Proactive_Controls#tab=OWASP_Proactive_Controls_2016)
+* [Estándar de Verificación de Seguridad en Aplicaciones de OWASP: V5](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project)
 * [Guía de Pruebas de OWASP: Pruebas para XSS Reflejados](https://www.owasp.org/index.php/Testing_for_Reflected_Cross_site_scripting_(OTG-INPVAL-001))
 * [Guía de Pruebas de OWASP: Pruebas para XSS Almacenados](https://www.owasp.org/index.php/Testing_for_Stored_Cross_site_scripting_(OTG-INPVAL-002))
 * [Guía de Pruebas de OWASP: Pruebas para XSS basados en DMO](https://www.owasp.org/index.php/Testing_for_DOM-based_Cross_site_scripting_(OTG-CLIENT-001))
-* [Hoja de ayuda de OWASP - Prevención de XSS](https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet)
-* [Hoja de ayuda de OWASP - Prevención de XSS basado en DOM](https://www.owasp.org/index.php/DOM_based_XSS_Prevention_Cheat_Sheet)
-* [Hoja de ayuda de OWASP - Evación de filtros de XSS](https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet)
+* [Hoja de ayuda de OWASP: Prevención de XSS](https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet)
+* [Hoja de ayuda de OWASP: Prevención de XSS basado en DOM](https://www.owasp.org/index.php/DOM_based_XSS_Prevention_Cheat_Sheet)
+* [Hoja de ayuda de OWASP: Evación de filtros de XSS](https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet)
 
 ### Externas
 

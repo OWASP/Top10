@@ -52,6 +52,6 @@ Puede existir debilidades de autenticación si la aplicación:
 
 ### Externas
 
-* [NIST 800-63b 5.1.1 Secretos Memorizados – consejos modernos basados en evidencia para la autenticación.](https://pages.nist.gov/800-63-3/sp800-63b.html#memsecret)
-* [CWE-287 Autenticación indebida](https://cwe.mitre.org/data/definitions/287.html)
-* [CWE-384 Fijación de Sesión](https://cwe.mitre.org/data/definitions/384.html)
+* [NIST 800-63b 5.1.1 Secretos Memorizados: consejos modernos basados en evidencia para la autenticación.](https://pages.nist.gov/800-63-3/sp800-63b.html#memsecret)
+* [CWE-287: Autenticación indebida](https://cwe.mitre.org/data/definitions/287.html)
+* [CWE-384: Fijación de Sesión](https://cwe.mitre.org/data/definitions/384.html)

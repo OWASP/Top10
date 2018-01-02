@@ -45,7 +45,7 @@ Esto cambia el significado de ambas consultas retornando todos los registro de l
 ### OWASP
 
 * [Controles Proactivos de OWASP: Consultas Parametrizadas](https://www.owasp.org/index.php/OWASP_Proactive_Controls#2:_Parameterize_Queries)
-* [OWASP ASVS: V5 Validación de entradas de datos y codificación](https://www.owasp.org/index.php/ASVS_V5_Input_validation_and_output_encoding)
+* [Estándar de Verificación de Seguridad en Aplicaciones de OWASP: V5 Validación de entradas de datos y codificación](https://www.owasp.org/index.php/ASVS_V5_Input_validation_and_output_encoding)
 * [Guía de Pruebas de OWASP: Inyecciones SQL](https://www.owasp.org/index.php/Testing_for_SQL_Injection_(OTG-INPVAL-005)), [Inyecciones de Comando](https://www.owasp.org/index.php/Testing_for_Command_Injection_(OTG-INPVAL-013)), [Inyecciones ORM](https://www.owasp.org/index.php/Testing_for_ORM_Injection_(OTG-INPVAL-007))
 * [Hoja de ayuda de OWASP: Prevención de inyecciones SQL](https://www.owasp.org/index.php/SQL_Injection_Prevention_Cheat_Sheet)
 * [Hoja de ayuda de OWASP: Prevención de inyecciones en Java](https://www.owasp.org/index.php/Injection_Prevention_Cheat_Sheet_in_Java)
