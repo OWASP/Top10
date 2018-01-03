@@ -4,14 +4,13 @@
 
 La seguridad en las aplicaciones ya no es opcional.Entre el aumento de los ataques y presiones de cumplimiento normativo, las organizaciones deben establecer un mecanismo eficaz para asegurar sus aplicaciones y APIs. Dado el asombroso número de líneas de código que ya están en producción en aplicaciones y APIs, muchas organizaciones están luchando para conseguir gestionar un enorme volumen de vulnerabilidades.
 
-OWASP recomienda a las organizaciones establecer un programa de seguridad de las aplicaciones para aumentar el conocimiento y mejorar la seguridad en todo su catálogo de aplicaciones. Conseguir un nivel de seguridad de las aplicaciones requiere que diversas partes de una organización trabajen juntos de manera eficiente, incluidos los departamentos de seguridad y auditoría, desarrollo de software, gestión y el negocio. Se requiere que la seguridad sea visible y medible, para que todos los involucrados puedan ver y entender la postura de la organización en cuanto a seguridad en aplicaciones. También es necesario centrarse en las actividades y resultados que realmente ayuden a mejorar la seguridad de la empresa mediante la reducción de riesgo de la forma más rentable posible. Algunas de las actividades clave en la efectiva aplicación de los programas de seguridad incluyen:
+OWASP recomienda a las organizaciones establecer un programa de seguridad de las aplicaciones para aumentar el conocimiento y mejorar la seguridad en todo su catálogo de aplicaciones y APIs. Conseguir un nivel de seguridad de las aplicaciones requiere que diversas partes de una organización trabajen juntos de manera eficiente, incluidos los departamentos de seguridad y auditoría, desarrollo de software, gestión y el negocio. Se requiere que la seguridad sea visible y medible, para que todos los involucrados puedan ver y entender la postura de la organización en cuanto a seguridad en aplicaciones. También es necesario centrarse en las actividades y resultados que realmente ayuden a mejorar la seguridad de la empresa mediante la reducción de riesgo de la forma más rentable posible. Algunas de las actividades clave en la efectiva aplicación de los programas de seguridad incluyen [OWASP SAMM](https://www.owasp.org/index.php/OWASP_SAMM_Project) y [Gúia de OWASP de Seguirdad de Aplicaciones para CISOs](https://www.owasp.org/index.php/Application_Security_Guide_For_CISOs).
 
-### Comience
+### Comienzo
 
-* Documentar todas las aplicaciones y sus activos de información en una base de datos de gestión de la configuración (CMDB).
+* Documentar todas las aplicaciones y sus activos de información asociados. Organizaciones grandes deben considerar el uso de una base de datos de gestión de la configuración (CMDB).
 * Establecer un [programa de seguridad de aplicaciones](https://www.owasp.org/index.php/SAMM_-_Strategy_&_Metrics_-_1) e impulsar su adopción.
-* Realizar un [análisis de brecha de capacidad](https://www.owasp.org/index.php/SAMM_-_Strategy_&_Metrics_-_3) entre su organización y los empleados para definir las áreas clave de
-mejora y un plan de ejecución.
+* Realizar un [análisis de brecha de capacidades](https://www.owasp.org/index.php/SAMM_-_Strategy_&_Metrics_-_3) entre su organización y otras similares para definir las áreas clave de mejora y un plan de ejecución.
 *  Obtener la aprobación de la dirección y establecer una [campaña de concienciación de seguridad](https://www.owasp.org/index.php/SAMM_-_Education_&_Guidance_-_1) en las aplicaciones para toda la organización TI.
 
 ### Enfoque basado en el catálogo de riesgos
@@ -30,13 +29,14 @@ probabilidades que reflejen la tolerancia al riesgo de la organización.
 
 ### Integre la Seguridad en los Procesos Existentes
 
-*  Definir e integrar actividades de [implementación segura](https://www.owasp.org/index.php/SAMM_-_Construction) y [verificación](https://www.owasp.org/index.php/SAMM_-_Verification) en los procesos operativos y de desarrollo existentes. Estas actividades incluyen el [modelado de amenazas](https://www.owasp.org/index.php/SAMM_-_Threat_Assessment_-_1), [diseño y revisión](https://www.owasp.org/index.php/SAMM_-_Design_Review_-_1) de seguridad, codificación segura, [revisión de código](https://www.owasp.org/index.php/SAMM_-_Code_Review_-_1), [pruebas de intrusión](https://www.owasp.org/index.php/SAMM_-_Security_Testing_-_1) y remediación.
-*  Para tener exito, proporcionar expertos en la materia y [servicios de apoyo a los equipos de desarrollo](https://www.owasp.org/index.php/SAMM_-_Education_&_Guidance_-_3) y de proyecto.
+* Actividades de [implementación segura](https://www.owasp.org/index.php/SAMM_-_Construction) y [verificación](https://www.owasp.org/index.php/SAMM_-_Verification) en los procesos operativos y de desarrollo existentes. 
+* Actividades como el [modelado de amenazas](https://www.owasp.org/index.php/SAMM_-_Threat_Assessment_-_1), [diseño y revisión](https://www.owasp.org/index.php/SAMM_-_Design_Review_-_1) de seguridad, [revisión de código](https://www.owasp.org/index.php/SAMM_-_Code_Review_-_1), [pruebas de intrusión](https://www.owasp.org/index.php/SAMM_-_Security_Testing_-_1) y remediación.
+* Para tener exito, proporcionar expertos en la materia y [servicios de apoyo a los equipos de desarrollo](https://www.owasp.org/index.php/SAMM_-_Education_&_Guidance_-_3) y de proyecto.
 
 ### Proporcione visibilidad a la gestión
 
-* Gestionar a través de métricas. Manejar las decisiones de mejora y provisión de recursos económicos basándose en las métricas y el análisis de los datos capturados. Las métricas incluyen el seguimiento de las prácticas / actividades de seguridad, vulnerabilidades presentes, mitigadas, cobertura de la aplicación, densidad de defectos por tipo y cantidad de instancias, etc.
-* Analizar los datos de las actividades de implementación y verificación para buscar el origen de la causa y patrones en las vulnerabilidades para poder conducir así mejoras estratégicas en la organización
+* Gestionar a través de métricas. Manejar las decisiones de mejora y provisión de recursos económicos basándose en las métricas y el análisis de los datos capturados. Las métricas incluyen el seguimiento de las prácticas y actividades de seguridad, vulnerabilidades presentes, mitigadas, cobertura de la aplicación, densidad de defectos por tipo y cantidad de instancias, etc.
+* Analizar los datos de las actividades de implementación y verificación para buscar el origen de la causa y patrones en las vulnerabilidades para poder conducir así mejoras estratégicas en la organización.
 
 ### Ejemplos de este tipo de programas
 
