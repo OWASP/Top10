@@ -1,4 +1,4 @@
-# +T Que Sigue en Revisiones de Seguridad
+# +T Próximos pasos para los revisores de seguridad
 
 ## Establecer Continuas Revisiones de Seguridad de Aplicaciones
 Construir código de modo seguro es importante. Pero es crítico verificar que la seguridad que Ud. pretende construir está realmente presente, correctamente implementada, y usada en todos los lugares donde se supone que debe estar. El objetivo de la revisión de seguridad de la aplicación es proveer esta evidencia. El trabajo es difícil y complejo, y los procesos modernos de desarrollo a alta velocidad como Agile y DevOps han colocado una extrema presión en los enfoques y las herramientas tradicionales. Por lo tanto lo alentamos enérgicamente a pensar en como va a enfocarse en lo que es importante para todo su portafolio de aplicaciones, y hacerlo efectivo en términos de costo.
