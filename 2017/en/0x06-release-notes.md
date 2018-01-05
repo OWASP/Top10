@@ -16,7 +16,7 @@ Over the last few years, the fundamental technology and architecture of applicat
 
 ## New issues, supported by the community
 
-We asked the community to provide insight into two forward looking weakness categories. After over 500 peer submissions, and removing issues that were already supported by data (such as Sensitive Data Exposure and XXE), the two new issues are: 
+We asked the community to provide insight into two forward looking weakness categories. After over 500 peer submissions, and removing issues that were already supported by data (such as Sensitive Data Exposure and XXE), the two new issues are: 
 
 * **A8:2017-Insecure Deserialization**, which permits remote code execution or sensitive object manipulation on affected platforms.
 * **A10:2017-Insufficient Logging and Monitoring**, the lack of which can prevent or significantly delay malicious activity and breach detection, incident response, and digital forensics.
