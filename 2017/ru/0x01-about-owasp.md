@@ -1,4 +1,4 @@
-# **O** Об OWASP
+# **Об OWASP**
 
 ## Об OWASP
 
