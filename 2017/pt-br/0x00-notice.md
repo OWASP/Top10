@@ -6,9 +6,11 @@ Esta versão do OWASP Top 10 foi desenvolvida como parte integrante da atividade
 
 Este documento é baseado na versão OWASP Top 10 de 2017 e a tradução pretende ser fiel ao texto original.
 
+Se encontrar algum erro de tradução, digitação, ou diagramação, favor entrar em contato com o líder do Projeto OWASP em Língua Portuguesa.
+
 ## Participantes
 
-Participaram da tradução o líder do Projeto OWASP em Língua Portuguesa:
+Participaram da tradução o líder do Projeto OWASP Top 10 em Língua Portuguesa:
  * Fábio Kimura - fkimura@gmail.com
  
  E os seguintes voluntários:
