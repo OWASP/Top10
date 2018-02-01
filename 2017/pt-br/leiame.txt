@@ -12,17 +12,17 @@ Open your browser here - this is the Golden Master branch, and it's where we wil
 
 https://github.com/OWASP/ Top10/tree/golden-master/2017
 
-These steps should work
-Fork the OWASP Top 10 into your a repo in one of your GitHub accounts (it helps if you can agree if there's only one!). Add all your collaborators to the fork.
-Change the branch to the "golden-master" branch. This is the post-RC2 branch we will be working from in English, and it's the easiest way to find out exactly which words or sentences or punctuation changed so you can keep up with us and the QA process. 
-Regularly pull from us so you keep up with our changes. I tagged "2017-RC2" as the tag you can diff from so you can see *all* the changes between RC2 and wherever we're up to. 
-Create an "pt" or "pt-br" folder (this is what the generate_document.sh script expects)
-Copy all the English markdown from "en" to "pt"
-Please translate the Markdown in the "pt" folder
-Once you're done with Markdown, you will want to create a PowerPoint. This takes about a day. Please copy the English version and save it in the same place but call it "OWASP Top 10 2017 GM (pt).pptx" or similar
-Converting to PowerPoint is a good validation step to make sure you fit into a single page. It's HARD to make everything fit. Make the changes you need to make it work. We know English can be a compact language, so we're not precious about precise translations as long as the meaning is preserved and folks can understand what they need to do with your text. 
-When you're ready for us to consume your translation, please create a pull request, and we'll merge your changes. We can do this as many times as you want. 
-Please avoid changing any of the existing files so your merges will be clean and conflict free. You are more than welcome to create or enable the "pt" line in the generate_document.sh script. That script generates a Word document, which is can be very handy for spell checking, and fast at copying text and already linked URLs to PowerPoint.
+These steps should work:
+* Fork the OWASP Top 10 into your a repo in one of your GitHub accounts (it helps if you can agree if there's only one!). Add all your collaborators to the fork.
+* Change the branch to the "golden-master" branch. This is the post-RC2 branch we will be working from in English, and it's the easiest way to find out exactly which words or sentences or punctuation changed so you can keep up with us and the QA process. 
+* Regularly pull from us so you keep up with our changes. I tagged "2017-RC2" as the tag you can diff from so you can see *all* the changes between RC2 and wherever we're up to. 
+* Create an "pt" or "pt-br" folder (this is what the generate_document.sh script expects)
+* Copy all the English markdown from "en" to "pt"
+* Please translate the Markdown in the "pt" folder
+* Once you're done with Markdown, you will want to create a PowerPoint. This takes about a day. Please copy the English version and save it in the same place but call it "OWASP Top 10 2017 GM (pt).pptx" or similar
+* Converting to PowerPoint is a good validation step to make sure you fit into a single page. It's HARD to make everything fit. Make the changes you need to make it work. We know English can be a compact language, so we're not precious about precise translations as long as the meaning is preserved and folks can understand what they need to do with your text. 
+* When you're ready for us to consume your translation, please create a pull request, and we'll merge your changes. We can do this as many times as you want. 
+* Please avoid changing any of the existing files so your merges will be clean and conflict free. You are more than welcome to create or enable the "pt" line in the generate_document.sh script. That script generates a Word document, which is can be very handy for spell checking, and fast at copying text and already linked URLs to PowerPoint.
 
 I'd like to have space for your credits somewhere. Have a think about the best location to put in your details within the document, because that will become the template for all the other languages, too.
 
