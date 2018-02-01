@@ -2,26 +2,27 @@
 
 ## O que mudou de 2013 para 2017?
 
-A mudança foi acelerada nos últimos quatro anos, e o OWASP Top 10 precisava mudar. Nós refatoramos completamente o OWASP Top 10,  revamped the methodology, utilized a new data call process, worked with the community, re-ordered our risks, re-written each risk from the ground up, and added references to frameworks and languages that are now commonly used.
+A mudança foi acelerada nos últimos quatro anos, e o OWASP Top 10 precisava mudar. Nós refatoramos completamente o OWASP Top 10,  renovamos a metodologia, utilizamos um novo processo de chamada de dados, trabalhamos com a comunidade, reordenamos nossos riscos, reescrevemos cada risco desde o início e adicionamos referências a frameworks e idiomas que agora são comumente usados. 
 
-Over the last few years, the fundamental technology and architecture of applications has changed significantly:
+Ao longo dos últimos anos, a tecnologia e a arquitetura fundamentais das aplicações mudaram significativamente:
 
-* Microservices written in node.js and Spring Boot are replacing traditional monolithic applications. Microservices comes with their own security challenges including establishing trust between microservices, containers, secrets management, etc. Old code never expected to be communicated with directly from the Internet is now sitting behind an API or RESTful web service to be consumed by SPAs and mobile applications. The base assumptions by the code, such as trusted callers, are no longer valid.
-* Single page applications, written in JavaScript frameworks such as Angular and React, allow the creation of highly modular feature-rich front ends. Client-side functionality that has traditionally been delivered server-side brings its own security challenges.
-* JavaScript is now the primary language of the web with node.js running server side and modern web frameworks such as Bootstrap, Electron, Angular, and React providing on the client.
+* Microsserviços escritos em node.js e Spring Boot estão substituindo aplicativos monolíticos tradicionais. Microsserviços vem com seus próprios desafios de segurança, incluindo o estabelecimento de confiança entre microservices, recipientes, gerenciamento de segredos, etc. Código legado que nunca deveria se comunicar diretamente com a Internet agora está atrás de uma serviço web ou API RESTful para ser consumido por SPAs e aplicativos móveis. Os pressupostos básicos do código, como os chamadores confiáveis, não são mais válidos.
+* Aplicações de página única, escritas em frameworks JavaScript, como Angular e React, permitem a criação de front ends altamente modulares e ricas em recursos. A funcionalidade do lado do cliente que tradicionalmente foi entregue no lado do servidor traz seus próprios desafios de segurança.
+* O JavaScript é agora o idioma principal da web com node.js executando o lado do servidor e estruturas modernas da Web, como Bootstrap, Electron, Angular e React fornecendo no cliente.
 
-## New issues, supported by data
+## Novos problemas, suportados por dados
 
-* **A4:2017-XML External Entities (XXE)** is a new category primarily supported by source code analysis security testing tools ([SAST](https://www.owasp.org/index.php/Source_Code_Analysis_Tools)) data sets.
+* **A4:2017-XML External Entities (XXE)** é uma nova categoria primariamente suportado por dados gerados por ferramentas de análise de segurança de código fonte (source code analysis security testing tools [SAST](https://www.owasp.org/index.php/Source_Code_Analysis_Tools)).
 
-## New issues, supported by the community
+## Novos problemas, suportados pela comunidade
 
 We asked the community to provide insight into two forward looking weakness categories. After over 500 peer submissions, and  removing issues that were already supported by data (such as Sensitive Data Exposure and XXE), the two new issues are 
+Pedimos à comunidade que fornecesse informações sobre duas categorias de fraquezas futuras. Após mais de 500 envios e remoção de problemas que já eram suportados por dados (como Sensitive Data Exposure e XXE), os dois novos problemas são:
 
-* **A8:2017-Insecure Deserialization**, which permits remote code execution or sensitive object manipulation on affected platforms.
-* **A10:2017-Insufficient Logging and Monitoring**, the lack of which can prevent or significantly delay malicious activity and breach detection, incident response, and digital forensics.
+* **A8:2017-Desserialização Insegura**, que permite execução de código remoto ou manipulação de objetos sensíveis nas plataformas afetadas.
+* **A10:2017-Insuficiência de Logs e Monitoração**, a falta destes pode impedir ou atrasar significativamente a deteção de atividades maliciosas e deteção de brechas, repostas de incidentes and digital forensics.
 
-## Retired, but not forgotten
+## Aposentados, mas não esquecidos
 
 * **A4-Insecure Direct Object References** and **A7-Missing Function Level Access Control** merged into **A5:2017-Broken Access Control**.
 * **A8-Cross-Site Request Forgery (CSRF)**, Frameworks commonly include CSRF defenses, with < 5% of all apps, now #13.
