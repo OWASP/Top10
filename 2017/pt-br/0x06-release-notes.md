@@ -1,8 +1,8 @@
 # RN Release Notes
 
-## What changed from 2013 to 2017?
+## O que mudou de 2013 para 2017?
 
-Change has accelerated over the last four years, and the OWASP Top 10 needed to change. We've completely refactored the OWASP Top 10, revamped the methodology, utilized a new data call process, worked with the community, re-ordered our risks, re-written each risk from the ground up, and added references to frameworks and languages that are now commonly used.
+A mudança foi acelerada nos últimos quatro anos, e o OWASP Top 10 precisava mudar. Nós refatoramos completamente o OWASP Top 10,  revamped the methodology, utilized a new data call process, worked with the community, re-ordered our risks, re-written each risk from the ground up, and added references to frameworks and languages that are now commonly used.
 
 Over the last few years, the fundamental technology and architecture of applications has changed significantly:
 
