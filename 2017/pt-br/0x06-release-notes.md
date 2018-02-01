@@ -24,8 +24,8 @@ Pedimos à comunidade que fornecesse informações sobre duas categorias de fraq
 
 ## Aposentados, mas não esquecidos
 
-* **A4-Insecure Direct Object References** and **A7-Missing Function Level Access Control** merged into **A5:2017-Broken Access Control**.
-* **A8-Cross-Site Request Forgery (CSRF)**, Frameworks commonly include CSRF defenses, with < 5% of all apps, now #13.
-* **A10-Unvalidated Redirects and Forwards**, less than 1% of the data set supports this issue today, now #25
+* **A4-Referências Insegura e Direta a Objetos** e **A7-Falta de Função para Controle do Nível de Acesso** foram unidos em **A5:2017-Quebra de Controle de Acesso**.
+* **A8-Cross-Site Request Forgery (CSRF)**, Frameworks comumente já incluem defesas contra CSRF defenses, com < 5% de todas as aplicações, agora #13.
+* **A10-Unvalidated Redirects and Forwards**, menos de 1% do conjunto de dados reportam este problema hoje, agora #25
 
 ![0x06-release-notes-1](images/0x06-release-notes-1.png)
