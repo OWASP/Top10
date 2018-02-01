@@ -11,7 +11,7 @@ OWASPには、自由でオープンなものがあります:
 * プレゼンテーションや[ビデオ](https://www.youtube.com/user/OWASPGLOBAL)
 * 開発者に共通なさまざまなトピックを扱った[チートシート](https://www.owasp.org/index.php/OWASP_Cheat_Sheet_Series) 
 * 標準的なセキュリティコントロールとライブラリ
-* [世界中にあるローカルチャプタ](https://www.owasp.org/index.php/OWASP_Chapter)
+* [世界中にあるローカルチャプター](https://www.owasp.org/index.php/OWASP_Chapter)
 * 先端的な調査研究
 * 多方面にわたる [世界中のコンファレンス](https://www.owasp.org/index.php/Category:OWASP_AppSec_Conference)
 * [メーリングリスト](https://lists.owasp.org/mailman/listinfo)

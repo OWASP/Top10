@@ -20,3 +20,9 @@ Best is to fork the master repo and then generate a pull request when you’re r
 - It works best if you work on different pages at the same time. If there are collisions you need to decide who overwrites the content. (edited)
 - From time to time we have uploaded the PPTX and PDF to github. (Please use Office 2016 to generate the PDF, Office 2010 may generate wrong internal links).
 - When you're ready for us to consume your translation, please create a pull request, and we'll merge your changes. We can do this as many times as you want. Please avoid changing any of the existing files so your merges will be clean and conflict free. You are more than welcome to enable the "<your language>" line in the generate_document.sh script.
+
+Questions and Answers (Q&A):
+Q1: Is it possible to add an additional page to your translation?
+A1: Thank you very much for your translation efforts, your are kindly welcomed to add a page with some words about your translation and an attribution to all translators. We'd kindly request not to use any external logos, please. We have decided to not add any non OWASP logos to the Top 10. This is to emphasize on the openness of the Top 10, the way it has been compiled, and how it has been supported by a huge number of individual and data contributors. Even our sponsor has no logo in the document. I hope this also OK for you.
+
+Please don't hesitate to ask, if you have any further questions.
