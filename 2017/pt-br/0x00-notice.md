@@ -14,3 +14,4 @@ Participaram da tradução o líder do Projeto OWASP em Língua Portuguesa:
  E os seguintes voluntários:
  
  * Márcio Machry
+ * ...
