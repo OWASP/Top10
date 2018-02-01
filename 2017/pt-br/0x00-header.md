@@ -2,11 +2,9 @@
 
 ## OWASP Top 10 2017
 
-Os Dez Riscos de Segurança Mais Críticos de Aplicações Web 
+Os Dez Riscos de Segurança Mais Críticos em Aplicações Web 
 
-Versão em Português (PT-BR) 
-
-### Golden Master
+### Versão em Português (PT-BR) 
 
 Comments requested per instructions within
 
