@@ -4,7 +4,7 @@
 
 Os Dez Riscos de Segurança Mais Críticos de Aplicações Web 
 
-November 13, 2017
+Versão em Português (PT-BR) 
 
 ### Golden Master
 
