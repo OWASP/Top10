@@ -8,11 +8,7 @@ Embora o objetivo original do projeto OWASP Top 10 fosse simplesmente promover a
 
 Nesta versão, as questões e recomendações são escritas de forma concisa e de forma testável para ajudar na adoção do OWASP Top 10 em programas de segurança de aplicações. Encorajamos organizações grandes e de alto desempenho a utilizar o [OWASP Application Security Verification Standard (ASVS)] (https://www.owasp.org/index.php/ASVS) se for necessário um verdadeiro padrão, mas, para a maioria, o OWASP Top 10 é um ótimo começo na jornada de segurança de aplicações.
 
-We have written up a range of suggested next steps for different users of the OWASP Top 10, including "What's Next for Developers", "What's Next for Security Testers", "What's Next for Organizations“, which is suitable for CIOs and CISOs, and "What's Next for Application Managers", which is suitable for application managers or anyone responsible for the lifecycle of the application.
-
 Nós escrevemos uma série sugestões de próximas etapas para diferentes usuários do OWASP Top 10, incluindo "O que fazer a seguir para desenvolvedores", "O que fazer a seguir para testadores de segurança", "O que fazer a seguir para organizações", que é adequado para CIOs e CISOs, e "O que fazer a seguir para gerentes de aplicações", que é adequado para gerentes de aplicações ou qualquer pessoa responsável pelo ciclo de vida de uma aplicação.
-
-In the long term, we encourage all software development teams and organizations to create an application security program that is compatible with your culture and technology. These programs come in all shapes and sizes. Leverage your organization's existing strengths to measure and improve your application security program using the Software Assurance Maturity Model.
 
 A longo prazo, incentivamos todas as equipes e organizações de desenvolvimento de software a criar um programa de segurança de aplicações compatível com sua cultura e tecnologia. Estes programas vêm em várias formas e tamanhos. Aproveite os pontos fortes da sua organização para medir e melhorar seu programa de segurança usando o Software Assurance Maturity Model.
 
