@@ -6,13 +6,11 @@ Os Dez Riscos de Segurança Mais Críticos em Aplicações Web
 
 ### Versão em Português (PT-BR) 
 
-Comments requested per instructions within
-
 ![WASP Logo URL TBA](images/front-wasp.png)
 
 |  | ![Creative Commons License Logo](images/front-cc.png) |
 | -- | -- |
-| https://owasp.org | This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License |
+| https://owasp.org | Este documento é publicado sob a licença Creative Commons Attribution ShareAlike 4.0. Para qualquer tipo de reutilização ou distribuição, os termos deste trabalho deverão ser informados |
 
 
 
