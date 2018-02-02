@@ -29,7 +29,7 @@ A Fundação OWASP é uma entidade sem fins lucrativos que garante o sucesso do 
 
 Junte-se a nós!
 
-## Copyright and License
+## Copyright and Licença
 
 ![license](images/license.png)
 
