@@ -2,7 +2,7 @@
 
 | Agentes de Ameaça/Vetores de Ataque | Vulnerabilidades de Segurança | Impactos |
 | -- | -- | -- |
-| Nível de Acesso \| Explorabilidade 3 | Prevalência 2 \| Detectabilidade 3 | Técnicos 3 \| Negócios |
+| Nível de Acesso \| Explorabilidade 3 | Prevalência 2 \| Detectabilidade 3 | Técnicos 3 \| Negócio |
 | Quase qualquer fonte de dados pode ser um vetor de injeção, variáveis de ambiente, parâmetros, web services externas e internas e todos os tipos de usuários. [Falhas de injeção](https://www.owasp.org/index.php/Injection_Flaws) ocorrem quando um atacante pode enviar dados hostis a um interpretador. | As falhas de injeção são muito comuns, particularmente em código legado. As vulnerabilidades de injeção são freqüentemente encontradas em consultas SQL, LDAP, XPath ou NoSQL; Comandos de SO; parsers XML, cabeçalhos SMTP, expression languages e consultas ORM. As falhas de injeção são fáceis de descobrir ao examinar o código. Scanners e fuzzers podem ajudar os atacantes a encontrar falhas de injeção. | Injeção pode resultar em perda ou corrupção de dados, falta de responsabilização ou negação de acesso. A injeção pode levar a que um atacante possa controlar completamente o servidor. O impacto comercial depende das necessidades de proteção da sua aplicação ou dos seus dados. |
 
 ## A Aplicação Está Vulnerável?
