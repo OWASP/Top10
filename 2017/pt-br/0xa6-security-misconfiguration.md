@@ -1,6 +1,6 @@
-# A6:2017 Security Misconfiguration
+# A6:2017 Configuração Incorreta de Segurança
 
-| Threat agents/Attack vectors | Security Weakness           | Impacts               |
+| Agentes de Ameaça/Vetores de Ataque | Vulnerabilidades de Segurança           | Impactos               |
 | -- | -- | -- |
 | Access Lvl \| Exploitability 3 | Prevalence 3 \| Detectability 3 | Technical 2 \| Business |
 | Attackers will often attempt to access default accounts, unused pages, unpatched flaws, unprotected files and directories, etc to gain unauthorized access or knowledge of the system. | Security misconfiguration can happen at any level of an application stack, including the network services, platform, web server, application server, database, frameworks, custom code, and pre-installed virtual machines, containers or storage. Automated scanners are useful for detecting misconfigurations, use of default accounts or configurations, unnecessary services, legacy options etc. | Such flaws frequently give attackers unauthorized access to some system data or functionality. Occasionally, such flaws result in a complete system compromise. The business impact depends on the protection needs of your application and data. |
