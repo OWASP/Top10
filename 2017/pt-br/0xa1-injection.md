@@ -3,9 +3,9 @@
 | Agentes de Ameaça/Vetores de Ataque | Vulnerabilidades de Segurança           | Impactos               |
 | -- | -- | -- |
 | Access Lvl \| Exploitability 3 | Prevalence 2 \| Detectability 3 | Technical 3 \| Business |
-| Almost any source of data can be an injection vector, environment variables, parameters, external and internal web services, and all types of users. [Injection flaws](https://www.owasp.org/index.php/Injection_Flaws) occur when an attacker can send hostile data to an interpreter. | Injection flaws are very prevalent, particularly in legacy code. Injection vulnerabilities are often found in SQL, LDAP, XPath, or NoSQL queries; OS commands; XML parsers, SMTP headers, expression languages, and ORM queries. Injection flaws are easy to discover when examining code. Scanners and fuzzers can help attackers find injection flaws. | Injection can result in data loss or corruption, lack of accountability, or denial of access. Injection can sometimes lead to complete host takeover. The business impact depends on the protection needs of your application and data. |
+| Quase qualquer fonte de dados pode ser um vetor de injeção, variáveis de ambiente, parâmetros, web services externas e internas e todos os tipos de usuários. [Falhas de injeção](https://www.owasp.org/index.php/Injection_Flaws) ocorrem quando um atacante pode enviar dados hostis a um interpretador. | As falhas de injeção são muito comuns, particularmente em código legado. As vulnerabilidades de injeção são freqüentemente encontradas em consultas SQL, LDAP, XPath ou NoSQL; Comandos de SO; parsers XML, cabeçalhos SMTP, expression languages e consultas ORM. As falhas de injeção são fáceis de descobrir ao examinar o código. Scanners e fuzzers podem ajudar os atacantes a encontrar falhas de injeção. | Injeção pode resultar em perda de dados ou corrupção, falta de responsabilidade ou negação de acesso. A injeção às vezes pode levar a uma aquisição completa do host. O impacto comercial depende das necessidades de proteção da sua aplicação e dos dados. |
 
-## Is the Application Vulnerable?
+## A Aplicação Está Vulnerável?
 
 An application is vulnerable to attack when:
 
@@ -15,7 +15,7 @@ An application is vulnerable to attack when:
 * Hostile data is directly used or concatenated, such that the SQL or command contains both structure and hostile data in dynamic queries, commands, or stored procedures.
 * Some of the more common injections are SQL, NoSQL, OS command, ORM, LDAP, and Expression Language (EL) or OGNL injection. The concept is identical among all interpreters. Source code review is the best method of detecting if your applications are vulnerable to injections, closely followed by thorough automated testing of all parameters, headers, URL, cookies, JSON, SOAP, and XML data inputs. Organizations can include static source ([SAST](https://www.owasp.org/index.php/Source_Code_Analysis_Tools)) and dynamic application test ([DAST](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools)) tools into the CI/CD pipeline to identify newly introduced injection flaws prior to production deployment.
 
-## How To Prevent
+## Como Prevenir?
 
 Preventing injection requires keeping data separate from commands and queries.
 
@@ -24,7 +24,7 @@ Preventing injection requires keeping data separate from commands and queries.
 * For any residual dynamic queries, escape special characters using the specific escape syntax for that interpreter. **Note**: SQL structure such as table names, column names, and so on cannot be escaped, and thus user-supplied structure names are dangerous. This is a common issue in report-writing software.
 * Use LIMIT and other SQL controls within queries to prevent mass disclosure of records in case of SQL injection.
 
-## Example Attack Scenarios
+## Exemplos de Cenários de Ataque
 
 **Scenario #1**: An application uses untrusted data in the construction of the following vulnerable SQL call:
 
@@ -40,7 +40,7 @@ In both cases, the attacker modifies the ‘id’ parameter value in their brows
 
 This changes the meaning of both queries to return all the records from the accounts table. More dangerous attacks could modify or delete data, or even invoke stored procedures.
 
-## References
+## Referências
 
 ### OWASP
 
@@ -53,7 +53,7 @@ This changes the meaning of both queries to return all the records from the acco
 * [OWASP Cheat Sheet: Query Parameterization](https://www.owasp.org/index.php/Query_Parameterization_Cheat_Sheet)
 * [OWASP Automated Threats to Web Applications – OAT-014](https://www.owasp.org/index.php/OWASP_Automated_Threats_to_Web_Applications)
 
-### External
+### Externas
 
 * [CWE-77: Command Injection](https://cwe.mitre.org/data/definitions/77.html)
 * [CWE-89: SQL Injection](https://cwe.mitre.org/data/definitions/89.html)
