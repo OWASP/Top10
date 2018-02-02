@@ -12,7 +12,7 @@ Por vezes, estes caminhos são triviais de encontrar e explorar, por outras são
 
 The [OWASP Top 10](https://www.owasp.org/index.php/Top10) focuses on identifying the most serious risks for a broad array of organizations. For each of these risks, we provide generic information about likelihood and technical impact using the following simple ratings scheme, which is based on the OWASP Risk Rating Methodology.  
 
-| Agentes de Ameaça | Explorabilidade | Prevalência da vulnerabilidade | Detectabilidade da Vulnerabilidade | Impactos Técnicos | Impactos de Negócio |
+| Agentes de Ameaça | Explorabilidade | Prevalência da Vulnerabilidade | Detectabilidade da Vulnerabilidade | Impactos Técnicos | Impactos de Negócio |
 | -- | -- | -- | -- | -- | -- |
 | Específico da Aplicação | Fácil 3 | Generalizada 3 | Fácil 3 | Severo 3 | Específicos da Aplicação/Negócio |
 | Específico da Aplicação | Médio 2 | Comum 2 | Médio 2 | Moderado 2 | Específicos da Aplicação/Negócio |
