@@ -36,7 +36,7 @@ Em ambos os casos, um atacante modifica o valor do parâmetro 'id' no seu browse
 
 `http://example.com/app/accountView?id=' or '1'='1`
 
-Isto altera o significado de ambas as pesquisas para que retornem todos os registos da tabela "accounts".  Ataques mais perigosos podem modificar dados ou até invocar stored procedures.
+Isto altera o significado de ambas as pesquisas para que retornem todos os registros da tabela "accounts".  Ataques mais perigosos podem modificar dados ou até invocar stored procedures.
 
 ## Referências
 
