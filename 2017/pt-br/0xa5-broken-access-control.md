@@ -1,6 +1,6 @@
-# A5:2017 Broken Access Control
+# A5:2017 Quebra de Controle de Acesso
 
-| Threat agents/Attack vectors | Security Weakness           | Impacts               |
+| Agentes de Ameaça/Vetores de Ataque | Vulnerabilidades de Segurança           | Impactos               |
 | -- | -- | -- |
 | Access Lvl \| Exploitability 2 | Prevalence 2 \| Detectability 2 | Technical 3 \| Business |
 | Exploitation of access control is a core skill of attackers. [SAST](https://www.owasp.org/index.php/Source_Code_Analysis_Tools) and [DAST](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools) tools can detect the absence of access control but can not verify if it is functional when it is present. Access control is detectable using manual means, or possibly through automation for the absence of access controls in certain frameworks. | Access control weaknesses are common due to the lack of automated detection, and lack of effective functional testing by application developers. Access control detection is not typically amenable to automated static or dynamic testing. | The technical impact is attackers acting as users or administrators, users using privileged functions, or creating, accessing, updating or deleting every record. The business impact depends on the protection needs of your application and data. |
