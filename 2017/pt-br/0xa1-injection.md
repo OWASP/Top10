@@ -28,7 +28,7 @@ Prevenir injecções requer que os dados estejam separados dos comandos e das co
 
 `String query = "SELECT * FROM accounts WHERE custID='" + request.getParameter("id") + "'";`
 
-**Cenário #2**: De forma similar, a confiança cega de uma aplicação em frameworks pode resultar em pesquisas que são igualmente vulneráveis, (p.e. Hibernate Query Language (HQL)):
+**Cenário #2**: De forma similar, a confiança cega de uma aplicação em frameworks pode resultar em pesquisas que são igualmente vulneráveis, (ex.: Hibernate Query Language (HQL)):
 
 `Query HQLQuery = session.createQuery("FROM accounts WHERE custID='" + request.getParameter("id") + "'");`
 
