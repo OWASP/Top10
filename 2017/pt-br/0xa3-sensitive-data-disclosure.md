@@ -17,35 +17,35 @@ A primeira coisa é determinar as necessidades de proteção de dados em trânsi
 * Are default crypto keys in use, weak crypto keys generated or re-used, or is proper key management or rotation missing?
 * Estão sendo usadas chaves de criptografia padrão, chaves de criptografia fracas geradas ou reutilizadas, ou o falta algum gerenciamento de chaves ou de troca delas?
 * Is encryption not enforced, e.g. are any user agent (browser) security directives or headers missing?
-* A criptografia não é aplicada, por exemplo, existe alguma diretiva ou cabeçalho de segurança de 'user agent' (navegador) faltando?
-* O 'user agent' (por exemplo, aplicativo, cliente de email) não verifica se o certificado do servidor recebido é válido.
+* A criptografia não é aplicada, por exemplo, existe alguma diretiva ou cabeçalho de segurança de *user agent* (navegador) faltando?
+* O *user agent* (por exemplo, aplicativo, cliente de email) não verifica se o certificado do servidor recebido é válido.
 
 
 Ver ASVS [Crypto (V7), Data Protection (V9) and SSL/TLS (V10)](https://www.owasp.org/index.php/ASVS).
 
 ## Como Prevenir
 
-Do the following, at a minimum and consult the references:
+Faça o seguinte, no mínimo, e consulte as referências:
 
-* Classify data processed, stored or transmitted by an application. Identify which data is sensitive according privacy laws, regulatory requirements, or business needs.
-* Apply controls as per the classification.
-* Don't store sensitive data unnecessarily. Discard it as soon as possible or use PCI DSS compliant tokenization or even truncation. Data that is not retained cannot be stolen.
-* Make sure to encrypt all sensitive data at rest.
-* Ensure up-to-date and strong standard algorithms, protocols, keys and proper key management is in place.
-* Encrypt all data in transit with secure protocols such as TLS with perfect forward secrecy (PFS) ciphers, cipher prioritization by the server, and secure parameters. Enforce encryption using directives like HTTP Strict Transport Security (HSTS).
-* Disable caching for response that contain sensitive data.
-* Store passwords using strong adaptive and salted hashing functions with a work factor (delay factor), such as [Argon2](https://www.cryptolux.org/index.php/Argon2), [scrypt](https://wikipedia.org/wiki/Scrypt), [bcrypt](https://wikipedia.org/wiki/Bcrypt) or [PBKDF2](https://wikipedia.org/wiki/PBKDF2).
-* Verify independently the effectiveness of your settings.
+* Classifique dados processados, armazenados ou transmitidos por uma aplicação. Identifique quais dados são sensíveis de acordo com as leis de privacidade, requisitos regulamentares ou necessidades do negócio.
+* Aplique controles de acordo com a classificação.
+* Não armazene dados sensíveis desnecessariamente. Descarte-os o mais rápido possível ou use tokenização compatível com PCI DSS ou mesmo truncamento. Dados que não são retidos não podem ser roubados.
+* Certifique-se de criptografar todos os dados sensíveis em repouso.
+* Certifique-se de que os algoritmos, protocolos, chaves e gerenciamento de chaves apropriados estão atualizados e fortes.
+* Criptografe todos os dados em trânsito com protocolos seguros, como TLS, com cifra *perfect forward secrecy* (PFS), prioridade de cifra do servidor e parâmetros seguros. Aplique criptografia usando diretivas como HTTP Strict Transport Security (HSTS).
+* Desativar o cache para respostas que contenham dados confidenciais.
+* Armazene senhas usando funções de hashing com salt fortes e adaptativas com um fator de trabalho (fator de atraso), como [Argon2](https://www.cryptolux.org/index.php/Argon2), [scrypt](https: // wikipedia.org/wiki/Scrypt), [bcrypt](https://wikipedia.org/wiki/Bcrypt) ou [PBKDF2](https://wikipedia.org/wiki/PBKDF2).
+* Verifique independentemente a eficácia das suas configurações.
 
-## Example Attack Scenarios
+## Examplo de Cenários de Ataque
 
-**Scenario #1**: An application encrypts credit card numbers in a database using automatic database encryption. However, this data is automatically decrypted when retrieved, allowing an SQL injection flaw to retrieve credit card numbers in clear text. 
+**Cenário #1**: Uma aplicação criptografa números de cartão de crédito em um banco de dados usando criptografia automática do próprio banco. No entanto, esses dados são descriptografados automaticamente quando recuperados, permitindo que uma falha de injeção SQL obtenha números de cartão de crédito em texto aberto.
 
-**Scenario #2**: A site doesn't use or enforce TLS for all pages or supports weak encryption. An attacker monitors network traffic, strips the TLS (e.g. at an open wireless network), intercepts requests, and steals the user's session cookie. The attacker then replays this cookie and hijacks the user's (authenticated) session, accessing or modifying the user's private data. Instead of the above they could alter all transported data, e.g. the recipient of a money transfer.
+**Cenário #2**: Um site não usa ou aplica TLS para todas as páginas ou suporta criptografia fraca. Um atacante monitora o tráfego de rede, tira o TLS (por exemplo, em uma rede sem fio aberta), intercepta solicitações e rouba o cookie de sessão do usuário. O atacante então reproduz este cookie e seqüestra a sessão (autenticada) do usuário, acessando ou modificando os dados privados do usuário. Em vez do anterior, podem alterar todos os dados transportados, por exemplo, o destinatário de uma transferência de dinheiro.
 
-**Scenario #3**: The password database uses unsalted or simple hashes to store everyone's passwords. A file upload flaw allows an attacker to retrieve the password database. All the unsalted hashes can be exposed with a rainbow table of pre-calculated hashes. Hashes generated by simple or fast hash functions may be cracked by GPUs, even if they were salted.
+**Cenário #3**: O banco de dados de senhas usa hashes sem salt ou hashes simples para armazenar senhas de todos. Uma falha de upload de arquivo permite que um invasor obtenha o banco de dados de senha. Todos os hashes sem salt podem ser expostos com uma *rainbow table* de hashes pré-calculados. Hashes gerados por funções de hash simples ou rápidas podem ser quebrados por GPUs, mesmo que possuam salts.
 
-## References
+## Referências
 
 * [OWASP Proactive Controls: Protect Data](https://www.owasp.org/index.php/OWASP_Proactive_Controls#7:_Protect_Data)
 * [OWASP Application Security Verification Standard: V7, 9, 10](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project)
@@ -56,7 +56,7 @@ Do the following, at a minimum and consult the references:
 * [OWASP Security Headers Project](https://www.owasp.org/index.php/OWASP_Secure_Headers_Project); [Cheat Sheet: HSTS](https://www.owasp.org/index.php/HTTP_Strict_Transport_Security_Cheat_Sheet)
 * [OWASP Testing Guide: Testing for weak cryptography](https://www.owasp.org/index.php/Testing_for_weak_Cryptography)
 
-### External
+### Externas
 
 * [CWE-220: Exposure of sens. information through data queries](https://cwe.mitre.org/data/definitions/220.html)
 * [CWE-310: Cryptographic Issues](https://cwe.mitre.org/data/definitions/310.html); [CWE-326: Weak Encryption](https://cwe.mitre.org/data/definitions/326.html)
