@@ -9,7 +9,7 @@ O principal objectivo do OWASP Top 10 é o de educar programadores, desenhadores
 
 ## Planeamento para actividades futuras
 
-**Não pare no 10**. Existem centenas de problemas que podem afectar a segurança geral de uma aplicação web tal como discutido no [Guia de Programadores da OWASP][1] e nas [Séries de Cheat Sheets da OWASP][2]. Isto é leitura essencial para alguém que esteja a desenvolver aplicações web e APIs. Informação sobre como enThese are essential reading for anyone developing web applications and APIs. Guidance on how to effectively find vulnerabilities in web applications and APIs is provided in the [OWASP Testing Guide][3].
+**Não pare no 10**. Existem centenas de problemas que podem afectar a segurança geral de uma aplicação web tal como discutido no [Guia de Programadores da OWASP][1] e nas [Séries de Cheat Sheets da OWASP][2]. Isto é leitura essencial para alguém que esteja a desenvolver aplicações web e APIs. Orientações sobre como encontrar efetivamente vulnerabilidades em aplicações Web e APIs são fornecidas no [OWASP Testing Guide[3].
 
 **Mudança constante**. O OWASP Top 10 vai continuar a mudar. Mesmo sem mudar uma única linha no código da sua aplicação, pode ficar vulnerável à medida que novas falhas são descobertas e métodos de ataque são refinados. Por favor, reveja os conselhos no final do Top 10 na parte “O que se se segue para Programadores, profissionais de Testes e Organizações” para mais informação.
 
