@@ -10,7 +10,8 @@ Se encontrar algum erro de tradução, digitação, ou diagramação, favor entr
 
 ## Participantes
 
-Participaram da tradução o líder do Projeto OWASP Top 10 em Língua Portuguesa:
+Participaram da tradução o líder do Projeto OWASP Top 10 em Língua Portuguesa do Brasil:
+
  * Fábio Kimura - fkimura@gmail.com
  
  E os seguintes voluntários:
