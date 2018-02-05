@@ -2,7 +2,7 @@
 
 | Agentes de Ameaça/Vetores de Ataque | Vulnerabilidades de Segurança           | Impactos               |
 | -- | -- | -- |
-| Access Lvl \| Exploitability 3 | Prevalence 2 \| Detectability 2 | Technical 3 \| Business |
+| N´vel de Acesso \| Explorabilidade 3 | Prevalência 2 \| Detectabilidade 2 | Técnicos 3 \| Negócio |
 | Os atacantes têm acesso a centenas de milhões de combinações de nomes de usuário e senha válidos para preenchimento de credenciais, listas de contas administrativas padrão, força bruta automatizada e ferramentas de ataque de dicionário. Os ataques de gerenciamento de sessões são bem compreendidos, particularmente em relação aos tokens de sessão não expirados. | A prevalência de quebra de autenticação é generalizada devido ao design e implementação da maioria dos controles de identidade e de acesso. O gerenciamento de sessões é o base de autenticação e controles de acesso, e está presente em todos os aplicativos que possuem estado. Os atacantes podem detectar a quebra de autenticação usando meios manuais e explorá-los usando ferramentas automatizadas com listas de senhas e ataques de dicionário. | Os atacantes só precisam ter acesso a algumas contas, ou apenas uma conta de administrador para comprometer o sistema. Dependendo do domínio do aplicativo, isso pode permitir lavagem de dinheiro, fraude de CPF e roubo de identidade, ou divulgar informações altamente sensíveis legalmente protegidas. |
 
 ## A Aplicação Está Vulnerável?
