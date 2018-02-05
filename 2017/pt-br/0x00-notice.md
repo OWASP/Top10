@@ -17,4 +17,5 @@ Participaram da tradução o líder do Projeto OWASP Top 10 em Língua Portugues
  E os seguintes voluntários:
  
  * Márcio Machry
+ * Colabore e tenha seu nome aqui!
  * ...
