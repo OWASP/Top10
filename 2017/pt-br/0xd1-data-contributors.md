@@ -48,11 +48,11 @@ Gostaríamos de agradecer a muitas organizações que contribuíram com os seus 
 * Veracode
 * Web.com
 
-For the first time, all the data contributed to a Top 10 release, and the full list of contributors is [publicly available](https://github.com/OWASP/Top10/tree/master/2017/datacall/submissions).
+Pela primeira vez, todos os dados contribuídos para uma versão do Top 10, e a lista completa de contribuidores, é [tornada pública](https://github.com/OWASP/Top10/tree/master/2017/datacall/submissions).
 
-## Acknowledgements to Individual Contributors
+## Reconhecimento a contribuidores individuais 
 
-We’d like to thank the individual contributors who spent many hours collectively contributing to the Top 10 in GitHub.
+Gostaríamos de agradecer aos contribuidores individuais que investiram muitas horas contribuindo coletivamente para esta versão do Top 10 no GitHub.
 
 * ak47gen
 * alonergan
@@ -125,6 +125,6 @@ We’d like to thank the individual contributors who spent many hours collective
 * vdbaan
 * yohgaki
 
-And everyone else who provided feedback via Twitter, email, and other means.
+E todos os outros que forneceram comentários via Twitter, e-mail e outros meios.
 
-We would be remiss not to mention that Dirk Wetter, Jim Manico, and Osama Elnaggar have provided extensive assistance. Also, Chris Frohoff and Gabriel Lawrence provided invaluable support in the writing of the new A8:2017-Insecure Deserialization risk.
+Seria imperdoável não mencionar que Dirk Wetter, Jim Manico e Osama Elnaggar prestaram ampla assistência. Além disso, Chris Frohoff e Gabriel Lawrence forneceram um apoio inestimável na redação do novo risco A8:2017-Desserialização Insegura.
