@@ -13,7 +13,7 @@ A confirmação da identidade, autenticação e gestão de sessões dos utilizad
 * Permite ataques de força bruta ou outro tipo de ataques automatizados.
 * Permite palavras-passe por defeito, fracas ou muito conhecidas, tais somo "Password1" ou "admin/admin".
 * Usa processos fracos de recuperação de credenciais ou de esquecimento de palavras-passe, tais como "perguntas baseadas em conhecimento", que podem não ser consideradas seguras.
-* A utilização de palavras-passe em claro, encriptadas, ou com resumos fracos permite a rápida recureação de palavras-passe usando "*crackers*" de GPU ou ferramentas de força bruta.
+* A utilização de palavras-passe em claro, encriptadas, ou com resumos fracos (veja **A3:2017-Exposição de dados sensíveis**).
 * Não possua autenticação multifactor ou que a mesma não funcione correctamente.
 * Expõe IDs de sessão na URL (por exemplo, reescrita de URL).
 * Não rotaciona os IDs de sessão após um login bem-sucedido.
