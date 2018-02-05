@@ -1,4 +1,4 @@
-# +D What's Next for Developers
+# +D Próximos Passos Para Desenvolvedores
 
 ## Establish &amp; Use Repeatable Security Processes and Standard Security Controls
 
