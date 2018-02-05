@@ -3,22 +3,27 @@
 | Agentes de Ameaça/Vetores de Ataque | Vulnerabilidades de Segurança           | Impactos               |
 | -- | -- | -- |
 | Access Lvl \| Exploitability 2 | Prevalence 3 \| Detectability 2 | Technical 3 \| Business |
-| Attackers typically don't break crypto directly. Instead attackers steal keys, execute man-in-the-middle attacks, or steal clear text data off the server, while in transit, or from the user's client, e.g. browser. A manual attack is generally required. Previously retrieved password databases could be brute forced or cracked by GPUs. | Over the last few years, this has been the most common impactful attack. The most common flaw is simply not encrypting sensitive data. When crypto is employed, weak key generation and management, and weak algorithm, protocol and cipher usage is common, particularly for data at rest weak password hashing techniques. For data in transit server side weaknesses are mainly easy to detect, but hard for data at rest. The exploitability of both varies. | Failure frequently compromises all data that should have been protected. Typically, this information includes sensitive personal information (PII) data such as health records, cre-dentials, personal data, credit cards, which often requires protection as defined by laws or regulations such as the EU GDPR or local privacy laws. |
+| Atacantes tipicamente não quebram criptofia diretamente. Em vez disso, eles roubam as chaves, executam ataques man-in-the-middle ou roubam dados em texto puro do servidor, enquanto estão em trânsito ou do cliente do usuário, ex.: navegador. Normalmente é necessário um ataque manual. Bancos de dados de senha recuperados anteriormente poderiam ser atacados por força bruta ou quebrados por GPUs. | Ao longo dos últimos anos, este tem sido o ataque impactante mais comum. A falha mais comum é simplesmente não criptografar dados confidenciais. Quando o criptografia é empregada, geração e gerenciamento de chaves fracas, algoritmos, protocolos e usos de cifra fracos são comuns, particularmente para dados em repouso, técnicas de hashing de senha fracas. Para dados em trânsito os pontos fracos do servidor são fáceis de detectar, mas difíceis para os dados em repouso. A explorabilidade de ambos varia. | A falha freqüentemente compromete todos os dados que deveriam ter sido protegidos. Normalmente, essas informações incluem dados de informações pessoais sensíveis (PII) tais como registros de saúde, dados pessoais, dados pessoais, cartões de crédito, que muitas vezes requer proteção conforme definido por leis ou regulamentos, como as leis de privacidade da UE (GDPR) ou as leis locais de privacidade. |
 
-## Is the Application Vulnerable?
+## A Aplicação Está Vulnerável?
 
-The first thing is to determine the protection needs of data in transit and at rest. For example, passwords, credit card numbers, health records, personal information and business secrets require extra protection, particularly if that data falls under privacy laws, e.g. EU's General Data Protection Regulation (GDPR), or regulations, e.g. financial data protection such as PCI Data Security Standard (PCI DSS). For all such data:
+A primeira coisa é determinar as necessidades de proteção de dados em trânsito e em repouso. Por exemplo, as senhas, números de cartão de crédito, registros de saúde, informações pessoais e segredos comerciais requerem proteção extra, especialmente se esses dados estiverem abrangidos pelas leis de privacidade, ex.: Regulamentação Geral de Proteção de Dados da UE (GDPR), ou regulamentos, ex.: proteção financeira de dados, como PCI Data Security Standard (PCI DSS). Para todos esses dados:
 
-* Is any data transmitted in clear text? This concerns any proto-col, e.g. http, smtp , ftp. External internet traffic is especially dangerous, but verify also all internal traffic e.g. between load balancers, gateways, web servers or back end systems.
+* Existe algum dado sendo transmitido em texto puro? Isto diz respeito a qualquer protocolo como http, smtp, ftp. O tráfego de internet externo é especialmente perigoso, mas verifique também todo o tráfego interno, como entre balanceadores de carga, gateways, servidores web ou sistemas back-end.
 * Is sensitive data stored in clear text, including backups?
-* Are any old or weak cryptographic algorithms used either by default or in older code? 
+* Algum dados sensível é armazenado em texto puro, incluindo backups?
+* Algum algoritmo criptográfico antigo ou fraco é usado por padrão ou em código antigo?
+
 * Are default crypto keys in use, weak crypto keys generated or re-used, or is proper key management or rotation missing?
+* Estão sendo usadas chaves de criptografia padrão, chaves de criptografia fracas geradas ou reutilizadas, ou o falta algum gerenciamento de chaves ou de troca delas?
 * Is encryption not enforced, e.g. are any user agent (browser) security directives or headers missing?
-* Does the user agent (e.g. app, mail client) not verify if the received server certificate is valid.
+* A criptografia não é aplicada, por exemplo, existe alguma diretiva ou cabeçalho de segurança de 'user agent' (navegador) faltando?
+* O 'user agent' (por exemplo, aplicativo, cliente de email) não verifica se o certificado do servidor recebido é válido.
 
-See ASVS [Crypto (V7), Data Protection (V9) and SSL/TLS (V10)](https://www.owasp.org/index.php/ASVS).
 
-## How To Prevent
+Ver ASVS [Crypto (V7), Data Protection (V9) and SSL/TLS (V10)](https://www.owasp.org/index.php/ASVS).
+
+## Como Prevenir
 
 Do the following, at a minimum and consult the references:
 
