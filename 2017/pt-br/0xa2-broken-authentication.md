@@ -3,43 +3,43 @@
 | Agentes de Ameaça/Vetores de Ataque | Vulnerabilidades de Segurança           | Impactos               |
 | -- | -- | -- |
 | Access Lvl \| Exploitability 3 | Prevalence 2 \| Detectability 2 | Technical 3 \| Business |
-| Attackers have access to hundreds of millions of valid username and password combinations for credential stuffing, default administrative account lists, automated brute force, and dictionary attack tools. Session management attacks are well understood, particularly in relation to unexpired session tokens. | The prevalence of broken authentication is widespread due to the design and implementation of most identity and access controls. Session management is the bedrock of authentication and access controls, and is present in all stateful apps. Attackers can detect broken authentication using manual means and exploit them using automated tools with password lists and dictionary attacks. | Attackers only have to gain access to a few accounts, or just one admin account to compromise the system. Depending on the domain of the application, this may allow money laundering, social security fraud, and identity theft, or disclose legally protected highly sensitive information. |
+| Os atacantes têm acesso a centenas de milhões de combinações de nomes de usuário e senha válidos para preenchimento de credenciais, listas de contas administrativas padrão, força bruta automatizada e ferramentas de ataque de dicionário. Os ataques de gerenciamento de sessões são bem compreendidos, particularmente em relação aos tokens de sessão não expirados. | A prevalência de quebra de autenticação é generalizada devido ao design e implementação da maioria dos controles de identidade e de acesso. O gerenciamento de sessões é o base de autenticação e controles de acesso, e está presente em todos os aplicativos que possuem estado. Os atacantes podem detectar a quebra de autenticação usando meios manuais e explorá-los usando ferramentas automatizadas com listas de senhas e ataques de dicionário. | Os atacantes só precisam ter acesso a algumas contas, ou apenas uma conta de administrador para comprometer o sistema. Dependendo do domínio do aplicativo, isso pode permitir lavagem de dinheiro, fraude de CPF e roubo de identidade, ou divulgar informações altamente sensíveis legalmente protegidas. |
 
-## Is the Application Vulnerable?
+## A Aplicação Está Vulnerável?
 
-Confirmation of the user's identity, authentication, and session management are critical to protect against authentication-related attacks.
+A confirmação da identidade, autenticação e gerenciamento de sessão do usuário é fundamental para proteger contra ataques relacionados à autenticação.
 
-There may be authentication weaknesses if your application:
+Pode haver pontos fracos de autenticação se a sua aplicação:
 
-* Permits automated attacks such as [credential stuffing](https://www.owasp.org/index.php/Credential_stuffing), where the attacker has a list of valid usernames and passwords.
-* Permits brute force or other automated attacks.
-* Permits default, weak, or well-known passwords, such as "Password1" or "admin/admin“.
-* Uses weak or ineffective credential recovery and forgot-password processes, such as "knowledge-based answers", which cannot be made safe.
-* Uses plain text, encrypted, or weakly hashed passwords (see **A3:2017-Sensitive Data Exposure**).
-* Has missing or ineffective multi-factor authentication.
-* Exposes Session IDs in the URL (e.g., URL rewriting).
-* Does not rotate Session IDs after successful login.
-* Does not properly invalidate Session IDs. User sessions or authentication tokens (particularly single sign-on (SSO) tokens) aren't properly invalidated during logout or a period of inactivity
+* Permite ataques automatizados, como [preenchimento de credenciais](https://www.owasp.org/index.php/Credential_stuffing), onde o atacante possui uma lista de nomes de usuário e senhas válidos.
+* Permite ataque de força bruta ou outros ataques automatizados.
+* Permite senhas padrão, fracas ou bastante conhecidas, como "Password1" ou "admin / admin".
+* Utiliza processos de recuperação de credenciais ou de recuperação de senhas fracos ou ineficazes, tais como "respostas baseadas em conhecimento", que não podem ser consideradas seguras.
+* Usa senhas em texto simples, criptografadas ou com hash muito fracos (veja **A3:2017-Exposição de dados sensíveis**).
+* Não possua autenticação multi-fator ou a mesma não funciona corretamente.
+* Expõe IDs de sessão na URL (por exemplo, reescrita de URL).
+* Não rotaciona os IDs de sessão após um login bem-sucedido.
+* Não invalida devidamente as IDs da Sessão. As sessões de usuário ou os tokens de autenticação (particularmente tokens de single sign-on (SSO)) não são devidamente invalidados durante o logout ou um período de inatividade.
 
-## How To Prevent
+## Como Prevenir?
 
-* Where possible, implement multi-factor authentication to prevent automated, credential stuffing, brute force, and stolen credential re-use attacks. 
-* Do not ship or deploy with any default credentials, particularly for admin users
-* Implement weak password checks, such as testing new or changed passwords against a list of the [top 10000 worst passwords](https://github.com/danielmiessler/SecLists/tree/master/Passwords).
-* Align password length, complexity and rotation policies with [NIST 800-63 B's guidelines in section 5.1.1 for Memorized Secrets](https://pages.nist.gov/800-63-3/sp800-63b.html#memsecret) or other modern, evidence based password policies.
-* Ensure registration, credential recovery, and API pathways are hardened against account enumeration attacks by using the same messages for all outcomes.
-* Limit or increasingly delay failed login attempts. Log all failures and alert administrators when credential stuffing, brute force, other attacks are detected.
-* Use a server-side, secure, built-in session manager that generates a new random session ID with high entropy after login. Session IDs should not be in the URL, be securely stored and invalidated after logout, idle, and absolute timeouts.
+* Sempre que possível, implemente a autenticação multi-fator para evitar ataques automatizados de preenchimento de credenciais, força bruta e de credenciais roubadas.
+* Não envie ou implante com quaisquer credenciais padrão, particularmente para usuários administradores.
+* Implementar verificações de senha fracas, como testar senhas novas ou alteradas em uma lista das [top 10000 piores senhas](https://github.com/danielmiessler/SecLists/tree/master/Passwords).
+* Alinhe o comprimento da senha, a complexidade e as políticas de rotação com as diretrizes do NIST 800-63 B na seção 5.1.1 para Segredos Memorizados](https://pages.nist.gov/800-63-3/sp800-63b.html#memsecret ) ou outras políticas modernas de senha baseadas em evidências.
+* Assegure-se de que o registro, a recuperação de credenciais e as vias da API sejam endurecidos contra ataques de enumeração de conta usando as mesmas mensagens para todos os resultados.
+* Limite ou retarde de forma progressiva as tentativas de login falhadas. Logar todas as falhas e alertar os administradores quando o preenchimento de credenciais, a força bruta, e outros ataques forem detectados.
+* Use um gerenciador de sessão seguro, no lado do servidor, que gere uma nova ID de sessão aleatória com alta entropia após o login. IDs de sessão não devem estar na URL, e devem ser armazenadas de forma segura e invalidadas após o logout, tempo ocioso e tempo limite absolutos.
 
-## Example Attack Scenarios
+## Exemplos de Cenários de Ataque
 
-Scenario #1: [credential stuffing](https://www.owasp.org/index.php/Credential_stuffing), the use of [lists of known passwords](https://github.com/danielmiessler/SecLists), is a common attack. If an application does not implement automated threat or credential stuffing protections, the application can be used as a password oracle to determine if the credentials are valid.
+**Cenário #1**: [preenchimento de credenciais](https://www.owasp.org/index.php/Credential_stuffing), o uso de [listas de senhas conhecidas](https://github.com/danielmiessler/SecLists), é um ataque comum. Se uma aplicação não implementar proteções de ameaças ou de preenchimento automatizados de  credenciais, a aplicação pode ser usada como um oráculo de senha para determinar se as credenciais são válidas.
 
-**Scenario #2**: Most authentication attacks occur due to the continued use of passwords as a sole factor. Once considered best practices, password rotation and complexity requirements are viewed as encouraging users to use, and reuse, weak passwords. Organizations are recommended to stop these practices per NIST 800-63 and use multi-factor authentication.
+**Cenário #2**: A maioria dos ataques de autenticação ocorrem devido ao uso contínuo de senhas como único fator. Uma vez consideradas as melhores práticas, a troca de senha e os requisitos de complexidade são vistos como incentivo aos usuários a usar e reutilizar senhas fracas. As organizações são recomendadas para parar essas práticas por NIST 800-63 e usar autenticação multi-fator.
 
-**Scenario #3**: Application session timeouts aren't set properly. A user uses a public computer to access an application. Instead of selecting “logout” the user simply closes the browser tab and walks away. An attacker uses the same browser an hour later, and the user is still authenticated.
+**Cenário #3**: Os tempos limite da sessão da aplicação não estão configurados corretamente. Um usuário usa um computador público para acessar a aplicação. Em vez de selecionar "logout", o usuário simplesmente fecha a guia do navegador e se afasta. Um invasor usa o mesmo navegador uma hora depois e o usuário ainda está autenticado.
 
-## References
+## Referência
 
 ### OWASP
 
@@ -54,7 +54,7 @@ Scenario #1: [credential stuffing](https://www.owasp.org/index.php/Credential_st
 * [OWASP Cheat Sheet: Session Management](https://www.owasp.org/index.php/Session_Management_Cheat_Sheet)
 * [OWASP Automated Threats Handbook](https://www.owasp.org/index.php/OWASP_Automated_Threats_to_Web_Applications)
 
-### External
+### Externos
 
 * [NIST 800-63b: 5.1.1 Memorized Secrets - for thorough, modern, evidence based advice on authentication.](https://pages.nist.gov/800-63-3/sp800-63b.html#memsecret)
 * [CWE-287: Improper Authentication](https://cwe.mitre.org/data/definitions/287.html)
