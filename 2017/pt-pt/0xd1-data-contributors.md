@@ -94,4 +94,8 @@ Gostaríamos de agradecer aos contribuidores individuais que investiram muitas h
 * Chris Frohoff 
 * Gabriel Lawrence 
 
+E todos os outros que forneceram comentários via Twitter, e-mail e outros meios.
+
+Seria imperdoável não mencionar que Dirk Wetter, Jim Manico e Osama Elnaggar prestaram ampla assistência. Além disso, Chris Frohoff e Gabriel Lawrence forneceram um apoio inestimável na redação do novo risco A8:2017-Desserialização Insegura.
+
 [1]:	https://github.com/OWASP/Top10/tree/master/2017/datacall/submissions
