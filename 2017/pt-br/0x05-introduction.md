@@ -1,12 +1,12 @@
-# I Introduction
+# I Introdução
 
-## Welcome to the OWASP Top 10 - 2017
+## Seja bem vindo ao OWASP Top 10 - 2017
 
-This major update adds several new issues, including two issues selected by the community - A8:2017-Insecure Deserialization and A10:2017-Insufficient Logging and Monitoring. Two key differentiators from previous OWASP Top 10 editions are the substantial community feedback in addition to the extensive data assembled from dozens of organizations (possibly the largest amount of data ever assembled in the preparation of an application security standard). This provides us with additional confidence that the new OWASP Top 10 addresses the most urgent application security issues currently facing organizations.
+Esta atualização importante adiciona vários novas questões, incluindo duas questões selecionadas pela comunidade - A8:2017-Desserialização insegura e A10:2017-Insuficiência de Logs e monitoração. Dois diferenciais chave das anteriores Edições OWASP Top 10 são o feedback substancial da comunidade, além dos dados extensos reunidos por dezenas de organizações (possivelmente a maior quantidade de dados já reunidos na preparação de um padrão de segurança de aplicativos). Isso nos proporciona uma confiança adicional de que o novo OWASP Top 10 aborda os problemas de segurança de aplicativos mais urgentes atualmente enfrentados pelas organizações.
 
-The OWASP Top 10 for 2017 is based primarily on 40+ data submissions from firms that specialize in application security and an industry survey that was completed by 515 individuals. This data spans vulnerabilities gathered from hundreds of organizations and over 100,000 real-world applications and APIs. The Top 10 items are selected and prioritized according to this prevalence data, in combination with consensus estimates of exploitability, detectability, and impact.
+O OWASP Top 10 para 2017 baseia-se principalmente em mais 40 pedidos de dados de empresas que se especializam em segurança de aplicativos e uma pesquisa da indústria que foi preenchida por 515 indivíduos. Este dados abrange vulnerabilidades coletadas de centenas de organizações e mais de 100.000 aplicativos e API do mundo real. Os 10 principais itens são selecionados e priorizados de acordo com esses dados de prevalência, em combinação com estimativas consensuais de capacidade de explorabilidade, detectabilidade e impacto.
 
-A primary aim of the OWASP Top 10 is to educate developers, designers, architects, managers, and organizations about the consequences of the most common and most important web application security weaknesses. The Top 10 provides basic techniques to protect against these high risk problem areas, and provides guidance on where to go from here.
+Um dos principais objetivos do OWASP Top 10 é educar desenvolvedores, designers, arquitetos, gerentes e organizações sobre as conseqüências das falhas de segurança de aplicações mais comuns e mais importantes na Web. O Top 10 fornece técnicas básicas para se proteger contra essas áreas problemáticas de alto risco e fornece orientação sobre aonde ir daqui.
 
 ## Roadmap for future activities
 
