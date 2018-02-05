@@ -12,13 +12,13 @@ Um dos principais objetivos do OWASP Top 10 é educar desenvolvedores, designers
 
 **Não pare em 10**. Existem centenas de questões que podem afetar a segurança geral de uma aplicação web conforme discutido no [OWASP Developer's Guide](https://www.owasp.org/index.php/OWASP_Guide_Project) e [OWASP Cheat Sheet Series](https://www.owasp.org/index.php/Category:Cheasheets). Estas são leituras essenciais para qualquer pessoa que esteja desenvolvendo aplicações Web e APIs. As orientações sobre como encontrar efetivamente vulnerabilidades em aplicações Web e APIs são fornecidas no [OWASP Testing Guide](https://www.owasp.org/index.php/OWASP_Testing_Project).
 
-**Mudança constante**. O OWASP Top 10 continuará a mudar. Mesmo sem alterar uma única linha do código da sua aplicação, você pode tornar-se vulnerável à medida que novas falhas são descobertas e os métodos de ataque são refinados. Por favor, reveja no final do Top 10 o **O que fazer a seguir para desenvolvedores, testadores, organizações e gerentes de aplicações".
+**Mudança constante**. O OWASP Top 10 continuará a mudar. Mesmo sem alterar uma única linha do código da sua aplicação, você pode tornar-se vulnerável à medida que novas falhas são descobertas e os métodos de ataque são refinados. Por favor, reveja no final do Top 10 os Próximos passos para desenvolvedores, testadores, organizações e gerentes de aplicações.
 
 **Pense positivo**. Quando estiver pronto para parar de perseguir vulnerabilidades e concentrar-se em estabelecer controles fortes de segurança de aplicações, o projeto [OWASP Proactive Controls](https://www.owasp.org/index.php/OWASP_Proactive_Controls) fornece um ponto de partida para ajudar os desenvolvedores a construir segurança em suas aplicações e o [OWASP Application Security Verification Standard (ASVS)](https://www.owasp.org/index.php/ASVS) é um guia para organizações e revisores de aplicações sobre o que verificar.
 
 **Use ferramentas com sabedoria**. Vulnerabilidades de segurança podem ser bastante complexas e profundamente enterradas no código. Em muitos casos, a abordagem mais econômica para encontrar e eliminar esses pontos fracos é o conhecimento de especialistas humanos armados com boas ferramentas. Basear-se apenas em ferramentas fornece uma falsa sensação de segurança e não é recomendado.
 
-** Pressione para a esquerda, para a direita e em todos os lugares **. Concentre-se em tornar a segurança uma parte integral da sua cultura em toda a sua organização de desenvolvimento. Saiba mais em [OWASP Software Assurance Maturity Model (SAMM)](https://www.owasp.org/index.php/OWASP_SAMM_Project).
+**Pressione para esquerda, para a direita e em todos os lugares**. Concentre-se em tornar a segurança uma parte integral da sua cultura em toda a sua organização de desenvolvimento. Saiba mais em [OWASP Software Assurance Maturity Model (SAMM)](https://www.owasp.org/index.php/OWASP_SAMM_Project).
 
 ## Reconhecimento
 
