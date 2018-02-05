@@ -15,6 +15,9 @@ A confirmação da identidade, autenticação e gestão de sessões dos utilizad
 * Usa processos fracos de recuperação de credenciais ou de esquecimento de palavras-passe, tais como "perguntas baseadas em conhecimento", que podem não ser consideradas seguras.
 * A utilização de palavras-passe em claro, encriptadas, ou com resumos fracos permite a rápida recureação de palavras-passe usando "*crackers*" de GPU ou ferramentas de força bruta.
 * Não possua autenticação multifactor ou que a mesma não funcione correctamente.
+* Expõe IDs de sessão na URL (por exemplo, reescrita de URL).
+* Não rotaciona os IDs de sessão após um login bem-sucedido.
+* Não invalida devidamente as IDs da Sessão. As sessões de usuário ou os tokens de autenticação (particularmente tokens de single sign-on (SSO)) não são devidamente invalidados durante o logout ou um período de inatividade.
 
 ## Como Prevenir?
 
