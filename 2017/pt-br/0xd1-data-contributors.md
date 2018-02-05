@@ -1,8 +1,8 @@
-# Acknowledgements
+# Reconhecimento
 
-## Acknowledgements to Data Contributors
+## Reconhecimento a quem contribuiu com dados
 
-We'd like to thank the many organizations that contributed their vulnerability data to support the 2017 update:
+Gostaríamos de agradecer a muitas organizações que contribuíram com os seus dados de vulnerabilidades que sustentaram esta atualização de 2017:
 
 * ANCAP
 * AsTech Consulting
