@@ -32,5 +32,5 @@ Junte-se a nós!
 
 ![license](images/license.png)
 
-Copyright © 2003-2017 Fundação OWASP. Este documento está licenciado de acordo com uma licença Creative Commons Attribution ShareAlike 3.0. Para algum tipo de reutilização ou distribuição, deve deixar claro para terceiros os termos da licença deste trabalho.
+Copyright © 2003-2017 Fundação OWASP. Este documento está licenciado de acordo com uma licença Creative Commons Attribution ShareAlike 4.0. Para algum tipo de reutilização ou distribuição, deve deixar claro para terceiros os termos da licença deste trabalho.
 
