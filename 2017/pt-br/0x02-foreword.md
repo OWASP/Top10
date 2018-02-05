@@ -27,7 +27,7 @@ Por último, desejamos agradecer à liderança fundadora do projeto OWASP Top 10
 * Neil Smithline
 * Torsten Gigler
 
-## Attribution
+## Reconhecimento
 Agradecimentos a [Autodesk](https://www.autodesk.com) por patrocionar o OWASP Top 10 - 2017.
 
 Organizações e indivíduos que forneceram dados de prevalência de vulnerabilidade ou outra assistência estão listados na [Página de Reconhecimentos](0xd1-data-contributors.md).
