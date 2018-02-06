@@ -21,7 +21,7 @@ Treinamento de desenvolvedor é essencial para identificar e mitigar o XXE. Alé
 
 * Sempre que possível, use um formato de dados menos complicado, como JSON.
 * Aplique os patches ou atualize todos os processadores e bibliotecas XML em uso pela aplicação ou em seu sistema operacional. Use controladores de dependência. Atualize o SOAP para SOAP 1.2 ou superior.
-* Desabilite o processamento de DTD e entidade externa XML em todos os analisadores de XML da sua aplicação, de acordo com o [OWASP Cheat Sheet 'XXE Prevention'](https://www.owasp.org/index.php/XML_External_Entity_ (XXE) _Prevention_Cheat_Sheet).
+* Desabilite o processamento de DTD e entidade externa XML em todos os analisadores de XML da sua aplicação, de acordo com o [OWASP Cheat Sheet 'XXE Prevention'](https://www.owasp.org/index.php/XML_External_Entity_(XXE)_Prevention_Cheat_Sheet).
 * Implementar validação positiva de entrada do lado do servidor ("lista branca"), filtragem ou sanitização para prevenir dados hostis em documentos, cabeçalhos ou nós XML.
 * Verifique se a funcionalidade de upload de arquivos XML ou XSL valida o XML entrante usando a validação XSD ou similar.
 * Ferramentas SAST podem ajudar a detectar o XXE no código-fonte, embora a revisão manual do código seja a melhor alternativa em aplicações grandes e complexas com muitas integrações.
