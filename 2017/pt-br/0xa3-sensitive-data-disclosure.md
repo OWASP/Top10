@@ -30,7 +30,7 @@ Faça o seguinte, no mínimo, e consulte as referências:
 * Certifique-se de que os algoritmos, protocolos, chaves e gerenciamento de chaves apropriados estão atualizados e fortes.
 * Criptografe todos os dados em trânsito com protocolos seguros, como TLS, com cifra *perfect forward secrecy* (PFS), prioridade de cifra do servidor e parâmetros seguros. Aplique criptografia usando diretivas como HTTP Strict Transport Security (HSTS).
 * Desativar o cache para respostas que contenham dados confidenciais.
-* Armazene senhas usando funções de hashing com salt fortes e adaptativas com um fator de trabalho (fator de atraso), como [Argon2](https://www.cryptolux.org/index.php/Argon2), [scrypt](https: // wikipedia.org/wiki/Scrypt), [bcrypt](https://wikipedia.org/wiki/Bcrypt) ou [PBKDF2](https://wikipedia.org/wiki/PBKDF2).
+* Armazene senhas usando funções de hashing com salt fortes e adaptativas com um fator de trabalho (fator de atraso), como [Argon2](https://www.cryptolux.org/index.php/Argon2), [scrypt](https://wikipedia.org/wiki/Scrypt), [bcrypt](https://wikipedia.org/wiki/Bcrypt) ou [PBKDF2](https://wikipedia.org/wiki/PBKDF2).
 * Verifique independentemente a eficácia das suas configurações.
 
 ## Examplo de Cenários de Ataque
