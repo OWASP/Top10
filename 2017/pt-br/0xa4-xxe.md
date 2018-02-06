@@ -1,6 +1,6 @@
 # A4:2017 Entidades Externas de XML (XXE)
 
-| Agentes de Ameaça/Vetores de Ataque | Vulnerabilidades de Segurança           | Impactos               |
+| Agentes de Ameaça/Vetores de Ataque | Vulnerabilidades de Segurança     | Impactos               |
 | -- | -- | -- |
 | Nível de Acesso \| Explorabilidade 2 | Prevalência 2 \| Detectabilidade 3 | Técnico 3 \| Negócio |
 | Atacantes podem explorar processadores XML vulneráveis se eles puderem fazer upload de XML ou incluir conteúdo hostil em um documento XML, explorando código vulnerável, dependências ou integrações. | Por padrão, muitos processadores XML mais antigos permitem a especificação de uma entidade externa, um URI que é desreferenciado e avaliado durante o processamento XML. Ferramentas [SAST](https://www.owasp.org/index.php/Source_Code_Analysis_Tools) podem descobrir esse problema inspecionando dependências e configuração. Ferramentas [DAST](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools) requerem etapas manuais adicionais para detectar e explorar esse problema.| Essas falhas podem ser usadas para extrair dados, executar uma solicitação remota do servidor, escanear sistemas internos, realizar um ataque de negação de serviço e outros ataques. O impacto comercial depende das necessidades de proteção de todas as aplicações e dados afetados. |
