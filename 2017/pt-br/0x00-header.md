@@ -4,7 +4,7 @@
 
 Os Dez Riscos de Segurança Mais Críticos em Aplicações Web 
 
-### Versão em Português (PT-BR) 
+### Versão em Português do Brasil (PT-BR) 
 
 ![WASP Logo URL TBA](images/front-wasp.png)
 
