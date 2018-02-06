@@ -11,9 +11,9 @@ A confirmação da identidade, autenticação e gerenciamento de sessão do usu�
 
 Pode haver pontos fracos de autenticação se a sua aplicação:
 
-* Permite ataques automatizados, como [preenchimento de credenciais](https://www.owasp.org/index.php/Credential_stuffing), onde o atacante possui uma lista de nomes de usuário e senhas válidos.
+* Permite ataques automatizados, como [teste exaustivo de credenciais, ou *credential stuffing*](https://www.owasp.org/index.php/Credential_stuffing), onde o atacante possui uma lista de nomes de usuário e senhas válidos.
 * Permite ataque de força bruta ou outros ataques automatizados.
-* Permite senhas padrão, fracas ou bastante conhecidas, como "Password1" ou "admin / admin".
+* Permite senhas padrão, fracas ou bastante conhecidas, como "Password1" ou "admin/admin".
 * Utiliza processos de recuperação de credenciais ou de recuperação de senhas fracos ou ineficazes, tais como "respostas baseadas em conhecimento", que não podem ser consideradas seguras.
 * Usa senhas em texto simples, criptografadas ou com hash muito fracos (veja **A3:2017-Exposição de dados sensíveis**).
 * Não possua autenticação multi-fator ou a mesma não funciona corretamente.
@@ -25,7 +25,7 @@ Pode haver pontos fracos de autenticação se a sua aplicação:
 
 * Sempre que possível, implemente a autenticação multi-fator para evitar ataques automatizados de preenchimento de credenciais, força bruta e de credenciais roubadas.
 * Não envie ou implante com quaisquer credenciais padrão, particularmente para usuários administradores.
-* Implementar verificações de senha fracas, como testar senhas novas ou alteradas em uma lista das [top 10000 piores senhas](https://github.com/danielmiessler/SecLists/tree/master/Passwords).
+* Implementar verificações de senha fracas, como testar senhas novas ou alteradas em uma lista das [Top 10000 piores senhas](https://github.com/danielmiessler/SecLists/tree/master/Passwords).
 * Alinhe o comprimento da senha, a complexidade e as políticas de rotação com as diretrizes do NIST 800-63 B na seção 5.1.1 para Segredos Memorizados](https://pages.nist.gov/800-63-3/sp800-63b.html#memsecret ) ou outras políticas modernas de senha baseadas em evidências.
 * Assegure-se de que o registro, a recuperação de credenciais e as vias da API sejam endurecidos contra ataques de enumeração de conta usando as mesmas mensagens para todos os resultados.
 * Limite ou retarde de forma progressiva as tentativas de login falhadas. Logar todas as falhas e alertar os administradores quando o preenchimento de credenciais, a força bruta, e outros ataques forem detectados.
@@ -33,7 +33,7 @@ Pode haver pontos fracos de autenticação se a sua aplicação:
 
 ## Exemplos de Cenários de Ataque
 
-**Cenário #1**: [preenchimento de credenciais](https://www.owasp.org/index.php/Credential_stuffing), o uso de [listas de senhas conhecidas](https://github.com/danielmiessler/SecLists), é um ataque comum. Se uma aplicação não implementar proteções de ameaças ou de preenchimento automatizados de  credenciais, a aplicação pode ser usada como um oráculo de senha para determinar se as credenciais são válidas.
+**Cenário #1**: [Teste exaustivo de credenciais ou *credential stuffing*](https://www.owasp.org/index.php/Credential_stuffing), o uso de [listas de senhas conhecidas](https://github.com/danielmiessler/SecLists), é um ataque comum. Se uma aplicação não implementar proteções de ameaças ou de preenchimento automatizados de  credenciais, a aplicação pode ser usada como um oráculo de senha para determinar se as credenciais são válidas.
 
 **Cenário #2**: A maioria dos ataques de autenticação ocorrem devido ao uso contínuo de senhas como único fator. Uma vez consideradas as melhores práticas, a troca de senha e os requisitos de complexidade são vistos como incentivo aos usuários a usar e reutilizar senhas fracas. As organizações são recomendadas para parar essas práticas por NIST 800-63 e usar autenticação multi-fator.
 
