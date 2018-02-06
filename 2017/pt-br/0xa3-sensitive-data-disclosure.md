@@ -2,7 +2,7 @@
 
 | Agentes de Ameaça/Vetores de Ataque | Vulnerabilidades de Segurança           | Impactos               |
 | -- | -- | -- |
-| Nível de Acesso \| Explorabilidade 2 | Prevalência 3 \| Detectabilidade 2 | Técnicos 3 \| Negócio |
+| Nível de Acesso \| Explorabilidade 2 | Prevalência 3 \| Detectabilidade 2 | Técnico 3 \| Negócio |
 | Atacantes tipicamente não quebram criptofia diretamente. Em vez disso, eles roubam as chaves, executam ataques man-in-the-middle ou roubam dados em texto puro do servidor, enquanto estão em trânsito ou do cliente do usuário, ex.: navegador. Normalmente é necessário um ataque manual. Bancos de dados de senha recuperados anteriormente poderiam ser atacados por força bruta ou quebrados por GPUs. | Ao longo dos últimos anos, este tem sido o ataque impactante mais comum. A falha mais comum é simplesmente não criptografar dados confidenciais. Quando o criptografia é empregada, geração e gerenciamento de chaves fracas, algoritmos, protocolos e usos de cifra fracos são comuns, particularmente para dados em repouso, técnicas de hashing de senha fracas. Para dados em trânsito os pontos fracos do servidor são fáceis de detectar, mas difíceis para os dados em repouso. A explorabilidade de ambos varia. | A falha freqüentemente compromete todos os dados que deveriam ter sido protegidos. Normalmente, essas informações incluem dados de informações pessoais sensíveis (PII) tais como registros de saúde, dados pessoais, dados pessoais, cartões de crédito, que muitas vezes requer proteção conforme definido por leis ou regulamentos, como as leis de privacidade da UE (GDPR) ou as leis locais de privacidade. |
 
 ## A Aplicação Está Vulnerável?
