@@ -2,27 +2,27 @@
 
 | Agentes de Ameaça/Vetores de Ataque | Vulnerabilidades de Segurança | Impactos |
 | -- | -- | -- |
-| Access Lvl \| Exploitability 1 | Prevalence 2 \| Detectability 2 | Technical 3 \| Business |
-| Exploitation of deserialization is somewhat difficult, as off the shelf exploits rarely work without changes or tweaks to the underlying exploit code. | This issue is included in the Top 10 based on an [industry survey](https://owasp.blogspot.com/2017/08/owasp-top-10-2017-project-update.html) and not on quantifiable data. Some tools can discover deserialization flaws, but human assistance is frequently needed to validate the problem. It is expected that prevalence data for deserialization flaws will increase as tooling is developed to help identify and address it. | The impact of deserialization flaws cannot be understated. These flaws can lead to remote code execution attacks, one of the most serious attacks possible. The business impact depends on the protection needs of your application and data. | 
+| Nível de Acesso \| Explorabilidade 1 | Prevalência 2 \| Detectabilidade 2 | Técnico 3 \| Negócio |
+| A exploração da desserialização é um tanto difícil, pois as explorações prontas *off the shelf* raramente funcionam sem mudanças ou ajustes no código interno de exploração. | Este problema está incluído no Top 10 com base em uma [pesquisa da indústria](https://owasp.blogspot.com/2017/08/owasp-top-10-2017-project-update.html) e não em dados quantificáveis. Algumas ferramentas podem descobrir falhas de desserialização, mas a assistência humana é freqüentemente necessária para validar o problema. Espera-se que os dados de prevalência para falhas de desserialização aumentem à medida que as ferramentas são desenvolvidas para ajudar a identificá-los e resolvê-los. | O impacto das falhas de desserialização não pode ser subestimado. Essas falhas podem levar a ataques execução remota de código, sendo um dos ataques mais sérios possível. O impacto comercial depende das necessidades de proteção de sua aplicação e dados. |
 
 ## A aplicação está vulnerável?
 
-Applications and APIs will be vulnerable if they deserialize hostile or tampered objects supplied by an attacker. 
+Aplicações e APIs estarão vulneráveis se desserializarem objetos hostis ou adulterados fornecidos por um atacante.
 
-This can result in two primary types of attacks:
+Isso pode resultar em dois principais tipos de ataques:
 
-* Object and data structure related attacks where the attacker modifies application logic or achieves arbitrary remote code execution if there are classes available to the application that can change behavior during or after deserialization.
-* Typical data tampering attacks such as access control-related attacks where existing data structures are used but the content is changed.
+* Ataques relacionados com a estrutura de objetos e dados onde o atacante modifica a lógica do aplicativo ou consegue a execução de código remoto arbitrário se houver classes disponíveis para a aplicação que possam alterar o comportamento durante ou após a deserialização. 
+* Ataques típicos de manipulação de dados, como ataques de controle de acesso, onde as estruturas de dados existentes são usadas, mas o conteúdo é alterado.
 
-Serialization may be used in applications for:
+Serialização pode ser usada em aplicações para:
 
-* Remote/Inter-process Communication (RPC/IPC) 
-* Wire protocols, web services, message brokers
-* Caching/Persistence
-* Databases, cache servers, file systems 
-* HTTP cookies, HTML form parameters, API authentication tokens 
+* Comunicação remota / interprocesso (RPC / IPC)
+* Protocolos com fio, serviços web, *message brokers*
+* Caching/Persistência
+* Bancos de dados, servidores de cache, sistemas de arquivos
+* Cookies HTTP, parâmetros de formulário HTML, tokens de autenticação de API
 
-## Como Prevenir?
+## Como Prevenir
 
 The only safe architectural pattern is to not accept serialized objects from untrusted sources or to use serialization mediums that only permit primitive data types.
 
