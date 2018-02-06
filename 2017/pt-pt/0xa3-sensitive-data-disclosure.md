@@ -3,41 +3,41 @@
 | Agentes de Ameaça/Vectores de Ataque | Fraquezas de Segurança           | Impactos               |
 | -- | -- | -- |
 | Nível de Acesso \| Exploração 2 | Prevalência 3 \| Deteção 2 | Técnica 3 \| Negócio |
-| Even anonymous attackers typically don't break crypto directly. They break something else, such as steal keys, do man-in-the-middle attacks, or steal clear text data off the server, while in transit, or from the user's client, e.g. browser. Manual attack is generally required. | Over the last few years, this has been the most common impactful attack. The most common flaw is simply not encrypting sensitive data. When crypto is employed, weak key generation and management, and weak algorithm usage is common, particularly weak password hashing techniques. For data in transit server side weaknesses are mainly easy to detect, but hard for data at rest. Both with very varying exploitability. | Failure frequently compromises all data that should have been protected. Typically, this information includes sensitive personal information (PII) data such as health records, credentials, personal data, credit cards, which often requires protection as defined by laws or regulations such as the EU GDPR or local privacy laws. |
+| Até mesmo atacantes anónimos não atacam e quebram directamente a criptografia. Eles quebram outra coisa qualquer, tais como roubar chaves, efectuar ataques de homem no meio, roubar dados em claro do servidor, quando estiver em transito, ou no cliente do utilizador, p.e. no browser web. É necessário algum tipo de ataque manual. | Ao longo dos últimos anos, este tem sido o ataque com maior impacto. A falha mais comum é simplesmente não encriptar dados sensíveis. Quando a criptografia é aplicada, geração fraca de chaves e má gestão das mesmas, e utilização de algoritmos criptográficos fracos é comum, em particular técnicas fracas de geração de resumos de palavras-passe. Para dados em trânsito, as fraquezas do lado do servidor são fáceis de detectar, mas díficil para dados em repouso. Ambas com uma nível de exploração muito variável. | As falhas comprometem frequentemente todos os dados que deveriam ser protegidos. Tipicamente, esta informação inclui informação pessoal sensível (*Personal Identifiable Information* - PII) tal como registos de saúde, credenciais, dados pessoais, cartões de crédito, que frequentemente requerem protecção definidas por leis ou regulamentos, tais como o RGPD EU (norma europeia - Regulamento Geral para a Protecção de Dados) ou leis locais de privacidade. |
 
 ## Está a Aplicação Vulnerável?
 
-The first thing is to determine the protection needs of data in transit and at rest. For example, passwords, credit card numbers, health records, and personal information require extra protection, particularly if that data falls under the EU's General Data Protection Regulation (GDPR), local privacy laws or regulations, financial data protection regulations and laws, such as PCI Data Security Standard (PCI DSS), or health records laws, such as the Health Insurance Portability Act (HIPAA). For all such data:
+A primeira coisa é determinar as necessidades de protecção dos dados em trânsito e em repouso. Por exemplo, palavras-passe, números de cartões de crédito, registos de saúde, e informação pessoal requerem proteção extra, em particular se os dados forem abrangidos pela regulamentação europeia RGPD, regulamentos ou leis locais de privacidade, tais como o PCI *Data Security Standard* (PCI DSS), ou leis de registos de saúde, tais como o *Health Insurance Portability Act* (HIPAA). Para todos estes dados:
 
-* Is any data of a site transmitted in clear text, internally or externally? Internet traffic is especially dangerous, but from load balancers to web servers or from web servers to back end systems can be problematic.
-* Is sensitive data stored in clear text, including backups?
-* Are any old or weak cryptographic algorithms used either by default or in older code? (see **A6:2017 Security Misconfiguration**)
-* Are default crypto keys in use, weak crypto keys generated or re-used, or is proper key management or rotation missing?
-* Is encryption not enforced, e.g. are any user agent (browser) security directives or headers missing?
+* Existem alguns dados do site que sejam transmitidos em claro, interna ou externamente? O tráfego Internet é especialmente perigoso, mas de balanceadores de carda para servidores web e de servidores web para sistemas de backend, pode ser problemático.
+* Existe dados sensíveis armazenados em claro, incluindo cópias de segurança?
+* Estão a ser usados algoritmos criptográficos antigos ou fracos no código actual ou antigo? (ver **A6:2017 Security Misconfiguration**)
+* Estão a ser usadas chaves criptográficas por defeito, estão a ser geradas ou re-utilizadas chaves criptográficas fracas, ou não estão a ser geridas convenientemente nem existe rotatividade?
+* Não está a encriptação a ser forçada, p.e. existem algumas directivas de segurança ou cabeçalhos do agente do utilizador (browser web) que não estejam presentes?
 
-See ASVS areas [Crypto (V7), Data Protection (V9) and SSL/TLS (V10)](https://www.owasp.org/index.php/ASVS).
+Ver as áreas do ASVS [Crypto (V7), Data Protection (V9) and SSL/TLS (V10)](https://www.owasp.org/index.php/ASVS).
 
 ## Como Prevenir?
 
-Do the following, at a minimum and consult the references:
+Efectuar o seguinto, ou pelo menos consultar as referências:
 
-* Classify data processed, stored or transmitted by a system. Apply controls as per the classification.
-Review the privacy laws or regulations applicable to sensitive data, and protect as per regulatory requirements.
-* Don't store sensitive data unnecessarily. Discard it as soon as possible or use PCI DSS compliant tokenization or even truncation. Data you don't retain can't be stolen.
-* Make sure you encrypt all sensitive data at rest.
-* Encrypt all data in transit, such as using TLS. Enforce this using directives like HTTP Strict Transport Security ([HSTS](https://www.owasp.org/index.php/HTTP_Strict_Transport_Security_Cheat_Sheet)).
-* Ensure up-to-date and strong standard algorithms or ciphers, parameters, protocols and keys are used, and proper key management is in place. Consider using [crypto modules](https://csrc.nist.gov/projects/cryptographic-module-validation-program/validated-modules/search).
-* Store passwords using strong adaptive algorithms appropriate for password protection, such as [Argon2](https://www.cryptolux.org/index.php/Argon2), [scrypt](https://wikipedia.org/wiki/Scrypt), [bcrypt](https://wikipedia.org/wiki/Bcrypt) and [PBKDF2](https://wikipedia.org/wiki/PBKDF2) with sufficient work factor (delay factor) to prevent realistic GPU cracking attacks.
-* Disable caching for response that contain sensitive data.
-* Verify independently the effectiveness of your settings.
+* Classificar is dados processados, armazenados ou transmitidos por um sistema. Aplicar controlos de acordo com a classificação.
+Rever as leis ou regulamentos de provacidade aplicados a dados sensíveis, e proteger os mesmos de acordo com as orbrigações regulamentares.
+* Não armazene dados sensíveis desnecessariamente. Descarte-os os mais depressa possível ou use técnicas de criação de "tokens" e truncagem alinhados com o PCI DSS. Dados que não sejam retidos não podem ser roubados.
+* Tenha a certeza que encriptam todos os dados sensíveis em repouso.
+* Encripte todod os dados em trânsitp, usando por exemplo TLS. Force isto usando directivas como o HTTP Strict Transport Security ([HSTS](https://www.owasp.org/index.php/HTTP_Strict_Transport_Security_Cheat_Sheet)).
+* Assegure o uso de algoritmos fortes e actualizadas para cifras, parâmetros, protocolos e chaves que sejam usados e que mecanismos apropriados de gestão de chaves estão em uso. Considere a utilização de [módulos criptográficos](https://csrc.nist.gov/projects/cryptographic-module-validation-program/validated-modules/search).
+* Armazene palavras-passe usando usando algoritmos fortes e adaptativos específicos para proteção de palavras-passe, tais como o [Argon2](https://www.cryptolux.org/index.php/Argon2), [scrypt](https://wikipedia.org/wiki/Scrypt), [bcrypt](https://wikipedia.org/wiki/Bcrypt) e [PBKDF2](https://wikipedia.org/wiki/PBKDF2) com um factor de complexidade suficiente para prevenir contra ataques de quebra por GPU.
+* Desabilitar a cache para respostas que contenham dados sensíveis.
+* Verificar de forma independente a eficácia das suas configurações.
 
 ## Exemplos de Cenários de Ataque
 
-**Cenário #1**:  An application encrypts credit card numbers in a database using automatic database encryption. However, this data is automatically decrypted when retrieved, allowing an SQL injection flaw to retrieve credit card numbers in clear text. 
+**Cenário #1**:  Uma aplicação encripta os números dos cartões de crédito numa base de dados usando a criptografia da própria base de dados. No entanto, estes dados são automaticamente decifrados quando são consultados na base dados, permitindo que um ataque de injeção de SQL possa obter os números dos cartões de crédito em claro. 
 
-**Cenário #2**: A site doesn't use or enforce TLS for all pages, or if it supports weak encryption. An attacker simply monitors network traffic, strips or intercepts the TLS (like an open wireless network), and steals the user's session cookie. The attacker then replays this cookie and hijacks the user's (authenticated) session, accessing or modifying the user's private data. Instead of the above he could alter all transported data, e.g. the recipient of a money transfer.
+**Cenário #2**: Um site web não força a utilização de TLS para todas as páginas, ou se o faz usa encriptação fraca. Um atacante pode simplesmente monitorizar o tráfego na rede, intercepta o TLS (como numa rede sem fios aberta), e rouba o cookie de sessão do utilizador. O atacante pode reutilizar este cookie e assim raptar a sessão (autenticada) do utilizador, acedendo e modificando os dados privados do utilizador. Em alternativa pode alterar os dados em trânsito, p.e. o destinatário de uma transferência bancária.
 
-**Cenário #3**: The password database uses unsalted hashes to store everyone's passwords. A file upload flaw allows an attacker to retrieve the password database. All the unsalted hashes can be exposed with a rainbow table of pre-calculated hashes.
+**Cenário #3**: A base de dados de palavras-passe usa resumos sem "salt" para armazenar as palavras passes de todos os utilizadores. Uma fraqueza de carregamento de ficheiros permite obter a base de dados de palavras-passe. Todos estes resumos podem ser expostos com uma tabela arco-iris ou usando resumos pré-calculados.
 
 ## Referências
 

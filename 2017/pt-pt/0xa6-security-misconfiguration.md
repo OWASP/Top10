@@ -3,43 +3,43 @@
 | Agentes de Ameaça/Vectores de Ataque | Fraquezas de Segurança           | Impactos               |
 | -- | -- | -- |
 | Nível de Acesso \| Exploração 3 | Prevalência 3 \| Deteção 3 | Técnico 2 \| Negócio |
-| Attackers will often attempt to access default accounts, unused pages, unpatched flaws, unprotected files and directories, etc. to gain unauthorized access to or knowledge of the system. | Security misconfiguration can happen at any level of an application stack, including the platform, web server, application server, database, frameworks, and custom code. Automated scanners are useful for detecting  misconfigurations, use of default accounts or configurations, unnecessary services, legacy options etc. | Such flaws frequently give attackers unauthorized access to some system data or functionality. Occasionally, such flaws result in a complete system compromise. The business impact depends on the protection needs of your application and data. |
+| Os atacantes tentam frequentemente aceder a contas por defeito, páginas não usadas, falhas não corrigidas, ficheiros e e directorias não protegidas, etc. para ganhar acesso não autorizado ou conhecimento do sistema. | Más configurações de segurança podem ocorrer em qualquer nível do stack aplicacional, incluindo a plataforma, servidor web, servidor aplicacional, base de dados, frameworks, e código customizado. Scanners automatizados são úteis na detecção de más configurações, uso de configurações ou contas por defeito, serviços desnecessários, opções legadas etc. | Tais falhas frequentemente dão aos atacantes acesso não autorizado a alguns dados ou funcionalidades do sistema. Ocasionalmente, tais falhas resultam no compromisso total do sistema. O impacto do negócio depende das necessidades de protecção da aplicação e dados. |
 
 ## Está a Aplicação Vulnerável?
 
-Is your application missing the proper security hardening across any part of the application stack? Including:
+Está a sua aplicação a necessitar de algum tipo de endurecimento de segurança em alguma das partes do stack da aplicação? Incluindo:
 
-* Are any unnecessary features enabled or installed (e.g. ports, services, pages, accounts, privileges)?
-* Are default accounts and their passwords still enabled and unchanged?
-* Will error handling reveal stack traces or other overly informative error messages to users?
-* On upgraded systems, are the latest security features disabled or not configured securely?
-* Are the security settings in your application servers, application frameworks (e.g. Struts, Spring, ASP.NET), libraries, databases, etc. not set to secure values?
-* For web applications, does the server not send security directives to client agents (e.g. [Security Headers](https://www.owasp.org/index.php/OWASP_Secure_Headers_Project)) or are they not set to secure values?
-* Is any of your software out of date? (see **A9:2017-Using Components with Known Vulnerabilities**).
+* Existem algumas funcionalidades activadas ou instaladas (p.e. portos, serviços, páginas, contas, privilégioss)?
+* Existem contas por defeito e as suas passwords ainda estão activas e inalteradas?
+* Será que a forma de tratamento de erros revela dados de execução do stack ou outra informação de erros demasiado detalhada para os utilizadores?
+* Em sistemas actualizados, estão as últimas funcionalidades de segurança desactivadas ou não estão configuradas de forma segura?
+* Estão as configurações de segurança nos seus servidores aplicacionais, frameworks aplicacionais (p.e. Struts, Spring, ASP.NET), bibliotecas, bases de dados, etc. não estabelecidas com valores seguros?
+* Para aplicações web, será que o servidor não envia as directivas de segurança para os agentes do cliente (p.e. [Security Headers](https://www.owasp.org/index.php/OWASP_Secure_Headers_Project)) ou será que não estão estabelecidas com valores seguros?
+* Está algum do seu software desactualizado? (see **A9:2017-Utilização de Componentes com Vulnerabilidades Conhecidas**).
 
-Without a concerted, repeatable application security configuration process, systems are at a higher risk.
+Sem um processo de configuração de segurança concertado e repetível, os sistemas enfrentam maiores riscos de segurança.
 
 ## Como Prevenir?
 
-Is your application missing the proper security hardening across any part of the application stack? Including:
+Falta à sua aplicação o endurecimento de segurança apropriado em alguma parte do stack aplicacional? Incluindo:
 
-* A repeatable hardening process that makes it fast and easy to deploy another environment that is properly locked down. Development, QA, and production environments should all be configured identically, with different credentials used in each environment. This process should be automated to minimize the effort required to setup a new secure environment.
-* Remove or do not install any unnecessary features, components, documentation and samples. Remove unused dependencies and frameworks.
-* A process to triage and deploy all updates and patches in a timely manner to each deployed environment. This process needs to include all frameworks, dependencies, components, and libraries (see **A9:2017 Using Components with Known Vulnerabilities**).
-* A strong application architecture that provides effective, secure separation between components, with segmentation, containerization, or cloud security groups (ACLs).
-* An automated process to verify the effectiveness of the configurations and settings in all environments.
+* Um processo de endurecimento repetível que o torne rápido e facilmente replicável para ser usado num outro ambiente que está devidamente protegido. Ambientes de desenvolvimento, de qualidade e de produção devem estar configurados de igual forma, com credenciais diferentes usadas em cada ambiente. Este processo deve ser automatizado para minimizar o esforço necessário para configurar um novo ambiente seguro.
+* Remover ou não instalar quaisquer funcionalidades, componentes, documentação ou exemplos que seja desnecessários. Remover dependências e frameworks não usadas.
+* Um processo para efectuar uma triagem a aplicar todas as actualizações e correções de uma forma atempada para cada um dos ambientes estabelecidos. Este processo necessita de incluir todas as frameworks, dependências e bibliotecas (ver **A9:2017 Utilização de Componentes com Vulnerabilidades Conhecidas**).
+* Uma arquitectura aplicacional forte que ofereça uma efectiva separação segura entre componentes, com segmentação, contentorização ou grupos de segurança cloud (ACLs).
+* Um processo automatizado para verificar a eficiência das configurações e parameterizações em todos os ambientes.
 
 ## Exemplos de Cenários de Ataque
 
-**Cenário #1**: The app server admin console is automatically installed and not removed. Default accounts aren't changed. Attacker discovers the standard admin pages are on your server, logs in with default passwords, and takes over.
+**Cenário #1**: A consola de administração do servidor aplicacional é automaticamente instalada e não é removida. O atacante descobre que as páginas de administração estão no servidor, entra com as palavras-chave por defeito, e assume o controlo.
 
-**Cenário #2**: Directory listing is not disabled on your server. An attacker discovers they can simply list directories to find file. The attacker finds and downloads your compiled Java classes, which they decompile and reverse engineer to get your custom code. Attacker then finds a serious access control flaw in your application.
+**Cenário #2**: A listagem de directorias não está desactivada no seu servidor. Um atacante descobre que pode listar uma directoria para encontrar um determinado ficheiro. O atacante descobre e descarrega as suas classes Java compiladas, que podem ser depois ser alvo de engenharia reversa para obter o seu código fonte costumizado. Um atacante pode depois encontrar uma falha séria de controlo de acesso da aplicação que pode explorar.
 
-**Cenário #3**: App server configuration allows stack traces to be returned to users, potentially exposing underlying flaws such as framework versions that are known to be vulnerable.
+**Cenário #3**: A configuração do servidor aplicacional permite que informação de execução do stack seja retornado para os utilizadores, potencialmente expondo falhas tais como versões de frameworks que são conhecidas por serem vulneráveis.
 
-**Cenário #4**: App server comes with sample apps that are not removed from your production server. These sample apps have known security flaws attackers use to compromise your server.
+**Cenário #4**: O servidor aplicacional vem acompanhado com um conjunto de aplicações de exemplo que não foram removidas do servidor de produção. Estas aplicações de possuem falhas de segurança conhecidas que os atacantes podem usar para comprometer o servidor.
 
-**Cenário #5**: The default configuration or a copied old one activates old vulnerable protocol versions or options that can be misused by an attacker or malware.
+**Cenário #5**: A configuração por defeito ou uma configuração antiga copida activa versões ou opções antigas e vulneráveis de um protocolo que pode ser explorado por um atacante ou malware.
 
 
 ## Referências
@@ -50,7 +50,7 @@ Is your application missing the proper security hardening across any part of the
 * [OWASP Testing Guide: Testing for Error Codes](https://www.owasp.org/index.php/Testing_for_Error_Code_(OWASP-IG-006))
 * [OWASP Security Headers Project](https://www.owasp.org/index.php/OWASP_Secure_Headers_Project)
 
-For additional requirements in this area, see the [ASVS requirements areas for Security Configuration (V11 and V19)](https://www.owasp.org/index.php/ASVS).
+Para consultar requisitos adicionais nesta área, por favor consulte o [ASVS requirements areas for Security Configuration (V11 and V19)](https://www.owasp.org/index.php/ASVS).
 
 ### Externas
 

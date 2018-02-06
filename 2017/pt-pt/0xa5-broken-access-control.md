@@ -3,51 +3,51 @@
 | Agentes de Ameaça/Vectores de Ataque | Fraquezas de Segurança           | Impactos               |
 | -- | -- | -- |
 | Nível de Acesso \| Exploração 2 | Prevalência 2 \| Deteção 2 | Técnico 3 \| Negócio |
-| Exploitation of access control is a core skill of penetration testers. SAST and DAST tools can detect the absence of access control, but not verify if it is functional. Access control is detectable using manual means, or possibly through automation for the absence of access controls in certain frameworks. | Access control weaknesses are common due to the lack of automated detection, and lack of effective functional testing by application developers. Access control detection is not typically amenable to automated static or dynamic testing. | The technical impact is anonymous attackers acting as users or administrators, users using privileged functions, or creating, accessing, updating or deleting every record. |
+| A exploração do controlo de acesso é uma das principais competências dos profissionais de testes de intrusão. Ferramentas SAST e DASTpodem detectar a ausência de controlo de acessos, mas não conseguem verificar a funcionalidade dos mesmos. O controlo de acessos é detectável através de meios manuais, ou possivelmente através da automação da detecção da ausência de controlos de acesso em determinadas frameworks. | As fraquezas de controlo de acessos são comuns devido à falta de detecção automática, e a falta de testes funcionais realizados pelos programadores. A detecção de controlo de acessos não é fácil de realizar recorrendo a testes automatizados estáticos ou dinâmicos. | O impacto técnico reside em atacantes anónimo poderem actuar como utilizadores ou administradores legítimos, utilizadores usarem funções priviligiadas, ou criar, aceder, actualizar ou apagar todos os registos. |
 
 ##Está a Aplicação Vulnerável?
 
-Access control enforces policy such that users cannot act outside of their intended permissions. Failures typically lead to unauthorized information disclosure, modification or destruction of all data, or performing a business function outside of the limits of the user. Common access control vulnerabilities include:
+O controlo de acessos força a política de forma a que os utilizadores não possam agir fora das suas permissões atribuídas. As falhas levam tipicamente ao acesso não autorizado ou revelação de informação, modificação ou destruição de todos os dados, ou execução de funções de negócio fora dos limites do utilizador. Vulnerabilidades comuns de controlo de acesso incluem:
 
-* Bypassing access control checks by modifying the URL, internal app state, or the HTML page, or simply using a custom API attack tool.
-* Allowing the primary key to be changed to another's users record, such as viewing or editing someone else's account.
-* Elevation of privilege. Acting as a user without being logged in, or acting as an admin when logged in as a user.
-* Metadata manipulation, such as replaying or tampering with a JWT access control token or a cookie or hidden field manipulated to elevate privileges.
-* CORS misconfiguration allows unauthorized API access.
-* Force browsing to authenticated pages as an unauthenticated user, or to privileged pages as a standard user or API not enforcing access controls for POST, PUT and DELETE.
+* Ultrapassar as verificações de controlo de acesso através da modificação da URL, estado interno de uma aplicação, ou página HTML, ou através de uma ferramenta customizada que realiza pedidos a uma API.
+* Permitir que a chave primária possa ser alterada para um registo de outro utilizador, tal como visualizar ou editar a conta de outro utilizador.
+* Escalar privilégios. Actuar como um utilizador sem ter feito o processo de "login", ou actuar como um administrador quando apenas efectuou "login" como utilizador.
+* Manipulação de Metainformação, tal como a repetição ou alteração de um token JWT de controlo de acesso ou um cookie ou campo escondido manipulado para elevar privilégios.
+* Imprórpia configuração do CORS permite acesso não-autorizado a uma API.
+* Forçar a navegação para páginas autenticadas como um utilizador não-autenticado, ou para páginas priviligiadas como um utilizador normal ou API não forçando controlo de acessos para POST, PUT e DELETE.
 
 ## Como Prevenir?
 
-Access control is only effective if enforced in trusted server-side code or server-less API, where the attacker cannot modify the access control check or metadata.
+O controlo de acesso é apenas efectivo se for forçado em código de confiança do lado do servidor ou API, em que o atacante não possa modificar o controlo de acesso nem a metainformação.
 
-* With the exception of public resources, deny by default.
-Implement access control mechanisms once and re-use them throughout the application.
-* Model access controls should enforce record ownership, rather than accepting that the user can create, read, update or delete any record.
-* Domain access controls are unique to each application, but business limit requirements should be enforced by domain models.
-* Disable web server directory listing, and ensure file metadata such (e.g. .git) is not present within web roots.
-* Log access control failures, alert admins when appropriate (e.g. repeated failures).
-* Rate limiting API and controller access to minimize the harm from automated attack tooling.
-* Developers and QA staff should include functional access control unit and integration tests.
+* Com a excepção de recursos públicos, negue por defeito.
+Implementar mecanismos de controlo de acesso uma vez e reutilizar os mesmos ao longo da aplicação.
+* Modelar os controlos de acesso que assegurem a posse dos registos, por oposição ao modelo que aceita que um utilizador possa criar, ler, actualizar ou apagar qualquer registo.
+* Os controlos de acesso de domínio são únicos para cada aplicação, mas os requisitos limitados dos negócios devem ser assegurados por modelos de domínio.
+* Desactivar a listagem de directorias no servidor, e assegurar que metainformação dos ficheiros (p.e. .git) não está presente na raíz de servidores web.
+* Registar falhas de controlo de acesso, alertar os administradores sempre que necessário (p.e. falhas repetidas).
+* Limitar o acesso à API e controlador para minimizar o impacto de ataque automatizado de ferramentas.
+* Programadores e equipa de garantia da qualidade deve incluir unidade de controlo de acesso funcional e testes de integração.
 
 ## Exemplos de Cenários de Ataque
 
-**Cenário #1**: The application uses unverified data in a SQL call that is accessing account information:
+**Cenário #1**: A aplicação usa dados não verificados numa chamada SQL que acede a informação da conta:
 
 ```
   pstmt.setString(1, request.getParameter("acct"));
   ResultSet results = pstmt.executeQuery( );
 ```
 
-An attacker simply modifies the 'acct' parameter in the browser to send whatever account number they want. If not properly verified, the attacker can access any user's account.
+Um atacante simplesmente modifica o parâmetro 'acct' no browser web para enviar um número de conta qualquer que deseje. Se não for devidamente verificado, o atacante pode aceder a qualquer conta de qualquer utilizador.
 
 * `http://example.com/app/accountInfo?acct=notmyacct`
 
-**Cenário #2**:  An attacker simply force browses to target URLs. Admin rights are required for access to the admin page.
+**Cenário #2**:  Um atacante simplesmente força a navegação para uma determinada URL alvo. Direitos de administração são requeridos para aceder à página de administração.
 
 * `http://example.com/app/getappInfo`
 * `http://example.com/app/admin_getappInfo`
 
-If an unauthenticated user can access either page, it's a flaw. If a non-admin can access the admin page, this is a flaw.
+Se um utilizador não autenticado puder aceder a essa página, temos uma falha. Se um não administrador puder aceder à página de administração, temos uma falha.
 
 ## Referências
 

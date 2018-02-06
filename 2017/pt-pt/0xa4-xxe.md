@@ -3,35 +3,35 @@
 | Agentes de Ameaça/Vectores de Ataque | Fraquezas de Segurança           | Impactos               |
 | -- | -- | -- |
 | Nível de Acesso \| Exploração 2 | Prevalência 2 \| Deteção 3 | Técnico 3 \| Negócio |
-| Attackers can exploit vulnerable XML processors if they can upload XML or include hostile content in an XML document, exploiting vulnerable code, dependencies or integrations. Penetration testers can exploit XXE. DAST tools require additional manual steps to exploit this issue. | By default, many older XML processors allow specification of an external entity, a URI that is dereferenced and evaluated during XML processing. SAST tools can discover this issue by inspecting dependencies and configuration. | These flaws can be used to extract data, execute a remote request from the server, scan internal systems, perform a denial-of-service attack, and other attacks. The business impact depends on the protection needs of all affected applications and data. |
+| Os atacantes podem explorar processadores de XML vulneráveis se eles conseguirem carregar XML ou incluir conteúdo malicioso num documento XML, explorando o código vulnerável, dependências ou integrações. Profssionais de testes de intrusões podem explorar o XXE. Ferramentas DAST necessitam de passos manuais adicionais para explorar este aspecto. | Por defeito, muitos dos processadores de XML mais antigos permitem a especificação de entidades externas, uma URI que é de-referenciada e avaliada durante o processamento do XML. As ferramentas SAST podem descobrir este aspecto através da inspecção das dependências e da configuração. | Estas falhas podem ser usadas para extrair dados, executar um pedido remoto de um servidor, analizar sistemas internos, efectuar ataques de negação de serviço, e outros ataques. O impacto no negócio depende das necessidades de proteção de todas aplicações de dados. |
 
 ## Está a Aplicação Vulnerável?
 
-Applications and in particular XML-based web services or downstream integrations might be vulnerable to attack if:
+As aplicações e em particular servicos web basedos em XML ou integrações posteriores podem ser vulneráveis a ataques se:
 
-* Your application accepts XML directly or XML uploads, especially from untrusted sources, or inserts untrusted data into XML documents, which is then parsed by an XML processor.
-* Any of the XML processors in the application or SOAP based web services has [document type definitions (DTDs)](https://en.wikipedia.org/wiki/Document_type_definition) enabled. As the exact mechanism for disabling DTD processing varies by processor, it is recommended that you consult a reference such as the [OWASP XXE Prevention Cheat Sheet](https://www.owasp.org/index.php/XML_External_Entity_(XXE)_Prevention_Cheat_Sheet).
-* If your application uses SOAP prior to version 1.2, it is likely susceptible to XXE attacks if XML entities are being passed to the SOAP framework.
-* SAST tools can help detect XXE in source code, although manual code review is the best alternative in large, complex applications with many integrations.
-* Being vulnerable to XXE attacks likely means that you are vulnerable to other billion laughs denial-of-service attacks.
+* A sua aplicação aceita XML directamente ou carregamentos de XML, em particular de fontes de pouca confiança, ou se insere dados não-confiáveis em documentos XML, que é tratada pelo processador.
+* Qualquer um dos processadores de XML numa aplicação ou em serviços web baseados em SOAP possui [definições de tipos de documento (*document type definition*s - DTDs)](https://en.wikipedia.org/wiki/Document_type_definition) activada. Uma vez que o mecanismo para desactivar o processamento de DTD varia de processador para processador, é recomendável que consulte uma referência como o [Cheat Sheet da OWASP de Prevenção do XXE](https://www.owasp.org/index.php/XML_External_Entity_(XXE)_Prevention_Cheat_Sheet).
+* Se a sua aplicação usa o SOAP anterior à versão 1.2, é provável que seja susceptível a ataques de XXE se as entidades de XAML estiverem a ser passadas à framework SOAP.
+* As ferramentas de SAST podem ajudar a detectar XXE no código-fonte, ambora a revisão de código manual seja a melhor alternativa em aplicações grandes e complexas com muitas integrações.
+* Ser vulnerável a ataques de XXE significa que provavelmente que é igualmente vulnerável a muitos outros ataques de negação de serviço.
 
 ## Como Prevenir?
 
-Developer training is essential to identify and mitigate XXE completely. Besides that, preventing XXE requires:
+O treino dos programadores é essencial para identificar e mitigar completamente o XXE. Para além disso, prevenir XXE requer:
 
-* Patch or upgrade all the latest XML processors and libraries in use by the application or on the underlying operating system. The use of dependency checkers is critical in managing the risk from necessary libraries and components in not only your application, but any downstream integrations.
-* Disable XML external entity and DTD processing in all XML parsers in your application, as per the [OWASP XXE Prevention Cheat Sheet](https://www.owasp.org/index.php/XML_External_Entity_(XXE)_Prevention_Cheat_Sheet).
-* Implement positive ("whitelisting") server-side input validation, filtering, or sanitization to prevent hostile data within XML documents, headers, or nodes.
-* Verify that XML or XSL file upload functionality validates incoming XML using XSD validation or similar.
-* Upgrade SOAP to the latest version.
+* Correção ou actualização a todos os processadores e bibliotecas de XML a serem usados pela aplicação ou no sistema operativo que suporta a aplicação. A utilização de verificadores de dependências é crítico para gerir o risco de bibliotecas e componentes não apenas da sua aplicação, mas todas as integrações a jusante.
+* Desactivar o processamento de entidades externas de XML e de DTD emm todos os processadores de XML na sua aplicação, tal como está no [Cheat Sheet da OWASP de Prevenção do XXE](https://www.owasp.org/index.php/XML_External_Entity_(XXE)_Prevention_Cheat_Sheet).
+* Implementar ("*whitelisting*") positivo na validação de entradas do lado do servidor, filtros, ou sanitização para prevenir dados hostis nos documentos de XML, cabeçalhos, ou nós.
+* Verificar que a funcionalidade de carregamento de ficheiros XML ou XSL valida o XML usando a validação por XSD ou similar.
+* Actualizar o SOAP para a versão mais.
 
-If these controls are not possible, consider using virtual patching, API security gateways, or WAFs to detect, monitor, and block XXE attacks.
+Se estes controlos não forem possíveis considere a utilização de correções virtuais, *gateways* de segurança de API, ou WAFs para detectar, monitorizar, e bloquear ataques de XXE.
 
 ## Exemplos de Cenários de Ataque
 
-Numerous public XXE issues have been discovered, including attacking embedded devices. XXE occurs in a lot of unexpected places, including deeply nested dependencies. The easiest way is to upload a malicious XML file, if accepted:
+Numerosos problemas públicos com o XXE têm vindo a ser descobertos, incluindo o ataques a dispositivos embebidos. O XXE ocorre em muitos locais não expectáveis, incluindo em dependências muito profundas. A forma mais simples é carregar um ficheiro XML, se for aceite:
 
-**Cenário #1**: The attacker  attempts to extract data from the server:
+**Cenário #1**: O atacante tenta extrair dados do servidor:
 
 ```
   <?xml version="1.0" encoding="ISO-8859-1"?>
@@ -41,12 +41,12 @@ Numerous public XXE issues have been discovered, including attacking embedded de
     <foo>&xxe;</foo>
 ```
 
-**Cenário #2**: An attacker probes the server's private network by changing the above ENTITY line to:
+**Cenário #2**: Um atacantes analiza a rede privada do servidor alterando a seguinte linha da ENTITY line para:
 ```
    <!ENTITY xxe SYSTEM "https://192.168.1.1/private" >]>
 ```
 
-**Cenário #3**: An attacker attempts a denial-of-service attack by including a potentially endless file:
+**Cenário #3**: Um atacante tentar efectuar um ataque de negação de serviço incluindo um potencial ficheiro sem fim:
 
 ```
    <!ENTITY xxe SYSTEM "file:///dev/random" >]>

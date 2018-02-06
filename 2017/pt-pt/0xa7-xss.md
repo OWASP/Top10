@@ -3,24 +3,24 @@
 | Agentes de Ameaça/Vectores de Ataque | Fraquezas de Segurança           | Impactos               |
 | -- | -- | -- |
 | Nível de Acesso \| Exploração 3 | Prevalência 3 \| Deteção 3 | Técnico 2 \| Negócio |
-| Automated tools can detect and exploit all three forms of XSS, and there are freely available exploitation frameworks. | XSS is the second most prevalent issue in the OWASP Top 10, and is found in around two thirds of all applications. Automated tools can find some XSS problems automatically, particularly in mature technologies such as PHP, J2EE / JSP, and ASP.NET. | The impact of XSS is moderate for reflected and DOM XSS, and severe for stored XSS, with remote code execution on the victim's browser, such as stealing credentials, sessions, or delivering malware to the victim. |
+| Ferramentas automáticas podem detectar e explorar todas as três formas de XSS, e existem muitas framewoeks de exploração disponíveis. | XSS é o segundo mais prevalente aspecto no OWASP Top 10, e encontra-se em cerca de dois terços de todas as aplicações. As ferramentas automáticas podem encontrar alguns problemas de XSS automaticamente, em particular em tecnologias maduras como o PHP, J2EE/JSP, e ASP.NET. | O impacto do XSS é moderado para as variantes de XSS reflectido e DOM XSS, e severo no caso do XSS armazenado, com execução remota de código no browser da vítima, para roubo de credenciais, sessões, ou entrega de malware à vítima. |
 
 ## Está a Aplicação Vulnerável?
 
-There are three forms of XSS, usually targeting users' browsers:
+Existem três formas de XSS, que afectam o browser das vítimas:
 
-* **Reflected XSS**: Your app or API includes unvalidated and  unescaped user input as part of HTML output or there is no content security policy ([CSP](https://www.owasp.org/index.php/Content_Security_Policy)) header. A successful attack can allow the attacker to execute arbitrary HTML and JavaScript in the victim's browser. Typically the user will need to interact with a link, or some other attacker controlled page, such as a watering hole attack, malicious advertisements, or similar.
-* **Stored XSS**: Your app or API stores unsanitized user input that is viewed at a later time by another user or an administrator. Stored XSS is often considered a high or critical risk.
-* **DOM XSS**: JavaScript frameworks, single page apps, and APIs that dynamically include attacker-controllable data to a page are vulnerable to DOM XSS. Ideally, you would avoid sending attacker-controllable data to unsafe JavaScript APIs.
+* **XSS Reflectido**: A sua aplicação ou API inclui as entradas não validadas e não limpas do utilizador como parte do HTML resultante ou então não existe um cabeçalho da política de segurança do conteúdo (_content security policy_) ([CSP](https://www.owasp.org/index.php/Content_Security_Policy)). Um ataque bem sucedido pode permitir a um atacante a execução de código arbitrário de HTML e Javascript no browser da vítima. Tipicamente o utilizador vai precisar de interagir com uma ligação, ou algum tipo de página controlada pelo utilizador, tais como publicidade maliciosa, "_watering pole attack_", ou algo semelhante.
+* **XSS Armazenado**: A sua aplicação ou API armazena entradas não limpas do utilizador que são visualizadas mais tarde por outro utilizador ou administrador. O XSS armazenado é considerado frequentemente como sendo de elevado risco.
+* **DOM XSS**: As frameworks de JavaScript, aplicações de página única, e APIs que dinamicamente incluam dados controlados por um atacante para uma página são vulneráveis a um DOM XSS. Idealmente, evitaria enviar dados controlados pelo atacante para APIs de Javascript inseguras.
 
-Typical XSS attacks include session stealing, account takeover, MFA bypass, DOM node replacement or defacement (such as trojan login panels), attacks against the user's browser such as malicious software downloads, key logging, and other client side attacks.
+Os ataques típicos de XSS incluem o roubo de sessões, roubo ou controlo de contas, ultrapassar factores de autenticação múltipla (MFA), substituição ou alteração de nós no DOM (tais como painéis de autenticação falsos), ataques contra o browser web do utilizador tais como o descarregar software malicioso, captura e registo de teclas ou outros ataques do lado do cliente.
 
 ## Como Prevenir?
 
-Preventing XSS requires separation of untrusted data from active browser content.
+Prevenir ataques de XSS requer a separação de dados não confiáveis do conteúdo activo de um browser.
 
-* Use safer frameworks that automatically escape for XSS by design, such as in Ruby 3.0 or React JS, or leverage framework XSS protections.
-* Escaping untrusted HTTP request data based on the context in the HTML output (body, attribute, JavaScript, CSS, or URL) will resolve Reflected and Stored XSS vulnerabilities. The [OWASP XSS Prevention Cheat Sheet](https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet) has details on the required data escaping techniques.
+* Usar frameworks seguras que limpam de forma automática o XSS por desenho, tal como acontece com o Ruby 3.0 ou React JS, ou então alavancar as proteções de XSS das frameworks.
+* Limpar pedidos de dados HTTP não confiáveis baseado no contexto do resultado HTML (corpo, attribute, JavaScript, CSS, or URL) will resolve Reflected and Stored XSS vulnerabilities. The [OWASP XSS Prevention Cheat Sheet](https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet) has details on the required data escaping techniques.
 * Applying context sensitive encoding when modifying the browser document on the client side acts against DOM XSS. When this cannot be avoided, similar context sensitive escaping techniques can be applied to browser APIs as described in the [OWASP DOM based XSS Prevention Cheat Sheet](https://www.owasp.org/index.php/DOM_based_XSS_Prevention_Cheat_Sheet).
 * Enabling a [Content Security Policy (CSP)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) is a defense in depth mitigating control against XSS, assuming no other vulnerabilities exist that would allow placing malicious code via local file include such as path traversal overwrites, or vulnerable libraries in permitted sources, such as content delivery network or local libraries. 
 
