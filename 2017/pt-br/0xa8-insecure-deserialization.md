@@ -29,28 +29,21 @@ O único padrão de arquitetura seguro é não aceitar objetos serializados de f
 Se isso não for possível:
 
 * Implementar verificações de integridade, tais como assinaturas digitais em qualquer objeto serializado para evitar a criação de objetos hostis ou a manipulação de dados.
-* Aplicar restrições de tipos estritos durante a desserialização antes da criação do objeto, pois seu código geralmente espera um conjunto definível de classes. Casos onde esta técnica foi , demonstrou-se que a dependência exclusiva disso não é aconselhável.
-* Isolar e executar o código que deserializa em ambientes de privilégios baixos quando possível.
-* Exceções e falhas de desserialização do log, como por exemplo, onde o tipo de entrada não é o tipo esperado, ou a deserialização lança exceções.
-* Restringir ou monitorar a conectividade de rede recebida e de saída de contêineres ou servidores que deserializam.
-* Monitorizar a deserialização, alertar se um usuário deserializar constantemente.
-
-* Enforce strict type constraints during deserialization before object creation as your code typically expects a definable set of classes. Bypasses to this technique have been demonstrated so reliance solely on this is not advisable.
-* Isolate and run code that deserializes in low privilege environments when possible.
-* Log deserialization exceptions and failures, such as where the incoming type is not the expected type, or the deserialization throws exceptions.
-* Restrict or monitor incoming and outgoing network connectivity from containers or servers that deserialize.
-* Monitor deserialization, alerting if a user deserializes constantly.
-
+* Aplicar restrições de tipos estritos durante a desserialização antes da criação do objeto, pois seu código geralmente espera um conjunto definível de classes. Foram demonstrados casos onde esta restrição foi superada, portanto a dependência exclusiva nela não é aconselhável.
+* Isolar e executar o código que desserializa em ambientes de baixos privilégios quando possível.
+* Registrar as exceções e falhas de desserialização, como por exemplo, onde o tipo de entrada não é o tipo esperado, ou a desserialização lança exceções.
+* Restringir ou monitorar a conectividade de rede de entrada e de saída de contêineres ou servidores que desserializem.
+* Monitorizar a desserialização, alertando se um usuário desserializar constantemente.
 
 ## Exemplos de Cenários de Ataque
 
-**Scenario #1**: A React application calls a set of Spring Boot microservices. Being functional programmers, they tried to ensure that their code is immutable. The solution they came up with is serializing user state and passing it back and forth with each request. An attacker notices the "R00" Java object signature, and uses the Java Serial Killer tool to gain remote code execution on the application server.
+**Cenário #1**: Uma aplicação React chama um conjunto de microsserviços Spring Boot. Sendo programadores funcionais, eles tentaram garantir que seu código seja imutável. A solução que eles inventaram é serializar o estado do usuário e passá-lo para frente e para trás em cada request. Um atacante percebe a assinatura "R00" do objeto Java e usa a ferramenta Java Serial Killer para obter uma execução de código remoto no servidor da aplicação.
 
-**Scenario #2**: A PHP forum uses PHP object serialization to save a "super" cookie, containing the user's user ID, role, password hash, and other state:
+**Cenário #2**: Um fórum em PHP usa a serialização de objeto PHP para salvar um "super" cookie, contendo o ID do usuário, o perfil, o hash da senha e outros estados do usuário:
 
 `a:4:{i:0;i:132;i:1;s:7:"Mallory";i:2;s:4:"user";i:3;s:32:"b6a8b3bea87fe0e05022f8f3c88bc960";}`
 
-An attacker changes the serialized object to give themselves admin privileges:
+Um atacante altera o objeto serializado para se dar privilégios de administrador:
 `a:4:{i:0;i:1;i:1;s:5:"Alice";i:2;s:5:"admin";i:3;s:32:"b6a8b3bea87fe0e05022f8f3c88bc960";}`
 
 ## Referências
