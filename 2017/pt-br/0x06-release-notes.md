@@ -20,7 +20,7 @@ We asked the community to provide insight into two forward looking weakness cate
 Pedimos à comunidade que fornecesse informações sobre duas categorias de fraquezas futuras. Após mais de 500 envios e remoção de problemas que já eram suportados por dados (como Sensitive Data Exposure e XXE), os dois novos problemas são:
 
 * **A8:2017-Desserialização Insegura**, que permite execução de código remoto ou manipulação de objetos sensíveis nas plataformas afetadas.
-* **A10:2017-Insuficiência de Logs e Monitoração**, a falta destes pode impedir ou atrasar significativamente a deteção de atividades maliciosas e deteção de brechas, repostas de incidentes and digital forensics.
+* **A10:2017-Insuficiência de Logs e Monitoração**, a falta destes pode impedir ou atrasar significativamente a deteção de atividades maliciosas e deteção de brechas, respostas de incidentes and digital forensics.
 
 ## Aposentados, mas não esquecidos
 
