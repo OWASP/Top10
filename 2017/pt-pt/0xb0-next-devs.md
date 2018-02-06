@@ -4,7 +4,7 @@
 
 Quer seja novo na segurança aplicacional web ou se já está muito familiarizado com estes riscos, a tarefa de produzir uma aplicação web segura or corrigir uma existente pode ser difícil. Se tiver que gerir um grande portfolio de aplicações pode ser um pesadelo.
 
-Para ajudar as organizações e os programadores a reduzirem os seus riscos de segurança aplicacional de uma forma efectiva, a OWASP produziu numerosos recursos livres e gratuítos que pode usar para endereçar a segurança aplicacional na sua organização. Os seguintes são alguns dos muitos recursos que a OWASP produziu para ajudar as organizações a produzir aplicações Web e APIs seguras. Na próxima página apresentamos recursoa adicionais da OWASP que podem ajudar as organizações a verificar a segurança das suas aplicações e APIs.
+Para ajudar as organizações e os programadores a reduzirem os seus riscos de segurança aplicacional de uma forma efectiva, a OWASP produziu numerosos recursos livres e gratuítos que pode usar para endereçar a segurança aplicacional na sua organização. Os seguintes são alguns dos muitos recursos que a OWASP produziu para ajudar as organizações a produzir aplicações Web e APIs seguras. Na próxima página apresentamos recursos adicionais da OWASP que podem ajudar as organizações a verificar a segurança das suas aplicações e APIs.
 
 | Actividade | Descrição |
 | --- | --- |

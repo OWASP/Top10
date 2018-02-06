@@ -13,8 +13,7 @@ Uma aplicação é vulnerável a este ataque quando:
 * Dados hostis são usados directamente com pesquisas dinâmicas ou invocações não parametrizadas para um interpretador sem terem sido filtrados de acordo com o seu contexto.
 * Dados hostis são usados como parâmetros de pesquisa ORM de forma a que pesquisa inclua dados sensíveis ou todos os registos.
 * Dados hostis são directamente usados ou concatenados, de forma a que o SQL ou comandos contenham tanto estrutura ou dados hostis em perguntas dinâmicas, comandos, ou procedimentos armazenados.
-
-Algumas das injecções mais comuns são SQL, comandos do SO, ORM, LDAP, Linguagens de Expressões (EL) ou injecção OGNL. O conceito é idêntico entre todos os interpretadores. As organizações podem incluir ferramentas SAST e DAST no pipeline de CI/CD para alertar se existe código que possua falhas de injecção antes de passar para produção. Revisões de código manuais ou automatizadas são a melhor forma de detectar se é vulnerável a injecções, seguidas por pesquisas DAST detalhadas de todos os parâmetros, campos, cabeçalhos, cookies, JSON, entradas de XML e de dados.
+* Algumas das injecções mais comuns são SQL, comandos do SO, ORM, LDAP, Linguagens de Expressões (EL) ou injecção OGNL. O conceito é idêntico entre todos os interpretadores. As organizações podem incluir ferramentas SAST e DAST no pipeline de CI/CD para alertar se existe código que possua falhas de injecção antes de passar para produção. Revisões de código manuais ou automatizadas são a melhor forma de detectar se é vulnerável a injecções, seguidas por pesquisas DAST detalhadas de todos os parâmetros, campos, cabeçalhos, cookies, JSON, entradas de XML e de dados.
 
 ## Como Prevenir?
 
