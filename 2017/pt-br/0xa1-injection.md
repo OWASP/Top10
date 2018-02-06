@@ -14,7 +14,7 @@ Uma aplicação é vulnerável a este ataque quando:
 * Os dados hostis são usados diretamente nos parâmetros de busca de mapeamento de objetos-relacionamentos (ORM) para extrair registros adicionais e sensíveis.
 * Algumas das injeções mais comuns são SQL, NoSQL, comando do sistema operacional, ORM, LDAP e Expression Language (EL) ou injeção OGNL. O conceito é idêntico entre todos os intérpretes. A revisão do código-fonte é o melhor método para detectar se suas aplicações estão vulneráveis a injeções, seguidos de perto por testes automatizados completos de todos os parâmetros, cabeçalhos, URL, cookies, JSON, SOAP e entradas de dados XML. Organizações podem incluir testes de código fonte estáticos ([SAST](https://www.owasp.org/index.php/Source_Code_Analysis_Tools)) e testes dinâmicos de aplicação ([DAST](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools)) no pipeline CI / CD para identificar as falhas de injeção recém-introduzidas antes da implantação em produção.
 
-## Como Prevenir?
+## Como Prevenir
 
 Prevenir injecções requer que os dados estejam separados dos comandos e das consultas.
 
