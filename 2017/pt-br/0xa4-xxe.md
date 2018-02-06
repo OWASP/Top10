@@ -13,7 +13,7 @@ Aplicações e, em particular, serviços Web baseados em XML ou integrações em
 * Qualquer um dos processadores XML na aplicação ou serviços web baseados em SOAP tem [definições de tipo de documento (DTDs)](https://en.wikipedia.org/wiki/Document_type_definition) (DTDs) habilitados. Como o mecanismo exato para desabilitar o processamento de DTD varia de acordo com o processador, é recomendável consultar uma referência, como [OWASP Cheat Sheet 'XXE Prevention'](https://www.owasp.org/index.php/XML_External_Entity_(XXE)_Prevention_Cheat_Sheet).
 * Se sua aplicação usa SAML para processamento de identidade dentro de um sistema de segurança em federação ou de logon único (SSO). SAML usa XML para asserções de identidade e pode ser vulnerável.
 * Se sua aplicação usa SOAP antes da versão 1.2, provavelmente estará suscetível a ataques XXE se as entidades XML estiverem sendo passadas para o framework SOAP.
-* Ser vulnerável aos ataques do XXE provavelmente significa que sua aplicação é vulnerável a ataques de negação de serviço, incluindo o ataque de bilhões de risos (*billion laughs attack*)
+* Ser vulnerável aos ataques do XXE provavelmente significa que sua aplicação é vulnerável a ataques de negação de serviço, incluindo o ataque de um bilhão de risos (*billion laughs attack*)
 
 ## Como Prevenir
 
