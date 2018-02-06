@@ -24,11 +24,17 @@ Serialização pode ser usada em aplicações para:
 
 ## Como Prevenir
 
-The only safe architectural pattern is to not accept serialized objects from untrusted sources or to use serialization mediums that only permit primitive data types.
+O único padrão de arquitetura seguro é não aceitar objetos serializados de fontes não confiáveis ou usar mídias de serialização que só permitem tipos de dados primitivos.
 
-If that is not possible:
+Se isso não for possível:
 
-* Implement integrity checks such as digital signatures on any serialized objects to prevent hostile object creation or data tampering.
+* Implementar verificações de integridade, tais como assinaturas digitais em qualquer objeto serializado para evitar a criação de objetos hostis ou a manipulação de dados.
+* Aplicar restrições de tipos estritos durante a desserialização antes da criação do objeto, pois seu código geralmente espera um conjunto definível de classes. Casos onde esta técnica foi , demonstrou-se que a dependência exclusiva disso não é aconselhável.
+* Isolar e executar o código que deserializa em ambientes de privilégios baixos quando possível.
+* Exceções e falhas de desserialização do log, como por exemplo, onde o tipo de entrada não é o tipo esperado, ou a deserialização lança exceções.
+* Restringir ou monitorar a conectividade de rede recebida e de saída de contêineres ou servidores que deserializam.
+* Monitorizar a deserialização, alertar se um usuário deserializar constantemente.
+
 * Enforce strict type constraints during deserialization before object creation as your code typically expects a definable set of classes. Bypasses to this technique have been demonstrated so reliance solely on this is not advisable.
 * Isolate and run code that deserializes in low privilege environments when possible.
 * Log deserialization exceptions and failures, such as where the incoming type is not the expected type, or the deserialization throws exceptions.
