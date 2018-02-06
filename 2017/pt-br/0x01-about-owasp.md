@@ -18,7 +18,7 @@ Na OWASP se pode encontrar, grátis e de forma aberta...
 
 Saiba mais em: [https://www.owasp.org](https://www.owasp.org).
 
-Todas as ferramentas, documentos, fóruns e capítulos do OWASP são grátis e abertos a todos os interessados em aperfeiçoar a segurança em aplicações. 
+Todas as ferramentas, documentos, fóruns e capítulos do OWASP são grátis e abertos a todos os interessados em aperfeiçoar a segurança em aplicações.
 
 Promovemos a abordagem da segurança em aplicações como um problema de pessoas, processos e tecnologia, porque as abordagens mais eficazes em segurança de aplicações requerem melhorias nestas áreas.
 
