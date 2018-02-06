@@ -31,7 +31,7 @@ Se isso não for possível:
 * Implementar verificações de integridade, tais como assinaturas digitais em qualquer objeto serializado para evitar a criação de objetos hostis ou a manipulação de dados.
 * Aplicar restrições de tipos estritos durante a desserialização antes da criação do objeto, pois seu código geralmente espera um conjunto definível de classes. Foram demonstrados casos onde esta restrição foi superada, portanto a dependência exclusiva nela não é aconselhável.
 * Isolar e executar o código que desserializa em ambientes de baixos privilégios quando possível.
-* Registrar as exceções e falhas de desserialização, como por exemplo, onde o tipo de entrada não é o tipo esperado, ou a desserialização lança exceções.
+* Registrar as exceções e falhas de desserialização como, por exemplo, onde o tipo de entrada não é o tipo esperado, ou a desserialização lança exceções.
 * Restringir ou monitorar a conectividade de rede de entrada e de saída de contêineres ou servidores que desserializem.
 * Monitorizar a desserialização, alertando se um usuário desserializar constantemente.
 
