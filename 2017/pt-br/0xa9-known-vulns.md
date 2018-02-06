@@ -3,40 +3,40 @@
 | Agentes de Ameaça/Vetores de Ataque | Vulnerabilidades de Segurança | Impactos |
 | -- | -- | -- |
 | Nível de Acesso \| Explorabilidade 2 | Prevalência 3 \| Detectabilidade 2 | Técnico 2 \| Negócio |
-| Embora seja fácil encontrar explorações já escritas para muitas vulnerabilidades conhecidas, outras vulnerabilidades requerem esforço concentrado para desenvolver uma exploração personalizada. | Prevalence of this issue is very widespread. Component-heavy development patterns can lead to development teams not even understanding which components they use in their application or API, much less keeping them up to date. Some scanners such as retire.js help in detection but determining exploitability requires additional effort. | While some known vulnerabilities lead to only minor impacts, some of the largest breaches to date have relied on exploiting known vulnerabilities in components. Depending on the assets you are protecting, perhaps this risk should be at the top of your list. |
+| Embora seja fácil encontrar explorações já escritas para muitas vulnerabilidades conhecidas, outras vulnerabilidades requerem esforço concentrado para desenvolver uma exploração personalizada. | A prevalência desta questão é muito difundida. Padrões de desenvolvimento de fortemente orientados a componentes podem levar as equipes de desenvolvimento a não entender quais componentes elas usam em sua aplicação ou API, quanto menos mantê-los atualizados. Alguns scanners, como retire.js ajudam na detecção, mas a determinação da vulnerabilidade requer esforço adicional. | Enquanto algumas vulnerabilidades conhecidas levam a apenas impactos menores, algumas das maiores brechas até agora se basearam em explorar vulnerabilidades conhecidas nos componentes. Dependendo dos ativos que você está protegendo, talvez esse risco esteja no topo da sua lista. |
 
-## Is the Application Vulnerable?
+## A Aplicação Está Vulnerável?
 
-You are likely vulnerable:
+Você provavelmente está vulnerável:
 
-* If you do not know the versions of all components you use (both client-side and server-side). This includes components you directly use as well as nested dependencies.
-* If any of your software is out of date. This includes the OS, Web/App Server, DBMS, applications, APIs and all components, runtime environments and libraries.
-* If you do not scan for vulnerabilities regularly and subscribe to security bulletins related to the components you use.
-* If you do not fix or upgrade the underlying platform, frameworks and dependencies in a timely fashion. This commonly happens is environments when patching is a monthly or quarterly task under change control, which leaves organizations open to many days or months of unnecessary exposure to fixed vulnerabilities.
-* If you do not secure the components' configurations (see **A6:2017-Security Misconfiguration**).
+* Se você não conhece as versões de todos os componentes que você usa (tanto do lado do cliente quanto do lado do servidor). Isso inclui componentes que você usa diretamente, bem como dependências aninhadas.
+* Se algum dos seus softwares está desatualizado. Isso inclui o SO, Servidor Web/App, DBMS, aplicações, APIs e todos os componentes, ambientes de execução e bibliotecas.
+* Se você não procura vulnerabilidades regularmente e se inscreve em boletins de segurança relacionados aos componentes que você usa.
+* Se você não arruma ou atualiza a plataforma que utiliza, frameworks e dependências em tempo hábil. Isso geralmente acontece em ambientes onde atualização de patches é uma tarefa mensal ou trimestral sob controle de mudanças, o que deixa as organizações abertas para muitos dias ou meses de exposição desnecessária a vulnerabilidades já consertadas.
+* Se você não mantém seguras as configurações dos componentes (veja **A6:2017-Configuração Incorreta de Segurança**).
 
-## How To Prevent
+## Como Prevenir
 
-Software projects should have a process in place to:
+Projetos de software devem ter um processo para:
 
-* Remove unused dependencies, unnecessary features, components, files, and documentation.
-* Continuously inventory the versions of both client-side and server-side components (e.g. frameworks, libraries) and their dependencies using tools like versions, DependencyCheck, retire.js, etc. 
-* Continuously monitor sources like CVE and NVD for vulnerabilities in your components. Use software composition analysis tools to automate the process. Subscribe to email alerts for security vulnerabilities related to components you use.
-* Only obtain your components from official sources and, when possible, prefer signed packages to reduce the chance of getting a modified, malicious component.
-* Monitor for libraries and components that are unmaintained or do not create security patches for older versions. If patching is not possible, consider deploying a virtual patch to monitor, detect, or protect against the discovered issue.
+* Remover dependências não utilizadas, recursos desnecessários, componentes, arquivos e documentação.
+* Manter continuamente um inventário das versões dos componentes do lado do cliente e do lado do servidor (por exemplo, frameworks, bibliotecas) e suas dependências usando ferramentas como versões, DependencyCheck, retire.js, etc.
+* Monitorar continuamente fontes como CVE e NVD para vulnerabilidades em seus componentes. Use ferramentas de análise de composição de software para automatizar o processo. Assine os alertas de e-mails para vulnerabilidades de segurança relacionadas aos componentes que você usa.
+* Obtenha seus componentes apenas de fontes oficiais e, quando possível, prefira pacotes assinados para reduzir a chance de obter um componente malicioso modificado.
+* Monitore bibliotecas e componentes que não são mantidos ou não tem mais patches de segurança para versões mais antigas. Se o patch não for possível, considere implantar um patch virtual para monitorar, detectar ou proteger contra o problema descoberto.
 
-Every organization must ensure that there is an ongoing plan for monitoring, triaging, and applying updates or configuration changes for the lifetime of the application or portfolio.
+Toda organização deve garantir que haja um plano contínuo de monitoramento, triagem e aplicação de atualizações ou mudanças de configuração para toda a vida da aplicação ou portfólio.
 
-## Example Attack Scenarios
+## Examplos de Cenários de Ataque
 
-**Scenario #1**: Components typically run with the same privileges as the application itself, so flaws in any component can result in serious impact. Such flaws can be accidental (e.g. coding error) or intentional (e.g. backdoor in component). Some example exploitable component vulnerabilities discovered are:
+**Cenário #1**: Componentes tipicamente são executados com os mesmos privilégios da própria aplicação, portanto, falhas em qualquer componente podem resultar em impacto sério. Tais falhas podem ser acidentais (por exemplo, erro de codificação) ou intencional (por exemplo, *backdoor* no componente). Alguns exemplos de vulnerabilidades de componentes exploráveis descobertos são:
 
-* [CVE-2017-5638](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5638), a Struts 2 remote code execution vulnerability that enables execution of arbitrary code on the server, has been blamed for significant breaches.
-* While [internet of things (IoT)](https://en.wikipedia.org/wiki/Internet_of_things) are frequently difficult or impossible to patch, the importance of patching them can be great (eg: [St. Jude pacemakers](https://arstechnica.com/information-technology/2017/08/465k-patients-need-a-firmware-update-to-prevent-serious-pacemaker-hacks/)).
+* [CVE-2017-5638](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5638), uma vulnerabilidade de execução remota de código no Struts 2 que permite a execução de código arbitrário em o servidor, foi culpado por brechas significativas.
+* Enquanto [a internet das coisas (IoT)](https://en.wikipedia.org/wiki/Internet_of_things) são freqüentemente difíceis ou impossíveis de corrigir, a importância de corrigi-los pode ser grande (por exemplo: [marca-passos de St. Jude](https://arstechnica.com/information-technology/2017/08/465k-patients-need-a-firmware-update-to-prevent-serious-pacemaker-hacks/)).
 
-There are automated tools to help attackers find unpatched or misconfigured systems. For example, the [Shodan IoT search engine](https://www.shodan.io/report/89bnfUyJ) can help you find devices that still suffer from [Heartbleed](https://en.wikipedia.org/wiki/Heartbleed) vulnerability that was patched in April 2014.
+Existem ferramentas automatizadas para ajudar os invasores a encontrar sistemas não corrigidos ou mal configurados. Por exemplo, o [mecanismo de busca de IoT Shodan](https://www.shodan.io/report/89bnfUyJ) pode ajudá-lo a encontrar dispositivos que ainda sofrem com a vulnerabilidade [Heartbleed](https://en.wikipedia.org/wiki/Heartbleed) que foi corrigida em abril de 2014.
 
-## References
+## Referências
 
 ### OWASP
 
@@ -45,7 +45,7 @@ There are automated tools to help attackers find unpatched or misconfigured syst
 * [OWASP Testing Guide - Map Application Architecture (OTG-INFO-010)](https://www.owasp.org/index.php/Map_Application_Architecture_(OTG-INFO-010))
 * [OWASP Virtual Patching Best Practices](https://www.owasp.org/index.php/Virtual_Patching_Best_Practices)
 
-### External
+### Externas
 
 * [The Unfortunate Reality of Insecure Libraries](https://www.aspectsecurity.com/research-presentations/the-unfortunate-reality-of-insecure-libraries)
 * [MITRE Common Vulnerabilities and Exposures (CVE) search](https://www.cvedetails.com/version-search.php)
