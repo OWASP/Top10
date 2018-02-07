@@ -13,10 +13,11 @@ Se encontrar algum erro de tradução, digitação, ou diagramação, favor entr
 Participaram da tradução os líderes do Projeto OWASP Top 10 em Língua Portuguesa:
 
  * Fábio Kimura - fkimura@gmail.com - Português do Brasil
+ * Márcio Machry - Português do Brasil
  * Carlos Serrão - Português de Portugal
  
  E os seguintes voluntários:
  
- * Márcio Machry
+ * 
  * Colabore e tenha seu nome aqui!
  * ...
