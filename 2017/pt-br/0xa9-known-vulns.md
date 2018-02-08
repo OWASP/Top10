@@ -27,7 +27,7 @@ Projetos de software devem ter um processo para:
 
 Toda organização deve garantir que haja um plano contínuo de monitoramento, triagem e aplicação de atualizações ou mudanças de configuração para toda a vida da aplicação ou portfólio.
 
-## Examplos de Cenários de Ataque
+## Exemplos de Cenários de Ataque
 
 **Cenário #1**: Componentes tipicamente são executados com os mesmos privilégios da própria aplicação, portanto, falhas em qualquer componente podem resultar em impacto sério. Tais falhas podem ser acidentais (por exemplo, erro de codificação) ou intencional (por exemplo, *backdoor* no componente). Alguns exemplos de vulnerabilidades de componentes exploráveis descobertos são:
 
