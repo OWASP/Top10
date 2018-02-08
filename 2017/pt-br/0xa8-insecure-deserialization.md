@@ -44,6 +44,7 @@ Se isso não for possível:
 `a:4:{i:0;i:132;i:1;s:7:"Mallory";i:2;s:4:"user";i:3;s:32:"b6a8b3bea87fe0e05022f8f3c88bc960";}`
 
 Um atacante altera o objeto serializado para se dar privilégios de administrador:
+
 `a:4:{i:0;i:1;i:1;s:5:"Alice";i:2;s:5:"admin";i:3;s:32:"b6a8b3bea87fe0e05022f8f3c88bc960";}`
 
 ## Referências
