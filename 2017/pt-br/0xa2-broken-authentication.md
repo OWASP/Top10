@@ -26,7 +26,7 @@ Podem haver pontos fracos de autenticação se a sua aplicação:
 * Sempre que possível, implemente a autenticação multi-fator para evitar ataques automatizados de preenchimento de credenciais, força bruta e de credenciais roubadas.
 * Não envie ou implante com quaisquer credenciais padrão, particularmente para usuários administradores.
 * Implementar verificações de senha fracas, como testar senhas novas ou alteradas em uma lista das [Top 10000 piores senhas](https://github.com/danielmiessler/SecLists/tree/master/Passwords).
-* Alinhe o comprimento da senha, a complexidade e as políticas de rotação com as diretrizes do NIST 800-63 B na seção 5.1.1 para Segredos Memorizados](https://pages.nist.gov/800-63-3/sp800-63b.html#memsecret ) ou outras políticas modernas de senha baseadas em evidências.
+* Alinhe o comprimento da senha, a complexidade e as políticas de rotação com as diretrizes do NIST 800-63 B na seção 5.1.1 para [Segredos Memorizados](https://pages.nist.gov/800-63-3/sp800-63b.html#memsecret) ou outras políticas modernas de senha baseadas em evidências.
 * Assegure-se de que o registro, a recuperação de credenciais e as vias da API sejam endurecidos contra ataques de enumeração de conta usando as mesmas mensagens para todos os resultados.
 * Limite ou retarde de forma progressiva as tentativas de login falhadas. Logar todas as falhas e alertar os administradores quando o preenchimento de credenciais, a força bruta, e outros ataques forem detectados.
 * Use um gerenciador de sessão seguro, no lado do servidor, que gere uma nova ID de sessão aleatória com alta entropia após o login. IDs de sessão não devem estar na URL, e devem ser armazenadas de forma segura e invalidadas após o logout, tempo ocioso e tempo limite absolutos.
