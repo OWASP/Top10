@@ -16,9 +16,10 @@ Uma aplicação é vulnerável a este ataque quando:
 
 ## Como Prevenir
 
-Prevenir injecções requer que os dados estejam separados dos comandos e das consultas.
+Prevenir injeções requer que os dados estejam separados dos comandos e das consultas.
 
-* A opção preferida é usar uma API segura, o que evite o uso exclusivo do interpretador ou que forneça uma interface parametrizada ou migrar para usar Object Relational Mapping Tools (ORMs). **Nota**: quando parametrizados, stored procedures ainda podem introduzir injeção de SQL se o PL/SQL ou T-SQL concatenar consultas e dados, ou executar dados hostis com EXECUTE IMMEDIATE ou exec ().* Use positive or "whitelist" server-side input validation, but this is not a complete defense as many applications require special characters, such as text areas or APIs for mobile applications.
+* A opção preferida é usar uma API segura, o que evite o uso exclusivo do interpretador ou que forneça uma interface parametrizada ou migrar para usar Object Relational Mapping Tools (ORMs). **Nota**: quando parametrizados, stored procedures ainda podem introduzir injeção de SQL se o PL/SQL ou T-SQL concatenar consultas e dados, ou executar dados hostis com EXECUTE IMMEDIATE ou exec ().
+* Use a validação positiva de entrada do lado do servidor ou "lista branca", mas isso não é uma defesa completa, pois muitas aplicações requerem caracteres especiais, como áreas de texto ou APIs para aplicativos móveis.
 * Para quaisquer consultas dinâmicas remanescentes, processe os caracteres especiais usando a sintaxe de escape específica para esse interpretador. **Nota**: Estruturas de SQL, como nomes de tabela, nomes de colunas, etc., não pode ser escapadas e, portanto, os nomes de estrutura fornecidos pelo usuário são perigosos. Este é um problema comum em software que produz relatórios.
 * Use o LIMIT e outros controles de SQL dentro das consultas para prevenir a revelação não autorizada de grandes volumes de registros no caso de injeção de SQL.
 
