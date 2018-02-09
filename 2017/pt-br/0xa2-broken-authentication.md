@@ -9,7 +9,7 @@
 
 A confirmação da identidade, autenticação e gerenciamento de sessão do usuário é fundamental para proteger contra ataques relacionados à autenticação.
 
-Pode haver pontos fracos de autenticação se a sua aplicação:
+Podem haver pontos fracos de autenticação se a sua aplicação:
 
 * Permite ataques automatizados, como [teste exaustivo de credenciais, ou *credential stuffing*](https://www.owasp.org/index.php/Credential_stuffing), onde o atacante possui uma lista de nomes de usuário e senhas válidos.
 * Permite ataque de força bruta ou outros ataques automatizados.
@@ -39,7 +39,7 @@ Pode haver pontos fracos de autenticação se a sua aplicação:
 
 **Cenário #3**: Os tempos limite da sessão da aplicação não estão configurados corretamente. Um usuário usa um computador público para acessar a aplicação. Em vez de selecionar "logout", o usuário simplesmente fecha a guia do navegador e se afasta. Um invasor usa o mesmo navegador uma hora depois e o usuário ainda está autenticado.
 
-## Referência
+## Referências
 
 ### OWASP
 
