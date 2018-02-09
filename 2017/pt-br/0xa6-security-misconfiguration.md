@@ -2,45 +2,44 @@
 
 | Agentes de Ameaça/Vetores de Ataque | Vulnerabilidades de Segurança           | Impactos               |
 | -- | -- | -- |
-| Access Lvl \| Exploitability 3 | Prevalence 3 \| Detectability 3 | Technical 2 \| Business |
-| Attackers will often attempt to access default accounts, unused pages, unpatched flaws, unprotected files and directories, etc to gain unauthorized access or knowledge of the system. | Security misconfiguration can happen at any level of an application stack, including the network services, platform, web server, application server, database, frameworks, custom code, and pre-installed virtual machines, containers or storage. Automated scanners are useful for detecting misconfigurations, use of default accounts or configurations, unnecessary services, legacy options etc. | Such flaws frequently give attackers unauthorized access to some system data or functionality. Occasionally, such flaws result in a complete system compromise. The business impact depends on the protection needs of your application and data. |
+| Nível de Acesso \| Explorabilidade 3 | Prevalência 3 \| Detectabilidade 3 | Técnico 2 \| Negócio |
+| Atacantes geralmente tentarão acessar contas padrão, páginas não utilizadas, falhas não corrigidas, arquivos e diretórios desprotegidos, etc., para obter acesso não autorizado ou conhecimento do sistema. | A configuração incorreta da segurança pode acontecer em qualquer nível das camadas da aplicação, incluindo serviços de rede, plataforma, servidor web, servidor de aplicativos, banco de dados, estruturas, código personalizado e máquinas virtuais, de contêineres ou de armazenamento pré-instaladas. Os scanners automatizados são úteis para detectar configurações erradas, uso de contas ou configurações padrão, serviços desnecessários, opções legadas etc. | Tais falhas freqüentemente dão aos atacantes acesso não autorizado a alguns dados ou funcionalidades do sistema. Ocasionalmente, tais falhas resultam em um comprometimento total do sistema. O impacto comercial depende das necessidades de proteção de sua aplicação e dados. |
 
-## Is the Application Vulnerable?
+## A Aplicação Está Vulnerável?
 
-The application might be vulnerable if the application is:
+A aplicação pode ser vulnerável se:
+* Falta endurecimento de segurança adequado em qualquer parte das camadas da aplicação.
+* Recursos desnecessários são habilitados ou instalados (por exemplo, portas, serviços, páginas, contas ou privilégios desnecessários).
+* As contas padrão e suas senhas ainda são ativadas e inalteradas.
+* O tratamento de erros revela vestígios de *stacktraces* ou outras mensagens de erro excessivamente informativas aos usuários.
+* Para sistemas atualizados, os recursos de segurança mais recentes são desativados ou não estão configurados de forma segura.
+* As configurações de segurança nos servidores de aplicação, frameworks de aplicação (por exemplo, Struts, Spring, ASP.NET), bibliotecas, bancos de dados, etc., não configurados para valores seguros.
+* O servidor não envia cabeçalhos ou diretivas de segurança ou não está configurado para valores seguros.
+* O software está desatualizado ou vulnerável (consulte **A9:2017-Utilização de Componentes com Vulnerabilidades Conhecidas**). 
+Sem um processo planejado e repetido de configuração de segurança de aplicações, os sistemas estão em maior risco.
 
-* Missing appropriate security hardening across any part of the application stack.
-* Unnecessary features are enabled or installed (e.g. unnecessary ports, services, pages, accounts, or privileges).
-* Default accounts and their passwords still enabled and unchanged.
-* Error handling reveals stack traces or other overly informative error messages to users.
-* For upgraded systems, latest security features are disabled or not configured securely.
-* The security settings in the application servers, application frameworks (e.g. Struts, Spring, ASP.NET), libraries, databases, etc. not set to secure values.
-* The server does not send security headers or directives or are not set to secure values.
-* The software out of date or vulnerable (see **A9:2017-Using Components with Known Vulnerabilities**).
-Without a concerted, repeatable application security configuration process, systems are at a higher risk.
+## Como Prevenir
 
-## How To Prevent
+Processos de instalação segura devem ser implementados, incluindo:
 
-Secure installation processes should be implemented, including:
+* Um processo de endurecimento repetido que torna rápido e fácil implantar outro ambiente que esteja devidamente bloqueado. Desenvolvimento, QA e ambientes de produção devem ser configurados de forma idêntica, com diferentes credenciais usadas em cada ambiente. Este processo deve ser automatizado para minimizar o esforço necessário para configurar um novo ambiente seguro.
+* Uma plataforma mínima sem recursos, componentes, documentação e amostras desnecessários. Remova ou não instale recursos e frameworks não utilizados.
+* Uma tarefa para revisar e atualizar as configurações apropriadas para todas as notas de segurança, atualizações e patches como parte do processo de gerenciamento de patches (veja **A9:2017-Utilização de Componentes com Vulnerabilidades Conhecidas**).
+* Uma arquitetura de aplicações segmentados que forneça separação efetiva e segura entre componentes ou inquilinos, com segmentação, conteinerização ou grupos de segurança de nuvem (ACLs).
+* Enviar diretivas de segurança para agentes clientes, por exemplo [Cabeçalhos de segurança](https://www.owasp.org/index.php/OWASP_Secure_Headers_Project).
+* Um processo automatizado para verificar a eficácia das configurações e configurações em todos os ambientes
 
-* A repeatable hardening process that makes it fast and easy to deploy another environment that is properly locked down. Development, QA, and production environments should all be configured identically, with different credentials used in each environment. This process should be automated to minimize the effort required to setup a new secure environment.
-* A minimal platform without any unnecessary features, components, documentation and samples. Remove or do not install unused features and frameworks.
-* A task to review and update the configurations appropriate toall security notes, updates and patches as part of the patch management process (see **A9:2017-Using Components with Known Vulnerabilities**).
-* A segmented application architecture that provides effective, secure separation between components or tenants, with segmentation, containerization, or cloud security groups (ACLs).
-* Send security directives to client agents, e.g. [Security Headers](https://www.owasp.org/index.php/OWASP_Secure_Headers_Project).
-* An automated process to verify the effectiveness of the configurations and settings in all environments
+## Exemplo de Cenários de Ataque
 
-## Example Attack Scenarios
+**Cenário #1**: O servidor de aplicação vem com aplicativos de exemplo que não são removidos do seu servidor de produção. Esses aplicativos de exemplo possuem falhas conhecidas de segurança que atacantes usam para comprometer seu servidor. Se um desses aplicativos for o console de administração, e as contas padrão não foram alteradas, o atacante faz logon com senhas padrão e assume o controle.
 
-**Scenario #1**: The application server comes with sample apps that are not removed from your production server. These sample apps have known security flaws attackers use to compromise your server. If one of these apps is the admin console, and default accounts weren't changed the attacker logs in with default passwords and takes over.
+**Cenário #2**: A listagem de diretórios não está desativada em seu servidor. Um atacante descobre que ele pode simplesmente listar diretórios. O atacante localiza e baixa suas classes Java compiladas, que são então descompiladas e sofrem engenharia reversa para visualizar seu código. O atacante então encontra uma falha séria de controle de acesso em sua aplicação.
 
-**Scenario #2**: Directory listing is not disabled on your server. An attacker discovers they can simply list directories. The attacker finds and downloads your compiled Java classes, which they decompile and reverse engineer to view your code. The attacker then finds a serious access control flaw in your application.
+**Cenário #3**: A configuração do servidor de aplicação permite mensagens de erro detalhadas, por exemplo, stacktraces que retornam para os usuários. Isso potencialmente expõe informações sensíveis ou falhas subjacentes, como versões de componentes que são conhecidas como vulneráveis.
 
-**Scenario #3**: The app server's configuration allows detailed error messages e.g. stack traces to be returned to users. This potentially exposes sensitive information or underlying flaws such as component versions that are known to be vulnerable.
+**Cenário #4**: A configuração padrão ou uma antiga copiada ativa as versões antigas ou opções de protocolo vulneráveis que podem ser mal utilizadas por um atacante ou malware.
 
-**Scenario #4**: The default configuration or a copied old one activates old vulnerable protocol versions or options that can be misused by an attacker or malware.
-
-## References
+## Referências
 
 ### OWASP
 
@@ -50,7 +49,7 @@ Secure installation processes should be implemented, including:
 
 For additional requirements in this area, see the [ASVS requirements areas for Security Configuration (V11 and V19)](https://www.owasp.org/index.php/ASVS).
 
-### External
+### Externas
 
 * [NIST Guide to General Server Hardening](https://csrc.nist.gov/publications/detail/sp/800-123/final)
 * [CWE-2: Environmental Security Flaws](https://cwe.mitre.org/data/definitions/2.html)
