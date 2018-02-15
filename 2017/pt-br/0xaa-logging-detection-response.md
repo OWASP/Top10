@@ -7,7 +7,7 @@
 
 ## A Aplicação Está Vulnerável?
 
-Insuficiência de logs, de detecção, de monitoração e resposta ativa ocorrem a qualquer momento:
+Insuficiência de logs, de detecção, de monitoração e de resposta ativa ocorrem a qualquer momento:
 
 * Eventos auditáveis, como logins, logins com falha e transações de alto valor não são registrados.
 * Os logs de aplicações e APIs não são monitorados para atividades suspeitas.
@@ -18,13 +18,13 @@ Para as organizações maiores e de alto desempenho, a falta de respostas ativas
 
 ## Como Prevenir
 
-As per the risk of the data stored or processed by the application:
+De acordo com o risco dos dados armazenados ou processados pela aplicação:
 
-* Ensure all login, access control failures, server-side input validation failures can be logged with sufficient user context to identify suspicious or malicious accounts, and held for sufficient time to allow delayed forensic analysis.
-* Ensure that logs are generated in a format that can be easily consumed by a centralized log management solutions.
-* Ensure high value transactions have an audit trail with integrity controls to prevent tampering or deletion, such as append only database tables or similar.
-* Establish effective monitoring and alerting such that suspicious activities are detected and responded to in a timely fashion.
-* Establish or adopt an incident response and recovery plan, such as [NIST 800-61 rev 2](https://csrc.nist.gov/publications/detail/sp/800-61/rev-2/final) or later.
+* Certifique-se de todos os logins, falhas de controle de acesso, as falhas de validação de entrada do lado do servidor possam ser registradas com um contexto de usuário suficiente para identificar contas suspeitas ou mal-intencionadas e mantidas por tempo suficiente para permitir análises forenses demoradas.
+* Certifique-se de que os logs são gerados em um formato que pode ser facilmente consumido por uma solução centralizada de gerenciamento de logs.
+* Certifique-se de que as transações de alto valor tenham uma trilha de auditoria com controles de integridade para evitar adulterações ou exclusões, como anexar apenas tabelas de banco de dados ou similares.
+* Estabeleça monitorações e alertas eficazes, de modo que as atividades suspeitas sejam detectadas e respondidas em tempo hábil.
+* Estabeleça ou adote um plano de respostas a incidentes e recuperação, como [NIST 800-61 rev 2](https://csrc.nist.gov/publications/detail/sp/800-61/rev-2/final) ou posterior.
 
 There are commercial and open source application protection frameworks such as [OWASP AppSensor](https://www.owasp.org/index.php/OWASP_AppSensor_Project), web application firewalls such as [mod_security with the OWASP Core Rule Set](https://www.owasp.org/index.php/Category:OWASP_ModSecurity_Core_Rule_Set_Project), and log correlation software with custom dashboards and alerting. 
 
