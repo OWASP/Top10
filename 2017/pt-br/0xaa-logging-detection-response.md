@@ -24,19 +24,19 @@ De acordo com o risco dos dados armazenados ou processados pela aplicação:
 * Certifique-se de que os logs são gerados em um formato que pode ser facilmente consumido por uma solução centralizada de gerenciamento de logs.
 * Certifique-se de que as transações de alto valor tenham uma trilha de auditoria com controles de integridade para evitar adulterações ou exclusões, como anexar apenas tabelas de banco de dados ou similares.
 * Estabeleça monitorações e alertas eficazes, de modo que as atividades suspeitas sejam detectadas e respondidas em tempo hábil.
-* Estabeleça ou adote um plano de respostas a incidentes e recuperação, como [NIST 800-61 rev 2](https://csrc.nist.gov/publications/detail/sp/800-61/rev-2/final) ou posterior.
+* Estabeleça ou adote um plano de respostas e recuperação a incidentes, como [NIST 800-61 rev 2](https://csrc.nist.gov/publications/detail/sp/800-61/rev-2/final) ou posterior.
 
-There are commercial and open source application protection frameworks such as [OWASP AppSensor](https://www.owasp.org/index.php/OWASP_AppSensor_Project), web application firewalls such as [mod_security with the OWASP Core Rule Set](https://www.owasp.org/index.php/Category:OWASP_ModSecurity_Core_Rule_Set_Project), and log correlation software with custom dashboards and alerting. 
+Existem frameworks de proteção de aplicações comerciais e de código aberto, como [OWASP AppSensor](https://www.owasp.org/index.php/OWASP_AppSensor_Project), firewalls de aplicações Web, como [mod_security com o OWASP Core Rule Set](https: //www.owasp.org/index.php/Category:OWASP_ModSecurity_Core_Rule_Set_Project) e software de correlação de logs com painéis personalizados e alertas.
 
-## Example Attack Scenarios
+## Examplos de Cenários de Ataque
 
-**Scenario 1**: An open source project forum software run by a small team was hacked using a flaw in its software. The attackers managed to wipe out the internal source code repository containing the next version, and all of the forum contents. Although source could be recovered, the lack of monitoring, logging or alerting led to a far worse breach. The forum software project is no longer active as a result of this issue.
+**Cenário 1**: Um software de fórum de código aberto executado por uma pequena equipe foi pirateado usando uma falha em seu software. Os atacantes conseguiram eliminar o repositório de código fonte interno que contém a próxima versão e todos os conteúdos do fórum. Embora o código fonte possa ser recuperado, a falta de monitoração, logs ou alertas levou a uma violação muito pior. O projeto de software de fórum não está mais ativo como resultado dessa questão.
 
-**Scenario 2**: An attacker uses scans for users using a common password. They can take over all accounts using this password. For all other users this scan leaves only 1 false login behind. After some days this may be repeated with a different password.
+**Cenário 2**: Um atacante usa varreduras para encontrar usuários que usam uma senha comum. Eles podem assumir todas as contas usando esta senha. Para todos os outros usuários, esta varredura deixa apenas 1 login falso para trás. Após alguns dias, isso pode ser repetido com uma senha diferente.
 
-**Scenario 3**: A major US retailer reportedly had an internal malware analysis sandbox analyzing attachments. The sandbox software had detected potentially unwanted software, but no one responded to this detection. The sandbox had been producing warnings for some time before the breach was detected due to fraudulent card transactions by an external bank.
+**Cenário 3**: Um grande varejista dos EUA teria um sandbox interno de análise de malware analisando anexos. O sandbox detectou softwares potencialmente indesejados, mas ninguém respondeu a essa detecção. O sandbox tinha produzido avisos por algum tempo antes da violação ser detectada devido a transações fraudulentas de cartão por um banco externo.
 
-## References
+## Referências
 
 ### OWASP
 
@@ -45,7 +45,7 @@ There are commercial and open source application protection frameworks such as 
 * [OWASP Testing Guide: Testing for Detailed Error Code](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
 * [OWASP Cheat Sheet: Logging](https://www.owasp.org/index.php/Logging_Cheat_Sheet)
 
-### External
+### Externas
 
 * [CWE-223: Omission of Security-relevant Information](https://cwe.mitre.org/data/definitions/223.html)
 * [CWE-778: Insufficient Logging](https://cwe.mitre.org/data/definitions/778.html)
