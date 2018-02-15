@@ -1,14 +1,14 @@
-# +RF Details About Risk Factors
+# +RF Detalhes Sobre Fatores de Risco
 
-## Top 10 Risk Factor Summary
+## Resumo de Fator de Risco dos Top 10
 
-The following table presents a summary of the 2017 Top 10 Application Security Risks, and the risk factors we have assigned to each risk. These factors were determined based on the available statistics and the experience of the OWASP Top 10 team. To understand these risks for a particular application or organization, you must consider your own specific threat agents and business impacts. Even severe software weaknesses may not present a serious risk if there are no threat agents in a position to perform the necessary attack or the business impact is negligible for the assets involved.
+A tabela a seguir apresenta um resumo dos Top 10 Riscos de Segurança de Aplicações de 2017 e os fatores de risco que atribuímos a cada risco. Esses fatores foram determinados com base nas estatísticas disponíveis e na experiência da equipe OWASP Top 10. Para entender esses riscos para uma determinada aplicação ou organização, você deve considerar seus próprios agentes de ameaças específicos e impactos comerciais. Mesmo as fraquezas mais graves de software podem não representar um risco grave se não houver agentes de ameaça em condições de realizar o ataque necessário ou o impacto comercial seja insignificante para os ativos envolvidos.
 
-![Risk Factor Table](images/0xc1-risk-factor-table.png)
+![Tabela de Fatores de Risco](images/0xc1-risk-factor-table.png)
 
-## Additional Risks To Consider
+## Riscos adicionais a considerar
 
-The Top 10 covers a lot of ground, but there are many other risks you should consider and evaluate in your organization. Some of these have appeared in previous versions of the Top 10, and others have not, including new attack techniques that are being identified all the time. Other important application security risks (ordered by CWE-ID) that you should additionally consider include:
+O Top 10 cobre um monte de terreno, mas há muitos outros riscos que você deve considerar e avaliar em sua organização. Alguns deles apareceram em versões anteriores do Top 10 e outros não, incluindo novas técnicas de ataque que estão sendo identificadas o tempo todo. Outros riscos de segurança de aplicações importantes (ordenados por CWE-ID) que você também deve considerar incluir:
 
 * [CWE-352: Cross-Site Request Forgery (CSRF)](https://cwe.mitre.org/data/definitions/352.html)
 * [CWE-400: Uncontrolled Resource Consumption ('Resource Exhaustion', 'AppDoS')](https://cwe.mitre.org/data/definitions/400.html)
