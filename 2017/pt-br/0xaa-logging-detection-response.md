@@ -2,21 +2,21 @@
 
 | Agentes de Ameaça/Vetores de Ataque | Vulnerabilidades de Segurança | Impactos |
 | -- | -- | -- |
-| Access Lvl \| Exploitability 2 | Prevalence 3 \| Detectability 1 | Technical 2 \| Business |
-| Exploitation of insufficient logging and monitoring is the bedrock of nearly every major incident. Attackers rely on the lack of monitoring and timely response to achieve their goals without being detected. | This issue is included in the Top 10 based on an [industry survey](https://owasp.blogspot.com/2017/08/owasp-top-10-2017-project-update.html). One strategy for determining if you have sufficient monitoring is to examine your logs following penetration testing. The testers' actions should be recorded sufficiently to understand what damages they may have inflicted. | Most successful attacks start with vulnerability probing. Allowing such probes to continue can raise the likelihood of successful exploit to nearly 100%. In 2016, identifying a breach took an [average of 191 days](https://www-01.ibm.com/common/ssi/cgi-bin/ssialias?htmlfid=SEL03130WWEN&) – plenty of time for damage to be inflicted. |
+| Nível de Acesso \| Explorabilidade 2 | Prevalência 3 \| Detectabilidade 1 | Técnico 2 \| Negócio |
+| A exploração de logs e monitoração insuficientes é o alicerce de quase todos os incidentes importantes. Os atacantes contam com a falta de monitoração e respostas feitas a tempo para alcançar seus objetivos sem serem detectados. | Este problema está incluído no Top 10 com base em uma [pesquisa da indústria](https://owasp.blogspot.com/2017/08/owasp-top-10-2017-project-update.html). Uma estratégia para determinar se você tem monitoração suficiente é examinar seus registros após um teste de penetração. As ações dos testadores devem ser registradas o suficiente para entender quais os danos que podem ter feitos. | A maioria dos ataques bem sucedidos começa com sondagem de vulnerabilidade. Permitir que tais sondas continuem pode aumentar a probabilidade de exploração bem sucedida para quase 100%. Em 2016, a identificação de uma violação levou uma [média de 191 dias](https://www-01.ibm.com/common/ssi/cgi-bin/ssialias?htmlfid=SEL03130WWEN&) - tempo suficiente para que estragos fossem feitos. |
 
-## Is the Application Vulnerable?
+## A Aplicação Está Vulnerável?
 
-Insufficient logging, detection, monitoring and active response occurs any time:
+Insuficiência de logs, de detecção, de monitoração e resposta ativa ocorrem a qualquer momento:
 
-* Auditable events, such as logins, failed logins, and high value transactions are not logged.
-* Logs of applications and APIs are not monitored for suspicious activity.
-* Alerting thresholds and response escalation as per the risk of the data held by the application is not in place or effective.
-* Penetration testing and scans by [DAST](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools) tools (such as [OWASP ZAP](https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project)) do not trigger alerts.
+* Eventos auditáveis, como logins, logins com falha e transações de alto valor não são registrados.
+* Os logs de aplicações e APIs não são monitorados para atividades suspeitas.
+* Os limiares de alerta e a escalação da resposta, conforme o risco dos dados detidos pela aplicação, não estão em vigor nem são efetivos.
+* Testes de penetração e varredura pelas ferramentas [DAST](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools) (como [OWASP ZAP](https://www.owasp.org/index.php)/OWASP_Zed_Attack_Proxy_Project)) não desencadeiam alertas.
 
-For larger and high performing organizations, the lack of active response, such as real time alerting and response activities such as blocking automated attacks on web applications and particularly APIs would place the organization at risk from extended compromise. The response does not necessarily need to be visible to the attacker, only that the application and associated infrastructure, frameworks, service layers, etc. can detect and alert humans or tools to respond in near real time.
+Para as organizações maiores e de alto desempenho, a falta de respostas ativas, como atividades de alerta e resposta em tempo real como o bloqueio de ataques automatizados em aplicações Web e particularmente APIs, colocaria a organização em risco de um comprometimento estendido. A resposta não precisa necessariamente ser visível para o invasor, apenas que a aplicação e infra-estrutura associada, frameworks, camadas de serviço, etc. podem detectar e alertar humanos ou ferramentas para responder em tempo quase real.
 
-## How To Prevent
+## Como Prevenir
 
 As per the risk of the data stored or processed by the application:
 
