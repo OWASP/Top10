@@ -1,4 +1,4 @@
-# Reconhecimento
+# Reconhecimentos
 
 ## Reconhecimento a quem contribuiu com dados
 
