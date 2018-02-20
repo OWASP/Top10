@@ -1,24 +1,25 @@
-# O About OWASP
+# O Tentang OWASP
 
-## About OWASP
+## tentang OWASP
 
-The Open Web Application Security Project (OWASP) is an open community dedicated to enabling organizations to develop, purchase, and maintain applications and APIs that can be trusted.
+Open Web Application Security Project (OWASP) adalah komunitas terbuka yang didedikasikan untuk memungkinkan
+organisasi mengembangkan, membeli, dan memelihara aplikasi yang dapat dipercaya. 
 
-At OWASP, you'll find free and open:
+Di OWASP anda akan menemukan free and open
 
-* Application security tools and standards.
-* Complete books on application security testing, secure code development, and secure code review.
-* Presentations and [videos](https://www.youtube.com/user/OWASPGLOBAL).
+* Tool dan standar keamanan aplikasi.
+* Buku tentang uji keamanan aplikasi, pengembangan kode aman, dan review kode keamanan.
+* Presentasi dan [video](https://www.youtube.com/user/OWASPGLOBAL).
 * [Cheat sheets](https://www.owasp.org/index.php/OWASP_Cheat_Sheet_Series) on many common topics.
 * Standard security controls and libraries.
-* [Local chapters worldwide](https://www.owasp.org/index.php/OWASP_Chapter).
-* Cutting edge research.
-* Extensive [conferences worldwide](https://www.owasp.org/index.php/Category:OWASP_AppSec_Conference).
+* [Cabang Lokal Di Seluruh Dunia](https://www.owasp.org/index.php/OWASP_Chapter).
+* Riset Terkini.
+* Konferensi OWASP di Seluruh Dunia (https://www.owasp.org/index.php/Category:OWASP_AppSec_Conference).
 * [Mailing lists](https://lists.owasp.org/mailman/listinfo).
 
-Learn more at: [https://www.owasp.org](https://www.owasp.org).
+Dan banyak lagi di: [https://www.owasp.org](https://www.owasp.org).
 
-All OWASP tools, documents, videos, presentations, and chapters are free and open to anyone interested in improving application security.
+Seluruh tool , dokumen, forum, dan cabang OWASP bebas dan terbuka bagi semua orang yang tertarik memperbaiki keamanan aplikasi. Kami mendukung pendekatan keamanan aplikasi sebagai masalah person, proses, dan teknologi karena pendekatan paling efektif ke keamanan aplikasi membutuhkan perbaikan di seluruh area ini.
 
 We advocate approaching application security as a people, process, and technology problem, because the most effective approaches to application security require improvements in these areas.
 
