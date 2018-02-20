@@ -11,13 +11,13 @@ Di OWASP anda akan menemukan free and open
 * Buku tentang uji keamanan aplikasi, pengembangan kode aman, dan review kode keamanan.
 * Presentasi dan [video](https://www.youtube.com/user/OWASPGLOBAL).
 * [Cheat sheets](https://www.owasp.org/index.php/OWASP_Cheat_Sheet_Series) on many common topics.
-* Standard security controls and libraries.
+* Kendali keamanan dan Pustaka Standart.
 * [Cabang Lokal Di Seluruh Dunia](https://www.owasp.org/index.php/OWASP_Chapter).
 * Riset Terkini.
 * Konferensi OWASP di Seluruh Dunia (https://www.owasp.org/index.php/Category:OWASP_AppSec_Conference).
 * [Mailing lists](https://lists.owasp.org/mailman/listinfo).
 
-Dan banyak lagi di: [https://www.owasp.org](https://www.owasp.org).
+Dan Masih banyak lagi di: [https://www.owasp.org](https://www.owasp.org).
 
 Seluruh tool , dokumen, forum, dan cabang OWASP bebas dan terbuka bagi semua orang yang tertarik memperbaiki keamanan aplikasi. Kami mendukung pendekatan keamanan aplikasi sebagai masalah person, proses, dan teknologi karena pendekatan paling efektif ke keamanan aplikasi membutuhkan perbaikan di seluruh area ini.
 
