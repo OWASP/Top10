@@ -1,7 +1,7 @@
 ![OWASP LOGO](images/OWASP_logo.png)
 
 ## OWASP Top 10 2017
-
+Versi Bahasa Indonesia
 The Ten Most Critical Web Application Security Risks
 
 November 20, 2017
