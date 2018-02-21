@@ -2,8 +2,7 @@
 
 ## tentang OWASP
 
-Open Web Application Security Project (OWASP) adalah komunitas terbuka yang didedikasikan untuk memungkinkan
-organisasi mengembangkan, membeli, dan memelihara aplikasi yang dapat dipercaya. 
+Open Web Application Security Project (OWASP) adalah komunitas terbuka yang didedikasikan untuk memungkinkan organisasi mengembangkan, membeli, dan memelihara aplikasi yang dapat dipercaya.
 
 Di OWASP anda akan menemukan free and open
 
@@ -21,19 +20,18 @@ Dan Masih banyak lagi di: [https://www.owasp.org](https://www.owasp.org).
 
 Seluruh tool , dokumen, forum, dan cabang OWASP bebas dan terbuka bagi semua orang yang tertarik memperbaiki keamanan aplikasi. Kami mendukung pendekatan keamanan aplikasi sebagai masalah person, proses, dan teknologi karena pendekatan paling efektif ke keamanan aplikasi membutuhkan perbaikan di seluruh area ini.
 
-We advocate approaching application security as a people, process, and technology problem, because the most effective approaches to application security require improvements in these areas.
+Kami menganjurkan mendekati keamanan aplikasi sebagai masalah orang, proses, dan teknologi, karena pendekatan yang paling efektif untuk keamanan aplikasi memerlukan perbaikan di bidang ini.
 
-OWASP is a new kind of organization. Our freedom from commercial pressures allows us to provide unbiased, practical, and cost-effective information about application security.
+OWASP adalah jenis organisasi baru. Kebebasan kami dari tekanan komersial memungkinkan kami memberikan informasi yang tidak bias, praktis, dan hemat biaya tentang keamanan aplikasi.
 
-OWASP is not affiliated with any technology company, although we support the informed use of commercial security technology. OWASP produces many types of materials in a collaborative, transparent, and open way.
+OWASP tidak berafiliasi dengan perusahaan teknologi mana pun, meskipun kami mendukung penggunaan teknologi keamanan komersial yang diinformasikan. OWASP memproduksi berbagai jenis bahan secara kolaboratif, transparan, dan terbuka.
 
-The OWASP Foundation is the non-profit entity that ensures the project's long-term success. Almost everyone associated with OWASP is a volunteer, including the OWASP board, chapter leaders, project leaders, and project members. We support innovative security research with grants and infrastructure.
+Yayasan OWASP adalah entitas nirlaba yang memastikan kesuksesan jangka panjang proyek. Hampir semua orang yang terkait dengan OWASP adalah relawan, termasuk dewan OWASP, pemimpin bab, pemimpin proyek, dan anggota proyek. Kami mendukung penelitian keamanan yang inovatif dengan hibah dan infrastruktur.
 
-Come join us!
+Ayo bergabung dengan kami!
 
 ## Copyright and License
 
 ![license](images/license.png)
 
 Copyright © 2003-2017 The OWASP Foundation. This document is released under the Creative Commons Attribution Share-Alike 4.0 license. For any reuse or distribution, you must make it clear to others the license terms of this work.
-
