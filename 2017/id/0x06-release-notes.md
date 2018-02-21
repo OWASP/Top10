@@ -1,4 +1,4 @@
-# RN Release Notes
+# RN Catatan Rilis
 
 ## Apa yang berubah dari tahun 2013 sampai 2017?
 
