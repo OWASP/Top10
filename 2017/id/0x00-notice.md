@@ -4,17 +4,17 @@
 
 ### Request for Comments
 
-This is the text version of the OWASP Top 10, and although it is useful for translators and those interested in a text version, it's not the official release, which is the PowerPoint / PDF version. 
+Ini adalah versi teks dari OWASP Top 10, dan meskipun ini berguna bagi penerjemah dan mereka yang tertarik dengan versi teks, ini bukan rilis resmi, yaitu versi PowerPoint / PDF.
 
-At this stage, we are asking for
+Pada tahap ini, kami memintanya
 
-* Translations - we have some teams working already, but do reach out to us if you can help
+* Terjemahan - kami memiliki beberapa tim yang sudah bekerja, tapi hubungi kami jika Anda dapat membantu
 
-We strongly urge for any corrections or issues to be logged at GitHub:
+Kami sangat mendesak agar ada koreksi atau masalah yang harus dicatat di GitHub:
 
 * [https://github.com/OWASP/Top10/issues](https://github.com/OWASP/Top10/issues)
 
-Through public transparency, we provide traceability and ensure that all voices are heard during this final month before publication.
+Melalui transparansi publik, kami memberikan penelusuran dan memastikan bahwa semua suara terdengar selama bulan terakhir ini sebelum dipublikasikan.
 
 * Andrew van der Stock
 * Brian Glas
