@@ -1,30 +1,30 @@
 # RN Release Notes
 
-## What changed from 2013 to 2017?
+## Apa yang berubah dari tahun 2013 sampai 2017?
 
-Change has accelerated over the last four years, and the OWASP Top 10 needed to change. We've completely refactored the OWASP Top 10, revamped the methodology, utilized a new data call process, worked with the community, re-ordered our risks, re-written each risk from the ground up, and added references to frameworks and languages that are now commonly used.
+Perubahan telah meningkat selama empat tahun terakhir, dan OWASP Top 10 perlu diubah. Kami telah benar-benar melakukan refactored OWASP Top 10, mengubah metodologinya, menggunakan proses panggilan data baru, bekerja dengan masyarakat, mengatur ulang risiko kami, menulis ulang setiap risiko dari awal, dan menambahkan referensi ke kerangka kerja dan bahasa yang sekarang sudah biasa digunakan
 
-Over the last few years, the fundamental technology and architecture of applications has changed significantly:
+Selama beberapa tahun terakhir, teknologi dan arsitektur mendasar dari aplikasi telah berubah secara signifikan:
 
-* Microservices written in node.js and Spring Boot are replacing traditional monolithic applications. Microservices come with their own security challenges including establishing trust between microservices, containers, secret management, etc. Old code never expected to be accessible from the Internet is now sitting behind an API or RESTful web service to be consumed by Single Page Applications (SPAs) and mobile applications. Architectural assumptions by the code, such as trusted callers, are no longer valid.
-* Single page applications, written in JavaScript frameworks such as Angular and React, allow the creation of highly modular feature-rich front ends. Client-side functionality that has traditionally been delivered server-side brings its own security challenges.
-* JavaScript is now the primary language of the web with node.js running server side and modern web frameworks such as Bootstrap, Electron, Angular, and React running on the client.
+Microservices yang ditulis di node.js dan Spring Boot menggantikan aplikasi monolitik tradisional. Microservices hadir dengan tantangan keamanan mereka sendiri termasuk membangun kepercayaan antara layanan mikroservice, kontainer, manajemen rahasia, dan lain-lain. Kode lama yang tidak pernah diharapkan dapat diakses dari Internet sekarang duduk di belakang layanan web API atau RESTful untuk dikonsumsi oleh Aplikasi Halaman Tunggal (SPA) dan aplikasi mobile. Asumsi arsitektur menurut kode, seperti penelepon yang terpercaya, sudah tidak berlaku lagi.
+Aplikasi halaman tunggal, yang ditulis dalam kerangka kerja JavaScript seperti Angular and React, memungkinkan pembuatan front end yang kaya fitur modular. Fungsi sisi klien yang secara tradisional telah disampaikan sisi server membawa tantangan keamanan tersendiri.
+JavaScript sekarang menjadi bahasa utama web dengan node.js menjalankan sisi server dan kerangka web modern seperti Bootstrap, Electron, Angular, dan React yang berjalan pada klien.
 
-## New issues, supported by data
+## Isu baru, didukung data
 
-* **A4:2017-XML External Entities (XXE)** is a new category primarily supported by source code analysis security testing tools ([SAST](https://www.owasp.org/index.php/Source_Code_Analysis_Tools)) data sets.
+A4: 2017-XML Entitas Eksternal (XXE) adalah kategori baru yang terutama didukung oleh kumpulan perangkat analisis keamanan pengujian (SAST) kumpulan kode (https://www.owasp.org/index.php/Source_Code_Analysis_Tools)) sumber.
 
-## New issues, supported by the community
+## Isu baru, didukung oleh masyarakat
 
-We asked the community to provide insight into two forward looking weakness categories. After over 500 peer submissions, and removing issues that were already supported by data (such as Sensitive Data Exposure and XXE), the two new issues are: 
+Kami meminta masyarakat untuk memberikan wawasan tentang dua kategori kelemahan kedepan. Setelah lebih dari 500 pengantar peer, dan menghapus isu-isu yang sudah didukung oleh data (seperti Sensitive Data Exposure and XXE), dua isu baru tersebut adalah:
 
-* **A8:2017-Insecure Deserialization**, which permits remote code execution or sensitive object manipulation on affected platforms.
-* **A10:2017-Insufficient Logging and Monitoring**, the lack of which can prevent or significantly delay malicious activity and breach detection, incident response, and digital forensics.
+A8: 2017-Insecure Deserialization, yang memungkinkan eksekusi kode jarak jauh atau manipulasi objek sensitif pada platform yang terpengaruh.
+A10: 2017-Pembukaan dan Pemantauan Tidak Cukup, kurangnya yang dapat mencegah atau secara signifikan menunda aktivitas berbahaya dan deteksi pelanggaran, respon insiden, dan forensik digital.
 
-## Merged or retired, but not forgotten
+## Bergabung atau pensiun, tapi tidak dilupakan
 
-* **A4-Insecure Direct Object References** and **A7-Missing Function Level Access Control** merged into **A5:2017-Broken Access Control**.
-* **A8-Cross-Site Request Forgery (CSRF)**, as many frameworks include [CSRF defenses](https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)), it was found in only 5% of applications.
-* **A10-Unvalidated Redirects and Forwards**, while found in approximately in 8% of applications, it was edged out overall by XXE.
+Referensi Objek Langsung A4-Tidak aman dan A7-Hilang fungsi level akses kontrol digabungkan menjadi A5: 2017- kontrol akses rusak.
+A8-Cross-Site Request Forgery (CSRF), karena banyak kerangka mencakup pertahanan CSRF (https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)), hanya ditemukan 5% aplikasi.
+A10-Unvalidated Redirects and Forwards, sementara ditemukan di sekitar 8% aplikasi, diarsipkan secara keseluruhan oleh XXE.
 
 ![0x06-release-notes-1](images/0x06-release-notes-1.png)
