@@ -82,6 +82,10 @@ generate() {
 # Italian
 #generate "it"
 
+# Bahasa indonesia
+#generate "id"
+generate "id"
+
 # Japanese
 #generate "jp"
 generate "ja"
