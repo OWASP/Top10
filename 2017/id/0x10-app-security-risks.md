@@ -12,7 +12,7 @@ dapat mengevaluasi kemungkinan yang diasosiasikan untuk setiap agen ancaman, vek
 mengkombinasikan dengan estimasi dampak teknis dan bisnis bagi organisasi Anda. Semua faktor ini menentukan risiko
 keseluruhan.
 
-## Apa Risiko Saya?n
+## Apa Risiko Saya?
 
 [OWASP Top 10](https://www.owasp.org/index.php/Top10) ini berfokus pada identifikasi risiko yang paling serius bagi sebagian besar organisasi. Untuk setiap risiko, kami memberikan informasi umum mengenai kemungkiinan dan dampak teknis dengan menggunakan skema penilaian sederhana berikut, yang berdasarkan pada  OWASP Risk Rating Methodology.  
 
@@ -27,7 +27,7 @@ Pada Edisi ini, kami telah memperbaharui Penilaian Risiko Sistem untuk membantu 
 
 Setiap organisasi itu unik, begitu pula aktor ancaman untuk organisasi tersebut, tujuan mereka, dan dampak dari setiap pelanggaran. Jika organisasi kepentingan publik menggunakan sistem manajemen konten (CMS) untuk informasi publik dan sistem kesehatan menggunakan CMS yang sama persis untuk catatan kesehatan yang sensitif, pelaku ancaman dan dampak bisnis dapat sangat berbeda untuk perangkat lunak yang sama. Penting untuk memahami risiko organisasi Anda berdasarkan pada agen ancaman dan dampak bisnis yang berlaku.
 
-Bila memungkinkan, nama risiko di Top 10 sesuai dengan [Common Weakness Enumeration](https://cwe.mitre.org/) (CWE)kelemahan untuk mempromosikan konvensi penamaan yang berlaku umum dan untuk mengurangi kebingungan.
+Bila memungkinkan, nama risiko di Top 10 sesuai dengan [Common Weakness Enumeration](https://cwe.mitre.org/) (CWE) kelemahan untuk mempromosikan konvensi penamaan yang berlaku umum dan untuk mengurangi kekeliruan.
 
 ## Referensi
 
