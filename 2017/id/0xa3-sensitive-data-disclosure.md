@@ -1,4 +1,4 @@
-# A3:2017 Paparan Data Sensitif
+# A3:2017 Pengungkapan Data Sensitif
 
 | Agen ancaman / vektor serangan | Kelemahan Keamanan | Dampak |
 | -- | -- | -- |
