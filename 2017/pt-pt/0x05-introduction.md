@@ -85,7 +85,7 @@ organizações a fazerem o mesmo e possivelmente serem vistas como um dos
 principais marcos da segurança baseada em evidências. O OWASP Top 10 não seria
 possível sem estas contribuições incríveis.
 
-Um agradecimento especial aos 516 indivíduos que gastaram o seu tempo a
+Um agradecimento especial aos mais de 500 indivíduos que gastaram o seu tempo a
 preencher o questionário à indústria. A voz deles ajudou a definir duas novas
 entradas no Top 10. Os comentários adicionais, as notas de encorajamento (e
 críticas) foram todos devidamente apreciados. Sabemos que o vosso tempo é
