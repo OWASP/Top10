@@ -1,18 +1,17 @@
 # GM Golden Master
 
-Important Notice
----
+## Important Notice
 
-## Request for Comments
+### Request for Comments
 
-This is the Golden Master, and once released, only high priority changes and small typos will be fixed. 
+This is the Golden Master, and once released, only high priority changes and small typos will be fixed.
 
-At this stage, we are asking for:
+At this stage, we are asking for
 
 * Translations - we have some teams working already, but do reach out to us if you can help
 * Very close review of the wording
 * Review diagrams and tables to make sure they are clear and useful
-* if risk factors (exploitability, prevalence, detectability, impact) are concise and accurate
+* If risk factors (exploitability, prevalence, detectability, impact) are concise and accurate
 * Vulnerability and Scenarios boxes are clear in meaning
 * Recommendations must be actionable
 * Any OWASP or External links are high quality and agree in concept and tone with the Top 10's content
@@ -20,7 +19,7 @@ At this stage, we are asking for:
 
 We strongly urge for any corrections or issues to be logged at GitHub:
 
-* https://github.com/OWASP/Top10/issues
+* [https://github.com/OWASP/Top10/issues](https://github.com/OWASP/Top10/issues)
 
 Through public transparency, we provide traceability and ensure that all voices are heard during this final month before publication.
 
