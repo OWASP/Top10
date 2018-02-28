@@ -1,10 +1,10 @@
-# +O What's Next for Organizations
+# +O Próximos Passos para Organizações
 
-## Start Your Application Security Program Now
+## Comece seu programa de segurança de aplicações agora
 
-Application security is no longer optional. Between increasing attacks and regulatory pressures, organizations must establish effective processes and capabilities for securing their applications and APIs. Given the staggering amount of code in the numerous applications and APIs already in production, many organizations are struggling to get a handle on the enormous volume of vulnerabilities. 
+Segurança de aplicações não é mais algo opcional. Entre os ataques crescentes e as pressões regulatórias, as organizações devem estabelecer processos e capacidades eficazes para garantir suas aplicações e APIs. Dada a incrível quantidade de código nas inúmeras aplicações e APIs já em produção, muitas organizações estão lutando para lidar com o enorme volume de vulnerabilidades.
 
-OWASP recommends organizations establish an application security program to gain insight and improve security across their app and API portfolio. Achieving application security requires many different parts of an organization to work together efficiently, including security and audit, software development, business, and executive management. Security should be visible and measurable, so that all the different players can see and understand the organization’s application security posture. Focus on the activities and outcomes that actually help improve enterprise security by eliminating or reducing risk. OWASP SAMM provides a lot of guidance in this space, and is the source of most of the key activities:
+OWASP recomenda que as organizações estabeleçam um programa de segurança de aplicações para obter informações e melhorar a segurança em suas aplicações e portfólio de APIs. Alcançar a segurança de aplicações exige que muitas partes diferentes de uma organização trabalhem em conjunto de forma eficiente, incluindo segurança e auditoria, desenvolvimento de software, negócios e gerenciamento executivo. A segurança deve ser visível e mensurável, para que todos os diferentes jogadores possam ver e entender a postura de segurança de aplicações da organização. Concentre-se nas atividades e nos resultados que realmente ajudam a melhorar a segurança empresarial, eliminando ou reduzindo o risco. OWASP SAMM fornece muitas orientações neste espaço e é a fonte da maioria das principais atividades:
 
 ### Get Started
 
