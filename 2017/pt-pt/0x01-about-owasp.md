@@ -12,13 +12,12 @@ A OWASP disponibiliza de forma livre e aberta:
 * Livros completos sobre testes de segurança aplicacional, desenvolvimento
   de código seguro e revisão de código focada em segurança
 * Apresentações e vídeos
-* [Cheat sheets](https://www.owasp.org/index.php/OWASP_Cheat_Sheet_Series)
-  sobre assuntos diversos
+* [Cheat sheets][1] sobre assuntos diversos
 * Controlos e bibliotecas de segurança _standard_
-* [Capítulos locais espalhados por todo o mundo](https://www.owasp.org/index.php/OWASP_Chapter)
+* [Capítulos locais espalhados por todo o mundo][2]
 * Investigação de ponta
-* Múltiplas [conferências a nível mundial](https://www.owasp.org/index.php/Category:OWASP_AppSec_Conference)
-* [Listas de discussão](https://lists.owasp.org/mailman/listinfo)
+* Múltiplas [conferências a nível mundial][3]
+* [Listas de discussão][4]
 
 Mais informação em: https://www.owasp.org.
 
@@ -53,4 +52,9 @@ Copyright © 2003-2017 Fundação OWASP. Este documento está licenciado de acor
 com uma licença Creative Commons Attribution ShareAlike 4.0. Para algum tipo de
 reutilização ou distribuição, deve deixar claro para terceiros os termos da
 licença deste trabalho.
+
+[1]: https://www.owasp.org/index.php/OWASP_Cheat_Sheet_Series
+[2]: https://www.owasp.org/index.php/OWASP_Chapter
+[3]: https://www.owasp.org/index.php/Category:OWASP_AppSec_Conference
+[4]: https://lists.owasp.org/mailman/listinfo
 

@@ -24,7 +24,7 @@ Nesta versão tivemos especial cuidado na definição dos problemas e na melhori
 das recomendações por forma a que as mesmas sejam práticas comuns a adoptar
 como um _standard_ de segurança aplicacional que cobre cerca de 80% a 90% dos
 ataques e ameaças mais comuns. Encorajamos as organizações de maior dimensão a
-usarem o [Standard OWASP para Verificação da Segurança Aplicacional](https://www.owasp.org/index.php/ASVS)
+usarem o [Standard OWASP para Verificação da Segurança Aplicacional][1]
 como verdadeiro _standard_ se um for necessário, mas para a grande maioria, o
 OWASP Top 10 é um excelente ponto de partida para a viagem na segurança
 aplicacional.
@@ -60,4 +60,6 @@ concluirmos esta tarefa com o suporte da comunidade. Obrigado!
 * Brian Glas
 * Neil Smithline
 * Andrew van der Stock
+
+[1]: https://www.owasp.org/index.php/ASVS
 
