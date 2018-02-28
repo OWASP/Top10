@@ -1,47 +1,48 @@
-# +A: What's next for Application Managers
+# +A: Próximos Passos para Gerente de Aplicações
 
-## Manage the full Application Lifecycle
+## Gerencie o Ciclo de Vida Completo da Aplicação
 
-Applications belong to the most complex systems humans regularly create and maintain. IT management for an application should be performed by IT specialists who are responsible for the overall IT lifecycle of an application. We suggest establishing the role of application managers as technical counterpart to the application owner. The application manager is in charge of the whole application lifecycle from IT perspective from collecting the requirements until the process of retiring systems, which is often overlooked.
+Aplicações estão entre os sistemas mais complexos que os seres humanos criam e mantêm regularmente. O gerenciamento de TI para uma aplicação deve ser realizado por especialistas de TI que são responsáveis pelo ciclo geral de TI de uma aplicação. Sugerimos estabelecer o papel de gerente de aplicações como contrapartida técnica para o dono da aplicação. O gerente de aplicações está encarregado de todo o ciclo de vida da aplicação sob a perspectiva de TI desde coletar os requisitos até o processo de aposentadoria de sistemas, que muitas vezes é ignorado.
 
-## Requirements and Resource Management
+## Requisitos e Gerenciamento de Recursos
 
-* Collect and negotiate the business requirements for an application with the business, including the protection requirements with regard to confidentiality, authenticity, integrity and availability of all data assets, and the expected business logic.
-* Compile the technical requirements including functional and non functional security requirements.
-* Plan and negotiate the budget that covers all aspects of design, build, testing and operation, including security activities.
+* Colete e negocie os requisitos de negócios para uma aplicação com o negócio, incluindo os requisitos de proteção em relação à confidencialidade, autenticidade, integridade e disponibilidade de todos os ativos de dados e a lógica comercial esperada.
+* Compile os requisitos técnicos, incluindo requisitos de segurança funcionais e não funcionais.
+* Planeje e negocie o orçamento que abrange todos os aspectos do projeto, construção, teste e operação, incluindo atividades de segurança.
 
-## Request for Proposals (RFP) and Contracting
+## Pedido de Propostas (RFP) e Contratação
 
-* Negotiate with internal or external developers the requirements, including guidelines and security requirements with respect to your security program, e.g. SDLC, best practices.
-* Rate the fulfillment of all technical requirements including a planning and design phase.
-* Negotiate all technical requirements including design, security and service level agreements (SLA).
-* Adopt templates and checklists, such as [OWASP Secure Software Contract Annex](https://www.owasp.org/index.php/OWASP_Secure_Software_Contract_Annex). **Note**: The Annex is a sample specific to US contract law, and is likely to need legal review in your jurisdiction. Please consult qualified legal advice before using the Annex
+* Negocie com desenvolvedores internos ou externos os requisitos, incluindo diretrizes e requisitos de segurança em relação ao seu programa de segurança, por exemplo, SDLC, melhores práticas.
+* Avalie o cumprimento de todos os requisitos técnicos, incluindo uma fase de planejamento e design.
+* Negocie todos os requisitos técnicos, incluindo acordos de design, segurança e nível de serviço (SLA).
+* Adote modelos e listas de verificação, como [Anexo de Contrato de Software Seguro OWASP](https://www.owasp.org/index.php/OWASP_Secure_Software_Contract_Annex). **Nota**: O Anexo é uma amostra específica da lei de contratos dos EUA e é provável que necessite de revisão legal em sua jurisdição. Consulte conselhos legais qualificados antes de usar o Anexo
 
-## Planning and Design
+## Planejamento e Design
 
-* Negotiate planning and design with the developers and internal shareholders, e.g. security specialists.
-* Define the security architecture, controls, and countermeasures appropriate to the protection needs and the expected threat level. This should be supported by security specialists.
-* Ensure that the application owner accepts remaining risks or provides additional resources.
-* In each sprint, ensure security stories are created including constraints added for non-functional requirements.
+* Negocie planejamento e design com os desenvolvedores e acionistas internos, por exemplo especialistas em segurança.
+* Defina a arquitetura de segurança, controles e contramedidas apropriadas às necessidades de proteção e ao nível de ameaça esperado. Isso deve ser suportado por especialistas em segurança.
+* Certifique-se de que o proprietário do aplicativo aceita os riscos remanescentes ou fornece recursos adicionais.
+* Em cada sprint, garantir que as histórias de segurança sejam criadas, incluindo restrições adicionadas para requisitos não funcionais.
 
-## Deployment, Testing and Rollout
+## *Deployment*, Testes e *Rollout*
 
-* Automate the secure deployment of the application, interfaces and of all components needed, including required authorizations.
-* Test the technical functions and integration with the IT architecture and coordinate business tests.
-* Create "use" and "abuse" test cases from technical and business perspectives.
-* Manage security tests according to internal processes, the protection needs and the level of security required by the application.
-* Put the application in operation and migrate from previously used applications if needed.
-* Finalize all documentation, including the CMDB and security architecture.
+* Automatize o *deploy* seguro do aplicativo, interfaces e de todos os componentes necessários, incluindo as autorizações necessárias.
+* Teste as funções técnicas e integração com a arquitetura de TI e coordene os testes de negócios.
+* Crie casos de teste de "uso" e "abuso" de perspectivas técnicas e empresariais.
+* Gerencie testes de segurança de acordo com os processos internos, as necessidades de proteção e o nível de segurança exigido pelo aplicativo.
+* Coloque o aplicativo em operação e migre dos aplicativos usados anteriormente, se necessário.
+* Finalize toda a documentação, incluindo o CMDB e arquitetura de segurança.
 
-## Operating and Changes
+## Operação e Mudanças
 
-* Operating including the security management for the application (e.g. patch management).
-* Raise the security awareness of users and manage conflicts about usability vs security.
-* Plan and manage changes, e.g. migrate to new versions of the application or other components like OS, middleware and libraries.
-* Update all documentation, including in CMDB and the security architecture, controls, and countermeasures, including any runbooks or project documentation.
+* Opere incluindo o gerenciamento de segurança para a aplicação (por exemplo, gerenciamento de patches).
+* Promova a consciência de segurança dos usuários e gerencie conflitos sobre usabilidade vs segurança.
+* Planeje e gerencie mudanças, por exemplo, migre para novas versões da aplicação ou outros componentes como SO, middleware e bibliotecas.
+* Atualize toda a documentação, inclusive no CMDB e na arquitetura de segurança, controles e contramedidas, incluindo qualquer procedimento ou documentação do projeto.
 
-## Retiring Systems
+## Aposentando Sistemas
 
-* Any required data should be archived. All other data should be securely wiped.
-* Securely retire the application, including deleting unused accounts and roles and permissions.
-* Set your application's state to retired in the CMDB.
+* Todos os dados necessários devem ser arquivados. Todos os outros dados devem ser totalmente apagados.
+* Retire com segurança a aplicação, incluindo a exclusão de contas e funções não utilizadas e permissões.
+* Defina o estado da sua aplicação a ser aposentada no CMDB.
+
