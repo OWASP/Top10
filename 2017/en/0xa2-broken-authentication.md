@@ -44,8 +44,8 @@ Scenario #1: [credential stuffing](https://www.owasp.org/index.php/Credential_st
 ### OWASP
 
 * [OWASP Proactive Controls: Implement Identity and Authentication Controls](https://www.owasp.org/index.php/OWASP_Proactive_Controls#5:_Implement_Identity_and_Authentication_Controls)
-* [OWASP Application Security Verification Standard: V2 Authentication](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
-* [OWASP Application Security Verification Standard: V3 Session Management](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
+* [OWASP Application Security Verification Standard: V2 Authentication](https://www.owasp.org/index.php/ASVS_V2_Authentication)
+* [OWASP Application Security Verification Standard: V3 Session Management](https://www.owasp.org/index.php/ASVS_V3_Session_Management)
 * [OWASP Testing Guide: Identity](https://www.owasp.org/index.php/Testing_Identity_Management)
  and [Authentication](https://www.owasp.org/index.php/Testing_for_authentication)
 * [OWASP Cheat Sheet: Authentication](https://www.owasp.org/index.php/Authentication_Cheat_Sheet)
