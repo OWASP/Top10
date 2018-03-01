@@ -9,7 +9,7 @@
 
 O controle de acesso impõe uma política que os usuários não podem atuar fora das suas permissões pretendidas. As falhas geralmente levam à divulgação não autorizada de informações, modificações ou destruição de todos os dados, ou a realização de uma função de negócio fora dos limites do usuário. As vulnerabilidades comuns de controle de acesso incluem:
 
-* Ignorar verificações de controle de acesso modificando a URL, o estado interno do aplicativo ou a página HTML, ou simplesmente usando uma ferramenta de ataque de API personalizada.
+* Ignorar verificações de controle de acesso modificando a URL, o estado interno da aplicação ou página HTML, ou simplesmente usando uma ferramenta de ataque de API personalizada.
 * Permitir que a chave primária seja alterada para o registro de outros usuários, como visualizar ou editar a conta de outra pessoa.
 * Elevação de privilégio. Atuando como um usuário sem estar logado, ou atuando como um administrador quando conectado como usuário.
 * Manipulação de metadados, como reproduzir ou adulterar um token de controle de acesso JWT ou um cookie ou campo oculto manipulado para elevar privilégios ou abusar da invalidação JWT.
@@ -21,7 +21,7 @@ O controle de acesso impõe uma política que os usuários não podem atuar fora
 O controle de acesso só é efetivo se for aplicado no código confiável do servidor ou na API server-less, onde o atacante não pode modificar a verificação de controle de acesso ou os metadados.
 
 * Com exceção de recursos públicos, negar por padrão. 
-* Implementar mecanismos de controle de acesso uma vez e reutilizá-los durante todo o aplicativo, incluindo CORS. 
+* Implementar mecanismos de controle de acesso uma vez e reutilizá-los durante toda a aplicação, incluindo CORS. 
 * Os controles de acesso ao Model devem impor a propriedade do registro, em vez de aceitar que o usuário possa criar, ler, atualizar ou excluir qualquer registro. 
 * Requisitos únicos de limites de negócios de aplicações devem ser aplicados por modelos de domínio. 
 * Desative a listagem do diretório do servidor web e assegure-se de que os metadados do arquivo (por exemplo, .git) e os arquivos de backup não estejam presentes na raiz de pastas web. 
