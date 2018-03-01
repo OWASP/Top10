@@ -35,7 +35,7 @@ O controle de acesso só é efetivo se for aplicado no código confiável do ser
 **Cenário #1**: O aplicativo usa dados não verificados em uma chamada SQL que está acessando informações de conta:
 
 ```
-  pstmt.setString(1, request.ge arameter("acct"));
+  pstmt.setString(1, request.getParameter("acct"));
   ResultSet results = pstmt.executeQuery( );
 ```
 
