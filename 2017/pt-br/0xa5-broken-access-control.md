@@ -9,7 +9,7 @@
 
 O controle de acesso impõe uma política que os usuários não podem atuar fora das suas permissões pretendidas. As falhas geralmente levam à divulgação não autorizada de informações, modificações ou destruição de todos os dados, ou a realização de uma função de negócio fora dos limites do usuário. As vulnerabilidades comuns de controle de acesso incluem:
 
-* Ignorar verificações de controle de acesso modificando a URL, o estado interno da aplicação ou página HTML, ou simplesmente usando uma ferramenta de ataque de API personalizada.
+* Contornar verificações de controle de acesso modificando a URL, o estado interno da aplicação ou página HTML, ou simplesmente usando uma ferramenta de ataque de API personalizada.
 * Permitir que a chave primária seja alterada para o registro de outros usuários, como visualizar ou editar a conta de outra pessoa.
 * Elevação de privilégio. Atuando como um usuário sem estar logado, ou atuando como um administrador quando conectado como usuário.
 * Manipulação de metadados, como reproduzir ou adulterar um token de controle de acesso JWT ou um cookie ou campo oculto manipulado para elevar privilégios ou abusar da invalidação JWT.
