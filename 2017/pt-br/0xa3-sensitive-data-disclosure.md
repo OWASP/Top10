@@ -10,7 +10,6 @@
 A primeira coisa é determinar as necessidades de proteção de dados em trânsito e em repouso. Por exemplo, as senhas, números de cartão de crédito, registros de saúde, informações pessoais e segredos comerciais requerem proteção extra, especialmente se esses dados estiverem abrangidos pelas leis de privacidade, ex.: Regulamentação Geral de Proteção de Dados da UE (GDPR), ou regulamentos, ex.: proteção financeira de dados, como PCI Data Security Standard (PCI DSS). Para todos esses dados:
 
 * Existe algum dado sendo transmitido em texto aberto? Isto diz respeito a qualquer protocolo como http, smtp, ftp. O tráfego de internet externo é especialmente perigoso, mas verifique também todo o tráfego interno, como entre balanceadores de carga, gateways, servidores web ou sistemas back-end.
-* Is sensitive data stored in clear text, including backups?
 * Algum dados sensível é armazenado em texto aberto, incluindo backups?
 * Algum algoritmo criptográfico antigo ou fraco é usado por padrão ou em código antigo?
 * Estão sendo usadas chaves de criptografia padrão, chaves de criptografia fracas geradas ou reutilizadas, ou o falta algum gerenciamento de chaves ou de troca delas?
