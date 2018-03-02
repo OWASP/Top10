@@ -19,11 +19,10 @@ Ataques XSS típicos incluem o roubo de sessão, a aquisição de contas, *bypas
 
 Prevenir XSS requer a separação de dados não confiáveis do conteúdo ativo do navegador. Isso pode ser alcançado por:
 
-
 * Use frameworks que automaticamente escapam o XSS por design, como os mais recentes Ruby on Rails, React JS. Aprenda as limitações de proteção XSS de cada framework e cuide adequadamente os casos de uso que não são cobertos.
 * Usar frameworks que automaticamente sanitizam o XSS por design, como Ruby on Rails e React JS mais recentes. Aprenda as limitações de proteção XSS de cada framework e cuide adequadamente os casos de uso que não são cobertos.
 * Sanitizar por *escape* dados de solicitação HTTP não confiáveis com base no contexto na saída HTML (corpo, atributo, JavaScript, CSS ou URL) irá resolver vulnerabilidades XSS refletidas e armazenadas. A [Folha de Dicas OWASP 'XSS Prevention'](https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet) contém detalhes sobre técnicas de *escape* de dados necessárias.
-* Aplicar *enconding* sensível ao contexto ao modificar o documento do navegador no lado do cliente atua contra DOM XSS. Quando isso não puder ser evitado, técnicas de *escaping* sensíveis ao contexto semelhantes podem ser aplicadas às APIs do navegador, conforme descrito na Folha de Dicas OWASP 'DOM Based XSS Prevention'.
+* Aplicar *encoding* sensível ao contexto ao modificar o documento do navegador no lado do cliente atua contra DOM XSS. Quando isso não puder ser evitado, técnicas de *escaping* sensíveis ao contexto semelhantes podem ser aplicadas às APIs do navegador, conforme descrito na Folha de Dicas OWASP 'DOM Based XSS Prevention'.
 * Habilitar um [Content Security Policy (CSP)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) é um controle de mitigação de defesa profunda contra o XSS. É eficaz se não existem outras vulnerabilidades que permitiriam colocar códigos maliciosos através de arquivos locais (por exemplo, sobrescritas de *path traversal* ou bibliotecas vulneráveis em fontes permitidas).
 
 ## Examplo de Cenários de Ataque
