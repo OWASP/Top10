@@ -12,7 +12,7 @@ A aplicação pode ser vulnerável se:
 * Recursos desnecessários são habilitados ou instalados (por exemplo, portas, serviços, páginas, contas ou privilégios desnecessários).
 * As contas padrão e suas senhas ainda são ativadas e inalteradas.
 * O tratamento de erros revela vestígios de *stacktraces* ou outras mensagens de erro excessivamente informativas aos usuários.
-* Para sistemas atualizados, os recursos de segurança mais recentes são desativados ou não estão configurados de forma segura.
+* Para sistemas atualizados, os recursos de segurança mais recentes estão desativados ou não estão configurados de forma segura.
 * As configurações de segurança nos servidores de aplicação, frameworks de aplicação (por exemplo, Struts, Spring, ASP.NET), bibliotecas, bancos de dados, etc., não configurados para valores seguros.
 * O servidor não envia cabeçalhos ou diretivas de segurança ou não está configurado para valores seguros.
 * O software está desatualizado ou vulnerável (consulte **A9:2017-Utilização de Componentes com Vulnerabilidades Conhecidas**). 
@@ -22,7 +22,7 @@ Sem um processo planejado e repetido de configuração de segurança de aplicaç
 
 Processos de instalação segura devem ser implementados, incluindo:
 
-* Um processo de endurecimento repetido que torna rápido e fácil implantar outro ambiente que esteja devidamente bloqueado. Desenvolvimento, QA e ambientes de produção devem ser configurados de forma idêntica, com diferentes credenciais usadas em cada ambiente. Este processo deve ser automatizado para minimizar o esforço necessário para configurar um novo ambiente seguro.
+* Um processo de endurecimento replicável que torne rápido e fácil implantar outro ambiente que esteja devidamente bloqueado. Desenvolvimento, QA e ambientes de produção devem ser configurados de forma idêntica, com diferentes credenciais usadas em cada ambiente. Este processo deve ser automatizado para minimizar o esforço necessário para configurar um novo ambiente seguro.
 * Uma plataforma mínima sem recursos, componentes, documentação e amostras desnecessários. Remova ou não instale recursos e frameworks não utilizados.
 * Uma tarefa para revisar e atualizar as configurações apropriadas para todas as notas de segurança, atualizações e patches como parte do processo de gerenciamento de patches (veja **A9:2017-Utilização de Componentes com Vulnerabilidades Conhecidas**).
 * Uma arquitetura de aplicações segmentados que forneça separação efetiva e segura entre componentes ou inquilinos, com segmentação, conteinerização ou grupos de segurança de nuvem (ACLs).
