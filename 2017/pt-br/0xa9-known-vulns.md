@@ -20,7 +20,7 @@ Você provavelmente está vulnerável:
 Projetos de software devem ter um processo para:
 
 * Remover dependências não utilizadas, recursos desnecessários, componentes, arquivos e documentação.
-* Manter continuamente um inventário das versões dos componentes do lado do cliente e do lado do servidor (por exemplo, frameworks, bibliotecas) e suas dependências usando ferramentas como versões, DependencyCheck, retire.js, etc.
+* Manter continuamente um inventário das versões dos componentes do lado do cliente e do lado do servidor (por exemplo, frameworks, bibliotecas) e suas dependências usando ferramentas como *versions, DependencyCheck, retire.js*, etc.
 * Monitorar continuamente fontes como CVE e NVD para vulnerabilidades em seus componentes. Use ferramentas de análise de composição de software para automatizar o processo. Assine os alertas de e-mails para vulnerabilidades de segurança relacionadas aos componentes que você usa.
 * Obtenha seus componentes apenas de fontes oficiais e, quando possível, prefira pacotes assinados para reduzir a chance de obter um componente malicioso modificado.
 * Monitore bibliotecas e componentes que não são mantidos ou não tem mais patches de segurança para versões mais antigas. Se o patch não for possível, considere implantar um patch virtual para monitorar, detectar ou proteger contra o problema descoberto.
