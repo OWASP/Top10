@@ -14,7 +14,7 @@ A primeira coisa é determinar as necessidades de proteção de dados em trânsi
 * Algum algoritmo criptográfico antigo ou fraco é usado por padrão ou em código antigo?
 * Estão sendo usadas chaves de criptografia padrão, chaves de criptografia fracas geradas ou reutilizadas, ou o falta algum gerenciamento de chaves ou de troca delas?
 * A criptografia não é aplicada, por exemplo, existe alguma diretiva ou cabeçalho de segurança de *user agent* (navegador) faltando?
-* O *user agent* (por exemplo, aplicativo, cliente de email) não verifica se o certificado do servidor recebido é válido.
+* O *user agent* (por exemplo, aplicativo, cliente de email) não verifica se o certificado recebido do servidor é válido.
 
 Ver ASVS [Crypto (V7), Data Protection (V9) and SSL/TLS (V10)](https://www.owasp.org/index.php/ASVS).
 
