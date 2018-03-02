@@ -12,7 +12,7 @@ Insuficiência de logs, de detecção, de monitoração e de resposta ativa ocor
 * Eventos auditáveis, como logins, logins com falha e transações de alto valor não são registrados.
 * Os logs de aplicações e APIs não são monitorados para atividades suspeitas.
 * Os limiares de alerta e a escalação da resposta, conforme o risco dos dados detidos pela aplicação, não estão em vigor nem são efetivos.
-* Testes de penetração e varredura pelas ferramentas [DAST](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools) (como [OWASP ZAP](https://www.owasp.org/index.php)/OWASP_Zed_Attack_Proxy_Project)) não desencadeiam alertas.
+* Testes de penetração e varredura pelas ferramentas [DAST](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools) (como [OWASP ZAP](https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project)) não desencadeiam alertas.
 
 Para as organizações maiores e de alto desempenho, a falta de respostas ativas, como atividades de alerta e resposta em tempo real como o bloqueio de ataques automatizados em aplicações Web e particularmente APIs, colocaria a organização em risco de um comprometimento estendido. A resposta não precisa necessariamente ser visível para o invasor, apenas que a aplicação e infra-estrutura associada, frameworks, camadas de serviço, etc. podem detectar e alertar humanos ou ferramentas para responder em tempo quase real.
 
