@@ -22,7 +22,7 @@ O controle de acesso só é efetivo se for aplicado no código confiável do ser
 
 * Com exceção de recursos públicos, negar por padrão. 
 * Implementar mecanismos de controle de acesso uma vez e reutilizá-los durante toda a aplicação, incluindo CORS. 
-* Os controles de acesso ao Model devem impor a propriedade do registro, em vez de aceitar que o usuário possa criar, ler, atualizar ou excluir qualquer registro. 
+* Os controles de acesso ao Model devem impor a posse do registro, em vez de aceitar que o usuário possa criar, ler, atualizar ou excluir qualquer registro. 
 * Requisitos únicos de limites de negócios de aplicações devem ser aplicados por modelos de domínio. 
 * Desative a listagem do diretório do servidor web e assegure-se de que os metadados do arquivo (por exemplo, .git) e os arquivos de backup não estejam presentes na raiz de pastas web. 
 * Registre as falhas de controle de acesso, alerte administradores quando apropriado (por exemplo, falhas repetidas). 
