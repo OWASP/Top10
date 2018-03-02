@@ -1,60 +1,125 @@
 # A3:2017 Exposição de Dados Sensíveis
 
-| Agentes de Ameaça/Vectores de Ataque | Fraquezas de Segurança           | Impactos               |
+| Agentes de Ameaça/Vetores de Ataque | Vulnerabilidade de Segurança | Impactos |
 | -- | -- | -- |
-| Nível de Acesso \| Exploração 2 | Prevalência 3 \| Deteção 2 | Técnica 3 \| Negócio |
-| Até mesmo atacantes anónimos não atacam e quebram directamente a criptografia. Eles quebram outra coisa qualquer, tais como roubar chaves, efectuar ataques de homem no meio, roubar dados em claro do servidor, quando estiver em transito, ou no cliente do utilizador, p.e. no browser web. É necessário algum tipo de ataque manual. | Ao longo dos últimos anos, este tem sido o ataque com maior impacto. A falha mais comum é simplesmente não encriptar dados sensíveis. Quando a criptografia é aplicada, geração fraca de chaves e má gestão das mesmas, e utilização de algoritmos criptográficos fracos é comum, em particular técnicas fracas de geração de resumos de palavras-passe. Para dados em trânsito, as fraquezas do lado do servidor são fáceis de detectar, mas díficil para dados em repouso. Ambas com uma nível de exploração muito variável. | As falhas comprometem frequentemente todos os dados que deveriam ser protegidos. Tipicamente, esta informação inclui informação pessoal sensível (*Personal Identifiable Information* - PII) tal como registos de saúde, credenciais, dados pessoais, cartões de crédito, que frequentemente requerem protecção definidas por leis ou regulamentos, tais como o RGPD EU (norma europeia - Regulamento Geral para a Protecção de Dados) ou leis locais de privacidade. |
+| Nível de Acesso \| Abuso 2 | Prevalência 3 \| Deteção 2 | Técnica 3 \| Negócio |
+| Tipicamente os atacantes não quebram directamente a criptografia. Ao invés, roubam chaves, executam ataques Man-in-the-Middle ou roubam dados sem qualquer tipo de proteção armazenados no servidor, em trânsito ou mesmo do dispositivo do cliente e.g. navegador. Normalmente é necessário um ataque manual. Bases de dados de palavras-chave previamente subtraídas podem ser atacadas por força bruta ou quebradas por GPUs | Ao longo dos últimos anos este tem sido o ataque com maior impacto. A falha mais comum é simplesmente a falta de encriptação de dados sensíveis. Quando a criptografia é aplicada, é comum a geração de chaves fracas e a sua má gestão, é também comum a utilização de algoritmos criptográficos, protocolos e cifra fracos. Para dados em trânsito, as vulnerabilidades no servidor são geralmente fáceis de detectar, mas díficil para dados em repouso. A complexidade de abuso destas vulnerabilidades é muito variável. | As falhas comprometem frequentemente todos os dados que deveriam estar protegidos. Tipicamente, esta informação inclui informação pessoal sensível (_Personal Identifiable Information_ - PII) tal como registos de saúde, credenciais, dados pessoais, cartões de crédito, que frequentemente requerem protecção definidas por leis ou regulamentos, tais como o RGPD EU ou leis locais de privacidade. |
 
-## Está a Aplicação Vulnerável?
+## A Aplicação é Vulnerável?
 
-A primeira coisa é determinar as necessidades de protecção dos dados em trânsito e em repouso. Por exemplo, palavras-passe, números de cartões de crédito, registos de saúde, e informação pessoal requerem proteção extra, em particular se os dados forem abrangidos pela regulamentação europeia RGPD, regulamentos ou leis locais de privacidade, tais como o PCI *Data Security Standard* (PCI DSS), ou leis de registos de saúde, tais como o *Health Insurance Portability Act* (HIPAA). Para todos estes dados:
+A primeira coisa a fazer é determinar as necessidades de protecção dos dados em
+trânsito e quando em repouso. Por exemplo, palavras-passe, números de cartões de
+crédito, registos de saúde, informação pessoal e segredos de negócio requerem
+proteção extra, em particular se os dados forem abrangidos por legislação sobre
+proteção de dados e.g. norma Europeia RGPD - Regulamento Geral para a Proteção
+de Dados, ou regulamentos e.g. proteção de dados financeiros PCI Data Security
+Standard (PCI DSS). Para todos estes dados:
 
-* Existem alguns dados do site que sejam transmitidos em claro, interna ou externamente? O tráfego Internet é especialmente perigoso, mas de balanceadores de carda para servidores web e de servidores web para sistemas de backend, pode ser problemático.
-* Existe dados sensíveis armazenados em claro, incluindo cópias de segurança?
-* Estão a ser usados algoritmos criptográficos antigos ou fracos no código actual ou antigo? (ver **A6:2017 Security Misconfiguration**)
-* Estão a ser usadas chaves criptográficas por defeito, estão a ser geradas ou re-utilizadas chaves criptográficas fracas, ou não estão a ser geridas convenientemente nem existe rotatividade?
-* Não está a encriptação a ser forçada, p.e. existem algumas directivas de segurança ou cabeçalhos do agente do utilizador (browser web) que não estejam presentes?
+* Existem dados transmitidos em claro? Isto é transversal a qualquer protocolo
+  e.g. HTTP, SMTP, FTP. O tráfego Internet é especialmente perigoso, mas deve
+  verificar também o tráfego interno e.g. entre balanceadores, _gateways_,
+  servidores web ou servidores aplicacionais.
+* Existem dados sensíveis armazenados em claro, incluindo cópias de segurança?
+* Estão a ser usados algoritmos criptográficos antigos ou fracos no código
+  actual ou antigo?
+* Estão a ser usadas chaves criptográficas padrão, estão a ser geradas ou
+  re-utilizadas chaves criptográficas fracas, ou não estão a ser geridas
+  convenientemente nem existe rotatividade?
+* A encriptação não está a ser forçada e.g. existem algumas directivas de
+  segurança ou cabeçalhos do agente do utilizador (navegador web) que não
+  estejam presentes?
+* O agente do utilizador e.g. aplicação, cliente de email, não está a verificar
+  a validade do certificado do servidor?
 
-Ver as áreas do ASVS [Crypto (V7), Data Protection (V9) and SSL/TLS (V10)](https://www.owasp.org/index.php/ASVS).
+Ver as áreas do ASVS [Crypto (V7), Data Protection (V9) and SSL/TLS(V10)][1].
 
 ## Como Prevenir?
 
-Efectuar o seguinto, ou pelo menos consultar as referências:
+No mínimo realizar os seguintes passos e consultar as referências:
 
-* Classificar is dados processados, armazenados ou transmitidos por um sistema. Aplicar controlos de acordo com a classificação.
-Rever as leis ou regulamentos de provacidade aplicados a dados sensíveis, e proteger os mesmos de acordo com as orbrigações regulamentares.
-* Não armazene dados sensíveis desnecessariamente. Descarte-os os mais depressa possível ou use técnicas de criação de "tokens" e truncagem alinhados com o PCI DSS. Dados que não sejam retidos não podem ser roubados.
-* Tenha a certeza que encriptam todos os dados sensíveis em repouso.
-* Encripte todod os dados em trânsitp, usando por exemplo TLS. Force isto usando directivas como o HTTP Strict Transport Security ([HSTS](https://www.owasp.org/index.php/HTTP_Strict_Transport_Security_Cheat_Sheet)).
-* Assegure o uso de algoritmos fortes e actualizadas para cifras, parâmetros, protocolos e chaves que sejam usados e que mecanismos apropriados de gestão de chaves estão em uso. Considere a utilização de [módulos criptográficos](https://csrc.nist.gov/projects/cryptographic-module-validation-program/validated-modules/search).
-* Armazene palavras-passe usando usando algoritmos fortes e adaptativos específicos para proteção de palavras-passe, tais como o [Argon2](https://www.cryptolux.org/index.php/Argon2), [scrypt](https://wikipedia.org/wiki/Scrypt), [bcrypt](https://wikipedia.org/wiki/Bcrypt) e [PBKDF2](https://wikipedia.org/wiki/PBKDF2) com um factor de complexidade suficiente para prevenir contra ataques de quebra por GPU.
-* Desabilitar a cache para respostas que contenham dados sensíveis.
+* Classificar os dados processados, armazenados ou transmitidos por uma
+  aplicação. Identificar que dados são sensíveis de acordo com a legislação de
+  proteção de dados, requisitos regulamentares ou necessidades do negócio.
+* Aplicar controlos de acordo com a classificação.
+* Não armazene dados sensíveis desnecessariamente. Descarte-os o mais depressa
+  possível ou use técnicas de criação de "tokens" e truncagem. Dados que não são
+  retidos não podem ser roubados.
+* Garanta que todos os dados em repouso são encriptados.
+* Assegure o uso de algoritmos, protocolos e chaves fortes, _standard_ e atuais,
+  assim como mecanismos apropriados de gestão das chaves em uso.
+* Encripte todos os dados em trânsito usando protocolos seguros como TLS
+  combinado com cifras que permitam _Perfect Forward Secrecy_ (PFS),
+  prioritização das cifras pelo servidor e pârametros seguros. Force o uso de
+  encriptação recorrendo a diretivas como [HTTP Strict Transport Security
+  (HSTS)][2].
+* Desative a _cache_ para respostas que contenham dados sensíveis.
+* Armazene palavras-passe usando algoritmos fortes e adaptativos e funções de
+  resumo (_hashing_) que suportem `salt` e `work factor` (`delay factor`), tais
+  como: [Argon2][3], [scrypt][4], [bcrypt][5] e [PBKDF2][6].
 * Verificar de forma independente a eficácia das suas configurações.
 
 ## Exemplos de Cenários de Ataque
 
-**Cenário #1**:  Uma aplicação encripta os números dos cartões de crédito numa base de dados usando a criptografia da própria base de dados. No entanto, estes dados são automaticamente decifrados quando são consultados na base dados, permitindo que um ataque de injeção de SQL possa obter os números dos cartões de crédito em claro. 
+**Cenário #1**: Uma aplicação encripta os números dos cartões de crédito numa
+base de dados usando a criptografia da própria base de dados. No entanto, estes
+dados são automaticamente decifrados quando são consultados na base dados,
+permitindo que um ataque de injeção de SQL possa obter os números dos cartões de
+crédito em claro. 
 
-**Cenário #2**: Um site web não força a utilização de TLS para todas as páginas, ou se o faz usa encriptação fraca. Um atacante pode simplesmente monitorizar o tráfego na rede, intercepta o TLS (como numa rede sem fios aberta), e rouba o cookie de sessão do utilizador. O atacante pode reutilizar este cookie e assim raptar a sessão (autenticada) do utilizador, acedendo e modificando os dados privados do utilizador. Em alternativa pode alterar os dados em trânsito, p.e. o destinatário de uma transferência bancária.
+**Cenário #2**: Um site web não força a utilização de TLS para todas as páginas,
+ou se o faz usa encriptação fraca. Um atacante pode simplesmente monitorizar o
+tráfego na rede, remove o TLS (como numa rede sem fios aberta), intercepta os
+pedidos e rouba o cookie de sessão do utilizador. O atacante pode reutilizar
+este cookie e assim raptar a sessão (autenticada) do utilizador, acedendo e
+modificando os dados privados deste. Em alternativa pode alterar os
+dados em trânsito, e.g. o destinatário de uma transferência bancária.
 
-**Cenário #3**: A base de dados de palavras-passe usa resumos sem "salt" para armazenar as palavras passes de todos os utilizadores. Uma fraqueza de carregamento de ficheiros permite obter a base de dados de palavras-passe. Todos estes resumos podem ser expostos com uma tabela arco-iris ou usando resumos pré-calculados.
+**Cenário #3**: A base de dados de palavras-passe usa resumos sem `salt` para
+armazenar as palavras passes de todos os utilizadores. Uma falha no carregamento
+de ficheiros permite ao atacante obter a base de dados de palavras-passe. Todos
+estes resumos podem ser expostos usando um _rainbow table_ ou resumos
+pré-calculados. Resumos gerados por funções simples ou rápidas pode ser
+quebrados por GPUs, mesmo que tenha sido usado um `salt`.
 
 ## Referências
 
-* [OWASP Proactive Controls: Protect Data](https://www.owasp.org/index.php/OWASP_Proactive_Controls#7:_Protect_Data)
-* [OWASP Application Security Verification Standard: V9, V10, V11](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project)
-* [OWASP Cheat Sheet: Transport Layer Protection](https://www.owasp.org/index.php/Transport_Layer_Protection_Cheat_Sheet)
-* [OWASP Cheat Sheet: User Privacy Protection](https://www.owasp.org/index.php/User_Privacy_Protection_Cheat_Sheet)
-* [OWASP Cheat Sheet: Password Storage](https://www.owasp.org/index.php/Password_Storage_Cheat_Sheet)
-* [OWASP Cheat Sheet: Cryptographic Storage](https://www.owasp.org/index.php/Cryptographic_Storage_Cheat_Sheet)
-* [OWASP Security Headers Project](https://www.owasp.org/index.php/OWASP_Secure_Headers_Project), [Cheat Sheet: HSTS](https://www.owasp.org/index.php/HTTP_Strict_Transport_Security_Cheat_Sheet)
-* [OWASP Testing Guide: Testing for weak cryptography](https://www.owasp.org/index.php/Testing_for_weak_Cryptography)
+* [OWASP Proactive Controls: Protect Data][7]
+* [OWASP Application Security Verification Standard: V9, V10, V11][8]
+* [OWASP Cheat Sheet: Transport Layer Protection][9]
+* [OWASP Cheat Sheet: User Privacy Protection][10]
+* [OWASP Cheat Sheet: Password Storage][11]
+* [OWASP Cheat Sheet: Cryptographic Storage][12]
+* [OWASP Security Headers Project][13], [Cheat Sheet: HSTS][14]
+* [OWASP Testing Guide: Testing for weak cryptography][15]
 
 ### Externas
 
-* [CWE-359: Exposure of Private Information - Privacy Violation](https://cwe.mitre.org/data/definitions/359.html)
-* [CWE-220: Exposure of sens. information through data queries](https://cwe.mitre.org/data/definitions/220.html)
-* [CWE-310: Cryptographic Issues](https://cwe.mitre.org/data/definitions/310.html)
-* [CWE-312: Cleartext Storage of Sensitive Information](https://cwe.mitre.org/data/definitions/312.html)
-* [CWE-319: Cleartext Transmission of Sensitive Information](https://cwe.mitre.org/data/definitions/319.html)
-* [CWE-326: Weak Encryption](https://cwe.mitre.org/data/definitions/326.html)
+* [CWE-359: Exposure of Private Information - Privacy Violation][16]
+* [CWE-220: Exposure of sens. information through data queries][17]
+* [CWE-310: Cryptographic Issues][18]
+* [CWE-312: Cleartext Storage of Sensitive Information][19]
+* [CWE-319: Cleartext Transmission of Sensitive Information][20]
+* [CWE-326: Weak Encryption][21]
+
+[1]: https://www.owasp.org/index.php/ASVS
+[2]: https://www.owasp.org/index.php/HTTP_Strict_Transport_Security_Cheat_Sheet
+[3]: https://www.cryptolux.org/index.php/Argon2
+[4]: https://wikipedia.org/wiki/Scrypt
+[5]: https://wikipedia.org/wiki/Bcrypt
+[6]: https://wikipedia.org/wiki/PBKDF2
+[7]: https://www.owasp.org/index.php/OWASP_Proactive_Controls#7:_Protect_Data
+[8]: https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project
+[9]: https://www.owasp.org/index.php/Transport_Layer_Protection_Cheat_Sheet
+[10]: https://www.owasp.org/index.php/User_Privacy_Protection_Cheat_Sheet
+[11]: https://www.owasp.org/index.php/Password_Storage_Cheat_Sheet
+[12]: https://www.owasp.org/index.php/Cryptographic_Storage_Cheat_Sheet
+[13]: https://www.owasp.org/index.php/OWASP_Secure_Headers_Project
+[14]: https://www.owasp.org/index.php/HTTP_Strict_Transport_Security_Cheat_Sheet
+[15]: https://www.owasp.org/index.php/Testing_for_weak_Cryptography
+[16]: https://cwe.mitre.org/data/definitions/359.html
+[17]: https://cwe.mitre.org/data/definitions/220.html
+[18]: https://cwe.mitre.org/data/definitions/310.html
+[19]: https://cwe.mitre.org/data/definitions/312.html
+[20]: https://cwe.mitre.org/data/definitions/319.html
+[21]: https://cwe.mitre.org/data/definitions/326.html
+
