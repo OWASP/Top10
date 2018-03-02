@@ -10,7 +10,7 @@ Por vezes, estes caminhos são triviais de encontrar e explorar, por outras são
 
 ## Qual o meu Risco
 
-The [OWASP Top 10](https://www.owasp.org/index.php/Top10) focuses on identifying the most serious risks for a broad array of organizations. For each of these risks, we provide generic information about likelihood and technical impact using the following simple ratings scheme, which is based on the OWASP Risk Rating Methodology.  
+O [OWASP Top 10](https://www.owasp.org/index.php/Top10) foca na identificação dos riscos mais graves para uma ampla gama de organizações. Para cada um desses riscos, fornecemos informações genéricas sobre probabilidade e impacto técnico usando o seguinte esquema de classificação simples, que é baseado na Metodologia de Classificação de Risco da OWASP.
 
 | Agentes de Ameaça | Explorabilidade | Prevalência da Vulnerabilidade | Detectabilidade da Vulnerabilidade | Impactos Técnicos | Impactos de Negócio |
 | -- | -- | -- | -- | -- | -- |
@@ -18,20 +18,20 @@ The [OWASP Top 10](https://www.owasp.org/index.php/Top10) focuses on identifying
 | Específico da Aplicação | Médio 2 | Comum 2 | Médio 2 | Moderado 2 | Específicos da Aplicação/Negócio |
 | Específico da Aplicação | Difícil 1 | Pouco Comum 1 | Difícil 1 | Menor 1 | Específicos da Aplicação/Negócio |
 
-In this edition, we have updated the risk rating system to assist in calculating the likelihood and impact of any given risk. For more details, please see [Note About Risks](0xc0-note-about-risks.md). 
+Nesta edição, atualizamos o sistema de classificação de risco para auxiliar no cálculo da probabilidade e impacto de qualquer dado risco. Para obter mais detalhes, consulte [Nota sobre riscos](0xc0-note-about-risks.md).
 
-Each organization is unique, and so are the threat actors for that organization, their goals, and the impact of any breach. If a public interest organization uses a content management system (CMS) for public information and a health system uses that same exact CMS for sensitive health records, the threat actors and business impacts can be very different for the same software. It is critical to understand the risk to your organization based on applicable threat agents and business impacts.
+Cada organização é única, e também os atores de ameaça para essa organização, seus objetivos e o impacto de qualquer violação. Se uma organização de interesse público usa um sistema de gerenciamento de conteúdo (CMS) para informações públicas e um sistema de saúde usa o mesmo CMS exato para registros de saúde sensíveis, os atores de ameaça e os impactos de negócios podem ser muito diferentes para o mesmo software. É fundamental compreender o risco para sua organização com base em agentes de ameaças aplicáveis e impactos comerciais.
 
-Where possible, the names of the risks in the Top 10 are aligned with [Common Weakness Enumeration](https://cwe.mitre.org/) (CWE) weaknesses to promote generally accepted security practices and to reduce confusion
+Sempre que possível, os nomes dos riscos no Top 10 estão alinhados com as fraquezas [Common Weakness Enumeration](https://cwe.mitre.org/) (CWE) para promover práticas de segurança geralmente aceitas e para reduzir possíveis confusões.
 
-## References
+## Referências
 
 ### OWASP
 
 * [OWASP Risk Rating Methodology](https://www.owasp.org/index.php/OWASP_Risk_Rating_Methodology)
 * [Article on Threat/Risk Modeling](https://www.owasp.org/index.php/Threat_Risk_Modeling)
 
-### External
+### Externas
 
 * [ISO 31000: Risk Management Std](https://www.iso.org/iso-31000-risk-management.html)
 * [ISO 27001: ISMS](https://www.iso.org/isoiec-27001-information-security.html)
