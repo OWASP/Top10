@@ -4,7 +4,7 @@
 
 The Ten Most Critical Web Application Security Risks
 
-November 20, 2017
+Kasım 20, 2017
 
 ### Release
 
