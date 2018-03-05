@@ -1,26 +1,26 @@
-## Foreword
+## Önsöz
 
-Insecure software is undermining our financial, healthcare, defense, energy, and other critical infrastructure. As our software becomes increasingly complex, and connected, the difficulty of achieving application security increases exponentially. The rapid pace of modern software development processes makes the most common risks essential to discover and resolve quickly and accurately. We can no longer afford to tolerate relatively simple security problems like those presented in this OWASP Top 10.
+Güvenli olmayan yazılımlar finans, sağlık, savunma, enerji ve diğer kritik alt yapılarımıza zarar vermektedir. Yazılımlarımız daha fazla karmaşık ve bağlantılı oldukça, uygulama güvenliğini sağlamak katlanarak zorlaşmaktadır. Modern yazılım geliştirme süreçlerinin yüksek hızı, en yaygın risklerin tespiti ile hızlı ve doğru bir şekilde kaldırılmasını kaçınılmaz kılmaktadır. Artık, bu OWASP Top 10 çalışmasında sunulanlar gibi basit güvenlik problemlerinin tolere edilmesi imkansızdır.
 
-A great deal of feedback was received during the creation of the OWASP Top 10 - 2017, more than for any other equivalent OWASP effort. This shows how much passion the community has for the OWASP Top 10, and thus how critical it is for OWASP to get the Top 10 right for the majority of use cases.
+OWASP Top 10 -2017 hazırlanırken, benzer diğer OWASP çalışmalarına kıyasla büyük oranda geri bildirim alınmıştır. Bu durum, topluluğun OWASP Top 10 için tutkusunu ve bu yüzden de Top 10’un kullanım örneklerinin çoğunu kapsayacak şekilde doğru yapılmasının OWASP için ne kadar önemli olduğunu göstermektedir.
 
-Although the original goal of the OWASP Top 10 project was simply to raise awareness amongst developers and managers, it has become the de facto application security standard. 
+OWASP Top 10 çalışmasının asıl amacı temelde geliştiriciler ve yöneticiler arasında farkındalık oluşturmak olsa da, gerçekte uygulama güvenlik standardı haline gelmiştir.
 
-In this release, issues and recommendations are written concisely and in a testable way to assist with the adoption of the OWASP Top 10 in application security programs. We encourage large and high performing organizations to use the [OWASP Application Security Verification Standard (ASVS)](https://www.owasp.org/index.php/ASVS) if a true standard is required, but for most, the OWASP Top 10 is a great start on the application security journey.
+Bu sürümde, uygulama güvenliği programlarında OWASP Top 10’un benimsenmesine yardımcı olmak için sorunlar ve çözüm önerileri kısa ve test edilebilir bir şekilde yazılmıştır. Gerçek bir standart gerekiyorsa, büyük kuruluşlara  [OWASP Application Security Verification Standard (ASVS)](https://www.owasp.org/index.php/ASVS) standardını kullanmalarını öneriyoruz, ancak çoğu için OWASP Top 10 uygulama güvenliği yolculuğunda önemli bir başlangıç olacaktır.
 
-We have written up a range of suggested next steps for different users of the OWASP Top 10, including "What's Next for Developers", "What's Next for Security Testers", "What's Next for Organizations“, which is suitable for CIOs and CISOs, and "What's Next for Application Managers", which is suitable for application managers or anyone responsible for the lifecycle of the application.
+"Geliştiriciler için Bir Sonraki Adım", "Güvenlik Testçileri için Bir Sonraki Adım", CIO ve CISO’lar için uygun olan "Organizasyonlar için Bir Sonraki Adım" ve uygulama yöneticileri veya uygulama yaşam döngüsünden sorumlu olan herhangi birisi için uygun olan "Uygulama Yöneticileri için Bir Sonraki Adım" kısımları dahil OWASP Top 10’in farklı kullanıcıları için bir takım tavsiye edilen sonraki adım bölümleri yazılmıştır.
 
-In the long term, we encourage all software development teams and organizations to create an application security program that is compatible with your culture and technology. These programs come in all shapes and sizes. Leverage your organization's existing strengths to measure and improve your application security program using the Software Assurance Maturity Model.
+Uzun vadede, tüm yazılım geliştirme takımlarına ve organizasyonlara kendi kültür ve teknolojileri ile uyumlu bir uygulama güvenliği programı oluşturmalarını tavsiye ediyoruz. Bu programlar çok fazla ve birbirlerinden çok farklı olabilmektedir. Software Assurance Maturity Model’ini kullanarak, organizasyonunuzun güçlü yanlarını uygulama güvenliği programınızı değerlendirmek ve geliştirmek için kullanınız.
 
-We hope that the OWASP Top 10 is useful to your application security efforts. Please don't hesitate to contact OWASP with your questions, comments, and ideas at our GitHub project repository:
+OWASP Top 10 çalışmasının uygulama güvenliği çabalarınız için kullanışlı olmasını umuyoruz. Sorularınız, yorumlarınız ve düşünceleriniz için aşağıdaki Github projesi üzerinden OWASP ile iletişime geçebilirsiniz:
 
 * [https://github.com/OWASP/Top10/issues](https://github.com/OWASP/Top10/issues)
 
-You can find the OWASP Top 10 project and translations here:
+OWASP Top 10 projesine ve çevirilerine aşağıdaki link üzerinden erişebilirsiniz:
 
 * [https://www.owasp.org/index.php/top10](https://www.owasp.org/index.php/top10)
 
-Lastly, we wish to thank the founding leadership of the OWASP Top 10 project, Dave Wichers and Jeff Williams, for all their efforts, and believing in us to get this finished with the community's help. Thank you!
+Son olarak, OWASP Top 10 projesinin kurucu liderleri Dave Wichers ve Jeff Williams’a tüm çabaları ve topluluğun yardımıyla bu projeyi bitirme konusunda bize olan inançları için teşekkür etmek istiyoruz. Teşekkürler! 
 
 * Andrew van der Stock
 * Brian Glas
@@ -28,6 +28,5 @@ Lastly, we wish to thank the founding leadership of the OWASP Top 10 project, Da
 * Torsten Gigler
 
 ## Attribution
-Thanks to [Autodesk](https://www.autodesk.com) for sponsoring the OWASP Top 10 - 2017.
-
-Organizations and individuals that have provided vulnerability prevalence data or other assistance are listed on the [Acknowledgements page](0xd1-data-contributors.md).
+[Autodesk](https://www.autodesk.com)'e OWASP Top 10 -2017 projesine sponsor oldukları için teşekkürler.
+Açıklıklara ait yaygınlık bilgisi veya diğer yardımları sağlayan organizasyonlar ve kişiler [Teşekkürler sayfasında](0xd1-data-contributors.md) listelenmiştir.
