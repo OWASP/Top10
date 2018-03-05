@@ -2,9 +2,9 @@
 
 ## OWASP Top 10 2017
 
-The Ten Most Critical Web Application Security Risks
+En Tehlikeli 10 Web Uygulaması Güvenlik Açıklıkları
 
-Kasım 20, 2017
+20 Kasım 2017
 
 ### Release
 
@@ -14,7 +14,7 @@ Comments requested per instructions within
 
 |  | ![Creative Commons License Logo](images/front-cc.png) |
 | -- | -- |
-| https://owasp.org | This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License |
+| https://owasp.org | Bu çalışma Creative Commons Attribution-ShareAlike 4.0 International lisansı altında sunulmaktadır. |
 
 
 
