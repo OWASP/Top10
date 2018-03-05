@@ -1,30 +1,29 @@
-# RN Release Notes
+# RN Sürüm Notları
 
-## What changed from 2013 to 2017?
+## 2013'ten 2017'ye Neler Değişti?
 
-Change has accelerated over the last four years, and the OWASP Top 10 needed to change. We've completely refactored the OWASP Top 10, revamped the methodology, utilized a new data call process, worked with the community, re-ordered our risks, re-written each risk from the ground up, and added references to frameworks and languages that are now commonly used.
+Son dört yıl içerisinde değişim hızlandı ve OWASP Top 10 projesini de değiştirme ihtiyacı doğdu. OWASP Top 10 projesi tamamen düzenlendi, metodoloji yenilendi, yeni bir veri talebi süreci oluşturuldu, topluluk ile beraber çalışıldı, riskler yeniden sıralandı, her bir risk baştan aşağı tekrar yazıldı ve yaygın olarak kullanılan diller ve kütüphaneler için referanslar eklendi.
 
-Over the last few years, the fundamental technology and architecture of applications has changed significantly:
+Son birkaç yıl içerisinde, uygulamaların sahip olduğu temel teknolojiler ve mimari büyük ölçüde değişti:
 
-* Microservices written in node.js and Spring Boot are replacing traditional monolithic applications. Microservices come with their own security challenges including establishing trust between microservices, containers, secret management, etc. Old code never expected to be accessible from the Internet is now sitting behind an API or RESTful web service to be consumed by Single Page Applications (SPAs) and mobile applications. Architectural assumptions by the code, such as trusted callers, are no longer valid.
-* Single page applications, written in JavaScript frameworks such as Angular and React, allow the creation of highly modular feature-rich front ends. Client-side functionality that has traditionally been delivered server-side brings its own security challenges.
-* JavaScript is now the primary language of the web with node.js running server side and modern web frameworks such as Bootstrap, Electron, Angular, and React running on the client.
+* Node.js ve Spring Boot ile yazılan mikroservisler geleneksel monolitik uygulamaların yerini almaktadır. Mikroservisler, mikroservisler arasında güven, konteynerler, gizli bilgilerin yönetimi gibi kendilerine özgü pek çok güvenlik sorunları ile beraber gelmektedir. İnternet üzerinden erişilebilmesine kesinlikle ihtimal verilmeyen eski kodlar, şimdi Tek Sayfa Uygulamalar (SPAs) ve mobil uygulamalar tarafından tüketilmek üzere bir API veya REST servisi arkasında bulunmaktadır. Güvenilir servis tüketicileri gibi mimarisel varsayımlar artık geçerli olmamaktadır.
+* Angular ve React gibi JavaScript kütüphaneleri ile yazılan tek sayfa uygulamalar, son derece modüler özellikler bakımından zengin ön uçların oluşturulmasına izin vermektedir. Geleneksel olarak sunucu tarafında sağlanan işlevlerin istemci tarafında olması kendi güvenlik sorunlarını da beraberinde getirmektedir.
+* Sunucu tarafında çalışan Node.js ve istemci tarafında çalışan Bootstrap, Electron, Angular ve React gibi modern web kütüphaneleri ile JavaScript artık web uygulamalarının birincil programlama dili olmuştur.
 
-## New issues, supported by data
+## Verilerle desteklenen yeni sorunlar
 
-* **A4:2017-XML External Entities (XXE)** is a new category primarily supported by source code analysis security testing tools ([SAST](https://www.owasp.org/index.php/Source_Code_Analysis_Tools)) data sets.
+* **A4:2017-XML Dış Varlıkları (XXE)** yaygın olarak kaynak kod analizi gerçekleştiren araçların([SAST](https://www.owasp.org/index.php/Source_Code_Analysis_Tools)) veri setleri tarafından desteklenen yeni bir kategoridir. 
 
-## New issues, supported by the community
+## Topluluk tarafından desteklenen yeni sorunlar
 
-We asked the community to provide insight into two forward looking weakness categories. After over 500 peer submissions, and removing issues that were already supported by data (such as Sensitive Data Exposure and XXE), the two new issues are: 
+İki ileriye yönelik açıklık kategorisi hakkında görüşlerini almak için topluluğa danıştık. 500'den fazla cevap değerlendirildikten ve verilerle desteklenen açıklıklar (Hassas Bilgi İfşası ve XXE) kaldırıldıktan sonra, aşağıdaki iki yeni açıklık eklenmiştir:
+* **A8:2017-Güvensiz Ters İşleme**, etkilenen platformlar üzerinde uzaktan kod çalıştırılmasına veya hassas nesnelerin değiştirilmesine izin vermektedir.
+* **A10:2017-Yetersiz Loglama ve İzleme**, eksikliği zararlı aktivitelerin ve ihlallerin tespitini, olay müdahalesini ve dijital adli bilişimi engelleyebilmekte veya önemli düzeyde geciktirebilmektedir.
 
-* **A8:2017-Insecure Deserialization**, which permits remote code execution or sensitive object manipulation on affected platforms.
-* **A10:2017-Insufficient Logging and Monitoring**, the lack of which can prevent or significantly delay malicious activity and breach detection, incident response, and digital forensics.
+## Unutulmamış ancak birleştirilmiş veya kaldırılmış sorunlar
 
-## Merged or retired, but not forgotten
-
-* **A4-Insecure Direct Object References** and **A7-Missing Function Level Access Control** merged into **A5:2017-Broken Access Control**.
-* **A8-Cross-Site Request Forgery (CSRF)**, as many frameworks include [CSRF defenses](https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)), it was found in only 5% of applications.
-* **A10-Unvalidated Redirects and Forwards**, while found in approximately in 8% of applications, it was edged out overall by XXE.
+* **A4-Güvensiz Doğrudan Nesne Başvuruları** ve **A7-Fonksiyon Düzeyinde Erişim Kontrolünün Olmaması**, **A5:2017-Yetersiz Erişim Kontrolü** başlığı altında birleştirilmiştir.
+* **A8-Siteler Arası İstek Sahteciliği (CSRF)**, pek çok kütüphane [CSRF savunması](https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)) içerdiği için sadece uygulamaların %5'inde bulunmuştur.
+* **A10-Doğrulanmamış Yönlendirme ve İletmeler**, uygulamaların %8'inde bulunmasına rağmen, XXE tarafından liste dışı bırakılmıştır.
 
 ![0x06-release-notes-1](images/0x06-release-notes-1.png)
