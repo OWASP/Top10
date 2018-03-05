@@ -1,3 +1,3 @@
-# TOC
+# İÇİNDEKİLER
 
-< replace me with a toc >
+< içindekiler tablosu ile değiştiriniz >
