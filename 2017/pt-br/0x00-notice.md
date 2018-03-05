@@ -19,5 +19,4 @@ Participaram da tradução os líderes do Projeto OWASP Top 10 em Língua Portug
  E os seguintes voluntários:
  
  * Bico Tavares
- * Colabore e tenha seu nome aqui!
- * ...
+ * Ícaro Torres
