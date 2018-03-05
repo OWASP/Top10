@@ -1,37 +1,37 @@
-# Risk - Application Security Risks
+# Risk - Uygulama Güvenliği Riskleri
 
-## What Are Application Security Risks?
+## Uygulama Güvenliği Riskleri Nelerdir?
 
-Attackers can potentially use many different paths through your application to do harm to your business or organization. Each of these paths represents a risk that may, or may not, be serious enough to warrant attention.
+Saldırganlar işinize veya organizasyonunuza zarar vermek için uygulamanız üzerinden farklı yollar deneyebilirler. Bu yolların herhangi birisi dikkat etmeyi gerektirecek kadar ciddi olabilecek veya olamayacak bir risk oluşturmaktadır.
 
 ![App Security Risks](images/0x10-risk-1.png)
 
-Sometimes these paths are trivial to find and exploit, and sometimes they are extremely difficult. Similarly, the harm that is caused may be of no consequence, or it may put you out of business. To determine the risk to your organization, you can evaluate the likelihood associated with each threat agent, attack vector, and security weakness and combine it with an estimate of the technical and business impact to your organization. Together, these factors determine your overall risk.
+Bazen bu yolların bulunması ve istismar edilmesi kolay olurken, bazen de son derece zor olabilmektedir. Benzer bir şekilde, oluşacak zarar da hiçbir öneme sahip olamayacağı gibi işinizi tehlikeye atabilecek boyutta da olabilmektedir. Organizasyonunuz için riskleri belirlerken, her bir tehdit etkeni ile ilişkilendirilen olasılığı, saldırı vektörünü ve güvenlik açığını değerlendirebilir ve bunu organizasyonunuz üzerinde bırakmasını tahmin ettiğiniz teknik ve iş etkileri ile birleştirebilirsiniz. 
 
-## What's My Risk
+## Risklerim Neler
 
-The [OWASP Top 10](https://www.owasp.org/index.php/Top10) focuses on identifying the most serious web application security risks for a broad array of organizations. For each of these risks, we provide generic information about likelihood and technical impact using the following simple ratings scheme, which is based on the OWASP Risk Rating Methodology.  
+[OWASP Top 10](https://www.owasp.org/index.php/Top10) farklı organizasyonlar için en ciddi web uygulaması güvenlik risklerini belirlemeye çalışmaktadır. Bu risklerin her biri için, OWASP Risk Belirleme Metodolojisi'ne dayanan aşağıdaki basit derecelendirme şemasını kullanarak olasılığı ve teknik etkisi hakkında genel bilgi sağlamaktayız.
 
-| Threat Agents | Exploitability | Weakness Prevalence | Weakness Detectability | Technical Impacts | Business Impacts |
+| Tehdit Etkenleri | İstismar Edilebilirlik | Zafiyetin Yaygınlığı | Tespit Edilebilirlik | Teknik Etkiler | İş Etkileri |
 | -- | -- | -- | -- | -- | -- |
-| Appli-   | Easy 3 | Widespread 3 | Easy 3 | Severe 3 | Business     |
-| cation   | Average 2 | Common 2 | Average 2 | Moderate 2 | Specific |
-| Specific | Difficult 1 | Uncommon 1 | Difficult 1 | Minor 1 |       |
+| Uygu-   | Kolay 3 | Çok yaygın 3 | Kolay 3 | Ciddi 3 | İş     |
+| lama   | Orta 2 | Yaygın 2 | Orta 2 | Orta 2 | Özel |
+| özelinde | Zor 1 | Nadir 1 | Zor 1 | Önemsiz 1 |       |
 
-In this edition, we have updated the risk rating system to assist in calculating the likelihood and impact of any given risk. For more details, please see [Note About Risks](0xc0-note-about-risks.md). 
+Bu sürümde, herhangi bir risk için etki ve olasılık hesaplamasında yardımcı olmak için risk derecelendirme sistemini güncelledik. Daha fazla detay için, lütfen [Riskler Hakkında Notlar](0xc0-note-about-risks.md) kısmına bakınız.
 
-Each organization is unique, and so are the threat actors for that organization, their goals, and the impact of any breach. If a public interest organization uses a content management system (CMS) for public information and a health system uses that same exact CMS for sensitive health records, the threat actors and business impacts can be very different for the same software. It is critical to understand the risk to your organization based on applicable threat agents and business impacts.
+Her organizasyon birbirinden farklıdır ve bunun sonucu olarak organizasyon için mevcut tehdit etkenleri, bunların amaçları ve herhangi bir ihlal durumunda etkileri de farklıdır. Kamu yararına hitap eden bir organizasyon ile hassas sağlık kayıtları içeren bir sağlık sistemi aynı içerik yönetim sistemini (CMS) kullansa bile, tehdit etkenleri ve iş etkileri aynı yazılım için birbirinden son derece farklı olacaktır. Bu yüzden, organizasyonunuz için var olan riskleri, uygulanabilir tehdit etkenleri ve iş etkilerini göz önünde bulundurarak anlamanız büyük önem taşımaktadır.
 
-Where possible, the names of the risks in the Top 10 are aligned with [Common Weakness Enumeration](https://cwe.mitre.org/) (CWE) weaknesses to promote generally accepted naming conventions and to reduce confusion.
+Mümkün olabildiğince, Top 10 içerisinde yer alan riskler, karmaşıklığı azaltmak ve genel olarak kabul görmüş adlandırma kurallarını teşvik etmek için [Common Weakness Enumeration](https://cwe.mitre.org/) (CWE) içerisinde yer alan açıklıklar ile benzer şekilde isimlendirilmiştir.
 
-## References
+## Kaynaklar
 
 ### OWASP
 
 * [OWASP Risk Rating Methodology](https://www.owasp.org/index.php/OWASP_Risk_Rating_Methodology)
 * [Article on Threat/Risk Modeling](https://www.owasp.org/index.php/Threat_Risk_Modeling)
 
-### External
+### Dış Kaynaklar
 
 * [ISO 31000: Risk Management Std](https://www.iso.org/iso-31000-risk-management.html)
 * [ISO 27001: ISMS](https://www.iso.org/isoiec-27001-information-security.html)
