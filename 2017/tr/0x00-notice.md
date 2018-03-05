@@ -1,20 +1,20 @@
-# Release
+# Sürüm
 
-## Important Notice
+## Önemli Hatırlatma
 
-### Request for Comments
+### Yorum Talebi
 
-This is the text version of the OWASP Top 10, and although it is useful for translators and those interested in a text version, it's not the official release, which is the PowerPoint / PDF version. 
+OWASP Top 10'in metin hali olan bu kısım, çevirmenler ve metin haliyle ilgilenenler için kullanışlı olsa da, resmi sürüm olmayıp, resmi sürüm PowerPoint / PDF halidir.
 
-At this stage, we are asking for
+Bu aşamada, aşağıdakiler için yardım talep etmekteyiz:
 
-* Translations - we have some teams working already, but do reach out to us if you can help
+* Çeviriler - üzerinde çalışan bazı takımlar bulunmakta, ancak yardım edebileceğinizi düşünüyorsanız bize ulaşın
 
-We strongly urge for any corrections or issues to be logged at GitHub:
+Herhangi bir düzeltme veya sorunun Github üzerinden kayıt altına alınmasına son derece özen gösteriyoruz:
 
 * [https://github.com/OWASP/Top10/issues](https://github.com/OWASP/Top10/issues)
 
-Through public transparency, we provide traceability and ensure that all voices are heard during this final month before publication.
+Herkese açık bir şeffaflık ile, izlenebilirlik sağlıyoruz ve yayım öncesi bu son ay sırasında tüm yorumların duyulmasını sağlıyoruz.
 
 * Andrew van der Stock
 * Brian Glas
