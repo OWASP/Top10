@@ -21,26 +21,26 @@ Enjeksiyon saldırılarını önlemek verinin komutlardan ve sorgulardan uzak tu
 
 * Tercih edilen yöntem, yorumlayıcı kullanımından tamamen kaçınan veya parametrik bir arayüz sunan veya ORM araçları kullanan güvenli bir API kullanımıdır. **Not**: Parametrik olsa bile, eğer PL/SQL veya T-SQL veri ile sorguları birleştiriyorsa veya zararlı veriyi EXECUTE IMMEDIATE veya exec() ile çalıştırıyorsa, saklı yordamlar hala SQL enjeksiyonu açıklığına neden olabilmektedir.
 * Sunucu taraflı "beyaz liste" girdi denetimi yapılmalıdır. Metin alanları veya mobil uygulama API'leri gibi pek çok uygulama özel karakterler gerektirdiği için bu kesin bir çözüm değildir.
-* For any residual dynamic queries, escape special characters using the specific escape syntax for that interpreter. **Note**: SQL structure such as table names, column names, and so on cannot be escaped, and thus user-supplied structure names are dangerous. This is a common issue in report-writing software.
-* Use LIMIT and other SQL controls within queries to prevent mass disclosure of records in case of SQL injection.
+* Herhangi bir şekilde yukarıdaki çözümler uygulanamayan diğer dinamik sorgular için, yorumlayıcı için özel sterilize yöntemleri belirlenerek özel karakterler sterilize edilmelidir. **Not**: Tablo adı, sütun adı gibi SQL yapıları sterilize edilemez, bu yüzden kullanıcı tarafından sağlanan yapısal isimler tehlikeli olmaktadır. Bu durum rapor hazırlayan yazılımlar için yaygın bir problemdir. 
+* Sorgular içerisinde LIMIT ve benzeri kontroller kullanılarak, SQL enjeksiyonu durumunda büyük miktarlarda verinin sızdırılması engellenmelidir.
 
-## Example Attack Scenarios
+## Örnek Saldırı Senaryosu
 
-**Scenario #1**: An application uses untrusted data in the construction of the following vulnerable SQL call:
+**Senaryo #1**: Bir uygulama, aşağıdaki zafiyet içeren SQL çağrısını oluştururken güvenilmeyen bir veri kullanmaktadır.
 
 `String query = "SELECT * FROM accounts WHERE custID='" + request.getParameter("id") + "'";`
 
-**Scenario #2**: Similarly, an application’s blind trust in frameworks may result in queries that are still vulnerable, (e.g. Hibernate Query Language (HQL)):
+**Senaryo #2**: Benzer şekilde, bir uygulamanın kullanılan çerçeve yazılımlara olan kayıtsız güveni de bu uygulamaları hala saldırılara açık bırakmaktadır. (örn. Hibernate Sorgu Dili (HQL))
 
 `Query HQLQuery = session.createQuery("FROM accounts WHERE custID='" + request.getParameter("id") + "'");`
 
-In both cases, the attacker modifies the ‘id’ parameter value in their browser to send:  ' or '1'='1. For example:
+Her iki durumda da, saldırgan id parametresinin değerini ' or '1'='1 şeklinde tarayıcısı üzerinden değiştirmektedir. Örneğin:
 
 `http://example.com/app/accountView?id=' or '1'='1`
 
-This changes the meaning of both queries to return all the records from the accounts table. More dangerous attacks could modify or delete data, or even invoke stored procedures.
+Bu değer, her iki sorgunun da anlamını değiştirmekte ve tablodaki tüm kayıtları döndürmektedir. Daha tehlikeli saldırılar veriyi değiştirebilir veya silebilir, hatta saklı yordamları bile çalıştırabilir.
 
-## References
+## Kaynaklar
 
 ### OWASP
 
@@ -53,7 +53,7 @@ This changes the meaning of both queries to return all the records from the acco
 * [OWASP Cheat Sheet: Query Parameterization](https://www.owasp.org/index.php/Query_Parameterization_Cheat_Sheet)
 * [OWASP Automated Threats to Web Applications – OAT-014](https://www.owasp.org/index.php/OWASP_Automated_Threats_to_Web_Applications)
 
-### External
+### Dış Kaynaklar
 
 * [CWE-77: Command Injection](https://cwe.mitre.org/data/definitions/77.html)
 * [CWE-89: SQL Injection](https://cwe.mitre.org/data/definitions/89.html)
