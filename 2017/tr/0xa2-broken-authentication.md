@@ -31,7 +31,7 @@ Uygulama aşağıdaki durumlarda kimlik doğrulama açıklıkları içeriyor ola
 * Başarısız giriş denemelerini sınırlandırılmalı veya artarak geciktirilmelidir. Tüm başarısız denemeler loglanmalı ve sözlük saldırıları, kaba kuvvet saldırıları veya diğer saldırılar tespit edildiğinde yöneticiler uyarılmalıdır.
 * Giriş yapıldıktan sonra yeni bir rastgele oturum ID değeri üreten ve büyük bir entropiye sahip olan sunucu taraflı, güvenli ve gömülü bir oturum yöneticisi kullanılmalıdır. Oturum ID değerleri URL üzerinde olmamalı, güvenli bir şekilde saklanmalı ve çıkış yapıldıktan, belirli bir süre hareketsiz kaldıktan ve geçerlilik süresi dolduktan sonra geçersiz kılınmalıdır. 
 
-## Example Attack Scenarios
+## Örnek Saldırı Senaryoları
 
 **Senaryo #1**: [Sözlük saldırıları](https://www.owasp.org/index.php/Credential_stuffing), [bilinen parola listelerinin](https://github.com/danielmiessler/SecLists) kullanımı yaygın saldırılardır. Eğer bir uygulama otomatize tehdit veya sözlük saldırısı koruması içermiyorsa, uygulama geçerli giriş bilgilerinin toplanması için kullanılabilir.
 
