@@ -1,45 +1,45 @@
-# A2:2017 Broken Authentication
+# A2:2017 Yetersiz Kimlik Doğrulama
 
-| Threat agents/Attack vectors | Security Weakness           | Impacts               |
+| Tehdit Etkenleri/Sadlırı vektörleri | Güvenlik zafiyeti           | Etkiler               |
 | -- | -- | -- |
-| Access Lvl : Exploitability 3 | Prevalence 2 : Detectability 2 | Technical 3 : Business |
-| Attackers have access to hundreds of millions of valid username and password combinations for credential stuffing, default administrative account lists, automated brute force, and dictionary attack tools. Session management attacks are well understood, particularly in relation to unexpired session tokens. | The prevalence of broken authentication is widespread due to the design and implementation of most identity and access controls. Session management is the bedrock of authentication and access controls, and is present in all stateful applications. Attackers can detect broken authentication using manual means and exploit them using automated tools with password lists and dictionary attacks. | Attackers have to gain access to only a few accounts, or just one admin account to compromise the system. Depending on the domain of the application, this may allow money laundering, social security fraud, and identity theft, or disclose legally protected highly sensitive information. |
+| Erişim Düzeyi : İstismar Edilebilirlik 3 | Yaygınlık 2 : Tespit Edilebilirlik 2 | Teknik 3 : İş |
+| Saldırganlar yüz milyonlarca geçerli kullanıcı adı ve parola kombinasyonlarına, varsayılan yönetici hesap listelerine, otomatize kaba kuvvet ve sözlük saldırısı araçlarına sahiptir. Oturum yönetimi saldırıları, özellikle süresi dolmayan oturum anahtarları, iyi anlaşılmaktadır. | Yetersiz kimlik doğrulama açıklıkları, pek çok kimlik ve erişim kontrollerinin tasarım ve uygulamasından dolayı son derece yaygındır. Oturum yönetimi kimlik doğrulamanın ve erişim kontrollerinin temel taşıdır ve durum tutan tüm uygulamalarda bulunmaktadır. Saldırganlar yetersiz kimlik doğrulama açıklıklarını kendileri tespit edebilmekte ve parola listeleri içeren otomatize araçları ve sözlük saldırılarını kullanarak bunları istismar etmektedirler. | Saldırganlar sistemi ele geçirmek için sadece birkaç hesaba veya bir tane yönetici hesabına erişmek zorundadır. Uygulamanın alanına bağlı olarak, bu kara para aklama, sosyal güvenlik dolandırıcılığı, kimlik hırsızlığına izin verebilir veya son derece hassas olan ve yasal olarak korunan bilgileri ifşa edebilir. |
 
-## Is the Application Vulnerable?
+## Uygulamam Açıklığı İçeriyor Mu?
 
-Confirmation of the user's identity, authentication, and session management are critical to protect against authentication-related attacks.
+Kullanıcının kimliğinin onaylanması, kimlik doğrulama ve oturum yönetimi, kimlik doğrulama ile ilgili saldırılara karşı korunmak için son derece büyük önem taşımaktadır.
 
-There may be authentication weaknesses if the application:
+Uygulama aşağıdaki durumlarda kimlik doğrulama açıklıkları içeriyor olabilir:
 
-* Permits automated attacks such as [credential stuffing](https://www.owasp.org/index.php/Credential_stuffing), where the attacker has a list of valid usernames and passwords.
-* Permits brute force or other automated attacks.
-* Permits default, weak, or well-known passwords, such as "Password1" or "admin/admin“.
-* Uses weak or ineffective credential recovery and forgot-password processes, such as "knowledge-based answers", which cannot be made safe.
-* Uses plain text, encrypted, or weakly hashed passwords (see **A3:2017-Sensitive Data Exposure**).
-* Has missing or ineffective multi-factor authentication.
-* Exposes Session IDs in the URL (e.g., URL rewriting).
-* Does not rotate Session IDs after successful login.
-* Does not properly invalidate Session IDs. User sessions or authentication tokens (particularly single sign-on (SSO) tokens) aren't properly invalidated during logout or a period of inactivity.
+*  Saldırganın geçerli kullanıcı adı ve parola listesine sahip olduğu [sözlük saldırıları](https://www.owasp.org/index.php/Credential_stuffing) gibi otomatize saldırılara izin veriyorsa.
+* Kaba kuvvet veya diğer otomatize saldırılara izin veriyorsa.
+* "Password1" veya "admin/admin" gibi varsayılan, zayıf veya herkesçe bilinen parolalara izin veriyorsa.
+* Güvenli yapılması mümkün olmayan "güvenlik soruları" gibi zayıf veya etkisiz hesap kurtarma ve unutulan parola süreçleri kullanıyorsa. 
+* Açık metin, şifrelenmiş veya zayıf bir şekilde özeti alınmış parolalar kullanıyorsa (Bakınız **A3:2017-Hassas Bilgi İfşası**).
+* Eksik veya etkisiz çok katmanlı kimlik doğrulamaya sahipse.
+* Oturum ID değerlerini URL üzerinden taşıyorsa (örn. URL'i yeniden yazma).
+* Başarılı giriş sonrası oturum ID değerlerini değiştirmiyorsa.
+* Oturum ID değerlerini doğru bir şekilde geçersiz kılmıyorsa. Çıkış veya hareketsizlik durumunda kullanıcı oturumları veya kimlik doğrulama anahtarları (özellikle tek oturum açma(SSO) anahtarları) düzgün bir şekilde geçersiz kılınmıyorsa.
 
-## How To Prevent
+## Nasıl Önlenir
 
-* Where possible, implement multi-factor authentication to prevent automated, credential stuffing, brute force, and stolen credential re-use attacks. 
-* Do not ship or deploy with any default credentials, particularly for admin users.
-* Implement weak-password checks, such as testing new or changed passwords against a list of the [top 10000 worst passwords](https://github.com/danielmiessler/SecLists/tree/master/Passwords).
-* Align password length, complexity and rotation policies with [NIST 800-63 B's guidelines in section 5.1.1 for Memorized Secrets](https://pages.nist.gov/800-63-3/sp800-63b.html#memsecret) or other modern, evidence based password policies.
-* Ensure registration, credential recovery, and API pathways are hardened against account enumeration attacks by using the same messages for all outcomes.
-* Limit or increasingly delay failed login attempts. Log all failures and alert administrators when credential stuffing, brute force, or other attacks are detected.
-* Use a server-side, secure, built-in session manager that generates a new random session ID with high entropy after login. Session IDs should not be in the URL, be securely stored and invalidated after logout, idle, and absolute timeouts.
+* Otomatize saldırıları, sözlük saldırılarını, kaba kuvvet saldırılarını ve çalınan giriş bilgilerinin tekrar kullanılması saldırılarını önlemek için mümkün olduğunca çok katmanlı kimlik doğrulama uygulanmalıdır. 
+* Özellikle yönetici kullanıcıları için herhangi bir varsayılan giriş bilgisi kullanılmamalı veya bu şekilde kullanıma sunulmamalıdır.
+* [En kötü 10000 parola](https://github.com/danielmiessler/SecLists/tree/master/Passwords) gibi bir listeye karşı yeni veya değiştirilmiş parolaları kıyaslamak gibi zayıf parola kontrolleri uygulanmalıdır.
+* Parola uzunluğu, karmaşıklığı ve değiştirme politikaları, [NIST 800-63 B's guidelines in section 5.1.1 for Memorized Secrets](https://pages.nist.gov/800-63-3/sp800-63b.html#memsecret) veya diğer modern, kanıta dayalı parola politikalarına göre belirlenmelidir.
+* Tüm sonuçlar için aynı mesaj kullanılarak, kayıt yapma, hesap kurtarma ve API yolları geçerli hesapları toplama saldırılarına karşı güçlendirilmelidir.
+* Başarısız giriş denemelerini sınırlandırılmalı veya artarak geciktirilmelidir. Tüm başarısız denemeler loglanmalı ve sözlük saldırıları, kaba kuvvet saldırıları veya diğer saldırılar tespit edildiğinde yöneticiler uyarılmalıdır.
+* Giriş yapıldıktan sonra yeni bir rastgele oturum ID değeri üreten ve büyük bir entropiye sahip olan sunucu taraflı, güvenli ve gömülü bir oturum yöneticisi kullanılmalıdır. Oturum ID değerleri URL üzerinde olmamalı, güvenli bir şekilde saklanmalı ve çıkış yapıldıktan, belirli bir süre hareketsiz kaldıktan ve geçerlilik süresi dolduktan sonra geçersiz kılınmalıdır. 
 
 ## Example Attack Scenarios
 
-Scenario #1: [Credential stuffing](https://www.owasp.org/index.php/Credential_stuffing), the use of [lists of known passwords](https://github.com/danielmiessler/SecLists), is a common attack. If an application does not implement automated threat or credential stuffing protections, the application can be used as a password oracle to determine if the credentials are valid.
+**Senaryo #1**: [Sözlük saldırıları](https://www.owasp.org/index.php/Credential_stuffing), [bilinen parola listelerinin](https://github.com/danielmiessler/SecLists) kullanımı yaygın saldırılardır. Eğer bir uygulama otomatize tehdit veya sözlük saldırısı koruması içermiyorsa, uygulama geçerli giriş bilgilerinin toplanması için kullanılabilir.
 
-**Scenario #2**: Most authentication attacks occur due to the continued use of passwords as a sole factor. Once considered best practices, password rotation and complexity requirements are viewed as encouraging users to use, and reuse, weak passwords. Organizations are recommended to stop these practices per NIST 800-63 and use multi-factor authentication.
+**Senaryo #2**: Pek çok kimlik doğrulama saldırısı sadece parolaların sürekli kullanımından kaynaklanmaktadır. En iyi uygulama örnekleri düşünüldüğünde, parola değiştirme ve karmaşıklık gereksinimleri, kullanıcıların zayıf parolaları kullanmaları ve bunları tekrar tekrar kullanmaları konusunda teşvik edici olarak görülmektedir. Organizasyonların NIST 800-63 uyarınca bu uygulamaları durdurması ve çok katmanlı kimlik doğrulama kullanması tavsiye edilmektedir.
 
-**Scenario #3**: Application session timeouts aren't set properly. A user uses a public computer to access an application. Instead of selecting “logout” the user simply closes the browser tab and walks away. An attacker uses the same browser an hour later, and the user is still authenticated.
+**Senaryo #3**: Uygulama oturum zaman aşımları düzgün bir şekilde belirlenmemiştir. Bir kullanıcı uygulamaya erişmek için herkes tarafından erişilebilir bir bilgisayar kullanmaktadır. Kullanıcı "çıkış yap" seçeneğini kullanmak yerine, tarayıcı sekmesini kapatmış ve oradan uzaklaşmıştır. Bu durumda, saldırgan bir saat sonra aynı tarayıcıyı kullandığında kullanıcının hala kimlik doğrulaması yapılmış olacaktır.
 
-## References
+## Kaynaklar
 
 ### OWASP
 
@@ -54,8 +54,8 @@ Scenario #1: [Credential stuffing](https://www.owasp.org/index.php/Credential_st
 * [OWASP Cheat Sheet: Session Management](https://www.owasp.org/index.php/Session_Management_Cheat_Sheet)
 * [OWASP Automated Threats Handbook](https://www.owasp.org/index.php/OWASP_Automated_Threats_to_Web_Applications)
 
-### External
+### Dış Kaynaklar
 
-* [NIST 800-63b: 5.1.1 Memorized Secrets](https://pages.nist.gov/800-63-3/sp800-63b.html#memsecret) - for thorough, modern, evidence-based advice on authentication. 
+* [NIST 800-63b: 5.1.1 Memorized Secrets](https://pages.nist.gov/800-63-3/sp800-63b.html#memsecret) - kimlik doğrulama hakkında tam, modern ve kanıta dayalı tavsiyeler için. 
 * [CWE-287: Improper Authentication](https://cwe.mitre.org/data/definitions/287.html)
 * [CWE-384: Session Fixation](https://cwe.mitre.org/data/definitions/384.html)
