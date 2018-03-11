@@ -1,58 +1,58 @@
-# A5:2017 Broken Access Control
+# A5:2017 Yetersiz Erişim Kontrolü
 
-| Threat agents/Attack vectors | Security Weakness  | Impacts |
+| Tehdit Etkenleri/Saldırı vektörleri | Güvenlik zafiyeti  | Etkiler |
 | -- | -- | -- |
-| Access Lvl : Exploitability 2 | Prevalence 2 : Detectability 2 | Technical 3 : Business |
-| Exploitation of access control is a core skill of attackers. [SAST](https://www.owasp.org/index.php/Source_Code_Analysis_Tools) and [DAST](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools) tools can detect the absence of access control but cannot verify if it is functional when it is present. Access control is detectable using manual means, or possibly through automation for the absence of access controls in certain frameworks. | Access control weaknesses are common due to the lack of automated detection, and lack of effective functional testing by application developers. Access control detection is not typically amenable to automated static or dynamic testing. Manual testing is the best way to detect missing or ineffective access control, including HTTP method (GET vs PUT, etc), controller, direct object references, etc. | The technical impact is attackers acting as users or administrators, or users using privileged functions, or creating, accessing, updating or deleting every record. The business impact depends on the protection needs of the application and data. |
+| Erişim Düzeyi : İstismar Edilebilirlik 2 | Yaygınlık 2 : Tespit Edilebilirlik 2 | Teknik 3 : İş |
+| Erişim kontrolü istismarı saldırganların temel bir yeteneğidir. [SAST](https://www.owasp.org/index.php/Source_Code_Analysis_Tools) ve [DAST](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools) araçları erişim kontrolünün olmadığını tespit edebilir ancak olduğu durumlarda fonksiyonel olup olmadığını doğrulayamamaktadır. Erişim kontrolü manuel yöntemlerle veya belirli çerçevelerde erişim kontrollerinin bulunmayışı için otomatizasyon aracılığıyla tespit edilebilmektedir. | Erişim kontrolü açıklıkları otomatize tespitin eksikliği ve uygulama geliştiricileri tarafından etkin bir fonksiyonel test yapılmamasından dolayı yaygındır. Erişim kontrolü tespiti genellikle otomatize statik veya dinamik test ile yapılamamaktadır. HTTP metotları (GET, PUT vb.), kontrolör, doğrudan nesne başvuruları vb. dahil eksik veya yetersiz erişim kontrollerini tespit etmenin en iyi yolu manuel testlerdir. | Teknik etki saldırganların kullanıcılar veya yöneticiler gibi davranması veya kullanıcıların yetki gerektiren fonksiyonları kullanması veya kayıt oluşturulması, kayıtlara erişilmesi, kayıtların güncellenmesi veya silinmesidir. |
 
-## Is the Application Vulnerable?
+## Uygulamam Açıklık İçeriyor Mu?
 
-Access control enforces policy such that users cannot act outside of their intended permissions. Failures typically lead to unauthorized information disclosure, modification or destruction of all data, or performing a business function outside of the limits of the user. Common access control vulnerabilities include:
+Erişim kontrolü kullanıcıların kendi istenen izinleri dışında bir şey yapamayacağı şekilde bir politika uygulamaktadır. Uyumsuzluklar genellikle yetkisiz bilgi ifşasına, tüm verinin değiştirilmesine veya silinmesine veya kullanıcının sınırları dışında bir iş fonksiyonunun gerçekleştirilmesine yol açmaktadır. Yaygın erişim kontrolü açıklıkları şunları içermektedir:
 
-* Bypassing access control checks by modifying the URL, internal application state, or the HTML page, or simply using a custom API attack tool.
-* Allowing the primary key to be changed to another's users record, permitting viewing or editing someone else's account.
-* Elevation of privilege. Acting as a user without being logged in, or acting as an admin when logged in as a user.
-* Metadata manipulation, such as replaying or tampering with a JSON Web Token (JWT) access control token or a cookie or hidden field manipulated to elevate privileges, or abusing JWT invalidation
-* CORS misconfiguration allows unauthorized API access.
-* Force browsing to authenticated pages as an unauthenticated user or to privileged pages as a standard user. Accessing API with missing access controls for POST, PUT and DELETE.
+* URL'i, iç uygulama durumunu veya HTML sayfasını değiştirerek veya basitçe özel bir API saldırı aracı kullanarak erişim kontrollerinin atlatılması.
+* Birincill anahtarın başka bir kullanıcının kaydına göre değiştirilmesine izin vermek ve bu şekilde başkalarının hesaplarının görülmesine ve değiştirilmesine izin vermek.
+* Yetki yükseltmesi. Giriş yapmadan bir kullanıcı gibi davranmak veya bir kullanıcı olarak girip bir yönetici gibi davranmak.
+* Bir JSON Web Token (JWT) erişim anahtarının veya bir çerezin değiştirmek veya tekrar oynatmak gibi meta veri değiştirmek veya yetki yükseltmek için gizli alanları değiştirmek veya JWT geçersiz kılma sürecini suistimal etmek.
+* CORS yanlış yapılandırması yetkisiz API erişimlerine izin vermektedir.
+* Kimlik doğrulaması yapılmamış bir kullanıcı olarak kimlik doğrulama gerektiren sayfalara veya standart bir kullanıcı olarak yetki gerektiren sayfalara erişim. POST, PUT ve DELETE için eksik erişim kontrolleri ile API erişimi.
 
-## How To Prevent
+## Nasıl Önlenir
 
-Access control is only effective if enforced in trusted server-side code or server-less API, where the attacker cannot modify the access control check or metadata.
+Erişim kontrolü sadece, saldırganın erişim kontrollerine veya meta verilere erişemeyeceği güvenilir sunucu taraflı kodda veya sunucusuz API'lerde zorunlu tutulduysa etkili olmaktadır.
 
-* With the exception of public resources, deny by default.
-* Implement access control mechanisms once and re-use them throughout the application, including minimizing CORS usage.
-* Model access controls should enforce record ownership, rather than accepting that the user can create, read, update, or delete any record.
-* Unique application business limit requirements should be enforced by domain models.
-* Disable web server directory listing and ensure file metadata (e.g. .git) and backup files are not present within web roots.
-* Log access control failures, alert admins when appropriate (e.g. repeated failures).
-* Rate limit API and controller access to minimize the harm from automated attack tooling.
-* JWT tokens should be invalidated on the server after logout.
-* Developers and QA staff should include functional access control unit and integration tests.
+* Herkese açık kaynaklar haricinde, varsayılan olarak reddedilmelidir.
+* CORS kullanımını azaltmak dahil, erişim kontrolü mekanizmaları bir sefer oluşturulmalı ve uygulama boyunca tekrar kullanılmalıdır.
+* Model erişim kontrolleri, kullanıcının herhangi bir kayıt oluşturabileceğini, herhangi bir kaydı okuyabileceğini, güncelleyebileceğini veya silebileceğini kabul etmek yerine, kayıt mülkiyetini gerektirmelidir. 
+* Özgün uygulama iş limiti gereksinimleri etki alanı modelleri ile uygulanmalıdır.
+* Sunucu dizin listelemesi devre dışı bırakılmalı ve web kök dizininde dosya meta verileri (örn. .git) ve yedekleme dosyaları bulunmamalıdır.
+* Erişim kontrolü ihlalleri loglanmalı ve uygun görüldüğünde (örn. tekrar eden ihlaller) yöneticiler uyarılmalıdır.
+* Otomatize saldırı araçlarından gelebilecek zararları en aza indirmek için API ve kontrolör erişimi sınırlandırılmalıdır.
+* Çıkış yapıldıktan sonra JWT anahtarları sunucuda geçersiz kılınmalıdır.
+* Geliştiricler ve QA çalışanları fonksiyonel erişin kontrolü birim ve entegrasyon testleri yapmalıdır.
 
-## Example Attack Scenarios
+## Örnek Saldırı Senaryoları
 
-**Scenario #1**: The application uses unverified data in a SQL call that is accessing account information:
+**Senaryo #1**: Uygulama, hesap bilgilerine erişin bir SQL çağrısı içerisinde doğrulanmamış bir veri kullanmaktadır:
 
 ```
   pstmt.setString(1, request.getParameter("acct"));
   ResultSet results = pstmt.executeQuery();
 ```
 
-An attacker simply modifies the 'acct' parameter in the browser to send whatever account number they want. If not properly verified, the attacker can access any user's account.
+Saldırgan tarayıcısında basitçe 'acct' parametresini değiştirerek istedği hesap numarasını yollayabilmektedir. Düzgün bir şekilde doğrulanmadığında, saldırgan herhangi bir kullanıcı hesabına erişebilmektedir.
 
 `http://example.com/app/accountInfo?acct=notmyacct`
 
-**Scenario #2**: An attacker simply force browses to target URLs. Admin rights are required for access to the admin page.
+**Senaryo #2**: Saldırgan kaba kuvvet ile hedef URL'leri gezmektedir. Yönetici sayfasına erişim için yönetici hakları gerekmektedir.
 
 ```
   http://example.com/app/getappInfo
   http://example.com/app/admin_getappInfo
 ```
 
-If an unauthenticated user can access either page, it’s a flaw. If a non-admin can access the admin page, this is a flaw.
+Eğer kimliği doğrulanmamış bir kullanıcı iki sayfadan herhangi birine erişebiliyorsa, açıklık bulunmaktadır. Eğer yönetici olmayan bir kullanıcı yönetici sayfasına erişebiliyorsa, bu bir açıklıktır.
 
-## References
+## Kaynaklar
 
 ### OWASP
 
@@ -61,7 +61,7 @@ If an unauthenticated user can access either page, it’s a flaw. If a non-admin
 * [OWASP Testing Guide: Authorization Testing](https://www.owasp.org/index.php/Testing_for_Authorization)
 * [OWASP Cheat Sheet: Access Control](https://www.owasp.org/index.php/Access_Control_Cheat_Sheet)
 
-### External
+### Dış Kaynaklar
 
 * [CWE-22: Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')](https://cwe.mitre.org/data/definitions/22.html)
 * [CWE-284: Improper Access Control (Authorization)](https://cwe.mitre.org/data/definitions/284.html)
