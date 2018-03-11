@@ -1,38 +1,38 @@
-# A4:2017 XML External Entities (XXE)
+# A4:2017 XML Dış Varlıkları (XXE)
 
-| Threat agents/Attack vectors | Security Weakness           | Impacts               |
+| Tehdit Etkenleri/Saldırı vektörleri | Güvenlik zafiyeti           | Etkiler               |
 | -- | -- | -- |
-| Access Lvl : Exploitability 2 | Prevalence 2 : Detectability 3 | Technical 3 : Business |
-| Attackers can exploit vulnerable XML processors if they can upload XML or include hostile content in an XML document, exploiting vulnerable code, dependencies or integrations. | By default, many older XML processors allow specification of an external entity, a URI that is dereferenced and evaluated during XML processing. [SAST](https://www.owasp.org/index.php/Source_Code_Analysis_Tools) tools can discover this issue by inspecting dependencies and configuration. [DAST](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools) tools require additional manual steps to detect and exploit this issue. Manual testers need to be trained in how to test for XXE, as it not commonly tested as of 2017. | These flaws can be used to extract data, execute a remote request from the server, scan internal systems, perform a denial-of-service attack, as well as execute other attacks. |
+| Erişim Düzeyi : İstismar Edilebilirlik 2 | Yaygınlık 2 : Tespit Edilebilirlik 3 | Teknik 3 : İş |
+| Saldırganlar, eğer XML dosyası yükleyebiliyorsa veya bir XML dokümanı içerisine zararlı bir içerik ekleyebiliyorsa, zafiyet içeren kodları, bağımlılıkları veya entegrasyonları istismar edecek şekilde XML işleyicilerini istismar edebilmektedir. | Varsayılan olarak, pek çok eski XML işleyicisi, XML işleme sırasında dereferans edilecek ve çalıştırılacak bir URI olan bir dış varlığın belirtilmesine izin vermektedir. [SAST](https://www.owasp.org/index.php/Source_Code_Analysis_Tools) araçları bağımlılıkları ve yapılandırma ayarlarını inceleyerek bu açıklığı tespit edebilmektedir. [DAST](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools) araçları, bu açıklığı tespit ve istismar etmek için ilave manuel adımlar gerektirmektedir. 2017 itibariyle genellikle test edilmediği için, manuel olarak test edecek kişiler XXE testlerinin nasıl yapılacağı konusunda eğitilmelidirler. | Bu açıklıklar veri ele geçirmek, sunucu üzerinden uzaktan istekte bulunmak, servis dışı bırakma saldırıları ve diğer saldırıları çalıştırmak için kullanılabilmektedir. |
 
-## Is the Application Vulnerable?
+## Uygulamam Açıklığı İçeriyor Mu?
 
-Applications and in particular XML-based web services or downstream integrations might be vulnerable to attack if:
+Uygulamalar ve özellikle XML tabanlı web servisleri veya girdi alacak şekilde yapılan entegrasyonlar aşağıdaki durumlarda saldırıya açık olabilir:
 
-* The application accepts XML directly or XML uploads, especially from untrusted sources, or inserts untrusted data into XML documents, which is then parsed by an XML processor.
-* Any of the XML processors in the application or SOAP based web services has [document type definitions (DTDs)](https://en.wikipedia.org/wiki/Document_type_definition) enabled. As the exact mechanism for disabling DTD processing varies by processor, it is good practice to consult a reference such as the [OWASP Cheat Sheet 'XXE Prevention'](https://www.owasp.org/index.php/XML_External_Entity_(XXE)_Prevention_Cheat_Sheet). 
-* If the application uses SAML for identity processing within federated security or single sign on (SSO) purposes. SAML uses XML for identity assertions, and may be vulnerable.
-* If the application uses SOAP prior to version 1.2, it is likely susceptible to XXE attacks if XML entities are being passed to the SOAP framework.
-* Being vulnerable to XXE attacks likely means that the application is vulnerable to denial of service attacks including the Billion Laughs attack
+* Uygulama özellikle güvenilmeyen kaynaklardan doğrudan XML girdisi kabul ediyorsa veya XML yüklemelerine izin veriyorsa veya daha sonra bir XML işleyicisi tarafından yorumlanacak şekilde güvenilmeyen veriyi XML dokümanına ekliyorsa.
+* Uygulamadaki herhangi bir XML işleyicisi veya SOAP tabanlı web servisleri [doküman tip tanımlarına (DTD)](https://en.wikipedia.org/wiki/Document_type_definition) izin veriyorsa. DTD özelliğini devre dışı bırakma yöntemi işleyiciye göre değiştiği için, ['XXE Korunması' OWASP Kopya Kağıdı](https://www.owasp.org/index.php/XML_External_Entity_(XXE)_Prevention_Cheat_Sheet) gibi bir referansa başvurulması iyi bir uygulama örneğidir.
+* Uygulama birleşik güvenlik veya tek oturum açma (SSO) amaçları doğrultusunda kimlik işleme için SAML kullanıyorsa. SAML kimlik iddiaları için XML kullanmakta ve bu da zafiyet içerebilmektedir.
+* Uygulama SOAP 1.2 sürümünden önceki sürümleri kullanıyorsa ve XML varlıkları SOAP çerçevesine iletiliyorsa XXE saldırılarına karşı açık olabilmektedir.
+* XXE saldırılarına karşı açık olmak uygulamanın Billion Laughs saldırısı gibi servis dışı bırakma saldırılarına da açık olduğu anlamına gelebilmektedir.
 
-## How To Prevent
+## Nasıl Önlenir
 
-Developer training is essential to identify and mitigate XXE. Besides that, preventing XXE requires:
+XXE tespiti ve önlemesi için geliştirici eğitimi çok önemlidir. Buna ek olarak, XXE saldırılarının önlenmesi için aşağıdakiler gerekmektedir:
 
-* Whenever possible, use less complex data formats such as JSON, and avoiding serialization of sensitive data.
-* Patch or upgrade all XML processors and libraries in use by the application or on the underlying operating system. Use dependency checkers. Update SOAP to SOAP 1.2 or higher.
-* Disable XML external entity and DTD processing in all XML parsers in the application, as per the [OWASP Cheat Sheet 'XXE Prevention'](https://www.owasp.org/index.php/XML_External_Entity_(XXE)_Prevention_Cheat_Sheet). 
-* Implement positive ("whitelisting") server-side input validation, filtering, or sanitization to prevent hostile data within XML documents, headers, or nodes.
-* Verify that XML or XSL file upload functionality validates incoming XML using XSD validation or similar.
-* SAST tools can help detect XXE in source code, although manual code review is the best alternative in large, complex applications with many integrations.
+* Mümkün oldukça, karmaşıklığı daha az olan JSON gibi veri formatları kullanılmalı ve hassas verinin serileştirilmesinden kaçınılmalıdır.
+* Uygulama veya üzerinde çalıştığı işletim sistemi tarafından kullanılan tüm XML işleyicileri ve kütüphaneler güncellenmeli ve yamaları yüklenmelidir. Bağımlılık kontrol araçları kullanılmalıdır. SOAP 1.2 veya üzeri sürümlere güncellenmelidir.
+* ['XXE Korunması' OWASP Kopya Kağıdı'nda](https://www.owasp.org/index.php/XML_External_Entity_(XXE)_Prevention_Cheat_Sheet) da belirtildiği üzere, uygulamadaki tüm XML ayrıştırıcılarında XML dış varlıkları ve DTD işleme özelliği devre dışı bırakılmalıdır.
+* XML dokümanları, başlıklar veya nodlar içerisindeki zararlı girdiyi önlemek için, sunucu tarafında pozitif ("beyaz liste") girdi doğrulaması, filtreleme veya sterilizasyon uygulanmalıdır.
+* XML veya XSL dosya yükleme özelliğinin gelen XML girdisini XSD doğrulaması veya benzer bir doğrulama ile kontrol ettiğinden emin olunmalıdır.
+* Pek çok entegrasyon içeren büyük ve karmaşık uygulamalar için manuel kod analizi en iyi alternatif olsa da, SAST araçları kaynak kod içerisindeki XXE açıklıklarının tespitinde yardımcı olmaktadır.
 
-If these controls are not possible, consider using virtual patching, API security gateways, or Web Application Firewalls (WAFs) to detect, monitor, and block XXE attacks.
+Eğer bu kontroller uygulanabilir değilse, XXE saldırılarını tespit etmek, izlemek ve engellemek için sanal yama kullanımı, API güvenlik geçitleri veya Web Uygulamaları Güvenlik Duvarları (WAF) kullanımı düşünülmelidir.
 
-## Example Attack Scenarios
+## Örnek Saldırı Senaryoları
 
-Numerous public XXE issues have been discovered, including attacking embedded devices. XXE occurs in a lot of unexpected places, including deeply nested dependencies. The easiest way is to upload a malicious XML file, if accepted:
+Gömülü cihazlara saldırılar dahil, pek çok sayıda açık XXE sorunları tespit edilmiştir. Derin bir şekilde iç içe geçmiş bağımlılıklar dahil pek çok beklenmedik yerde XXE açıklığı bulunmaktadır. En kolay yöntem ise, eğer kabul ediliyorsa zararlı bir XML dosyası yüklemektir.
 
-**Scenario #1**: The attacker attempts to extract data from the server:
+**Senaryo #1**: Saldırgan sunucudan veri ele geçirmeye çalışmaktadır:
 
 ```
   <?xml version="1.0" encoding="ISO-8859-1"?>
@@ -42,18 +42,19 @@ Numerous public XXE issues have been discovered, including attacking embedded de
     <foo>&xxe;</foo>
 ```
 
-**Scenario #2**: An attacker probes the server's private network by changing the above ENTITY line to:
+**Senaryo #2**: Saldırgan aşağıdaki ENTITY satırını değiştirerek sunucunun iç ağını dinlemektedir:
+
 ```
    <!ENTITY xxe SYSTEM "https://192.168.1.1/private" >]>
 ```
 
-**Scenario #3**: An attacker attempts a denial-of-service attack by including a potentially endless file:
+**Senaryo #3**: Saldırgan potansiyel olarak sonu olmayan bir dosyayı dahil ederek, servis dışı bırakma saldırısı gerçekleştirmeye çalışmaktadır:
 
 ```
    <!ENTITY xxe SYSTEM "file:///dev/random" >]>
 ```
 
-## References
+## Kaynaklar
 
 ### OWASP
 
@@ -63,7 +64,7 @@ Numerous public XXE issues have been discovered, including attacking embedded de
 * [OWASP Cheat Sheet: XXE Prevention](https://www.owasp.org/index.php/XML_External_Entity_(XXE)_Prevention_Cheat_Sheet)
 * [OWASP Cheat Sheet: XML Security](https://www.owasp.org/index.php/XML_Security_Cheat_Sheet)
 
-### External
+### Dış Kaynaklar
 
 * [CWE-611: Improper Restriction of XXE](https://cwe.mitre.org/data/definitions/611.html)
 * [Billion Laughs Attack](https://en.wikipedia.org/wiki/Billion_laughs_attack)
