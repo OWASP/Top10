@@ -1,45 +1,45 @@
-# A3:2017 Sensitive Data Exposure
+# A3:2017 Hassas Bilgi İfşası
 
-| Threat agents/Attack vectors | Security Weakness | Impacts |
+| Tehdit etkenleri/Saldırı vektörleri | Güvenlik zafiyeti | Etkiler |
 | -- | -- | -- |
-| Access Lvl : Exploitability 2 | Prevalence 3 : Detectability 2 | Technical 3 : Business |
-| Rather than directly attacking crypto, attackers steal keys, execute man-in-the-middle attacks, or steal clear text data off the server, while in transit, or from the user’s client, e.g. browser. A manual attack is generally required. Previously retrieved password databases could be brute forced by Graphics Processing Units (GPUs). | Over the last few years, this has been the most common impactful attack. The most common flaw is simply not encrypting sensitive data. When crypto is employed, weak key generation and management, and weak algorithm, protocol and cipher usage is common, particularly for weak password hashing storage techniques. For data in transit, server side weaknesses are mainly easy to detect, but hard for data at rest. | Failure frequently compromises all data that should have been protected. Typically, this information includes sensitive personal information (PII) data such as health records, credentials, personal data, and credit cards, which often require protection as defined by laws or regulations such as the EU GDPR or local privacy laws. |
+| Erişim düzeyi : İstismar Edilebilirlik 2 | Yaygınlık 3 : Tespit Edilebilirlik 2 | Teknik 3 : İş |
+| Doğrudan şifrelemeye saldırmak yerine saldırganlar anahtarları çalmakta, ortadaki adam saldırıları gerçekleştirmekte veya sunucudan iletim halindeyken veya istemcinin tarayıcısından açık metin verileri çalmaktadır. Genellikle, elle yapılacak bir saldırı gerekmektedir. Daha önceden elde edilen parola veri tabanları grafik işleme üniteleri (GPU) tarafından kaba kuvvet saldırısında kullanılmaktadır. | Son birkaç yıldır, bu etkili en yaygın saldırıları olmuştur. En yaygın açıklık hassas verinin şifrelenmemesidir. Şifreleme uygulandığında, özellikle zayıf parola özeti ile saklama yöntemleri için zayıf anahtar üretimi ve yönetimi, zayıf algoritma, protokol ve anahtar kullanımı yaygındır. Veri iletim halindeyken, sunucu taraflı açıklıkların tespit edilmesi kolaydır, ancak durağan veri için tespit zor olmaktadır. | Eksiklikler sıklıkla korunması gereken tüm veriyi tehlikeye atmaktadır. Genellikle, bu veriler EU GDPR veya yerel gizlilik kanunları gibi yasalarda veya düzenlenmelerde tanımlandığı gibi koruma gerektiren kredi kartı numarası, kişisel veriler, giriş bilgileri, sağlık kayıtları gibi hassas kişisel bilgileri (PII) içermektedir. |
 
-## Is the Application Vulnerable?
+## Uygulamam Açıklık İçeriyor Mu?
 
-The first thing is to determine the protection needs of data in transit and at rest. For example, passwords, credit card numbers, health records, personal information and business secrets require extra protection, particularly if that data falls under privacy laws, e.g. EU's General Data Protection Regulation (GDPR), or regulations, e.g. financial data protection such as PCI Data Security Standard (PCI DSS). For all such data:
+Yapılacak ilk şey transit ve durağan veri için koruma gereksinimlerinin belirlenmesidir. Örneğin, parolalar, kredi kartı numaraları, sağlık kayıtları, kişisel bilgiler ve iş sırları, özellikle veri AB Genel Veri Koruma Tüzüğü (GDPR) gibi yasalar veya PCI Veri Güvenliği Standardı (PCI DSS) gibi finansal veri koruma düzenlemeleri tarafından korunuyorsa, ilave koruma önlemleri gerektirmektedir. Bu kapsamdaki tüm veriler için:
 
-* Is any data transmitted in clear text? This concerns protocols such as HTTP, SMTP, and FTP. External internet traffic is especially dangerous. Verify all internal traffic e.g. between load balancers, web servers, or back-end systems.
-* Are any old or weak cryptographic algorithms used either by default or in older code? 
-* Are default crypto keys in use, weak crypto keys generated or re-used, or is proper key management or rotation missing?
-* Is encryption not enforced, e.g. are any user agent (browser) security directives or headers missing?
-* Does the user agent (e.g. app, mail client) not verify if the received server certificate is valid?
+* Herhangi bir veri açık metin olarak iletiliyor mu? Bu HTTP, SMTP ve FTP gibi protokolleri ilgilendirmektedir. Özellikle dış internet trafiği tehlike taşımaktadır. Tüm iç trafik örn. yük dengeleyiciler, web sunucuları veya arka uç sistemleri arasındaki trafik, doğrulanmalıdır. 
+* Varsayılan olarak ve eski kod içerisinde herhangi bir eski veya zayıf kriptografik algoritma kullanılmakta mı? 
+* Varsayılan kripto anahtarları kullanılmakta mı, zayıf kripto anahtarları üretilmekte veya tekrar kullanılmakta mı? Yeterli anahtar yönetimi veya değişimi bulunmakta mı?
+* Şifreleme zorunlu tutuluyor mu? örn. herhangi bir tarayıcı güvenlik direktifi veya başlığı eksik mi?
+* Kullanıcı aracısı (örn. uygulama, mail istemcisi) alınan sunucu sertifikasının geçerli olup olmadığını doğruluyor mu?
 
-See ASVS [Crypto (V7)](https://www.owasp.org/index.php/ASVS_V7_Cryptography), [Data Protection (V9)](https://www.owasp.org/index.php/ASVS_V9_Data_Protection) and [SSL/TLS (V10)](https://www.owasp.org/index.php/ASVS_V10_Communications).
+Bakınız ASVS [Şifreleme (V7)](https://www.owasp.org/index.php/ASVS_V7_Cryptography), [Veri Koruma (V9)](https://www.owasp.org/index.php/ASVS_V9_Data_Protection) ve [SSL/TLS (V10)](https://www.owasp.org/index.php/ASVS_V10_Communications).
 
-## How To Prevent
+## Nasıl Önlenir
 
-Do the following, at a minimum, and consult the references:
+En azından aşağıdakiler yapılmalı ve referanslara başvurulmalıdır:
 
-* Classify data processed, stored or transmitted by an application. Identify which data is sensitive according to privacy laws, regulatory requirements, or business needs.
-* Apply controls as per the classification.
-* Don't store sensitive data unnecessarily. Discard it as soon as possible or use PCI DSS compliant tokenization or even truncation. Data that is not retained cannot be stolen.
-* Make sure to encrypt all sensitive data at rest.
-* Ensure up-to-date and strong standard algorithms, protocols, and keys are in place; use proper key management.
-* Encrypt all data in transit with secure protocols such as TLS with perfect forward secrecy (PFS) ciphers, cipher prioritization by the server, and secure parameters. Enforce encryption using directives like HTTP Strict Transport Security (HSTS).
-* Disable caching for response that contain sensitive data.
-* Store passwords using strong adaptive and salted hashing functions with a work factor (delay factor), such as [Argon2](https://www.cryptolux.org/index.php/Argon2), [scrypt](https://wikipedia.org/wiki/Scrypt), [bcrypt](https://wikipedia.org/wiki/Bcrypt) or [PBKDF2](https://wikipedia.org/wiki/PBKDF2).
-* Verify independently the effectiveness of configuration and settings.
+* Bir uygulama tarafından işlenen, saklanılan veya iletilen veri sınıflandırılmalıdır. Gizlilik kanunlarına, yasal gereksinimlere ve iş ihtiyaçlarına göre hsass olan veriler belirlenmelidir.
+* Her bir sınıflandırma için kontroller uygulanmalıdır.
+* Gereksiz şekilde hassas veriler saklanmamalıdır. Mümkün olduğunca erken bir şekilde hassas veri elden çıkarılmalı veya PCI DSS standardına uygun dizgeciklendirilmeli veya silinmelidir. Saklanmayan veri çalınamaz. 
+* Durağan tüm hassas verilerin şifrelendiğinden emin olunmalıdır.
+* Güncel ve güçlü algortimaların, protokollerin ve anahtarların kullanıldığından emin olunmalıdır. Düzgün bir anahtar yönetimi yapılmalıdır.
+* Perfect forward secrecy (PFS) şifreleri, sunucu tarafından şifre önceliklendirmesi ve güvenli parametreler ile TLS protokolü gibi güvenli protokoller ile tüm veriler transit haldeyken şifrelenmelidir.
+* Hassas veriler içeren cevapların önbelleğe alınması engellenmelidir.
+* Parolaları [Argon2](https://www.cryptolux.org/index.php/Argon2), [scrypt](https://wikipedia.org/wiki/Scrypt), [bcrypt](https://wikipedia.org/wiki/Bcrypt) veya [PBKDF2](https://wikipedia.org/wiki/PBKDF2) gibi güçlü, adaptif ve tuzlama kullanan özet fonksiyonları ile saklayınız.
+* Birbirinden bağımsız olarak yapılandırmanın ve ayarların etkinliği tespit edilmelidir.
 
-## Example Attack Scenarios
+## Örnek Saldırı Senaryoları
 
-**Scenario #1**: An application encrypts credit card numbers in a database using automatic database encryption. However, this data is automatically decrypted when retrieved, allowing an SQL injection flaw to retrieve credit card numbers in clear text. 
+**Senaryo #1**: Bir uygulama kredi kartı numaralarını otomatik veri tabanı şifrelemesini kullanarak bir veri tabanında tutmaktadır. Ancak, bu veri veri tabanından alınırken otomatik olarak çözülmektedir ve bu da bir SQL enjeksiyonu açıklığı sayesinde kredi kartı numaralarının açık metin olarak alınmasına izin vermektedir.
 
-**Scenario #2**: A site doesn't use or enforce TLS for all pages or supports weak encryption. An attacker monitors network traffic  (e.g. at an insecure wireless network), downgrades connections from HTTPS to HTTP, intercepts requests, and steals the user's session cookie. The attacker then replays this cookie and hijacks the user's (authenticated) session, accessing or modifying the user's private data. Instead of the above they could alter all transported data, e.g. the recipient of a money transfer.
+**Senaryo #2**: Bir site tüm sayfaları için TLS protokolünü zorunlu tutmamaktadır veya zayıf şifrelemeyi desteklemektedir. Bir saldırgan ağ trafiğini dinlemekte (örn. güvensiz bir kablosuz ağda), bağlantıları HTTPS'den HTTP'e düşürmekte, isteklerde araya girmekte ve kullanıcının oturum çerezini çalmaktadır. Saldırgan daha sonra bu çerezi tekrar yollamakta ve kullanıcının (kimliği doğrulanmış) oturumunu çalmakta, kullanıcının özel verisine erişmekte ve bunu değiştirmektedir. Bunların da yerine, bir para transferindeki alıcı ismi gibi iletilen veriyi de değiştirebilmektedir.
 
-**Scenario #3**: The password database uses unsalted or simple hashes to store everyone's passwords. A file upload flaw allows an attacker to retrieve the password database. All the unsalted hashes can be exposed with a rainbow table of pre-calculated hashes. Hashes generated by simple or fast hash functions may be cracked by GPUs, even if they were salted.
+**Senaryo #3**: Bir parola veri tabanı kullanıcıların parolalarını saklamak için tuzlanmamış veya basit özet fonksiyonlarını kullanmaktadır. Bir dosya yükleme açıklığı saldırganın parola veri tabanına ulaşmasını sağlamaktadır. Tuzlanmamış tüm özetler, önceden hesaplanmış özetler ile yapılan bir kaba kuvvet saldırısı sonucu çözülebilmektedir. Basit veya hızlı özet fonksiyonları tarafından üretilen özetler, tuzlanmış olsalar bile GPU'lar tarafından kırılabilmektedir.
 
-## References
+## Kaynaklar
 
 * [OWASP Proactive Controls: Protect Data](https://www.owasp.org/index.php/OWASP_Proactive_Controls#7:_Protect_Data)
 * [OWASP Application Security Verification Standard]((https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project)): [V7](https://www.owasp.org/index.php/ASVS_V7_Cryptography), [9](https://www.owasp.org/index.php/ASVS_V9_Data_Protection), [10](https://www.owasp.org/index.php/ASVS_V10_Communications)
@@ -49,7 +49,7 @@ Do the following, at a minimum, and consult the references:
 * [OWASP Security Headers Project](https://www.owasp.org/index.php/OWASP_Secure_Headers_Project); [Cheat Sheet: HSTS](https://www.owasp.org/index.php/HTTP_Strict_Transport_Security_Cheat_Sheet)
 * [OWASP Testing Guide: Testing for weak cryptography](https://www.owasp.org/index.php/Testing_for_weak_Cryptography)
 
-### External
+### Dış Kaynaklar
 
 * [CWE-220: Exposure of sens. information through data queries](https://cwe.mitre.org/data/definitions/220.html)
 * [CWE-310: Cryptographic Issues](https://cwe.mitre.org/data/definitions/310.html); [CWE-311: Missing Encryption](https://cwe.mitre.org/data/definitions/311.html)
