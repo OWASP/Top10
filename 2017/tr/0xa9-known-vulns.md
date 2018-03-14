@@ -1,43 +1,43 @@
-# A9:2017 Using Components with Known Vulnerabilities
+# A9:2017 Bilinen Açıklık İçeren Bileşen Kullanımı
 
-| Threat agents/Attack vectors | Security Weakness           | Impacts               |
+| Tehdit etkenleri/Saldırı vektörleri | Güvenlik zafiyeti           | Etkiler               |
 | -- | -- | -- |
-| Access Lvl : Exploitability 2 | Prevalence 3 : Detectability 2 | Technical 2 : Business |
-| While it is easy to find already-written exploits for many known vulnerabilities, other vulnerabilities require concentrated effort to develop a custom exploit. | Prevalence of this issue is very widespread. Component-heavy development patterns can lead to development teams not even understanding which components they use in their application or API, much less keeping them up to date. Some scanners such as retire.js help in detection, but determining exploitability requires additional effort. | While some known vulnerabilities lead to only minor impacts, some of the largest breaches to date have relied on exploiting known vulnerabilities in components. Depending on the assets you are protecting, perhaps this risk should be at the top of the list. |
+| Erişim Düzeyi : İstismar Edilebilirlik 2 | Yaygınlık 3 : Tespit Edilebilirlik 2 | Teknik 2 : İş |
+| Pek çok bilinen açıklık için yazılmış hazır istismarların bulunması kolay olsa da, diğer açıklıklar özel bir istismarın geliştirilmesi için özel çaba gerektirmektedir. | Bu sorun aşırı derece yaygındır. Bileşen yönünden zengin uygulamalar geliştirme takımlarının bileşenleri güncel tutamamasına ve hatta uygulama ve API'lerinde hangi bileşenlerin kullanıldığını unutmalarına yol açmaktadır. Retire.js gibi bazı tarama araçları tespitte yardımcı olmaktadır, ancak istismar edilebilirliğin tespiti ilave çaba gerektirmektedir. | Bazı bilinen açıklıklar sadece ufak etkilere yol açarken, şimdiye kadarki en büyük ihlallerin bazıları bileşenlerdeki bilinen açıklıkların istismarından kaynaklanmıştır. Korunmaya çalışılan varlıklara bağlı olarak, bu risk listede birinci sırada olabilecektir. |
 
-## Is the Application Vulnerable?
+## Uygulamam Açıklık İçeriyor Mu?
 
-You are likely vulnerable:
+Aşağıdaki durumlarda açıklıktan söz edilebilir:
 
-* If you do not know the versions of all components you use (both client-side and server-side). This includes components you directly use as well as nested dependencies.
-* If software is vulnerable, unsupported, or out of date. This includes the OS, web/application server, database management system (DBMS), applications, APIs and all components, runtime environments, and libraries.
-* If you do not scan for vulnerabilities regularly and subscribe to security bulletins related to the components you use.
-* If you do not fix or upgrade the underlying platform, frameworks, and dependencies in a risk-based, timely fashion. This commonly happens in environments when patching is a monthly or quarterly task under change control, which leaves organizations open to many days or months of unnecessary exposure to fixed vulnerabilities.
-* If software developers do not test the compatibility of updated, upgraded, or patched libraries.
-* If you do not secure the components' configurations (see **A6:2017-Security Misconfiguration**).
+* (Hem istemci tarafında hem de sunucu tarafında) kullandığınız tüm bileşenlerin versiyonlarını bilmiyorsanız. Bu doğrudan kullandıklarınıza ilave olarak bağımlı olarak kullandıklarınızı da içermektedir.
+* Eğer yazılım açıklık içeriyorsa, desteklenmiyorsa veya güncel değilse. Bu işletim sistemini, web/uygulama sunucusunu, veri tabanı yönetim sistemini (DBMS), uygulamaları, API'leri ve tüm bileşenleri, çalışma ortamlarını ve kütüphaneleri içermektedir.
+* Eğer düzenli olarak açıklıkları taramıyorsanız ve kullandığınız bileşenlerin güvenlik bültenlerini takip etmiyorsanız.
+* Risk tabanlı ve düzenli bir şekilde, altta kullanılan platformu, çerçeveleri ve bağımlılıkları düzeltmiyor veya güncellemiyorsanız. Bu durum genellikle yamaların aylık veya üç aylık süreçlerde yapıldığı ortamlarda ortaya çıkmaktadır ve bu durum organizasyonların çözebileceği açıklıklara karşı günlerce veya aylarca gereksiz bir şekilde açık olmasına neden olmaktadır.
+* Eğer yazılım geliştiriciler güncellenen, iyileştirilen veya yama yüklenen kütüphanelerin uyumluluğunu test etmiyorsa.
+* Eğer bileşenlerin yapılandırması güvenli olarak yapılmıyorsa (bkz. **A6:2017-Yanlış Güvenlik Yapılandırması**).
 
-## How To Prevent
+## Nasıl Önlenir
 
-There should be a patch management process in place to:
+Aşağıdakileri sağlayacak bir yama yönetim süreci bulunmalıdır:
 
-* Remove unused dependencies, unnecessary features, components, files, and documentation.
-* Continuously inventory the versions of both client-side and server-side components (e.g. frameworks, libraries) and their dependencies using tools like versions, DependencyCheck, retire.js, etc. 
-* Continuously monitor sources like CVE and NVD for vulnerabilities in the components. Use software composition analysis tools to automate the process. Subscribe to email alerts for security vulnerabilities related to components you use.
-* Only obtain components from official sources over secure links. Prefer signed packages to reduce the chance of including a modified, malicious component.
-* Monitor for libraries and components that are unmaintained or do not create security patches for older versions. If patching is not possible, consider deploying a virtual patch to monitor, detect, or protect against the discovered issue.
+* Kullanılmayan bağımlılıkların, gereksiz özelliklerin, bileşenlerin, dosyaların ve dokümantasyonun kaldırılması.
+* Hem istemci taraflı hem de sunucu taraflı bileşenlerin (örn. çerçeveler, kütüphaneler) ve bunların bağımlılıklarının versions, DependencyCheck, retire.js vb. araçlar kullanılarak sürekli olarak sürüm envanterlerinin çıkarılması.
+* Bileşenlerdeki açıklıklar için CVE ve NVD gibi kaynakların sürekli izlenmesi. Süreci otomatik hale getirmek için yazılım envanter analizi araçları kullanılmalıdır. Kullanılan bileşenlerle ilgili güvenlik açıklıkları için eposta alarmlarına abone olunmalıdır.
+* Sadece güvenli bağlantılar üzerinden ve resmi kaynaklardan bileşen temini. Değiştirilmiş veya zararlı bir bileşenin alınması riskini azaltmak için imzalanmış paketler tercih edilmelidir.
+* Desteklenmeyen veya eski sürümleri için güvenlik yamalarının çıkmadığı kütüphaneler ve bileşenlerin takibi. Eğer yamama mümkün değilse, tespit edilen açıklığa karşı izleme, tespit veya koruma yapılabilmesi için sanal bir yama uygulaması düşünülmelidir.
 
-Every organization must ensure that there is an ongoing plan for monitoring, triaging, and applying updates or configuration changes for the lifetime of the application or portfolio.
+Tüm organizasyonlar, uygulamanın veya porfolyönün yaşam süresi boyunca devam eden bir izleme, derecelendirme ve güncelleme veya yapılandırma değişiklikleri uygulama planlarının olduğundan emin olmalıdır.
 
-## Example Attack Scenarios
+## Örnek Saldırı Senaryoları
 
-**Scenario #1**: Components typically run with the same privileges as the application itself, so flaws in any component can result in serious impact. Such flaws can be accidental (e.g. coding error) or intentional (e.g. backdoor in component). Some example exploitable component vulnerabilities discovered are:
+**Senaryo #1**: Bileşenler genellikle uygulamanın sahip olduğu yetkilerle çalışmaktadır, bu yüzden herhangi bir bileşendeki açıklık ciddi bir sonuç doğurabilmektedir. Bu tür açıklıklar farkında olunmadan (örn. kodlama hatası) veya bilinçli olarak (örn. bileşendeki bir arka kapı) ortaya çıkabilmektedir. Tespit edilen bazı istismar edilebilir bileşen açıklıkları şunlardır:
 
-* [CVE-2017-5638](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5638), a Struts 2 remote code execution vulnerability that enables execution of arbitrary code on the server, has been blamed for significant breaches.
-* While [internet of things (IoT)](https://en.wikipedia.org/wiki/Internet_of_things) are frequently difficult or impossible to patch, the importance of patching them can be great (e.g. biomedical devices).
+* [CVE-2017-5638](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5638), Pek çok ihlal için suçlanan ve sunucu üzerinde isteğe bağlı kod çalıştırılmasına izin veren bir Struts 2 uzaktan kod çalıştırma açıklığı.
+* [Nesnelerin İnterneti (IoT)](https://en.wikipedia.org/wiki/Internet_of_things) yama açısından genellikle zor veya imkansız olsa da, yamalarının yüklenmesi çok önemli olabilmektedir (örn. biyomedikal cihazlar).
 
-There are automated tools to help attackers find unpatched or misconfigured systems. For example, the [Shodan IoT search engine](https://www.shodan.io/report/89bnfUyJ) can help you find devices that still suffer from [Heartbleed](https://en.wikipedia.org/wiki/Heartbleed) vulnerability that was patched in April 2014.
+Yamaları eksik olan veya yanlış yapılandırılmış sistemlerin tespiti için saldırganlara yardım edecek otomatize araçlar bulunmaktadır. Örneğin, [Shodan IoT arama moturu](https://www.shodan.io/report/89bnfUyJ) Nisan 2014 tarihinde yaması çıkarılan [Heartbleed](https://en.wikipedia.org/wiki/Heartbleed) açıklığından hala etkilenen cihazları bulmanıza yardım etmektedir.
 
-## References
+## Kaynaklar
 
 ### OWASP
 
@@ -46,7 +46,7 @@ There are automated tools to help attackers find unpatched or misconfigured syst
 * [OWASP Testing Guide - Map Application Architecture (OTG-INFO-010)](https://www.owasp.org/index.php/Map_Application_Architecture_(OTG-INFO-010))
 * [OWASP Virtual Patching Best Practices](https://www.owasp.org/index.php/Virtual_Patching_Best_Practices)
 
-### External
+### Dış Kaynaklar
 
 * [The Unfortunate Reality of Insecure Libraries](https://www.aspectsecurity.com/research-presentations/the-unfortunate-reality-of-insecure-libraries)
 * [MITRE Common Vulnerabilities and Exposures (CVE) search](https://www.cvedetails.com/version-search.php)
