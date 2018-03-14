@@ -1,53 +1,53 @@
-# A8:2017 Insecure Deserialization
+# A8:2017 Güvensiz Ters Serileştirme
 
-| Threat agents/Attack vectors | Security Weakness           | Impacts               |
+| Tehdit etkenleri/Saldırı vektörleri | Güvenlik zafiyeti           | Etkiler               |
 | -- | -- | -- |
-| Access Lvl : Exploitability 1 | Prevalence 2 : Detectability 2 | Technical 3 : Business |
-| Exploitation of deserialization is somewhat difficult, as off the shelf exploits rarely work without changes or tweaks to the underlying exploit code. | This issue is included in the Top 10 based on an [industry survey](https://owasp.blogspot.com/2017/08/owasp-top-10-2017-project-update.html) and not on quantifiable data. Some tools can discover deserialization flaws, but human assistance is frequently needed to validate the problem. It is expected that prevalence data for deserialization flaws will increase as tooling is developed to help identify and address it. | The impact of deserialization flaws cannot be overstated. These flaws can lead to remote code execution attacks, one of the most serious attacks possible. The business impact depends on the protection needs of the application and data. |
+| Erişim Düzeyi : İstismar Edilebilirlik 1 | Yaygınlık 2 : Tespit Edilebilirlik 2 | Teknik 3 : İş |
+| Hazır istismarlar altta yatan istismar kodunda değişiklik yapılmadığında nadiren çalıştığı için ters serileştirme açıklıklarının istismarı daha zor olmaktadır. | Bu açıklık [endüstri anketine](https://owasp.blogspot.com/2017/08/owasp-top-10-2017-project-update.html) dayanarak Top 10 içerisinde yer almaktadır ve hesaplanabilir bir veriye dayanmamaktadır. Bazı araçlar ters serileştirme açıklıklarını bulabilir, ancak problemin varlığını doğrulamak için genellikle insan faktörü gerekmektedir. Bu problemi tespit etmek ve çözmek için araçlar geliştikçe, ters serileştirme için yaygınlık verilerinin de artması beklenmektedir. | Ters serileştirme açıklıklarının etkileri abartılamaz. Bu açıklıklar mümkün olan en ciddi açıklıklardan birisi olan uzaktan kod çalıştırma saldırına yol açabilmektedir. İş etkisi, uygulama ve verinin koruma gereksinimlerine göre değişmektedir. |
 
-## Is the Application Vulnerable?
+## Uygulama Açıklık İçeriyor Mu?
 
-Applications and APIs will be vulnerable if they deserialize hostile or tampered objects supplied by an attacker.
+Uygulama ve API'ler, eğer saldırgan tarafından sağlanan zararlı veya değiştirilmiş nesneleri ters serileştiriyorsa, açıklığa sahip olacaktır.
 
-This can result in two primary types of attacks:
+Bu açıklık iki ana saldırı türüyle sonuçlanabilmektedir:
 
-* Object and data structure related attacks where the attacker modifies application logic or achieves arbitrary remote code execution if there are classes available to the application that can change behavior during or after deserialization.
-* Typical data tampering attacks such as access-control-related attacks where existing data structures are used but the content is changed.
+* Ters serileştirme sırasında veya sonrasında davranış değiştirebilen sınıflar uygulamada mevcut olduğunda, saldırganın uygulama mantığını değiştirdiği veya uzaktan kod çalıştırabildiği nesne ve veri yapısı ile ilgili saldırılar.
+* Mevcut veri yapılarının kullanıldığı ancak içeriğinin değiştirildiği erişim kontrolü ile ilgili saldırılar gibi tipik veri değiştirme saldırıları.
 
-Serialization may be used in applications for:
+Serileştirme aşağıdaki amaçlarla uygulamalarda kullanılabilmektedir:
 
-* Remote- and inter-process communication (RPC/IPC) 
-* Wire protocols, web services, message brokers
-* Caching/Persistence
-* Databases, cache servers, file systems 
-* HTTP cookies, HTML form parameters, API authentication tokens 
+* Uzaktan işlem çağrısı ve işlemler arası iletişim (RPC/IPC)
+* Kablo protokolleri, web servisleri, mesaj simsarları
+* Ön belleğe alma/Süreklilik
+* Veri tabanları, ön bellek sunucuları, dosya sistemleri
+* HTTP çerezleri, HTML form parametreleri, API kimlik doğrulama tokenleri
 
-## How To Prevent
+## Nasıl Önlenir
 
-The only safe architectural pattern is not to accept serialized objects from untrusted sources or to use serialization mediums that only permit primitive data types.
+Tek güvenli yapısal çözüm güvenilmeyen kaynaklardan serileştirilmiş nesneleri kabul etmemek veya sadece birincil veri tiplerine izin veren serileştirme ortamlarının kullanımıdır.
 
-If that is not possible, consider one of more of the following:
+Bu mümkün değilse, aşağıdakilerden birisi veya birkaçı düşünülmelidir:
 
-* Implementing integrity checks such as digital signatures on any serialized objects to prevent hostile object creation or data tampering.
-* Enforcing strict type constraints during deserialization before object creation as the code typically expects a definable set of classes. Bypasses to this technique have been demonstrated, so reliance solely on this is not advisable.
-* Isolating and running code that deserializes in low privilege environments when possible.
-* Log deserialization exceptions and failures, such as where the incoming type is not the expected type, or the deserialization throws exceptions.
-* Restricting or monitoring incoming and outgoing network connectivity from containers or servers that deserialize.
-* Monitoring deserialization, alerting if a user deserializes constantly.
+* Zararlı nesne oluşumunu veya veri değişimini engellemek için herhangi bir serileştirilmiş nesne üzerinde dijital imzalar gibi bütünlük kontrollerinin uygulanması.
+* Genellikle kod tanımlanabilir bir sınıf seti beklediği için, nesne oluşturmadan önce ters serileştirme sırasında katı tip kısıtlamalarının zorunlu tutulması.
+* Mümkün olduğunda ters serileştirilen kodun izole edilmesi ve düşük yetki gerektiren ortamlarda çalıştırılması.
+* Gelen tipin beklenen tip olmadığı gibi ters serileştirme istisnaları ve başarısızlıkları loglanmalı veya ters serileştirme istisna atmalıdır.
+* Ters serileştirme yapan konteyner veya sunuculardan gelen ve bunlardan çıkan ağ bağlantılarının kısıtlanması veya izlenmesi.
+* Ters serileştirmenin izlenmesi ve bir kullanıcı sürekli ters serileştirme yaptığında alarm üretilmesi.
 
+## Örnek Saldırı Senaryoları
 
-## Example Attack Scenarios
+**Senaryo #1**: Bir React uygulaması bir takım Spring Boot mikroservislerini çağırmaktadır. Programcılar fonksiyonel programcılar olarak, kodlarının değişmez olduğundan emin olmaya çalışmıştır. Bunun için buldukları çözüm kullanıcı durum bilgisini nesneleştirmek ve her bir istekte tekrar gönderip almaktır. Saldırgan "R00" Java nesnesi imzasını fark edebilir ve Java Serial Killer aracını kullanarak uygulama sunucusu üzerinde uzaktan kod çalıştırabilir.
 
-**Scenario #1**: A React application calls a set of Spring Boot microservices. Being functional programmers, they tried to ensure that their code is immutable. The solution they came up with is serializing user state and passing it back and forth with each request. An attacker notices the "R00" Java object signature, and uses the Java Serial Killer tool to gain remote code execution on the application server.
-
-**Scenario #2**: A PHP forum uses PHP object serialization to save a "super" cookie, containing the user's user ID, role, password hash, and other state:
+**Senaryo #2**: Bir PHP formu, kullanıcının kullanıcı ID değerini, rolünü, parola özetini ve diğer durum bilgilerini taşıyan bir "süper" çerez kaydetmek için PHP nesne serileştirmesini kullanmaktadır: 
 
 `a:4:{i:0;i:132;i:1;s:7:"Mallory";i:2;s:4:"user";i:3;s:32:"b6a8b3bea87fe0e05022f8f3c88bc960";}`
 
-An attacker changes the serialized object to give themselves admin privileges:
+Saldırgan serileştirilen nesneyi yönetici hakları elde etmek için değiştirebilecektir:
+
 `a:4:{i:0;i:1;i:1;s:5:"Alice";i:2;s:5:"admin";i:3;s:32:"b6a8b3bea87fe0e05022f8f3c88bc960";}`
 
-## References
+## Kaynaklar
 
 ### OWASP
 
@@ -57,7 +57,7 @@ An attacker changes the serialized object to give themselves admin privileges:
 * [OWASP AppSecEU 2016: Surviving the Java Deserialization Apocalypse](https://speakerdeck.com/pwntester/surviving-the-java-deserialization-apocalypse)
 * [OWASP AppSecUSA 2017: Friday the 13th JSON Attacks](https://speakerdeck.com/pwntester/friday-the-13th-json-attacks)
 
-### External
+### Dış Kaynaklar
 
 * [CWE-502: Deserialization of Untrusted Data](https://cwe.mitre.org/data/definitions/502.html)
 * [Java Unmarshaller Security](https://github.com/mbechler/marshalsec)
