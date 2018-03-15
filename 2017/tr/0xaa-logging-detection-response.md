@@ -1,45 +1,45 @@
-# A10:2017 Insufficient Logging and Monitoring
+# A10:2017 Yetersiz Loglama ve İzleme
 
-| Threat agents/Attack vectors | Security Weakness           | Impacts               |
+| Tehdit etkenleri/Saldırı vektörleri | Güvenlik zafiyeti           | Etkiler               |
 | -- | -- | -- |
-| Access Lvl : Exploitability 2 | Prevalence 3 : Detectability 1 | Technical 2 : Business |
-| Exploitation of insufficient logging and monitoring is the bedrock of nearly every major incident. Attackers rely on the lack of monitoring and timely response to achieve their goals without being detected. | This issue is included in the Top 10 based on an [industry survey](https://owasp.blogspot.com/2017/08/owasp-top-10-2017-project-update.html). One strategy for determining if you have sufficient monitoring is to examine the logs following penetration testing. The testers' actions should be recorded sufficiently to understand what damages they may have inflicted. | Most successful attacks start with vulnerability probing. Allowing such probes to continue can raise the likelihood of successful exploit to nearly 100%. In 2016, identifying a breach took an [average of 191 days](https://www-01.ibm.com/common/ssi/cgi-bin/ssialias?htmlfid=SEL03130WWEN&) – plenty of time for damage to be inflicted. |
+| Erişim Düzeyi : İstismar Edilebilirlik 2 | Yaygınlık 3 : Tespit Edilebilirlik 1 | Teknik 2 : İş |
+| Yetersiz loglama ve izleme açıklıklarının istismarı neredeyse tüüm büyük ihlallerin ana nedenidir. Saldırganlar tespit edilmeksizin amaçlarına ulaşmak için izleme ve zamanında müdahalenin eksikliğini kullanmaktadır. | Bu açıklık [endüstri anketine](https://owasp.blogspot.com/2017/08/owasp-top-10-2017-project-update.html) dayanarak Top 10 listesinde yer almaktadır. Yeterli düzeyde izleme yapılıp yapılmadığına karar verirken kullanılacak bir strateji sızma testi sonrası logların incelenmesidir. Test ekibinin eylemleri, çıkarabilecekleri zararları anlamak için yeterli olacak şekilde kayıt altına alınmalıdır. | Başarılı pek çok saldırı açıklık araştırması ile başlamaktadır. Bu tür araştırmalara izin verilmesi başarılı istismar oranını neredeyse %100 oranında artırmaktadır. 2016 yılında, bir ihlalin tespiti, zararın oluşması için yeterli bir süre olan [ortalama 191 gün](https://www-01.ibm.com/common/ssi/cgi-bin/ssialias?htmlfid=SEL03130WWEN&) olmuştur. |
 
-## Is the Application Vulnerable?
+## Uygulamam Açıklık İçeriyor Mu?
 
-Insufficient logging, detection, monitoring and active response occurs any time:
+Yetersiz loglama, tespit, izleme ve aktif müdahale aşağıdaki durumlarda ortaya çıkmaktadır:
 
-* Auditable events, such as logins, failed logins, and high-value transactions are not logged.
-* Warnings and errors generate no, inadequate, or unclear log messages.
-* Logs of applications and APIs are not monitored for suspicious activity.
-* Logs are only stored locally.
-* Appropriate alerting thresholds and response escalation processes are not in place or effective.
-* Penetration testing and scans by [DAST](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools) tools (such as [OWASP ZAP](https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project)) do not trigger alerts.
-* The application is unable to detect, escalate, or alert for active attacks in real time or near real time.
+* Giriş işlemleri, başarısız giriş denemeleri ve yüksek değerli işlemler gibi denetlenebilir olaylar loglanmadığında.
+* Uyarı ve hatalar yetersiz veya açık olmayan log mesajları oluşturuyorsa veya hiç oluşturmuyorsa.
+* Uygulamaların ve API'lerin logları şüphe çekici faaliyetler için izlenmediğinde.
+* Loglar sadece yerel olarak saklandığında.
+* Uygun alarm üretme sınırları ve yanıt yükseltme süreçleri yerinde veya etkin olmadığında.
+* [OWASP ZAP](https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project) gibi [DAST](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools) araçları tarafından yapılan sızma testi ve taramalar alarm üretmediğinde.
+* Uygulama gerçek zamanlı olarak veya neredeyse gerçek zamanlı olarak aktif saldırıları tespit edemediğinde veya alarm üretmediğinde.
 
-You are vulnerable to information leakage if you make logging and alerting events visible to a user or an attacker (see A3:2017-Sensitive Information Exposure).
+Eğer loglama ve alarm kayıtları bir kullanıcı veya bir saldırgan tarafından görüntülenebilirse, bilgi ifşası açıklığı bulunmaktadır. (bkz. A3:2017-Hassas Bilgi İfşası).
 
-## How To Prevent
+## Nasıl Önlenir
 
-As per the risk of the data stored or processed by the application:
+Uygulama tarafından saklanan veya işlenen her bir risk için:
 
-* Ensure all login, access control failures, and server-side input validation failures can be logged with sufficient user context to identify suspicious or malicious accounts, and held for sufficient time to allow delayed forensic analysis.
-* Ensure that logs are generated in a format that can be easily consumed by a centralized log management solutions.
-* Ensure high-value transactions have an audit trail with integrity controls to prevent tampering or deletion, such as append-only database tables or similar.
-* Establish effective monitoring and alerting such that suspicious activities are detected and responded to in a timely fashion.
-* Establish or adopt an incident response and recovery plan, such as [NIST 800-61 rev 2](https://csrc.nist.gov/publications/detail/sp/800-61/rev-2/final) or later.
+* Şüpheli veya zararlı hesapların belirlenmesi için yeterli kullanıcı bağlanmıyla tüm giriş, erişim kontrolü eksiklikleri ve sunucu taraflı girdi doğrulama hatalarının loglandığından emin olunmalı ve ileri zamanlı adli bilişim analizlerine izin vermek için yeterli bir süre için tutulmalıdır.
+* Logların merkezi bir log yönetim çözümü tarafından kolayca tüketilebileceği bir formatta üretildiğinden emin olunmalıdır.
+* Değiştirme ve silmeleri engellemek için sadece ekleme yapılabilen veri tabanı tabloları gibi bütünlük kontrolü içeren denetim izlerinin yüksek değerli işlemler için bulunduğundan emin olunmalıdır.
+* Şüpheli faaliyetlerin tespit edilebileceği ve zamanında müdahale edilebileceği şekilde etkin izleme ve alarm üretimi sağlanmalıdır.
+* [NIST 800-61 rev 2](https://csrc.nist.gov/publications/detail/sp/800-61/rev-2/final) veya daha ileri sürümleri gibi bir olay müdahale ve kurtarma planı oluşturulmalı veya benimsenmelidir.
 
-There are commercial and open source application protection frameworks such as [OWASP AppSensor](https://www.owasp.org/index.php/OWASP_AppSensor_Project), web application firewalls such as [ModSecurity with the OWASP ModSecurity Core Rule Set](https://www.owasp.org/index.php/Category:OWASP_ModSecurity_Core_Rule_Set_Project), and log correlation software with custom dashboards and alerting. 
+[OWASP AppSensor](https://www.owasp.org/index.php/OWASP_AppSensor_Project) gibi açık kaynak kodlu ve ticari uygulama koruma çerçeveleri, [OWASP ModSecurity Temel Kural Seti ile ModSecurity](https://www.owasp.org/index.php/Category:OWASP_ModSecurity_Core_Rule_Set_Project) gibi web uygulama güvenlik duvarları ve özelleştirilmiş gösterge panelleri ve alarm üretme özellikleri ile log korelasyon yazılımları bulunmaktadır.
 
-## Example Attack Scenarios
+## Örnek Saldırı Senaryoları
 
-**Scenario #1**: An open source project forum software run by a small team was hacked using a flaw in its software. The attackers managed to wipe out the internal source code repository containing the next version, and all of the forum contents. Although source could be recovered, the lack of monitoring, logging or alerting led to a far worse breach. The forum software project is no longer active as a result of this issue.
+**Senaryo #1**: Küçük bir takım tarafından yürütülen bir açık kaynak proje forum yazılımı, yazılımında bulunan bir açıklık kullanılarak ele geçirilmiştir. Saldırganlar bir sonraki sürüme ait bir iç kaynak kod deposu ve tüm forum içeriğini temizlemiştir. Kaynak kod kurtarılabilse de, izleme, loglama veya alarmlama eksikliği daha da kötü bir ihlale yol açmıştır. Forum yazılım projesi bu sorunun bir sonucu olarak artık aktif değildir.
 
-**Scenario #2**: An attacker uses scans for users using a common password. They can take over all accounts using this password. For all other users, this scan leaves only one false login behind. After some days, this may be repeated with a different password.
+**Senaryo #2**: Bir saldırgan, yaygın parola kullanan kullanıcılar için tarama yapmaktadır. Saldırganlar bu parolaları kullanarak tüm hesapları ele geçirebilmektedir. Diğer tüm kullanıcılar için, bu tarama sadece bir tane yanlış giriş bırakmaktadır. Birkaç gün sonra, bu durum farklı bir parola ile tekrar edilebilmektedir.
 
-**Scenario #3**: A major US retailer reportedly had an internal malware analysis sandbox analyzing attachments. The sandbox software had detected potentially unwanted software, but no one responded to this detection. The sandbox had been producing warnings for some time before the breach was detected due to fraudulent card transactions by an external bank.
+**Senaryo #3**: Bir tane büyük US perakendecisinin, eklentileri analiz eden bir iç kötücül yazlım analiz kum havuzuna sahip olduğu raporlanmıştır. Kum havuzu yazılımı potansiyel olarak istenmeyen yazılım tespit etmiştir, ancak hiçbir kimse bu tespite cevap vermemiştir. Dış bir banka tarafından yapılan sahte kart işlemleri sayesinde bu ihlal tespit edilmeden önce, kum havuzu bir süredir uyarılar üretmekteydi.
 
-## References
+## Kaynaklar
 
 ### OWASP
 
@@ -48,7 +48,7 @@ There are commercial and open source application protection frameworks such as 
 * [OWASP Testing Guide: Testing for Detailed Error Code](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
 * [OWASP Cheat Sheet: Logging](https://www.owasp.org/index.php/Logging_Cheat_Sheet)
 
-### External
+### Dış Kaynaklar
 
 * [CWE-223: Omission of Security-relevant Information](https://cwe.mitre.org/data/definitions/223.html)
 * [CWE-778: Insufficient Logging](https://cwe.mitre.org/data/definitions/778.html)
