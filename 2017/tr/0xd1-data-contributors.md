@@ -47,8 +47,8 @@
 * Vantage Point
 * Veracode
 * Web.com
-w
-İlk kez, bir Top 10 sürümene katkı olarak sunulan tüm veriler ve iştirakçilerin tam listesi [erişilebilirdir](https://github.com/OWASP/Top10/tree/master/2017/datacall/submissions).
+
+İlk kez, bir Top 10 sürümene katkı olarak sunulan tüm veriler ve iştirakçilerin tam listesi [herkes tarafından erişilebilirdir](https://github.com/OWASP/Top10/tree/master/2017/datacall/submissions).
 
 ## Bireysel İştirakçilere Teşekkür
 
