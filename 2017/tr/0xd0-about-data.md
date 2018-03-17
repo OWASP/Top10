@@ -1,10 +1,10 @@
-# +Dat Methodology and Data
+# + Veri Metadolojisi ve Veriler
 
-At the OWASP Project Summit, active participants and community members decided on a vulnerability view, with up to two (2) forward looking vulnerability classes, with ordering defined partially by quantitative data, and partially by qualitative surveys.
+OWASP Projesi Zirvesi'nde, aktif katılımcılar ve topluluk üyeleri, kısmen nicel veri ile kısmen de nitel anketler ile tanımlanan bir sıralama ile 2 ileriye yönelik açıklık sınıfı ile bir açıklık görünümü üzerinde ortak karar aldılar.
  
-## Industry Ranked Survey
+## Endüstri Katılımlı Anket
 
-For the survey, we collected the vulnerability categories that had been previously identified as being “on the cusp” or were mentioned in feedback to 2017 RC1 on the Top 10 mailing list. We put them into a ranked survey and asked respondents to rank the top four vulnerabilities that they felt should be included in the OWASP Top 10 - 2017. The survey was open from Aug 2 – Sep 18, 2017. 516 responses were collected and the vulnerabilities were ranked.
+Anket için, eskiden "daha yeni çıkmış" olarak belirlenen veya Top 10 mail listesinde 2017 RC1'a geri bildirim olarak olarak bahsedilen açıklık kategorilerini topladık. Bunları sıralanmış bir ankete yerleştirdik ve katılımcılardan Owasp Top 10 - 2017 içerisinde yer alması gerektiğini düşündükleri ilk dört açıklığı sıralamasını istedik.Anket 2 Ağustos - 18 Eylül 2017 tarihleri arasında açık kaldı. 516 cevap toplandı ve açıklıklar sıralandı.
 
 | Rank | Survey Vulnerability Categories | Score |
 | -- | -- | -- |
