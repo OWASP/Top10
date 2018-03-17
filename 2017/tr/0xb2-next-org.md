@@ -1,31 +1,30 @@
-# +O What's Next for Organizations
+# +O Organizasyonlar İçin Bir Sonraki Adım
 
-## Start Your Application Security Program Now
+## Uygulama Güvenliği Programınıza Şimdi Başlayın
 
-Application security is no longer optional. Between increasing attacks and regulatory pressures, organizations must establish effective processes and capabilities for securing their applications and APIs. Given the staggering amount of code in the numerous applications and APIs already in production, many organizations are struggling to get a handle on the enormous volume of vulnerabilities. 
+Uygulama güvenliği artık opsiyonel değildir. Artan saldırılar ve düzenleyici baskılar arasında, organizasyonlar uygulama ve API'lerinin güvenliğini sağlamak için etkin süreçler ve yetkinlikler oluşturmalıdır. Hali hazırda üretim ortamında olan uygulama ve API'lere ait aşırı düzeydeki kod miktarı düşünüldüğünde, pek çok organizasyon aşırı düzeydeki açıklıklar hakkında bilgi sahibi olmak için zorlanmaktadır.
 
-OWASP recommends organizations establish an application security program to gain insight and improve security across their applications and APIs. Achieving application security requires many different parts of an organization to work together efficiently, including security and audit, software development, business, and executive management. Security should be visible and measurable, so that all the different players can see and understand the organization’s application security posture. Focus on the activities and outcomes that actually help improve enterprise security by eliminating or reducing risk. [OWASP SAMM](https://www.owasp.org/index.php/OWASP_SAMM_Project) and the [OWASP Application Security Guide for CISOs](https://www.owasp.org/index.php/Application_Security_Guide_For_CISOs) is the source of most of the key activities in this list.
+OWASP, organizasyonların uygulama ve API'lerinin günveliği hakkında bilgi sahibi olmaları ve güvenliklerini artırmaları için bir uygulama güvenliği programı oluşturmalarını tavsiye etmektedir. Uygulama güvenliğinin sağlanması, güvenlik ve denetim, yazılım geliştirme, iş geliştirme ve üst yönetim gibi bir organizasyonun farklı pek çok kısmının etkin bir şekilde beraber çalışmasını gerektirmektedir. Güvenlik gözlemlenebilir ve ölçülebilir olmalıdır, böylece tüm farklı oyuncular organizasyonun güvenlik duruşunu görebilir ve anlayabilir. Açıklıkları gerçekten ortadan kaldırarak veya etkilerini azaltarak kurum güvenliğinin geliştirilmesine yardım eden faaliyetlere ve sonuçlara odaklanın. [OWASP SAMM](https://www.owasp.org/index.php/OWASP_SAMM_Project) ve [CISO'lar İçin OWASP Uygulama Güvenliği Rehberi](https://www.owasp.org/index.php/Application_Security_Guide_For_CISOs) bu listedeki pek çok önemli faaliyetin kaynağıdır.
 
-### Get Started
+### Başlayın
 
-* Document all applications and associated data assets. Larger organizations should consider implementing a Configuration Management Database (CMDB) for this purpose.
-* Establish an [application security program](https://www.owasp.org/index.php/SAMM_-_Strategy_&_Metrics_-_1) and drive adoption.
-* Conduct a [capability gap analysis](https://www.owasp.org/index.php/SAMM_-_Strategy_&_Metrics_-_3) comparing your organization to your peers to define key
-improvement areas and an execution plan.
-* Gain management approval and establish an [application security awareness campaign](https://www.owasp.org/index.php/SAMM_-_Education_&_Guidance_-_1) for the entire IT organization.
+* Tüm uygulamaları ve ilgili veri varlıklarını belgelendirin. Daha büyük organizasyon bu amaç için bir Yapılandırma Yönetimi Veri Tabanı (CMDB) oluşturmayı düşünmelidir.
+* Bir [uygulama güvenliği programı](https://www.owasp.org/index.php/SAMM_-_Strategy_&_Metrics_-_1) oluşturun ve benimseyin.
+* Ana gelişim alanlarını belirlemek için organizasyonunuzu benzer organizasyonlar ile kıyaslayarak bir [yetkinlik açığı analizi](https://www.owasp.org/index.php/SAMM_-_Strategy_&_Metrics_-_3) yapın ve yürütme planı hazırlayın.
+* Yönetim onayı alın ve IT organizasyonunun tamamı için bir [uygulama güvenliği farkındalık kampanyası](https://www.owasp.org/index.php/SAMM_-_Education_&_Guidance_-_1) oluşturun.
 
-### Risk Based Portfolio Approach
+### Risk Tabanlı Portfolyö Yaklaşımı
 
-* Identify the [protection needs](https://www.owasp.org/index.php/SAMM_-_Strategy_&_Metrics_-_2) of your [application portfolio](https://www.owasp.org/index.php/SAMM_-_Strategy_&_Metrics_-_2) from a business perspective. This should be driven in part by privacy laws and other regulations relevant to the data asset being protected. 
-* Establish a common [risk rating model](https://www.owasp.org/index.php/OWASP_Risk_Rating_Methodology) with a consistent set of likelihood and impact factors reflective of your organization's tolerance for risk. 
-* Accordingly measure and prioritize all your applications and APIs. Add the results to your CMDB. 
-* Establish assurance guidelines to properly define coverage and level of rigor required.
+* İş perspektifi ile [uygulama portfolyönüzün](https://www.owasp.org/index.php/SAMM_-_Strategy_&_Metrics_-_2) [korunma ihtiyaçlarını](https://www.owasp.org/index.php/SAMM_-_Strategy_&_Metrics_-_2) belirleyin. Bu işlem korunan veri varlığı ile ilgili gizlilik yasaları ve diğer düzenlemelere göre parça parça yapılmalıdır.
+* Tutarlı bir olasılık seti ve organizasyonunuzun risk toleransını yansıtan etki faktörleri seti ile bir ortak [risk derecelendirme modeli](https://www.owasp.org/index.php/OWASP_Risk_Rating_Methodology) oluşturun. 
+* Buna uygun olarak, tüm uygulama ve API'lerinizi ölçün ve önceliklendirin. Sonuçları CMDB veri tabanınıza ekleyin.
+* Gereken özenin kapsamını ve düzeyini düzgün bir şekilde belirlemek için güvence yönergeleri oluşturun.
 
-### Enable with a Strong Foundation
+### Güçlü Bir Temele Oturtun
 
-* Establish a set of focused [policies and standards](https://www.owasp.org/index.php/SAMM_-_Policy_&_Compliance_-_2) that provide an application security baseline for all development teams to adhere to.
-* Define a common set of [reusable security controls](https://www.owasp.org/index.php/OWASP_Security_Knowledge_Framework) that complement these policies and standards and provide design and development guidance on their use.
-* Establish an [application security training curriculum](https://www.owasp.org/index.php/SAMM_-_Education_&_Guidance_-_2) that is required and targeted to different development roles and topics.
+* Tüm geliştirme ekiplerinin uyguması için bir uygulama güvenliği çizgisi oluşturacak bir odaklı [politika ve standart](https://www.owasp.org/index.php/SAMM_-_Policy_&_Compliance_-_2) seti oluşturun.
+* Bu politika ve standartlara uygun ve kullanımları hakkında tasarım ve geliştirme yönergeleri sağlayan ortak bir [tekrar kullanılabilir günvelik kontrolleri](https://www.owasp.org/index.php/OWASP_Security_Knowledge_Framework) seti tanımlayın.
+* Zorunlu tutulacak ve farklı geliştirme rollerini ve konularını hedefleyecek bir [uygulama güvenliği eğitimi içeriği](https://www.owasp.org/index.php/SAMM_-_Education_&_Guidance_-_2) hazırlayın.
 
 ### Integrate Security into Existing Processes
 
