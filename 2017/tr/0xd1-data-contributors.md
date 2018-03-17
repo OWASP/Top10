@@ -1,8 +1,8 @@
-# Acknowledgements
+# Teşekkür
 
-## Acknowledgements to Data Contributors
+## Veri İştirakçilerine Teşekkür
 
-We'd like to thank the many organizations that contributed their vulnerability data to support the 2017 update:
+2017 güncellemesini desteklemek için açıklık verilerini sunarak katkıda bulunan pek çok organizasyona teşekkür etmek istiyoruz:
 
 * ANCAP
 * Aspect Security
@@ -48,11 +48,11 @@ We'd like to thank the many organizations that contributed their vulnerability d
 * Veracode
 * Web.com
 w
-For the first time, all the data contributed to a Top 10 release, and the full list of contributors is [publicly available](https://github.com/OWASP/Top10/tree/master/2017/datacall/submissions).
+İlk kez, bir Top 10 sürümene katkı olarak sunulan tüm veriler ve iştirakçilerin tam listesi [erişilebilirdir](https://github.com/OWASP/Top10/tree/master/2017/datacall/submissions).
 
-## Acknowledgements to Individual Contributors
+## Bireysel İştirakçilere Teşekkür
 
-We’d like to thank the individual contributors who spent many hours collectively contributing to the Top 10 in GitHub.
+Saatler harcayarak Github üzerinden Top 10 projesine katkıda bulunan bireysel iştirakçilere de teşekkür etmek istiyoruz.
 
 * ak47gen
 * alonergan
@@ -131,6 +131,6 @@ We’d like to thank the individual contributors who spent many hours collective
 * vdbaan
 * yohgaki
 
-And everyone else who provided feedback via Twitter, email, and other means.
+Ve Twitter, eposta ve diğer yöntemler ile geri bildirimde bulunan herkese.
 
-We would be remiss not to mention that Dirk Wetter, Jim Manico, and Osama Elnaggar have provided extensive assistance. Also, Chris Frohoff and Gabriel Lawrence provided invaluable support in the writing of the new A8:2017-Insecure Deserialization risk.
+Dirk Watter, Jim Manico ve Osama Elnaggar'ın sağladıkları kapsamlı yardımlardan bahsetmemek olmazdı. Ayrıca, Chris Frohoff ve Gabriel Lawrence yeni A8:2017-Güvensiz Ters serileştirme açıklığının yazımı için paha biçilemez bir destek sağlamışlardır.
