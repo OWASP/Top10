@@ -1,6 +1,6 @@
 # +RF Risk Faktörleri Hakkında Detaylar
 
-## Top 10 Risk Faktöleri Özeti
+## Top 10 Risk Faktörleri Özeti
 
 Aşağıdaki tablo 2017 Top 10 Uygulama Güvenliği Risklerini ve herbir risk için belirlediğimiz risk faktörlerinin bir özetini sunmaktadır. Bu faktörler hazır bulunan istatistik verilerine ve OWASP Top 10 takımının tecrübelerine göre belirlenmiştir. Belirli bir uygulama veya organizasyon için bu riskleri anlamak için, kendi tehdit etkenlerinizi ve iş etkilerinizi düşünmelisiniz. Gerekli saldırıyı gerçekleştirmek için bir tehdit etkeni bulunmuyorsa veya varlıklar için iş etkisi ihmal edilebilirse, ciddi yazılım açıklıkları bile ciddi bir risk oluşturmayabilmektedir.
 
