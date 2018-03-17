@@ -1,21 +1,22 @@
-# +A: What's next for Application Managers
+# +A: Uygulama Yöneticileri için Bir Sonraki Adım
 
-## Manage the Full Application Lifecycle
+## Bütün Uygulama Yaşam Döngüsünü Yönetin
 
-Applications belong to the most complex systems humans regularly create and maintain. IT management for an application should be performed by IT specialists who are responsible for the overall IT lifecycle of an application. We suggest establishing the role of application manager as technical counterpart to the application owner. The application manager is in charge of the whole application lifecycle from the IT perspective, from collecting the requirements until the process of retiring systems, which is often overlooked. 
+Uygulamalar, insanların düzenli olarak oluşturduğu ve sürdürdüğü en karmaşık sistemlere aittir. Bir uygulama için IT yönetimi, bir uygulamanın bütün IT yaşam döngüsü için sorumlu olan IT uzmanları tarafından yapılmalıdır. Uygulama yöneticisi rolünün, uygulama sahibinin teknik karşılığı olarak oluşturulmasını öneriyoruz. Uygulama yöneticisi, gereksinimlerin toplanmasından sistemin kaldırılması sürecine kadarki genellikle gözden kaçırılan tüm uygulama yaşam döngüsünden sorumludur. 
 
-## Requirements and Resource Management
+## Gereksinimler ve Kaynak Yönetimi
 
-* Collect and negotiate the business requirements for an application with the business, including the protection requirements with regard to confidentiality, authenticity, integrity and availability of all data assets, and the expected business logic.
-* Compile the technical requirements including functional and nonfunctional security requirements.
-* Plan and negotiate the budget that covers all aspects of design, build, testing and operation, including security activities.
+* Tüm veri varlıklarının gizlilik, kimlik doğrulama, bütünlük ve erişilebilirlik ilkeleri ve beklenen iş mantığı ile ilgili korunma gereksinimleri dahil bir uygulama için bulunan iş gereksinimleri toplanmalı ve görüşülmelidir. 
+* Fonksiyonel ve fonksiyonel olmayan güvenlik gereksinimleri dahil teknik gereksinimler toplanmalıdır.
+* Güvenlik faaliyetleri dahil tasarım, geliştirme, test etme ve operasyonun tüm yönlerini kapsayan bütçe planlanmalı ve görüşülmelidir.
 
-## Request for Proposals (RFP) and Contracting
+## Yorum Talepleri (RFP) ve Kontrat
 
-* Negotiate the requirements with internal or external developers, including guidelines and security requirements with respect to your security program, e.g. SDLC, best practices.
-* Rate the fulfillment of all technical requirements, including a planning and design phase.
-* Negotiate all technical requirements, including design, security, and service level agreements (SLA).
-* Adopt templates and checklists, such as [OWASP Secure Software Contract Annex](https://www.owasp.org/index.php/OWASP_Secure_Software_Contract_Annex). **Note**: The annex is for US contract law, so please consult qualified legal advice before using the sample annex.
+* Güvenlik programınız, örn. SDLC, en iyi kullanım örnekleri ile ilgili kılavuzlar ve güvenlik gereksinimleri dahil gereksinimler iç ve dış geliştiricler ile görüşülmelidir.
+* Planlama ve tasarım fazı dahil tüm teknik gereksinimlerin yerine getirilip getirilmediği takip edilmelidir.
+* Tasarım, güvenlik ve hizmet seviyesi anlaşmaları (SLA) dahil tüm teknik gereksinimler görüşülmelidir.
+* [OWASP Güvenlik Yazılım Sözleşmesi Eki](https://www.owasp.org/index.php/OWASP_Secure_Software_Contract_Annex) gibi şablonlar ve kontrol listeleri benimsenmelidir. **Not** 
+Adopt templates and checklists, such as [OWASP Secure Software Contract Annex]. **Note**: The annex is for US contract law, so please consult qualified legal advice before using the sample annex.
 
 ## Planning and Design
 
