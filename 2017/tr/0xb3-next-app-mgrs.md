@@ -15,34 +15,33 @@ Uygulamalar, insanların düzenli olarak oluşturduğu ve sürdürdüğü en kar
 * Güvenlik programınız, örn. SDLC, en iyi kullanım örnekleri ile ilgili kılavuzlar ve güvenlik gereksinimleri dahil gereksinimler iç ve dış geliştiricler ile görüşülmelidir.
 * Planlama ve tasarım fazı dahil tüm teknik gereksinimlerin yerine getirilip getirilmediği takip edilmelidir.
 * Tasarım, güvenlik ve hizmet seviyesi anlaşmaları (SLA) dahil tüm teknik gereksinimler görüşülmelidir.
-* [OWASP Güvenlik Yazılım Sözleşmesi Eki](https://www.owasp.org/index.php/OWASP_Secure_Software_Contract_Annex) gibi şablonlar ve kontrol listeleri benimsenmelidir. **Not** 
-Adopt templates and checklists, such as [OWASP Secure Software Contract Annex]. **Note**: The annex is for US contract law, so please consult qualified legal advice before using the sample annex.
+* [OWASP Güvenlik Yazılım Sözleşmesi Eki](https://www.owasp.org/index.php/OWASP_Secure_Software_Contract_Annex) gibi şablonlar ve kontrol listeleri benimsenmelidir. **Not**:Bu ek US sözleşme hukukuna göredir, bu yüzden örnek eki kullanmadan önce lütfen nitelikli yasal tavsiye alınız.
 
-## Planning and Design
+## Planlama ve Tasarım
 
-* Negotiate planning and design with the developers and internal shareholders, e.g. security specialists.
-* Define the security architecture, controls, and countermeasures appropriate to the protection needs and the expected threat level. This should be supported by security specialists.
-* Ensure that the application owner accepts remaining risks or provides additional resources.
-* In each sprint, ensure security stories are created that include constraints added for non-functional requirements.
+* Gelişticiler ve güvenlik uzmanları gibi iç paydaşlar ile planlama ve tasarım görüşülmelidir.
+* Korunma ihtiyaçlarına ve beklenen tehdit düzeyine uygun güvenlik mimarisi, kontrolleri ve önlemleri belirlenmelidir.
+* Uygulama sahibinin kalan riskleri kabul ettiğinden ve ilave kaynaklar sağladığından emin olunmalıdır.
+* Her bir sprintte, fonksiyonel olmayan gereksinimler için eklenen kısıtlamları içerecek güvenlik hikayelerinin oluşturulduğundan emin olunmalıdır.
 
-## Deployment, Testing, and Rollout
+## Dağıtım, Test ve Yaygınlaştırma
 
-* Automate the secure deployment of the application, interfaces and all required components, including needed authorizations.
-* Test the technical functions and integration with the IT architecture and coordinate business tests.
-* Create "use" and "abuse" test cases from technical and business perspectives.
-* Manage security tests according to internal processes, the protection needs, and the assumed threat level by the application.
-* Put the application in operation and migrate from previously used applications if needed.
-* Finalize all documentation, including the CMDB and security architecture.
+* Uygulamanın, ara yüzlerin ve ihtiyaç duyulan yetkilendirmeler dahil tüm gerekli bileşenlerin güvenli dağıtımı otomatize edilmelidir.
+* Teknik fonksiyonları ve IT mimarisi ile entegrasyon test edilmelidir ve iş testleri koordine edilmelidir.
+* Teknik ve iş perspektiflerine göre "kullanım" ve "istismar" test senaryoları oluşturulmalıdır.
+* Güvenlik testlerini iç süreçlere, korunma ihtiyaçlarına ve uygulama tarafından varsayılan tehdit düzeyine göre yönetilmelidir.
+* Uygulama aktif hale getirilmeli ve ihtiyaç duyularsa önceden kullanılan uygulamalara dönülmelidir.
+* CMDB ve güvenlik mimarisi dahil tüm dokümantasyon son hale getirilmelidir.
 
-## Operations and Change Management
+## Operasyonlar ve Değişim Yönetimi
 
-* Operations must include guidelines for the security management of the application (e.g. patch management).
-* Raise the security awareness of users and manage conflicts about usability vs. security.
-* Plan and manage changes, e.g. migrate to new versions of the application or other components like OS, middleware, and libraries.
-* Update all documentation, including in the change management data base (CMDB) and the security architecture, controls, and countermeasures, including any runbooks or project documentation.
+* Operasyonlar, uygulamanın güvenlik yönetimi için kılavuzlar (örn. yama yönetimi) içermelidir.
+* Kullanıcıların güvenlik farkındalığı artırılmalı ve kullanılabilir ile güvenlik arasındaki çatışmazlıklar yönetilmelidir.
+* Değişimler, örn. uygulamanın veya işletim sistemi, ara katman ve kütüphaneler gibi diğer bileşenlerin yeni sürümlerine geçilmesi, planlanmalı ve yönetilmelidir.
+* Değişiklik yönetimi veri tabanı (CMDB) dahil tüm dokümantasyon ve çalışma kitapları veya proje dokümantasyonu dahil güvenlik mimarisi, kontrolleri ve önlemleri güncellenmelidir.
 
-## Retiring Systems
+## Eskiyen Sistemler
 
-* Any required data should be archived. All other data should be securely wiped.
-* Securely retire the application, including deleting unused accounts and roles and permissions.
-* Set your application's state to retired in the CMDB.
+* Tüm gerekli veriler arşivlenmelidir. Diğer tüm veriler güvenli bir şekilde silinmelidir.
+* Kullanılmayan hesapların, rollerin ve izinlerin silinmesi dahil uygulama güvenli bir şekilde kaldırılmalıdır.
+* CMDB veri tabanında uygulamanın durumu kaldırıldı olarak değiştirilmelidir.
