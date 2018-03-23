@@ -26,7 +26,7 @@ De acordo com o risco dos dados armazenados ou processados pela aplicação:
 * Estabeleça monitorações e alertas eficazes, de modo que as atividades suspeitas sejam detectadas e respondidas em tempo hábil.
 * Estabeleça ou adote um plano de respostas e recuperação a incidentes, como [NIST 800-61 rev 2](https://csrc.nist.gov/publications/detail/sp/800-61/rev-2/final) ou posterior.
 
-Existem frameworks de proteção de aplicações comerciais e de código aberto, como [OWASP AppSensor](https://www.owasp.org/index.php/OWASP_AppSensor_Project), firewalls de aplicações Web, como [mod_security com o OWASP Core Rule Set](https: //www.owasp.org/index.php/Category:OWASP_ModSecurity_Core_Rule_Set_Project) e software de correlação de logs com painéis personalizados e alertas.
+Existem frameworks de proteção de aplicações comerciais e de código aberto, como [OWASP AppSensor](https://www.owasp.org/index.php/OWASP_AppSensor_Project), firewalls de aplicações Web, como [mod_security com o OWASP Core Rule Set](https://www.owasp.org/index.php/Category:OWASP_ModSecurity_Core_Rule_Set_Project) e software de correlação de logs com painéis personalizados e alertas.
 
 ## Examplos de Cenários de Ataque
 
