@@ -2,7 +2,7 @@
 
 | Agentes de Ameaça/Vetores de Ataque | Vulnerabilidades de Segurança           | Impactos               |
 | -- | -- | -- |
-| Nível de Acesso \| Explorabilidade 2 | Prevêlencia 2 \| Detectabilidade 2 | Técnico 3 \| Negócio |
+| Nível de Acesso \| Explorabilidade 2 | Prevalência 2 \| Detectabilidade 2 | Técnico 3 \| Negócio |
 | A exploração do controle de acesso é uma habilidade básica dos atacantes. As ferramentas [SAST](https://www.owasp.org/index.php/Source_Code_Analysis_Tools) e [DAST](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools) podem detectar a ausência de controle de acesso, mas não pode verificar se é funcional quando está presente. O controle de acesso é detectável usando meios manuais, ou possivelmente por automação para a ausência de controles de acesso em certos frameworks.| As vulnerabilidades de controle de acesso são comuns devido à falta de detecção automatizada e à falta de testes funcionais efetivos pelos desenvolvedores de aplicação. A detecção de controle de acesso normalmente não é compatível com testes estáticos ou dinâmicos automatizados. | O impacto técnico são os atacantes que atuam como usuários ou administradores, usuários que usam funções privilegiadas, ou criam, acessam, atualizam ou excluem todos os registros. O impacto comercial depende das necessidades de proteção de sua aplicação e dados. |
 
 ## A Aplicação Está Vulnerável?
