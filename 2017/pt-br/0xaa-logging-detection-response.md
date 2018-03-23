@@ -28,7 +28,7 @@ De acordo com o risco dos dados armazenados ou processados pela aplicação:
 
 Existem frameworks de proteção de aplicações comerciais e de código aberto, como [OWASP AppSensor](https://www.owasp.org/index.php/OWASP_AppSensor_Project), firewalls de aplicações Web, como [mod_security com o OWASP Core Rule Set](https://www.owasp.org/index.php/Category:OWASP_ModSecurity_Core_Rule_Set_Project) e software de correlação de logs com painéis personalizados e alertas.
 
-## Examplos de Cenários de Ataque
+## Exemplos de Cenários de Ataque
 
 **Cenário 1**: Um software de fórum de código aberto executado por uma pequena equipe foi pirateado usando uma falha em seu software. Os atacantes conseguiram eliminar o repositório de código fonte interno que contém a próxima versão e todos os conteúdos do fórum. Embora o código fonte possa ser recuperado, a falta de monitoração, logs ou alertas levou a uma violação muito pior. O projeto de software de fórum não está mais ativo como resultado dessa questão.
 
