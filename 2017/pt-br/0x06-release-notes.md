@@ -17,7 +17,6 @@ Código legado que nunca deveria se comunicar diretamente com a Internet agora e
 
 ## Novos problemas, suportados pela comunidade
 
-We asked the community to provide insight into two forward looking weakness categories. After over 500 peer submissions, and  removing issues that were already supported by data (such as Sensitive Data Exposure and XXE), the two new issues are 
 Pedimos à comunidade que fornecesse informações sobre duas categorias de fraquezas futuras. Após mais de 500 envios e remoção de problemas que já eram suportados por dados (como Sensitive Data Exposure e XXE), os dois novos problemas são:
 
 * **A8:2017-Desserialização Insegura**, que permite execução de código remoto ou manipulação de objetos sensíveis nas plataformas afetadas.
