@@ -11,7 +11,7 @@ Aplicações e APIs estarão vulneráveis se desserializarem objetos hostis ou a
 
 Isso pode resultar em dois principais tipos de ataques:
 
-* Ataques relacionados com a estrutura de objetos e dados onde o atacante modifica a lógica do aplicativo ou consegue a execução de código remoto arbitrário se houver classes disponíveis para a aplicação que possam alterar o comportamento durante ou após a deserialização. 
+* Ataques relacionados com a estrutura de objetos e dados onde o atacante modifica a lógica do aplicativo ou consegue a execução de código remoto arbitrário se houver classes disponíveis para a aplicação que possam alterar o comportamento durante ou após a desserialização. 
 * Ataques típicos de manipulação de dados, como ataques de controle de acesso, onde as estruturas de dados existentes são usadas, mas o conteúdo é alterado.
 
 Serialização pode ser usada em aplicações para:
