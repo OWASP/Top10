@@ -25,7 +25,7 @@ Prevenir XSS requer a separação de dados não confiáveis do conteúdo ativo d
 * Aplicar *encoding* sensível ao contexto ao modificar o documento do navegador no lado do cliente atua contra DOM XSS. Quando isso não puder ser evitado, técnicas de *escaping* sensíveis ao contexto semelhantes podem ser aplicadas às APIs do navegador, conforme descrito na Folha de Dicas OWASP 'DOM Based XSS Prevention'.
 * Habilitar um [Content Security Policy (CSP)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) é um controle de mitigação de defesa profunda contra o XSS. É eficaz se não existem outras vulnerabilidades que permitiriam colocar códigos maliciosos através de arquivos locais (por exemplo, sobrescritas de *path traversal* ou bibliotecas vulneráveis em fontes permitidas).
 
-## Examplo de Cenários de Ataque
+## Exemplo de Cenários de Ataque
 
 **Cenário 1**: A aplicação usa dados não confiáveis na construção do seguinte fragmento HTML sem validação ou *escaping*:
 
