@@ -1,4 +1,4 @@
-# A4:2017 Entidades Externas de XML (External XML Entities - XXE)
+# A4:2017 Entidades Externas de XML (XML External Entities - XXE)
 
 | Agentes de Ameaça/Vetores de Ataque | Vulnerabilidades de Segurança     | Impactos               |
 | -- | -- | -- |
