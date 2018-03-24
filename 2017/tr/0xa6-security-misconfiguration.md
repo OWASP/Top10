@@ -3,7 +3,7 @@
 | Tehdit etkenleri/Saldırı vektörleri | Güvenlik zafiyeti           | Etkiler               |
 | -- | -- | -- |
 | Erişim Düzeyi: İstismar Edilebilirlik 3 | Yaygınlık 3 : Tespit Edilebilirlik 3 | Teknik 2 : İş |
-| Saldırganlar, sisteme erişim sağlamak için veya sistem hakkında bilgi elde etmek için düzeltilmesi için gerekli olan yamaları yüklenmemiş olan açıklıkları istismar etmeye veya varsayılan hesaplara, kullanılmayan sayfalara, korunmayan dosya ve dizinlere erişmeye çalışmaktadır. | Yanlış güvenlik yapılandırması ağ servisleri, platform, web sunucusu, uygulama sunucusu, veri tabanı, çerçeve yazılımlar, özel kodlar ve önceden yüklenen sanal makineler, konteynerler veya saklama alanları dahil uygulama katmanlarından herhangi birisinde ortaya çıkabilmektedir. Otomatize tarama araçları yanlış yapılandırmanın, varsayılan hesapların veya ayarların kullanımının, gereksiz servislerin, eski seçeneklerin vb. tespitinde faydalı olmaktadır. | Bu tür açıklıklar sıklıkla saldırganlara bazı sistem verilerine veya fonksiyonlarına yetkisiz erişim sağlamaktadır. Bazen, bu tür açıklıklar sistemin tamamının ele geçirilmesi ile sonuçlanmaktadır. İş etkisi uygulama ve verinin korunma gereksinimlerine göre değişmektedir. |
+| Saldırganlar, sisteme erişim sağlamak için veya sistem hakkında bilgi elde etmek için yüklenmemiş yamalardan kaynaklanan açıklıkları istismar etmeye veya varsayılan hesaplara, kullanılmayan sayfalara, korunmayan dosya ve dizinlere erişmeye çalışmaktadır. | Yanlış güvenlik yapılandırması ağ servisleri, platform, web sunucusu, uygulama sunucusu, veri tabanı, çerçeve yazılımlar, özel kodlar ve önceden yüklenen sanal makineler, konteynerler veya saklama alanları dahil uygulama katmanlarından herhangi birisinde ortaya çıkabilmektedir. Otomatize tarama araçları yanlış yapılandırmanın, varsayılan hesapların veya ayarların kullanımının, gereksiz servislerin, eski seçeneklerin vb. tespitinde faydalı olmaktadır. | Bu tür açıklıklar sıklıkla saldırganlara bazı sistem verilerine veya fonksiyonlarına yetkisiz erişim sağlamaktadır. Bazen, bu tür açıklıklar sistemin tamamının ele geçirilmesi ile sonuçlanmaktadır. İş etkisi uygulama ve verinin korunma gereksinimlerine göre değişmektedir. |
 
 ## Uygulamam Açıklığı İçeriyor Mu?
 
@@ -24,16 +24,16 @@ Düzenlenmiş, tekrar edilebilir uygulama  güvenlik yapılandırması süreci o
 
 Aşağıdakiler dahil güvenli yükleme süreçleri uygulanmalıdır:
 
-* Düzgün bir şekilde kilitlenmiş başka bir ortamda kurulumu kolay ve hızlı yapacak bir tekrarlanabilir sıkılaştırma süreci. Geliştirme, QA ve ürün ortamları, her bir ortamda farklı giriş bilgileri kullanılacak şekilde aynı şekilde yapılandırılmalıdır. Yeni bir güvenli ortamın hazırlanması için gereken iş yükünü azaltmak için bu süreç otomatize hale getirilmelidir.
-* Herhangi bir gereksiz özellik, bileşen, dokümantasyon ve örnek içermeyen minimal bir platform. Kullanılmayan özellikler veya çerçeveler yüklenmemeli veya kaldırılmalıdır.
-* Yama yönetim sürecinin bir parçası olarak tüm güvenlik notlarına, güncellemelerine ve yamalarına uygun yapılandırmaları gözden geçirme ve güncelleme görevi (bkz. **A9:2017-Bilinen Açıklık İçeren Bileşen Kullanımı**). Özellikle, bulut depolama izinlerini (örn. S3 bucket izinleri) gözden geçirilmelidir.
+* Kapalı başka bir ortamda, kurulumu kolaylaştıracak ve hızlandıracak bir tekrarlanabilir sıkılaştırma süreci. Geliştirme, QA ve ürün ortamları, her bir ortamda farklı giriş bilgileri kullanılacak şekilde aynı şekilde yapılandırılmalıdır. Yeni bir güvenli ortamın hazırlanması için gereken iş yükünü azaltmak için bu süreç otomatize hale getirilmelidir.
+* Herhangi bir gereksiz özellik, bileşen, dokümantasyon veya örnek içermeyen minimal bir platform. Kullanılmayan özellikler veya çerçeveler yüklenmemeli ve varsa kaldırılmalıdır.
+* Yama yönetim sürecinin bir parçası olarak tüm güvenlik notlarına, güncellemelerine ve yamalarına uygun yapılandırmaları gözden geçirme ve güncelleme görevi (bkz. **A9:2017-Bilinen Açıklık İçeren Bileşen Kullanımı**). Özellikle, bulut depolama izinleri (örn. S3 bucket izinleri) gözden geçirilmelidir.
 * Segmentasyon, konteyner kullanımı veya bulut güvenlik grupları (ACL) ile bileşenler arasında güvenli ve etkin bir ayırım sağlayan parçalara ayrılmış bir uygulama mimarisi.
 * Güvenlik direktiflerinin istemciye gönderilmesi, örn. [Güvenlik Başlıkları](https://www.owasp.org/index.php/OWASP_Secure_Headers_Project).
 * Tüm ortamlardaki yapılandırmanın ve ayarların etkinliğini doğrulamak için otomatize bir süreç.
 
 ## Örnek Saldırı Senaryoları
 
-**Senaryo #1**: Uygulama sunucusu ürün ortamından kaldırılmamış örnek uygulamalar ile birlikte gelmiştir. Bu örnek uygulamalar saldırganların sunucuyu ele geçirmek için kullanacağı bilinen güvenlik açıklıkları içermektedir. Eğer bu uygulamalardan birisi yönetici konsolu ise ve varsayılan hesaplar değiştirilmemişse, saldırgan varsayılan parola ile giriş yapabilmekte ve yetkileri devralmaktadır.
+**Senaryo #1**: Uygulama sunucusu ürün ortamından kaldırılmamış örnek uygulamalar ile birlikte gelmiştir. Bu örnek uygulamalar saldırganların sunucuyu ele geçirmek için kullanacağı birtakım bilinen güvenlik açıklıkları içermektedir. Eğer bu uygulamalardan birisi yönetici konsolu ise ve varsayılan hesaplar değiştirilmemişse, saldırgan varsayılan parola ile giriş yapabilmekte ve yetkileri devralmaktadır.
 
 **Senaryo #2**: Dizin listeleme sunucu üzerinde devre dışı bırakılmamıştır. Saldırgan dizinleri listeleyebileceğini kolayca tespit edecektir. Saldırgan kaynak koda çevireceği ve kodu görmek için ters mühendislik yapabileceği derlenmiş Java sınıflarını bulabilecek ve indirebilecektir. Saldırgan daha sonra uygulama üzerinde ciddi bir erişim kontrolü zafiyeti bulabilecektir.
 
@@ -45,9 +45,9 @@ Aşağıdakiler dahil güvenli yükleme süreçleri uygulanmalıdır:
 
 ### OWASP
 
-* [OWASP Testing Guide: Configuration Management](https://www.owasp.org/index.php/Testing_for_configuration_management)
-* [OWASP Testing Guide: Testing for Error Codes](https://www.owasp.org/index.php/Testing_for_Error_Code_(OWASP-IG-006))
-* [OWASP Security Headers Project](https://www.owasp.org/index.php/OWASP_Secure_Headers_Project)
+* [OWASP Test Rehberi: Yapılandırma Yönetimi](https://www.owasp.org/index.php/Testing_for_configuration_management)
+* [OWASP Test Rehberi: Hata Kodlarının Testi](https://www.owasp.org/index.php/Testing_for_Error_Code_(OWASP-IG-006))
+* [OWASP Güvenlik Başlıkları Projesi](https://www.owasp.org/index.php/OWASP_Secure_Headers_Project)
 
 Bu alanda ilave gereksinimler için, bkz. Uygulama Güvenliği Doğrulama Standardı [V19 Yapılandırma](https://www.owasp.org/index.php/ASVS_V19_Configuration).
 
