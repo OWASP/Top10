@@ -3,7 +3,7 @@
 | Tehdit etkenleri/Saldırı vektörleri | Güvenlik zafiyeti           | Etkiler               |
 | -- | -- | -- |
 | Erişim Düzeyi : İstismar Edilebilirlik 2 | Yaygınlık 3 : Tespit Edilebilirlik 1 | Teknik 2 : İş |
-| Yetersiz loglama ve izleme açıklıklarının istismarı neredeyse tüüm büyük ihlallerin ana nedenidir. Saldırganlar tespit edilmeksizin amaçlarına ulaşmak için izleme ve zamanında müdahalenin eksikliğini kullanmaktadır. | Bu açıklık [endüstri anketine](https://owasp.blogspot.com/2017/08/owasp-top-10-2017-project-update.html) dayanarak Top 10 listesinde yer almaktadır. Yeterli düzeyde izleme yapılıp yapılmadığına karar verirken kullanılacak bir strateji sızma testi sonrası logların incelenmesidir. Test ekibinin eylemleri, çıkarabilecekleri zararları anlamak için yeterli olacak şekilde kayıt altına alınmalıdır. | Başarılı pek çok saldırı açıklık araştırması ile başlamaktadır. Bu tür araştırmalara izin verilmesi başarılı istismar oranını neredeyse %100 oranında artırmaktadır. 2016 yılında, bir ihlalin tespiti, zararın oluşması için yeterli bir süre olan [ortalama 191 gün](https://www-01.ibm.com/common/ssi/cgi-bin/ssialias?htmlfid=SEL03130WWEN&) olmuştur. |
+| Yetersiz loglama ve izleme açıklıklarının istismarı neredeyse tüm büyük ihlallerin ana nedenidir. Saldırganlar tespit edilmeksizin amaçlarına ulaşmak için izleme ve zamanında müdahalenin eksikliğini kullanmaktadır. | Bu açıklık [endüstri anketine](https://owasp.blogspot.com/2017/08/owasp-top-10-2017-project-update.html) dayanarak İlk 10 listesinde yer almaktadır. Yeterli düzeyde izleme yapılıp yapılmadığına karar verirken kullanılacak bir strateji sızma testi sonrası logların incelenmesidir. Test ekibinin eylemleri, çıkarabilecekleri zararları anlamak için yeterli olacak şekilde kayıt altına alınmalıdır. | Başarılı pek çok saldırı, açıklık araştırması ile başlamaktadır. Bu tür araştırmalara izin verilmesi başarılı istismar oranını neredeyse %100 oranında artırmaktadır. 2016 yılında, bir ihlalin tespiti, zararın oluşması için yeterli bir süre olan [ortalama 191 gün](https://www-01.ibm.com/common/ssi/cgi-bin/ssialias?htmlfid=SEL03130WWEN&) olmuştur. |
 
 ## Uygulamam Açıklık İçeriyor Mu?
 
@@ -23,7 +23,7 @@ Eğer loglama ve alarm kayıtları bir kullanıcı veya bir saldırgan tarafınd
 
 Uygulama tarafından saklanan veya işlenen her bir risk için:
 
-* Şüpheli veya zararlı hesapların belirlenmesi için yeterli kullanıcı bağlanmıyla tüm giriş, erişim kontrolü eksiklikleri ve sunucu taraflı girdi doğrulama hatalarının loglandığından emin olunmalı ve ileri zamanlı adli bilişim analizlerine izin vermek için yeterli bir süre için tutulmalıdır.
+* Şüpheli veya zararlı hesapların belirlenmesi için yeterli kullanıcı bağlamıyla tüm giriş, erişim kontrolü eksiklikleri ve sunucu taraflı girdi doğrulama hatalarının loglandığından emin olunmalı ve ileri zamanlı adli bilişim analizlerine izin vermek için yeterli bir süre için tutulmalıdır.
 * Logların merkezi bir log yönetim çözümü tarafından kolayca tüketilebileceği bir formatta üretildiğinden emin olunmalıdır.
 * Değiştirme ve silmeleri engellemek için sadece ekleme yapılabilen veri tabanı tabloları gibi bütünlük kontrolü içeren denetim izlerinin yüksek değerli işlemler için bulunduğundan emin olunmalıdır.
 * Şüpheli faaliyetlerin tespit edilebileceği ve zamanında müdahale edilebileceği şekilde etkin izleme ve alarm üretimi sağlanmalıdır.
@@ -37,16 +37,16 @@ Uygulama tarafından saklanan veya işlenen her bir risk için:
 
 **Senaryo #2**: Bir saldırgan, yaygın parola kullanan kullanıcılar için tarama yapmaktadır. Saldırganlar bu parolaları kullanarak tüm hesapları ele geçirebilmektedir. Diğer tüm kullanıcılar için, bu tarama sadece bir tane yanlış giriş bırakmaktadır. Birkaç gün sonra, bu durum farklı bir parola ile tekrar edilebilmektedir.
 
-**Senaryo #3**: Bir tane büyük US perakendecisinin, eklentileri analiz eden bir iç kötücül yazlım analiz kum havuzuna sahip olduğu raporlanmıştır. Kum havuzu yazılımı potansiyel olarak istenmeyen yazılım tespit etmiştir, ancak hiçbir kimse bu tespite cevap vermemiştir. Dış bir banka tarafından yapılan sahte kart işlemleri sayesinde bu ihlal tespit edilmeden önce, kum havuzu bir süredir uyarılar üretmekteydi.
+**Senaryo #3**: Bir tane büyük ABD perakendecisinin, eklentileri analiz eden bir iç kötücül yazılım analiz kum havuzuna sahip olduğu raporlanmıştır. Kum havuzu yazılımı potansiyel olarak istenmeyen yazılım tespit etmiştir, ancak hiçbir kimse bu tespite cevap vermemiştir. Dış bir banka tarafından yapılan sahte kart işlemleri sayesinde bu ihlal tespit edilmeden önce, kum havuzu bir süredir uyarılar üretmekteydi.
 
 ## Kaynaklar
 
 ### OWASP
 
-* [OWASP Proactive Controls: Implement Logging and Intrusion Detection](https://www.owasp.org/index.php/OWASP_Proactive_Controls#8:_Implement_Logging_and_Intrusion_Detection)
-* [OWASP Application Security Verification Standard: V8 Logging and Monitoring](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
-* [OWASP Testing Guide: Testing for Detailed Error Code](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
-* [OWASP Cheat Sheet: Logging](https://www.owasp.org/index.php/Logging_Cheat_Sheet)
+* [OWASP Proaktif Kontroller: Loglama ve Saldırı Tespiti](https://www.owasp.org/index.php/OWASP_Proactive_Controls#8:_Implement_Logging_and_Intrusion_Detection)
+* [OWASP Uygulama Güvenliği Doğrulama Standardı: V8 Loglama ve İzleme](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
+* [OWASP Test Rehberi: Detaylı Hata Kodu Testleri](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
+* [OWASP Kopya Kağıdı: Loglama](https://www.owasp.org/index.php/Logging_Cheat_Sheet)
 
 ### Dış Kaynaklar
 
