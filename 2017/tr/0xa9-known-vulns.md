@@ -3,7 +3,7 @@
 | Tehdit etkenleri/Saldırı vektörleri | Güvenlik zafiyeti           | Etkiler               |
 | -- | -- | -- |
 | Erişim Düzeyi : İstismar Edilebilirlik 2 | Yaygınlık 3 : Tespit Edilebilirlik 2 | Teknik 2 : İş |
-| Pek çok bilinen açıklık için yazılmış hazır istismarların bulunması kolay olsa da, diğer açıklıklar özel bir istismarın geliştirilmesi için özel çaba gerektirmektedir. | Bu sorun aşırı derece yaygındır. Bileşen yönünden zengin uygulamalar geliştirme takımlarının bileşenleri güncel tutamamasına ve hatta uygulama ve API'lerinde hangi bileşenlerin kullanıldığını unutmalarına yol açmaktadır. Retire.js gibi bazı tarama araçları tespitte yardımcı olmaktadır, ancak istismar edilebilirliğin tespiti ilave çaba gerektirmektedir. | Bazı bilinen açıklıklar sadece ufak etkilere yol açarken, şimdiye kadarki en büyük ihlallerin bazıları bileşenlerdeki bilinen açıklıkların istismarından kaynaklanmıştır. Korunmaya çalışılan varlıklara bağlı olarak, bu risk listede birinci sırada olabilecektir. |
+| Pek çok bilinen açıklık için yazılmış hazır istismarların bulunması kolay olsa da, diğer açıklıklar için özel bir istismarın geliştirilmesi özel çaba gerektirmektedir. | Bu sorun aşırı derece yaygındır. Bileşen yönünden zengin uygulamalar geliştirme takımlarının bileşenleri güncel tutamamasına ve hatta uygulama ve API'lerinde hangi bileşenlerin kullanıldığını unutmalarına yol açmaktadır. Retire.js gibi bazı tarama araçları tespitte yardımcı olmaktadır, ancak istismar edilebilirliğin tespiti ilave çaba gerektirmektedir. | Bazı bilinen açıklıklar sadece ufak etkilere yol açarken, şimdiye kadarki en büyük ihlallerin bazıları bileşenlerdeki bilinen açıklıkların istismarından kaynaklanmıştır. Korunmaya çalışılan varlıklara bağlı olarak, bu risk listede birinci sıraya çıkabilecektir. |
 
 ## Uygulamam Açıklık İçeriyor Mu?
 
@@ -12,7 +12,7 @@ Aşağıdaki durumlarda açıklıktan söz edilebilir:
 * (Hem istemci tarafında hem de sunucu tarafında) kullandığınız tüm bileşenlerin versiyonlarını bilmiyorsanız. Bu doğrudan kullandıklarınıza ilave olarak bağımlı olarak kullandıklarınızı da içermektedir.
 * Eğer yazılım açıklık içeriyorsa, desteklenmiyorsa veya güncel değilse. Bu işletim sistemini, web/uygulama sunucusunu, veri tabanı yönetim sistemini (DBMS), uygulamaları, API'leri ve tüm bileşenleri, çalışma ortamlarını ve kütüphaneleri içermektedir.
 * Eğer düzenli olarak açıklıkları taramıyorsanız ve kullandığınız bileşenlerin güvenlik bültenlerini takip etmiyorsanız.
-* Risk tabanlı ve düzenli bir şekilde, altta kullanılan platformu, çerçeveleri ve bağımlılıkları düzeltmiyor veya güncellemiyorsanız. Bu durum genellikle yamaların aylık veya üç aylık süreçlerde yapıldığı ortamlarda ortaya çıkmaktadır ve bu durum organizasyonların çözebileceği açıklıklara karşı günlerce veya aylarca gereksiz bir şekilde açık olmasına neden olmaktadır.
+* Risk tabanlı ve düzenli bir şekilde, altta kullanılan platformu, çerçeveleri ve bağımlılıkları düzeltmiyor veya güncellemiyorsanız. Bu durum genellikle yamaların aylık veya üç aylık süreçlerde yapıldığı ortamlarda ortaya çıkmaktadır ve bu durum kurumların çözebileceği açıklıklara karşı günlerce veya aylarca gereksiz bir şekilde açık olmasına neden olmaktadır.
 * Eğer yazılım geliştiriciler güncellenen, iyileştirilen veya yama yüklenen kütüphanelerin uyumluluğunu test etmiyorsa.
 * Eğer bileşenlerin yapılandırması güvenli olarak yapılmıyorsa (bkz. **A6:2017-Yanlış Güvenlik Yapılandırması**).
 
@@ -26,7 +26,7 @@ Aşağıdakileri sağlayacak bir yama yönetim süreci bulunmalıdır:
 * Sadece güvenli bağlantılar üzerinden ve resmi kaynaklardan bileşen temini. Değiştirilmiş veya zararlı bir bileşenin alınması riskini azaltmak için imzalanmış paketler tercih edilmelidir.
 * Desteklenmeyen veya eski sürümleri için güvenlik yamalarının çıkmadığı kütüphaneler ve bileşenlerin takibi. Eğer yamama mümkün değilse, tespit edilen açıklığa karşı izleme, tespit veya koruma yapılabilmesi için sanal bir yama uygulaması düşünülmelidir.
 
-Tüm organizasyonlar, uygulamanın veya porfolyönün yaşam süresi boyunca devam eden bir izleme, derecelendirme ve güncelleme veya yapılandırma değişiklikleri uygulama planlarının olduğundan emin olmalıdır.
+Tüm kurumlar, uygulamanın veya porfolyönün yaşam süresi boyunca devam eden bir izleme, derecelendirme ve güncelleme planlarının veya yapılandırma değişiklikleri uygulama planlarının olduğundan emin olmalıdır.
 
 ## Örnek Saldırı Senaryoları
 
@@ -41,10 +41,10 @@ Yamaları eksik olan veya yanlış yapılandırılmış sistemlerin tespiti içi
 
 ### OWASP
 
-* [OWASP Application Security Verification Standard: V1 Architecture, design and threat modelling](https://www.owasp.org/index.php/ASVS_V1_Architecture)
-* [OWASP Dependency Check (for Java and .NET libraries)](https://www.owasp.org/index.php/OWASP_Dependency_Check)
-* [OWASP Testing Guide - Map Application Architecture (OTG-INFO-010)](https://www.owasp.org/index.php/Map_Application_Architecture_(OTG-INFO-010))
-* [OWASP Virtual Patching Best Practices](https://www.owasp.org/index.php/Virtual_Patching_Best_Practices)
+* [OWASP Uygulama Güvenliği Doğrulama Standardı: V1 Mimari, tasarım ve tehdit modelleme](https://www.owasp.org/index.php/ASVS_V1_Architecture)
+* [OWASP Dependency Check (Java ve .NET kütüphaneleri için)](https://www.owasp.org/index.php/OWASP_Dependency_Check)
+* [OWASP Test Rehberi - Uygulama Mimarisinin Haritalanması (OTG-INFO-010)](https://www.owasp.org/index.php/Map_Application_Architecture_(OTG-INFO-010))
+* [OWASP Sanal Yama En İyi Kullanım Örnekleri](https://www.owasp.org/index.php/Virtual_Patching_Best_Practices)
 
 ### Dış Kaynaklar
 
