@@ -14,7 +14,7 @@ Talimatlara uygun yorumlar talep edilmiştir
 
 |  | ![Creative Commons License Logo](images/front-cc.png) |
 | -- | -- |
-| https://owasp.org | Bu çalışma Creative Commons Attribution-ShareAlike 4.0 International lisansı altında sunulmaktadır. |
+| https://owasp.org | Bu çalışma Creative Commons Attribution-ShareAlike 4.0 International lisansı kapsamında oluşturulmuştur. |
 
 
 
