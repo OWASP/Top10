@@ -2,7 +2,7 @@
 
 ## OWASP Hakkında
 
-Open Web Application Security Project (OWASP), kendini organizasyonların güvenilebilir uygulamalar ve API’ler geliştirmesini, satın almasını ve sürdürmesini sağlamaya adamış bir açık topluluktur. 
+Open Web Application Security Project (OWASP), kendisini kurumların güvenilebilir uygulamalar ve API’ler geliştirmesini, satın almasını ve sürdürmesini sağlamaya adamış açık bir topluluktur. 
 
 OWASP ile, aşağıdakileri açık ve ücretsiz bir şekilde temin edebilirsiniz:
 
@@ -14,19 +14,19 @@ OWASP ile, aşağıdakileri açık ve ücretsiz bir şekilde temin edebilirsiniz
 * [Dünya çapında yerel topluluklar](https://www.owasp.org/index.php/OWASP_Chapter).
 * İleri düzey ve son teknoloji araştırma.
 * Dünya çapında geniş kapsamlı [konferanslar](https://www.owasp.org/index.php/Category:OWASP_AppSec_Conference).
-* [Mail listeleri](https://lists.owasp.org/mailman/listinfo).
+* [E-posta listeleri](https://lists.owasp.org/mailman/listinfo).
 
 Daha fazla bilgi için: [https://www.owasp.org](https://www.owasp.org).
 
 Tüm OWASP araçları, belgeleri, videoları, sunumları ve toplulukları uygulama güvenliği alanında kendisini geliştirmek isteyen herkese açık ve ücretsizdir. 
 
-Uygulama güvenliğine karşı insanlar, süreçler ve teknoloji arasındaki bir problem yaklaşımı destekliyoruz, çünkü uygulama güvenliğine karşı en etkili yaklaşımlar bu alanlarda gelişimi gerektirmektedir.
+Uygulama güvenliğini insanlar, süreçler ve teknoloji arasındaki bir problem olarak gören yaklaşımı destekliyoruz, çünkü uygulama güvenliğine karşı en etkili yaklaşımlar bu alanlarda gelişimi gerektirmektedir.
 
 OWASP yeni bir tür organizasyondur. Ticari baskılara karşı özgürlüğümüz uygulama güvenliği hakkında tarafsız, uygulanabilir ve maliyeti az bilgiler sağlamamıza izin vermektedir. 
 
-Ticari güvenlik teknolojilerinin bilinçli kullanımını desteklememize ragmen, OWASP herhangi bir teknoloji kuruluşu ile ilişkili değildir. OWASP işbirlikçi, şeffaf ve açık bir şekilde pek çok farklı kaynak üretmektedir.
+Ticari güvenlik teknolojilerinin bilinçli kullanımını destekliyor olsak da, OWASP herhangi bir teknoloji kuruluşu ile ilişkili değildir. OWASP işbirlikçi, şeffaf ve açık bir şekilde pek çok farklı kaynak üretmektedir.
 
-OWASP projenin uzun vadede başarısını sağlayan kar amacı gütmeyen bir varlıktır. OWASP kurulu, bölüm liderleri, proje liderleri ve proje üyeleri dahil OWASP ile ilişkili neredeyse herkes bir gönüllüdür. Ödenekler ve alt yapı ile yenilikçi güvenlik araştırmalarını destekliyoruz.
+OWASP projenin uzun vadeli başarısını sağlayan kar amacı gütmeyen bir varlıktır. OWASP kurulu, topluluk liderleri, proje liderleri ve proje üyeleri dahil OWASP ile ilişkili neredeyse herkes gönüllülerdir. Ödenekler ve alt yapı aracılığıyla yenilikçi güvenlik araştırmalarını destekliyoruz.
 
 Bize katılın!
 
@@ -34,7 +34,5 @@ Bize katılın!
 
 ![license](images/license.png)
 
-Copyright © 2003-2017 The OWASP Foundation. Bu belge Creative Commons Attribution Share-Alike 4.0 lisansı altında yayınlanmıştır. 
-Herhangi bir tekrar kullanım veya dağıtım için, bu çalışmanın lisans şartlarını diğerlerine belirtmelk zorundasınız.
-
-
+Copyright © 2003-2017 The OWASP Foundation. Bu doküman Creative Commons Attribution Share-Alike 4.0 lisansı kapsamında yayınlanmıştır. 
+Herhangi bir tekrar kullanım veya dağıtım için, bu çalışmanın lisans şartlarını belirtmeniz gerekmektedir.
