@@ -6,9 +6,9 @@ En Tehlikeli 10 Web Uygulaması Güvenlik Açıklıkları
 
 20 Kasım 2017
 
-### Release
+### Sürüm
 
-Comments requested per instructions within
+Talimatlara uygun yorumlar talep edilmiştir
 
 ![WASP Logo URL TBA](images/front-wasp.png)
 
