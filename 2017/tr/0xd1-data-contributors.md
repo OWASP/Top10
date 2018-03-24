@@ -1,8 +1,8 @@
 # Teşekkür
 
-## Veri İştirakçilerine Teşekkür
+## Veri Katkısında Bulunanlara Teşekkürler
 
-2017 güncellemesini desteklemek için açıklık verilerini sunarak katkıda bulunan pek çok organizasyona teşekkür etmek istiyoruz:
+2017 güncellemesini desteklemek için açıklık verilerini sunarak katkıda bulunan sayısız kuruma teşekkür etmek istiyoruz:
 
 * ANCAP
 * Aspect Security
@@ -48,11 +48,11 @@
 * Veracode
 * Web.com
 
-İlk kez, bir Top 10 sürümene katkı olarak sunulan tüm veriler ve iştirakçilerin tam listesi [herkes tarafından erişilebilirdir](https://github.com/OWASP/Top10/tree/master/2017/datacall/submissions).
+İlk kez, bir İlk 10 sürümüne katkı olarak sunulan tüm verilere ve katkı sağlayanların tam listesine [herkes tarafından erişilebilmektedir](https://github.com/OWASP/Top10/tree/master/2017/datacall/submissions).
 
-## Bireysel İştirakçilere Teşekkür
+## Bireysel Katkı Sağlayanlara Teşekkürler
 
-Saatler harcayarak Github üzerinden Top 10 projesine katkıda bulunan bireysel iştirakçilere de teşekkür etmek istiyoruz.
+Saatler harcayarak Github üzerinden İlk 10 projesine katkıda bulunan bireysel katkı sahiplerine de teşekkür etmek istiyoruz.
 
 * ak47gen
 * alonergan
@@ -131,6 +131,6 @@ Saatler harcayarak Github üzerinden Top 10 projesine katkıda bulunan bireysel 
 * vdbaan
 * yohgaki
 
-Ve Twitter, eposta ve diğer yöntemler ile geri bildirimde bulunan herkese.
+Ve Twitter, e-posta ve diğer yöntemler ile geri bildirimde bulunan herkese.
 
-Dirk Watter, Jim Manico ve Osama Elnaggar'ın sağladıkları kapsamlı yardımlardan bahsetmemek olmazdı. Ayrıca, Chris Frohoff ve Gabriel Lawrence yeni A8:2017-Güvensiz Ters serileştirme açıklığının yazımı için paha biçilemez bir destek sağlamışlardır.
+Dirk Watter, Jim Manico ve Osama Elnaggar'ın sağladıkları kapsamlı yardımlardan bahsetmeden geçmek haksızlık olurdu. Ayrıca, Chris Frohoff ve Gabriel Lawrence yeni A8:2017-Güvensiz Ters Serileştirme açıklığının yazımı için paha biçilemez bir katkı sağlamışlardır.
