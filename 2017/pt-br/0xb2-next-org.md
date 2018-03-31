@@ -17,7 +17,7 @@ OWASP recomenda que as organizações estabeleçam um programa de segurança de 
 
 * Identifique as [necessidades de proteção](https://www.owasp.org/index.php/SAMM_-_Strategy_&_Metrics_-_2) do seu [portfólio de aplicações](https://www.owasp.org/index.php/SAMM_-_Strategy_&_Metrics_-_2) sob uma perspectiva de negócios. Isso deve ser conduzido em parte pelas leis de privacidade e outros regulamentos relevantes para a posse de dados que está sendo protegida.
 * Estabeleça um [modelo comum de classificação de risco](https://www.owasp.org/index.php/OWASP_Risk_Rating_Methodology) com um conjunto consistente de fatores de probabilidade e impacto refletindo a tolerância de sua organização para o risco.
-* De forma adequada, meça e priorize todos os suas aplicações e APIs de acord. Adicione os resultados ao seu CMDB.
+* De forma adequada, meça e priorize todas as suas aplicações e APIs. Adicione os resultados ao seu CMDB.
 * Estabeleça diretrizes de garantia para definir corretamente a cobertura e o nível de rigor exigido.
 
 ### Promova uma Fundação Forte
@@ -29,8 +29,8 @@ OWASP recomenda que as organizações estabeleçam um programa de segurança de 
 ### Integre a segurança em processos existentes
 
 * Defina e integre atividades de [implementação segura](https://www.owasp.org/index.php/SAMM_-_Construction) e [verificação](https://www.owasp.org/index.php/SAMM_-_Verification) em processos de desenvolvimento e operação existentes.
-* As atividades devem incluir [modelagem de ameaças](https://www.owasp.org/index.php/SAMM_-_Threat_Assessment_-_1), [design & revisão](https://www.owasp.org/index.php/ SAMM_-_Design_Review_-_1) seguros, codificação segura e [revisão de código](https://www.owasp.org/index.php/SAMM_-_Code_Review_-_1), [testes de penetração](https://www.owasp.org/index.php/SAMM_-_Security_Testing_-_1) e remediação.
-* Forneça especialistas em matéria de assuntos e [serviços de suporte para equipes de desenvolvimento e projeto](https://www.owasp.org/index.php/SAMM_-_Education_&_Guidance_-_3) para ter sucesso.
+* As atividades devem incluir [modelagem de ameaças](https://www.owasp.org/index.php/SAMM_-_Threat_Assessment_-_1), [design & revisão](https://www.owasp.org/index.php/SAMM_-Design_Review_-_1) seguros, codificação segura e [revisão de código](https://www.owasp.org/index.php/SAMM_-_Code_Review_-_1), [testes de penetração](https://www.owasp.org/index.php/SAMM_-_Security_Testing_-_1) e remediação.
+* Forneça especialistas e [serviços de suporte para equipes de desenvolvimento e projeto](https://www.owasp.org/index.php/SAMM_-_Education_&_Guidance_-_3) para ter sucesso.
 
 ### Forneça visibilidade de gerenciamento
 
