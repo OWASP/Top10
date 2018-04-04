@@ -30,7 +30,7 @@ The OWASP Foundation is the non-profit entity that ensures the project's long-te
 
 Rejoignez nous !
 
-## Copyright and License
+## Copyright et License
 
 ![license](images/license.png)
 
