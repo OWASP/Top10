@@ -28,9 +28,8 @@ Avant tout début de traduction, merci de contacter @SPoint42 pour être ajouter
 * Vincent Malguy (https://github.com/vmalguy) 									
   - https://github.com/SPoint42/Top10/tree/FR-2017-translation/2017/fr/0xa8-insecure-deserialization.md => Traduction intitiale
  
-  
-  
- 
 * Valérie Lasserre (https://github.com/val38)
     - https://github.com/SPoint42/Top10/tree/FR-2017-translation/2017/fr/0xaa-logging-detection-response.md => Traduction initiale 2017
 
+## Relectures / vérifications nécessaires
+- https://github.com/SPoint42/Top10/blob/FR-2017-translation/2017/fr/0xd0-about-data.md => Traduction initiale 2017
