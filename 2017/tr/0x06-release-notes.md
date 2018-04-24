@@ -14,13 +14,13 @@ Son birkaç yıl içerisinde, uygulamaların sahip olduğu temel teknolojiler ve
 
 * **A4:2017-XML Dış Varlıkları (XXE)** yaygın olarak kaynak kod analizi gerçekleştiren araçların([SAST](https://www.owasp.org/index.php/Source_Code_Analysis_Tools)) veri setleri tarafından desteklenen yeni bir kategoridir. 
 
-## Topluluk tarafından desteklenen yeni sorunlar
+## Topluluk tarafından desteklenen yeni açıklıklar
 
 Aşağıdaki iki açıklık kategorisi hakkında görüşlerini almak için topluluğa danıştık. 500'den fazla cevap değerlendirildikten sonra, bu açıklıklar İlk 10'a eklenmiştir;
 * **A8:2017-Güvensiz Ters İşleme**, etkilenen platformlar üzerinde uzaktan kod çalıştırılmasına veya hassas nesnelerin değiştirilmesine izin vermektedir.
 * **A10:2017-Yetersiz Loglama ve İzleme**, eksikliği zararlı aktivitelerin ve ihlallerin tespitini, olay müdahalesini ve dijital adli bilişimi engelleyebilmekte veya önemli düzeyde geciktirebilmektedir.
 
-## Unutulmamış ancak birleştirilmiş veya kaldırılmış sorunlar
+## Unutulmamış ancak birleştirilmiş veya kaldırılmış açıklıklar
 
 * **A4-Güvensiz Doğrudan Nesne Başvuruları** ve **A7-Fonksiyon Düzeyinde Erişim Kontrolünün Olmaması**, **A5:2017-Yetersiz Erişim Kontrolü** başlığı altında birleştirilmiştir.
 * **A8-Siteler Arası İstek Sahteciliği (CSRF)**, pek çok çerçeve [CSRF savunması](https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)) içerdiği için sadece uygulamaların %5'inde bulunmuştur.
