@@ -10,7 +10,7 @@ Bazen bu yolların bulunması ve istismar edilmesi kolay olurken, bazen de son d
 
 ## Risklerim Neler
 
-[OWASP İlk 10](https://www.owasp.org/index.php/Top10) farklı kurumlar için en ciddi web uygulaması güvenlik risklerini belirlemeye çalışmaktadır. Bu risklerin her biri için, OWASP Risk Belirleme Metadolojisi'ne dayanan aşağıdaki basit derecelendirme şemasını kullanarak olasılığı ve teknik etkisi hakkında genel bilgi sağlamaktayız.
+[OWASP İlk 10](https://www.owasp.org/index.php/Top10) farklı kurumlar için en ciddi web uygulaması güvenlik risklerini belirlemeye çalışmaktadır. Bu risklerin her biri için, OWASP Risk Derecelendirme Metadolojisi'ne dayanan aşağıdaki basit derecelendirme şemasını kullanarak olasılığı ve teknik etkisi hakkında genel bilgi sağlamaktayız.
 
 | Tehdit Etkenleri | İstismar Edilebilirlik | Zafiyetin Yaygınlığı | Tespit Edilebilirlik | Teknik Etkiler | İş Etkileri |
 | -- | -- | -- | -- | -- | -- |
