@@ -18,7 +18,7 @@ OWASP İlk 10'un temel amacı, en yaygın ve en önemli web uygulama güvenlik z
 
 **Araçları akıllıca kullanma**. Güvenlik açıklıkları son derece karmaşık olabilmekte ve kod içerisinde derinlerde bulunabilmektedir. Çoğu durumda, bu açıklıkları bulmak ve ortadan kaldırmak için en etkili yaklaşım gelişmiş araçları kullanan uzmanlardır. Sadece araçlara bağlı kalmak güvenliği yanlış anlamaktır ve tavsiye edilmemektedir.
 
-**Her yerde yaygınlaştırma**. Kurumunuzda güvenliği kurum kültürünün tamamlayıcı bir parçası yapmaya odaklanın. [OWASP Yazılım Garanti Olgunluk Modeli (SAMM)](https://www.owasp.org/index.php/OWASP_SAMM_Project) üzerinden daha fazla bilgi edinebilirsiniz.
+**Her yönde yaygınlaştırma**. Kurumunuzda güvenliği kurum kültürünün tamamlayıcı bir parçası yapmaya odaklanın. [OWASP Yazılım Garanti Olgunluk Modeli (SAMM)](https://www.owasp.org/index.php/OWASP_SAMM_Project) üzerinden daha fazla bilgi edinebilirsiniz.
 
 ## Teşekkürler
 
