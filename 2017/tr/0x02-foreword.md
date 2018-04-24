@@ -8,7 +8,7 @@ OWASP İlk 10 çalışmasının asıl amacı geliştiriciler ve yöneticiler ara
 
 Bu sürümde, uygulama güvenliği programlarında OWASP İlk 10’un benimsenmesine yardımcı olmak için sorunlar ve çözüm önerileri kısa ve test edilebilir bir şekilde yazılmıştır. Gerçek bir standart gerekiyorsa, büyük kuruluşlara  [OWASP Uygulama Güvenliği Doğrulama Standardı'nı (ASVS)](https://www.owasp.org/index.php/ASVS) kullanmalarını öneriyoruz, ancak çoğu kurum için OWASP İlk 10 uygulama güvenliği alanında önemli bir başlangıç olacaktır.
 
-"Geliştiriciler için Bir Sonraki Adım", "Güvenlik Testi Ekipleri için Bir Sonraki Adım", CIO ve CISO’lar için uygun olan "Kurumlar için Bir Sonraki Adım" ve uygulama yöneticileri veya uygulama yaşam döngüsünden sorumlu olan kişiler için uygun olan "Uygulama Yöneticileri için Bir Sonraki Adım" kısımları dahil OWASP Top 10’in farklı kullanıcıları için bir takım tavsiye edilen sonraki adım bölümleri yazılmıştır.
+"Geliştiriciler için Bir Sonraki Adım", "Güvenlik Testi Ekipleri için Bir Sonraki Adım", CIO ve CISO’lar için uygun olan "Kurumlar için Bir Sonraki Adım" ve uygulama yöneticileri veya uygulama yaşam döngüsünden sorumlu olan kişiler için uygun olan "Uygulama Yöneticileri için Bir Sonraki Adım" kısımları dahil OWASP İlk 10’un farklı kullanıcıları için bir takım tavsiye edilen sonraki adım bölümleri yazılmıştır.
 
 Uzun vadede, tüm yazılım geliştirme takımlarına ve kurumlara kendi kültür ve teknolojileri ile uyumlu bir uygulama güvenliği programı oluşturmalarını tavsiye ediyoruz. Bu programlar sayı olarak çok fazla ve birbirlerinden çok farklı olabilir. Yazılım Garanti Olgunluk Modeli’ni kullanarak, organizasyonunuzun güçlü yanlarını uygulama güvenliği programınızı değerlendirmek ve geliştirmek için kullanınız.
 
