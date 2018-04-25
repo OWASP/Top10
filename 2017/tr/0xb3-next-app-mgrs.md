@@ -43,5 +43,5 @@ Uygulamalar, insanların düzenli olarak oluşturduğu ve sürdürdüğü en kar
 ## Eskiyen Sistemler
 
 * Tüm gerekli veriler arşivlenmelidir. Diğer tüm veriler güvenli bir şekilde silinmelidir.
-* Kullanılmayan hesapların, rollerin ve izinlerin silinmesi dahil uygulama güvenli bir şekilde kaldırılmalıdır.
+* Kullanılmayan hesapların, rollerin ve izinlerin silinmesi ile beraber uygulama güvenli bir şekilde kaldırılmalıdır.
 * CMDB veri tabanında uygulamanın durumu kaldırıldı olarak değiştirilmelidir.
