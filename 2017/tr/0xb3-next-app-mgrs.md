@@ -37,7 +37,7 @@ Uygulamalar, insanların düzenli olarak oluşturduğu ve sürdürdüğü en kar
 
 * Operasyonlar, uygulamanın güvenlik yönetimi için kılavuzlar (örn. yama yönetimi) içermelidir.
 * Kullanıcıların güvenlik farkındalığı artırılmalı ve kullanılabilirlik ile güvenlik arasındaki çatışmazlıklar yönetilmelidir.
-* Değişiklikler, örn. uygulamanın veya işletim sistemi, ara katman ve kütüphaneler gibi diğer bileşenlerin yeni sürümlerine geçilmesi, planlanmalı ve yönetilmelidir.
+* Değişiklikler, örn. uygulamanın veya işletim sisteminin, ara katman ve kütüphaneler gibi diğer bileşenlerin yeni sürümlerine geçilmesi, planlanmalı ve yönetilmelidir.
 * Değişiklik yönetimi veri tabanı (CMDB) dahil tüm dokümantasyon ve çalışma kitapları veya proje dokümantasyonu dahil güvenlik mimarisi, kontrolleri ve önlemleri güncellenmelidir.
 
 ## Eskiyen Sistemler
