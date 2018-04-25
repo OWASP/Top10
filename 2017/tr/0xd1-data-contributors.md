@@ -1,4 +1,4 @@
-# Teşekkür
+# Teşekkürler
 
 ## Veri Katkısında Bulunanlara Teşekkürler
 
