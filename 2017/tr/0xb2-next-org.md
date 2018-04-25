@@ -22,7 +22,7 @@ OWASP, kurumların uygulama ve API'lerinin günveliği hakkında bilgi sahibi ol
 
 ### Güçlü Bir Temele Oturtun
 
-* Tüm geliştirme ekiplerinin uyguması için bir uygulama güvenliği çizgisi oluşturacak odaklı bir [politika ve standart](https://www.owasp.org/index.php/SAMM_-_Policy_&_Compliance_-_2) seti oluşturun.
+* Tüm geliştirme ekiplerinin uyması için bir uygulama güvenliği çizgisi oluşturacak odaklı bir [politika ve standart](https://www.owasp.org/index.php/SAMM_-_Policy_&_Compliance_-_2) seti oluşturun.
 * Bu politika ve standartlara uygun ve kullanımları hakkında tasarım ve geliştirme yönergeleri sağlayan ortak bir [tekrar kullanılabilir günvelik kontrolleri](https://www.owasp.org/index.php/OWASP_Security_Knowledge_Framework) seti tanımlayın.
 * Zorunlu tutulacak ve farklı geliştirme rollerini ve konularını hedefleyecek bir [uygulama güvenliği eğitimi içeriği](https://www.owasp.org/index.php/SAMM_-_Education_&_Guidance_-_2) hazırlayın.
 
