@@ -50,7 +50,7 @@
 
 İlk kez, bir İlk 10 sürümüne katkı olarak sunulan tüm verilere ve katkı sağlayanların tam listesine [herkes tarafından erişilebilmektedir](https://github.com/OWASP/Top10/tree/master/2017/datacall/submissions).
 
-## Bireysel Katkı Sağlayanlara Teşekkürler
+## Bireysel Olarak Katkı Sağlayanlara Teşekkürler
 
 Saatler harcayarak Github üzerinden İlk 10 projesine katkıda bulunan bireysel katkı sahiplerine de teşekkür etmek istiyoruz.
 
