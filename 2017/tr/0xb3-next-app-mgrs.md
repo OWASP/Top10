@@ -19,7 +19,7 @@ Uygulamalar, insanların düzenli olarak oluşturduğu ve sürdürdüğü en kar
 
 ## Planlama ve Tasarım
 
-* Gelişticiler ve güvenlik uzmanları gibi iç paydaşlar ile planlama ve tasarım görüşülmelidir.
+* Geliştiriciler ve güvenlik uzmanları gibi iç paydaşlar ile planlama ve tasarım görüşülmelidir.
 * Korunma ihtiyaçlarına ve beklenen tehdit düzeyine uygun güvenlik mimarisi, kontrolleri ve önlemleri belirlenmelidir.
 * Uygulama sahibinin kalan riskleri kabul ettiğinden ve ilave kaynaklar sağladığından emin olunmalıdır.
 * Her bir sprintte, fonksiyonel olmayan gereksinimler için eklenen kısıtlamaları içerecek güvenlik hikayelerinin oluşturulduğundan emin olunmalıdır.
