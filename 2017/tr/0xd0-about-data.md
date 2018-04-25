@@ -6,7 +6,7 @@ OWASP Projesi Zirvesi'nde, aktif katılımcılar ve topluluk üyeleri, kısmen n
 
 Anket için, eskiden "daha yeni çıkmış" olarak belirlenen veya İlk 10 e-posta listesinde 2017 RC1'a geri bildirim olarak gönderilen açıklık kategorilerini topladık. Bunları sıralanmış bir ankete yerleştirdik ve katılımcılardan Owasp İlk 10 - 2017 içerisinde yer alması gerektiğini düşündükleri ilk dört açıklığı sıralamasını istedik. Anket 2 Ağustos - 18 Eylül 2017 tarihleri arasında açık kaldı. 516 cevap toplandı ve açıklıklar sıralandı.
 
-| sıralama | Anket Açıklık Kategorileri | Skor |
+| Sıra | Anket Açıklık Kategorileri | Skor |
 | -- | -- | -- |
 | 1 | Gizli Bilgilerin İfşası ('Gizlilik İhlali') [CWE-359] | 748 |
 | 2 | Kriptografik Eksiklikler [CWE-310/311/312/326/327]| 584 |
