@@ -2,7 +2,7 @@
 
 ## OWASP Top 10 2017
 
-The Ten Most Critical Web Application Security Risks
+ 10 ریسک امنیتی بسیار بحرانی برنامه‌های تحت وب
 
 November 20, 2017
 
