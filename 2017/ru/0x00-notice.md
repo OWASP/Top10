@@ -1,22 +1,22 @@
-# Release
+# Выпуск
 
-## Important Notice
+## Важное сообщение
 
-### Request for Comments
+### Запрос комментариев
 
-This is the text version of the OWASP Top 10, and although it is useful for translators and those interested in a text version, it's not the official release, which is the PowerPoint / PDF version. 
+Эта текстовая версия Топ-10 OWASP будет полезна переводчикам и другим заинтересованным лицам. Данная версия не является официальным релизом, который будет представлен документами в формате PowerPoint и PDF.
 
-At this stage, we are asking for
+На данном этапе нам требуются:
 
-* Translations - we have some teams working already, but do reach out to us if you can help
+* **переводы** - несколько команд уже начали работу, но мы просим вас связаться с нами, если вы можете чем-то помочь.
 
-We strongly urge for any corrections or issues to be logged at GitHub:
+Настоятельно просим вносить все исправления или замечания на GitHub:
 
 * [https://github.com/OWASP/Top10/issues](https://github.com/OWASP/Top10/issues)
 
-Through public transparency, we provide traceability and ensure that all voices are heard during this final month before publication.
+Действуя публично и открыто, мы предоставляем возможность отслеживания и контроля, а также гарантируем, что все высказывания не останутся без внимания в течении последнего месяца перед публикацией.
 
-* Andrew van der Stock
-* Brian Glas
-* Neil Smithline
-* Torsten Gigler
+* Эндрю ван дер Сток (Andrew van der Stock)
+* Брайан Глас (Brian Glas)
+* Нейл Смитлайн (Neil Smithline)
+* Торстен Гиглер (Torsten Gigler)
