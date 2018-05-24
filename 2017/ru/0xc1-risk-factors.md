@@ -1,14 +1,14 @@
-# **+К** О категориях угроз
+# **+ФР** О факторах риска угроз
 
 ## Сводная таблица угроз Топ-10
 
-The following table presents a summary of the 2017 Top 10 Application Security Risks, and the risk factors we have assigned to each risk. These factors were determined based on the available statistics and the experience of the OWASP Top 10 team. To understand these risks for a particular application or organization, you must consider your own specific threat agents and business impacts. Even severe software weaknesses may not present a serious risk if there are no threat agents in a position to perform the necessary attack or the business impact is negligible for the assets involved.
+Таблица ниже содержит сводную информацию о Топ-10 угроз безопасности приложений 2017 г., а также факторы риска, назначенные для каждой из угроз. Эти факторы определялись на основе доступной статистики и опыта команды Топ-10 OWASP. Чтобы рассчитать риски для конкретного приложения или организации, необходимо определить специфичные для них источники угроз и последствия для бизнеса. Даже критические недостатки ПО могут не представлять серьезной опасности, если отсутствуют источники угроз или последствия для бизнеса являются незначительными для рассматриваемых активов.
 
-![Risk Factor Table](images/0xc1-risk-factor-table.png)
+![Таблица факторов риска](images/0xc1-risk-factor-table.png)
 
-## Additional Risks To Consider
+## Дополнительные риски, требующие внимания
 
-The Top 10 covers a lot of ground, but there are many other risks you should consider and evaluate in your organization. Some of these have appeared in previous versions of the Top 10, and others have not, including new attack techniques that are being identified all the time. Other important application security risks (ordered by CWE-ID) that you should additionally consider include:
+Помимо угроз, представленных в Топ-10, существуют другие риски, которые необходимо оценивать и учитывать. Некоторые из них уже описывались в прошлых версиях Топ-10, а некоторые — нет, включая новые техники атак, которые появляются постоянно. Ниже перечислены дополнительные угрозы безопасности приложений (по номеру CWE), на которые также необходимо обратить внимание:
 
 * [CWE-352: Межсайтовая подмена запросов (CSRF)](https://cwe.mitre.org/data/definitions/352.html)
 * [CWE-400: Неконтролируемое использование ресурсов ("Чрезмерное потребление ресурсов", "Отказ в обслуживании приложения")](https://cwe.mitre.org/data/definitions/400.html)
