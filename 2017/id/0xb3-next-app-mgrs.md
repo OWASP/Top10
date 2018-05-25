@@ -1,47 +1,47 @@
-# +A: What's next for Application Managers
+# + A: Apa selanjutnya untuk Manajer Aplikasi
 
-## Manage the Full Application Lifecycle
+## Mengelola Siklus Aplikasi Penuh Hidup
 
-Applications belong to the most complex systems humans regularly create and maintain. IT management for an application should be performed by IT specialists who are responsible for the overall IT lifecycle of an application. We suggest establishing the role of application manager as technical counterpart to the application owner. The application manager is in charge of the whole application lifecycle from the IT perspective, from collecting the requirements until the process of retiring systems, which is often overlooked. 
+Aplikasi milik sistem yang paling kompleks secara teratur membuat dan memelihara adalah manusia. Manajemen TI untuk sebuah aplikasi harus dilakukan oleh spesialis TI yang bertanggung jawab atas keseluruhan siklus hidup aplikasi. Kami menyarankan untuk menetapkan peran sebagai manajer aplikasi sebagai mitra teknis bagi pemilik aplikasi. Manajer aplikasi bertanggung jawab atas keseluruhan siklus hidup aplikasi dari perspektif TI, mulai dari mengumpulkan persyaratan sampai proses sistem pensiun, yang sering diabaikan.
 
-## Requirements and Resource Management
+## Persyaratan dan Manajemen Sumber Daya
 
-* Collect and negotiate the business requirements for an application with the business, including the protection requirements with regard to confidentiality, authenticity, integrity and availability of all data assets, and the expected business logic.
-* Compile the technical requirements including functional and nonfunctional security requirements.
-* Plan and negotiate the budget that covers all aspects of design, build, testing and operation, including security activities.
+* Mengumpulkan dan menegosiasikan persyaratan bisnis untuk aplikasi dengan bisnis, termasuk persyaratan perlindungan berkenaan     dengan kerahasiaan, keaslian, integritas dan ketersediaan semua aset data, dan logika bisnis yang diharapkan.
+* Kompilasi persyaratan teknis termasuk persyaratan keamanan fungsional dan nonfungsional.
+* Merencanakan dan menegosiasikan anggaran yang mencakup semua aspek desain, pengembangan, pengujian dan operasi, termasuk kegiatan keamanan.
 
-## Request for Proposals (RFP) and Contracting
+## Permohonan untuk Proposal (RFP) dan Kontrak
 
-* Negotiate the requirements with internal or external developers, including guidelines and security requirements with respect to your security program, e.g. SDLC, best practices.
-* Rate the fulfillment of all technical requirements, including a planning and design phase.
-* Negotiate all technical requirements, including design, security, and service level agreements (SLA).
-* Adopt templates and checklists, such as [OWASP Secure Software Contract Annex](https://www.owasp.org/index.php/OWASP_Secure_Software_Contract_Annex). **Note**: The annex is for US contract law, so please consult qualified legal advice before using the sample annex.
+* Negosiasikan persyaratan dengan pengembang internal atau eksternal, termasuk pedoman dan persyaratan keamanan sehubungan dengan program keamanan Anda, mis. SDLC, praktik terbaik.
+* Beri nilai pemenuhan semua persyaratan teknis, termasuk tahap perencanaan dan perancangan.
+* Negosiasikan semua persyaratan teknis, termasuk disain, keamanan, dan perjanjian tingkat layanan (SLA).
+* Mengadopsi template dan daftar periksa, seperti [OWASP Secure Software Contract Annex](https://www.owasp.org/index.php/OWASP_Secure_Software_Contract_Annex). Catatan: Lampiran ini untuk hukum kontrak AS, jadi mohon berkonsultasi dengan nasihat hukum yang memenuhi syarat sebelum menggunakan contoh sampel.
 
-## Planning and Design
+## Perencanaan dan Desain
 
-* Negotiate planning and design with the developers and internal shareholders, e.g. security specialists.
-* Define the security architecture, controls, and countermeasures appropriate to the protection needs and the expected threat level. This should be supported by security specialists.
-* Ensure that the application owner accepts remaining risks or provides additional resources.
-* In each sprint, ensure security stories are created that include constraints added for non-functional requirements.
+* Negosiasikan perencanaan dan desain dengan para pengembang dan pemegang saham internal, mis. spesialis keamanan
+* Tentukan arsitektur keamanan, kontrol, dan tindakan penanggulangan yang sesuai dengan kebutuhan perlindungan dan tingkat ancaman yang diharapkan. Ini harus didukung oleh spesialis keamanan.
+* Pastikan pemilik aplikasi menerima risiko yang tersisa atau menyediakan sumber daya tambahan.
+* Daya dalam setiap kecepatan, pastikan dibuatkan cerita keamanan yang mencakup batasan yang ditambahkan untuk persyaratan yang tidak fungsional.
 
-## Deployment, Testing, and Rollout
+## Penyebaran, pengujian dan peluncuran
 
-* Automate the secure deployment of the application, interfaces and all required components, including needed authorizations.
-* Test the technical functions and integration with the IT architecture and coordinate business tests.
-* Create "use" and "abuse" test cases from technical and business perspectives.
-* Manage security tests according to internal processes, the protection needs, and the assumed threat level by the application.
-* Put the application in operation and migrate from previously used applications if needed.
-* Finalize all documentation, including the CMDB and security architecture.
+* Mengotomatiskan penerapan aplikasi, antarmuka, dan semua komponen yang dibutuhkan dengan aman, termasuk otorisasi yang diperlukan.
+* Menguji fungsi teknis dan integrasi dengan arsitektur TI dan mengkoordinasikan tes bisnis.
+* Buat kasus uji "penggunaan" dan "penyalahgunaan" dari perspektif teknis dan bisnis.
+* Mengelola tes keamanan sesuai dengan proses internal, kebutuhan perlindungan, dan tingkat ancaman yang diasumsikan oleh aplikasi.
+* Letakkan aplikasi dalam operasi dan migran dari aplikasi yang sebelumnya digunakan jika diperlukan.
+*  Selesaikan semua dokumentasi, termasuk CMDB dan arsitektur keamanan.
 
-## Operations and Change Management
+## Operasi dan Manajemen Perubahan
 
-* Operations must include guidelines for the security management of the application (e.g. patch management).
-* Raise the security awareness of users and manage conflicts about usability vs. security.
-* Plan and manage changes, e.g. migrate to new versions of the application or other components like OS, middleware, and libraries.
-* Update all documentation, including in the change management data base (CMDB) and the security architecture, controls, and countermeasures, including any runbooks or project documentation.
+* Operasi harus mencakup panduan untuk pengelolaan keamanan aplikasi (misalnya manajemen patch).
+* Naikkan kesadaran keamanan pengguna dan kelola konflik tentang kegunaan vs keamanan.
+* Merencanakan dan mengelola perubahan, mis. bermigrasi ke versi baru dari aplikasi atau komponen lain seperti OS, middleware, dan perpustakaan.
+* Perbarui semua dokumentasi, termasuk dalam basis data manajemen perubahan (CMDB) dan arsitektur keamanan, kontrol, dan penanggulangan, termasuk runbook atau dokumentasi proyek apa pun.
 
-## Retiring Systems
+## Sistem Pensiun
 
-* Any required data should be archived. All other data should be securely wiped.
-* Securely retire the application, including deleting unused accounts and roles and permissions.
-* Set your application's state to retired in the CMDB.
+* Data yang dibutuhkan harus diarsipkan. Semua data lainnya harus dilepas dengan aman.
+* Pelepasan aplikasi dengan aman, termasuk menghapus akun dan peran dan izin yang tidak terpakai.
+* Tetapkan status aplikasi Anda ke pensiunan di CMDB.

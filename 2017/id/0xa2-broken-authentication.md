@@ -1,45 +1,44 @@
-# A2:2017 Broken Authentication
+# A2:2017 Otentikasi yang rusak
 
-| Threat agents/Attack vectors | Security Weakness           | Impacts               |
+| Agen ancaman / vektor serangan | Kelemahan Keamanan           | Dampak               |
 | -- | -- | -- |
-| Access Lvl : Exploitability 3 | Prevalence 2 : Detectability 2 | Technical 3 : Business |
-| Attackers have access to hundreds of millions of valid username and password combinations for credential stuffing, default administrative account lists, automated brute force, and dictionary attack tools. Session management attacks are well understood, particularly in relation to unexpired session tokens. | The prevalence of broken authentication is widespread due to the design and implementation of most identity and access controls. Session management is the bedrock of authentication and access controls, and is present in all stateful applications. Attackers can detect broken authentication using manual means and exploit them using automated tools with password lists and dictionary attacks. | Attackers have to gain access to only a few accounts, or just one admin account to compromise the system. Depending on the domain of the application, this may allow money laundering, social security fraud, and identity theft, or disclose legally protected highly sensitive information. |
+| Akses Lvl: Eksploitasi 3 | Prevalensi 2: Deteksi 2 | Teknis 3: Bisnis |
+|Penyerang memiliki akses ke ratusan juta kombinasi nama pengguna dan sandi yang valid untuk isian kredensial, daftar akun administratif default, alat kekerasan otomatis, dan alat serangan kamus. Serangan manajemen sesi dipahami dengan baik, terutama terkait dengan token sesi yang belum habis.| Prevalensi otentikasi yang terputus tersebar luas karena desain dan implementasi sebagian besar identitas dan kontrol akses. Manajemen sesi adalah fondasi otentikasi dan kontrol akses, dan hadir dalam semua aplikasi stateful. Penyerang dapat mendeteksi autentikasi yang rusak menggunakan cara manual dan memanfaatkannya menggunakan alat otomatis dengan daftar kata sandi dan serangan kamus. Prevalensi otentikasi yang terputus tersebar luas karena desain dan implementasi sebagian besar identitas dan kontrol akses. Manajemen sesi adalah fondasi otentikasi dan kontrol akses, dan hadir dalam semua aplikasi stateful. Penyerang dapat mendeteksi autentikasi yang rusak menggunakan cara manual dan memanfaatkannya menggunakan alat otomatis dengan daftar kata sandi dan serangan kamus.|Penyerang harus mendapatkan akses hanya pada beberapa akun, atau hanya satu akun admin untuk kompromi sistem. Bergantung pada domain aplikasi, ini mungkin mengizinkan pencucian uang, penipuan keamanan sosial, dan pencurian identitas, atau mengungkapkan informasi sensitif yang dilindungi secara hukum.|
 
-## Is the Application Vulnerable?
+## Apakah Aplikasi itu Rentan?
 
-Confirmation of the user's identity, authentication, and session management are critical to protect against authentication-related attacks.
+Konfirmasi identitas pengguna, otentikasi, dan manajemen sesi sangat penting untuk melindungi terhadap serangan terkait otentifikasi.
 
-There may be authentication weaknesses if the application:
+Mungkin ada kelemahan otentikasi jika aplikasi:
 
-* Permits automated attacks such as [credential stuffing](https://www.owasp.org/index.php/Credential_stuffing), where the attacker has a list of valid usernames and passwords.
-* Permits brute force or other automated attacks.
-* Permits default, weak, or well-known passwords, such as "Password1" or "admin/admin“.
-* Uses weak or ineffective credential recovery and forgot-password processes, such as "knowledge-based answers", which cannot be made safe.
-* Uses plain text, encrypted, or weakly hashed passwords (see **A3:2017-Sensitive Data Exposure**).
-* Has missing or ineffective multi-factor authentication.
-* Exposes Session IDs in the URL (e.g., URL rewriting).
-* Does not rotate Session IDs after successful login.
-* Does not properly invalidate Session IDs. User sessions or authentication tokens (particularly single sign-on (SSO) tokens) aren't properly invalidated during logout or a period of inactivity.
+* Izin serangan otomatis seperti [mengisi kredensial](https://www.owasp.org/index.php/Credential_stuffing), dimana penyerang memiliki daftar username dan password yang valid.
+* Memungkinkan kekerasan atau serangan otomatis lainnya.
+* Memungkinkan password default, lemah, atau terkenal, seperti "Password1" atau "admin / admin".
+* Menggunakan proses pemulihan kredensial yang lemah atau tidak efektif dan lupa-proses kata sandi, seperti "jawaban berbasis pengetahuan", yang tidak dapat dilakukan dengan aman.
+* Menggunakan kata kunci plain text, encrypted, atau weakhedhed (lihat ** A3: 2017-Sensitive Data Exposure **).
+* Hsebagai otentikasi multi faktor yang hilang atau tidak efektif.
+* Paparkan ID Sesi di URL (mis., Penulisan ulang URL).
+* Tidak memutar Sesi ID setelah berhasil masuk.
+* Tidak benar membatalkan ID Sesi. Sesi pengguna atau token otentikasi (terutama single sign on on (SSO) token) tidak dianggap salah saat logout atau periode tidak aktif.
+adalah serangan yang umum. Jika sebuah aplikasi tidak menerapkan ancaman pengamanan ancaman atau ancaman otomatis, aplikasi tersebut dapat digunakan sebagai kata sandi untuk menentukan apakah kredensial tersebut valid.## Cara Mencegah
 
-## How To Prevent
+* Bila memungkinkan, terapkan autentikasi multi-faktor untuk mencegah pengisian otomatis, pengisian kata kunci, kekerasan, dan penggunaan kembali kredensial bekas pakai yang dicuri.
+* Jangan mengirim atau menyebarkan dengan kredensial default, terutama untuk pengguna admin.
+* Terapkan cek password lemah, seperti menguji password baru atau yang telah diubah terhadap daftar[10000 password terburuk teratas](https://github.com/danielmiessler/SecLists/tree/master/Passwords).
+* Sejajarkan panjang kata sandi, kompleksitas dan kebijakan rotasi dengan [NIST 800-63 B panduan di bagian 5.1.1 untuk Rahasia Memoris](https://pages.nist.gov/800-63-3/sp800-63b.html#memsecret) atau kebijakan sandi berbasis bukti yang modern lainnya.
+* Pastikan pendaftaran, pemulihan kredensial, dan jalur API dikeraskan melawan serangan pencacahan akun dengan menggunakan pesan yang sama untuk semua hasil.
+* Batasi atau kian menunda upaya login gagal. Log semua kegagalan dan administrator peringatan saat pengisian barang, kekerasan, atau serangan lain terdeteksi.
+* Gunakan manajer sesi server-side, secure, built-in yang menghasilkan ID sesi acak baru dengan entropi tinggi setelah login. Sesi ID tidak boleh berada di URL, disimpan dengan aman dan tidak valid setelah logout, idle, dan timeout absolut.
 
-* Where possible, implement multi-factor authentication to prevent automated, credential stuffing, brute force, and stolen credential re-use attacks. 
-* Do not ship or deploy with any default credentials, particularly for admin users.
-* Implement weak-password checks, such as testing new or changed passwords against a list of the [top 10000 worst passwords](https://github.com/danielmiessler/SecLists/tree/master/Passwords).
-* Align password length, complexity and rotation policies with [NIST 800-63 B's guidelines in section 5.1.1 for Memorized Secrets](https://pages.nist.gov/800-63-3/sp800-63b.html#memsecret) or other modern, evidence based password policies.
-* Ensure registration, credential recovery, and API pathways are hardened against account enumeration attacks by using the same messages for all outcomes.
-* Limit or increasingly delay failed login attempts. Log all failures and alert administrators when credential stuffing, brute force, or other attacks are detected.
-* Use a server-side, secure, built-in session manager that generates a new random session ID with high entropy after login. Session IDs should not be in the URL, be securely stored and invalidated after logout, idle, and absolute timeouts.
+## Contoh Skenario Serangan
 
-## Example Attack Scenarios
+**Skenario  #1**: [mengisi kredensial](https://www.owasp.org/index.php/Credential_stuffing), penggunaan [daftar kata sandi yang dikenal](https://github.com/danielmiessler/SecLists), adalah serangan yang umum. Jika sebuah aplikasi tidak menerapkan ancaman pengamanan ancaman atau ancaman otomatis, aplikasi tersebut dapat digunakan sebagai kata sandi untuk menentukan apakah kredensial tersebut valid.
 
-Scenario #1: [Credential stuffing](https://www.owasp.org/index.php/Credential_stuffing), the use of [lists of known passwords](https://github.com/danielmiessler/SecLists), is a common attack. If an application does not implement automated threat or credential stuffing protections, the application can be used as a password oracle to determine if the credentials are valid.
+**Skenario #2**: ebagian besar serangan otentikasi terjadi karena terus menggunakan kata kunci sebagai satu-satunya faktor. Setelah dianggap sebagai praktik terbaik, persyaratan perumusan kata sandi dan kompleksitas dipandang mendorong pengguna untuk menggunakan, dan menggunakan kembali, kata kunci yang lemah. Organisasi direkomendasikan untuk menghentikan praktik ini per NIST 800-63 dan menggunakan autentikasi multi faktor.
 
-**Scenario #2**: Most authentication attacks occur due to the continued use of passwords as a sole factor. Once considered best practices, password rotation and complexity requirements are viewed as encouraging users to use, and reuse, weak passwords. Organizations are recommended to stop these practices per NIST 800-63 and use multi-factor authentication.
+**Skenario #3**: Batas waktu sesi aplikasi tidak diatur dengan benar. Pengguna menggunakan komputer umum untuk mengakses aplikasi. Alih-alih memilih "logout" pengguna cukup menutup tab browser dan berjalan pergi. Penyerang menggunakan peramban yang sama satu jam kemudian, dan pengguna masih diotentifikasi.
 
-**Scenario #3**: Application session timeouts aren't set properly. A user uses a public computer to access an application. Instead of selecting “logout” the user simply closes the browser tab and walks away. An attacker uses the same browser an hour later, and the user is still authenticated.
-
-## References
+## Referensi
 
 ### OWASP
 
