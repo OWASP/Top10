@@ -1,61 +1,61 @@
-# A2:2017 Broken Authentication
+# A2:2017 Недостатки аутентификации
 
-| Threat agents/Attack vectors | Security Weakness           | Impacts               |
+| Угрозы/Векторы атаки | Слабые места безопасности           | Нападение               |
 | -- | -- | -- |
-| Access Lvl : Exploitability 3 | Prevalence 2 : Detectability 2 | Technical 3 : Business |
-| Attackers have access to hundreds of millions of valid username and password combinations for credential stuffing, default administrative account lists, automated brute force, and dictionary attack tools. Session management attacks are well understood, particularly in relation to unexpired session tokens. | The prevalence of broken authentication is widespread due to the design and implementation of most identity and access controls. Session management is the bedrock of authentication and access controls, and is present in all stateful applications. Attackers can detect broken authentication using manual means and exploit them using automated tools with password lists and dictionary attacks. | Attackers have to gain access to only a few accounts, or just one admin account to compromise the system. Depending on the domain of the application, this may allow money laundering, social security fraud, and identity theft, or disclose legally protected highly sensitive information. |
+| Уровень доступа : Уязвимости 3 | Распространённость 2 : Обнаруживаемость 2 | Технический 3 : Бизнес |
+| У атакующих есть доступ к сотням миллионов действующих комбинаций имён и паролей пользователей для заполнения учетных данных, административных списков по умолчанию, автоматического перебора и атак по словарю. Управление сеансами атак хорошо понятно, особенно в отношении неработающих токенов сеанса. | Недостатки аутентификации широко распространены благодаря разработке и внедрению большинства средств идентификации и контроля доступа. Управление сеансом является основой аутентификации и контроля доступа и присутствует во всех приложениях с поддержкой состояния. Атакующие могут обнаруживать сломанную аутентификацию с использованием ручных средств и использовать их с помощью автоматических инструментов со списками паролей и атаками по словарю. | Злоумышленники должны получить доступ только к нескольким учетным записям или только к одной учетной записи администратора, чтобы скомпрометировать систему. В зависимости от области применения приложения это может привести к отмыванию денег, мошенничеству в области социального обеспечения и краже личных данных или раскрывать конфиденциальную информацию, охраняемую законом. |
 
-## Is the Application Vulnerable?
+## Является ли приложение уязвимым?
 
-Confirmation of the user's identity, authentication, and session management are critical to protect against authentication-related attacks.
+Подтверждение идентификации пользователя, аутентификации и управления сеансом имеет решающее значение для защиты от атак, связанных с аутентификацией.
 
-There may be authentication weaknesses if the application:
+Недостатки проверки подлинности возникают, если приложение:
 
-* Permits automated attacks such as [credential stuffing](https://www.owasp.org/index.php/Credential_stuffing), where the attacker has a list of valid usernames and passwords.
-* Permits brute force or other automated attacks.
-* Permits default, weak, or well-known passwords, such as "Password1" or "admin/admin“.
-* Uses weak or ineffective credential recovery and forgot-password processes, such as "knowledge-based answers", which cannot be made safe.
-* Uses plain text, encrypted, or weakly hashed passwords (see **A3:2017-Sensitive Data Exposure**).
-* Has missing or ineffective multi-factor authentication.
-* Exposes Session IDs in the URL (e.g., URL rewriting).
-* Does not rotate Session IDs after successful login.
-* Does not properly invalidate Session IDs. User sessions or authentication tokens (particularly single sign-on (SSO) tokens) aren't properly invalidated during logout or a period of inactivity.
+* Разрешает автоматические атаки, такие как [учетные данные](https://www.owasp.org/index.php/Credential_stuffing), где у злоумышленника есть список допустимых имен пользователей и паролей.
+* Разрешает перебор или другие автоматические атаки.
+* Разрешает пароли по умолчанию, слабые или известные пароли, такие как "Password1" или "admin/admin“.
+* Использует слабое или неэффективное восстановление учетных данных и забытого пароля, такие как «ответы на основе знаний», которые нельзя сделать безопасными.
+* Использует простые текстовые, зашифрованные или слабо хешированные пароли (см. **A3: 2017-Разглашение конфиденциальных данных**).
+* Отсутствует или неэффективна многофакторная аутентификация.
+* Выдает идентификаторы сеанса в URL-адресе (например, переписывание URL-адресов).
+* После успешного входа в систему не возвращает идентификаторы сеанса.
+* Не корректно аннулирует идентификаторы сеанса. Пользовательские сеансы или токены аутентификации (в частности, токены единого входа (SSO)) не уничтожаются должным образом во время выхода из системы или периода бездействия.
 
-## How To Prevent
+## Как предотвратить
 
-* Where possible, implement multi-factor authentication to prevent automated, credential stuffing, brute force, and stolen credential re-use attacks. 
-* Do not ship or deploy with any default credentials, particularly for admin users.
-* Implement weak-password checks, such as testing new or changed passwords against a list of the [top 10000 worst passwords](https://github.com/danielmiessler/SecLists/tree/master/Passwords).
-* Align password length, complexity and rotation policies with [NIST 800-63 B's guidelines in section 5.1.1 for Memorized Secrets](https://pages.nist.gov/800-63-3/sp800-63b.html#memsecret) or other modern, evidence based password policies.
-* Ensure registration, credential recovery, and API pathways are hardened against account enumeration attacks by using the same messages for all outcomes.
-* Limit or increasingly delay failed login attempts. Log all failures and alert administrators when credential stuffing, brute force, or other attacks are detected.
-* Use a server-side, secure, built-in session manager that generates a new random session ID with high entropy after login. Session IDs should not be in the URL, be securely stored and invalidated after logout, idle, and absolute timeouts.
+* Там, где это возможно, реализуйте многофакторную аутентификацию для предотвращения автоматических атак, кражи учетных данных, перебора и кражи для повторных атак.
+* Не работайте под учетными данными по умолчанию, особенно для пользователей admin.
+* Внедряйте проверки слабых паролей, такие как проверка новых или измененных паролей по списку [топ-10000 наихудших паролей](https://github.com/danielmiessler/SecLists/tree/master/Passwords).
+* Применяйте правила длины, сложности и ротации паролей с помощью [NIST 800-63 B разделе 5.1.1 для запомненных секретов](https://pages.nist.gov/800-63-3/sp800-63b.html#memsecret) или используйте другие современные, основанные на доказательствах политики паролей подходы.
+* Обеспечьте, чтобы регистрация, восстановление учетных данных и пути API были усилены против атак на аккаунты, используя одни и те же сообщения для всех результатов.
+* Ограничте колличество или увеличте задержки неудачных попыток входа в систему. Логируйте все отказы и административные предупреждения, при работе с учетными данными, их перебором или другими атаками.
+* Используйте серверный, безопасный, встроенный диспетчер сеансов, который генерирует новый случайный идентификатор сеанса с высокой энтропией после входа в систему. Идентификаторы сеансов не должны находиться в URL-адресе, должны быть надежно сохранены и аннулированы после выхода из системы, бездействия и абсолютных тайм-аутов.
 
-## Example Attack Scenarios
+## Пример сценария атаки
 
-Scenario #1: [Credential stuffing](https://www.owasp.org/index.php/Credential_stuffing), the use of [lists of known passwords](https://github.com/danielmiessler/SecLists), is a common attack. If an application does not implement automated threat or credential stuffing protections, the application can be used as a password oracle to determine if the credentials are valid.
+**Сценарий #1**: [Учётные данные](https://www.owasp.org/index.php/Credential_stuffing), использование [списка известных паролей](https://github.com/danielmiessler/SecLists), является обычной атакой. Если приложение не реализует автоматическую защиту учетных данных или предотвращение угроз, то приложение может использоваться в качестве пароля для определения того, действительны ли учетные данные.
 
-**Scenario #2**: Most authentication attacks occur due to the continued use of passwords as a sole factor. Once considered best practices, password rotation and complexity requirements are viewed as encouraging users to use, and reuse, weak passwords. Organizations are recommended to stop these practices per NIST 800-63 and use multi-factor authentication.
+**Сценарий #2**: Большинство атак аутентификации происходят из-за постоянного использования паролей в качестве единственного фактора. После рассмотрения передовой практики, ротация пароля и изменение требований к его сложности рассматриваются как поощряющие пользователей к использованию и повторному использованию слабых паролей. Организациям рекомендуется прекратить эту практику в NIST 800-63 и использовать многофакторную аутентификацию.
 
-**Scenario #3**: Application session timeouts aren't set properly. A user uses a public computer to access an application. Instead of selecting “logout” the user simply closes the browser tab and walks away. An attacker uses the same browser an hour later, and the user is still authenticated.
+**Сценарий #3**: Таймауты сеанса приложения не установлены должным образом. Пользователь использует общедоступный компьютер для доступа к приложению. Вместо выбора «logout» пользователь просто закрывает вкладку браузера и уходит. Злоумышленник использует тот же браузер через час, и пользователь все еще аутентифицирован.
 
-## References
+## Ссылки
 
 ### OWASP
 
-* [OWASP Proactive Controls: Implement Identity and Authentication Controls](https://www.owasp.org/index.php/OWASP_Proactive_Controls#5:_Implement_Identity_and_Authentication_Controls)
-* [OWASP Application Security Verification Standard: V2 Authentication](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
-* [OWASP Application Security Verification Standard: V3 Session Management](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
-* [OWASP Testing Guide: Identity](https://www.owasp.org/index.php/Testing_Identity_Management)
- and [Authentication](https://www.owasp.org/index.php/Testing_for_authentication)
-* [OWASP Cheat Sheet: Authentication](https://www.owasp.org/index.php/Authentication_Cheat_Sheet)
-* [OWASP Cheat Sheet: Credential Stuffing](https://www.owasp.org/index.php/Credential_Stuffing_Prevention_Cheat_Sheet)
-* [OWASP Cheat Sheet: Forgot Password](https://www.owasp.org/index.php/Forgot_Password_Cheat_Sheet)
-* [OWASP Cheat Sheet: Session Management](https://www.owasp.org/index.php/Session_Management_Cheat_Sheet)
-* [OWASP Automated Threats Handbook](https://www.owasp.org/index.php/OWASP_Automated_Threats_to_Web_Applications)
+* [Проактивная защита OWASP: реализация защиты идентификационных данных и аутентификации](https://www.owasp.org/index.php/OWASP_Proactive_Controls#5:_Implement_Identity_and_Authentication_Controls)
+* [Стандарт подтверждения безопасности приложений OWASP (ASVS): V2 Аутентификация](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
+* [Стандарт подтверждения безопасности приложений OWASP (ASVS): V3 Управление сессиями](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
+* [Руководство OWASP по тестированию: Идентификационные данные](https://www.owasp.org/index.php/Testing_Identity_Management)
+ и [Аутентификация](https://www.owasp.org/index.php/Testing_for_authentication)
+* [Памятка OWASP: Аутентификация](https://www.owasp.org/index.php/Authentication_Cheat_Sheet)
+* [Памятка OWASP: Утечка учётных данных](https://www.owasp.org/index.php/Credential_Stuffing_Prevention_Cheat_Sheet)
+* [Памятка OWASP: Забытый пароль](https://www.owasp.org/index.php/Forgot_Password_Cheat_Sheet)
+* [Памятка OWASP: Управление сессиями](https://www.owasp.org/index.php/Session_Management_Cheat_Sheet)
+* [Справочник OWASP по автоматизированным атакам](https://www.owasp.org/index.php/OWASP_Automated_Threats_to_Web_Applications)
 
-### External
+### Сторонние
 
-* [NIST 800-63b: 5.1.1 Memorized Secrets](https://pages.nist.gov/800-63-3/sp800-63b.html#memsecret) - for thorough, modern, evidence-based advice on authentication. 
-* [CWE-287: Improper Authentication](https://cwe.mitre.org/data/definitions/287.html)
-* [CWE-384: Session Fixation](https://cwe.mitre.org/data/definitions/384.html)
+* [NIST 800-63b: 5.1.1 Запоминаемые секреты](https://pages.nist.gov/800-63-3/sp800-63b.html#memsecret) - для получения исчерпывающей, актуальной и основанной на фактических данных справки по аутентификации. 
+* [CWE-287: Некорректная аутентификация](https://cwe.mitre.org/data/definitions/287.html)
+* [CWE-384: Фиксация сессии](https://cwe.mitre.org/data/definitions/384.html)
