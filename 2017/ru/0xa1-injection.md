@@ -2,8 +2,8 @@
 
 | Источники угроз/Векторы атак | Недостатки безопасности           | Последствия               |
 | -- | -- | -- |
-| Уровень доступности : Сложность эксплуатации 3 | Распространенность 2 : Сложность обнаружения 3 | Технические 3 : Бизнес |
-| Почти любой источник данных может оказаться вектором для внедрения: переменные окружения, параметры, внешние и внутренние веб-службы, а также все типы пользователей. [Внедрения](https://www.owasp.org/index.php/Injection_Flaws) становятся возможными, если злоумышленник может отправлять интерпретатору вредоносные данные. | Внедрения особенно распространены в старом коде. Уязвимости часто встречаются в SQL- LDAP-, XPath- или NoSQL-запросах, системных командах, XML-обработчиках, SMTP-заголовках, языках выражений и ORM-запросах. Внедрения легко обнаружить при анализе кода. Сканеры и фаззеры могут помочь злоумышленникам найти подобные уязвимости. |Injection can result in data loss, corruption, or disclosure to unauthorized parties, loss of accountability, or denial of access. Injection can sometimes lead to complete host takeover. The business impact depends on the needs of the application and data.|
+| Зависит от прил. : Сложность эксплуатации 3 | Распространенность 2 : Сложность обнаружения 3 | Технические 3 : Бизнес ?|
+| Почти любой источник данных может оказаться вектором для внедрения: переменные окружения, параметры, внешние и внутренние веб-службы, а также все типы пользователей. [Внедрения](https://www.owasp.org/index.php/Injection_Flaws) становятся возможными, если злоумышленник может отправлять интерпретатору вредоносные данные. | Внедрения особенно распространены в старом коде. Уязвимости часто встречаются в SQL- LDAP-, XPath- или NoSQL-запросах, системных командах, XML-обработчиках, SMTP-заголовках, языках выражений и ORM-запросах. Внедрения легко обнаружить при анализе кода. Сканеры и фаззеры могут помочь злоумышленникам найти подобные уязвимости. |Внедрения могут привести к потере данных, их повреждению или разглашению третьим лицам, а также к отказу в обслуживании. В некоторых случаях контроль над узлом может быть полностью перехвачен. Последствия для бизнеса зависят от критичности приложения и данных.|
 
 
 ## Is the Application Vulnerable?
@@ -56,8 +56,8 @@ This changes the meaning of both queries to return all the records from the acco
 
 ### External
 
-* [CWE-77: Command Injection](https://cwe.mitre.org/data/definitions/77.html)
-* [CWE-89: SQL Injection](https://cwe.mitre.org/data/definitions/89.html)
-* [CWE-564: Hibernate Injection](https://cwe.mitre.org/data/definitions/564.html)
-* [CWE-917: Expression Language Injection](https://cwe.mitre.org/data/definitions/917.html)
+* [CWE-77: Внедрение команд](https://cwe.mitre.org/data/definitions/77.html)
+* [CWE-89: Внедрение SQL](https://cwe.mitre.org/data/definitions/89.html)
+* [CWE-564: Внедрение SQL-кода с использованием Hibernate](https://cwe.mitre.org/data/definitions/564.html)
+* [CWE-917: Внедрение кода языка выражений](https://cwe.mitre.org/data/definitions/917.html)
 * [PortSwigger: Server-side template injection](https://portswigger.net/kb/issues/00101080_serversidetemplateinjection)
