@@ -1,37 +1,42 @@
-# Risk - Application Security Risks
+# Risiko - Risiko Keamanan Aplikasi
 
-## What Are Application Security Risks?
+## Apa Saja Risiko Keamanan Aplikasi??
 
-Attackers can potentially use many different paths through your application to do harm to your business or organization. Each of these paths represents a risk that may, or may not, be serious enough to warrant attention.
+Penyerang berpotensi menggunakan beragam cara melalui aplikasi Anda untuk membahayakan bisnis atau organisasi Anda. Setiap cara mewakili risiko, yang mungkin, cukup serius untuk memperoleh perhatian.
 
 ![App Security Risks](images/0x10-risk-1.png)
 
-Sometimes these paths are trivial to find and exploit, and sometimes they are extremely difficult. Similarly, the harm that is caused may be of no consequence, or it may put you out of business. To determine the risk to your organization, you can evaluate the likelihood associated with each threat agent, attack vector, and security weakness and combine it with an estimate of the technical and business impact to your organization. Together, these factors determine your overall risk.
+Terkadang cara ini mudah ditemukan dan dieksploitasi, namun kadang-kadang sulit. Demikian juga, kerusakan yang diakibatkan
+dapat berkisar dari tidak ada apa-apa hingga membuat Anda keluar dari bisnis. Untuk menentukan risiko di organisasi Anda, Anda
+dapat mengevaluasi kemungkinan yang diasosiasikan untuk setiap agen ancaman, vektor serangan, kelemahan keamanan, dan
+mengkombinasikan dengan estimasi dampak teknis dan bisnis bagi organisasi Anda. Semua faktor ini menentukan risiko
+keseluruhan.
 
-## What's My Risk
+## Apa Risiko Saya?
 
-The [OWASP Top 10](https://www.owasp.org/index.php/Top10) focuses on identifying the most serious web application security risks for a broad array of organizations. For each of these risks, we provide generic information about likelihood and technical impact using the following simple ratings scheme, which is based on the OWASP Risk Rating Methodology.  
+[OWASP Top 10](https://www.owasp.org/index.php/Top10) ini berfokus pada identifikasi risiko yang paling serius bagi sebagian besar organisasi. Untuk setiap risiko, kami memberikan informasi umum mengenai kemungkiinan dan dampak teknis dengan menggunakan skema penilaian sederhana berikut, yang berdasarkan pada  OWASP Risk Rating Methodology.  
 
-| Threat Agents | Exploitability | Weakness Prevalence | Weakness Detectability | Technical Impacts | Business Impacts |
+| Agen Ancaman| Vektor Serangan | Keberadaan kelemahan| Deteksi Kelemahan | Dampak Teknis | Dampak Bisnis |
 | -- | -- | -- | -- | -- | -- |
-| Appli-   | Easy 3 | Widespread 3 | Easy 3 | Severe 3 | Business     |
-| cation   | Average 2 | Common 2 | Average 2 | Moderate 2 | Specific |
-| Specific | Difficult 1 | Uncommon 1 | Difficult 1 | Minor 1 |       |
+| Appli-   | Mudah 3 | Tersebar 3 | Mudah 3 | Parah 3 | Bisnis    |
+| kasi   | Menengah 2 | Umum 2 | Rata - rata 2 | Sedang 2 | Spesifik |
+| Spesifik | Sulit 1 | Tidak Umum 1 | Sulit 1 | Rendah 1 |       |
 
-In this edition, we have updated the risk rating system to assist in calculating the likelihood and impact of any given risk. For more details, please see [Note About Risks](0xc0-note-about-risks.md). 
 
-Each organization is unique, and so are the threat actors for that organization, their goals, and the impact of any breach. If a public interest organization uses a content management system (CMS) for public information and a health system uses that same exact CMS for sensitive health records, the threat actors and business impacts can be very different for the same software. It is critical to understand the risk to your organization based on applicable threat agents and business impacts.
+Pada Edisi ini, kami telah memperbaharui Penilaian Risiko Sistem untuk membantu dalam menghitung kemungkinan dan dampak dari risiko tertentu. Untuk Lebih Detail, Lihat pada [Catatan tentang Risiko](0xc0-note-about-risks.md). 
 
-Where possible, the names of the risks in the Top 10 are aligned with [Common Weakness Enumeration](https://cwe.mitre.org/) (CWE) weaknesses to promote generally accepted naming conventions and to reduce confusion.
+Setiap organisasi itu unik, begitu pula aktor ancaman untuk organisasi tersebut, tujuan mereka, dan dampak dari setiap pelanggaran. Jika organisasi kepentingan publik menggunakan sistem manajemen konten (CMS) untuk informasi publik dan sistem kesehatan menggunakan CMS yang sama persis untuk catatan kesehatan yang sensitif, pelaku ancaman dan dampak bisnis dapat sangat berbeda untuk perangkat lunak yang sama. Penting untuk memahami risiko organisasi Anda berdasarkan pada agen ancaman dan dampak bisnis yang berlaku.
 
-## References
+Bila memungkinkan, nama risiko di Top 10 sesuai dengan [Common Weakness Enumeration](https://cwe.mitre.org/) (CWE) kelemahan untuk mempromosikan konvensi penamaan yang berlaku umum dan untuk mengurangi kekeliruan.
+
+## Referensi
 
 ### OWASP
 
 * [OWASP Risk Rating Methodology](https://www.owasp.org/index.php/OWASP_Risk_Rating_Methodology)
 * [Article on Threat/Risk Modeling](https://www.owasp.org/index.php/Threat_Risk_Modeling)
 
-### External
+### Eksternal
 
 * [ISO 31000: Risk Management Std](https://www.iso.org/iso-31000-risk-management.html)
 * [ISO 27001: ISMS](https://www.iso.org/isoiec-27001-information-security.html)
