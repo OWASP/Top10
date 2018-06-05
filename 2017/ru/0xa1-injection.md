@@ -8,56 +8,70 @@
 
 ## Является ли приложение уязвимым?
 
-An application is vulnerable to attack when:
+Приложение уязвимо, если:
 
-* User-supplied data is not validated, filtered, or sanitized by the application.
-* Dynamic queries or non-parameterized calls without context-aware escaping are used directly in the interpreter.  
-* Hostile data is used within object-relational mapping (ORM) search parameters to extract additional, sensitive records.
-* Hostile data is directly used or concatenated, such that the SQL or command contains both structure and hostile data in dynamic queries, commands, or stored procedures.
-* Some of the more common injections are SQL, NoSQL, OS command, Object Relational Mapping (ORM), LDAP, and Expression Language (EL) or Object Graph Navigation Library (OGNL) injection. The concept is identical among all interpreters. Source code review is the best method of detecting if applications are vulnerable to injections, closely followed by thorough automated testing of all parameters, headers, URL, cookies, JSON, SOAP, and XML data inputs. Organizations can include static source ([SAST](https://www.owasp.org/index.php/Source_Code_Analysis_Tools)) and dynamic application test ([DAST](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools)) tools into the CI/CD pipeline to identify newly introduced injection flaws prior to production deployment.
+* вводимые пользователем данные не проверяются, не фильтруются или не очищаются;
+* динамические запросы или непараметризованные вызовы без контекстного экранирования напрямую используются в интерпретаторе;  
+* вредоносные данные используются в поисковых параметрах объектно-реляционного отображения для извлечения дополнительной, критичной информации;
+* вредоносные данные используются или добавляются т.о., что SQL-код или команды содержат структурные и вредоносные данные в динамических запросах, командах или хранимых процедурах.
 
-## How To Prevent
+Наиболее распространенными являются SQL-, NoSQL-, ORM-, LDAP-, EL- или OGNL-внедрения, а также внедрения команд ОС. То же самое касается всех интерпретаторов. Анализ исходного кода является лучшим способом обнаружения внедрений, за которым следует полное автоматизированное тестирование всех вводимых параметров, заголовков, URL, куки, JSON-, SOAP- и XML-данных. Организации также могут включать в процесс непрерывной интеграции и развертывания ПО (CI/CD) статическое ([SAST](https://www.owasp.org/index.php/Source_Code_Analysis_Tools)) и динамическое ([DAST](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools)) тестирование кода и приложений для обнаружения новых уязвимостей перед внедрением приложений в производство.
+<details>
+    <summary>
+        <b><i><font size="2" color="aqua">ORM | LDAP | EL | OGNL</font></i></b>
+    </summary>
+    <font size="2" color="aquamarine">
+        <b>ORM</b> → Объектно-реляционное отображение <br>
+        <b>LDAP</b> → Облегченный протокол доступа к каталогам<br>
+        <b>EL</b> → Язык выражений<br>
+        <b>OGNL</b> → Объектно-графовый язык навигации
+    </font>
+</details>
 
-Preventing injection requires keeping data separate from commands and queries.
+## Как предотвратить
 
-* The preferred option is to use a safe API, which avoids the use of the interpreter entirely or provides a parameterized interface, or migrate to use Object Relational Mapping Tools (ORMs). **Note**: Even when parameterized, stored procedures can still introduce SQL injection if PL/SQL or T-SQL concatenates queries and data, or executes hostile data with EXECUTE IMMEDIATE or exec().
-* Use positive or "whitelist" server-side input validation. This is not a complete defense as many applications require special characters, such as text areas or APIs for mobile applications.
-* For any residual dynamic queries, escape special characters using the specific escape syntax for that interpreter. **Note**: SQL structure such as table names, column names, and so on cannot be escaped, and thus user-supplied structure names are dangerous. This is a common issue in report-writing software.
-* Use LIMIT and other SQL controls within queries to prevent mass disclosure of records in case of SQL injection.
+Для предотвращения внедрений необходимо изолировать данные от команд и запросов.
 
-## Example Attack Scenarios
+* Используйте безопасный API, исключающий применение интерпретатора или предоставляющий параметризованный интерфейс, либо используйте инструменты объектно-реляционного отображения (ORM).
+__Примечание__: даже параметризованные хранимые процедуры могут привести к SQL-внедрениям, если PL/SQL или T-SQL позволяют присоединять запросы и данные или выполнять вредоносный код с помощью EXECUTE IMMEDIATE или exec().
+* Реализуйте на сервере белые списки для проверки входных данных. Это, конечно, не обеспечит полную защиту, поскольку многие приложения используют спецсимволы, например, в текстовых областях или API для мобильных приложений.
+* Для остальных динамических запросов реализуйте экранирование спецсимволов, используя соответствующий интерпретатору синтаксис.
+__Примечание__: элементы SQL-структуры, такие как названия таблиц или столбцов, нельзя экранировать, поэтому предоставляемые пользователями названия представляют опасность. Это обычная проблема программ для составления отчетов.
+* Используйте в запросах LIMIT или другие элементы управления SQL для предотвращения утечек данных.
 
-**Scenario #1**: An application uses untrusted data in the construction of the following vulnerable SQL call:
+## Примеры сценариев атак
+
+**Сценарий №1**: Приложение использует недоверенные данные при создании следующего уязвимого SQL-вызова:
 
 `String query = "SELECT * FROM accounts WHERE custID='" + request.getParameter("id") + "'";`
 
-**Scenario #2**: Similarly, an application’s blind trust in frameworks may result in queries that are still vulnerable, (e.g. Hibernate Query Language (HQL)):
+**Сценарий №2**: Безоговорочное доверие приложений к фреймворкам может привести к появлению уязвимых запросов (например, в языке запросов HQL):
 
 `Query HQLQuery = session.createQuery("FROM accounts WHERE custID='" + request.getParameter("id") + "'");`
 
-In both cases, the attacker modifies the ‘id’ parameter value in their browser to send:  ' or '1'='1. For example:
+В обоих случаях злоумышленник изменяет в своем браузере значение параметра "id" для отправки ' or '1'='1. Например:
 
 `http://example.com/app/accountView?id=' or '1'='1`
 
-This changes the meaning of both queries to return all the records from the accounts table. More dangerous attacks could modify or delete data, or even invoke stored procedures.
+Изменение обоих запросов позволяет получить все записи из таблицы учетных данных. Более серьезные атаки позволяют изменить или удалить данные, а также вызвать хранимые процедуры.
 
-## References
+## Ссылки
 
 ### OWASP
 
-* [OWASP Proactive Controls: Parameterize Queries](https://www.owasp.org/index.php/OWASP_Proactive_Controls#2:_Parameterize_Queries)
-* [OWASP ASVS: V5 Input Validation and Encoding](https://www.owasp.org/index.php/ASVS_V5_Input_validation_and_output_encoding)
-* [OWASP Testing Guide: SQL Injection](https://www.owasp.org/index.php/Testing_for_SQL_Injection_(OTG-INPVAL-005)), [Command Injection](https://www.owasp.org/index.php/Testing_for_Command_Injection_(OTG-INPVAL-013)), [ORM injection](https://www.owasp.org/index.php/Testing_for_ORM_Injection_(OTG-INPVAL-007))
-* [OWASP Cheat Sheet: Injection Prevention](https://www.owasp.org/index.php/Injection_Prevention_Cheat_Sheet)
-* [OWASP Cheat Sheet: SQL Injection Prevention](https://www.owasp.org/index.php/SQL_Injection_Prevention_Cheat_Sheet)
-* [OWASP Cheat Sheet: Injection Prevention in Java](https://www.owasp.org/index.php/Injection_Prevention_Cheat_Sheet_in_Java)
-* [OWASP Cheat Sheet: Query Parameterization](https://www.owasp.org/index.php/Query_Parameterization_Cheat_Sheet)
-* [OWASP Automated Threats to Web Applications – OAT-014](https://www.owasp.org/index.php/OWASP_Automated_Threats_to_Web_Applications)
+* [Проактивная защита OWASP: Параметризация запросов](https://www.owasp.org/index.php/OWASP_Proactive_Controls#2:_Parameterize_Queries)
+* [Стандарт подтверждения безопасности приложений OWASP (ASVS): V5 Проверка входных данных и кодировки](https://www.owasp.org/index.php/ASVS_V5_Input_validation_and_output_encoding)
+* [Руководство OWASP по тестированию: Внедрение SQL-кода](https://www.owasp.org/index.php/Testing_for_SQL_Injection_(OTG-INPVAL-005)), [команд](https://www.owasp.org/index.php/Testing_for_Command_Injection_(OTG-INPVAL-013)), [ORM](https://www.owasp.org/index.php/Testing_for_ORM_Injection_(OTG-INPVAL-007))
+* [Памятка OWASP: Предотвращение внедрений](https://www.owasp.org/index.php/Injection_Prevention_Cheat_Sheet)
+* [Памятка OWASP: Предотвращение SQL-внедрений](https://www.owasp.org/index.php/SQL_Injection_Prevention_Cheat_Sheet)
+* [Памятка OWASP: Предотвращение внедрений в Java](https://www.owasp.org/index.php/Injection_Prevention_Cheat_Sheet_in_Java)
+* [Памятка OWASP: Параметризация запросов](https://www.owasp.org/index.php/Query_Parameterization_Cheat_Sheet)
+* [Справочник OWASP по автоматизированным атакам на веб-приложения – OAT-014](https://www.owasp.org/index.php/OWASP_Automated_Threats_to_Web_Applications)
 
-### External
+### Сторонние
 
 * [CWE-77: Внедрение команд](https://cwe.mitre.org/data/definitions/77.html)
 * [CWE-89: Внедрение SQL](https://cwe.mitre.org/data/definitions/89.html)
 * [CWE-564: Внедрение SQL-кода с использованием Hibernate](https://cwe.mitre.org/data/definitions/564.html)
 * [CWE-917: Внедрение кода языка выражений](https://cwe.mitre.org/data/definitions/917.html)
-* [PortSwigger: Server-side template injection](https://portswigger.net/kb/issues/00101080_serversidetemplateinjection)
+* [PortSwigger: Внедрение в серверные шаблоны](https://portswigger.net/kb/issues/00101080_serversidetemplateinjection)
