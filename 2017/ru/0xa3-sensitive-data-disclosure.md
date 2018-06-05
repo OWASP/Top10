@@ -49,7 +49,7 @@
 * [OWASP Проект заголовков безопасности](https://www.owasp.org/index.php/OWASP_Secure_Headers_Project); [Шпаргалка: HSTS](https://www.owasp.org/index.php/HTTP_Strict_Transport_Security_Cheat_Sheet)
 * [OWASP Руководство по тестированию: тестирование на слабую криптографию](https://www.owasp.org/index.php/Testing_for_weak_Cryptography)
 
-### External
+### Сторонние
 
 * [CWE-220: Экспозиция конфиденциальной информации через запросы данных](https://cwe.mitre.org/data/definitions/220.html)
 * [CWE-310: Криптографические проблемы](https://cwe.mitre.org/data/definitions/310.html); [CWE-311: Отсутствие шифрования](https://cwe.mitre.org/data/definitions/311.html)
