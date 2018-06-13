@@ -1,70 +1,70 @@
-# A5:2017 Broken Access Control
+# A5:2017 Недостатки контроля доступа
 
-| Threat agents/Attack vectors | Security Weakness  | Impacts |
+| Угрозы/Векторы атаки | Слабые места безопасности  | Нападение |
 | -- | -- | -- |
-| Access Lvl : Exploitability 2 | Prevalence 2 : Detectability 2 | Technical 3 : Business |
-| Exploitation of access control is a core skill of attackers. [SAST](https://www.owasp.org/index.php/Source_Code_Analysis_Tools) and [DAST](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools) tools can detect the absence of access control but cannot verify if it is functional when it is present. Access control is detectable using manual means, or possibly through automation for the absence of access controls in certain frameworks. | Access control weaknesses are common due to the lack of automated detection, and lack of effective functional testing by application developers. Access control detection is not typically amenable to automated static or dynamic testing. Manual testing is the best way to detect missing or ineffective access control, including HTTP method (GET vs PUT, etc), controller, direct object references, etc. | The technical impact is attackers acting as users or administrators, or users using privileged functions, or creating, accessing, updating or deleting every record. The business impact depends on the protection needs of the application and data. |
+| Уровень доступа Lvl : Уязвимости 2 | Распространённость 2 : Обнаруживаемость 2 | Технический 3 : Бизнес |
+| Эксплуатация контроля доступа является основным навыком злоумышленников. [SAST](https://www.owasp.org/index.php/Source_Code_Analysis_Tools) и [DAST](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools) являются инструментами, которые могут обнаруживать отсутствие доступа но не могут проверить, является ли он функциональным, когда он присутствует. Контроль доступа можно обнаружить с помощью ручных средств или, возможно, путем автоматизации для отсутствия контроля доступа в определенных рамках.| Недостатки контроля доступа являются общими из-за отсутствия автоматического обнаружения и отсутствия эффективного функционального тестирования разработчиками приложений. Обнаружение контроля доступа обычно не поддается автоматическому статическому или динамическому тестированию. Ручное тестирование - лучший способ обнаружить отсутствующий или неэффективный контроль доступа, включая HTTP-метод (GET против PUT и т. Д.), контроллер, прямые ссылки на объекты и т. Д. | Техническое воздействие - это злоумышленники, действующие как пользователи или администраторы, или пользователи, использующие привилегированные функции, или создающие, получающие доступ, обновляющие или удаляющие каждую запись. Влияние бизнеса зависит от потребностей защиты приложения и данных. |
 
-## Is the Application Vulnerable?
+## Является ли приложение уязвимым?
 
-Access control enforces policy such that users cannot act outside of their intended permissions. Failures typically lead to unauthorized information disclosure, modification or destruction of all data, or performing a business function outside of the limits of the user. Common access control vulnerabilities include:
+Контроль доступа обеспечивает соблюдение политики, при которой пользователи не могут действовать за пределами своих предполагаемых разрешений. Неудачи обычно приводят к несанкционированному раскрытию, изменению или уничтожению всех данных или выполнению бизнес-функции вне пределов доступа пользователя. К уязвимым местам общего доступа относятся:
 
-* Bypassing access control checks by modifying the URL, internal application state, or the HTML page, or simply using a custom API attack tool.
-* Allowing the primary key to be changed to another's users record, permitting viewing or editing someone else's account.
-* Elevation of privilege. Acting as a user without being logged in, or acting as an admin when logged in as a user.
-* Metadata manipulation, such as replaying or tampering with a JSON Web Token (JWT) access control token or a cookie or hidden field manipulated to elevate privileges, or abusing JWT invalidation
-* CORS misconfiguration allows unauthorized API access.
-* Force browsing to authenticated pages as an unauthenticated user or to privileged pages as a standard user. Accessing API with missing access controls for POST, PUT and DELETE.
+* Обход проверок контроля доступа путем изменения URL-адреса, состояния внутреннего приложения или HTML-страницы или просто использования специального инструмента атаки API.
+* Разрешение изменения первичного ключа в чужой учетной записи пользователя, позволяя просматривать или редактировать чужую учетную запись.
+* Повышение уровня привилегий. Действовать как пользователь без входа в систему или действовать как администратор при входе в систему как пользователь.
+* Обработка метаданных, такая как воспроизведение или подделка токена контроля доступа JSON (JWT) или куки-файла или скрытого поля, используемых для повышения привилегий или злоупотребления недействительностью JWT
+* Неправильная конфигурация CORS допускает несанкционированный доступ к API.
+* Принудительный просматр страницы, прошедшей проверку подлинности, как не прошедшей аутентификацию пользователя или привилегированные страницы в качестве стандартного пользователя. Доступ к API с отсутствующими элементами управления доступом для POST, PUT и DELETE.
 
-## How To Prevent
+## Как предотвратить?
 
-Access control is only effective if enforced in trusted server-side code or server-less API, where the attacker cannot modify the access control check or metadata.
+Контроль доступа эффективен только в том случае, если он применяется в доверенном серверном коде или API без сервера, где злоумышленник не может изменять проверку контроля доступа или метаданные.
 
-* With the exception of public resources, deny by default.
-* Implement access control mechanisms once and re-use them throughout the application, including minimizing CORS usage.
-* Model access controls should enforce record ownership, rather than accepting that the user can create, read, update, or delete any record.
-* Unique application business limit requirements should be enforced by domain models.
-* Disable web server directory listing and ensure file metadata (e.g. .git) and backup files are not present within web roots.
-* Log access control failures, alert admins when appropriate (e.g. repeated failures).
-* Rate limit API and controller access to minimize the harm from automated attack tooling.
-* JWT tokens should be invalidated on the server after logout.
-* Developers and QA staff should include functional access control unit and integration tests.
+* За исключением общественных ресурсов, отказывать по умолчанию.
+* Внедрите механизмы контроля доступа один раз и повторно используйте их во всем приложении, включая минимизацию использования CORS.
+* Элементы управления доступом к модели должны обеспечивать соблюдение права собственности на запись, а не принимать, что пользователь может создавать, читать, обновлять или удалять любую запись.
+* Уникальные требования к бизнес-ограничениям приложений должны применяться в моделях доменов.
+* Отключите список каталогов веб-сервера и убедитесь, что метаданные файлов (например, .git) и файлы резервных копий отсутствуют в веб-корнях.
+* Логируйте ошибки управления доступом к журналу, когда это необходимо (например, повторные сбои).
+* Ограничте скорость API и доступ к контроллеру для минимизации вреда от автоматизированной системы атак.
+* Токены JWT должны быть аннулированы на сервере после выхода из системы.
+* Разработчики и тестеры должны разрабатывать функциональный блок контроля доступа и интеграционные тесты.
 
-## Example Attack Scenarios
+## Пример сценария атаки
 
-**Scenario #1**: The application uses unverified data in a SQL call that is accessing account information:
+**Сценарий #1**: Приложение использует непроверенные данные в SQL-вызове, который обращается к информации учетной записи:
 
 ```
   pstmt.setString(1, request.getParameter("acct"));
   ResultSet results = pstmt.executeQuery();
 ```
 
-An attacker simply modifies the 'acct' parameter in the browser to send whatever account number they want. If not properly verified, the attacker can access any user's account.
+Злоумышленник просто модифицирует параметр «acct» в браузере для отправки любого номера учетной записи по желанию. Если проверка не выполнена должным образом, злоумышленник может получить доступ к любой учетной записи пользователя.
 
 `http://example.com/app/accountInfo?acct=notmyacct`
 
-**Scenario #2**: An attacker simply force browses to target URLs. Admin rights are required for access to the admin page.
+**Сценарий #2**: Злоумышленник просто заставляет просматривать целевые URL-адреса. Права администратора необходимы для доступа к странице администратора.
 
 ```
   http://example.com/app/getappInfo
   http://example.com/app/admin_getappInfo
 ```
 
-If an unauthenticated user can access either page, it’s a flaw. If a non-admin can access the admin page, this is a flaw.
+Если неавторизованный пользователь может получить доступ к любой странице, это недостаток. Если не администратор может получить доступ к странице администратора, это недостаток.
 
-## References
+## Рекомендации
 
 ### OWASP
 
-* [OWASP Proactive Controls: Access Controls](https://www.owasp.org/index.php/OWASP_Proactive_Controls#6:_Implement_Access_Controls)
-* [OWASP Application Security Verification Standard: V4 Access Control](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
-* [OWASP Testing Guide: Authorization Testing](https://www.owasp.org/index.php/Testing_for_Authorization)
-* [OWASP Cheat Sheet: Access Control](https://www.owasp.org/index.php/Access_Control_Cheat_Sheet)
+* [OWASP Проактивные элементы управления: средства контроля доступа](https://www.owasp.org/index.php/OWASP_Proactive_Controls#6:_Implement_Access_Controls)
+* [OWASP Стандарт проверки безопасности приложения: контроль доступа V4](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
+* [OWASP Руководство по тестированию: авторизация](https://www.owasp.org/index.php/Testing_for_Authorization)
+* [OWASP Шпаргалка: Контроль доступа](https://www.owasp.org/index.php/Access_Control_Cheat_Sheet)
 
-### External
+### Сторонние
 
-* [CWE-22: Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')](https://cwe.mitre.org/data/definitions/22.html)
-* [CWE-284: Improper Access Control (Authorization)](https://cwe.mitre.org/data/definitions/284.html)
-* [CWE-285: Improper Authorization](https://cwe.mitre.org/data/definitions/285.html)
-* [CWE-639: Authorization Bypass Through User-Controlled Key](https://cwe.mitre.org/data/definitions/639.html)
-* [PortSwigger: Exploiting CORS misconfiguration](https://portswigger.net/blog/exploiting-cors-misconfigurations-for-bitcoins-and-bounties)
+* [CWE-22: Неправильное ограничение пути к ограниченному каталогу («Обход пути»)](https://cwe.mitre.org/data/definitions/22.html)
+* [CWE-284: Неправильное управление доступом (авторизация)](https://cwe.mitre.org/data/definitions/284.html)
+* [CWE-285: Неправильная авторизация](https://cwe.mitre.org/data/definitions/285.html)
+* [CWE-639: Автономный байпас через управляемый пользователем ключ](https://cwe.mitre.org/data/definitions/639.html)
+* [PortSwigger: Использование неправильной конфигурации CORS](https://portswigger.net/blog/exploiting-cors-misconfigurations-for-bitcoins-and-bounties)
