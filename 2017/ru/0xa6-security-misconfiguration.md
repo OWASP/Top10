@@ -1,61 +1,61 @@
-# A6:2017 Security Misconfiguration
+# A6:2017 Некорректная настройка параметров безопасности
 
-| Threat agents/Attack vectors | Security Weakness           | Impacts               |
+| Источники угроз/Векторы атак | Недостатки безопасности           | Последствия               |
 | -- | -- | -- |
-| Access Lvl : Exploitability 3 | Prevalence 3 : Detectability 3 | Technical 2 : Business |
-| Attackers will often attempt to exploit unpatched flaws or access default accounts, unused pages, unprotected files and directories, etc to gain unauthorized access or knowledge of the system. | Security misconfiguration can happen at any level of an application stack, including the network services, platform, web server, application server, database, frameworks, custom code, and pre-installed virtual machines, containers, or storage. Automated scanners are useful for detecting misconfigurations, use of default accounts or configurations, unnecessary services, legacy options, etc. | Such flaws frequently give attackers unauthorized access to some system data or functionality. Occasionally, such flaws result in a complete system compromise. The business impact depends on the protection needs of the application and data. |
+| Зависит от прил. : Сложность эксплуатации 3 | Распространенность 3 : Сложность обнаружения 3 | Технические 2 : Бизнес ? |
+| Злоумышленники часто пытаются эксплуатировать неисправленные уязвимости, настроенные по умолчанию учетные записи, неиспользуемые страницы, незащищенные файлы и каталоги для получения несанкционированного доступа или информации о системе. | Настройка безопасности может быть выполнена некорректно на любом уровне приложения, включая сетевые службы, платформы, веб-службы, сервер, базу данных, фреймворки, код, а также предустановленные виртуальные машины, контейнеры или хранилища. Для поиска уязвимых настроек, настроенных по умолчанию учетных записей, неиспользуемых служб, устаревших параметров и т. п. можно использовать автоматизированные сканеры. | SПодобные уязвимости позволяют злоумышленникам получить несанкционированный доступ к системным данным или функциям, а также могут привести к полной компрометации системы. Последствия для бизнеса зависят от критичности защиты приложения и данных. |
 
-## Is the Application Vulnerable?
+## Является ли приложение уязвимым?
 
-The application might be vulnerable if the application is:
+Приложение уязвимо, если:
 
-* Missing appropriate security hardening across any part of the application stack, or improperly configured permissions on cloud services.
-* Unnecessary features are enabled or installed (e.g. unnecessary ports, services, pages, accounts, or privileges).
-* Default accounts and their passwords still enabled and unchanged.
-* Error handling reveals stack traces or other overly informative error messages to users.
-* For upgraded systems, latest security features are disabled or not configured securely.
-* The security settings in the application servers, application frameworks (e.g. Struts, Spring, ASP.NET), libraries, databases, etc. not set to secure values.
-* The server does not send security headers or directives or they are not set to secure values.
-* The software is out of date or vulnerable (see **A9:2017-Using Components with Known Vulnerabilities**).
+* любой из компонентов приложения недостаточно защищен или разрешения облачных сервисов некорректно настроены;
+* включены или присутствуют лишние функции (например, неиспользуемые порты, службы, страницы, учетные записи или привилегии);
+* учетные записи и пароли, создаваемые по умолчанию, используются без изменений;
+* обработка ошибок позволяет осуществить трассировку стека или получить слишком подробные сообщения об ошибках;
+* отключены или некорректно настроены последние обновления безопасности;
+* не выбраны безопасные значения параметров защиты серверов приложений, фреймворков (например, Struts, Spring, ASP.NET), библиотек и т. п.;
+* сервер не использует безопасные заголовки или директивы, а также если они некорректно настроены;
+* ПО устарело или имеет уязвимости (см. __A9:2017-Использование компонентов с известными уязвимостями__).
 
-Without a concerted, repeatable application security configuration process, systems are at a higher risk.
+Без организованной и регулярно выполняемой проверки безопасности приложений системы подвержены большему риску.
 
-## How To Prevent
+## Как предотвратить
 
-Secure installation processes should be implemented, including:
+Необходимо реализовать процесс безопасной установки, включая:
 
-* A repeatable hardening process that makes it fast and easy to deploy another environment that is properly locked down. Development, QA, and production environments should all be configured identically, with different credentials used in each environment. This process should be automated to minimize the effort required to setup a new secure environment.
-* A minimal platform without any unnecessary features, components, documentation, and samples. Remove or do not install unused features and frameworks.
-* A task to review and update the configurations appropriate to all security notes, updates and patches as part of the patch management process (see **A9:2017-Using Components with Known Vulnerabilities**). In particular, review cloud storage permissions (e.g. S3 bucket permissions).
-* A segmented application architecture that provides effective, secure separation between components or tenants, with segmentation, containerization, or cloud security groups (ACLs).
-* Sending security directives to clients, e.g. [Security Headers](https://www.owasp.org/index.php/OWASP_Secure_Headers_Project).
-* An automated process to verify the effectiveness of the configurations and settings in all environments.
+* воспроизводимость процессов для быстрого создания сред с ограниченной функциональностью. Среды для разработки, контроля качества и производства должны быть настроены одинаково, но иметь разные учетные данные. Процессы должны быть автоматизированы для минимизации затрат на создание новых безопасных сред;
+* использование платформ только с необходимым набором функций, компонентов, документации и образцов. Удалите или не устанавливайте лишние компоненты или фреймворки;
+* проверку и актуализацию параметров настройки безопасности в соответствии с выпускаемыми бюллетенями, обновлениями и исправлениями (см. __A9:2017-Использование компонентов с известными уязвимостями__), а также проверку разрешений облачных хранилищ (например, для контейнеров S3);
+* создание сегментированной архитектуры приложения, обеспечивающей эффективное разграничение компонентов или клиентов с помощью контейнеризации или облачных групп безопасности (списков контроля доступа);
+* использование безопасных директив для клиентов, например, [безопасных заголовков](https://www.owasp.org/index.php/OWASP_Secure_Headers_Project); 
+* автоматизацию проверки эффективности используемых конфигураций и настроек во всех средах.
 
-## Example Attack Scenarios
+## Примеры сценариев атак
 
-**Scenario #1**: The application server comes with sample applications that are not removed from the production server. These sample applications have known security flaws attackers use to compromise the server. If one of these applications is the admin console, and default accounts weren't changed the attacker logs in with default passwords and takes over.
+**Сценарий №1**: Сервер приложений поставляется с образцами приложений, которые не удаляются с рабочего сервера. Эти приложения содержат известные уязвимости, позволяющие злоумышленникам скомпрометировать сервер. Если одно из этих приложений является консолью администратора, а стандартные учетные записи не менялись, то атакующий может войти в приложение и перехватить контроль над ним, используя стандартный пароль.
 
-**Scenario #2**: Directory listing is not disabled on the server. An attacker discovers they can simply list directories. The attacker finds and downloads the compiled Java classes, which they decompile and reverse engineer to view the code. The attacker then finds a serious access control flaw in the application.
+**Сценарий №2**: На сервере не отключен вывод списка файлов в каталогах, что позволяет злоумышленнику найти и выгрузить скомпилированные Java-классы, после декомпиляции и обратного анализа которых можно просмотреть исходный код. В результате атакующий может обнаружить уязвимости и получить доступ к приложению.
 
-**Scenario #3**: The application server's configuration allows detailed error messages, e.g. stack traces, to be returned to users. This potentially exposes sensitive information or underlying flaws such as component versions that are known to be vulnerable.
+**Сценарий №3**: Сервер приложений настроен на отправку подробных сообщений об ошибках, включая данные о трассировке стека. Это может привести к разглашению важной информации, например, о версии компонента, содержащей известные уязвимости.
 
-**Scenario #4**: A cloud service provider has default sharing permissions open to the Internet by other CSP users. This allows sensitive data stored within cloud storage to be accessed.
+**Сценарий №4**: Поставщик облачных услуг использует стандартные разрешения общего доступа через интернет для других пользователей облака. Это позволяет получить доступ к конфиденциальной информации, доступной в облачном хранилище.
 
-## References
+## Ссылки
 
 ### OWASP
 
-* [OWASP Testing Guide: Configuration Management](https://www.owasp.org/index.php/Testing_for_configuration_management)
-* [OWASP Testing Guide: Testing for Error Codes](https://www.owasp.org/index.php/Testing_for_Error_Code_(OWASP-IG-006))
-* [OWASP Security Headers Project](https://www.owasp.org/index.php/OWASP_Secure_Headers_Project)
+* [Руководство OWASP по тестированию: Управление конфигурацией](https://www.owasp.org/index.php/Testing_for_configuration_management)
+* [Руководство OWASP по тестированию: Коды ошибок](https://www.owasp.org/index.php/Testing_for_Error_Code_(OWASP-IG-006))
+* [Проект OWASP: Безопасные заголовки](https://www.owasp.org/index.php/OWASP_Secure_Headers_Project)
 
-For additional requirements in this area, see the Application Security Verification Standard [V19 Configuration](https://www.owasp.org/index.php/ASVS_V19_Configuration).
+Для получения дополнительной информации по данной теме см. "Стандарт подтверждения безопасности приложений (ASVS): [V19 Конфигурация](https://www.owasp.org/index.php/ASVS_V19_Configuration)".
 
-### External
+### Сторонние
 
-* [NIST Guide to General Server Hardening](https://csrc.nist.gov/publications/detail/sp/800-123/final)
-* [CWE-2: Environmental Security Flaws](https://cwe.mitre.org/data/definitions/2.html)
-* [CWE-16: Configuration](https://cwe.mitre.org/data/definitions/16.html)
-* [CWE-388: Error Handling](https://cwe.mitre.org/data/definitions/388.html)
-* [CIS Security Configuration Guides/Benchmarks](https://www.cisecurity.org/cis-benchmarks/)
-* [Amazon S3 Bucket Discovery and Enumeration](https://blog.websecurify.com/2017/10/aws-s3-bucket-discovery.html)
+* [Руководство NIST по повышению безопасности серверов](https://csrc.nist.gov/publications/detail/sp/800-123/final)
+* [CWE-2: Уязвимости, связанные со средой](https://cwe.mitre.org/data/definitions/2.html)
+* [CWE-16: Уязвимости, связанные с конфигурацией](https://cwe.mitre.org/data/definitions/16.html)
+* [CWE-388: Уязвимости, связанные с обработкой ошибок](https://cwe.mitre.org/data/definitions/388.html)
+* [Руководства/стандарты CIS по настройке безопасности](https://www.cisecurity.org/cis-benchmarks/)
+* [Обнаружение и перечисление контейнеров Amazon S3](https://blog.websecurify.com/2017/10/aws-s3-bucket-discovery.html)
