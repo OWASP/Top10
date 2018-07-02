@@ -1,39 +1,38 @@
-# +O What's Next for Organizations
+# +O Что делать организациям
 
-## Start Your Application Security Program Now
+## Запустите программу обеспечения безопасности приложений
 
-Application security is no longer optional. Between increasing attacks and regulatory pressures, organizations must establish effective processes and capabilities for securing their applications and APIs. Given the staggering amount of code in the numerous applications and APIs already in production, many organizations are struggling to get a handle on the enormous volume of vulnerabilities. 
+Безопасность приложений больше не является опциональной. Между возрастающими атаками и нормативным давлением организации должны создавать эффективные процессы и возможности для обеспечения их приложений и API. Учитывая ошеломляющее количество кода в многочисленных приложениях и API уже в производстве, многие организации изо всех сил пытаются справиться с огромным объемом уязвимостей. 
 
-OWASP recommends organizations establish an application security program to gain insight and improve security across their applications and APIs. Achieving application security requires many different parts of an organization to work together efficiently, including security and audit, software development, business, and executive management. Security should be visible and measurable, so that all the different players can see and understand the organization’s application security posture. Focus on the activities and outcomes that actually help improve enterprise security by eliminating or reducing risk. [OWASP SAMM](https://www.owasp.org/index.php/OWASP_SAMM_Project) and the [OWASP Application Security Guide for CISOs](https://www.owasp.org/index.php/Application_Security_Guide_For_CISOs) is the source of most of the key activities in this list.
+OWASP рекомендует организациям создать программу безопасности приложений, чтобы получить представление о безопасности и повысить безопасность своих приложений и API. Для обеспечения безопасности приложений многие организации должны эффективно работать вместе, включая безопасность и аудит, разработку программного обеспечения, бизнес и исполнительное руководство. Безопасность должна быть видимой и измеримой, чтобы все различные игроки могли видеть и понимать положение безопасности приложения в организации. Сосредоточьтесь на действиях и результатах, которые на самом деле помогают повысить безопасность предприятия, устраняя или уменьшая риск. [OWASP SAMM](https://www.owasp.org/index.php/OWASP_SAMM_Project) и [Руководство по безопасности приложений OWASP для CISO](https://www.owasp.org/index.php/Application_Security_Guide_For_CISOs) - это источник большинства ключевых видов деятельности в этом списке.
 
-### Get Started
+### Начало
 
-* Document all applications and associated data assets. Larger organizations should consider implementing a Configuration Management Database (CMDB) for this purpose.
-* Establish an [application security program](https://www.owasp.org/index.php/SAMM_-_Strategy_&_Metrics_-_1) and drive adoption.
-* Conduct a [capability gap analysis](https://www.owasp.org/index.php/SAMM_-_Strategy_&_Metrics_-_3) comparing your organization to your peers to define key
-improvement areas and an execution plan.
-* Gain management approval and establish an [application security awareness campaign](https://www.owasp.org/index.php/SAMM_-_Education_&_Guidance_-_1) for the entire IT organization.
+* Документируйте все приложения и связанные с ними данные. Для этой цели более крупные организации должны рассмотреть возможность внедрения базы данных управления конфигурацией (CMDB).
+* Установите и начните использовать [программу безопасности приложения](https://www.owasp.org/index.php/SAMM_-_Strategy_&_Metrics_-_1).
+* Проведите анализ [слабых мест](https://www.owasp.org/index.php/SAMM_-_Strategy_&_Metrics_-_3) , сравнивая вашу организацию с конкурентами, чтобы определить направление улучшения и план выполнения.
+* Подтвердите получение прав руководства и создайте [мероприятие по повышению безопасности приложений](https://www.owasp.org/index.php/SAMM_-_Education_&_Guidance_-_1) для всей ИТ-организации.
 
-### Risk Based Portfolio Approach
+### Подход, основанный на оценке рисков
 
-* Identify the [protection needs](https://www.owasp.org/index.php/SAMM_-_Strategy_&_Metrics_-_2) of your [application portfolio](https://www.owasp.org/index.php/SAMM_-_Strategy_&_Metrics_-_2) from a business perspective. This should be driven in part by privacy laws and other regulations relevant to the data asset being protected. 
-* Establish a common [risk rating model](https://www.owasp.org/index.php/OWASP_Risk_Rating_Methodology) with a consistent set of likelihood and impact factors reflective of your organization's tolerance for risk. 
-* Accordingly measure and prioritize all your applications and APIs. Add the results to your CMDB. 
-* Establish assurance guidelines to properly define coverage and level of rigor required.
+* Определите [требования защиты](https://www.owasp.org/index.php/SAMM_-_Strategy_&_Metrics_-_2) вашего [портфолио приложений](https://www.owasp.org/index.php/SAMM_-_Strategy_&_Metrics_-_2) с точки зрения бизнеса. Это должно быть частично обусловлено законами о неприкосновенности частной жизни и другими нормами, относящимися к защищаемому объекту данных. 
+* Установите общую [модель оценки рисков](https://www.owasp.org/index.php/OWASP_Risk_Rating_Methodology) с последовательным набором факторов вероятности и воздействия, отражающих отношение вашей организации к риску. 
+* Соответственно измерьте и определите приоритеты для всех ваших приложений и API. Добавьте результаты в CMDB. 
+* Установите правила обеспечения достоверности, чтобы правильно определить охват и уровень строгости.
 
 ### Enable with a Strong Foundation
 
-* Establish a set of focused [policies and standards](https://www.owasp.org/index.php/SAMM_-_Policy_&_Compliance_-_2) that provide an application security baseline for all development teams to adhere to.
-* Define a common set of [reusable security controls](https://www.owasp.org/index.php/OWASP_Security_Knowledge_Framework) that complement these policies and standards and provide design and development guidance on their use.
-* Establish an [application security training curriculum](https://www.owasp.org/index.php/SAMM_-_Education_&_Guidance_-_2) that is required and targeted to different development roles and topics.
+* Установите набор сфокусированных  [политик и стандартов](https://www.owasp.org/index.php/SAMM_-_Policy_&_Compliance_-_2) , которые обеспечивают базовую линию безопасности приложений для всех разработчиков.
+* Определите общий набор [многоразовых элементов управления безопасностью](https://www.owasp.org/index.php/OWASP_Security_Knowledge_Framework) которые дополняют эти политики и стандарты и предоставляют рекомендации по разработке и разработке их использования.
+* Создайте в рамках приложения  [учебную программу по обучению](https://www.owasp.org/index.php/SAMM_-_Education_&_Guidance_-_2) , которая требуется и предназначена для различных ролей и тем развития.
 
-### Integrate Security into Existing Processes
+### Интеграция безопасности в существующие процессы
 
-* Define and integrate [secure implementation](https://www.owasp.org/index.php/SAMM_-_Construction) and [verification](https://www.owasp.org/index.php/SAMM_-_Verification) activities into existing development and operational processes. 
-* Activities include [threat modeling](https://www.owasp.org/index.php/SAMM_-_Threat_Assessment_-_1), secure [design and design review](https://www.owasp.org/index.php/SAMM_-_Design_Review_-_1), secure coding and [code review](https://www.owasp.org/index.php/SAMM_-_Code_Review_-_1), [penetration testing](https://www.owasp.org/index.php/SAMM_-_Security_Testing_-_1), and remediation.
-* Provide subject matter experts and [support services for development and project teams](https://www.owasp.org/index.php/SAMM_-_Education_&_Guidance_-_3) to be successful.
+* Определите и интегрируйте [безопасную реализацию](https://www.owasp.org/index.php/SAMM_-_Construction) и [проверку](https://www.owasp.org/index.php/SAMM_-_Verification) действия в существующих процессах разработки и эксплуатации. 
+* Мероприятия включают [моделирование угроз](https://www.owasp.org/index.php/SAMM_-_Threat_Assessment_-_1), безопасную [разработку архитектуры и её ревью](https://www.owasp.org/index.php/SAMM_-_Design_Review_-_1), безопасное кодирование и [ревью](https://www.owasp.org/index.php/SAMM_-_Code_Review_-_1), [тестирование на проникновение](https://www.owasp.org/index.php/SAMM_-_Security_Testing_-_1), и исправление.
+* Предоставьте экспертную помощь по тематике и [вспомогательные услуги для разработчиков и проектных групп](https://www.owasp.org/index.php/SAMM_-_Education_&_Guidance_-_3) для успеха мероприятия.
 
-### Provide Management Visibility
+### Обеспечение управления
 
-* Manage with metrics. Drive improvement and funding decisions based on the metrics and analysis data captured. Metrics include adherence to security practices and activities, vulnerabilities introduced, vulnerabilities mitigated, application coverage, defect density by type and instance counts, etc.
-* Analyze data from the implementation and verification activities to look for root cause and vulnerability patterns to drive strategic and systemic improvements across the enterprise. Learn from mistakes and offer positive incentives to promote improvements
+* Управление метриками. Решения по совершенствованию и финансированию решений, основанные на полученных метриках и аналитических данных. Метрики включают соблюдение методов и действий безопасности, введенные уязвимости, смягчение уязвимостей, охват приложений, плотность дефектов по типу и количеству экземпляров и т.д.
+* Проанализируйте данные из мероприятий по внедрению и проверке, чтобы найти основные причины и шаблоны уязвимостей для обеспечения стратегических и системных улучшений на предприятии. Учитесь на ошибках и предлагайте позитивные стимулы для улучшения
