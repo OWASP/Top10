@@ -1,47 +1,47 @@
-# +A: What's next for Application Managers
+# **+М**: Что делать менеджерам приложений
 
-## Manage the Full Application Lifecycle
+## Управление жизненным циклом приложения
 
-Applications belong to the most complex systems humans regularly create and maintain. IT management for an application should be performed by IT specialists who are responsible for the overall IT lifecycle of an application. We suggest establishing the role of application manager as technical counterpart to the application owner. The application manager is in charge of the whole application lifecycle from the IT perspective, from collecting the requirements until the process of retiring systems, which is often overlooked. 
+Приложения относятся к наиболее сложным системам, которые люди постоянно создают и обслуживают. Администрирование приложений необходимо поручать ИТ-специалистам, которые будут отвечать за весь их жизненный цикл. Мы предлагаем назначать менеджеров приложений, которые будут отвечать за технические аспекты приложения на протяжении его жизненного цикла, начиная со сбора требований и заканчивая выводом систем из эксплуатации, про что так часто забывают. 
 
-## Requirements and Resource Management
+## Требования и управление ресурсами
 
-* Collect and negotiate the business requirements for an application with the business, including the protection requirements with regard to confidentiality, authenticity, integrity and availability of all data assets, and the expected business logic.
-* Compile the technical requirements including functional and nonfunctional security requirements.
-* Plan and negotiate the budget that covers all aspects of design, build, testing and operation, including security activities.
+* Соберите и обсудите с заказчиком бизнес-требования к приложению, включая обеспечение конфиденциальности, подлинности, целостности и доступности всех информационных активов, а также ожидаемую бизнес-логику.
+* Составьте перечень технических требований, включая  функциональные и нефункциональные требования по безопасности.
+* Спланируйте и обсудите бюджет, охватывающий все аспекты проектирования, создания, тестирования и эксплуатации, а также работы по обеспечению безопасности.
 
-## Request for Proposals (RFP) and Contracting
+## Запрос предложений и заключение контракта
 
-* Negotiate the requirements with internal or external developers, including guidelines and security requirements with respect to your security program, e.g. SDLC, best practices.
-* Rate the fulfillment of all technical requirements, including a planning and design phase.
-* Negotiate all technical requirements, including design, security, and service level agreements (SLA).
-* Adopt templates and checklists, such as [OWASP Secure Software Contract Annex](https://www.owasp.org/index.php/OWASP_Secure_Software_Contract_Annex). **Note**: The annex is for US contract law, so please consult qualified legal advice before using the sample annex.
+* Обсудите требования с внутренними и внешними разработчиками, включая нормативы и требования вашей программы обеспечения безопасности, например, рекомендации по жизненному циклу разработки ПО.
+* Оцените выполнение всех технических требований, включая этап планирования и проектирования.
+* Обсудите все технические требования, включая проектирование, безопасность и гарантийные обязательства.
+* Используйте шаблоны и контрольные списки, например, [Приложение по безопасности к Контракту на разработку ПО от OWASP](https://www.owasp.org/index.php/OWASP_Secure_Software_Contract_Annex). **Примечание**: приложение применимо к договорному праву США, проконсультируйтесь с юристом перед его использованием.
 
-## Planning and Design
+## Планирование и проектирование
 
-* Negotiate planning and design with the developers and internal shareholders, e.g. security specialists.
-* Define the security architecture, controls, and countermeasures appropriate to the protection needs and the expected threat level. This should be supported by security specialists.
-* Ensure that the application owner accepts remaining risks or provides additional resources.
-* In each sprint, ensure security stories are created that include constraints added for non-functional requirements.
+* Обсудите планы и проекты с разработчиками и внутренними партнерами, например, специалистами по безопасности.
+* Определите архитектуру и средства управления безопасностью, а также контрмеры, соответствующие требованиям защиты и ожидаемым уровням опасности. Все это должно обеспечиваться специалистами по безопасности.
+* Убедитесь, что владелец приложения принимает остальные риски или предоставляет дополнительные ресурсы.
+* В каждом спринте обеспечьте создание записей по безопасности с указанием ограничений, добавленных для нефункциональлных требований.
 
-## Deployment, Testing, and Rollout
+## Развертывание, тестирование и внедрение
 
-* Automate the secure deployment of the application, interfaces and all required components, including needed authorizations.
-* Test the technical functions and integration with the IT architecture and coordinate business tests.
-* Create "use" and "abuse" test cases from technical and business perspectives.
-* Manage security tests according to internal processes, the protection needs, and the assumed threat level by the application.
-* Put the application in operation and migrate from previously used applications if needed.
-* Finalize all documentation, including the CMDB and security architecture.
+* Автоматизируйте безопасное развертывание приложения, интерфейсов и компонентов, а также получение необходимых разрешений.
+* Протестируйте технические возможности и интеграцию с ИТ-архитектурой, а также организуйте бизнес-тестирование.
+* Протестируйте "штатное" и "нештатное" использование технических и производственных возможностей.
+* Организуйте тестирование безопасности в соответствии с внутренними процессами, требованиями защиты и предполагаемым уровнем опасности для каждого приложения.
+* Введите приложение в эксплуатацию и перестаньте использовать старые приложения при необходимости.
+* Согласуйте всю документацию, а также базу данных контроля изменений и архитектуру безопасности.
 
-## Operations and Change Management
+## Работы и контроль изменений
 
-* Operations must include guidelines for the security management of the application (e.g. patch management).
-* Raise the security awareness of users and manage conflicts about usability vs. security.
-* Plan and manage changes, e.g. migrate to new versions of the application or other components like OS, middleware, and libraries.
-* Update all documentation, including in the change management data base (CMDB) and the security architecture, controls, and countermeasures, including any runbooks or project documentation.
+* Работы должны включать в себя управление безопасностью приложения (например, управление обновлениями).
+* Обратите внимание пользователей на безопасность, а также найдите компромисс между практичностью и безопасностью.
+* Спланируйте и проведите модификации, например, переход на новую версию приложения или использование других компонентов (ОС, ПО или библиотек).
+* Обновите документацию, включая документацию по контролю изменений, архитектуре безопасности, элементам управления и мерам противодействия, а также документацию по текущим задачам или проектам.
 
-## Retiring Systems
+## Вывод из эксплуатации
 
-* Any required data should be archived. All other data should be securely wiped.
-* Securely retire the application, including deleting unused accounts and roles and permissions.
-* Set your application's state to retired in the CMDB.
+* Все важные данные необходимо заархивировать, а остальные безопасно удалить.
+* Осуществите безопасный вывод приложения из эксплуатации, включая удаление неиспользуемых учетных записей, а также ролей и разрешений.
+* Установите приложению статус "выведено из эксплуатации" в БД контроля изменений.
