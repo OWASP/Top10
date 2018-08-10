@@ -30,6 +30,12 @@ Avant tout début de traduction, merci de contacter @SPoint42 pour être ajouter
  
 * Valérie Lasserre (https://github.com/val38)
     - https://github.com/SPoint42/Top10/tree/FR-2017-translation/2017/fr/0xaa-logging-detection-response.md => Traduction initiale 2017
+	
+* Rémi Lavedrine (https://github.com/Shosta) 								
+  - https://github.com/OWASP/Top10/blob/master/2017/fr/0x02-foreword.md => Traduction depuis Top10 2013
+  
 
 ## Relectures / vérifications nécessaires
 - https://github.com/SPoint42/Top10/blob/FR-2017-translation/2017/fr/0xd0-about-data.md => Traduction initiale 2017
+
+
