@@ -2,31 +2,31 @@
 
 ## A propos de l'OWASP
 
-The Open Web Application Security Project (OWASP) is an open community dedicated to enabling organizations to develop, purchase, and maintain applications and APIs that can be trusted.
+L'Open Web Application Security Project (OWASP) est une communauté dont la tâche est de permettre aux organisations de développer, acheter et maintenir des applications et des APIs dignes de confiance. 
 
-At OWASP, you'll find free and open:
+Avec OWASP, vous trouverez de façon gratuite et libre :
 
-* Application security tools and standards.
-* Complete books on application security testing, secure code development, and secure code review.
-* Presentations and [videos](https://www.youtube.com/user/OWASPGLOBAL).
-* [Cheat sheets](https://www.owasp.org/index.php/OWASP_Cheat_Sheet_Series) on many common topics.
-* Standard security controls and libraries.
-* [Local chapters worldwide](https://www.owasp.org/index.php/OWASP_Chapter).
-* Cutting edge research.
-* Extensive [conferences worldwide](https://www.owasp.org/index.php/Category:OWASP_AppSec_Conference).
-* [Mailing lists](https://lists.owasp.org/mailman/listinfo).
+* Des outils et des standards à propos de la sécurité des applications
+* Des livres à propos de la façon de tester la sécurité des applications, le développement de code sécurisé ainsi que les revues de code sécurisées
+* Des présentations et des [vidéos](https://www.youtube.com/user/OWASPGLOBAL).
+* Des [antisèches](https://www.owasp.org/index.php/OWASP_Cheat_Sheet_Series) à propos de nombreux sujets courants.
+* Des critères de contrôles de sécurité et des librairies
+* [Des chapitres locaux à travers le monde](https://www.owasp.org/index.php/OWASP_Chapter).
+* Des recherches de pointes.
+* Des [conférences autour du monde](https://www.owasp.org/index.php/Category:OWASP_AppSec_Conference).
+* [Des listes de diffusion](https://lists.owasp.org/mailman/listinfo).
 
-Learn more at: [https://www.owasp.org](https://www.owasp.org).
+Apprenez-en plus à l'adresse suivante : [https://www.owasp.org](https://www.owasp.org).
 
-All OWASP tools, documents, videos, presentations, and chapters are free and open to anyone interested in improving application security.
+Tous les outils, documents, vidéos, présentations et les chapitres sont ouverts à toute personne intéressée par l'amélioration de la sécurité des applications.
 
-We advocate approaching application security as a people, process, and technology problem, because the most effective approaches to application security require improvements in these areas.
+Nous recommandons une approche de la sécurité des applications qui prend en compte celle-ci à travers un problème de personne, de processus et de technologie, car la méthode la plus efficace pour la sécurité des applications nécessite des améliorations dans tous ces domaines.
 
-OWASP is a new kind of organization. Our freedom from commercial pressures allows us to provide unbiased, practical, and cost-effective information about application security.
+L'OWASP est une nouvelle sorte d'organisation. Notre indépendance vis à vis de pressions commerciales nous permet de fournir des informations impartiales, réalistes et rentables à propos de la sécurité des applications.
 
-OWASP is not affiliated with any technology company, although we support the informed use of commercial security technology. OWASP produces many types of materials in a collaborative, transparent, and open way.
+L'OWASP n'est affiliée à aucune société technologique, même si nous soutenons l'utilisation de technologies de sécurité d'ordre commercial. L'OWASP produit de nombreux documents dans une approche ouverte de façon collaborative et transparente.
 
-The OWASP Foundation is the non-profit entity that ensures the project's long-term success. Almost everyone associated with OWASP is a volunteer, including the OWASP board, chapter leaders, project leaders, and project members. We support innovative security research with grants and infrastructure.
+La fondation OWASP est une entité à but non lucratif qui s'assure du succès du projet sur le long terme. Presque toutes les personnes liées à l'OWASP sont des volontaires, ceci incluant le conseil de l'OWASP, les leaders de chapitre, les leaders de projet et les membres de projet. Nous soutenons une recherche innovante à propos de la sécurité avec des subventions et des infrastrucures.
 
 Rejoignez nous !
 
