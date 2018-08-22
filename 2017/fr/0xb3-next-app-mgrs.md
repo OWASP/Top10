@@ -2,7 +2,7 @@
 
 ## Gestion de la totalité du cycle de vie de l'application
 
-Les applications appartiennent aux systèmes les plus complexes régulièrement créées et maintenues par des humains. La gestion informatique d'une application doit être effectuée par les spécialistes responsables du cycle de vie informatique total de l'application. Nous préconisons que ce rôle de gestionnaire d'application soit la contrepartie technique de celui du propriétaire de l'application. Le gestionnaire d'application est responsable du cycle de vie total de l'application d'un point de vue 'technologies de l'information', depuis le recueil des exigences jusqu'au retrait des systèmes - un point souvent négligé.
+Les applications appartiennent aux systèmes les plus complexes régulièrement créés et maintenus par des humains. La gestion informatique d'une application doit être effectuée par les spécialistes responsables du cycle de vie informatique total de l'application. Nous préconisons que ce rôle de gestionnaire d'application soit la contrepartie technique de celui du propriétaire de l'application. Le gestionnaire d'application est responsable du cycle de vie total de l'application d'un point de vue 'technologies de l'information', depuis le recueil des exigences jusqu'au retrait des systèmes - un point souvent négligé.
 
 ## Gestion des besoins et des ressources
 
