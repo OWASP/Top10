@@ -1,47 +1,47 @@
-# +A: What's next for Application Managers
+# +A: 	Perspectives pour les gestionnaires d'applications
 
-## Manage the Full Application Lifecycle
+## Gestion de la totalité du cycle de vie de l'application
 
-Applications belong to the most complex systems humans regularly create and maintain. IT management for an application should be performed by IT specialists who are responsible for the overall IT lifecycle of an application. We suggest establishing the role of application manager as technical counterpart to the application owner. The application manager is in charge of the whole application lifecycle from the IT perspective, from collecting the requirements until the process of retiring systems, which is often overlooked. 
+Les applications appartiennent aux systèmes les plus complexes régulièrement créées et maintenues par des humains. La gestion informatique d'une application doit être effectuée par les spécialistes responsables du cycle de vie informatique total de l'application. Nous préconisons que ce rôle de gestionnaire d'application soit la contrepartie technique de celui du propriétaire de l'application. Le gestionnaire d'application est responsable du cycle de vie total de l'application d'un point de vue 'technologies de l'information', depuis le recueil des exigences jusqu'au retrait des systèmes - un point souvent négligé.
 
-## Requirements and Resource Management
+## Gestion des besoins et des ressources
 
-* Collect and negotiate the business requirements for an application with the business, including the protection requirements with regard to confidentiality, authenticity, integrity and availability of all data assets, and the expected business logic.
-* Compile the technical requirements including functional and nonfunctional security requirements.
-* Plan and negotiate the budget that covers all aspects of design, build, testing and operation, including security activities.
+* Recueillez et confrontez les exigences métier d'une application au métier concerné. Cela inclut les nécessités de protection relatives à la confidentialité, à l'authentification, à l'intégrité et à la disponibilité des ressources en données, ainsi que la logique de travail attendue.
+* Rassemblez les exigences techniques, y compris les contraintes de sécurité fonctionnelles et non-fonctionnelles.
+* Préparez et ponderez un budget recouvrant tous les aspects de la conception, du codage, des tests et de la mise en oeuvre, y compris les activités sécuritaires.
 
-## Request for Proposals (RFP) and Contracting
+## Recueil de propositions (RFP, _Request for Proposals_) et contractualisation
 
-* Negotiate the requirements with internal or external developers, including guidelines and security requirements with respect to your security program, e.g. SDLC, best practices.
-* Rate the fulfillment of all technical requirements, including a planning and design phase.
-* Negotiate all technical requirements, including design, security, and service level agreements (SLA).
-* Adopt templates and checklists, such as [OWASP Secure Software Contract Annex](https://www.owasp.org/index.php/OWASP_Secure_Software_Contract_Annex). **Note**: The annex is for US contract law, so please consult qualified legal advice before using the sample annex.
+* Retravaillez les exigences avec des développeurs internes ou externes, y compris des règles de conduite et des exigences sécuritaires provenant de votre programme de sécurité (SDLC) et des pratiques recommandées.
+* Evaluez le degré d'achèvement de toutes les exigences techniques, avec une phase de prévision et de conception.
+* Analysez toutes les exigences techniques, y compris conception, sécurité et niveaux de service attendus (SLA, _Service level Agreements_).
+* Adoptez des modèles et des checklists, comme [OWASP Secure Software Contract Annex](https://www.owasp.org/index.php/OWASP_Secure_Software_Contract_Annex). **Remarque** : Cette annexe respectant la loi américaine sur les contrats, consultez un expert juridique pertinent avant de l'employer.
 
-## Planning and Design
+## Planification et conception
 
-* Negotiate planning and design with the developers and internal shareholders, e.g. security specialists.
-* Define the security architecture, controls, and countermeasures appropriate to the protection needs and the expected threat level. This should be supported by security specialists.
-* Ensure that the application owner accepts remaining risks or provides additional resources.
-* In each sprint, ensure security stories are created that include constraints added for non-functional requirements.
+* Etudiez la planification et la conception avec des développeurs et les parties prenantes internes, comme les spécialistes en sécurité.
+* Définissez l'architecture de sécurité, les contrôles et les contre-mesures adaptés aux besoins de protection ainsi qu'au niveau de menace estimé. Cela doit être approuvé par des spécialistes en sécurité.
+* Assurez-vous que le propriétaire de l'application accepte les risques restants ou procure des ressources additionnelles.
+* Vérifiez qu'à chaque étape des scénarios de sécurité soient créés, incluant des contraintes supplémentaires d'exigences non-fonctionnelles.
 
-## Deployment, Testing, and Rollout
+## Déploiement, Tests et Retrait
 
-* Automate the secure deployment of the application, interfaces and all required components, including needed authorizations.
-* Test the technical functions and integration with the IT architecture and coordinate business tests.
-* Create "use" and "abuse" test cases from technical and business perspectives.
-* Manage security tests according to internal processes, the protection needs, and the assumed threat level by the application.
-* Put the application in operation and migrate from previously used applications if needed.
-* Finalize all documentation, including the CMDB and security architecture.
+* Automatisez le déploiement sécurisé de l'application, des interfaces et de tous les composants nécessaires, y compris les autorisations indispensables.
+* Testez les fonctions techniques et l'intégration avec l'architecture du système d'information et coordonnez les tests métier.
+* Créez des cas de test d'utilisation "normale" et "abusive" selon des perspectives techniques et de métier.
+* Gérez des tests de sécurité adaptés aux processus internes, aux besoins de protection et au niveau de menaces estimé pour l'application.
+* Mettez en poeuvre l'application et effectuez si nécessaire la migration depuis les applications antérieurement employées.
+* Finalisez toute la documentation, y compris la la base de données de gestion des modifications (CMDB, _Change Management DataBase_) et l'architecture de sécurité.
 
-## Operations and Change Management
+## Gestion des mises en oeuvre et des modifications
 
-* Operations must include guidelines for the security management of the application (e.g. patch management).
-* Raise the security awareness of users and manage conflicts about usability vs. security.
-* Plan and manage changes, e.g. migrate to new versions of the application or other components like OS, middleware, and libraries.
-* Update all documentation, including in the change management data base (CMDB) and the security architecture, controls, and countermeasures, including any runbooks or project documentation.
+* Les mises en oeuvre doivent inclure des règles de conduite pour la gestion de la sécurité de l'application (par exemple, gestion des correctifs).
+* Développez la conscience sécuritaire des utilisateurs et arbitrez les conflits entre employabilité et sécurité.
+* Prévoyez et gérez les modifications, par exemple la migration vers de nouvelles versions de l'application ou d'autres composants tels le système d'exploitation, des composants logiciels tiers ou des bibliothèques.
+* Mettez à jour toute la documentation, y compris la base de données de gestion des modifications et l'architecture de sécurité.
 
-## Retiring Systems
+## Purge des systèmes
 
-* Any required data should be archived. All other data should be securely wiped.
-* Securely retire the application, including deleting unused accounts and roles and permissions.
-* Set your application's state to retired in the CMDB.
+* Toute donnée utile doit être archivée. Les autres données doivent être effacées de façon sécurisée.
+* Supprimez l'application de manière sécurisée, y compris les comptes, rôles et autorisations inemployés.
+* Fixez l'état de l'application à Supprimé dans la CMDB.
