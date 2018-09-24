@@ -1,8 +1,8 @@
-# +RF Details About Risk Factors
+# +RF Détails sur les facteurs de risque
 
-## Top 10 Risk Factor Summary
+## Résumé des 10 principaux facteurs de risque
 
-The following table presents a summary of the 2017 Top 10 Application Security Risks, and the risk factors we have assigned to each risk. These factors were determined based on the available statistics and the experience of the OWASP Top 10 team. To understand these risks for a particular application or organization, you must consider your own specific threat agents and business impacts. Even severe software weaknesses may not present a serious risk if there are no threat agents in a position to perform the necessary attack or the business impact is negligible for the assets involved.
+Le tableau suivant présente un résumé des 10 principaux risques liés à la sécurité des applications pour 2017 et les facteurs de risque que nous avons attribués à chaque risque. Ces facteurs ont été déterminés en fonction des statistiques disponibles et de l'expérience de l'équipe du Top 10 de l'OWASP. Pour comprendre ces risques pour une application ou une organisation particulière, vous devez tenir compte de vos propres agents de menace et de leurs répercussions sur votre entreprise. Même de graves faiblesses logicielles peuvent ne pas présenter un risque sérieux s'il n'y a pas d'agents de menace en mesure d'effectuer l'attaque nécessaire ou si l'impact commercial est négligeable pour les actifs concernés.
 
 ![Risk Factor Table](images/0xc1-risk-factor-table.png)
 
