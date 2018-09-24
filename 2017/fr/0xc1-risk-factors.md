@@ -8,7 +8,7 @@ Le tableau suivant présente un résumé des 10 principaux risques liés à la s
 
 ## Risques supplémentaires à prendre en considération
 
-Le Top 10 couvre beaucoup de terrains, mais il y a beaucoup d'autres risques que vous devriez considérer et évaluer dans votre organisation. Certaines d'entre elles sont apparues dans les versions précédentes du Top 10, et d'autres non, y compris de nouvelles techniques d'attaque qui sont identifiées tout le temps. D'autres risques importants pour la sécurité des applications (commandés par CWE-ID) que vous devriez également prendre en considération incluent :
+Le Top 10 est très efficace, mais il existe de nombreux autres risques qu'il est nécessaire de prendre en compte et d'évaluer dans votre organisation. Certains d'entre eux sont apparus dans des versions précédentes du Top 10, mais ce n'est pas le cas d'autres risques, incluant de nouvelles techniques d'attaques qui sont identifiées en permanence. D'autres risques de sécurité applicatives importants (classés selon le CWE-ID) que vous devriez également considérés sont :
 
 * [CWE-352: Cross-Site Request Forgery (CSRF)](https://cwe.mitre.org/data/definitions/352.html)
 * [CWE-400: Consommation incontrôlée de ressources ('Resource Exhaustion', 'AppDoS')](https://cwe.mitre.org/data/definitions/400.html)
