@@ -33,6 +33,9 @@ Avant tout début de traduction, merci de contacter @SPoint42 pour être ajouter
 	
 * Rémi Lavedrine (https://github.com/Shosta) 								
   - https://github.com/OWASP/Top10/blob/master/2017/fr/0x02-foreword.md => Traduction depuis Top10 2013
+  - https://github.com/SPoint42/Top10/blob/FR-2017-translation/2017/fr/0x02-foreword.md => Traduction depuis Top10 2013
+  - https://github.com/SPoint42/Top10/blob/FR-2017-translation/2017/fr/0x10-app-security-risks.md => Traduction depuis Top10 2013
+  - https://github.com/SPoint42/Top10/blob/FR-2017-translation/2017/fr/0xc1-risk-factors.md => Traduction depuis Top10 2013
   
 * Fabrice Lemainque (https://github.com/FyndhornElder)
   - https://github.com/SPoint42/Top10/blob/FR-2017-translation/2017/fr/0x05-introduction.md => Traduction depuis Top 10 2013
