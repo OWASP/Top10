@@ -2,7 +2,7 @@
 
 | Facteurs de Menace/Vecteurs d'Attaque | Vulnérabilités           | Impacts               |
 | -- | -- | -- |
-| Accès Lvl : Exploitation 2 | Fréquence 3 : Détection 1 | Techniques 2 : Métier ? |
+| Accès Lvl : Exploitation 2 | Fréquence 3 : Détection 1 | Techniques 2 : Métier  |
 | L’exploitation  des insuffisances de supervision et de journalisation sont à la base de presque tous les incidents majeurs. Les carences dans la supervision et la gestion de réactions, rapides et adéquates, permettent aux attaquants de réaliser leurs objectifs sans être détectés.| Ce problème a été intégré dans le Top 10 suite à l’enquête auprès d’un panel d’entreprises (voir [enquête industrie](https://owasp.blogspot.com/2017/08/owasp-top-10-2017-project-update.html)). Une des méthodes pour s’assurer que vous avez une journalisation suffisante est de contrôler les journaux après un test d’intrusion. La journalisation des actions du testeur doit permettre de comprendre quels dommages ont été faits.| La plupart des attaques réussies commencent par des tests de vulnérabilités. Laisser faire de tels tests en continu conduira à une exploitation réussie avec une probabilité proche de 100%. En 2016, reconnaître une attaque prenait [en moyenne 191 jours](https://www-01.ibm.com/common/ssi/cgi-bin/ssialias?htmlfid=SEL03130WWEN&), ce qui laisse beaucoup de temps pour faire des dégâts. |
 
 ## Suis-je Vulnérable ?

@@ -14,7 +14,7 @@ Comments requested per instructions within
 
 |  | ![Creative Commons License Logo](images/front-cc.png) |
 | -- | -- |
-| https://owasp.org | This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License |
+| https://owasp.org | Ce travail est distribué sous licence Creative Commons Attribution-ShareAlike 4.0 International |
 
 
 
