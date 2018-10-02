@@ -56,7 +56,7 @@ Scenario #1: La réutilisation de mots de passe, l’utilisation de mots de pass
 * [OWASP Cheat Sheet: Session Management](https://www.owasp.org/index.php/Session_Management_Cheat_Sheet)
 * [OWASP Automated Threats Handbook](https://www.owasp.org/index.php/OWASP_Automated_Threats_to_Web_Applications)
 
-### External
+### Externes
 
 * [NIST 800-63b: 5.1.1 Memorized Secrets](https://pages.nist.gov/800-63-3/sp800-63b.html#memsecret) - for thorough, modern, evidence-based advice on authentication. 
 * [CWE-287: Improper Authentication](https://cwe.mitre.org/data/definitions/287.html)

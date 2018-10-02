@@ -2,7 +2,7 @@
 
 | Facteurs de Menace/Vecteurs d'Attaque | Vulnérabilités           | Impacts               |
 | -- | -- | -- |
-| Accès Lvl : Exploitation 2 | Fréquence 3 : Détection 2 | Techniques 2 : Métier ?  |
+| Accès Lvl : Exploitation 2 | Fréquence 3 : Détection 2 | Techniques 2 : Métier  |
 | Bien qu'il soit facile de trouver des exploits prêts à l'emploi pour de multiples vulnérabilités, d'autres vulnérabilités demandent un effort soutenu pour développer un exploit adapté. | La fréquence de ce problème est très élevée. Les modèles de développement à composants multiples peuvent conduire à ce que des équipes de développement ne sachent même pas quels composants ils utilisent dans leur application ou API, et soient donc encore moins susceptibles de les maintenir à jour. Des scanners comme retire.js aident à la détection, mais l'exploitation demande un effort supplémentaire. | Alors que quelques vulnérabilités connues ont seulement des impacts mineurs, certaines des violations les plus importantes jusqu'à aujourd'hui reposent sur l'exploitation de vulnérabilités connues dans des composants. Suivant les actifs que vous avez à protéger, ce risque pourra être l'un de vos risques majeurs. |
 
 ## Suis-je Vulnérable ?

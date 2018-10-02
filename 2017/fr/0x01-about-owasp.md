@@ -30,7 +30,7 @@ La fondation OWASP est une entité à but non lucratif qui s'assure du succès d
 
 Rejoignez nous !
 
-## Copyright and License
+## Copyright et License
 
 ![license](images/license.png)
 
