@@ -42,7 +42,7 @@ De nombreux problèmes  XXE ont été rendu public, notamment des attaques sur d
     <foo>&xxe;</foo>
 ```
 
-**Scenario #2**: Un attaquant sonde le réseau privé du serveur en modifiant la ligne ENTITY ci-dessus en:
+**Scenario #2**: Un attaquant scan le réseau privé du serveur en modifiant la ligne ENTITY ci-dessus en:
 ```
    <!ENTITY xxe SYSTEM "https://192.168.1.1/private" >]>
 ```
