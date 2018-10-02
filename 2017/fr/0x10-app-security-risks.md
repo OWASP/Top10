@@ -11,10 +11,10 @@ Parfois ces chemins sont triviaux à trouver et à exploiter, et parfois ils son
 
 ## Quel est mon risque ?
 
-Le[Top 10 de l'OWASP] (https://www.owasp.org/index.php/Top10) se concentre sur l'identification des risques les plus sérieux pour la sécurité des applications Web d'un large éventail d'organisations. Pour chacun de ces risques, nous fournissons des informations génériques sur la probabilité et l'impact technique à l'aide du système de notation simple suivant, qui est basé sur la méthodologie de notation des risques de l'OWASP.  
+Le [Top 10 de l'OWASP](https://www.owasp.org/index.php/Top10) se concentre sur l'identification des risques les plus sérieux pour la sécurité des applications Web d'un large éventail d'organisations. Pour chacun de ces risques, nous fournissons des informations génériques sur la probabilité et l'impact technique à l'aide du système de notation simple suivant, qui est basé sur la méthodologie de notation des risques de l'OWASP.  
 
-| Agents de menace | Exploitabilité | Prévalence de la faiblesse | Détectabilité de la faiblesse | Impacts techniques | Impacts commerciaux | Impacts commerciaux |
-| -- | -- | -- | -- | -- | -- |
+| Agents de menace | Exploitabilité | Prévalence de la faiblesse | Détectabilité de la faiblesse | Impacts techniques | Impacts commerciaux |
+| --- | --- | --- | --- | --- | --- |
 | Appli-   | Facile 3 | Répandu 3 | Facile 3 | Sévère 3 | Commercial     |
 | cation   | Moyen 2 | Commun 2 | Moyen 2 | Modéré 2 | Specifique |
 | Specifique | Difficile 1 | Uncommon 1 | Difficile 1 | Mineur 1 |       |
