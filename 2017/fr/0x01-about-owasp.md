@@ -16,7 +16,7 @@ Avec OWASP, vous trouverez de façon gratuite et libre :
 * Des [conférences autour du monde](https://www.owasp.org/index.php/Category:OWASP_AppSec_Conference).
 * [Des listes de diffusion](https://lists.owasp.org/mailman/listinfo).
 
-Apprenez-en plus à l'adresse suivante : [https://www.owasp.org](https://www.owasp.org).
+Pour plus d'information vous pouvez consulter le site de l'OWASP: [https://www.owasp.org](https://www.owasp.org).
 
 Tous les outils, documents, vidéos, présentations et les chapitres sont ouverts à toute personne intéressée par l'amélioration de la sécurité des applications.
 
