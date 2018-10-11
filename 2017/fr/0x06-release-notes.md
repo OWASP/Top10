@@ -2,7 +2,7 @@
 
 ## Ce qui a changé entre 2013 et 2017
 
-Depuis les quatre dernières années, les changements se sont accélérés, et le Top 10 de l'OWASP devait en tenir compte. Nous avons complètement restructuré le Top 10 de l'OWASP, renouvelé la démarche, utilisé de nouvelles sources de données, travaillé avec la communauté, réorganisé les risques, réécrit chaque risque à partir de zéro, et ajouté des références aux environnements et aux langages communément utilisés.
+Depuis quatre ans, les changements se sont accélérés, et le Top 10 de l'OWASP se devait d'en tenir compte. Nous avons complètement restructuré le Top 10 de l'OWASP, renouvelé la démarche, utilisé de nouvelles sources de données, travaillé avec la communauté, réorganisé les risques, réécrit chaque risque à partir de zéro, et ajouté des références aux environnements et aux langages communément utilisés.
 
 Au cours des dernières années, les technologies de base et les architectures des applications ont évoluées de façon significative:
 
@@ -25,6 +25,6 @@ Nous avons interrogé la communauté pour avoir leur retour prospectif sur deux 
 
 * **A4–Références directes non sécurisées à un objet** et **A7–Manque de contrôle d’accès au niveau fonctionnel** ont été fusionnés dans **A5:2017-Ruptures de Contrôles d'Accès**.
 * **A8–Falsification de requête intersites (CSRF)**, a été supprimé car beaucoup d'environnements logiciel intègrent des [défenses CSRF](https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)), et que cela n'a été retrouvé que dans 5% des applications.
-* **A10–Redirection et Renvois non validés**, a été supprimé, bien que cela ait été retrouvé dans 8% des applications, car cela est globalement détrôné par XXE.
+* **A10–Redirection et Renvois non validés**, a été supprimé, bien que cela ait été retrouvé dans 8% des applications, car cela est globalement supplanté par XXE.
 
 ![0x06-release-notes-1](images/0x06-release-notes-1-fr.png)
