@@ -2,56 +2,90 @@
 
 ## Gerir o Ciclo de Vida das Aplicações
 
-As aplicações são alguns dos sistemas mais complexos que os humanos criam e mantêm regularmente. A gestão de TI para uma aplicação deve ser realizada por especialistas de TI que são responsáveis pelo ciclo de vida global de TI de uma aplicação.
+As aplicações são alguns dos sistemas mais complexos que os humanos criam e
+mantêm regularmente. A gestão de TI para uma aplicação deve ser realizada por
+especialistas de TI que são responsáveis pelo ciclo de vida global de TI de uma
+aplicação.
 
-Sugerimos que se definam donos e gestores de aplicações para cada aplicação para oferecer responsabilização, prestação de contas, de forma consultada e informada (RACI), para permitir que a organização possa descartar riscos, identificar quem é responsável pelo desenho de segurança, construção, teste e instalação da aplicação.
+Sugerimos que se defina o perfil de "gestor" da aplicação sendo este mais
+técnico do que o de "dono" da aplicação. O gestor da aplicação é quem controla
+todo o ciclo de vida da aplicação dum ponto de vista técnico, desde a
+identificação de requisitos até à descontinuação do sistema, o qual é
+normalmente esquecido.
 
 ## Requisitos e Gestão de Recursos
 
-* Colecionar e negociar os requisitos de negócio de uma aplicação com o negócio, incluindo receber requisitos de proteção relativos a confidencialidade, integridade e disponibilidade de todos os activos de dados.
-* Compilar os requisitos técnicos incluindo os requisitos funcionais e não funcionais de segurança.
-* Planear e negociar o orçamento que cobre todos os aspectos do desenho, construção e operação, incluindo actividades de segurança.
+* Identificar e negociar os requisitos de negócio para uma aplicação com os
+  responsáveis da área de negócio, incluindo requisitos de protecção
+  relacionados com confidencialidade, integridade e disponibilidade de todos os
+  ativos de dados e respetiva lógica de negócio.
+* Compilar os requisitos técnicos incluindo os requisitos funcionais e não
+  funcionais de segurança.
+* Planear e negociar o orçamento que deve cobrir todos os aspectos do desenho,
+  construção, teste e operação, incluindo actividades de segurança.
 
-## Solicitação de Propostas (RFP) e Contratação
+## Solicitação de Propostas e Contratação
 
-* Negociar os requisitos com os programadores internos e externos, incluindo guias e requisitos de segurança respeitantes ao seu programa de segurança, por exemplo, SDLC e melhores práticas.
-* Classificar o cumprimento de todos os requisitos técnicos incluindo um planeamento básico e uma fase de desenho.
-* Negociar todos os requisitos técnicos incluindo o desenho, segurança e acordos de nível de serviço (SLA).
-* Adoptar templates listas de validação, tais como [Anexo de Contrato para Software Seguro da OWASP][1].
+* Negociar os requisitos com os programadores internos ou externos, incluindo
+  orientações e requisitos de segurança relativos ao seu programa de segurança,
+  e.g. SDLC (Systems Development Life Cycle), melhores práticas.
+* Classificar o cumprimento de todos os requisitos técnicos incluindo
+  planeamento e fase de desenho.
+* Negociar todos os requisitos técnicos incluindo o desenho, segurança e acordos
+  de nível de serviço (SLA).
+* Adotar modelos de documentos e listas de validação, tais como [Anexo de
+  Contrato para Software Seguro da OWASP][1].
 
-**NB: Por favor note que o Anexo é um exemplo específico para a lei de contratação nos EUA, e provavelmente necessita de ser adaptada à realidade jurídica de outros países. Por favor, consulte um aconselhamento legal antes de usar o Anexo.**
+**NB**: O Anexo é um exemplo específico para a lei de contratação nos EUA, e
+provavelmente necessita de ser adaptada à realidade jurídica de outros países.
+Por favor, obtenha aconselhamento legal antes de usar o Anexo.
 
 ## Planear e Desenhar
 
-Para assegurar que as aplicações têm um desenho seguro, o seguinte deve ser realizado:
-* Negociar o planeamento e desenhar com os programadores e com os grupos internos interessados, por exemplo, os especialistas de segurança.
-* Definir uma arquitectura de segurança, controlos e contramedidas de acordo com as proteções requeridas e o ambiente de segurança planeado. Isto deve ser suportado pelos especialistas de segurança.
-* Garantir que o dono da aplicação assume os riscos remanescentes ou que proporcione os recursos adicionais.
-* Para cada sprint de desenvolvimento, assegurar que as histórias de segurança são criadas para os requisitos funcionais, e que restrições são adicionais para os requisitos não-funcionais.
+* Negociar o planeamento e desenho com os programadores e com os intervenientes
+  internos, e.g. os especialistas de segurança.
+* Definir a arquitectura de segurança, controlos e contramedidas adequadas às
+  necessidades de proteção e nível de ameaça expectável. Isto deve ser feito em
+  colaboração com os especialistas de segurança.
+* Garantir que o dono da aplicação assume os riscos remanescentes ou que
+  disponibiliza recursos adicionais.
+* Para cada ciclo de desenvolvimento (_sprint_), assegurar que as tarefas
+  (_stories_) de segurança são criadas para os requisitos funcionais, incluindo
+  os constrangimentos adicionados aos requisitos não-funcionais.
 
 ## Instalação, Teste e Lançamento
 
-Para garantir operações e alterações seguras, deve ser realizado o seguinte:
-* Automatizar a configuração segura da aplicação, dos interfaces e de todos os componentes necessários, incluindo autorizações.
-* Testar as funções técnicas e integração com a arquitectura de TI e coordenar os testes de negócio.
-* Criar casos de teste de “uso” e de “abuso” com perspectivas técnicas e de negócio.
-* Gerir testes de segurança de acordo com os processos internos, as necessidades de proteção e o nível de segurança requerido pela aplicação.
-* Colocar a aplicação em operação e migrar de aplicações usadas anteriormente se necessário.
-Finalizar toda a documentação, incluindo o CMDB e a arquitectura de segurança.
+* Automatizar a configuração segura da aplicação, interfaces e de todos os
+  componentes necessários, incluindo autorizações.
+* Testar as funções técnicas e integração com a arquitectura de TI e coordenar
+  os testes de negócio.
+* Criar casos de teste de “uso” e de “abuso” tanto da perspectiva técnicas como
+  de negócio.
+* Gerir testes de segurança de acordo com os processos internos, as necessidades
+  de proteção e o nível de segurança requerido pela aplicação.
+* Colocar a aplicação em operação e, quando necessário, proceder à migração das
+  aplicações em uso.
+* Finalizar toda a documentação, incluindo a BDGC (Base de Dados de Gestão de
+  Configurações) e a arquitectura de segurança.
 
 ## Operação e Alterações
 
-Para assegurar as operações e alterações seguras, deve ser realizado o seguinte:
-* Operar incluindo a gestão de segurança para a aplicação (por exemplo, a gestão de correções).
-* Aumentar a consciencialização de segurança dos utilizadores e gerir conflitos da dicotomia entre usabilidade e segurança.
-* Planear e gerir alterações, por exemplo, migrar para novas versões da aplicação ou outros componentes como o SO, middleware ou bibliotecas.
-* Actualizar toda a documentação, incluindo o CMDB e a arquitectura de segurança, controlos e contramedidas, incluindo quaisquer cadernos ou documentação de projecto.
+* Operar incluindo a gestão de segurança para a aplicação (e.g. gestão de
+  correções).
+* Aumentar a consciencialização de segurança dos utilizadores e gerir conflitos
+  da dicotomia entre usabilidade e segurança.
+* Planear e gerir alterações, e.g. migrar para novas versões da aplicação ou
+  outros componentes como o SO, _middleware_ ou bibliotecas.
+* Atualizar toda a documentação, incluindo o DBGC e a arquitectura de segurança,
+  controlos e contramedidas, incluindo quaisquer cadernos ou documentação de
+  projecto.
 
-## Retirada de Sistemas
+## Descontinuação de Sistemas
 
-O processo de retirada do sistemas é muitas vezes ignorado. Deve assegurar que:
-* Quaisquer dados importantes são arquivados. Todos os outros dados são apagados em segurança.
-* Encerrar em segurança a aplicação, incluindo apagar contas, papéis e permissões não usadas.
-* Actualizar o estado da aplicação para retirada na CMDB.
+* Dados relevantes devem ser arquivados. Todos os outros dados devem ser
+  apagados de forma segurança.
+* Interromper a utilização da aplicação de forma segura, incluindo a remoção de
+  contas, perfis e permissões não usadas.
+* Atualizar o estado da aplicação para "descontinuada" na BDGC.
 
-[1]:	https://www.owasp.org/index.php/OWASP_Secure_Software_Contract_Annex
+[1]: https://www.owasp.org/index.php/OWASP_Secure_Software_Contract_Annex
