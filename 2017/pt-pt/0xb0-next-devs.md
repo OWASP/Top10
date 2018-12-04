@@ -1,17 +1,48 @@
-# +D O que se segue para os Programadores
+# +D O Que Se Segue para Programadores
 
-## Estabelecer &amp; Usar Processos de Segurança Repetitivos e Controlos de Segurança Standard
+## Estabelecer &amp; Usar Processos de Segurança Repetíveis e Controlos de Segurança Padrão
 
-Quer seja novo na segurança aplicacional web ou se já está muito familiarizado com estes riscos, a tarefa de produzir uma aplicação web segura or corrigir uma existente pode ser difícil. Se tiver que gerir um grande portfolio de aplicações pode ser um pesadelo.
+Quer seja novo em segurança aplicacional *web* ou já esteja familiarizado com
+estes riscos, a tarefa de produzir uma aplicação *web* segura ou de alterar
+uma existente pode ser difícil. Se tiver que gerir um grande portfólio de
+aplicações, esta tarefa pode ser mesmo assustadora.
 
-Para ajudar as organizações e os programadores a reduzirem os seus riscos de segurança aplicacional de uma forma efectiva, a OWASP produziu numerosos recursos livres e gratuítos que pode usar para endereçar a segurança aplicacional na sua organização. Os seguintes são alguns dos muitos recursos que a OWASP produziu para ajudar as organizações a produzir aplicações Web e APIs seguras. Na próxima página apresentamos recursos adicionais da OWASP que podem ajudar as organizações a verificar a segurança das suas aplicações e APIs.
+Para ajudar as organizações e os programadores a reduzirem os riscos de
+segurança aplicacional de forma efetiva, a OWASP tem produzido inúmeros recursos
+gratuitos e livres que poderá utilizar para lidar com segurança aplicacional na
+sua organização. Os recursos abaixo são alguns dos muitos recursos que a OWASP
+tem produzido para ajudar as organizações a desenvolver aplicações *web* e APIs
+seguras. Na próxima página são apresentados recursos OWASP adicionais que
+poderão ajudar as organizações a verificar a segurança das suas aplicações e
+APIs.
 
-| Actividade | Descrição |
+| Atividade | Descrição |
 | --- | --- |
-| Requisitos de Segurança Aplicacional | Para produzir uma aplicação Web segura, deve definir o que significa ser segura para essa aplicação. A OWASP recomenda que use o [OWASP Application Security Verification Standard (ASVS)](https://www.owasp.org/index.php/ASVS), como um guia para definir os requisitos de segurança da aplicação. Se estiver a solicitar o desenvolvimento em outsourcing, considere usar o [OWASP Secure Software Contract Annex](https://www.owasp.org/index.php/OWASP_Secure_Software_Contract_Annex). **NB**: O anexo está definido para as leis contratuais dos EUA, por isso consulte aconselhamento legal antes de usar o mesmo noutras jusrisdições. |
-| Arquitectura de Segurança Aplicacional  | Em vez de adaptar a segurança às suas aplicações e APIs, é muito mais económico planear a segurança desde o início. A OWASP recomenda o [OWASP Prevention Cheat Sheets](https://www.owasp.org/index.php/OWASP_Cheat_Sheet_Series) e o [OWASP Developer's Guide](https://www.owasp.org/index.php/OWASP_Guide_Project) como dois pontos de partida para indicar como desenhar a segurança desde o início. |
-| Controlos Padrão de Segurança | Desenvolver controlos de segurança fortes e usáveis é difícil. O uso de um conjunto de controlos de segurança padrão simplifica radicalmente o desenvolvimento de aplicações e APIs seguros. Muitos frameworks populares vêm com controlos de segurança padrão para autorização, validação, CSRF, entre outros|
-| Ciclo de Desenvolvimento Seguro | Para melhorar o processo que a organização segue quando constroi aplicações e APIs, a OWASP recomenda o [OWASP Software Assurance Maturity Model (SAMM)](https://www.owasp.org/index.php/OWASP_SAMM_Project). Este modelo ajuda as organizações a formular e implementar uma estratégia para a segurança de software que adaptado aos riscos específicos que a organização tem que enfrentar. |
-| Educação em Segurança Aplicacional | O [OWASP Education Project](https://www.owasp.org/index.php/Category:OWASP_Education_Project) oferece os materiais de treino para educar os programadores sobre segurança aplicacional web. Para um treino mais prático use o [OWASP WebGoat](https://www.owasp.org/index.php/WebGoat), [WebGoat.NET](https://www.owasp.org/index.php/Category:OWASP_WebGoat.NET),  [OWASP NodeJS Goat](https://www.owasp.org/index.php/OWASP_Node_js_Goat_Project), [OWASP Juice Shop Project](https://www.owasp.org/index.php/OWASP_Juice_Shop_Project) ou o [OWASP Broken Web Applications Project](https://www.owasp.org/index.php/OWASP_Broken_Web_Applications_Project). Para estar actualizado, participe na [OWASP AppSec Conference](https://www.owasp.org/index.php/Category:OWASP_AppSec_Conference), [OWASP Conference Training](https://www.owasp.org/index.php/Category:OWASP_AppSec_Conference), ou em reuniões dos [Chapter locais da OWASP](https://www.owasp.org/index.php/Category:OWASP_Chapter). |
+| Requisitos de Segurança da Aplicação | Para produzir uma aplicação *web* segura, deve-se definir o que é considerado como seguro para essa aplicação. A OWASP recomenda que seja usado [OWASP Application Security Verification Standard (ASVS)][1] como guia para a criação dos requisitos de segurança para a(s) sua(s) aplicação(ões). Se recorrer a *outsourcing* considere o [OWASP Secure Software Contract Annex][2]. **Nota**: O anexo está sob a lei contratual norte-americana (EUA), por favor peça aconselhamento legal qualificado antes de utilizar a amostra do anexo. |
+| Arquitetura de Segurança Aplicacional | Em vez de reajustar a segurança nas suas aplicações e APIs, é mais económico planear a segurança desde o início. A OWASP recomenda [OWASP Prevention Cheat Sheets][3] como um bom ponto de partida para planear a segurança desde o início.|
+| Controlos Padrão de Segurança | Criar controlos de segurança fortes e úteis é difícil. Um conjunto de controlos padrão de segurança simplificam radicalmente o desenvolvimento de aplicações e APIs seguras. [OWASP Prevention Cheat Sheets][3] é um bom ponto de partida para desenvolvedores, e muitas das *frameworks* modernas vêm com controlos de segurança padrão e eficazes para autorização, validação, prevenção de CSRF, etc. |
+| Ciclo de Vida de Desenvolvimento Seguro | Para melhorar o processo que a sua organização segue quando desenvolve aplicações e APIs, a OWASP recomenda o [OWASP Software Assurance Maturity Model (SAMM)][4]. Este modelo ajuda as organizações a formular e implementar uma estratégia de segurança de software adaptada aos riscos específicos que a sua organização enfrenta. |
+| Ensino de Segurança Aplicacional | A [OWASP Education Project][5] providencia materiais de ensino para educar programadores em segurança de aplicações *web*. Para exercícios práticos de vulnerabilidades tente [OWASP WebGoat][6], [WebGoat.NET][7],  [OWASP NodeJS Goat][8], [OWASP Juice Shop Project][9] ou [OWASP Broken Web Applications Project][10]. Para se manter atualizado, participe numa [OWASP AppSec Conference][11], [OWASP Conference Training][11], ou [OWASP Chapter meetings][12] locais.|
 
-Existem numerosos recursos adicionais da OWASP disponíveis para poder usar. Por favor visite a página dos [Projectos OWASP](https://www.owasp.org/index.php/Projects), que lista todos os projectos "Flagship", "Labs", e "Incubator" no inventário de projectos da OWASP. A maior parte dos recursos da OWASP estão disponíveis na nossa [wiki](https://www.owasp.org/), e muitos dos documentos da OWASP podem ser encomendados em [formato físico ou como eBooks](https://stores.lulu.com/owasp).
+Existem inúmeros recursos adicionais da OWASP disponíveis para serem utilizados.
+Por favor visite a página [OWASP Projects][13], que lista todos os projetos
+*Flagship*, *Labs*, e *Incubator*, no inventário de projetos da OWASP.
+Os recursos OWASP estão disponíveis na nossa [wiki][14], e muitos documentos
+OWASP podem ser adquiridos em formato [papel ou eBook][15].
+
+[1]: https://www.owasp.org/index.php/ASVS
+[2]: https://www.owasp.org/index.php/OWASP_Secure_Software_Contract_Annex
+[3]: https://www.owasp.org/index.php/OWASP_Cheat_Sheet_Series
+[4]: https://www.owasp.org/index.php/OWASP_SAMM_Project
+[5]: https://www.owasp.org/index.php/Category:OWASP_Education_Project
+[6]: https://www.owasp.org/index.php/WebGoat
+[7]: https://www.owasp.org/index.php/Category:OWASP_WebGoat.NET
+[8]: https://www.owasp.org/index.php/OWASP_Node_js_Goat_Project
+[9]: https://www.owasp.org/index.php/OWASP_Juice_Shop_Project
+[10]: https://www.owasp.org/index.php/OWASP_Broken_Web_Applications_Project
+[11]: https://www.owasp.org/index.php/Category:OWASP_AppSec_Conference
+[12]: https://www.owasp.org/index.php/Category:OWASP_Chapter
+[13]: https://www.owasp.org/index.php/Projects
+[14]: https://www.owasp.org/
+[15]: https://stores.lulu.com/owasp
+
