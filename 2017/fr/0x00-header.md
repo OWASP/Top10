@@ -8,7 +8,7 @@ Les Dix Risques de Sécurité Applicatif Web les Plus Critiques
 
 ### Release
 
-Comments requested per instructions within
+
 
 ![WASP Logo URL TBA](images/front-wasp.png)
 

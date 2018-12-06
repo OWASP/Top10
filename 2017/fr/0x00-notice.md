@@ -1,20 +1,21 @@
 # Release
 
-## Important Notice
+## Notes importantes 
 
-### Request for Comments
+### Appels a commentaires
 
-This is the text version of the OWASP Top 10, and although it is useful for translators and those interested in a text version, it's not the official release, which is the PowerPoint / PDF version. 
+Ceci est la version texte du OWASP Top10, et  bien qu'il soit util aux traducteurs et ceux interessés par la version texte, il ne constitue pas la version officielle finale qui est en version PowerPoint/PDF.
 
-At this stage, we are asking for
 
-* Translations - we have some teams working already, but do reach out to us if you can help
+A ce stage nous demandons donc : 
 
-We strongly urge for any corrections or issues to be logged at GitHub:
+* Aux traducteurs - Contactez les équipes de traductions déja constituées.
+
+Nous recommandons que toutes les erreurs soient consignées via GitHub:
 
 * [https://github.com/OWASP/Top10/issues](https://github.com/OWASP/Top10/issues)
 
-Through public transparency, we provide traceability and ensure that all voices are heard during this final month before publication.
+Cela permettra plus de transparence, de tracabilité et assurera que toutes les voix seront entendues lors de la publication finale ..
 
 * Andrew van der Stock
 * Brian Glas

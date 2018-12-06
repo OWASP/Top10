@@ -1,8 +1,8 @@
-# A5:2017 Broken Access Control
+# A5:2017 Manque dans le contrôle d'accès
 
 | Facteurs de menace/Vecteurs d'attaque | Vulnérabilité  | Impacts |
 | -- | -- | -- |
-| Niveau d'accès : Exploitation 2 | Fréquence 2 : Détection 2 | Impact 3 : Métier |
+| Niveau d'accès : Exploitation 2 | Fréquence 2 : Détection 2 | Technique 3 : Métier |
 | L'exploitation des contrôles d'accès est une des principales compétences des attaquants. Les outils [SAST](https://www.owasp.org/index.php/Source_Code_Analysis_Tools) and [DAST](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools) peuvent détecter l'absence de contrôles d'accès mais ne peuvent vérifier s'ils sont efficaces quand ils existent. Les contrôles d'accès peuvent être détectés par des tests manuels, leur absence peut être détectée par des contrôles automatiques dans certains frameworks. | Les vulnérabilités de contrôles d'accès surviennent souvent par le manque de détection automatique, et le manque de tests fonctionnels effectifs par les développeurs d'applications. La detection des contrôles d'accès ne se prête pas bien aux tests statiques ou dynamiques. Les tests manuels sont la meilleure méthode de détecter des contrôles d'accès manquant ou défectueux, Ceci inclut mes méthodes HTTP (GET vs PUT, etc), les contrôleurs, les références directes d'objets, etc. | Techniquement parlant, l'impact est qu'un attaquant peut obtenir les droits d'un utilisateur ou d'un administrateur, ou qu'un utilisateur obtienne des droits privilégiés ou qu'il puisse créer, lire ou supprimer tout enregistrement de son choix. L'impact métier est dépendant du niveau de protection nécessité par l'application et ses données. |
 
 ## Suis-je vulnérable ?

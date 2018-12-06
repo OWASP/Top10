@@ -1,8 +1,8 @@
 # A3:2017 Exposition de données sensibles
 
-| Facteurs de Menace/Vecteurs d'Attaque | Vulnérabilité | Impacts Techniques |
+| Facteurs de Menace/Vecteurs d'Attaque | Vulnérabilité | Impacts  |
 | -- | -- | -- |
-| Niveau d'accès : Exploitation 2 | Fréquence 3 : Détection 2 | Impact 3 : Métier |
+| Niveau d'accès : Exploitation 2 | Fréquence 3 : Détection 2 | Technique 3 : Métier |
 | La cryptanalyse (cassage de l’algorithme ou de la clé) reste rare. On préfère obtenir les clefs, effectuer des attaques du type man-in-the-middle, accéder aux données en clair sur le serveur, en transit, ou depuis le client de l'utilisateur, par exemple le navigateur. Une attaque manuelle est requise dans la majorité des cas. Des bases de données de mots de passe précédemment récupérées peuvent étre brute forcées par des processeurs graphiques (GPU). | Au cours des dernières années, cela a été l'attaque impactante la plus courante. La principale erreur est de ne pas chiffrer les données sensibles. Les autres erreurs fréquentes sont: génération de clés faibles, choix et configuration incorrects des algorithmes et protection insuffisante des mots de passe. En ce qui concerne les données en transit, les faiblesses côté serveur sont pour la plupart faciles à détecter. C'est plus difficile pour les données déjà stockées. | L’exploitation peut résulter en la compromission ou la perte de données personnelles, médicales, financières, d’éléments de cartes de crédit ou d’authentification. Ces données nécessitent souvent une protection telle que définie par le Règlement Général sur la Protection des Données ou les lois locales sur la vie privée. |
 
 ## Suis-je vulnérable ?

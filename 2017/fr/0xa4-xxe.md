@@ -1,8 +1,8 @@
 # A4:2017 XML Entités externes (XXE)
 
-| Facteurs de Menace/Vecteurs d'Attaque | Vulnérabilité | Impacts Techniques |
+| Facteurs de Menace/Vecteurs d'Attaque | Vulnérabilité | Impacts  |
 | -- | -- | -- |
-| Niveau d'accès : Exploitation 2 | Fréquence 2 : Détection 2 | Impact 3 : Métier |
+| Niveau d'accès : Exploitation 2 | Fréquence 2 : Détection 2 | Technique 3 : Métier |
 | Des attquants peuvent exploiter des processeurs XML vulnérables s'ils peuvent télécharger du XML ou inclure du contenu hostile dans un document XML, en exploitant du code vulnérable, des dépendances ou des intégrations. | Par défaut, de nombreux anciens processeurs XML permettent de spécifier une entité externe: une URI déréférencé et évalué lors du traitement XML. Les outils [SAST](https://www.owasp.org/index.php/Source_Code_Analysis_Tools) peuvent découvrir ces problèmes en inspectant les dépendances et la configuration. Les outils [DAST](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools) nécessite des étapes manuelles supplémentaires pour détecter et exploiter ces problèmes. Des testeurs doivent être formés à la façon manuel de tester les XXE, car il n'était pas couramment testé en 2017. | Ces failles peuvent être utilisées pour extraire des données, exécuter une requête à distance sur un serveur, découvrir des systèmes internes, lancer des attaques par déni de service ou même exécuter d'autres attaques. |
 
 ## L'application est-elle vulnérable?

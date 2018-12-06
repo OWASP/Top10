@@ -1,6 +1,6 @@
 # I Introduction
 
-## Bienvenue au Top 10 OWASP - 2017
+## Bienvenue dans le  Top 10 OWASP - 2017
 
 Cette mise à jour majeure ajoute plusieurs nouveaux problèmes, dont deux sélectionnés par la communauté - A8:2017- Désérialisation sans validation et A10:2017- Journalisation et surveillance insuffisantes. Les deux différences clé par rapport aux précédents Tops 10 OWASP sont les importants retours de la communauté et l'immense masse de données rassemblées par des douzaines d'organismes : sans doute la quantité la plus importante jamais collectée pour préparer une norme de sécurité applicative. Cela nous permet de supposer raisonnablement que le nouveau TOP 10 OWASP répond aux risques sécuritaires applicatifs les plus graves rencontrés par les entreprises.
 

@@ -1,12 +1,12 @@
-# A2:2017 Broken Authentication
+# A2:2017 Authentification de mauvaise qualité
 
-| Threat agents/Attack vectors | Security Weakness           | Impacts               |
+| Facteurs de Menace/Vecteurs d'Attaque | Vulnérabilité    | Impacts  |
 | -- | -- | -- |
-| Access Lvl : Exploitability 3 | Prevalence 2 : Detectability 2 | Technical 3 : Business |
+| Accès  Lvl : Exploitabilité 3 | Fréquence 2 : Détection 2 | Technique 3 : Métier |
 | Les attaquants ont des accès à des centaines de millions de combinaisons de logins et mot de passe, des comptes par défaut d’administration, d’outils de brute force automatisés, Les attaques de gestion de session sont bien connues, en particulier en ce qui concerne les jetons de sessions non expirés. |
 Le prévalence de la violation de l’authentification est généralement liée à une erreur de conception ou de mise en œuvre dans la plupart des contrôles d’identités et d’accès. La gestion des sessions est la base  de l’authentification et du contrôle d’accès. Les attaquants peuvent détecter une violation de l’authentification avec des tests manuels et les exploiter avec des outils automatisés utilisant des listes de mots de passe et des attaques par dictionnaires. | Les attaquants doivent avoir accès à seulement quelques comptes ou à un seul compte admin pour compromettre le système. Selon le domaine de l'application, cela peut permettre le blanchiment d'argent, une fraude à la sécurité sociale et le vol d'identité, ou divulguer des informations hautement sensibles protégées par la loi. |
 
-## Is the Application Vulnerable?
+## Suis-je vulnérable ? 
 
 La confirmation de l'identité, de l'authentification et de la session de l'utilisateur est essentielle pour se protéger des attaques liées à l'authentification. 
 
@@ -22,7 +22,7 @@ Il peut y avoir des faiblesses d'authentification si l'application:
 * Non rotation des IDs de session après connexion réussie
 * N'invalide pas correctement les ID de session. Les sessions utilisateur ou les jetons d'authentification (en particulier les jetons SSO) ne sont pas correctement invalidés lors de la déconnexion ou après une période d'inactivité.
 
-## How To Prevent
+## Comment protéger l'application ? 
 
 * Lorsque cela est possible, implémentez l'authentification multifacteur pour éviter les attaques automatisées, le bourrage des informations d'identification, le brute force et la réutilisation des informations d'identification volées.
 * Ne pas livrer ou déployer avec des informations d'identification par défaut, en particulier pour les utilisateurs avec privilèges.
@@ -33,7 +33,7 @@ NIST 800-63 B à la section 5.1.1 ou autre directives modernes
 * Limiter ou retarder de plus en plus les tentatives de connexions infructueuses. Enregistrer tous les échecs et alerter les administrateurs lors du bourrage des informations d'identification, de brute force ou d'autres attaques détectées.
  * Utilisez un gestionnaire de session intégré et sécurisé côté serveur qui génère un nouvel ID de session aléatoire avec une entropie élevée après la connexion. Les ID de session ne doivent pas se trouver dans l'URL, ils doivent être stockés de manière sécurisée et être invalidés après la déconnexion, inactivité et une certaine durée. 
  
-## Example Attack Scenarios
+## Exemples de scenarios d'attaques
 
 Scenario #1: La réutilisation de mots de passe, l’utilisation de mots de passe connus, est une attaque classique. Si une application n’implémente une protection automatisée contre cela XXXXX oracle????? XXXX ?[Credential stuffing](https://www.owasp.org/index.php/Credential_stuffing), the use of [lists of known passwords](https://github.com/danielmiessler/SecLists), TO REMOVE // is a common attack. If an application does not implement automated threat or credential stuffing protections, the application can be used as a password oracle to determine if the credentials are valid. TO REMOVE
 

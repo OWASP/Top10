@@ -1,4 +1,4 @@
-# A8:2017 Insecure Deserialization
+# A8:2017 Désérialisation non sécurisée
 
 | Agents de menaces/Vecteurs d'attaques | Vulnérabilité | Impacts               |
 | -- | -- | -- |
