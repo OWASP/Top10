@@ -34,6 +34,7 @@ De nombreux problèmes  XXE ont été rendu public, notamment des attaques sur d
 
 **Scenario #1**: L'attaquant tente d'extraire des données du serveur:
 
+
 ```
   <?xml version="1.0" encoding="ISO-8859-1"?>
     <!DOCTYPE foo [
@@ -42,18 +43,22 @@ De nombreux problèmes  XXE ont été rendu public, notamment des attaques sur d
     <foo>&xxe;</foo>
 ```
 
+
 **Scenario #2**: Un attaquant scan le réseau privé du serveur en modifiant la ligne ENTITY ci-dessus en:
+
 ```
    <!ENTITY xxe SYSTEM "https://192.168.1.1/private" >]>
 ```
 
+
 **Scenario #3**: Un attaquant tente une attaque par déni de service en incluant un fichier potentiellement sans fin:
+
 
 ```
    <!ENTITY xxe SYSTEM "file:///dev/random" >]>
 ```
 
-## References
+## Références
 
 ### OWASP
 

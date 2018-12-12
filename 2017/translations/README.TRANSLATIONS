@@ -1,0 +1,28 @@
+Hi, thank you very much for volunteering to translate the Top 10.
+
+Please join us at owasp.slack.com (there’s a 'top 10 translations' channel).
+Please join us also at github.com, and open an issue for your translation if there hasen't been one before. So other volunteers can find you and where you are working on your translation. 
+
+Best is to fork the master repo and then generate a pull request when you’re ready.
+(https://github.com/OWASP/Top10/tree/master/2017/)
+- Fork the OWASP Top 10 into your repo in one of your GitHub accounts (it helps if you can agree if there's only one!). Add all your collaborators to the fork.
+- Create an "<your language, e.g. fr, it, se, tr, zh, de>" folder (this is what the generate_document.sh script expects)
+- Copy all the English markdown from "en" to "<your language>"
+- Copy the Top 10 template in DIN-A4 also from "translations" to "<your language>" and rename it to something like 'OWASP_Top10-2017_(<your language>).pptx' (https://github.com/OWASP/Top10/blob/master/2017/translations/OWASP%20Top%2010-2017_Template_DIN-A4.pptx or use the original file if you need a template in letter size: https://github.com/OWASP/Top10/blob/master/2017/OWASP%20Top%2010-2017%20(en).pptx)
+- We'd suggest to translate the PPTX and the Markdown in the "<your language>" folder step by step simultaneously. It is easier to check in the PPTX if the text fits into the boxes before you make a commit to github. The Markdown gives you the possibility to trace changes and to get feedback from the community.
+- Editing the text in PowerPoint is a good validation step to make sure you fit into a single page. We know English can be a compact language, so we're not precious about precise translations as long as the meaning is preserved and folks can understand what they need to do with your text.
+- Editing the PPTX:
+  ~ Fonts: + We use https://fonts.google.com/specimen/Exo+2 for all headlines (please install this font)
+           + For all standard text we use 'liberation sans' which should be already on your computer, if not you can download it from here: https://pagure.io/liberation-fonts/
+           + On the Table of page 4, we have also used some special characters (e.g. arrows) from 'Windings', 'Open Symbol' should provide about the same (e.g. install LibreOffice to get this font).
+           + We have used thin spaces left of the numbers that represent the risk factors, e.g. Widespread:<thin nonbreaking space>3, Detectability:<thin nonbreaking space>2; <thin nonbreaking space>=<alt>+8239 (https://en.wikipedia.org/wiki/Thin_space)
+- I'd say that it was the best to share the PPTX on onedrive and open the file for the fist time via a browser using directly Powerpoint 2010 or 2016.  The 'save' button will look differently and save the file to upload your content and download the content of the other members of the team. (I'd suggest not to use the OneDrive App, we have had some issues with it). It works best if you work on different pages at the same time. If there are collisions you need to decide who overwrites the content. When you continue working with the PPTX you can open it directly from the (pinned) history of Powerpoint.
+- It works best if you work on different pages at the same time. If there are collisions you need to decide who overwrites the content. (edited)
+- From time to time we have uploaded the PPTX and PDF to github. (Please use Office 2016 to generate the PDF, Office 2010 may generate wrong internal links).
+- When you're ready for us to consume your translation, please create a pull request, and we'll merge your changes. We can do this as many times as you want. Please avoid changing any of the existing files so your merges will be clean and conflict free. You are more than welcome to enable the "<your language>" line in the generate_document.sh script.
+
+Questions and Answers (Q&A):
+Q1: Is it possible to add an additional page to your translation?
+A1: Thank you very much for your translation efforts, your are kindly welcomed to add a page with some words about your translation and an attribution to all translators. We'd kindly request not to use any external logos, please. We have decided to not add any non OWASP logos to the Top 10. This is to emphasize on the openness of the Top 10, the way it has been compiled, and how it has been supported by a huge number of individual and data contributors. Even our sponsor has no logo in the document. I hope this also OK for you.
+
+Please don't hesitate to ask, if you have any further questions.
