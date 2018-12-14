@@ -1,8 +1,8 @@
 # FINAL REVIEW IN PROGRESS
 
-Merci de logguer les problemes ici / Please Log issues here : https://github.com/SPoint42/Top10/projects/1
+**Merci de logguer les problemes ici / Please Log issues here : https://github.com/SPoint42/Top10/projects/1**
 
-Si vous n'avez pas les droits / If you don't have the rights to, please contact @SPoint42
+**Si vous n'avez pas les droits / If you don't have the rights to, please contact @SPoint42**
 
 
 #### Top10
