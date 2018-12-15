@@ -10,8 +10,8 @@
 L'insuffisance de journalisation, de détection, de supervision et de réaction aux incidents est avérée si :
 * Les traces d’audit, telles que les accès réussis ou échoués et les transactions sensibles, ne sont pas enregistrées.
 * Les alertes et les erreurs générées ne sont pas enregistrées, ou leur journalisation est inadéquate, ou imprécise.
-* Les journaux des applications et des APIs ne sont pas contrôlés pour détecter les actions suspectes.
-* Les journaux ne sont stockés que localement.
+* Les journaux des applications et des API ne sont pas contrôlés pour détecter les actions suspectes.
+* Les journaux sont stockés que localement.
 * Aucun processus de seuil d’alerte convenable ni de remontées d'information pour y répondre n'ont été définis, ou ils sont inadéquats, ou inefficaces.
 * Les tests d'intrusion et de balayage avec des outils [DAST](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools) (tels que [OWASP ZAP](https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project)) ne génèrent pas d'alertes.
 * L’application est incapable de détecter, de générer des remontées d'information et des alertes en temps réel, ou assimilé, en cas d’attaque active.
@@ -31,9 +31,11 @@ On trouve des logiciels, commerciaux ou open source, de protection d'application
 
 ## Exemples de Scénarios d'Attaque
 
-**Scénario #1**: : Un forum, pour un projet de développement open source d’une petite équipe, a été piraté à cause d’une faille logicielle. Les attaquants ont effacé le dépôt du code source de la future version et tout le contenu du forum. Bien que le code ait pu être récupéré, le manque de supervision, de journalisation et d’alertes ont conduit à une atteinte bien plus grave. Le résultat étant que le projet a été arrêté.  
-**Scénario #2**: : Un attaquant teste des accès utilisateur avec un mot de passe commun. Il pourra accéder à tous les comptes ayant ce mot de passe. Pour tous les autres utilisateurs, ce test ne laisse qu'une trace de tentative d'accès échoué. Quelques jours après, ce test peut être réalisé avec un autre mot de passe.  
-**Scénario #3**: Un grand distributeur américain a rapporté qu'une sandbox d’analyse de malware de fichiers attachés, aurait détecté un logiciel suspect mais que personne n'a réagi à cette détection. Il y a eu plusieurs alertes avant que la brèche ne soit découverte par une banque externe à cause d'une transaction par carte frauduleuse.
+**Scénario #1** : Un forum, pour un projet de développement open source d’une petite équipe, a été piraté à cause d’une faille logicielle. Les attaquants ont effacé le dépôt du code source de la future version et tout le contenu du forum. Bien que le code ait pu être récupéré, le manque de supervision, de journalisation et d’alertes ont conduit à une atteinte bien plus grave. Le résultat étant que le projet a été arrêté.  
+
+**Scénario #2** : Un attaquant teste des accès utilisateurs avec un mot de passe commun. Il pourra accéder à tous les comptes ayant ce mot de passe. Pour tous les autres utilisateurs, ce test ne laisse qu'une trace de tentative d'accès échoué. Quelques jours après, ce test peut être réalisé avec un autre mot de passe.  
+
+**Scénario #3** : Un grand distributeur américain a rapporté qu'une sandbox d’analyse de malware de fichiers attachés, aurait détecté un logiciel suspect, mais que personne n'a réagi à cette détection. Il y a eu plusieurs alertes avant que la brèche ne soit découverte par une banque externe à cause d'une transaction par carte frauduleuse.
 
 ## Références
 
