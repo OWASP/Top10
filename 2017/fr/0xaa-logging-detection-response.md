@@ -11,7 +11,7 @@ L'insuffisance de journalisation, de détection, de supervision et de réaction 
 * Les traces d’audit, telles que les accès réussis ou échoués et les transactions sensibles, ne sont pas enregistrées.
 * Les alertes et les erreurs générées ne sont pas enregistrées, ou leur journalisation est inadéquate, ou imprécise.
 * Les journaux des applications et des API ne sont pas contrôlés pour détecter les actions suspectes.
-* Les journaux sont stockés que localement.
+* Les journaux ne sont stockés que localement.
 * Aucun processus de seuil d’alerte convenable ni de remontées d'information pour y répondre n'ont été définis, ou ils sont inadéquats, ou inefficaces.
 * Les tests d'intrusion et de balayage avec des outils [DAST](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools) (tels que [OWASP ZAP](https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project)) ne génèrent pas d'alertes.
 * L’application est incapable de détecter, de générer des remontées d'information et des alertes en temps réel, ou assimilé, en cas d’attaque active.
