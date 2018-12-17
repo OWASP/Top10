@@ -1,45 +1,45 @@
-# A3:2017 Sensitive Data Exposure
+# A3:2017 Exposition de données sensibles
 
-| Threat agents/Attack vectors | Security Weakness | Impacts |
+| Facteurs de Menace/Vecteurs d'Attaque | Vulnérabilité | Impacts  |
 | -- | -- | -- |
-| Access Lvl : Exploitability 2 | Prevalence 3 : Detectability 2 | Technical 3 : Business |
-| Rather than directly attacking crypto, attackers steal keys, execute man-in-the-middle attacks, or steal clear text data off the server, while in transit, or from the user’s client, e.g. browser. A manual attack is generally required. Previously retrieved password databases could be brute forced by Graphics Processing Units (GPUs). | Over the last few years, this has been the most common impactful attack. The most common flaw is simply not encrypting sensitive data. When crypto is employed, weak key generation and management, and weak algorithm, protocol and cipher usage is common, particularly for weak password hashing storage techniques. For data in transit, server side weaknesses are mainly easy to detect, but hard for data at rest. | Failure frequently compromises all data that should have been protected. Typically, this information includes sensitive personal information (PII) data such as health records, credentials, personal data, and credit cards, which often require protection as defined by laws or regulations such as the EU GDPR or local privacy laws. |
+| Niveau d'accès : Exploitation 2 | Fréquence 3 : Détection 2 | Technique 3 : Métier |
+| La cryptanalyse (cassage de l’algorithme ou de la clé) reste rare. On préfère obtenir les clefs, effectuer des attaques du type man-in-the-middle, accéder aux données en clair sur le serveur, en transit, ou depuis le client de l'utilisateur, par exemple le navigateur. Une attaque manuelle est requise dans la majorité des cas. Des bases de données de mots de passe précédemment récupérées peuvent étre brute forcées par des processeurs graphiques (GPU). | Au cours des dernières années, cela a été l'attaque impactante la plus courante. La principale erreur est de ne pas chiffrer les données sensibles. Les autres erreurs fréquentes sont: génération de clés faibles, choix et configuration incorrects des algorithmes et protection insuffisante des mots de passe. En ce qui concerne les données en transit, les faiblesses côté serveur sont pour la plupart faciles à détecter. C'est plus difficile pour les données déjà stockées. | L’exploitation peut résulter en la compromission ou la perte de données personnelles, médicales, financières, d’éléments de cartes de crédit ou d’authentification. Ces données nécessitent souvent une protection telle que définie par le Règlement Général sur la Protection des Données ou les lois locales sur la vie privée. |
 
-## Is the Application Vulnerable?
+## Suis-je vulnérable ?
 
-The first thing is to determine the protection needs of data in transit and at rest. For example, passwords, credit card numbers, health records, personal information and business secrets require extra protection, particularly if that data falls under privacy laws, e.g. EU's General Data Protection Regulation (GDPR), or regulations, e.g. financial data protection such as PCI Data Security Standard (PCI DSS). For all such data:
+Déterminer d’abord quelles données doivent bénéficier d’une protection chiffrée (mots de passe, données patient, numéros de cartes, données personnelles, etc.), lors de leur transfert et/ou leur stockage. Pour chacune de ces données :
 
-* Is any data transmitted in clear text? This concerns protocols such as HTTP, SMTP, and FTP. External internet traffic is especially dangerous. Verify all internal traffic e.g. between load balancers, web servers, or back-end systems.
-* Are any old or weak cryptographic algorithms used either by default or in older code? 
-* Are default crypto keys in use, weak crypto keys generated or re-used, or is proper key management or rotation missing?
-* Is encryption not enforced, e.g. are any user agent (browser) security directives or headers missing?
-* Does the user agent (e.g. app, mail client) not verify if the received server certificate is valid?
+* Les données circulent-elles en clair ? Ceci concerne les protocoles tels que HTTP, SMTP, et FTP. Le trafic externe sur inernet est particulièrement dangereux. Vérifiez tout le réseau interne, par exemple entre les équilibreurs de charge, les serveurs Web, ou les systèmes backend.
+* Des algorithmes faibles ou désuets sont-ils utilisés, soit par défaut, soit dans le code source existant ?
+* Est-ce que des clefs de chiffrement par défaut sont utilisées ? Des clefs de chiffrement faibles sont-elles générées ou réutilisées ? Leur gestion et rotation sont-elles prises en charge?
+* Les réponses transmises au navigateur incluent-elles les directives/en-têtes de sécurité adéquats ?
+* Est-ce que l'agent utilisateur (l'application ou le client mail, par exemple) vérifie que le certificat envoyé par le serveur est valide ?
 
-See ASVS [Crypto (V7)](https://www.owasp.org/index.php/ASVS_V7_Cryptography), [Data Protection (V9)](https://www.owasp.org/index.php/ASVS_V9_Data_Protection) and [SSL/TLS (V10)](https://www.owasp.org/index.php/ASVS_V10_Communications).
+Pour une liste complète de contrôles, se référer à l’ASVS : [Crypto (V7)](https://www.owasp.org/index.php/ASVS_V7_Cryptography), [Data Protection (V9)](https://www.owasp.org/index.php/ASVS_V9_Data_Protection) et [SSL/TLS (V10)](https://www.owasp.org/index.php/ASVS_V10_Communications).
 
-## How To Prevent
+## Comment s'en prémunir ?
 
-Do the following, at a minimum, and consult the references:
+On veillera au minimum à suivre les recommandations suivantes, mais il reste nécessaire de consulter les références.
 
-* Classify data processed, stored or transmitted by an application. Identify which data is sensitive according to privacy laws, regulatory requirements, or business needs.
-* Apply controls as per the classification.
-* Don't store sensitive data unnecessarily. Discard it as soon as possible or use PCI DSS compliant tokenization or even truncation. Data that is not retained cannot be stolen.
-* Make sure to encrypt all sensitive data at rest.
-* Ensure up-to-date and strong standard algorithms, protocols, and keys are in place; use proper key management.
-* Encrypt all data in transit with secure protocols such as TLS with perfect forward secrecy (PFS) ciphers, cipher prioritization by the server, and secure parameters. Enforce encryption using directives like HTTP Strict Transport Security (HSTS).
-* Disable caching for response that contain sensitive data.
-* Store passwords using strong adaptive and salted hashing functions with a work factor (delay factor), such as [Argon2](https://www.cryptolux.org/index.php/Argon2), [scrypt](https://wikipedia.org/wiki/Scrypt), [bcrypt](https://wikipedia.org/wiki/Bcrypt) or [PBKDF2](https://wikipedia.org/wiki/PBKDF2).
-* Verify independently the effectiveness of configuration and settings.
+* Classifier les données traitées, stockées ou transmises par l'application. Identifier quelles données sont sensibles selon les lois concernant la protection de la vie privée, les exigances réglementaires, ou les besoins métier.
+* Appliquer des contrôles selon la classification.
+* Ne pas stocker de données sensibles sans que cela ne soit nécessaire. Les rejeter ou utiliser une tokenisation conforme à la norme de sécurité de l’industrie des cartes de paiement (PCI DSS) ou même une troncature. Les données que l’on ne possède pas ne peuvent être volées!
+* S'assurer de chiffrer toutes les données sensibles au repos.
+* Choisir des algorithmes éprouvés et générer des clés robustes. S'assurer qu'une gestion des clés est en place.
+* Chiffrer toutes les données transmises avec des protocoles sécurisés tels que TLS avec des chiffres à confidentialité persistante (perfect forward secrecy - PFS). Chiffrer en priorité sur le serveur. Utiliser des paramètres sécurisés. Forcer le chiffrement en utilisant des directives comme HTTP Strict Transport Security (HSTS).
+* Désactiver le cache pour les réponses contenant des données sensibles.
+* Stocker les mots de passe au moyen de puissantes fonctions de hachage adaptatives, avec sel et facteur de travail (ou facteur de retard), comme [Argon2](https://www.cryptolux.org/index.php/Argon2), [scrypt](https://wikipedia.org/wiki/Scrypt), [bcrypt](https://wikipedia.org/wiki/Bcrypt) ou [PBKDF2](https://wikipedia.org/wiki/PBKDF2).
+* Vérifier indépendamment l'efficacité de la configuration et des paramètres.
 
-## Example Attack Scenarios
+## Exemples de scénarios d'attaque
 
-**Scenario #1**: An application encrypts credit card numbers in a database using automatic database encryption. However, this data is automatically decrypted when retrieved, allowing an SQL injection flaw to retrieve credit card numbers in clear text. 
+**Scenario #1**: Une application chiffre des numéros de cartes de crédit dans une base de données utilisant un chiffrement en base automatique. Cependant, ces données sont automatiquement déchiffrées lorsqu'elles sont récupérées, permettant, à une injection SQL de récupérer des numéros de carte de crédit en clair. 
 
-**Scenario #2**: A site doesn't use or enforce TLS for all pages or supports weak encryption. An attacker monitors network traffic  (e.g. at an insecure wireless network), downgrades connections from HTTPS to HTTP, intercepts requests, and steals the user's session cookie. The attacker then replays this cookie and hijacks the user's (authenticated) session, accessing or modifying the user's private data. Instead of the above they could alter all transported data, e.g. the recipient of a money transfer.
+**Scenario #2**: Un site n'utilise pas ou ne force pas l'utilisation de TLS sur toutes les pages, ou supporte des protocoles de chiffrement faibles. Un attaquant surveille le trafic réseau (par exemple sur un réseau sans fil non sécurisé), dégrade les connexions de HTTPS à HTTP, intercepte les requêtes, et vole le cookie de session d'un utilisateur. L'attaquant réutilise alors ce cookie et détourne la session de l'utilisateur (authentifié), pouvant ainsi accéder aux données privées de l'utilisateur ou les modifier. Un attaquant pourrait également modifier toutes les données en transit, par exemple le destinataire d'un virement d'argent.
 
-**Scenario #3**: The password database uses unsalted or simple hashes to store everyone's passwords. A file upload flaw allows an attacker to retrieve the password database. All the unsalted hashes can be exposed with a rainbow table of pre-calculated hashes. Hashes generated by simple or fast hash functions may be cracked by GPUs, even if they were salted.
+  **Scenario #3**: La base de données contenant les mots de passe n'utilise pas de sel, ou alors de simples hashs pour stocker les mots de passe de chacun. Une faille d'upload de fichier permet à un attaquant de récupérer la base de données de mots de passe. Tous les hashs non salés peuvent alors être révélés avec une rainbow table de hashs pré-calculés. Des hashs générés par des fonctions de hachage simples ou rapides peuvent être décrytés par des GPUs, même salés.
 
-## References
+## Références
 
 * [OWASP Proactive Controls: Protect Data](https://www.owasp.org/index.php/OWASP_Proactive_Controls#7:_Protect_Data)
 * [OWASP Application Security Verification Standard]((https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project)): [V7](https://www.owasp.org/index.php/ASVS_V7_Cryptography), [9](https://www.owasp.org/index.php/ASVS_V9_Data_Protection), [10](https://www.owasp.org/index.php/ASVS_V10_Communications)
@@ -49,7 +49,7 @@ Do the following, at a minimum, and consult the references:
 * [OWASP Security Headers Project](https://www.owasp.org/index.php/OWASP_Secure_Headers_Project); [Cheat Sheet: HSTS](https://www.owasp.org/index.php/HTTP_Strict_Transport_Security_Cheat_Sheet)
 * [OWASP Testing Guide: Testing for weak cryptography](https://www.owasp.org/index.php/Testing_for_weak_Cryptography)
 
-### External
+### Externes
 
 * [CWE-220: Exposure of sens. information through data queries](https://cwe.mitre.org/data/definitions/220.html)
 * [CWE-310: Cryptographic Issues](https://cwe.mitre.org/data/definitions/310.html); [CWE-311: Missing Encryption](https://cwe.mitre.org/data/definitions/311.html)
