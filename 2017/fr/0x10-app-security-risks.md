@@ -17,13 +17,13 @@ Le [Top 10 de l'OWASP](https://www.owasp.org/index.php/Top10) se concentre sur l
 | --- | --- | --- | --- | --- | --- |
 | Appli-   | Facile 3 | Répandu 3 | Facile 3 | Sévère 3 | Commercial     |
 | cation   | Moyen 2 | Commun 2 | Moyen 2 | Modéré 2 | Specifique |
-| Specifique | Difficile 1 | Uncommon 1 | Difficile 1 | Mineur 1 |       |
+| Specifique | Difficile 1 | Rare 1 | Difficile 1 | Mineur 1 |       |
 
 Dans la présente édition, nous avons mis à jour le système d'évaluation des risques pour faciliter le calcul de la probabilité et de l'incidence d'un risque donné. Pour plus de détails, voir la [Note sur les risques](0xc0-note-about-risks.md). 
 
 Chaque organisation est unique, de même que les acteurs de la menace pour cette organisation, leurs objectifs et l'impact de toute violation. Si une organisation d'intérêt public utilise un système de gestion de contenu (SGC) pour l'information publique et qu'un système de santé utilise le même SGC pour les dossiers de santé sensibles, les acteurs de la menace et les impacts commerciaux peuvent être très différents pour le même logiciel. Il est essentiel de comprendre le risque pour votre organisation en fonction des agents de menace et des répercussions commerciales applicables.
 
-Dans la mesure du possible, les noms des risques figurant dans le Top 10 sont alignés sur les faiblesses[Common Weakness Enumeration](https://cwe.mitre.org/) (CWE) afin de promouvoir des conventions d'appellation généralement acceptées et de réduire la confusion.
+Dans la mesure du possible, les noms des risques figurant dans le Top 10 sont alignés sur les faiblesses [Common Weakness Enumeration](https://cwe.mitre.org/) (CWE) afin de promouvoir des conventions d'appellation généralement acceptées et de réduire la confusion.
 
 ## Références
 

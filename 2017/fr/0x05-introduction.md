@@ -26,7 +26,7 @@ Nous tenons à remercier toutes les organisations qui ont transmis leurs donnée
 
 La liste des contributeurs excédant largement la place disponible ici, nous avons ajouté une page dédiée à la reconnaissance de ces contributions. Nous souhaitons remercier du fond du coeur tous ces organismes pour avoir tenu à être sur la ligne de front en partageant publiquement leurs données de vulnérabilités. Nous espérons voir leur nombre croître et encourageons d'autres entreprises à procéder de même sur ce qui est sans doute un élément clé de la sécurité fondée sur les faits. Le Top 10 OWASP ne pourrait exister sans ces fantastiques contributions. 
 
-Un grand merci aux individus (plus de 500 !) qui ont pris le temps de répondre à l'étude industrielle. Votre voix a aidé à retenir deux nouveaux ajouts au Top 10. Les commentaires, messagez d'encouragements et critiques ont tous été appréciés. Nous savons que votre temps est précieux et tenons à vous dire merci.
+Un grand merci aux individus (plus de 500 !) qui ont pris le temps de répondre à l'étude industrielle. Votre voix a aidé à retenir deux nouveaux ajouts au Top 10. Les commentaires, messages d'encouragements et critiques ont tous été appréciés. Nous savons que votre temps est précieux et tenons à vous dire merci.
 
 Nous aimerions également remercier ceux qui ont contribués par des commentaires constructifs et ont consacrés du temps à relire cette mise à jour du Top 10. Nous les avons autant que possible cités sur la page de Remerciements.
 
