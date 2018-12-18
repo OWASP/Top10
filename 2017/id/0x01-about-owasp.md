@@ -18,7 +18,7 @@ Di OWASP anda akan menemukan free and open
 
 Dan Masih banyak lagi di: [https://www.owasp.org](https://www.owasp.org).
 
-Seluruh tool , dokumen, forum, dan cabang OWASP bebas dan terbuka bagi semua orang yang tertarik memperbaiki keamanan aplikasi. Kami mendukung pendekatan keamanan aplikasi sebagai masalah person, proses, dan teknologi karena pendekatan paling efektif ke keamanan aplikasi membutuhkan perbaikan di seluruh area ini.
+Seluruh tool , dokumen, forum, dan cabang OWASP free dan open bagi semua orang yang tertarik memperbaiki keamanan aplikasi. Kami mendukung pendekatan keamanan aplikasi sebagai masalah person, proses, dan teknologi karena pendekatan paling efektif ke keamanan aplikasi membutuhkan perbaikan di seluruh area ini.
 
 Kami menganjurkan mendekati keamanan aplikasi sebagai masalah orang, proses, dan teknologi, karena pendekatan yang paling efektif untuk keamanan aplikasi memerlukan perbaikan di bidang ini.
 
@@ -26,7 +26,7 @@ OWASP adalah jenis organisasi baru. Kebebasan kami dari tekanan komersial memung
 
 OWASP tidak berafiliasi dengan perusahaan teknologi mana pun, meskipun kami mendukung penggunaan teknologi keamanan komersial yang diinformasikan. OWASP memproduksi berbagai jenis bahan secara kolaboratif, transparan, dan terbuka.
 
-Yayasan OWASP adalah entitas nirlaba yang memastikan kesuksesan jangka panjang proyek. Hampir semua orang yang terkait dengan OWASP adalah relawan, termasuk dewan OWASP, pemimpin bab, pemimpin proyek, dan anggota proyek. Kami mendukung penelitian keamanan yang inovatif dengan hibah dan infrastruktur.
+Yayasan OWASP adalah entitas nonprofit yang memastikan kesuksesan jangka panjang proyek. Hampir semua orang yang terkait dengan OWASP adalah relawan, termasuk OWASP Board, OWASP Chapter Leader, Project Leader, dan Project Member. Kami mendukung penelitian keamanan yang inovatif dengan hibah dan infrastruktur.
 
 Ayo bergabung dengan kami!
 
