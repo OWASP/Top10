@@ -2,9 +2,10 @@
 
 Software yang tidak aman telah mengancam infrastruktur keuangan, kesehatan, pertahanan, energi, dan infrastruktur kritikal lainnya. Dengan semakin kompleks dan terhubungnya infrastruktur digital kita, kesulitan mencapai keamanan aplikasi meningkat secara eksponensial. Kita tidak dapat lagi mentoleransi masalah keamanan sederhana seperti yang ditampilkan dalam OWASP Top 10.
 
-A great deal of feedback was received during the creation of the OWASP Top 10 - 2017, more than for any other equivalent OWASP effort. This shows how much passion the community has for the OWASP Top 10, and thus how critical it is for OWASP to get the Top 10 right for the majority of use cases.
 
-Although the original goal of the OWASP Top 10 project was simply to raise awareness amongst developers and managers, it has become the de facto application security standard. 
+Banyak feedback yang diterima selama pembuatan OWASP Top 10 - 2017, lebih dari usaha OWASP Projek lainnya. Hal ini menunjukkan seberapa besar minat yang dimiliki komunitas untuk OWASP Top 10, dan dengan demikian betapa pentingnya bagi OWASP untuk mendapatkan Top 10 untuk Mayoritas kasus penggunaan web paling kritis .
+
+Meskipun tujuan awal dari proyek 10 Besar OWASP hanya untuk meningkatkan kesadaran di antara pengembang dan manajer, itu telah menjadi standar keamanan aplikasi secara de facto.
 
 In this release, issues and recommendations are written concisely and in a testable way to assist with the adoption of the OWASP Top 10 in application security programs. We encourage large and high performing organizations to use the [OWASP Application Security Verification Standard (ASVS)](https://www.owasp.org/index.php/ASVS) if a true standard is required, but for most, the OWASP Top 10 is a great start on the application security journey.
 
