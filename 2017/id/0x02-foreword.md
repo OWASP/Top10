@@ -21,6 +21,7 @@ Software Assurance Maturity Model / OWASP SAMM.
 Kami berharap bahwa OWASP Top 10 bermanfaat dalam upaya peningkatan keamanan aplikasi Anda. Jangan ragu untuk menghubungi OWASP dengan pertanyaan, komentar, dan ide Anda di repositori proyek GitHub kami:
 
 * [https://github.com/OWASP/Top10/issues](https://github.com/OWASP/Top10/issues)
+
 Anda bisa mendapatkan Proyek OWASP Top 10  dan Terjemahannya di sini :
 
 * [https://www.owasp.org/index.php/top10](https://www.owasp.org/index.php/top10)
