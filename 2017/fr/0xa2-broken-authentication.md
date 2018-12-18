@@ -3,7 +3,7 @@
 | Facteurs de Menace/Vecteurs d'Attaque | Vulnérabilité    | Impacts  |
 | -- | -- | -- |
 | Accès  Lvl : Exploitabilité 3 | Fréquence 2 : Détection 2 | Technique 3 : Métier |
-| Les attaquants ont des accès à des centaines de millions de combinaisons de logins et mot de passe, des comptes par défaut d’administration, d’outils de brute force automatisés. Les attaques de gestion de session sont bien connues, en particulier en ce qui concerne les jetons de sessions non expirés. |
+| Les attaquants ont des accès à des centaines de millions de combinaisons de logins et mots de passe, des comptes par défaut d’administration, d’outils de force brute automatisés. Les attaques de gestion de session sont bien connues, en particulier en ce qui concerne les jetons de sessions non expirés. |
 Le prévalence de la violation de l’authentification est généralement liée à une erreur de conception ou de mise en œuvre dans la plupart des contrôles d’identités et d’accès. La gestion des sessions est la base  de l’authentification et du contrôle d’accès. Les attaquants peuvent détecter une violation de l’authentification avec des tests manuels et les exploiter avec des outils automatisés utilisant des listes de mots de passe et des attaques par dictionnaires. | Les attaquants doivent avoir accès à seulement quelques comptes ou à un seul compte admin pour compromettre le système. Selon le domaine de l'application, cela peut permettre le blanchiment d'argent, une fraude à la sécurité sociale et le vol d'identité, ou divulguer des informations hautement sensibles protégées par la loi. |
 
 ## Suis-je vulnérable ? 
@@ -13,7 +13,7 @@ La confirmation de l'identité, de l'authentification et de la session de l'util
 Il peut y avoir des faiblesses d'authentification si l'application :
 
 * Autorise les attaques automatisées telles que le [credential stuffing](https://www.owasp.org/index.php/Credential_stuffing), où l'attaquant dispose d'une liste de noms d'utilisateurs valides et mots de passe.
-* Permet le force brute ou d'autres attaques automatisées
+* Permet la force brute ou d'autres attaques automatisées
 * Autorise les mots de passe par défaut, faibles ou bien connus, tels que "Password1" ou "admin / admin".
 * Utilise des processus de récupération des informations d'identification faibles ou inefficaces et des processus de mot de passe oublié, tels que « "Questions secrètes" », qui ne peuvent être sécurisées.
 * Utilise des mots de passe en texte brut, chiffrés ou faiblement hachés (voir A3 : Exposition de données sensibles 2017).
