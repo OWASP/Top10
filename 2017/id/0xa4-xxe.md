@@ -1,11 +1,11 @@
 # A4:2017 XML External Entities (XXE)
 
-| Threat agents/Attack vectors | Security Weakness           | Impacts               |
+| Agen ancaman / vektor serangan | Kelemahan Keamanan          | Dampak            |
 | -- | -- | -- |
-| Access Lvl : Exploitability 2 | Prevalence 2 : Detectability 3 | Technical 3 : Business |
+| Access Lvl : Eksploitasi 2 | Prevalensi 3: Deteksi 2 | Teknis 3: Bisnis |
 | Attackers can exploit vulnerable XML processors if they can upload XML or include hostile content in an XML document, exploiting vulnerable code, dependencies or integrations. | By default, many older XML processors allow specification of an external entity, a URI that is dereferenced and evaluated during XML processing. [SAST](https://www.owasp.org/index.php/Source_Code_Analysis_Tools) tools can discover this issue by inspecting dependencies and configuration. [DAST](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools) tools require additional manual steps to detect and exploit this issue. Manual testers need to be trained in how to test for XXE, as it not commonly tested as of 2017. | These flaws can be used to extract data, execute a remote request from the server, scan internal systems, perform a denial-of-service attack, as well as execute other attacks. |
 
-## Is the Application Vulnerable?
+## Apakah Aplikasi itu Rentan?
 
 Applications and in particular XML-based web services or downstream integrations might be vulnerable to attack if:
 
