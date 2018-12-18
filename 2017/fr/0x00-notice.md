@@ -4,7 +4,7 @@
 
 ### Appels à commentaires
 
-Ceci est la version texte du OWASP Top10, et  bien qu'il soit utile aux traducteurs et ceux interessés par la version texte, il ne constitue pas la version officielle finale qui la version PowerPoint/PDF.
+Ceci est la version texte du OWASP Top10, et  bien qu'il soit utile aux traducteurs et ceux interessés par la version texte, il ne constitue pas la version officielle finale qui est la version PowerPoint/PDF.
 
 
 A ce stage nous demandons donc : 
