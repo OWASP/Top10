@@ -2,7 +2,7 @@
 
 ## Lancez dès maintenant un programme de sécurisation des applications
 
-La sécurité des applications n'est plus une option. Entre le nombre croissant des agressions et la pression des autorités de régulation, les entreprises du web doivent se donner les moyens de sécuriser leurs applications et APIs. Etant donné le nombre écrasant de lignes de code des applications et APIs existantes, constituant autant de risques de vulnérabilité, beaucoup d‘entreprises luttent déjà pour en reprendre le contrôle. 
+La sécurité des applications n'est plus une option. Entre le nombre croissant des agressions et la pression des autorités de régulation, les entreprises du web doivent se donner les moyens de sécuriser leurs applications et API. Etant donné le nombre écrasant de lignes de code des applications et API existantes, constituant autant de risques de vulnérabilité, beaucoup d‘entreprises luttent déjà pour en reprendre le contrôle. 
 
 L'OWASP leur recommande de mettre en place un plan global qui profite à l'ensemble de leurs services. Mais pour mener à bien cette sécurisation des applications, il faut une synergie de tous les composants de l‘entreprise : la sécurité, la qualité, les développeurs, les commerciaux et la direction. La sécurité doit être mise en avant, de telle sorte que tous les acteurs puissent la retrouver dans leurs directives de travail et l'appliquer. Il faut aussi mettre l'accent sur les méthodes qui vont effectivement améliorer la sécurité en diminuant ou éliminant les risques. Les éléments clefs de la sécurisation des applications sont le projet OWASP [SAMM](https://www.owasp.org/index.php/OWASP_SAMM_Project) et le guide OWASP [Application Security Guide for CISOs](https://www.owasp.org/index.php/Application_Security_Guide_For_CISOs)
 
@@ -17,7 +17,7 @@ L'OWASP leur recommande de mettre en place un plan global qui profite à l'ensem
 
 * Identifiez les [besoins de protection](https://www.owasp.org/index.php/SAMM_-_Strategy_&_Metrics_-_2) de votre [portefeuille d'applications](https://www.owasp.org/index.php/SAMM_-_Strategy_&_Metrics_-_2) selon un point de vue métier. Vous devez raisonner en tenant compte tant de la législation sur la protection des données personnelles que des autres textes applicables aux données à protéger.
 * Créez un [modèle de profil de risque applicatif](https://www.owasp.org/index.php/OWASP_Risk_Rating_Methodology) à partir d'un ensemble cohérent de facteurs d'impacts et de probabilités correspondant au degré de tolérance de l'entreprise en matière de risques.
-* Mesurez et prioritisez toutes vos applications et sAPI et ajoutez-les à votre CMDB.
+* Mesurez et prioritisez toutes vos applications et API et ajoutez-les à votre CMDB.
 * Établissez des directives d'assurance pour définir correctement la couverture et le niveau de rigueur requis.
 
 ### Partez sur des bases solides
