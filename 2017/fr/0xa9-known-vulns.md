@@ -1,56 +1,57 @@
-# A9:2017 Using Components with Known Vulnerabilities
+# A9:2017 Utilisation de Composants avec des Vulnérabilités Connues
 
-| Threat agents/Attack vectors | Security Weakness           | Impacts               |
+| Facteurs de Menace/Vecteurs d'Attaque | Vulnérabilités           | Impacts               |
 | -- | -- | -- |
-| Access Lvl : Exploitability 2 | Prevalence 3 : Detectability 2 | Technical 2 : Business |
-| While it is easy to find already-written exploits for many known vulnerabilities, other vulnerabilities require concentrated effort to develop a custom exploit. | Prevalence of this issue is very widespread. Component-heavy development patterns can lead to development teams not even understanding which components they use in their application or API, much less keeping them up to date. Some scanners such as retire.js help in detection, but determining exploitability requires additional effort. | While some known vulnerabilities lead to only minor impacts, some of the largest breaches to date have relied on exploiting known vulnerabilities in components. Depending on the assets you are protecting, perhaps this risk should be at the top of the list. |
+| Accès Lvl : Exploitation 2 | Fréquence 3 : Détection 2 | Techniques 2 : Métier  |
+| Bien qu'il soit facile de trouver des exploits prêts à l'emploi pour de multiples vulnérabilités, d'autres vulnérabilités demandent un effort soutenu pour développer un exploit adapté. | La fréquence de ce problème est très élevée. Les modèles de développement à composants multiples peuvent conduire à ce que des équipes de développement ne sachent même pas quels composants ils utilisent dans leur application ou API, et soient donc encore moins susceptibles de les maintenir à jour. Des scanners comme retire.js aident à la détection, mais l'exploitation demande un effort supplémentaire. | Alors que quelques vulnérabilités connues ont seulement des impacts mineurs, certaines des violations les plus importantes jusqu'à aujourd'hui reposent sur l'exploitation de vulnérabilités connues dans des composants. Suivant les actifs que vous avez à protéger, ce risque pourra être l'un de vos risques majeurs. |
 
-## Is the Application Vulnerable?
+## Suis-je Vulnérable ?
 
-You are likely vulnerable:
+Vous êtes probablement vulnérable :
 
-* If you do not know the versions of all components you use (both client-side and server-side). This includes components you directly use as well as nested dependencies.
-* If software is vulnerable, unsupported, or out of date. This includes the OS, web/application server, database management system (DBMS), applications, APIs and all components, runtime environments, and libraries.
-* If you do not scan for vulnerabilities regularly and subscribe to security bulletins related to the components you use.
-* If you do not fix or upgrade the underlying platform, frameworks, and dependencies in a risk-based, timely fashion. This commonly happens in environments when patching is a monthly or quarterly task under change control, which leaves organizations open to many days or months of unnecessary exposure to fixed vulnerabilities.
-* If software developers do not test the compatibility of updated, upgraded, or patched libraries.
-* If you do not secure the components' configurations (see **A6:2017-Security Misconfiguration**).
+* Si vous ne savez pas quels sont tous les composants que vous utilisez (à la fois côté client et côté serveur). Cela comprend les composants que vous utilisez directement ou par l'intermédiaire des dépendances imbriquées.
+* Si le logiciel est vulnérable, sans support, ou obsolète. Cela concerne le système d'exploitation, le serveur web/application, le système de gestion de base de données (SGBD), les applications, API et autres composants, les environments d'exécution, et les bibliothèques.
+* Si vous ne faites pas de recherche régulières de vulnérabilités et de souscription aux bulletins de sécurité des composants que vous utilisez.
+* Si vous ne corrigez pas ni mettez à jour vos plateformes sous-jacentes, vos frameworks, et leurs dépendances sur la base d'une analyse de risque, dans un délai convenable. Cela apparaît fréquemment dans les environnements où les mises à jour sont faites sur une base mensuelle ou trimestrielle au rythme des évolutions logicielles, ce qui laisse les organisations exposées inutilement, des jours et des mois, à des failles avant de corriger les vulnérabilités.
+* Si les développeurs de logiciels ne testent pas la compatibilité des évolutions, des mises à jour et des correctifs des bibliothèques.
+* Si vous ne sécurisez pas les configurations des composants (voir **A6:2017-Mauvaise Configuration de Sécurité**).
 
-## How To Prevent
+## Comment s'en Prémunir ?
 
-There should be a patch management process in place to:
+Vous devez mettre en place une gestion des mises à jour pour :
 
-* Remove unused dependencies, unnecessary features, components, files, and documentation.
-* Continuously inventory the versions of both client-side and server-side components (e.g. frameworks, libraries) and their dependencies using tools like versions, DependencyCheck, retire.js, etc. 
-* Continuously monitor sources like CVE and NVD for vulnerabilities in the components. Use software composition analysis tools to automate the process. Subscribe to email alerts for security vulnerabilities related to components you use.
-* Only obtain components from official sources over secure links. Prefer signed packages to reduce the chance of including a modified, malicious component.
-* Monitor for libraries and components that are unmaintained or do not create security patches for older versions. If patching is not possible, consider deploying a virtual patch to monitor, detect, or protect against the discovered issue.
+* Supprimer les dépendances inutiles et les fonctionnalités, composants, fichiers et documentation non nécessaires.
+* Faire un inventaire en continu des versions de composants à la fois client et serveur (ex : frameworks, bibliothèques) et de leurs dépendances avec des outils tels que versions, DependencyCheck, retire.js, etc. 
+* Surveiller en permanence les sources comme CVE et NVD pour suivre les vulnérabilités des composants. Utiliser des outils d'analyse de composants logiciels pour automatiser le processus. Souscrire aux alertes par courriel concernant les vulnérabilités sur les composants que vous utilisez.
+* Ne récupérer des composants qu'auprès de sources officielles via des liens sécurisés. Préférer des paquets signés pour minimiser les risques d'insertion de composants modifiés malicieux.
+* Surveiller les bibliothèques et les composants qui ne sont plus maintenus ou pour lesquels il n'y a plus de correctifs de sécurité. Si les mises à jour ne sont pas possibles, penser à déployer des mises à jour virtuelles pour surveiller, détecter et se protéger d'éventuelles découvertes de failles.
 
-Every organization must ensure that there is an ongoing plan for monitoring, triaging, and applying updates or configuration changes for the lifetime of the application or portfolio.
+Chaque organisation doit s'assurer d'avoir un projet continu de surveillance, de tri, d'application des mises à jour et de modification de configuration pour la durée de vie d'une application ou de sa gamme.
 
-## Example Attack Scenarios
+## Exemple de Scénario d'Attaque
 
-**Scenario #1**: Components typically run with the same privileges as the application itself, so flaws in any component can result in serious impact. Such flaws can be accidental (e.g. coding error) or intentional (e.g. backdoor in component). Some example exploitable component vulnerabilities discovered are:
+**Scénario #1** : Les composants s'exécutent généralement avec le même niveau de privilèges que l'application, et donc les failles d'un quelconque composant peuvent aboutir à un impact sévère. Les failles peuvent être accidentelles (ex : erreur de codage) ou intentionnelles (ex : porte dérobée dans un composant). 
+Voici quelques exemples de découvertes de vulnérabilités exploitables de composants :
 
-* [CVE-2017-5638](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5638), a Struts 2 remote code execution vulnerability that enables execution of arbitrary code on the server, has been blamed for significant breaches.
-* While [internet of things (IoT)](https://en.wikipedia.org/wiki/Internet_of_things) are frequently difficult or impossible to patch, the importance of patching them can be great (e.g. biomedical devices).
+* [CVE-2017-5638](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5638), une vulnérabilité d'exécution à distance de Struts 2, qui permet l'éxecution de code arbitraire sur le serveur, a été responsable d'importantes violations.
+* Bien que [l'internet des objets (IoT)](https://en.wikipedia.org/wiki/Internet_of_things) soit souvent difficile voire impossible à mettre à jour, l'importance de ces mises à jour peut être énorme (ex : objets biomédicaux).
 
-There are automated tools to help attackers find unpatched or misconfigured systems. For example, the [Shodan IoT search engine](https://www.shodan.io/report/89bnfUyJ) can help you find devices that still suffer from [Heartbleed](https://en.wikipedia.org/wiki/Heartbleed) vulnerability that was patched in April 2014.
+Il existe des outils automatiques qui aident les attaquants à trouver des systèmes malconfigurés ou non mis à jour. Par exemple, le [moteur de recherche IoT de Shodan](https://www.shodan.io/report/89bnfUyJ) peut vous aider à trouver des objets qui sont encore vulnérables à la faille [Heartbleed](https://en.wikipedia.org/wiki/Heartbleed) corrigée en Avril 2014.
 
-## References
+## Références
 
 ### OWASP
 
-* [OWASP Application Security Verification Standard: V1 Architecture, design and threat modelling](https://www.owasp.org/index.php/ASVS_V1_Architecture)
-* [OWASP Dependency Check (for Java and .NET libraries)](https://www.owasp.org/index.php/OWASP_Dependency_Check)
-* [OWASP Testing Guide - Map Application Architecture (OTG-INFO-010)](https://www.owasp.org/index.php/Map_Application_Architecture_(OTG-INFO-010))
-* [OWASP Virtual Patching Best Practices](https://www.owasp.org/index.php/Virtual_Patching_Best_Practices)
+* [OWASP Standard de Vérification de Sécurité Applicative: V1 Architecture, conception et modélisation des menaces](https://www.owasp.org/index.php/ASVS_V1_Architecture)
+* [OWASP Contrôle des Dépendences (pour les bibliothèques Java et .NET)](https://www.owasp.org/index.php/OWASP_Dependency_Check)
+* [OWASP Guide de Test - Map Application Architecture (OTG-INFO-010)](https://www.owasp.org/index.php/Map_Application_Architecture_(OTG-INFO-010))
+* [OWASP Meilleures pratiques de Mises à Jour Virtuelles](https://www.owasp.org/index.php/Virtual_Patching_Best_Practices)
 
-### External
+### Externes
 
-* [The Unfortunate Reality of Insecure Libraries](https://www.aspectsecurity.com/research-presentations/the-unfortunate-reality-of-insecure-libraries)
-* [MITRE Common Vulnerabilities and Exposures (CVE) search](https://www.cvedetails.com/version-search.php)
-* [National Vulnerability Database (NVD)](https://nvd.nist.gov/)
-* [Retire.js for detecting known vulnerable JavaScript libraries](https://github.com/retirejs/retire.js/)
-* [Node Libraries Security Advisories](https://nodesecurity.io/advisories)
-* [Ruby Libraries Security Advisory Database and Tools](https://rubysec.com/)
+* [La regrettable réalité des bibliothèques non sécurisées](https://www.aspectsecurity.com/research-presentations/the-unfortunate-reality-of-insecure-libraries)
+* [L'organisation MITRE maintient le dictionnaire de recherche des Common Vulnerabilities and Exposures (CVE)](https://www.cvedetails.com/version-search.php)
+* [Base de Données Nationale de Vulnérabilité (NVD)](https://nvd.nist.gov/)
+* [Retire.js pour la détection de vulnérabilités connues des bibliothèques JavaScript](https://github.com/retirejs/retire.js/)
+* [Bibliothèques des alertes de Sécurité Node.js](https://nodesecurity.io/advisories)
+* [Base de Données des alertes de Sécurité des bibliothèques Ruby et Outils](https://rubysec.com/)

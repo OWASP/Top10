@@ -1,59 +1,62 @@
-# A3:2017 Sensitive Data Exposure
+# A3:2017 Разглашение конфиденциальных данных
 
-| Threat agents/Attack vectors | Security Weakness | Impacts |
+| Источники угроз/Векторы атак | Недостатки безопасности | Последствия |
 | -- | -- | -- |
-| Access Lvl : Exploitability 2 | Prevalence 3 : Detectability 2 | Technical 3 : Business |
-| Rather than directly attacking crypto, attackers steal keys, execute man-in-the-middle attacks, or steal clear text data off the server, while in transit, or from the user’s client, e.g. browser. A manual attack is generally required. Previously retrieved password databases could be brute forced by Graphics Processing Units (GPUs). | Over the last few years, this has been the most common impactful attack. The most common flaw is simply not encrypting sensitive data. When crypto is employed, weak key generation and management, and weak algorithm, protocol and cipher usage is common, particularly for weak password hashing storage techniques. For data in transit, server side weaknesses are mainly easy to detect, but hard for data at rest. | Failure frequently compromises all data that should have been protected. Typically, this information includes sensitive personal information (PII) data such as health records, credentials, personal data, and credit cards, which often require protection as defined by laws or regulations such as the EU GDPR or local privacy laws. |
+| Зависит от прил. : Сложность эксплуатации 2 | Распространенность 3 : Сложность обнаружения 2 | Технические 3 : Для бизнеса ? |
+| Вместо взлома механизмов шифрования злоумышленники крадут ключи, проводят атаки по принципу "человек посередине" или получают данные в незашифрованном виде с сервера, в процессе их передачи или из клиента пользователя, например, браузера. Подобные атаки обычно проводятся вручную. Ранее полученные базы данных паролей могут быть взломаны методом подбора с использованием графических процессоров. | На протяжении последних лет данная атака является самой распространенной и опасной. Чаще всего встречается отсутствие шифрования конфиденциальных данных; а при наличии шифрования часто используются ненадежные алгоритмы, протоколы, криптопакеты, методы хранения хешированных паролей или методы создания и управления ключами. Также легко обнаружить уязвимости на стороне сервера для передаваемых данных, но не хранимых. | Из-за уязвимости часто страдают все персональные данные (медицинские записи, учетные данные, данные кредитных карт), которые должны быть защищены по закону, например, в соответствии с Общим регламентом ЕС по защите данных (GDPR) или локальными законами о неприкосновенности данных. |
 
-## Is the Application Vulnerable?
+## Является ли приложение уязвимым?
 
-The first thing is to determine the protection needs of data in transit and at rest. For example, passwords, credit card numbers, health records, personal information and business secrets require extra protection, particularly if that data falls under privacy laws, e.g. EU's General Data Protection Regulation (GDPR), or regulations, e.g. financial data protection such as PCI Data Security Standard (PCI DSS). For all such data:
+Прежде всего необходимо определить требуемый уровень защиты данных при их передаче и хранении. Например, пароли, номера кредитных карт, медицинские записи, персональные данные и коммерческие тайны требуют дополнительной защиты, особенно если они подпадают под действие закона о неприкосновенности данных (напр., Общего регламента ЕС по защите данных) или закона о защите финансовых данных (напр., Стандарта безопасности данных в сфере платежных карт).
 
-* Is any data transmitted in clear text? This concerns protocols such as HTTP, SMTP, and FTP. External internet traffic is especially dangerous. Verify all internal traffic e.g. between load balancers, web servers, or back-end systems.
-* Are any old or weak cryptographic algorithms used either by default or in older code? 
-* Are default crypto keys in use, weak crypto keys generated or re-used, or is proper key management or rotation missing?
-* Is encryption not enforced, e.g. are any user agent (browser) security directives or headers missing?
-* Does the user agent (e.g. app, mail client) not verify if the received server certificate is valid?
+* Шифруются ли передаваемые данные? Это касается протоколов передачи данных, таких как HTTP, SMTP и FTP. Особенно опасен внешний интернет-трафик. Проверьте весь внутренний трафик, например, между балансировщиками нагрузки, веб-серверами и внутренними системами.
+* Шифруются ли хранилища критичных данных, а также резервные копии?
+* Используются ли по умолчанию или в более ранних версиях устаревшие или ненадежные алгоритмы шифрования? 
+* Используются ли созданные по умолчанию, ненадежные или одинаковые шифроключи, а также применяются ли соответствующие механизмы контроля и смены ключей?
+* Используется ли шифрование, например, присутствуют ли директивы безопасности пользовательских агентов (браузеров) и заголовки?
+* Проверяет ли пользовательский агент (напр., приложение или почтовый клиент) действительность полученных сертификатов?
 
-See ASVS [Crypto (V7)](https://www.owasp.org/index.php/ASVS_V7_Cryptography), [Data Protection (V9)](https://www.owasp.org/index.php/ASVS_V9_Data_Protection) and [SSL/TLS (V10)](https://www.owasp.org/index.php/ASVS_V10_Communications).
+См. Стандарт подтверждения безопасности приложений: [Криптография (V7)](https://www.owasp.org/index.php/ASVS_V7_Cryptography), [Защита данных (V9)](https://www.owasp.org/index.php/ASVS_V9_Data_Protection) и [SSL/TLS (V10)](https://www.owasp.org/index.php/ASVS_V10_Communications).
 
-## How To Prevent
+## Как предотвратить?
 
-Do the following, at a minimum, and consult the references:
+Выполните, как минимум, следующее, а также ознакомьтесь с материалами в разделе "Ссылки":
 
-* Classify data processed, stored or transmitted by an application. Identify which data is sensitive according to privacy laws, regulatory requirements, or business needs.
-* Apply controls as per the classification.
-* Don't store sensitive data unnecessarily. Discard it as soon as possible or use PCI DSS compliant tokenization or even truncation. Data that is not retained cannot be stolen.
-* Make sure to encrypt all sensitive data at rest.
-* Ensure up-to-date and strong standard algorithms, protocols, and keys are in place; use proper key management.
-* Encrypt all data in transit with secure protocols such as TLS with perfect forward secrecy (PFS) ciphers, cipher prioritization by the server, and secure parameters. Enforce encryption using directives like HTTP Strict Transport Security (HSTS).
-* Disable caching for response that contain sensitive data.
-* Store passwords using strong adaptive and salted hashing functions with a work factor (delay factor), such as [Argon2](https://www.cryptolux.org/index.php/Argon2), [scrypt](https://wikipedia.org/wiki/Scrypt), [bcrypt](https://wikipedia.org/wiki/Bcrypt) or [PBKDF2](https://wikipedia.org/wiki/PBKDF2).
-* Verify independently the effectiveness of configuration and settings.
+* Классифицируйте данные, обрабатываемые, хранимые или передаваемые приложением. Определите какие из них являются конфиденциальными согласно законам о неприкосновенности данных, нормативам или бизнес-требованиям.
+* Реализуйте требования согласно классификации.
+* Не храните конфиденциальные данные без необходимости. Сразу удаляйте их или используйте токенизацию или усечение, соответствующие стандарту PCI DSS. Данные, которые не сохраняются, нельзя украсть.
+* Обеспечьте шифрование всех хранимых конфиденциальных данных.
+* Обеспечьте применение современных и надежных алгоритмов, протоколов и ключей, а также используйте соответствующие механизмы управления ключами.
+* Шифруйте все передаваемые данные с помощью надежного протокола, например, TLS с совершенной прямой секретностью (PFS), приоритизацией шифров сервером и безопасными настройками. Обеспечьте принудительное шифрование, например, используя механизм принудительного использования HTTPS (HSTS).
+* Отключите кэширование ответов, содержащих конфиденциальные данные.
+* Сохраняйте пароли с помощью надежных, адаптивных функций хеширования с солью и фактором трудоемкости (задержки), таких как [Argon2](https://www.cryptolux.org/index.php/Argon2), [scrypt](https://wikipedia.org/wiki/Scrypt), [bcrypt](https://wikipedia.org/wiki/Bcrypt) или [PBKDF2](https://wikipedia.org/wiki/PBKDF2).
+* Проверяйте отдельно эффективность конфигурации и настройки.
 
-## Example Attack Scenarios
+## Примеры сценариев атак
 
-**Scenario #1**: An application encrypts credit card numbers in a database using automatic database encryption. However, this data is automatically decrypted when retrieved, allowing an SQL injection flaw to retrieve credit card numbers in clear text. 
+**Сценарий №1**: Приложение шифрует номера кредитных карт в базе данных, используя автоматическое шифрование БД. Однако эти данные автоматически расшифровываются при извлечении, позволяя с помощью внедрения SQL-кода получить данные кредитных карт в незашифрованном виде.
 
-**Scenario #2**: A site doesn't use or enforce TLS for all pages or supports weak encryption. An attacker monitors network traffic  (e.g. at an insecure wireless network), downgrades connections from HTTPS to HTTP, intercepts requests, and steals the user's session cookie. The attacker then replays this cookie and hijacks the user's (authenticated) session, accessing or modifying the user's private data. Instead of the above they could alter all transported data, e.g. the recipient of a money transfer.
+**Сценарий №2**: Сайт не использует TLS для всех страниц или поддерживает ненадежное шифрование. Злоумышленник может просмотреть сетевой трафик (например, в небезопасной беспроводной сети), переключить соединение с HTTPS на HTTP, перехватить запросы и похитить сессионные куки. После этого он может использовать полученные куки для перехвата сессии пользователя (прошедшего аутентификацию), изменив личные данные пользователя. Также злоумышленник может изменить все передаваемые данные , например, получателя денежного перевода.
 
-**Scenario #3**: The password database uses unsalted or simple hashes to store everyone's passwords. A file upload flaw allows an attacker to retrieve the password database. All the unsalted hashes can be exposed with a rainbow table of pre-calculated hashes. Hashes generated by simple or fast hash functions may be cracked by GPUs, even if they were salted.
+**Сценарий №3**: Для сохранения паролей в базе данных не используется соль или используется простой алгоритм хеширования. Уязвимость в загрузке файлов позволяет злоумышленнику получить БД паролей. Все хеш-значения без соли могут быть восстановлены с помощью радужной таблицы предварительно расчитанных хешей. Хеш-значения, рассчитанные с использованием простых или быстрых хеш-функций, могут быть взломаны с помощью графических процессоров, даже если для них использовалась соль. 
 
-## References
+## Ссылки
 
-* [OWASP Proactive Controls: Protect Data](https://www.owasp.org/index.php/OWASP_Proactive_Controls#7:_Protect_Data)
-* [OWASP Application Security Verification Standard]((https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project)): [V7](https://www.owasp.org/index.php/ASVS_V7_Cryptography), [9](https://www.owasp.org/index.php/ASVS_V9_Data_Protection), [10](https://www.owasp.org/index.php/ASVS_V10_Communications)
-* [OWASP Cheat Sheet: Transport Layer Protection](https://www.owasp.org/index.php/Transport_Layer_Protection_Cheat_Sheet)
-* [OWASP Cheat Sheet: User Privacy Protection](https://www.owasp.org/index.php/User_Privacy_Protection_Cheat_Sheet)
-* [OWASP Cheat Sheet: Password](https://www.owasp.org/index.php/Password_Storage_Cheat_Sheet) and [Cryptographic Storage](https://www.owasp.org/index.php/Cryptographic_Storage_Cheat_Sheet)
-* [OWASP Security Headers Project](https://www.owasp.org/index.php/OWASP_Secure_Headers_Project); [Cheat Sheet: HSTS](https://www.owasp.org/index.php/HTTP_Strict_Transport_Security_Cheat_Sheet)
-* [OWASP Testing Guide: Testing for weak cryptography](https://www.owasp.org/index.php/Testing_for_weak_Cryptography)
+### OWASP
 
-### External
+* [Проактивная защита OWASP: Защита данных](https://www.owasp.org/index.php/OWASP_Proactive_Controls#7:_Protect_Data)
+* [Стандарт подтверждения безопасности приложений OWASP]((https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project)): [V7](https://www.owasp.org/index.php/ASVS_V7_Cryptography), [9](https://www.owasp.org/index.php/ASVS_V9_Data_Protection), [10](https://www.owasp.org/index.php/ASVS_V10_Communications)
+* [Памятка OWASP: Защита транспортного уровня](https://www.owasp.org/index.php/Transport_Layer_Protection_Cheat_Sheet)
+* [Памятка OWASP: Защита конфиденциальности пользователей](https://www.owasp.org/index.php/User_Privacy_Protection_Cheat_Sheet)
+* [Памятка OWASP: Хранение паролей](https://www.owasp.org/index.php/Password_Storage_Cheat_Sheet) и [хранение в зашифрованном виде](https://www.owasp.org/index.php/Cryptographic_Storage_Cheat_Sheet)
+* [Проект OWASP: Безопасные заголовки](https://www.owasp.org/index.php/OWASP_Secure_Headers_Project); [Памятка по HSTS](https://www.owasp.org/index.php/HTTP_Strict_Transport_Security_Cheat_Sheet)
+* [Руководство OWASP по тестированию: Проверка надежности шифрования](https://www.owasp.org/index.php/Testing_for_weak_Cryptography)
 
-* [CWE-220: Exposure of sens. information through data queries](https://cwe.mitre.org/data/definitions/220.html)
-* [CWE-310: Cryptographic Issues](https://cwe.mitre.org/data/definitions/310.html); [CWE-311: Missing Encryption](https://cwe.mitre.org/data/definitions/311.html)
-* [CWE-312: Cleartext Storage of Sensitive Information](https://cwe.mitre.org/data/definitions/312.html)
-* [CWE-319: Cleartext Transmission of Sensitive Information](https://cwe.mitre.org/data/definitions/319.html)
-* [CWE-326: Weak Encryption](https://cwe.mitre.org/data/definitions/326.html); [CWE-327: Broken/Risky Crypto](https://cwe.mitre.org/data/definitions/327.html)
-* [CWE-359: Exposure of Private Information - Privacy Violation](https://cwe.mitre.org/data/definitions/359.html)
+### Сторонние
+
+* [CWE-202: Разглашение конфиденциальных данных, связанное с запросами](https://cwe.mitre.org/data/definitions/202.html)
+* [CWE-310: Уязвимости, связанные с криптографией](https://cwe.mitre.org/data/definitions/310.html); [CWE-311: Отсутствие шифрования](https://cwe.mitre.org/data/definitions/311.html)
+* [CWE-312: Хранение критичных данных в незашифрованном виде](https://cwe.mitre.org/data/definitions/312.html)
+* [CWE-319: Передача критичных данных в незашифрованном виде](https://cwe.mitre.org/data/definitions/319.html)
+* [CWE-326: Ненадежное шифрование](https://cwe.mitre.org/data/definitions/326.html); [CWE-327: Скомпрометированный криптоалгоритм](https://cwe.mitre.org/data/definitions/327.html)
+* [CWE-359: Разглашение личных данных (Нарушение конфиденциальности)](https://cwe.mitre.org/data/definitions/359.html)
