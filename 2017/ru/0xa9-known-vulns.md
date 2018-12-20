@@ -1,56 +1,56 @@
-# A9:2017 Using Components with Known Vulnerabilities
+# A9:2017 Использование компонентов с известными уязвимостями
 
-| Threat agents/Attack vectors | Security Weakness           | Impacts               |
+| Источники угроз/Векторы атак | Недостатки безопасности           | Последствия               |
 | -- | -- | -- |
-| Access Lvl : Exploitability 2 | Prevalence 3 : Detectability 2 | Technical 2 : Business |
-| While it is easy to find already-written exploits for many known vulnerabilities, other vulnerabilities require concentrated effort to develop a custom exploit. | Prevalence of this issue is very widespread. Component-heavy development patterns can lead to development teams not even understanding which components they use in their application or API, much less keeping them up to date. Some scanners such as retire.js help in detection, but determining exploitability requires additional effort. | While some known vulnerabilities lead to only minor impacts, some of the largest breaches to date have relied on exploiting known vulnerabilities in components. Depending on the assets you are protecting, perhaps this risk should be at the top of the list. |
+| Зависит от прил. : Сложность эксплуатации 2 | Распространенность 3 : Сложность обнаружения 2 | Технические 2 : Для бизнеса ? |
+| Несмотря на простоту поиска уже готовых эксплойтов для большинства известных уязвимостей, некоторые из них требуют создания специальных средств для их эксплуатации. | Данная уязвимость является очень распространенной. Шаблоны для разработчиков, содержащие большое количество компонентов, могут привести к непониманию того, какие компоненты  реально используются в приложении или API. Некоторые сканеры, такие как retire.js, могут помочь с обнаружением уязвимостей, но определение сложности их эксплуатации потребует дополнительных усилий.| Несмотря на то, что не все уязвимости приводят к серьезным последствиям, причиной некоторых масштабных взломов стали именно компоненты, содержащие известные уязвимости. В зависимости от защищаемых активов подобная угроза может оказаться на вершине вашего списка. |
 
-## Is the Application Vulnerable?
+## Является ли приложение уязвимым?
 
-You are likely vulnerable:
+Приложение уязвимо, если:
 
-* If you do not know the versions of all components you use (both client-side and server-side). This includes components you directly use as well as nested dependencies.
-* If software is vulnerable, unsupported, or out of date. This includes the OS, web/application server, database management system (DBMS), applications, APIs and all components, runtime environments, and libraries.
-* If you do not scan for vulnerabilities regularly and subscribe to security bulletins related to the components you use.
-* If you do not fix or upgrade the underlying platform, frameworks, and dependencies in a risk-based, timely fashion. This commonly happens in environments when patching is a monthly or quarterly task under change control, which leaves organizations open to many days or months of unnecessary exposure to fixed vulnerabilities.
-* If software developers do not test the compatibility of updated, upgraded, or patched libraries.
-* If you do not secure the components' configurations (see **A6:2017-Security Misconfiguration**).
+* вы не знаете версии всех используемых (на стороне клиента и на стороне сервера) компонентов. Сюда относятся сами компоненты и встроенные зависимости;
+* ПО содержит уязвимости, не поддерживается или устарело. Сюда относятся ОС, веб-серверы, серверы приложений, СУБД, приложения, API, а также все компоненты, среды исполнения и библиотеки;
+* поиск уязвимостей выполняется нерегулярно, а также отсутствует подписка на бюллетени по безопасности используемых компонентов;
+* своевременно не устанавливаются исправления или обновления для используемых платформ, фреймворков и зависимостей. Обычно такое происходит, когда наличие обновлений проверяется раз в месяц или квартал, в результате чего организации неделями или месяцами не устраняют исправленные уязвимости;
+* разработчики ПО не тестируют совместимость обновленных или исправленных библиотек;
+* не обеспечивается безопасность компонентов (см. [A6:2017-Некорректные параметры безопасности](0xa6-security-misconfiguration.md)).
 
-## How To Prevent
+## Как предотвратить
 
-There should be a patch management process in place to:
+Необходимо реализовать процесс управления обновлениями:
 
-* Remove unused dependencies, unnecessary features, components, files, and documentation.
-* Continuously inventory the versions of both client-side and server-side components (e.g. frameworks, libraries) and their dependencies using tools like versions, DependencyCheck, retire.js, etc. 
-* Continuously monitor sources like CVE and NVD for vulnerabilities in the components. Use software composition analysis tools to automate the process. Subscribe to email alerts for security vulnerabilities related to components you use.
-* Only obtain components from official sources over secure links. Prefer signed packages to reduce the chance of including a modified, malicious component.
-* Monitor for libraries and components that are unmaintained or do not create security patches for older versions. If patching is not possible, consider deploying a virtual patch to monitor, detect, or protect against the discovered issue.
+* удалите неиспользуемые зависимости, а также лишние функции, компоненты, файлы и сведения из документации;
+* регулярно проверяйте актуальность версий клиентских и серверных компонентов (например, фреймворков и библиотек), а также их зависимостей, используя такие инструменты как [versions](http://www.mojohaus.org/versions-maven-plugin/), [DependencyCheck](https://www.owasp.org/index.php/OWASP_Dependency_Check), [retire.js](https://github.com/retirejs/retire.js/) и т. п.; 
+* Следите за новостями об уязвимостях на соответствующих ресурсах, таких как [CVE](https://cve.mitre.org/) и [NVD](https://nvd.nist.gov/). Используйте инструменты анализа состава ПО для автоматизации процесса. Подпишитесь на рассылки об уязвимостях, относящихся к используемым вами компонентам;
+* загружайте компоненты из официальных источников по безопасным ссылкам. Отдавайте предпочтение подписанным пакетам для снижения риска установки измененного или вредоносного компонента;
+* следите за библиотеками и компонентами, которые не поддерживаются или не получают обновлений безопасности. Если обновление не возможно, попробуйте использовать [виртуальные патчи](https://www.owasp.org/index.php/Virtual_Patching_Best_Practices#What_is_a_Virtual_Patch.3F) для обнаружения или предотвращения эксплуатации известных уязвимостей.
 
-Every organization must ensure that there is an ongoing plan for monitoring, triaging, and applying updates or configuration changes for the lifetime of the application or portfolio.
+Каждая организация должна обеспечить отслеживание, приоритизацию и применение обновлений или изменений в конфигурации на протяжении всего жизненного цикла приложения или линейки приложений.
 
-## Example Attack Scenarios
+## Примеры сценариев атак
 
-**Scenario #1**: Components typically run with the same privileges as the application itself, so flaws in any component can result in serious impact. Such flaws can be accidental (e.g. coding error) or intentional (e.g. backdoor in component). Some example exploitable component vulnerabilities discovered are:
+**Сценарий №1**: Компоненты обычно запускаются с привилегиями приложения, поэтому уязвимость в любом из компонентов может привести к серьезным последствиям. Уязвимость может появиться случайно (например, из-за ошибки в коде) или преднамеренно (например, бэкдор). Вот несколько примеров эксплуатации уязвимостей, обнаруженных в компонентах:
 
-* [CVE-2017-5638](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5638), a Struts 2 remote code execution vulnerability that enables execution of arbitrary code on the server, has been blamed for significant breaches.
-* While [internet of things (IoT)](https://en.wikipedia.org/wiki/Internet_of_things) are frequently difficult or impossible to patch, the importance of patching them can be great (e.g. biomedical devices).
+* [CVE-2017-5638](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5638): уязвимость в Struts 2, позволяющая удаленно выполнить произвольный код на сервере, стала причиной нескольких серьезных взломов;
+* уязвимости в [интернете вещей (IoT)](https://en.wikipedia.org/wiki/Internet_of_things) зачастую сложно или невозможно устранить, а это может привести к серьезным последствиям (например, в случае биомедицинских приборов).
 
-There are automated tools to help attackers find unpatched or misconfigured systems. For example, the [Shodan IoT search engine](https://www.shodan.io/report/89bnfUyJ) can help you find devices that still suffer from [Heartbleed](https://en.wikipedia.org/wiki/Heartbleed) vulnerability that was patched in April 2014.
+Существуют автоматизированные инструменты, позволяющие злоумышленникам находить уязвимые или некорректно настроенные системы. Например, поисковик [Shodan для IoT](https://www.shodan.io/report/89bnfUyJ) позволяет обнаружить устройства, в которых до сих пор не устранена уязвимость [Heartbleed](https://en.wikipedia.org/wiki/Heartbleed), которая была исправлена в апреле 2014 года.
 
-## References
+## Ссылки
 
 ### OWASP
 
-* [OWASP Application Security Verification Standard: V1 Architecture, design and threat modelling](https://www.owasp.org/index.php/ASVS_V1_Architecture)
-* [OWASP Dependency Check (for Java and .NET libraries)](https://www.owasp.org/index.php/OWASP_Dependency_Check)
-* [OWASP Testing Guide - Map Application Architecture (OTG-INFO-010)](https://www.owasp.org/index.php/Map_Application_Architecture_(OTG-INFO-010))
-* [OWASP Virtual Patching Best Practices](https://www.owasp.org/index.php/Virtual_Patching_Best_Practices)
+* [Стандарт подтверждения безопасности приложений OWASP: V1 Архитектура, разработка и моделирование угроз](https://www.owasp.org/index.php/ASVS_V1_Architecture)
+* [Проверки зависимостей OWASP (для библиотек Java и .NET)](https://www.owasp.org/index.php/OWASP_Dependency_Check)
+* [Руководство OWASP по тестированию: Установление взаимосвязей в архитектуре приложения (OTG-INFO-010)](https://www.owasp.org/index.php/Map_Application_Architecture_(OTG-INFO-010))
+* [Рекомендации OWASP по использованию виртуальных патчей](https://www.owasp.org/index.php/Virtual_Patching_Best_Practices)
 
-### External
+### Сторонние
 
-* [The Unfortunate Reality of Insecure Libraries](https://www.aspectsecurity.com/research-presentations/the-unfortunate-reality-of-insecure-libraries)
-* [MITRE Common Vulnerabilities and Exposures (CVE) search](https://www.cvedetails.com/version-search.php)
-* [National Vulnerability Database (NVD)](https://nvd.nist.gov/)
-* [Retire.js for detecting known vulnerable JavaScript libraries](https://github.com/retirejs/retire.js/)
-* [Node Libraries Security Advisories](https://nodesecurity.io/advisories)
-* [Ruby Libraries Security Advisory Database and Tools](https://rubysec.com/)
+* [Унылая реальность небезопасных библиотек](https://www.aspectsecurity.com/research-presentations/the-unfortunate-reality-of-insecure-libraries)
+* [Поиск уязвимостей (CVE) MITRE](https://www.cvedetails.com/version-search.php)
+* [Национальная база данных уязвимостей (NVD)](https://nvd.nist.gov/)
+* [Retire.js для обнаружения известных уязвимых библиотек JavaScript](https://github.com/retirejs/retire.js/)
+* [Бюллетени по безопасности библиотек Node](https://nodesecurity.io/advisories)
+* [Инструменты и база данных бюллетеней по безопасности библиотек Ruby](https://rubysec.com/)

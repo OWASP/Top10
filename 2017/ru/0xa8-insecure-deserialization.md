@@ -1,64 +1,69 @@
-# A8:2017 Insecure Deserialization
+# A8:2017 Небезопасная десериализация
 
-| Threat agents/Attack vectors | Security Weakness           | Impacts               |
+| Источники угроз/Векторы атак | Недостатки безопасности           | Последствия               |
 | -- | -- | -- |
-| Access Lvl : Exploitability 1 | Prevalence 2 : Detectability 2 | Technical 3 : Business |
-| Exploitation of deserialization is somewhat difficult, as off the shelf exploits rarely work without changes or tweaks to the underlying exploit code. | This issue is included in the Top 10 based on an [industry survey](https://owasp.blogspot.com/2017/08/owasp-top-10-2017-project-update.html) and not on quantifiable data. Some tools can discover deserialization flaws, but human assistance is frequently needed to validate the problem. It is expected that prevalence data for deserialization flaws will increase as tooling is developed to help identify and address it. | The impact of deserialization flaws cannot be overstated. These flaws can lead to remote code execution attacks, one of the most serious attacks possible. The business impact depends on the protection needs of the application and data. |
+| Зависит от прил. : Сложность эксплуатации 1 | Распространенность 2 : Сложность обнаружения 2 | Технические 3 : Для бизнеса ? |
+| Эксплуатировать десериализацию сложно, поскольку готовые эксплойты редко можно использовать без их изменения или доработки. | Данная уязвимость включена в Топ-10 по результатам [отраслевых исследований](https://owasp.blogspot.com/2017/08/owasp-top-10-2017-project-update.html) , а не по количественным показателям. Некоторые инструменты могут обнаруживать ошибки десериализации, но для их подтверждения обычно требуется участие специалиста. Ожидается, что по мере разработки новых инструментов обнаружения и устранения ошибок десериализации данных об их распространенности станет больше.  | Последствия ошибок десериализации нельзя недооценивать. Подобные ошибки могут привести к удаленному выполнению кода, одной из самых опасных уязвимостей. Последствия для бизнеса зависят от критичности защиты приложения и данных. |
 
-## Is the Application Vulnerable?
+## Является ли приложение уязвимым?
 
-Applications and APIs will be vulnerable if they deserialize hostile or tampered objects supplied by an attacker.
+Приложения и API уязвимы, если осуществляют десериализацию вредоносных или модифицированных объектов, предоставляемых злоумышленником.
 
-This can result in two primary types of attacks:
+Это позволяет осуществить два основных типа атак:
 
-* Object and data structure related attacks where the attacker modifies application logic or achieves arbitrary remote code execution if there are classes available to the application that can change behavior during or after deserialization.
-* Typical data tampering attacks such as access-control-related attacks where existing data structures are used but the content is changed.
+* атаки, связанные со структурой объектов и данных, когда злоумышленник изменяет логику приложения или удаленно выполняет произвольный код при наличии доступных приложению классов, поведение которых может меняться во время или после десериализации;
+* атаки с подменой данных, например, связанные с управлением доступом, когда используются существующие структуры данных, но изменяется содержимое.
 
-Serialization may be used in applications for:
+Сериализация может использоваться в приложениях для:
 
-* Remote- and inter-process communication (RPC/IPC) 
-* Wire protocols, web services, message brokers
-* Caching/Persistence
-* Databases, cache servers, file systems 
-* HTTP cookies, HTML form parameters, API authentication tokens 
+* удаленного и межпроцессного взаимодействия (RPC/IPC);
+* проводных протоколов, веб-служб, брокеров сообщений;
+* кэширования или сохранения данных;
+* баз данных, серверов кэширования, файловых систем;
+* куки-файлов HTTP, параметров HTML-форм, токенов аутентификации API.
 
-## How To Prevent
+## Как предотвратить
 
-The only safe architectural pattern is not to accept serialized objects from untrusted sources or to use serialization mediums that only permit primitive data types.
+Единственным безопасным решением будет отклонение сериализованных объектов от недоверенных источников или использование среды сериализации, допускающей только примитивные типы данных.
 
-If that is not possible, consider one of more of the following:
+Если это невозможно, рекомендуется следующее:
 
-* Implementing integrity checks such as digital signatures on any serialized objects to prevent hostile object creation or data tampering.
-* Enforcing strict type constraints during deserialization before object creation as the code typically expects a definable set of classes. Bypasses to this technique have been demonstrated, so reliance solely on this is not advisable.
-* Isolating and running code that deserializes in low privilege environments when possible.
-* Log deserialization exceptions and failures, such as where the incoming type is not the expected type, or the deserialization throws exceptions.
-* Restricting or monitoring incoming and outgoing network connectivity from containers or servers that deserialize.
-* Monitoring deserialization, alerting if a user deserializes constantly.
+* Проверка целостности сериализованных объектов, например, с помощью цифровых подписей, для предотвращения создания вредоносных объектов или подмены данных.
+* Ввод строгих ограничений типов при десериализации перед созданием объекта, поскольку ожидаемым является поддающийся определению набор классов. Существуют методы обхода подобной защиты, поэтому полагаться исключительно на нее не рекомендуется.
+* Изоляция и запуск кода, осуществляющего десериализацию, в среде с минимальными привилегиями, если это возможно.
+* Журналирование исключений и ошибок десериализации, например, непредусмотренных типов входных данных или исключений при десериализации.
+* Ограничение или контроль входящих и исходящих сетевых подключений контейнеров или серверов, осуществляющих десериализацию.
+* Отслеживание десериализации с предупреждением о фактах продолжительной десериализации.
 
 
-## Example Attack Scenarios
+## Примеры сценариев атак
 
-**Scenario #1**: A React application calls a set of Spring Boot microservices. Being functional programmers, they tried to ensure that their code is immutable. The solution they came up with is serializing user state and passing it back and forth with each request. An attacker notices the "R00" Java object signature, and uses the Java Serial Killer tool to gain remote code execution on the application server.
+**Сценарий №1**. React-приложение вызывает набор микрослужб Spring Boot. Будучи функциональными программистами, разработчики попытались обеспечить неизменяемость своего кода. Используемое ими решение заключается в сериализации состояния пользователя и передаче его с каждым запросом. Злоумышленник, заметивший подпись Java-объекта "rO0", может использовать Java Serial Killer для удаленного выполнения кода на сервере приложения.
 
-**Scenario #2**: A PHP forum uses PHP object serialization to save a "super" cookie, containing the user's user ID, role, password hash, and other state:
+**Сценарий №2**. На PHP-форуме используется сериализация PHP-объектов для хранения "суперкуки", содержащих идентификатор, роль, хеш пароля и другие данные пользователя:
 
-`a:4:{i:0;i:132;i:1;s:7:"Mallory";i:2;s:4:"user";i:3;s:32:"b6a8b3bea87fe0e05022f8f3c88bc960";}`
+```
+a:4:{i:0;i:132;i:1;s:7:"Mallory";i:2;s:4:"user";i:3;s:32:"b6a8b3bea87fe0e05022f8f3c88bc960";}
+```
 
-An attacker changes the serialized object to give themselves admin privileges:
-`a:4:{i:0;i:1;i:1;s:5:"Alice";i:2;s:5:"admin";i:3;s:32:"b6a8b3bea87fe0e05022f8f3c88bc960";}`
+Злоумышленник изменяет сериализованный объект, наделяя себя привилегиями администратора:
 
-## References
+```
+a:4:{i:0;i:1;i:1;s:5:"Alice";i:2;s:5:"admin";i:3;s:32:"b6a8b3bea87fe0e05022f8f3c88bc960";}
+```
+
+## Ссылки
 
 ### OWASP
 
-* [OWASP Cheat Sheet: Deserialization](https://www.owasp.org/index.php/Deserialization_Cheat_Sheet)
-* [OWASP Proactive Controls: Validate All Inputs](https://www.owasp.org/index.php/OWASP_Proactive_Controls#4:_Validate_All_Inputs)
-* [OWASP Application Security Verification Standard: TBA](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
-* [OWASP AppSecEU 2016: Surviving the Java Deserialization Apocalypse](https://speakerdeck.com/pwntester/surviving-the-java-deserialization-apocalypse)
-* [OWASP AppSecUSA 2017: Friday the 13th JSON Attacks](https://speakerdeck.com/pwntester/friday-the-13th-json-attacks)
+* [Памятка OWASP: Десериализация](https://www.owasp.org/index.php/Deserialization_Cheat_Sheet)
+* [Проактивная защита OWASP: Обязательная проверка всех входных данных](https://www.owasp.org/index.php/OWASP_Proactive_Controls#4:_Validate_All_Inputs)
+* [Стандарт подтверждения безопасности приложений OWASP](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
+* [OWASP AppSecEU 2016: Как пережить апокалипсис десериализации Java](https://speakerdeck.com/pwntester/surviving-the-java-deserialization-apocalypse)
+* [OWASP AppSecUSA 2017: Пятница, 13-е — Джейсон под ударом](https://speakerdeck.com/pwntester/friday-the-13th-json-attacks)
 
-### External
+### Сторонние
 
-* [CWE-502: Deserialization of Untrusted Data](https://cwe.mitre.org/data/definitions/502.html)
-* [Java Unmarshaller Security](https://github.com/mbechler/marshalsec)
-* [OWASP AppSec Cali 2015: Marshalling Pickles](http://frohoff.github.io/appseccali-marshalling-pickles/)
+* [CWE-502: Десериализация недоверенных данных](https://cwe.mitre.org/data/definitions/502.html)
+* [Безопасность десериализации Java](https://github.com/mbechler/marshalsec)
+* [OWASP AppSec Cali 2015: Консервируем объекты](http://frohoff.github.io/appseccali-marshalling-pickles/)

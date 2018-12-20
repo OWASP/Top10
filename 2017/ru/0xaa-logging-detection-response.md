@@ -1,54 +1,54 @@
-# A10:2017 Insufficient Logging and Monitoring
+# A10:2017 Недостатки журналирования и мониторинга
 
-| Threat agents/Attack vectors | Security Weakness           | Impacts               |
+| Источники угроз/Векторы атак | Недостатки безопасности           | Последствия               |
 | -- | -- | -- |
-| Access Lvl : Exploitability 2 | Prevalence 3 : Detectability 1 | Technical 2 : Business |
-| Exploitation of insufficient logging and monitoring is the bedrock of nearly every major incident. Attackers rely on the lack of monitoring and timely response to achieve their goals without being detected. | This issue is included in the Top 10 based on an [industry survey](https://owasp.blogspot.com/2017/08/owasp-top-10-2017-project-update.html). One strategy for determining if you have sufficient monitoring is to examine the logs following penetration testing. The testers' actions should be recorded sufficiently to understand what damages they may have inflicted. | Most successful attacks start with vulnerability probing. Allowing such probes to continue can raise the likelihood of successful exploit to nearly 100%. In 2016, identifying a breach took an [average of 191 days](https://www-01.ibm.com/common/ssi/cgi-bin/ssialias?htmlfid=SEL03130WWEN&) – plenty of time for damage to be inflicted. |
+| Зависит от прил. : Сложность эксплуатации 2 | Распространенность 3 : Сложность обнаружения 1 | Технические 2 : Для бизнеса ? |
+| Эксплуатация недостатков журналирования и мониторинга лежит в основе почти всех крупных взломов. При проведении атак злоумышленники полагаются на отсутствие контроля и своевременного реагирования на инциденты.  | Данная уязвимость включена в Топ-10 по результатам [отраслевых исследований](https://owasp.blogspot.com/2017/08/owasp-top-10-2017-project-update.html). Одним из способов определить качество мониторинга является анализ журналов после проведения теста на проникновение. Для определения возможного ущерба все действия тестировщиков должны регистрироваться соответствующим образом. | Большинство атак начинаются с анализа уязвимостей. Возможность проведения подобного анализа повышает вероятность удачной эксплуатации уязвимости практически до 100%. В 2016 году обнаружение факта проникновения занимало [в среднем 191 день](https://www-01.ibm.com/common/ssi/cgi-bin/ssialias?htmlfid=SEL03130WWEN&) — нанесенный за это время ущерб мог быть огромным. |
 
-## Is the Application Vulnerable?
+## Является ли приложение уязвимым?
 
-Insufficient logging, detection, monitoring and active response occurs any time:
+Недостатки журналирования, обнаружения атак, мониторинга и реагирования на инциденты выявляются постоянно:
 
-* Auditable events, such as logins, failed logins, and high-value transactions are not logged.
-* Warnings and errors generate no, inadequate, or unclear log messages.
-* Logs of applications and APIs are not monitored for suspicious activity.
-* Logs are only stored locally.
-* Appropriate alerting thresholds and response escalation processes are not in place or effective.
-* Penetration testing and scans by [DAST](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools) tools (such as [OWASP ZAP](https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project)) do not trigger alerts.
-* The application is unable to detect, escalate, or alert for active attacks in real time or near real time.
+* подвергаемые аудиту события, такие как удачные и неудачные попытки входа в систему, а также важные транзакции, не регистрируются;
+* предупреждения и ошибки не регистрируются или регистрируются некорректно;
+* журналы приложений и API не проверяются на предмет подозрительной активности;
+* журналы хранятся только локально;
+* пороговые значения предупреждений и схемы реагирования на инциденты отсутствуют или являются неэффективными;
+* тестирование на проникновение и сканирование инструментами [DAST](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools) (например, [OWASP ZAP](https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project)) не выдают предупреждений;
+* приложение не может определять, реагировать или предупреждать об атаках в реальном или почти реальном времени.
 
-You are vulnerable to information leakage if you make logging and alerting events visible to a user or an attacker (see A3:2017-Sensitive Information Exposure).
+В системе имеется утечка данных, если журналы регистрации и предупреждения доступны пользователям или атакующим (см. **A3:2017-Разглашение конфиденциальных данных**).
 
-## How To Prevent
+## Как предотвратить
 
-As per the risk of the data stored or processed by the application:
+Исходя из критичности данных, хранимых или обрабатываемых приложением, необходимо:
 
-* Ensure all login, access control failures, and server-side input validation failures can be logged with sufficient user context to identify suspicious or malicious accounts, and held for sufficient time to allow delayed forensic analysis.
-* Ensure that logs are generated in a format that can be easily consumed by a centralized log management solutions.
-* Ensure high-value transactions have an audit trail with integrity controls to prevent tampering or deletion, such as append-only database tables or similar.
-* Establish effective monitoring and alerting such that suspicious activities are detected and responded to in a timely fashion.
-* Establish or adopt an incident response and recovery plan, such as [NIST 800-61 rev 2](https://csrc.nist.gov/publications/detail/sp/800-61/rev-2/final) or later.
+* регистрировать все ошибки входа, доступа и проверки данных на стороне сервера с указанием контекста, достаточного для выявления подозрительных или вредоносных действий, а также хранить их для последующего анализа;
+* регистрировать события в формате, наиболее подходящем для обработки централизованной службой журналирования;
+* использовать контроль целостности журналов аудита важных транзакций для предотвращения подмены или удаления данных, например, с помощью доступных только для добавления таблиц БД;
+* использовать эффективные системы мониторинга и предупреждения для своевременного обнаружения подозрительных действий и реагирования на них;
+* разработать или утвердить руководство по реагированию на инциденты и устранению их последствий, такое как [NIST 800-61 rev 2](https://csrc.nist.gov/publications/detail/sp/800-61/rev-2/final).
 
-There are commercial and open source application protection frameworks such as [OWASP AppSensor](https://www.owasp.org/index.php/OWASP_AppSensor_Project), web application firewalls such as [ModSecurity with the OWASP ModSecurity Core Rule Set](https://www.owasp.org/index.php/Category:OWASP_ModSecurity_Core_Rule_Set_Project), and log correlation software with custom dashboards and alerting. 
+Существуют коммерческие и бесплатные системы защиты приложений (например, [OWASP AppSensor](https://www.owasp.org/index.php/OWASP_AppSensor_Project)), межсетевые экраны веб-приложений (например, [ModSecurity с набором основных правил OWASP ModSecurity](https://www.owasp.org/index.php/Category:OWASP_ModSecurity_Core_Rule_Set_Project)), а также программы корреляции журналов с настраиваемыми панелями и предупреждениями.
 
-## Example Attack Scenarios
+## Примеры сценариев атак
 
-**Scenario #1**: An open source project forum software run by a small team was hacked using a flaw in its software. The attackers managed to wipe out the internal source code repository containing the next version, and all of the forum contents. Although source could be recovered, the lack of monitoring, logging or alerting led to a far worse breach. The forum software project is no longer active as a result of this issue.
+**Сценарий №1**: Форум открытого проекта, используемый небольшой командой, был взломан через уязвимость в его ПО. Злоумышленники удалили внутренний репозиторий, содержащий следующую версию продукта, а также все содержимое форума. Несмотря на возможность восстановления источника, отсутствие мониторинга, журналирования или оповещений привело к более серьезным последствиям. Из-за инцидента программный проект с форума более не развивается.
 
-**Scenario #2**: An attacker uses scans for users using a common password. They can take over all accounts using this password. For all other users, this scan leaves only one false login behind. After some days, this may be repeated with a different password.
+**Сценарий №2**: Злоумышленник может использовать один стандартный пароль для проверки доступа ко всем учетным записям, к некоторым из них он может подойти. Для остальных будет зарегистрирована лишь неудачная попытка входа. Через несколько дней попытка может повториться, но уже с другим паролем.
 
-**Scenario #3**: A major US retailer reportedly had an internal malware analysis sandbox analyzing attachments. The sandbox software had detected potentially unwanted software, but no one responded to this detection. The sandbox had been producing warnings for some time before the breach was detected due to fraudulent card transactions by an external bank.
+**Сценарий №3**: В крупной торговой сети имеется песочница для внутреннего анализа вредоносных вложений. Средства песочницы обнаружили потенциально вредоносное ПО, но никто не обращал внимания на получаемые от песочницы предупреждения, пока взлом не обнаружили в связи с мошенническими транзакциями по банковским картам от стороннего банка.
 
-## References
+## Ссылки
 
 ### OWASP
 
-* [OWASP Proactive Controls: Implement Logging and Intrusion Detection](https://www.owasp.org/index.php/OWASP_Proactive_Controls#8:_Implement_Logging_and_Intrusion_Detection)
-* [OWASP Application Security Verification Standard: V8 Logging and Monitoring](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
-* [OWASP Testing Guide: Testing for Detailed Error Code](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
-* [OWASP Cheat Sheet: Logging](https://www.owasp.org/index.php/Logging_Cheat_Sheet)
+* [Проактивная защита OWASP: Реализация журналирования и обнаружения вторжений](https://www.owasp.org/index.php/OWASP_Proactive_Controls#8:_Implement_Logging_and_Intrusion_Detection)
+* [Стандарт подтверждения безопасности приложений OWASP: V8 Журналирование и мониторинг](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
+* [Руководство OWASP по тестированию: Подробные коды ошибок](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
+* [Памятка OWASP: Журналирование](https://www.owasp.org/index.php/Logging_Cheat_Sheet)
 
-### External
+### Сторонние
 
-* [CWE-223: Omission of Security-relevant Information](https://cwe.mitre.org/data/definitions/223.html)
-* [CWE-778: Insufficient Logging](https://cwe.mitre.org/data/definitions/778.html)
+* [CWE-223: Отсутствие регистрации или отображения данных, относящихся к безопасности](https://cwe.mitre.org/data/definitions/223.html)
+* [CWE-778: Некорректное журналирование](https://cwe.mitre.org/data/definitions/778.html)
