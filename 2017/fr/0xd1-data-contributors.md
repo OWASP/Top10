@@ -1,8 +1,8 @@
-# Acknowledgements
+# Remerciements
 
-## Acknowledgements to Data Contributors
+## Remerciements aux contributions de données
 
-We'd like to thank the many organizations that contributed their vulnerability data to support the 2017 update:
+Nous remercions les acteurs ci-après pour nous avoir fourni des données pour l'élaboration du Top 10 2017:
 
 * ANCAP
 * Aspect Security
@@ -48,11 +48,11 @@ We'd like to thank the many organizations that contributed their vulnerability d
 * Veracode
 * Web.com
 w
-For the first time, all the data contributed to a Top 10 release, and the full list of contributors is [publicly available](https://github.com/OWASP/Top10/tree/master/2017/datacall/submissions).
+La liste des contributions ainsi que les données fournies pour l'élaboration du Top 10 2017 sont [disponibles au téléchargement](https://github.com/OWASP/Top10/tree/master/2017/datacall/submissions).
 
-## Acknowledgements to Individual Contributors
+## Remerciements personnels
 
-We’d like to thank the individual contributors who spent many hours collectively contributing to the Top 10 in GitHub.
+Nous remercions les contributrices et contributeurs ci-après pour avoir investi de nombreuses heures dans l'élaboration du document via GitHub.
 
 * ak47gen
 * alonergan
@@ -131,6 +131,6 @@ We’d like to thank the individual contributors who spent many hours collective
 * vdbaan
 * yohgaki
 
-And everyone else who provided feedback via Twitter, email, and other means.
+Ainsi que toutes celles et ceux qui nous ont fourni des retours via Twitter, email ou tout autre vecteur.
 
-We would be remiss not to mention that Dirk Wetter, Jim Manico, and Osama Elnaggar have provided extensive assistance. Also, Chris Frohoff and Gabriel Lawrence provided invaluable support in the writing of the new A8:2017-Insecure Deserialization risk.
+Finalement, nous souhaitons tout particulièrement remercier Dirk Wetter, Jim Manico, et Osama Elnaggar, pour leur aide précieuse; ainsi que Chris Frohoff et Gabriel Lawrence pour leur support dans la rédaction de la nouvelle entrée A8:2017-Désérialisation vulnérable.
