@@ -1,4 +1,4 @@
-# +T O que se segue para Testes de Segurança
+# +T O que se segue para os profissionais de testes de software
 
 ## Estebelecer um Plano contínuo de Testes de Segurança
 
@@ -20,7 +20,6 @@ Procure melhorar as linhas de produção de software existentes com mecanismos d
 automação de segurança que não atrasem o desenvolvimento. Qualquer que seja a
 abordagem escolhida, considere o custo anual dos testes a realizar, multiplicado
 pelo tamanho do seu portfolio aplicacional.
-
 
 | Actividade | Descrição |
 | --- | --- |
