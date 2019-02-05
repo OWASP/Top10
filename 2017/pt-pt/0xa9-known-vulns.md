@@ -1,55 +1,110 @@
 # A9:2017 Utilização de Componentes com Vulnerabilidades Conhecidas
 
-| Agentes de Ameaça/Vectores de Ataque | Fraquezas de Segurança           | Impactos               |
+| Agentes de Ameaça/Vetores de ataque | Vulnerabilidade de Segurança | Impactos |
 | -- | -- | -- |
-| Nível de Acesso \| Exploração 2 | Prevalência 3 \| Deteção 2 | Técnico 2 \| Negócio |
-| Enquanto é fácil encontrar exploits já escritos para muitas vulnerabilidades conhecidas, outras vulnerabilidades requerem um esforço concentrado para o desenvolvimento de um exploit especializado. | A prevalência deste tipo de situação é bastante abrangente. Padrões de desenvolvimento fortemente baseados em componentes podem causar que as equipas de desenvolvimento nem percebam quais os componentes que usam nas suas aplicações ou API, quanto mais manter os  mesmos devidamente actualizados. Este problema pode ser detectado pela utilização de scanners tais como o retire.js e através da inspeção dos caçalhos, no entanto verificar se os mesmos podem ser explorados requer um ataque e alguma descrição. | Enquanto algumas vulnerabilidades conhecidas podem levar a impactos menores, algumas das principais ataques até à data dependeram da exploração de vulnerabilidades em componentes. Dependendo dos activos que necessita de proteger, provavelmente este risco precisa de estar no topo da sua lista. |
+| Nível de acesso \| Abuso 2 | Prevalência 3 \| Deteção 2 | Técnico 2 \| Negócio |
+| Apesar de ser fácil encontrar ferramentas que já exploram vulnerabilidades conhecidas, algumas vulnerabilidades requerem um esforço superior no sentido de desenvolver uma forma individual de as explorar.  | Este problema continua a prevalecer de forma generalizada. Padrões de desenvolvimento, que focam na utilização extensiva de componentes, podem levar a que as equipas de desenvolvimento não percebam que componentes devem utilizar na sua aplicação ou API. Algumas ferramentas de deteção como *retire.js* ajudam na tarefa de deteção destes casos, no entanto a deteção da exploração de vulnerabilidades requer esforço adicional.  | Enquanto algumas das vulnerabilidades mais conhecidas têm um impacto reduzido, algumas das maiores falhas de segurança, até à data, assentaram na exploração destas vulnerabilidades conhecidas, em componentes.  |
 
-## Está a Aplicação Vulnerável?
+## A Aplicação é Vulnerável?
 
-Estará vulnerável:
+A aplicação pode ser vulnerável se:
 
-* Se não souber as versões de todos os componentes que usa (tanto do lado do cliente como do lado do servidor). Isto inclui compontes que usa directamente assim como as suas dependências.
-* Está algum do software desactualizado? Isto inclui o SO, Servidor Web e Aplicacional, Servidor de Gestão de Bases de Dados, aplicações, APIs e todos os componentes, ambientes de execução e bibliotecas.
-* Se não souber se as mesmas são vulneráveis. Ou por um lado não procura esta informação ou não efectua pesquisas de análises de vulnerabilidades de forma regular.
-* Se não corrigir ou actualizar a plataforma subjacente, as frameworks e dependências de uma forma If you do not fix or upgrade the underlying platform, frameworks and dependencies em tempo útil. Isto acontece frequentemente em ambientes em que a realização das correções são uma tarefa realizada mensalmente ou trimestralmente, o que leva a que a organização fique exposta a muitos dias ou meses de exposição desnecessária as vulnerabilidades que entretanto já foram corrigidas. Esta é na verdade uma das principais causas que levou à maior reveleção de informação não autorizada de todos os tempos. 
-* Se não garantir a segurança das configurações dos componentes (ver **A6:2017-Más Configurações de Segurança**).
+* Não conhecer as versões de todos os componentes que utiliza (tanto no âmbito
+  do cliente como no servidor). Isto engloba componentes que utiliza
+  diretamente, bem como as suas dependências.
+* O *software* é vulnerável, deixou de ser suportado, ou está desatualizado.
+  Isto inclui o SO, servidor web ou da aplicação, sistemas de gestão de base de
+  dados (SGBDs), aplicações, APIs e todos os componentes, ambientes de execução,
+  e bibliotecas.
+* Não examinar regularmente os componentes que utiliza quanto à presença de
+  vulnerabilidades e não subscrever relatórios de segurança relacionados com os
+  mesmos.
+* Não corrigir ou atualizar a plataforma base, *frameworks* e dependências de
+  forma oportuna numa abordagem baseada no risco. Isto é um padrão comum em
+  ambientes nos quais novas versões são lançadas mensalmente ou trimestralmente,
+  levando a que as organizações fiquem expostas à exploração de vulnerabilidades
+  já corrigidas, durante dias ou meses.
+* Os desenvolvedores de *software* não testarem a compatibilidade com as
+  novas versões, atualizações ou correções das bibliotecas.
+* Não garantir a segurança das configurações dos componentes (referência
+  **A6:2017-Security Misconfiguration**).
 
 ## Como Prevenir?
 
-Os projectos de software devem um processo estabelecido para:
+Deve existir um processo de gestão de correções e atualizações, que:
 
-* Remover dependências não-usadas, funcionalidades desnecessárias, componentes, ficheiros e documentação.
-* Inventariação contínua das versões dos componentes tanto do lado cliente como do lado do servidor e das suas dependências usando ferramentas como o  [versions](http://www.mojohaus.org/versions-maven-plugin/), [DependencyCheck](https://www.owasp.org/index.php/OWASP_Dependency_Check), [retire.js](https://github.com/retirejs/retire.js/), entre outras.
-* Monitorizar continuamente fontes de informação como o [CVE](https://cve.mitre.org/) e [NVD](https://nvd.nist.gov/) por vulnerabilidades nos componentes. Usar ferramentas de análise de composição de software para automatizar o processo.
-* Apenas obter os componentes das fontes oficiais e, quando possível, preferir os pacotes assinados para reduzir a hipótese de obter uma versão de um componente que tenha sido modificado ou seja malicioso.
-* Muitas bibliotecas e componentes não criam actualizações de segurança para versões antigas, ou são simplesmente não mantidos. Se não for possível efectuar correções de segurança, consider aplicar uma [actualização virtual](https://www.owasp.org/index.php/Virtual_Patching_Best_Practices#What_is_a_Virtual_Patch.3F) para monitorar, detectar ou proteger contra um problema descoberto.
+* Remova dependências não utilizadas assim como funcionalidades, componentes,
+  ficheiros e documentação desnecessários.
+* Realize um inventário das versões dos componentes ao nível do cliente e do
+  servidor (ex. *frameworks*, bibliotecas) e das suas dependências, através da
+  utilização de ferramentas como *versions*, *DependencyCheck*, *retire.js*,
+  etc.
+* Monitorize, regularmente, fontes de informação como o Common Vulnerabilities
+  and Exposures(CVE) e o National Vulnerability Database (NVD), em busca de
+  vulnerabilidades em componentes. Utilize *software* de análise de forma a
+  automatizar o processo. Subscreva alertas via e-mail sobre vulnerabilidades de
+  segurança relacionadas com componentes utilizados.
+* Apenas obtenha componentes de fontes oficiais através de ligações seguras.
+  Dê preferência a pacotes assinados de forma a reduzir a probabilidade de obter
+  um componente modificado ou malicioso.
+* Monitorize bibliotecas e componentes que não sofram manutenção ou cujas
+  versões antigas não são alvo de atualizações de segurança.
 
-Cada organização deve assegurar que existe um plano para monitorizar, efectuar a triagem, e aplicar as actualizações ou alterações de configurações durante o tempo de vida da aplicação ou do conjunto de aplicações.
+Cada organização deve assegurar que possui um plano ativo que vise a
+monitorização, triagem e aplicação de atualizações ou mudanças na configuração
+da aplicação ou portefólio, ao longo do seu ciclo de vida.
 
 ## Exemplos de Cenários de Ataque
 
-Os componentes são tipicamente executados com os mesmos privilégios da própria aplicação, por isso as falhas nos componentes podem resultar num impacto sério na aplicação. Tais falhas podem ser acidentais (por exemplo, erro de codificação) ou intencionais (por exemplo, um backdoor num componente). Alguns exemplos de vulnerabilidades em componentes que podem ser exploradas são:
+**Cenário #1**: Tipicamente os componentes executam com os mesmos privilégios da
+aplicação onde se inserem, portanto quaisquer vulnerabilidades nos componentes
+podem resultar num impacto sério. Falhas deste tipo podem ser acidentais (ex.
+erro de programação) ou intencional (ex. *backdoor* no componente). Exemplos de
+exploração de vulnerabilidades em componentes são:
 
-* [CVE-2017-5638](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5638), uma vulnerabilidade de execução remota de código na Struts 2 que permite a execução remota de código arbitrário no servidor, tem sido responsável por significativas revelações não autorizadas de dados.
-* Enquanto falhas na [Internet das Coisas (IoT)](https://en.wikipedia.org/wiki/Internet_of_things) são frequentemente difíceis ou impossíveis de corrigir, a importância de as corrigir é muito significativa (por exemplo, [pacemakers de St. Jude](https://arstechnica.com/information-technology/2017/08/465k-patients-need-a-firmware-update-to-prevent-serious-pacemaker-hacks/)).
+* [CVE-2017-5638][1], a execução remota de código relacionado com uma
+  vulnerabilidade Struts 2, a qual permite a execução de código arbitrário no
+  servidor, foi responsável por várias quebras de segurança graves.
+* Enquanto que redes como [Internet of Things (IoT)][2] continuam a ser
+  frequentemente difíceis ou impossíveis de corrigir, a importância de as
+  corrigir é fundamental (ex. dispositivos biomédicos).
 
-Existem ferramentas automáticas que ajudam os atacantes a encontrarem sistemas mal configurados ou que não estejam devidamente actualizados. Por exemplo, o [motor de busca Shodan](https://www.shodan.io/report/89bnfUyJ) pode ajudar a encontrar dispositivos que ainda são vulneráveis ao [Heartbleed](https://en.wikipedia.org/wiki/Heartbleed) que foi corrigida em Abril de 2014.
+Existem ferramentas automáticas que ajudam os atacantes a encontrar sistemas mal
+configuradas ou com erros. Por exemplo, o [motor de busca Shodan][3] pode ajudar
+a facilmente encontrar dispositivos que possam ainda estar vulneráveis a
+[Heartbleed][4], vulnerabilidade esta que já foi corrigida em Abril de 2014.
 
 ## Referências
 
 ### OWASP
 
-* [OWASP Application Security Verification Standard: V1 Architecture, design and threat modelling](https://www.owasp.org/index.php/ASVS)
-* [OWASP Testing Guide - Map Application Architecture (OTG-INFO-010)](https://www.owasp.org/index.php/Map_Application_Architecture_(OTG-INFO-010))
-* [OWASP Dependency Check (for Java and .NET libraries)](https://www.owasp.org/index.php/OWASP_Dependency_Check)
-* [OWASP Virtual Patching Best Practices](https://www.owasp.org/index.php/Virtual_Patching_Best_Practices)
+* [OWASP Application Security Verification Standard: V1 Architecture, design and
+  threat modelling][5]
+* [OWASP Testing Guide - Map Application Architecture (OTG-INFO-010)][6]
+* [OWASP Dependency Check (for Java and .NET libraries)][7]
+* [OWASP Virtual Patching Best Practices][8]
 
 ### Externas
 
-* [The Unfortunate Reality of Insecure Libraries](https://www.aspectsecurity.com/research-presentations/the-unfortunate-reality-of-insecure-libraries)
-* [MITRE Common Vulnerabilities and Exposures (CVE) search](https://www.cvedetails.com/version-search.php)
-* [National Vulnerability Database (NVD)](https://nvd.nist.gov/)
-* [Retire.js for detecting known vulnerable JavaScript libraries](https://github.com/retirejs/retire.js/)
-* [Node Libraries Security Advisories](https://nodesecurity.io/advisories)
-* [Ruby Libraries Security Advisory Database and Tools](https://rubysec.com/)
+* [The Unfortunate Reality of Insecure Libraries][9]
+* [MITRE Common Vulnerabilities and Exposures (CVE) search][10]
+* [National Vulnerability Database (NVD)][11]
+* [Retire.js for detecting known vulnerable JavaScript libraries][12]
+* [Node Libraries Security Advisories][13]
+* [Ruby Libraries Security Advisory Database and Tools][14]
+
+[1]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5638
+[2]: https://en.wikipedia.org/wiki/Internet_of_things
+[3]: https://www.shodan.io/report/89bnfUyJ
+[4]: https://en.wikipedia.org/wiki/Heartbleed
+[5]: https://www.owasp.org/index.php/ASVS
+[6]: https://www.owasp.org/index.php/Map_Application_Architecture_(OTG-INFO-010)
+[7]: https://www.owasp.org/index.php/OWASP_Dependency_Check
+[8]: https://www.owasp.org/index.php/Virtual_Patching_Best_Practices
+[9]: https://www.aspectsecurity.com/research-presentations/the-unfortunate-reality-of-insecure-libraries
+[10]: https://www.cvedetails.com/version-search.php
+[11]: https://nvd.nist.gov/
+[12]: https://github.com/retirejs/retire.js/
+[13]: https://nodesecurity.io/advisories
+[14]: https://rubysec.com/
+
