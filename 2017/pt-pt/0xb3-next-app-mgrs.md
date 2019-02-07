@@ -1,4 +1,4 @@
-# +A: O que se segue para os Gestores de Aplicações
+# +A: Próximos Passos Para Gestores de Aplicações
 
 ## Gerir o Ciclo de Vida das Aplicações
 
@@ -13,7 +13,7 @@ todo o ciclo de vida da aplicação dum ponto de vista técnico, desde a
 identificação de requisitos até à descontinuação do sistema, o qual é
 normalmente esquecido.
 
-## Requisitos e Gestão de Recursos
+### Requisitos e Gestão de Recursos
 
 * Identificar e negociar os requisitos de negócio para uma aplicação com os
   responsáveis da área de negócio, incluindo requisitos de protecção
@@ -24,7 +24,7 @@ normalmente esquecido.
 * Planear e negociar o orçamento que deve cobrir todos os aspectos do desenho,
   construção, teste e operação, incluindo actividades de segurança.
 
-## Solicitação de Propostas e Contratação
+### Solicitação de Propostas e Contratação
 
 * Negociar os requisitos com os programadores internos ou externos, incluindo
   orientações e requisitos de segurança relativos ao seu programa de segurança,
@@ -40,7 +40,7 @@ normalmente esquecido.
 provavelmente necessita de ser adaptada à realidade jurídica de outros países.
 Por favor, obtenha aconselhamento legal antes de usar o Anexo.
 
-## Planear e Desenhar
+### Planear e Desenhar
 
 * Negociar o planeamento e desenho com os programadores e com os intervenientes
   internos, e.g. os especialistas de segurança.
@@ -53,7 +53,7 @@ Por favor, obtenha aconselhamento legal antes de usar o Anexo.
   (_stories_) de segurança são criadas para os requisitos funcionais, incluindo
   os constrangimentos adicionados aos requisitos não-funcionais.
 
-## Instalação, Teste e Lançamento
+### Instalação, Teste e Lançamento
 
 * Automatizar a configuração segura da aplicação, interfaces e de todos os
   componentes necessários, incluindo autorizações.
@@ -68,7 +68,7 @@ Por favor, obtenha aconselhamento legal antes de usar o Anexo.
 * Finalizar toda a documentação, incluindo a BDGC (Base de Dados de Gestão de
   Configurações) e a arquitectura de segurança.
 
-## Operação e Alterações
+### Operação e Alterações
 
 * Operar incluindo a gestão de segurança para a aplicação (e.g. gestão de
   correções).
@@ -80,7 +80,7 @@ Por favor, obtenha aconselhamento legal antes de usar o Anexo.
   controlos e contramedidas, incluindo quaisquer cadernos ou documentação de
   projecto.
 
-## Descontinuação de Sistemas
+### Descontinuação de Sistemas
 
 * Dados relevantes devem ser arquivados. Todos os outros dados devem ser
   apagados de forma segurança.

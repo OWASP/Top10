@@ -1,6 +1,6 @@
 # +RF Detalhes sobre os Fatores de Risco
 
-## Sumário dos Riscos do Top 10
+## Resumo dos Riscos do Top 10
 
 A tabela seguinte apresenta um resumo do Top 10 de Riscos de Segurança
 Aplicacional de 2017 e o fator de risco que lhes foram atribuídos.

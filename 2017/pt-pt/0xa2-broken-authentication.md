@@ -3,7 +3,7 @@
 | Agentes de Ameaça/Vetores de Ataque | Vulnerabilidade de Segurança | Impactos |
 | -- | -- | -- |
 | Nível de Acesso \| Abuso 3 | Prevalência 2 \| Deteção 2 | Técnico 3 \| Negócio |
-| Os atacantes têm acesso a centenas de milhões de combinações de nomes de utilizador e palavras-passe válidas para preenchimento de credenciais, listas de contas administrativas padrão, ferramentas automatizadas para ataques de força bruta e ataque de dicionário. Ataques ao sistema de gestão de sessões são geralmente compreendidos, em particular no que diz respeito a tokens de sessão que não expiram. | A prevalência da quebra de autenticação está muito disseminada devido ao desenho e implementação de muitos controlos de gestão de identidades e acesso. A gestão de sessão é o alicerce da autenticação e controlo de acesso, estando presente em todas as aplicações que guardam estado. Os atacantes podem detetar quebras de autenticação através de processos manuais, abusando das mesmas com recurso a ferramentas automáticas com listas de palavras-passe e ataques de dicionário. | Os atacantes apenas têm que ganhar acesso a algumas contas, ou a uma conta de administrador para comprometer o sistema. Dependendo do domínio da aplicação, isto pode permitir a lavagem de dinheiro, fraudes na segurança social e roubo de identidade; ou revelação de informação altamente sensível. |
+| Os atacantes têm acesso a uma infinidade de combinações de nome de utilizador e palavra-passe válidas para ataques de credential stuffing, força bruta e de dicionário bem como acesso a contas padrão de administração. Ataques à gestão de sessão são genericamente compreendidos em particular tokens que não expiram. | A quebra de autenticação está bastante difundida devido ao desenho e implementação de muitos controlos de identificação e acesso. A gestão de sessão é o alicerce da autenticação e controlo de acesso, estando presente em todas as aplicações que guardam estado. Os atacantes podem detetar quebras de autenticação através de processos manuais, abusando com recurso a ferramentas automáticas com listas de palavras-passe e ataques de dicionário. | Os atacantes apenas têm que ganhar acesso a algumas contas, ou a uma conta de administrador para comprometer o sistema. Dependendo do domínio da aplicação, isto pode permitir a lavagem de dinheiro, fraudes na segurança social e roubo de identidade; ou revelação de informação altamente sensível. |
 
 ## A Aplicação é Vulnerável?
 
@@ -13,18 +13,15 @@ críticas para a defesa contra ataques relacionados com autenticação.
 A sua aplicação poderá ter problemas na autenticação se:
 
 * Permite ataques automatizados tais como [credential stuffing][1] (teste
-  exaustivo), em que o atacante possui uma lista de nomes de utilizadores e
-  palavras-passe válidos.
-* Permite ataques de força bruta ou outro tipo de ataques automatizados.
+  exaustivo) ou força bruta.
 * Permite palavras-passe padrão, fracas ou conhecidas, tais somo "Password1" ou
   "admin/admin".
-* Usa processos fracos ou ineficazes de recuperação de credenciais e de
-  recuperação de palavra-passe, tais como "perguntas baseadas em conhecimento",
-  que podem não ser seguras.
-* A utilização de palavras-passe em claro, encriptadas, ou com resumos (_hash_)
-  fracos (veja [A3:2017 Exposição de Dados Sensíveis][2]).
-* Não possua autenticação multi-factor ou que a mesma não funcione
-  correctamente.
+* Usa processos fracos ou ineficazes de recuperação de credenciais e recuperação
+  de palavra-passe e.g. "perguntas baseadas em conhecimento", que podem não ser
+  seguras.
+* Usa as palavras-passe em claro, encriptação ou resumos (hash) fracos (veja
+  A3:2017 Exposição de Dados Sensíveis).
+* Não possui autenticação multi-factor ou o mesmo não funciona correctamente.
 * Expõe os identificadores de sessão no URL (e.g. quando o URLs é re-escrito).
 * Não ronova os identificadores de sessão após o processo de "login" ter sido
   bem sucedido.
@@ -33,7 +30,7 @@ A sua aplicação poderá ter problemas na autenticação se:
   (SSO)) não são invalidados convenientemente durante o processo de "logout" ou
   após um período de inatividade.
 
-## Como Prevenir?
+## Como Prevenir
 
 * Sempre que possível, implementar autenticação multi-factor por forma a
   prevenir ataques automatizado de [credential stuffing][1], força bruta e
@@ -41,19 +38,18 @@ A sua aplicação poderá ter problemas na autenticação se:
 * Não disponibilizar a aplicação com credenciais pré-definidas, em especial para
   utilizadores com perfil de administrador.
 * Implementar verificações de palavras-chave fracas, tais como comparar as
-  palavras-passe novas ou alteradas com a lista [das Top 10000 piores
+  palavras-passe novas ou alteradas com a lista das [das Top 10000 piores
   palavras-passe][3].
-* Alinhar o comprimento da palavra-passe, complexidade e políticas de
-  rotatividade com o guia [NIST 800-63 B na secção 5.1.1 para Memorized
+* Seguir as recomendações do guia [NIST 800-63 B na secção 5.1.1 para Memorized
   Secrets][4] ou outras políticas modernas para palavras-passe, baseadas em
   evidências.
-* Assegurar que o registo, recuperação de credenciais, e caminhos da API estão
-  preparados para resistirem a ataques de enumeração de contas usando as mesmas
-  mensagens para todos os resultados.
+* Assegurar que o registo, recuperação de credenciais e API estão preparados
+  para resistir a ataques de enumeração de contas usando as mesmas mensagens
+  para todos os resultados (sucesso/insucesso).
 * Limitar o número máximo de tentativas de login falhadas ou atrasar
   progressivamente esta operação. Registar todas as falhas de autenticação e
-  alertar os administradores sempre que forem detetados ataques de teste
-  exaustivo de palavras-passe, força bruta ou outros.
+  alertar os administradores quando detetados ataques de teste exaustivo, força
+  bruta ou outros.
 * Usar, no servidor, um gestor de sessões seguro que gere novos identificadores
   de sessão aleatórios e com elevado nível de entropia após o login. Os
   identificadores de sessão não devem constar do URL e devem ser guardados de

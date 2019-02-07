@@ -10,50 +10,48 @@
 Existem três tipos de XSS que visam normalmente o navegador dos utilizadores:
 
 * **Reflected XSS**: A aplicação ou API incluem dados de entrada do utilizador
-  como parte do HTML de resposta sem que estes tenham sido devidamente validados
-  e/ou os caracteres especiais devidamente tratados (_escaping_). Um ataque bem
-  sucedido pode permitir ao atacante executar qualquer tipo de código HTML e
-  JavaScript no navegador da vítima. Normalmente a vítima terá de seguir um
-  endereço malicioso para uma página controlada pelo atacante tal como _watering
-  hole websites_, publicidade ou algo semelhante.
+  como parte do HTML da resposta sem que estes tenham sido validados e/ou os
+  caracteres especiais tratados (escaping). Um ataque bem sucedido pode permitir
+  a execução de código HTML e JavaScript no navegador da vítima. Normalmente a
+  vítima segue um endereço malicioso para uma página controlada pelo atacante
+  tal como watering hole websites, publicidade ou algo semelhante.
 * **Stored XSS**: A aplicação ou API armazenam dados de entrada do utilizador de
-  forma não tratada (_sanitization_) os quais serão mais tarde acedidos por
-  outro utilizador ou administrador. Este tipo de XSS é considerado de risco
-  alto ou crítico.
-* **DOM XSS**: Tipicamente as _frameworks_ JavaScript, _Single Page
-  Applications_ (SPA) e APIs que incluem na página, de forma dinâmica,
-  informação controlada pelo atacante, são vulneráveis a DOM XSS. Idealmente a
-  aplicação não enviaria informação controlada pelo atacante para as APIs
-  JavaScript.
+  forma não tratada (sanitization) os quais serão mais tarde acedidos por outro
+  utilizador ou administrador. Este tipo de XSS é considerado de risco alto ou
+  crítico.
+* **DOM XSS** : Tipicamente as frameworks JavaScript, Single Page Applications
+  (SPA) e APIs que incluem na página, de forma dinâmica, informação controlada
+  pelo atacante, são vulneráveis a DOM XSS. Idealmente a aplicação não enviaria
+  informação controlada pelo atacante para as APIs JavaScript.
 
 Os ataques típicos de XSS visam o roubo da sessão do utilizador, roubo ou
 controlo da conta de utilizador, contornar autenticação de múltiplo fator (MFA),
-alteração do DOM por substituição ou alteração de nós (tais como formulários de
-autenticação), ataques contra o navegador do utilizador tais como o download de
-software malicioso, _key logging_ e outros ataques possíveis do lado do cliente.
+alteração do DOM por substituição ou alteração de nós (e.g. formulários),
+ataques contra o navegador do utilizador tais como o download de software
+malicioso, key logging entre outros.
 
-## Como Prevenir?
+## Como Prevenir
 
 Prevenir ataques de XSS requer a separação dos dados não confiáveis do conteúdo
-activo do navegador. Isto é conseguido através da:
+ativo do navegador. Isto é conseguido através da:
 
-* Utilização de _frameworks_ que ofereçam nativamente protecção para XSS tais
-  como as versões mais recentes de Ruby on Rails e React JS. É preciso conhecer
-  as limitações destes mecanismos de proteção por forma a tratar de forma
-  adequada os casos não cobertos.
-* Tratamento adequado (_escaping_) da informação não confiável no pedido HTTP
+* Utilização de frameworks que ofereçam nativamente protecção para XSS tais como
+  as versões mais recentes de Ruby on Rails e React JS. É preciso conhecer as
+  limitações destes mecanismos de proteção por forma a tratar de forma adequada
+  os casos não cobertos.
+* Tratamento adequado (escaping) da informação não confiável no pedido HTTP
   tendo em conta o contexto onde esta informação irá ser inserida no HTML (body,
   atributo, JavaScript, CSS ou URL) resolve as vulnerabilidades Reflected e
-  Stored XSS. O documento [OWASP Cheat Sheet 'XSS Prevention'][1] inclui
-  detalhes de como deve ser tratada esta informação.
-* Aplicação do _encoding_ adequado com base no contexto de utilização aquando da
-  modificação da página no lado do cliente previne o DOM XSS. Quando isto não é
-  possível, podemos utilizar algumas das técnicas referidas no documento OWASP
-  Cheat Sheet 'XSS Prevention'.
+  Stored XSS. Detalhes sobre como tratar esta informação estão no [OWASP Cheat
+  Sheet 'XSS Prevention'][1].
+* Aplicação de codificação de caracteres adequada ao contexto de utilização
+  aquando da modificação da página no lado do cliente previne DOM XSS. Quando
+  isto não é possível, podem utilizar-se algumas das técnicas referidas no
+  documento [OWASP Cheat Sheet 'DOM based XSS Prevention'][9].
 * Adição de [Content Security Policy (CSP)][2] enquanto medida de mitigação de
   XSS. É uma medida eficaz se não existirem outras vulnerabilidades que
   possibilitem a inclusão de código malicioso através de ficheiros locais da
-  aplicação (e.g. _path traversal overwrites_ ou dependências vulneráveis
+  aplicação (e.g. path traversal overwrites ou dependências vulneráveis
   incluídas a partir de CDNs autorizadas).
 
 ## Exemplos de Cenários de Ataque

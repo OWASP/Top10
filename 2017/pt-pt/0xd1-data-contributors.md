@@ -1,6 +1,6 @@
-# Reconhecimento
+# Agradecimentos
 
-## Reconhecimento a quem contribuiu com dados
+## Agradecimento a quem contribuiu com dados
 
 Gostaríamos de agradecer às muitas organizações que contribuíram com os seus
 dados de vulnerabilidades para suportar esta actualização de 2017:
@@ -50,9 +50,9 @@ dados de vulnerabilidades para suportar esta actualização de 2017:
 * Web.com
 
 Pela primeira vez, todos os dados considerados para uma versão do Top 10 bem
-como a lista completa de contribuidores é [tornada pública][1].
+como a [lista completa de contribuidores é tornada pública][1].
 
-## Reconhecimento a contribuidores individuais
+## Agradecimento aos contribuidores individuais
 
 Gostaríamos de agradecer aos contribuidores individuais que investiram muitas
 horas a contribuírem para esta versão do Top 10 no GitHub.
@@ -142,4 +142,3 @@ forneceram um apoio inestimável na redação do novo risco A8:2017-Desserializa
 Insegura.
 
 [1]: https://github.com/OWASP/Top10/tree/master/2017/datacall/submissions
-

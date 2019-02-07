@@ -1,4 +1,4 @@
-# +R Notas Sobre Os Riscos
+# +R Nota Sobre Os Riscos
 
 ## É Sobre Os Riscos Que as Falhas Representam
 
@@ -44,7 +44,7 @@ dada a sua cultura, indústria, e o ambiente regulatório. O propósito do Top 1
 da OWASP não é realizar a análise de risco por si.
 
 A imagem seguinte ilustra o nosso cálculo do risco para
-**A6:2017 - Más Configurações de Segurança**.
+**A6:2017 - Configurações de Segurança Incorretas**.
 
 ![Risk Calculation for A6:2017-Security Misconfiguration][image-1]
 

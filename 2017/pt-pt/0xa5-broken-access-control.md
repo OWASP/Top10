@@ -3,58 +3,56 @@
 | Agentes de Ameaça/Vetores de Ataque | Vulnerabilidade de Segurança | Impactos |
 | -- | -- | -- |
 | Nível de Acesso \| Abuso 2 | Prevalência 2 \| Deteção 2 | Técnico 3 \| Negócio |
-| O abuso do controlo de acessos é uma das principais competências dos atacantes. As ferramentas SAST e DAST podem detetar a ausência de controlo de acessos, mas não conseguem validar o seu funcionamento quando presentes. O controlo de acessos é detetável através de processos manuais, ou possivelmente através da automação da detecção da ausência de controlos de acesso em frameworks específicas. | As falhas de controlo de acessos são comuns devido à falta de processos automáticos de deteção e à falta de testes funcionais realizados pelos programadores. A deteção de controlo de acessos não é fácil de realizar recorrendo a testes automáticos tanto estáticos como dinâmicos. | O impacto técnico reside no facto dos atacantes poderem atuar como utilizadores ou administradores legítimos, utilizadores usarem funções priviligiadas ou criar, aceder, atualizar ou apagar todos os registos. O impacto no negócio depende na necessidade de proteção dos dados. |
+| O abuso do controlo de acessos é uma competências base dos atacantes. Ferramentas automáticas como SAST e DAST podem detetar a ausência, mas não validar o funcionamento do controlo de acessos quando presente. A deteção do controlo de acessos envolve processos manuais. | As falhas de controlo de acessos são comuns devido à falta de processos automáticos de deteção e à falta de testes funcionais realizados pelos programadores. A deteção de controlo de acessos não é fácil de realizar recorrendo a testes automáticos tanto estáticos como dinâmicos. | O impacto técnico reside no facto dos atacantes poderem atuar como utilizadores ou administradores legítimos, utilizadores usarem funções priviligiadas ou criar, aceder, atualizar ou apagar todos os registos. O impacto no negócio depende na necessidade de proteção dos dados. |
 
 ## A Aplicação é Vulnerável?
 
-O controlo de acessos força a política de utlização de forma a que os
-utilizadores não possam agir além das permissões que lhe foram atribuídas.
-Falhas no controlo contro de acessos levam tipicamente à divulgação não
-autorizada de informação, modificação ou destruição de todos os dados, ou á
-execução de funções de negócio fora dos limites do utilizador. As
-vulnerabilidades comuns no controlo de acesso incluem:
+O controlo de acessos garante que os utilizadores não podem agir além das
+permissões que lhe foram atribuídas. Falhas no controlo de acessos levam
+tipicamente à divulgação não autorizada de informação, modificação ou destruição
+de todos os dados, ou á execução de funções de negócio fora dos limites do
+utilizador. As vulnerabilidades comuns incluem:
 
-* Ultrapassar as verificações de controlo de acesso através da modificação do
-  URL, do estado interno da aplicação, ou página HTML, ou através da utilização
-  de ferramenta específica para atacar uma API.
-* Permitir que a chave primária possa ser alterada para um registo de outro
-  utilizador, tal como visualizar ou editar a conta de outro utilizador.
+* Ultrapassar as verificações de controlo de acesso modificando o URL, estado
+  interno da aplicação, ou página HTML, ou através da utilização de ferramenta
+  para ataque a APIs.
+* Permitir a alteração da chave primária para um registo doutro utilizador,
+  permitindo visualizar ou editar a conta deste.
 * Elevação de privilégios. Atuar como um utilizador sem ter feito o processo de
   "login", ou atuar como administrador mesmo tendo perfil de utilizador regular.
-* Manipulação de meta-informação, tal como a repetição ou adulteração de um JSON
-  Web Token (JWT) de controlo de acesso, um cookie ou campo escondido para
-  elevação de privilégios.
+* Manipulação de meta-informação, tais como repetição ou adulteração do JSON Web
+  Token (JWT) de controlo de acesso, cookie ou campo escondido para elevação de
+  privilégios.
 * Acesso não autorizado a uma API devido a má configuração da política de
-  partilha de recursos entre origens (CORS - Cross-Origin Resource Sharing).
+  partilha de recursos entre origens (CORS).
 * Forçar a navegação para páginas autenticadas como um utilizador
   não-autenticado, ou para páginas priviligiadas como um utilizador normal, asim
   como utilizar uma API sem o devido controlo de acessos para operações POST,
   PUT e DELETE.
 
-## Como Prevenir?
+## Como Prevenir
 
 O controlo de acessos é apenas efetivo se realizado por código confiável a
-correr no servidor ou pelas APIs em arquiteturas _serverless_, em que o atacante
+correr no servidor ou pelas APIs em arquiteturas serverless, em que o atacante
 não pode modificar a validação do controlo de acessos nem a meta-informação.
 
 * Com a excepção dos recursos públicos, o acesso deve ser negado por omissão.
 * Implementar mecanismos de controlo de acesso uma única vez, reutilizando-os ao
   longo da aplicação, incluíndo CORS.
-* Modelar controlos de acesso que assegurem a posse dos registos, por oposição
-  ao modelo que aceita que um utilizador possa criar, ler, actualizar ou apagar
-  qualquer registo.
+* Modelar controlo de acesso que assegure a propriedade dos registos, por
+  oposição ao modelo que aceita que um utilizador possa criar, ler, actualizar
+  ou apagar qualquer registo.
 * As regras de negócio específicas duma aplicação, devem ser assegurados por
   modelos de domínio.
 * Desativar a listagem de diretorias no servidor e assegurar que nenhuma
-  meta-informação dos ficheiros (e.g. `.git`) está presente na raíz do servidor
-  web.
+  meta-informação está presente na raíz do servidor web (e.g. `.git`).
 * Registar falhas de controlo de acesso e alertar os administradores sempre que
   necessário (e.g. falhas repetidas).
 * Limitar o acesso à API e controladores por forma a minimizar o impacto de
   ataque com recurso a ferramentas automáticas.
-* Os JSON Web Tokens (JWT) devem ser invalidados após o _logout_.
-* Os programadores e equipa de qualidade devem incluir testes unitários e de
-  integração para as funcionalidades de controlo de acessos.
+* Invalidar JSON Web Tokens (JWT) após o logout.
+* Incluir testes unitários e de integração para as funcionalidades de controlo
+  de acessos.
 
 ## Exemplos de Cenários de Ataque
 
@@ -109,3 +107,4 @@ administração, existe igualmente uma falha.
 [7]: https://cwe.mitre.org/data/definitions/285.html
 [8]: https://cwe.mitre.org/data/definitions/639.html
 [9]: http://blog.portswigger.net/2016/10/exploiting-cors-misconfigurations-for.html
+

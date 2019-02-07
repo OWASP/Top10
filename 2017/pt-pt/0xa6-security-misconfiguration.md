@@ -1,4 +1,4 @@
-# A6:2017 Más Configurações de Segurança
+# A6:2017 Configurações de Segurança Incorretas
 
 | Agentes de Ameaça/Vetores de Ataque | Vulnerabilidade de Segurança | Impactos |
 | -- | -- | -- |
@@ -14,42 +14,40 @@ A aplicação pode ser vulnerável se:
 * Funcionalidades desnecessárias estão ativas ou instaladas (e.g. portas de
   comunicação desnecessárias, serviços, páginas, contas ou privilégios).
 * Existem contas padrão e as suas passwords ainda estão ativas e inalteradas.
-* O rotina de tratamento de erros revela informação de execução (_stack trace_)
-  ou outras mensagens que incluam detalhe excessivo para os utilizadores.
+* A rotina de tratamento de erros revela informação de execução (stack trace) ou
+  outras mensagens que incluam detalhe excessivo para os utilizadores.
 * Em sistemas atualizados, as últimas funcionalidades de segurança encontram-se
   desativadas ou configuradas de forma insegura.
-* As definições de segurança nos servidores aplicacionais, _frameworks_ (e.g.
+* As definições de segurança nos servidores aplicacionais, frameworks (e.g.
   Struts, Spring, ASP.NET), bibliotecas de código, base de dados, etc., não usam
   valores seguros.
 * O servidor não inclui cabeçalhos ou diretivas de segurança nas respostas ou
   estas não usam valores seguros.
-* O software está desatualizado ou vulnerável (ver **A9:2017 Utilização de
-  Componentes com Vulnerabilidades Conhecidas**). Sem manutenção corretiva e um
-  processo de aplicação de definições de segurança reprodutível os sistemas
-  apresentam um risco mais elevado.
+* O software está desatualizado ou vulnerável (ver A9:2017 Utilização de
+  Componentes Vulneráveis). Sem manutenção corretiva e um processo de aplicação
+  de definições de segurança reprodutível os sistemas apresentam um risco mais
+  elevado.
 
-## Como Prevenir?
+## Como Prevenir
 
 Processos de instalação seguros devem ser implementados, incluindo:
 
-* Um processo reprodutível de robustecimento do sistema, que torne fácil e
-  rápido criar um novo ambiente que esteja devidamente seguro.
-  Ambientes de desenvolvimento, qualidade e produção devem todos estar
-  configurados de forma semelhante com diferentes credências para cada ambiente.
-  Este processo deve ser automatizado para minimizar o esforço necessário para
-  configurar um novo ambiente seguro.
+* Um processo automatizado e reprodutível de robustecimento do sistema, que
+  torne fácil e rápido criar um novo ambiente devidamente seguro. Ambientes de
+  desenvolvimento, qualidade e produção devem ser configurados de forma
+  semelhante com credênciais específicas por ambiente.
 * A plataforma mínima necessária, sem funcionalidades desnecessárias,
   componentes, documentação ou exemplos. Remover ou não instalar funcionalidaes
-  que não são usadas bem como _frameworks_.
+  que não são usadas bem como frameworks.
 * Uma tarefa para rever e atualizar as configurações de forma adequada e de
   acordo com as notas de segurança, atualizações e correções como parte do
-  processo de gestão de correções (ver **A9:2017 Utilização de Componentes com
-  Vulnerabilidades Conhecidas**).
+  processo de gestão de correções (ver A9:2017 Utilização de Componentes com
+  Vulnerabilidades Conhecidas).
 * Uma arquitetura aplicacional segmentada que garanta uma separação efetiva e
   segura entre os componentes ou módulos, com segmentação, utilização de
-  _containers_ ou grupos de segurança _cloud_ (Access Control List (ACL)).
-* Envio de diretivas de segurança para o agente dos clientes e.g. [Security
-  Headers][1].
+  containers ou grupos de segurança cloud (Access Control List (ACL)).
+* Envio de diretivas de segurança para o agente dos clientes e.g. Security
+  Headers.
 * Um processo automatizado para verificação da eficácia das configurações e
   definições em todos os ambientes.
 
