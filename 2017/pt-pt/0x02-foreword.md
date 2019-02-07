@@ -30,10 +30,11 @@ OWASP Top 10 é um excelente ponto de partida para a viagem na segurança
 aplicacional.
 
 Escrevemos um conjunto de "próximos passos" sugeridos para diferentes
-utilizadores do OWASP Top 10, incluíndo "O que se segue para os programadores",
-"O que se segue para os profissionais de testes de software", "O que se segue
-para as organizações" direccionado para CIO's e CISO's e "O que se segue
-para gestores de aplicações", mais adequado para os donos das aplicações.
+utilizadores do OWASP Top 10, incluíndo "**Próximos Passos para
+Programadores**", "**Próximos Passos para Profissionais de testes de
+software**", "**Próximos Passos Para Organizações**" direccionado para CIO's e
+CISO's e "**Próximos Passos para Gestores de aplicações**", mais adequado para
+os donos das aplicações.
 
 A longo prazo, encorajamos todas as equipas de desenvolvimento de software e
 organizações a criarem programas de segurança aplicacional que sejam
@@ -62,4 +63,3 @@ concluirmos esta tarefa com o suporte da comunidade. Obrigado!
 * Andrew van der Stock
 
 [1]: https://www.owasp.org/index.php/ASVS
-

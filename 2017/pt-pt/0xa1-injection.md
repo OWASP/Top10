@@ -19,41 +19,39 @@ Uma aplicação é vulnerável a este ataque quando:
 * Dados hostis são usados directamente ou concatenados em consultas SQL ou
   comandos, misturando a estrutura e os dados hostis em consultadas dinâmicas,
   comandos ou procedimentos armazenados.
-* Algumas das injeções mais comuns são SQL, NoSQl, comandos do sistema
-  operativo, ORM, LDAP, Linguagens de Expressão (EL) ou injeção OGNL. O conceito
-  é idêntico entre todos os interpretadores. A revisão de código é a melhor
-  forma de detetar se a sua aplicação é vulnerável a injeções, complementada
-  sempre com testes automáticos que cubram todos os parâmetros, cabeçalhos, URL,
-  cookies, JSON, SOAP e dados de entrada para XML. As organizações podem
-  implementar ferramentas de análise estática e dinâmica de código no seu
-  processo de CI/CD por forma a identificar novas falhas relacionadas com
-  injeção antes de colocar as aplicações em ambiente de produção.
 
-## Como Prevenir?
+Algumas das injeções mais comuns são SQL, NoSQl, comandos do sistema operativo,
+ORM, LDAP, Linguagens de Expressão (EL) ou injeção OGNL. O conceito é idêntico
+entre todos os interpretadores. A revisão de código é a melhor forma de detetar
+se a sua aplicação é vulnerável a injeções, complementada sempre com testes
+automáticos que cubram todos os parâmetros, cabeçalhos, URL, cookies, JSON, SOAP
+e dados de entrada para XML. As organizações podem implementar ferramentas de
+análise estática ([SAST][]) e dinâmica ([DAST][]) de código no seu processo de CI/CD por forma a
+identificar novas falhas relacionadas com injeção antes de colocar as aplicações
+em ambiente de produção.
+
+## Como Prevenir
 
 Prevenir as injeções requer que os dados estejam separados dos comandos e das
 consultas.
 
-* A opção preferencial consiste em usar uma API que evite por completo o uso do
-  interpretador ou que ofereça uma interface parametrizável, ou então usar uma
-  ferramenta ORM - _Object Relational Mapping_.
-  
+* Optar por uma API que evite por completo o uso do interpretador ou que ofereça
+  uma interface parametrizável, ou então usar uma ferramenta ORM - Object
+  Relational Mapping.
   **NB**: Quando parametrizados, os procedimentos armazenados podem ainda
   introduzir injeção de SQL se o PL/SQL ou T-SQL concatenar consulta e dados, ou
-  executar dados hostis com `EXECUTE IMMEDIATE` ou `exec()`.
+  executar dados hostis com EXECUTE IMMEDIATE ou exec().
 * Validação dos dados de entrada do lado do servidor usando "whitelists", pese
   embora isto não represente uma defesa completa uma vez que muitas aplicações
   necessitam de usar caracteres especiais, tais como campos de texto ou APIs
   para aplicações móveis.
 * Para todas as consultas dinâmicas, processar os caracteres especiais usando
-  sintaxe especial de processamento para o interpretador específico
-  (_escaping_).
-  
+  sintaxe especial de processamento para o interpretador específico (escaping).
   **NB**: Estruturas de SQL tais como o nome das tabelas e colunas, entre
   outras, não podem ser processadas conforme descrito acima e por isso todos os
   nomes de estruturas fornecidos pelos utilizadores são perigosos. Este é um
   problema comum em software que produz relatórios.
-* Usar o `LIMIT` e outros controlos de SQL dentro das consultas para prevenir a
+* Usar o LIMIT e outros controlos de SQL dentro das consultas para prevenir a
   revelação não autorizada de grandes volumes de registos em caso de injeção de
   SQL.
 
@@ -82,14 +80,8 @@ http://example.com/app/accountView?id=' or '1'='1
 ```
 
 Isto altera o significado de ambas as consultas para que retornem todos os
-registos da tabela "accounts" 
-
-```sql
-SELECT * FROM accounts WHERE custID='' or '1'='1'
-```
-
-Ataques mais perigosos podem modificar dados ou até invocar procedimentos
-armazenados.
+registos da tabela "accounts". Ataques mais perigosos podem modificar dados ou
+até invocar procedimentos armazenados.
 
 ## Referências
 
@@ -99,6 +91,7 @@ armazenados.
 * [OWASP ASVS: V5 Input Validation and Encoding][3]
 * [OWASP Testing Guide: SQL Injection][4], [Command Injection][5], [ORM
   injection][6]
+* [OWASP Cheat Sheet: Injection Prevention][]
 * [OWASP Cheat Sheet: SQL Injection Prevention][7]
 * [OWASP Cheat Sheet: Injection Prevention in Java][8]
 * [OWASP Cheat Sheet: Query Parameterization][9]
@@ -127,4 +120,7 @@ armazenados.
 [13]: https://cwe.mitre.org/data/definitions/564.html
 [14]: https://cwe.mitre.org/data/definitions/917.html
 [15]: https://portswigger.net/knowledgebase/issues/details/00101080_serversidetemplateinjection
+[16]: https://www.owasp.org/index.php/Source_Code_Analysis_Tools
+[17]: https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools
+[18]: https://www.owasp.org/index.php/Injection_Prevention_Cheat_Sheet
 

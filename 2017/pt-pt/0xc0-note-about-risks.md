@@ -1,24 +1,53 @@
-# +R Notas sobre os Riscos
+# +R Nota Sobre Os Riscos
 
-## É sobre Riscos, não Fraquezas
+## É Sobre Os Riscos Que as Falhas Representam
 
-Apesar do [OWASP Top 10 2007][1] e das anteriores versões do Top 10 estarem muito focadas na identificação das vulnerabilidades mais prevalentes, o OWASP Top 10 sempre esteve organizado em torno de riscos. Este enfoque nos riscos causou alguma compreensível confusão em pessoas que procuravam uma taxonomia  estrita de fraquezas. O [OWASP Top 10 for 2010][2] clarificou o enfoque nos riscos no Top 10 sendo muito explicito sobre como os agentes de ameaça, vectores de ataque, fraquezas, impactos técnicos e impactos de negócio se combinam para produzir riscos. Esta versão do OWASP Top 10 continua no seguimento da mesma metodologia.
+A metodologia de Classificação de Risco para o Top 10 é baseada na [OWASP Risk
+Rating Methodology][1]. Para cada categoria do Top 10, estimamos o risco típico
+que cada falha introduz numa aplicação _web_ típica, ao observar os fatores de
+ocorrência comuns e os fatores de impacto para cada falha. De seguida, ordenamos
+o Top 10 de acordo com as falhas que tipicamente introduzem o risco mais
+significativo para uma aplicação. Estes fatores são atualizados a cada nova
+versão do Top 10 de acordo as mudanças que ocorrem.
 
-A metodologia de Classificação de Riscos para o OWASP Top 10 baseia-se na [Metodologia de Classificação de Riscos da OWASP][3]. Para cada item do Top 10, estimamos o risco típico que cada fraqueza introduz numa aplicação web típica olhando para factores comuns de ocorrência e para os factores de impacto de cada fraqueza. Depois ordenamos o Top 10 de acordo com essas fraquezas que tipicamente introduzem os riscos mais significativos numa aplicação. Estes factores são actualizados a cada nova versão do Top 10 de acordo com as mudanças que ocorram.
+[OWASP Risk Rating Methodology][1] define diversos fatores que ajudam a calcular
+o risco de uma determinada vulnerabilidade. Todavia, o Top 10 deve ser genérico
+e não focar em vulnerabilidades específicas existentes em aplicações e APIs
+reais. Consequentemente, não poderemos ser tão precisos quanto os donos do
+sistema, no que diz respeito a calcular o risco para a(s) sua(s) aplicação(ões).
+Você avaliará melhor a importância da(s) sua(s) aplicação(ões) e dos seus dados,
+quais são as ameaças, como o sistema foi construído e como é utilizado.
 
-A [Metodologia de Classificação de Risco da OWASP][4] define múltiplos factores que ajudam a calcular o risco de uma determinada vulnerabilidade. No entanto, o  Top 10 deve ser genérico, ao invés de referir vulnerabilidades específicas existentes em APIs e aplicações reais. Por consequência, nunca poderemos ser tão específicos como o dono do sistema quando calculam o risco para a sua aplicação(ões). Você está melhor equipado para julgar a importância das suas aplicações e dados, quais são as suas ameaças, e como o seu sistema foi implementado e é operado.
+A nossa metodologia inclui três fatores de ocorrência para cada falha
+(prevalência, detecção, e facilidade de exploração) e um factor de impacto
+(técnico). A escala de risco para cada factor varia entre 1-Baixo até 3-Alto
+com terminologia específica. A prevalência de uma falha é um factor que
+tipicamente não terá de calcular. Para dados sobre a prevalência, recebemos
+estatísticas de diferentes organizações (como referido na secção de
+Agradecimentos na página 25), agregamos todos os dados pelos 10 fatores mais
+prováveis. Estes dados foram depois combinados com os outros dois fatores de
+ocorrência (deteção e facilidade de abuso) para calcular um índice de ocorrência
+de cada falha. Este último foi então multiplicado pelo factor de impacto técnico
+médio estimado de cada item, para apresentar uma ordenação geral dos riscos de
+cada item para o Top 10 (quanto mais elevado for o resultado, mais elevado é o
+risco). Deteção, Facilidade de Abuso, e o Impacto foram calculados através da
+análise de CVEs reportados que foram associados com cada item do Top 10.
 
-A nossa metodologia inclui três factores de ocorrência para cada fraqueza (prevalência, detecção, e facilidade de exploração) e um factor de impacto (impacto técnico). A prevalência de uma fraqueza é um factor que tipicamente não tem que calcular. Para os dados da prevalência, fornecemos estatísticas de prevalência de um número de diferentes organizações (como foi referido na secção de Reconhecimento na página 4) e calculamos a média do conjunto dos seus dados para produzir a probabilidade em termos de prevalência no Top 10. Estes dados foram depois combinados com os outros dois factores de ocorrência (detecção e facilidade de exploração) para calcular a taxa de probabilidade de cada fraqueza. A taxa de probabilidade foi então multiplicada pela nossa média estimada do factor de impacto técnico para cada item para chegarmos à ordenação geral dos riscos para cada item no Top 10 (quanto mais elevado for o resultado, mais elevado é o risco).  
+**Nota**: Esta abordagem não tem em consideração a existência de um agente de
+ameaça. Nem tem em consideração quaisquer detalhes técnicos associados à sua
+aplicação em particular. Qualquer um destes fatores pode afetar de forma
+significativa a probabilidade geral de um atacante encontrar e explorar uma
+vulnerabilidade específica. Esta classificação não tem em consideração o impacto
+específico no seu negócio. A sua organização terá que decidir que riscos de
+segurança das aplicações e APIs é que a sua organização está disposta a aceitar
+dada a sua cultura, indústria, e o ambiente regulatório. O propósito do Top 10
+da OWASP não é realizar a análise de risco por si.
 
-De notar que esta abordagem não tem em consideração a probabilidade do agente de ameaça. Nem tem em consideração quaisquer detalhes técnicos associados a uma qualquer aplicação em particular. Qualquer um destes factores pode afectar de forma significativa a probabilidade geral de um atacante encontrar e explorar uma vulnerabilidade específica. Esta classificação não tem em consideração o impacto específico no negócio. _A sua organização_ terá que decidir quanto risco de segurança de aplicações e APIs é que A _organização_ está disposta a aceitar dada a sua cultura, industria, e ambiente regulatório. Não é o objectivo do OWASP Top 10 fazer esta análise de risco por si.
-
-A seguinte imagem ilustra o nosso cálculo do risco para **A6:2017 - Más Configurações de Segurança**.
+A imagem seguinte ilustra o nosso cálculo do risco para
+**A6:2017 - Configurações de Segurança Incorretas**.
 
 ![Risk Calculation for A6:2017-Security Misconfiguration][image-1]
 
-[1]:	https://www.owasp.org/index.php/Top10
-[2]:	https://www.owasp.org/index.php/Top_10_2010
-[3]:	https://www.owasp.org/index.php/OWASP_Risk_Rating_Methodology
-[4]:	https://www.owasp.org/index.php/OWASP_Risk_Rating_Methodology
+[1]: https://www.owasp.org/index.php/OWASP_Risk_Rating_Methodology
+[image-1]: images/0xc0-risk-explanation.png
 
-[image-1]:	images/0xc0-risk-explanation.png

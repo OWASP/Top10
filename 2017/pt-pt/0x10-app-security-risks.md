@@ -1,6 +1,6 @@
-# Risco - Riscos de Segurança Aplicacional
+# Risco - Riscos Segurança Aplicacional
 
-## O que são os riscos de Segurança Aplicacional?
+## O que são Riscos de Segurança Aplicacional?
 
 Os atacantes podem potencialmente usar muitos caminhos diferentes através da sua
 aplicação para afectar o seu negócio ou organização. Cada um destes caminhos
@@ -22,8 +22,8 @@ determinam o risco global.
 O [Top 10 da OWASP][1] foca-se na identificação dos riscos mais sérios para um
 conjunto alargado de organizações. Para cada um desses riscos, oferecemos
 informação genérica sobre a probabilidade e impacto técnico usando o seguinte
-esquema de classificação simples, baseado na Metodologia de Classificação de
-Risco da OWASP.
+esquema de classificação simples, baseado na [Metodologia de Classificação de
+Risco da OWASP][4].
 
 | Agentes de Ameaça | Complexidade do Abuso | Prevalência da Falha | Detecção da Falha | Impactos Técnicos | Impactos de Negócio |
 | :-: | :-: | :-: | :-: | :-: | :-: |
@@ -31,7 +31,7 @@ Risco da OWASP.
 | Específico da Aplicação | Médio 2 | Comum 2 | Médio 2 | Moderado 2 | Específica da Aplicação/Negócio |
 | Específico da Aplicação | Difícil 1 | Pouco comum 1 | Difícil 1 | Menor 1 | Específica da Aplicação/Negócio |
 
-Neste edição do Top 10 atualizámos o sistema de classificação de risco por forma
+Nesta edição do Top 10 atualizámos o sistema de classificação de risco por forma
 a ser considerado no calculo da probabilidade e impacto associado a cada risco.
 Para mais detalhes, por favor leia as [Notas sobre Riscos][2].
 

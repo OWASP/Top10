@@ -36,7 +36,7 @@ contexto das aplicações web. O Top 10 oferece não só técnicas básicas para
 proteção nestas áreas problemáticas e de elevado risco, mas também direções
 sobre onde encontrar informação adicional sobre estes assuntos.
 
-## Planeamento para atividades futuras
+## Planeamento Atividades Futuras
 
 **Não pare no 10**. Existem centenas de problemas que podem afectar a segurança
 geral de uma aplicação web tal como discutido no [Guia de Programadores da
@@ -62,7 +62,7 @@ podem ser bastante complexas e muito intrincadas no meio do código. Em muitos
 casos a abordagem mais eficiente para encontrar e eliminar estas fraquezas
 consiste na utilização de especialistas humanos munidos de boas ferramentas.
 
-**Dispare em todas as direcções**. Foque-se em tornar a segurança parte
+**Dispare em todas as direções**. Foque-se em tornar a segurança parte
 integrante da cultura da sua organização, em particular no departamento de
 desenvolvimento. Pode encontrar mais informação em [Modelo de Garantia da
 Maturidade do Software da OWASP (SAMM)][5].
@@ -72,9 +72,9 @@ Maturidade do Software da OWASP (SAMM)][5].
 Gostaríamos de agradecer às organizações que contribuíram com os seus dados
 sobre vulnerabilidades para suportar esta actualização de 2017. Recebemos mais
 de 40 respostas à nossa solicitação de dados. Pela primeira vez todos os dados
-que contribuíram para este Top 10 e a lista completa de contribuidores, foi
-tornada pública. Acreditamos que esta é uma das maiores e mais heterogéneas
-coleções de dados sobre vulnerabilidades alguma vez recolhida publicamente.
+bem como a lista completa de contribuidores, foi tornada pública. Acreditamos
+que esta é uma das maiores e mais heterogéneas coleções de dados sobre
+vulnerabilidades alguma vez recolhida publicamente.
 
 Uma vez que existem mais organizações do que espaço aqui disponível, criámos uma
 página dedicada a reconhecer as contribuições realizadas. Queremos agradecer

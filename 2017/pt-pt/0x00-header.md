@@ -2,7 +2,7 @@
 
 ## OWASP Top 10 2017
 
-Os dez problemas mais críticos em Segurança de Aplicações Web
+The Ten Most Critical Web Application Security Risks
 
 13 de Novembro de 2017
 
@@ -14,5 +14,5 @@ Comentários são aceites de acordo com as instruções contidas neste documento
 
 |  | ![Creative Commons License Logo](images/front-cc.png) |
 | -- | -- |
-| https://owasp.org | Este trabalho está licenciado de acordo com a licença Creative Commons Attribution-ShareAlike 4.0 International License |
+| https://owasp.org | Publicado ao abrigo da licença Creative Commons Attribution-ShareAlike 4.0 International License |
 

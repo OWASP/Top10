@@ -29,7 +29,7 @@ posteriores podem ser vulneráveis a ataques se:
   aplicação é igualmente vulnerável a ataques de negação de serviço, em
   particular ao ataque [billion laughs attack][11].
 
-## Como Prevenir?
+## Como Prevenir
 
 O treino dos programadores é essencial para identificar e mitigar completamente
 o XXE. Para além disso, prevenir XXE requer:

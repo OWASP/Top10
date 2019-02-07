@@ -38,7 +38,7 @@ fundamental das aplicações alterou-se de forma significativa:
 Pedimos à comunidade que fornecesse a sua opinião sobre duas categorias de
 poblemas voltados para o futuro. Das 516 submissões por pares e removendo alguns
 problemas que já eram suportados pelos dados recolhidos (como Exposição de Dados
-Sensíveis e XXE), os dois novos problemas encontrados são
+Sensíveis e XXE), os dois novos problemas encontrados são:
 
 * **A8:2017 - De-serialização Insegura**, responsável por uma das piores brechas
   de todos os tempos, e
@@ -48,12 +48,12 @@ Sensíveis e XXE), os dois novos problemas encontrados são
 
 **Removidos, mas não esquecidos**
 
-* **A4 Referências Directas Inseguras a Objectos** e **A7 Falta de Controlo de
+* **A4-Referências Directas Inseguras a Objectos** e **A7 Falta de Controlo de
   Acesso ao Nível das Funções** juntaram-se, dando origem a **A5:2017 - Quebra
   de Controlo de Acesso**.
-* **A8 CSRF**. Menos de 5% dos dados obtidos suportam atualmente o CSRF, o que
-  o coloca na posição #13
-* **A10 Redireccionamentos e Encaminhamentos Não Validados**. Menos de 1% dos
+* **A8-Cross-Site Request Forgery (CSRF)**. Menos de 5% dos dados obtidos
+  suportam atualmente o CSRF, o que o coloca na posição #13
+* **A10-Redireccionamentos e Encaminhamentos Não Validados**. Menos de 1% dos
   dados obtidos suportam actualmente este problema, pelo que está agora na
   posição #25
 
