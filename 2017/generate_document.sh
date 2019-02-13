@@ -89,5 +89,8 @@ generate "es"
 # Ukraine
 #generate "ukr"
 
+# Portuguese
+generate "pt-pt"
+
 echo 
 echo "Generated OWASP Top 10"
