@@ -3,7 +3,7 @@
 ## Agradecimento a quem contribuiu com dados
 
 Gostaríamos de agradecer às muitas organizações que contribuíram com os seus
-dados de vulnerabilidades para suportar esta actualização de 2017:
+dados de vulnerabilidades a fim de suportar esta actualização de 2017:
 
 * ANCAP
 * Aspect Security
@@ -50,12 +50,12 @@ dados de vulnerabilidades para suportar esta actualização de 2017:
 * Web.com
 
 Pela primeira vez, todos os dados considerados para uma versão do Top 10 bem
-como a [lista completa de contribuidores é tornada pública][1].
+como a [lista completa de contribuidores é tornada pública][0xd11].
 
 ## Agradecimento aos contribuidores individuais
 
-Gostaríamos de agradecer aos contribuidores individuais que investiram muitas
-horas a contribuírem para esta versão do Top 10 no GitHub.
+Gostaríamos de agradecer a todos os contribuidores individuais que investiram
+muitas horas e contribuíram de forma coletiva para o Top 10 no GitHub:
 
 * ak47gen
 * alonergan
@@ -134,11 +134,14 @@ horas a contribuírem para esta versão do Top 10 no GitHub.
 * vdbaan
 * yohgaki
 
-E todos os outros que forneceram comentários via Twitter, e-mail e outros meios.
+Agradecer também a todos os outros que deram feedbacl através do Twitter, e-mail
+ou por outro meio.
 
-Seria imperdoável não mencionar que Dirk Wetter, Jim Manico e Osama Elnaggar
-prestaram ampla assistência. Além disso, Chris Frohoff e Gabriel Lawrence
-forneceram um apoio inestimável na redação do novo risco A8:2017-Desserialização
-Insegura.
+Não poderíamos deixar de mencionar Dirk Wetter, Jim Manico, and Osama Elnaggar
+pela extensiva assistência.
 
-[1]: https://github.com/OWASP/Top10/tree/master/2017/datacall/submissions
+Também Chris Frohoff and Gabriel Lawrence pelo excecional contributo na escrita
+do novo [A8:2017-Desserialização Insegura][0xd12].
+
+[0xd11]: https://github.com/OWASP/Top10/tree/master/2017/datacall/submissions
+[0xd12]: ./0xa8-insecure-deserialization.md

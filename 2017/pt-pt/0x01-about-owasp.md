@@ -55,6 +55,7 @@ licença deste trabalho.
 
 [1]: https://www.owasp.org/index.php/OWASP_Cheat_Sheet_Series
 [2]: https://www.owasp.org/index.php/OWASP_Chapter
+
 [3]: https://www.owasp.org/index.php/Category:OWASP_AppSec_Conference
 [4]: https://lists.owasp.org/mailman/listinfo
 
