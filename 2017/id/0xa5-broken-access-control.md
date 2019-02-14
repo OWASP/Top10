@@ -50,7 +50,7 @@ Seorang penyerang hanya memodifikasi parameter 'acct' di browser untuk mengirim 
   http://example.com/app/admin_getappInfo
 ```
 
-Jika pengguna yang tidak diautentikasi dapat mengakses halaman mana pun, itu cacat. Jika non-admin dapat mengakses halaman admin, ini adalah cacat.
+Jika pengguna yang tidak diautentikasi dapat mengakses halaman mana pun, itu adalah kontrol akses yang buruk. Jika non-admin dapat mengakses halaman admin, ini adalah otentifikasi yang buruk.
 
 ## Referensi
 
