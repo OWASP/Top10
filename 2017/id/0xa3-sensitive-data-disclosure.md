@@ -29,7 +29,7 @@ Lakukan hal berikut, minimal, dan bacalah rujukannya:
 * Enkripsikan semua data dalam transit dengan protokol aman seperti TLS dengan kriptifikasi keamanan maju yang sempurna (PFS), prioritas cipher oleh server, dan parameter yang aman. Terapkan enkripsi menggunakan arahan seperti HTTP Strict Transport Security (HSTS).
 * Nonaktifkan caching untuk respon yang mengandung data sensitif.
 * Simpan kata sandi dengan menggunakan fungsi hashing adaptif dan asin yang kuat dengan faktor kerja (faktor keterlambatan), seperti [Argon2](https://www.cryptolux.org/index.php/Argon2), [scrypt](https://wikipedia.org/wiki/Scrypt), [bcrypt](https://wikipedia.org/wiki/Bcrypt) or [PBKDF2](https://wikipedia.org/wiki/PBKDF2).
-* Verify independently the effectiveness of configuration and settings.
+* Verifikasi secara independen efektivitas pada konfigurasi dan pengaturan.
 
 ## Contoh Skenario Serangan
 
