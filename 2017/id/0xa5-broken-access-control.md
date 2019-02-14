@@ -1,11 +1,11 @@
 # A5:2017 Broken Access Control
 
-| Threat agents/Attack vectors | Security Weakness  | Impacts |
+| Agen ancaman / vektor serangan | Kelemahan Keamanan  | Dampak |
 | -- | -- | -- |
-| Access Lvl : Exploitability 2 | Prevalence 2 : Detectability 2 | Technical 3 : Business |
+| Akses Lvl : Exploitasi 2 | Prevalensi 2 : Deteksi 2 | Teknik 3 : Bisnis |
 | Exploitation of access control is a core skill of attackers. [SAST](https://www.owasp.org/index.php/Source_Code_Analysis_Tools) and [DAST](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools) tools can detect the absence of access control but cannot verify if it is functional when it is present. Access control is detectable using manual means, or possibly through automation for the absence of access controls in certain frameworks. | Access control weaknesses are common due to the lack of automated detection, and lack of effective functional testing by application developers. Access control detection is not typically amenable to automated static or dynamic testing. Manual testing is the best way to detect missing or ineffective access control, including HTTP method (GET vs PUT, etc), controller, direct object references, etc. | The technical impact is attackers acting as users or administrators, or users using privileged functions, or creating, accessing, updating or deleting every record. The business impact depends on the protection needs of the application and data. |
 
-## Is the Application Vulnerable?
+## Apakah Aplikasi itu Rentan?
 
 Access control enforces policy such that users cannot act outside of their intended permissions. Failures typically lead to unauthorized information disclosure, modification or destruction of all data, or performing a business function outside of the limits of the user. Common access control vulnerabilities include:
 
@@ -16,7 +16,7 @@ Access control enforces policy such that users cannot act outside of their inten
 * CORS misconfiguration allows unauthorized API access.
 * Force browsing to authenticated pages as an unauthenticated user or to privileged pages as a standard user. Accessing API with missing access controls for POST, PUT and DELETE.
 
-## How To Prevent
+## Cara Mencegah
 
 Access control is only effective if enforced in trusted server-side code or server-less API, where the attacker cannot modify the access control check or metadata.
 
@@ -30,9 +30,9 @@ Access control is only effective if enforced in trusted server-side code or serv
 * JWT tokens should be invalidated on the server after logout.
 * Developers and QA staff should include functional access control unit and integration tests.
 
-## Example Attack Scenarios
+## Contoh Skenario Serangan
 
-**Scenario #1**: The application uses unverified data in a SQL call that is accessing account information:
+**Skenario #1**: The application uses unverified data in a SQL call that is accessing account information:
 
 ```
   pstmt.setString(1, request.getParameter("acct"));
@@ -52,7 +52,7 @@ An attacker simply modifies the 'acct' parameter in the browser to send whatever
 
 If an unauthenticated user can access either page, it’s a flaw. If a non-admin can access the admin page, this is a flaw.
 
-## References
+## Referensi
 
 ### OWASP
 
@@ -61,7 +61,7 @@ If an unauthenticated user can access either page, it’s a flaw. If a non-admin
 * [OWASP Testing Guide: Authorization Testing](https://www.owasp.org/index.php/Testing_for_Authorization)
 * [OWASP Cheat Sheet: Access Control](https://www.owasp.org/index.php/Access_Control_Cheat_Sheet)
 
-### External
+### Eksternal
 
 * [CWE-22: Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')](https://cwe.mitre.org/data/definitions/22.html)
 * [CWE-284: Improper Access Control (Authorization)](https://cwe.mitre.org/data/definitions/284.html)
