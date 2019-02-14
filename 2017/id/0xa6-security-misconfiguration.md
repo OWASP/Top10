@@ -1,11 +1,11 @@
-# A6:2017 Security Misconfiguration
+# A6:2017 Kesalahan Konfigurasi Keamanan
 
-| Threat agents/Attack vectors | Security Weakness           | Impacts               |
+| Agen ancaman / vektor serangan | Kelemahan Keamanan           | Dampak             |
 | -- | -- | -- |
-| Access Lvl : Exploitability 3 | Prevalence 3 : Detectability 3 | Technical 2 : Business |
-| Attackers will often attempt to exploit unpatched flaws or access default accounts, unused pages, unprotected files and directories, etc to gain unauthorized access or knowledge of the system. | Security misconfiguration can happen at any level of an application stack, including the network services, platform, web server, application server, database, frameworks, custom code, and pre-installed virtual machines, containers, or storage. Automated scanners are useful for detecting misconfigurations, use of default accounts or configurations, unnecessary services, legacy options, etc. | Such flaws frequently give attackers unauthorized access to some system data or functionality. Occasionally, such flaws result in a complete system compromise. The business impact depends on the protection needs of the application and data. |
+| Akses Lvl : Exploitasi 3 | Prevalensi 3 : Deteksi 3 | Teknik 2 : Bisnis |
+| Penyerang akan sering mencoba untuk mengeksploitasi kelemahan yang tidak ditonton atau mengakses akun default, halaman yang tidak digunakan, file dan direktori yang tidak dilindungi, dll untuk mendapatkan akses yang tidak sah atau pengetahuan tentang sistem. | Kesalahan konfigurasi keamanan dapat terjadi di semua tingkat tumpukan aplikasi, termasuk layanan jaringan, platform, server web, server aplikasi, database, kerangka kerja, kode kustom, dan mesin, wadah, atau penyimpanan virtual pra-instal, wadah, atau penyimpanan. Pemindai otomatis berguna untuk mendeteksi kesalahan konfigurasi, penggunaan akun atau konfigurasi default, layanan yang tidak perlu, opsi lawas, dll. | Kelemahan seperti itu sering memberi penyerang akses tidak sah ke beberapa data sistem atau fungsionalitas. Kadang-kadang, kelemahan tersebut menghasilkan kompromi sistem yang lengkap. Dampak bisnis tergantung pada kebutuhan perlindungan aplikasi dan data. |
 
-## Is the Application Vulnerable?
+## Apakah Aplikasi itu Rentan?
 
 The application might be vulnerable if the application is:
 
