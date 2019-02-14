@@ -16,7 +16,7 @@ Kontrol akses memberlakukan kebijakan sedemikian rupa sehingga pengguna tidak da
 * Kesalahan konfigurasi CORS memungkinkan akses API yang tidak sah.
 * Paksa penelusuran ke halaman yang diautentikasi sebagai pengguna yang tidak diauthentikasi atau ke halaman yang diistimewakan sebagai pengguna standar. Mengakses API dengan kontrol akses yang hilang untuk POST, PUT dan DELETE.
 
-## Cara Mencegah
+## Cara Pencegahan
 
 Kontrol akses hanya efektif jika ditegakkan dalam kode sisi server tepercaya atau server-less API, di mana penyerang tidak dapat mengubah pemeriksaan kontrol akses atau metadata.
 
