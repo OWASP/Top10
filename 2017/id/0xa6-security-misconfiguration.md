@@ -7,18 +7,19 @@
 
 ## Apakah Aplikasi itu Rentan?
 
-The application might be vulnerable if the application is:
+Aplikasi mungkin rentan jika aplikasi tersebut adalah:
 
-* Missing appropriate security hardening across any part of the application stack, or improperly configured permissions on cloud services.
-* Unnecessary features are enabled or installed (e.g. unnecessary ports, services, pages, accounts, or privileges).
-* Default accounts and their passwords still enabled and unchanged.
-* Error handling reveals stack traces or other overly informative error messages to users.
-* For upgraded systems, latest security features are disabled or not configured securely.
-* The security settings in the application servers, application frameworks (e.g. Struts, Spring, ASP.NET), libraries, databases, etc. not set to secure values.
-* The server does not send security headers or directives or they are not set to secure values.
-* The software is out of date or vulnerable (see **A9:2017-Using Components with Known Vulnerabilities**).
+* Tidak ada pengerasan keamanan yang sesuai di seluruh bagian dari tumpukan aplikasi, atau izin yang tidak dikonfigurasi dengan benar pada layanan cloud.
+* Fitur yang tidak perlu diaktifkan atau diinstal (mis. Port, layanan, halaman, akun, atau hak istimewa yang tidak perlu).
+* Akun default dan kata sandi mereka masih diaktifkan dan tidak berubah.
+* Menangani kesalahan mengungkapkan jejak tumpukan atau pesan kesalahan yang terlalu informatif kepada pengguna.
+* Untuk sistem yang ditingkatkan, fitur keamanan terbaru dinonaktifkan atau tidak dikonfigurasi dengan aman.
+* Pengaturan keamanan di server aplikasi, kerangka kerja aplikasi (mis. Struts, Spring, ASP.NET),libraries, databases, etc. Tidak disetting secara aman.
+* Server tidak mengirim security headers atau arahan keamanan atau tidak diatur untuk mengamankan nilai dari sisi backend.
+* Software telah out of date atau rentan (lihat **A9:2017-Using Components with Known Vulnerabilities**).
 
-Without a concerted, repeatable application security configuration process, systems are at a higher risk.
+
+Tanpa proses konfigurasi keamanan aplikasi yang diintegrasikan dan dilakukan secara berkala, sistem berisiko lebih tinggi.
 
 ## How To Prevent
 
