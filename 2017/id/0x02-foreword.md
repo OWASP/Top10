@@ -7,11 +7,7 @@ Banyak feedback yang diterima selama pembuatan OWASP Top 10 - 2017, lebih dari u
 
 Meskipun tujuan awal dari proyek 10 Besar OWASP hanya untuk meningkatkan kesadaran di antara pengembang dan manajer, itu telah menjadi standar keamanan aplikasi secara de facto.
 
-In this release, issues and recommendations are written concisely and in a testable way to assist with the adoption of the OWASP Top 10 in application security programs. We encourage large and high performing organizations to use the [OWASP Application Security Verification Standard (ASVS)](https://www.owasp.org/index.php/ASVS) if a true standard is required, but for most, the OWASP Top 10 is a great start on the application security journey.
-
 Dalam rilis ini, masalah dan rekomendasi ditulis secara ringkas dan dengan cara yang dapat diuji untuk membantu penerapan OWASP Top 10 dalam program keamanan aplikasi. Kami mendorong organisasi besar dan kinerja yang tinggi untuk menggunakan [OWASP Application Verification Standard (ASVS)] (https://www.owasp.org/index.php/ASVS) jika standar yang benar diperlukan, tetapi untuk sebagian besar, OWASP Top 10 adalah awal yang bagus dalam keamanan aplikasi.
-
-We have written up a range of suggested next steps for different users of the OWASP Top 10, including "What's Next for Developers", "What's Next for Security Testers", "What's Next for Organizations“, which is suitable for CIOs and CISOs, and "What's Next for Application Managers", which is suitable for application managers or anyone responsible for the lifecycle of the application.
 
 Kami telah menulis berbagai langkah yang disarankan selanjutnya untuk pengguna yang berbeda dari OWASP Top 10, termasuk "Apa Selanjutnya untuk Pengembang Aplikasi", "Apa Selanjutnya untuk Penguji Keamanan", "Apa Selanjutnya untuk Organisasi", yang cocok untuk CIO dan CISO, dan "Apa Selanjutnya untuk Manajer pengembangan perangkat lunak/Aplikasi", yang cocok untuk manajer pengembang aplikasi atau siapa pun yang bertanggung jawab pada pengembangan perangkat lunak.
 
@@ -25,8 +21,6 @@ Kami berharap bahwa OWASP Top 10 bermanfaat dalam upaya peningkatan keamanan apl
 Anda bisa mendapatkan Proyek OWASP Top 10  dan Terjemahannya di sini :
 
 * [https://www.owasp.org/index.php/top10](https://www.owasp.org/index.php/top10)
-
-Lastly, we wish to thank the founding leadership of the OWASP Top 10 , Dave Wichers and Jeff Williams, for all their efforts, and believing in us to get this finished with the community's help. Thank you!
 
 Terakhir, kami mengucapkan terimakasih kepada pimpinan pendiri proyek OWASP Top 10, Dave Wichers dan Jeff Williams, atas semua upaya mereka, dan memercayai kami untuk menyelesaikannya dengan bantuan komunitas. Terima kasih!
 
