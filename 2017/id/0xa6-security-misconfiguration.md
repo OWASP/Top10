@@ -16,8 +16,7 @@ Aplikasi mungkin rentan jika aplikasi tersebut adalah:
 * Untuk sistem yang ditingkatkan, fitur keamanan terbaru dinonaktifkan atau tidak dikonfigurasi dengan aman.
 * Pengaturan keamanan di server aplikasi, kerangka kerja aplikasi (mis. Struts, Spring, ASP.NET),libraries, databases, etc. Tidak disetting secara aman.
 * Server tidak mengirim security headers atau arahan keamanan atau tidak diatur untuk mengamankan nilai dari sisi backend.
-* Software telah out of date atau rentan (lihat **A9:2017-Using Components with Known Vulnerabilities**).
-
+* Software telah out of date atau diketahui rentan (lihat **A9:2017-Using Components with Known Vulnerabilities**).
 
 Tanpa proses konfigurasi keamanan aplikasi yang diintegrasikan dan dilakukan secara berkala, sistem berisiko lebih tinggi.
 
