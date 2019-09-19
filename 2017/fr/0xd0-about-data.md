@@ -12,11 +12,11 @@ Les classes de vulnérabilités qui avaient préalablement été considérées, 
 | -- | -- | -- |
 | 1 | Fuites de données personnelles [CWE-359] | 748 |
 | 2 | Utilisations incorrectes de la cryptographie [CWE-310/311/312/326/327]| 584 |
-| 3 | Déserialisations de données sans validation préalable [CWE-502] | 514 |
+| 3 | Désérialisations de données sans validation préalable [CWE-502] | 514 |
 | 4 | Contournements d'autorisation par modification de références [CWE-639] | 493 |
 | 5 | Journalisation et surveillance insuffisantes [CWE-223 / CWE-778]| 440 |
 
-Les fuites de données personnelles occupent la première position avec une avance significative, mais peuvent être assimilées à l'entrée pré-existante **A3:2017-Divulgation de données sensibles**. Tout comme les utilisations incorrectes de la cryptographie. Les désérialisations de données sans validation préalable occupent la 3ème position, elles ont été ajoutées au classement final sous **A8:2017-Désérialisation vulnérable** après calcul du risque. La quatrième entrée (contournements d'autorisations par modification de références) est incluse dans l'entrée préexistante **A5:2017-Contrôle d'accès défaillant**, le sondage valide la proposition initiale de la RC1. La cinquième classe de vulnérabilités, journalisation et surveillance insuffisantes, a été retenue sous **A10:2017-Journalisation et Surveillance insuffisantes**. Nous avons atteint un stade où les applications devraient produire des journaux et des alertes permettant des processus d'escalade et de réponse aux incidents appropriés.
+Les fuites de données personnelles occupent la première position avec une avance significative, mais peuvent être assimilées à l'entrée préexistante **A3:2017-Divulgation de données sensibles**. Tout comme les utilisations incorrectes de la cryptographie. Les désérialisations de données sans validation préalable occupent la 3ème position, elles ont été ajoutées au classement final sous **A8:2017-Désérialisation vulnérable** après calcul du risque. La quatrième entrée (contournements d'autorisations par modification de références) est incluse dans l'entrée préexistante **A5:2017-Contrôle d'accès défaillant**, le sondage valide la proposition initiale de la RC1. La cinquième classe de vulnérabilités, journalisation et surveillance insuffisantes, a été retenue sous **A10:2017-Journalisation et Surveillance insuffisantes**. Nous avons atteint un stade où les applications devraient produire des journaux et des alertes permettant des processus d'escalade et de réponse aux incidents appropriés.
 
 ## Données quantitatives : rapports de tests anonymisés 
 
