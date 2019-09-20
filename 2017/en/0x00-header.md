@@ -4,9 +4,9 @@
 
 The Ten Most Critical Web Application Security Risks
 
-November 13, 2017
+November 20, 2017
 
-### Golden Master
+### Release
 
 Comments requested per instructions within
 

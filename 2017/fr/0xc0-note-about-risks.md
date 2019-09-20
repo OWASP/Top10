@@ -1,0 +1,16 @@
+# +R Note à propos des Risques
+
+## Il s’agit de risques, non de faiblesses
+
+La méthodologie d’évaluation du risque pour le Top 10 est fondée sur l’[OWASP Risk Rating Methodology](https://www.owasp.org/index.php/OWASP_Risk_Rating_Methodology). Pour chacun des éléments du Top 10, nous avons estimé le risque type introduit par chaque vulnérabilité pour une application type en estimant le facteur de probabilité et d’impact pour chacune des failles. Nous avons ensuite classé le Top 10 en fonction des vulnérabilités types qui introduisent le risque le plus important dans une application. Ces facteurs sont actualisés dans chaque nouvelle version du Top 10 au fur et à mesure des évolutions et modifications.
+
+La [méthodologie d'évaluation du risque OWASP](https://www.owasp.org/index.php/OWASP_Risk_Rating_Methodology) définit de nombreux facteurs pour aider au calcul du risque associé à une vulnérabilité identifiée. Cependant, le Top 10 doit parler de généralités plutôt que de vulnérabilités spécifiques aux applications et API réelles. Par conséquent, nous ne pourrons jamais être aussi précis que peut l’être un propriétaire ou gestionnaire d'application en matière de calcul des risques pesant sur leur(s) application(s). Vous êtes les mieux placés pour juger de l’importance de vos applications et données, de vos menaces, de comment votre système a été construit et comment il est géré.
+
+Pour chaque vulnérabilité, notre méthodologie inclut trois facteurs de probabilité (fréquence, détection et facilité d’exploitation) et un facteur d’impact (technique). Chaque facteur est mesurée sur ne échelle allant de 1-Faible à 3-Elevé, avec une terminologie propre à chaque facteur. La fréquence d’une faille est un facteur que vous n’avez en principe pas à calculer. Pour les calculer, nous avons agrégé les statistiques fournies par des entreprises d’horizons variés (cf. Remerciements page 25) afin d’obtenir un Top 10 par fréquence d'apparition. Ces données ont ensuite été combinées avec deux autres facteurs de probabilité (détection et facilité d’exploitation) afin de calculer un ratio de probabilité pour chaque faille. Enfin celui-ci a été multiplié par l’impact technique moyen que nous avons estimé, afin d’obtenir un classement du risque global pour chaque élément du Top 10. Détection, Facilité d'exploitation et impact ont été calculés d'après les éléments recueillis pour chaque catégorie du Top 10.
+
+**Remarque** : Cette approche ne prend en compte ni la probabilité des menaces ni les nombreux détails techniques propres à votre application. Tous ces facteurs peuvent grandement affecter la probabilité qu’un attaquant puisse trouver et exploiter une vulnérabilité. Ce classement ne prend pas non plus en compte les impacts effectifs sur votre activité. En fonction de sa culture, de son secteur et des contraintes règlementaires, votre organisation devra décider quel niveau de risque est acceptable pour chaque application et API. Le but du Top 10 OWASP n’est pas de réaliser l’analyse de risque à votre place.
+
+Le schéma suivant illustre notre calcul pour la vulnérabilité **A6:2017-Mauvaise configuration de la sécurité**.
+
+![Calcul du risque pour la vulnérabilité A6:2017-Mauvaise configuration de la sécurité](images/0xc0-risk-explanation.png)
+
