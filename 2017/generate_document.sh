@@ -28,7 +28,11 @@ generate_pdf() {
 }
 
 generate_docx() {
-    pandoc -s -f markdown_github --reference-docx=../templates/reference.docx --columns 10000 -t docx -o "../OWASP-Top-10-2017-$1.docx" *.md
+    pandoc -s -f markdown_github --reference-doc=../templates/reference.docx --columns 10000 -t docx -o "../OWASP-Top-10-2017-$1.docx" *.md
+}
+
+generate_doc() {
+    pandoc -s -f gfm --reference-doc=../templates/reference.docx --columns 10000 -t docx -o "../OWASP-Top-10-2017-$1.docx" *.md
 }
 
 generate_html() {
@@ -40,7 +44,8 @@ generate() {
     if [ -d "$1" ]; 
     then
         cd "$1"
-        generate_docx $1
+        generate_doc $1
+        #generate_docx $1
         generate_pdf $1
         generate_html $1
         cd ..
@@ -63,13 +68,13 @@ generate() {
 #generate "cz"
 
 # English
-generate "en"
+#generate "en"
 
 # French 
-#generate "fr"
+generate "fr"
 
 # German
-generate "de"
+#generate "de"
 
 # Hebrew
 #generate "heb"
@@ -77,17 +82,25 @@ generate "de"
 # Italian
 #generate "it"
 
+# Bahasa indonesia
+#generate "id"
+generate "id"
+
 # Japanese
 #generate "jp"
+generate "ja"
 
 # Korean
 #generate "kr"
 
 # Spanish
-generate "es"
+#generate "es"
 
 # Ukraine
 #generate "ukr"
+
+# Portuguese
+generate "pt-pt"
 
 echo 
 echo "Generated OWASP Top 10"
