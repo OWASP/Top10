@@ -16,7 +16,7 @@
 * 範囲と厳密さのレベルを適切に設定するために、品質保証ガイドラインを確立します。
 
 ### 強力な基礎の作り上げ
-* 全ての開発チームが遵守すべきアプリケーションセキュリティのベースラインを定義した[組織の方針と標準](https://www.owasp.org/images/7/72/OWASP_Top_10-2017_%28en%29.pdf.pdf)を確立します。
+* 全ての開発チームが遵守すべきアプリケーションセキュリティのベースラインを定義した[組織の方針と標準](https://www.owasp.org/index.php/SAMM_-_Policy_&_Compliance_-_2)を確立します。
 * これらの方針と標準を補完する[再利用可能なセキュリティ制御](https://www.owasp.org/index.php/OWASP_Security_Knowledge_Framework#tab=Main)を定義し、それらを使用する際の設計開発ガイドラインを提供します。
 * 様々な開発の役割やトピックからなる[アプリケーションセキュリティのトレーニングカリキュラム](https://www.owasp.org/index.php/SAMM_-_Education_&_Guidance_-_2)を確立します。   
 
