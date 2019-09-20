@@ -41,8 +41,8 @@ Puede existir debilidades de autenticación si la aplicación:
 ### OWASP
 
 * [Controles Proactivos de OWASP: Implementar controles de Identificación y Autenticación]((https://www.owasp.org/index.php/OWASP_Proactive_Controls#5:_Implement_Identity_and_Authentication_Controls))
-* [Estándar de Verificación de Seguridad en Aplicaciones de OWASP: V2 Autenticación](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
-* [Estándar de Verificación de Seguridad en Aplicaciones de OWASP: V3 Gestión de Sesiones](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
+* [Estándar de Verificación de Seguridad en Aplicaciones de OWASP: V2 Autenticación](https://github.com/OWASP/ASVS/blob/v4.0.1/4.0/en/0x11-V2-Authentication.md)
+* [Estándar de Verificación de Seguridad en Aplicaciones de OWASP: V3 Gestión de Sesiones](https://github.com/OWASP/ASVS/blob/v4.0.1/4.0/en/0x12-V3-Session-management.md)
 * [Guía de Pruebas de OWASP: Identificación](https://www.owasp.org/index.php/Testing_Identity_Management) y [Autenticación](https://www.owasp.org/index.php/Testing_for_authentication)
 * [Hoja de ayuda de OWASP: Autenticación](https://www.owasp.org/index.php/Authentication_Cheat_Sheet)
 * [Hoja de ayuda de OWASP: Reutilización de credenciales conocidas](https://www.owasp.org/index.php/Credential_Stuffing_Prevention_Cheat_Sheet)

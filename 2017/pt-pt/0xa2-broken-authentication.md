@@ -107,8 +107,8 @@ e o utilizador está ainda autenticado.
 [0xa25]: https://www.owasp.org/index.php/Credential_stuffing
 [0xa26]: https://github.com/danielmiessler/SecLists
 [0xa27]: https://www.owasp.org/index.php/OWASP_Proactive_Controls#5:_Implement_Identity_and_Authentication_Controls
-[0xa28]: https://www.owasp.org/index.php/ASVS_V2_Authentication
-[0xa29]: https://www.owasp.org/index.php/ASVS_V3_Session_Management
+[0xa28]: https://github.com/OWASP/ASVS/blob/v4.0.1/4.0/en/0x11-V2-Authentication.md
+[0xa29]: https://github.com/OWASP/ASVS/blob/v4.0.1/4.0/en/0x12-V3-Session-management.md
 [0xa210]: https://www.owasp.org/index.php/Testing_Identity_Management
 [0xa211]: https://www.owasp.org/index.php/Testing_for_authentication
 [0xa212]: https://www.owasp.org/index.php/Authentication_Cheat_Sheet

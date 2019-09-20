@@ -44,8 +44,8 @@ Uygulama aşağıdaki durumlarda kimlik doğrulama açıklıkları içeriyor ola
 ### OWASP
 
 * [OWASP Proaktif Kontroller: Kimlik ve Kimlik Doğrulama Kontrollerinin Uygulanması](https://www.owasp.org/index.php/OWASP_Proactive_Controls#5:_Implement_Identity_and_Authentication_Controls)
-* [OWASP Uygulama Güvenliği Doğrulama Standardı: V2 Kimlik Doğrulama](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
-* [OWASP Uygulama Güvenliği Doğrulama Standardı: V3 Oturum Yönetimi](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
+* [OWASP Uygulama Güvenliği Doğrulama Standardı: V2 Kimlik Doğrulama](https://github.com/OWASP/ASVS/blob/v4.0.1/4.0/en/0x11-V2-Authentication.md)
+* [OWASP Uygulama Güvenliği Doğrulama Standardı: V3 Oturum Yönetimi](https://github.com/OWASP/ASVS/blob/v4.0.1/4.0/en/0x12-V3-Session-management.md)
 * [OWASP Test Rehberi: Kimlik](https://www.owasp.org/index.php/Testing_Identity_Management)
  ve [Kimlik Doğrulama](https://www.owasp.org/index.php/Testing_for_authentication)
 * [OWASP Kopya Kağıdı: Kimlik Doğrulama](https://www.owasp.org/index.php/Authentication_Cheat_Sheet)

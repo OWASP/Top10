@@ -44,8 +44,8 @@
 ### OWASP
 
 * [Проактивная защита OWASP: реализация защиты идентификационных данных и аутентификации](https://www.owasp.org/index.php/OWASP_Proactive_Controls#5:_Implement_Identity_and_Authentication_Controls)
-* [Стандарт подтверждения безопасности приложений OWASP (ASVS): V2 Аутентификация](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
-* [Стандарт подтверждения безопасности приложений OWASP (ASVS): V3 Управление сессиями](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
+* [Стандарт подтверждения безопасности приложений OWASP (ASVS): V2 Аутентификация](https://github.com/OWASP/ASVS/blob/v4.0.1/4.0/en/0x11-V2-Authentication.md)
+* [Стандарт подтверждения безопасности приложений OWASP (ASVS): V3 Управление сессиями](https://github.com/OWASP/ASVS/blob/v4.0.1/4.0/en/0x12-V3-Session-management.md)
 * [Руководство OWASP по тестированию: Идентификационные данные](https://www.owasp.org/index.php/Testing_Identity_Management)
  и [Аутентификация](https://www.owasp.org/index.php/Testing_for_authentication)
 * [Памятка OWASP: Аутентификация](https://www.owasp.org/index.php/Authentication_Cheat_Sheet)
