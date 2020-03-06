@@ -15,4 +15,3 @@
 * 2004
   
 * 2003
-  Still looking for a copy of this very first top ten.
