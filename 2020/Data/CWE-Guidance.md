@@ -1,4 +1,4 @@
-As organizations and people work toward submitting data for the Top 10 project, one of the pieces that can be difficult is mapping our findings to the CWE list.   While many HAT systems do this automatically, TAH groups may not have this information prebuilt.   The list below is an attempt to gather sample lists of CWEs related to Top 10-like vulnerabilities to ease the collation of data.   While not comprehensive, and we encourage submissions to build this better, it is hopefully a start to work from.
+As organizations and people work toward submitting data for the Top 10 project, one of the pieces that can be difficult is mapping our findings to the CWE list.   While many HAT systems do this automatically, TAH groups may not have this information prebuilt.   The list below is an attempt to gather sample lists of CWEs related to Top 10-like vulnerabilities to ease the collation of data.   While not comprehensive, and we encourage submissions to build this better, it is hopefully a start to our work.
 
 One source of a easier to follow list of CWEs is at https://cwe.mitre.org/data/definitions/2000.html		
 		
