@@ -44,7 +44,7 @@ Bu değer, her iki sorgunun da anlamını değiştirmekte ve tablodaki tüm kay�
 
 ### OWASP
 
-* [OWASP Proaktif Kontroller: Parametrik Sorgular](https://www.owasp.org/index.php/OWASP_Proactive_Controls#2:_Parameterize_Queries)
+* [OWASP Proaktif Kontroller: Parametrik Sorgular](https://owasp.org/www-project-proactive-controls/#div-proactivecontrols)
 * [OWASP ASVS: V5 Girdi Doğrulama ve Kodlama](https://www.owasp.org/index.php/ASVS_V5_Input_validation_and_output_encoding)
 * [OWASP Test Rehberi: SQL Enjeksiyonu](https://www.owasp.org/index.php/Testing_for_SQL_Injection_(OTG-INPVAL-005)), [Komut Enjeksiyonu](https://www.owasp.org/index.php/Testing_for_Command_Injection_(OTG-INPVAL-013)), [ORM enjeksiyonu](https://www.owasp.org/index.php/Testing_for_ORM_Injection_(OTG-INPVAL-007))
 * [OWASP Kopya Kağıdı: Enjeksiyon Önlemleri](https://www.owasp.org/index.php/Injection_Prevention_Cheat_Sheet)
