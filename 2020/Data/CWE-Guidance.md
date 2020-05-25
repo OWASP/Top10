@@ -36,6 +36,7 @@ CWE ID	| CWE Name
 326	| Inadequate Encryption Strength
 327	| Use of a Broken or Risky Cryptographic Algorithm
 328	| Reversible One-Way Hash
+346	| Origin Validation Error
 352	| Cross-Site Request Forgery (CSRF)
 359	| Exposure of Private Personal Information to an Unauthorized Actor
 384	| Session Fixation
@@ -46,15 +47,19 @@ CWE ID	| CWE Name
 434	| Unrestricted Upload of File with Dangerous Type
 476	| NULL Pointer Dereference
 502	| Deserialization of Untrusted Data
+521	| Weak Password Requirements
 522	| Insufficiently Protected Credentials
 523	| Unprotected Transport of Credentials
 548	| Exposure of Information Through Directory Listing
 564	| SQL Injection: Hibernate
+601	| URL Redirection to Untrusted Site ('Open Redirect')
 611	| Improper Restriction of XML External Entity Reference
 613	| Insufficient Session Expiration
+614	| Sensitive Cookie in HTTPS Session Without 'Secure' Attribute
 620	| Unverified Password Change
 639	| Authorization Bypass Through User-Controlled Key
 640	| Weak Password Recovery Mechanism for Forgotten Password
+650	| Trusting HTTP Permission Methods on the Server Side
 732	| Incorrect Permission Assignment for Critical Resource
 772	| Missing Release of Resource after Effective Lifetime
 776	| Improper Restriction of Recursive Entity References in DTDs ('XML Entity Expansion')
@@ -63,3 +68,5 @@ CWE ID	| CWE Name
 798	| Use of Hard-coded Credentials
 917	| Improper Neutralization of Special Elements used in an Expression Language Statement ('Expression Language Injection')
 943	| Improper Neutralization of Special Elements in Data Query Logic
+1021	| Improper Restriction of Rendered UI Layers or Frames
+1216	| Lockout Mechanism Errors
