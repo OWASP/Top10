@@ -1,16 +1,16 @@
-# I Introduction
+# I Introducere
 
-## Welcome to the OWASP Top 10 - 2017
+## Bine ați venit la Top 10 OWASP - 2017
 
-This major update adds several new issues, including two issues selected by the community - A8:2017-Insecure Deserialization and A10:2017-Insufficient Logging and Monitoring. Two key differentiators from previous OWASP Top 10 releases are the substantial community feedback and extensive data assembled from dozens of organizations, possibly the largest amount of data ever assembled in the preparation of an application security standard. This provides us with confidence that the new OWASP Top 10 addresses the most impactful application security risks currently facing organizations.
+Această actualizare majoră adaugă câteva probleme noi, inclusiv două probleme selectate de comunitate - A8: 2017-Deserializare nesigură și A10: 2017-Logare și monitorizare insuficiente. Doi diferențiatori cheie față de versiunile anterioare din Top 10 OWASP sunt feedback-ul comunitar substanțial și datele extinse colectate de la zeci de organizații, posibil cea mai mare cantitate de date reunite vreodată în pregătirea unui standard de securitate a aplicației. Acest lucru ne oferă încredere că noul Top 10 al OWASP abordează cele mai impactante riscuri de securitate a aplicațiilor cu care se confruntă în prezent organizațiile.
 
-The OWASP Top 10 for 2017 is based primarily on 40+ data submissions from firms that specialize in application security and an industry survey that was completed by over 500 individuals. This data spans vulnerabilities gathered from hundreds of organizations and over 100,000 real-world applications and APIs. The Top 10 items are selected and prioritized according to this prevalence data, in combination with consensus estimates of exploitability, detectability, and impact.
+Top 10 OWASP pentru 2017 se bazează în principal pe peste 40 de date de la firme specializate în securitatea aplicațiilor și un sondaj industrial completat de peste 500 de persoane. Aceste date acoperă vulnerabilitățile adunate de la sute de organizații și peste 100.000 de aplicații și API-uri din lumea reală. Top 10 elemente sunt selectate și prioritizate în funcție de aceste date de prevalență, în combinație cu estimări consensuale privind exploatabilitatea, detectabilitatea și impactul.
 
-A primary aim of the OWASP Top 10 is to educate developers, designers, architects, managers, and organizations about the consequences of the most common and most important web application security weaknesses. The Top 10 provides basic techniques to protect against these high risk problem areas, and provides guidance on where to go from here.
+Un obiectiv principal al Top 10 al OWASP este de a educa dezvoltatorii, designerii, arhitecții, managerii și organizațiile despre consecințele celor mai comune și mai importante puncte slabe ale securității aplicațiilor web. Top 10 oferă tehnici de bază pentru a vă proteja împotriva acestor zone cu probleme de risc ridicat și oferă îndrumări pentru a merge de aici.
 
-## Roadmap for future activities
+## Roadmap pentru activități viitoare
 
-**Don't stop at 10**. There are hundreds of issues that could affect the overall security of a web application as discussed in the [OWASP Developer's Guide](https://www.owasp.org/index.php/OWASP_Guide_Project) and the [OWASP Cheat Sheet Series](https://www.owasp.org/index.php/Category:Cheatsheets). These are essential reading for anyone developing web applications and APIs. Guidance on how to effectively find vulnerabilities in web applications and APIs is provided in the [OWASP Testing Guide](https://www.owasp.org/index.php/OWASP_Testing_Project).
+**Nu te opri la 10**. Există sute de probleme care ar putea afecta securitatea generală a unei aplicații web, așa cum este discutat în [Ghidul dezvoltatorului OWASP] (https://www.owasp.org/index.php/OWASP_Guide_Project) și în [OWASP Cheat Sheet Series] (https://www.owasp.org/index.php/Category:Cheatsheets). Acestea sunt lecturi esențiale pentru oricine dezvoltă aplicații web și API. Îndrumări privind găsirea eficientă a vulnerabilităților în aplicațiile web și API-urile sunt furnizate în [OWASP Testing Guide] (https://www.owasp.org/index.php/OWASP_Testing_Project). 
 
 **Constant change**. The OWASP Top 10 will continue to change. Even without changing a single line of your application's code, you may become vulnerable as new flaws are discovered and attack methods are refined. Please review the advice at the end of the Top 10 in What's Next For Developers, Testers, Organizations and Application Managers for more information.
 

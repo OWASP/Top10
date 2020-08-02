@@ -1,38 +1,38 @@
-# O About OWASP
+# O Despre OWASP
 
-## About OWASP
+## Despre OWASP
 
-The Open Web Application Security Project (OWASP) is an open community dedicated to enabling organizations to develop, purchase, and maintain applications and APIs that can be trusted.
+Proiectul Open Web Application Security Project (OWASP) este o comunitate deschisă dedicată pentru a permite organizațiilor să dezvolte, să cumpere și să întrețină aplicații și API-uri care pot fi de încredere.
 
-At OWASP, you'll find free and open:
+La OWASP, veți găsi gratuit și liber:
 
-* Application security tools and standards.
-* Complete books on application security testing, secure code development, and secure code review.
-* Presentations and [videos](https://www.youtube.com/user/OWASPGLOBAL).
-* [Cheat sheets](https://www.owasp.org/index.php/OWASP_Cheat_Sheet_Series) on many common topics.
-* Standard security controls and libraries.
-* [Local chapters worldwide](https://www.owasp.org/index.php/OWASP_Chapter).
-* Cutting edge research.
-* Extensive [conferences worldwide](https://www.owasp.org/index.php/Category:OWASP_AppSec_Conference).
+* Instrumente și standarde de securitate pentru aplicații.
+* Cărți complete despre testarea securității aplicației, dezvoltarea sigură a codului și revizuirea codului securizat.
+* Prezentări și [video-uri](https://www.youtube.com/user/OWASPGLOBAL).
+* [Cheat sheets](https://www.owasp.org/index.php/OWASP_Cheat_Sheet_Series) pe multe subiecte comune.
+* Controale de securitate și biblioteci standard.
+* [Capitole locale din întreaga lume](https://www.owasp.org/index.php/OWASP_Chapter).
+* Cercetări de ultimă oră.
+* [Conferințe extensive la nivel mondial](https://www.owasp.org/index.php/Category:OWASP_AppSec_Conference).
 * [Mailing lists](https://lists.owasp.org/mailman/listinfo).
 
-Learn more at: [https://www.owasp.org](https://www.owasp.org).
+Aflați mai multe la: [https://www.owasp.org](https://www.owasp.org).
 
-All OWASP tools, documents, videos, presentations, and chapters are free and open to anyone interested in improving application security.
+Toate instrumentele, documentele, videoclipurile, prezentările și capitolele OWASP sunt gratuite și deschise tuturor celor interesați de îmbunătățirea securității aplicațiilor.
 
-We advocate approaching application security as a people, process, and technology problem, because the most effective approaches to application security require improvements in these areas.
+Noi pledăm pentru abordarea securității aplicațiilor ca problemă de oameni, procese și tehnologii, deoarece cele mai eficiente abordări ale securității aplicațiilor necesită îmbunătățiri în aceste domenii.
 
-OWASP is a new kind of organization. Our freedom from commercial pressures allows us to provide unbiased, practical, and cost-effective information about application security.
+OWASP este un nou tip de organizație. Libertatea noastră împotriva presiunilor comerciale ne permite să oferim informații imparțiale, practice și rentabile despre securitatea aplicațiilor.
 
-OWASP is not affiliated with any technology company, although we support the informed use of commercial security technology. OWASP produces many types of materials in a collaborative, transparent, and open way.
+OWASP nu este afiliat cu nicio companie de tehnologie, deși susținem utilizarea în cunoștință a tehnologiei de securitate comercială. OWASP produce multe tipuri de materiale într-un mod colaborativ, transparent și deschis.
 
-The OWASP Foundation is the non-profit entity that ensures the project's long-term success. Almost everyone associated with OWASP is a volunteer, including the OWASP board, chapter leaders, project leaders, and project members. We support innovative security research with grants and infrastructure.
+Fundația OWASP este entitatea non-profit care asigură succesul pe termen lung al proiectului. Aproape toată lumea asociată cu OWASP este voluntară, incluzând consiliul OWASP, conducătorii de capitole, conducătorii de proiect și membrii proiectului. Susținem cercetarea inovatoare în domeniul securității cu subvenții și infrastructură.
 
-Come join us!
+Vino alături de noi!
 
-## Copyright and License
+## Copyright și licență
 
 ![license](images/license.png)
 
-Copyright © 2003-2017 The OWASP Foundation. This document is released under the Creative Commons Attribution Share-Alike 4.0 license. For any reuse or distribution, you must make it clear to others the license terms of this work.
+Copyright © 2003-2017 Fundația OWASP. Acest document este lansat sub licența Creative Commons Attribution Share-Alike 4.0. Pentru orice reutilizare sau distribuție, trebuie să le lămuriți pe alții termenii de licență ai acestei lucrări.
 
