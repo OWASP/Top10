@@ -15,7 +15,7 @@ There may be authentication weaknesses if the application:
 * Permits brute force or other automated attacks.
 * Permits default, weak, or well-known passwords, such as "Password1" or "admin/admin“.
 * Uses weak or ineffective credential recovery and forgot-password processes, such as "knowledge-based answers", which cannot be made safe.
-* Uses plain text, encrypted, or weakly hashed passwords (see **A3:2017-Sensitive Data Exposure**).
+* Uses plain text, unencrypted, or weakly hashed passwords (see **A3:2017-Sensitive Data Exposure**).
 * Has missing or ineffective multi-factor authentication.
 * Exposes Session IDs in the URL (e.g., URL rewriting).
 * Does not rotate Session IDs after successful login.
