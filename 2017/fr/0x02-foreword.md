@@ -1,33 +1,43 @@
-## Avant Propos
+## <div dir="rtl" align="right">  پیش گفتار </div> 
 
-Insecure software is undermining our financial, healthcare, defense, energy, and other critical infrastructure. As our software becomes increasingly complex, and connected, the difficulty of achieving application security increases exponentially. The rapid pace of modern software development processes makes the most common risks essential to discover and resolve quickly and accurately. We can no longer afford to tolerate relatively simple security problems like those presented in this OWASP Top 10.
+<p dir="rtl" align="right">برنامه کاربردی ناامن، زیرساخت‌های مالی، مراقبتی ، دفاعی ، انرژی و دیگرزیرساخت های حساس و بحرانی ما را تضعیف میکند. مادامی که نرم افزار ما به مرور پیچیده تر شده و ارتباطش بیشتر میشود، مشقت رسیدن به امنیت برنامه هم به صورت فزاینده ای افزایش میابد.</p>
 
-A great deal of feedback was received during the creation of the OWASP Top 10 - 2017, more than for any other equivalent OWASP effort. This shows how much passion the community has for the OWASP Top 10, and thus how critical it is for OWASP to get the Top 10 right for the majority of use cases.
 
-Although the original goal of the OWASP Top 10 project was simply to raise awareness amongst developers and managers, it has become the de facto application security standard. 
+<p dir="rtl" align="right">
+سرعت توسعه نرم افزارهای جدید ، کشف خطرهای معمول و برطرف کردن آنها به صورت سریع و دقیق را الزامی میکند. ما دیگر قادر به پذیرش نقص های امنیتی نسبتا ساده، شبیه مواردی که در این  OWASP TOP 10 ارائه شده‌اند نیستیم.</p>
 
-In this release, issues and recommendations are written concisely and in a testable way to assist with the adoption of the OWASP Top 10 in application security programs. We encourage large and high performing organizations to use the [OWASP Application Security Verification Standard (ASVS)](https://www.owasp.org/index.php/ASVS) if a true standard is required, but for most, the OWASP Top 10 is a great start on the application security journey.
+<p dir="rtl" align="right">با اینکه هدف اصلی OWASP TOP 10  به صورت خلاصه افزایش آگاهی میان توسعه دهندگان و مدیران بود، با این حال تبدیل به استاندارد امنیتی بالفعل برنامه ها شده است.
+</p>
 
-We have written up a range of suggested next steps for different users of the OWASP Top 10, including "What's Next for Developers", "What's Next for Security Testers", "What's Next for Organizations“, which is suitable for CIOs and CISOs, and "What's Next for Application Managers", which is suitable for application managers or anyone responsible for the lifecycle of the application.
+<p dir="rtl" align="right">در این نسخه، مشکلات و توصیه ها به صورت مختصر و قابل تست با اقتباس از OWASP TOP 10  در برنامه های امنیت نرم افزار نوشته شده اند. ما توصیه میکنیم که سازمان های بزرگ و با فعالیت بالا، از 
+OWASP APPLICATION SECURITY VERIFICATION  STANDARD (ASVS) استفاده کنند ، در صورتی که یک استاندارد واقعی مورد نیاز است.اما برای اکثریت، OWASP TOP 10  یک شروع خوب در مسیر امنیت برنامه می‌باشد.</p>
 
-In the long term, we encourage all software development teams and organizations to create an application security program that is compatible with your culture and technology. These programs come in all shapes and sizes. Leverage your organization's existing strengths to measure and improve your application security program using the Software Assurance Maturity Model.
+<p dir="rtl" align="right">ما یک سری پیشنهاد به عنوان قدم بعدی برای کاربران مختلف OWASP TOP 10 ، شامل قدم بعدی برای توسعه دهندگان ، قدم بعدی برای ارزیاب های امنیت، قدم بعدی برای سازمان ها که مناسب برای CIO  و CISO  ها است ، قدم بعدی برای مدیران برنامه ها که مناسب برای مدیران برنامه ها و هرکسی که مسئول چرخه‌ی حیات برنامه است، نوشته ایم.</p>
 
-We hope that the OWASP Top 10 is useful to your application security efforts. Please don't hesitate to contact OWASP with your questions, comments, and ideas at our GitHub project repository:
+<p dir="rtl" align="right">در دراز مدت، ما به تمام تیم های توسعه نرم افزار توصیه میکنیم که یک برنامه امنیت نرم افزار که با الگو و تکنولوژی ما سازگاری دارد ایجاد کنند. این برنامه ها در اشکال و سایزهای مختلف ارایه میشوند.</p>
+
+<p dir="rtl" align="right">قدرت فعلی اندازه گیری و بهبود امنیت برنامه های خود را با استفاده از مدل Software Assurance Maturity  افزایش دهید.</p>
+
+<p dir="rtl" align="right">امیدواریم که OWASP TOP 10  برای اقدامات امنیت نرم افزار شما مفید باشد. لطفا با ما در تماس باشید و سوالات، نظرات و ایده های خود را در مخزن پروژه گیت هاب ما ، با OWASP در میان بگذارید.</p>
 
 * [https://github.com/OWASP/Top10/issues](https://github.com/OWASP/Top10/issues)
 
-You can find the OWASP Top 10 project and translations here:
+<p dir="rtl" align="right">شما میتوانید پروژه ی OWASP TOP 10 و ترجمه هایش را اینجا پیدا کنید :</p>
 
 * [https://www.owasp.org/index.php/top10](https://www.owasp.org/index.php/top10)
 
-Lastly, we wish to thank the founding leadership of the OWASP Top 10 project, Dave Wichers and Jeff Williams, for all their efforts, and believing in us to get this finished with the community's help. Thank you!
+<p dir="rtl" align="right">در پایان ، دوست داریم که از رهبران موسس OWASP TOP 10 ، آقایان Dave Wichers  و Jeff Williams  برای تمام تلاش‌ها و اعتقادی که برای اتمام پروژه با کمک جامعه به ما داشتند تشکر کنیم. از شما ممنونیم.</p>
 
 * Andrew van der Stock
 * Brian Glas
 * Neil Smithline
 * Torsten Gigler
 
-## Attribution
-Thanks to [Autodesk](https://www.autodesk.com) for sponsoring the OWASP Top 10 - 2017.
+## <div dir="rtl" align="right"> اسپانسری پروژه</div>
 
-Organizations and individuals that have provided vulnerability prevalence data or other assistance are listed on the [Acknowledgements page](0xd1-data-contributors.md).
+<p dir="rtl" align="right">از Autodesk  برای اسپانسری OWASP TOP 10 – 2017  تشکر میکنیم.</p>
+
+<p dir="rtl" align="right">سازمان ها و افرادی که در دادن اطلاعات در مورد آسیب های شایع یا دیگر موارد همکاری کردند در این آدرس لیست شده اند :
+</p>
+
+[Acknowledgements page](0xd1-data-contributors.md).
