@@ -1,49 +1,75 @@
-# A1:2017 Injection
+# <div dir="rtl" align="right">A1:2017 تزریق</div> 
 
 | Threat agents/Attack vectors | Security Weakness           | Impacts               |
 | -- | -- | -- |
-| Access Lvl : Exploitability 3 | Prevalence 2 : Detectability 3 | Technical 3 : Business |
-| Almost any source of data can be an injection vector, environment variables, parameters, external and internal web services, and all types of users. [Injection flaws](https://www.owasp.org/index.php/Injection_Flaws) occur when an attacker can send hostile data to an interpreter. | Injection flaws are very prevalent, particularly in legacy code. Injection vulnerabilities are often found in SQL, LDAP, XPath, or NoSQL queries, OS commands, XML parsers, SMTP headers, expression languages, and ORM queries. Injection flaws are easy to discover when examining code. Scanners and fuzzers can help attackers find injection flaws. |Injection can result in data loss, corruption, or disclosure to unauthorized parties, loss of accountability, or denial of access. Injection can sometimes lead to complete host takeover. The business impact depends on the needs of the application and data.|
+| Access Lvl : قابلیت بهره‌برداری: ۳ | شیوع: ۲ : قابل کشف بودن: ۳ | تکنیکی: ۳ : Business |
+| <div dir="rtl" align="right">تقریبا هر منبع داده می تواند یک بردار تزریق، متغیرهای محیطی، پارامترها، خدمات وب داخلی و خارجی و انواع مختلف کاربران باشد. <a href="https://www.owasp.org/index.php/Injection_Flaws">نقص تزریق</a> زمانی رخ می دهد که مهاجم می تواند داده های خصمانه را به مفسر ارسال کند.</div> | <div dir="rtl" align="right"> حمله تزریق بسیار شایع است، به خصوص در کد میرای. آسیب پذیری های تزریق اغلب در  Queryهای SQL، LDAP، XPath یا NoSQL، کامندهای  OS، پارسرهای  XML، هدر SMTP، زبان بیان و پرس و جوهای ORM یافت میشوند. هنگام بررسی کد، کشف نقص تزریق آسان است. اسکنرها و فازرها می توانند به مهاجمان برای پیدا کردن نقص تزریق کمک کنند.</div> | <div dir="rtl" align="right">تزریق می تواند باعث از دست دادن اطلاعات یا انحراف، عدم پاسخگویی یا رد دسترسی شود. تزریق می تواند گاهی منجر به تصاحب کامل میزبان نیز گردد. تاثیر تجاری بستگی به نیازهای محافظت از برنامه و اطلاعات شما دارد.</div> |
 
+## <div dir="rtl" align="right">آیا برنامه کاربردی آسیب‌پذیر است؟ </div>
 
-## Is the Application Vulnerable?
+<p dir="rtl" align="right">برنامه کاربردی در شرایط زیر به حمله آسیب پذیر است: </p>
 
-An application is vulnerable to attack when:
+<ul dir="rtl" align="right">
+  <li>
+ورودی های ارائه شده توسط کاربر اعتبار سنجی یا فیلتر نشوند. 
+  </li>
+  <li>
+    داده های خصمانه به طور مستقیم با استفاده از پرس و جو های پویا و یا درخواست های غیر پارامتریک برای مفسر بدون آگاهی از متن مورد استفاده قرار می گیرد. 
+  </li>
+  <li>
+    داده های خصمانه در پارامترهای جستجو در نگاشت شیء-ارتباطی (ORM) برای استخراج  همه اطلاعات یا اطلاعات حساس استفاده می‌شود.
+  </li>
+  <li>
+   داده های خصمانه به طور مستقیم استفاده می شود یا پیوند داده می شوند با دستورات SQL یا دستور حاوی هر دو ساختار و داده های خصمانه در پرس و جوهای پویا، دستورات و روش های ذخیره شده.
+  </li>
+  <li>
+    برخی از تزریقات رایج عبارتند از SQL، NoSQL، دستور OS، ORM، LDAP و زبان بیان (EL) یا تزریق OGNL . مفهوم در میان همه مفسرها یکسان است.
+بررسی کد منبع بهترین روش تشخیص این است که آیا برنامه کاربردی شما برای تزریق آسیب پذیر هستند یا خیر، با تست کامل خودکار تمام پارامترها، سرصفحه ها، URL ها، کوکی ها، JSON، SOAP و ورودی های داده XML می توان نقص تزریق را پیگیری کرد. سازمانها می توانند از ابزارهای منبع استاتیک <a href="https://www.owasp.org/index.php/Source_Code_Analysis_Tools">SAST</a> و آزمون برنامه کاربردی پویا <a href="https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools">DAST</a> را در خط لوله CI /     CD  برای شناسایی نقص های تزریق  معرفی شده قبل از تولید در اختیار بگیرند و استفاده کنند. .
+  </li>
+</ul>
 
-* User-supplied data is not validated, filtered, or sanitized by the application.
-* Dynamic queries or non-parameterized calls without context-aware escaping are used directly in the interpreter.  
-* Hostile data is used within object-relational mapping (ORM) search parameters to extract additional, sensitive records.
-* Hostile data is directly used or concatenated, such that the SQL or command contains both structure and hostile data in dynamic queries, commands, or stored procedures.
-* Some of the more common injections are SQL, NoSQL, OS command, Object Relational Mapping (ORM), LDAP, and Expression Language (EL) or Object Graph Navigation Library (OGNL) injection. The concept is identical among all interpreters. Source code review is the best method of detecting if applications are vulnerable to injections, closely followed by thorough automated testing of all parameters, headers, URL, cookies, JSON, SOAP, and XML data inputs. Organizations can include static source ([SAST](https://www.owasp.org/index.php/Source_Code_Analysis_Tools)) and dynamic application test ([DAST](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools)) tools into the CI/CD pipeline to identify newly introduced injection flaws prior to production deployment.
+## <div dir="rtl" align="right">نحوه پیشگیری از حمله:</div>
 
-## How To Prevent
+<p dir="rtl" align="right">جهت جلوگیری از حمله تزریق نیاز داریم داده‌ها جدا از دستورات و پرس و جوها نگه داری شوند.</p>
 
-Preventing injection requires keeping data separate from commands and queries.
+<ul dir="rtl" align="right">
+  <li>
+    گزینه ترجیح داده شده این است که از یک API مطمئن استفاده کنید که از استفاده کامل از مفسر اجتناب می کند یا یک رابط کاربری پارامتریک را فراهم می کند یا برای استفاده از ابزارهای مدل سازی ارتباطی شیء (ORM) مهاجرت می کند.
+    <strong>نکته: </strong>
+    هنگام پارامتر کردن، روش های ذخیره شده هنوز می توانند تزریق SQL را در صورت PL / SQL یا T-SQL پیوندها و داده ها را پیوند دهند یا داده های خصمانه را با EXECUTE IMMEDIATE یا exec ()  اجرا کنند.
+  </li>
+  <li>
+    استفاده از تصدیق ورودی مثبت یا "لیست سفید" سمت سرور توصیه میشود، اما این یک محافظت کامل ایجاد نمیکند، زیرا بسیاری از برنامه ها نیاز به کاراکترهای خاص مانند ناحیه های متن یا API برای برنامه های کاربردی تلفن همراه دارند.
+  </li>
+  <li>
+    برای هر پرس و جو پویای باقی مانده، گریز از کاراکترهای خاصی با استفاده از گریز از سینتکس خاص برای آن مفسر. 
+    <strong>نکته: </strong>
+    ساختار SQL مانند نام جدول، نام ستون و غیره نمیتواند گریزی داشته باشد و بنابراین ساختار ورودی های ارائه شده توسط کاربر خطرناک است. این یک مسئله رایج در نرم افزار گزارش نوشتن است.
+  </li>
+  <li>
+    استفاده از LIMIT و دیگر کنترل های SQL  درون پرس و جوها برای جلوگیری از افشای رکوردهای پرونده ها در حملا تزریق SQL. 
+  </li>
+</ul>
 
-* The preferred option is to use a safe API, which avoids the use of the interpreter entirely or provides a parameterized interface, or migrate to use Object Relational Mapping Tools (ORMs). **Note**: Even when parameterized, stored procedures can still introduce SQL injection if PL/SQL or T-SQL concatenates queries and data, or executes hostile data with EXECUTE IMMEDIATE or exec().
-* Use positive or "whitelist" server-side input validation. This is not a complete defense as many applications require special characters, such as text areas or APIs for mobile applications.
-* For any residual dynamic queries, escape special characters using the specific escape syntax for that interpreter. **Note**: SQL structure such as table names, column names, and so on cannot be escaped, and thus user-supplied structure names are dangerous. This is a common issue in report-writing software.
-* Use LIMIT and other SQL controls within queries to prevent mass disclosure of records in case of SQL injection.
+## <div dir="rtl" align="right">نمونه‌ سناریوهای حمله</div>
 
-## Example Attack Scenarios
-
-**Scenario #1**: An application uses untrusted data in the construction of the following vulnerable SQL call:
+<p dir="rtl" align="right"><strong>سناریو #1:</strong>یک برنامه با استفاده از داده های نا مطمئن در ساختار درستور فراخوانی SQL آسیب پذیر زیر استفاده می کند : </p>
 
 `String query = "SELECT * FROM accounts WHERE custID='" + request.getParameter("id") + "'";`
 
-**Scenario #2**: Similarly, an application’s blind trust in frameworks may result in queries that are still vulnerable, (e.g. Hibernate Query Language (HQL)):
+<p dir="rtl" align="right"><strong>سناریو #2:</strong>به طور مشابه، اعتماد کورکورانه نرم افزار به چارچوبها ممکن است منجر به نمایش داده هایی که هنوز آسیب پذیر هستند (به عنوان مثال، زبان پرس و جو حالت خواب (HQL)) Hibernate Query Language  را دنبال کند:</p>
 
 `Query HQLQuery = session.createQuery("FROM accounts WHERE custID='" + request.getParameter("id") + "'");`
 
-In both cases, the attacker modifies the ‘id’ parameter value in their browser to send:  ' or '1'='1. For example:
+<p dir="rtl" align="right">در هر دو مورد، مهاجم مقدار پارامتر < id> را در مرورگر خود تغییر می دهد: به طور مثال: ' or '1'='1</p>
 
 `http://example.com/app/accountView?id=' or '1'='1`
 
-This changes the meaning of both queries to return all the records from the accounts table. More dangerous attacks could modify or delete data, or even invoke stored procedures.
+<p dir="rtl" align="right">این معنای هر دو پرسش را تغییر می دهد تا تمام رکورد ها را از جدول حساب بازگرداند. حملات خطرناک بیشتر می تواند داده ها را تغییر داده یا حذف کند یا حتی روال ذخیره شده را فراخوانی کند. </p>
 
-## References
+## <div dir="rtl" align="right">منابع</div>
 
-### OWASP
+### <div dir="rtl" align="right">OWASP</div> 
 
 * [OWASP Proactive Controls: Parameterize Queries](https://www.owasp.org/index.php/OWASP_Proactive_Controls#2:_Parameterize_Queries)
 * [OWASP ASVS: V5 Input Validation and Encoding](https://www.owasp.org/index.php/ASVS_V5_Input_validation_and_output_encoding)
@@ -54,7 +80,7 @@ This changes the meaning of both queries to return all the records from the acco
 * [OWASP Cheat Sheet: Query Parameterization](https://www.owasp.org/index.php/Query_Parameterization_Cheat_Sheet)
 * [OWASP Automated Threats to Web Applications – OAT-014](https://www.owasp.org/index.php/OWASP_Automated_Threats_to_Web_Applications)
 
-### External
+### <div dir="rtl" align="right">خارجی</div>
 
 * [CWE-77: Command Injection](https://cwe.mitre.org/data/definitions/77.html)
 * [CWE-89: SQL Injection](https://cwe.mitre.org/data/definitions/89.html)
