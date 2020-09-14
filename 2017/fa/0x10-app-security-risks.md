@@ -1,37 +1,37 @@
-# Risk - Application Security Risks
+# <div dir="rtl" align="right">مخاطرات امنیتی برنامه‌های کاربردی</div>
 
-## What Are Application Security Risks?
+## <div dir="rtl" align="right">خطرات امنیتی برنامه چیست؟</div>
 
-Attackers can potentially use many different paths through your application to do harm to your business or organization. Each of these paths represents a risk that may, or may not, be serious enough to warrant attention.
+<p dir="rtl" align="right">مهاجمان به طور بالقوه می‌توانند از راه‌‌های مختلفی از طریق برنامه کاربردی شما، به کسب و کار یا سازمان شما آسیب برسانند. هر یک از این راه‌ها بیانگر یک خطر است که ممکن است به اندازه کافی جدی باشد تا به آن توجه شود.</p>
 
 ![App Security Risks](images/0x10-risk-1.png)
 
-Sometimes these paths are trivial to find and exploit, and sometimes they are extremely difficult. Similarly, the harm that is caused may be of no consequence, or it may put you out of business. To determine the risk to your organization, you can evaluate the likelihood associated with each threat agent, attack vector, and security weakness and combine it with an estimate of the technical and business impact to your organization. Together, these factors determine your overall risk.
+<p dir="rtl" align="right">گاهی اوقات این مسیرها بسیار راحت مشخص می‌شوند و گاهی اوقات بسیار دشوار است. به طور مشابه، آسیب ناشی از آن ممکن است هیچ نتیجه ای نداشته باشد، یا ممکن است شما را از کسب و کار بیرون کند. برای تعیین خطر برای سازمان شما می توانید احتمال را با هر عامل تهدید، بردار حمله و ضعف امنیتی مرتبط کنید و آن را با برآورد اثرات فنی و تجاری سازمان خود ترکیب کنید. این عوامل با هم، ریسک کلی شما را تعیین می کنند.</p>
 
-## What's My Risk
+## <div dir="rtl" align="right">ریسک من چیست؟</div>
 
-The [OWASP Top 10](https://www.owasp.org/index.php/Top10) focuses on identifying the most serious web application security risks for a broad array of organizations. For each of these risks, we provide generic information about likelihood and technical impact using the following simple ratings scheme, which is based on the OWASP Risk Rating Methodology.  
+<p dir="rtl" align="right"><a href="https://www.owasp.org/index.php/Top10">OWASP Top 10</a> به شناسایی جدی ترین خطرات برای مجموعه وسیعی از سازمان ها متمرکز است. برای هر یک از این خطرات، ما اطلاعات کلی درباره احتمال و تأثیر فنی را با استفاده از رهنمود ساده ارزیابی می کنیم که بر اساس روش رتبه بندی ریسک OWASP است.</p> 
 
-| Threat Agents | Exploitability | Weakness Prevalence | Weakness Detectability | Technical Impacts | Business Impacts |
+| عوامل تهدید | قابل بهره‌برداری بودن | شیوع ضعف | قابل تشخیص بودن ضعف | اثر تکنیکال | تاثیرات کسب و کار |
 | -- | -- | -- | -- | -- | -- |
-| Appli-   | Easy 3 | Widespread 3 | Easy 3 | Severe 3 | Business     |
-| cation   | Average 2 | Common 2 | Average 2 | Moderate 2 | Specific |
-| Specific | Difficult 1 | Uncommon 1 | Difficult 1 | Minor 1 |       |
+| ویژه -   | ساده: ۳ | شایع: ۳ | ساده: ۳ | شدید: ۳ | مختص -     |
+|  برنامه -  | متوسط: ۲ | عمومی: ۲ | متوسط: ۲ | متعادل: ۲ | کسب و -  |
+|     کاربردی   | سخت: ۱ | نادر: ۱ | سخت: ۱ | جزئی: ۱ |     کار   |
 
-In this edition, we have updated the risk rating system to assist in calculating the likelihood and impact of any given risk. For more details, please see [Note About Risks](0xc0-note-about-risks.md). 
+<p dir="rtl" align="right">در این نسخه، سیستم رتبه بندی ریسک را به روز کرده ایم تا در محاسبه احتمال (likelihood) و تاثیر هر گونه ریسک داده شده کمک کنیم. برای اطلاعات بیشتر، لطفا <a href="0xc0-note-about-risks.md">در مورد ریسک</a> را ببینید.</p>
 
-Each organization is unique, and so are the threat actors for that organization, their goals, and the impact of any breach. If a public interest organization uses a content management system (CMS) for public information and a health system uses that same exact CMS for sensitive health records, the threat actors and business impacts can be very different for the same software. It is critical to understand the risk to your organization based on applicable threat agents and business impacts.
+<p dir="rtl" align="right">هر سازمان منحصر به فرد است و تهدید کننده برای این سازمان، اهداف آنها و تأثیر هر گونه نقض نیز دارند. اگر سازمان منافع عمومی با استفاده از یک سیستم مدیریت محتوا (CMS) برای اطلاعات عمومی و یک سیستم سالم از همان CMS دقیق برای رکورد های سالم حساس استفاده کند،  تهدید کننده ها و تاثیرات تجاری می توانند برای یک نرم افزار بسیار متفاوت باشند. درک خطرات سازمان شما بر اساس عوامل تهدید قابل اجرا و تاثیرات تجاری بسیار مهم است.</p>
 
-Where possible, the names of the risks in the Top 10 are aligned with [Common Weakness Enumeration](https://cwe.mitre.org/) (CWE) weaknesses to promote generally accepted naming conventions and to reduce confusion.
+<p dir="rtl" align="right">در صورت امکان، نام ریسک ها در Top 10 با ضعف های عمومی <a href="https://cwe.mitre.org/">Weakness Enumeration (CWE)</a> به منظور ارتقای شیوه های پذیرفته شده امنیتی و کاهش سردرگمی مطابقت دارد.</p>
 
-## References
+## <div dir="rtl" align="right">منابع</div>
 
-### OWASP
+### <div dir="rtl" align="right"></div>OWASP
 
 * [OWASP Risk Rating Methodology](https://www.owasp.org/index.php/OWASP_Risk_Rating_Methodology)
 * [Article on Threat/Risk Modeling](https://www.owasp.org/index.php/Threat_Risk_Modeling)
 
-### External
+### <div dir="rtl" align="right">خارجی</div> 
 
 * [ISO 31000: Risk Management Std](https://www.iso.org/iso-31000-risk-management.html)
 * [ISO 27001: ISMS](https://www.iso.org/isoiec-27001-information-security.html)
