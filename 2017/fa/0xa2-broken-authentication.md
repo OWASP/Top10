@@ -1,45 +1,63 @@
-# A2:2017 Broken Authentication
+# <div dir="rtl" align="right"> A2:2017 احراز هویت ناقص</div>
 
 | Threat agents/Attack vectors | Security Weakness           | Impacts               |
 | -- | -- | -- |
-| Access Lvl : Exploitability 3 | Prevalence 2 : Detectability 2 | Technical 3 : Business |
-| Attackers have access to hundreds of millions of valid username and password combinations for credential stuffing, default administrative account lists, automated brute force, and dictionary attack tools. Session management attacks are well understood, particularly in relation to unexpired session tokens. | The prevalence of broken authentication is widespread due to the design and implementation of most identity and access controls. Session management is the bedrock of authentication and access controls, and is present in all stateful applications. Attackers can detect broken authentication using manual means and exploit them using automated tools with password lists and dictionary attacks. | Attackers have to gain access to only a few accounts, or just one admin account to compromise the system. Depending on the domain of the application, this may allow money laundering, social security fraud, and identity theft, or disclose legally protected highly sensitive information. |
+| Access Lvl : قابلیت بهره‌برداری: ۳ | شیوع: ۲ : قابل کشف بودن: ۲ | تکنیکی: ۳ : Business |
+| <div dir="rtl" align="right">مهاجمان به صدها میلیون نام کاربری و  رمز عبور معتبر جهت ارائه تشخیص هویت، به عنوان لیست حساب‌های مدیریتی پیش فرض، حمله جامع خودکار و ابزارهای حمله دیکشنری دسترسی دارند. حملات مدیریت نشست به خوبی درک می شود، به خصوص در رابطه با توکن های نشست غیرقابل انتظار.</div> | <div dir="rtl" align="right">رواج این حمله به علت نحوه طراحی و پیاده سازی بیشتر احراز هویت‌ها و کنترل دسترسی بسیار گسترده است. مدیریت نشست، پایه‌ی احراز هویت و کنترل دسترسی است و در همه برنامه های stateful وجود دارد. مهاجمان می توانند شکست احراز هویت را با استفاده از راهکار دستی تشخیص دهند و با استفاده از ابزارهای خودکار با لیستی از پسوردها و حمله های دیکشنری از آنها سو استفاده کنند. </div> | <div dir="rtl" align="right">مهاجم تنها می تواند به چند تا از حساب های  محدود دسترسی پیدا کند، یا تنها می تواند به حساب مدیر برای به خطر انداختن سیستم دسترسی پیدا کند. بسته به حوزه کاربرد، این ممکن است منجر به پولشویی، کلاهبرداری اجتماعی و سرقت هویت یا اطلاعات محرمانه محافظت شده از نظر قانونی را افشا کند. </div> |
 
-## Is the Application Vulnerable?
+## <div dir="rtl" align="right">آیا برنامه کاربرد آسیب‌پذیر است؟</div>
 
-Confirmation of the user's identity, authentication, and session management are critical to protect against authentication-related attacks.
+<p dir="rtl" align="right">تأیید هویت کاربر، احراز هویت و مدیریت نشست برای حفاظت از حملات مرتبط با احراز هویت حیاتی است.</p>
 
-There may be authentication weaknesses if the application:
+<p dir="rtl" align="right">اگر برنامه کاربردی شامل موارد زیر باشد ضعف های آسیب‎‌پذیری وجود خواهند داشت: </p>
 
-* Permits automated attacks such as [credential stuffing](https://www.owasp.org/index.php/Credential_stuffing), where the attacker has a list of valid usernames and passwords.
-* Permits brute force or other automated attacks.
-* Permits default, weak, or well-known passwords, such as "Password1" or "admin/admin“.
-* Uses weak or ineffective credential recovery and forgot-password processes, such as "knowledge-based answers", which cannot be made safe.
-* Uses plain text, encrypted, or weakly hashed passwords (see **A3:2017-Sensitive Data Exposure**).
-* Has missing or ineffective multi-factor authentication.
-* Exposes Session IDs in the URL (e.g., URL rewriting).
-* Does not rotate Session IDs after successful login.
-* Does not properly invalidate Session IDs. User sessions or authentication tokens (particularly single sign-on (SSO) tokens) aren't properly invalidated during logout or a period of inactivity.
+<ul dir="rtl" align="right">
+ <li>اجازه حملات خودکار را به مهاجم بدهد. مانند حملات <a href="https://www.owasp.org/index.php/Credential_stuffing">جاسازی احراز هویت</a>، که در آن مهاجم دارای لیستی از نام‌های کاربری و کلمه عبور معتبر را در اختیار دارد.</li>
+ <li>اجازه حملات خودکار رمز عبور یا حملات خودکار دیگر را بدهد. </li>
+ <li>اجازه ثبت رمزهای عبور پیش فرض، ضعیف یا شناخته شده مانند "Password1 " یا admin / admin"" را بدهد.</li>
+ <li>از فرآیندهای ضعیف یا ناکارآمد بازیابی یا فراموشی احراز هویت رمز، مانند "پاسخهای مبتنی بر دانش"، استفاده کند که امن نیستند.</li>
+ <li>با استفاده از متن آشکار، رمزنگاری شده و یا رمزهای هش ضعیف شده استفاده کند <strong>(نگاه کنید به A3: ۲017-Sensitive Data Exposure)</strong>.</li>
+ <li>از روش های احراز هویت چند مرحله ای ناکارآمد استفاده کند. </li>
+ <li>شناسه نشست در URL قابل مشاهده باشد. (مثل URL, Rewriting)</li>
+ <li>شناسه نشست پس از ورود موفق به سیستم ، تغییر نکرده باشد. </li>
+ <li>شناسه های نشست تداوم نداشته باشند. نشست های کاربر یا توکن های احراز هویت (به ویژه توکن های (Single sign-on SSO) ( در زمان خروج از سیستم یا یک دوره غیرفعال بودن به درستی اعتبار ندارند.</li>
+</ul>
 
-## How To Prevent
+## <div dir="rtl" align="right">نحوه پیشگیری از حمله</div>
 
-* Where possible, implement multi-factor authentication to prevent automated, credential stuffing, brute force, and stolen credential re-use attacks. 
-* Do not ship or deploy with any default credentials, particularly for admin users.
-* Implement weak-password checks, such as testing new or changed passwords against a list of the [top 10000 worst passwords](https://github.com/danielmiessler/SecLists/tree/master/Passwords).
-* Align password length, complexity and rotation policies with [NIST 800-63 B's guidelines in section 5.1.1 for Memorized Secrets](https://pages.nist.gov/800-63-3/sp800-63b.html#memsecret) or other modern, evidence based password policies.
-* Ensure registration, credential recovery, and API pathways are hardened against account enumeration attacks by using the same messages for all outcomes.
-* Limit or increasingly delay failed login attempts. Log all failures and alert administrators when credential stuffing, brute force, or other attacks are detected.
-* Use a server-side, secure, built-in session manager that generates a new random session ID with high entropy after login. Session IDs should not be in the URL, be securely stored and invalidated after logout, idle, and absolute timeouts.
+<ul dir="rtl" align="right">
+  <li>
+    در صورت امکان، احراز هویت چند عامل را برای جلوگیری از حملات خودکار، اعتبارنامه، نیروی بی رحمانه و حملات مجدد اعتبارنامه ربوده شده پیاده سازی کنید.
+  </li>
+ <li>
+    آیا با هیچ مدرک پیش فرض، مخصوصا برای مدیران مدیریت، ارسال و ارسال نمی شود.
+  </li>
+ <li>
+  اجرای چک های ضعیف رمز عبور، مانند تست گذرواژه های جدید یا تغییر یافته در برابر یک <a href="https://github.com/danielmiessler/SecLists/tree/master/Password">لیست از 10000 بدترین رمزهای عبور .</a> 
+  </li>
+ <li>
+  خطاهای رمز عبور، پیچیدگی و چرخش را با <a href="https://pages.nist.gov/800-63-3/sp800-63b.html#memsecret">دستورالعملهای NIST 800-63 B در بخش 5.1.1</a> برای اسرار حفظ شده یا سایر سیاستهای رمز عبور مدرن مبتنی بر شواهد منطبق کنید.
+  </li>
+ <li>
+    اطمینان از ثبت نام، بازیابی اعتبارنامه ها و مسیرهای API در برابر حملات شمارش حساب، با استفاده از پیام های مشابه برای تمام نتایج، تشدید می شود.
+  </li>
+ <li>
+    محدود کردن یا به طور فزاینده ای تلاشهای ورود به سیستم را تاخیر می دهد. همه خرابی ها را وارد کنید و مدیران را هشدار دهید وقتی که اعتبار نامه ها، نیروی بی رحم یا سایر حملات شناسایی می شوند.
+  </li>
+ <li>
+    استفاده از یک مدیر جلسه ای امن، امن، ساخته شده در جلسه که یک شناسه جلسه تصادفی جدید با انتروپی بالا پس از ورود ایجاد می کند. شناسه جلسه نباید در نشانی اینترنتی باشد، پس از خروج از سیستم، بیکار و زمان وقوع مطلق، ایمن ذخیره و نامعتبر باشد.
+  </li> 
+</ul>
 
-## Example Attack Scenarios
+## <div dir="rtl" align="right">نمونه‌ سناریوهای حمله</div> 
 
-Scenario #1: [Credential stuffing](https://www.owasp.org/index.php/Credential_stuffing), the use of [lists of known passwords](https://github.com/danielmiessler/SecLists), is a common attack. If an application does not implement automated threat or credential stuffing protections, the application can be used as a password oracle to determine if the credentials are valid.
+<p dir="rtl" align="right"><strong>سناریو #1: </strong><a href=""> Credential stuffing </a>، که از لیست های رمزهای عبور شناخته شده <a href="https://github.com/danielmiessler/SecLists">لیست های رمزهای عبور شناخته شده</a> استفاده می کند، یک حمله رایج است. اگر برنامه کاربردی محافظت از تهدیدات خودکار یا محافظت از Credential stuffing  را اجرا نکند، برنامه را می توان به عنوان اوراکل رمز عبور برای تعیین اعتبار Credentials استفاده کرد.</p>
 
-**Scenario #2**: Most authentication attacks occur due to the continued use of passwords as a sole factor. Once considered best practices, password rotation and complexity requirements are viewed as encouraging users to use, and reuse, weak passwords. Organizations are recommended to stop these practices per NIST 800-63 and use multi-factor authentication.
+<p dir="rtl" align="right"><strong>سناریو #2: </strong>بیشتر حملات احراز هویت به دلیل استفاده مداوم از کلمات عبور به عنوان یک عامل واحد صورت می گیرد. هنگامی که بهترین شیوه ها در نظر گرفته می شود، چرخش رمز عبور و الزامات پیچیدگی به عنوان کاربران تشویقی برای استفاده و استفاده مجدد از کلمه عبور ضعیف مورد توجه قرار می گیرند. در سازمان ها توصیه می شود که این روش ها را در NIST 800-63 متوقف کنند و از احراز هویت چند عامل استفاده کنند.</p>
 
-**Scenario #3**: Application session timeouts aren't set properly. A user uses a public computer to access an application. Instead of selecting “logout” the user simply closes the browser tab and walks away. An attacker uses the same browser an hour later, and the user is still authenticated.
+<p dir="rtl" align="right"><strong>سناریو #3: </strong>مهلت زمانی نشست برنامه کاربردی به درستی تنظیم نشده است. یک کاربر از یک رایانه عمومی برای دسترسی به یک برنامه کاربردی استفاده می کند. کاربر به جای انتخاب "خروج از سیستم"،  تنها به بستن مرورگر اکتفا کرده و سیستم را رها می کند. مهاجم از این مرورگر یک ساعت بعد استفاده می کند و  احراز هویت کاربر قربانی هنوز معتبر است.</p>
 
-## References
+## <div dir="rtl" align="right">منابع</div> 
 
 ### OWASP
 
@@ -54,7 +72,7 @@ Scenario #1: [Credential stuffing](https://www.owasp.org/index.php/Credential_st
 * [OWASP Cheat Sheet: Session Management](https://www.owasp.org/index.php/Session_Management_Cheat_Sheet)
 * [OWASP Automated Threats Handbook](https://www.owasp.org/index.php/OWASP_Automated_Threats_to_Web_Applications)
 
-### External
+### <div dir="rtl" align="right">خارجی</div>
 
 * [NIST 800-63b: 5.1.1 Memorized Secrets](https://pages.nist.gov/800-63-3/sp800-63b.html#memsecret) - for thorough, modern, evidence-based advice on authentication. 
 * [CWE-287: Improper Authentication](https://cwe.mitre.org/data/definitions/287.html)
