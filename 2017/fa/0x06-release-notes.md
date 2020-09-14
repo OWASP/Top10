@@ -1,30 +1,69 @@
-# RN Release Notes
+# <div dir="rtl" align="right">توجهات این نسخه</div> 
 
-## What changed from 2013 to 2017?
+## <div dir="rtl" align="right">از 2013 تا 2017 چه چیزهایی تغییر کرده اند؟</div>
 
-Change has accelerated over the last four years, and the OWASP Top 10 needed to change. We've completely refactored the OWASP Top 10, revamped the methodology, utilized a new data call process, worked with the community, re-ordered our risks, re-written each risk from the ground up, and added references to frameworks and languages that are now commonly used.
+<p dir="rtl" align="right">تغییرات در سال های اخیر شتاب گرفته اند و  OWASP TOP 10 به تغییر احتیاج داشت. ما به صورت کامل OWASP TOP 10  را از لحاظ ساختاری تغییر داده ایم و متدولوژی آن را مورد بازنگری قرار داده ایم. یک پروسه درخواست دیتا که با جامعه در ارتباط است تبیین کرده ایم،‌ خطرات را مجددا در دستور کار قرار داده ایم و هر خطر را مجددا از ابتدا نوشته ایم. و به فریمورک ها و زبان هایی که در حال حاضر به طور عمومی استفاده میشوند منابعی را اضافه کرده ایم.</p>
 
-Over the last few years, the fundamental technology and architecture of applications has changed significantly:
+<p dir="rtl" align="right">در طی سالهای اخیر، تکنولوژی و معماری اولیه ی برنامه ها به صورت چشمگیری تغییر یافته است :</p>
 
-* Microservices written in node.js and Spring Boot are replacing traditional monolithic applications. Microservices come with their own security challenges including establishing trust between microservices, containers, secret management, etc. Old code never expected to be accessible from the Internet is now sitting behind an API or RESTful web service to be consumed by Single Page Applications (SPAs) and mobile applications. Architectural assumptions by the code, such as trusted callers, are no longer valid.
-* Single page applications, written in JavaScript frameworks such as Angular and React, allow the creation of highly modular feature-rich front ends. Client-side functionality that has traditionally been delivered server-side brings its own security challenges.
-* JavaScript is now the primary language of the web with node.js running server side and modern web frameworks such as Bootstrap, Electron, Angular, and React running on the client.
+<ul dir="rtl" align="right">
+  <li>
+  میکروسرویسهای نوشته شده درnode.js  و Spring Boot در حال جایگزین شدن به جای برنامه های سنتی یکپارچه هستند. میکروسرویسها با چالش های امنیتی خودشان مواجه هستند که شامل برقراری اعتماد بین میکروسرویس های ، کانتینرها ، مدیریت امنیت و ... می‌شود. کد قدیمی که هرگز انتظار نمیرفت تا از طریق اینترنت قابل دسترسی باشد ،‌حالا پشت API ها و وب سرویس RESTful قرار گرفته تا توسط برنامه های تک صفحه ای (SPAs) و برنام های موبایل مورد استفاده قرار گیرد.فرض های معماری توسط کد، مثل درخواست کننده های مورد اعتماد ها دیگر معتبر نیستند.
+  </li>
+  <li>
+    برنامه های تک صفحه ای که در API جاواسکریپت نوشته شده اند، مثل Angular  و React، اجازه ی خلق فرانت اندهای بسیار ماژولار و پر از ویژگی را میدهند. عملکرد سمت کلاینت که به صورت سنتی در سمت سرور تحویل میشده است، چالش های امنیتی خاص خود را به همراه دارد.
+  </li>
+   <li>
+    جاواسکریپت حالا زبان اولیه ی وب است، با  node.js که در سمت سرور اجرا میشود و وب فریمورک هایی نظیر Bootstrap ،‌ Electron ، Angular ، و React که در سمت کلاینت اجرا میشوند.
+  </li>
+</ul>
 
-## New issues, supported by data
+## <div dir="rtl" align="right">مشکلات جدیدی که با دیتا ساپورت میشوند:</div>
 
-* **A4:2017-XML External Entities (XXE)** is a new category primarily supported by source code analysis security testing tools ([SAST](https://www.owasp.org/index.php/Source_Code_Analysis_Tools)) data sets.
+<ul dir="rtl" align="right">
+  <li>
+    <strong> A4:2017-XML External Entities (XXE)</strong>
+    یک دسته بندی جدید است که به صورت اولیه توسط دیتاست هایابزارهای آنالیز و آزمون امنیت کد منبع <a href="https://www.owasp.org/index.php/Source_Code_Analysis_Tools">[SAST]<a/>  ساپورت میشود.
+  </li>
+</ul>
 
-## New issues, supported by the community
 
-We asked the community to provide insight into two forward looking weakness categories. After over 500 peer submissions, and removing issues that were already supported by data (such as Sensitive Data Exposure and XXE), the two new issues are: 
+## <div dir="rtl" align="right">مشکلات جدیدی که توسط جامعه ساپورت میشوند:</div>
 
-* **A8:2017-Insecure Deserialization**, which permits remote code execution or sensitive object manipulation on affected platforms.
-* **A10:2017-Insufficient Logging and Monitoring**, the lack of which can prevent or significantly delay malicious activity and breach detection, incident response, and digital forensics.
+<p dir="rtl" align="right">ما از جامعه خواستیم که نگاه دقیقی به ۲ دسته بندی از ضعف های پیش رو داشته باشند.بعد از بیش از ۵۰۰ توافق دو طرفه، وحذف مشکلاتی که توسط دیتا ساپورت میشوند (مثل افشای اطلاعات حساس یا  و XXE )، دو مشکل جدید عبارتند از : 
+</p>
 
-## Merged or retired, but not forgotten
+<ul dir="rtl" align="right">
+  <li>
+    <strong>A8:2017- دیسریالیزیشن نا امن</strong>
+    , که اجازه ی اجرای کد به صورت ریموت یا دستکاری اشیائ حساس را در پلتفرم های تحت تاثیرش میدهد.
+  </li>
+  <li>
+    <strong>A10:2017- لاگینگ و مانیتورینگ نا کارآمد </strong>
+    که فقدان آن باعث ممانعت یا تاخیر قابل توجه کشف فعالیت های مشکوک و رخنه ها ، واکنش به حوادث ، و فارنزیک دیجیتال میشود.
+  </li>
+</ul>
 
-* **A4-Insecure Direct Object References** and **A7-Missing Function Level Access Control** merged into **A5:2017-Broken Access Control**.
-* **A8-Cross-Site Request Forgery (CSRF)**, as many frameworks include [CSRF defenses](https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)), it was found in only 5% of applications.
-* **A10-Unvalidated Redirects and Forwards**, while found in approximately in 8% of applications, it was edged out overall by XXE.
+## <div dir="rtl" align="right">مرج شده یا بازنشسته شده، اما فراموش نشده : </div> 
+
+<ul dir="rtl" align="right">
+  <li>
+    <strong>A4-Insecure Direct Object References </strong>
+    و
+    <strong>A7-Missing Function Level Access Control </strong>
+    ادغام شده اند به
+    <strong>A5:2017-Broken Access Control</strong>
+  </li>
+  <li>
+    <strong>A8-Cross-Site Request Forgery (CSRF)</strong> ,
+    از آنجایی که فریمورگ های بسیاری دارای محافظ
+    <a href="https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)">محافظ CSRF</a>
+    هستند ، این مورد تنها در ۵ درصد از برنامه های کاربردی یافت شده.
+  </li>
+  <li>
+    <strong>A10-Unvalidated Redirects and Forwards </strong>,
+    از انجایی که در تقریبا ۸ درصد از برنامه های کاربردی یافت شد،‌به طور کلی به صورت XXE ارائه شد.
+  </li>
+</ul>
 
 ![0x06-release-notes-1](images/0x06-release-notes-1.png)
