@@ -1,45 +1,50 @@
-# A3:2017 Sensitive Data Exposure
+# <div dir="rtl" align="right">A3:2017 افشای اطلاعات حساس</div>
 
 | Threat agents/Attack vectors | Security Weakness | Impacts |
 | -- | -- | -- |
-| Access Lvl : Exploitability 2 | Prevalence 3 : Detectability 2 | Technical 3 : Business |
-| Rather than directly attacking crypto, attackers steal keys, execute man-in-the-middle attacks, or steal clear text data off the server, while in transit, or from the user’s client, e.g. browser. A manual attack is generally required. Previously retrieved password databases could be brute forced by Graphics Processing Units (GPUs). | Over the last few years, this has been the most common impactful attack. The most common flaw is simply not encrypting sensitive data. When crypto is employed, weak key generation and management, and weak algorithm, protocol and cipher usage is common, particularly for weak password hashing storage techniques. For data in transit, server side weaknesses are mainly easy to detect, but hard for data at rest. | Failure frequently compromises all data that should have been protected. Typically, this information includes sensitive personal information (PII) data such as health records, credentials, personal data, and credit cards, which often require protection as defined by laws or regulations such as the EU GDPR or local privacy laws. |
+| Access Lvl : قابلیت بهره‌برداری: ۲ | شیوع: ۳ : قابل کشف بودن: ۲ | تکنیکی: ۳ : Business ? |
+| <div dir="rtl" align="right">مهاجم ها به جای حملات مخفیانه به صورت مستقیم، اقدام به سرقت کلیدها، اجرای حملات مردمیانی، یا سرقت اطلاعات رمز نشده سمت سرور یا کاربر، هنگام انتقال اطلاعات می کنند، برای مثال مروررگر. حمله دستی به طور کلی مورد نیاز است. قبلا بانک های داده رمز عبور بازیابی شده باید توسط GPU ها (واحدهای پردازش گرافیکی) مورد حمله جامع قرار می گرفت. </div> | <div dir="rtl" align="right">در طول چند سال گذشته، این شایعترین حمله تاثیرگذار بوده است. شایع ترین اشتباه هم رمز نکردن اطلاعات حساس است. هنگامی که از رمزنگاری استفاده می شود، تولید و مدیریت کلید ضعیف، و الگوریتم ضعیف، استفاده از پروتکل و رمز مشترک، مخصوصا برای تکنیک های ذخیره سازی هشینگ رمزنگاری ضعیف است. برای اطلاعات در حال انتقال، ضعف های سمت سرور بهبه راحتی قابل تشخیص هستند. اما تشخیص برای داده هایی که در داخل سرور ذخیره شده اند سخت است. </div> | <div dir="rtl" align="right">یک شکست امنیتی اغلب تمام اطلاعاتی را که باید محافظت شوند را به خطر می اندازد. به طور معمول، این اطلاعات شامل اطلاعات شخصی حساس (PII) مانند پرونده های بهداشتی، اعتبارنامه ها، اطلاعات شخصی و کارت های اعتباری است که اغلب نیاز به حفاظت بر اساس قوانین یا مقرراتی مانند GDPR  اتحادیه اروپا یا قوانین حفظ حریم خصوصی محلی دارند.</div> |
 
-## Is the Application Vulnerable?
+## <div dir="rtl" align="right">آیا برنامه کاربردی آسیب‌پذیر است؟</div>
 
-The first thing is to determine the protection needs of data in transit and at rest. For example, passwords, credit card numbers, health records, personal information and business secrets require extra protection, particularly if that data falls under privacy laws, e.g. EU's General Data Protection Regulation (GDPR), or regulations, e.g. financial data protection such as PCI Data Security Standard (PCI DSS). For all such data:
+<p dir="rtl" align="right">اولین نکته این است که نیازهای حفاظت از داده ها در هنگام انتقال و در حالت ذخیره تعیین شود. به عنوان مثال، گذرواژه‌ها، شماره کارت اعتباری، پرونده‌های بهداشتی، اطلاعات شخصی و اسرار تجاری، حفاظت بیشتری نیاز دارند، به ویژه اگر داده‌ها تحت قوانین حریم خصوصی قرار بگیرند، برای مثال مقررات حفاظت کلی اطلاعات اتحادیه اروپا (GDPR)، یا مقررات، مانند حفاظت از اطلاعات مالی مانند PCI Data Security Standard (PCI DSS) . برای چنین اطلاعاتی:</p>
 
-* Is any data transmitted in clear text? This concerns protocols such as HTTP, SMTP, and FTP. External internet traffic is especially dangerous. Verify all internal traffic e.g. between load balancers, web servers, or back-end systems.
-* Are any old or weak cryptographic algorithms used either by default or in older code? 
-* Are default crypto keys in use, weak crypto keys generated or re-used, or is proper key management or rotation missing?
-* Is encryption not enforced, e.g. are any user agent (browser) security directives or headers missing?
-* Does the user agent (e.g. app, mail client) not verify if the received server certificate is valid?
+<ul dir="rtl" align="right">
+  <li>آیا داده ها بدون رمز شدن ارسال شده اند؟ این مربوط به پروتکل هایی مانند HTTP، SMTP و FTP است. به ویژه ترافیک اینترنتی خارجی خطرناک است. تمام ترافیک داخلی بین load balancer ها، وب سرورها، و یا سیستم هایback-end بایستی بررسی گردد.</li>
+  <li>آیا اطلاعات حساس در متن آشکار ذخیره می شوند، از جمله در پشتیبان متن‌ها؟</li>
+  <li>آیا الگوریتم‌های رمزنگاری قدیمی یا ضعیف از پیش فرض یا کد قدیمی تر استفاده می کنند؟</li>
+  <li>آیا کلید های رمزنگاری پیش فرض در حال استفاده هستند، کلید های رمزنگاری ضعیف تولید شده یا همچنان از آنها استفاده مجدد میشود، یا اینکه  آیا مدیریت کلید مناسب است؟</li>
+  <li>آیا رمزگذاری اعمال شده است، به عنوان مثال آیا برای هر عامل کاربر (مرورگر) تمهیدات امنیتی اندیشیده شده است یا headers missing رخ می‌دهد؟ </li>
+  <li>اگر عامل کاربر (مثلا برنامه کاربردی، سرویس پست الکترونیکی) گواهی سرور صحیحی را دریافت کند آیا آن را تأیید نمی کند؟</li>
+</ul>
 
 See ASVS [Crypto (V7)](https://www.owasp.org/index.php/ASVS_V7_Cryptography), [Data Protection (V9)](https://www.owasp.org/index.php/ASVS_V9_Data_Protection) and [SSL/TLS (V10)](https://www.owasp.org/index.php/ASVS_V10_Communications).
 
-## How To Prevent
+## <div dir="rtl" align="right">چگونه ممانعت کنیم؟</div>
 
-Do the following, at a minimum, and consult the references:
+<p dir="rtl" align="right">حداقل موارد زیر را دنبال کنید و به مراجع رجوع کنید: </p>
 
-* Classify data processed, stored or transmitted by an application. Identify which data is sensitive according to privacy laws, regulatory requirements, or business needs.
-* Apply controls as per the classification.
-* Don't store sensitive data unnecessarily. Discard it as soon as possible or use PCI DSS compliant tokenization or even truncation. Data that is not retained cannot be stolen.
-* Make sure to encrypt all sensitive data at rest.
-* Ensure up-to-date and strong standard algorithms, protocols, and keys are in place; use proper key management.
-* Encrypt all data in transit with secure protocols such as TLS with perfect forward secrecy (PFS) ciphers, cipher prioritization by the server, and secure parameters. Enforce encryption using directives like HTTP Strict Transport Security (HSTS).
-* Disable caching for response that contain sensitive data.
-* Store passwords using strong adaptive and salted hashing functions with a work factor (delay factor), such as [Argon2](https://www.cryptolux.org/index.php/Argon2), [scrypt](https://wikipedia.org/wiki/Scrypt), [bcrypt](https://wikipedia.org/wiki/Bcrypt) or [PBKDF2](https://wikipedia.org/wiki/PBKDF2).
-* Verify independently the effectiveness of configuration and settings.
+<ul dir="rtl" align="right">
+  <li>داده های پردازش شده، ذخیره شده، و یا ارسال شده توسط یک برنامه را طبقه بندی کنیم. بر اساس قوانین حریم خصوصی، با توجه به الزامات قانونی یا نیازهای تجاری داده های حساس را شناسایی کنید. </li>
+  <li>طبق طبقه بندی، کنترل ها را اعمال کنید.</li>
+  <li>در صورت عدم نیاز داده های حساس را ذخیره نکنید. در اسرع وقت آن را حذف کنید و یا از توافق PCI DSS برای علامتگذاری یا حتی ناقص سازی استفاده کنید. داده هایی که ذخیره نمی شوند نمی توانند سرقت شوند.</li>
+  <li>اطمینان حاصل کنید که همه اطلاعات حساس در حالت ذخیره را رمزگذاری کرده‌اید.</li>
+  <li>اطمینان حاصل کنید از الگوریتم های استاندارد، پروتکل ها و کلیدهای استاندارد به روز و قوی در جای خود استفاده می شود. از مدیریت کلید مناسب استفاده کنید.</li>
+  <li>رمزگذاری تمام داده ها در حال انتقال با پروتکل های امن مانند TLS با رمزهای محرمانه بدون نقص (PFS)، اولویت بندی رمز توسط سرور و پارامترهای امن انجام گردد. اعمال رمزگذاری را با استفاده از دستورالعمل هایی مانند HTTP Security Transport Strict Security (HSTS) انجام دهید.</li>
+  <li>برای پاسخ هایی که حاوی اطلاعات حساس هستند، ذخیره سازی (Caching) غیرفعال شود. </li>
+  <li>رمزهای عبور را با استفاده از توابع هش قوی منطبق و هش salting با یک عامل کار (عامل تاخیر) مانند <a href="https://www.cryptolux.org/index.php/Argon2">Argon2</a>،<a href="https://wikipedia.org/wiki/Scrypt">Scrypt</a> ،<a href="https://wikipedia.org/wiki/Bcrypt">bcrypt</a> یا <a href="https://wikipedia.org/wiki/PBKDF2">PBKDF2</a> ذخیره کنید.</li>
+  <li>به طور مستقل اثربخشی پیکربندی و تنظیمات را بررسی کنید.</li>
+</ul>
 
-## Example Attack Scenarios
+## <div dir="rtl" align="right">نمونه‌ سناریوهای حمله</div>
 
-**Scenario #1**: An application encrypts credit card numbers in a database using automatic database encryption. However, this data is automatically decrypted when retrieved, allowing an SQL injection flaw to retrieve credit card numbers in clear text. 
+<p dir="rtl" align="right"><strong>سناریو #1 :</strong>یک برنامه رمزنگاری شماره کارت اعتباری را در یک پایگاه داده با استفاده از رمزگذاری خودکار پایگاه داده رمز می کند. با این حال، هنگامی فراخوانی، این داده ها به طور خودکار رمزگشایی می شود، و به یک نقص تزریق SQL  اجازه می هد شماره کارت اعتباری را در حالت متن آشکار بازیابی کند.</p>
 
-**Scenario #2**: A site doesn't use or enforce TLS for all pages or supports weak encryption. An attacker monitors network traffic  (e.g. at an insecure wireless network), downgrades connections from HTTPS to HTTP, intercepts requests, and steals the user's session cookie. The attacker then replays this cookie and hijacks the user's (authenticated) session, accessing or modifying the user's private data. Instead of the above they could alter all transported data, e.g. the recipient of a money transfer.
+<p dir="rtl" align="right"><strong>سناریو #2 :</strong>یک سایت TLS را برای تمام صفحاتش استفاده نمی کند و یا از رمزنگاری ضعیف پشتیبانی می کند. مهاجم ترافیک شبکه را مانیتور می‎‌کند (به عنوان مثال در یک شبکه بی سیم ناامن)، اتصالات را از HTTPS  به    HTTP کاهش می‌دهد، در‌خواستها بین کاربر اصلی و سرور را قطع می کند و کوکی نشست کاربر را سرقت می کند. مهاجم پس از آن از این کوکی استفاده می کند و نشست کاربر (احراز هویت شده) را دزدیده، به داده های شخصی کاربر دسترسی پیدا میکند یا آنها را تغییر می دهد. مهاجم به جای موارد بالا می توانند تمام داده های منتقل شده مانند دریافت کننده انتقال مالی را تغییر دهد.</p>
 
-**Scenario #3**: The password database uses unsalted or simple hashes to store everyone's passwords. A file upload flaw allows an attacker to retrieve the password database. All the unsalted hashes can be exposed with a rainbow table of pre-calculated hashes. Hashes generated by simple or fast hash functions may be cracked by GPUs, even if they were salted.
+<p dir="rtl" align="right"><strong>سناریو #3 :</strong>پایگاه داده رمز عبور از هش های unsalted  یا ساده برای ذخیره کلمه عبور استفاده می کند. یک نقص آپلود فایل به مهاجم اجازه می دهد تا رمز عبور پایگاه داده را بازیابی کند. تمام هش های unsaldhed را می توان با یک جدول رنگین کمان از هش های پیش محاسبه شده شکست. هش های تولید شده توسط توابع هش ساده یا سریع ممکن است توسط GPU ها شکسته شوند، حتی اگر از نوع  salted باشند.</p>
 
-## References
+## <div dir="rtl" align="right">منابع</div>
 
 * [OWASP Proactive Controls: Protect Data](https://www.owasp.org/index.php/OWASP_Proactive_Controls#7:_Protect_Data)
 * [OWASP Application Security Verification Standard]((https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project)): [V7](https://www.owasp.org/index.php/ASVS_V7_Cryptography), [9](https://www.owasp.org/index.php/ASVS_V9_Data_Protection), [10](https://www.owasp.org/index.php/ASVS_V10_Communications)
@@ -49,7 +54,7 @@ Do the following, at a minimum, and consult the references:
 * [OWASP Security Headers Project](https://www.owasp.org/index.php/OWASP_Secure_Headers_Project); [Cheat Sheet: HSTS](https://www.owasp.org/index.php/HTTP_Strict_Transport_Security_Cheat_Sheet)
 * [OWASP Testing Guide: Testing for weak cryptography](https://www.owasp.org/index.php/Testing_for_weak_Cryptography)
 
-### External
+### <div dir="rtl" align="right">خارجی</div>
 
 * [CWE-220: Exposure of sens. information through data queries](https://cwe.mitre.org/data/definitions/220.html)
 * [CWE-310: Cryptographic Issues](https://cwe.mitre.org/data/definitions/310.html); [CWE-311: Missing Encryption](https://cwe.mitre.org/data/definitions/311.html)
