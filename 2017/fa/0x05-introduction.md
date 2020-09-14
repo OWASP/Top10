@@ -1,33 +1,46 @@
-# I Introduction
+# <div dir="rtl" align="right"> معرفی <div>
 
-## Welcome to the OWASP Top 10 - 2017
+## <div dir="rtl" align="right"> به OWASP Top 10 – 2017 خوش آمدید!<div>
 
-This major update adds several new issues, including two issues selected by the community - A8:2017-Insecure Deserialization and A10:2017-Insufficient Logging and Monitoring. Two key differentiators from previous OWASP Top 10 releases are the substantial community feedback and extensive data assembled from dozens of organizations, possibly the largest amount of data ever assembled in the preparation of an application security standard. This provides us with confidence that the new OWASP Top 10 addresses the most impactful application security risks currently facing organizations.
+<p dir="rtl" align="right">آپدیت کلی چند موضع جدید را اضافه کرده، موضوعات جدید شامل دو موضوع انتخاب توسط جامعه است – A8:2017-Insecure Deserialization و A10:2017- Insufficient Logging and Monitoring. دو تفاوت کلیدی با نسخه قبلی OWASP Top 10 هستند که مورد توجه بازخورد community و داده‌های جمع آوری شده از ده‌ها سازمان، احتمالا بزرگترین میزان داده‌ای است که تاکنون برای تهیه یک استاندارد امنیتی جمع‌آوری شده است. که به ما اطمینان می‌دهد OWASP Top 10 جدید مهم‌ترین ریسک‌های امنیتی برنامه‌ها که سازمان‌ها با آن مواجه هستند را پوشش داده.<p>
 
-The OWASP Top 10 for 2017 is based primarily on 40+ data submissions from firms that specialize in application security and an industry survey that was completed by over 500 individuals. This data spans vulnerabilities gathered from hundreds of organizations and over 100,000 real-world applications and APIs. The Top 10 items are selected and prioritized according to this prevalence data, in combination with consensus estimates of exploitability, detectability, and impact.
+<p dir="rtl" align="right">OWASP Top 10-2017 ابتدا برپایه پیش از 40 گزارشی است که شرکت‌هایی که در زمینه امنیت برنامه فعال هستند و یک مرور در صنعت که ما روی 500 مورد انجام داده‌ایم. این داده شامل آسیب‌پذیری‌های جمع آوری شده از صدها سازمان و بیش از 100 هزار برنامه و API دنیای واقعی هستند. 10 آیتم برتر با انتخاب و اهمیت دادن این داده‌های متداول در ترکیب با اجماع سنسورهای تخمین احتمال اکسپلویت شدن، قابلیت کشف و تاثیر.<p>
 
-A primary aim of the OWASP Top 10 is to educate developers, designers, architects, managers, and organizations about the consequences of the most common and most important web application security weaknesses. The Top 10 provides basic techniques to protect against these high risk problem areas, and provides guidance on where to go from here.
+<p dir="rtl" align="right">هدف اصلی OWASP Top 10 آموزش توسعه دهنده‌گان، طراحان، معماران، مدیران و سازمان‌ها درباره عواقب آسیب‌پذیری‌های سایع و مهم برنامه‌های وب است. Top 10 تکنیک‌های پایه برای محافظت دربرابر مشکلات مناطق با ریسک بالا و راهنمایی برای خروج از آن است.<p>
 
-## Roadmap for future activities
+## <div dir="rtl" align="right">نقشه راه برای فعالیت‌های آینده<div>
 
-**Don't stop at 10**. There are hundreds of issues that could affect the overall security of a web application as discussed in the [OWASP Developer's Guide](https://www.owasp.org/index.php/OWASP_Guide_Project) and the [OWASP Cheat Sheet Series](https://www.owasp.org/index.php/Category:Cheatsheets). These are essential reading for anyone developing web applications and APIs. Guidance on how to effectively find vulnerabilities in web applications and APIs is provided in the [OWASP Testing Guide](https://www.owasp.org/index.php/OWASP_Testing_Project).
+<p dir="rtl" align="right">**در ۱۰ متوقف نشودید.**<p>
 
-**Constant change**. The OWASP Top 10 will continue to change. Even without changing a single line of your application's code, you may become vulnerable as new flaws are discovered and attack methods are refined. Please review the advice at the end of the Top 10 in What's Next For Developers, Testers, Organizations and Application Managers for more information.
+<p dir="rtl" align="right">. صدها مشکل وجود دارند که میتوانند امنیت کلی وب اپلیکیشن را تحت تاثیر قراردهند ، مطابق چیزی که در راهنمای توسعه دهنده OWASP ، OWASP  و مجموعه کدهای تقلب. مورد بحث قرار گرفته اند. این مطالعات برای کسانی که وب اپلیکیشن یا API  توسعه میدهند ضروری هستند.<p>
 
-**Think positive**. When you're ready to stop chasing vulnerabilities and focus on establishing strong application security controls, the [OWASP Proactive Controls](https://www.owasp.org/index.php/OWASP_Proactive_Controls) project provides a starting point to help developers build security into their applications and the [OWASP Application Security Verification Standard (ASVS)](https://www.owasp.org/index.php/ASVS) is a guide for organizations and application reviewers on what to verify.
+<p dir="rtl" align="right">راهنمایی در این مورد که چگونه به طور موثر در وب اپلیکیشن ها و API  ها ، آسیب پذیری پیدا کنیم در  راهنمای تست OWASP. تدارک دیده شده است.<p>
 
-**Use tools wisely**. Security vulnerabilities can be quite complex and deeply buried in code. In many cases, the most cost-effective approach for finding and eliminating these weaknesses is human experts armed with advanced tools. Relying on tools alone provides a false sense of security and is not recommended.
+<p dir="rtl" align="right">**تغییر همیشگی.**<p>
 
-**Push left, right, and everywhere**. Focus on making security an integral part of your culture throughout your development organization. Find out more in the [OWASP Software Assurance Maturity Model (SAMM)](https://www.owasp.org/index.php/OWASP_SAMM_Project).
+<p dir="rtl" align="right">OWASP TOP 10  همیشه به دنبال تغییر خواهد بود.حتی بدون تغییر یک خط از کد برنامه‌تان، شما ممکن است که با کشف آسیب های جدید و روش های حمله ، آسیب پذیر شوید. لطفا جهت کسل اطلاعات بیشتر ، توصیه هایی که در انتهای TOP 10 در توسعه دهندگان, ارزیاب های امنیت, سازمان ها, مدیران برنامه  آمده است را برای اطلاعات بیشتر مطالعه کنید.<p>
 
-## Attribution
+<p dir="rtl" align="right">**مثبت فکر کنید.**<p>
 
-We'd like to thank the organizations that contributed their vulnerability data to support the 2017 update. We received more than 40 responses to the call for data. For the first time, all the data contributed to a Top 10 release, and the full list of contributors, is publicly available. We believe this is one of the larger, more diverse collections of vulnerability data ever collected publicly.
+<p dir="rtl" align="right">زمانی که آماده شدید تا بدنبال آسیب پذیری گشتن را متوقف کنید و روی اعمال کنترل های امنیتی قدرتمند در برنامه متمرکز شوید، پروژه ی کنترل پویشگرایانه ی OWASP نقطه شروعی برای کمک به توسعه دهندگان برای اعمال امنیت در برنامه هایشان مهیا می کند. و  استاندارد تایید امنیتی برنامه کاربردی OWASP (ASVS)  یک راهنما برای سازمان ها و بررسی کنندگان برنامه هاست برای اینکه بدانند چه چیزی را تایید کنند.<p>
 
-As there are more contributors than space here, we have created a dedicated page to recognize the contributions made. We wish to give heartfelt thanks to these organizations for being willing to be on the front lines by publicly sharing vulnerability data from their efforts. We hope this will continue to grow and encourage more organizations to do the same and possibly be seen as one of the key milestones of evidence based security. The OWASP Top 10 would not be possible without these amazing contributions. 
+<p dir="rtl" align="right">**از ابزارها با هوشمندی استفاده کنید. **<p>
 
-A big thank you to the more than 500 individuals who took the time to complete the industry ranked survey. Your voice helped determine two new additions to the Top 10. The additional comments, notes of encouragement, and criticisms were all appreciated. We know your time is valuable and we wanted to say thanks.
+<p dir="rtl" align="right">آسیب پذیری های امنیتی میتوانند کاملا پیچیده باشند و عمیقا در کدها مدفون شده باشند.در موارد بسیار، مقرون به صرفه ترین رویکرد برای کشف و از بین بردن این ضعف ها ، متخصص های انسانی هستند که با ابزارهای پیشرفته تجهیز شده اند. تکیه صرف روی ابزارها یک حس اشتباه امنیتی ایجاد میکند و توصیه نمیشود.<p>
+  
+<p dir="rtl" align="right">**Push left, right, and everywhere.**<p>
 
-We would like to thank those individuals who contributed significant constructive comments and time reviewing this update to the Top 10. As much as possible, we have listed them on the "Acknowledgements" page.
+<p dir="rtl" align="right">بر روی امنیت به عنوان بخشی لاینفک از فرهنگتان در سازمان توسعه دهندگی خود تمرکز کنید. در این لینک میتوانید اطلاعات بیشتری کسب کنید:
+(https://www.owasp.org/index.php/OWASP_SAMM_Project).</p>
 
-And finally, we'd like to thank in advance all the translators out there who will translate this release of the Top 10 into numerous different languages, helping to make the OWASP Top 10 more accessible to the entire planet.
+## <div dir="rtl" align="right">ارجاع<div>
+
+<p dir="rtl" align="right">مایلیم از سازمانی هایی که دیتای خود را برای حمایت از بروزرسانی ۲۰۱۷ به اشتراک گذاشتند تشکر کنیم. ما بیش از ۴۰ پاسخ برای تقاضای دیتا دریافت کردیم. برای اولین بار ، تمامی دیتایی که برای نسخه TOP 10  به اشتراک گذاشته شده اند و تمامی مشارک کنندگان به صورت عمومی قابل دسترس است.ما معتقدیم که این یکی از بزرگترین مجموعه دیتاهای مربوط به آسیب پذیری است که تا کنون به صورت عمومی جمع آوری شده است.<p>
+  
+<p dir="rtl" align="right">به این دلیل که اینجا تعداد مشارکت کنندگان از فضایی که در اختیار داریم بیشتر است ،‌یک صفحه ی مجزا در پایان این سند برای شناسایی مشارکت کنندگان ایجاد کرده ایم. از صمیم قلب از این سازمان ها که با تمایل خودشان در خط مقدم حضور داشتند و دیتای مربوط به آسیب پذیری ها که نتیجه ی تلاش هایشان بود را به صورت عمومی به اشتراک گذاشتند تشکر میکنیم.امیدواریم که این اقدام در جهت رشد و تشویق دیگر سازمان ها جهت انجام اقدامات مشابه و نقطه عطفی در راستای امنیت مستند ، ادامه داشته باشد.<p>
+
+<p dir="rtl" align="right">یک تشکر ویژه به بیش از ۵۰۰ نفر که در مسیر رنکینگ صنعتی وقت گذاشتند. صدای شما کمک کرد که دو مورد جدید به  TOP 10  اضافه شود.<p>
+
+<p dir="rtl" align="right">مایلیم که از افرادی که نظرات سازنده‌ی خود و همینطور زمانی را برای بررسی این بروزرسانی به TOP 10  با ما به اشتراک گذاشتند تشکر کنیم.تا جایی که ممکن است ما لیستی از این افراد را در قسمت قدردانی قرار داده ایم.<p>
+
+<p dir="rtl" align="right">و در نهایت مایلیم که پیشاپیش از تمام مترجم هایی که این نسخه از TOP 10  را به زبان های مختلف ترجمه میکنند و کمک میکنند که OWASP TOP 10  در کل سیاره بیشتر قابل دسترس باشد تشکر کنیم.<p>
