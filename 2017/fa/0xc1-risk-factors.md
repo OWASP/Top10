@@ -1,14 +1,14 @@
-# +RF Details About Risk Factors
+# <div dir="rtl" align="right">+RF جزئیاتی در مورد فاکتورهای ریسک </div>
 
-## Top 10 Risk Factor Summary
+## <div dir="rtl" align="right">خلاصه ۱۰ فاکتور ریسک برتر</div>
 
-The following table presents a summary of the 2017 Top 10 Application Security Risks, and the risk factors we have assigned to each risk. These factors were determined based on the available statistics and the experience of the OWASP Top 10 team. To understand these risks for a particular application or organization, you must consider your own specific threat agents and business impacts. Even severe software weaknesses may not present a serious risk if there are no threat agents in a position to perform the necessary attack or the business impact is negligible for the assets involved.
+<p dir="rtl" align="right">جدول پیش رو خلاصه ای از ۱۰ خطر برتر امنیتی ۲۰۱۷ و فاکتورهای ریسکی که ما به انها اضافه نموده‌ایم را نمایش میدهد. این فاکتورها بر اساس آمارهای قابل دسترس و همینطور تجربه ی تیم OWASP TOP 10  تعیین شده اند.برای درک این خطرها برای برنامه یا سازمان، باید تهدیدات داخلی و تاثیرات کسب و کار خود را مورد نظر قرار دهید. حتی ضعف های امنیتی شدید هم ممکن است خطر جدی به همراه نداشته باشند ، اگر که هیچ تهدیدی در موقعیت حمله قرار نداشته باشد و یا تاثیر کسب و کار بر دارایی هایی که مشمول هستند ناچیز باشد.</p>
 
 ![Risk Factor Table](images/0xc1-risk-factor-table.png)
 
-## Additional Risks To Consider
+## <div dir="rtl" align="right">ریسک اضافه قابل توجه</div>
 
-The Top 10 covers a lot of ground, but there are many other risks you should consider and evaluate in your organization. Some of these have appeared in previous versions of the Top 10, and others have not, including new attack techniques that are being identified all the time. Other important application security risks (ordered by CWE-ID) that you should additionally consider include:
+<p dir="rtl" align="right">TOP 10 زمینه های بسیاری را پوشش میدهد، اما ریسک های دیگری نیز وجود دارند که باید آنها را در نظر داشته و در سازمان خود ارزیابی نمایید.بعضی از اینها در نسخه های قبلی TOP 10  وجود دارند و برخی نه، که شامل تکنیک های جدید حمله که همیشه شناسایی میشوند است. مابقی ریسک های امنیتی برنامه کاربردی (به ترتیب CVE-ID) که شما باید به صورت اضافی در نظر بگیرید شامل این موارد هستند :</p>
 
 * [CWE-352: Cross-Site Request Forgery (CSRF)](https://cwe.mitre.org/data/definitions/352.html)
 * [CWE-400: Uncontrolled Resource Consumption ('Resource Exhaustion', 'AppDoS')](https://cwe.mitre.org/data/definitions/400.html)
