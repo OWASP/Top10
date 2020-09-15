@@ -1,54 +1,83 @@
-# A10:2017 Insufficient Logging and Monitoring
+# <div dir="rtl" align="right">A10:2017 نظارت و ثبت سیاهه ناکافی </div>
 
 | Threat agents/Attack vectors | Security Weakness           | Impacts               |
 | -- | -- | -- |
-| Access Lvl : Exploitability 2 | Prevalence 3 : Detectability 1 | Technical 2 : Business |
-| Exploitation of insufficient logging and monitoring is the bedrock of nearly every major incident. Attackers rely on the lack of monitoring and timely response to achieve their goals without being detected. | This issue is included in the Top 10 based on an [industry survey](https://owasp.blogspot.com/2017/08/owasp-top-10-2017-project-update.html). One strategy for determining if you have sufficient monitoring is to examine the logs following penetration testing. The testers' actions should be recorded sufficiently to understand what damages they may have inflicted. | Most successful attacks start with vulnerability probing. Allowing such probes to continue can raise the likelihood of successful exploit to nearly 100%. In 2016, identifying a breach took an [average of 191 days](https://www-01.ibm.com/common/ssi/cgi-bin/ssialias?htmlfid=SEL03130WWEN&) – plenty of time for damage to be inflicted. |
+| Access Lvl قابلیت بهره‌برداری: ۲ | شیوع: ۳ قابل کشف بودن: ۱ | تکنیکی: ۲ Business ? |
+| <div dir="rtl" align="right">اکسپلویت از نظارت و ثبت سیاهه ناکافی تقریبا بستر اصلی هر حادثه مهم است. مهاجمان به عدم نظارت و واکنش به موقع برای رسیدن به اهداف خود بدون شناسایی شدن متکی هستند.</div> | <div dir="rtl" align="right">این مسئله بر اساس <a href="https://owasp.blogspot.com/2017/08/owasp-top-10-2017-project-update.html">نظرسنجی صنعتی</a>، در Top 10 قرار دارد. یک استراتژی برای تعیین اینکه آیا شما نظارت کافی دارید بررسی کردن سیاهه های مربوط به تست نفوذ است. اقدامات تست کنندگان باید به اندازه کافی ثبت شود تا بدانند که چه آسیبی به آنها وارد شده است.</div> | <div dir="rtl" align="right">بیشترین حملات موفقیت آمیز با شناسایی آسیب پذیری آغاز می شود. اجازه دادن به این کاوشگرها برای ادامه می تواند احتمال اکسپلویت موفقیت آمیز را تا حدود 100 درصد افزایش دهد. در سال 2016، شناسایی یک شکاف (رخنه) <a href="https://www-01.ibm.com/common/ssi/cgi-bin/ssialias?htmlfid=SEL03130WWEN&">به طور متوسط 191 روز </a> طول کشید - زمان زیادی برای آسیب زدن) است.</div> |
 
-## Is the Application Vulnerable?
+## <div dir="rtl" align="right">آیا برنامه کاربردی آسیب پذیر است ؟</div>
 
-Insufficient logging, detection, monitoring and active response occurs any time:
+<p dir="rtl" align="right">ثبت سیاهه، تشخیص، نظارت و پاسخ فعال ناکافی در هر زمان رخ می دهد:</p>
 
-* Auditable events, such as logins, failed logins, and high-value transactions are not logged.
-* Warnings and errors generate no, inadequate, or unclear log messages.
-* Logs of applications and APIs are not monitored for suspicious activity.
-* Logs are only stored locally.
-* Appropriate alerting thresholds and response escalation processes are not in place or effective.
-* Penetration testing and scans by [DAST](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools) tools (such as [OWASP ZAP](https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project)) do not trigger alerts.
-* The application is unable to detect, escalate, or alert for active attacks in real time or near real time.
+<ul dir="rtl" align="right">
+  <li>
+    رویداد های قابل بررسی، از قبیل ورود به سیستم، ورود ناموفق به سیستم و تراکنش های با ارزش بالا در سیستم ثبت نشده اند.
+  </li>
+  <li>
+   هشدارها و اشتباهات موجب ایجاد پیام های رویداد نامشخص، پیام های نامناسب یا غیرقابل تعریف می شود.
+  </li>
+  <li>
+    سیاهههای مربوط به برنامه ها و API  ها برای فعالیت مشکوک نظارت نمی شود.
+  </li>
+  <li>
+    سیاهه ها فقط به صورت محلی ذخیره می شوند.
+  </li>
+  <li>
+   آستانه های مربوط به هشدار و فرآیندهای تشدید پاسخ مناسب یا موثر نیستند.
+  </li>
+  <li>
+    تست نفوذ و اسکن با ابزارهای <a href="https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools">DAST</a> <a href="https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project"> ( مانند  OWASP ZAP) </a> باعث هشدار نمی شود.
+  </li>
+  <li>
+    برنامه قادر به تشخیص، تشدید شدن یا هشدار برای حملات فعال در زمان واقعی یا نزدیک به زمان واقعی نیست.
+  </li>
+</ul>
 
-You are vulnerable to information leakage if you make logging and alerting events visible to a user or an attacker (see A3:2017-Sensitive Information Exposure).
+<p dir="rtl" align="right">شما به علت نشت اطلاعات آسیبپذیر هستید، اگر سیاهه وقایع و هشدارها قابل مشاهده برای یک کاربر و یا یک فرد باشد. (نگاه کنید به A3: 2017-Sensitive Information Exposure) .
+</p>
 
-## How To Prevent
+## <div dir="rtl" align="right">پیشگیری از حمله</div>
 
-As per the risk of the data stored or processed by the application:
+<p dir="rtl" align="right">همانطور که در مورد خطر اطلاعات ذخیره شده یا پردازش شده توسط برنامه داریم:</p>
 
-* Ensure all login, access control failures, and server-side input validation failures can be logged with sufficient user context to identify suspicious or malicious accounts, and held for sufficient time to allow delayed forensic analysis.
-* Ensure that logs are generated in a format that can be easily consumed by a centralized log management solutions.
-* Ensure high-value transactions have an audit trail with integrity controls to prevent tampering or deletion, such as append-only database tables or similar.
-* Establish effective monitoring and alerting such that suspicious activities are detected and responded to in a timely fashion.
-* Establish or adopt an incident response and recovery plan, such as [NIST 800-61 rev 2](https://csrc.nist.gov/publications/detail/sp/800-61/rev-2/final) or later.
+<ul dir="rtl" align="right">
+  <li>
+    اطمینان حاصل کنید که تمام ورودی ها به سیستم، خطاهای کنترل دسترسی و شکست های اعتبار سنجی ورودی طرف سرور می توانند با زمینه کاربری کافی برای شناسایی حساب های مشکوک یا مخرب ثبت کرد و زمان کافی را برای اجازه دادن تجزیه و تحلیل قانونی به تاخیر انداخت.
+  </li>
+  <li>
+   اطمینان حاصل کنید که سیاهه هادر یک فرمت و قالبی تولید میشود که می تواند به راحتی توسط یک راه حل مدیریت رویداد متمرکز مورد استفاده قرار گیرد.
+  </li>
+  <li>
+   اطمینان از اینکه تراکنش های با ارزش بالا، دارای یک دنباله حسابرسی با کنترلهای یکپارچه برای جلوگیری از دستکاری یا حذف، مانند جداول پایگاه داده اضافه یا مشابه آن است.
+  </li>
+  <li>
+   ایجاد نظارت مؤثر و هشدار به طوری که فعالیت های مشکوک به موقع شناسایی و پاسخ داده شود.
+  </li>
+  <li>
+    ایجاد و یا اتخاذ یک پاسخ تصادفی و برنامه ریکاوری، مانند <a href="https://csrc.nist.gov/publications/detail/sp/800-61/rev-2/final"> NIST 800-61 rev 2 </a> یا بالاتر.
+  </li>
+</ul>
 
-There are commercial and open source application protection frameworks such as [OWASP AppSensor](https://www.owasp.org/index.php/OWASP_AppSensor_Project), web application firewalls such as [ModSecurity with the OWASP ModSecurity Core Rule Set](https://www.owasp.org/index.php/Category:OWASP_ModSecurity_Core_Rule_Set_Project), and log correlation software with custom dashboards and alerting. 
+<p dir="rtl" align="right">چارچوب های حفاظت از نرم افزارهای تجاری و منبع باز مانند <a href="https://www.owasp.org/index.php/OWASP_AppSensor_Project">OWASP AppSensor</a>، فایروال های وب کاربردی مانند <a href="https://www.owasp.org/index.php/Category:OWASP_ModSecurity_Core_Rule_Set_Project"> ModSecurity  با OWASP ModSecurity Core Rule Set </a>  و نرم افزار همبسته‌سازی سیاهه  با داشبورد های سفارشی و هشدار وجود دارد.</p>
 
-## Example Attack Scenarios
+## <div dir="rtl" align="right">نمونه سناریو های حمله</div>
 
-**Scenario #1**: An open source project forum software run by a small team was hacked using a flaw in its software. The attackers managed to wipe out the internal source code repository containing the next version, and all of the forum contents. Although source could be recovered, the lack of monitoring, logging or alerting led to a far worse breach. The forum software project is no longer active as a result of this issue.
+<p dir="rtl" align="right"><strong>سناریو # 1: </strong>یک نرم افزار انجمن منبع باز که توسط یک تیم کوچک اجرا می شد با استفاده از یک نقص در نرم افزار آن هک شد. مهاجمان موفق به از بین بردن منبع کد داخلی حاوی نسخه بعدی و تمامی محتویات انجمن شدند. اگرچه این منبع کد قابل بازیابی است، اما فقدان نظارت، عدم ثبت رویداد و عدم هشدار دادن منجر به نقص بسیار بدتری شد. پروژه نرم افزاری انجمن در نتیجه این موضوع دیگر فعال نیست.</p>
 
-**Scenario #2**: An attacker uses scans for users using a common password. They can take over all accounts using this password. For all other users, this scan leaves only one false login behind. After some days, this may be repeated with a different password.
+<p dir="rtl" align="right"><strong>سناریو # 2: </strong>یک مهاجم کاربران را با استفاده از گذرواژه معمولی اسکن می کند. آنها می توانند با استفاده از این گذرواژه تمام حساب ها را در اختیار بگیرند. برای همه کاربران دیگر، این اسکن فقط یک ورود ناموفق به نظر می رسد. پس از چند روز، این کار ممکن است با یک گذرواژه متفاوت تکرار شود.</p>
 
-**Scenario #3**: A major US retailer reportedly had an internal malware analysis sandbox analyzing attachments. The sandbox software had detected potentially unwanted software, but no one responded to this detection. The sandbox had been producing warnings for some time before the breach was detected due to fraudulent card transactions by an external bank.
+<p dir="rtl" align="right"><strong>سناریو # 3: </strong>یک خرده فروش بزرگ آمریکایی گزارش داده است که یک سندباکس تحلیل بدافزار را تحلیل پیوست می کند. برنامه سندباکس به طور بالقوه برنامه ناخواسته را شناسایی کرده بود، اما هیچکس به این کشف واکنشی نشان نداد. قبل از اینکه نفوذ به دلیل تراکنش های کارت اعتباری توسط یک بانک خارجی شناسایی شود، سندباکس چندین مرتبه هشدار داده بود. </p>
 
-## References
+## <div dir="rtl" align="right">منابع</div>
 
-### OWASP
+### <div dir="rtl" align="right">OWASP</div>
 
 * [OWASP Proactive Controls: Implement Logging and Intrusion Detection](https://www.owasp.org/index.php/OWASP_Proactive_Controls#8:_Implement_Logging_and_Intrusion_Detection)
 * [OWASP Application Security Verification Standard: V8 Logging and Monitoring](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
 * [OWASP Testing Guide: Testing for Detailed Error Code](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
 * [OWASP Cheat Sheet: Logging](https://www.owasp.org/index.php/Logging_Cheat_Sheet)
 
-### External
+### <div dir="rtl" align="right">خارجی</div>
 
 * [CWE-223: Omission of Security-relevant Information](https://cwe.mitre.org/data/definitions/223.html)
 * [CWE-778: Insufficient Logging](https://cwe.mitre.org/data/definitions/778.html)
