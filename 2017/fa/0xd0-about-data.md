@@ -1,25 +1,27 @@
-# +Dat Methodology and Data
+# <div dir="rtl" align="right">+Dat روش و داده</div>
 
-At the OWASP Project Summit, active participants and community members decided on a vulnerability view, with up to two (2) forward looking vulnerability classes, with ordering defined partially by quantitative data, and partially by qualitative surveys.
- 
-## Industry Ranked Survey
+<p dir="rtl" align="right">در نشست پروژه OWASP، شرکت کنندگان فعال و اعضای جامعه از منظر آسیب پذیری تصمیم گرفتند، کلاس های آسیب پذیری را با استفاده از داده های کمی و تا حدی با بررسی های کیفی، 2 پله به جلو ببرند.</p>
 
-For the survey, we collected the vulnerability categories that had been previously identified as being “on the cusp” or were mentioned in feedback to 2017 RC1 on the Top 10 mailing list. We put them into a ranked survey and asked respondents to rank the top four vulnerabilities that they felt should be included in the OWASP Top 10 - 2017. The survey was open from Aug 2 – Sep 18, 2017. 516 responses were collected and the vulnerabilities were ranked.
+## <div dir="rtl" align="right">بررسی رتبه بندی صنعت</div> 
+
+<p dir="rtl" align="right">برای این نظرسنجی، ما دسته های آسیب پذیری را که پیش از این به عنوان on the cusp شناخته شده بودند و یا در لیست بازخورد 2017 RC1 در فهرست Top 10 ذکر شده بودند، جمع آوری کردیم. ما آنها را به یک نظرسنجی رتبه بندی کرده ایم و از پاسخ دهندگان خواسته ایم تا چهار آسیب پذیری را که باید آنها را در OWASP Top   10-2017 قرار گیرند رتبه بندی کنند. این نظرسنجی از 2 آگوست تا 18 سپتامبر 2017صورت گرفت. 516 پاسخ جمع آوری شد و آسیب پذیری ها رتبه بندی شدند.</p>
 
 | Rank | Survey Vulnerability Categories | Score |
 | -- | -- | -- |
-| 1 | Exposure of Private Information ('Privacy Violation') [CWE-359] | 748 |
-| 2 | Cryptographic Failures [CWE-310/311/312/326/327]| 584 |
-| 3 | Deserialization of Untrusted Data [CWE-502] | 514 |
-| 4 | Authorization Bypass Through User-Controlled Key (IDOR & Path Traversal) [CWE-639] | 493 |
-| 5 | Insufficient Logging and Monitoring [CWE-223 / CWE-778]| 440 |
+| 1 | افشای اطلاعات خصوصی (‘نقض حریم شخصی') [CWE-359] | 748 |
+| 2 | شکست های رمزنگاری [CWE-310/311/312/326/327] | 584 |
+| 3 | Deserialization دیتای غیرقابل اعتماد[CWE-502] | 514 |
+| 4 | دورزدن احراز هویت توسط کلید تحت کنترل کاربر(IDOR* و Path Traversal) [CWE-639] | 493 |
+| 5 | لاگینگ و مانیتورینگ نا کارآمد[CWE-223 / CWE-778] | 440 |
 
-Exposure of Private Information is clearly the highest-ranking vulnerability, but fits very easily as an additional emphasis into the existing **A3:2017-Sensitive Data Exposure**. Cryptographic Failures can fit within Sensitive Data Exposure. Insecure deserialization was ranked at number three, so it was added to the Top 10 as **A8:2017-Insecure Deserialization** after risk rating. The fourth ranked User-Controlled Key is included in **A5:2017-Broken Access Control**; it is good to see it rank highly on the survey, as there is not much data relating to authorization vulnerabilities. The number five ranked category in the survey is Insufficient Logging and Monitoring, which we believe is a good fit for the Top 10 list, which is why it has become **A10:2017-Insufficient Logging & Monitoring**. We have moved to a point where applications need to be able to define what may be an attack and generate appropriate logging, alerting, escalation and response. 
+<p dir="rtl" align="right">افشای اطلاعات خصوصی به وضوح در صدر آسیب پذیری ها قرار دارد، اما بعنوان یک تاکید اضافه روی این موضوع است: <strong>A3:2017-Sensitive Data Exposure </strong>شکست های رمزنگاری در گروه افشای اطلاعات حساس قرار میگیرند.. Insecure deserialization در رده ی سوم قرار دارد. , بنابراین در OWASP TOP 10 بعنوان <strong>A8:2017- دیسریالیزیشن نا امن</strong>  اضافه شده است بعد از ارزیابی خطر. رتبه ی چهارم ، کلید تحت کنترل کاربر است و در <strong>A5:2017- کنترل دسترسی ناقص </strong>قرار داده شده است. جالب است که با اینکه دیتای زیادی در مورد مشکلات امنیتی احراز هویت موجود نیست ، اما این آسیب پذیری رنک بالایی دریافت کرده است. جایگاه پنجم در رنکینگ اختصاص دارد به لاگینگ و مانیتورینگ نا کارآمد که به اعتقاد ما در TOP 10 باید جایگاهی داشته باشد که به همین دلیل تبدیل به  <strong>A10:2017- لاگینک و مانیتورینگ نا کارآمد</strong>.  شده است.ما به نقطه ای رسیده ایم که برنامه ها نیاز دارند حملات را تعریف کرده و لاگینگ و هشدار و افزایش دسترسی و واکنش مناسب را نشان دهند.
+</p>
 
-## Public Data Call
+## <div dir="rtl" align="right">درخواست دیتای عمومی</div>
 
-Traditionally, the data collected and analyzed was more along the lines of frequency data: how many vulnerabilities were found in tested applications. As is well known, tools traditionally report all instances found of a vulnerability and humans traditionally report a single finding with a number of examples. This makes it very difficult to aggregate the two styles of reporting in a comparable manner.
+<p dir="rtl" align="right">به صورت سنتی ، دیتای جمع شده و آنالیز شده بیشتر در طول مسیر فرکانس داده بوده است : چند آسیب پذیری در برنامه های تست شده پیدا شدند. با توجه به اینکه خیلی خوب شناخته شده است ، ابزارها به صورت سنتی تمام انواع پیدا شده ی آسیب پذری و انسان ها را به صورت سنتی به شکل یک یافته با شماره ي مثال گزارش میدهند. این جمع آوری دو استایل مختلف گزارش را به شکلی قابل مقایسه بسیار سخت میکند. </p>
 
-For 2017, the incidence rate was calculated by how many applications in a given data set had one or more of a specific vulnerability type. The data from many larger contributors was provided in two views. The first was the traditional frequency style of counting every instance found of a vulnerability, while the second was the count of applications in which each vulnerability was found in (one or more times). While not perfect, this reasonably allows us to compare the data from Human Assisted Tools and Tool Assisted Humans. The raw data and analysis work is [available in GitHub](https://github.com/OWASP/Top10/tree/master/2017/datacall). We intend to expand on this with additional structure for future versions of the Top 10.
+<p dir="rtl" align="right">برای ۲۰۱۷ ، نرخ حادثه بر اساس اینکه چند برنامه در یک دیتاست دارای یک یا بیشتر از یک نوع خاص آسیب پذیری هستند محاسبه میشود. دیتا از بسیاری مشارکت کنندگان بزرگتر در دو دیدگاه آمده است. اولی استایل سنتی مرسوم شمارش هر تکرار از آسیب پذیری است، در حالی که دومی شمارش تعداد برنامه هایی است که در آنها هر آسیب پذیری یک یا بیشتر بار پیدا شده است. در حالی که کامل نیست، این مورد به صورت قابل قبولی  به ما اجازه ی مقایسه ی داده ی انسان های مجهز به ابزار و ابزارهای مجهز به انسان را میدهد. دیتای خام و آنالیز در <a href="https://github.com/OWASP/Top10/tree/master/2017/datacall">گیت هاب</a> موجود است .</p>
 
-We received 40+ submissions in the call for data, and because many were from the original data call that was focused on frequency, we were able to use data from 23 contributors covering ~114,000 applications. We used a one-year block of time where possible and identified by the contributor. The majority of applications are unique, though we acknowledge the likelihood of some repeat applications between the yearly data from Veracode. The 23 data sets used were either identified as tool assisted human testing or specifically provided incidence rate from human assisted tools. Anomalies in the selected data of 100%+ incidence were adjusted down to 100% max. To calculate the incidence rate, we calculated the percentage of the total applications there were found to contain each vulnerability type. The ranking of incidence was used for the prevalence calculation in the overall risk for ranking the Top 10.
+<p dir="rtl" align="right">ما بیش از ۴۰ توافق در مورد درخواست داده دریافت کرده ایم، و به این دلیل که خیلی از آنها شامل داده ی اصلی پر از تکرار بودند ، قادر بودیم تا دیتای ۲۳ مشارکت کننده که حدود ۱۱۴ هزار برنامه را شامل میشد استفاده کنیم. یک دوره ی یک ساله از زمان را که توسط مشارکت کننده تعیین شده بود و ممکن بود را به این مورد اختصاص دادیم.اکثر برنامه ها منحصر به فرد هستند، اگرچه ما از احتمال تکرار برنامه ها در بین دیتای یک ساله از Veracode  قدردانی میکنیم. ۲۳ دیتاست استفاده شده یا به عنوان تست انسانی مجهز به ابزار شناسایی شدند یا نرخ حادثه منحصرا تدارک دیده شده از ابزارهایی که با همکاری انسان کار میکنند. ناهمگونی ها در دیتای انتخاب شده از بیش از ۱۰۰ درصد رخدادها به نهایتا ۱۰۰ درصد کاهش پیدا کردند. برای محاسبه ی نرخ تصادف، ما درصد کل برنامه هایی که شامل هر آسیب پذیری بودند را پیدا کردیم. رتبه بندی حوادث برای محاسبه شیوع خطر کلی TOP 10  استفاده شد.</p>
+
