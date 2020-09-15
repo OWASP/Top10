@@ -1,90 +1,57 @@
-# <div dir="rtl" align="right">A6:2017 پیکربندی اشتباه امنیتی </div>
+# A6:2017 Security Misconfiguration
 
 | Threat agents/Attack vectors | Security Weakness           | Impacts               |
 | -- | -- | -- |
-| Access Lvl : قابلیت بهره‌برداری: ۳ | شیوع: ۳ : قابل کشف بودن: ۳ | تکنیکی: ۲ : Business ? |
-| <div dir="rtl" align="right">مهاجمان اغلب سعی می کنند از نقص های وصله نشده بهره ببرند یا دسترسی به حساب‌های پیش‌فرض، صفحات استفاده نشده، فایل ها و پوشه های محافظت نشده و غیره دسترسی پیدا کنند، تا دسترسی غیرمجاز به سیستم یا دانش آن را کسب کنند. </div> | <div dir="rtl" align="right">پیکربندی اشتباه امنیتی ممکن است در هر سطحی از یک برنامه شامل خدمات شبکه، پلت فرم، سرور وب، سرور برنامه، پایگاه داده، چارچوب ها، کد سفارشی و ماشین های مجازی، و فضای ذخیره‌سازی رخ دهد. اسکنرهای خودکار برای تشخیص پیکربندی‌های اشتباه، استفاده از حساب های پیش‌فرض،  خدمات غیرضروری، غیره مفید هستند.</div> | <div dir="rtl" align="right">چنین نقصی اغلب دسترسی غیرمجاز به برخی از داده‌های سیستم یا عملکرد سیستم را به مهاجم می‌دهد. گاهی اوقات چنین نقصی باعث ایجاد یک سازش کامل سیستم می شود.تاثیر کسب و کار بستگی به نیازهای حفاظت از برنامه و داده ها دارد.</div> |
+| Access Lvl : Exploitability 3 | Prevalence 3 : Detectability 3 | Technical 2 : Business |
+| Attackers will often attempt to exploit unpatched flaws or access default accounts, unused pages, unprotected files and directories, etc to gain unauthorized access or knowledge of the system. | Security misconfiguration can happen at any level of an application stack, including the network services, platform, web server, application server, database, frameworks, custom code, and pre-installed virtual machines, containers, or storage. Automated scanners are useful for detecting misconfigurations, use of default accounts or configurations, unnecessary services, legacy options, etc. | Such flaws frequently give attackers unauthorized access to some system data or functionality. Occasionally, such flaws result in a complete system compromise. The business impact depends on the protection needs of the application and data. |
 
-## <div dir="rtl" align="right">آیا برنامه کاربردی آسیب پذیر است ؟</div>
+## Is the Application Vulnerable?
 
-<p dir="rtl" align="right">برنامه ممکن است آسیب پذیر باشد اگر:</p>
+The application might be vulnerable if the application is:
 
-<ul dir="rtl" align="right">
-  <li>
-   گسستن امنیت مناسب در هر بخشی از پشته برنامه، و یا مجوز نادرست پیکربندی شده در خدمات ابری.
-  </li>
-  <li>
-   ویژگی های غیر ضروری فعال یا نصب شده اند (به عنوان مثال پورت های غیر ضروری، خدمات، صفحات، حساب ها یا امتیازات).
-  </li>
-  <li>
-   حساب های پیش فرض و گذرواژه های آنها هنوز فعال و بدون تغییر هستند.
-  </li>
-  <li>
-    مدیریت خطا نشان دهنده دنبال کردن پشته و یا دیگر پیام‌های خطای زیاد جهت اطلاع رسانی به کاربران است.
-  </li>
-  <li>
-    برای سیستم‌های به روز شده، آخرین ویژگی های امنیتی غیرفعال شده و یا به صورت امن پیکربندی نشده است.
-  </li>
-  <li>
-    تنظیمات امنیتی در سرورهای برنامه، چارچوب برنامه (مانند Struts، Spring، ASP.NET،) کتابخانه‌ها، پایگاه‌های داده و غیره برای ارزش‌های امنیتی تنظیم نشده است.
-  </li>
-  <li>
-    سرور هدرهای امنیتی یا دستورالعمل ها را ارسال نمی‌کند یا آنها برای ارزش‌های امنیتی تنظیم نمی شوند.
-  </li>
-  <li>
-    این نرم افزار قدیمی یا آسیبپذیر است <strong>(نگاه کنید به A9: 2017 - استفاده از کامپوننت با آسیبپذیری های شناخته شده)</strong>.
-  </li>
-</ul>
+* Missing appropriate security hardening across any part of the application stack, or improperly configured permissions on cloud services.
+* Unnecessary features are enabled or installed (e.g. unnecessary ports, services, pages, accounts, or privileges).
+* Default accounts and their passwords still enabled and unchanged.
+* Error handling reveals stack traces or other overly informative error messages to users.
+* For upgraded systems, latest security features are disabled or not configured securely.
+* The security settings in the application servers, application frameworks (e.g. Struts, Spring, ASP.NET), libraries, databases, etc. not set to secure values.
+* The server does not send security headers or directives or they are not set to secure values.
+* The software is out of date or vulnerable (see **A9:2017-Using Components with Known Vulnerabilities**).
 
+Without a concerted, repeatable application security configuration process, systems are at a higher risk.
 
-<p dir="rtl" align="right">بدون یک پروسه پیکربندی امنیتی هماهنگ، قابل تکرار، سیستم ها در معرض خطر بیشتری هستند.</p>
+## How To Prevent
 
-## <div dir="rtl" align="right">نحوه پیشگیری از حمله</div>
+Secure installation processes should be implemented, including:
 
-<p dir="rtl" align="right">فرآیند نصب امن باید اجرا شود، از جمله:</p>
+* A repeatable hardening process that makes it fast and easy to deploy another environment that is properly locked down. Development, QA, and production environments should all be configured identically, with different credentials used in each environment. This process should be automated to minimize the effort required to setup a new secure environment.
+* A minimal platform without any unnecessary features, components, documentation, and samples. Remove or do not install unused features and frameworks.
+* A task to review and update the configurations appropriate to all security notes, updates and patches as part of the patch management process (see **A9:2017-Using Components with Known Vulnerabilities**). In particular, review cloud storage permissions (e.g. S3 bucket permissions).
+* A segmented application architecture that provides effective, secure separation between components or tenants, with segmentation, containerization, or cloud security groups (ACLs).
+* Sending security directives to clients, e.g. [Security Headers](https://www.owasp.org/index.php/OWASP_Secure_Headers_Project).
+* An automated process to verify the effectiveness of the configurations and settings in all environments.
 
-<ul dir="rtl" align="right">
-  <li>
-    یک فرایند سخت افزاری تکرارپذیر که باعث گسترش سریع و آسان یک محیط دیگر است که کاملا محافظت می شود. توسعه، QA، و محیط های تولید باید همه پیکربندی یکسان، با کلمه عبور مختلف استفاده شده در هر محیط را دارا باشند. این فرایند باید به صورت خودکار برای به حداقل رساندن تلاش لازم برای راه اندازی یک محیط امنیتی جدید باشد.
-  </li>
-  <li>
-    حداقل پلت فرم بدون هیچ گونه ویژگی، اجزای، اسناد و نمونه های غیر ضروری. ویژگی ها و چارچوب های استفاده نشده را حذف یا نصب کنید.
-  </li>
-  <li>
-   یک وظیفه برای بررسی و به روز کردن پیکربندی مربوط به همه یادداشت های امنیتی، به روز رسانی ها و وصله های امنیتی به عنوان بخشی از فرآیند مدیریت وصله <strong> (نگاه کنید به A9: ۲017 - استفاده از قطعات با آسیب پذیری های شناخته شده) </strong>. به ویژه بررسی مجوزهای ذخیره سازی ابر (به عنوان مثال مجوزهای سطل S3).
-  </li>
-  <li>
-    یک معماری نرم افزار قوی که جداسازی موثر و امن بین اجزای را با بخش بندی، یا گروه های امنیتی ابری فراهم می کند.
-  </li>
-  <li>
-    ارسال دستورات امنیتی به مشتریان، برای مثال <a href="https://www.owasp.org/index.php/OWASP_Secure_Headers_Project">سربرگ امنیتی</a>
-  </li>
-  <li>
-    یک فرایند خودکار برای بررسی تأثیر تنظیمات و پیکربندی در همه محیط ها.
-  </li>
-</ul>
+## Example Attack Scenarios
 
-## <div dir="rtl" align="right">نمونه سناریو های حمله</div>
+**Scenario #1**: The application server comes with sample applications that are not removed from the production server. These sample applications have known security flaws attackers use to compromise the server. If one of these applications is the admin console, and default accounts weren't changed the attacker logs in with default passwords and takes over.
 
-<p dir="rtl" align="right"><strong>سناریو # 1: </strong>سرور برنامه همراه با برنامه های نمونه به طور خودکار نصب شده و حذف نشده است. این برنامه های نمونه دارای نقص امنیتی هستند که مهاجمان از سرور برای به خطر انداختن امنیت استفاده می کنند. اگر یکی از این برنامه ها کنسول مدیریت باشد، و حسابهای پیشفرض تغییری نداشته است، مهاجم با گذرواژه‌های پیشفرض وارد سیستم می‌شود و آن را تصرف می‌کند.</p>
+**Scenario #2**: Directory listing is not disabled on the server. An attacker discovers they can simply list directories. The attacker finds and downloads the compiled Java classes, which they decompile and reverse engineer to view the code. The attacker then finds a serious access control flaw in the application.
 
-<p dir="rtl" align="right"><strong>سناریو # 2: </strong>لیست دایرکتوری در سرور غیر فعال نیست. مهاجم می توانند به سادگی از دایرکتوری ها برای یافتن فایل ها استفاده کند. مهاجم کلاس های جاوا کامپایل شده را پیدا می کند و آنها را دانلود می کند و آنها را تجزیه و تحلیل می کند و برای بازبینی این کد از مهندس معکوس استفاده می کنند. مهاجم پس از آن یک نقص کنترل دسترسی کنترل در برنامه کاربردی پیدا می کند.</p>
+**Scenario #3**: The application server's configuration allows detailed error messages, e.g. stack traces, to be returned to users. This potentially exposes sensitive information or underlying flaws such as component versions that are known to be vulnerable.
 
-<p dir="rtl" align="right"><strong>سناریو # 3: </strong>پیکربندی سرور برنامه اجازه می دهد تا جزییات پیام های خطای، مثلا ردیابی پشته ها، به کاربران بازگردانده شود. این به طور بالقوه نشت اطلاعات حساس و یا نقص های زیر را شامل می شود مانند نسخه های اجزاء که شناخته شده اند آسیب پذیر هستند.</p>
+**Scenario #4**: A cloud service provider has default sharing permissions open to the Internet by other CSP users. This allows sensitive data stored within cloud storage to be accessed.
 
-<p dir="rtl" align="right"><strong>سناریو # 4:</strong>ارائه دهنده خدمات ابری دارای مجوزهای به اشتراک گذاری پیش فرض برای سایر کاربران CSP به اینترنت است. که منجر به دسترسی اطلاعات حساس ذخیره شده در ذخیره سازی ابر می گردد.</p>
+## References
 
-## <div dir="rtl" align="right">منابع</div>
-
-### <div dir="rtl" align="right">OWASP</div>
+### OWASP
 
 * [OWASP Testing Guide: Configuration Management](https://www.owasp.org/index.php/Testing_for_configuration_management)
 * [OWASP Testing Guide: Testing for Error Codes](https://www.owasp.org/index.php/Testing_for_Error_Code_(OWASP-IG-006))
 * [OWASP Security Headers Project](https://www.owasp.org/index.php/OWASP_Secure_Headers_Project)
 
-<p dir="rtl" align="right">برای نیازمندیهای بیشتر در این زمینه ، استاندارد تایید امنیت برنامه کاربردی را ببینید .<a href="https://www.owasp.org/index.php/ASVS_V19_Configuration">V19 Configuration</a></p>
+For additional requirements in this area, see the Application Security Verification Standard [V19 Configuration](https://www.owasp.org/index.php/ASVS_V19_Configuration).
 
-### <div dir="rtl" align="right">خارجی</div>
+### External
 
 * [NIST Guide to General Server Hardening](https://csrc.nist.gov/publications/detail/sp/800-123/final)
 * [CWE-2: Environmental Security Flaws](https://cwe.mitre.org/data/definitions/2.html)
