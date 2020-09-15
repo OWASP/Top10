@@ -1,39 +1,81 @@
-# +O What's Next for Organizations
+# <div dir="rtl" align="right">+O گام بعدی برای مدیران برنامه ها</div> 
 
-## Start Your Application Security Program Now
+## <div dir="rtl" align="right">روند امنیت برنامه کاربردی خود را حالا شروع کنید</div>
 
-Application security is no longer optional. Between increasing attacks and regulatory pressures, organizations must establish effective processes and capabilities for securing their applications and APIs. Given the staggering amount of code in the numerous applications and APIs already in production, many organizations are struggling to get a handle on the enormous volume of vulnerabilities. 
+<p dir="rtl" align="right">امنیت برنامه دیگر اختیاری نیست. بین افزایش حملات و فشارهای نظارتی، سازمان ها باید پروسه های موثر و قابلیت های لازم را برای تأمین برنامه های کاربردی و API  ها خود ایجاد کنند. با توجه به مقدار قابل توجهی از کد در برنامه های کاربردی و  API  های متعدد در حال حاضر در تولید، بسیاری از سازمان ها در حال تلاش برای رسیدگی به حجم زیادی از آسیب پذیری.</p>
 
-OWASP recommends organizations establish an application security program to gain insight and improve security across their applications and APIs. Achieving application security requires many different parts of an organization to work together efficiently, including security and audit, software development, business, and executive management. Security should be visible and measurable, so that all the different players can see and understand the organization’s application security posture. Focus on the activities and outcomes that actually help improve enterprise security by eliminating or reducing risk. [OWASP SAMM](https://www.owasp.org/index.php/OWASP_SAMM_Project) and the [OWASP Application Security Guide for CISOs](https://www.owasp.org/index.php/Application_Security_Guide_For_CISOs) is the source of most of the key activities in this list.
+<p dir="rtl" align="right">OWASP  توصیه سازمان ها برای ایجاد بینش و بهبود امنیت در بین برنامه ها و API  های آنها برنامه امنیتی امنیتی برنامه را ایجاد می کند. به دست آوردن امنیت نرم افزار نیازمند بخشهای مختلف سازمان است تا کارآیی با همکاری، از جمله امنیت و حسابرسی، توسعه نرم افزار، کسب و کار و مدیریت اجرایی. امنیت باید قابل مشاهده و قابل اندازه گیری باشد، به طوری که تمام بازیکنان مختلف می توانند وضعیت امنیت نرم افزار سازمان را ببینند و درک کنند. تمرکز بر فعالیت ها و نتایجی که در حقیقت به بهبود امنیت شرکت ها با حذف یا کاهش خطر کمک می کند. <a href="https://www.owasp.org/index.php/OWASP_SAMM_Project">OWASP SAMM</a>  و <a href="https://www.owasp.org/index.php/Application_Security_Guide_For_CISOs">راهنمای امنیت نرم افزار OWASP  برای CISOs</a>  منبع بسیاری از فعالیت های کلیدی در این لیست است.</p>
 
-### Get Started
+### <div dir="rtl" align="right">شروع</div>
 
-* Document all applications and associated data assets. Larger organizations should consider implementing a Configuration Management Database (CMDB) for this purpose.
-* Establish an [application security program](https://www.owasp.org/index.php/SAMM_-_Strategy_&_Metrics_-_1) and drive adoption.
-* Conduct a [capability gap analysis](https://www.owasp.org/index.php/SAMM_-_Strategy_&_Metrics_-_3) comparing your organization to your peers to define key
-improvement areas and an execution plan.
-* Gain management approval and establish an [application security awareness campaign](https://www.owasp.org/index.php/SAMM_-_Education_&_Guidance_-_1) for the entire IT organization.
+<ul dir="rtl" align="right">
+  <li>
+    تمام برنامه ها و دارایی های مرتبط مربوطه را مستند کنید. سازمان های بزرگ باید در نظر داشته باشند که پایگاه داده مدیریت پیکربندی (CMDB)  را برای این منظور در نظر بگیرند.
+  </li>
+  <li>
+    یک <a href="https://www.owasp.org/index.php/SAMM_-_Strategy_&_Metrics_-_1">برنامه امنیتی نرم افزاری</a> ایجاد کنید و درایور را بردارید.
+  </li>
+  <li>
+    انجام یک <a href="https://www.owasp.org/index.php/SAMM_-_Strategy_&_Metrics_-_3">تجزیه و تحلیل شکاف قابلیت</a> مقایسه سازمان خود را به همسالان خود را برای تعریف کلیدی
+مناطق بهبودی و یک طرح اجرایی.
+  </li>
+  <li>
+    به دست آوردن مدیریت تایید و ایجاد یک <a href="https://www.owasp.org/index.php/SAMM_-_Education_&_Guidance_-_1">کمپین آگاهی امنیتی برنامه</a> برای کل سازمان فناوری اطلاعات.
+  </li>
+</ul>
 
-### Risk Based Portfolio Approach
+### <div dir="rtl" align="right">رویکرد مبتنی بر خطر</div>
 
-* Identify the [protection needs](https://www.owasp.org/index.php/SAMM_-_Strategy_&_Metrics_-_2) of your [application portfolio](https://www.owasp.org/index.php/SAMM_-_Strategy_&_Metrics_-_2) from a business perspective. This should be driven in part by privacy laws and other regulations relevant to the data asset being protected. 
-* Establish a common [risk rating model](https://www.owasp.org/index.php/OWASP_Risk_Rating_Methodology) with a consistent set of likelihood and impact factors reflective of your organization's tolerance for risk. 
-* Accordingly measure and prioritize all your applications and APIs. Add the results to your CMDB. 
-* Establish assurance guidelines to properly define coverage and level of rigor required.
+<ul dir="rtl" align="right">
+  <li>
+    <a href="https://www.owasp.org/index.php/SAMM_-_Strategy_&_Metrics_-_2">نیازهای حفاظتی</a> <a href="https://www.owasp.org/index.php/SAMM_-_Strategy_&_Metrics_-_2">نمونه کارها</a> را از منظر تجاری شناسایی کنید. این باید بخشی از قوانین حریم خصوصی و سایر مقررات مربوط به دارایی داده محافظت شود.
+  </li>
+  <li>
+    یک <a href="https://www.owasp.org/index.php/OWASP_Risk_Rating_Methodology">مدل رایج ریسک</a> را با یک مجموعه سازگاری از عوامل احتمال و تاثیر گذار بر تحمل پذیری سازمان برای ریسک ایجاد کنید.
+  </li>
+  <li>
+   بر اساس این همه برنامه ها و API  های خود را اندازه گیری و اولویت بندی کنید. نتایج را بهCMDB  اضافه کنید.
+  </li>
+  <li>
+   دستورالعمل های اطمینان را به درستی تعریف پوشش و سطح سختی مورد نیاز ایجاد کنید.
+  </li>
+</ul>
 
-### Enable with a Strong Foundation
+### <div dir="rtl" align="right">فعالسازی یک بنیاد قوی</div>
 
-* Establish a set of focused [policies and standards](https://www.owasp.org/index.php/SAMM_-_Policy_&_Compliance_-_2) that provide an application security baseline for all development teams to adhere to.
-* Define a common set of [reusable security controls](https://www.owasp.org/index.php/OWASP_Security_Knowledge_Framework) that complement these policies and standards and provide design and development guidance on their use.
-* Establish an [application security training curriculum](https://www.owasp.org/index.php/SAMM_-_Education_&_Guidance_-_2) that is required and targeted to different development roles and topics.
+<ul dir="rtl" align="right">
+  <li>
+    مجموعه ای از <a href="https://www.owasp.org/index.php/SAMM_-_Policy_&_Compliance_-_2">سیاست ها و استانداردها</a>ی متمرکز را ایجاد کنید که امنیت پایه برنامه را برای همه تیم های توسعه تطبیق دهد.
+  </li>
+  <li>
+    مجموعه ای از <a href="https://www.owasp.org/index.php/OWASP_Security_Knowledge_Framework">کنترل های امنیتی قابل استفاده مجدد</a> را که به این سیاست ها و استانداردها مجهز است و مجموعه ای از دستورالعمل های طراحی و توسعه را در مورد استفاده از آنها تکمیل کنید، تعریف کنید.
+  </li>
+  <li>
+    ایجاد یک <a href="https://www.owasp.org/index.php/SAMM_-_Education_&_Guidance_-_2">برنامه درسی برنامه های امنیتی کاربردی</a> که مورد نیاز و هدف های مختلف توسعه و موضوعات است.
+  </li>
+</ul>
 
-### Integrate Security into Existing Processes
+### <div dir="rtl" align="right">ادغام امنیت با پروسه های موجود</div>
 
-* Define and integrate [secure implementation](https://www.owasp.org/index.php/SAMM_-_Construction) and [verification](https://www.owasp.org/index.php/SAMM_-_Verification) activities into existing development and operational processes. 
-* Activities include [threat modeling](https://www.owasp.org/index.php/SAMM_-_Threat_Assessment_-_1), secure [design and design review](https://www.owasp.org/index.php/SAMM_-_Design_Review_-_1), secure coding and [code review](https://www.owasp.org/index.php/SAMM_-_Code_Review_-_1), [penetration testing](https://www.owasp.org/index.php/SAMM_-_Security_Testing_-_1), and remediation.
-* Provide subject matter experts and [support services for development and project teams](https://www.owasp.org/index.php/SAMM_-_Education_&_Guidance_-_3) to be successful.
+<ul dir="rtl" align="right">
+  <li>
+    تعریف و ادغام <a href="https://www.owasp.org/index.php/SAMM_-_Construction">فعالیت های ایمن سازی</a> و <a href="https://www.owasp.org/index.php/SAMM_-_Verification">تأیید</a> را در فرایندهای توسعه و عملیاتی موجود.
+  </li>
+  <li>
+    فعالیت ها شامل <a href="https://www.owasp.org/index.php/SAMM_-_Threat_Assessment_-_1">مدل سازی تهدید</a>، <a href="https://www.owasp.org/index.php/SAMM_-_Design_Review_-_1">طراحی ایمن و بازبینی طراحی</a>، برنامه نویسی امن و <a href="https://www.owasp.org/index.php/SAMM_-_Code_Review_-_1">بازبینی کد</a>، <a href="https://www.owasp.org/index.php/SAMM_-_Security_Testing_-_1">آزمایش نفوذ</a> و اصلاح است.
+  </li>
+  <li>
+    ارائه کارشناسان موضوعی و <a href="https://www.owasp.org/index.php/SAMM_-_Education_&_Guidance_-_3">حمایت از خدمات برای توسعه و تیم پروژه</a> برای موفقیت.
+  </li>
+</ul>
 
-### Provide Management Visibility
+### <div dir="rtl" align="right">مهیا سازی قابل رویت بودن مدیریت</div>
 
-* Manage with metrics. Drive improvement and funding decisions based on the metrics and analysis data captured. Metrics include adherence to security practices and activities, vulnerabilities introduced, vulnerabilities mitigated, application coverage, defect density by type and instance counts, etc.
-* Analyze data from the implementation and verification activities to look for root cause and vulnerability patterns to drive strategic and systemic improvements across the enterprise. Learn from mistakes and offer positive incentives to promote improvements
+<ul dir="rtl" align="right">
+  <li>
+    مدیریت با معیارهای تصمیم گیری در مورد بهبود و تامین مالی بر اساس معیارها و داده های تجزیه و تحلیل داده شده رانندگی کنید. متریک شامل پیوستگی به شیوه های امنیتی و فعالیت ها، معرفی آسیب پذیری ها، آسیب پذیری ها، پوشش برنامه، چالش های نقص بر اساس نوع و تعداد موارد و غیره است.
+  </li>
+  <li>
+    تجزیه و تحلیل داده ها از فعالیت های پیاده سازی و تایید برای نگاه کردن به علل ریشه و الگوهای آسیب پذیری برای راندن پیشرفت های استراتژیک و سیستماتیک در سراسر شرکت. از اشتباهات یاد بگیرند و انگیزه های مثبت برای ارتقای پیشرفت ارائه دهند.
+  </li>
+</ul>
