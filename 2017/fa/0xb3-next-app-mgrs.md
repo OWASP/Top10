@@ -1,47 +1,108 @@
-# +A: What's next for Application Managers
+# <div dir="rtl" align="right">+A: گام بعدی برای مدیران برنامه ها </div>  
 
-## Manage the Full Application Lifecycle
+## <div dir="rtl" align="right">مدیریت چرخه حیات کامل برنامه کاربردی</div>
 
-Applications belong to the most complex systems humans regularly create and maintain. IT management for an application should be performed by IT specialists who are responsible for the overall IT lifecycle of an application. We suggest establishing the role of application manager as technical counterpart to the application owner. The application manager is in charge of the whole application lifecycle from the IT perspective, from collecting the requirements until the process of retiring systems, which is often overlooked. 
+<p dir="rtl" align="right">برنامه های کاربردی متعلق به سیستم پیچیده ترین سیستم ها هستند که به طور مرتب ایجاد و نگهداری می شوند. مدیریت فناوری اطلاعات برای یک برنامه باید توسط متخصصان فناوری اطلاعات انجام شود که مسئولیت کل چرخه عمر فناوری اطلاعات یک برنامه را دارند. پیشنهاد می کنیم نقش مدیر برنامه را به عنوان متخصص فنی مالک نرم افزار تعیین کنید. مدیر برنامه مسئول تمام چرخه عمر برنامه از دیدگاه فناوری اطلاعات است، از جمع آوری الزامات تا سیستم های بازنشستگی که اغلب نادیده گرفته می شوند.</p>
 
-## Requirements and Resource Management
+## <div dir="rtl" align="right">مدیریت منابع و نیازها</div>
 
-* Collect and negotiate the business requirements for an application with the business, including the protection requirements with regard to confidentiality, authenticity, integrity and availability of all data assets, and the expected business logic.
-* Compile the technical requirements including functional and nonfunctional security requirements.
-* Plan and negotiate the budget that covers all aspects of design, build, testing and operation, including security activities.
+<ul dir="rtl" align="right">
+  <li>
+    جمع آوری و مذاکره در مورد شرایط کسب و کار برای یک برنامه با کسب و کار، از جمله الزامات حفاظت در مورد محرمانه بودن، صحت، صحت و در دسترس بودن تمام دارایی های داده ها و منطق کسب و کار مورد انتظار.
+  </li>
+  <li>
+    الزامات فنی را از جمله الزامات امنیتی عملکردی و غیرمستقیم تهیه کنید.
+  </li>
+  <li>
+    برنامه ریزی و مذاکره بر بودجه که شامل تمام جنبه های طراحی، ساخت، آزمایش و عملیات، از جمله فعالیت های امنیتی است.
+  </li>
+</ul>
 
-## Request for Proposals (RFP) and Contracting
+## <div dir="rtl" align="right">درخواست برای پروپوزال(RFP)  و قرارداد</div>
 
-* Negotiate the requirements with internal or external developers, including guidelines and security requirements with respect to your security program, e.g. SDLC, best practices.
-* Rate the fulfillment of all technical requirements, including a planning and design phase.
-* Negotiate all technical requirements, including design, security, and service level agreements (SLA).
-* Adopt templates and checklists, such as [OWASP Secure Software Contract Annex](https://www.owasp.org/index.php/OWASP_Secure_Software_Contract_Annex). **Note**: The annex is for US contract law, so please consult qualified legal advice before using the sample annex.
+<ul dir="rtl" align="right">
+  <li>
+    شرایط لازم را با توسعه دهندگان داخلی یا خارجی، از جمله دستورالعمل ها و الزامات امنیتی مربوط به برنامه امنیتی خود، به عنوان مثال SDLC، بهترین شیوه ها.
+  </li>
+  <li>
+    برآورده کردن تمام الزامات فنی، از جمله مرحله برنامه ریزی و طراحی، را ارزیابی کنید.
+  </li>
+  <li>
+    مذاکره با تمام شرایط فنی، از جمله طراحی، امنیت، و موافقت نامه های سطح خدمات (SLA).
+  </li>
+  <li>
+    اتخاذ قالب ها و چک لیست ها، مانند <a href="https://www.owasp.org/index.php/OWASP_Secure_Software_Contract_Annex">OWASP Secure Software Contract Annex</a>.
+    <strong> نکته :</strong>این ضمیمه برای قانون قرارداد ایالات متحده است، بنابراین قبل از استفاده از ضمیمه نمونه، لطفا با مشاوره قانونی مشورت کنید.
+  </li>
+</ul>
 
-## Planning and Design
+## <div dir="rtl" align="right">طراحی و نقشه</div>
 
-* Negotiate planning and design with the developers and internal shareholders, e.g. security specialists.
-* Define the security architecture, controls, and countermeasures appropriate to the protection needs and the expected threat level. This should be supported by security specialists.
-* Ensure that the application owner accepts remaining risks or provides additional resources.
-* In each sprint, ensure security stories are created that include constraints added for non-functional requirements.
+<ul dir="rtl" align="right">
+  <li>
+    برنامه ریزی و طراحی با برنامه نویسان و سهامداران داخلی مذاکره کنید، برای مثال متخصصین امنیتی.
+  </li>
+  <li>
+    معماری امنیتی، کنترل ها و اقدامات متقابل مناسب برای نیازهای حفاظتی و سطح تهدید مورد نظر را تعیین کنید. این باید توسط متخصصان امنیتی پشتیبانی شود.
+  </li>
+  <li>
+    اطمینان حاصل کنید که مالک نرم افزار خطرات باقیمانده را دریافت می کند یا منابع اضافی را فراهم می کند.
+  </li>
+  <li>
+    در هر سرعت، اطمینان از اینکه داستانهای امنیتی ایجاد می شوند، شامل محدودیت هایی است که برای الزامات غیر کاربردی اضافه شده است.
+  </li>
+</ul>.
 
-## Deployment, Testing, and Rollout
+## <div dir="rtl" align="right">تست گسترش و گستردن</div>
 
-* Automate the secure deployment of the application, interfaces and all required components, including needed authorizations.
-* Test the technical functions and integration with the IT architecture and coordinate business tests.
-* Create "use" and "abuse" test cases from technical and business perspectives.
-* Manage security tests according to internal processes, the protection needs, and the assumed threat level by the application.
-* Put the application in operation and migrate from previously used applications if needed.
-* Finalize all documentation, including the CMDB and security architecture.
+<ul dir="rtl" align="right">
+  <li>
+راه اندازی امن برنامه، رابط ها و تمام اجزای مورد نیاز، از جمله مجوزهای لازم را به صورت خودکار انجام دهید.
+  </li>
+  <li>
+   تست عملکرد فنی و ادغام با معماری فناوری اطلاعات و هماهنگ سازی آزمون های کسب و کار.
+  </li>
+  <li>
+    ایجاد موارد استفاده از "استفاده" و "سوء استفاده" از دیدگاه های فنی و تجاری.
+  </li>
+  <li>
+    مدیریت تست های امنیتی بر اساس فرآیندهای داخلی، نیازهای حفاظت، و سطح تهدید فرض شده توسط برنامه.
+  </li>
+  <li>
+    در صورت لزوم، برنامه را در عمل قرار دهید و از برنامه های قبلی استفاده کنید.
+  </li>
+  <li>
+    تمام مستندات، شامل پایگاه اطلاعات مدیریت تغییر  (CMDB) و معماری امنیتی را نهایی کنید.
+  </li>
+</ul>
 
-## Operations and Change Management
+## <div dir="rtl" align="right">مدیریت عملیات ها و تغییرات</div>
 
-* Operations must include guidelines for the security management of the application (e.g. patch management).
-* Raise the security awareness of users and manage conflicts about usability vs. security.
-* Plan and manage changes, e.g. migrate to new versions of the application or other components like OS, middleware, and libraries.
-* Update all documentation, including in the change management data base (CMDB) and the security architecture, controls, and countermeasures, including any runbooks or project documentation.
+<ul dir="rtl" align="right">
+  <li>
+    عملیات باید شامل دستورالعمل هایی برای مدیریت امنیت برنامه (مانند مدیریت پچ) باشد.
+  </li>
+  <li>
+    بالا بردن آگاهی امنیتی کاربران و مدیریت اختلافات در مورد قابلیت استفاده و امنیت.
+  </li>
+  <li>
+    برنامه ریزی و مدیریت تغییرات، به عنوان مثال مهاجرت به نسخه های جدید برنامه یا اجزای دیگر مانند سیستم عامل،      middleware و کتابخانه ها.
+  </li>
+  <li>
+    به روز رسانی تمام اسناد و مدارک، از جمله در CMDB  و معماری امنیتی، کنترل ها و اقدامات متقابل، از جمله هر کتاب و یا مستندات پروژه.
+  </li>
+</ul>
 
-## Retiring Systems
+## <div dir="rtl" align="right">سیستم های امتیازدهی</div>
 
-* Any required data should be archived. All other data should be securely wiped.
-* Securely retire the application, including deleting unused accounts and roles and permissions.
-* Set your application's state to retired in the CMDB.
+<ul dir="rtl" align="right">
+  <li>
+    هر گونه اطلاعات مورد نیاز باید بایگانی شود. تمام داده های دیگر باید ایمن پاک شود.
+  </li>
+  <li>
+    نرم افزار به درستی بازنشسته می شود، از جمله حذف حساب های استفاده نشده و نقش ها و مجوزها.
+  </li>
+  <li>
+    دولت برنامه خود را در CMDB  بازنشسته کنید.
+  </li>
+</ul>
