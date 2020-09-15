@@ -1,8 +1,8 @@
-# Acknowledgements
+# <div dir="rtl" align="right">تشکر و قدردانی</div>
 
-## Acknowledgements to Data Contributors
+## <div dir="rtl" align="right">تشکر از به اشتراک گذارندگان دیتا</div>
 
-We'd like to thank the many organizations that contributed their vulnerability data to support the 2017 update:
+<p dir="rtl" align="right">مایلیم از سازمان هایی که دیتای خود را برای حمایت از بروزرسانی ۲۰۱۷ در اختیارمان قرار دادند تشکر کنیم :</p>
 
 * ANCAP
 * Aspect Security
@@ -47,12 +47,12 @@ We'd like to thank the many organizations that contributed their vulnerability d
 * Vantage Point
 * Veracode
 * Web.com
-w
-For the first time, all the data contributed to a Top 10 release, and the full list of contributors is [publicly available](https://github.com/OWASP/Top10/tree/master/2017/datacall/submissions).
 
-## Acknowledgements to Individual Contributors
+<p dir="rtl" align="right">برای اولین بار تمام دیتایی که از مشارکت کنندگان جمع آوری شده است به صورت عمومی قابل دسترس است : به صورت عمومی در <a href="https://github.com/OWASP/Top10/tree/master/2017/datacall/submissions">اینجا</a> در دسترس است.</p>
 
-We’d like to thank the individual contributors who spent many hours collectively contributing to the Top 10 in GitHub.
+## <div dir="rtl" align="right">تشکر از افراد به اشتراک گذارنده دیتا</div>
+
+<p dir="rtl" align="right">مایلیم از افرادی که ساعت ها صرف جمع آوری و به اشتراک گذاری دیتا با  OWASP TOP 10 -2017 کردند تشکر کنیم:</p>
 
 * ak47gen
 * alonergan
@@ -131,6 +131,6 @@ We’d like to thank the individual contributors who spent many hours collective
 * vdbaan
 * yohgaki
 
-And everyone else who provided feedback via Twitter, email, and other means.
+<p dir="rtl" align="right">و هر فرد دیگری که از طریف توییر یا ایمیل یا موارد دیگر فیدبک ارسال کرد.</p>
 
-We would be remiss not to mention that Dirk Wetter, Jim Manico, and Osama Elnaggar have provided extensive assistance. Also, Chris Frohoff and Gabriel Lawrence provided invaluable support in the writing of the new A8:2017-Insecure Deserialization risk.
+<p dir="rtl" align="right">فراموش نمی کنیم که اشاره کنیم که  DIRK Wetter، Jim Manico  و Osama Elnaggar  همکاری بسیار خوبی داشتند. همچنین Chris Frohoff  و Gabriel Lawrence  حمایت بسیار با ارزشی در نگارش <strong>A8:2017- ریسک دیسریالیزیشن ناامن </strong> به عمل آوردند.</p>
