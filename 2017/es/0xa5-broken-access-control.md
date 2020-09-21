@@ -22,7 +22,7 @@ El control de acceso solo es efectivo si es aplicado del lado del servidor o en 
 
 * Con la excepción de los recursos públicos, denegar de forma predeterminada.
 * Implemente los mecanismos de control de acceso una vez y reutilícelo en toda la aplicación, incluyendo minimizar el control de acceso HTTP (CORS).
-* Los controles de acceso al modelo deben imponer la propiedad de los registros, en lugar de aceptar que el usuario puede crear, leer, actualizar o eliminar cualquier registro.
+* Los modelos de control de acceso deben imponer la propiedad de los registros, en lugar de aceptar que el usuario puede crear, leer, actualizar o eliminar cualquier registro.
 * Los modelos de dominio deben hacer cumplir los requisitos exclusivos de los límites de negocio de las aplicaciones.
 * Deshabilitar el listado de directorios del servidor web y asegurar que los metadatos de archivos (por ejemplo de git) y archivos de copia de seguridad no estén presentes en las carpetas web.
 * Registrar errores de control de acceso, alertar a los administradores cuando corresponda (por ejemplo, fallas reiteradas).
