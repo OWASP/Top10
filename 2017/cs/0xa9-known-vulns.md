@@ -3,7 +3,7 @@
 | Průvodci hrozeb / Vektor útoku | Bezpečnostní slabina           | Dopady               |
 | -- | -- | -- |
 | Access Lvl : Zneužitelnost 2 | Rozšíření 3 : Zjistitelnost 2 | Technické 2 : Obchodní |
-| Ačkoliv je snadné nalézt již zaznamenané exploity související s mnoha známými zranitelnostmi, jiné zranitelnosti vyžadují soustředěné úsilí vytvoření vlastního exploitu. | Tento problému je velmi rozšířen. Vývojové vzorce náročné na komponenty mohou vést k tomu, že vývojové týmy ani nepochopí, které komponenty používají ve své aplikaci nebo API – tím méně je budou udržovat aktuální. Některé skenery, jako například retire.js, pomáhají při detekci, ale určení zneužitelnosti vyžaduje další úsilí. | Zatímco některé známé zranitelnosti vedou pouze znamenají jen malé dopady, některé z dosud největších prolomení se spoléhaly na využití známých zranitelností v komponentách. V závislosti na aktivech, která chráníte, by toto riziko mělo být na začátku seznamu. |
+| Ačkoliv je snadné nalézt již zaznamenané exploity související s mnoha známými zranitelnostmi, jiné zranitelnosti vyžadují soustředěné úsilí vytvoření vlastního exploitu. | Tento problému je velmi rozšířen. Vývojové vzorce náročné na komponenty mohou vést k tomu, že vývojové týmy ani nepochopí, které komponenty používají ve své aplikaci nebo API – tím méně je budou udržovat aktuální. Některé skenery, například retire.js, pomáhají při detekci, ale určení zneužitelnosti vyžaduje další úsilí. | Zatímco některé známé zranitelnosti vedou pouze znamenají jen malé dopady, některé z dosud největších prolomení se spoléhaly na využití známých zranitelností v komponentách. V závislosti na aktivech, která chráníte, by toto riziko mělo být na začátku seznamu. |
 
 ## Je aplikace zranitelná?
 
