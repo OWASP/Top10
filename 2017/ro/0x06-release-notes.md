@@ -1,22 +1,22 @@
-# RN Release Notes
+# NDL Note de lansare
 
-## What changed from 2013 to 2017?
+## Ce s-a schimbat din 2013 până în 2017?
 
-Change has accelerated over the last four years, and the OWASP Top 10 needed to change. We've completely refactored the OWASP Top 10, revamped the methodology, utilized a new data call process, worked with the community, re-ordered our risks, re-written each risk from the ground up, and added references to frameworks and languages that are now commonly used.
+Schimbarea s-a accelerat în ultimii patru ani, iar Top 10 al OWASP trebuia să se schimbe. Am refacturat complet OWASP Top 10, am restructurat metodologia, am utilizat un nou proces de apel de date, am lucrat cu comunitatea, am reorganizat riscurile noastre, am rescris fiecare risc de la zero și am adăugat referințe la frameworks și limbaje de programare care sunt acum utilizate în mod obișnuit.
 
-Over the last few years, the fundamental technology and architecture of applications has changed significantly:
+În ultimii ani, tehnologia fundamentală și arhitectura aplicațiilor s-au schimbat semnificativ:
 
-* Microservices written in node.js and Spring Boot are replacing traditional monolithic applications. Microservices come with their own security challenges including establishing trust between microservices, containers, secret management, etc. Old code never expected to be accessible from the Internet is now sitting behind an API or RESTful web service to be consumed by Single Page Applications (SPAs) and mobile applications. Architectural assumptions by the code, such as trusted callers, are no longer valid.
-* Single page applications, written in JavaScript frameworks such as Angular and React, allow the creation of highly modular feature-rich front ends. Client-side functionality that has traditionally been delivered server-side brings its own security challenges.
-* JavaScript is now the primary language of the web with node.js running server side and modern web frameworks such as Bootstrap, Electron, Angular, and React running on the client.
+* Microserviciile scrise în node.js și Spring Boot înlocuiesc aplicațiile tradiționale monolitice. Microserviciile vin cu propriile provocări de securitate, inclusiv stabilirea încrederii între microservicii, containere, management-ul de parole etc. Cod vechi de la care nu era așteptat să fie accesibil de pe Internet este șade acum în spatele unui API sau serviciu RESTful web care urmează să fie consumat de aplicații cu o singură pagină (Single Page Applications SPA) și aplicații mobile. Așteptările arhitecturale ale codului, prcum apelanți de încredere, nu mai sunt valabile.
+* Aplicațiile cu o singură pagină, scrise în framework-uri de JavaScript, precum Angular și React, permit crearea unor aplicații foarte modulare, bogate în caracteristici. Funcționalitatea pe partea client, care a fost livrată în mod tradițional pe partea de server, aduce propriile provocări de securitate.
+* JavaScript este acum limbajul de programare primar a web-ului cu node.js pe partea de server care și framework-uri web moderne, cum ar fi Bootstrap, Electron, Angular și React care rulează pe partea de client.
 
-## New issues, supported by data
+## Probleme noi, vizibile in date
 
-* **A4:2017-XML External Entities (XXE)** is a new category primarily supported by source code analysis security testing tools ([SAST](https://www.owasp.org/index.php/Source_Code_Analysis_Tools)) data sets.
+* **A4:2017-XML External Entities (XXE)** este o nouă categorie recunoscută în principal de instrumentele de testare a securității a codului sursă ([SAST](https://www.owasp.org/index.php/Source_Code_Analysis_Tools)).
 
-## New issues, supported by the community
+## Probleme noi, propuse de comunitate
 
-We asked the community to provide insight into two forward looking weakness categories. After over 500 peer submissions, and removing issues that were already supported by data (such as Sensitive Data Exposure and XXE), the two new issues are: 
+We asked the community to provide insight into two forward looking weakness categories. După peste 500 de rapoarte trimise și eliminarea problemelor care au fost deja vizibile in date (cum ar fi Expunerea de date sensibile și XXE), cele două noi probleme sunt: 
 
 * **A8:2017-Insecure Deserialization**, which permits remote code execution or sensitive object manipulation on affected platforms.
 * **A10:2017-Insufficient Logging and Monitoring**, the lack of which can prevent or significantly delay malicious activity and breach detection, incident response, and digital forensics.

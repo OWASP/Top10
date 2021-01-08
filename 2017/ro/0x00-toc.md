@@ -1,3 +1,3 @@
 # TOC
 
-< replace me with a toc >
+< înlocuiți-mă cu un toc >
