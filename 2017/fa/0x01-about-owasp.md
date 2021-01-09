@@ -1,15 +1,17 @@
+
 # <div dir="rtl" align="right">درباره OWASP</div>
 
 ## <div dir="rtl" align="right">درباره OWASP</div>
 
-<p dir="rtl" align="right">پروژه متن‌باز امنیت برنامه‌های کاربردی تحت وب (OWASP) یک جامعه آزاد است که تصمیم به توانمندسازی سازمان‌ها برای توسعه، خرید و حفظ اپلیکیشن‌ها و ‌APIهایی که قابل اعتماد باشند، دارد.
+<p dir="rtl" align="right">
+ پروژه متن باز امنیت برنامه های کاربردی تحت وب (OWASP) یک جامعه آزاد است که تصمیم به توانمندسازی سازمان‌ها برای توسعه، خرید و حفظ اپلیکیشن ها و API هایی که قابل اعتماد باشند، دارد. 
 </p>
 
-<p dir="rtl" align="right">در  OWASP شما به این موارد به صورت رایگان و آزاد دسترسی خواهید داشت:</p>
+<p dir="rtl" align="right">در OWASP شما به این موارد به صورت رایگان و آزاد دسترسی خواهید داشت:</p>
 
 <ul dir="rtl" align="right">
   <li>
-      ابزارها و استانداردهای امنیت برنامه کاربردی.
+     ابزارها و استانداردهای امنیت برنامه کاربردی.
   </li>
    <li>
     کتاب‌های کامل در زمینه‌ی آزمون امنیتی برنامه‌ها، توسعه‌ی کد امن و بررسی امنیت کد.
@@ -34,11 +36,11 @@
     <a href="https://www.owasp.org/index.php/Category:OWASP_AppSec_Conference">کنفرانس‌های گسترده در تمام دنیا</a> 
   </li>
   <li>
-    <a href="https://lists.owasp.org/mailman/listinfo">میل لیست‌ها</a> 
+    <a href="https://lists.owasp.org/mailman/listinfo">ایمیل لیست‌ها</a> 
   </li>
 </ul>
 
-<p dir="rtl" align="right">از اینجا میتوانید اطلاعات بیشتری کسب کنید : <a href="https://www.owasp.org">https://www.owasp.org</a> .</p>
+<p dir="rtl" align="right">در اینجا میتوانید اطلاعات بیشتری کسب کنید : <a href="https://www.owasp.org">https://www.owasp.org</a> .</p>
 
 <p dir="rtl" align="right">تمام ابزارها، مدارک، ویدیوها، ارائه‌ها و گردهمایی‌های OWASP برای هرکسی که به ارتقا سطح امنیتی برنامه‌ها علاقه‌مند است به صورت رایگان و آزاد قابل دسترس است. </p>
 
@@ -56,5 +58,9 @@
 
 ![license](images/license.png)
 
-<p dir="rtl" align="right">کپی رایت 2003-2017 بنیاد OWASP. این سند تحت لیسانس Creative Commons Attribution Share-Alike 4.0  منتشر شده است.
+<p dir="rtl" align="right">
+  کپی رایت 2003-2017 بنیاد OWASP.
+</p>
+<p dir="rtl" align="right">
+  این سند تحت لیسانس Creative Commons Attribution Share-Alike 4.0  منتشر شده است.
 برای هرگونه استفاده یا توزیع مجدد، باید شرایط و مفاد این گواهی را برای دیگران شفاف سازی نمایید.</p>
