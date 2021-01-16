@@ -9,7 +9,7 @@ Di OWASP anda akan menemukan free and open
 * Tool dan standar keamanan aplikasi.
 * Buku tentang uji keamanan aplikasi, pengembangan kode aman, dan review kode keamanan.
 * Presentasi dan [video](https://www.youtube.com/user/OWASPGLOBAL).
-* [Cheat sheets](https://www.owasp.org/index.php/OWASP_Cheat_Sheet_Series) on many common topics.
+* [Cheat sheets](https://www.owasp.org/index.php/OWASP_Cheat_Sheet_Series) untuk banyak topik umum.
 * Kendali keamanan dan Pustaka Standart.
 * [Cabang Lokal Di Seluruh Dunia](https://www.owasp.org/index.php/OWASP_Chapter).
 * Riset Terkini.
@@ -18,9 +18,9 @@ Di OWASP anda akan menemukan free and open
 
 Dan Masih banyak lagi di: [https://www.owasp.org](https://www.owasp.org).
 
-Seluruh tool , dokumen, forum, dan cabang OWASP free dan open bagi semua orang yang tertarik memperbaiki keamanan aplikasi. Kami mendukung pendekatan keamanan aplikasi sebagai masalah person, proses, dan teknologi karena pendekatan paling efektif ke keamanan aplikasi membutuhkan perbaikan di seluruh area ini.
+Seluruh tool , dokumen, forum, dan cabang OWASP free dan open bagi semua orang yang tertarik memperbaiki keamanan aplikasi. 
 
-Kami menganjurkan mendekati keamanan aplikasi sebagai masalah orang, proses, dan teknologi, karena pendekatan yang paling efektif untuk keamanan aplikasi memerlukan perbaikan di bidang ini.
+Kami menganjurkan mendekati keamanan aplikasi sebagai masalah orang, proses, dan teknologi, karena pendekatan yang paling efektif untuk keamanan aplikasi memerlukan perbaikan pada bidang-bidang ini.
 
 OWASP adalah jenis organisasi baru. Kebebasan kami dari tekanan komersial memungkinkan kami memberikan informasi yang tidak bias, praktis, dan hemat biaya tentang keamanan aplikasi.
 
