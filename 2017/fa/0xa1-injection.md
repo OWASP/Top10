@@ -62,7 +62,7 @@
 
 `Query HQLQuery = session.createQuery("FROM accounts WHERE custID='" + request.getParameter("id") + "'");`
 
-<p dir="rtl" align="right">در هر دو مورد، مهاجم مقدار پارامتر < id> را در مرورگر خود تغییر می دهد تا1'='1 را ارسال کند : به طور مثال: ' or '1'='1</p>
+<p dir="rtl" align="right">در هر دو مورد، مهاجم مقدار پارامتر < id> را در مرورگر خود تغییر می دهد تا 'or '1'='1 را ارسال کند : به طور مثال: </p>
 
 `http://example.com/app/accountView?id=' or '1'='1`
 
