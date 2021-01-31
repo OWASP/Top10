@@ -34,9 +34,7 @@
   <li>رمزگذاری تمام داده ها در حال انتقال با پروتکل های امن مانندTLS  با رمزهای محرمانه بدون نقص (PFS)، اولویت بندی رمز توسط سرور و پارامترهای امن انجام گردد. اعمال رمزگذاری را با استفاده از دستورالعمل هایی مانند HTTP Security Transport Strict Security (HSTS) انجام دهید.</li>
   <li>برای پاسخ هایی که حاوی اطلاعات حساس هستند، ذخیره سازی (Caching) غیرفعال شود. </li>
   <li>
-    رمزهای عبور را با استفاده از توابع هش قوی قابل انطباق و هش به همراه سلت با یک عامل کار (عامل تاخیر) مانند <a href="https://www.cryptolux.org/index.php/Argon2">Argon2</a> , <a href="https://wikipedia.org/wiki/Scrypt">Scrypt</a> , <a href="https://wikipedia.org/wiki/Bcrypt">bcrypt</a> یا  <a href="https://wikipedia.org/wiki/PBKDF2">PBKDF2</a> ذخیره کنید.
-
-    رمزهای عبور را با استفاده از توابع هش قوی منطبق و هش salting با یک عامل کار (عامل تاخیر) مانند <a href="https://www.cryptolux.org/index.php/Argon2">Argon2</a>،<a href="https://wikipedia.org/wiki/Scrypt">Scrypt</a> ، یا <a href="https://wikipedia.org/wiki/PBKDF2">PBKDF2</a> ذخیره کنید.</li>
+    رمزهای عبور را با استفاده از توابع هش قوی قابل انطباق و هش به همراه سلت با یک عامل کار (عامل تاخیر) مانند <a href="https://www.cryptolux.org/index.php/Argon2">Argon2</a> , <a href="https://wikipedia.org/wiki/Scrypt">Scrypt</a> , <a href="https://wikipedia.org/wiki/Bcrypt">bcrypt</a> یا  <a href="https://wikipedia.org/wiki/PBKDF2">PBKDF2</a> ذخیره کنید.</li>
   <li>به طور مستقل اثربخشی پیکربندی و تنظیمات را بررسی کنید.</li>
 </ul>
 
