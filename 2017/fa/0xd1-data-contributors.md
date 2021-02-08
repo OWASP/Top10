@@ -1,8 +1,8 @@
 # <div dir="rtl" align="right">تشکر و قدردانی</div>
 
-## <div dir="rtl" align="right">تشکر از به اشتراک گذارندگان دیتا</div>
+## <div dir="rtl" align="right">تشکر از به اشتراک گذارندگان داده</div>
 
-<p dir="rtl" align="right">مایلیم از سازمان هایی که دیتای خود را برای حمایت از بروزرسانی ۲۰۱۷ در اختیارمان قرار دادند تشکر کنیم :</p>
+<p dir="rtl" align="right">مایلیم از سازمان هایی که داده خود را برای حمایت از بروزرسانی ۲۰۱۷ در اختیارمان قرار دادند تشکر کنیم :</p>
 
 * ANCAP
 * Aspect Security
@@ -48,7 +48,7 @@
 * Veracode
 * Web.com
 
-<p dir="rtl" align="right">برای اولین بار تمام دیتایی که از مشارکت کنندگان جمع آوری شده است به صورت عمومی قابل دسترس است : به صورت عمومی در <a href="https://github.com/OWASP/Top10/tree/master/2017/datacall/submissions">اینجا</a> در دسترس است.</p>
+<p dir="rtl" align="right">برای اولین بار تمام داده‌ای که از مشارکت کنندگان جمع آوری شده است به صورت عمومی‌قابل دسترس است : به صورت عمومی در <a href="https://github.com/OWASP/Top10/tree/master/2017/datacall/submissions">اینجا</a> در دسترس است.</p>
 
 ## <div dir="rtl" align="right">تشکر از افراد به اشتراک گذارنده دیتا</div>
 
@@ -131,6 +131,6 @@
 * vdbaan
 * yohgaki
 
-<p dir="rtl" align="right">و هر فرد دیگری که از طریف توییر یا ایمیل یا موارد دیگر فیدبک ارسال کرد.</p>
+<p dir="rtl" align="right">و هر فرد دیگری که از طریق توئیتر یا ایمیل یا موارد دیگر بازخورد ارسال کرد.</p>
 
-<p dir="rtl" align="right">فراموش نمی کنیم که اشاره کنیم که  DIRK Wetter، Jim Manico  و Osama Elnaggar  همکاری بسیار خوبی داشتند. همچنین Chris Frohoff  و Gabriel Lawrence  حمایت بسیار با ارزشی در نگارش <strong>A8:2017- ریسک دیسریالیزیشن ناامن </strong> به عمل آوردند.</p>
+<p dir="rtl" align="right">فراموش نمی‌کنیم که اشاره کنیم DIRK Wetter، Jim Manico  و Osama Elnaggar  همکاری بسیار خوبی داشتند. همچنین Chris Frohoff  و Gabriel Lawrence  حمایت بسیار با ارزشی در نگارش A8:2017 - Deserialization   نا امن  به عمل آوردند.</p>
