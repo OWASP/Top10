@@ -15,12 +15,13 @@ Ada Tiga Jenis XSS, biasanya menargetkan browser pengguna:
 Serangan XSS termasuk _session stealing, account takeover, MFA bypass_, _DOM node replacement_ atau perusakan pada halaman website atau _defacing_ (seperti panel trojan login), 
 serangan terhadap browser pengguna seperti unduhan perangkat lunak berbahaya, pencatatan log kunci, dan serangan sisi klien lainnya.
 
-## How To Prevent
+## Bagaimana Cara Pencegahannya
 
-Preventing XSS requires separation of untrusted data from active browser content. This can be achieved by:
+Pencegahan XSS membutuhkan pemisahan pada data yang tidak terpecaya dari konten browser yang aktif. Ini dapat dicapai dengan:
 
-* Using frameworks that automatically escape XSS by design, such as the latest Ruby on Rails, React JS. Learn the limitations of each framework's XSS protection and appropriately handle the use cases which are not covered.
-* Escaping untrusted HTTP request data based on the context in the HTML output (body, attribute, JavaScript, CSS, or URL) will resolve Reflected and Stored XSS vulnerabilities. The [OWASP  Cheat Sheet 'XSS Prevention'](https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet) has details on the required data escaping techniques.
+* Menggunakan kerangka kerja yang secara otomatis lolos dari XSS berdasarkan desain, seperti Ruby on Rails terbaru, React JS. Pelajari batasan perlindungan XSS setiap framework dan tangani kasus penggunaan yang tidak tercakup dengan tepat.
+* Meloloskan data permintaan HTTP yang tidak tepercaya berdasarkan konteks di Output HTML (_body, attribute, JavaScript, CSS, atau URL)_ akan diselesaikan 
+*  Reflected dan Stored XSS. The [OWASP  Cheat Sheet 'XSS Prevention'](https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet) has details on the required data escaping techniques.
 * Applying context-sensitive encoding when modifying the browser document on the client side acts against DOM XSS. When this cannot be avoided, similar context sensitive escaping techniques can be applied to browser APIs as described in the OWASP Cheat Sheet 'DOM based XSS Prevention'.
 * Enabling a [Content Security Policy (CSP)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) as a defense-in-depth mitigating control against XSS. It is effective if no other vulnerabilities exist that would allow placing malicious code via local file includes (e.g. path traversal overwrites or vulnerable libraries from permitted content delivery networks).
 
