@@ -1,4 +1,4 @@
-# A9:2017 Using Components with Known Vulnerabilities
+# A9:2017 Menggunakan Komponen yang Diketahui Rentan
 
 | Threat agents/Attack vectors | Security Weakness           | Impacts               |
 | -- | -- | -- |
