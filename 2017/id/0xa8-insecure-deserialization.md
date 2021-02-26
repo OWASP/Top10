@@ -7,7 +7,7 @@
 
 ## Apakah Aplikasi itu Rentan?
 
-Applikasi dan API akan menjadi rentan jika mereka menghilangkan identitas objek yang dimusuhi atau dirusak yang disediakan oleh penyerang.
+Aplikasi dan API akan menjadi rentan jika mereka menghilangkan identitas objek yang dimusuhi atau dirusak yang disediakan oleh penyerang.
 
 Ini dapat mengakibatkan dua jenis serangan utama:
 
@@ -24,7 +24,7 @@ Serialisasi dapat digunakan dalam aplikasi untuk:
 
 ## Bagaimana Cara Pencegahannya
 
-Satu-satunya pola arsitektur yang aman adalah tidak menerima objek serialisasi dari sumber yang tidak tepercaya atau menggunakan media serialisasi yang hanya mengizinkan tipe data primitif.
+Satu-satunya pola arsitektur yang aman adalah tidak menerima objek serialisasi dari sumber yang tidak terpercaya atau menggunakan media serialisasi yang hanya mengizinkan tipe data primitif.
 
 Jika memungkinkan, pertimbangkan salah satu cara pencegahan dibawah ini :
 
@@ -39,13 +39,12 @@ Jika memungkinkan, pertimbangkan salah satu cara pencegahan dibawah ini :
 
 ## Contoh Skenario Serangan
 
-**Scenario #1**: A React application calls a set of Spring Boot microservices. Being functional programmers, they tried to ensure that their code is immutable. The solution they came up with is serializing user state and passing it back and forth with each request. An attacker notices the "R00" Java object signature, and uses the Java Serial Killer tool to gain remote code execution on the application server.
-
-**Scenario #2**: A PHP forum uses PHP object serialization to save a "super" cookie, containing the user's user ID, role, password hash, and other state:
+**Scenario #1**: Aplikasi React memanggil satu set layanan mikro Spring Boot. Sebagai programmer fungsional, mereka mencoba memastikan bahwa kode mereka tidak dapat diubah. Solusi yang mereka hasilkan adalah membuat serial status pengguna dan meneruskannya bolak-balik dengan setiap permintaan. Seorang penyerang memperhatikan tanda tangan objek Java "R00", dan menggunakan alat Pembunuh Serial Java untuk mendapatkan eksekusi kode jarak jauh pada server aplikasi.
+**Scenario #2**: Sebuah kode PHP menggunakan serialisasi objek PHP untuk menyimpan sebuah "super" cookie, berisi user's user ID, role, password hash, dan bagian yang lain:
 
 `a:4:{i:0;i:132;i:1;s:7:"Mallory";i:2;s:4:"user";i:3;s:32:"b6a8b3bea87fe0e05022f8f3c88bc960";}`
 
-An attacker changes the serialized object to give themselves admin privileges:
+Seorang Penyerang mengubah object serialisasi untuk mengubah aksesnya menjadi hak akses admin:
 `a:4:{i:0;i:1;i:1;s:5:"Alice";i:2;s:5:"admin";i:3;s:32:"b6a8b3bea87fe0e05022f8f3c88bc960";}`
 
 ## Referensi
