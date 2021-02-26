@@ -18,25 +18,26 @@ Serialisasi dapat digunakan dalam aplikasi untuk:
 
 * Remote- dan komunikasi antar proses (RPC/IPC) 
 * Protokol kawat, layanan web, perantara pesan
-* Caching / Persistence
+* Caching / Persistensi
 * Database, server cache, sistem file
 * Cookie pada HTTP, HTML form parameter, otentikasi token pada API
 
-## How To Prevent
+## Bagaimana Cara Pencegahannya
 
-The only safe architectural pattern is not to accept serialized objects from untrusted sources or to use serialization mediums that only permit primitive data types.
+Satu-satunya pola arsitektur yang aman adalah tidak menerima objek serialisasi dari sumber yang tidak tepercaya atau menggunakan media serialisasi yang hanya mengizinkan tipe data primitif.
 
-If that is not possible, consider one of more of the following:
+Jika memungkinkan, pertimbangkan salah satu cara pencegahan dibawah ini :
 
-* Implementing integrity checks such as digital signatures on any serialized objects to prevent hostile object creation or data tampering.
-* Enforcing strict type constraints during deserialization before object creation as the code typically expects a definable set of classes. Bypasses to this technique have been demonstrated, so reliance solely on this is not advisable.
-* Isolating and running code that deserializes in low privilege environments when possible.
+* Menerapkan pemeriksaan integritas seperti tanda tangan digital pada objek serial apa pun untuk mencegah pembuatan objek yang tidak terpecaya  atau gangguan data. 
+* Menerapkan batasan tipe yang ketat selama deserialization sebelum pembuatan objek karena kode biasanya mengharapkan sekumpulan kelas yang dapat ditentukan. Pengabaian  
+  terhadap teknik ini telah dibuktikan, jadi tidak disarankan untuk mengandalkan hanya pada teknik ini.
+* Mengisolasi dan menjalankan kode yang deserialisasi dengan hak Environment lebih rendah jika memungkinkan
 * Log deserialization exceptions and failures, such as where the incoming type is not the expected type, or the deserialization throws exceptions.
 * Restricting or monitoring incoming and outgoing network connectivity from containers or servers that deserialize.
 * Monitoring deserialization, alerting if a user deserializes constantly.
 
 
-## Example Attack Scenarios
+## Contoh Skenario Serangan
 
 **Scenario #1**: A React application calls a set of Spring Boot microservices. Being functional programmers, they tried to ensure that their code is immutable. The solution they came up with is serializing user state and passing it back and forth with each request. An attacker notices the "R00" Java object signature, and uses the Java Serial Killer tool to gain remote code execution on the application server.
 
@@ -47,7 +48,7 @@ If that is not possible, consider one of more of the following:
 An attacker changes the serialized object to give themselves admin privileges:
 `a:4:{i:0;i:1;i:1;s:5:"Alice";i:2;s:5:"admin";i:3;s:32:"b6a8b3bea87fe0e05022f8f3c88bc960";}`
 
-## References
+## Referensi
 
 ### OWASP
 
