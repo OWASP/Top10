@@ -2,7 +2,7 @@
 
 | Agen ancaman / vektor serangan | Kelemahan Keamanan          | Dampak              |
 | -- | -- | -- |
-| Akses Lvl: Eksploitasi 3 | Prevalensi 2: Detektifitas 3 | Teknis 3: Bisnis |
+| Akses Lvl: Eksploitasi 3 | Prevalensi 2: Deteksi 3 | Teknis 3: Bisnis |
 | Hampir semua sumber data bisa berupa vektor injeksi, variabel lingkungan, parameter, layanan web eksternal dan internal, dan semua jenis pengguna. [Kekurangan injeksi](https://www.owasp.org/index.php/Injection_Flaws) terjadi ketika penyerang bisa mengirim data yang bermusuhan ke juru bahasa. | Cacat injeksi sangat lazim, terutama dalam kode warisan. Kerentanan injeksi sering ditemukan di kueri SQL, LDAP, XPath, atau NoSQL, perintah OS, parser XML, header SMTP, bahasa ekspresi, dan kueri ORM. Kelemahan injeksi mudah ditemukan saat memeriksa kode. Pemindai dan fuzzers dapat membantu penyerang menemukan kekurangan injeksi. |Injeksi dapat mengakibatkan kehilangan data, korupsi, atau pengungkapan kepada pihak yang tidak berwenang, kehilangan pertanggungjawaban, atau penolakan akses. Injeksi terkadang bisa mengakibatkan pengambilalihan tuan rumah yang lengkap. Dampak bisnis tergantung dari kebutuhan aplikasi dan data.|
 
 
