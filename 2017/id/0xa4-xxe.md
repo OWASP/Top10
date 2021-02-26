@@ -7,10 +7,10 @@
 
 ## Apakah Aplikasi itu Rentan?
 
-Aplikasi dan layanan web berbasis XML tertentu atau _downstream integration_s_  mungkin rentan terhadap serangan jika:
+Aplikasi dan layanan web berbasis XML tertentu atau integrasi downstream mungkin rentan terhadap serangan jika:
 
-* The application accepts XML directly or XML uploads, especially from untrusted sources, or inserts untrusted data into XML documents, which is then parsed by an XML processor.
-* Any of the XML processors in the application or SOAP based web services has [document type definitions (DTDs)](https://en.wikipedia.org/wiki/Document_type_definition) enabled. As the exact mechanism for disabling DTD processing varies by processor, it is good practice to consult a reference such as the [OWASP Cheat Sheet 'XXE Prevention'](https://www.owasp.org/index.php/XML_External_Entity_(XXE)_Prevention_Cheat_Sheet). 
+* Aplikasi menerima XML secara langsung atau unggahan XML, terutama dari sumber yang tidak tepercaya, atau menyisipkan data yang tidak tepercaya ke dalam dokumen XML, yang kemudian diurai oleh pemroses XML.
+* Setiap prosesor XML dalam aplikasi atau layanan web berbasis SOAP memiliki [_document type definitions (DTDs_)](https://en.wikipedia.org/wiki/Document_type_definition) yang diijinkan. Karena mekanisme yang tepat untuk menonaktifkan pemrosesan DTD bervariasi berdasarkan prosesor, praktik yang baik untuk berkonsultasi dengan referensi seperti [OWASP Cheat Sheet 'XXE Prevention'](https://www.owasp.org/index.php/XML_External_Entity_(XXE)_Prevention_Cheat_Sheet). 
 * If the application uses SAML for identity processing within federated security or single sign on (SSO) purposes. SAML uses XML for identity assertions, and may be vulnerable.
 * If the application uses SOAP prior to version 1.2, it is likely susceptible to XXE attacks if XML entities are being passed to the SOAP framework.
 * Being vulnerable to XXE attacks likely means that the application is vulnerable to denial of service attacks including the Billion Laughs attack
