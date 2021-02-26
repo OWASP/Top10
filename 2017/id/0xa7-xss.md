@@ -2,8 +2,8 @@
 
 | Threat agents/Attack vectors | Security Weakness           | Impacts               |
 | -- | -- | -- |
-| Access Lvl : Exploitability 3 | Prevalence 3 : Detectability 3 | Technical 2 : Business |
-| Automated tools can detect and exploit all three forms of XSS, and there are freely available exploitation frameworks. | XSS is the second most prevalent issue in the OWASP Top 10, and is found in around two thirds of all applications. Automated tools can find some XSS problems automatically, particularly in mature technologies such as PHP, J2EE / JSP, and ASP.NET. | The impact of XSS is moderate for reflected and DOM XSS, and severe for stored XSS, with remote code execution on the victim's browser, such as stealing credentials, sessions, or delivering malware to the victim. |
+| Akses Lvl: Eksploitasi 3 | Prevalensi 3 : Deteksi 3 | Teknis 2 : Bisnis |
+| Automated tools / Tool dengan fitur otomatis dapat  mendeteksi dan melakukan exploit pada semua tiga type XSS, and ada Framework eksploitasi yang tersedia secara gratis. | XSS adalah bug / vulnerabilty paling umum kedua di OWASP Top 10, dan  masih ditemukan di sekitar dua pertiga dari semua aplikasi. Automated tools dapat menemukan beberapa bug XSS  secara otomatis, Khusunya dalam aplikasi pemrograman yang sudah matang seperti PHP, J2EE / JSP, dan ASP.NET. | Dampak pada XSS is moderate for reflected and DOM XSS, and severe for stored XSS, with remote code execution on the victim's browser, such as stealing credentials, sessions, or delivering malware to the victim. |
 
 ## Is the Application Vulnerable?
 
