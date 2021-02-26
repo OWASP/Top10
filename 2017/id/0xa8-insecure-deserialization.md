@@ -16,7 +16,7 @@ Ini dapat mengakibatkan dua jenis serangan utama:
 
 Serialisasi dapat digunakan dalam aplikasi untuk:
 
-* Remote- dan komunikasi antar proses (RPC/IPC) 
+* Remote dan komunikasi antar proses (RPC/IPC) 
 * Protokol kawat, layanan web, perantara pesan
 * Caching / Persistensi
 * Database, server cache, sistem file
