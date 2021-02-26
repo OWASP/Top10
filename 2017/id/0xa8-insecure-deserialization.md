@@ -16,7 +16,7 @@ Ini dapat mengakibatkan dua jenis serangan utama:
 
 Serialisasi dapat digunakan dalam aplikasi untuk:
 
-* Remote dan komunikasi antar proses (RPC/IPC) 
+* _Remote_ dan komunikasi antar proses (RPC/IPC) 
 * Protokol kawat, layanan web, perantara pesan
 * Caching / Persistensi
 * Database, server cache, sistem file
@@ -32,9 +32,9 @@ Jika memungkinkan, pertimbangkan salah satu cara pencegahan dibawah ini :
 * Menerapkan batasan tipe yang ketat selama deserialization sebelum pembuatan objek karena kode biasanya mengharapkan sekumpulan kelas yang dapat ditentukan. Pengabaian  
   terhadap teknik ini telah dibuktikan, jadi tidak disarankan untuk mengandalkan hanya pada teknik ini.
 * Mengisolasi dan menjalankan kode yang deserialisasi dengan hak Environment lebih rendah jika memungkinkan
-* Log deserialization exceptions and failures, such as where the incoming type is not the expected type, or the deserialization throws exceptions.
-* Restricting or monitoring incoming and outgoing network connectivity from containers or servers that deserialize.
-* Monitoring deserialization, alerting if a user deserializes constantly.
+* Pengecualian dan kegagalan deserialisasi log, seperti saat jenis yang masuk bukan jenis yang diharapkan, atau deserialisasi melontarkan pengecualian.
+* Membatasi atau memantau konektivitas jaringan masuk dan keluar dari kontainer atau server yang deserialisasi
+* Monitoring deserialisasi, memberikan _alert_ jika ada _user_ terus menerus melakukan deserialisasi.
 
 
 ## Contoh Skenario Serangan
