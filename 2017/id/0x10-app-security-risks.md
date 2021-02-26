@@ -34,7 +34,7 @@ Bila memungkinkan, nama risiko di Top 10 sesuai dengan [Common Weakness Enumerat
 ### OWASP
 
 * [OWASP Risk Rating Methodology](https://www.owasp.org/index.php/OWASP_Risk_Rating_Methodology)
-* [Artikel Pada Threat/Risk Modeling](https://www.owasp.org/index.php/Threat_Risk_Modeling)
+* [Article on Threat/Risk Modeling](https://www.owasp.org/index.php/Threat_Risk_Modeling)
 
 ### Eksternal
 
