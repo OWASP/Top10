@@ -1,8 +1,8 @@
-# Release
+# Rilis
 
-## Important Notice
+## Pemberitahuan Penting
 
-### Request for Comments
+
 
 Ini adalah versi teks dari OWASP Top 10, dan meskipun ini berguna bagi penerjemah dan mereka yang tertarik dengan versi teks, ini bukan rilis resmi, yaitu versi PowerPoint / PDF.
 
