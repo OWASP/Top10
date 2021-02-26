@@ -2,21 +2,21 @@
 
 | Threat agents/Attack vectors | Security Weakness           | Impacts               |
 | -- | -- | -- |
-| Access Lvl : Exploitability 1 | Prevalence 2 : Detectability 2 | Technical 3 : Business |
-| Exploitation of deserialization is somewhat difficult, as off the shelf exploits rarely work without changes or tweaks to the underlying exploit code. | This issue is included in the Top 10 based on an [industry survey](https://owasp.blogspot.com/2017/08/owasp-top-10-2017-project-update.html) and not on quantifiable data. Some tools can discover deserialization flaws, but human assistance is frequently needed to validate the problem. It is expected that prevalence data for deserialization flaws will increase as tooling is developed to help identify and address it. | The impact of deserialization flaws cannot be overstated. These flaws can lead to remote code execution attacks, one of the most serious attacks possible. The business impact depends on the protection needs of the application and data. |
+| Akses Lvl: Eksploitasi 1 | Prevalensi 2 : Deteksi 2 | Teknis 3: Bisnis |
+|Penyerang dapat mengeksploitasi prosesor XML yang rentan jika mereka dapat mengunggah XML atau menyertakan konten yang tidak bersahabat dalam dokumen XML, mengeksploitasi kode yang rentan, ketergantungan, atau integrasi. | Masalah ini termasuk dalam Top 10 berdasarkan [Survei Industri ](https://owasp.blogspot.com/2017/08/owasp-top-10-2017-project-update.html) and bukan pada data yang dapat dihitung. Beberapa alat dapat menemukan kekurangan deserialisasi, tetapi bantuan manusia sering kali diperlukan untuk memvalidasi masalah. Diharapkan bahwa data prevalensi untuk kekurangan deserialisasi akan meningkat seiring dengan pengembangan perangkat untuk membantu mengidentifikasi dan mengatasinya. | Dampak kelemahan deserialisasi tidak bisa dilebih-lebihkan. Cacat ini dapat menyebabkan serangan eksekusi kode jarak jauh, salah satu serangan paling serius yang mungkin terjadi. Dampak bisnis bergantung pada kebutuhan perlindungan aplikasi dan data.|
 
-## Is the Application Vulnerable?
+## Apakah Aplikasi itu Rentan?
 
-Applications and APIs will be vulnerable if they deserialize hostile or tampered objects supplied by an attacker.
+Applikasi dan API akan menjadi rentan jika mereka menghilangkan identitas objek yang dimusuhi atau dirusak yang disediakan oleh penyerang.
 
-This can result in two primary types of attacks:
+Ini dapat mengakibatkan dua jenis serangan utama:
 
-* Object and data structure related attacks where the attacker modifies application logic or achieves arbitrary remote code execution if there are classes available to the application that can change behavior during or after deserialization.
-* Typical data tampering attacks such as access-control-related attacks where existing data structures are used but the content is changed.
+* Serangan terkait objek dan struktur data di mana penyerang mengubah logika aplikasi atau mencapai eksekusi kode jarak jauh arbitrer jika ada kelas yang tersedia untuk aplikasi yang dapat mengubah perilaku selama atau setelah deserialisasi.
+* Serangan perusakan data tipikal seperti serangan terkait kontrol akses di mana struktur data yang ada digunakan tetapi kontennya diubah.
 
-Serialization may be used in applications for:
+Serialisasi dapat digunakan dalam aplikasi untuk:
 
-* Remote- and inter-process communication (RPC/IPC) 
+* Remote- dan komunikasi antar proses (RPC/IPC) 
 * Wire protocols, web services, message brokers
 * Caching/Persistence
 * Databases, cache servers, file systems 
