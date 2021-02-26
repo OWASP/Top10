@@ -7,7 +7,7 @@ Banyak feedback yang diterima selama pembuatan OWASP Top 10 - 2017, lebih dari u
 
 Meskipun tujuan awal dari proyek 10 Besar OWASP hanya untuk meningkatkan kesadaran di antara pengembang dan manajer, itu telah menjadi standar keamanan aplikasi secara de facto.
 
-Dalam rilis ini, masalah dan rekomendasi ditulis secara ringkas dan dengan cara yang dapat diuji untuk membantu penerapan OWASP Top 10 dalam program keamanan aplikasi. Kami mendorong organisasi besar dan kinerja yang tinggi untuk menggunakan [OWASP Application Verification Standard (ASVS)] (https://www.owasp.org/index.php/ASVS) jika standar yang benar diperlukan, tetapi untuk sebagian besar, OWASP Top 10 adalah awal yang bagus dalam keamanan aplikasi.
+Dalam rilis ini, masalah dan rekomendasi ditulis secara ringkas dan dengan cara yang dapat diuji untuk membantu penerapan OWASP Top 10 dalam program keamanan aplikasi. Kami mendorong organisasi besar dan kinerja yang tinggi untuk menggunakan OWASP Application Verification Standard (ASVS) https://www.owasp.org/index.php/ASVS jika standar yang benar diperlukan, tetapi untuk sebagian besar, OWASP Top 10 adalah awal yang bagus dalam keamanan aplikasi.
 
 Kami telah menulis berbagai langkah yang disarankan selanjutnya untuk pengguna yang berbeda dari OWASP Top 10, termasuk "Apa Selanjutnya untuk Pengembang Aplikasi", "Apa Selanjutnya untuk Penguji Keamanan", "Apa Selanjutnya untuk Organisasi", yang cocok untuk CIO dan CISO, dan "Apa Selanjutnya untuk Manajer pengembangan perangkat lunak/Aplikasi", yang cocok untuk manajer pengembang aplikasi atau siapa pun yang bertanggung jawab pada pengembangan perangkat lunak.
 
