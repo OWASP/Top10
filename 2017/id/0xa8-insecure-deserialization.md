@@ -20,7 +20,7 @@ Serialisasi dapat digunakan dalam aplikasi untuk:
 * Protokol kawat, layanan web, perantara pesan
 * Caching / Persistence
 * Database, server cache, sistem file
-* HTTP cookies, HTML form parameters, API token otentikasi
+* Cookie pada HTTP, HTML form parameter, otentikasi token pada API
 
 ## How To Prevent
 
