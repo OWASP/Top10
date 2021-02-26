@@ -16,7 +16,7 @@ Aplikasi rentan terhadap serangan saat:
 * Data yang bermusuhan langsung digunakan atau digabungkan, sehingga SQL atau perintah berisi data struktur dan permusuhan dalam query dinamis, perintah, atau prosedur tersimpan.
 * Beberapa suntikan yang lebih umum adalah perintah SQL, NoSQL, OS, pemetaan Object Relational Mapping (ORM), LDAP, dan Expression Language (EL) atau Object Graph Navigation Library (OGNL). Konsepnya identik diantara semua penafsir. Source code review adalah metode terbaik untuk mendeteksi jika aplikasi rentan terhadap suntikan, diikuti dengan pengujian otomatis menyeluruh terhadap semua parameter, header, URL, cookies, JSON, SOAP, dan data XML. Organisasi dapat menyertakan sumber statis ([SAST](https://www.owasp.org/index.php/Source_Code_Analysis_Tools)) dan uji aplikasi dinamis ([DAST](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools)) alat ke dalam pipa CI / CD untuk mengidentifikasi kelemahan injeksi yang baru diperkenalkan sebelum penggelaran produksi.
 
-## Cara Mencegah
+## Bagaimana Cara Pencegahannya
 
 Mencegah injeksi membutuhkan data terpisah dari perintah dan kueri.
 
