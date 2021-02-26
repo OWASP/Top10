@@ -27,7 +27,7 @@ Mencegah injeksi membutuhkan data terpisah dari perintah dan kueri.
 
 ## Contoh Skenario Serangan
 
-**Skenario #1**: Aplikasi menggunakan data yang tidak tepercaya dalam pembuatan panggilan SQL yang rentan berikut ini:
+**Skenario #1**: Aplikasi menggunakan data yang tidak terpercaya dalam pembuatan panggilan SQL yang rentan berikut ini:
 
 `String query = "SELECT * FROM accounts WHERE custID='" + request.getParameter("id") + "'";`
 
