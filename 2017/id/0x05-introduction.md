@@ -11,11 +11,11 @@ Tujuan utama dari OWASP Top 10 adalah untuk mendidik pengembang, perancang, arsi
 
 ## Peta jalan untuk kegiatan selanjutnya
 
-Jangan berhenti di 10. Ada ratusan masalah yang dapat mempengaruhi keseluruhan keamanan aplikasi web seperti yang dibahas dalam Panduan Pengembang OWASP dan Seri Lembar Cheat Lembar OWASP. Ini adalah bacaan penting bagi siapa saja yang mengembangkan aplikasi web dan API. Panduan tentang cara menemukan kerentanan di aplikasi web dan API secara efektif disediakan di Panduan Pengujian OWASP.
+Jangan berhenti pada OWASP Top 10. Ada ratusan masalah yang dapat mempengaruhi keseluruhan keamanan aplikasi web seperti yang dibahas dalam  OWASP Developer's Guide  dan OWASP Cheat Sheet Series. Ini adalah bacaan penting bagi siapa saja yang mengembangkan aplikasi web dan API. Panduan tentang cara menemukan kerentanan di aplikasi web dan API secara efektif disediakan di Panduan Pengujian OWASP.
 
 Perubahan terus-menerus. OWASP Top 10 akan terus berubah. Bahkan tanpa mengubah satu baris kode aplikasi Anda, Anda mungkin menjadi rentan karena kekurangan baru ditemukan dan metode serangan disempurnakan. Harap tinjau saran di akhir Top 10 di Apa Selanjutnya untuk Pengembang, Penguji, Organisasi, dan Manajer Aplikasi untuk informasi lebih lanjut.
 
-Berpikir positif. Bila Anda siap untuk berhenti mengejar kerentanan dan fokus untuk membangun kontrol keamanan aplikasi yang kuat, proyek Kontrol Proaktif OWASP memberikan titik awal untuk membantu pengembang membangun keamanan ke dalam aplikasinya dan Standar Verifikasi Keamanan Aplikasi OWASP (ASWW) adalah panduan untuk organisasi dan pemeriksa aplikasi tentang apa yang harus diverifikasi.
+Berpikir positif. Bila Anda siap untuk berhenti mengejar kerentanan dan fokus untuk membangun kontrol keamanan aplikasi yang kuat, OWASP Proactive Controls  memberikan titik awal untuk membantu pengembang membangun keamanan ke dalam aplikasinya dan OWASP Application Security Verification Standard (ASVS)  adalah panduan untuk organisasi dan pemeriksa aplikasi tentang apa yang harus diverifikasi.
 
 Gunakan alat dengan bijak. Kerentanan keamanan bisa sangat rumit dan terkubur dalam kode. Dalam banyak kasus, pendekatan yang paling hemat biaya untuk menemukan dan menghilangkan kelemahan ini adalah pakar manusia yang dipersenjatai dengan alat canggih. Bergantung pada alat saja memberikan rasa aman yang salah dan tidak disarankan.
 
@@ -23,7 +23,7 @@ Dorong ke kiri, kanan, dan di mana-mana. Fokus pada keamanan merupakan bagian in
 
 ## Atribusi
 
-Kami ingin mengucapkan terima kasih kepada organisasi yang menyumbangkan data kerentanan mereka untuk mendukung pembaruan 2017. Kami menerima lebih dari 40 tanggapan atas permintaan data. Untuk pertama kalinya, semua data berkontribusi pada rilis Top 10, dan daftar kontributor lengkap, tersedia untuk umum. Kami percaya ini adalah salah satu kumpulan data kerentanan yang lebih besar dan beragam yang dikumpulkan di masyarakat.
+Kami ingin mengucapkan terima kasih kepada organisasi yang menyumbangkan data kerentanan mereka untuk mendukung pembaruan 2017. Kami menerima lebih dari 40 tanggapan atas permintaan data. Untuk pertama kalinya, semua data berkontribusi pada rilis OWASP Top 10, dan daftar kontributor lengkap, tersedia untuk umum. Kami percaya ini adalah salah satu kumpulan data kerentanan yang lebih besar dan beragam yang dikumpulkan di masyarakat.
 
 Karena ada lebih banyak kontributor daripada ruang di sini, kami telah membuat halaman khusus untuk mengenali kontribusi yang dibuat. Kami ingin mengucapkan terima kasih yang tulus kepada organisasi-organisasi ini karena bersedia berada di garis depan dengan membagikan data kerentanan secara terbuka dari usaha mereka. Kami berharap ini akan terus berkembang dan mendorong lebih banyak organisasi untuk melakukan hal yang sama dan mungkin dipandang sebagai salah satu tonggak utama keamanan berbasis bukti. OWASP Top 10 tidak akan mungkin terjadi tanpa kontribusi yang menakjubkan ini.
 
