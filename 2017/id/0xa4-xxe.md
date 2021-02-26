@@ -7,7 +7,7 @@
 
 ## Apakah Aplikasi itu Rentan?
 
-Applications and in particular XML-based web services or downstream integrations might be vulnerable to attack if:
+Aplikasi dan layanan web berbasis XML tertentu atau _downstream integration_s_  mungkin rentan terhadap serangan jika:
 
 * The application accepts XML directly or XML uploads, especially from untrusted sources, or inserts untrusted data into XML documents, which is then parsed by an XML processor.
 * Any of the XML processors in the application or SOAP based web services has [document type definitions (DTDs)](https://en.wikipedia.org/wiki/Document_type_definition) enabled. As the exact mechanism for disabling DTD processing varies by processor, it is good practice to consult a reference such as the [OWASP Cheat Sheet 'XXE Prevention'](https://www.owasp.org/index.php/XML_External_Entity_(XXE)_Prevention_Cheat_Sheet). 
