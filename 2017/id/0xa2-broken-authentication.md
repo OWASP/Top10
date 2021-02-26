@@ -1,4 +1,4 @@
-# A2:2017 Otentikasi yang rusak
+# A2:2017 Kerusakan Autentikasi
 
 | Agen ancaman / vektor serangan | Kelemahan Keamanan           | Dampak               |
 | -- | -- | -- |
