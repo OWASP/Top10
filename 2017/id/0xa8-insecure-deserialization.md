@@ -1,4 +1,4 @@
-# A8:2017 Insecure Deserialization
+# A8:2017 Deserialisasi yang Tidak Aman
 
 | Threat agents/Attack vectors | Security Weakness           | Impacts               |
 | -- | -- | -- |
