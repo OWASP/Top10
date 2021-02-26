@@ -3,7 +3,7 @@
 | Threat agents/Attack vectors | Security Weakness           | Impacts               |
 | -- | -- | -- |
 | Akses Lvl: Eksploitasi 3 | Prevalensi 3 : Deteksi 3 | Teknis 2 : Bisnis |
-| Tool otomatis dapat  mendeteksi dan melakukan exploit pada semua tiga type XSS, and ada Framework eksploitasi yang tersedia secara gratis. | XSS adalah kerentanan paling umum kedua di OWASP Top 10, dan  masih ditemukan di sekitar dua pertiga dari semua aplikasi. Automated tools dapat menemukan beberapa bug XSS  secara otomatis, Khususnya dalam aplikasi pemrograman seperti PHP, J2EE / JSP, dan ASP.NET. | Dampak pada XSS untuk kategori medium untuk Reflected XSS dan DOM XSS dan Kritikal untuk stored XSS, dengan eksekusi kode jarak jauh di browser korban, seperti mencuri kredensial, sesi, atau mengirimkan malware ke korban |
+| Tool otomatis dapat  mendeteksi dan melakukan exploit pada semua tiga type XSS, and ada Framework eksploitasi yang tersedia secara gratis. | XSS adalah kerentanan paling umum kedua di OWASP Top 10, dan  masih ditemukan di sekitar dua pertiga dari semua aplikasi. Tool otomatis dapat menemukan beberapa kerentanan XSS secara otomatis, Khususnya dalam aplikasi pemrograman seperti PHP, J2EE / JSP, dan ASP.NET. | Dampak pada XSS untuk kategori medium untuk Reflected XSS dan DOM XSS dan Kritikal untuk stored XSS, dengan eksekusi kode jarak jauh di browser korban, seperti mencuri kredensial, sesi, atau mengirimkan malware ke korban |
 
 ## Apakah Aplikasi itu Rentan?
 
