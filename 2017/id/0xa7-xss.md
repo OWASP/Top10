@@ -20,8 +20,7 @@ serangan terhadap browser pengguna seperti unduhan perangkat lunak berbahaya, pe
 Pencegahan XSS membutuhkan pemisahan pada data yang tidak terpecaya dari konten browser yang aktif. Ini dapat dicapai dengan:
 
 * Menggunakan kerangka kerja yang secara otomatis lolos dari XSS berdasarkan desain, seperti Ruby on Rails terbaru, React JS. Pelajari batasan perlindungan XSS setiap framework dan tangani kasus penggunaan yang tidak tercakup dengan tepat.
-* Meloloskan data permintaan HTTP yang tidak tepercaya berdasarkan konteks di Output HTML (_body, attribute, JavaScript, CSS, atau URL)_ akan menutup celah Reflected and Stored XSS.emiliki detail tentang teknik pelolosan data yang diperlukan.
-*  Reflected dan Stored XSS. The [OWASP  Cheat Sheet 'XSS Prevention'](https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet) emiliki detail tentang teknik pelolosan data yang diperlukan.
+* Mengeluarkan semua data yang tidak dipercaya berdasarkan konteks HTML (_body, attribute, JavaScript, CSS, atau URL)_ akan menutup celah Reflected and Stored XSS.Lihat OWASP XSS Prevention Cheat Sheet untuk detail dari teknik mengeluarkan data.
 * Applying context-sensitive encoding when modifying the browser document on the client side acts against DOM XSS. When this cannot be avoided, similar context sensitive escaping techniques can be applied to browser APIs as described in the OWASP Cheat Sheet 'DOM based XSS Prevention'.
 * Enabling a [Content Security Policy (CSP)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) as a defense-in-depth mitigating control against XSS. It is effective if no other vulnerabilities exist that would allow placing malicious code via local file includes (e.g. path traversal overwrites or vulnerable libraries from permitted content delivery networks).
 
