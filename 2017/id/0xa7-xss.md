@@ -3,17 +3,17 @@
 | Threat agents/Attack vectors | Security Weakness           | Impacts               |
 | -- | -- | -- |
 | Akses Lvl: Eksploitasi 3 | Prevalensi 3 : Deteksi 3 | Teknis 2 : Bisnis |
-| Automated tools / Tool dengan fitur otomatis dapat  mendeteksi dan melakukan exploit pada semua tiga type XSS, and ada Framework eksploitasi yang tersedia secara gratis. | XSS adalah bug / vulnerabilty paling umum kedua di OWASP Top 10, dan  masih ditemukan di sekitar dua pertiga dari semua aplikasi. Automated tools dapat menemukan beberapa bug XSS  secara otomatis, Khusunya dalam aplikasi pemrograman yang sudah matang seperti PHP, J2EE / JSP, dan ASP.NET. | Dampak pada XSS is moderate for reflected and DOM XSS, and severe for stored XSS, with remote code execution on the victim's browser, such as stealing credentials, sessions, or delivering malware to the victim. |
+| Automated tools / Tool dengan fitur otomatis dapat  mendeteksi dan melakukan exploit pada semua tiga type XSS, and ada Framework eksploitasi yang tersedia secara gratis. | XSS adalah bug / vulnerabilty paling umum kedua di OWASP Top 10, dan  masih ditemukan di sekitar dua pertiga dari semua aplikasi. Automated tools dapat menemukan beberapa bug XSS  secara otomatis, Khusunya dalam aplikasi pemrograman yang sudah matang seperti PHP, J2EE / JSP, dan ASP.NET. | Dampak pada XSS untuk kategori medium untuk Reflected XSS dan DOM XSS dan Kritikal untuk stored XSS, dengan eksekusi kode jarak jauh di browser korban, seperti mencuri kredensial, sesi, atau mengirimkan malware ke korban |
 
-## Is the Application Vulnerable?
+## Apakah Aplikasi itu Rentan?
 
-There are three forms of XSS, usually targeting users' browsers:
+Ada Tiga Jenis XSS, biasanya menargetkan browser pengguna:
 
-* **Reflected XSS**: The application or API includes unvalidated and unescaped user input as part of HTML output. A successful attack can allow the attacker to execute arbitrary HTML and JavaScript in the victim’s browser. Typically the user will need to interact with some malicious link that points to an attacker-controlled page, such as malicious watering hole websites, advertisements, or similar.
-* **Stored XSS**: The application or API stores unsanitized user input that is viewed at a later time by another user or an administrator. Stored XSS is often considered a high or critical risk.
-* **DOM XSS**: JavaScript frameworks, single-page applications, and APIs that dynamically include attacker-controllable data to a page are vulnerable to DOM XSS. Ideally, the application would not send attacker-controllable data to unsafe JavaScript APIs.
-
-Typical XSS attacks include session stealing, account takeover, MFA bypass, DOM node replacement or defacement (such as trojan login panels), attacks against the user's browser such as malicious software downloads, key logging, and other client-side attacks.
+* **Reflected XSS**: Aplikasi atau API menyertakan masukan pengguna yang tidak divalidasi dan tidak lolos sebagai bagian dari keluaran HTML. Serangan yang berhasil memungkinkan penyerang mengeksekusi HTML dan JavaScript sewenang-wenang di browser korban. Biasanya pengguna perlu berinteraksi dengan beberapa tautan berbahaya yang mengarah ke laman yang dikendalikan penyerang, seperti situs web lubang air berbahaya, iklan, atau sejenisnya
+* **Stored XSS**: Aplikasi atau API menyimpan masukan pengguna yang tidak dibersihkan yang dilihat di lain waktu oleh pengguna lain atau administrator. XSS yang disimpan sering dianggap sebagai risiko tinggi atau kritis.
+* **DOM XSS**: Kerangka kerja JavaScript, aplikasi halaman tunggal, dan API yang secara dinamis menyertakan data yang dapat dikontrol penyerang ke halaman rentan terhadap DOM XSS. Idealnya, aplikasi tidak akan mengirim data yang dapat dikontrol penyerang ke JavaScript API yang tidak aman.
+Serangan XSS termasuk _session stealing, account takeover, MFA bypass_, _DOM node replacement_ atau perusakan pada halaman website atau _defacing_ (seperti panel trojan login), 
+serangan terhadap browser pengguna seperti unduhan perangkat lunak berbahaya, pencatatan log kunci, dan serangan sisi klien lainnya.
 
 ## How To Prevent
 
