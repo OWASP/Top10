@@ -19,7 +19,7 @@ Berpikir positif. Bila Anda siap untuk berhenti mengejar kerentanan dan fokus un
 
 Gunakan alat dengan bijak. Kerentanan keamanan bisa sangat rumit dan terkubur dalam kode. Dalam banyak kasus, pendekatan yang paling hemat biaya untuk menemukan dan menghilangkan kelemahan ini adalah pakar manusia yang dipersenjatai dengan alat canggih. Bergantung pada alat saja memberikan rasa aman yang salah dan tidak disarankan.
 
-Dorong ke kiri, kanan, dan di mana-mana. Fokus pada keamanan merupakan bagian integral dari budaya Anda di seluruh organisasi pembangunan Anda. Cari tahu lebih lanjut dalam Model Kedewasaan Jaminan Perangkat Lunak OWASP (SAMM).
+Dorong ke kiri, kanan, dan di mana-mana. Fokus pada keamanan merupakan bagian integral dari budaya Anda di seluruh organisasi pembangunan Anda. Cari tahu lebih lanjut dalam OWASP Software Assurance Maturity Model (SAMM).
 
 ## Atribusi
 
