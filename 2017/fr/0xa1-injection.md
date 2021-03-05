@@ -10,7 +10,7 @@
 
 Une application est vulnérable quand :
 * les données venant de l'utilisateur ne sont pas validées, filtrées ou nettoyées par l'application ;
-* des requêtes dynamiques ou des appels non paramétrés sans échappage par rappport au contexte sont envoyés à l'interpréteur ;
+* des requêtes dynamiques ou des appels non paramétrés sans échappage par rapport au contexte sont envoyés à l'interpréteur ;
 * des données hostiles sont utilisées au sein de paramètres de recherche de mapping objet - relationnel (ORM) pour extraire des données supplémentaires sensibles ;
 * des données hostiles sont utilisées directement ou concaténées, par exemple lors de la construction de requête dynamiques, de commandes ou de procédures stockées pour des requêtes SQL ou des commandes OS ;
 * les injections les plus courantes se font dans le SQL, le NoSQL, les commandes OS, le mapping objet - relationnel, le LDAP, l'Expression Language et le Object Graph Navigation Library (OGNL). La façon de faire est la même pour tous les interpréteurs. La revue de code source est la meilleure manière de détecter si une application est vulnérable à l'Injection, suivie de près par le test automatique de toutes les données d'entrée via les paramètres, en-têtes, URL, cookies, JSON, SOAP et XML. Les organisations peuvent tirer profit de la puissance des outils d'analyse statique de code (SAST) ou d'analyse dynamique de l'application (DAST) en les intégrant dans leur chaine d'intégration continue (CI / CD) pour identifier avant déploiement en production les vulnérabilités liées aux injections. 
