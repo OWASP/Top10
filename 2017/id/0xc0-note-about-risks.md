@@ -1,6 +1,6 @@
 # + R Catatan Tentang Resiko
 
-## Ini tentang Resiko yang Mewakili Kelemahan
+## Ini tentang Resiko yang Melihatkan Kelemahan
 
 Metodologi Rating Resiko untuk Top 10 didasarkan pada Metodologi Penilaian Resiko OWASP. Untuk setiap kategori Top 10, kami memperkirakan resiko khas yang masing-masing kelemahan diperkenalkan pada aplikasi web biasa dengan melihat faktor kemungkinan umum dan faktor dampak untuk setiap kelemahan umum. Kami kemudian memesan untuk Top 10 sesuai dengan kelemahan yang biasanya mengenalkan resiko paling signifikan ke aplikasi. Faktor-faktor ini dapat diperbarui dengan setiap rilis, Top 10 terbaru saat berbagai hal berubah dan berkembang.
 
