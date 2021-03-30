@@ -12,14 +12,14 @@ Aplikasi milik sistem yang paling kompleks secara teratur membuat dan memelihara
 
 ## Permohonan untuk Proposal (RFP) dan Kontrak
 
-* Negosiasikan persyaratan dengan pengembang internal atau eksternal, termasuk pedoman dan persyaratan keamanan sehubungan dengan program keamanan Anda, mis. SDLC, praktik terbaik.
+* Negosiasikan persyaratan dengan pengembang internal atau eksternal, termasuk pedoman dan persyaratan keamanan sehubungan dengan program keamanan Anda, misal: SDLC, praktik terbaik.
 * Beri nilai pemenuhan semua persyaratan teknis, termasuk tahap perencanaan dan perancangan.
 * Negosiasikan semua persyaratan teknis, termasuk disain, keamanan, dan perjanjian tingkat layanan (SLA).
 * Mengadopsi template dan daftar periksa, seperti [OWASP Secure Software Contract Annex](https://www.owasp.org/index.php/OWASP_Secure_Software_Contract_Annex). Catatan: Lampiran ini untuk hukum kontrak AS, jadi mohon berkonsultasi dengan nasihat hukum yang memenuhi syarat sebelum menggunakan contoh sampel.
 
 ## Perencanaan dan Desain
 
-* Negosiasikan perencanaan dan desain dengan para pengembang dan pemegang saham internal, mis. spesialis keamanan
+* Negosiasikan perencanaan dan desain dengan para pengembang dan pemegang saham internal, misal: spesialis keamanan
 * Tentukan arsitektur keamanan, kontrol, dan tindakan penanggulangan yang sesuai dengan kebutuhan perlindungan dan tingkat ancaman yang diharapkan. Ini harus didukung oleh spesialis keamanan.
 * Pastikan pemilik aplikasi menerima risiko yang tersisa atau menyediakan sumber daya tambahan.
 * Daya dalam setiap kecepatan, pastikan dibuatkan cerita keamanan yang mencakup batasan yang ditambahkan untuk persyaratan yang tidak fungsional.

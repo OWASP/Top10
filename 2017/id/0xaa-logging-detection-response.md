@@ -19,17 +19,17 @@ Insufficient logging, detection, monitoring and active response occurs any time:
 
 You are vulnerable to information leakage if you make logging and alerting events visible to a user or an attacker (see A3:2017-Sensitive Information Exposure).
 
-## How To Prevent
+## Bagaimana Cara Mencegah?
 
-As per the risk of the data stored or processed by the application:
+Pada setiap resiko dari data yang disetorkan atau diproses oleh aplikasi :
 
-* Ensure all login, access control failures, and server-side input validation failures can be logged with sufficient user context to identify suspicious or malicious accounts, and held for sufficient time to allow delayed forensic analysis.
-* Ensure that logs are generated in a format that can be easily consumed by a centralized log management solutions.
-* Ensure high-value transactions have an audit trail with integrity controls to prevent tampering or deletion, such as append-only database tables or similar.
-* Establish effective monitoring and alerting such that suspicious activities are detected and responded to in a timely fashion.
-* Establish or adopt an incident response and recovery plan, such as [NIST 800-61 rev 2](https://csrc.nist.gov/publications/detail/sp/800-61/rev-2/final) or later.
+* Pastikan semua login, kegagalan kontrol akses, dan kegagalan validasi input dari sisi server dapat dapat dimasukkan dengan konteks yang cukup dari user untuk mengidentifikasi akun mencurigakan atau berbahaya, dan ditahan untuk waktu yang cukup untuk mengizinkan analisa forensik yang tertunda.
+* Pastikan bahwa log dibuat dalam format yang dapat dengan mudah digunakan oleh solusi log manajemen utama.
+* Pastikan transaksi bernilai tinggi memiliki jejak audit dengan kontrol integritas untuk mencegah kerusakan atau terhapus, seperti tabel database yang hanya bisa menambahkan data atau semacamnya.
+* Buat monitoring dan peringatan yang efektif agar aktivitas mencurigakan dapat terdeteksi dan direspon secara tepat waktu.
+* Buat atau adopsi sebuah respon kejadian dan rencana pemulihan, seperti [NIST 800-61 rev 2](https://csrc.nist.gov/publications/detail/sp/800-61/rev-2/final) atau nanti.
 
-There are commercial and open source application protection frameworks such as [OWASP AppSensor](https://www.owasp.org/index.php/OWASP_AppSensor_Project), web application firewalls such as [ModSecurity with the OWASP ModSecurity Core Rule Set](https://www.owasp.org/index.php/Category:OWASP_ModSecurity_Core_Rule_Set_Project), and log correlation software with custom dashboards and alerting. 
+Tersedia aplikasi framework proteksi baik komersial maupun opensource seperti [OWASP AppSensor](https://www.owasp.org/index.php/OWASP_AppSensor_Project), aplikasi web firewalls seperti [ModSecurity with the OWASP ModSecurity Core Rule Set](https://www.owasp.org/index.php/Category:OWASP_ModSecurity_Core_Rule_Set_Project), dan perangkat lunak korelasi log dengan dasboard dan peringatan yang bisa dibuat sesuai keinginan. 
 
 ## Example Attack Scenarios
 
