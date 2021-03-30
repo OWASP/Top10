@@ -31,15 +31,15 @@ As per the risk of the data stored or processed by the application:
 
 There are commercial and open source application protection frameworks such as [OWASP AppSensor](https://www.owasp.org/index.php/OWASP_AppSensor_Project), web application firewalls such as [ModSecurity with the OWASP ModSecurity Core Rule Set](https://www.owasp.org/index.php/Category:OWASP_ModSecurity_Core_Rule_Set_Project), and log correlation software with custom dashboards and alerting.
 
-## Example Attack Scenarios
+## Contoh Skenario Serangan
 
-**Scenario #1**: An open source project forum software run by a small team was hacked using a flaw in its software. The attackers managed to wipe out the internal source code repository containing the next version, and all of the forum contents. Although source could be recovered, the lack of monitoring, logging or alerting led to a far worse breach. The forum software project is no longer active as a result of this issue.
+**Skenario #1**: Sebuah forum proyek Open Source Perangkat lunak yang dijalankan oleh tim kecil diretas menggunakan kecacatan pada perangkat lunaknya. Para penyerang berhasil menghapus repositori kode sumber internal yang berisi versi berikutnya, dan semua konten forum. Meskipun sumber dapat dipulihkan, kurangnya pemantauan, penebangan, atau peringatan menyebabkan pelanggaran yang jauh lebih buruk.Forum proyek perangkat lunak tidak lagi aktif karena masalah ini.
 
-**Scenario #2**: An attacker uses scans for users using a common password. They can take over all accounts using this password. For all other users, this scan leaves only one false login behind. After some days, this may be repeated with a different password.
+**Skenario #2**: Penyerang menggunakan pemindaian untuk pengguna menggunakan sandi umum. Mereka dapat mengambil alih semua akun menggunakan kata sandi ini. Untuk semua pengguna lain, pemindaian ini hanya menyisakan satu login palsu. Setelah beberapa hari, ini mungkin akan diulangi dengan sandi yang berbeda.
 
-**Scenario #3**: A major US retailer reportedly had an internal malware analysis sandbox analyzing attachments. The sandbox software had detected potentially unwanted software, but no one responded to this detection. The sandbox had been producing warnings for some time before the breach was detected due to fraudulent card transactions by an external bank.
+**Skenario #3**: Sebuah pengecer besar AS dilaporkan memiliki analisis malware internal Sandbox menganalisis lampiran. Perangkat lunak Sandbox telah mendeteksi perangkat lunak yang mungkin tidak diinginkan, tetapi tidak ada yang menanggapi deteksi ini. Sandbox telah mengeluarkan peringatan untuk beberapa waktu sebelum pelanggaran terdeteksi karena transaksi kartu yang curang oleh bank eksternal.
 
-## References
+## Referensi
 
 ### OWASP
 
