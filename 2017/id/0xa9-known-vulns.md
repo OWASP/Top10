@@ -5,16 +5,16 @@
 | Access Lvl : Exploitability 2 | Prevalence 3 : Detectability 2 | Technical 2 : Business |
 | Meskipun mudah untuk menemukan eksploitasi yang telah tercatat dalam banyak kasus kerentanan yang telah diketahui, kerentanan lain yang belum diketahui membutuhkan usaha yang lebih dalam mengembangkan sebuah Custom Exploit. | Tingkat kelaziman mengenai permasalahan ini sangat luas. Komponen yang sulit dalam pola pengembangan dapat menyebabkan tim pengembangan bahkan kurang mengerti mengenai komponen yang mereka gunakan dalam aplikasi mereka atau pada API, apalagi menjaganya agar tetap mutakhir. beberapa sistem pemindai seperti retire.js dapat membantu dalam pendeteksian, tetapi dalam mengetahui exploitability membutuhkan upaya tambahan | sementara itu, dalam beberapa kasus kerentanan yang diketahui hanya menyebabkan dampak kecil, beberapa pelanggaran terbesar hingga saat ini mengandalkan pengeksploitasian kerentanan yang ada dalam komponen, bergantung dalam aset yang anda sedang lindungi, kemungkinan resiko seperti ini harus berada pada urutan teratas dalam daftar kerentanan |
 
-## Is the Application Vulnerable?
+## Apakah Aplikasi Rentan?
 
-You are likely vulnerable:
+Kemungkinan besar anda rentan:
 
-* If you do not know the versions of all components you use (both client-side and server-side). This includes components you directly use as well as nested dependencies.
-* If software is vulnerable, unsupported, or out of date. This includes the OS, web/application server, database management system (DBMS), applications, APIs and all components, runtime environments, and libraries.
-* If you do not scan for vulnerabilities regularly and subscribe to security bulletins related to the components you use.
-* If you do not fix or upgrade the underlying platform, frameworks, and dependencies in a risk-based, timely fashion. This commonly happens in environments when patching is a monthly or quarterly task under change control, which leaves organizations open to many days or months of unnecessary exposure to fixed vulnerabilities.
-* If software developers do not test the compatibility of updated, upgraded, or patched libraries.
-* If you do not secure the components' configurations (see **A6:2017-Security Misconfiguration**).
+* Jika anda tidak mengetahui versi dari semua komponen yang anda gunakan (baik sisi klien maupun sisi server). Ini termasuk komponen yang langsung anda gunakan serta dependensi bertingkat.
+* Jika perangkat lunak rentan, tidak didukung, atau ketinggalan zaman. Seperti OS, server web / aplikasi, sistem manajemen basis data (DBMS), aplikasi, API dan semua komponen, lingkungan yang berjalan, dan pustaka.
+* Jika Anda tidak memindai kerentanan secara teratur dan berlangganan buletin keamanan yang terkait dengan komponen yang Anda gunakan.
+* Jika Anda tidak memperbaiki atau meningkatkan platform, kerangka kerja, dan dependensi yang mendasarinya secara tepat waktu dan berbasis risiko. Ini biasanya terjadi di lingkungan ketika perbaikan sedang dilakukan setiap bulan atau tiga bulan sekali dalam perubahan kendali, yang membuat organisasi terbuka untuk beberapa hari atau bulan dari keterpaparan yang tidak perlu terhadap kerentanan tetap.
+* Jika pengembang perangkat lunak tidak menguji kompatibilitas pustaka yang diperbarui, ditingkatkan, atau diperbaiki.
+* Jika Anda tidak mengamankan konfigurasi komponen (see **A6:2017-Security Misconfiguration**).
 
 ## Cara Untuk Mencegah
 
@@ -28,16 +28,16 @@ Seharusnya ada proses manajemen patch untuk:
 
 Setiap organisasi harus memastikan bahwa ada rencana berkelanjutan untuk memonitoring, triaging, dan menerapkan update atau perubahan konfigurasi selama masa pakai aplikasi atau portfolio.
 
-## Example Attack Scenarios
+## Contoh Skenario Serangan
 
-**Scenario #1**: Components typically run with the same privileges as the application itself, so flaws in any component can result in serious impact. Such flaws can be accidental (e.g. coding error) or intentional (e.g. backdoor in component). Some example exploitable component vulnerabilities discovered are:
+**Skenario #1**: Komponen biasanya berjalan dengan hak yang sama seperti aplikasi itu sendiri, jadi kekurangan pada komponen apa pun dapat mengakibatkan dampak yang serius. Kondisi semacam itu bisa tidak disengaja (mis. Kesalahan pada sisi code) atau disengaja (mis. Pintu belakang di dalam komponen). Beberapa contoh kerentanan komponen yang dapat dieksploitasi yang ditemukan adalah:
 
-* [CVE-2017-5638](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5638), a Struts 2 remote code execution vulnerability that enables execution of arbitrary code on the server, has been blamed for significant breaches.
-* While [internet of things (IoT)](https://en.wikipedia.org/wiki/Internet_of_things) are frequently difficult or impossible to patch, the importance of patching them can be great (e.g. biomedical devices).
+* [CVE-2017-5638](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5638), kerentanan eksekusi kode jarak jauh Struts 2 yang memungkinkan eksekusi kode arbitrer pada server, telah disalahkan atas pelanggaran yang signifikan.
+* Meskipun [internet of things (IoT)](https://en.wikipedia.org/wiki/Internet_of_things) seringkali sulit atau tidak mungkin untuk diperbaiki, pentingnya memperbaiki mereka bisa jadi sangat penting (mis. Perangkat biomedis).
 
-There are automated tools to help attackers find unpatched or misconfigured systems. For example, the [Shodan IoT search engine](https://www.shodan.io/report/89bnfUyJ) can help you find devices that still suffer from [Heartbleed](https://en.wikipedia.org/wiki/Heartbleed) vulnerability that was patched in April 2014.
+Ada alat otomatis untuk membantu penyerang menemukan sistem yang belum diperbaiki atau salah dalam konfigurasi. Contoh, [mesin telusur Shodan IoT](https://www.shodan.io/report/89bnfUyJ) dapat membantu Anda menemukan perangkat yang masih terkena [Heartbleed] [Heartbleed](https://en.wikipedia.org/wiki/Heartbleed) kerentanan yang telah di-patch pada April 2014.
 
-## References
+## Referensi
 
 ### OWASP
 
