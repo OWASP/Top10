@@ -18,17 +18,17 @@ Pencatatan(logging), deteksi, pemantauan(monitoring), dan respons aktif yang tid
 
 Anda rentan terhadap kebocoran informasi jika Anda membuat pencatatan log dan peringatan event terlihat oleh pengguna atau penyerang (lihat A3: Keterpaparan Informasi Sensitif 2017).
 
-## Bagaimana Mencegahnya
+## Bagaimana Cara Mencegah?
 
-Sesuai dengan risiko data yang disimpan atau diproses oleh aplikasi:
+Pada setiap resiko dari data yang disetorkan atau diproses oleh aplikasi :
 
-* Pastikan semua login, kegagalan kontrol akses, dan kegagalan validasi input pada sisi server dapat dicatat dengan konteks pengguna yang memadai untuk mengidentifikasi akun yang mencurigakan atau berbahaya, dan ditahan untuk waktu yang cukup untuk memungkinkan analisis forensik yang tertunda.
-* Pastikan bahwa log dibuat dalam format yang dapat dengan mudah digunakan oleh centralized log management solutions.
-* Pastikan transaksi bernilai tinggi memiliki jejak audit dengan kontrol integritas untuk mencegah gangguan atau penghapusan, seperti append-only tabel database atau yang serupa. E
-* Buat pemantauan dan peringatan yang efektif sehingga aktivitas mencurigakan terdeteksi dan ditanggapi secara tepat waktu. Establish effective monitoring and alerting such that suspicious activities are detected and responded to in a timely fashion.
-* Menetapkan atau mengadopsi respons insiden dan rencana pemulihan, seperti [NIST 800-61 rev 2](https://csrc.nist.gov/publications/detail/sp/800-61/rev-2/final) atau yang lebih baru.
+* Pastikan semua login, kegagalan kontrol akses, dan kegagalan validasi input dari sisi server dapat dapat dimasukkan dengan konteks yang cukup dari user untuk mengidentifikasi akun mencurigakan atau berbahaya, dan ditahan untuk waktu yang cukup untuk mengizinkan analisa forensik yang tertunda.
+* Pastikan bahwa log dibuat dalam format yang dapat dengan mudah digunakan oleh solusi log manajemen utama.
+* Pastikan transaksi bernilai tinggi memiliki jejak audit dengan kontrol integritas untuk mencegah kerusakan atau terhapus, seperti tabel database yang hanya bisa menambahkan data atau semacamnya.
+* Buat monitoring dan peringatan yang efektif agar aktivitas mencurigakan dapat terdeteksi dan direspon secara tepat waktu.
+* Buat atau adopsi sebuah respon kejadian dan rencana pemulihan, seperti [NIST 800-61 rev 2](https://csrc.nist.gov/publications/detail/sp/800-61/rev-2/final) atau nanti.
 
-Terdapat komersial dan aplikasi open source proteksi framework seperti [OWASP AppSensor](https://www.owasp.org/index.php/OWASP_AppSensor_Project), web aplikasi firewall seperti [ModSecurity with the OWASP ModSecurity Core Rule Set](https://www.owasp.org/index.php/Category:OWASP_ModSecurity_Core_Rule_Set_Project), dan perangkat lunak korelasi log dengan kostum dashboard dan peringatan. 
+Tersedia aplikasi framework proteksi baik komersial maupun opensource seperti [OWASP AppSensor](https://www.owasp.org/index.php/OWASP_AppSensor_Project), aplikasi web firewalls seperti [ModSecurity with the OWASP ModSecurity Core Rule Set](https://www.owasp.org/index.php/Category:OWASP_ModSecurity_Core_Rule_Set_Project), dan perangkat lunak korelasi log dengan dasboard dan peringatan yang bisa dibuat sesuai keinginan. 
 
 ## Contoh Skenario Serangan
 
