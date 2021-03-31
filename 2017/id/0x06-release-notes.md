@@ -23,7 +23,7 @@ A10: 2017-Pembukaan dan Pemantauan Tidak Cukup, kurangnya yang dapat mencegah at
 
 ## Digabung atau dihilangkan, tapi tidak dilupakan
 
-A4-Referensi Objek Langsung Tidak aman dan A7-Kehilangan fungsi level akses kontrol digabungkan menjadi A5: 2017- Kerusakan Akses Kontrol.
+A4-Referensi Objek Langsung Tidak aman dan A7-Kehilangan fungsi level akses kontrol digabungkan menjadi A5: 2017-Kontrol Akses Yang Buruk.
 A8-Cross-Site Request Forgery (CSRF), karena banyak kerangka mencakup pertahanan CSRF (https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)), hanya ditemukan 5% aplikasi.
 A10-Unvalidated Redirects and Forwards, sementara ditemukan di sekitar 8% aplikasi, diarsipkan secara keseluruhan oleh XXE.
 
