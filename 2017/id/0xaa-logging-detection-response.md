@@ -1,35 +1,34 @@
 # A10:2017 Insufficient Logging and Monitoring
 
-| Threat agents/Attack vectors | Security Weakness           | Impacts               |
+| Ancaman/Vektor Serangan | Kelemahan Keamanan           | Dampak               |
 | -- | -- | -- |
-| Access Lvl : Exploitability 2 | Prevalence 3 : Detectability 2 | Technical 2 : Business |
-| Exploitation of insufficient logging and monitoring is the bedrock of nearly every major incident. Attackers rely on the lack of monitoring and timely response to achieve their goals without being detected. | This issue is included in the Top 10 based on an [industry survey](https://owasp.blogspot.com/2017/08/owasp-top-10-2017-project-update.html). One strategy for determining if you have sufficient monitoring is to examine the logs following penetration testing. The testers' actions should be recorded sufficiently to understand what damages they may have inflicted. | Most successful attacks start with vulnerability probing. Allowing such probes to continue can raise the likelihood of successful exploit to nearly 100%. In 2016, identifying a breach took an [average of 191 days](https://www-01.ibm.com/common/ssi/cgi-bin/ssialias?htmlfid=SEL03130WWEN&) – plenty of time for damage to be inflicted. |
+| Lvl Akses : Dapat Dieksploitasi 2 | Prevalence 3 : Detectability 1 | Technical 2 : Business |
+| Eksploitasi logging dan pemantauan/monitoring yang tidak memadai adalah awal/fondasi dari hampir setiap insiden besar. Penyerang bergantung pada kurangnya pemantauan/monitoring dan respon yang tepat waktu untuk mencapai tujuan mereka tanpa terdeteksi. | Issue tersebut termasuk dalam top 10 berdasarkan [industry survey](https://owasp.blogspot.com/2017/08/owasp-top-10-2017-project-update.html). Salah satu strategi untuk menentukan apakah Anda memiliki pemantauan(monitoring) yang memadai adalah dengan memeriksa log setelah pengujian penetrasi(penetration testing). Tindakan tester/penguji harus direkam secukupnya untuk memahami kerusakan apa yang mungkin mereka timbulkan | Serangan yang paling sukses dimulai dengan pemeriksaan kerentanan. Membiarkan probe/pemeriksaan seperti itu terus-menerus dapat meningkatkan kemungkinan eksploitasi yang berhasil hingga hampir 100%. Pada tahun 2016, mengidentifikasi pelanggaran membutuhkan [rata-rata 191 hari](https://www-01.ibm.com/common/ssi/cgi-bin/ssialias?htmlfid=SEL03130WWEN&) – banyak waktu untuk menimbulkan kerusakan. |
 
-## Apakah Aplikasi Rentan ?
+## Apakah Aplikasi Tersebut Rentan?
 
-Tidak cukupnya logging, deteksi, monitoring dan respon aktif akan terjadi jika :
+Pencatatan(logging), deteksi, pemantauan(monitoring), dan respons aktif yang tidak memadai terjadi saat:
 
-- Segala proses yang memerlukan pemeriksaan / audit, seperti login, login yang gagal, dan transaksi yang bernilai tinggi tidak dimasukkan ke log.
-- Peringatan dan error menampilkan message no, inadequate, atau unclear log.
-- Tidak memonitor aktivitas mencurigakan pada log aplikasi dan APIs.
-- Log hanya disimpan secara local.
-- Tidak bekerjanya atau kurang efektifnya alerting thresholds dan response escalation processes.
-- Testing Pembobolan (Penetration Testing) dan scan dengan menggunakan [DAST](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools) tools (seperti [OWASP ZAP](https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project)) tidak menimbulkan sebuah peringatan.
-- Aplikasi tidak dapat mendeteksi atau memberitahu serangan aktif secara real time atau mendekati real time.
+* Kejadian yang dapat diaudit, seperti login, kegagalan login, dan transaksi bernilai tinggi tidak dicatat.
+* Pesan Log untuk peringatan dan kesalahan tidak ada, tidak memadai, atau tidak jelas.
+* Logs hanya disimpan secara local.
+* Ambang peringatan yang tepat dan proses eskalasi respons tidak tersedia atau efektif. Appropriate alerting thresholds and response escalation processes are not in place or effective.
+* Penetrasi Testing dan scan dengan [DAST](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools) tools (seperti [OWASP ZAP](https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project)) tidak memacu peringatan.
+* Aplikasi tidak dapat mendeteksi, meningkatkan, atau memperingatkan serangan aktif dalam waktu real-time atau mendekati real-time.
 
-Anda akan rentan terhadap bocornya informasi jika event logging dan pemberitahuan (alerting) dapat dilihat oleh seorang user atau attacker (dapat dilihat : A3:2017-Sensitive Information Exposure).
+Anda rentan terhadap kebocoran informasi jika Anda membuat pencatatan log dan peringatan event terlihat oleh pengguna atau penyerang (lihat A3: Keterpaparan Informasi Sensitif 2017).
 
-## How To Prevent
+## Bagaimana Mencegahnya
 
-As per the risk of the data stored or processed by the application:
+Sesuai dengan risiko data yang disimpan atau diproses oleh aplikasi:
 
-- Ensure all login, access control failures, and server-side input validation failures can be logged with sufficient user context to identify suspicious or malicious accounts, and held for sufficient time to allow delayed forensic analysis.
-- Ensure that logs are generated in a format that can be easily consumed by a centralized log management solutions.
-- Ensure high-value transactions have an audit trail with integrity controls to prevent tampering or deletion, such as append-only database tables or similar.
-- Establish effective monitoring and alerting such that suspicious activities are detected and responded to in a timely fashion.
-- Establish or adopt an incident response and recovery plan, such as [NIST 800-61 rev 2](https://csrc.nist.gov/publications/detail/sp/800-61/rev-2/final) or later.
+* Pastikan semua login, kegagalan kontrol akses, dan kegagalan validasi input pada sisi server dapat dicatat dengan konteks pengguna yang memadai untuk mengidentifikasi akun yang mencurigakan atau berbahaya, dan ditahan untuk waktu yang cukup untuk memungkinkan analisis forensik yang tertunda.
+* Pastikan bahwa log dibuat dalam format yang dapat dengan mudah digunakan oleh centralized log management solutions.
+* Pastikan transaksi bernilai tinggi memiliki jejak audit dengan kontrol integritas untuk mencegah gangguan atau penghapusan, seperti append-only tabel database atau yang serupa. E
+* Buat pemantauan dan peringatan yang efektif sehingga aktivitas mencurigakan terdeteksi dan ditanggapi secara tepat waktu. Establish effective monitoring and alerting such that suspicious activities are detected and responded to in a timely fashion.
+* Menetapkan atau mengadopsi respons insiden dan rencana pemulihan, seperti [NIST 800-61 rev 2](https://csrc.nist.gov/publications/detail/sp/800-61/rev-2/final) atau yang lebih baru.
 
-There are commercial and open source application protection frameworks such as [OWASP AppSensor](https://www.owasp.org/index.php/OWASP_AppSensor_Project), web application firewalls such as [ModSecurity with the OWASP ModSecurity Core Rule Set](https://www.owasp.org/index.php/Category:OWASP_ModSecurity_Core_Rule_Set_Project), and log correlation software with custom dashboards and alerting.
+Terdapat komersial dan aplikasi open source proteksi framework seperti [OWASP AppSensor](https://www.owasp.org/index.php/OWASP_AppSensor_Project), web aplikasi firewall seperti [ModSecurity with the OWASP ModSecurity Core Rule Set](https://www.owasp.org/index.php/Category:OWASP_ModSecurity_Core_Rule_Set_Project), dan perangkat lunak korelasi log dengan kostum dashboard dan peringatan. 
 
 ## Contoh Skenario Serangan
 
@@ -38,6 +37,7 @@ There are commercial and open source application protection frameworks such as 
 **Skenario #2**: Penyerang menggunakan pemindaian untuk pengguna menggunakan sandi umum. Mereka dapat mengambil alih semua akun menggunakan kata sandi ini. Untuk semua pengguna lain, pemindaian ini hanya menyisakan satu login palsu. Setelah beberapa hari, ini mungkin akan diulangi dengan sandi yang berbeda.
 
 **Skenario #3**: Sebuah pengecer besar AS dilaporkan memiliki analisis malware internal Sandbox menganalisis lampiran. Perangkat lunak Sandbox telah mendeteksi perangkat lunak yang mungkin tidak diinginkan, tetapi tidak ada yang menanggapi deteksi ini. Sandbox telah mengeluarkan peringatan untuk beberapa waktu sebelum pelanggaran terdeteksi karena transaksi kartu yang curang oleh bank eksternal.
+
 
 ## Referensi
 
