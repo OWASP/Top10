@@ -33,7 +33,7 @@ Lakukan hal berikut, setidaknya minimal kita harus dan baca rujukannya:
 
 ## Contoh Skenario Serangan
 
-**Skenario #1**: Aplikasi mengenkripsi nomor kartu kredit dalam database menggunakan enkripsi dengan basis data otomatis. Namun, data ini secara otomatis didenkripsi saat diambil, memungkinkan celah unutk injeksi SQL untuk mengambil nomor kartu kredit dengan tulisan yang jelas.
+**Skenario #1**: Aplikasi mengenkripsi nomor kartu kredit dalam database menggunakan enkripsi dengan basis data otomatis. Namun, data ini secara otomatis didekripsi saat diambil, memungkinkan celah untuk injeksi SQL untuk mengambil nomor kartu kredit dengan tulisan yang jelas.
 
 **Skenario #2**: Situs tidak menggunakan atau memberlakukan TLS untuk semua halaman atau enkripsinya lemah. Penyerang memonitor lalu lintas jaringan (misalnya di jaringan nirkabel yang tidak aman), menurunkan koneksi dari HTTPS ke HTTP, mencegat permintaan, dan mencuri cookie dari pengguna. Penyerang kemudian memutar ulang cookie ini dan membajak sesi pengguna (dikonfirmasi), mengakses atau memodifikasi data pribadi pengguna. Alih-alih di atas, mereka dapat mengubah semua data yang diangkut, mis. penerima transfer uang
 
