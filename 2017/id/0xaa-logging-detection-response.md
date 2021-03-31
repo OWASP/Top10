@@ -9,7 +9,7 @@
 
 Kurangnya dalam logging, deteksi, monitoring dan respon aktif dapat terjadi setiap waktu :
 
-* Peristiwa(Events) yang dapat diaudit, seperti login, gagal login, dan transaksi yang bernilai tinggi tidak masuk dalam log.
+* Peristiwa(Events) yang dapat diaudit, seperti login, gagal login, dan transaksi yang bernilai tinggi tidak masuk dalam log.cd
 * Warning atau Error yang tidak menghasilkan, kurang nya informasi log, atau informasi log yang kurang jelas.
 * Log dari aplikasi dan API tidak dimonitor untuk aktifitas mencurigakan.
 * Log Hanya disimpan secara lokal.
