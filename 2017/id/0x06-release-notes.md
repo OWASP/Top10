@@ -21,9 +21,9 @@ Kami meminta masyarakat untuk memberikan wawasan tentang dua kategori kelemahan 
 A8: 2017-Insecure Deserialization, yang memungkinkan eksekusi kode jarak jauh atau manipulasi objek sensitif pada platform yang terpengaruh.
 A10: 2017-Pembukaan dan Pemantauan Tidak Cukup, kurangnya yang dapat mencegah atau secara signifikan menunda aktivitas berbahaya dan deteksi pelanggaran, respon insiden, dan forensik digital.
 
-## Bergabung atau pensiun, tapi tidak dilupakan
+## Digabung atau dihilangkan, tapi tidak dilupakan
 
-Referensi Objek Langsung A4-Tidak aman dan A7-Hilang fungsi level akses kontrol digabungkan menjadi A5: 2017- kontrol akses rusak.
+A4-Referensi Objek Langsung Tidak aman dan A7-Kehilangan fungsi level akses kontrol digabungkan menjadi A5: 2017- Kerusakan Akses Kontrol.
 A8-Cross-Site Request Forgery (CSRF), karena banyak kerangka mencakup pertahanan CSRF (https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)), hanya ditemukan 5% aplikasi.
 A10-Unvalidated Redirects and Forwards, sementara ditemukan di sekitar 8% aplikasi, diarsipkan secara keseluruhan oleh XXE.
 
