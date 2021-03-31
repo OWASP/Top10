@@ -1,54 +1,67 @@
 # A10:2017 Kurangnya dalam Melakukan Logging dan Monitoring
 
-| Arah Serang/Hal Pengancam | Kelemahan pada Security         | Dampak               |
+| Ancaman/Vektor Serangan | Kelemahan Keamanan           | Dampak               |
 | -- | -- | -- |
-| Tingkat Dalam Pengaksesan : Tingkat 2 Untuk Dapat di Eksploitasi (Exploitability 2) | Prevalence(Kelaziman) 3 : Tingkat 1 untuk dapat di Deteksi (Detectability 1)| Technical(Teknis) 2 : Pada kalangan Bisnis |
-| Eksploitasi dari Kurangnya kita dalam melakukan logging dan monitoring adalah akar dari hampir kebanyakan insiden besar. Penyerang(Attackers) bergantung pada kurangnya kita dalam melakukan monitoring dan mereka merespon secara tepat waktu untuk melancarkan serangan sehingga dapat mencapai tujuan mereka tanpa terdeteksi. | isu ini telah masuk dalam Owasp Top 10 berdasarkan [survey perusahaan](https://owasp.blogspot.com/2017/08/owasp-top-10-2017-project-update.html). Salah satu strategi untuk memastikan bila kita memliki monitoring yang cukup adalah dengan memeriksa log hasil dari Penetration Testing. Aksi dari Orang(Tester) yang melakukan test harus di rekam secukup mungkin agar kita dapat paham kerugian atau kerusakan apa saja yang mungkin terjadi. | Kebanyakan Serangan yang sukses diawali dengan kerentanan dalam penyelidikan. Membiarkan cara penyelidikan seperti itu dapat meningkatkan kemungkinan hampir 100% dari kesuksesan untuk eksploitasi. Di Tahun 2016, untuk mengidentifikasi sebuah kebobolan keamanan membutuhkan waktu setidaknya [Secara rata-rata 191 Hari](https://www-01.ibm.com/common/ssi/cgi-bin/ssialias?htmlfid=SEL03130WWEN&) – Hal ini memakan waktu yang cukup lama bukan untuk kerugian/kerusakan yang telah ditimbulkan dari sebuah peretasan. |
+| Lvl Akses : Dapat Dieksploitasi 2 | Prevalence 3 : Detectability 1 | Technical 2 : Business |
+| Eksploitasi logging dan pemantauan/monitoring yang tidak memadai adalah awal/fondasi dari hampir setiap insiden besar. Penyerang bergantung pada kurangnya pemantauan/monitoring dan respon yang tepat waktu untuk mencapai tujuan mereka tanpa terdeteksi. | Issue tersebut termasuk dalam top 10 berdasarkan [industry survey](https://owasp.blogspot.com/2017/08/owasp-top-10-2017-project-update.html). Salah satu strategi untuk menentukan apakah Anda memiliki pemantauan(monitoring) yang memadai adalah dengan memeriksa log setelah pengujian penetrasi(penetration testing). Tindakan tester/penguji harus direkam secukupnya untuk memahami kerusakan apa yang mungkin mereka timbulkan | Serangan yang paling sukses dimulai dengan pemeriksaan kerentanan. Membiarkan probe/pemeriksaan seperti itu terus-menerus dapat meningkatkan kemungkinan eksploitasi yang berhasil hingga hampir 100%. Pada tahun 2016, mengidentifikasi pelanggaran membutuhkan [rata-rata 191 hari](https://www-01.ibm.com/common/ssi/cgi-bin/ssialias?htmlfid=SEL03130WWEN&) – banyak waktu untuk menimbulkan kerusakan. |
 
-## Bagaimana Sebuah Aplikasi dapat dikatakan Rentan?
+## Apakah Aplikasi Tersebut Rentan?
 
-Kurangnya dalam logging, deteksi, monitoring dan respon aktif dapat terjadi setiap waktu :
+Pencatatan(logging), deteksi, pemantauan(monitoring), dan respons aktif yang tidak memadai terjadi saat:
 
-* Peristiwa(Events) yang dapat diaudit, seperti login, gagal login, dan transaksi yang bernilai tinggi tidak masuk dalam log.cd
-* Warning atau Error yang tidak menghasilkan, kurang nya informasi log, atau informasi log yang kurang jelas.
-* Log dari aplikasi dan API tidak dimonitor untuk aktifitas mencurigakan.
-* Log Hanya disimpan secara lokal.
-* threshold untuk peringatan dan sistem eskalasi respon sedang tidak aktif atau tidak efektif.
-* Tes Penetrasi dan scan oleh [DAST](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools) atau alat (seperti [OWASP ZAP](https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project)) tidak mengaktifkan peringatan apapun.
-* Aplikasi tidak dapat mendeteksi, eskalasi, atau memberi peringatan untuk mendeteksi serangan aktif dalam kondisi real time atau bahkan mendekati real time.
+* Kejadian yang dapat diaudit, seperti login, kegagalan login, dan transaksi bernilai tinggi tidak dicatat.
+* Pesan Log untuk peringatan dan kesalahan tidak ada, tidak memadai, atau tidak jelas.
+* Logs hanya disimpan secara local.
+* Ambang peringatan yang tepat dan proses eskalasi respons tidak tersedia atau efektif. Appropriate alerting thresholds and response escalation processes are not in place or effective.
+* Penetrasi Testing dan scan dengan [DAST](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools) tools (seperti [OWASP ZAP](https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project)) tidak memacu peringatan.
+* Aplikasi tidak dapat mendeteksi, meningkatkan, atau memperingatkan serangan aktif dalam waktu real-time atau mendekati real-time.
 
-Kita bahkan rentan akan kebocoran informasi bila kita membuat log dan peringatan yang dapat terlihat ke sebuah user atau bahkan penyerang dengan akun user (lihat A3:2017-Sensitive Information Exposure).
+Anda rentan terhadap kebocoran informasi jika Anda membuat pencatatan log dan peringatan event terlihat oleh pengguna atau penyerang (lihat A3: Keterpaparan Informasi Sensitif 2017).
 
-## Cara Untuk Mencegah
+## Bagaimana Cara Mencegah?
 
-Dari setiap resiko dari data yang tersimpan atau diproses oleh aplikasi kita juga dapat melakukan hal sebagai berikut: 
+Pada setiap resiko dari data yang disetorkan atau diproses oleh aplikasi :
 
-* Memastikan semua fitur login, kegagalan akses kontrol dan kegagalan validasi input dari server-side memiliki log dengan informasi user context yang cukup dan untuk mengidentifikasi akun yang mencurigakan atau akun jahat, serta dengan adanya waktu dan informasi yang cukup dapat digunakan untuk analisis forensik.
-* Memastikan log tidak dibuat dengan sebuah format yang dapat dicerna atau dikonsumsi oleh sebuah centralized log management solutions(Log Management yang telah di sentralisasi).
-* Memastikan transaksi dengan nilai tinggi memiliki jejak(trail) dengan sistem kontrol yang terintegritas untuk mencegah gangguan atau bahkan terhapus, seperti database table yang hanya bisa menambah data dan sejenisnya. 
-* Membentuk monitoring yang efektif dan sistem peringatan untuk aktifitas yang mencurigakan sehingga dapat terdeksi dan dapat merespon dengan tepat waktu.
-* Membuat atau mengadopsi sebuah respon insiden dan rencana pemulihan(Recovery Plant) bila kita mendapat kerusakan. Seperti [NIST 800-61 rev 2](https://csrc.nist.gov/publications/detail/sp/800-61/rev-2/final) atau setelahnya.
+* Pastikan semua login, kegagalan kontrol akses, dan kegagalan validasi input dari sisi server dapat dapat dimasukkan dengan konteks yang cukup dari user untuk mengidentifikasi akun mencurigakan atau berbahaya, dan ditahan untuk waktu yang cukup untuk mengizinkan analisa forensik yang tertunda.
+* Pastikan bahwa log dibuat dalam format yang dapat dengan mudah digunakan oleh solusi log manajemen utama.
+* Pastikan transaksi bernilai tinggi memiliki jejak audit dengan kontrol integritas untuk mencegah kerusakan atau terhapus, seperti tabel database yang hanya bisa menambahkan data atau semacamnya.
+* Buat monitoring dan peringatan yang efektif agar aktivitas mencurigakan dapat terdeteksi dan direspon secara tepat waktu.
+* Buat atau adopsi sebuah respon kejadian dan rencana pemulihan, seperti [NIST 800-61 rev 2](https://csrc.nist.gov/publications/detail/sp/800-61/rev-2/final) atau nanti.
 
-Ada beberapa framework aplikasi komersial dan open-source untuk proteksi seperti [OWASP AppSensor](https://www.owasp.org/index.php/OWASP_AppSensor_Project), firewall untuk aplikasi web seperti [ModSecurity dengan kumpulan OWASP ModSecurity](https://www.owasp.org/index.php/Category:OWASP_ModSecurity_Core_Rule_Set_Project), dan software korelasi log dengan custom dashboard dan sistem peringatan.
+Tersedia aplikasi framework proteksi baik komersial maupun opensource seperti [OWASP AppSensor](https://www.owasp.org/index.php/OWASP_AppSensor_Project), aplikasi web firewalls seperti [ModSecurity with the OWASP ModSecurity Core Rule Set](https://www.owasp.org/index.php/Category:OWASP_ModSecurity_Core_Rule_Set_Project), dan perangkat lunak korelasi log dengan dasboard dan peringatan yang bisa dibuat sesuai keinginan. 
 
-## Contoh dari Skenario Serangan
+## Contoh Skenario Serangan
 
-**Skenario #1**: Sebuah Forum Project Open Source yang dijalankan oleh sebuah tim kecil telah diretas menggunakan kecacatan yang berada di software itu. Penyerangnya berhasil untuk menghapus source code dari repositori interna yang mengandung source code dari versi terbaru, dan menghapus seluruh konten dari forum tersebut. Meskipun source nya dapat dipulihkan atau direstore, Kurangnya dalam memonitor, logging atau peringatan menyebabkan kebobolan yang menimbulkan kerusakan cukup parah. Forum dari Project Software tersebut tidak aktif lagi dikarenkan isu ini.
+**Skenario #1**: Sebuah forum proyek Open Source Perangkat lunak yang dijalankan oleh tim kecil diretas menggunakan kecacatan pada perangkat lunaknya. Para penyerang berhasil menghapus repositori kode sumber internal yang berisi versi berikutnya, dan semua konten forum. Meskipun sumber dapat dipulihkan, kurangnya pemantauan, penebangan, atau peringatan menyebabkan pelanggaran yang jauh lebih buruk.Forum proyek perangkat lunak tidak lagi aktif karena masalah ini.
 
-**Skenario #2**: Penyerang menggunakan scan ke akun pengguna dengan kombinasi password yang umum. Mereka dapat mengambil semua akun yang menggunakan password ini. Untuk semua user lain, scan ini hanya meninggalkan track login yang gagal. Setelah beberapa hari, hal ini dilakukan kembali dengan password yang berbeda dan semua akun dengan password ini dapat terambil.
+**Skenario #2**: Penyerang menggunakan pemindaian untuk pengguna menggunakan sandi umum. Mereka dapat mengambil alih semua akun menggunakan kata sandi ini. Untuk semua pengguna lain, pemindaian ini hanya menyisakan satu login palsu. Setelah beberapa hari, ini mungkin akan diulangi dengan sandi yang berbeda.
 
-**Scenario #3**: Sebuah retailer besar melaporkan bahwa mereka memiliki sebuah sandbox analisa internal malware. sandbox software ini telah mendeteksi potensi software tak diinginkan, tapi tidak ada yang merespon dengan deteksi dari software ini. Bahkan sandbox software ini telah memproduksi peringatan sebelum kebobolan keamanan telah terdeteksi yang disebabkan oleh transaksi penipuan dari bank eksternal.
+**Skenario #3**: Sebuah pengecer besar AS dilaporkan memiliki analisis malware internal Sandbox menganalisis lampiran. Perangkat lunak Sandbox telah mendeteksi perangkat lunak yang mungkin tidak diinginkan, tetapi tidak ada yang menanggapi deteksi ini. Sandbox telah mengeluarkan peringatan untuk beberapa waktu sebelum pelanggaran terdeteksi karena transaksi kartu yang curang oleh bank eksternal.
 
+
+>>>>>>> upstream/master
 ## Referensi
 
 ### OWASP
 
+<<<<<<< HEAD
 * [OWASP Kontrol Proaktif: Mengimplementasi Logging dan Deteksi Gangguan](https://www.owasp.org/index.php/OWASP_Proactive_Controls#8:_Implement_Logging_and_Intrusion_Detection)
 * [OWASP Application Security Verification Standard: V8 Logging and Monitoring](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
 * [OWASP Panduan Testing: Testing untuk Kode Error yang Mendetail](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
 * [OWASP Cheat Sheet: Logging](https://www.owasp.org/index.php/Logging_Cheat_Sheet)
+=======
+- [OWASP Proactive Controls: Implement Logging and Intrusion Detection](https://www.owasp.org/index.php/OWASP_Proactive_Controls#8:_Implement_Logging_and_Intrusion_Detection)
+- [OWASP Application Security Verification Standard: V8 Logging and Monitoring](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
+- [OWASP Testing Guide: Testing for Detailed Error Code](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
+- [OWASP Cheat Sheet: Logging](https://www.owasp.org/index.php/Logging_Cheat_Sheet)
+>>>>>>> upstream/master
 
 ### Eksternal
 
+<<<<<<< HEAD
 * [CWE-223: Omission of Security-relevant Information](https://cwe.mitre.org/data/definitions/223.html)
 * [CWE-778: Kurangnya Logging](https://cwe.mitre.org/data/definitions/778.html)
+=======
+- [CWE-223: Omission of Security-relevant Information](https://cwe.mitre.org/data/definitions/223.html)
+- [CWE-778: Insufficient Logging](https://cwe.mitre.org/data/definitions/778.html)
+>>>>>>> upstream/master
