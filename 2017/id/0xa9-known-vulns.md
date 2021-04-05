@@ -5,16 +5,16 @@
 | Access Lvl : Exploitability 2 | Prevalence 3 : Detectability 2 | Technical 2 : Business |
 | Meskipun mudah untuk menemukan eksploitasi yang telah tercatat dalam banyak kasus kerentanan yang telah diketahui, kerentanan lain yang belum diketahui membutuhkan usaha yang lebih dalam mengembangkan sebuah Custom Exploit. | Tingkat kelaziman mengenai permasalahan ini sangat luas. Komponen yang sulit dalam pola pengembangan dapat menyebabkan tim pengembangan bahkan kurang mengerti mengenai komponen yang mereka gunakan dalam aplikasi mereka atau pada API, apalagi menjaganya agar tetap mutakhir. beberapa sistem pemindai seperti retire.js dapat membantu dalam pendeteksian, tetapi dalam mengetahui exploitability membutuhkan upaya tambahan | sementara itu, dalam beberapa kasus kerentanan yang diketahui hanya menyebabkan dampak kecil, beberapa pelanggaran terbesar hingga saat ini mengandalkan pengeksploitasian kerentanan yang ada dalam komponen, bergantung dalam aset yang anda sedang lindungi, kemungkinan resiko seperti ini harus berada pada urutan teratas dalam daftar kerentanan |
 
-## Apakah Aplikasi Rentan?
+## Apakah aplikasi rentan?
 
-Kemungkinan besar anda rentan:
+Tampaknya aplikasi anda rentan:
 
-* Jika anda tidak mengetahui versi dari semua komponen yang anda gunakan (baik sisi klien maupun sisi server). Ini termasuk komponen yang langsung anda gunakan serta dependensi bertingkat.
-* Jika perangkat lunak rentan, tidak didukung, atau ketinggalan zaman. Seperti OS, server web / aplikasi, sistem manajemen basis data (DBMS), aplikasi, API dan semua komponen, lingkungan yang berjalan, dan pustaka.
-* Jika Anda tidak memindai kerentanan secara teratur dan berlangganan buletin keamanan yang terkait dengan komponen yang Anda gunakan.
-* Jika Anda tidak memperbaiki atau meningkatkan platform, kerangka kerja, dan dependensi yang mendasarinya secara tepat waktu dan berbasis risiko. Ini biasanya terjadi di lingkungan ketika perbaikan sedang dilakukan setiap bulan atau tiga bulan sekali dalam perubahan kendali, yang membuat organisasi terbuka untuk beberapa hari atau bulan dari keterpaparan yang tidak perlu terhadap kerentanan tetap.
-* Jika pengembang perangkat lunak tidak menguji kompatibilitas pustaka yang diperbarui, ditingkatkan, atau diperbaiki.
-* Jika Anda tidak mengamankan konfigurasi komponen (see **A6:2017-Security Misconfiguration**).
+* Jika anda tidak tahu versi dari semua komponen yang digunakan (bagian client maupun server). Ini juga termasuk Komponen yang langsung anda gunakan sebagai komponen yang bergantung satu sama lain (nested dependencies).
+* Jika software rentan, tidak mendukung, atau masa aktif telah habis. Termasuk juga OS, web/aplikasi server, database management system (DBMS), aplikasi, API dan semua komponen, lingkungan berjalannya program, dan libarynya.
+* Jika anda tidak melakukan scanning vulnerabilities secara teratur dan mengikuti kabar keamanan  terkait dengan komponen yang anda gunakan
+* Jika anda tidak memperbaiki atau memperbarui platform yang mendasarinya, frameworks, dan dependencies yang termasuk dalam risk-based secara berkala. Ini biasanya terjadi pada environments saat penutupan celah sebagai tugas setiap bulan atau kuarter pada masa kontrol perubahan, yang mana organisasi telah membiarkan beberapa hari atau bulan akan pengerjaan tidak penting untuk pembenaran celah 
+* Jika software deplopers tidak melakukan test terhadap kesesuaian update, upgrade atau pembaruan libary.
+* Jika anda tidak mengamankan konfigurasi komponen (lihat **A6:2017-Security Misconfiguration**).
 
 ## Cara Untuk Mencegah
 
