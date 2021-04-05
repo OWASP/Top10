@@ -3,7 +3,7 @@
 | Threat agents/Attack vectors | Security Weakness           | Impacts               |
 | -- | -- | -- |
 | Akses Lvl: Eksploitasi 1 | Prevalensi 2 : Deteksi 2 | Teknis 3: Bisnis |
-| Penyerang dapat mengeksploitasi prosesor XML yang rentan jika mereka dapat mengunggah XML atau menyertakan konten yang tidak bersahabat dalam dokumen XML, mengeksploitasi kode yang rentan, ketergantungan, atau integrasi. | Masalah ini termasuk dalam Top 10 berdasarkan [Survei Industri ](https://owasp.blogspot.com/2017/08/owasp-top-10-2017-project-update.html) and bukan pada data yang dapat dihitung. Beberapa alat dapat menemukan kekurangan deserialisasi, tetapi bantuan manusia sering kali diperlukan untuk memvalidasi masalah. Diharapkan bahwa data prevalensi untuk kekurangan deserialisasi akan meningkat seiring dengan pengembangan perangkat untuk membantu mengidentifikasi dan mengatasinya. | Dampak kelemahan deserialisasi tidak bisa dilebih-lebihkan. Cacat ini dapat menyebabkan serangan eksekusi kode jarak jauh, salah satu serangan paling serius yang mungkin terjadi. Dampak bisnis bergantung pada kebutuhan perlindungan aplikasi dan data.|
+| Penyerang dapat mengeksploitasi prosesor XML yang rentan jika mereka dapat mengunggah XML atau menyertakan konten yang tidak bersahabat dalam dokumen XML, mengeksploitasi kode yang rentan, ketergantungan, atau integrasi. | Masalah ini termasuk dalam Top 10 berdasarkan [Survei Industri ](https://owasp.blogspot.com/2017/08/owasp-top-10-2017-project-update.html) dan bukan pada data yang dapat dihitung. Beberapa alat dapat menemukan kekurangan deserialisasi, tetapi bantuan manusia sering kali diperlukan untuk memvalidasi masalah. Diharapkan bahwa data prevalensi untuk kekurangan deserialisasi akan meningkat seiring dengan pengembangan perangkat untuk membantu mengidentifikasi dan mengatasinya. | Dampak kelemahan deserialisasi tidak bisa dilebih-lebihkan. Cacat ini dapat menyebabkan serangan eksekusi kode jarak jauh, salah satu serangan paling serius yang mungkin terjadi. Dampak bisnis bergantung pada kebutuhan perlindungan aplikasi dan data.|
 
 ## Apakah Aplikasi itu Rentan?
 
@@ -29,7 +29,7 @@ Satu-satunya pola arsitektur yang aman adalah tidak menerima objek serialisasi d
 Jika memungkinkan, pertimbangkan salah satu cara pencegahan dibawah ini :
 
 * Menerapkan pemeriksaan integritas seperti tanda tangan digital pada objek serial apa pun untuk mencegah pembuatan objek yang tidak terpecaya  atau gangguan data. 
-* Menerapkan batasan tipe yang ketat selama deserialization sebelum pembuatan objek karena kode biasanya mengharapkan sekumpulan kelas yang dapat ditentukan. Pengabaian  
+* Menerapkan batasan tipe yang ketat selama desentralisasi sebelum pembuatan objek karena kode biasanya mengharapkan sekumpulan kelas yang dapat ditentukan. Pengabaian  
   terhadap teknik ini telah dibuktikan, jadi tidak disarankan untuk mengandalkan hanya pada teknik ini.
 * Mengisolasi dan menjalankan kode yang deserialisasi dengan hak Environment lebih rendah jika memungkinkan
 * Pengecualian dan kegagalan deserialisasi log, seperti saat jenis yang masuk bukan jenis yang diharapkan, atau deserialisasi melontarkan pengecualian.
