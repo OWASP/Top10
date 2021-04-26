@@ -1,38 +1,37 @@
 # A4:2017 XML External Entities (XXE)
 
-| Threat agents/Attack vectors | Security Weakness           | Impacts               |
+| Agen ancaman / vektor serangan | Kelemahan Keamanan          | Dampak            |
 | -- | -- | -- |
-| Access Lvl : Exploitability 2 | Prevalence 2 : Detectability 3 | Technical 3 : Business |
-| Attackers can exploit vulnerable XML processors if they can upload XML or include hostile content in an XML document, exploiting vulnerable code, dependencies or integrations. | By default, many older XML processors allow specification of an external entity, a URI that is dereferenced and evaluated during XML processing. [SAST](https://www.owasp.org/index.php/Source_Code_Analysis_Tools) tools can discover this issue by inspecting dependencies and configuration. [DAST](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools) tools require additional manual steps to detect and exploit this issue. Manual testers need to be trained in how to test for XXE, as it not commonly tested as of 2017. | These flaws can be used to extract data, execute a remote request from the server, scan internal systems, perform a denial-of-service attack, as well as execute other attacks. |
+| Access Lvl : Eksploitasi 2 | Prevalensi 3: Deteksi 2 | Teknis 3: Bisnis |
+| Penyerang dapat mengeksploitasi yaitu pemproses XML yang rentan jika mereka dapat mengunggah XML atau menyertakan konten yang jelek atau tidak sesuai dalam dokumen sebuah XML, mereka dapat mengeksploitasi kode yang rentan, dependencies atau integrasi. | Secara default, banyak pemproses XML yang lebih lama untuk memperbolehkan spesifikasi entitas eksternal, URI yang direferensikan dan dievaluasi selama pemrosesan XML. [SAST](https://www.owasp.org/index.php/Source_Code_Analysis_Tools) tool apat dapat menemukan masalah ini dengan memeriksa dependensi dan konfigurasi. [DAST](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools) tool memerlukan langkah manual tambahan untuk mendeteksi dan memanfaatkan masalah ini. Manual tester perlu untuk dilatih tentang cara menguji XXE, karena hal ini tidak umum diuji pada tahun 2017. | Kelemahan ini dapat digunakan untuk mengekstrak data, menjalankan permintaan jarak jauh dari server, scan sistem internal, melakukan metode denial-of-service attack, serta melakukan serangan lainnya. |
 
-## Is the Application Vulnerable?
+## Apakah Aplikasi itu Rentan?
 
-Applications and in particular XML-based web services or downstream integrations might be vulnerable to attack if:
+Aplikasi dan layanan web berbasis XML tertentu atau integrasi downstream mungkin rentan terhadap serangan bilamana:
 
-* The application accepts XML directly or XML uploads, especially from untrusted sources, or inserts untrusted data into XML documents, which is then parsed by an XML processor.
-* Any of the XML processors in the application or SOAP based web services has [document type definitions (DTDs)](https://en.wikipedia.org/wiki/Document_type_definition) enabled. As the exact mechanism for disabling DTD processing varies by processor, it is good practice to consult a reference such as the [OWASP Cheat Sheet 'XXE Prevention'](https://www.owasp.org/index.php/XML_External_Entity_(XXE)_Prevention_Cheat_Sheet). 
-* If the application uses SAML for identity processing within federated security or single sign on (SSO) purposes. SAML uses XML for identity assertions, and may be vulnerable.
-* If the application uses SOAP prior to version 1.2, it is likely susceptible to XXE attacks if XML entities are being passed to the SOAP framework.
-* Being vulnerable to XXE attacks likely means that the application is vulnerable to denial of service attacks including the Billion Laughs attack
+* Aplikasi menerima XML secara langsung atau unggahan XML, terutama dari sumber yang tidak tepercaya, atau menyisipkan data yang tidak tepercaya ke dalam dokumen XML, yang kemudian diurai oleh pemroses XML.
+* Setiap prosesor XML dalam aplikasi atau layanan web berbasis SOAP memiliki [_document type definitions (DTDs_)](https://en.wikipedia.org/wiki/Document_type_definition) yang diperbolehkan. Karena mekanisme yang tepat untuk menonaktifkan pemrosesan DTD cukup bervariasi berdasarkan pemprosesan XML, praktik yang baik untuk mempelajari dapat menggunakan referensi seperti [OWASP Cheat Sheet 'XXE Prevention'](https://www.owasp.org/index.php/XML_External_Entity_(XXE)_Prevention_Cheat_Sheet). 
+* bilamana aplikasi tersebut menggunakan SAML untuk tools dalam pemrosesan identitas dalam keamanan yang telah difederalkan atau dengan single sign on(SSO). SAML menggunakan XML untuk asersi identitas, dan sangat mungkin bahwa hal itu rentan.
+* bilamana aplikasi tersebut menggunakan versi SOAP sebelumnya hingga versi 1.2, biasanya hal yang rentan serangan XXE adalah saat entitas XML dikirim atau dioper menuju framework SOAP.
+* Untuk menjadi rentan dari serangan XXE biasanya berarti aplikasi tersebut cukup rentan untuk menolak serangan service termasuk metode Billion Laughs Attack.
+## Cara untuk mencegah
 
-## How To Prevent
+Pelatihan untuk Developer sangatlah esensial untuk mengidentifikasi dan memitigasi serangan XXE. Tak hanya itu, mencegah serangan XXE membutuhkan hal sebagai berikut : 
 
-Developer training is essential to identify and mitigate XXE. Besides that, preventing XXE requires:
+* Bila memungkinkan, gunakan data format yang tidak terlalu kompleks seperti JSON, dan hindari serialisasi dari data yang bersifat sensitif.
+* patch atau tingkatkan seluru pemroses XML dan library yang digunakan oleh aplikasi tersebut atau yang berada diatas Sistem Operasi(OS). Gunakan Pemeriksa dependency. Kemudian update SOAP ke SOAP dengan versi 1.2 atau yang lebih tinggi
+* Nonaktifkan Eksternal Entitas XML dan Pemrosesan DTD di semua pengurai XML dalam aplikasi, sesuai dengan referensi [OWASP Cheat Sheet 'Pencegahan XXE'](https://www.owasp.org/index.php/XML_External_Entity_(XXE)_Prevention_Cheat_Sheet). 
+* Implementasikan daftar putih positif yang berada pada sisi server untuk validator input, pemfilteran atau sanitasi untuk mencegah data yang tidak bersahabat yang berada didalam dokumen XML.
+* Verifikasikan XML tersebut atau unggah file XSL fungsionalitas untuk memvalidasi XML yang akan masuk menggunakan validator seperti XSD atau yang lain yang persis.
+* Alat seperti SAST dapat membantu mendeteksi serangan XXE didalam sebuah source code, walau review code manual adalah alternatif terbaik dalam jumlah yang besar seperti aplikasi kompleks dengan banyak integrasi.
 
-* Whenever possible, use less complex data formats such as JSON, and avoiding serialization of sensitive data.
-* Patch or upgrade all XML processors and libraries in use by the application or on the underlying operating system. Use dependency checkers. Update SOAP to SOAP 1.2 or higher.
-* Disable XML external entity and DTD processing in all XML parsers in the application, as per the [OWASP Cheat Sheet 'XXE Prevention'](https://www.owasp.org/index.php/XML_External_Entity_(XXE)_Prevention_Cheat_Sheet). 
-* Implement positive ("whitelisting") server-side input validation, filtering, or sanitization to prevent hostile data within XML documents, headers, or nodes.
-* Verify that XML or XSL file upload functionality validates incoming XML using XSD validation or similar.
-* SAST tools can help detect XXE in source code, although manual code review is the best alternative in large, complex applications with many integrations.
+bila kontrol ini tidak dimungkinkan maka dengan mempertimbangkan untuk menggunakan virtual patching, Gateway keamanan API, atau Firewall dari APlikasi (WAFs) untuk mendeteksi, memonitor dan melakukan blocking pada serangan XXE.
 
-If these controls are not possible, consider using virtual patching, API security gateways, or Web Application Firewalls (WAFs) to detect, monitor, and block XXE attacks.
+## Contoh Skenario Serangan
 
-## Example Attack Scenarios
+Banyak sekali serangan XXE pada publik yang telah ditemukan, termasuk serangan pada perangkat tanam. XXE dapat terjadi dibanyak tempat yang tidak diekspektasikan, termasuk dependencies bersarang yang sangat dalam. Hal yang paling mudah adalah dengan mengupload sebuah file XML yang mencurigakan, bila diterima maka: 
 
-Numerous public XXE issues have been discovered, including attacking embedded devices. XXE occurs in a lot of unexpected places, including deeply nested dependencies. The easiest way is to upload a malicious XML file, if accepted:
-
-**Scenario #1**: The attacker attempts to extract data from the server:
+**Skenario #1**: Penyerang berupaya untuk mengekstrak data dari sebuah server:
 
 ```
   <?xml version="1.0" encoding="ISO-8859-1"?>
@@ -42,18 +41,18 @@ Numerous public XXE issues have been discovered, including attacking embedded de
     <foo>&xxe;</foo>
 ```
 
-**Scenario #2**: An attacker probes the server's private network by changing the above ENTITY line to:
+**Skenario #2**: Sebuah penyerang menyelidiki server pribadi dengan mengganti kode entitas di atas menjadi:
 ```
    <!ENTITY xxe SYSTEM "https://192.168.1.1/private" >]>
 ```
 
-**Scenario #3**: An attacker attempts a denial-of-service attack by including a potentially endless file:
+**Skenario #3**: Sebuah penyerang berupaya untuk melakukan metode serangan denial-of-service dan berpotensial menggunakan endless file atau file yang tidak ada habisnya dengan seperti berikut:
 
 ```
    <!ENTITY xxe SYSTEM "file:///dev/random" >]>
 ```
 
-## References
+## Referensi
 
 ### OWASP
 

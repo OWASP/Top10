@@ -2,32 +2,34 @@
 
 Software yang tidak aman telah mengancam infrastruktur keuangan, kesehatan, pertahanan, energi, dan infrastruktur kritikal lainnya. Dengan semakin kompleks dan terhubungnya infrastruktur digital kita, kesulitan mencapai keamanan aplikasi meningkat secara eksponensial. Kita tidak dapat lagi mentoleransi masalah keamanan sederhana seperti yang ditampilkan dalam OWASP Top 10.
 
-A great deal of feedback was received during the creation of the OWASP Top 10 - 2017, more than for any other equivalent OWASP effort. This shows how much passion the community has for the OWASP Top 10, and thus how critical it is for OWASP to get the Top 10 right for the majority of use cases.
 
-Although the original goal of the OWASP Top 10 project was simply to raise awareness amongst developers and managers, it has become the de facto application security standard. 
+Banyak feedback yang diterima selama pembuatan OWASP Top 10 - 2017, lebih dari usaha OWASP Projek lainnya. Hal ini menunjukkan seberapa besar minat yang dimiliki komunitas untuk OWASP Top 10, dan dengan demikian betapa pentingnya bagi OWASP untuk mendapatkan Top 10 untuk Mayoritas kasus penggunaan web paling kritis .
 
-In this release, issues and recommendations are written concisely and in a testable way to assist with the adoption of the OWASP Top 10 in application security programs. We encourage large and high performing organizations to use the [OWASP Application Security Verification Standard (ASVS)](https://www.owasp.org/index.php/ASVS) if a true standard is required, but for most, the OWASP Top 10 is a great start on the application security journey.
+Meskipun tujuan awal dari proyek 10 Besar OWASP hanya untuk meningkatkan kesadaran di antara pengembang dan manajer, itu telah menjadi standar keamanan aplikasi secara de facto.
 
-We have written up a range of suggested next steps for different users of the OWASP Top 10, including "What's Next for Developers", "What's Next for Security Testers", "What's Next for Organizations“, which is suitable for CIOs and CISOs, and "What's Next for Application Managers", which is suitable for application managers or anyone responsible for the lifecycle of the application.
+Dalam rilis ini, masalah dan rekomendasi ditulis secara ringkas dan dengan cara yang dapat diuji untuk membantu penerapan OWASP Top 10 dalam program keamanan aplikasi. Kami mendorong organisasi besar dan kinerja yang tinggi untuk menggunakan OWASP Application Verification Standard (ASVS) https://www.owasp.org/index.php/ASVS jika standar yang benar diperlukan, tetapi untuk sebagian besar, OWASP Top 10 adalah awal yang bagus dalam keamanan aplikasi.
 
-In the long term, we encourage all software development teams and organizations to create an application security program that is compatible with your culture and technology. These programs come in all shapes and sizes. Leverage your organization's existing strengths to measure and improve your application security program using the Software Assurance Maturity Model.
+Kami telah menulis berbagai langkah yang disarankan selanjutnya untuk pengguna yang berbeda dari OWASP Top 10, termasuk "Apa Selanjutnya untuk Pengembang Aplikasi", "Apa Selanjutnya untuk Penguji Keamanan", "Apa Selanjutnya untuk Organisasi", yang cocok untuk CIO dan CISO, dan "Apa Selanjutnya untuk Manajer pengembangan perangkat lunak/Aplikasi", yang cocok untuk manajer pengembang aplikasi atau siapa pun yang bertanggung jawab pada pengembangan perangkat lunak.
 
-We hope that the OWASP Top 10 is useful to your application security efforts. Please don't hesitate to contact OWASP with your questions, comments, and ideas at our GitHub project repository:
+Dalam jangka panjang, kami mendorong semua tim pengembangan perangkat lunak dan organisasi untuk membuat program keamanan aplikasi yang kompatibel dengan budaya dan teknologi Anda. Program-program tersebut datang dalam semua bentuk dan ukuran. Buatlah keputusan dalam organisasi Anda yang ada untuk mengukur dan meningkatkan program keamanan aplikasi Anda menggunakan
+Software Assurance Maturity Model / OWASP SAMM.
+
+Kami berharap bahwa OWASP Top 10 bermanfaat dalam upaya peningkatan keamanan aplikasi Anda. Jangan ragu untuk menghubungi OWASP dengan pertanyaan, komentar, dan ide Anda di repositori proyek GitHub kami:
 
 * [https://github.com/OWASP/Top10/issues](https://github.com/OWASP/Top10/issues)
 
-You can find the OWASP Top 10 project and translations here:
+Anda bisa mendapatkan Proyek OWASP Top 10  dan Terjemahannya di sini :
 
 * [https://www.owasp.org/index.php/top10](https://www.owasp.org/index.php/top10)
 
-Lastly, we wish to thank the founding leadership of the OWASP Top 10 project, Dave Wichers and Jeff Williams, for all their efforts, and believing in us to get this finished with the community's help. Thank you!
+Terakhir, kami mengucapkan terimakasih kepada pimpinan pendiri proyek OWASP Top 10, Dave Wichers dan Jeff Williams, atas semua upaya mereka, dan memercayai kami untuk menyelesaikannya dengan bantuan komunitas. Terima kasih!
 
 * Andrew van der Stock
 * Brian Glas
 * Neil Smithline
 * Torsten Gigler
 
-## Attribution
-Thanks to [Autodesk](https://www.autodesk.com) for sponsoring the OWASP Top 10 - 2017.
+## Atribusi
+Terimakasih kepada [Autodesk](https://www.autodesk.com) dalam mensponsori OWASP Top 10 - 2017.
 
-Organizations and individuals that have provided vulnerability prevalence data or other assistance are listed on the [Acknowledgements page](0xd1-data-contributors.md).
+Organisasi dan individu yang telah membantu menyediakan data prevalensi kerentanan atau bantuan lainnya berada pada [Halaman Ucapan Terima Kasih] (0xd1-data-contributors.md)

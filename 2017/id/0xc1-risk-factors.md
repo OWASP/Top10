@@ -2,7 +2,7 @@
 
 ## Ringkasan Faktor Risiko Top 10
 
-Tabel berikut menyajikan ringkasan Resiko Keamanan Aplikasi 10 Teratas 2017, dan faktor risiko yang telah kami berikan pada setiap risiko. Faktor-faktor ini ditentukan berdasarkan statistik yang ada dan pengalaman tim OWASP Top 10. Untuk memahami risiko ini untuk aplikasi atau organisasi tertentu, Anda harus mempertimbangkan agen ancaman dan bisnis Anda sendiri. Bahkan kelemahan perangkat lunak yang parah mungkin tidak menimbulkan risiko serius jika tidak ada agen ancaman dalam posisi untuk melakukan serangan yang diperlukan atau dampak bisnis dapat diabaikan untuk aset yang terlibat.
+Tabel berikut menyajikan ringkasan Resiko Keamanan Aplikasi 10 Teratas 2017, dan faktor risiko yang telah kami berikan pada setiap risiko. Faktor-faktor ini ditentukan berdasarkan statistik yang ada dan pengalaman tim OWASP Top 10. Untuk memahami risiko ini untuk aplikasi atau organisasi tertentu, Anda harus mempertimbangkan suatu ancaman dan bisnis Anda sendiri. Bahkan kelemahan perangkat lunak yang cukup parah mungkin tidak menimbulkan risiko serius jika tidak ada suatu ancaman dalam posisi untuk tidak melakukan serangan yang diperlukan atau dampak bisnis menjadi pertimbangan agar dapat diabaikan untuk aset yang penting.
 
 ![Risk Factor Table](images/0xc1-risk-factor-table.png)
 
