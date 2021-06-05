@@ -29,7 +29,7 @@ Si esto no es posible, considere uno o mas de los siguientes puntos:
 
 * Implementar verificaciones de integridad tales como firmas digitales en cualquier objeto serializado con el fin de detectar modificaciones no autorizadas.
 * Cumplimiento estricto de verificaciones de tipo de dato durante la deserialización y antes de la creación del objeto, ya que el código normalmente espera un conjunto de clases definibles. Se ha demostrado que se puede pasar por alto esta técnica, por lo que no es aconsejable confiar únicamente en ella.
-* Aislar el código que realiza la deserialización, de modo que ejecute en un entorno con los mínomos provilegios posibles.
+* Aislar el código que realiza la deserialización, de modo que ejecute en un entorno con los mínimos privilegios posibles.
 * Registrar excepciones y fallas en la deserialización, tales como cuando el tipo recibido no es el tipo esperado, o la deserialización lanza excepciones.
 * Restringir o monitorear las conexiones de red entrantes y salientes desde contenedores o servidores que utilizan funcionalidades de deserialización.
 * Monitorear deserialización, alertando si un usuario deserializa constantemente.
