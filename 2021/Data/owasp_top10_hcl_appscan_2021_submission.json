@@ -1,0 +1,4963 @@
+{
+  "contributions": {
+    "appData": {
+      "appsSubmitted": 16484
+    },
+    "cwe": [
+      {
+        "id": 798,
+        "occurances": 17,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 548,
+        "occurances": 35,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 200,
+        "occurances": 559,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 425,
+        "occurances": 40,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 295,
+        "occurances": 57,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 22,
+        "occurances": 7,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 522,
+        "occurances": 91,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 451,
+        "occurances": 3,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 327,
+        "occurances": 144,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 352,
+        "occurances": 48,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 78,
+        "occurances": 37,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 829,
+        "occurances": 119,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 74,
+        "occurances": 116,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 89,
+        "occurances": 76,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 497,
+        "occurances": 35,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 472,
+        "occurances": 1,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "f",
+        "testingType": "Tools"
+      },
+      {
+        "id": 116,
+        "occurances": 70,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 359,
+        "occurances": 200,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 754,
+        "occurances": 20,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 287,
+        "occurances": 19,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 120,
+        "occurances": 5,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 79,
+        "occurances": 226,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 259,
+        "occurances": 11,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 311,
+        "occurances": 66,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 927,
+        "occurances": 20,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 307,
+        "occurances": 14,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 310,
+        "occurances": 7,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 275,
+        "occurances": 14,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 693,
+        "occurances": 113,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 489,
+        "occurances": 28,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 20,
+        "occurances": 103,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 614,
+        "occurances": 38,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 434,
+        "occurances": 7,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 926,
+        "occurances": 2,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 601,
+        "occurances": 77,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 550,
+        "occurances": 96,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 113,
+        "occurances": 46,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 427,
+        "occurances": 2,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 602,
+        "occurances": 46,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 204,
+        "occurances": 5,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "f",
+        "testingType": "Tools"
+      },
+      {
+        "id": 321,
+        "occurances": 22,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 525,
+        "occurances": 54,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 296,
+        "occurances": 5,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 266,
+        "occurances": 26,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 209,
+        "occurances": 50,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 73,
+        "occurances": 54,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 16,
+        "occurances": 29,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 730,
+        "occurances": 9,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 531,
+        "occurances": 34,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 77,
+        "occurances": 3,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 539,
+        "occurances": 12,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 682,
+        "occurances": 2,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 134,
+        "occurances": 6,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "f",
+        "testingType": "Tools"
+      },
+      {
+        "id": 15,
+        "occurances": 4,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 523,
+        "occurances": 28,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 340,
+        "occurances": 5,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "f",
+        "testingType": "Tools"
+      },
+      {
+        "id": 119,
+        "occurances": 3,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "f",
+        "testingType": "Tools"
+      },
+      {
+        "id": 300,
+        "occurances": 40,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 297,
+        "occurances": 17,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 91,
+        "occurances": 12,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 338,
+        "occurances": 27,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 653,
+        "occurances": 21,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 285,
+        "occurances": 10,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 470,
+        "occurances": 2,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 306,
+        "occurances": 8,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 565,
+        "occurances": 6,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 90,
+        "occurances": 11,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 201,
+        "occurances": 21,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 98,
+        "occurances": 1,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 10,
+        "occurances": 3,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 598,
+        "occurances": 48,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 538,
+        "occurances": 5,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 264,
+        "occurances": 4,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 626,
+        "occurances": 2,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "f",
+        "testingType": "Tools"
+      },
+      {
+        "id": 566,
+        "occurances": 7,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 506,
+        "occurances": 2,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "f",
+        "testingType": "Tools"
+      },
+      {
+        "id": 540,
+        "occurances": 11,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 288,
+        "occurances": 17,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 615,
+        "occurances": 41,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 112,
+        "occurances": 2,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "f",
+        "testingType": "Tools"
+      },
+      {
+        "id": 720,
+        "occurances": 26,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 331,
+        "occurances": 43,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 255,
+        "occurances": 21,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 643,
+        "occurances": 6,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 304,
+        "occurances": 18,
+        "timePeriod": 2017,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 200,
+        "occurances": 7201,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 614,
+        "occurances": 408,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 359,
+        "occurances": 1357,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 74,
+        "occurances": 465,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 296,
+        "occurances": 6,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 327,
+        "occurances": 1849,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 829,
+        "occurances": 1132,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 285,
+        "occurances": 24,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 531,
+        "occurances": 489,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 927,
+        "occurances": 89,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 134,
+        "occurances": 8,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 311,
+        "occurances": 649,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 20,
+        "occurances": 280,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 506,
+        "occurances": 21,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 926,
+        "occurances": 2,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "f",
+        "testingType": "Tools"
+      },
+      {
+        "id": 275,
+        "occurances": 23,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 532,
+        "occurances": 9,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 78,
+        "occurances": 175,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 295,
+        "occurances": 260,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 98,
+        "occurances": 12,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 472,
+        "occurances": 26,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 113,
+        "occurances": 100,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 209,
+        "occurances": 239,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 522,
+        "occurances": 432,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 297,
+        "occurances": 84,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 89,
+        "occurances": 254,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 331,
+        "occurances": 137,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 79,
+        "occurances": 1036,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 456,
+        "occurances": 8,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 77,
+        "occurances": 5,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 538,
+        "occurances": 51,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 427,
+        "occurances": 1,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 798,
+        "occurances": 37,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 90,
+        "occurances": 6,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 306,
+        "occurances": 52,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 352,
+        "occurances": 434,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 340,
+        "occurances": 16,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "f",
+        "testingType": "Tools"
+      },
+      {
+        "id": 693,
+        "occurances": 456,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 682,
+        "occurances": 26,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 16,
+        "occurances": 94,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 384,
+        "occurances": 2,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "f",
+        "testingType": "Tools"
+      },
+      {
+        "id": 523,
+        "occurances": 97,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 338,
+        "occurances": 109,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 540,
+        "occurances": 99,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 425,
+        "occurances": 118,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 601,
+        "occurances": 822,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 300,
+        "occurances": 104,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 598,
+        "occurances": 890,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 304,
+        "occurances": 171,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 22,
+        "occurances": 19,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 345,
+        "occurances": 7,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 321,
+        "occurances": 53,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 550,
+        "occurances": 763,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 255,
+        "occurances": 55,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 489,
+        "occurances": 89,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 548,
+        "occurances": 213,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 73,
+        "occurances": 155,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 913,
+        "occurances": 17,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 602,
+        "occurances": 932,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 201,
+        "occurances": 102,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 10,
+        "occurances": 4,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 525,
+        "occurances": 954,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 120,
+        "occurances": 25,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 653,
+        "occurances": 180,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 15,
+        "occurances": 5,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 434,
+        "occurances": 52,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 266,
+        "occurances": 105,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 310,
+        "occurances": 36,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 112,
+        "occurances": 4,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "f",
+        "testingType": "Tools"
+      },
+      {
+        "id": 730,
+        "occurances": 9,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 539,
+        "occurances": 589,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 91,
+        "occurances": 57,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 307,
+        "occurances": 101,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 288,
+        "occurances": 94,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 367,
+        "occurances": 4,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 615,
+        "occurances": 556,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 0,
+        "occurances": 1,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "f",
+        "testingType": "Tools"
+      },
+      {
+        "id": 497,
+        "occurances": 111,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 470,
+        "occurances": 3,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 643,
+        "occurances": 15,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 259,
+        "occurances": 26,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 204,
+        "occurances": 21,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 287,
+        "occurances": 172,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 754,
+        "occurances": 85,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 566,
+        "occurances": 14,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 264,
+        "occurances": 2,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 451,
+        "occurances": 5,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 119,
+        "occurances": 4,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 116,
+        "occurances": 185,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 720,
+        "occurances": 90,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 565,
+        "occurances": 19,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 613,
+        "occurances": 33,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 626,
+        "occurances": 1,
+        "timePeriod": 2018,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "f",
+        "testingType": "Tools"
+      },
+      {
+        "id": 300,
+        "occurances": 148,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 201,
+        "occurances": 280,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 79,
+        "occurances": 3541,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 926,
+        "occurances": 8,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "f",
+        "testingType": "Tools"
+      },
+      {
+        "id": 427,
+        "occurances": 11,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 311,
+        "occurances": 1628,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 22,
+        "occurances": 144,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 88,
+        "occurances": 1,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "f",
+        "testingType": "Tools"
+      },
+      {
+        "id": 548,
+        "occurances": 431,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 200,
+        "occurances": 14203,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 693,
+        "occurances": 835,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 77,
+        "occurances": 16,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 20,
+        "occurances": 1120,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 531,
+        "occurances": 859,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 113,
+        "occurances": 364,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 285,
+        "occurances": 185,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 626,
+        "occurances": 3,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "f",
+        "testingType": "Tools"
+      },
+      {
+        "id": 614,
+        "occurances": 1002,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 798,
+        "occurances": 86,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 352,
+        "occurances": 939,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 327,
+        "occurances": 3657,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 338,
+        "occurances": 169,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 522,
+        "occurances": 1276,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 506,
+        "occurances": 161,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 296,
+        "occurances": 18,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 359,
+        "occurances": 2412,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 754,
+        "occurances": 180,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 89,
+        "occurances": 763,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 538,
+        "occurances": 103,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 523,
+        "occurances": 153,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 615,
+        "occurances": 1193,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 287,
+        "occurances": 131,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 829,
+        "occurances": 2460,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 119,
+        "occurances": 36,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 643,
+        "occurances": 105,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 78,
+        "occurances": 836,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 550,
+        "occurances": 1436,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 601,
+        "occurances": 1537,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 434,
+        "occurances": 100,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 517,
+        "occurances": 1,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 472,
+        "occurances": 58,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 74,
+        "occurances": 1518,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 91,
+        "occurances": 306,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 913,
+        "occurances": 145,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 275,
+        "occurances": 34,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 340,
+        "occurances": 25,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "f",
+        "testingType": "Tools"
+      },
+      {
+        "id": 653,
+        "occurances": 629,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 602,
+        "occurances": 1652,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 927,
+        "occurances": 166,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 16,
+        "occurances": 331,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 120,
+        "occurances": 38,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 525,
+        "occurances": 1583,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 297,
+        "occurances": 173,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 398,
+        "occurances": 37,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 489,
+        "occurances": 353,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 116,
+        "occurances": 691,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 720,
+        "occurances": 404,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 310,
+        "occurances": 124,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 477,
+        "occurances": 3,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 321,
+        "occurances": 73,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 204,
+        "occurances": 26,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 264,
+        "occurances": 16,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 90,
+        "occurances": 44,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 112,
+        "occurances": 5,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "f",
+        "testingType": "Tools"
+      },
+      {
+        "id": 134,
+        "occurances": 23,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 97,
+        "occurances": 1,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "f",
+        "testingType": "Tools"
+      },
+      {
+        "id": 295,
+        "occurances": 486,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 345,
+        "occurances": 17,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 209,
+        "occurances": 851,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 425,
+        "occurances": 583,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 565,
+        "occurances": 111,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 306,
+        "occurances": 144,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 520,
+        "occurances": 2,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 288,
+        "occurances": 669,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 307,
+        "occurances": 174,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 624,
+        "occurances": 15,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 331,
+        "occurances": 647,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 451,
+        "occurances": 13,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 98,
+        "occurances": 12,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 456,
+        "occurances": 4,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 613,
+        "occurances": 98,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 470,
+        "occurances": 11,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 566,
+        "occurances": 25,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 367,
+        "occurances": 39,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 15,
+        "occurances": 29,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 259,
+        "occurances": 32,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 304,
+        "occurances": 251,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 532,
+        "occurances": 88,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 539,
+        "occurances": 854,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 540,
+        "occurances": 231,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 497,
+        "occurances": 441,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 598,
+        "occurances": 1554,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 117,
+        "occurances": 2,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 682,
+        "occurances": 9,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 73,
+        "occurances": 820,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 266,
+        "occurances": 470,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 250,
+        "occurances": 23,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 255,
+        "occurances": 226,
+        "timePeriod": 2019,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 200,
+        "occurances": 17884,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 327,
+        "occurances": 5981,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 829,
+        "occurances": 3992,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 79,
+        "occurances": 4961,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 359,
+        "occurances": 2796,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 525,
+        "occurances": 1806,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 602,
+        "occurances": 1799,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 20,
+        "occurances": 1806,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 311,
+        "occurances": 2402,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 73,
+        "occurances": 1482,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 601,
+        "occurances": 1706,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 615,
+        "occurances": 1272,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 116,
+        "occurances": 1201,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 0,
+        "occurances": 1137,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 288,
+        "occurances": 1124,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 550,
+        "occurances": 1667,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 522,
+        "occurances": 1798,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 425,
+        "occurances": 1049,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 266,
+        "occurances": 1046,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 614,
+        "occurances": 1043,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 539,
+        "occurances": 812,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 352,
+        "occurances": 977,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 209,
+        "occurances": 995,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 89,
+        "occurances": 1125,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 653,
+        "occurances": 693,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 497,
+        "occurances": 629,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 78,
+        "occurances": 903,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 74,
+        "occurances": 1756,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 720,
+        "occurances": 516,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 489,
+        "occurances": 600,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 295,
+        "occurances": 490,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 16,
+        "occurances": 551,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 1275,
+        "occurances": 676,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 91,
+        "occurances": 477,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 113,
+        "occurances": 393,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 531,
+        "occurances": 836,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 255,
+        "occurances": 365,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 693,
+        "occurances": 861,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 201,
+        "occurances": 345,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 1032,
+        "occurances": 344,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 565,
+        "occurances": 307,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 540,
+        "occurances": 301,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 598,
+        "occurances": 269,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 506,
+        "occurances": 244,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 297,
+        "occurances": 232,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 296,
+        "occurances": 216,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 754,
+        "occurances": 208,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 307,
+        "occurances": 200,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 90,
+        "occurances": 284,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 548,
+        "occurances": 354,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 643,
+        "occurances": 155,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 913,
+        "occurances": 269,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 532,
+        "occurances": 142,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 538,
+        "occurances": 128,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 398,
+        "occurances": 127,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 304,
+        "occurances": 118,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 338,
+        "occurances": 149,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 250,
+        "occurances": 111,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 310,
+        "occurances": 124,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 400,
+        "occurances": 97,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 300,
+        "occurances": 220,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 613,
+        "occurances": 75,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 523,
+        "occurances": 165,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 22,
+        "occurances": 127,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 507,
+        "occurances": 71,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 367,
+        "occurances": 71,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 306,
+        "occurances": 69,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 434,
+        "occurances": 54,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 472,
+        "occurances": 75,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 321,
+        "occurances": 76,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 927,
+        "occurances": 127,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 287,
+        "occurances": 63,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 624,
+        "occurances": 43,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 285,
+        "occurances": 131,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 798,
+        "occurances": 85,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 15,
+        "occurances": 56,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 331,
+        "occurances": 35,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 259,
+        "occurances": 34,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 918,
+        "occurances": 29,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 204,
+        "occurances": 26,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 275,
+        "occurances": 34,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 940,
+        "occurances": 22,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 120,
+        "occurances": 47,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 517,
+        "occurances": 20,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 730,
+        "occurances": 18,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 119,
+        "occurances": 18,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "f",
+        "testingType": "Tools"
+      },
+      {
+        "id": 117,
+        "occurances": 13,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 345,
+        "occurances": 13,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 682,
+        "occurances": 11,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 134,
+        "occurances": 18,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 470,
+        "occurances": 9,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 451,
+        "occurances": 9,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 88,
+        "occurances": 8,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "f",
+        "testingType": "Tools"
+      },
+      {
+        "id": 511,
+        "occurances": 12,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 77,
+        "occurances": 12,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 427,
+        "occurances": 8,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 778,
+        "occurances": 9,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 112,
+        "occurances": 7,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "f",
+        "testingType": "Tools"
+      },
+      {
+        "id": 566,
+        "occurances": 6,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 298,
+        "occurances": 9,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 340,
+        "occurances": 5,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "f",
+        "testingType": "Tools"
+      },
+      {
+        "id": 586,
+        "occurances": 4,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 384,
+        "occurances": 4,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "f",
+        "testingType": "Tools"
+      },
+      {
+        "id": 98,
+        "occurances": 4,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "f",
+        "testingType": "Tools"
+      },
+      {
+        "id": 404,
+        "occurances": 3,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 382,
+        "occurances": 3,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 131,
+        "occurances": 3,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "f",
+        "testingType": "Tools"
+      },
+      {
+        "id": 544,
+        "occurances": 3,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 520,
+        "occurances": 2,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 97,
+        "occurances": 2,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 130,
+        "occurances": 2,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 477,
+        "occurances": 2,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 242,
+        "occurances": 1,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "f",
+        "testingType": "Tools"
+      },
+      {
+        "id": 441,
+        "occurances": 1,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "f",
+        "testingType": "Tools"
+      },
+      {
+        "id": 524,
+        "occurances": 1,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 804,
+        "occurances": 1,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 118,
+        "occurances": 1,
+        "timePeriod": 2020,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 200,
+        "occurances": 7636,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 531,
+        "occurances": 359,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 74,
+        "occurances": 936,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 78,
+        "occurances": 434,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 287,
+        "occurances": 32,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 89,
+        "occurances": 635,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 285,
+        "occurances": 30,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 489,
+        "occurances": 258,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 19,
+        "occurances": 1,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 1032,
+        "occurances": 2576,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 693,
+        "occurances": 381,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 359,
+        "occurances": 1386,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 550,
+        "occurances": 841,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 506,
+        "occurances": 130,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 540,
+        "occurances": 143,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 398,
+        "occurances": 101,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 79,
+        "occurances": 2974,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 472,
+        "occurances": 34,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 0,
+        "occurances": 1295,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 113,
+        "occurances": 246,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 798,
+        "occurances": 16,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 209,
+        "occurances": 481,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 327,
+        "occurances": 4356,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 204,
+        "occurances": 10,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 523,
+        "occurances": 117,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 720,
+        "occurances": 241,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 98,
+        "occurances": 6,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 295,
+        "occurances": 223,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 116,
+        "occurances": 786,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 565,
+        "occurances": 192,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 601,
+        "occurances": 886,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 306,
+        "occurances": 36,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 1275,
+        "occurances": 2117,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 117,
+        "occurances": 18,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 434,
+        "occurances": 50,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 310,
+        "occurances": 78,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 548,
+        "occurances": 214,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 300,
+        "occurances": 60,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 250,
+        "occurances": 75,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 120,
+        "occurances": 44,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 345,
+        "occurances": 1,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 829,
+        "occurances": 2393,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 311,
+        "occurances": 1398,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 90,
+        "occurances": 188,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 682,
+        "occurances": 1,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "f",
+        "testingType": "Tools"
+      },
+      {
+        "id": 20,
+        "occurances": 1202,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 22,
+        "occurances": 30,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 73,
+        "occurances": 948,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 16,
+        "occurances": 649,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 384,
+        "occurances": 4,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "f",
+        "testingType": "Tools"
+      },
+      {
+        "id": 425,
+        "occurances": 674,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 517,
+        "occurances": 7,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 400,
+        "occurances": 395,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 119,
+        "occurances": 7,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 91,
+        "occurances": 378,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 340,
+        "occurances": 1,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "f",
+        "testingType": "Tools"
+      },
+      {
+        "id": 15,
+        "occurances": 25,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 614,
+        "occurances": 862,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 624,
+        "occurances": 26,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 296,
+        "occurances": 165,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 522,
+        "occurances": 936,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 927,
+        "occurances": 34,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 307,
+        "occurances": 151,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 255,
+        "occurances": 205,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 321,
+        "occurances": 20,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 653,
+        "occurances": 610,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 913,
+        "occurances": 148,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 304,
+        "occurances": 124,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 497,
+        "occurances": 358,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 539,
+        "occurances": 691,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 275,
+        "occurances": 14,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 613,
+        "occurances": 26,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 525,
+        "occurances": 1020,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 538,
+        "occurances": 47,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 264,
+        "occurances": 2,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 201,
+        "occurances": 219,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 297,
+        "occurances": 87,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 298,
+        "occurances": 6,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 131,
+        "occurances": 1,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "f",
+        "testingType": "Tools"
+      },
+      {
+        "id": 338,
+        "occurances": 71,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 266,
+        "occurances": 1200,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 134,
+        "occurances": 8,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 544,
+        "occurances": 2,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 367,
+        "occurances": 37,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 918,
+        "occurances": 18,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 615,
+        "occurances": 192,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 288,
+        "occurances": 727,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 352,
+        "occurances": 496,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 532,
+        "occurances": 65,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 598,
+        "occurances": 33,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 754,
+        "occurances": 75,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 130,
+        "occurances": 2,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 259,
+        "occurances": 5,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "f",
+        "testingType": "Tools"
+      },
+      {
+        "id": 602,
+        "occurances": 980,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 566,
+        "occurances": 1,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 331,
+        "occurances": 32,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 77,
+        "occurances": 3,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 643,
+        "occurances": 103,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 940,
+        "occurances": 6,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "f",
+        "testingType": "Tools"
+      },
+      {
+        "id": 507,
+        "occurances": 46,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 626,
+        "occurances": 1,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      },
+      {
+        "id": 730,
+        "occurances": 3,
+        "timePeriod": 2021,
+        "language": "",
+        "region": "North America",
+        "industry": "",
+        "retest": "t",
+        "testingType": "Tools"
+      }
+    ],
+    "contributor": {
+      "name": "Shahar Sperling",
+      "email": "shahar.sperling@hcl.com"
+    }
+  }
+}
