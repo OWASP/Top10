@@ -1,1 +1,1 @@
-Folder for the OWASP Top 10 2020
+Folder for the OWASP Top 10 2021
