@@ -1,47 +1,47 @@
 # A1:2017 Injection
 
-| Threat agents/Attack vectors | Security Weakness           | Impacts               |
+| Agen ancaman / vektor serangan | Kelemahan Keamanan          | Dampak              |
 | -- | -- | -- |
-| Access Lvl : Exploitability 3 | Prevalence 2 : Detectability 3 | Technical 3 : Business |
-| Almost any source of data can be an injection vector, environment variables, parameters, external and internal web services, and all types of users. [Injection flaws](https://www.owasp.org/index.php/Injection_Flaws) occur when an attacker can send hostile data to an interpreter. | Injection flaws are very prevalent, particularly in legacy code. Injection vulnerabilities are often found in SQL, LDAP, XPath, or NoSQL queries, OS commands, XML parsers, SMTP headers, expression languages, and ORM queries. Injection flaws are easy to discover when examining code. Scanners and fuzzers can help attackers find injection flaws. |Injection can result in data loss, corruption, or disclosure to unauthorized parties, loss of accountability, or denial of access. Injection can sometimes lead to complete host takeover. The business impact depends on the needs of the application and data.|
+| Akses Lvl: Eksploitasi 3 | Prevalensi 2: Deteksi 3 | Teknis 3: Bisnis |
+| Hampir semua sumber data bisa berupa vektor injeksi, variabel lingkungan, parameter, layanan web eksternal dan internal, dan semua jenis pengguna. [Kekurangan injeksi](https://www.owasp.org/index.php/Injection_Flaws) terjadi ketika penyerang bisa mengirim data yang tidak bersahabat ke penerjemah. | Cacat   injeksi sangat lazim, terutama dalam kode warisan. Kerentanan injeksi sering ditemukan di query SQL, LDAP, XPath, atau NoSQL, perintah OS, parser XML, header SMTP, ekspresi bahasa, dan kueri ORM. Kelemahan injeksi mudah ditemukan saat memeriksa kode. Pemindai dan fuzzers dapat membantu penyerang menemukan kekurangan injeksi. |Injeksi dapat mengakibatkan kehilangan data, rusak, atau pengungkapan kepada pihak yang tidak berwenang, kehilangan pertanggungjawaban, atau penolakan akses. Injeksi terkadang bisa mengakibatkan pengambilalihan host seacara keseluruhan. Dampak bisnis tergantung dari kebutuhan aplikasi dan data.|
 
 
-## Is the Application Vulnerable?
+## Apakah Aplikasi itu Rentan?
 
-An application is vulnerable to attack when:
+Aplikasi rentan terhadap serangan saat:
 
-* User-supplied data is not validated, filtered, or sanitized by the application.
-* Dynamic queries or non-parameterized calls without context-aware escaping are used directly in the interpreter.  
-* Hostile data is used within object-relational mapping (ORM) search parameters to extract additional, sensitive records.
-* Hostile data is directly used or concatenated, such that the SQL or command contains both structure and hostile data in dynamic queries, commands, or stored procedures.
-* Some of the more common injections are SQL, NoSQL, OS command, Object Relational Mapping (ORM), LDAP, and Expression Language (EL) or Object Graph Navigation Library (OGNL) injection. The concept is identical among all interpreters. Source code review is the best method of detecting if applications are vulnerable to injections, closely followed by thorough automated testing of all parameters, headers, URL, cookies, JSON, SOAP, and XML data inputs. Organizations can include static source ([SAST](https://www.owasp.org/index.php/Source_Code_Analysis_Tools)) and dynamic application test ([DAST](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools)) tools into the CI/CD pipeline to identify newly introduced injection flaws prior to production deployment.
+* Data yang dipasok pengguna tidak divalidasi, disaring, atau disterilkan oleh aplikasi.
+* Permintaan dinamis atau panggilan non-parameter tanpa tanpa sadar konteks digunakan langsung di penerjemah. 
+* Data yang tidak bersahabat digunakan dalam parameter pencarian pemetaan objek-relasional (ORM) untuk mengekstrak catatan sensitif tambahan.
+* Data yang tidak bersahabat langsung digunakan atau digabungkan, sehingga SQL atau perintah berisi data struktur dan data yang tidak bersahabat dalam query dinamis, perintah, atau prosedur tersimpan.
+* Beberapa injeksi yang lebih umum adalah perintah SQL, NoSQL, OS, pemetaan Object Relational Mapping (ORM), LDAP, dan Expression Language (EL) atau Object Graph Navigation Library (OGNL). Konsepnya identik diantara semua penafsir. Source code review adalah metode terbaik untuk mendeteksi jika aplikasi rentan terhadap injeksi, diikuti dengan pengujian otomatis secara menyeluruh terhadap semua parameter, header, URL, cookies, JSON, SOAP, dan data XML. Organisasi dapat menyertakan sumber statis ([SAST](https://www.owasp.org/index.php/Source_Code_Analysis_Tools)) dan uji aplikasi dinamis ([DAST](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools)) alat ke dalam pipa CI / CD untuk mengidentifikasi kelemahan injeksi yang baru diperkenalkan sebelum penggelaran produksi.
 
-## How To Prevent
+## Bagaimana Cara Pencegahannya
 
-Preventing injection requires keeping data separate from commands and queries.
+Mencegah injeksi membutuhkan data terpisah dari perintah dan query.
 
-* The preferred option is to use a safe API, which avoids the use of the interpreter entirely or provides a parameterized interface, or migrate to use Object Relational Mapping Tools (ORMs). **Note**: Even when parameterized, stored procedures can still introduce SQL injection if PL/SQL or T-SQL concatenates queries and data, or executes hostile data with EXECUTE IMMEDIATE or exec().
-* Use positive or "whitelist" server-side input validation. This is not a complete defense as many applications require special characters, such as text areas or APIs for mobile applications.
-* For any residual dynamic queries, escape special characters using the specific escape syntax for that interpreter. **Note**: SQL structure such as table names, column names, and so on cannot be escaped, and thus user-supplied structure names are dangerous. This is a common issue in report-writing software.
-* Use LIMIT and other SQL controls within queries to prevent mass disclosure of records in case of SQL injection.
+* Pilihan yang lebih disukai adalah menggunakan API yang aman, yang menghindari penggunaan penafsir sepenuhnya atau menyediakan parameter antarmuka, atau bermigrasi untuk menggunakan Object Relational Mapping Tools (ORMs). ** Catatan **: Meskipun parameter, prosedur yang tersimpan masih dapat mengenalkan injeksi SQL jika PL / SQL atau T-SQL menggabungkan query dan data, atau mengeksekusi data yang bentrok dengan EXECUTE IMMEDIATE atau exec ().
+* Gunakan validasi masukan positive server-side atau "whitelist". Ini bukan pertahanan yang lengkap karena banyak aplikasi memerlukan karakter khusus, seperti area teks atau API untuk aplikasi mobile.
+* Untuk setiap sisa query dinamis, lepaskan karakter khusus menggunakan sintaks keluar khusus untuk penerjemah itu. ** Catatan **: Struktur SQL seperti nama tabel, nama kolom, dan sebagainya tidak dapat diloloskan, dan dengan demikian nama-nama struktur pengguna yang diberikan berbahaya. Ini adalah masalah umum dalam perangkat lunak penulisan laporan.
+* Gunakan LIMIT dan kontrol SQL lainnya dalam query untuk mencegah penyebaran rekaman secara massal jika terjadi injeksi SQL.
 
-## Example Attack Scenarios
+## Contoh Skenario Serangan
 
-**Scenario #1**: An application uses untrusted data in the construction of the following vulnerable SQL call:
+**Skenario #1**: Aplikasi menggunakan data yang tidak terpercaya dalam pembuatan panggilan SQL yang rentan berikut ini:
 
 `String query = "SELECT * FROM accounts WHERE custID='" + request.getParameter("id") + "'";`
 
-**Scenario #2**: Similarly, an application’s blind trust in frameworks may result in queries that are still vulnerable, (e.g. Hibernate Query Language (HQL)):
+**Skenario #2**: Demikian pula, kepercayaan buta huruf aplikasi dalam kerangka kerja dapat menghasilkan query yang masih rentan, (misalnya Hibernate Query Language (HQL)):
 
 `Query HQLQuery = session.createQuery("FROM accounts WHERE custID='" + request.getParameter("id") + "'");`
 
-In both cases, the attacker modifies the ‘id’ parameter value in their browser to send:  ' or '1'='1. For example:
+Dalam kedua kasus tersebut, penyerang memodifikasi nilai parameter 'id' di browser mereka untuk mengirim: 'atau' 1 '=' 1. Sebagai contoh:
 
 `http://example.com/app/accountView?id=' or '1'='1`
 
-This changes the meaning of both queries to return all the records from the accounts table. More dangerous attacks could modify or delete data, or even invoke stored procedures.
+Ini mengubah arti kedua query untuk mengembalikan semua catatan dari tabel akun. Serangan yang lebih berbahaya bisa mengubah atau menghapus data, atau bahkan memanggil prosedur yang tersimpan.
 
-## References
+## Referensi
 
 ### OWASP
 

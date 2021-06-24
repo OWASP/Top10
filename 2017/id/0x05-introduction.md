@@ -1,33 +1,34 @@
-# I Introduction
+# Pendahuluan
 
-## Welcome to the OWASP Top 10 - 2017
+## Selamat datang di OWASP Top 10 - 2017
 
-This major update adds several new issues, including two issues selected by the community - A8:2017-Insecure Deserialization and A10:2017-Insufficient Logging and Monitoring. Two key differentiators from previous OWASP Top 10 releases are the substantial community feedback and extensive data assembled from dozens of organizations, possibly the largest amount of data ever assembled in the preparation of an application security standard. This provides us with confidence that the new OWASP Top 10 addresses the most impactful application security risks currently facing organizations.
 
-The OWASP Top 10 for 2017 is based primarily on 40+ data submissions from firms that specialize in application security and an industry survey that was completed by over 500 individuals. This data spans vulnerabilities gathered from hundreds of organizations and over 100,000 real-world applications and APIs. The Top 10 items are selected and prioritized according to this prevalence data, in combination with consensus estimates of exploitability, detectability, and impact.
+Pembaruan utama ini menambahkan beberapa isu baru, termasuk dua isu yang dipilih oleh masyarakat - A8: 2017-Insecure Deserialization and A10: 2017-Insufficient Logging and Monitoring. Dua pembeda utama dari rilis OWASP Top 10 sebelumnya adalah umpan balik komunitas yang substansial dan data ekstensif yang dikumpulkan dari puluhan organisasi, mungkin jumlah data terbesar yang pernah dikumpulkan dalam pembuatan standar keamanan aplikasi. Ini memberi kami keyakinan bahwa OWASP Top 10 yang baru menangani risiko keamanan aplikasi yang paling berdampak saat ini yang dihadapi organisasi.
 
-A primary aim of the OWASP Top 10 is to educate developers, designers, architects, managers, and organizations about the consequences of the most common and most important web application security weaknesses. The Top 10 provides basic techniques to protect against these high risk problem areas, and provides guidance on where to go from here.
+OWASP Top 10 untuk 2017 didasarkan terutama pada 40+ pengiriman data dari perusahaan yang mengkhususkan diri pada keamanan aplikasi dan survei industri yang diselesaikan oleh lebih dari 500 individu. Data ini mencakup kerentanan yang dikumpulkan dari ratusan organisasi dan lebih dari 100.000 aplikasi dan API dunia nyata. 10 item teratas dipilih dan diprioritaskan sesuai dengan data prevalensi ini, dikombinasikan dengan perkiraan konsensus tentang exploitability, detectability, dan impact.
 
-## Roadmap for future activities
+Tujuan utama dari OWASP Top 10 adalah untuk mendidik pengembang, perancang, arsitek, manajer, dan organisasi tentang konsekuensi kelemahan keamanan aplikasi web yang paling umum dan paling penting. Top 10 menyediakan teknik dasar untuk melindungi area masalah berisiko tinggi ini, dan memberikan panduan ke mana harus pergi dari sini.
 
-**Don't stop at 10**. There are hundreds of issues that could affect the overall security of a web application as discussed in the [OWASP Developer's Guide](https://www.owasp.org/index.php/OWASP_Guide_Project) and the [OWASP Cheat Sheet Series](https://www.owasp.org/index.php/Category:Cheatsheets). These are essential reading for anyone developing web applications and APIs. Guidance on how to effectively find vulnerabilities in web applications and APIs is provided in the [OWASP Testing Guide](https://www.owasp.org/index.php/OWASP_Testing_Project).
+## Peta jalan untuk kegiatan selanjutnya
 
-**Constant change**. The OWASP Top 10 will continue to change. Even without changing a single line of your application's code, you may become vulnerable as new flaws are discovered and attack methods are refined. Please review the advice at the end of the Top 10 in What's Next For Developers, Testers, Organizations and Application Managers for more information.
+Jangan berhenti pada OWASP Top 10. Ada ratusan masalah yang dapat mempengaruhi keseluruhan keamanan aplikasi web seperti yang dibahas dalam  OWASP Developer's Guide  dan OWASP Cheat Sheet Series. Ini adalah bacaan penting bagi siapa saja yang mengembangkan aplikasi web dan API. Panduan tentang cara menemukan kerentanan di aplikasi web dan API secara efektif disediakan di Panduan Pengujian OWASP.
 
-**Think positive**. When you're ready to stop chasing vulnerabilities and focus on establishing strong application security controls, the [OWASP Proactive Controls](https://www.owasp.org/index.php/OWASP_Proactive_Controls) project provides a starting point to help developers build security into their applications and the [OWASP Application Security Verification Standard (ASVS)](https://www.owasp.org/index.php/ASVS) is a guide for organizations and application reviewers on what to verify.
+Perubahan terus-menerus. OWASP Top 10 akan terus berubah. Bahkan tanpa mengubah satu baris kode aplikasi Anda, Anda mungkin menjadi rentan karena kekurangan baru ditemukan dan metode serangan disempurnakan. Harap tinjau saran di akhir Top 10 di Apa Selanjutnya untuk Pengembang, Penguji, Organisasi, dan Manajer Aplikasi untuk informasi lebih lanjut.
 
-**Use tools wisely**. Security vulnerabilities can be quite complex and deeply buried in code. In many cases, the most cost-effective approach for finding and eliminating these weaknesses is human experts armed with advanced tools. Relying on tools alone provides a false sense of security and is not recommended.
+Berpikir positif. Bila Anda siap untuk berhenti mengejar kerentanan dan fokus untuk membangun kontrol keamanan aplikasi yang kuat, OWASP Proactive Controls  memberikan titik awal untuk membantu pengembang membangun keamanan ke dalam aplikasinya dan OWASP Application Security Verification Standard (ASVS)  adalah panduan untuk organisasi dan pemeriksa aplikasi tentang apa yang harus diverifikasi.
 
-**Push left, right, and everywhere**. Focus on making security an integral part of your culture throughout your development organization. Find out more in the [OWASP Software Assurance Maturity Model (SAMM)](https://www.owasp.org/index.php/OWASP_SAMM_Project).
+Gunakan alat dengan bijak. Kerentanan keamanan bisa sangat rumit dan terkubur dalam kode. Dalam banyak kasus, pendekatan yang paling hemat biaya untuk menemukan dan menghilangkan kelemahan ini adalah pakar manusia yang dipersenjatai dengan alat canggih. Bergantung pada alat saja memberikan rasa aman yang salah dan tidak disarankan.
 
-## Attribution
+Dorong ke kiri, kanan, dan di mana-mana. Fokus pada keamanan merupakan bagian integral dari budaya Anda di seluruh organisasi pembangunan Anda. Cari tahu lebih lanjut dalam OWASP Software Assurance Maturity Model (SAMM).
 
-We'd like to thank the organizations that contributed their vulnerability data to support the 2017 update. We received more than 40 responses to the call for data. For the first time, all the data contributed to a Top 10 release, and the full list of contributors, is publicly available. We believe this is one of the larger, more diverse collections of vulnerability data ever collected publicly.
+## Atribusi
 
-As there are more contributors than space here, we have created a dedicated page to recognize the contributions made. We wish to give heartfelt thanks to these organizations for being willing to be on the front lines by publicly sharing vulnerability data from their efforts. We hope this will continue to grow and encourage more organizations to do the same and possibly be seen as one of the key milestones of evidence based security. The OWASP Top 10 would not be possible without these amazing contributions. 
+Kami ingin mengucapkan terima kasih kepada organisasi yang menyumbangkan data kerentanan mereka untuk mendukung pembaruan 2017. Kami menerima lebih dari 40 tanggapan atas permintaan data. Untuk pertama kalinya, semua data berkontribusi pada rilis OWASP Top 10, dan daftar kontributor lengkap, tersedia untuk umum. Kami percaya ini adalah salah satu kumpulan data kerentanan yang lebih besar dan beragam yang dikumpulkan di masyarakat.
 
-A big thank you to the more than 500 individuals who took the time to complete the industry ranked survey. Your voice helped determine two new additions to the Top 10. The additional comments, notes of encouragement, and criticisms were all appreciated. We know your time is valuable and we wanted to say thanks.
+Karena ada lebih banyak kontributor daripada ruang di sini, kami telah membuat halaman khusus untuk mengenali kontribusi yang dibuat. Kami ingin mengucapkan terima kasih yang tulus kepada organisasi-organisasi ini karena bersedia berada di garis depan dengan membagikan data kerentanan secara terbuka dari usaha mereka. Kami berharap ini akan terus berkembang dan mendorong lebih banyak organisasi untuk melakukan hal yang sama dan mungkin dipandang sebagai salah satu tonggak utama keamanan berbasis bukti. OWASP Top 10 tidak akan mungkin terjadi tanpa kontribusi yang menakjubkan ini.
 
-We would like to thank those individuals who contributed significant constructive comments and time reviewing this update to the Top 10. As much as possible, we have listed them on the "Acknowledgements" page.
+Terima kasih yang sebesar-besarnya kepada lebih dari 500 individu yang meluangkan waktu untuk menyelesaikan survei peringkat industri. Suara Anda membantu menentukan dua tambahan baru ke Top 10. Komentar tambahan, catatan dorongan, dan kritik semuanya dihargai. Kami tahu waktu Anda sangat berharga dan kami ingin mengucapkan terima kasih.
 
-And finally, we'd like to thank in advance all the translators out there who will translate this release of the Top 10 into numerous different languages, helping to make the OWASP Top 10 more accessible to the entire planet.
+Kami ingin mengucapkan terima kasih kepada orang-orang yang memberikan komentar konstruktif yang signifikan dan waktu untuk meninjau pembaruan ini ke 10 Besar. Sebisa mungkin, kami telah mendaftarkannya di halaman "Ucapan Terima Kasih".
+
+Dan akhirnya, kami ingin mengucapkan terima kasih terlebih dahulu kepada semua penerjemah di luar sana yang akan menerjemahkan peluncuran Top 10 ini ke dalam berbagai bahasa yang berbeda, membantu membuat OWASP Top 10 lebih mudah diakses ke seluruh planet.

@@ -1,70 +1,70 @@
-# A5:2017 Broken Access Control
+# A5:2017 Kontrol Akses Yang Buruk
 
-| Threat agents/Attack vectors | Security Weakness  | Impacts |
+| Agen ancaman / vektor serangan | Kelemahan Keamanan          | Dampak            |
 | -- | -- | -- |
-| Access Lvl : Exploitability 2 | Prevalence 2 : Detectability 2 | Technical 3 : Business |
-| Exploitation of access control is a core skill of attackers. [SAST](https://www.owasp.org/index.php/Source_Code_Analysis_Tools) and [DAST](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools) tools can detect the absence of access control but cannot verify if it is functional when it is present. Access control is detectable using manual means, or possibly through automation for the absence of access controls in certain frameworks. | Access control weaknesses are common due to the lack of automated detection, and lack of effective functional testing by application developers. Access control detection is not typically amenable to automated static or dynamic testing. Manual testing is the best way to detect missing or ineffective access control, including HTTP method (GET vs PUT, etc), controller, direct object references, etc. | The technical impact is attackers acting as users or administrators, or users using privileged functions, or creating, accessing, updating or deleting every record. The business impact depends on the protection needs of the application and data. |
+| Access Lvl : Eksploitasi 2 | Prevalensi 3: Deteksi 2 | Teknis 3: Bisnis |
+| Eksploitasi kontrol akses adalah keahlian inti pada penyerang. [SAST](https://www.owasp.org/index.php/Source_Code_Analysis_Tools) dan [DAST](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools) Tool ini dapat mendeteksi tidak adanya kontrol akses tetapi tidak dapat memverifikasi apakah itu berfungsi ketika serangan itu muncul. Kontrol akses dapat dideteksi menggunakan cara manual, atau mungkin melalui otomatisasi karena tidak adanya kontrol akses dalam framework tertentu | Kelemahan kontrol akses adalah umum karena kurangnya security assessment/deteksi awal, dan kurangnya pengujian fungsional yang efektif oleh pengembang aplikasi. Deteksi kontrol akses biasanya tidak menerima pengujian statis atau dinamis otomatis. Pengujian manual adalah cara terbaik untuk mendeteksi kontrol akses yang hilang atau tidak efektif, termasuk metode HTTP (GET vs PUT, dll), Kontrol, referensi objek langsung, dll. | Dampak teknisnya adalah penyerang bertindak sebagai pengguna atau administrator, atau pengguna yang menggunakan hak akses istimewa, atau membuat, mengakses, memperbarui, atau menghapus setiap catatan. Dampak bisnis tergantung pada kebutuhan perlindungan aplikasi dan data |
 
-## Is the Application Vulnerable?
+## Apakah Aplikasi itu Rentan?
 
-Access control enforces policy such that users cannot act outside of their intended permissions. Failures typically lead to unauthorized information disclosure, modification or destruction of all data, or performing a business function outside of the limits of the user. Common access control vulnerabilities include:
+Kontrol akses memberlakukan kebijakan sedemikian rupa sehingga pengguna tidak dapat bertindak di luar izin yang dimaksudkan. Kegagalan dalam mengimplementasikan kontrol akses akan mendampakkan pengeluaran sebuah informasi tanpa izin, modifikasi atau kerusakan semua data, atau melakukan sebuah fungsi bisnis diluar batasan yang telah diberikan kepada sebuah user / pengguna. Kerentanan kontrol akses yang umum termasuk:
 
-* Bypassing access control checks by modifying the URL, internal application state, or the HTML page, or simply using a custom API attack tool.
-* Allowing the primary key to be changed to another's users record, permitting viewing or editing someone else's account.
-* Elevation of privilege. Acting as a user without being logged in, or acting as an admin when logged in as a user.
-* Metadata manipulation, such as replaying or tampering with a JSON Web Token (JWT) access control token or a cookie or hidden field manipulated to elevate privileges, or abusing JWT invalidation
-* CORS misconfiguration allows unauthorized API access.
-* Force browsing to authenticated pages as an unauthenticated user or to privileged pages as a standard user. Accessing API with missing access controls for POST, PUT and DELETE.
+- Melewati pemeriksaan kontrol akses dengan memodifikasi URL, status aplikasi internal, atau halaman HTML, atau hanya menggunakan sebuah alat khusus untuk menyerang API.
+- Mengizinkan kunci utama atau primary key untuk diubah ke catatan pengguna orang lain, sehingga menyebabkan orang lain dapat melihat atau mengedit akun orang lain.
+- Ketinggian hak istimewa. Bertindak sebagai pengguna tanpa login, atau bertindak sebagai admin saat login sebagai pengguna.
+- Manipulasi metadata, seperti memutar ulang atau merusak token kontrol akses JSON Web Token (JWT) atau cookie atau bidang tersembunyi yang dimanipulasi untuk meningkatkan hak istimewa, atau menyalahgunakan pembatalan JWT
+- Kesalahan konfigurasi CORS memungkinkan akses API yang tidak diizinkan.
+- Paksa penelusuran ke halaman yang diautentikasi sebagai pengguna yang tidak diauthentikasi atau ke halaman yang diistimewakan sebagai pengguna standar. Mengakses API dengan kontrol akses yang hilang untuk POST, PUT dan DELETE.
 
-## How To Prevent
+## Cara Pencegahan
 
-Access control is only effective if enforced in trusted server-side code or server-less API, where the attacker cannot modify the access control check or metadata.
+Kontrol akses hanya efektif jika ditegakkan dalam kode sisi server terpercaya atau server-less API, yang dimana penyerang tidak dapat mengubah pemeriksaan kontrol akses atau metadata.
 
-* With the exception of public resources, deny by default.
-* Implement access control mechanisms once and re-use them throughout the application, including minimizing CORS usage.
-* Model access controls should enforce record ownership, rather than accepting that the user can create, read, update, or delete any record.
-* Unique application business limit requirements should be enforced by domain models.
-* Disable web server directory listing and ensure file metadata (e.g. .git) and backup files are not present within web roots.
-* Log access control failures, alert admins when appropriate (e.g. repeated failures).
-* Rate limit API and controller access to minimize the harm from automated attack tooling.
-* JWT tokens should be invalidated on the server after logout.
-* Developers and QA staff should include functional access control unit and integration tests.
+- Dengan pengecualian sumber daya publik, tolak secara default.
+- Terapkan mekanisme kontrol akses satu kali dan digunakan kembali di seluruh aplikasi, termasuk meminimalkan penggunaan CORS.
+- Kontrol akses model harus menegakkan kepemilikan catatan, daripada membolehkan bahwa pengguna atau user dapat membuat, membaca, memperbarui, atau menghapus catatan apa pun.
+- Persyaratan batas bisnis aplikasi unik harus diberlakukan oleh model domain.
+- Nonaktifkan daftar direktori server web dan pastikan metadata file (mis. Git) dan file cadangan tidak ada dalam root web.
+- Log kegagalan kontrol akses, admin waspada bila perlu (mis. Kegagalan berulang).
+- Menentukan batas limit untuk akses API dan controller untuk meminimalkan bahaya dari perkakas serangan otomatis.
+- Token JWT harus tidak valid di server setelah logout.
+- Pengembang dan staf QA harus mencakup unit kontrol akses fungsional dan tes integrasi.
 
-## Example Attack Scenarios
+## Contoh Skenario Serangan
 
-**Scenario #1**: The application uses unverified data in a SQL call that is accessing account information:
+**Skenario #1**: Aplikasi menggunakan data yang tidak diverifikasi dalam panggilan SQL yang mengakses informasi akun:
 
 ```
   pstmt.setString(1, request.getParameter("acct"));
   ResultSet results = pstmt.executeQuery();
 ```
 
-An attacker simply modifies the 'acct' parameter in the browser to send whatever account number they want. If not properly verified, the attacker can access any user's account.
+Seorang penyerang hanya memodifikasi parameter 'acct' di browser untuk mengirim nomor akun apa pun yang mereka inginkan. Jika tidak diverifikasi dengan benar, penyerang dapat mengakses akun pengguna mana pun.
 
 `http://example.com/app/accountInfo?acct=notmyacct`
 
-**Scenario #2**: An attacker simply force browses to target URLs. Admin rights are required for access to the admin page.
+**Scenario #2**: Seorang penyerang cukup memaksa browser untuk menargetkan URL. Hak admin diperlukan untuk akses ke halaman admin.
 
 ```
   http://example.com/app/getappInfo
   http://example.com/app/admin_getappInfo
 ```
 
-If an unauthenticated user can access either page, it’s a flaw. If a non-admin can access the admin page, this is a flaw.
+Jika pengguna yang tidak diautentikasi dapat mengakses halaman mana pun, itu adalah kontrol akses yang buruk. Jika non-admin dapat mengakses halaman admin, ini adalah otentifikasi yang buruk.
 
-## References
+## Referensi
 
 ### OWASP
 
-* [OWASP Proactive Controls: Access Controls](https://www.owasp.org/index.php/OWASP_Proactive_Controls#6:_Implement_Access_Controls)
-* [OWASP Application Security Verification Standard: V4 Access Control](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
-* [OWASP Testing Guide: Authorization Testing](https://www.owasp.org/index.php/Testing_for_Authorization)
-* [OWASP Cheat Sheet: Access Control](https://www.owasp.org/index.php/Access_Control_Cheat_Sheet)
+- [OWASP Proactive Controls: Access Controls](https://www.owasp.org/index.php/OWASP_Proactive_Controls#6:_Implement_Access_Controls)
+- [OWASP Application Security Verification Standard: V4 Access Control](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
+- [OWASP Testing Guide: Authorization Testing](https://www.owasp.org/index.php/Testing_for_Authorization)
+- [OWASP Cheat Sheet: Access Control](https://www.owasp.org/index.php/Access_Control_Cheat_Sheet)
 
-### External
+### Eksternal
 
-* [CWE-22: Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')](https://cwe.mitre.org/data/definitions/22.html)
-* [CWE-284: Improper Access Control (Authorization)](https://cwe.mitre.org/data/definitions/284.html)
-* [CWE-285: Improper Authorization](https://cwe.mitre.org/data/definitions/285.html)
-* [CWE-639: Authorization Bypass Through User-Controlled Key](https://cwe.mitre.org/data/definitions/639.html)
-* [PortSwigger: Exploiting CORS misconfiguration](https://portswigger.net/blog/exploiting-cors-misconfigurations-for-bitcoins-and-bounties)
+- [CWE-22: Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')](https://cwe.mitre.org/data/definitions/22.html)
+- [CWE-284: Improper Access Control (Authorization)](https://cwe.mitre.org/data/definitions/284.html)
+- [CWE-285: Improper Authorization](https://cwe.mitre.org/data/definitions/285.html)
+- [CWE-639: Authorization Bypass Through User-Controlled Key](https://cwe.mitre.org/data/definitions/639.html)
+- [PortSwigger: Exploiting CORS misconfiguration](https://portswigger.net/blog/exploiting-cors-misconfigurations-for-bitcoins-and-bounties)
