@@ -1,4 +1,9 @@
 # Top10
+ 
+ترجمه فارسی
+
+OWASP Top 10 2017
+
 Official OWASP Top 10 Document Repository
 
 We have released the OWASP Top 10 - 2017 (Final)
@@ -21,3 +26,4 @@ There are currently four co-leaders for the OWASP Top 10. We meet every Friday a
 # OWASP T10 References
 - [OWASP T10 Wiki homepage](https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project)
 - [OWASP 2017 Summit Outcomes](https://owaspsummit.org/Outcomes/Owasp-Top-10-2017/Owasp-Top-10-2017.html)
+ 
