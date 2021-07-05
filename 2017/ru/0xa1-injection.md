@@ -54,7 +54,7 @@ __Примечание__: элементы SQL-структуры, такие к
 
 ### OWASP
 
-* [Проактивная защита OWASP: Параметризация запросов](https://www.owasp.org/index.php/OWASP_Proactive_Controls#2:_Parameterize_Queries)
+* [Проактивная защита OWASP: Параметризация запросов](https://owasp.org/www-project-proactive-controls/#div-proactivecontrols)
 * [Стандарт подтверждения безопасности приложений OWASP (ASVS): V5 Проверка входных данных и кодировки](https://www.owasp.org/index.php/ASVS_V5_Input_validation_and_output_encoding)
 * [Руководство OWASP по тестированию: Внедрение SQL-кода](https://www.owasp.org/index.php/Testing_for_SQL_Injection_(OTG-INPVAL-005)), [команд](https://www.owasp.org/index.php/Testing_for_Command_Injection_(OTG-INPVAL-013)), [ORM](https://www.owasp.org/index.php/Testing_for_ORM_Injection_(OTG-INPVAL-007))
 * [Памятка OWASP: Предотвращение внедрений](https://www.owasp.org/index.php/Injection_Prevention_Cheat_Sheet)
