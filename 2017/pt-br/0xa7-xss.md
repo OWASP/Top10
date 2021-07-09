@@ -5,7 +5,7 @@
 | Nível de Acesso \| Explorabilidade 3 | Prevalência 3 \| Detectabilidade 3 | Técnico 2 \| Negócio |
 | Ferramentas automatizadas podem detectar e explorar as três formas de XSS, e existem frameworks de exploits disponíveis gratuitamente. | XSS é o segundo problema mais prevalente no OWASP Top 10, e é encontrado em cerca de dois terços de todas as aplicações. As ferramentas automatizadas podem encontrar alguns problemas XSS automaticamente, particularmente em tecnologias maduras, como PHP, J2EE / JSP e ASP.NET. | O impacto do XSS é moderado para refletido e DOM XSS, e grave para XSS armazenado, com execução remota de código no navegador da vítima, como roubar credenciais, sessões ou entregar malwares à vítima. |
 
-## A Aplicação Está Vulnerável?
+## A Aplicação está Vulnerável?
 
 Existem três formas de XSS, geralmente visando os navegadores dos usuários:
 
