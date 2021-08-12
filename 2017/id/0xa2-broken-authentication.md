@@ -25,7 +25,7 @@ Mungkin ada kelemahan otentikasi jika aplikasi:
 
 * Bila memungkinkan, terapkan autentikasi multi-faktor untuk mencegah pengisian otomatis, credential stuffing, brute force, dan penggunaan kembali kredensial bekas pakai yang dicuri.
 * Jangan mengirim atau menyebarkan dengan kredensial default, terutama untuk pengguna admin.
-* Lakukan pengecekan password lemah, seperti menguji password baru atau yang telah diubah terhadap daftar[10000 password terburuk teratas](https://github.com/danielmiessler/SecLists/tree/master/Passwords).
+* Lakukan pengecekan password lemah, seperti menguji password baru atau yang telah diubah terhadap daftar [10000 password terburuk teratas](https://github.com/danielmiessler/SecLists/tree/master/Passwords).
 * Sejajarkan panjang kata sandi, kompleksitas dan kebijakan rotasi dengan [NIST 800-63 B panduan di bagian 5.1.1 untuk Rahasia Memoris](https://pages.nist.gov/800-63-3/sp800-63b.html#memsecret) atau kebijakan sandi berbasis kebijakan yang modern lainnya.
 * Pastikan pendaftaran, pemulihan kredensial, dan jalur API disulitkan melawan serangan akun satu per satu dengan menggunakan pesan yang sama untuk semua hasil.
 * Batasi atau tingkatkan penundaan upaya login yang gagal. Log semua kegagalan dan peringatan administrator saat credential stuffing, brute force, atau serangan lain yang terdeteksi.

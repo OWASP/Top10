@@ -38,30 +38,17 @@ Tersedia aplikasi framework proteksi baik komersial maupun opensource seperti [O
 
 **Skenario #3**: Sebuah pengecer besar AS dilaporkan memiliki analisis malware internal Sandbox menganalisis lampiran. Perangkat lunak Sandbox telah mendeteksi perangkat lunak yang mungkin tidak diinginkan, tetapi tidak ada yang menanggapi deteksi ini. Sandbox telah mengeluarkan peringatan untuk beberapa waktu sebelum pelanggaran terdeteksi karena transaksi kartu yang curang oleh bank eksternal.
 
-
->>>>>>> upstream/master
 ## Referensi
 
 ### OWASP
 
-<<<<<<< HEAD
-* [OWASP Kontrol Proaktif: Mengimplementasi Logging dan Deteksi Gangguan](https://www.owasp.org/index.php/OWASP_Proactive_Controls#8:_Implement_Logging_and_Intrusion_Detection)
-* [OWASP Application Security Verification Standard: V8 Logging and Monitoring](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
-* [OWASP Panduan Testing: Testing untuk Kode Error yang Mendetail](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
-* [OWASP Cheat Sheet: Logging](https://www.owasp.org/index.php/Logging_Cheat_Sheet)
-=======
 - [OWASP Proactive Controls: Implement Logging and Intrusion Detection](https://www.owasp.org/index.php/OWASP_Proactive_Controls#8:_Implement_Logging_and_Intrusion_Detection)
 - [OWASP Application Security Verification Standard: V8 Logging and Monitoring](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
 - [OWASP Testing Guide: Testing for Detailed Error Code](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
 - [OWASP Cheat Sheet: Logging](https://www.owasp.org/index.php/Logging_Cheat_Sheet)
->>>>>>> upstream/master
 
 ### Eksternal
 
-<<<<<<< HEAD
-* [CWE-223: Omission of Security-relevant Information](https://cwe.mitre.org/data/definitions/223.html)
-* [CWE-778: Kurangnya Logging](https://cwe.mitre.org/data/definitions/778.html)
-=======
 - [CWE-223: Omission of Security-relevant Information](https://cwe.mitre.org/data/definitions/223.html)
 - [CWE-778: Insufficient Logging](https://cwe.mitre.org/data/definitions/778.html)
->>>>>>> upstream/master
+
