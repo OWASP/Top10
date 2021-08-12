@@ -55,4 +55,4 @@ This attack causes the victim’s session ID to be sent to the attacker’s webs
 ### External
 
 * [CWE-79: Improper neutralization of user supplied input](https://cwe.mitre.org/data/definitions/79.html)
-* [PortSwigger: Client-side template injection](https://portswigger.net/kb/issues/00200308_clientsidetemplateinjection)
+* [PortSwigger: Client-side template injection](https://portswigger.net/kb/issues/00200308_client-side-template-injection)

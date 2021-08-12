@@ -57,4 +57,4 @@ Este ataque faz com que a ID da sessão da vítima seja enviada para o site do i
 ### Externas
 
 * [CWE-79: Improper neutralization of user supplied input](https://cwe.mitre.org/data/definitions/79.html)
-* [PortSwigger: Client-side template injection](https://portswigger.net/kb/issues/00200308_clientsidetemplateinjection)
+* [PortSwigger: Client-side template injection](https://portswigger.net/kb/issues/00200308_client-side-template-injection)

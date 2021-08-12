@@ -35,7 +35,7 @@ Every organization must ensure that there is an ongoing plan for monitoring, tri
 * [CVE-2017-5638](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5638), a Struts 2 remote code execution vulnerability that enables execution of arbitrary code on the server, has been blamed for significant breaches.
 * While [internet of things (IoT)](https://en.wikipedia.org/wiki/Internet_of_things) are frequently difficult or impossible to patch, the importance of patching them can be great (e.g. biomedical devices).
 
-There are automated tools to help attackers find unpatched or misconfigured systems. For example, the [Shodan IoT search engine](https://www.shodan.io/report/89bnfUyJ) can help you find devices that still suffer from [Heartbleed](https://en.wikipedia.org/wiki/Heartbleed) vulnerability that was patched in April 2014.
+There are automated tools to help attackers find unpatched or misconfigured systems. For example, the [Shodan IoT search engine](https://www.shodan.io/) can help you find devices that still suffer from [Heartbleed](https://en.wikipedia.org/wiki/Heartbleed) vulnerability that was patched in April 2014.
 
 ## References
 
@@ -48,9 +48,9 @@ There are automated tools to help attackers find unpatched or misconfigured syst
 
 ### External
 
-* [The Unfortunate Reality of Insecure Libraries](https://www.aspectsecurity.com/research-presentations/the-unfortunate-reality-of-insecure-libraries)
+* [The Unfortunate Reality of Insecure Libraries](https://cdn2.hubspot.net/hub/203759/file-1100864196-pdf/docs/Contrast_-_Insecure_Libraries_2014.pdf)
 * [MITRE Common Vulnerabilities and Exposures (CVE) search](https://www.cvedetails.com/version-search.php)
 * [National Vulnerability Database (NVD)](https://nvd.nist.gov/)
 * [Retire.js for detecting known vulnerable JavaScript libraries](https://github.com/retirejs/retire.js/)
-* [Node Libraries Security Advisories](https://nodesecurity.io/advisories)
+
 * [Ruby Libraries Security Advisory Database and Tools](https://rubysec.com/)

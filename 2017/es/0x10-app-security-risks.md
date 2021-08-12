@@ -36,6 +36,6 @@ En la medida de lo posible, los nombres de los riesgos en el Top 10 están aline
 * [ISO 31000: Risk Management Std](https://www.iso.org/iso-31000-risk-management.html)
 * [ISO 27001: ISMS](https://www.iso.org/isoiec-27001-information-security.html)
 * [NIST Cyber Framework (US)](https://www.nist.gov/cyberframework)
-* [ASD Strategic Mitigations (AU)](https://www.asd.gov.au/infosec/mitigationstrategies.htm)
+* [ASD Strategic Mitigations (AU)](https://www.cyber.gov.au/acsc/view-all-content/publications/strategies-mitigate-cyber-security-incidents)
 * [NIST CVSS 3.0](https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator)
 * [Herramienta de modelado de riesgos de Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=49168)

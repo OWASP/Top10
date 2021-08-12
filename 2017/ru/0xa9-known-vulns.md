@@ -34,7 +34,7 @@
 * [CVE-2017-5638](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5638): уязвимость в Struts 2, позволяющая удаленно выполнить произвольный код на сервере, стала причиной нескольких серьезных взломов;
 * уязвимости в [интернете вещей (IoT)](https://en.wikipedia.org/wiki/Internet_of_things) зачастую сложно или невозможно устранить, а это может привести к серьезным последствиям (например, в случае биомедицинских приборов).
 
-Существуют автоматизированные инструменты, позволяющие злоумышленникам находить уязвимые или некорректно настроенные системы. Например, поисковик [Shodan для IoT](https://www.shodan.io/report/89bnfUyJ) позволяет обнаружить устройства, в которых до сих пор не устранена уязвимость [Heartbleed](https://en.wikipedia.org/wiki/Heartbleed), которая была исправлена в апреле 2014 года.
+Существуют автоматизированные инструменты, позволяющие злоумышленникам находить уязвимые или некорректно настроенные системы. Например, поисковик [Shodan для IoT](https://www.shodan.io/) позволяет обнаружить устройства, в которых до сих пор не устранена уязвимость [Heartbleed](https://en.wikipedia.org/wiki/Heartbleed), которая была исправлена в апреле 2014 года.
 
 ## Ссылки
 
@@ -47,7 +47,7 @@
 
 ### Сторонние
 
-* [Унылая реальность небезопасных библиотек](https://www.aspectsecurity.com/research-presentations/the-unfortunate-reality-of-insecure-libraries)
+* [Унылая реальность небезопасных библиотек](https://cdn2.hubspot.net/hub/203759/file-1100864196-pdf/docs/Contrast_-_Insecure_Libraries_2014.pdf)
 * [Поиск уязвимостей (CVE) MITRE](https://www.cvedetails.com/version-search.php)
 * [Национальная база данных уязвимостей (NVD)](https://nvd.nist.gov/)
 * [Retire.js для обнаружения известных уязвимых библиотек JavaScript](https://github.com/retirejs/retire.js/)

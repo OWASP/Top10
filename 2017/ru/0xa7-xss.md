@@ -59,4 +59,4 @@
 ### Сторонние
 
 * [CWE-79: Некорректная нейтрализация входных данных от пользователей](https://cwe.mitre.org/data/definitions/79.html)
-* [PortSwigger: Внедрение в пользовательские шаблоны](https://portswigger.net/kb/issues/00200308_clientsidetemplateinjection)
+* [PortSwigger: Внедрение в пользовательские шаблоны](https://portswigger.net/kb/issues/00200308_client-side-template-injection)

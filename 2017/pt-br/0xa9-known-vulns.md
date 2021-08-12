@@ -34,7 +34,7 @@ Toda organização deve garantir que haja um plano contínuo de monitoramento, t
 * [CVE-2017-5638](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5638), uma vulnerabilidade de execução remota de código no Struts 2 que permite a execução de código arbitrário em o servidor, foi culpado por brechas significativas.
 * Enquanto [a internet das coisas (IoT)](https://en.wikipedia.org/wiki/Internet_of_things) são freqüentemente difíceis ou impossíveis de corrigir, a importância de corrigi-los pode ser grande (por exemplo: [marca-passos de St. Jude](https://arstechnica.com/information-technology/2017/08/465k-patients-need-a-firmware-update-to-prevent-serious-pacemaker-hacks/)).
 
-Existem ferramentas automatizadas para ajudar os invasores a encontrar sistemas não corrigidos ou mal configurados. Por exemplo, o [mecanismo de busca de IoT Shodan](https://www.shodan.io/report/89bnfUyJ) pode ajudá-lo a encontrar dispositivos que ainda sofrem com a vulnerabilidade [Heartbleed](https://en.wikipedia.org/wiki/Heartbleed) que foi corrigida em abril de 2014.
+Existem ferramentas automatizadas para ajudar os invasores a encontrar sistemas não corrigidos ou mal configurados. Por exemplo, o [mecanismo de busca de IoT Shodan](https://www.shodan.io/) pode ajudá-lo a encontrar dispositivos que ainda sofrem com a vulnerabilidade [Heartbleed](https://en.wikipedia.org/wiki/Heartbleed) que foi corrigida em abril de 2014.
 
 ## Referências
 
@@ -47,9 +47,9 @@ Existem ferramentas automatizadas para ajudar os invasores a encontrar sistemas 
 
 ### Externas
 
-* [The Unfortunate Reality of Insecure Libraries](https://www.aspectsecurity.com/research-presentations/the-unfortunate-reality-of-insecure-libraries)
+* [The Unfortunate Reality of Insecure Libraries](https://cdn2.hubspot.net/hub/203759/file-1100864196-pdf/docs/Contrast_-_Insecure_Libraries_2014.pdf)
 * [MITRE Common Vulnerabilities and Exposures (CVE) search](https://www.cvedetails.com/version-search.php)
 * [National Vulnerability Database (NVD)](https://nvd.nist.gov/)
 * [Retire.js for detecting known vulnerable JavaScript libraries](https://github.com/retirejs/retire.js/)
-* [Node Libraries Security Advisories](https://nodesecurity.io/advisories)
+
 * [Ruby Libraries Security Advisory Database and Tools](https://rubysec.com/)

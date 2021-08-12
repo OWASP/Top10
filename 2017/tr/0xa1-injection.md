@@ -59,4 +59,4 @@ Bu değer, her iki sorgunun da anlamını değiştirmekte ve tablodaki tüm kay�
 * [CWE-89: SQL Injection](https://cwe.mitre.org/data/definitions/89.html)
 * [CWE-564: Hibernate Injection](https://cwe.mitre.org/data/definitions/564.html)
 * [CWE-917: Expression Language Injection](https://cwe.mitre.org/data/definitions/917.html)
-* [PortSwigger: Server-side template injection](https://portswigger.net/kb/issues/00101080_serversidetemplateinjection)
+* [PortSwigger: Server-side template injection](https://portswigger.net/web-security/server-side-template-injection)

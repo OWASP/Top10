@@ -113,5 +113,5 @@ mecanismo de defesa automática contra [Cross-Site Request Forgery
 [0xa713]: https://owasp.org/www-community/xss-filter-evasion-cheatsheet
 [0xa714]: https://owasp.org/www-project-java-encoder/
 [0xa715]: https://cwe.mitre.org/data/definitions/79.html
-[0xa716]: https://portswigger.net/kb/issues/00200308_clientsidetemplateinjection
+[0xa716]: https://portswigger.net/kb/issues/00200308_client-side-template-injection
 

@@ -56,4 +56,4 @@ Cette attaque envoie l'ID de session de la victime vers le site web de l'attaqua
 ### Externes
 
 * [CWE-79 : Neutralisation incorrecte des entrées utilisateurs](https://cwe.mitre.org/data/definitions/79.html)
-* [PortSwigger : Modèle d'injection côté Client](https://portswigger.net/kb/issues/00200308_clientsidetemplateinjection)
+* [PortSwigger : Modèle d'injection côté Client](https://portswigger.net/kb/issues/00200308_client-side-template-injection)

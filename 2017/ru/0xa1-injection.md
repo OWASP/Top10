@@ -69,4 +69,4 @@ __Примечание__: элементы SQL-структуры, такие к
 * [CWE-89: Внедрение SQL](https://cwe.mitre.org/data/definitions/89.html)
 * [CWE-564: Внедрение SQL-кода с использованием Hibernate](https://cwe.mitre.org/data/definitions/564.html)
 * [CWE-917: Внедрение кода языка выражений](https://cwe.mitre.org/data/definitions/917.html)
-* [PortSwigger: Внедрение в серверные шаблоны](https://portswigger.net/kb/issues/00101080_serversidetemplateinjection)
+* [PortSwigger: Внедрение в серверные шаблоны](https://portswigger.net/web-security/server-side-template-injection)

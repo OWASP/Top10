@@ -61,7 +61,7 @@
   </li>
 </ul>
 
-<p dir="rtl" align="right">ابزارهای خودکاری برای کمک به مهاجمین وجود دارد که سیستم های با پیکربندی اشتباه یا وصله نشده را پیدا می کنند. به عنوان مثال،  <a href="https://www.shodan.io/report/89bnfUyJ">موتور جستجوی  Shodan IoT </a> می تواند به شما در پیدا کردن دستگاه هایی که هنوز از آسیب پذیری <a href="https://en.wikipedia.org/wiki/Heartbleed">Heartbleed</a> که در آوریل 2014 رفع شده است رنج میبرند کمک شایانی می کند. </p>
+<p dir="rtl" align="right">ابزارهای خودکاری برای کمک به مهاجمین وجود دارد که سیستم های با پیکربندی اشتباه یا وصله نشده را پیدا می کنند. به عنوان مثال،  <a href="https://www.shodan.io/">موتور جستجوی  Shodan IoT </a> می تواند به شما در پیدا کردن دستگاه هایی که هنوز از آسیب پذیری <a href="https://en.wikipedia.org/wiki/Heartbleed">Heartbleed</a> که در آوریل 2014 رفع شده است رنج میبرند کمک شایانی می کند. </p>
 
 ## <div dir="rtl" align="right">منابع</div>
 
@@ -74,9 +74,9 @@
 
 ### <div dir="rtl" align="right">خارجی</div>
 
-* [The Unfortunate Reality of Insecure Libraries](https://www.aspectsecurity.com/research-presentations/the-unfortunate-reality-of-insecure-libraries)
+* [The Unfortunate Reality of Insecure Libraries](https://cdn2.hubspot.net/hub/203759/file-1100864196-pdf/docs/Contrast_-_Insecure_Libraries_2014.pdf)
 * [MITRE Common Vulnerabilities and Exposures (CVE) search](https://www.cvedetails.com/version-search.php)
 * [National Vulnerability Database (NVD)](https://nvd.nist.gov/)
 * [Retire.js for detecting known vulnerable JavaScript libraries](https://github.com/retirejs/retire.js/)
-* [Node Libraries Security Advisories](https://nodesecurity.io/advisories)
+
 * [Ruby Libraries Security Advisory Database and Tools](https://rubysec.com/)

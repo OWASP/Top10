@@ -69,4 +69,4 @@ Si un utilisateur non-authentifié peut accéder à l'une des pages, c'est une f
 * [CWE-284: Improper Access Control (Authorization)](https://cwe.mitre.org/data/definitions/284.html)
 * [CWE-285: Improper Authorization](https://cwe.mitre.org/data/definitions/285.html)
 * [CWE-639: Authorization Bypass Through User-Controlled Key](https://cwe.mitre.org/data/definitions/639.html)
-* [PortSwigger: Exploiting CORS misconfiguration](https://portswigger.net/blog/exploiting-cors-misconfigurations-for-bitcoins-and-bounties)
+* [PortSwigger: Exploiting CORS misconfiguration](https://portswigger.net/research/exploiting-cors-misconfigurations-for-bitcoins-and-bounties)

@@ -124,5 +124,5 @@ até invocar procedimentos armazenados.
 [0xa115]: https://cwe.mitre.org/data/definitions/89.html
 [0xa116]: https://cwe.mitre.org/data/definitions/564.html
 [0xa117]: https://cwe.mitre.org/data/definitions/917.html
-[0xa118]: https://portswigger.net/kb/issues/00101080_serversidetemplateinjection
+[0xa118]: https://portswigger.net/web-security/server-side-template-injection
 

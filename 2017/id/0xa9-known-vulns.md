@@ -35,7 +35,7 @@ Setiap organisasi harus memastikan bahwa ada rencana berkelanjutan untuk memonit
 * [CVE-2017-5638](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5638), kerentanan eksekusi kode jarak jauh Struts 2 yang memungkinkan eksekusi kode arbitrer pada server, telah disalahkan atas pelanggaran yang signifikan.
 * Meskipun [internet of things (IoT)](https://en.wikipedia.org/wiki/Internet_of_things) seringkali sulit atau tidak mungkin untuk diperbaiki, pentingnya memperbaiki mereka bisa jadi sangat penting (mis. Perangkat biomedis).
 
-Ada alat otomatis untuk membantu penyerang menemukan sistem yang belum diperbaiki atau salah dalam konfigurasi. Contoh, [mesin telusur Shodan IoT](https://www.shodan.io/report/89bnfUyJ) dapat membantu Anda menemukan perangkat yang masih terkena [Heartbleed] [Heartbleed](https://en.wikipedia.org/wiki/Heartbleed) kerentanan yang telah di-patch pada April 2014.
+Ada alat otomatis untuk membantu penyerang menemukan sistem yang belum diperbaiki atau salah dalam konfigurasi. Contoh, [mesin telusur Shodan IoT](https://www.shodan.io/) dapat membantu Anda menemukan perangkat yang masih terkena [Heartbleed] [Heartbleed](https://en.wikipedia.org/wiki/Heartbleed) kerentanan yang telah di-patch pada April 2014.
 
 ## Referensi
 
@@ -48,9 +48,9 @@ Ada alat otomatis untuk membantu penyerang menemukan sistem yang belum diperbaik
 
 ### External
 
-* [The Unfortunate Reality of Insecure Libraries](https://www.aspectsecurity.com/research-presentations/the-unfortunate-reality-of-insecure-libraries)
+* [The Unfortunate Reality of Insecure Libraries](https://cdn2.hubspot.net/hub/203759/file-1100864196-pdf/docs/Contrast_-_Insecure_Libraries_2014.pdf)
 * [MITRE Common Vulnerabilities and Exposures (CVE) search](https://www.cvedetails.com/version-search.php)
 * [National Vulnerability Database (NVD)](https://nvd.nist.gov/)
 * [Retire.js for detecting known vulnerable JavaScript libraries](https://github.com/retirejs/retire.js/)
-* [Node Libraries Security Advisories](https://nodesecurity.io/advisories)
+
 * [Ruby Libraries Security Advisory Database and Tools](https://rubysec.com/)

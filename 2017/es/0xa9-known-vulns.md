@@ -34,7 +34,7 @@ Cada organización debe asegurar la existencia de un plan en ejecución para mon
 * [CVE-2017-5638](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5638), una ejecución remota de código en Struts 2 que ha sido culpada de grandes brechas de datos.
 * Aunque los dispositivos del [internet de las cosas (IoT)](https://en.wikipedia.org/wiki/Internet_of_things) frecuentemente son imposibles o muy dificultosos de ser actualizados, la importancia de éstas actualizaciones puede ser enorme ( por ejemplo dispositivos biomedicos).
 
-Existen herramientas automáticas que ayudan a los atacantes a descubrir sistemas mal configurados o desactualizados. A modo de ejemplo, el [motor de búsqueda Shodan IoT](https://www.shodan.io/report/89bnfUyJ) ayuda a descubrir dispositivos que aún son vulnerables a [Heartbleed](https://en.wikipedia.org/wiki/Heartbleed), la cual fue parcheada en abril del 2014.
+Existen herramientas automáticas que ayudan a los atacantes a descubrir sistemas mal configurados o desactualizados. A modo de ejemplo, el [motor de búsqueda Shodan IoT](https://www.shodan.io/) ayuda a descubrir dispositivos que aún son vulnerables a [Heartbleed](https://en.wikipedia.org/wiki/Heartbleed), la cual fue parcheada en abril del 2014.
 
 ## Referencias (en Inglés)
 
@@ -46,7 +46,7 @@ Existen herramientas automáticas que ayudan a los atacantes a descubrir sistema
 
 ### Externas
 
-* [The Unfortunate Reality of Insecure Libraries](https://www.aspectsecurity.com/research-presentations/the-unfortunate-reality-of-insecure-libraries)
+* [The Unfortunate Reality of Insecure Libraries](https://cdn2.hubspot.net/hub/203759/file-1100864196-pdf/docs/Contrast_-_Insecure_Libraries_2014.pdf)
 * [Búsquedas en MITRE Common Vulnerabilities and Exposures (CVE)](https://www.cvedetails.com/version-search.php)
 * [National Vulnerability Database (NVD)](https://nvd.nist.gov/)
 * [Retire.js para la detección de vulnerabilidades en bibliotecas de JavaScript](https://github.com/retirejs/retire.js/)

@@ -74,7 +74,7 @@ nomenclatura consensual e reduzir possível confusão.
 [0x108]: https://www.iso.org/iso-31000-risk-management.html
 [0x109]: https://www.iso.org/isoiec-27001-information-security.html
 [0x1010]: https://www.nist.gov/cyberframework
-[0x1011]: https://www.asd.gov.au/infosec/mitigationstrategies.htm
+[0x1011]: https://www.cyber.gov.au/acsc/view-all-content/publications/strategies-mitigate-cyber-security-incidents
 [0x1012]: https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator
 [0x1013]: https://www.microsoft.com/en-us/download/details.aspx?id=49168
 

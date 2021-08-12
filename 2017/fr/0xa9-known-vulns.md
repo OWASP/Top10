@@ -36,7 +36,7 @@ Voici quelques exemples de découvertes de vulnérabilités exploitables de comp
 * [CVE-2017-5638](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5638), une vulnérabilité d'exécution à distance de Struts 2, qui permet l'éxecution de code arbitraire sur le serveur, a été responsable d'importantes violations.
 * Bien que [l'internet des objets (IoT)](https://en.wikipedia.org/wiki/Internet_of_things) soit souvent difficile voire impossible à mettre à jour, l'importance de ces mises à jour peut être énorme (ex : objets biomédicaux).
 
-Il existe des outils automatiques qui aident les attaquants à trouver des systèmes malconfigurés ou non mis à jour. Par exemple, le [moteur de recherche IoT de Shodan](https://www.shodan.io/report/89bnfUyJ) peut vous aider à trouver des objets qui sont encore vulnérables à la faille [Heartbleed](https://en.wikipedia.org/wiki/Heartbleed) corrigée en Avril 2014.
+Il existe des outils automatiques qui aident les attaquants à trouver des systèmes malconfigurés ou non mis à jour. Par exemple, le [moteur de recherche IoT de Shodan](https://www.shodan.io/) peut vous aider à trouver des objets qui sont encore vulnérables à la faille [Heartbleed](https://en.wikipedia.org/wiki/Heartbleed) corrigée en Avril 2014.
 
 ## Références
 
@@ -49,7 +49,7 @@ Il existe des outils automatiques qui aident les attaquants à trouver des syst�
 
 ### Externes
 
-* [La regrettable réalité des bibliothèques non sécurisées](https://www.aspectsecurity.com/research-presentations/the-unfortunate-reality-of-insecure-libraries)
+* [La regrettable réalité des bibliothèques non sécurisées](https://cdn2.hubspot.net/hub/203759/file-1100864196-pdf/docs/Contrast_-_Insecure_Libraries_2014.pdf)
 * [L'organisation MITRE maintient le dictionnaire de recherche des Common Vulnerabilities and Exposures (CVE)](https://www.cvedetails.com/version-search.php)
 * [Base de Données Nationale de Vulnérabilité (NVD)](https://nvd.nist.gov/)
 * [Retire.js pour la détection de vulnérabilités connues des bibliothèques JavaScript](https://github.com/retirejs/retire.js/)

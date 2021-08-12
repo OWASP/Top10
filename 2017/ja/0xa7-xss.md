@@ -55,4 +55,4 @@ XSSを防止するには、信頼できないデータを動的なブラウザ�
 ### 外部資料
 
 * [CWE-79: Improper neutralization of user supplied input](https://cwe.mitre.org/data/definitions/79.html)
-* [PortSwigger: Client-side template injection](https://portswigger.net/kb/issues/00200308_clientsidetemplateinjection)
+* [PortSwigger: Client-side template injection](https://portswigger.net/kb/issues/00200308_client-side-template-injection)

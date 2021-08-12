@@ -68,4 +68,4 @@
 * [CWE-284: Некорректное управление доступом (Авторизация)](https://cwe.mitre.org/data/definitions/284.html)
 * [CWE-285: Некорректная авторизация](https://cwe.mitre.org/data/definitions/285.html)
 * [CWE-639: Обход авторизации, используя значение ключа пользователя](https://cwe.mitre.org/data/definitions/639.html)
-* [PortSwigger: Эксплуатация некорректно настроенного междоменного использования ресурсов](https://portswigger.net/blog/exploiting-cors-misconfigurations-for-bitcoins-and-bounties)
+* [PortSwigger: Эксплуатация некорректно настроенного междоменного использования ресурсов](https://portswigger.net/research/exploiting-cors-misconfigurations-for-bitcoins-and-bounties)

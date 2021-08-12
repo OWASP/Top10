@@ -36,7 +36,7 @@
 * Apache Struts 2においてリモートで任意のコードが実行される脆弱性[CVE-2017-5638](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5638)は、重大な侵害をもたらしています。
 * [Internet of things (IoT)](https://en.wikipedia.org/wiki/Internet_of_things)は、頻繁なパッチ適用が困難もしくは不可能ですが、一方でパッチ適用の重要性はますます高まっています。（例：医療機器）
 
-攻撃者を助けるようなツールがあり、パッチが未適用なシステムやシステムの設定ミスを自動的に見つけることができます。例えば、[Shodan IoT search engine](https://www.shodan.io/report/89bnfUyJ)は、2014年4月にパッチが適用された[Heartbleed](https://en.wikipedia.org/wiki/Heartbleed)の脆弱性などセキュリティに問題のある機器を見つけることができます。
+攻撃者を助けるようなツールがあり、パッチが未適用なシステムやシステムの設定ミスを自動的に見つけることができます。例えば、[Shodan IoT search engine](https://www.shodan.io/)は、2014年4月にパッチが適用された[Heartbleed](https://en.wikipedia.org/wiki/Heartbleed)の脆弱性などセキュリティに問題のある機器を見つけることができます。
 
 ## 参考資料
 
@@ -49,9 +49,9 @@
 
 ### 外部資料
 
-* [The Unfortunate Reality of Insecure Libraries](https://www.aspectsecurity.com/research-presentations/the-unfortunate-reality-of-insecure-libraries)
+* [The Unfortunate Reality of Insecure Libraries](https://cdn2.hubspot.net/hub/203759/file-1100864196-pdf/docs/Contrast_-_Insecure_Libraries_2014.pdf)
 * [MITRE Common Vulnerabilities and Exposures (CVE) search](https://www.cvedetails.com/version-search.php)
 * [National Vulnerability Database (NVD)](https://nvd.nist.gov/)
 * [Retire.js for detecting known vulnerable JavaScript libraries](https://github.com/retirejs/retire.js/)
-* [Node Libraries Security Advisories](https://nodesecurity.io/advisories)
+
 * [Ruby Libraries Security Advisory Database and Tools](https://rubysec.com/)
