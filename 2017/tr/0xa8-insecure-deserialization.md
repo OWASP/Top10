@@ -51,9 +51,9 @@ Saldırgan serileştirilen nesneyi yönetici hakları elde etmek için değişti
 
 ### OWASP
 
-* [OWASP Kopya Kağıdı: Ters Serileştirme](https://www.owasp.org/index.php/Deserialization_Cheat_Sheet)
-* [OWASP Proaktif Kontroller: Tüm Girdilerin Doğrulanması](https://www.owasp.org/index.php/OWASP_Proactive_Controls#4:_Validate_All_Inputs)
-* [OWASP Uygulama Güvenliği Doğrulama Standardı: TBA](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
+* [OWASP Kopya Kağıdı: Ters Serileştirme](https://cheatsheetseries.owasp.org/cheatsheets/Deserialization_Cheat_Sheet.html)
+* [OWASP Proaktif Kontroller: Tüm Girdilerin Doğrulanması](https://owasp.org/www-project-proactive-controls/v3/en/c5-validate-inputs)
+* [OWASP Uygulama Güvenliği Doğrulama Standardı: TBA](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x11-V2-Authentication.md)
 * [OWASP AppSecEU 2016: Surviving the Java Deserialization Apocalypse](https://speakerdeck.com/pwntester/surviving-the-java-deserialization-apocalypse)
 * [OWASP AppSecUSA 2017: Friday the 13th JSON Attacks](https://speakerdeck.com/pwntester/friday-the-13th-json-attacks)
 
@@ -61,4 +61,4 @@ Saldırgan serileştirilen nesneyi yönetici hakları elde etmek için değişti
 
 * [CWE-502: Deserialization of Untrusted Data](https://cwe.mitre.org/data/definitions/502.html)
 * [Java Unmarshaller Security](https://github.com/mbechler/marshalsec)
-* [OWASP AppSec Cali 2015: Marshalling Pickles](http://frohoff.github.io/appseccali-marshalling-pickles/)
+* [OWASP AppSec Cali 2015: Marshalling Pickles](https://frohoff.github.io/appseccali-marshalling-pickles/)

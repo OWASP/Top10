@@ -3,7 +3,7 @@
 | Threat agents/Attack vectors | Security Weakness           | Impacts               |
 | -- | -- | -- |
 | Access Lvl : قابلیت بهره‌برداری: ۳ | شیوع: ۲ : قابل کشف بودن: ۳ | تکنیکی: ۳ : Business ? |
-| <div dir="rtl" align="right">اگر مهاجمان بتوانند XML بارگذاری کنند یا محتوای آلوده در یک سندXML  وارد کنند، از کد ها، وابستگی ها یا ادغام های آسیب پذیر استفاده کنند، می‌توانند از پردازنده های XML آسیب پذیر برای مقاصد خود بهره جویی کنند.</div> | <div dir="rtl" align="right"> به طور پیش فرض، بسیاری از پردازنده های قدیمی‌ترXML  اجازه تعیین یک موجود خارجی را می‌دهند. ( یک URI  که در پردازش XML  محاسبه و ارزیابی می‌شود.)ابزارهای <a href="https://www.owasp.org/index.php/Source_Code_Analysis_Tools">SAST</a> می‌تواند این مسئله را با بررسی وابستگی ها و پیکربندی کشف کند. ابزارهای <a href="https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools">DAST</a> نیاز به مراحل دستی بیشتر برای شناسایی و بهره جویی از این مسئله دارند. آزمایش کنندگان دستی باید برای چگونگی آزمایش XXE آموزش ببینند، زیرا معمولا از سال 2017 آزمایش نشده اند.</div> | <div dir="rtl" align="right">این نقص ها می‌تواند برای استخراج داده ها، اجرای یک درخواست از راه دور از سمت سرور، اسکن سیستم های داخلی، انجام حمله اختلال در سرویس و همچنین اجرای سایر حملات استفاده شود.تأثیر کسب و کار بستگی به الزامات حفاظتی همه برنامه های کاربردی متاثر و داده ها دارد.</div> |
+| <div dir="rtl" align="right">اگر مهاجمان بتوانند XML بارگذاری کنند یا محتوای آلوده در یک سندXML  وارد کنند، از کد ها، وابستگی ها یا ادغام های آسیب پذیر استفاده کنند، می‌توانند از پردازنده های XML آسیب پذیر برای مقاصد خود بهره جویی کنند.</div> | <div dir="rtl" align="right"> به طور پیش فرض، بسیاری از پردازنده های قدیمی‌ترXML  اجازه تعیین یک موجود خارجی را می‌دهند. ( یک URI  که در پردازش XML  محاسبه و ارزیابی می‌شود.)ابزارهای <a href="https://owasp.org/www-community/Source_Code_Analysis_Tools">SAST</a> می‌تواند این مسئله را با بررسی وابستگی ها و پیکربندی کشف کند. ابزارهای <a href="https://owasp.org/www-community/Vulnerability_Scanning_Tools">DAST</a> نیاز به مراحل دستی بیشتر برای شناسایی و بهره جویی از این مسئله دارند. آزمایش کنندگان دستی باید برای چگونگی آزمایش XXE آموزش ببینند، زیرا معمولا از سال 2017 آزمایش نشده اند.</div> | <div dir="rtl" align="right">این نقص ها می‌تواند برای استخراج داده ها، اجرای یک درخواست از راه دور از سمت سرور، اسکن سیستم های داخلی، انجام حمله اختلال در سرویس و همچنین اجرای سایر حملات استفاده شود.تأثیر کسب و کار بستگی به الزامات حفاظتی همه برنامه های کاربردی متاثر و داده ها دارد.</div> |
 
 ## <div dir="rtl" align="right">آیا برنامه کاربردی آسیب‌پذیر است؟</div>
 
@@ -14,7 +14,7 @@
     برنامه های XML را به طور مستقیم یا آپلودهای XML را قبول می‌کند، به خصوص از منابع نامشخص، یا داده های غیر قابل اعتماد را به اسناد XML وارد می‌کند و سپس توسط یک پردازنده XML پردازش می‌شود.
   </li>
   <li>
-    هر یک از پردازنده‌های XML در برنامه های کاربردی یا وب سرویس های مبتنی بر <a href="https://en.wikipedia.org/wiki/Document_type_definition">SOAP، document type definitions (DTDs)</a> ها را فعال کرده اند. به عنوان مکانیزم دقیق برای غیرفعال کردن پردازش DTD، بهترین کار، استفاده از مرجعی مانند<a href="https://www.owasp.org/index.php/XML_External_Entity_(XXE)_Prevention_Cheat_Sheet">OWASP Cheat Sheet 'XXE Prevention'</a>. است.
+    هر یک از پردازنده‌های XML در برنامه های کاربردی یا وب سرویس های مبتنی بر <a href="https://en.wikipedia.org/wiki/Document_type_definition">SOAP، document type definitions (DTDs)</a> ها را فعال کرده اند. به عنوان مکانیزم دقیق برای غیرفعال کردن پردازش DTD، بهترین کار، استفاده از مرجعی مانند<a href="https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html">OWASP Cheat Sheet 'XXE Prevention'</a>. است.
 </li>
   <li>اگر برنامه کاربردی شما از SAML برای پردازش هویت در خلال امنیت یکپارچه یا اهداف SSO استفاده می‌کند. SAML از XML برای اثبات هویت استفاده می‌کند و ممکن است آسیب پذیر باشد.
 </li>
@@ -31,7 +31,7 @@
   <li>وصله امنیتی یا ارتقاء تمام پردازنده های XML و کتابخانه هایی که توسط برنامه کاربردی یا سیستم عامل اصلی استفاده می‌شود. از بررسی کننده های وابستگی استفاده کنید. SOAP به SOAP 1.2 یا بالاتر به روز رسانی کنید.
   </li>
   <li>
-    موجودیت خارجی XML و پردازش DTD در تمام پارسرهایXML  در برنامه را غیر فعال کنید، با توجه به در برنامه را غیر فعال کنید، همانطور که در<a href="https://www.owasp.org/index.php/XML_External_Entity_(XXE)_Prevention_Cheat_Sheet"> OWASP Cheat Sheet 'XXE  Preventtion</a>.
+    موجودیت خارجی XML و پردازش DTD در تمام پارسرهایXML  در برنامه را غیر فعال کنید، با توجه به در برنامه را غیر فعال کنید، همانطور که در<a href="https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html"> OWASP Cheat Sheet 'XXE  Preventtion</a>.
   </li>
   <li>اعتبار سنجی ورودی، فیلتر کردن و یا پاکسازی ورودی را در سمت سرور برای جلوگیری از انتقال اطلاعات خصمانه در اسناد XML، هدرها یا گره ها پیاده سازی کنید.</li>
   <li>قابلیت آپلود فایل XML یا XSL، ورودی XML را با استفاده از اعتبارسنجی XSD یا مشابه آن را اعتبار سنجی کنید.</li>
@@ -68,11 +68,11 @@
 
 ### <div dir="rtl" align="right">OWASP</div>
 
-* [OWASP Application Security Verification Standard](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
-* [OWASP Testing Guide: Testing for XML Injection](https://www.owasp.org/index.php/Testing_for_XML_Injection_(OTG-INPVAL-008))
-* [OWASP XXE Vulnerability](https://www.owasp.org/index.php/XML_External_Entity_(XXE)_Processing)
-* [OWASP Cheat Sheet: XXE Prevention](https://www.owasp.org/index.php/XML_External_Entity_(XXE)_Prevention_Cheat_Sheet)
-* [OWASP Cheat Sheet: XML Security](https://www.owasp.org/index.php/XML_Security_Cheat_Sheet)
+* [OWASP Application Security Verification Standard](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x11-V2-Authentication.md)
+* [OWASP Testing Guide: Testing for XML Injection](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/07-Testing_for_XML_Injection)
+* [OWASP XXE Vulnerability](https://owasp.org/www-community/vulnerabilities/XML_External_Entity_(XXE)_Processing)
+* [OWASP Cheat Sheet: XXE Prevention](https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html)
+* [OWASP Cheat Sheet: XML Security](https://cheatsheetseries.owasp.org/cheatsheets/XML_Security_Cheat_Sheet.html)
 
 ### <div dir="rtl" align="right">خارجی</div> 
 

@@ -98,10 +98,10 @@ areas for Security Configuration (V11 and V19)][0xa65].
 * [Amazon S3 Bucket Discovery and Enumeration][0xa611]
 
 [0xa61]: ./0xa9-known-vulns.md
-[0xa62]: https://www.owasp.org/index.php/Testing_for_configuration_management
-[0xa63]: https://www.owasp.org/index.php/Testing_for_Error_Code_(OWASP-IG-006)
-[0xa64]: https://www.owasp.org/index.php/OWASP_Secure_Headers_Project
-[0xa65]: https://www.owasp.org/index.php/ASVS
+[0xa62]: https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/README
+[0xa63]: https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/08-Testing_for_Error_Handling/README
+[0xa64]: https://owasp.org/www-project-secure-headers/
+[0xa65]: https://owasp.org/www-project-application-security-verification-standard/
 [0xa66]: https://csrc.nist.gov/publications/detail/sp/800-123/final
 [0xa67]: https://cwe.mitre.org/data/definitions/2.html
 [0xa68]: https://cwe.mitre.org/data/definitions/16.html

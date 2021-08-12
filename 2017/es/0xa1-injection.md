@@ -3,7 +3,7 @@
 | Agentes de amenaza/Vectores de ataque | Debilidades de seguridad         |      Impactos       |
 | -- | -- | -- |
 | Nivel de acceso : Explotabilidad 3    | Prevalencia 2 : Detectabilidad 3 | Técnico 3 : Negocio |
-| Casi cualquier fuente de datos puede ser un vector de inyección, variables de entorno, parámetros, servicios web externos e internos, y todo tipo de usuarios. [Los defectos de inyección](http://www.owasp.org/index.php/Injection_Flaws) ocurren cuando un atacante puede enviar información hostil a un intérprete. | Estos defectos son muy comunes, particularmente en código heredado. Las vulnerabilidades de inyección se encuentran a menudo en consultas SQL, LDAP, XPath, o NoSQL, comandos OS, analizadores XML, encabezados SMTP, lenguajes de expresión y consultas ORM. Los defectos de inyección son fáciles de descubrir al examinar el código. Los escáneres y los fuzzers pueden ayudar a los atacantes a encontrar defectos de inyecciones. | Una inyección puede causar divulgación, pérdida o corrupción de datos, pérdida de auditabilidad, o negación de acceso. El impacto del negocio depende de las necesidades de la aplicación y de los datos. |
+| Casi cualquier fuente de datos puede ser un vector de inyección, variables de entorno, parámetros, servicios web externos e internos, y todo tipo de usuarios. [Los defectos de inyección](https://owasp.org/www-community/Injection_Flaws) ocurren cuando un atacante puede enviar información hostil a un intérprete. | Estos defectos son muy comunes, particularmente en código heredado. Las vulnerabilidades de inyección se encuentran a menudo en consultas SQL, LDAP, XPath, o NoSQL, comandos OS, analizadores XML, encabezados SMTP, lenguajes de expresión y consultas ORM. Los defectos de inyección son fáciles de descubrir al examinar el código. Los escáneres y los fuzzers pueden ayudar a los atacantes a encontrar defectos de inyecciones. | Una inyección puede causar divulgación, pérdida o corrupción de datos, pérdida de auditabilidad, o negación de acceso. El impacto del negocio depende de las necesidades de la aplicación y de los datos. |
 
 ## ¿La aplicación es vulnerable?
 
@@ -13,7 +13,7 @@ Una aplicación es vulnerable a ataque cuando:
 * Se invocan consultas dinámicas o no paremitrizadas sin codificar sus parámetros de forma acorde al contexto.
 * Datos hostiles se utilizan dentro de los parámetros de búsqueda en consultas object-relational mapping (ORM) para extraer registros adicionales y sensibles.
 * Datos hostiles se utilizan o concatenan directamente, de manera que el SQL o comando contiene tanto datos de estructura como hostiles en consultas dinámicas, comandos o procedimientos almacenados.
-* Algunas de las inyecciones más comunes son SQL, NoSQL, comando OS, Object Relational Mapping (ORM), LDAP y Expresiones del Language (EL), o la inyección de la Biblioteca de Navegación Gráfica de Objetos (OGNL). El concepto es idéntico entre todos los intérpretes. La revisión del código fuente es el mejor método para detectar si las aplicaciones son vulnerables a inyecciones, seguido de cerca por pruebas automatizadas  de todos los parámetros, encabezados, URL, cookies, JSON, SOAP y entradas de datos XML. Las organizaciones pueden incluir herramientas de análisis estático ([SAST](https://www.owasp.org/index.php/Source_Code_Analysis_Tools]) y pruebas dinámicas ([DAST](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools)) en su pipeline de CI/CD para identificar defectos de inyecciones recientemente introducidas antes de su despliegue en producción.
+* Algunas de las inyecciones más comunes son SQL, NoSQL, comando OS, Object Relational Mapping (ORM), LDAP y Expresiones del Language (EL), o la inyección de la Biblioteca de Navegación Gráfica de Objetos (OGNL). El concepto es idéntico entre todos los intérpretes. La revisión del código fuente es el mejor método para detectar si las aplicaciones son vulnerables a inyecciones, seguido de cerca por pruebas automatizadas  de todos los parámetros, encabezados, URL, cookies, JSON, SOAP y entradas de datos XML. Las organizaciones pueden incluir herramientas de análisis estático ([SAST](https://owasp.org/www-community/Source_Code_Analysis_Tools]) y pruebas dinámicas ([DAST](https://owasp.org/www-community/Vulnerability_Scanning_Tools)) en su pipeline de CI/CD para identificar defectos de inyecciones recientemente introducidas antes de su despliegue en producción.
 
 ## Cómo se previene
 
@@ -36,7 +36,7 @@ Para prevenir inyecciones, se requiere separar los datos de los comandos y las c
 
 En ambos casos, al atacante modificar el parametro 'id' en su navegador para enviar:  ' or '1'='1. Por ejemplo:
 
-* `http://example.com/app/accountView?id=' or '1'='1`
+* `https://example.com/app/accountView?id=' or '1'='1`
 
 Esto cambia el significado de ambas consultas retornando todos los registro de la tabla "accounts". Ataques más peligrosos pueden modificar datos o incluso invocar procedimientos almacenados.
 
@@ -44,13 +44,13 @@ Esto cambia el significado de ambas consultas retornando todos los registro de l
 
 ### OWASP
 
-* [Controles Proactivos de OWASP: Consultas Parametrizadas](https://www.owasp.org/index.php/OWASP_Proactive_Controls#2:_Parameterize_Queries)
-* [Estándar de Verificación de Seguridad en Aplicaciones de OWASP: V5 Validación de entradas de datos y codificación](https://www.owasp.org/index.php/ASVS_V5_Input_validation_and_output_encoding)
-* [Guía de Pruebas de OWASP: Inyecciones SQL](https://www.owasp.org/index.php/Testing_for_SQL_Injection_(OTG-INPVAL-005)), [Inyecciones de Comando](https://www.owasp.org/index.php/Testing_for_Command_Injection_(OTG-INPVAL-013)), [Inyecciones ORM](https://www.owasp.org/index.php/Testing_for_ORM_Injection_(OTG-INPVAL-007))
-* [Hoja de ayuda de OWASP: Prevención de inyecciones SQL](https://www.owasp.org/index.php/SQL_Injection_Prevention_Cheat_Sheet)
-* [Hoja de ayuda de OWASP: Prevención de inyecciones en Java](https://www.owasp.org/index.php/Injection_Prevention_Cheat_Sheet_in_Java)
-* [Hoja de ayuda de OWASP: Consultas parametrizadas](https://www.owasp.org/index.php/Query_Parameterization_Cheat_Sheet)
-* [Hoja de ayuda de OWASP: Defensas contra inyecciones de Comandos](https://www.owasp.org/index.php/Command_Injection_Defense_Cheat_Sheet)
+* [Controles Proactivos de OWASP: Consultas Parametrizadas](https://owasp.org/www-project-proactive-controls/v3/en/c3-secure-database)
+* [Estándar de Verificación de Seguridad en Aplicaciones de OWASP: V5 Validación de entradas de datos y codificación](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x13-V5-Validation-Sanitization-Encoding.md)
+* [Guía de Pruebas de OWASP: Inyecciones SQL](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/05-Testing_for_SQL_Injection), [Inyecciones de Comando](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/12-Testing_for_Command_Injection), [Inyecciones ORM](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/05.7-Testing_for_ORM_Injection)
+* [Hoja de ayuda de OWASP: Prevención de inyecciones SQL](https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html)
+* [Hoja de ayuda de OWASP: Prevención de inyecciones en Java](https://cheatsheetseries.owasp.org/cheatsheets/Injection_Prevention_Cheat_Sheet.html_in_Java)
+* [Hoja de ayuda de OWASP: Consultas parametrizadas](https://cheatsheetseries.owasp.org/cheatsheets/Query_Parameterization_Cheat_Sheet.html)
+* [Hoja de ayuda de OWASP: Defensas contra inyecciones de Comandos](https://cheatsheetseries.owasp.org/cheatsheets/OS_Command_Injection_Defense_Cheat_Sheet.html)
 
 ### Externas
 

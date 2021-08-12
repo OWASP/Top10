@@ -3,7 +3,7 @@
 | Agentes de Ameaça/Vetores de Ataque | Vulnerabilidades de Segurança           | Impactos               |
 | -- | -- | -- |
 | Nível de Acesso \| Explorabilidade 2 | Prevalência 2 \| Detectabilidade 2 | Técnico 3 \| Negócio |
-| A exploração do controle de acesso é uma habilidade básica dos atacantes. As ferramentas [SAST](https://www.owasp.org/index.php/Source_Code_Analysis_Tools) e [DAST](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools) podem detectar a ausência de controle de acesso, mas não pode verificar se é funcional quando está presente. O controle de acesso é detectável usando meios manuais, ou possivelmente por automação para a ausência de controles de acesso em certos frameworks.| As vulnerabilidades de controle de acesso são comuns devido à falta de detecção automatizada e à falta de testes funcionais efetivos pelos desenvolvedores de aplicação. A detecção de controle de acesso normalmente não é compatível com testes estáticos ou dinâmicos automatizados. | O impacto técnico são os atacantes que atuam como usuários ou administradores, usuários que usam funções privilegiadas, ou criam, acessam, atualizam ou excluem todos os registros. O impacto comercial depende das necessidades de proteção de sua aplicação e dados. |
+| A exploração do controle de acesso é uma habilidade básica dos atacantes. As ferramentas [SAST](https://owasp.org/www-community/Source_Code_Analysis_Tools) e [DAST](https://owasp.org/www-community/Vulnerability_Scanning_Tools) podem detectar a ausência de controle de acesso, mas não pode verificar se é funcional quando está presente. O controle de acesso é detectável usando meios manuais, ou possivelmente por automação para a ausência de controles de acesso em certos frameworks.| As vulnerabilidades de controle de acesso são comuns devido à falta de detecção automatizada e à falta de testes funcionais efetivos pelos desenvolvedores de aplicação. A detecção de controle de acesso normalmente não é compatível com testes estáticos ou dinâmicos automatizados. | O impacto técnico são os atacantes que atuam como usuários ou administradores, usuários que usam funções privilegiadas, ou criam, acessam, atualizam ou excluem todos os registros. O impacto comercial depende das necessidades de proteção de sua aplicação e dados. |
 
 ## A Aplicação Está Vulnerável?
 
@@ -41,13 +41,13 @@ O controle de acesso só é efetivo se for aplicado no código confiável do ser
 
 Um atacante simplesmente modifica o parâmetro 'acct' no navegador para enviar qualquer número de conta que eles desejem. Se não for verificado corretamente, o invasor pode acessar a conta de qualquer usuário.
 
-`http://example.com/app/accountInfo?acct=notmyacct`
+`https://example.com/app/accountInfo?acct=notmyacct`
 
 **Cenário #2**: Um atacante simplesmente faz uma busca forçada por URLs. Os direitos de administrador são necessários para acessar a página de administração.
 
 ```
-  http://example.com/app/getappInfo
-  http://example.com/app/admin_getappInfo
+  https://example.com/app/getappInfo
+  https://example.com/app/admin_getappInfo
 ```
 Se um usuário não autenticado puder acessar qualquer uma das páginas, é uma falha. Se um não administrador puder acessar a página de administração, isso é uma falha.
 
@@ -55,10 +55,10 @@ Se um usuário não autenticado puder acessar qualquer uma das páginas, é uma 
 
 ### OWASP
 
-* [OWASP Proactive Controls: Access Controls](https://www.owasp.org/index.php/OWASP_Proactive_Controls#6:_Implement_Access_Controls)
-* [OWASP Application Security Verification Standard: V4 Access Control](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
-* [OWASP Testing Guide: Authorization Testing](https://www.owasp.org/index.php/Testing_for_Authorization)
-* [OWASP Cheat Sheet: Access Control](https://www.owasp.org/index.php/Access_Control_Cheat_Sheet)
+* [OWASP Proactive Controls: Access Controls](https://owasp.org/www-project-proactive-controls/v3/en/c7-enforce-access-controls)
+* [OWASP Application Security Verification Standard: V4 Access Control](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x12-V4-Access-Control.md)
+* [OWASP Testing Guide: Authorization Testing](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/05-Authorization_Testing/README)
+* [OWASP Cheat Sheet: Access Control](https://cheatsheetseries.owasp.org/cheatsheets/Access_Control_Cheat_Sheet.html)
 
 ### Externas
 

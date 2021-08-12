@@ -55,9 +55,9 @@ a:4:{i:0;i:1;i:1;s:5:"Alice";i:2;s:5:"admin";i:3;s:32:"b6a8b3bea87fe0e05022f8f3c
 
 ### OWASP
 
-* [Памятка OWASP: Десериализация](https://www.owasp.org/index.php/Deserialization_Cheat_Sheet)
-* [Проактивная защита OWASP: Обязательная проверка всех входных данных](https://www.owasp.org/index.php/OWASP_Proactive_Controls#4:_Validate_All_Inputs)
-* [Стандарт подтверждения безопасности приложений OWASP](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
+* [Памятка OWASP: Десериализация](https://cheatsheetseries.owasp.org/cheatsheets/Deserialization_Cheat_Sheet.html)
+* [Проактивная защита OWASP: Обязательная проверка всех входных данных](https://owasp.org/www-project-proactive-controls/v3/en/c5-validate-inputs)
+* [Стандарт подтверждения безопасности приложений OWASP](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x11-V2-Authentication.md)
 * [OWASP AppSecEU 2016: Как пережить апокалипсис десериализации Java](https://speakerdeck.com/pwntester/surviving-the-java-deserialization-apocalypse)
 * [OWASP AppSecUSA 2017: Пятница, 13-е — Джейсон под ударом](https://speakerdeck.com/pwntester/friday-the-13th-json-attacks)
 
@@ -65,4 +65,4 @@ a:4:{i:0;i:1;i:1;s:5:"Alice";i:2;s:5:"admin";i:3;s:32:"b6a8b3bea87fe0e05022f8f3c
 
 * [CWE-502: Десериализация недоверенных данных](https://cwe.mitre.org/data/definitions/502.html)
 * [Безопасность десериализации Java](https://github.com/mbechler/marshalsec)
-* [OWASP AppSec Cali 2015: Консервируем объекты](http://frohoff.github.io/appseccali-marshalling-pickles/)
+* [OWASP AppSec Cali 2015: Консервируем объекты](https://frohoff.github.io/appseccali-marshalling-pickles/)

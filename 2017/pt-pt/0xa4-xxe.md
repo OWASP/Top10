@@ -102,14 +102,14 @@ incluindo um potencial ficheiro sem fim:
 * [CWE-611: Improper Restriction of XXE][0xa410]
 * [Billion Laughs Attack][0xa411]
 
-[0xa41]: https://www.owasp.org/index.php/Source_Code_Analysis_Tools
-[0xa42]: https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools
+[0xa41]: https://owasp.org/www-community/Source_Code_Analysis_Tools
+[0xa42]: https://owasp.org/www-community/Vulnerability_Scanning_Tools
 [0xa43]: https://en.wikipedia.org/wiki/Document_type_definition
-[0xa44]: https://www.owasp.org/index.php/XML_External_Entity_(XXE)_Prevention_Cheat_Sheet
-[0xa45]: https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home
-[0xa46]: https://www.owasp.org/index.php/Testing_for_XML_Injection_(OTG-INPVAL-008)
-[0xa47]: https://www.owasp.org/index.php/XML_External_Entity_(XXE)_Processingi
-[0xa49]: https://www.owasp.org/index.php/XML_Security_Cheat_Sheet
+[0xa44]: https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html
+[0xa45]: https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x11-V2-Authentication.md
+[0xa46]: https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/07-Testing_for_XML_Injection
+[0xa47]: https://owasp.org/www-community/vulnerabilities/XML_External_Entity_(XXE)_Processingi
+[0xa49]: https://cheatsheetseries.owasp.org/cheatsheets/XML_Security_Cheat_Sheet.html
 [0xa410]: https://cwe.mitre.org/data/definitions/611.html
 [0xa411]: https://en.wikipedia.org/wiki/Billion_laughs_attack
 

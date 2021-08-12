@@ -16,7 +16,7 @@ At OWASP, you'll find free and open:
 - [Events, training, and conferences](https://owasp.org/events/).
 - [Google Groups](TBA)
 
-Learn more at: [https://www.owasp.org](https://www.owasp.org).
+Learn more at: [https://owasp.org](https://owasp.org).
 
 All OWASP tools, documents, videos, presentations, and chapters are free and open to anyone interested in improving application security.
 

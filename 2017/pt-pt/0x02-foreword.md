@@ -50,7 +50,7 @@ e ideias no nosso repositório de projeto no GitHub:
 Pode encontrar mais informação sobre o OWASP Top 10 e correspondentes traduções
 aqui:
 
-* https://www.owasp.org/index.php/top10
+* https://owasp.org/www-project-top-ten/
 
 Por último, queremos agradecer aos fundadores do projecto OWASP Top 10, Dave
 Wichers e Jeff Williams por todo o seu esforço e por acreditarem em nós para
@@ -69,7 +69,7 @@ As Organizações e indivíduos que contribuiram com dados sobre a prevalência 
 vulnerabilidades ou outros contributos encontram-se listados na secção
 Agradecimentos.
 
-[1]: https://www.owasp.org/index.php/ASVS
+[1]: https://owasp.org/www-project-application-security-verification-standard/
 [2]: ./0xb0-next-devs.md
 [3]: ./0xb1-next-testing.md
 [4]: ./0xb2-next-org.md

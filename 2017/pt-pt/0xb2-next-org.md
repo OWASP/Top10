@@ -80,20 +80,20 @@ nesta lista.
   melhorias sistemáticas e estratégicas em toda a empresa. Aprenda com os erros
   e promova incentivos positivos para estimular melhorias.
 
-[0xb21]: https://www.owasp.org/index.php/OWASP_SAMM_Project
-[0xb22]: https://www.owasp.org/index.php/Application_Security_Guide_For_CISOs
-[0xb23]: https://www.owasp.org/index.php/SAMM_-_Education_&_Guidance_-_1
-[0xb24]: https://www.owasp.org/index.php/SAMM_-_Strategy_&_Metrics_-_2
-[0xb25]: https://www.owasp.org/index.php/SAMM_-_Strategy_&_Metrics_-_2
-[0xb26]: https://www.owasp.org/index.php/OWASP_Risk_Rating_Methodology
-[0xb27]: https://www.owasp.org/index.php/SAMM_-_Policy_&_Compliance_-_2
-[0xb28]: https://www.owasp.org/index.php/OWASP_Security_Knowledge_Framework
-[0xb29]: https://www.owasp.org/index.php/SAMM_-_Education_&_Guidance_-_2
-[0xb210]: https://www.owasp.org/index.php/SAMM_-_Construction
-[0xb211]: https://www.owasp.org/index.php/SAMM_-_Verification
-[0xb212]: https://www.owasp.org/index.php/SAMM_-_Threat_Assessment_-_1
-[0xb213]: https://www.owasp.org/index.php/SAMM_-_Design_Review_-_1
-[0xb214]: https://www.owasp.org/index.php/SAMM_-_Code_Review_-_1
-[0xb215]: https://www.owasp.org/index.php/SAMM_-_Security_Testing_-_1
-[0xb216]: https://www.owasp.org/index.php/SAMM_-_Education_&_Guidance_-_3
+[0xb21]: https://owasp.org/www-project-samm/
+[0xb22]: https://owasp.org/www-pdf-archive/Owasp-ciso-guide.pdf
+[0xb23]: https://owasp.org/www-project-samm/
+[0xb24]: https://owasp.org/www-project-samm/
+[0xb25]: https://owasp.org/www-project-samm/
+[0xb26]: https://owasp.org/www-community/OWASP_Risk_Rating_Methodology
+[0xb27]: https://owasp.org/www-project-samm/
+[0xb28]: https://owasp.org/www-project-security-knowledge-framework/
+[0xb29]: https://owasp.org/www-project-samm/
+[0xb210]: https://owasp.org/www-project-samm/
+[0xb211]: https://owasp.org/www-project-samm/
+[0xb212]: https://owasp.org/www-project-samm/
+[0xb213]: https://owasp.org/www-project-samm/
+[0xb214]: https://owasp.org/www-project-samm/
+[0xb215]: https://owasp.org/www-project-samm/
+[0xb216]: https://owasp.org/www-project-samm/
 

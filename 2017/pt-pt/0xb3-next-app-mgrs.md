@@ -87,5 +87,5 @@ Por favor, obtenha aconselhamento legal antes de usar o Anexo.
   contas, perfis e permissões não usadas.
 * Atualizar o estado da aplicação para "descontinuada" na BDGC.
 
-[0xb31]: https://www.owasp.org/index.php/OWASP_Secure_Software_Contract_Annex
+[0xb31]: https://owasp.org/www-community/OWASP_Secure_Software_Contract_Annex
 

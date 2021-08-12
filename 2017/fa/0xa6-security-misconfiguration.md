@@ -56,7 +56,7 @@
   <li>
 یک معماری نرم افزار قوی که جداسازی موثر و امن بین اجزاء را با بخش بندی، کانتینریزاسیون یا گروه های امنیتی ابری فراهم می‌کند.  </li>
   <li>
-    ارسال دستورات امنیتی به مشتریان، برای مثال <a href="https://www.owasp.org/index.php/OWASP_Secure_Headers_Project">سربرگ های امنیتی</a>. 
+    ارسال دستورات امنیتی به مشتریان، برای مثال <a href="https://owasp.org/www-project-secure-headers/">سربرگ های امنیتی</a>. 
   </li>
   <li>
 یک فرایند خودکار برای بررسی تأثیر تنظیمات و پیکربندی در همه محیط ها.  </li>
@@ -76,11 +76,11 @@
 
 ### <div dir="rtl" align="right">OWASP</div>
 
-* [OWASP Testing Guide: Configuration Management](https://www.owasp.org/index.php/Testing_for_configuration_management)
-* [OWASP Testing Guide: Testing for Error Codes](https://www.owasp.org/index.php/Testing_for_Error_Code_(OWASP-IG-006))
-* [OWASP Security Headers Project](https://www.owasp.org/index.php/OWASP_Secure_Headers_Project)
+* [OWASP Testing Guide: Configuration Management](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/README)
+* [OWASP Testing Guide: Testing for Error Codes](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/08-Testing_for_Error_Handling/README)
+* [OWASP Security Headers Project](https://owasp.org/www-project-secure-headers/)
 
-<p dir="rtl" align="right">برای نیازمندیهای بیشتر در این زمینه ، استاندارد تایید امنیت برنامه کاربردی را ببینید .<a href="https://www.owasp.org/index.php/ASVS_V19_Configuration">V19 Configuration</a></p>
+<p dir="rtl" align="right">برای نیازمندیهای بیشتر در این زمینه ، استاندارد تایید امنیت برنامه کاربردی را ببینید .<a href="https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x22-V14-Config.md">V19 Configuration</a></p>
 
 ### <div dir="rtl" align="right">خارجی</div>
 

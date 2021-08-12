@@ -15,7 +15,7 @@ Applications belong to the most complex systems humans regularly create and main
 * Negotiate the requirements with internal or external developers, including guidelines and security requirements with respect to your security program, e.g. SDLC, best practices.
 * Rate the fulfillment of all technical requirements, including a planning and design phase.
 * Negotiate all technical requirements, including design, security, and service level agreements (SLA).
-* Adopt templates and checklists, such as [OWASP Secure Software Contract Annex](https://www.owasp.org/index.php/OWASP_Secure_Software_Contract_Annex). **Note**: The annex is for US contract law, so please consult qualified legal advice before using the sample annex.
+* Adopt templates and checklists, such as [OWASP Secure Software Contract Annex](https://owasp.org/www-community/OWASP_Secure_Software_Contract_Annex). **Note**: The annex is for US contract law, so please consult qualified legal advice before using the sample annex.
 
 ## Planning and Design
 

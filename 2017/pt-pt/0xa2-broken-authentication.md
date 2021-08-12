@@ -100,22 +100,22 @@ e o utilizador está ainda autenticado.
 * [CWE-287: Improper Authentication][0xa218]
 * [CWE-384: Session Fixation][0xa219]
 
-[0xa21]: https://www.owasp.org/index.php/Credential_stuffing
+[0xa21]: https://owasp.org/www-community/attacks/Credential_stuffing
 [0xa22]: 0xa3-sensitive-data-disclosure.md
 [0xa23]: https://github.com/danielmiessler/SecLists/tree/master/Passwords
 [0xa24]: https://pages.nist.gov/800-63-3/sp800-63b.html#memsecret
-[0xa25]: https://www.owasp.org/index.php/Credential_stuffing
+[0xa25]: https://owasp.org/www-community/attacks/Credential_stuffing
 [0xa26]: https://github.com/danielmiessler/SecLists
-[0xa27]: https://www.owasp.org/index.php/OWASP_Proactive_Controls#5:_Implement_Identity_and_Authentication_Controls
-[0xa28]: https://www.owasp.org/index.php/ASVS_V2_Authentication
-[0xa29]: https://www.owasp.org/index.php/ASVS_V3_Session_Management
-[0xa210]: https://www.owasp.org/index.php/Testing_Identity_Management
-[0xa211]: https://www.owasp.org/index.php/Testing_for_authentication
-[0xa212]: https://www.owasp.org/index.php/Authentication_Cheat_Sheet
-[0xa213]: https://www.owasp.org/index.php/Credential_Stuffing_Prevention_Cheat_Sheet
-[0xa214]: https://www.owasp.org/index.php/Forgot_Password_Cheat_Sheet
-[0xa215]: https://www.owasp.org/index.php/Password_Storage_Cheat_Sheet
-[0xa216]: https://www.owasp.org/index.php/Session_Management_Cheat_Sheet
+[0xa27]: https://owasp.org/www-project-proactive-controls/v3/en/c6-digital-identity
+[0xa28]: https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x11-V2-Authentication.md
+[0xa29]: https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x12-V3-Session-management.md
+[0xa210]: https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/03-Identity_Management_Testing/README
+[0xa211]: https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/04-Authentication_Testing/README
+[0xa212]: https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html
+[0xa213]: https://cheatsheetseries.owasp.org/cheatsheets/Credential_Stuffing_Prevention_Cheat_Sheet.html
+[0xa214]: https://cheatsheetseries.owasp.org/cheatsheets/Forgot_Password_Cheat_Sheet.html
+[0xa215]: https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html
+[0xa216]: https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html
 [0xa217]: https://pages.nist.gov/800-63-3/sp800-63b.html#memsecret
 [0xa218]: https://cwe.mitre.org/data/definitions/287.html
 [0xa219]: https://cwe.mitre.org/data/definitions/384.html

@@ -3,7 +3,7 @@
 | Agen ancaman / vektor serangan | Kelemahan Keamanan          | Dampak            |
 | -- | -- | -- |
 | Access Lvl : Eksploitasi 2 | Prevalensi 3: Deteksi 2 | Teknis 3: Bisnis |
-| Eksploitasi kontrol akses adalah keahlian inti pada penyerang. [SAST](https://www.owasp.org/index.php/Source_Code_Analysis_Tools) dan [DAST](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools) Tool ini dapat mendeteksi tidak adanya kontrol akses tetapi tidak dapat memverifikasi apakah itu berfungsi ketika serangan itu muncul. Kontrol akses dapat dideteksi menggunakan cara manual, atau mungkin melalui otomatisasi karena tidak adanya kontrol akses dalam framework tertentu | Kelemahan kontrol akses adalah umum karena kurangnya security assessment/deteksi awal, dan kurangnya pengujian fungsional yang efektif oleh pengembang aplikasi. Deteksi kontrol akses biasanya tidak menerima pengujian statis atau dinamis otomatis. Pengujian manual adalah cara terbaik untuk mendeteksi kontrol akses yang hilang atau tidak efektif, termasuk metode HTTP (GET vs PUT, dll), Kontrol, referensi objek langsung, dll. | Dampak teknisnya adalah penyerang bertindak sebagai pengguna atau administrator, atau pengguna yang menggunakan hak akses istimewa, atau membuat, mengakses, memperbarui, atau menghapus setiap catatan. Dampak bisnis tergantung pada kebutuhan perlindungan aplikasi dan data |
+| Eksploitasi kontrol akses adalah keahlian inti pada penyerang. [SAST](https://owasp.org/www-community/Source_Code_Analysis_Tools) dan [DAST](https://owasp.org/www-community/Vulnerability_Scanning_Tools) Tool ini dapat mendeteksi tidak adanya kontrol akses tetapi tidak dapat memverifikasi apakah itu berfungsi ketika serangan itu muncul. Kontrol akses dapat dideteksi menggunakan cara manual, atau mungkin melalui otomatisasi karena tidak adanya kontrol akses dalam framework tertentu | Kelemahan kontrol akses adalah umum karena kurangnya security assessment/deteksi awal, dan kurangnya pengujian fungsional yang efektif oleh pengembang aplikasi. Deteksi kontrol akses biasanya tidak menerima pengujian statis atau dinamis otomatis. Pengujian manual adalah cara terbaik untuk mendeteksi kontrol akses yang hilang atau tidak efektif, termasuk metode HTTP (GET vs PUT, dll), Kontrol, referensi objek langsung, dll. | Dampak teknisnya adalah penyerang bertindak sebagai pengguna atau administrator, atau pengguna yang menggunakan hak akses istimewa, atau membuat, mengakses, memperbarui, atau menghapus setiap catatan. Dampak bisnis tergantung pada kebutuhan perlindungan aplikasi dan data |
 
 ## Apakah Aplikasi itu Rentan?
 
@@ -41,13 +41,13 @@ Kontrol akses hanya efektif jika ditegakkan dalam kode sisi server terpercaya at
 
 Seorang penyerang hanya memodifikasi parameter 'acct' di browser untuk mengirim nomor akun apa pun yang mereka inginkan. Jika tidak diverifikasi dengan benar, penyerang dapat mengakses akun pengguna mana pun.
 
-`http://example.com/app/accountInfo?acct=notmyacct`
+`https://example.com/app/accountInfo?acct=notmyacct`
 
 **Scenario #2**: Seorang penyerang cukup memaksa browser untuk menargetkan URL. Hak admin diperlukan untuk akses ke halaman admin.
 
 ```
-  http://example.com/app/getappInfo
-  http://example.com/app/admin_getappInfo
+  https://example.com/app/getappInfo
+  https://example.com/app/admin_getappInfo
 ```
 
 Jika pengguna yang tidak diautentikasi dapat mengakses halaman mana pun, itu adalah kontrol akses yang buruk. Jika non-admin dapat mengakses halaman admin, ini adalah otentifikasi yang buruk.
@@ -56,10 +56,10 @@ Jika pengguna yang tidak diautentikasi dapat mengakses halaman mana pun, itu ada
 
 ### OWASP
 
-- [OWASP Proactive Controls: Access Controls](https://www.owasp.org/index.php/OWASP_Proactive_Controls#6:_Implement_Access_Controls)
-- [OWASP Application Security Verification Standard: V4 Access Control](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
-- [OWASP Testing Guide: Authorization Testing](https://www.owasp.org/index.php/Testing_for_Authorization)
-- [OWASP Cheat Sheet: Access Control](https://www.owasp.org/index.php/Access_Control_Cheat_Sheet)
+- [OWASP Proactive Controls: Access Controls](https://owasp.org/www-project-proactive-controls/v3/en/c7-enforce-access-controls)
+- [OWASP Application Security Verification Standard: V4 Access Control](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x12-V4-Access-Control.md)
+- [OWASP Testing Guide: Authorization Testing](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/05-Authorization_Testing/README)
+- [OWASP Cheat Sheet: Access Control](https://cheatsheetseries.owasp.org/cheatsheets/Access_Control_Cheat_Sheet.html)
 
 ### Eksternal
 

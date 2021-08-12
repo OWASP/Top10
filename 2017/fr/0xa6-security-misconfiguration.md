@@ -32,7 +32,7 @@ Des processus d'installation sécurisés doivent être mis en œuvre, avec notam
 
 * Une architecture d'application segmentée qui fournit une séparation efficace et sécurisée entre les composants ou les environnement hébergés, avec de la segmentation, de la mise en conteneurs ou l'utilisation de groupes de sécurité dans le Cloud (ACL).
 
-* L'envoi de directives de sécurité aux clients, par exemple [En-têtes de sécurité] (https://www.owasp.org/index.php/OWASP_Secure_Headers_Project).
+* L'envoi de directives de sécurité aux clients, par exemple [En-têtes de sécurité] (https://owasp.org/www-project-secure-headers/).
 
 * Un processus automatisé pour vérifier l'efficacité des configurations et des réglages dans tous les environnements.
 
@@ -50,11 +50,11 @@ Des processus d'installation sécurisés doivent être mis en œuvre, avec notam
 
 ### OWASP
 
-* [OWASP Testing Guide: Configuration Management](https://www.owasp.org/index.php/Testing_for_configuration_management)
-* [OWASP Testing Guide: Testing for Error Codes](https://www.owasp.org/index.php/Testing_for_Error_Code_(OWASP-IG-006))
-* [OWASP Security Headers Project](https://www.owasp.org/index.php/OWASP_Secure_Headers_Project)
+* [OWASP Testing Guide: Configuration Management](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/README)
+* [OWASP Testing Guide: Testing for Error Codes](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/08-Testing_for_Error_Handling/README)
+* [OWASP Security Headers Project](https://owasp.org/www-project-secure-headers/)
 
-Pour des exigences supplémentaires dans ce domaine, voir la Norme de vérification de la sécurité des applications : Application Security Verification Standard [V19 Configuration](https://www.owasp.org/index.php/ASVS_V19_Configuration).
+Pour des exigences supplémentaires dans ce domaine, voir la Norme de vérification de la sécurité des applications : Application Security Verification Standard [V19 Configuration](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x22-V14-Config.md).
 
 ### Externes
 

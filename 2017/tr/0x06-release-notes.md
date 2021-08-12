@@ -12,7 +12,7 @@ Son birkaç yıl içerisinde, uygulamaların sahip olduğu temel teknolojiler ve
 
 ## Verilerle desteklenen yeni açıklıklar
 
-* **A4:2017-XML Dış Varlıkları (XXE)** yaygın olarak kaynak kod analizi gerçekleştiren araçların([SAST](https://www.owasp.org/index.php/Source_Code_Analysis_Tools)) veri setleri tarafından desteklenen yeni bir kategoridir. 
+* **A4:2017-XML Dış Varlıkları (XXE)** yaygın olarak kaynak kod analizi gerçekleştiren araçların([SAST](https://owasp.org/www-community/Source_Code_Analysis_Tools)) veri setleri tarafından desteklenen yeni bir kategoridir. 
 
 ## Topluluk tarafından desteklenen yeni açıklıklar
 
@@ -23,7 +23,7 @@ Aşağıdaki iki açıklık kategorisi hakkında görüşlerini almak için topl
 ## Unutulmamış ancak birleştirilmiş veya kaldırılmış açıklıklar
 
 * **A4-Güvensiz Doğrudan Nesne Başvuruları** ve **A7-Fonksiyon Düzeyinde Erişim Kontrolünün Olmaması**, **A5:2017-Yetersiz Erişim Kontrolü** başlığı altında birleştirilmiştir.
-* **A8-Siteler Arası İstek Sahteciliği (CSRF)**, pek çok çerçeve [CSRF savunması](https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)) içerdiği için sadece uygulamaların %5'inde bulunmuştur.
+* **A8-Siteler Arası İstek Sahteciliği (CSRF)**, pek çok çerçeve [CSRF savunması](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html) içerdiği için sadece uygulamaların %5'inde bulunmuştur.
 * **A10-Doğrulanmamış Yönlendirme ve İletmeler**, uygulamaların %8'inde bulunmasına rağmen, XXE tarafından liste dışı bırakılmıştır.
 
 ![0x06-release-notes-1](images/0x06-release-notes-1.png)

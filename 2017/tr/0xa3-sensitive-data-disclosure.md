@@ -15,7 +15,7 @@ Yapılacak ilk şey transit ve durağan veri için koruma gereksinimlerinin beli
 * Şifreleme zorunlu tutuluyor mu? örn. herhangi bir tarayıcı güvenlik direktifi veya başlığı eksik mi?
 * Kullanıcı aracısı (örn. uygulama, mail istemcisi) alınan sunucu sertifikasının geçerli olup olmadığını doğruluyor mu?
 
-Bakınız ASVS [Şifreleme (V7)](https://www.owasp.org/index.php/ASVS_V7_Cryptography), [Veri Koruma (V9)](https://www.owasp.org/index.php/ASVS_V9_Data_Protection) ve [SSL/TLS (V10)](https://www.owasp.org/index.php/ASVS_V10_Communications).
+Bakınız ASVS [Şifreleme (V7)](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x14-V6-Cryptography.md), [Veri Koruma (V9)](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x16-V8-Data-Protection.md) ve [SSL/TLS (V9)](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x17-V9-Communications.md).
 
 ## Nasıl Önlenir
 
@@ -28,7 +28,7 @@ En azından aşağıdakiler yapılmalı ve referanslara başvurulmalıdır:
 * Güncel ve güçlü algortimaların, protokollerin ve anahtarların kullanıldığından emin olunmalıdır. Düzgün bir anahtar yönetimi yapılmalıdır.
 * Mükemmel iletme gizliliği (PFS) şifreleri, sunucu tarafından şifre önceliklendirmesi ve güvenli parametreler ile TLS protokolü gibi güvenli protokoller ile tüm veriler transit haldeyken şifrelenmelidir.
 * Hassas veriler içeren cevapların önbelleğe alınması engellenmelidir.
-* Parolaları [Argon2](https://www.cryptolux.org/index.php/Argon2), [scrypt](https://wikipedia.org/wiki/Scrypt), [bcrypt](https://wikipedia.org/wiki/Bcrypt) veya [PBKDF2](https://wikipedia.org/wiki/PBKDF2) gibi güçlü, adaptif ve tuzlama kullanan özet fonksiyonları ile saklayınız.
+* Parolaları [Argon2](https://github.com/p-h-c/phc-winner-argon2), [scrypt](https://wikipedia.org/wiki/Scrypt), [bcrypt](https://wikipedia.org/wiki/Bcrypt) veya [PBKDF2](https://wikipedia.org/wiki/PBKDF2) gibi güçlü, adaptif ve tuzlama kullanan özet fonksiyonları ile saklayınız.
 * Birbirinden bağımsız olarak yapılandırmanın ve ayarların etkinliği tespit edilmelidir.
 
 ## Örnek Saldırı Senaryoları
@@ -41,13 +41,13 @@ En azından aşağıdakiler yapılmalı ve referanslara başvurulmalıdır:
 
 ## Kaynaklar
 
-* [OWASP Proaktif Kontroller: Verinin Korunması](https://www.owasp.org/index.php/OWASP_Proactive_Controls#7:_Protect_Data)
-* [OWASP Uygulama Güvenliği Doğrulama Standardı]((https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project)): [V7](https://www.owasp.org/index.php/ASVS_V7_Cryptography), [9](https://www.owasp.org/index.php/ASVS_V9_Data_Protection), [10](https://www.owasp.org/index.php/ASVS_V10_Communications)
-* [OWASP Kopya Kağıdı: Taşıma Katmanı Korumaları](https://www.owasp.org/index.php/Transport_Layer_Protection_Cheat_Sheet)
-* [OWASP Kopya Kağıdı: Kullanıcı Gizliliğinin Korunması](https://www.owasp.org/index.php/User_Privacy_Protection_Cheat_Sheet)
-* [OWASP Kopya Kağıdı: Parola](https://www.owasp.org/index.php/Password_Storage_Cheat_Sheet) ve [Kriptografik Saklama](https://www.owasp.org/index.php/Cryptographic_Storage_Cheat_Sheet)
-* [OWASP Güvenlik Başlıkları Projesi](https://www.owasp.org/index.php/OWASP_Secure_Headers_Project); [Kopya Kağıdı: HSTS](https://www.owasp.org/index.php/HTTP_Strict_Transport_Security_Cheat_Sheet)
-* [OWASP Test Rehberi: Zayıf kriptografi testleri](https://www.owasp.org/index.php/Testing_for_weak_Cryptography)
+* [OWASP Proaktif Kontroller: Verinin Korunması](https://owasp.org/www-project-proactive-controls/v3/en/c8-protect-data-everywhere)
+* [OWASP Uygulama Güvenliği Doğrulama Standardı](https://owasp.org/www-project-application-security-verification-standard/): [V6](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x14-V6-Cryptography.md), [9](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x16-V8-Data-Protection.md), [10](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x17-V9-Communications.md)
+* [OWASP Kopya Kağıdı: Taşıma Katmanı Korumaları](https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Protection_Cheat_Sheet.html)
+* [OWASP Kopya Kağıdı: Kullanıcı Gizliliğinin Korunması](https://cheatsheetseries.owasp.org/cheatsheets/User_Privacy_Protection_Cheat_Sheet.html)
+* [OWASP Kopya Kağıdı: Parola](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html) ve [Kriptografik Saklama](https://cheatsheetseries.owasp.org/cheatsheets/Cryptographic_Storage_Cheat_Sheet.html)
+* [OWASP Güvenlik Başlıkları Projesi](https://owasp.org/www-project-secure-headers/); [Kopya Kağıdı: HSTS](https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html)
+* [OWASP Test Rehberi: Zayıf kriptografi testleri](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/09-Testing_for_Weak_Cryptography/README)
 
 ### Dış Kaynaklar
 

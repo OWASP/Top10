@@ -3,7 +3,7 @@
 | Threat agents/Attack vectors | Security Weakness           | Impacts               |
 | -- | -- | -- |
 | Access Lvl : قابلیت بهره‌برداری: ۳ | شیوع: ۲ : قابل کشف بودن: ۳ | تکنیکی: ۳ : Business |
-| <div dir="rtl" align="right">تقریبا هر منبع داده می تواند یک بردار تزریق، متغیرهای محیطی، پارامترها، خدمات وب داخلی و خارجی و انواع مختلف کاربران باشد. <a href="https://www.owasp.org/index.php/Injection_Flaws">نقص تزریق</a> زمانی رخ می دهد که مهاجم می تواند داده های خصمانه را به مفسر ارسال کند.</div> | <div dir="rtl" align="right">نقص تزریق بسیار شایع است، به خصوص در کد اصلی. آسیب پذیری های تزریق اغلب در درخواست‌های SQL، LDAP، Xpath  یا  NoSQL، دستورات سیستم عامل، پارس کننده‌های XML، هدرهای SMTP، زبان توضیفی و درخواست‌های ORM یافت می‌شوند. هنگام بررسی کد، کشف نقص تزریق آسان است. اسکنرها و فازرها می‌توانند به مهاجمان برای پیدا کردن نقص تزریق کمک کنند.</div> | <div dir="rtl" align="right">تزریق می تواند باعث از دست دادن اطلاعات یا انحراف، عدم پاسخگویی یا رد دسترسی شود. تزریق می تواند گاهی منجر به تصاحب کامل میزبان نیز گردد. تاثیر تجاری بستگی به نیازهای محافظت از برنامه و اطلاعات شما دارد.</div> |
+| <div dir="rtl" align="right">تقریبا هر منبع داده می تواند یک بردار تزریق، متغیرهای محیطی، پارامترها، خدمات وب داخلی و خارجی و انواع مختلف کاربران باشد. <a href="https://owasp.org/www-community/Injection_Flaws">نقص تزریق</a> زمانی رخ می دهد که مهاجم می تواند داده های خصمانه را به مفسر ارسال کند.</div> | <div dir="rtl" align="right">نقص تزریق بسیار شایع است، به خصوص در کد اصلی. آسیب پذیری های تزریق اغلب در درخواست‌های SQL، LDAP، Xpath  یا  NoSQL، دستورات سیستم عامل، پارس کننده‌های XML، هدرهای SMTP، زبان توضیفی و درخواست‌های ORM یافت می‌شوند. هنگام بررسی کد، کشف نقص تزریق آسان است. اسکنرها و فازرها می‌توانند به مهاجمان برای پیدا کردن نقص تزریق کمک کنند.</div> | <div dir="rtl" align="right">تزریق می تواند باعث از دست دادن اطلاعات یا انحراف، عدم پاسخگویی یا رد دسترسی شود. تزریق می تواند گاهی منجر به تصاحب کامل میزبان نیز گردد. تاثیر تجاری بستگی به نیازهای محافظت از برنامه و اطلاعات شما دارد.</div> |
 
 ## <div dir="rtl" align="right">آیا برنامه کاربردی آسیب‌پذیر است؟ </div>
 
@@ -24,7 +24,7 @@
   </li>
   <li>
     برخی از تزریقات رایج عبارتند از SQL، NoSQL، دستور OS، ORM، LDAP و زبان بیان (EL) یا تزریق OGNL . مفهوم در میان همه مفسرها یکسان است.
-بررسی کد منبع بهترین روش تشخیص این است که آیا برنامه کاربردی شما برای تزریق آسیب پذیر هستند یا خیر، با تست کامل خودکار تمام پارامترها، سرصفحه ها، URL ها، کوکی ها، JSON، SOAP و ورودی های داده XML می توان نقص تزریق را پیگیری کرد. سازمانها می توانند از ابزارهای منبع استاتیک <a href="https://www.owasp.org/index.php/Source_Code_Analysis_Tools">SAST</a> و آزمون برنامه کاربردی پویا <a href="https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools">DAST</a> را در خط لوله CI /     CD  برای شناسایی نقص های تزریق  معرفی شده قبل از تولید در اختیار بگیرند و استفاده کنند. .
+بررسی کد منبع بهترین روش تشخیص این است که آیا برنامه کاربردی شما برای تزریق آسیب پذیر هستند یا خیر، با تست کامل خودکار تمام پارامترها، سرصفحه ها، URL ها، کوکی ها، JSON، SOAP و ورودی های داده XML می توان نقص تزریق را پیگیری کرد. سازمانها می توانند از ابزارهای منبع استاتیک <a href="https://owasp.org/www-community/Source_Code_Analysis_Tools">SAST</a> و آزمون برنامه کاربردی پویا <a href="https://owasp.org/www-community/Vulnerability_Scanning_Tools">DAST</a> را در خط لوله CI /     CD  برای شناسایی نقص های تزریق  معرفی شده قبل از تولید در اختیار بگیرند و استفاده کنند. .
   </li>
 </ul>c
 
@@ -64,7 +64,7 @@
 
 <p dir="rtl" align="right">در هر دو مورد، مهاجم مقدار پارامتر < id> را در مرورگر خود تغییر می دهد تا <span style="direction:ltr;display:inline-block">' or '1'='1 </span> را ارسال کند : به طور مثال: </p>
 
-`http://example.com/app/accountView?id=' or '1'='1`
+`https://example.com/app/accountView?id=' or '1'='1`
 
 <p dir="rtl" align="right">این معنای هر دو درخواست را تغییر می‌دهد تا تمام رکوردها را از جدول حساب‌ها بازگرداند. حملات خطرناک ترمی‌توانند داده ها را تغییر داده یا حذف کنند یا حتی دستورالعمل‌های ذخیره شده را فراخوانی کنند. </p>
 
@@ -72,14 +72,14 @@
 
 ### <div dir="rtl" align="right">OWASP</div> 
 
-* [OWASP Proactive Controls: Parameterize Queries](https://www.owasp.org/index.php/OWASP_Proactive_Controls#2:_Parameterize_Queries)
-* [OWASP ASVS: V5 Input Validation and Encoding](https://www.owasp.org/index.php/ASVS_V5_Input_validation_and_output_encoding)
-* [OWASP Testing Guide: SQL Injection](https://www.owasp.org/index.php/Testing_for_SQL_Injection_(OTG-INPVAL-005)), [Command Injection](https://www.owasp.org/index.php/Testing_for_Command_Injection_(OTG-INPVAL-013)), [ORM injection](https://www.owasp.org/index.php/Testing_for_ORM_Injection_(OTG-INPVAL-007))
-* [OWASP Cheat Sheet: Injection Prevention](https://www.owasp.org/index.php/Injection_Prevention_Cheat_Sheet)
-* [OWASP Cheat Sheet: SQL Injection Prevention](https://www.owasp.org/index.php/SQL_Injection_Prevention_Cheat_Sheet)
-* [OWASP Cheat Sheet: Injection Prevention in Java](https://www.owasp.org/index.php/Injection_Prevention_Cheat_Sheet_in_Java)
-* [OWASP Cheat Sheet: Query Parameterization](https://www.owasp.org/index.php/Query_Parameterization_Cheat_Sheet)
-* [OWASP Automated Threats to Web Applications – OAT-014](https://www.owasp.org/index.php/OWASP_Automated_Threats_to_Web_Applications)
+* [OWASP Proactive Controls: Parameterize Queries](https://owasp.org/www-project-proactive-controls/v3/en/c3-secure-database)
+* [OWASP ASVS: V5 Input Validation and Encoding](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x13-V5-Validation-Sanitization-Encoding.md)
+* [OWASP Testing Guide: SQL Injection](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/05-Testing_for_SQL_Injection), [Command Injection](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/12-Testing_for_Command_Injection), [ORM injection](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/05.7-Testing_for_ORM_Injection)
+* [OWASP Cheat Sheet: Injection Prevention](https://cheatsheetseries.owasp.org/cheatsheets/Injection_Prevention_Cheat_Sheet.html)
+* [OWASP Cheat Sheet: SQL Injection Prevention](https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html)
+* [OWASP Cheat Sheet: Injection Prevention in Java](https://cheatsheetseries.owasp.org/cheatsheets/Injection_Prevention_Cheat_Sheet.html_in_Java)
+* [OWASP Cheat Sheet: Query Parameterization](https://cheatsheetseries.owasp.org/cheatsheets/Query_Parameterization_Cheat_Sheet.html)
+* [OWASP Automated Threats to Web Applications – OAT-014](https://owasp.org/www-project-automated-threats-to-web-applications/)
 
 ### <div dir="rtl" align="right">خارجی</div>
 

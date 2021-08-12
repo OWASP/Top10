@@ -3,7 +3,7 @@
 | Tehdit Etkenleri/Saldırı vektörleri | Güvenlik zafiyeti  | Etkiler |
 | -- | -- | -- |
 | Erişim Düzeyi : İstismar Edilebilirlik 2 | Yaygınlık 2 : Tespit Edilebilirlik 2 | Teknik 3 : İş |
-| Erişim kontrolü istismarı saldırganların temel bir yeteneğidir. [SAST](https://www.owasp.org/index.php/Source_Code_Analysis_Tools) ve [DAST](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools) araçları erişim kontrolünün olmadığını tespit edebilir ancak olduğu durumlarda fonksiyonel olup olmadığını doğrulayamamaktadır. Erişim kontrolü manuel yöntemlerle veya belirli çerçevelerde erişim kontrolleri bulunmadığı için otomasyon aracılığıyla tespit edilebilmektedir. | Erişim kontrolü açıklıkları otomatize tespitin eksikliği ve uygulama geliştiricileri tarafından etkin bir fonksiyonel test yapılmamasından dolayı yaygındır. Erişim kontrolü tespiti genellikle otomatize statik veya dinamik test ile yapılamamaktadır. HTTP metotları (GET, PUT vb.), doğrudan nesne başvuruları vb. dahil eksik veya yetersiz erişim kontrollerini tespit etmenin en iyi yolu manuel testlerdir. | Teknik etki saldırganların kullanıcılar veya yöneticiler gibi davranması veya kullanıcıların yetki gerektiren fonksiyonları kullanması veya kayıt oluşturulması, kayıtlara erişilmesi, kayıtların güncellenmesi veya silinmesidir. |
+| Erişim kontrolü istismarı saldırganların temel bir yeteneğidir. [SAST](https://owasp.org/www-community/Source_Code_Analysis_Tools) ve [DAST](https://owasp.org/www-community/Vulnerability_Scanning_Tools) araçları erişim kontrolünün olmadığını tespit edebilir ancak olduğu durumlarda fonksiyonel olup olmadığını doğrulayamamaktadır. Erişim kontrolü manuel yöntemlerle veya belirli çerçevelerde erişim kontrolleri bulunmadığı için otomasyon aracılığıyla tespit edilebilmektedir. | Erişim kontrolü açıklıkları otomatize tespitin eksikliği ve uygulama geliştiricileri tarafından etkin bir fonksiyonel test yapılmamasından dolayı yaygındır. Erişim kontrolü tespiti genellikle otomatize statik veya dinamik test ile yapılamamaktadır. HTTP metotları (GET, PUT vb.), doğrudan nesne başvuruları vb. dahil eksik veya yetersiz erişim kontrollerini tespit etmenin en iyi yolu manuel testlerdir. | Teknik etki saldırganların kullanıcılar veya yöneticiler gibi davranması veya kullanıcıların yetki gerektiren fonksiyonları kullanması veya kayıt oluşturulması, kayıtlara erişilmesi, kayıtların güncellenmesi veya silinmesidir. |
 
 ## Uygulamam Açıklık İçeriyor Mu?
 
@@ -41,13 +41,13 @@ Erişim kontrolü sadece, saldırganın erişim kontrollerine veya meta verilere
 
 Saldırgan tarayıcısında basitçe 'acct' parametresini değiştirerek istediği hesap numarasını yollayabilmektedir. Düzgün bir şekilde doğrulanmadığında, saldırgan herhangi bir kullanıcı hesabına erişebilmektedir.
 
-`http://example.com/app/accountInfo?acct=notmyacct`
+`https://example.com/app/accountInfo?acct=notmyacct`
 
 **Senaryo #2**: Saldırgan kaba kuvvet ile hedef URL'leri gezmektedir. Yönetici sayfasına erişim için yönetici hakları gerekmektedir.
 
 ```
-  http://example.com/app/getappInfo
-  http://example.com/app/admin_getappInfo
+  https://example.com/app/getappInfo
+  https://example.com/app/admin_getappInfo
 ```
 
 Eğer kimliği doğrulanmamış bir kullanıcı iki sayfadan herhangi birine erişebiliyorsa, açıklık bulunmaktadır. Eğer yönetici olmayan bir kullanıcı yönetici sayfasına erişebiliyorsa, bu bir açıklıktır.
@@ -56,10 +56,10 @@ Eğer kimliği doğrulanmamış bir kullanıcı iki sayfadan herhangi birine eri
 
 ### OWASP
 
-* [OWASP Proaktif Kontroller: Erişim Kontrolleri](https://www.owasp.org/index.php/OWASP_Proactive_Controls#6:_Implement_Access_Controls)
-* [OWASP Uygulama Güveliği Doğrulama Standardı: V4 Erişim Kontrolü](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
-* [OWASP Test Rehberi: Yetkilendirme Testleri](https://www.owasp.org/index.php/Testing_for_Authorization)
-* [OWASP Kopya Kağıdı: Erişim Kontrolü](https://www.owasp.org/index.php/Access_Control_Cheat_Sheet)
+* [OWASP Proaktif Kontroller: Erişim Kontrolleri](https://owasp.org/www-project-proactive-controls/v3/en/c7-enforce-access-controls)
+* [OWASP Uygulama Güveliği Doğrulama Standardı: V4 Erişim Kontrolü](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x11-V2-Authentication.md)
+* [OWASP Test Rehberi: Yetkilendirme Testleri](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/05-Authorization_Testing/README)
+* [OWASP Kopya Kağıdı: Erişim Kontrolü](https://cheatsheetseries.owasp.org/cheatsheets/Access_Control_Cheat_Sheet.html)
 
 ### Dış Kaynaklar
 

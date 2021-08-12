@@ -14,7 +14,7 @@
 * アプリケーションとAPIのログが、疑わしいアクティビティをモニタリングしていない。
 * ログがローカルにのみ格納されている。
 * アラートの適切なしきい値とレスポンスのエスカレーションプロセスが整えられていない、または有効ではない。
-* ペネトレーションテストや[DAST](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools)ツール（[OWASP ZAP](https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project)など）によるスキャンがアラートをあげない。
+* ペネトレーションテストや[DAST](https://owasp.org/www-community/Vulnerability_Scanning_Tools)ツール（[OWASP ZAP](https://owasp.org/www-project-zap/)など）によるスキャンがアラートをあげない。
 * アプリケーションがリアルタイム、準リアルタイムにアクティブな攻撃を検知、エスカレート、またはアラートすることができない。
 
 ユーザまたは攻撃者がログやアラートのイベントを閲覧できると、情報の漏えいが発生する可能性があります（**A3:2017-機微な情報の露出**を参照）。
@@ -29,7 +29,7 @@
 * 疑わしい活動がタイムリーに検知されて対応されるように、効果的なモニタリングとアラートを確立する。
 * [NIST 800-61 rev 2](https://csrc.nist.gov/publications/detail/sp/800-61/rev-2/final)（またはそれ以降）のような、インシデント対応および復旧計画を策定または採用する。
 
-[OWASP AppSensor](https://www.owasp.org/index.php/OWASP_AppSensor_Project)、[OWASP ModSecurity Core Rule Set](https://www.owasp.org/index.php/Category:OWASP_ModSecurity_Core_Rule_Set_Project)を使用したModSecurityなどのWebアプリケーションファイアウォール、カスタムダッシュボードとアラートを使用したログ相関分析ソフトウェアなど、商用およびオープンソースのアプリケーション保護フレームワークがあります。
+[OWASP AppSensor](https://owasp.org/www-project-appsensor/)、[OWASP ModSecurity Core Rule Set](https://owasp.org/www-project-modsecurity-core-rule-set/)を使用したModSecurityなどのWebアプリケーションファイアウォール、カスタムダッシュボードとアラートを使用したログ相関分析ソフトウェアなど、商用およびオープンソースのアプリケーション保護フレームワークがあります。
 
 ## 攻撃シナリオの例
 
@@ -43,10 +43,10 @@
 
 ### OWASP
 
-* [OWASP Proactive Controls: Implement Logging and Intrusion Detection](https://www.owasp.org/index.php/OWASP_Proactive_Controls#8:_Implement_Logging_and_Intrusion_Detection)
-* [OWASP Application Security Verification Standard: V8 Logging and Monitoring](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
-* [OWASP Testing Guide: Testing for Detailed Error Code](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
-* [OWASP Cheat Sheet: Logging](https://www.owasp.org/index.php/Logging_Cheat_Sheet)
+* [OWASP Proactive Controls: Implement Logging and Intrusion Detection](https://owasp.org/www-project-proactive-controls/v3/en/c9-security-logging)
+* [OWASP Application Security Verification Standard: V8 Logging and Monitoring](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x11-V2-Authentication.md)
+* [OWASP Testing Guide: Testing for Detailed Error Code](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x11-V2-Authentication.md)
+* [OWASP Cheat Sheet: Logging](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html)
 
 ### 外部資料
 

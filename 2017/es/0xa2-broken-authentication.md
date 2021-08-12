@@ -11,7 +11,7 @@ La confirmación de la identidad, la autenticación y la gestion de sesiones del
 
 Puede existir debilidades de autenticación si la aplicación:
 
-* Permite ataques automatizados como la [reutilización de credenciales conocidas](https://www.owasp.org/index.php/Credential_stuffing), cuando el atacante posee una lista de pares de usuario y contraseña válidos.
+* Permite ataques automatizados como la [reutilización de credenciales conocidas](https://owasp.org/www-community/attacks/Credential_stuffing), cuando el atacante posee una lista de pares de usuario y contraseña válidos.
 * Permite ataques de fuerza bruta u otros ataques automatizados.
 * Permite contraseñas por defecto, débiles o bien conocidas, como "Password1", "Contraseña1" o "admin/admin".
 * Posee procesos débiles o inefectivos para el olvido de contraseña o recuperación de credenciales, como "respuestas basadas en el conocimiento", las cuales no se pueden implementar de forma segura seguras.
@@ -30,7 +30,7 @@ Puede existir debilidades de autenticación si la aplicación:
 
 ## Ejemplos de escenarios de ataque
 
-**Escenario #1**: [Relleno de credenciales](https://www.owasp.org/index.php/Credential_stuffing), el uso de [listas de contraseñas conocidas](https://github.com/danielmiessler/SecLists), es un ataque común. Si una aplicación no implementa protecciones automáticas de amenazas o rellenado de credenciales, la aplicación puede usarse como oráculo de contraseña para determinar si las credenciales son válidas.
+**Escenario #1**: [Relleno de credenciales](https://owasp.org/www-community/attacks/Credential_stuffing), el uso de [listas de contraseñas conocidas](https://github.com/danielmiessler/SecLists), es un ataque común. Si una aplicación no implementa protecciones automáticas de amenazas o rellenado de credenciales, la aplicación puede usarse como oráculo de contraseña para determinar si las credenciales son válidas.
 
 **Escenario #2**: La mayoría de los ataques de autenticación ocurren debido al uso de contraseñas como único factor. Las consideradas mejores prácticas de requerir de una rotación y complejidad de las contraseñas, son vistos como alentadoras del uso y reúso de contraseñas débiles por parte de los usuarios. Se le recomienda a las organizaciones que detengan dichas prácticas y utilicen las prácticas recomendadas en la guía NIST 800-63 y el uso de la autenticación multi-factor.
 
@@ -40,15 +40,15 @@ Puede existir debilidades de autenticación si la aplicación:
 
 ### OWASP
 
-* [Controles Proactivos de OWASP: Implementar controles de Identificación y Autenticación]((https://www.owasp.org/index.php/OWASP_Proactive_Controls#5:_Implement_Identity_and_Authentication_Controls))
-* [Estándar de Verificación de Seguridad en Aplicaciones de OWASP: V2 Autenticación](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
-* [Estándar de Verificación de Seguridad en Aplicaciones de OWASP: V3 Gestión de Sesiones](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
-* [Guía de Pruebas de OWASP: Identificación](https://www.owasp.org/index.php/Testing_Identity_Management) y [Autenticación](https://www.owasp.org/index.php/Testing_for_authentication)
-* [Hoja de ayuda de OWASP: Autenticación](https://www.owasp.org/index.php/Authentication_Cheat_Sheet)
-* [Hoja de ayuda de OWASP: Reutilización de credenciales conocidas](https://www.owasp.org/index.php/Credential_Stuffing_Prevention_Cheat_Sheet)
-* [Hoja de ayuda de OWASP: Olvide mi contraseña](https://www.owasp.org/index.php/Forgot_Password_Cheat_Sheet)
-* [Hoja de ayuda de OWASP: Almacenamiento de la contraseña](https://www.owasp.org/index.php/Password_Storage_Cheat_Sheet)
-* [Hoja de ayuda: Gestión de Sesiones](https://www.owasp.org/index.php/Session_Management_Cheat_Sheet)
+* [Controles Proactivos de OWASP: Implementar controles de Identificación y Autenticación]((https://owasp.org/www-project-proactive-controls/v3/en/c6-digital-identity))
+* [Estándar de Verificación de Seguridad en Aplicaciones de OWASP: V2 Autenticación](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x11-V2-Authentication.md)
+* [Estándar de Verificación de Seguridad en Aplicaciones de OWASP: V3 Gestión de Sesiones](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x11-V2-Authentication.md)
+* [Guía de Pruebas de OWASP: Identificación](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/03-Identity_Management_Testing/README) y [Autenticación](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/04-Authentication_Testing/README)
+* [Hoja de ayuda de OWASP: Autenticación](https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html)
+* [Hoja de ayuda de OWASP: Reutilización de credenciales conocidas](https://cheatsheetseries.owasp.org/cheatsheets/Credential_Stuffing_Prevention_Cheat_Sheet.html)
+* [Hoja de ayuda de OWASP: Olvide mi contraseña](https://cheatsheetseries.owasp.org/cheatsheets/Forgot_Password_Cheat_Sheet.html)
+* [Hoja de ayuda de OWASP: Almacenamiento de la contraseña](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html)
+* [Hoja de ayuda: Gestión de Sesiones](https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html)
 
 ### Externas
 

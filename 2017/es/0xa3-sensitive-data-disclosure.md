@@ -15,7 +15,7 @@ Lo primero es determinar las necesidades de protección de los datos en tránsit
 * ¿No se aplica el cifrado, por ejemplo, no se han configurado alguna de las directivas de seguridad o encabezados para el navegador?
 * ¿El Agente del usuario (aplicación o cliente de correo electrónico, por ejemplo), verifica que el certificado enviado por el servidor se válido?
 
-Véase también [criptografía en el almacenamiento (V7)](https://www.owasp.org/index.php/ASVS_V7_Cryptography), [protección de datos (V9)](https://www.owasp.org/index.php/ASVS_V9_Data_rotection) y [seguridad de la comunicaciones (V10)](https://www.owasp.org/index.php/ASVS_V10_Communications) del ASVS.
+Véase también [criptografía en el almacenamiento (V7)](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x14-V6-Cryptography.md), [protección de datos (V9)](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x16-V8-Data-Protection.md) y [seguridad de la comunicaciones (V10)](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x17-V9-Communications.md) del ASVS.
 
 ## Cómo se previene
 
@@ -27,7 +27,7 @@ Realice como mínimo las siguientes recomendaciones y consulte las referencias:
 * Asegúrese de cifrar todos los datos sensibles cuando son almacenados.
 * Asegúrese de que se utilizan únicamente algoritmos y protocolos estándares  y fuertes, así como que para las claves se implementa una gestión adecuada.
 * Cifre todos los datos en tránsito utilizando protocolos seguros como TLS con cifradores que utilicen perfect forward secrecy (PFS), priorización de cifradores por el servidor y parámetros seguros. Aplique el cifrado utilizando directivas como HTTP Strict Transport Security (HSTS).
-* Almacene contraseñas utilizando funciones de hashing adaptables con un factor de trabajo (factor de retraso) además de sal, como [Argon2](https://www.cryptolux.org/index.php/Argon2), [scrypt](https://wikipedia.org/wiki/Scrypt),[bcrypt](https://wikipedia.org/wiki/Bcrypt) o [PBKDF2](https://wikipedia.org/wiki/PBKDF2).
+* Almacene contraseñas utilizando funciones de hashing adaptables con un factor de trabajo (factor de retraso) además de sal, como [Argon2](https://github.com/p-h-c/phc-winner-argon2), [scrypt](https://wikipedia.org/wiki/Scrypt),[bcrypt](https://wikipedia.org/wiki/Bcrypt) o [PBKDF2](https://wikipedia.org/wiki/PBKDF2).
 * Verifique la efectividad de sus configuraciones y parámetros de forma independiente.
 
 
@@ -43,14 +43,14 @@ Realice como mínimo las siguientes recomendaciones y consulte las referencias:
 
 ### OWASP
 
-* [Controles Proactivos de OWASP: Protección de Datos](https://www.owasp.org/index.php/OWASP_Proactive_Controls#7:_Protect_Data)
-* [Estándar de Verificación de Seguridad en Aplicaciones de OWASP: V9, V10, V11](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project)
-* [Hoja de ayuda de OWASP: Protección de Capa Transporte](https://www.owasp.org/index.php/Transport_Layer_Protection_Cheat_Sheet)
-* [Hoja de ayuda de OWASP: Protección de Seguridad de Usuario](https://www.owasp.org/index.php/User_Privacy_Protection_Cheat_Sheet)
-* [Hoja de ayuda de OWASP: Almacenamiento de Contraseña](https://www.owasp.org/index.php/Password_Storage_Cheat_Sheet)
-* [Hoja de ayuda de OWASP: Almacenamiento Criptográfico](https://www.owasp.org/index.php/Cryptographic_Storage_Cheat_Sheet)
-* [Proyecto de Cabezales de Seguridad de OWASP](https://www.owasp.org/index.php/OWASP_Secure_Headers_Project)
-* [Guía de Pruebas de OWASP: Pruebas de Criptografía débil](https://www.owasp.org/index.php/Testing_for_weak_Cryptography)
+* [Controles Proactivos de OWASP: Protección de Datos](https://owasp.org/www-project-proactive-controls/v3/en/c8-protect-data-everywhere)
+* [Estándar de Verificación de Seguridad en Aplicaciones de OWASP: V9, V10, V11](https://owasp.org/www-project-application-security-verification-standard/)
+* [Hoja de ayuda de OWASP: Protección de Capa Transporte](https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Protection_Cheat_Sheet.html)
+* [Hoja de ayuda de OWASP: Protección de Seguridad de Usuario](https://cheatsheetseries.owasp.org/cheatsheets/User_Privacy_Protection_Cheat_Sheet.html)
+* [Hoja de ayuda de OWASP: Almacenamiento de Contraseña](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html)
+* [Hoja de ayuda de OWASP: Almacenamiento Criptográfico](https://cheatsheetseries.owasp.org/cheatsheets/Cryptographic_Storage_Cheat_Sheet.html)
+* [Proyecto de Cabezales de Seguridad de OWASP](https://owasp.org/www-project-secure-headers/)
+* [Guía de Pruebas de OWASP: Pruebas de Criptografía débil](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/09-Testing_for_Weak_Cryptography/README)
 
 ### Externas
 

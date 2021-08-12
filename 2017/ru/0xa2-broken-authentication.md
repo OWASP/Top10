@@ -11,7 +11,7 @@
 
 Приложение имеет недостатки в аутентификации, если:
 
-* допускается проведение автоматизированных атак, например, [на учетные записи](https://www.owasp.org/index.php/Credential_stuffing), когда у атакующего есть список действующих имен и паролей пользователей;
+* допускается проведение автоматизированных атак, например, [на учетные записи](https://owasp.org/www-community/attacks/Credential_stuffing), когда у атакующего есть список действующих имен и паролей пользователей;
 * допускается проведение атак методом подбора или других автоматизированных атак;
 * допускается использование стандартных, ненадежных или хорошо известных паролей, например "Password1" или "admin/admin“;
 * используются ненадежные или неэффективные методы восстановления учетных данных и паролей, например "ответы на основе знаний", которые являются небезопасными;
@@ -33,7 +33,7 @@
 
 ## Примеры сценариев атак
 
-**Сценарий №1**: [Атака на учетные записи](https://www.owasp.org/index.php/Credential_stuffing), с использованием [списков известных паролей](https://github.com/danielmiessler/SecLists), является очень распространенной. Если в приложении нет защиты от автоматизированных атак или атак на учетные записи, то оно может быть использовано для определения действующих учетных данных.
+**Сценарий №1**: [Атака на учетные записи](https://owasp.org/www-community/attacks/Credential_stuffing), с использованием [списков известных паролей](https://github.com/danielmiessler/SecLists), является очень распространенной. Если в приложении нет защиты от автоматизированных атак или атак на учетные записи, то оно может быть использовано для определения действующих учетных данных.
 
 **Сценарий №2**: Большинство атак на аутентификацию связано с использованием исключительно паролей. Ранее считавшиеся хорошими требования к смене пароля и его сложности способствуют использованию и переиспользованию пользователями ненадежных паролей. Организациям рекомендуется отказаться от подобной практики (см. NIST 800-63) и внедрить многофакторную аутентификацию.
 
@@ -43,16 +43,16 @@
 
 ### OWASP
 
-* [Проактивная защита OWASP: реализация защиты идентификационных данных и аутентификации](https://www.owasp.org/index.php/OWASP_Proactive_Controls#5:_Implement_Identity_and_Authentication_Controls)
-* [Стандарт подтверждения безопасности приложений OWASP (ASVS): V2 Аутентификация](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
-* [Стандарт подтверждения безопасности приложений OWASP (ASVS): V3 Управление сессиями](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
-* [Руководство OWASP по тестированию: Идентификационные данные](https://www.owasp.org/index.php/Testing_Identity_Management)
- и [Аутентификация](https://www.owasp.org/index.php/Testing_for_authentication)
-* [Памятка OWASP: Аутентификация](https://www.owasp.org/index.php/Authentication_Cheat_Sheet)
-* [Памятка OWASP: Утечка учётных данных](https://www.owasp.org/index.php/Credential_Stuffing_Prevention_Cheat_Sheet)
-* [Памятка OWASP: Забытый пароль](https://www.owasp.org/index.php/Forgot_Password_Cheat_Sheet)
-* [Памятка OWASP: Управление сессиями](https://www.owasp.org/index.php/Session_Management_Cheat_Sheet)
-* [Справочник OWASP по автоматизированным атакам](https://www.owasp.org/index.php/OWASP_Automated_Threats_to_Web_Applications)
+* [Проактивная защита OWASP: реализация защиты идентификационных данных и аутентификации](https://owasp.org/www-project-proactive-controls/v3/en/c6-digital-identity)
+* [Стандарт подтверждения безопасности приложений OWASP (ASVS): V2 Аутентификация](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x11-V2-Authentication.md)
+* [Стандарт подтверждения безопасности приложений OWASP (ASVS): V3 Управление сессиями](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x11-V2-Authentication.md)
+* [Руководство OWASP по тестированию: Идентификационные данные](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/03-Identity_Management_Testing/README)
+ и [Аутентификация](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/04-Authentication_Testing/README)
+* [Памятка OWASP: Аутентификация](https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html)
+* [Памятка OWASP: Утечка учётных данных](https://cheatsheetseries.owasp.org/cheatsheets/Credential_Stuffing_Prevention_Cheat_Sheet.html)
+* [Памятка OWASP: Забытый пароль](https://cheatsheetseries.owasp.org/cheatsheets/Forgot_Password_Cheat_Sheet.html)
+* [Памятка OWASP: Управление сессиями](https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html)
+* [Справочник OWASP по автоматизированным атакам](https://owasp.org/www-project-automated-threats-to-web-applications/)
 
 ### Сторонние
 

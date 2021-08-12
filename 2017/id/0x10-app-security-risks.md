@@ -14,7 +14,7 @@ keseluruhan.
 
 ## Apa Risiko Saya?
 
-[OWASP Top 10](https://www.owasp.org/index.php/Top10) ini berfokus pada identifikasi risiko yang paling serius bagi sebagian besar organisasi. Untuk setiap risiko, kami memberikan informasi umum mengenai kemungkiinan dan dampak teknis dengan menggunakan skema penilaian sederhana berikut, yang berdasarkan pada  OWASP Risk Rating Methodology.  
+[OWASP Top 10](https://owasp.org/www-project-top-ten/) ini berfokus pada identifikasi risiko yang paling serius bagi sebagian besar organisasi. Untuk setiap risiko, kami memberikan informasi umum mengenai kemungkiinan dan dampak teknis dengan menggunakan skema penilaian sederhana berikut, yang berdasarkan pada  OWASP Risk Rating Methodology.  
 
 | Agen Ancaman| Vektor Serangan | Keberadaan kelemahan| Deteksi Kelemahan | Dampak Teknis | Dampak Bisnis |
 | -- | -- | -- | -- | -- | -- |
@@ -33,8 +33,8 @@ Bila memungkinkan, nama risiko di Top 10 sesuai dengan [Common Weakness Enumerat
 
 ### OWASP
 
-* [OWASP Risk Rating Methodology](https://www.owasp.org/index.php/OWASP_Risk_Rating_Methodology)
-* [Article on Threat/Risk Modeling](https://www.owasp.org/index.php/Threat_Risk_Modeling)
+* [OWASP Risk Rating Methodology](https://owasp.org/www-community/OWASP_Risk_Rating_Methodology)
+* [Article on Threat/Risk Modeling](https://owasp.org/www-community/Threat_Modeling)
 
 ### Eksternal
 

@@ -9,14 +9,14 @@ La OWASP, veți găsi gratuit și liber:
 * Instrumente și standarde de securitate pentru aplicații.
 * Cărți complete despre testarea securității aplicației, dezvoltarea sigură a codului și revizuirea codului securizat.
 * Prezentări și [video-uri](https://www.youtube.com/user/OWASPGLOBAL).
-* [Cheat sheets](https://www.owasp.org/index.php/OWASP_Cheat_Sheet_Series) pe multe subiecte comune.
+* [Cheat sheets](https://cheatsheetseries.owasp.org/) pe multe subiecte comune.
 * Controale de securitate și biblioteci standard.
-* [Capitole locale din întreaga lume](https://www.owasp.org/index.php/OWASP_Chapter).
+* [Capitole locale din întreaga lume](https://owasp.org/chapters/).
 * Cercetări de ultimă oră.
-* [Conferințe extensive la nivel mondial](https://www.owasp.org/index.php/Category:OWASP_AppSec_Conference).
-* [Mailing lists](https://lists.owasp.org/mailman/listinfo).
+* [Conferințe extensive la nivel mondial](https://owasp.org/events/).
+* [Google Groups](https://groups.google.com/a/owasp.org).
 
-Aflați mai multe la: [https://www.owasp.org](https://www.owasp.org).
+Aflați mai multe la: [https://owasp.org](https://owasp.org).
 
 Toate instrumentele, documentele, videoclipurile, prezentările și capitolele OWASP sunt gratuite și deschise tuturor celor interesați de îmbunătățirea securității aplicațiilor.
 

@@ -31,7 +31,7 @@
 مذاکره تمام شرایط فنی، از جمله طراحی، امنیت، و موافقت نامه های سطح خدمات (SLA) 
   </li>
   <li>
-    اتخاذ قالب ها و چک لیست ها، مانند <a href="https://www.owasp.org/index.php/OWASP_Secure_Software_Contract_Annex">ضمیمه قرارداد نرم افزار امن OWASP</a>.
+    اتخاذ قالب ها و چک لیست ها، مانند <a href="https://owasp.org/www-community/OWASP_Secure_Software_Contract_Annex">ضمیمه قرارداد نرم افزار امن OWASP</a>.
     <strong> نکته :</strong>این ضمیمه برای قانون قرارداد ایالات متحده است، بنابراین قبل از استفاده از ضمیمه نمونه، لطفا با مشاوره قانونی مشورت کنید.
   </li>
 </ul>

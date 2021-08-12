@@ -16,7 +16,7 @@
 * Используется ли шифрование, например присутствуют ли директивы безопасности пользовательских агентов (браузеров) и заголовки?
 * Проверяет ли пользовательский агент (напр., приложение или почтовый клиент) действительность полученных сертификатов?
 
-См. Стандарт подтверждения безопасности приложений: [Криптография (V7)](https://www.owasp.org/index.php/ASVS_V7_Cryptography), [Защита данных (V9)](https://www.owasp.org/index.php/ASVS_V9_Data_Protection) и [SSL/TLS (V10)](https://www.owasp.org/index.php/ASVS_V10_Communications).
+См. Стандарт подтверждения безопасности приложений: [Криптография (V7)](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x14-V6-Cryptography.md), [Защита данных (V9)](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x16-V8-Data-Protection.md) и [SSL/TLS (V9)](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x17-V9-Communications.md).
 
 ## Как предотвратить?
 
@@ -29,7 +29,7 @@
 * Обеспечьте применение современных и надежных алгоритмов, протоколов и ключей, а также используйте соответствующие механизмы управления ключами.
 * Шифруйте все передаваемые данные с помощью надежного протокола, например TLS с совершенной прямой секретностью (PFS), приоритизацией шифров сервером и безопасными настройками. Обеспечьте принудительное шифрование, например используя механизм принудительного использования HTTPS (HSTS).
 * Отключите кэширование ответов, содержащих конфиденциальные данные.
-* Сохраняйте пароли с помощью надежных, адаптивных функций хеширования с солью и фактором трудоемкости (задержки), таких как [Argon2](https://www.cryptolux.org/index.php/Argon2), [scrypt](https://wikipedia.org/wiki/Scrypt), [bcrypt](https://wikipedia.org/wiki/Bcrypt) или [PBKDF2](https://wikipedia.org/wiki/PBKDF2).
+* Сохраняйте пароли с помощью надежных, адаптивных функций хеширования с солью и фактором трудоемкости (задержки), таких как [Argon2](https://github.com/p-h-c/phc-winner-argon2), [scrypt](https://wikipedia.org/wiki/Scrypt), [bcrypt](https://wikipedia.org/wiki/Bcrypt) или [PBKDF2](https://wikipedia.org/wiki/PBKDF2).
 * Проверяйте отдельно эффективность конфигурации и настройки.
 
 ## Примеры сценариев атак
@@ -44,13 +44,13 @@
 
 ### OWASP
 
-* [Проактивная защита OWASP: Защита данных](https://www.owasp.org/index.php/OWASP_Proactive_Controls#7:_Protect_Data)
-* [Стандарт подтверждения безопасности приложений OWASP]((https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project)): [V7](https://www.owasp.org/index.php/ASVS_V7_Cryptography), [9](https://www.owasp.org/index.php/ASVS_V9_Data_Protection), [10](https://www.owasp.org/index.php/ASVS_V10_Communications)
-* [Памятка OWASP: Защита транспортного уровня](https://www.owasp.org/index.php/Transport_Layer_Protection_Cheat_Sheet)
-* [Памятка OWASP: Защита конфиденциальности пользователей](https://www.owasp.org/index.php/User_Privacy_Protection_Cheat_Sheet)
-* [Памятка OWASP: Хранение паролей](https://www.owasp.org/index.php/Password_Storage_Cheat_Sheet) и [хранение в зашифрованном виде](https://www.owasp.org/index.php/Cryptographic_Storage_Cheat_Sheet)
-* [Проект OWASP: Безопасные заголовки](https://www.owasp.org/index.php/OWASP_Secure_Headers_Project); [Памятка по HSTS](https://www.owasp.org/index.php/HTTP_Strict_Transport_Security_Cheat_Sheet)
-* [Руководство OWASP по тестированию: Проверка надежности шифрования](https://www.owasp.org/index.php/Testing_for_weak_Cryptography)
+* [Проактивная защита OWASP: Защита данных](https://owasp.org/www-project-proactive-controls/v3/en/c8-protect-data-everywhere)
+* [Стандарт подтверждения безопасности приложений OWASP](https://owasp.org/www-project-application-security-verification-standard/): [V6](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x14-V6-Cryptography.md), [9](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x16-V8-Data-Protection.md), [10](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x17-V9-Communications.md)
+* [Памятка OWASP: Защита транспортного уровня](https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Protection_Cheat_Sheet.html)
+* [Памятка OWASP: Защита конфиденциальности пользователей](https://cheatsheetseries.owasp.org/cheatsheets/User_Privacy_Protection_Cheat_Sheet.html)
+* [Памятка OWASP: Хранение паролей](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html) и [хранение в зашифрованном виде](https://cheatsheetseries.owasp.org/cheatsheets/Cryptographic_Storage_Cheat_Sheet.html)
+* [Проект OWASP: Безопасные заголовки](https://owasp.org/www-project-secure-headers/); [Памятка по HSTS](https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html)
+* [Руководство OWASP по тестированию: Проверка надежности шифрования](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/09-Testing_for_Weak_Cryptography/README)
 
 ### Сторонние
 

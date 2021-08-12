@@ -28,7 +28,7 @@ Aşağıdakiler dahil güvenli yükleme süreçleri uygulanmalıdır:
 * Herhangi bir gereksiz özellik, bileşen, dokümantasyon veya örnek içermeyen minimal bir platform. Kullanılmayan özellikler veya çerçeveler yüklenmemeli ve varsa kaldırılmalıdır.
 * Yama yönetim sürecinin bir parçası olarak tüm güvenlik notlarına, güncellemelerine ve yamalarına uygun yapılandırmaları gözden geçirme ve güncelleme görevi (bkz. **A9:2017-Bilinen Açıklık İçeren Bileşen Kullanımı**). Özellikle, bulut depolama izinleri (örn. S3 bucket izinleri) gözden geçirilmelidir.
 * Segmentasyon, konteyner kullanımı veya bulut güvenlik grupları (ACL) ile bileşenler arasında güvenli ve etkin bir ayırım sağlayan parçalara ayrılmış bir uygulama mimarisi.
-* Güvenlik direktiflerinin istemciye gönderilmesi, örn. [Güvenlik Başlıkları](https://www.owasp.org/index.php/OWASP_Secure_Headers_Project).
+* Güvenlik direktiflerinin istemciye gönderilmesi, örn. [Güvenlik Başlıkları](https://owasp.org/www-project-secure-headers/).
 * Tüm ortamlardaki yapılandırmanın ve ayarların etkinliğini doğrulamak için otomatize bir süreç.
 
 ## Örnek Saldırı Senaryoları
@@ -45,11 +45,11 @@ Aşağıdakiler dahil güvenli yükleme süreçleri uygulanmalıdır:
 
 ### OWASP
 
-* [OWASP Test Rehberi: Yapılandırma Yönetimi](https://www.owasp.org/index.php/Testing_for_configuration_management)
-* [OWASP Test Rehberi: Hata Kodlarının Testi](https://www.owasp.org/index.php/Testing_for_Error_Code_(OWASP-IG-006))
-* [OWASP Güvenlik Başlıkları Projesi](https://www.owasp.org/index.php/OWASP_Secure_Headers_Project)
+* [OWASP Test Rehberi: Yapılandırma Yönetimi](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/README)
+* [OWASP Test Rehberi: Hata Kodlarının Testi](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/08-Testing_for_Error_Handling/README)
+* [OWASP Güvenlik Başlıkları Projesi](https://owasp.org/www-project-secure-headers/)
 
-Bu alanda ilave gereksinimler için, bkz. Uygulama Güvenliği Doğrulama Standardı [V19 Yapılandırma](https://www.owasp.org/index.php/ASVS_V19_Configuration).
+Bu alanda ilave gereksinimler için, bkz. Uygulama Güvenliği Doğrulama Standardı [V19 Yapılandırma](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x22-V14-Config.md).
 
 ### Dış Kaynaklar
 

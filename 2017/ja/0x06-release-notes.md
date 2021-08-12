@@ -12,7 +12,7 @@
 
 ## データに裏付けられた新しい問題
 
-* **A4:2017-XML 外部エンティティ参照 (XXE)** は、新しいカテゴリです。主にソースコード分析を行うセキュリティテストツール([SAST](https://www.owasp.org/index.php/Source_Code_Analysis_Tools))から寄せられたデータが根拠となっています。
+* **A4:2017-XML 外部エンティティ参照 (XXE)** は、新しいカテゴリです。主にソースコード分析を行うセキュリティテストツール([SAST](https://owasp.org/www-community/Source_Code_Analysis_Tools))から寄せられたデータが根拠となっています。
 
 ## コミュニティにより裏付けられた新しい問題
 
@@ -24,7 +24,7 @@
 ## 統合、引退。ただし、忘れて良いという意味ではない
 
 * **A4-安全でないオブジェクト直接参照** と **A7-機能レベルアクセス制御の欠落** は、**A5:2017-アクセス制御の不備**にマージされました。
-* **A8-クロスサイトリクエストフォージェリ (CSRF)** は、多くのフレームワークがこの対策を講じており [（CSRF対策）](https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF))、アプリケーションの5%程度でのみ観察されています。
+* **A8-クロスサイトリクエストフォージェリ (CSRF)** は、多くのフレームワークがこの対策を講じており [（CSRF対策）](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html)、アプリケーションの5%程度でのみ観察されています。
 * **A10-未検証のリダクレクトとフォワード**は、アプリケーションのおよそ8%で観察されており、XXEが入ったことにより、外れることになりました。
 
 ![0x06-release-notes-1](images/0x06-release-notes-1.png)

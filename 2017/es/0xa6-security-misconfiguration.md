@@ -28,7 +28,7 @@ Deben implementarse procesos seguros de instalación, incluyendo:
 * Una plataforma minimalista sin funcionalidades innecesarias, componentes, documentación o ejemplos. Elimine o no instale frameworks y funcionalidades no utilizadas.
 * Un proceso para revisar y actualizar las configuraciones apropiadas para todas las advertencias de seguridad, actualizaciones y parches como parte del proceso de gestión de parches (ver **A9:2017-Uso de Componentes con vulnerabilidades conocidas**). En particular, revise los permisos de almacenamiento en la nube (por ejemplo, los permisos de buckets de S3).
 * Una arquitectura de la aplicación segmentada que proporcione una separación efectiva y segura entre componentes o arrendatarios, utilizando segmentación, contenedorización o grupos de seguridad en la nube (ACL).
-* Enviando directivas de seguridad a clientes, p. ej.[Cabezales de seguridad](https://www.owasp.org/index.php/OWASP_Secure_Headers_Project).
+* Enviando directivas de seguridad a clientes, p. ej.[Cabezales de seguridad](https://owasp.org/www-project-secure-headers/).
 * Un proceso automatizado para verificar la efectividad de los ajustes y configuraciones en todos los ambientes.
 
 ## Ejemplos de escenarios de ataque
@@ -46,11 +46,11 @@ Deben implementarse procesos seguros de instalación, incluyendo:
 
 ### OWASP
 
-* [Guía de Pruebas de OWASP: Gestión de la Configuración](https://www.owasp.org/index.php/Testing_for_configuration_management)
-* [Guía de Pruebas de OWASP: Prueba de Error de Código](https://www.owasp.org/index.php/Testing_for_Error_Code_(OWASP-IG-006))
-* [Proyecto de Cabezalez de Seguridad de OWASP](https://www.owasp.org/index.php/OWASP_Secure_Headers_Project)
+* [Guía de Pruebas de OWASP: Gestión de la Configuración](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/README)
+* [Guía de Pruebas de OWASP: Prueba de Error de Código](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/08-Testing_for_Error_Handling/README)
+* [Proyecto de Cabezalez de Seguridad de OWASP](https://owasp.org/www-project-secure-headers/)
 
-Para conocer más sobre requisitos adicionales en esta área, consulte el Estándar de Verificación de Seguridad en Aplicaciones [V19 Configuración](https://www.owasp.org/index.php/ASVS_V19_Configuration).
+Para conocer más sobre requisitos adicionales en esta área, consulte el Estándar de Verificación de Seguridad en Aplicaciones [V19 Configuración](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x22-V14-Config.md).
 
 ### Externos
 

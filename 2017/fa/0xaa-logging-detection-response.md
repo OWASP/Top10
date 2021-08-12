@@ -26,7 +26,7 @@
 آستانه های مربوط به هشدار و فرآیندهای تشدید پاسخ مناسب یا موثر نیستند.
   </li>
   <li>
-    تست نفوذ و اسکن با ابزارهای <a href="https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools">DAST</a> <a href="https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project"> ( مانند  OWASP ZAP) </a> باعث هشدار نمی شود.
+    تست نفوذ و اسکن با ابزارهای <a href="https://owasp.org/www-community/Vulnerability_Scanning_Tools">DAST</a> <a href="https://owasp.org/www-project-zap/"> ( مانند  OWASP ZAP) </a> باعث هشدار نمی شود.
   </li>
   <li>
 برنامه قادر به تشخیص، تشدید یا هشدار برای حملات فعال در زمان واقعی یا نزدیک به زمان واقعی نیست.
@@ -56,7 +56,7 @@
 </ul>
 
 <p dir="rtl" align="right">
-  چارچوب های تجاری و منبع باز حفاظت از نرم افزارهای کاربردی مانند <a href="https://www.owasp.org/index.php/OWASP_AppSensor_Project">OWASP AppSensor</a>، فایروال های وب کاربردی مانند <a href="https://www.owasp.org/index.php/Category:OWASP_ModSecurity_Core_Rule_Set_Project"> ModSecurity  با OWASP ModSecurity Core Rule Set </a>و نرم افزار همبسته‌سازی نگاشت رویداد با داشبوردها و هشداردهی سفارشی وجود دارند.</p>
+  چارچوب های تجاری و منبع باز حفاظت از نرم افزارهای کاربردی مانند <a href="https://owasp.org/www-project-appsensor/">OWASP AppSensor</a>، فایروال های وب کاربردی مانند <a href="https://owasp.org/www-project-modsecurity-core-rule-set/"> ModSecurity  با OWASP ModSecurity Core Rule Set </a>و نرم افزار همبسته‌سازی نگاشت رویداد با داشبوردها و هشداردهی سفارشی وجود دارند.</p>
 
 ## <div dir="rtl" align="right">نمونه سناریو های حمله</div>
 
@@ -70,10 +70,10 @@
 
 ### <div dir="rtl" align="right">OWASP</div>
 
-* [OWASP Proactive Controls: Implement Logging and Intrusion Detection](https://www.owasp.org/index.php/OWASP_Proactive_Controls#8:_Implement_Logging_and_Intrusion_Detection)
-* [OWASP Application Security Verification Standard: V8 Logging and Monitoring](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
-* [OWASP Testing Guide: Testing for Detailed Error Code](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
-* [OWASP Cheat Sheet: Logging](https://www.owasp.org/index.php/Logging_Cheat_Sheet)
+* [OWASP Proactive Controls: Implement Logging and Intrusion Detection](https://owasp.org/www-project-proactive-controls/v3/en/c9-security-logging)
+* [OWASP Application Security Verification Standard: V8 Logging and Monitoring](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x11-V2-Authentication.md)
+* [OWASP Testing Guide: Testing for Detailed Error Code](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x11-V2-Authentication.md)
+* [OWASP Cheat Sheet: Logging](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html)
 
 ### <div dir="rtl" align="right">خارجی</div>
 

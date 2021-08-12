@@ -10,7 +10,7 @@ Por vezes, estes caminhos são triviais de encontrar e explorar, por outras são
 
 ## Qual o meu Risco
 
-O [OWASP Top 10](https://www.owasp.org/index.php/Top10) foca na identificação dos riscos mais graves para uma ampla gama de organizações. Para cada um desses riscos, fornecemos informações genéricas sobre probabilidade e impacto técnico usando o seguinte esquema de classificação simples, que é baseado na Metodologia de Classificação de Risco da OWASP.
+O [OWASP Top 10](https://owasp.org/www-project-top-ten/) foca na identificação dos riscos mais graves para uma ampla gama de organizações. Para cada um desses riscos, fornecemos informações genéricas sobre probabilidade e impacto técnico usando o seguinte esquema de classificação simples, que é baseado na Metodologia de Classificação de Risco da OWASP.
 
 | Agentes de Ameaça | Explorabilidade | Prevalência da Vulnerabilidade | Detectabilidade da Vulnerabilidade | Impactos Técnicos | Impactos de Negócio |
 | -- | -- | -- | -- | -- | -- |
@@ -28,8 +28,8 @@ Sempre que possível, os nomes dos riscos no Top 10 estão alinhados com as fraq
 
 ### OWASP
 
-* [OWASP Risk Rating Methodology](https://www.owasp.org/index.php/OWASP_Risk_Rating_Methodology)
-* [Article on Threat/Risk Modeling](https://www.owasp.org/index.php/Threat_Risk_Modeling)
+* [OWASP Risk Rating Methodology](https://owasp.org/www-community/OWASP_Risk_Rating_Methodology)
+* [Article on Threat/Risk Modeling](https://owasp.org/www-community/Threat_Modeling)
 
 ### Externas
 

@@ -11,7 +11,7 @@
 </p>
 
 <p dir="rtl" align="right">در این نسخه، مشکلات و توصیه ها به صورت مختصر و قابل آزمودن با اقتباس از OWASP TOP 10  در برنامه های امنیت نرم افزار نوشته شده اند. ما توصیه می‌کنیم که سازمان های بزرگ و با فعالیت بالا، اگر به یک استاندارد واقعی نیاز دارند از 
-[OWASP Application Security Verification Standard (ASVS)](https://www.owasp.org/index.php/ASVS) استفاده کنند. اما برای اکثریت، OWASP TOP 10  یک شروع خوب در مسیر امنیت برنامه می‌باشد.</p>
+[OWASP Application Security Verification Standard (ASVS)](https://owasp.org/www-project-application-security-verification-standard/) استفاده کنند. اما برای اکثریت، OWASP TOP 10  یک شروع خوب در مسیر امنیت برنامه می‌باشد.</p>
 
 <p dir="rtl" align="right">ما یک سری پیشنهاد به عنوان قدم بعدی برای کاربران مختلف OWASP TOP 10 ، شامل قدم بعدی برای توسعه دهندگان ، قدم بعدی برای ارزیاب های امنیت، قدم بعدی برای سازمان ها که مناسب برای CIO  و CISO  ها است ، قدم بعدی برای مدیران برنامه ها که مناسب برای مدیران برنامه ها و هرکسی که مسئول چرخه‌ی حیات برنامه است، نوشته ایم.</p>
 
@@ -24,7 +24,7 @@
 
 <p dir="rtl" align="right">شما میتوانید پروژه ی OWASP TOP 10 و ترجمه هایش را اینجا پیدا کنید :</p>
 
-* [https://www.owasp.org/index.php/top10](https://www.owasp.org/index.php/top10)
+* [https://owasp.org/www-project-top-ten/](https://owasp.org/www-project-top-ten/)
 
 <p dir="rtl" align="right">در پایان ، دوست داریم که از رهبران موسس OWASP TOP 10 ، آقایان Dave Wichers  و Jeff Williams  برای تمام تلاش‌ها و اعتقادی که برای اتمام پروژه با کمک جامعه به ما داشتند تشکر کنیم. از شما ممنونیم.</p>
 

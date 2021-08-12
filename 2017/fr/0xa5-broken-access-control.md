@@ -3,7 +3,7 @@
 | Facteurs de menace/Vecteurs d'attaque | Vulnérabilité  | Impacts |
 | -- | -- | -- |
 | Niveau d'accès : Exploitation 2 | Fréquence 2 : Détection 2 | Technique 3 : Métier |
-| L'exploitation des contrôles d'accès est une des principales compétences des attaquants. Les outils [SAST](https://www.owasp.org/index.php/Source_Code_Analysis_Tools) et [DAST](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools) peuvent détecter l'absence de contrôles d'accès, mais ne peuvent vérifier s'ils sont efficaces quand ils existent. Les vulnérabilités de contrôles d'accès peuvent être détectés par des tests manuels, leur absence peut être détectée par des contrôles automatiques dans certains frameworks. | Les vulnérabilités de contrôles d'accès surviennent souvent par le manque de détection automatique, et le manque de tests fonctionnels effectifs par les développeurs d'applications. La detection des vulnérabilités de contrôles d'accès ne se prête pas bien aux tests statiques ou dynamiques. Les tests manuels sont la meilleure méthode pour détecter des vulnérabilités de contrôles d'accès manquants ou défectueux. Ceci inclut les méthodes HTTP (GET vs PUT, etc.), les contrôleurs, les références directes d'objets, etc. | Techniquement parlant, l'impact est qu'un attaquant peut obtenir les droits d'un utilisateur ou d'un administrateur, ou qu'un utilisateur obtienne des droits privilégiés ou qu'il puisse créer, lire ou supprimer tout enregistrement de son choix. L'impact métier est dépendant du niveau de protection nécessité par l'application et ses données. |
+| L'exploitation des contrôles d'accès est une des principales compétences des attaquants. Les outils [SAST](https://owasp.org/www-community/Source_Code_Analysis_Tools) et [DAST](https://owasp.org/www-community/Vulnerability_Scanning_Tools) peuvent détecter l'absence de contrôles d'accès, mais ne peuvent vérifier s'ils sont efficaces quand ils existent. Les vulnérabilités de contrôles d'accès peuvent être détectés par des tests manuels, leur absence peut être détectée par des contrôles automatiques dans certains frameworks. | Les vulnérabilités de contrôles d'accès surviennent souvent par le manque de détection automatique, et le manque de tests fonctionnels effectifs par les développeurs d'applications. La detection des vulnérabilités de contrôles d'accès ne se prête pas bien aux tests statiques ou dynamiques. Les tests manuels sont la meilleure méthode pour détecter des vulnérabilités de contrôles d'accès manquants ou défectueux. Ceci inclut les méthodes HTTP (GET vs PUT, etc.), les contrôleurs, les références directes d'objets, etc. | Techniquement parlant, l'impact est qu'un attaquant peut obtenir les droits d'un utilisateur ou d'un administrateur, ou qu'un utilisateur obtienne des droits privilégiés ou qu'il puisse créer, lire ou supprimer tout enregistrement de son choix. L'impact métier est dépendant du niveau de protection nécessité par l'application et ses données. |
 
 ## Suis-je vulnérable ?
 
@@ -42,14 +42,14 @@ Les contrôles d'accès ne sont efficaces que s'ils sont appliqués dans du code
 En modifiant simplement le paramètre 'acct' dans le navigateur, un attaquant peut envoyer le numéro de compte qu'il veut. Si ce numéro n'est pas vérifié, l'attaquant peut accéder à n'importe quel compte utilisateur.
 
 ```
-http://example.com/app/accountInfo?acct=notmyacct
+https://example.com/app/accountInfo?acct=notmyacct
 ```
 
 **Scénario #2** : Un attaquant force le navigateur à visiter des URL arbitraires. Il faut imposer des droits pour accéder à une page d'administration.
 
 ```
-  http://example.com/app/getappInfo
-  http://example.com/app/admin_getappInfo
+  https://example.com/app/getappInfo
+  https://example.com/app/admin_getappInfo
 ```
 
 Si un utilisateur non-authentifié peut accéder à l'une des pages, c'est une faille. Si un non-administrateur peut accéder à une page d'administration, c'est une faille.
@@ -58,10 +58,10 @@ Si un utilisateur non-authentifié peut accéder à l'une des pages, c'est une f
 
 ### OWASP
 
-* [OWASP Proactive Controls: Access Controls](https://www.owasp.org/index.php/OWASP_Proactive_Controls#6:_Implement_Access_Controls)
-* [OWASP Application Security Verification Standard: V4 Access Control](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
-* [OWASP Testing Guide: Authorization Testing](https://www.owasp.org/index.php/Testing_for_Authorization)
-* [OWASP Cheat Sheet: Access Control](https://www.owasp.org/index.php/Access_Control_Cheat_Sheet)
+* [OWASP Proactive Controls: Access Controls](https://owasp.org/www-project-proactive-controls/v3/en/c7-enforce-access-controls)
+* [OWASP Application Security Verification Standard: V4 Access Control](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x12-V4-Access-Control.md)
+* [OWASP Testing Guide: Authorization Testing](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/05-Authorization_Testing/README)
+* [OWASP Cheat Sheet: Access Control](https://cheatsheetseries.owasp.org/cheatsheets/Access_Control_Cheat_Sheet.html)
 
 ### Externes
 

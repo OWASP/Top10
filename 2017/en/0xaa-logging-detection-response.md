@@ -14,7 +14,7 @@ Insufficient logging, detection, monitoring and active response occurs any time:
 * Logs of applications and APIs are not monitored for suspicious activity.
 * Logs are only stored locally.
 * Appropriate alerting thresholds and response escalation processes are not in place or effective.
-* Penetration testing and scans by [DAST](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools) tools (such as [OWASP ZAP](https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project)) do not trigger alerts.
+* Penetration testing and scans by [DAST](https://owasp.org/www-community/Vulnerability_Scanning_Tools) tools (such as [OWASP ZAP](https://owasp.org/www-project-zap/)) do not trigger alerts.
 * The application is unable to detect, escalate, or alert for active attacks in real time or near real time.
 
 You are vulnerable to information leakage if you make logging and alerting events visible to a user or an attacker (see A3:2017-Sensitive Information Exposure).
@@ -29,7 +29,7 @@ As per the risk of the data stored or processed by the application:
 * Establish effective monitoring and alerting such that suspicious activities are detected and responded to in a timely fashion.
 * Establish or adopt an incident response and recovery plan, such as [NIST 800-61 rev 2](https://csrc.nist.gov/publications/detail/sp/800-61/rev-2/final) or later.
 
-There are commercial and open source application protection frameworks such as [OWASP AppSensor](https://www.owasp.org/index.php/OWASP_AppSensor_Project), web application firewalls such as [ModSecurity with the OWASP ModSecurity Core Rule Set](https://www.owasp.org/index.php/Category:OWASP_ModSecurity_Core_Rule_Set_Project), and log correlation software with custom dashboards and alerting. 
+There are commercial and open source application protection frameworks such as [OWASP AppSensor](https://owasp.org/www-project-appsensor/), web application firewalls such as [OWASP ModSecurity Core Rule Set](https://owasp.org/www-project-modsecurity-core-rule-set/), and log correlation software with custom dashboards and alerting. 
 
 ## Example Attack Scenarios
 
@@ -43,10 +43,10 @@ There are commercial and open source application protection frameworks such as 
 
 ### OWASP
 
-* [OWASP Proactive Controls: Implement Logging and Intrusion Detection](https://www.owasp.org/index.php/OWASP_Proactive_Controls#8:_Implement_Logging_and_Intrusion_Detection)
-* [OWASP Application Security Verification Standard: V8 Logging and Monitoring](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
-* [OWASP Testing Guide: Testing for Detailed Error Code](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
-* [OWASP Cheat Sheet: Logging](https://www.owasp.org/index.php/Logging_Cheat_Sheet)
+* [OWASP Proactive Controls: Implement Logging and Intrusion Detection](https://owasp.org/www-project-proactive-controls/v3/en/c9-security-logging)
+* [OWASP Application Security Verification Standard: V8 Logging and Monitoring](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x11-V2-Authentication.md)
+* [OWASP Testing Guide: Testing for Detailed Error Code](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x11-V2-Authentication.md)
+* [OWASP Cheat Sheet: Logging](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html)
 
 ### External
 

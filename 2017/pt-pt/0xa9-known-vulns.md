@@ -95,19 +95,19 @@ facilmente [encontrar dispositivos][0xa910] que possam ainda estar vulneráveis 
 
 [0xa91]: 0xa6-security-misconfiguration.md
 [0xa92]: http://www.mojohaus.org/versions-maven-plugin/
-[0xa93]: https://www.owasp.org/index.php/OWASP_Dependency_Check
+[0xa93]: https://owasp.org/www-project-dependency-check/
 [0xa94]: https://github.com/retirejs/retire.js/
 [0xa95]: https://cve.mitre.org/
 [0xa96]: https://nvd.nist.gov/
-[0xa97]: https://www.owasp.org/index.php/Virtual_Patching_Best_Practices#What_is_a_Virtual_Patch.3F
+[0xa97]: https://owasp.org/www-community/Virtual_Patching_Best_Practices#What_is_a_Virtual_Patch.3F
 [0xa98]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5638
 [0xa99]: https://en.wikipedia.org/wiki/Internet_of_things
 [0xa910]: https://www.shodan.io/report/89bnfUyJ
 [0xa911]: https://en.wikipedia.org/wiki/Heartbleed
-[0xa912]: https://www.owasp.org/index.php/ASVS_V1_Architecture
-[0xa913]: https://www.owasp.org/index.php/OWASP_Dependency_Check
-[0xa914]: https://www.owasp.org/index.php/Map_Application_Architecture_(OTG-INFO-010)
-[0xa915]: https://www.owasp.org/index.php/Virtual_Patching_Best_Practices
+[0xa912]: https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x10-V1-Architecture.md
+[0xa913]: https://owasp.org/www-project-dependency-check/
+[0xa914]: https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/01-Information_Gathering/10-Map_Application_Architecture
+[0xa915]: https://owasp.org/www-community/Virtual_Patching_Best_Practices
 [0xa916]: https://www.aspectsecurity.com/research-presentations/the-unfortunate-reality-of-insecure-libraries
 [0xa917]: https://www.cvedetails.com/version-search.php
 [0xa918]: https://nvd.nist.gov/

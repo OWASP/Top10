@@ -19,7 +19,7 @@ A OWASP disponibiliza de forma livre e aberta:
 * Múltiplas [conferências a nível mundial][3]
 * [Listas de discussão][4]
 
-Mais informação em: https://www.owasp.org.
+Mais informação em: https://owasp.org.
 
 Todas as ferramentas, documentos, vídeos, apresentações e capítulos da OWASP
 são livres e abertos a todos os interessados em melhorar a segurança
@@ -53,9 +53,9 @@ com uma licença Creative Commons Attribution ShareAlike 4.0. Para algum tipo de
 reutilização ou distribuição, deve deixar claro para terceiros os termos da
 licença deste trabalho.
 
-[1]: https://www.owasp.org/index.php/OWASP_Cheat_Sheet_Series
-[2]: https://www.owasp.org/index.php/OWASP_Chapter
+[1]: https://cheatsheetseries.owasp.org/
+[2]: https://owasp.org/chapters/
 
-[3]: https://www.owasp.org/index.php/Category:OWASP_AppSec_Conference
+[3]: https://owasp.org/events/
 [4]: https://lists.owasp.org/mailman/listinfo
 

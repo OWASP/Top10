@@ -6,7 +6,7 @@ O mulțime de feedback a fost primit în timpul creării OWASP Top 10 - 2017, ma
 
 Deși obiectivul inițial al proiectului Top 10 OWASP a fost pur și simplu acela de a sensibiliza dezvoltatorii și managerii, a devenit de facto standardul de securitate al aplicațiilor.
 
-În această versiune, problemele și recomandările sunt scrise concis și într-un mod testabil pentru a ajuta la adoptarea Top 10 OWASP în programele de securitate a aplicațiilor. Încurajăm organizațiile mari și performante să utilizeze [Standardul de verificare a securității aplicațiilor OWASP (ASVS)] (https://www.owasp.org/index.php/ASVS) dacă este necesar un standard adevărat, dar pentru majoritatea OWASP Top 10 este un început excelent în călătoria de securitate a aplicației.
+În această versiune, problemele și recomandările sunt scrise concis și într-un mod testabil pentru a ajuta la adoptarea Top 10 OWASP în programele de securitate a aplicațiilor. Încurajăm organizațiile mari și performante să utilizeze [Standardul de verificare a securității aplicațiilor OWASP (ASVS)] (https://owasp.org/www-project-application-security-verification-standard/) dacă este necesar un standard adevărat, dar pentru majoritatea OWASP Top 10 este un început excelent în călătoria de securitate a aplicației.
 
 Am scris o serie de pași propuși pentru diferiți utilizatori ai Top 10 OWASP, inclusiv "Ce urmează pentru dezvoltatori" , "Ce urmează pentru testerii de securitate", "Ce urmează pentru organizații", care este potrivit pentru CIO-uri și CISO-uri și "Ce urmează pentru managerii de aplicații", care este potrivit pentru managerii de aplicații sau pentru orice persoană responsabilă de ciclul de viață al aplicației.
 
@@ -18,7 +18,7 @@ Sperăm că OWASP Top 10 este util pentru cerințele dumneavoastră de securitat
 
 Puteți găsi proiectul și traducerile OWASP Top 10 aici:
 
-* [https://www.owasp.org/index.php/top10](https://www.owasp.org/index.php/top10)
+* [https://owasp.org/www-project-top-ten/](https://owasp.org/www-project-top-ten/)
 
 În sfârșit, dorim să mulțumim conducerii fondatoare a proiectului OWASP Top 10, Dave Wichers și Jeff Williams, pentru toate eforturile depuse și credința în noi pentru a finaliza acest lucru cu ajutorul comunității. Mulțumesc!
 

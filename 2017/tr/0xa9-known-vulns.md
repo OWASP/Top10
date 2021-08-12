@@ -41,10 +41,10 @@ Yamaları eksik olan veya yanlış yapılandırılmış sistemlerin tespiti içi
 
 ### OWASP
 
-* [OWASP Uygulama Güvenliği Doğrulama Standardı: V1 Mimari, tasarım ve tehdit modelleme](https://www.owasp.org/index.php/ASVS_V1_Architecture)
-* [OWASP Dependency Check (Java ve .NET kütüphaneleri için)](https://www.owasp.org/index.php/OWASP_Dependency_Check)
-* [OWASP Test Rehberi - Uygulama Mimarisinin Haritalanması (OTG-INFO-010)](https://www.owasp.org/index.php/Map_Application_Architecture_(OTG-INFO-010))
-* [OWASP Sanal Yama En İyi Kullanım Örnekleri](https://www.owasp.org/index.php/Virtual_Patching_Best_Practices)
+* [OWASP Uygulama Güvenliği Doğrulama Standardı: V1 Mimari, tasarım ve tehdit modelleme](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x10-V1-Architecture.md)
+* [OWASP Dependency Check (Java ve .NET kütüphaneleri için)](https://owasp.org/www-project-dependency-check/)
+* [OWASP Test Rehberi - Uygulama Mimarisinin Haritalanması (OTG-INFO-010)](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/01-Information_Gathering/10-Map_Application_Architecture)
+* [OWASP Sanal Yama En İyi Kullanım Örnekleri](https://owasp.org/www-community/Virtual_Patching_Best_Practices)
 
 ### Dış Kaynaklar
 

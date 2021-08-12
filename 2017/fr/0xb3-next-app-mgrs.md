@@ -15,7 +15,7 @@ Les applications appartiennent aux systèmes les plus complexes régulièrement 
 * Retravaillez les exigences avec des développeurs internes ou externes, y compris des règles de conduite et des exigences sécuritaires provenant de votre programme de sécurité (SDLC) et des pratiques recommandées.
 * Evaluez le degré d'achèvement de toutes les exigences techniques, avec une phase de prévision et de conception.
 * Analysez toutes les exigences techniques, y compris conception, sécurité et niveaux de service attendus (SLA, _Service level Agreements_).
-* Adoptez des modèles et des checklists, comme [OWASP Secure Software Contract Annex](https://www.owasp.org/index.php/OWASP_Secure_Software_Contract_Annex). **Remarque** : Cette annexe respectant la loi américaine sur les contrats, consultez un expert juridique pertinent avant de l'employer.
+* Adoptez des modèles et des checklists, comme [OWASP Secure Software Contract Annex](https://owasp.org/www-community/OWASP_Secure_Software_Contract_Annex). **Remarque** : Cette annexe respectant la loi américaine sur les contrats, consultez un expert juridique pertinent avant de l'employer.
 
 ## Planification et conception
 

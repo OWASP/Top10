@@ -50,9 +50,9 @@ Un atacante modifica el objeto serializado para darse a si mismo los privilegios
 
 ### OWASP
 
-* [Hoja de ayuda de OWASP: Deserialización](https://www.owasp.org/index.php/Deserialization_Cheat_Sheet)
-* [Controles Proactivos de OWASP: Validar Todas las Entradas](https://www.owasp.org/index.php/OWASP_Proactive_Controls#4:_Validate_All_Inputs)
-* [Estándar de Verificación de Seguridad en Aplicaciones de OWASP: TBA](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
+* [Hoja de ayuda de OWASP: Deserialización](https://cheatsheetseries.owasp.org/cheatsheets/Deserialization_Cheat_Sheet.html)
+* [Controles Proactivos de OWASP: Validar Todas las Entradas](https://owasp.org/www-project-proactive-controls/v3/en/c5-validate-inputs)
+* [Estándar de Verificación de Seguridad en Aplicaciones de OWASP: TBA](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x11-V2-Authentication.md)
 * [OWASP AppSecEU 2016: Surviving the Java Deserialization Apocalypse](https://speakerdeck.com/pwntester/surviving-the-java-deserialization-apocalypse)
 * [OWASP AppSecUSA 2017: Friday the 13th JSON Attacks](https://speakerdeck.com/pwntester/friday-the-13th-json-attacks)
 
@@ -60,4 +60,4 @@ Un atacante modifica el objeto serializado para darse a si mismo los privilegios
 
 * [CWE-502 Deserialización de Datos No Confiables](https://cwe.mitre.org/data/definitions/502.html)
 * [Java Unmarshaller Security](https://github.com/mbechler/marshalsec)
-* [OWASP AppSec Cali 2015: Marshalling Pickles](http://frohoff.github.io/appseccali-marshalling-pickles/)
+* [OWASP AppSec Cali 2015: Marshalling Pickles](https://frohoff.github.io/appseccali-marshalling-pickles/)

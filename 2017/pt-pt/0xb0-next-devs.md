@@ -68,21 +68,21 @@ Flagship, Labs, e Incubator, no inventário de projetos da OWASP. Os recursos
 OWASP estão disponíveis na nossa [wiki][0xb016], e muitos documentos OWASP podem
 ser adquiridos em formato [papel ou eBook][0xb017].
 
-[0xb01]: https://www.owasp.org/index.php/ASVS
-[0xb02]: https://www.owasp.org/index.php/OWASP_Secure_Software_Contract_Annex
-[0xb03]: https://www.owasp.org/index.php/OWASP_Cheat_Sheet_Series
-[0xb04]: https://www.owasp.org/index.php/OWASP_Cheat_Sheet_Series
-[0xb05]: https://www.owasp.org/index.php/OWASP_SAMM_Project
-[0xb06]: https://www.owasp.org/index.php/Category:OWASP_Education_Project
-[0xb07]: https://www.owasp.org/index.php/WebGoat
-[0xb08]: https://www.owasp.org/index.php/Category:OWASP_WebGoat.NET
-[0xb09]: https://www.owasp.org/index.php/OWASP_Node_js_Goat_Project
-[0xb010]: https://www.owasp.org/index.php/OWASP_Juice_Shop_Project
-[0xb011]: https://www.owasp.org/index.php/OWASP_Broken_Web_Applications_Project
-[0xb012]: https://www.owasp.org/index.php/Category:OWASP_AppSec_Conference
-[0xb013]: https://www.owasp.org/index.php/Category:OWASP_AppSec_Conference
-[0xb014]: https://www.owasp.org/index.php/Category:OWASP_Chapter
-[0xb015]: https://www.owasp.org/index.php/Projects
-[0xb016]: https://www.owasp.org/
+[0xb01]: https://owasp.org/www-project-application-security-verification-standard/
+[0xb02]: https://owasp.org/www-community/OWASP_Secure_Software_Contract_Annex
+[0xb03]: https://cheatsheetseries.owasp.org/
+[0xb04]: https://cheatsheetseries.owasp.org/
+[0xb05]: https://owasp.org/www-project-samm/
+[0xb06]: https://owasp.org/www-committee-education-and-training/
+[0xb07]: https://owasp.org/www-project-webgoat/
+[0xb08]: https://github.com/jerryhoff/WebGoat.NET
+[0xb09]: https://owasp.org/www-project-node.js-goat/
+[0xb010]: https://owasp.org/www-project-juice-shop/
+[0xb011]: https://github.com/chuckfw/owaspbwa/
+[0xb012]: https://owasp.org/events/
+[0xb013]: https://owasp.org/events/
+[0xb014]: https://owasp.org/chapters/
+[0xb015]: https://owasp.org/projects/
+[0xb016]: https://owasp.org/
 [0xb017]: https://stores.lulu.com/owasp
 

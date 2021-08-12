@@ -12,7 +12,7 @@ Over the last few years, the fundamental technology and architecture of applicat
 
 ## New issues, supported by data
 
-* **A4:2017-XML External Entities (XXE)** is a new category primarily supported by source code analysis security testing tools ([SAST](https://www.owasp.org/index.php/Source_Code_Analysis_Tools)) data sets.
+* **A4:2017-XML External Entities (XXE)** is a new category primarily supported by source code analysis security testing tools ([SAST](https://owasp.org/www-community/Source_Code_Analysis_Tools)) data sets.
 
 ## New issues, supported by the community
 
@@ -24,7 +24,7 @@ We asked the community to provide insight into two forward looking weakness cate
 ## Merged or retired, but not forgotten
 
 * **A4-Insecure Direct Object References** and **A7-Missing Function Level Access Control** merged into **A5:2017-Broken Access Control**.
-* **A8-Cross-Site Request Forgery (CSRF)**, as many frameworks include [CSRF defenses](https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)), it was found in only 5% of applications.
+* **A8-Cross-Site Request Forgery (CSRF)**, as many frameworks include [CSRF defenses](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html), it was found in only 5% of applications.
 * **A10-Unvalidated Redirects and Forwards**, while found in approximately in 8% of applications, it was edged out overall by XXE.
 
 ![0x06-release-notes-1](images/0x06-release-notes-1.png)

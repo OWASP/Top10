@@ -14,7 +14,7 @@ Registro y monitoreo insuficientes ocurre en cualquier instante:
 * Registros en aplicaciones o APIs no son monitoreados por actividad sospechosa.
 * Registros son almacenados únicamente de forma local.
 * Los umbrales de alerta y de escalamiento de respuesta no están implementados o no son eficaces.
-* Pruebas de penetración y escaneos utilizando herramientas [DAST](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools) (tales como [OWASP ZAP](https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project)) no generan alertas.
+* Pruebas de penetración y escaneos utilizando herramientas [DAST](https://owasp.org/www-community/Vulnerability_Scanning_Tools) (tales como [OWASP ZAP](https://owasp.org/www-project-zap/)) no generan alertas.
 * La aplicación no logra detectar, escalar o alertar sobre ataques en tiempo real o cerca de estar en tiempo real.
 
 También es vulnerable a la fuga de información si registra y alerta eventos visibles para un usuario o un atacante (consulte A3:2017 Exposición sensible a la información).
@@ -29,7 +29,7 @@ Según el riesgo de los datos almacenados o procesados por la aplicación:
 * Establezca una monitorización y alerta efectivos de tal manera que las actividades sospechosas sean detectadas y respondidas dentro de periodos de tiempo aceptables.
 * Establezca o adopte un plan de respuesta o recuperación de incidentes, tales como [NIST 800-61 rev 2](https://csrc.nist.gov/publications/detail/sp/800-61/rev-2/final) o posterior.
 
-Existen frameworks de protección de aplicaciones comerciales y de código abierto tales como [OWASP AppSensor](https://www.owasp.org/index.php/OWASP_AppSensor_Project), firewalls de aplicaciones web como [ModSecurity utilizando el Core Rule Set de OWASP](https://www.owasp.org/index.php/Category:OWASP_ModSecurity_Core_Rule_Set_Project), y software de correlación de registros con paneles personalizados y alertas.
+Existen frameworks de protección de aplicaciones comerciales y de código abierto tales como [OWASP AppSensor](https://owasp.org/www-project-appsensor/), firewalls de aplicaciones web como [ModSecurity utilizando el Core Rule Set de OWASP](https://owasp.org/www-project-modsecurity-core-rule-set/), y software de correlación de registros con paneles personalizados y alertas.
 
 ## Ejemplo de Escenarios de Ataque
 
@@ -43,10 +43,10 @@ Existen frameworks de protección de aplicaciones comerciales y de código abier
 
 ### OWASP
 
-* [Controles Proactivos de OWASP: Implementar Registros y Detección de Intrusos](https://www.owasp.org/index.php/OWASP_Proactive_Controls#8:_Implement_Logging_and_Intrusion_Detection)
-* [Estándar de Verificación de Seguridad en Aplicaciones de OWASP: V7 Registro y Monitorización](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
-* [Guía de Pruebas de OWASP: Prueba de Error de Código Detallado](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
-* [Hojas de ayuda de OWASP: Registros](https://www.owasp.org/index.php/Logging_Cheat_Sheet)
+* [Controles Proactivos de OWASP: Implementar Registros y Detección de Intrusos](https://owasp.org/www-project-proactive-controls/v3/en/c9-security-logging)
+* [Estándar de Verificación de Seguridad en Aplicaciones de OWASP: V7 Registro y Monitorización](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x11-V2-Authentication.md)
+* [Guía de Pruebas de OWASP: Prueba de Error de Código Detallado](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x11-V2-Authentication.md)
+* [Hojas de ayuda de OWASP: Registros](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html)
 
 ### Externas
 

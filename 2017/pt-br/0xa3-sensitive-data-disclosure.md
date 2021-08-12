@@ -16,7 +16,7 @@ A primeira coisa é determinar as necessidades de proteção de dados em trânsi
 * A criptografia não é aplicada, por exemplo, existe alguma diretiva ou cabeçalho de segurança de *user agent* (navegador) faltando?
 * O *user agent* (por exemplo, aplicativo, cliente de email) não verifica se o certificado recebido do servidor é válido.
 
-Ver ASVS [Crypto (V7), Data Protection (V9) and SSL/TLS (V10)](https://www.owasp.org/index.php/ASVS).
+Ver ASVS [Crypto (V6), Data Protection (V8) and SSL/TLS (V9)](https://owasp.org/www-project-application-security-verification-standard/).
 
 ## Como Prevenir
 
@@ -29,7 +29,7 @@ Faça o seguinte, no mínimo, e consulte as referências:
 * Certifique-se de que os algoritmos, protocolos, chaves e gerenciamento de chaves apropriados estão atualizados e fortes.
 * Criptografe todos os dados em trânsito com protocolos seguros, como TLS, com cifra *perfect forward secrecy* (PFS), prioridade de cifra do servidor e parâmetros seguros. Aplique criptografia usando diretivas como HTTP Strict Transport Security (HSTS).
 * Desativar o cache para respostas que contenham dados confidenciais.
-* Armazene senhas usando funções de hashing com salt fortes e adaptativas com um fator de trabalho (fator de atraso), como [Argon2](https://www.cryptolux.org/index.php/Argon2), [scrypt](https://wikipedia.org/wiki/Scrypt), [bcrypt](https://wikipedia.org/wiki/Bcrypt) ou [PBKDF2](https://wikipedia.org/wiki/PBKDF2).
+* Armazene senhas usando funções de hashing com salt fortes e adaptativas com um fator de trabalho (fator de atraso), como [Argon2](https://github.com/p-h-c/phc-winner-argon2), [scrypt](https://wikipedia.org/wiki/Scrypt), [bcrypt](https://wikipedia.org/wiki/Bcrypt) ou [PBKDF2](https://wikipedia.org/wiki/PBKDF2).
 * Verifique independentemente a eficácia das suas configurações.
 
 ## Examplo de Cenários de Ataque
@@ -42,14 +42,14 @@ Faça o seguinte, no mínimo, e consulte as referências:
 
 ## Referências
 
-* [OWASP Proactive Controls: Protect Data](https://www.owasp.org/index.php/OWASP_Proactive_Controls#7:_Protect_Data)
-* [OWASP Application Security Verification Standard: V7, 9, 10](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project)
-* [OWASP Cheat Sheet: Transport Layer Protection](https://www.owasp.org/index.php/Transport_Layer_Protection_Cheat_Sheet)
-* [OWASP Cheat Sheet: User Privacy Protection](https://www.owasp.org/index.php/User_Privacy_Protection_Cheat_Sheet)
-* [OWASP Cheat Sheet: Password Storage](https://www.owasp.org/index.php/Password_Storage_Cheat_Sheet)
-* [OWASP Cheat Sheet: Cryptographic Storage](https://www.owasp.org/index.php/Cryptographic_Storage_Cheat_Sheet)
-* [OWASP Security Headers Project](https://www.owasp.org/index.php/OWASP_Secure_Headers_Project); [Cheat Sheet: HSTS](https://www.owasp.org/index.php/HTTP_Strict_Transport_Security_Cheat_Sheet)
-* [OWASP Testing Guide: Testing for weak cryptography](https://www.owasp.org/index.php/Testing_for_weak_Cryptography)
+* [OWASP Proactive Controls: Protect Data](https://owasp.org/www-project-proactive-controls/v3/en/c8-protect-data-everywhere)
+* [OWASP Application Security Verification Standard: V7, 9, 10](https://owasp.org/www-project-application-security-verification-standard/)
+* [OWASP Cheat Sheet: Transport Layer Protection](https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Protection_Cheat_Sheet.html)
+* [OWASP Cheat Sheet: User Privacy Protection](https://cheatsheetseries.owasp.org/cheatsheets/User_Privacy_Protection_Cheat_Sheet.html)
+* [OWASP Cheat Sheet: Password Storage](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html)
+* [OWASP Cheat Sheet: Cryptographic Storage](https://cheatsheetseries.owasp.org/cheatsheets/Cryptographic_Storage_Cheat_Sheet.html)
+* [OWASP Security Headers Project](https://owasp.org/www-project-secure-headers/); [Cheat Sheet: HSTS](https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html)
+* [OWASP Testing Guide: Testing for weak cryptography](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/09-Testing_for_Weak_Cryptography/README)
 
 ### Externas
 

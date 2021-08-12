@@ -6,7 +6,7 @@ Un grand nombre de remarques ont été reçues au cours de la création de l'OWA
 
 Bien que le but original du projet OWASP Top 10 fut simplement de sensibiliser les développeurs et les managers, il est devenu, dans les faits, le standard de la sécurité des applications.
 
-Dans cette release, les problèmes et les recommandations sont écrits de façon concises et facilement testables afin de faciliter l'adoption de l'OWASP Top 10 au sein de tout type de programmes de sécurité d'applications. Nous encourageons les grandes organisations performantes d'utiliser l'[OWASP Application Security Verification Standard (ASVS)](https://www.owasp.org/index.php/ASVS) si un réel standard est requis, mais dans la plupart des cas, l'OWASP Top 10 est un bon début dans la mise en place d'une politique de sécurité des applications.
+Dans cette release, les problèmes et les recommandations sont écrits de façon concises et facilement testables afin de faciliter l'adoption de l'OWASP Top 10 au sein de tout type de programmes de sécurité d'applications. Nous encourageons les grandes organisations performantes d'utiliser l'[OWASP Application Security Verification Standard (ASVS)](https://owasp.org/www-project-application-security-verification-standard/) si un réel standard est requis, mais dans la plupart des cas, l'OWASP Top 10 est un bon début dans la mise en place d'une politique de sécurité des applications.
 
 Nous avons écrit un éventail de potentielles prochaines étapes pour différents types d'utilisateurs de l'OWASP Top 10, incluant notamment "Que faire ensuite pour les Développeurs", "Que faire ensuite pour les Testeurs en Sécurité", "Que faire ensuite pour les Organisations", qui est tout à fait approprié pour les DSI et les RSSI, et "Que faire ensuite pour les Managers d'Applications", qui est approprié pour les managers d'applications mais également pour toute personne responsable d'une application durant son cycle de vie .
 
@@ -18,7 +18,7 @@ Nous espérons que l'OWASP Top 10 sera utile dans vos efforts de sécurisation d
 
 Vous trouverez le projet OWASP Top 10 ainsi que ses traductions à l'adresse suivante:
 
-* [https://www.owasp.org/index.php/top10](https://www.owasp.org/index.php/top10)
+* [https://owasp.org/www-project-top-ten/](https://owasp.org/www-project-top-ten/)
 
 Enfin, nous souhaitons remercier les membres fondateurs du projet OWASP Top 10, Dave Wichers et Jeff Williams, pour tous leurs efforts, et leur soutien sans faille en nous pour finir ce projet avec l'aide de la communauté. Merci!
 

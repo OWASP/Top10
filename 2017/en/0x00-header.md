@@ -1,16 +1,14 @@
 ![OWASP LOGO](images/OWASP_logo.png)
 
-## OWASP Top 10 2017
+## OWASP Top 10 2017 1.01
 
 The Ten Most Critical Web Application Security Risks
 
-November 20, 2017
+August 13, 2021
 
 ### Release
 
-Comments requested per instructions within
-
-![WASP Logo URL TBA](images/front-wasp.png)
+![OWASP Logo](images/front-wasp.png)
 
 |  | ![Creative Commons License Logo](images/front-cc.png) |
 | -- | -- |

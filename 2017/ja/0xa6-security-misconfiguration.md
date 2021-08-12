@@ -28,7 +28,7 @@
 * プラットフォームは最小限のものとし、必要のない機能やコンポーネント、ドキュメント、サンプルを除くこと。使用しない機能とフレームワークは、削除もしくはインストールしないこと。
 * レビューを実施して、セキュリティ関連の記録と更新の全てに加え、パッチを管理するプロセスの一環としてパッチの設定を適切に更新すること(**A9:2017-既知の脆弱性のあるコンポーネントの使用** を参照)。クラウドストレージのパーミッションは、詳細にレビューすること (例えば、S3 バケットのパーミッション)。
 * セグメント化したアプリケーションアーキテクチャは、セグメンテーションやコンテナリゼーション、クラウドのセキュリティグループ(ACL)をともなったコンポーネントやテナント間に、効果的で安全な仕切りをもたらす。
-* セキュリティディレクティブをクライアントへ送ること。例えば [セキュリティヘッダー](https://www.owasp.org/index.php/OWASP_Secure_Headers_Project)
+* セキュリティディレクティブをクライアントへ送ること。例えば [セキュリティヘッダー](https://owasp.org/www-project-secure-headers/)
 * プロセスを自動化して設定の有効性を検証し、環境すべてに適用すること。
 
 ## 攻撃シナリオの例
@@ -45,11 +45,11 @@
 
 ### OWASP
 
-* [OWASP Testing Guide: Configuration Management](https://www.owasp.org/index.php/Testing_for_configuration_management)
-* [OWASP Testing Guide: Testing for Error Codes](https://www.owasp.org/index.php/Testing_for_Error_Code_(OWASP-IG-006))
-* [OWASP Security Headers Project](https://www.owasp.org/index.php/OWASP_Secure_Headers_Project)
+* [OWASP Testing Guide: Configuration Management](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/README)
+* [OWASP Testing Guide: Testing for Error Codes](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/08-Testing_for_Error_Handling/README)
+* [OWASP Security Headers Project](https://owasp.org/www-project-secure-headers/)
 
-この分野でさらに知りたいのなら、 Application Security Verification Standard [V19 Configuration](https://www.owasp.org/index.php/ASVS_V19_Configuration)を参照してください。
+この分野でさらに知りたいのなら、 Application Security Verification Standard [V19 Configuration](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x22-V14-Config.md)を参照してください。
 
 ### 外部資料
 

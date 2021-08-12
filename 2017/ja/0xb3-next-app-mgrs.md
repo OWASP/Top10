@@ -12,7 +12,7 @@
 * 例えば、ソフトウェア開発ライフサイクルにおけるベストプラクティスといったセキュリティプログラムに関するガイドラインやセキュリティ要件などについて、社内外の開発者と要件を交渉する。
 * 計画と設計工程を含む、全ての技術要件の達成を評価する。
 * 設計、セキュリティ、サービスレベルアグリーメント（SLA）を含む技術的な要件を交渉する。
-* [OWASP Secure Software Contract Annex](https://www.owasp.org/index.php/OWASP_Secure_Software_Contract_Annex)のような様式やチェックリストを適用する。 **注記**: OWASP Secure Software Contract Annexは米国の契約法に基づいている。そのため、参照するに当たっては、弁護士に相談する。
+* [OWASP Secure Software Contract Annex](https://owasp.org/www-community/OWASP_Secure_Software_Contract_Annex)のような様式やチェックリストを適用する。 **注記**: OWASP Secure Software Contract Annexは米国の契約法に基づいている。そのため、参照するに当たっては、弁護士に相談する。
 
 ## 計画と設計
 * 開発者や社内の株主や例えばセキュリティ専門家と計画や設計を交渉する。

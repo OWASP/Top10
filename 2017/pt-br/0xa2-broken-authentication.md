@@ -11,7 +11,7 @@ A confirmação da identidade, autenticação e gerenciamento de sessão do usu�
 
 Podem haver pontos fracos de autenticação se a sua aplicação:
 
-* Permite ataques automatizados, como [teste exaustivo de credenciais, ou *credential stuffing*](https://www.owasp.org/index.php/Credential_stuffing), onde o atacante possui uma lista de nomes de usuário e senhas válidos.
+* Permite ataques automatizados, como [teste exaustivo de credenciais, ou *credential stuffing*](https://owasp.org/www-community/attacks/Credential_stuffing), onde o atacante possui uma lista de nomes de usuário e senhas válidos.
 * Permite ataque de força bruta ou outros ataques automatizados.
 * Permite senhas padrão, fracas ou bastante conhecidas, como "Password1" ou "admin/admin".
 * Utiliza processos de recuperação de credenciais ou de recuperação de senhas fracos ou ineficazes, tais como "respostas baseadas em conhecimento", que não podem ser consideradas seguras.
@@ -33,7 +33,7 @@ Podem haver pontos fracos de autenticação se a sua aplicação:
 
 ## Exemplos de Cenários de Ataque
 
-**Cenário #1**: [Teste exaustivo de credenciais ou *credential stuffing*](https://www.owasp.org/index.php/Credential_stuffing), o uso de [listas de senhas conhecidas](https://github.com/danielmiessler/SecLists), é um ataque comum. Se uma aplicação não implementar proteções de ameaças ou de preenchimento automatizados de  credenciais, a aplicação pode ser usada como um oráculo de senha para determinar se as credenciais são válidas.
+**Cenário #1**: [Teste exaustivo de credenciais ou *credential stuffing*](https://owasp.org/www-community/attacks/Credential_stuffing), o uso de [listas de senhas conhecidas](https://github.com/danielmiessler/SecLists), é um ataque comum. Se uma aplicação não implementar proteções de ameaças ou de preenchimento automatizados de  credenciais, a aplicação pode ser usada como um oráculo de senha para determinar se as credenciais são válidas.
 
 **Cenário #2**: A maioria dos ataques de autenticação ocorrem devido ao uso contínuo de senhas como único fator. Uma vez consideradas as melhores práticas, a troca de senha e os requisitos de complexidade são vistos como incentivo aos usuários a usar e reutilizar senhas fracas. As organizações são recomendadas para parar essas práticas por NIST 800-63 e usar autenticação multi-fator.
 
@@ -43,16 +43,16 @@ Podem haver pontos fracos de autenticação se a sua aplicação:
 
 ### OWASP
 
-* [OWASP Proactive Controls: Implement Identity and Authentication Controls](https://www.owasp.org/index.php/OWASP_Proactive_Controls#5:_Implement_Identity_and_Authentication_Controls)
-* [OWASP Application Security Verification Standard: V2 Authentication](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
-* [OWASP Application Security Verification Standard: V3 Session Management](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
-* [OWASP Testing Guide: Identity](https://www.owasp.org/index.php/Testing_Identity_Management)
- and [Authentication](https://www.owasp.org/index.php/Testing_for_authentication)
-* [OWASP Cheat Sheet: Authentication](https://www.owasp.org/index.php/Authentication_Cheat_Sheet)
-* [OWASP Cheat Sheet: Credential Stuffing](https://www.owasp.org/index.php/Credential_Stuffing_Prevention_Cheat_Sheet)
-* [OWASP Cheat Sheet: Forgot Password](https://www.owasp.org/index.php/Forgot_Password_Cheat_Sheet)
-* [OWASP Cheat Sheet: Session Management](https://www.owasp.org/index.php/Session_Management_Cheat_Sheet)
-* [OWASP Automated Threats Handbook](https://www.owasp.org/index.php/OWASP_Automated_Threats_to_Web_Applications)
+* [OWASP Proactive Controls: Implement Identity and Authentication Controls](https://owasp.org/www-project-proactive-controls/v3/en/c6-digital-identity)
+* [OWASP Application Security Verification Standard: V2 Authentication](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x11-V2-Authentication.md)
+* [OWASP Application Security Verification Standard: V3 Session Management](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x12-V3-Session-management.md)
+* [OWASP Testing Guide: Identity](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/03-Identity_Management_Testing/README)
+ and [Authentication](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/04-Authentication_Testing/README)
+* [OWASP Cheat Sheet: Authentication](https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html)
+* [OWASP Cheat Sheet: Credential Stuffing](https://cheatsheetseries.owasp.org/cheatsheets/Credential_Stuffing_Prevention_Cheat_Sheet.html)
+* [OWASP Cheat Sheet: Forgot Password](https://cheatsheetseries.owasp.org/cheatsheets/Forgot_Password_Cheat_Sheet.html)
+* [OWASP Cheat Sheet: Session Management](https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html)
+* [OWASP Automated Threats Handbook](https://owasp.org/www-project-automated-threats-to-web-applications/)
 
 ### Externos
 

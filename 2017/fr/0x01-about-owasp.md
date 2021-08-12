@@ -9,14 +9,14 @@ Avec l'OWASP, vous trouverez de façon gratuite et libre :
 * Des outils et des normes à propos de la sécurité des applications
 * Des livres à propos de la façon de tester la sécurité des applications, le développement de code sécurisé ainsi que les revues de code sécurisées
 * Des présentations et des [vidéos](https://www.youtube.com/user/OWASPGLOBAL).
-* Des [aides mémoires](https://www.owasp.org/index.php/OWASP_Cheat_Sheet_Series) à propos de nombreux sujets courants.
+* Des [aides mémoires](https://cheatsheetseries.owasp.org/) à propos de nombreux sujets courants.
 * Des critères de contrôles de sécurité et des librairies
-* [Des chapitres locaux à travers le monde](https://www.owasp.org/index.php/OWASP_Chapter).
+* [Des chapitres locaux à travers le monde](https://owasp.org/chapters/).
 * Des recherches de pointes.
-* Des [conférences autour du monde](https://www.owasp.org/index.php/Category:OWASP_AppSec_Conference).
+* Des [conférences autour du monde](https://owasp.org/events/).
 * [Des listes de diffusion](https://lists.owasp.org/mailman/listinfo).
 
-Pour plus d'information vous pouvez consulter le site de l'OWASP: [https://www.owasp.org](https://www.owasp.org).
+Pour plus d'information vous pouvez consulter le site de l'OWASP: [https://owasp.org](https://owasp.org).
 
 Tous les outils, documents, vidéos, présentations et les chapitres sont ouverts à toute personne intéressée par l'amélioration de la sécurité des applications.
 

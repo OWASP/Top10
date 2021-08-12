@@ -9,14 +9,14 @@ OWASP ile, aşağıdakileri açık ve ücretsiz bir şekilde temin edebilirsiniz
 * Uygulama güvenliği araçları ve standartları
 * Uygulama güvenlik testleri, güvenli kod geliştirme ve güvenli kod analizi hakkında eksiksiz kitaplar.
 * Sunumlar ve [videolar](https://www.youtube.com/user/OWASPGLOBAL).
-* Yaygın pek çok konu hakkında [kopya kağıtları](https://www.owasp.org/index.php/OWASP_Cheat_Sheet_Series)
+* Yaygın pek çok konu hakkında [kopya kağıtları](https://cheatsheetseries.owasp.org/)
 * Standart güvenlik kontrolleri ve kütüphaneleri.
-* [Dünya çapında yerel topluluklar](https://www.owasp.org/index.php/OWASP_Chapter).
+* [Dünya çapında yerel topluluklar](https://owasp.org/chapters/).
 * İleri düzey ve son teknoloji araştırma.
-* Dünya çapında geniş kapsamlı [konferanslar](https://www.owasp.org/index.php/Category:OWASP_AppSec_Conference).
+* Dünya çapında geniş kapsamlı [konferanslar](https://owasp.org/events/).
 * [E-posta listeleri](https://lists.owasp.org/mailman/listinfo).
 
-Daha fazla bilgi için: [https://www.owasp.org](https://www.owasp.org).
+Daha fazla bilgi için: [https://owasp.org](https://owasp.org).
 
 Tüm OWASP araçları, belgeleri, videoları, sunumları ve toplulukları uygulama güvenliği alanında kendisini geliştirmek isteyen herkese açık ve ücretsizdir. 
 

@@ -24,6 +24,6 @@ There are currently four co-leaders for the OWASP Top 10. We meet every Friday a
 * Andrew van der Stock [@vanderaj](https://github.com/vanderaj)
 
 # OWASP T10 References
-- [OWASP T10 Wiki homepage](https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project)
+- [OWASP T10 Wiki homepage](https://owasp.org/www-project-top-ten/)
 - [OWASP 2017 Summit Outcomes](https://owaspsummit.org/Outcomes/Owasp-Top-10-2017/Owasp-Top-10-2017.html)
  

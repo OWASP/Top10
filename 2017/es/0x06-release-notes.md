@@ -12,7 +12,7 @@ En los últimos años, la tecnología base y la arquitectura de las aplicaciones
 
 ## Nuevos riesgos, respaldados en datos
 
-* **A4:2017 - Entidades Externas XML (XXE)** es una nueva categoría, principalmente respaldado por los resultados obtenidos de las herramientas de análisis estático de código ([SAST](https://www.owasp.org/index.php/Source_Code_Analysis_Tools)). 
+* **A4:2017 - Entidades Externas XML (XXE)** es una nueva categoría, principalmente respaldado por los resultados obtenidos de las herramientas de análisis estático de código ([SAST](https://owasp.org/www-community/Source_Code_Analysis_Tools)). 
 
 ## Nuevos riesgos, respaldados por la comunidad
 
@@ -24,7 +24,7 @@ Le pedimos a la comunidad que nos proporcionara información sobre dos categorí
 ## Fusionados o retirados, pero no olvidados
 
 * **A4 – Referencia Directa Insegura a Objetos** y **A7 – Ausencia de Control de Acceso a las Funciones** fueron fusionados en **A5:2017 Pérdida de Control de Acceso**.
-* **A8 – Falsificación de PeCciones en SiCos Cruzados (CSRF)** dado que varios Frameworks incluyen defensas contra [CSRF](https://www.owasp.org/index.php/Cross-Site_Request_Forgery_ (CSRF)), sólo se encontró en el 5% de las aplicaciones.
+* **A8 – Falsificación de PeCciones en SiCos Cruzados (CSRF)** dado que varios Frameworks incluyen defensas contra [CSRF](https://owasp.org/www-community/attacks/csrf), sólo se encontró en el 5% de las aplicaciones.
 * **A10 – Redirecciones y reenvíos no validados** mientras que se encuentra en aproximadamente el 8% de las aplicaciones, fue superado ampliamente por XXE.
 
 ![0x06-release-notes-1](images/0x06-release-notes-1.png)

@@ -11,7 +11,7 @@ Konfirmasi identitas pengguna, otentikasi, dan manajemen sesi sangat penting unt
 
 Mungkin ada kelemahan otentikasi jika aplikasi:
 
-* Izin serangan otomatis seperti [mengisi kredensial](https://www.owasp.org/index.php/Credential_stuffing), dimana penyerang memiliki daftar username dan password yang valid.
+* Izin serangan otomatis seperti [mengisi kredensial](https://owasp.org/www-community/attacks/Credential_stuffing), dimana penyerang memiliki daftar username dan password yang valid.
 * Memungkinkan brute force atau serangan otomatis lainnya.
 * Memungkinkan password default, lemah, atau terkenal, seperti "Password1" atau "admin / admin".
 * Menggunakan proses pemulihan kredensial yang lemah atau tidak efektif dan proses lupa kata sandi, seperti "jawaban berbasis pengetahuan", yang tidak dapat dilakukan dengan aman.
@@ -33,7 +33,7 @@ Mungkin ada kelemahan otentikasi jika aplikasi:
 
 ## Contoh Skenario Serangan
 
-**Skenario  #1**: [Credential stuffing](https://www.owasp.org/index.php/Credential_stuffing), penggunaan [daftar kata sandi yang dikenal](https://github.com/danielmiessler/SecLists), adalah serangan yang umum. Jika sebuah aplikasi tidak menerapkan ancaman Credential stuffing atau ancaman otomatis, aplikasi tersebut dapat digunakan sebagai kata sandi untuk menentukan apakah kredensial tersebut valid.
+**Skenario  #1**: [Credential stuffing](https://owasp.org/www-community/attacks/Credential_stuffing), penggunaan [daftar kata sandi yang dikenal](https://github.com/danielmiessler/SecLists), adalah serangan yang umum. Jika sebuah aplikasi tidak menerapkan ancaman Credential stuffing atau ancaman otomatis, aplikasi tersebut dapat digunakan sebagai kata sandi untuk menentukan apakah kredensial tersebut valid.
 
 **Skenario #2**: Sebagian besar serangan otentikasi terjadi karena terus menggunakan kata kunci sebagai satu-satunya faktor. Setelah dianggap sebagai praktik terbaik, persyaratan perumusan kata sandi dan kompleksitas dipandang mendorong pengguna untuk menggunakan, dan menggunakan kembali, kata kunci yang lemah. Organisasi merekomendasikan untuk menghentikan praktik ini per NIST 800-63 dan menggunakan autentikasi multi faktor.
 
@@ -43,16 +43,16 @@ Mungkin ada kelemahan otentikasi jika aplikasi:
 
 ### OWASP
 
-* [OWASP Proactive Controls: Implement Identity and Authentication Controls](https://www.owasp.org/index.php/OWASP_Proactive_Controls#5:_Implement_Identity_and_Authentication_Controls)
-* [OWASP Application Security Verification Standard: V2 Authentication](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
-* [OWASP Application Security Verification Standard: V3 Session Management](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
-* [OWASP Testing Guide: Identity](https://www.owasp.org/index.php/Testing_Identity_Management)
- and [Authentication](https://www.owasp.org/index.php/Testing_for_authentication)
-* [OWASP Cheat Sheet: Authentication](https://www.owasp.org/index.php/Authentication_Cheat_Sheet)
-* [OWASP Cheat Sheet: Credential Stuffing](https://www.owasp.org/index.php/Credential_Stuffing_Prevention_Cheat_Sheet)
-* [OWASP Cheat Sheet: Forgot Password](https://www.owasp.org/index.php/Forgot_Password_Cheat_Sheet)
-* [OWASP Cheat Sheet: Session Management](https://www.owasp.org/index.php/Session_Management_Cheat_Sheet)
-* [OWASP Automated Threats Handbook](https://www.owasp.org/index.php/OWASP_Automated_Threats_to_Web_Applications)
+* [OWASP Proactive Controls: Implement Identity and Authentication Controls](https://owasp.org/www-project-proactive-controls/v3/en/c6-digital-identity)
+* [OWASP Application Security Verification Standard: V2 Authentication](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x11-V2-Authentication.md)
+* [OWASP Application Security Verification Standard: V3 Session Management](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x12-V3-Session-management.md)
+* [OWASP Testing Guide: Identity](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/03-Identity_Management_Testing/README)
+ and [Authentication](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/04-Authentication_Testing/README)
+* [OWASP Cheat Sheet: Authentication](https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html)
+* [OWASP Cheat Sheet: Credential Stuffing](https://cheatsheetseries.owasp.org/cheatsheets/Credential_Stuffing_Prevention_Cheat_Sheet.html)
+* [OWASP Cheat Sheet: Forgot Password](https://cheatsheetseries.owasp.org/cheatsheets/Forgot_Password_Cheat_Sheet.html)
+* [OWASP Cheat Sheet: Session Management](https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html)
+* [OWASP Automated Threats Handbook](https://owasp.org/www-project-automated-threats-to-web-applications/)
 
 ### External
 

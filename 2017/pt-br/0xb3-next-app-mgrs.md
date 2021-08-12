@@ -15,7 +15,7 @@ Aplicações estão entre os sistemas mais complexos que os seres humanos criam 
 * Negocie com desenvolvedores internos ou externos os requisitos, incluindo diretrizes e requisitos de segurança em relação ao seu programa de segurança, por exemplo, SDLC, melhores práticas.
 * Avalie o cumprimento de todos os requisitos técnicos, incluindo uma fase de planejamento e design.
 * Negocie todos os requisitos técnicos, incluindo acordos de design, segurança e nível de serviço (SLA).
-* Adote modelos e listas de verificação, como [Anexo de Contrato de Software Seguro OWASP](https://www.owasp.org/index.php/OWASP_Secure_Software_Contract_Annex). **Nota**: O Anexo é uma amostra específica da lei de contratos dos EUA e é provável que necessite de revisão legal em sua jurisdição. Consulte conselhos legais qualificados antes de usar o Anexo
+* Adote modelos e listas de verificação, como [Anexo de Contrato de Software Seguro OWASP](https://owasp.org/www-community/OWASP_Secure_Software_Contract_Annex). **Nota**: O Anexo é uma amostra específica da lei de contratos dos EUA e é provável que necessite de revisão legal em sua jurisdição. Consulte conselhos legais qualificados antes de usar o Anexo
 
 ## Planejamento e Design
 

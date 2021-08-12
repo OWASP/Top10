@@ -40,9 +40,9 @@ Existen herramientas automáticas que ayudan a los atacantes a descubrir sistema
 
 ### OWASP
 
-* [Estándar de Verificación de Seguridad en Aplicaciones de OWASP: V1 Arquitectura, diseño y modelado de amenazas](https://www.owasp.org/index.php/ASVS_V1_Architecture)
-* [Dependency Check de OWASP (para bibliotecas Java y .NET)](https://www.owasp.org/index.php/OWASP_Dependency_Check)
-* [Mejores Prácticas para el parcheo virtual de OWASP](https://www.owasp.org/index.php/Virtual_Patching_Best_Practices)
+* [Estándar de Verificación de Seguridad en Aplicaciones de OWASP: V1 Arquitectura, diseño y modelado de amenazas](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x10-V1-Architecture.md)
+* [Dependency Check de OWASP (para bibliotecas Java y .NET)](https://owasp.org/www-project-dependency-check/)
+* [Mejores Prácticas para el parcheo virtual de OWASP](https://owasp.org/www-community/Virtual_Patching_Best_Practices)
 
 ### Externas
 

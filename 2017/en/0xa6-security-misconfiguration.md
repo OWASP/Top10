@@ -28,7 +28,7 @@ Secure installation processes should be implemented, including:
 * A minimal platform without any unnecessary features, components, documentation, and samples. Remove or do not install unused features and frameworks.
 * A task to review and update the configurations appropriate to all security notes, updates and patches as part of the patch management process (see **A9:2017-Using Components with Known Vulnerabilities**). In particular, review cloud storage permissions (e.g. S3 bucket permissions).
 * A segmented application architecture that provides effective, secure separation between components or tenants, with segmentation, containerization, or cloud security groups (ACLs).
-* Sending security directives to clients, e.g. [Security Headers](https://www.owasp.org/index.php/OWASP_Secure_Headers_Project).
+* Sending security directives to clients, e.g. [Security Headers](https://owasp.org/www-project-secure-headers/).
 * An automated process to verify the effectiveness of the configurations and settings in all environments.
 
 ## Example Attack Scenarios
@@ -45,11 +45,11 @@ Secure installation processes should be implemented, including:
 
 ### OWASP
 
-* [OWASP Testing Guide: Configuration Management](https://www.owasp.org/index.php/Testing_for_configuration_management)
-* [OWASP Testing Guide: Testing for Error Codes](https://www.owasp.org/index.php/Testing_for_Error_Code_(OWASP-IG-006))
-* [OWASP Security Headers Project](https://www.owasp.org/index.php/OWASP_Secure_Headers_Project)
+* [OWASP Testing Guide: Configuration Management](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/README)
+* [OWASP Testing Guide: Testing for Error Codes](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/08-Testing_for_Error_Handling/README)
+* [OWASP Security Headers Project](https://owasp.org/www-project-secure-headers/)
 
-For additional requirements in this area, see the Application Security Verification Standard [V19 Configuration](https://www.owasp.org/index.php/ASVS_V19_Configuration).
+For additional requirements in this area, see the Application Security Verification Standard [V19 Configuration](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x22-V14-Config.md).
 
 ### External
 

@@ -3,14 +3,14 @@
 | Agen ancaman / vektor serangan | Kelemahan Keamanan          | Dampak            |
 | -- | -- | -- |
 | Access Lvl : Eksploitasi 2 | Prevalensi 3: Deteksi 2 | Teknis 3: Bisnis |
-| Penyerang dapat mengeksploitasi yaitu pemproses XML yang rentan jika mereka dapat mengunggah XML atau menyertakan konten yang jelek atau tidak sesuai dalam dokumen sebuah XML, mereka dapat mengeksploitasi kode yang rentan, dependencies atau integrasi. | Secara default, banyak pemproses XML yang lebih lama untuk memperbolehkan spesifikasi entitas eksternal, URI yang direferensikan dan dievaluasi selama pemrosesan XML. [SAST](https://www.owasp.org/index.php/Source_Code_Analysis_Tools) tool apat dapat menemukan masalah ini dengan memeriksa dependensi dan konfigurasi. [DAST](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools) tool memerlukan langkah manual tambahan untuk mendeteksi dan memanfaatkan masalah ini. Manual tester perlu untuk dilatih tentang cara menguji XXE, karena hal ini tidak umum diuji pada tahun 2017. | Kelemahan ini dapat digunakan untuk mengekstrak data, menjalankan permintaan jarak jauh dari server, scan sistem internal, melakukan metode denial-of-service attack, serta melakukan serangan lainnya. |
+| Penyerang dapat mengeksploitasi yaitu pemproses XML yang rentan jika mereka dapat mengunggah XML atau menyertakan konten yang jelek atau tidak sesuai dalam dokumen sebuah XML, mereka dapat mengeksploitasi kode yang rentan, dependencies atau integrasi. | Secara default, banyak pemproses XML yang lebih lama untuk memperbolehkan spesifikasi entitas eksternal, URI yang direferensikan dan dievaluasi selama pemrosesan XML. [SAST](https://owasp.org/www-community/Source_Code_Analysis_Tools) tool apat dapat menemukan masalah ini dengan memeriksa dependensi dan konfigurasi. [DAST](https://owasp.org/www-community/Vulnerability_Scanning_Tools) tool memerlukan langkah manual tambahan untuk mendeteksi dan memanfaatkan masalah ini. Manual tester perlu untuk dilatih tentang cara menguji XXE, karena hal ini tidak umum diuji pada tahun 2017. | Kelemahan ini dapat digunakan untuk mengekstrak data, menjalankan permintaan jarak jauh dari server, scan sistem internal, melakukan metode denial-of-service attack, serta melakukan serangan lainnya. |
 
 ## Apakah Aplikasi itu Rentan?
 
 Aplikasi dan layanan web berbasis XML tertentu atau integrasi downstream mungkin rentan terhadap serangan bilamana:
 
 * Aplikasi menerima XML secara langsung atau unggahan XML, terutama dari sumber yang tidak tepercaya, atau menyisipkan data yang tidak tepercaya ke dalam dokumen XML, yang kemudian diurai oleh pemroses XML.
-* Setiap prosesor XML dalam aplikasi atau layanan web berbasis SOAP memiliki [_document type definitions (DTDs_)](https://en.wikipedia.org/wiki/Document_type_definition) yang diperbolehkan. Karena mekanisme yang tepat untuk menonaktifkan pemrosesan DTD cukup bervariasi berdasarkan pemprosesan XML, praktik yang baik untuk mempelajari dapat menggunakan referensi seperti [OWASP Cheat Sheet 'XXE Prevention'](https://www.owasp.org/index.php/XML_External_Entity_(XXE)_Prevention_Cheat_Sheet). 
+* Setiap prosesor XML dalam aplikasi atau layanan web berbasis SOAP memiliki [_document type definitions (DTDs_)](https://en.wikipedia.org/wiki/Document_type_definition) yang diperbolehkan. Karena mekanisme yang tepat untuk menonaktifkan pemrosesan DTD cukup bervariasi berdasarkan pemprosesan XML, praktik yang baik untuk mempelajari dapat menggunakan referensi seperti [OWASP Cheat Sheet 'XXE Prevention'](https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html). 
 * bilamana aplikasi tersebut menggunakan SAML untuk tools dalam pemrosesan identitas dalam keamanan yang telah difederalkan atau dengan single sign on(SSO). SAML menggunakan XML untuk asersi identitas, dan sangat mungkin bahwa hal itu rentan.
 * bilamana aplikasi tersebut menggunakan versi SOAP sebelumnya hingga versi 1.2, biasanya hal yang rentan serangan XXE adalah saat entitas XML dikirim atau dioper menuju framework SOAP.
 * Untuk menjadi rentan dari serangan XXE biasanya berarti aplikasi tersebut cukup rentan untuk menolak serangan service termasuk metode Billion Laughs Attack.
@@ -20,7 +20,7 @@ Pelatihan untuk Developer sangatlah esensial untuk mengidentifikasi dan memitiga
 
 * Bila memungkinkan, gunakan data format yang tidak terlalu kompleks seperti JSON, dan hindari serialisasi dari data yang bersifat sensitif.
 * patch atau tingkatkan seluru pemroses XML dan library yang digunakan oleh aplikasi tersebut atau yang berada diatas Sistem Operasi(OS). Gunakan Pemeriksa dependency. Kemudian update SOAP ke SOAP dengan versi 1.2 atau yang lebih tinggi
-* Nonaktifkan Eksternal Entitas XML dan Pemrosesan DTD di semua pengurai XML dalam aplikasi, sesuai dengan referensi [OWASP Cheat Sheet 'Pencegahan XXE'](https://www.owasp.org/index.php/XML_External_Entity_(XXE)_Prevention_Cheat_Sheet). 
+* Nonaktifkan Eksternal Entitas XML dan Pemrosesan DTD di semua pengurai XML dalam aplikasi, sesuai dengan referensi [OWASP Cheat Sheet 'Pencegahan XXE'](https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html). 
 * Implementasikan daftar putih positif yang berada pada sisi server untuk validator input, pemfilteran atau sanitasi untuk mencegah data yang tidak bersahabat yang berada didalam dokumen XML.
 * Verifikasikan XML tersebut atau unggah file XSL fungsionalitas untuk memvalidasi XML yang akan masuk menggunakan validator seperti XSD atau yang lain yang persis.
 * Alat seperti SAST dapat membantu mendeteksi serangan XXE didalam sebuah source code, walau review code manual adalah alternatif terbaik dalam jumlah yang besar seperti aplikasi kompleks dengan banyak integrasi.
@@ -56,11 +56,11 @@ Banyak sekali serangan XXE pada publik yang telah ditemukan, termasuk serangan p
 
 ### OWASP
 
-* [OWASP Application Security Verification Standard](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
-* [OWASP Testing Guide: Testing for XML Injection](https://www.owasp.org/index.php/Testing_for_XML_Injection_(OTG-INPVAL-008))
-* [OWASP XXE Vulnerability](https://www.owasp.org/index.php/XML_External_Entity_(XXE)_Processing)
-* [OWASP Cheat Sheet: XXE Prevention](https://www.owasp.org/index.php/XML_External_Entity_(XXE)_Prevention_Cheat_Sheet)
-* [OWASP Cheat Sheet: XML Security](https://www.owasp.org/index.php/XML_Security_Cheat_Sheet)
+* [OWASP Application Security Verification Standard](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x11-V2-Authentication.md)
+* [OWASP Testing Guide: Testing for XML Injection](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/07-Testing_for_XML_Injection)
+* [OWASP XXE Vulnerability](https://owasp.org/www-community/vulnerabilities/XML_External_Entity_(XXE)_Processing)
+* [OWASP Cheat Sheet: XXE Prevention](https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html)
+* [OWASP Cheat Sheet: XML Security](https://cheatsheetseries.owasp.org/cheatsheets/XML_Security_Cheat_Sheet.html)
 
 ### External
 

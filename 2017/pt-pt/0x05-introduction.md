@@ -94,14 +94,14 @@ o OWASP Top 10 mais acessível a todo o planeta.
 
 [0x051]: ./0xa8-insecure-deserialization.md
 [0x052]: ./0xaa-logging-detection-response.md
-[0x053]: https://www.owasp.org/index.php/OWASP_Guide_Project
-[0x054]: https://www.owasp.org/index.php/OWASP_Cheat_Sheet_Series
-[0x055]: https://www.owasp.org/index.php/OWASP_Testing_Project
+[0x053]: https://github.com/OWASP/DevGuide
+[0x054]: https://cheatsheetseries.owasp.org/
+[0x055]: https://owasp.org/www-project-web-security-testing-guide/
 [0x056]: ./0xb0-next-devs.md
 [0x057]: ./0xb1-next-testing.md
 [0x058]: ./0xb2-next-org.md
-[0x059]: https://www.owasp.org/index.php/ASVS
-[0x0510]: https://www.owasp.org/index.php/ASVS
-[0x0511]: https://www.owasp.org/index.php/OWASP_SAMM_Project
+[0x059]: https://owasp.org/www-project-application-security-verification-standard/
+[0x0510]: https://owasp.org/www-project-application-security-verification-standard/
+[0x0511]: https://owasp.org/www-project-samm/
 [0x0512]: ./0xd1-data-contributors.md
 

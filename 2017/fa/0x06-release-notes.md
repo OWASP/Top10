@@ -27,7 +27,7 @@
 <ul dir="rtl" align="right">
   <li>
     <strong> A4:2017-XML External Entities (XXE)</strong>
-   یک دسته بندی جدید است که به صورت اولیه توسط مجموعه داده <a href="https://www.owasp.org/index.php/Source_Code_Analysis_Tools">ابزارهای آنالیز و آزمون امنیت کد منبع (SAST)</a>  پشتبانی می‌شود.
+   یک دسته بندی جدید است که به صورت اولیه توسط مجموعه داده <a href="https://owasp.org/www-community/Source_Code_Analysis_Tools">ابزارهای آنالیز و آزمون امنیت کد منبع (SAST)</a>  پشتبانی می‌شود.
   </li>
 </ul>
 
@@ -62,7 +62,7 @@
   <li>
     <strong>A8-Cross-Site Request Forgery (CSRF)</strong> ,
     از آنجایی که فریمورک های بسیاری دارای 
-    <a href="https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)">محافظ CSRF</a>
+    <a href="https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html">محافظ CSRF</a>
     هستند ، این مورد تنها در ۵ درصد از برنامه های کاربردی یافت شده است .
   </li>
   <li>

