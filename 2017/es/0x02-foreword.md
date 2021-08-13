@@ -14,18 +14,18 @@ En el largo plazo, hemos cubierto todo el proceso de desarrollo de software que 
 
 Esperamos que el OWASP Top 10 sea útil para redoblar los esfuerzos de seguridad en aplicaciones. No dude en contactar con OWASP acerca de sus cuestiones, comentarios e ideas en nuestro repositorio de Github:
 
-* [https://owasp.org/www-project-top-ten/](https://owasp.org/www-project-top-ten/)
+- [https://owasp.org/www-project-top-ten/](https://owasp.org/www-project-top-ten/)
 
 Puede encontrar las traducciones del OWASP Top 10 aquí:
 
-* [https://owasp.org/www-project-top-ten/](https://owasp.org/www-project-top-ten/)
+- [https://owasp.org/www-project-top-ten/](https://owasp.org/www-project-top-ten/)
 
 Por último, queremos agradecer a la fundación y dirección del proyecto del OWASP Top 10, Dave Wichers y Jeff Williams, por todos sus esfuerzos y creer en nosotros para poder finalizar con la ayuda de la comunidad. ¡Gracias!
 
-* Andrew van der Stock
-* Brian Glas
-* Neil Smithline
-* Torsten Gigler
+- Andrew van der Stock
+- Brian Glas
+- Neil Smithline
+- Torsten Gigler
 
 ## Atribuciones
 Gracias a[Autodesk](https://www.autodesk.com) por patrocinar el OWASP Top 10 - 2017.

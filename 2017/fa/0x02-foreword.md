@@ -20,18 +20,18 @@
 
 <p dir="rtl" align="right">امیدواریم که OWASP TOP 10  برای اقدامات امنیت نرم افزار شما مفید باشد. لطفا با ما در تماس باشید و سوالات، نظرات و ایده های خود را در مخزن پروژه گیت هاب ما ، با OWASP در میان بگذارید.</p>
 
-* [https://github.com/OWASP/Top10/issues](https://github.com/OWASP/Top10/issues)
+- [https://github.com/OWASP/Top10/issues](https://github.com/OWASP/Top10/issues)
 
 <p dir="rtl" align="right">شما میتوانید پروژه ی OWASP TOP 10 و ترجمه هایش را اینجا پیدا کنید :</p>
 
-* [https://owasp.org/www-project-top-ten/](https://owasp.org/www-project-top-ten/)
+- [https://owasp.org/www-project-top-ten/](https://owasp.org/www-project-top-ten/)
 
 <p dir="rtl" align="right">در پایان ، دوست داریم که از رهبران موسس OWASP TOP 10 ، آقایان Dave Wichers  و Jeff Williams  برای تمام تلاش‌ها و اعتقادی که برای اتمام پروژه با کمک جامعه به ما داشتند تشکر کنیم. از شما ممنونیم.</p>
 
-* Andrew van der Stock
-* Brian Glas
-* Neil Smithline
-* Torsten Gigler
+- Andrew van der Stock
+- Brian Glas
+- Neil Smithline
+- Torsten Gigler
 
 
 ## <div dir="rtl" align="right"> اسپانسر پروژه</div>

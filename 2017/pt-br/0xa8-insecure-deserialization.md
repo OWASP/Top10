@@ -11,16 +11,16 @@ Aplicações e APIs estarão vulneráveis se desserializarem objetos hostis ou a
 
 Isso pode resultar em dois principais tipos de ataques:
 
-* Ataques relacionados com a estrutura de objetos e dados onde o atacante modifica a lógica do aplicativo ou consegue a execução de código remoto arbitrário se houver classes disponíveis para a aplicação que possam alterar o comportamento durante ou após a desserialização. 
-* Ataques típicos de manipulação de dados, como ataques de controle de acesso, onde as estruturas de dados existentes são usadas, mas o conteúdo é alterado.
+- Ataques relacionados com a estrutura de objetos e dados onde o atacante modifica a lógica do aplicativo ou consegue a execução de código remoto arbitrário se houver classes disponíveis para a aplicação que possam alterar o comportamento durante ou após a desserialização. 
+- Ataques típicos de manipulação de dados, como ataques de controle de acesso, onde as estruturas de dados existentes são usadas, mas o conteúdo é alterado.
 
 Serialização pode ser usada em aplicações para:
 
-* Comunicação remota / interprocesso (RPC / IPC)
-* Protocolos com fio, serviços web, *message brokers*
-* Caching/Persistência
-* Bancos de dados, servidores de cache, sistemas de arquivos
-* Cookies HTTP, parâmetros de formulário HTML, tokens de autenticação de API
+- Comunicação remota / interprocesso (RPC / IPC)
+- Protocolos com fio, serviços web, *message brokers*
+- Caching/Persistência
+- Bancos de dados, servidores de cache, sistemas de arquivos
+- Cookies HTTP, parâmetros de formulário HTML, tokens de autenticação de API
 
 ## Como Prevenir
 
@@ -28,12 +28,12 @@ O único padrão de arquitetura seguro é não aceitar objetos serializados de f
 
 Se isso não for possível:
 
-* Implementar verificações de integridade, tais como assinaturas digitais em qualquer objeto serializado para evitar a criação de objetos hostis ou a manipulação de dados.
-* Aplicar restrições de tipos estritos durante a desserialização antes da criação do objeto, pois seu código geralmente espera um conjunto definível de classes. Foram demonstrados casos onde esta restrição foi superada, portanto a dependência exclusiva nela não é aconselhável.
-* Isolar e executar o código que desserializa em ambientes de baixos privilégios quando possível.
-* Registrar as exceções e falhas de desserialização como, por exemplo, onde o tipo de entrada não é o tipo esperado, ou a desserialização lança exceções.
-* Restringir ou monitorar a conectividade de rede de entrada e de saída de contêineres ou servidores que desserializem.
-* Monitorizar a desserialização, alertando se um usuário desserializar constantemente.
+- Implementar verificações de integridade, tais como assinaturas digitais em qualquer objeto serializado para evitar a criação de objetos hostis ou a manipulação de dados.
+- Aplicar restrições de tipos estritos durante a desserialização antes da criação do objeto, pois seu código geralmente espera um conjunto definível de classes. Foram demonstrados casos onde esta restrição foi superada, portanto a dependência exclusiva nela não é aconselhável.
+- Isolar e executar o código que desserializa em ambientes de baixos privilégios quando possível.
+- Registrar as exceções e falhas de desserialização como, por exemplo, onde o tipo de entrada não é o tipo esperado, ou a desserialização lança exceções.
+- Restringir ou monitorar a conectividade de rede de entrada e de saída de contêineres ou servidores que desserializem.
+- Monitorizar a desserialização, alertando se um usuário desserializar constantemente.
 
 ## Exemplos de Cenários de Ataque
 
@@ -51,14 +51,14 @@ Um atacante altera o objeto serializado para se dar privilégios de administrado
 
 ### OWASP
 
-* [OWASP Cheat Sheet: Deserialization](https://cheatsheetseries.owasp.org/cheatsheets/Deserialization_Cheat_Sheet.html)
-* [OWASP Proactive Controls: Validate All Inputs](https://owasp.org/www-project-proactive-controls/v3/en/c5-validate-inputs)
-* [OWASP Application Security Verification Standard: TBA](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x11-V2-Authentication.md)
-* [OWASP AppSecEU 2016: Surviving the Java Deserialization Apocalypse](https://speakerdeck.com/pwntester/surviving-the-java-deserialization-apocalypse)
-* [OWASP AppSecUSA 2017: Friday the 13th JSON Attacks](https://speakerdeck.com/pwntester/friday-the-13th-json-attacks)
+- [OWASP Cheat Sheet: Deserialization](https://cheatsheetseries.owasp.org/cheatsheets/Deserialization_Cheat_Sheet.html)
+- [OWASP Proactive Controls: Validate All Inputs](https://owasp.org/www-project-proactive-controls/v3/en/c5-validate-inputs)
+- [OWASP Application Security Verification Standard: TBA](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x11-V2-Authentication.md)
+- [OWASP AppSecEU 2016: Surviving the Java Deserialization Apocalypse](https://speakerdeck.com/pwntester/surviving-the-java-deserialization-apocalypse)
+- [OWASP AppSecUSA 2017: Friday the 13th JSON Attacks](https://speakerdeck.com/pwntester/friday-the-13th-json-attacks)
 
 ### Externas
 
-* [CWE-502: Deserialization of Untrusted Data](https://cwe.mitre.org/data/definitions/502.html)
-* [Java Unmarshaller Security](https://github.com/mbechler/marshalsec)
-* [OWASP AppSec Cali 2015: Marshalling Pickles](https://frohoff.github.io/appseccali-marshalling-pickles/)
+- [CWE-502: Deserialization of Untrusted Data](https://cwe.mitre.org/data/definitions/502.html)
+- [Java Unmarshaller Security](https://github.com/mbechler/marshalsec)
+- [OWASP AppSec Cali 2015: Marshalling Pickles](https://frohoff.github.io/appseccali-marshalling-pickles/)

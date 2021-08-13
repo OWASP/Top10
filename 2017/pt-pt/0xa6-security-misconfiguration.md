@@ -10,22 +10,22 @@
 
 A aplicação pode ser vulnerável se:
 
-* Estão em falta medidas apropriadas de segurança em alguma parte da camada
+- Estão em falta medidas apropriadas de segurança em alguma parte da camada
   aplicacional.
-* Funcionalidades desnecessárias estão ativas ou instaladas (e.g. portos de
+- Funcionalidades desnecessárias estão ativas ou instaladas (e.g. portos de
   comunicação desnecessários, serviços, páginas, contas ou privilégios).
-* Existem contas padrão e as suas palavras-passe ainda estão ativas e
+- Existem contas padrão e as suas palavras-passe ainda estão ativas e
   inalteradas.
-* A rotina de tratamento de erros revela informação de execução (_stack trace_)
+- A rotina de tratamento de erros revela informação de execução (_stack trace_)
   ou outras mensagens que incluam detalhe excessivo para os utilizadores.
-* Em sistemas atualizados, as últimas funcionalidades de segurança encontram-se
+- Em sistemas atualizados, as últimas funcionalidades de segurança encontram-se
   desativadas ou configuradas de forma insegura.
-* As definições de segurança nos servidores aplicacionais, _frameworks_ (e.g.
+- As definições de segurança nos servidores aplicacionais, _frameworks_ (e.g.
   Struts, Spring, ASP.NET), bibliotecas de código, base de dados, etc., não usam
   valores seguros.
-* O servidor não inclui cabeçalhos ou diretivas de segurança nas respostas ou
+- O servidor não inclui cabeçalhos ou diretivas de segurança nas respostas ou
   estas não usam valores seguros.
-* O software está desatualizado ou vulnerável (ver [A9:2017 Utilização de
+- O software está desatualizado ou vulnerável (ver [A9:2017 Utilização de
   Componentes Vulneráveis][0xa61]).
 
 Sem manutenção corretiva e um processo de aplicação de definições de segurança
@@ -35,23 +35,23 @@ reprodutível os sistemas apresentam um risco mais elevado.
 
 Processos de instalação seguros devem ser implementados, incluindo:
 
-* Um processo automatizado e reprodutível de robustecimento do sistema, que
+- Um processo automatizado e reprodutível de robustecimento do sistema, que
   torne fácil e rápido criar um novo ambiente devidamente seguro. Ambientes de
   desenvolvimento, qualidade e produção devem ser configurados de forma
   semelhante com credenciais específicas por ambiente.
-* A plataforma mínima necessária, sem funcionalidades desnecessárias,
+- A plataforma mínima necessária, sem funcionalidades desnecessárias,
   componentes, documentação ou exemplos. Remover ou não instalar funcionalidades
   que não são usadas bem como frameworks.
-* Uma tarefa para rever e atualizar as configurações de forma adequada e de
+- Uma tarefa para rever e atualizar as configurações de forma adequada e de
   acordo com as notas de segurança, atualizações e correções como parte do
   processo de gestão de correções (ver [A9:2017 Utilização de Componentes com
   Vulnerabilidades Conhecidas][0xa61]).
-* Uma arquitetura aplicacional segmentada que garanta uma separação efetiva e
+- Uma arquitetura aplicacional segmentada que garanta uma separação efetiva e
   segura entre os componentes ou módulos, com segmentação, utilização de
   containers ou grupos de segurança cloud (Access Control List (ACL)).
-* Envio de diretivas de segurança para o agente dos clientes e.g. _Security
+- Envio de diretivas de segurança para o agente dos clientes e.g. _Security
   Headers_.
-* Um processo automatizado para verificação da eficácia das configurações e
+- Um processo automatizado para verificação da eficácia das configurações e
   definições em todos os ambientes.
 
 ## Exemplos de Cenários de Ataque
@@ -81,21 +81,21 @@ Isto permite o acesso a dados sensíveis armazenados nesse serviço Cloud.
 
 ### OWASP
 
-* [OWASP Testing Guide: Configuration Management][0xa62]
-* [OWASP Testing Guide: Testing for Error Codes][0xa63]
-* [OWASP Security Headers Project][0xa64]
+- [OWASP Testing Guide: Configuration Management][0xa62]
+- [OWASP Testing Guide: Testing for Error Codes][0xa63]
+- [OWASP Security Headers Project][0xa64]
 
 Para requisitos adicionais nesta área, por favor consulte o [ASVS requirements
 areas for Security Configuration (V11 and V19)][0xa65].
 
 ### Externas
 
-* [NIST Guide to General Server Hardening][0xa66]
-* [CWE Entry 2 on Environmental Security Flaws][0xa67]
-* [CWE-16: Configuration][0xa68]
-* [CWE-388: Error Handling][0xa69]
-* [CIS Security Configuration Guides/Benchmarks][0xa610]
-* [Amazon S3 Bucket Discovery and Enumeration][0xa611]
+- [NIST Guide to General Server Hardening][0xa66]
+- [CWE Entry 2 on Environmental Security Flaws][0xa67]
+- [CWE-16: Configuration][0xa68]
+- [CWE-388: Error Handling][0xa69]
+- [CIS Security Configuration Guides/Benchmarks][0xa610]
+- [Amazon S3 Bucket Discovery and Enumeration][0xa611]
 
 [0xa61]: ./0xa9-known-vulns.md
 [0xa62]: https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/README

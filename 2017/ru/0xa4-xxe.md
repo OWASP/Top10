@@ -10,22 +10,22 @@
 
 Приложения, в особенности веб-службы или компоненты на основе XML, являются уязвимыми в следующих случаях:
 
-* приложение принимает XML напрямую или через выгрузку, особенно от недоверенных источников, или включает непроверенные данные в XML-документы, которые затем обрабатываются XML-обработчиком;
-* хотя бы один из XML-обработчиков приложения или веб-службы на основе SOAP использует [определение типа документов (DTD)](https://en.wikipedia.org/wiki/Document_type_definition). Поскольку механизм отключения DTD зависит от обработчика, рекомендуется воспользоваться справочной информацией, например ["Памяткой OWASP по предотвращению XXE"](https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html); 
-* приложение использует SAML для идентификации в рамках федеративной безопасности или технологии единого входа (SSO). SAML использует XML для подтверждения идентификаторов, поэтому может быть уязвим;
-* приложение использует SOAP версии ниже 1.2. Оно может быть уязвимо для XXE-атак, если XML-сущности передаются фреймворку SOAP;
-* если приложение уязвимо для XXE-атак, то злоумышленник может также вызвать отказ в обслуживании или осуществить атаку с использованием миллиона XML-сущностей (Billion Laughs).
+- приложение принимает XML напрямую или через выгрузку, особенно от недоверенных источников, или включает непроверенные данные в XML-документы, которые затем обрабатываются XML-обработчиком;
+- хотя бы один из XML-обработчиков приложения или веб-службы на основе SOAP использует [определение типа документов (DTD)](https://en.wikipedia.org/wiki/Document_type_definition). Поскольку механизм отключения DTD зависит от обработчика, рекомендуется воспользоваться справочной информацией, например ["Памяткой OWASP по предотвращению XXE"](https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html); 
+- приложение использует SAML для идентификации в рамках федеративной безопасности или технологии единого входа (SSO). SAML использует XML для подтверждения идентификаторов, поэтому может быть уязвим;
+- приложение использует SOAP версии ниже 1.2. Оно может быть уязвимо для XXE-атак, если XML-сущности передаются фреймворку SOAP;
+- если приложение уязвимо для XXE-атак, то злоумышленник может также вызвать отказ в обслуживании или осуществить атаку с использованием миллиона XML-сущностей (Billion Laughs).
 
 ## Как предотвратить
 
 Обучение разработчиков имеет большое значение для выявления и противодействия XXE. Кроме того, для предотвращения XXE необходимо:
 
-* использовать по возможности более простые форматы данных, например JSON, и избегать сериализации критически важных данных;
-* установить исправления или обновления для всех библиотек и обработчиков XML, используемых приложением или ОС. Использовать проверки зависимостей. Обновить SOAP до версии 1.2 или выше;
-* отключить обработку внешних сущностей XML и DTD во всех XML-обработчиках приложения, согласно ["Памятке OWASP по предотвращению XXE"](https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html); 
-* реализовать на сервере (по белым спискам) проверку, фильтрацию или очистку (экранирование) входных данных для предотвращения попадания вредоносных данных в XML-документы, заголовки или узлы;
-* удостовериться, что функция загрузки XML или XSL проверяет входящие файлы с использованием XSD или другой подобной методики;
-* анализировать код масштабных и сложных приложений со множеством встраиваемых компонентов вручную, хотя инструменты SAST могут помочь обнаружить XXE в исходном коде.
+- использовать по возможности более простые форматы данных, например JSON, и избегать сериализации критически важных данных;
+- установить исправления или обновления для всех библиотек и обработчиков XML, используемых приложением или ОС. Использовать проверки зависимостей. Обновить SOAP до версии 1.2 или выше;
+- отключить обработку внешних сущностей XML и DTD во всех XML-обработчиках приложения, согласно ["Памятке OWASP по предотвращению XXE"](https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html); 
+- реализовать на сервере (по белым спискам) проверку, фильтрацию или очистку (экранирование) входных данных для предотвращения попадания вредоносных данных в XML-документы, заголовки или узлы;
+- удостовериться, что функция загрузки XML или XSL проверяет входящие файлы с использованием XSD или другой подобной методики;
+- анализировать код масштабных и сложных приложений со множеством встраиваемых компонентов вручную, хотя инструменты SAST могут помочь обнаружить XXE в исходном коде.
 
 Если выполнение данных требований невозможно, попробуйте использовать виртуальные патчи, шлюзы безопасности API или файрволы веб-приложений (WAF) для обнаружения, мониторинга и блокировки XXE-атак.
 
@@ -59,15 +59,15 @@
 
 ### OWASP
 
-* [Стандарт подтверждения безопасности приложений OWASP](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x11-V2-Authentication.md)
-* [Руководство OWASP по тестированию: Проверка внедрения XML](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/07-Testing_for_XML_Injection)
-* [OWASP: Уязвимость XXE](https://owasp.org/www-community/vulnerabilities/XML_External_Entity_(XXE)_Processing)
-* [Памятка OWASP: Предотвращение XXE](https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html)
-* [Памятка OWASP: Безопасность XML](https://cheatsheetseries.owasp.org/cheatsheets/XML_Security_Cheat_Sheet.html)
+- [Стандарт подтверждения безопасности приложений OWASP](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x11-V2-Authentication.md)
+- [Руководство OWASP по тестированию: Проверка внедрения XML](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/07-Testing_for_XML_Injection)
+- [OWASP: Уязвимость XXE](https://owasp.org/www-community/vulnerabilities/XML_External_Entity_(XXE)_Processing)
+- [Памятка OWASP: Предотвращение XXE](https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html)
+- [Памятка OWASP: Безопасность XML](https://cheatsheetseries.owasp.org/cheatsheets/XML_Security_Cheat_Sheet.html)
 
 ### Сторонние
 
-* [CWE-611: Некорректное ограничение ссылок на внешние сущности XML](https://cwe.mitre.org/data/definitions/611.html)
-* [Атака Billion Laughs (с использованием миллиона XML-сущностей)](https://en.wikipedia.org/wiki/Billion_laughs_attack)
-* [Атака на SAML с использованием внешних сущностей XML](https://secretsofappsecurity.blogspot.tw/2017/01/saml-security-xml-external-entity-attack.html)
-* [Обнаружение и эксплуатация XXE в SAML-интерфейсах](https://web-in-security.blogspot.tw/2014/11/detecting-and-exploiting-xxe-in-saml.html)
+- [CWE-611: Некорректное ограничение ссылок на внешние сущности XML](https://cwe.mitre.org/data/definitions/611.html)
+- [Атака Billion Laughs (с использованием миллиона XML-сущностей)](https://en.wikipedia.org/wiki/Billion_laughs_attack)
+- [Атака на SAML с использованием внешних сущностей XML](https://secretsofappsecurity.blogspot.tw/2017/01/saml-security-xml-external-entity-attack.html)
+- [Обнаружение и эксплуатация XXE в SAML-интерфейсах](https://web-in-security.blogspot.tw/2014/11/detecting-and-exploiting-xxe-in-saml.html)

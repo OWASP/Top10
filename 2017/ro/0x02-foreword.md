@@ -14,18 +14,18 @@ Pe termen lung, încurajăm toate echipele și organizațiile de dezvoltare soft
 
 Sperăm că OWASP Top 10 este util pentru cerințele dumneavoastră de securitate. Vă rugăm să nu ezitați să contactați OWASP cu întrebările, comentariile și ideile dvs.
 
-* [https://github.com/OWASP/Top10/issues](https://github.com/OWASP/Top10/issues)
+- [https://github.com/OWASP/Top10/issues](https://github.com/OWASP/Top10/issues)
 
 Puteți găsi proiectul și traducerile OWASP Top 10 aici:
 
-* [https://owasp.org/www-project-top-ten/](https://owasp.org/www-project-top-ten/)
+- [https://owasp.org/www-project-top-ten/](https://owasp.org/www-project-top-ten/)
 
 În sfârșit, dorim să mulțumim conducerii fondatoare a proiectului OWASP Top 10, Dave Wichers și Jeff Williams, pentru toate eforturile depuse și credința în noi pentru a finaliza acest lucru cu ajutorul comunității. Mulțumesc!
 
-* Andrew van der Stock
-* Brian Glas
-* Neil Smithline
-* Torsten Gigler
+- Andrew van der Stock
+- Brian Glas
+- Neil Smithline
+- Torsten Gigler
 
 ## Atribuire
 Mulțumimi [Autodesk](https://www.autodesk.com) pentru sponsorizarea Top 10 OWASP - 2017.

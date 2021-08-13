@@ -9,26 +9,26 @@
 
 El control de acceso aplica la política de modo que los usuarios no puedan actuar fuera de los permisos previstos. Las fallas típicamente conducen a la divulgación, modificación o destrucción de información no autorizada de todos los datos, o al realizar una función de negocio fuera de los límites del usuario. Las vulnerabilidades comunes de control de acceso incluyen:
 
-* Pasar por alto las comprobaciones de control de acceso modificando la URL, el estado interno de la aplicación o página HTML, o utilizando una herramienta personalizada de ataques a API.
-* Permitir que la clave primaria se cambie a la de otro usuario, pudiendo ver o editar la cuenta de otra persona.
-* Elevación de privilegios. Actuar como un usuario sin iniciar sesión, o actuar como  un administrador cuando inicia sesión como usuario.
-* Manipulación de metadatos, como reproducir o manipular un token de control de acceso JWT (JSON Web Token), una cookie o un campo oculto para elevar los privilegios, o abusar de la invalidación de tokens JWT.
-* La configuración incorrecta de CORS permite el acceso no autorizado a la API.
-* Forzar la navegación  a páginas autenticadas como un usuario no autenticado o a páginas privilegiadas como usuario estándar. Acceder a API con controles de acceso ausentes para verbos POST, PUT y DELETE.
+- Pasar por alto las comprobaciones de control de acceso modificando la URL, el estado interno de la aplicación o página HTML, o utilizando una herramienta personalizada de ataques a API.
+- Permitir que la clave primaria se cambie a la de otro usuario, pudiendo ver o editar la cuenta de otra persona.
+- Elevación de privilegios. Actuar como un usuario sin iniciar sesión, o actuar como  un administrador cuando inicia sesión como usuario.
+- Manipulación de metadatos, como reproducir o manipular un token de control de acceso JWT (JSON Web Token), una cookie o un campo oculto para elevar los privilegios, o abusar de la invalidación de tokens JWT.
+- La configuración incorrecta de CORS permite el acceso no autorizado a la API.
+- Forzar la navegación  a páginas autenticadas como un usuario no autenticado o a páginas privilegiadas como usuario estándar. Acceder a API con controles de acceso ausentes para verbos POST, PUT y DELETE.
 
 ## Cómo se previene
 
 El control de acceso solo es efectivo si es aplicado del lado del servidor o en la API sin servidor, donde el atacante no puede modificar la verificación o los metadatos del control de acceso.
 
-* Con la excepción de los recursos públicos, denegar de forma predeterminada.
-* Implemente los mecanismos de control de acceso una vez y reutilícelo en toda la aplicación, incluyendo minimizar el control de acceso HTTP (CORS).
-* Los modelos de control de acceso deben imponer la propiedad de los registros, en lugar de aceptar que el usuario puede crear, leer, actualizar o eliminar cualquier registro.
-* Los modelos de dominio deben hacer cumplir los requisitos exclusivos de los límites de negocio de las aplicaciones.
-* Deshabilitar el listado de directorios del servidor web y asegurar que los metadatos de archivos (por ejemplo de git) y archivos de copia de seguridad no estén presentes en las carpetas web.
-* Registrar errores de control de acceso, alertar a los administradores cuando corresponda (por ejemplo, fallas reiteradas).
-* Limite la tasa de acceso a APIs y al control de acceso para minimizar el daño de herramientas de ataque automatizadas.
-* Los tokens JWT deben ser invalidados luego de la finalización de la sesión por parte del usuario.
-* Los desarrolladores y el personal de control de calidad deben incluir pruebas de control de acceso en sus pruebas unitarias y de integración.
+- Con la excepción de los recursos públicos, denegar de forma predeterminada.
+- Implemente los mecanismos de control de acceso una vez y reutilícelo en toda la aplicación, incluyendo minimizar el control de acceso HTTP (CORS).
+- Los modelos de control de acceso deben imponer la propiedad de los registros, en lugar de aceptar que el usuario puede crear, leer, actualizar o eliminar cualquier registro.
+- Los modelos de dominio deben hacer cumplir los requisitos exclusivos de los límites de negocio de las aplicaciones.
+- Deshabilitar el listado de directorios del servidor web y asegurar que los metadatos de archivos (por ejemplo de git) y archivos de copia de seguridad no estén presentes en las carpetas web.
+- Registrar errores de control de acceso, alertar a los administradores cuando corresponda (por ejemplo, fallas reiteradas).
+- Limite la tasa de acceso a APIs y al control de acceso para minimizar el daño de herramientas de ataque automatizadas.
+- Los tokens JWT deben ser invalidados luego de la finalización de la sesión por parte del usuario.
+- Los desarrolladores y el personal de control de calidad deben incluir pruebas de control de acceso en sus pruebas unitarias y de integración.
 
 ## Ejemplos de escenarios de ataque
 
@@ -56,15 +56,15 @@ Si un usuario no autenticado puede acceder a cualquiera de las páginas, es un e
 
 ### OWASP
 
-* [Controles Proactivos de OWASP: Control de Acceso](https://owasp.org/www-project-proactive-controls/v3/en/c7-enforce-access-controls)
-* [Estándar de Verificación de Seguridad en Aplicaciones de OWASP: V4 Control de Acceso](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x11-V2-Authentication.md)
-* [Guía de Pruebas de OWASP: Control de Acceso](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/05-Authorization_Testing/README)
-* [Hojas de ayuda de OWASP: Control de Acceso](https://cheatsheetseries.owasp.org/cheatsheets/Access_Control_Cheat_Sheet.html)
+- [Controles Proactivos de OWASP: Control de Acceso](https://owasp.org/www-project-proactive-controls/v3/en/c7-enforce-access-controls)
+- [Estándar de Verificación de Seguridad en Aplicaciones de OWASP: V4 Control de Acceso](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x11-V2-Authentication.md)
+- [Guía de Pruebas de OWASP: Control de Acceso](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/05-Authorization_Testing/README)
+- [Hojas de ayuda de OWASP: Control de Acceso](https://cheatsheetseries.owasp.org/cheatsheets/Access_Control_Cheat_Sheet.html)
 
 ### Externas
 
-* [CWE-22 Limitación indebida de un nombre de ruta a un directorio restringido ('Path Traversal')]()
-* [CWE-284 Control de Acceso inadecuado (Autorización)](https://cwe.mitre.org/data/definitions/284.html)
-* [CWE-285 Inadecuada Autorización](https://cwe.mitre.org/data/definitions/285.html)
-* [CWE-639 Desviación de la autorización Bypass a través del claves controladas por el usuario](https://cwe.mitre.org/data/definitions/639.html)
-* [Explotando fallas en las configuraciones de CORS](https://blog.portswigger.net/2016/10/exploiting-cors-misconfigurations-for.html)
+- [CWE-22 Limitación indebida de un nombre de ruta a un directorio restringido ('Path Traversal')]()
+- [CWE-284 Control de Acceso inadecuado (Autorización)](https://cwe.mitre.org/data/definitions/284.html)
+- [CWE-285 Inadecuada Autorización](https://cwe.mitre.org/data/definitions/285.html)
+- [CWE-639 Desviación de la autorización Bypass a través del claves controladas por el usuario](https://cwe.mitre.org/data/definitions/639.html)
+- [Explotando fallas en las configuraciones de CORS](https://blog.portswigger.net/2016/10/exploiting-cors-misconfigurations-for.html)

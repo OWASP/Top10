@@ -9,13 +9,13 @@
 
 Registro y monitoreo insuficientes ocurre en cualquier instante:
 
-* Eventos auditables, tales como los inicios de sesión, fallos en el inicio de sesión, y transacciones de alto valor no son registrados.
-* Advertencias y errores generan registros poco claros, inadecuados o ninguno en absoluto.
-* Registros en aplicaciones o APIs no son monitoreados por actividad sospechosa.
-* Registros son almacenados únicamente de forma local.
-* Los umbrales de alerta y de escalamiento de respuesta no están implementados o no son eficaces.
-* Pruebas de penetración y escaneos utilizando herramientas [DAST](https://owasp.org/www-community/Vulnerability_Scanning_Tools) (tales como [OWASP ZAP](https://owasp.org/www-project-zap/)) no generan alertas.
-* La aplicación no logra detectar, escalar o alertar sobre ataques en tiempo real o cerca de estar en tiempo real.
+- Eventos auditables, tales como los inicios de sesión, fallos en el inicio de sesión, y transacciones de alto valor no son registrados.
+- Advertencias y errores generan registros poco claros, inadecuados o ninguno en absoluto.
+- Registros en aplicaciones o APIs no son monitoreados por actividad sospechosa.
+- Registros son almacenados únicamente de forma local.
+- Los umbrales de alerta y de escalamiento de respuesta no están implementados o no son eficaces.
+- Pruebas de penetración y escaneos utilizando herramientas [DAST](https://owasp.org/www-community/Vulnerability_Scanning_Tools) (tales como [OWASP ZAP](https://owasp.org/www-project-zap/)) no generan alertas.
+- La aplicación no logra detectar, escalar o alertar sobre ataques en tiempo real o cerca de estar en tiempo real.
 
 También es vulnerable a la fuga de información si registra y alerta eventos visibles para un usuario o un atacante (consulte A3:2017 Exposición sensible a la información).
 
@@ -23,11 +23,11 @@ También es vulnerable a la fuga de información si registra y alerta eventos vi
 
 Según el riesgo de los datos almacenados o procesados por la aplicación:
 
-* Asegúrese de que todos los errores de inicio de sesión, de control de acceso y de validación de entradas de dato del lado del servidor se pueden registrar con el contexto de usuario suficiente para identificar cuentas sospechosas o maliciosas, y mantenerlo durante el tiempo suficiente para permitir un eventual análisis forense.
-* Asegúrese de que las transacciones de alto impacto tengan una pista de auditoría con controles de integridad para prevenir alteraciones o eliminaciones, tales como añadir únicamente tablas de bases de datos o similares.
-* Asegúrese que todas las transacciones de alto valor poseen una traza de auditoría con controles de integridad que permitan detectar su modificación o borrado, tales como una base de datos con permisos únicamente de inserción u otro.
-* Establezca una monitorización y alerta efectivos de tal manera que las actividades sospechosas sean detectadas y respondidas dentro de periodos de tiempo aceptables.
-* Establezca o adopte un plan de respuesta o recuperación de incidentes, tales como [NIST 800-61 rev 2](https://csrc.nist.gov/publications/detail/sp/800-61/rev-2/final) o posterior.
+- Asegúrese de que todos los errores de inicio de sesión, de control de acceso y de validación de entradas de dato del lado del servidor se pueden registrar con el contexto de usuario suficiente para identificar cuentas sospechosas o maliciosas, y mantenerlo durante el tiempo suficiente para permitir un eventual análisis forense.
+- Asegúrese de que las transacciones de alto impacto tengan una pista de auditoría con controles de integridad para prevenir alteraciones o eliminaciones, tales como añadir únicamente tablas de bases de datos o similares.
+- Asegúrese que todas las transacciones de alto valor poseen una traza de auditoría con controles de integridad que permitan detectar su modificación o borrado, tales como una base de datos con permisos únicamente de inserción u otro.
+- Establezca una monitorización y alerta efectivos de tal manera que las actividades sospechosas sean detectadas y respondidas dentro de periodos de tiempo aceptables.
+- Establezca o adopte un plan de respuesta o recuperación de incidentes, tales como [NIST 800-61 rev 2](https://csrc.nist.gov/publications/detail/sp/800-61/rev-2/final) o posterior.
 
 Existen frameworks de protección de aplicaciones comerciales y de código abierto tales como [OWASP AppSensor](https://owasp.org/www-project-appsensor/), firewalls de aplicaciones web como [ModSecurity utilizando el Core Rule Set de OWASP](https://owasp.org/www-project-modsecurity-core-rule-set/), y software de correlación de registros con paneles personalizados y alertas.
 
@@ -43,12 +43,12 @@ Existen frameworks de protección de aplicaciones comerciales y de código abier
 
 ### OWASP
 
-* [Controles Proactivos de OWASP: Implementar Registros y Detección de Intrusos](https://owasp.org/www-project-proactive-controls/v3/en/c9-security-logging)
-* [Estándar de Verificación de Seguridad en Aplicaciones de OWASP: V7 Registro y Monitorización](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x11-V2-Authentication.md)
-* [Guía de Pruebas de OWASP: Prueba de Error de Código Detallado](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x11-V2-Authentication.md)
-* [Hojas de ayuda de OWASP: Registros](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html)
+- [Controles Proactivos de OWASP: Implementar Registros y Detección de Intrusos](https://owasp.org/www-project-proactive-controls/v3/en/c9-security-logging)
+- [Estándar de Verificación de Seguridad en Aplicaciones de OWASP: V7 Registro y Monitorización](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x11-V2-Authentication.md)
+- [Guía de Pruebas de OWASP: Prueba de Error de Código Detallado](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x11-V2-Authentication.md)
+- [Hojas de ayuda de OWASP: Registros](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html)
 
 ### Externas
 
-* [CWE-223: Omisión de información relevante de seguridad](https://cwe.mitre.org/data/definitions/223.html)
-* [CWE-778: Registro insuficiente](https://cwe.mitre.org/data/definitions/778.html)
+- [CWE-223: Omisión de información relevante de seguridad](https://cwe.mitre.org/data/definitions/223.html)
+- [CWE-778: Registro insuficiente](https://cwe.mitre.org/data/definitions/778.html)

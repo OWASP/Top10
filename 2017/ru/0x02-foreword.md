@@ -14,18 +14,18 @@
 
 Надеемся, что Топ-10 OWASP окажется полезным при обеспечении безопасности ваших приложений. Все вопросы, комментарии и идеи вы можете оставлять в нашем проектном репозитории на GitHub:
 
-* [https://github.com/OWASP/Top10/issues](https://github.com/OWASP/Top10/issues)
+- [https://github.com/OWASP/Top10/issues](https://github.com/OWASP/Top10/issues)
 
 Топ-10 OWASP и переводы можно найти здесь:
 
-* [https://owasp.org/www-project-top-ten/](https://owasp.org/www-project-top-ten/)
+- [https://owasp.org/www-project-top-ten/](https://owasp.org/www-project-top-ten/)
 
 Наконец, мы хотим поблагодарить основателей проекта Топ-10 OWASP, Дейва Вичерса (Dave Wichers) и Джеффа Вильямса (Jeff Williams), за их вклад и веру в успешное завершение данного документа стараниями сообщества. Большое вам спасибо!
 
-* Эндрю ван дер Сток (Andrew van der Stock)
-* Брайан Глас (Brian Glas)
-* Нил Смитлайн (Neil Smithline)
-* Торстен Гиглер (Torsten Gigler)
+- Эндрю ван дер Сток (Andrew van der Stock)
+- Брайан Глас (Brian Glas)
+- Нил Смитлайн (Neil Smithline)
+- Торстен Гиглер (Torsten Gigler)
 
 ## Поддержка проекта
 

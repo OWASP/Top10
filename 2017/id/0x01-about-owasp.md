@@ -6,15 +6,15 @@ Open Web Application Security Project (OWASP) adalah komunitas terbuka yang dide
 
 Di OWASP anda akan menemukan secara bebas dan terbuka mengenai:
 
-* Tool dan standar keamanan aplikasi.
-* Buku tentang uji keamanan aplikasi, pengembangan kode aman, dan review kode keamanan.
-* Presentasi dan [video](https://www.youtube.com/user/OWASPGLOBAL).
-* [Cheat sheets](https://cheatsheetseries.owasp.org/) untuk banyak topik umum.
-* Kendali standar keamanan dan Pustaka Standart.
-* [Cabang Lokal Di Seluruh Dunia](https://owasp.org/chapters/).
-* Riset Terkini.
-* Konferensi OWASP di Seluruh Dunia (https://owasp.org/events/).
-* [Google Groups](https://groups.google.com/a/owasp.org).
+- Tool dan standar keamanan aplikasi.
+- Buku tentang uji keamanan aplikasi, pengembangan kode aman, dan review kode keamanan.
+- Presentasi dan [video](https://www.youtube.com/user/OWASPGLOBAL).
+- [Cheat sheets](https://cheatsheetseries.owasp.org/) untuk banyak topik umum.
+- Kendali standar keamanan dan Pustaka Standart.
+- [Cabang Lokal Di Seluruh Dunia](https://owasp.org/chapters/).
+- Riset Terkini.
+- Konferensi OWASP di Seluruh Dunia (https://owasp.org/events/).
+- [Google Groups](https://groups.google.com/a/owasp.org).
 
 Dan Masih banyak lagi di: [https://owasp.org](https://owasp.org).
 
@@ -34,4 +34,4 @@ Ayo bergabung dengan kami!
 
 ![license](images/license.png)
 
-Copyright © 2003-2017 The OWASP Foundation. This document is released under the Creative Commons Attribution Share-Alike 4.0 license. For any reuse or distribution, you must make it clear to others the license terms of this work.
+Copyright © 2003-2021 The OWASP Foundation. This document is released under the Creative Commons Attribution Share-Alike 4.0 license. For any reuse or distribution, you must make it clear to others the license terms of this work.

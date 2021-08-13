@@ -11,16 +11,16 @@ Aplikasi dan API akan menjadi rentan jika mereka menghilangkan identitas objek y
 
 Ini dapat mengakibatkan dua jenis serangan utama:
 
-* Serangan terkait objek dan struktur data di mana penyerang mengubah logika aplikasi atau mencapai eksekusi kode jarak jauh arbitrer jika ada kelas yang tersedia untuk aplikasi yang dapat mengubah perilaku selama atau setelah deserialisasi.
-* Serangan perusakan data tipikal seperti serangan terkait kontrol akses di mana struktur data yang ada digunakan tetapi kontennya diubah.
+- Serangan terkait objek dan struktur data di mana penyerang mengubah logika aplikasi atau mencapai eksekusi kode jarak jauh arbitrer jika ada kelas yang tersedia untuk aplikasi yang dapat mengubah perilaku selama atau setelah deserialisasi.
+- Serangan perusakan data tipikal seperti serangan terkait kontrol akses di mana struktur data yang ada digunakan tetapi kontennya diubah.
 
 Serialisasi dapat digunakan dalam aplikasi untuk:
 
-* _Remote_ dan komunikasi antar proses (RPC/IPC) 
-* Protokol kawat, layanan web, perantara pesan
-* Caching / Persistensi
-* Database, server cache, sistem file
-* Cookie pada HTTP, HTML form parameter, otentikasi token pada API
+- _Remote_ dan komunikasi antar proses (RPC/IPC) 
+- Protokol kawat, layanan web, perantara pesan
+- Caching / Persistensi
+- Database, server cache, sistem file
+- Cookie pada HTTP, HTML form parameter, otentikasi token pada API
 
 ## Bagaimana Cara Pencegahannya
 
@@ -28,13 +28,13 @@ Satu-satunya pola arsitektur yang aman adalah tidak menerima objek serialisasi d
 
 Jika memungkinkan, pertimbangkan salah satu cara pencegahan dibawah ini :
 
-* Menerapkan pemeriksaan integritas seperti tanda tangan digital pada objek serial apa pun untuk mencegah pembuatan objek yang tidak terpecaya  atau gangguan data. 
-* Menerapkan batasan tipe yang ketat selama desentralisasi sebelum pembuatan objek karena kode biasanya mengharapkan sekumpulan kelas yang dapat ditentukan. Pengabaian  
+- Menerapkan pemeriksaan integritas seperti tanda tangan digital pada objek serial apa pun untuk mencegah pembuatan objek yang tidak terpecaya  atau gangguan data. 
+- Menerapkan batasan tipe yang ketat selama desentralisasi sebelum pembuatan objek karena kode biasanya mengharapkan sekumpulan kelas yang dapat ditentukan. Pengabaian  
   terhadap teknik ini telah dibuktikan, jadi tidak disarankan untuk mengandalkan hanya pada teknik ini.
-* Mengisolasi dan menjalankan kode yang deserialisasi dengan hak Environment lebih rendah jika memungkinkan
-* Pengecualian dan kegagalan deserialisasi log, seperti saat jenis yang masuk bukan jenis yang diharapkan, atau deserialisasi melontarkan pengecualian.
-* Membatasi atau memantau konektivitas jaringan masuk dan keluar dari kontainer atau server yang deserialisasi
-* Monitoring deserialisasi, memberikan _alert_ jika ada _user_ terus menerus melakukan deserialisasi.
+- Mengisolasi dan menjalankan kode yang deserialisasi dengan hak Environment lebih rendah jika memungkinkan
+- Pengecualian dan kegagalan deserialisasi log, seperti saat jenis yang masuk bukan jenis yang diharapkan, atau deserialisasi melontarkan pengecualian.
+- Membatasi atau memantau konektivitas jaringan masuk dan keluar dari kontainer atau server yang deserialisasi
+- Monitoring deserialisasi, memberikan _alert_ jika ada _user_ terus menerus melakukan deserialisasi.
 
 
 ## Contoh Skenario Serangan
@@ -51,14 +51,14 @@ Seorang Penyerang mengubah object serialisasi untuk mengubah aksesnya menjadi ha
 
 ### OWASP
 
-* [OWASP Cheat Sheet: Deserialization](https://cheatsheetseries.owasp.org/cheatsheets/Deserialization_Cheat_Sheet.html)
-* [OWASP Proactive Controls: Validate All Inputs](https://owasp.org/www-project-proactive-controls/v3/en/c5-validate-inputs)
-* [OWASP Application Security Verification Standard: TBA](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x11-V2-Authentication.md)
-* [OWASP AppSecEU 2016: Surviving the Java Deserialization Apocalypse](https://speakerdeck.com/pwntester/surviving-the-java-deserialization-apocalypse)
-* [OWASP AppSecUSA 2017: Friday the 13th JSON Attacks](https://speakerdeck.com/pwntester/friday-the-13th-json-attacks)
+- [OWASP Cheat Sheet: Deserialization](https://cheatsheetseries.owasp.org/cheatsheets/Deserialization_Cheat_Sheet.html)
+- [OWASP Proactive Controls: Validate All Inputs](https://owasp.org/www-project-proactive-controls/v3/en/c5-validate-inputs)
+- [OWASP Application Security Verification Standard: TBA](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x11-V2-Authentication.md)
+- [OWASP AppSecEU 2016: Surviving the Java Deserialization Apocalypse](https://speakerdeck.com/pwntester/surviving-the-java-deserialization-apocalypse)
+- [OWASP AppSecUSA 2017: Friday the 13th JSON Attacks](https://speakerdeck.com/pwntester/friday-the-13th-json-attacks)
 
 ### External
 
-* [CWE-502: Deserialization of Untrusted Data](https://cwe.mitre.org/data/definitions/502.html)
-* [Java Unmarshaller Security](https://github.com/mbechler/marshalsec)
-* [OWASP AppSec Cali 2015: Marshalling Pickles](https://frohoff.github.io/appseccali-marshalling-pickles/)
+- [CWE-502: Deserialization of Untrusted Data](https://cwe.mitre.org/data/definitions/502.html)
+- [Java Unmarshaller Security](https://github.com/mbechler/marshalsec)
+- [OWASP AppSec Cali 2015: Marshalling Pickles](https://frohoff.github.io/appseccali-marshalling-pickles/)

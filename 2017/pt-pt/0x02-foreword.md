@@ -45,22 +45,22 @@ Esperamos que o OWASP Top 10 seja útil nos seus esforços de segurança
 aplicacional. Não hesite em contactar a OWASP com as suas questões, comentários
 e ideias no nosso repositório de projeto no GitHub:
 
-* https://github.com/OWASP/Top10/issues
+- https://github.com/OWASP/Top10/issues
 
 Pode encontrar mais informação sobre o OWASP Top 10 e correspondentes traduções
 aqui:
 
-* https://owasp.org/www-project-top-ten/
+- https://owasp.org/www-project-top-ten/
 
 Por último, queremos agradecer aos fundadores do projecto OWASP Top 10, Dave
 Wichers e Jeff Williams por todo o seu esforço e por acreditarem em nós para
 concluirmos esta tarefa com o suporte da comunidade. Obrigado!
 
-* Torsten Gigler
-* Brian Glas
-* Neil Smithline
+- Torsten Gigler
+- Brian Glas
+- Neil Smithline
 
-* Andrew van der Stock
+- Andrew van der Stock
 
 ## Patrocinadores do Projeto
 

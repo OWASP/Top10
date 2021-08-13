@@ -23,59 +23,59 @@ nesta lista.
 
 ### Começar
 
-* Documentar todas as aplicações e dados associados. Organizações de maior
+- Documentar todas as aplicações e dados associados. Organizações de maior
   dimensão devem considerar implementar uma Base de Dados de Gestão de
   Configurações (CMDB).
-* Estabelecer um programa de segurança aplicacional e promover a sua adoção.
-* Realizar uma análise diferencial de capacidades comparando a sua organização
+- Estabelecer um programa de segurança aplicacional e promover a sua adoção.
+- Realizar uma análise diferencial de capacidades comparando a sua organização
   com a dos seus pares para definir áreas importantes de melhoria e um plano
   para a sua execução.
-* Obter a aprovação da gestão e estabelecer uma [campanha de consciencialização
+- Obter a aprovação da gestão e estabelecer uma [campanha de consciencialização
   desegurança aplicacional][0xb23] para toda a da organização.
 
 ### Abordagem Orientada ao Risco
 
-* Identificar as [necessidades de proteção][0xb24] do seu [portefólio
+- Identificar as [necessidades de proteção][0xb24] do seu [portefólio
   aplicacional][0xb25] da perspetiva do negócio. Isto deve estar alinhado com a
   legislação de privacidade ou outro tipo de regulamentação relevante para os
   dados a ser protegidos.
-* Estabelecer [modelo comum de classificação de risco][0xb26] com um conjunto
+- Estabelecer [modelo comum de classificação de risco][0xb26] com um conjunto
   consistente de fatores de probabilidade e de impacto que reflita a tolerância
   da organização ao risco.
-* De igual forma, medir e definir prioridades em todas as suas aplicações e
+- De igual forma, medir e definir prioridades em todas as suas aplicações e
   APIs. Acrescente os resultados ao seu CMDB.
-* Estabelecer diretrizes para definir de forma adequada a cobertura e nível de
+- Estabelecer diretrizes para definir de forma adequada a cobertura e nível de
   rigor necessários.
 
 ### Operar com uma Base Sólida
 
-* Definir um conjunto de [políticas e standards][0xb27] que forneçam o essencial
+- Definir um conjunto de [políticas e standards][0xb27] que forneçam o essencial
   da segurança aplicacional para que todas as equipas de desenvolvimento as
   possam adotar.
-* Definir um conjunto comum de [controlos de segurança reutilizáveis][0xb28] que
+- Definir um conjunto comum de [controlos de segurança reutilizáveis][0xb28] que
   complementem essas políticas e standards e ofereçam direções de desenho e
   desenvolvimento para quem as usa.
-* Estabelecer um [currículo de treino em segurança aplicacional][0xb29] que seja
+- Estabelecer um [currículo de treino em segurança aplicacional][0xb29] que seja
   necessário e direcionado para diferentes papéis e tópicos de desenvolvimento.
 
 ### Integrar a Segurança em Processos Existentes
 
-* Definir e integrar actividades de [implementação segura][0xb210] e de
+- Definir e integrar actividades de [implementação segura][0xb210] e de
   [verificação][0xb211] nos processos de desenvolvimento e operacionais. Nestas
   atividades incluem-se [modelação de ameaças][0xb212], [desenho e
   revisão][0xb213] segurança, codificação segura e [revisão de código][0xb214],
   [testes de intrusão][0xb215], e remediação.
-* Contar com especialistas, [serviços de suporte ao desenvolvimento e equipas de
+- Contar com especialistas, [serviços de suporte ao desenvolvimento e equipas de
   projeto][0xb216] para ser bem sucedido.
 
 ### Oferecer Visibilidade para a Gestão
 
-* Gerir usando métricas. Influencie as melhorias e decisões de investimento
+- Gerir usando métricas. Influencie as melhorias e decisões de investimento
   baseadas em métricas e na análise de dados recolhidos. As métricas incluem a
   adesão às práticas e atividades de segurança, vulnerabilidades introduzidas,
   vulnerabilidades mitigadas, cobertura da aplicação, densidade de defeitos por
   tipo e por número de instâncias, entre outros.
-* Analise os dados das atividades de implementação e de verificação para
+- Analise os dados das atividades de implementação e de verificação para
   encontrar a causa principal e os padrões de vulnerabilidades para realizar
   melhorias sistemáticas e estratégicas em toda a empresa. Aprenda com os erros
   e promova incentivos positivos para estimular melhorias.

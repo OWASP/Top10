@@ -12,25 +12,25 @@ La confirmation de l'identité, de l'authentification et de la session de l'util
 
 Il peut y avoir des faiblesses d'authentification si l'application :
 
-* Autorise les attaques automatisées telles que le [credential stuffing](https://owasp.org/www-community/attacks/Credential_stuffing), où l'attaquant dispose d'une liste de noms d'utilisateurs valides et mots de passe.
-* Permet la force brute ou d'autres attaques automatisées
-* Autorise les mots de passe par défaut, faibles ou bien connus, tels que "Password1" ou "admin / admin".
-* Utilise des processus de récupération des informations d'identification faibles ou inefficaces et des processus de mot de passe oublié, tels que « "Questions secrètes" », qui ne peuvent être sécurisées.
-* Utilise des mots de passe en texte brut, chiffrés ou faiblement hachés (voir A3 : Exposition de données sensibles 2017).
-* Absence ou utilisation inefficace de l’authentification multi-facteur.
-* Exposition des ID de session dans l'URL. (ex : réécriture)
-* Non rotation des ID de session après une connexion réussie
-* N'invalide pas correctement les ID de session. Les sessions utilisateurs ou les jetons d'authentification (en particulier les jetons SSO) ne sont pas correctement invalidés lors de la déconnexion ou après une période d'inactivité.
+- Autorise les attaques automatisées telles que le [credential stuffing](https://owasp.org/www-community/attacks/Credential_stuffing), où l'attaquant dispose d'une liste de noms d'utilisateurs valides et mots de passe.
+- Permet la force brute ou d'autres attaques automatisées
+- Autorise les mots de passe par défaut, faibles ou bien connus, tels que "Password1" ou "admin / admin".
+- Utilise des processus de récupération des informations d'identification faibles ou inefficaces et des processus de mot de passe oublié, tels que « "Questions secrètes" », qui ne peuvent être sécurisées.
+- Utilise des mots de passe en texte brut, chiffrés ou faiblement hachés (voir A3 : Exposition de données sensibles 2017).
+- Absence ou utilisation inefficace de l’authentification multi-facteur.
+- Exposition des ID de session dans l'URL. (ex : réécriture)
+- Non rotation des ID de session après une connexion réussie
+- N'invalide pas correctement les ID de session. Les sessions utilisateurs ou les jetons d'authentification (en particulier les jetons SSO) ne sont pas correctement invalidés lors de la déconnexion ou après une période d'inactivité.
 
 ## Comment protéger l'application ? 
 
-* Lorsque cela est possible, implémentez l'authentification multifacteur pour éviter les attaques automatisées, le bourrage des informations d'identification, le brute force et la réutilisation des informations d'identification volées.
-* Ne pas livrer ou déployer avec des informations d'identification par défaut, en particulier pour les utilisateurs avec privilèges.
-* Intégrer des tests de mots de passes faibles, à la création ou au changement. Comparer ce mot de passe avec la liste des [tops 10000 mots de passe faibles](https://github.com/danielmiessler/SecLists/tree/master/Passwords).  
-* Respecter la longueur, la complexité et la rotation des mots de passe par rapport aux directives [NIST 800-63 B à la section 5.1.1](https://pages.nist.gov/800-63-3/sp800-63b.html#memsecret) 
+- Lorsque cela est possible, implémentez l'authentification multifacteur pour éviter les attaques automatisées, le bourrage des informations d'identification, le brute force et la réutilisation des informations d'identification volées.
+- Ne pas livrer ou déployer avec des informations d'identification par défaut, en particulier pour les utilisateurs avec privilèges.
+- Intégrer des tests de mots de passes faibles, à la création ou au changement. Comparer ce mot de passe avec la liste des [tops 10000 mots de passe faibles](https://github.com/danielmiessler/SecLists/tree/master/Passwords).  
+- Respecter la longueur, la complexité et la rotation des mots de passe par rapport aux directives [NIST 800-63 B à la section 5.1.1](https://pages.nist.gov/800-63-3/sp800-63b.html#memsecret) 
 NIST 800-63 B à la section 5.1.1 ou autre directives modernes
-* Assurez-vous que l'inscription, la récupération des informations d'identification et les chemins d'accès aux API sont durcis contre les attaques d'énumération de compte en utilisant le même message pour tous les résultats
-* Limiter ou retarder de plus en plus les tentatives de connexions infructueuses. Enregistrer tous les échecs et alerter les administrateurs lors du bourrage des informations d'identification, de brute force ou d'autres attaques détectées.
+- Assurez-vous que l'inscription, la récupération des informations d'identification et les chemins d'accès aux API sont durcis contre les attaques d'énumération de compte en utilisant le même message pour tous les résultats
+- Limiter ou retarder de plus en plus les tentatives de connexions infructueuses. Enregistrer tous les échecs et alerter les administrateurs lors du bourrage des informations d'identification, de brute force ou d'autres attaques détectées.
  * Utilisez un gestionnaire de session intégré et sécurisé côté serveur qui génère un nouvel ID de session aléatoire avec une entropie élevée après la connexion. Les ID de session ne doivent pas se trouver dans l'URL, ils doivent être stockés de manière sécurisée et être invalidés après la déconnexion, une inactivité et une certaine durée. 
  
 ## Exemples de scenarios d'attaques
@@ -45,19 +45,19 @@ NIST 800-63 B à la section 5.1.1 ou autre directives modernes
 
 ### OWASP
 
-* [OWASP Proactive Controls: Implement Identity and Authentication Controls](https://owasp.org/www-project-proactive-controls/v3/en/c6-digital-identity)
-* [OWASP Application Security Verification Standard: V2 Authentication](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x11-V2-Authentication.md)
-* [OWASP Application Security Verification Standard: V3 Session Management](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x12-V3-Session-management.md)
-* [OWASP Testing Guide: Identity](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/03-Identity_Management_Testing/README)
+- [OWASP Proactive Controls: Implement Identity and Authentication Controls](https://owasp.org/www-project-proactive-controls/v3/en/c6-digital-identity)
+- [OWASP Application Security Verification Standard: V2 Authentication](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x11-V2-Authentication.md)
+- [OWASP Application Security Verification Standard: V3 Session Management](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x12-V3-Session-management.md)
+- [OWASP Testing Guide: Identity](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/03-Identity_Management_Testing/README)
  and [Authentication](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/04-Authentication_Testing/README)
-* [OWASP Cheat Sheet: Authentication](https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html)
-* [OWASP Cheat Sheet: Credential Stuffing](https://cheatsheetseries.owasp.org/cheatsheets/Credential_Stuffing_Prevention_Cheat_Sheet.html)
-* [OWASP Cheat Sheet: Forgot Password](https://cheatsheetseries.owasp.org/cheatsheets/Forgot_Password_Cheat_Sheet.html)
-* [OWASP Cheat Sheet: Session Management](https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html)
-* [OWASP Automated Threats Handbook](https://owasp.org/www-project-automated-threats-to-web-applications/)
+- [OWASP Cheat Sheet: Authentication](https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html)
+- [OWASP Cheat Sheet: Credential Stuffing](https://cheatsheetseries.owasp.org/cheatsheets/Credential_Stuffing_Prevention_Cheat_Sheet.html)
+- [OWASP Cheat Sheet: Forgot Password](https://cheatsheetseries.owasp.org/cheatsheets/Forgot_Password_Cheat_Sheet.html)
+- [OWASP Cheat Sheet: Session Management](https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html)
+- [OWASP Automated Threats Handbook](https://owasp.org/www-project-automated-threats-to-web-applications/)
 
 ### Externes
 
-* [NIST 800-63b: 5.1.1 Memorized Secrets](https://pages.nist.gov/800-63-3/sp800-63b.html#memsecret) - for thorough, modern, evidence-based advice on authentication. 
-* [CWE-287: Improper Authentication](https://cwe.mitre.org/data/definitions/287.html)
-* [CWE-384: Session Fixation](https://cwe.mitre.org/data/definitions/384.html)
+- [NIST 800-63b: 5.1.1 Memorized Secrets](https://pages.nist.gov/800-63-3/sp800-63b.html#memsecret) - for thorough, modern, evidence-based advice on authentication. 
+- [CWE-287: Improper Authentication](https://cwe.mitre.org/data/definitions/287.html)
+- [CWE-384: Session Fixation](https://cwe.mitre.org/data/definitions/384.html)

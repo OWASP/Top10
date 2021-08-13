@@ -6,15 +6,15 @@ The Open Web Application Security Project (OWASP/日本語: オワスプ) は、
 
 OWASPには、自由でオープンなものがあります:
 
-* アプリケーションセキュリティのためのツールと標準
-* アプリケーションセキュリティテスト、セキュアなコード開発、セキュアなコードレビューについての一揃いの文献
-* プレゼンテーションや[ビデオ](https://www.youtube.com/user/OWASPGLOBAL)
-* 開発者に共通なさまざまなトピックを扱った[チートシート](https://cheatsheetseries.owasp.org/) 
-* 標準的なセキュリティコントロールとライブラリ
-* [世界中にあるローカルチャプター](https://owasp.org/chapters/)
-* 先端的な調査研究
-* 多方面にわたる [世界中のコンファレンス](https://owasp.org/events/)
-* [メーリングリスト](https://lists.owasp.org/mailman/listinfo)
+- アプリケーションセキュリティのためのツールと標準
+- アプリケーションセキュリティテスト、セキュアなコード開発、セキュアなコードレビューについての一揃いの文献
+- プレゼンテーションや[ビデオ](https://www.youtube.com/user/OWASPGLOBAL)
+- 開発者に共通なさまざまなトピックを扱った[チートシート](https://cheatsheetseries.owasp.org/) 
+- 標準的なセキュリティコントロールとライブラリ
+- [世界中にあるローカルチャプター](https://owasp.org/chapters/)
+- 先端的な調査研究
+- 多方面にわたる [世界中のコンファレンス](https://owasp.org/events/)
+- [メーリングリスト](https://lists.owasp.org/mailman/listinfo)
 
 さらに多くの情報はこちら: [https://owasp.org](https://owasp.org)
 
@@ -34,5 +34,5 @@ The OWASP Foundation(オワスプ・ファウンデーション)は、プロジ�
 
 ![license](images/license.png)
 
-Copyright © 2003-2017 The OWASP Foundation. This document is released under the Creative Commons Attribution Share-Alike 4.0 license. For any reuse or distribution, you must make it clear to others the license terms of this work.
+Copyright © 2003-2021 The OWASP Foundation. This document is released under the Creative Commons Attribution Share-Alike 4.0 license. For any reuse or distribution, you must make it clear to others the license terms of this work.
 

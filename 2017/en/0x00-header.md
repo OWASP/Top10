@@ -10,8 +10,8 @@ August 13, 2021
 
 ![OWASP Logo](images/front-wasp.png)
 
-|  | ![Creative Commons License Logo](images/front-cc.png) |
-| -- | -- |
+|                   | ![Creative Commons License Logo](images/front-cc.png)                                           |
+| ----------------- | ----------------------------------------------------------------------------------------------- |
 | https://owasp.org | This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License |
 
 

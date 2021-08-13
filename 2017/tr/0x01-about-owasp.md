@@ -6,15 +6,15 @@ Open Web Application Security Project (OWASP), kendisini kurumların güvenilebi
 
 OWASP ile, aşağıdakileri açık ve ücretsiz bir şekilde temin edebilirsiniz:
 
-* Uygulama güvenliği araçları ve standartları
-* Uygulama güvenlik testleri, güvenli kod geliştirme ve güvenli kod analizi hakkında eksiksiz kitaplar.
-* Sunumlar ve [videolar](https://www.youtube.com/user/OWASPGLOBAL).
-* Yaygın pek çok konu hakkında [kopya kağıtları](https://cheatsheetseries.owasp.org/)
-* Standart güvenlik kontrolleri ve kütüphaneleri.
-* [Dünya çapında yerel topluluklar](https://owasp.org/chapters/).
-* İleri düzey ve son teknoloji araştırma.
-* Dünya çapında geniş kapsamlı [konferanslar](https://owasp.org/events/).
-* [E-posta listeleri](https://lists.owasp.org/mailman/listinfo).
+- Uygulama güvenliği araçları ve standartları
+- Uygulama güvenlik testleri, güvenli kod geliştirme ve güvenli kod analizi hakkında eksiksiz kitaplar.
+- Sunumlar ve [videolar](https://www.youtube.com/user/OWASPGLOBAL).
+- Yaygın pek çok konu hakkında [kopya kağıtları](https://cheatsheetseries.owasp.org/)
+- Standart güvenlik kontrolleri ve kütüphaneleri.
+- [Dünya çapında yerel topluluklar](https://owasp.org/chapters/).
+- İleri düzey ve son teknoloji araştırma.
+- Dünya çapında geniş kapsamlı [konferanslar](https://owasp.org/events/).
+- [E-posta listeleri](https://lists.owasp.org/mailman/listinfo).
 
 Daha fazla bilgi için: [https://owasp.org](https://owasp.org).
 
@@ -34,5 +34,5 @@ Bize katılın!
 
 ![license](images/license.png)
 
-Copyright © 2003-2017 The OWASP Foundation. Bu doküman Creative Commons Attribution Share-Alike 4.0 lisansı kapsamında yayınlanmıştır. 
+Copyright © 2003-2021 The OWASP Foundation. Bu doküman Creative Commons Attribution Share-Alike 4.0 lisansı kapsamında yayınlanmıştır. 
 Herhangi bir tekrar kullanım veya dağıtım için, bu çalışmanın lisans şartlarını belirtmeniz gerekmektedir.

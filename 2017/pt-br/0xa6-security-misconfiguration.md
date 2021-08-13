@@ -8,26 +8,26 @@
 ## A Aplicação Está Vulnerável?
 
 A aplicação pode ser vulnerável se:
-* Falta endurecimento de segurança adequado em qualquer parte das camadas da aplicação.
-* Recursos desnecessários são habilitados ou instalados (por exemplo, portas, serviços, páginas, contas ou privilégios desnecessários).
-* As contas padrão e suas senhas ainda são ativadas e inalteradas.
-* O tratamento de erros revela vestígios de *stacktraces* ou outras mensagens de erro excessivamente informativas aos usuários.
-* Para sistemas atualizados, os recursos de segurança mais recentes estão desativados ou não estão configurados de forma segura.
-* As configurações de segurança nos servidores de aplicação, frameworks de aplicação (por exemplo, Struts, Spring, ASP.NET), bibliotecas, bancos de dados, etc., não configurados para valores seguros.
-* O servidor não envia cabeçalhos ou diretivas de segurança ou não está configurado para valores seguros.
-* O software está desatualizado ou vulnerável (consulte **A9:2017-Utilização de Componentes com Vulnerabilidades Conhecidas**). 
+- Falta endurecimento de segurança adequado em qualquer parte das camadas da aplicação.
+- Recursos desnecessários são habilitados ou instalados (por exemplo, portas, serviços, páginas, contas ou privilégios desnecessários).
+- As contas padrão e suas senhas ainda são ativadas e inalteradas.
+- O tratamento de erros revela vestígios de *stacktraces* ou outras mensagens de erro excessivamente informativas aos usuários.
+- Para sistemas atualizados, os recursos de segurança mais recentes estão desativados ou não estão configurados de forma segura.
+- As configurações de segurança nos servidores de aplicação, frameworks de aplicação (por exemplo, Struts, Spring, ASP.NET), bibliotecas, bancos de dados, etc., não configurados para valores seguros.
+- O servidor não envia cabeçalhos ou diretivas de segurança ou não está configurado para valores seguros.
+- O software está desatualizado ou vulnerável (consulte **A9:2017-Utilização de Componentes com Vulnerabilidades Conhecidas**). 
 Sem um processo planejado e repetido de configuração de segurança de aplicações, os sistemas estão em maior risco.
 
 ## Como Prevenir
 
 Processos de instalação segura devem ser implementados, incluindo:
 
-* Um processo de endurecimento replicável que torne rápido e fácil implantar outro ambiente que esteja devidamente bloqueado. Desenvolvimento, QA e ambientes de produção devem ser configurados de forma idêntica, com diferentes credenciais usadas em cada ambiente. Este processo deve ser automatizado para minimizar o esforço necessário para configurar um novo ambiente seguro.
-* Uma plataforma mínima sem recursos, componentes, documentação e amostras desnecessários. Remova ou não instale recursos e frameworks não utilizados.
-* Uma tarefa para revisar e atualizar as configurações apropriadas para todas as notas de segurança, atualizações e patches como parte do processo de gerenciamento de patches (veja **A9:2017-Utilização de Componentes com Vulnerabilidades Conhecidas**).
-* Uma arquitetura de aplicações segmentados que forneça separação efetiva e segura entre componentes ou inquilinos, com segmentação, conteinerização ou grupos de segurança de nuvem (ACLs).
-* Enviar diretivas de segurança para agentes clientes, por exemplo [Cabeçalhos de segurança](https://owasp.org/www-project-secure-headers/).
-* Um processo automatizado para verificar a eficácia das configurações e configurações em todos os ambientes
+- Um processo de endurecimento replicável que torne rápido e fácil implantar outro ambiente que esteja devidamente bloqueado. Desenvolvimento, QA e ambientes de produção devem ser configurados de forma idêntica, com diferentes credenciais usadas em cada ambiente. Este processo deve ser automatizado para minimizar o esforço necessário para configurar um novo ambiente seguro.
+- Uma plataforma mínima sem recursos, componentes, documentação e amostras desnecessários. Remova ou não instale recursos e frameworks não utilizados.
+- Uma tarefa para revisar e atualizar as configurações apropriadas para todas as notas de segurança, atualizações e patches como parte do processo de gerenciamento de patches (veja **A9:2017-Utilização de Componentes com Vulnerabilidades Conhecidas**).
+- Uma arquitetura de aplicações segmentados que forneça separação efetiva e segura entre componentes ou inquilinos, com segmentação, conteinerização ou grupos de segurança de nuvem (ACLs).
+- Enviar diretivas de segurança para agentes clientes, por exemplo [Cabeçalhos de segurança](https://owasp.org/www-project-secure-headers/).
+- Um processo automatizado para verificar a eficácia das configurações e configurações em todos os ambientes
 
 ## Exemplo de Cenários de Ataque
 
@@ -43,16 +43,16 @@ Processos de instalação segura devem ser implementados, incluindo:
 
 ### OWASP
 
-* [OWASP Testing Guide: Configuration Management](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/README)
-* [OWASP Testing Guide: Testing for Error Codes](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/08-Testing_for_Error_Handling/README)
-* [OWASP Security Headers Project](https://owasp.org/www-project-secure-headers/)
+- [OWASP Testing Guide: Configuration Management](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/README)
+- [OWASP Testing Guide: Testing for Error Codes](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/08-Testing_for_Error_Handling/README)
+- [OWASP Security Headers Project](https://owasp.org/www-project-secure-headers/)
 
 For additional requirements in this area, see the [ASVS requirements areas for Security Configuration (V11 and V19)](https://owasp.org/www-project-application-security-verification-standard/).
 
 ### Externas
 
-* [NIST Guide to General Server Hardening](https://csrc.nist.gov/publications/detail/sp/800-123/final)
-* [CWE-2: Environmental Security Flaws](https://cwe.mitre.org/data/definitions/2.html)
-* [CWE-16: Configuration](https://cwe.mitre.org/data/definitions/16.html)
-* [CWE-388: Error Handling](https://cwe.mitre.org/data/definitions/388.html)
-* [CIS Security Configuration Guides/Benchmarks](https://www.cisecurity.org/cis-benchmarks/)
+- [NIST Guide to General Server Hardening](https://csrc.nist.gov/publications/detail/sp/800-123/final)
+- [CWE-2: Environmental Security Flaws](https://cwe.mitre.org/data/definitions/2.html)
+- [CWE-16: Configuration](https://cwe.mitre.org/data/definitions/16.html)
+- [CWE-388: Error Handling](https://cwe.mitre.org/data/definitions/388.html)
+- [CIS Security Configuration Guides/Benchmarks](https://www.cisecurity.org/cis-benchmarks/)

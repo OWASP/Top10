@@ -6,15 +6,15 @@ The Open Web Application Security Project (OWASP) is an open community dedicated
 
 At OWASP, you'll find free and open:
 
-* Application security tools and standards.
-* Complete books on application security testing, secure code development, and secure code review.
-* Presentations and [videos](https://www.youtube.com/user/OWASPGLOBAL).
-* [Cheat sheets](https://cheatsheetseries.owasp.org/) on many common topics.
-* Standard security controls and libraries.
-* [Local chapters worldwide](https://owasp.org/chapters/).
-* Cutting edge research.
-* Extensive [conferences worldwide](https://owasp.org/events/).
-* [Google Groups](https://groups.google.com/a/owasp.org).
+- Application security tools and standards.
+- Complete books on application security testing, secure code development, and secure code review.
+- Presentations and [videos](https://www.youtube.com/user/OWASPGLOBAL).
+- [Cheat sheets](https://cheatsheetseries.owasp.org/) on many common topics.
+- Standard security controls and libraries.
+- [Local chapters worldwide](https://owasp.org/chapters/).
+- Cutting edge research.
+- Extensive [conferences worldwide](https://owasp.org/events/).
+- [Google Groups](https://groups.google.com/a/owasp.org).
 
 Learn more at: [https://owasp.org](https://owasp.org).
 
@@ -34,5 +34,5 @@ Come join us!
 
 ![license](images/license.png)
 
-Copyright © 2003-2017 The OWASP Foundation. This document is released under the Creative Commons Attribution Share-Alike 4.0 license. For any reuse or distribution, you must make it clear to others the license terms of this work.
+Copyright © 2003-2021 The OWASP Foundation. This document is released under the Creative Commons Attribution Share-Alike 4.0 license. For any reuse or distribution, you must make it clear to others the license terms of this work.
 

@@ -9,26 +9,26 @@
 
 Erişim kontrolü, kullanıcıların kendilerine verilen izinler dışında bir şey yapamayacağı şekilde bir politika uygulamaktadır. Uyumsuzluklar genellikle yetkisiz bilgi ifşasına, tüm verinin değiştirilmesine veya silinmesine veya kullanıcının sınırları dışında bir iş fonksiyonunun gerçekleştirilmesine yol açmaktadır. Yaygın erişim kontrolü açıklıkları şunları içermektedir:
 
-* URL'i, iç uygulama durumunu veya HTML sayfasını değiştirerek veya basitçe özel bir API saldırı aracı kullanarak erişim kontrollerinin atlatılması.
-* Birincil anahtarın başka bir kullanıcının kaydına göre değiştirilmesine izin vermek ve bu şekilde başkalarının hesaplarının görülmesine ve değiştirilmesine izin vermek.
-* Yetki yükseltmesi. Giriş yapmadan bir kullanıcı gibi davranmak veya bir kullanıcı olarak girip bir yönetici gibi davranmak.
-* Bir JSON Web Token (JWT) erişim anahtarını veya bir çerezi değiştirmek veya tekrar oynatmak gibi meta veri değiştirmek veya yetki yükseltmek için gizli alanları değiştirmek veya JWT geçersiz kılma sürecini suistimal etmek.
-* CORS yanlış yapılandırması aracılığıyla yetkisiz API erişimleri.
-* Kimlik doğrulaması yapılmamış bir kullanıcı olarak kimlik doğrulama gerektiren sayfalara veya standart bir kullanıcı olarak yetki gerektiren sayfalara erişim. POST, PUT ve DELETE için eksik erişim kontrolleri ile API erişimi.
+- URL'i, iç uygulama durumunu veya HTML sayfasını değiştirerek veya basitçe özel bir API saldırı aracı kullanarak erişim kontrollerinin atlatılması.
+- Birincil anahtarın başka bir kullanıcının kaydına göre değiştirilmesine izin vermek ve bu şekilde başkalarının hesaplarının görülmesine ve değiştirilmesine izin vermek.
+- Yetki yükseltmesi. Giriş yapmadan bir kullanıcı gibi davranmak veya bir kullanıcı olarak girip bir yönetici gibi davranmak.
+- Bir JSON Web Token (JWT) erişim anahtarını veya bir çerezi değiştirmek veya tekrar oynatmak gibi meta veri değiştirmek veya yetki yükseltmek için gizli alanları değiştirmek veya JWT geçersiz kılma sürecini suistimal etmek.
+- CORS yanlış yapılandırması aracılığıyla yetkisiz API erişimleri.
+- Kimlik doğrulaması yapılmamış bir kullanıcı olarak kimlik doğrulama gerektiren sayfalara veya standart bir kullanıcı olarak yetki gerektiren sayfalara erişim. POST, PUT ve DELETE için eksik erişim kontrolleri ile API erişimi.
 
 ## Nasıl Önlenir
 
 Erişim kontrolü sadece, saldırganın erişim kontrollerine veya meta verilere erişemeyeceği güvenilir sunucu taraflı kodda veya sunucusuz API'lerde zorunlu tutulduysa etkili olmaktadır.
 
-* Herkese açık kaynaklar hariç diğer tüm kaynaklara erişim varsayılan olarak reddedilmelidir.
-* CORS kullanımını azaltmak gibi erişim kontrolü mekanizmaları bir sefer oluşturulmalı ve uygulama boyunca tekrar kullanılmalıdır.
-* Model erişim kontrolleri, kullanıcının herhangi bir kayıt oluşturabileceğini, herhangi bir kaydı okuyabileceğini, güncelleyebileceğini veya silebileceğini kabul etmek yerine, kayıt mülkiyetini gerektirmelidir. 
-* Özgün uygulama iş limiti gereksinimleri etki alanı modelleri ile uygulanmalıdır.
-* Sunucu dizin listelemesi devre dışı bırakılmalı ve web kök dizininde dosya meta verileri (örn. .git) ve yedekleme dosyaları bulunmamalıdır.
-* Erişim kontrolü ihlalleri loglanmalı ve uygun görüldüğünde (örn. tekrar eden ihlaller) yöneticiler uyarılmalıdır.
-* Otomatize saldırı araçlarından gelebilecek zararları en aza indirmek için API ve kontrolör erişimi sınırlandırılmalıdır.
-* Çıkış yapıldıktan sonra JWT anahtarları sunucuda geçersiz kılınmalıdır.
-* Geliştiricler ve QA çalışanları fonksiyonel erişim kontrolü birim ve entegrasyon testleri yapmalıdır.
+- Herkese açık kaynaklar hariç diğer tüm kaynaklara erişim varsayılan olarak reddedilmelidir.
+- CORS kullanımını azaltmak gibi erişim kontrolü mekanizmaları bir sefer oluşturulmalı ve uygulama boyunca tekrar kullanılmalıdır.
+- Model erişim kontrolleri, kullanıcının herhangi bir kayıt oluşturabileceğini, herhangi bir kaydı okuyabileceğini, güncelleyebileceğini veya silebileceğini kabul etmek yerine, kayıt mülkiyetini gerektirmelidir. 
+- Özgün uygulama iş limiti gereksinimleri etki alanı modelleri ile uygulanmalıdır.
+- Sunucu dizin listelemesi devre dışı bırakılmalı ve web kök dizininde dosya meta verileri (örn. .git) ve yedekleme dosyaları bulunmamalıdır.
+- Erişim kontrolü ihlalleri loglanmalı ve uygun görüldüğünde (örn. tekrar eden ihlaller) yöneticiler uyarılmalıdır.
+- Otomatize saldırı araçlarından gelebilecek zararları en aza indirmek için API ve kontrolör erişimi sınırlandırılmalıdır.
+- Çıkış yapıldıktan sonra JWT anahtarları sunucuda geçersiz kılınmalıdır.
+- Geliştiricler ve QA çalışanları fonksiyonel erişim kontrolü birim ve entegrasyon testleri yapmalıdır.
 
 ## Örnek Saldırı Senaryoları
 
@@ -56,15 +56,15 @@ Eğer kimliği doğrulanmamış bir kullanıcı iki sayfadan herhangi birine eri
 
 ### OWASP
 
-* [OWASP Proaktif Kontroller: Erişim Kontrolleri](https://owasp.org/www-project-proactive-controls/v3/en/c7-enforce-access-controls)
-* [OWASP Uygulama Güveliği Doğrulama Standardı: V4 Erişim Kontrolü](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x11-V2-Authentication.md)
-* [OWASP Test Rehberi: Yetkilendirme Testleri](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/05-Authorization_Testing/README)
-* [OWASP Kopya Kağıdı: Erişim Kontrolü](https://cheatsheetseries.owasp.org/cheatsheets/Access_Control_Cheat_Sheet.html)
+- [OWASP Proaktif Kontroller: Erişim Kontrolleri](https://owasp.org/www-project-proactive-controls/v3/en/c7-enforce-access-controls)
+- [OWASP Uygulama Güveliği Doğrulama Standardı: V4 Erişim Kontrolü](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x11-V2-Authentication.md)
+- [OWASP Test Rehberi: Yetkilendirme Testleri](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/05-Authorization_Testing/README)
+- [OWASP Kopya Kağıdı: Erişim Kontrolü](https://cheatsheetseries.owasp.org/cheatsheets/Access_Control_Cheat_Sheet.html)
 
 ### Dış Kaynaklar
 
-* [CWE-22: Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')](https://cwe.mitre.org/data/definitions/22.html)
-* [CWE-284: Improper Access Control (Authorization)](https://cwe.mitre.org/data/definitions/284.html)
-* [CWE-285: Improper Authorization](https://cwe.mitre.org/data/definitions/285.html)
-* [CWE-639: Authorization Bypass Through User-Controlled Key](https://cwe.mitre.org/data/definitions/639.html)
-* [PortSwigger: Exploiting CORS misconfiguration](https://portswigger.net/research/exploiting-cors-misconfigurations-for-bitcoins-and-bounties)
+- [CWE-22: Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')](https://cwe.mitre.org/data/definitions/22.html)
+- [CWE-284: Improper Access Control (Authorization)](https://cwe.mitre.org/data/definitions/284.html)
+- [CWE-285: Improper Authorization](https://cwe.mitre.org/data/definitions/285.html)
+- [CWE-639: Authorization Bypass Through User-Controlled Key](https://cwe.mitre.org/data/definitions/639.html)
+- [PortSwigger: Exploiting CORS misconfiguration](https://portswigger.net/research/exploiting-cors-misconfigurations-for-bitcoins-and-bounties)

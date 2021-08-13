@@ -14,18 +14,18 @@ Uzun vadede, tüm yazılım geliştirme takımlarına ve kurumlara kendi kültü
 
 OWASP İlk 10 çalışmasının uygulama güvenliği için yapacağınız çalışmalarda kullanışlı olmasını umuyoruz. Sorularınız, yorumlarınız ve düşünceleriniz için aşağıdaki Github projesi üzerinden OWASP ile iletişime geçebilirsiniz:
 
-* [https://github.com/OWASP/Top10/issues](https://github.com/OWASP/Top10/issues)
+- [https://github.com/OWASP/Top10/issues](https://github.com/OWASP/Top10/issues)
 
 OWASP İlk 10 projesine ve çevirilerine aşağıdaki link üzerinden erişebilirsiniz:
 
-* [https://owasp.org/www-project-top-ten/](https://owasp.org/www-project-top-ten/)
+- [https://owasp.org/www-project-top-ten/](https://owasp.org/www-project-top-ten/)
 
 Son olarak, OWASP İlk 10 projesinin kurucu liderleri olan Dave Wichers ve Jeff Williams’a tüm topluluğun yardımıyla bu projeyi bitirme konusunda bize olan inançları ve tüm çabaları için teşekkür etmek istiyoruz. Teşekkürler! 
 
-* Andrew van der Stock
-* Brian Glas
-* Neil Smithline
-* Torsten Gigler
+- Andrew van der Stock
+- Brian Glas
+- Neil Smithline
+- Torsten Gigler
 
 ## Teşekkürler
 [Autodesk](https://www.autodesk.com)'e OWASP İlk 10 -2017 projesine sponsor oldukları için teşekkürler.

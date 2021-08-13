@@ -11,25 +11,25 @@ Kullanıcının kimliğinin onaylanması, kimlik doğrulama ve oturum yönetimi 
 
 Uygulama aşağıdaki durumlarda kimlik doğrulama açıklıkları içeriyor olabilir:
 
-*  Saldırganın geçerli kullanıcı adı ve parola listesine sahip olduğu [sözlük saldırıları](https://owasp.org/www-community/attacks/Credential_stuffing) gibi otomatize saldırılara izin veriyorsa.
-* Kaba kuvvet veya diğer otomatize saldırılara izin veriyorsa.
-* "Password1" veya "admin/admin" gibi varsayılan, zayıf veya herkesçe bilinen parolalara izin veriyorsa.
-* Güvenli olması mümkün olmayan "güvenlik soruları" gibi zayıf veya etkisiz hesap kurtarma ve unutulan parola süreçleri kullanıyorsa. 
-* Açık metin, şifrelenmiş veya zayıf bir şekilde özeti alınmış parolalar kullanıyorsa (Bakınız **A3:2017-Hassas Bilgi İfşası**).
-* Eksik veya etkisiz çok katmanlı kimlik doğrulamaya sahipse.
-* Oturum ID değerlerini URL üzerinden taşıyorsa (örn. URL'i yeniden yazma).
-* Başarılı giriş sonrası oturum ID değerlerini değiştirmiyorsa.
-* Oturum ID değerlerini doğru bir şekilde sonlandırmıyorsa. Çıkış veya hareketsizlik durumunda kullanıcı oturumları veya kimlik doğrulama anahtarları (özellikle tek oturum açma(SSO) anahtarları) düzgün bir şekilde sonlandırılmıyorsa.
+-  Saldırganın geçerli kullanıcı adı ve parola listesine sahip olduğu [sözlük saldırıları](https://owasp.org/www-community/attacks/Credential_stuffing) gibi otomatize saldırılara izin veriyorsa.
+- Kaba kuvvet veya diğer otomatize saldırılara izin veriyorsa.
+- "Password1" veya "admin/admin" gibi varsayılan, zayıf veya herkesçe bilinen parolalara izin veriyorsa.
+- Güvenli olması mümkün olmayan "güvenlik soruları" gibi zayıf veya etkisiz hesap kurtarma ve unutulan parola süreçleri kullanıyorsa. 
+- Açık metin, şifrelenmiş veya zayıf bir şekilde özeti alınmış parolalar kullanıyorsa (Bakınız **A3:2017-Hassas Bilgi İfşası**).
+- Eksik veya etkisiz çok katmanlı kimlik doğrulamaya sahipse.
+- Oturum ID değerlerini URL üzerinden taşıyorsa (örn. URL'i yeniden yazma).
+- Başarılı giriş sonrası oturum ID değerlerini değiştirmiyorsa.
+- Oturum ID değerlerini doğru bir şekilde sonlandırmıyorsa. Çıkış veya hareketsizlik durumunda kullanıcı oturumları veya kimlik doğrulama anahtarları (özellikle tek oturum açma(SSO) anahtarları) düzgün bir şekilde sonlandırılmıyorsa.
 
 ## Nasıl Önlenir
 
-* Otomatize saldırıları, sözlük saldırılarını, kaba kuvvet saldırılarını ve çalınan giriş bilgilerinin tekrar kullanılmasını önlemek için mümkün olduğunca çok katmanlı kimlik doğrulama uygulanmalıdır. 
-* Özellikle yönetici kullanıcıları için herhangi bir varsayılan giriş bilgisi kullanılmamalı veya bu şekilde kullanıma sunulmamalıdır.
-* [En kötü 10000 parola](https://github.com/danielmiessler/SecLists/tree/master/Passwords) gibi bir listeye karşı yeni veya değiştirilmiş parolaları kıyaslamak gibi zayıf parola kontrolleri uygulanmalıdır.
-* Parola uzunluğu, karmaşıklığı ve değiştirme politikaları, [NIST 800-63 B's guidelines in section 5.1.1 for Memorized Secrets](https://pages.nist.gov/800-63-3/sp800-63b.html#memsecret) veya diğer modern, kanıta dayalı parola politikalarına göre belirlenmelidir.
-* Tüm sonuçlar için aynı mesaj kullanılarak, kayıt yapma, hesap kurtarma ve API yolları geçerli hesapları toplama saldırılarına karşı güçlendirilmelidir.
-* Başarısız giriş denemeleri sınırlandırılmalı veya artarak geciktirilmelidir. Tüm başarısız denemeler loglanmalı ve sözlük saldırıları, kaba kuvvet saldırıları veya diğer saldırılar tespit edildiğinde yöneticiler uyarılmalıdır.
-* Giriş yapıldıktan sonra yeni bir rastgele oturum ID değeri üreten ve büyük bir entropiye sahip olan sunucu taraflı, güvenli ve gömülü bir oturum yöneticisi kullanılmalıdır. Oturum ID değerleri URL üzerinde olmamalı, güvenli bir şekilde saklanmalı ve çıkış yapıldıktan, belirli bir süre hareketsiz kaldıktan ve geçerlilik süresi dolduktan sonra sonlandırılmalıdır. 
+- Otomatize saldırıları, sözlük saldırılarını, kaba kuvvet saldırılarını ve çalınan giriş bilgilerinin tekrar kullanılmasını önlemek için mümkün olduğunca çok katmanlı kimlik doğrulama uygulanmalıdır. 
+- Özellikle yönetici kullanıcıları için herhangi bir varsayılan giriş bilgisi kullanılmamalı veya bu şekilde kullanıma sunulmamalıdır.
+- [En kötü 10000 parola](https://github.com/danielmiessler/SecLists/tree/master/Passwords) gibi bir listeye karşı yeni veya değiştirilmiş parolaları kıyaslamak gibi zayıf parola kontrolleri uygulanmalıdır.
+- Parola uzunluğu, karmaşıklığı ve değiştirme politikaları, [NIST 800-63 B's guidelines in section 5.1.1 for Memorized Secrets](https://pages.nist.gov/800-63-3/sp800-63b.html#memsecret) veya diğer modern, kanıta dayalı parola politikalarına göre belirlenmelidir.
+- Tüm sonuçlar için aynı mesaj kullanılarak, kayıt yapma, hesap kurtarma ve API yolları geçerli hesapları toplama saldırılarına karşı güçlendirilmelidir.
+- Başarısız giriş denemeleri sınırlandırılmalı veya artarak geciktirilmelidir. Tüm başarısız denemeler loglanmalı ve sözlük saldırıları, kaba kuvvet saldırıları veya diğer saldırılar tespit edildiğinde yöneticiler uyarılmalıdır.
+- Giriş yapıldıktan sonra yeni bir rastgele oturum ID değeri üreten ve büyük bir entropiye sahip olan sunucu taraflı, güvenli ve gömülü bir oturum yöneticisi kullanılmalıdır. Oturum ID değerleri URL üzerinde olmamalı, güvenli bir şekilde saklanmalı ve çıkış yapıldıktan, belirli bir süre hareketsiz kaldıktan ve geçerlilik süresi dolduktan sonra sonlandırılmalıdır. 
 
 ## Örnek Saldırı Senaryoları
 
@@ -43,19 +43,19 @@ Uygulama aşağıdaki durumlarda kimlik doğrulama açıklıkları içeriyor ola
 
 ### OWASP
 
-* [OWASP Proaktif Kontroller: Kimlik ve Kimlik Doğrulama Kontrollerinin Uygulanması](https://owasp.org/www-project-proactive-controls/v3/en/c6-digital-identity)
-* [OWASP Uygulama Güvenliği Doğrulama Standardı: V2 Kimlik Doğrulama](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x11-V2-Authentication.md)
-* [OWASP Uygulama Güvenliği Doğrulama Standardı: V3 Oturum Yönetimi](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x11-V2-Authentication.md)
-* [OWASP Test Rehberi: Kimlik](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/03-Identity_Management_Testing/README)
+- [OWASP Proaktif Kontroller: Kimlik ve Kimlik Doğrulama Kontrollerinin Uygulanması](https://owasp.org/www-project-proactive-controls/v3/en/c6-digital-identity)
+- [OWASP Uygulama Güvenliği Doğrulama Standardı: V2 Kimlik Doğrulama](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x11-V2-Authentication.md)
+- [OWASP Uygulama Güvenliği Doğrulama Standardı: V3 Oturum Yönetimi](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x11-V2-Authentication.md)
+- [OWASP Test Rehberi: Kimlik](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/03-Identity_Management_Testing/README)
  ve [Kimlik Doğrulama](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/04-Authentication_Testing/README)
-* [OWASP Kopya Kağıdı: Kimlik Doğrulama](https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html)
-* [OWASP Kopya Kağıdı: Sözlük Saldırıları](https://cheatsheetseries.owasp.org/cheatsheets/Credential_Stuffing_Prevention_Cheat_Sheet.html)
-* [OWASP Kopya Kağıdı: Unutulmuş Parola](https://cheatsheetseries.owasp.org/cheatsheets/Forgot_Password_Cheat_Sheet.html)
-* [OWASP Kopya Kağıdı: Oturum Yönetimi](https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html)
-* [OWASP Otomatize Tehditler El Kitabı](https://owasp.org/www-project-automated-threats-to-web-applications/)
+- [OWASP Kopya Kağıdı: Kimlik Doğrulama](https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html)
+- [OWASP Kopya Kağıdı: Sözlük Saldırıları](https://cheatsheetseries.owasp.org/cheatsheets/Credential_Stuffing_Prevention_Cheat_Sheet.html)
+- [OWASP Kopya Kağıdı: Unutulmuş Parola](https://cheatsheetseries.owasp.org/cheatsheets/Forgot_Password_Cheat_Sheet.html)
+- [OWASP Kopya Kağıdı: Oturum Yönetimi](https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html)
+- [OWASP Otomatize Tehditler El Kitabı](https://owasp.org/www-project-automated-threats-to-web-applications/)
 
 ### Dış Kaynaklar
 
-* [NIST 800-63b: 5.1.1 Memorized Secrets](https://pages.nist.gov/800-63-3/sp800-63b.html#memsecret) - kimlik doğrulama hakkında tam, modern ve kanıta dayalı tavsiyeler için. 
-* [CWE-287: Improper Authentication](https://cwe.mitre.org/data/definitions/287.html)
-* [CWE-384: Session Fixation](https://cwe.mitre.org/data/definitions/384.html)
+- [NIST 800-63b: 5.1.1 Memorized Secrets](https://pages.nist.gov/800-63-3/sp800-63b.html#memsecret) - kimlik doğrulama hakkında tam, modern ve kanıta dayalı tavsiyeler için. 
+- [CWE-287: Improper Authentication](https://cwe.mitre.org/data/definitions/287.html)
+- [CWE-384: Session Fixation](https://cwe.mitre.org/data/definitions/384.html)

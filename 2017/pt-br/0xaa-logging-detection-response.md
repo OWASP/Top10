@@ -9,10 +9,10 @@
 
 Insuficiência de logs, de detecção, de monitoração e de resposta ativa ocorrem a qualquer momento:
 
-* Eventos auditáveis, como logins, logins com falha e transações de alto valor não são registrados.
-* Os logs de aplicações e APIs não são monitorados para atividades suspeitas.
-* Os limiares de alerta e a escalação da resposta, conforme o risco dos dados detidos pela aplicação, não estão em vigor nem são efetivos.
-* Testes de penetração e varredura pelas ferramentas [DAST](https://owasp.org/www-community/Vulnerability_Scanning_Tools) (como [OWASP ZAP](https://owasp.org/www-project-zap/)) não desencadeiam alertas.
+- Eventos auditáveis, como logins, logins com falha e transações de alto valor não são registrados.
+- Os logs de aplicações e APIs não são monitorados para atividades suspeitas.
+- Os limiares de alerta e a escalação da resposta, conforme o risco dos dados detidos pela aplicação, não estão em vigor nem são efetivos.
+- Testes de penetração e varredura pelas ferramentas [DAST](https://owasp.org/www-community/Vulnerability_Scanning_Tools) (como [OWASP ZAP](https://owasp.org/www-project-zap/)) não desencadeiam alertas.
 
 Para as organizações maiores e de alto desempenho, a falta de respostas ativas, como atividades de alerta e resposta em tempo real como o bloqueio de ataques automatizados em aplicações Web e particularmente APIs, colocaria a organização em risco de um comprometimento estendido. A resposta não precisa necessariamente ser visível para o invasor, apenas que a aplicação e infra-estrutura associada, frameworks, camadas de serviço, etc. podem detectar e alertar humanos ou ferramentas para responder em tempo quase real.
 
@@ -20,11 +20,11 @@ Para as organizações maiores e de alto desempenho, a falta de respostas ativas
 
 De acordo com o risco dos dados armazenados ou processados pela aplicação:
 
-* Certifique-se de todos os logins, falhas de controle de acesso, as falhas de validação de entrada do lado do servidor possam ser registradas com um contexto de usuário suficiente para identificar contas suspeitas ou mal-intencionadas e mantidas por tempo suficiente para permitir análises forenses demoradas.
-* Certifique-se de que os logs são gerados em um formato que pode ser facilmente consumido por uma solução centralizada de gerenciamento de logs.
-* Certifique-se de que as transações de alto valor tenham uma trilha de auditoria com controles de integridade para evitar adulterações ou exclusões, como anexar apenas tabelas de banco de dados ou similares.
-* Estabeleça monitorações e alertas eficazes, de modo que as atividades suspeitas sejam detectadas e respondidas em tempo hábil.
-* Estabeleça ou adote um plano de respostas e recuperação a incidentes, como [NIST 800-61 rev 2](https://csrc.nist.gov/publications/detail/sp/800-61/rev-2/final) ou posterior.
+- Certifique-se de todos os logins, falhas de controle de acesso, as falhas de validação de entrada do lado do servidor possam ser registradas com um contexto de usuário suficiente para identificar contas suspeitas ou mal-intencionadas e mantidas por tempo suficiente para permitir análises forenses demoradas.
+- Certifique-se de que os logs são gerados em um formato que pode ser facilmente consumido por uma solução centralizada de gerenciamento de logs.
+- Certifique-se de que as transações de alto valor tenham uma trilha de auditoria com controles de integridade para evitar adulterações ou exclusões, como anexar apenas tabelas de banco de dados ou similares.
+- Estabeleça monitorações e alertas eficazes, de modo que as atividades suspeitas sejam detectadas e respondidas em tempo hábil.
+- Estabeleça ou adote um plano de respostas e recuperação a incidentes, como [NIST 800-61 rev 2](https://csrc.nist.gov/publications/detail/sp/800-61/rev-2/final) ou posterior.
 
 Existem frameworks de proteção de aplicações comerciais e de código aberto, como [OWASP AppSensor](https://owasp.org/www-project-appsensor/), firewalls de aplicações Web, como [mod_security com o OWASP Core Rule Set](https://owasp.org/www-project-modsecurity-core-rule-set/) e software de correlação de logs com painéis personalizados e alertas.
 
@@ -40,12 +40,12 @@ Existem frameworks de proteção de aplicações comerciais e de código aberto,
 
 ### OWASP
 
-* [OWASP Proactive Controls: Implement Logging and Intrusion Detection](https://owasp.org/www-project-proactive-controls/v3/en/c9-security-logging)
-* [OWASP Application Security Verification Standard: V8 Logging and Monitoring](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x11-V2-Authentication.md)
-* [OWASP Testing Guide: Testing for Detailed Error Code](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x11-V2-Authentication.md)
-* [OWASP Cheat Sheet: Logging](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html)
+- [OWASP Proactive Controls: Implement Logging and Intrusion Detection](https://owasp.org/www-project-proactive-controls/v3/en/c9-security-logging)
+- [OWASP Application Security Verification Standard: V8 Logging and Monitoring](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x11-V2-Authentication.md)
+- [OWASP Testing Guide: Testing for Detailed Error Code](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x11-V2-Authentication.md)
+- [OWASP Cheat Sheet: Logging](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html)
 
 ### Externas
 
-* [CWE-223: Omission of Security-relevant Information](https://cwe.mitre.org/data/definitions/223.html)
-* [CWE-778: Insufficient Logging](https://cwe.mitre.org/data/definitions/778.html)
+- [CWE-223: Omission of Security-relevant Information](https://cwe.mitre.org/data/definitions/223.html)
+- [CWE-778: Insufficient Logging](https://cwe.mitre.org/data/definitions/778.html)

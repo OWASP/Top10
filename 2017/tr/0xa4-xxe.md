@@ -9,22 +9,22 @@
 
 Uygulamalar ve özellikle XML tabanlı web servisleri veya girdi alacak şekilde yapılan entegrasyonlar aşağıdaki durumlarda saldırıya açık olabilir:
 
-* Uygulama özellikle güvenilmeyen kaynaklardan doğrudan XML girdisi kabul ediyorsa veya XML yüklemelerine izin veriyorsa veya daha sonra bir XML işleyicisi tarafından yorumlanacak şekilde güvenilmeyen veriyi XML dokümanına ekliyorsa.
-* Uygulamadaki herhangi bir XML işleyicisi veya SOAP tabanlı web servisleri [doküman tip tanımlarına (DTD)](https://en.wikipedia.org/wiki/Document_type_definition) izin veriyorsa. DTD özelliğini devre dışı bırakma yöntemi işleyiciye göre değiştiği için, [OWASP Kopya Kağıdı: XXE Korunması](https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html) gibi bir referansa başvurulması iyi bir uygulama örneğidir.
-* Uygulama birleşik güvenlik veya tek oturum açma (SSO) amaçları doğrultusunda kimlik işleme için SAML kullanıyorsa. SAML kimlik iddiaları için XML kullanmakta ve bu da zafiyet içerebilmektedir.
-* Uygulama SOAP 1.2 sürümünden önceki sürümleri kullanıyorsa ve XML varlıkları SOAP çerçevesine iletiliyorsa XXE saldırılarına karşı açık olabilmektedir.
-* XXE saldırılarına karşı açık olmak uygulamanın Billion Laughs saldırısı gibi servis dışı bırakma saldırılarına da açık olduğu anlamına gelebilmektedir.
+- Uygulama özellikle güvenilmeyen kaynaklardan doğrudan XML girdisi kabul ediyorsa veya XML yüklemelerine izin veriyorsa veya daha sonra bir XML işleyicisi tarafından yorumlanacak şekilde güvenilmeyen veriyi XML dokümanına ekliyorsa.
+- Uygulamadaki herhangi bir XML işleyicisi veya SOAP tabanlı web servisleri [doküman tip tanımlarına (DTD)](https://en.wikipedia.org/wiki/Document_type_definition) izin veriyorsa. DTD özelliğini devre dışı bırakma yöntemi işleyiciye göre değiştiği için, [OWASP Kopya Kağıdı: XXE Korunması](https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html) gibi bir referansa başvurulması iyi bir uygulama örneğidir.
+- Uygulama birleşik güvenlik veya tek oturum açma (SSO) amaçları doğrultusunda kimlik işleme için SAML kullanıyorsa. SAML kimlik iddiaları için XML kullanmakta ve bu da zafiyet içerebilmektedir.
+- Uygulama SOAP 1.2 sürümünden önceki sürümleri kullanıyorsa ve XML varlıkları SOAP çerçevesine iletiliyorsa XXE saldırılarına karşı açık olabilmektedir.
+- XXE saldırılarına karşı açık olmak uygulamanın Billion Laughs saldırısı gibi servis dışı bırakma saldırılarına da açık olduğu anlamına gelebilmektedir.
 
 ## Nasıl Önlenir
 
 XXE tespiti ve önlemesi için geliştirici eğitimi çok önemlidir. Buna ek olarak, XXE saldırılarının önlenmesi için aşağıdakiler gerekmektedir:
 
-* Mümkün oldukça, karmaşıklığı daha az olan JSON gibi veri formatları kullanılmalı ve hassas verinin serileştirilmesinden kaçınılmalıdır.
-* Uygulama veya üzerinde çalıştığı işletim sistemi tarafından kullanılan tüm XML işleyicileri ve kütüphaneler güncellenmeli ve yamaları yüklenmelidir. Bağımlılık kontrol araçları kullanılmalıdır. SOAP 1.2 veya üzeri sürümlere güncellenmelidir.
-* [OWASP Kopya Kağıdı: XXE Korunması](https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html) dokümanında da belirtildiği üzere, uygulamadaki tüm XML ayrıştırıcılarında XML dış varlıkları ve DTD işleme özelliği devre dışı bırakılmalıdır.
-* XML dokümanları, başlıklar veya nodlar içerisindeki zararlı girdiyi önlemek için, sunucu tarafında pozitif ("beyaz liste") girdi doğrulaması, filtreleme veya sterilizasyon uygulanmalıdır.
-* XML veya XSL dosya yükleme özelliğinin, gelen XML girdisini XSD doğrulaması veya benzer bir doğrulama ile kontrol ettiğinden emin olunmalıdır.
-* Pek çok entegrasyon içeren büyük ve karmaşık uygulamalar için manuel kod analizi en iyi alternatif olsa da, SAST araçları kaynak kod içerisindeki XXE açıklıklarının tespitinde yardımcı olmaktadır.
+- Mümkün oldukça, karmaşıklığı daha az olan JSON gibi veri formatları kullanılmalı ve hassas verinin serileştirilmesinden kaçınılmalıdır.
+- Uygulama veya üzerinde çalıştığı işletim sistemi tarafından kullanılan tüm XML işleyicileri ve kütüphaneler güncellenmeli ve yamaları yüklenmelidir. Bağımlılık kontrol araçları kullanılmalıdır. SOAP 1.2 veya üzeri sürümlere güncellenmelidir.
+- [OWASP Kopya Kağıdı: XXE Korunması](https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html) dokümanında da belirtildiği üzere, uygulamadaki tüm XML ayrıştırıcılarında XML dış varlıkları ve DTD işleme özelliği devre dışı bırakılmalıdır.
+- XML dokümanları, başlıklar veya nodlar içerisindeki zararlı girdiyi önlemek için, sunucu tarafında pozitif ("beyaz liste") girdi doğrulaması, filtreleme veya sterilizasyon uygulanmalıdır.
+- XML veya XSL dosya yükleme özelliğinin, gelen XML girdisini XSD doğrulaması veya benzer bir doğrulama ile kontrol ettiğinden emin olunmalıdır.
+- Pek çok entegrasyon içeren büyük ve karmaşık uygulamalar için manuel kod analizi en iyi alternatif olsa da, SAST araçları kaynak kod içerisindeki XXE açıklıklarının tespitinde yardımcı olmaktadır.
 
 Eğer bu kontroller uygulanabilir değilse, XXE saldırılarını tespit etmek, izlemek ve engellemek için sanal yama kullanımı, API güvenlik geçitleri veya Web Uygulamaları Güvenlik Duvarları (WAF) kullanımı düşünülmelidir.
 
@@ -58,15 +58,15 @@ Gömülü cihazlara saldırılar dahil, pek çok sayıda açık XXE sorunları t
 
 ### OWASP
 
-* [OWASP Uygulama Güvenliği Doğrulama Standardı](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x11-V2-Authentication.md)
-* [OWASP Test Rehberi: XML Enjeksiyonu Testleri](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/07-Testing_for_XML_Injection)
-* [OWASP XXE Açıklığı](https://owasp.org/www-community/vulnerabilities/XML_External_Entity_(XXE)_Processing)
-* [OWASP Kopya Kağıdı: XXE Önlemleri](https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html)
-* [OWASP Kopya Kağıdı: XML Güvenliği](https://cheatsheetseries.owasp.org/cheatsheets/XML_Security_Cheat_Sheet.html)
+- [OWASP Uygulama Güvenliği Doğrulama Standardı](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x11-V2-Authentication.md)
+- [OWASP Test Rehberi: XML Enjeksiyonu Testleri](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/07-Testing_for_XML_Injection)
+- [OWASP XXE Açıklığı](https://owasp.org/www-community/vulnerabilities/XML_External_Entity_(XXE)_Processing)
+- [OWASP Kopya Kağıdı: XXE Önlemleri](https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html)
+- [OWASP Kopya Kağıdı: XML Güvenliği](https://cheatsheetseries.owasp.org/cheatsheets/XML_Security_Cheat_Sheet.html)
 
 ### Dış Kaynaklar
 
-* [CWE-611: Improper Restriction of XXE](https://cwe.mitre.org/data/definitions/611.html)
-* [Billion Laughs Attack](https://en.wikipedia.org/wiki/Billion_laughs_attack)
-* [SAML Security XML External Entity Attack](https://secretsofappsecurity.blogspot.tw/2017/01/saml-security-xml-external-entity-attack.html)
-* [Detecting and exploiting XXE in SAML Interfaces](https://web-in-security.blogspot.tw/2014/11/detecting-and-exploiting-xxe-in-saml.html)
+- [CWE-611: Improper Restriction of XXE](https://cwe.mitre.org/data/definitions/611.html)
+- [Billion Laughs Attack](https://en.wikipedia.org/wiki/Billion_laughs_attack)
+- [SAML Security XML External Entity Attack](https://secretsofappsecurity.blogspot.tw/2017/01/saml-security-xml-external-entity-attack.html)
+- [Detecting and exploiting XXE in SAML Interfaces](https://web-in-security.blogspot.tw/2014/11/detecting-and-exploiting-xxe-in-saml.html)

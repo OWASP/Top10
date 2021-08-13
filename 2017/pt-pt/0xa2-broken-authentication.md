@@ -13,46 +13,46 @@ críticas para a defesa contra ataques relacionados com autenticação.
 
 A sua aplicação poderá ter problemas na autenticação se:
 
-* Permite ataques automatizados tais como [credential stuffing][0xa21] ou força
+- Permite ataques automatizados tais como [credential stuffing][0xa21] ou força
   bruta.
-* Permite palavras-passe padrão, fracas ou conhecidas, tais como "Password1" ou
+- Permite palavras-passe padrão, fracas ou conhecidas, tais como "Password1" ou
   "admin/admin".
-* Usa processos fracos ou ineficazes de recuperação de credenciais e recuperação
+- Usa processos fracos ou ineficazes de recuperação de credenciais e recuperação
   de palavra-passe e.g. "perguntas baseadas em conhecimento", que podem não ser
   seguras.
-* Usa as palavras-passe em claro, encriptação ou resumos (hash) fracas (veja
+- Usa as palavras-passe em claro, encriptação ou resumos (hash) fracas (veja
   [A3:2017 Exposição de Dados Sensíveis][0xa22]).
-* Não possui autenticação multi-fator ou o mesmo não funciona corretamente.
-* Expõe os identificadores de sessão no URL (e.g. quando o endereço é
+- Não possui autenticação multi-fator ou o mesmo não funciona corretamente.
+- Expõe os identificadores de sessão no URL (e.g. quando o endereço é
   reescrito).
-* Não renova os identificadores de sessão após o processo de autenticação ter
+- Não renova os identificadores de sessão após o processo de autenticação ter
   sido bem sucedido.
-* Não invalida convenientemente os identificadores de sessão. As sessões do
+- Não invalida convenientemente os identificadores de sessão. As sessões do
   utilizador ou os tokens de autenticação (em particular os de single sign-on
   (SSO)) não são invalidados convenientemente durante o processo de término de
   sessão (logout) ou após um período de inatividade.
 
 ## Como Prevenir
 
-* Sempre que possível, implementar autenticação multi-fator por forma a prevenir
+- Sempre que possível, implementar autenticação multi-fator por forma a prevenir
   ataques automatizados de _credential stuffing_, força bruta e reutilização de
   credenciais roubadas.
-* Não disponibilizar a aplicação com credenciais pré-definidas, em especial para
+- Não disponibilizar a aplicação com credenciais pré-definidas, em especial para
   utilizadores com perfil de administrador.
-* Implementar verificações de palavras-chave fracas, tais como comparar as
+- Implementar verificações de palavras-chave fracas, tais como comparar as
   palavras-passe novas ou alteradas com a lista das [Top 10000 piores
   palavras-passe][0xa23].
-* Seguir as recomendações do guia NIST 800-63 B na secção 5.1.1 para Memorized
+- Seguir as recomendações do guia NIST 800-63 B na secção 5.1.1 para Memorized
   Secrets ou outras políticas modernas para palavras-passe, baseadas em
   evidências.
-* Assegurar que o registo, recuperação de credenciais e API estão preparados
+- Assegurar que o registo, recuperação de credenciais e API estão preparados
   para resistir a ataques de enumeração de contas usando as mesmas mensagens
   para todos os resultados (sucesso/insucesso).
-* Limitar o número máximo de tentativas de autenticação falhadas ou atrasar
+- Limitar o número máximo de tentativas de autenticação falhadas ou atrasar
   progressivamente esta operação. Registar todas as falhas e alertar os
   administradores quando detetados ataques de teste exaustivo, força bruta ou
   outros.
-* Usar, no servidor, um gestor de sessões seguro que gere novos identificadores
+- Usar, no servidor, um gestor de sessões seguro que gere novos identificadores
   de sessão aleatórios e com elevado nível de entropia após a autenticação. Os
   identificadores de sessão não devem constar no URL, devem ser guardados de
   forma segura e invalidados após o _logout_, por inatividade e ao fim dum
@@ -83,22 +83,22 @@ e o utilizador está ainda autenticado.
 
 ### OWASP
 
-* [OWASP Proactive Controls: Implement Identity and Authentication Controls][0xa27]
-* [OWASP Application Security Verification Standard: V2 Authentication][0xa28]
-* [OWASP Application Security Verification Standard: V3 Session Management][0xa29]
-* [OWASP Testing Guide: Identity][0xa210] e [Authentication][0xa211]
-* [OWASP Cheat Sheet: Authentication][0xa212]
-* [OWASP Cheat Sheet: Credential Stuffing][0xa213]
-* [OWASP Cheat Sheet: Forgot Password][0xa214]
-* [OWASP Cheat Sheet: Password Storage][0xa215]
-* [OWASP Cheat Sheet: Session Management][0xa216]
+- [OWASP Proactive Controls: Implement Identity and Authentication Controls][0xa27]
+- [OWASP Application Security Verification Standard: V2 Authentication][0xa28]
+- [OWASP Application Security Verification Standard: V3 Session Management][0xa29]
+- [OWASP Testing Guide: Identity][0xa210] e [Authentication][0xa211]
+- [OWASP Cheat Sheet: Authentication][0xa212]
+- [OWASP Cheat Sheet: Credential Stuffing][0xa213]
+- [OWASP Cheat Sheet: Forgot Password][0xa214]
+- [OWASP Cheat Sheet: Password Storage][0xa215]
+- [OWASP Cheat Sheet: Session Management][0xa216]
 
 ### Externas
 
-* [NIST 800-63b: 5.1.1 Memorized Secrets - for thorough, modern, evidence based
+- [NIST 800-63b: 5.1.1 Memorized Secrets - for thorough, modern, evidence based
   advice on authentication][0xa217]
-* [CWE-287: Improper Authentication][0xa218]
-* [CWE-384: Session Fixation][0xa219]
+- [CWE-287: Improper Authentication][0xa218]
+- [CWE-384: Session Fixation][0xa219]
 
 [0xa21]: https://owasp.org/www-community/attacks/Credential_stuffing
 [0xa22]: 0xa3-sensitive-data-disclosure.md

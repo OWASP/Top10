@@ -9,21 +9,21 @@
 
 Aplikasi dan layanan web berbasis XML tertentu atau integrasi downstream mungkin rentan terhadap serangan bilamana:
 
-* Aplikasi menerima XML secara langsung atau unggahan XML, terutama dari sumber yang tidak tepercaya, atau menyisipkan data yang tidak tepercaya ke dalam dokumen XML, yang kemudian diurai oleh pemroses XML.
-* Setiap prosesor XML dalam aplikasi atau layanan web berbasis SOAP memiliki [_document type definitions (DTDs_)](https://en.wikipedia.org/wiki/Document_type_definition) yang diperbolehkan. Karena mekanisme yang tepat untuk menonaktifkan pemrosesan DTD cukup bervariasi berdasarkan pemprosesan XML, praktik yang baik untuk mempelajari dapat menggunakan referensi seperti [OWASP Cheat Sheet 'XXE Prevention'](https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html). 
-* bilamana aplikasi tersebut menggunakan SAML untuk tools dalam pemrosesan identitas dalam keamanan yang telah difederalkan atau dengan single sign on(SSO). SAML menggunakan XML untuk asersi identitas, dan sangat mungkin bahwa hal itu rentan.
-* bilamana aplikasi tersebut menggunakan versi SOAP sebelumnya hingga versi 1.2, biasanya hal yang rentan serangan XXE adalah saat entitas XML dikirim atau dioper menuju framework SOAP.
-* Untuk menjadi rentan dari serangan XXE biasanya berarti aplikasi tersebut cukup rentan untuk menolak serangan service termasuk metode Billion Laughs Attack.
+- Aplikasi menerima XML secara langsung atau unggahan XML, terutama dari sumber yang tidak tepercaya, atau menyisipkan data yang tidak tepercaya ke dalam dokumen XML, yang kemudian diurai oleh pemroses XML.
+- Setiap prosesor XML dalam aplikasi atau layanan web berbasis SOAP memiliki [_document type definitions (DTDs_)](https://en.wikipedia.org/wiki/Document_type_definition) yang diperbolehkan. Karena mekanisme yang tepat untuk menonaktifkan pemrosesan DTD cukup bervariasi berdasarkan pemprosesan XML, praktik yang baik untuk mempelajari dapat menggunakan referensi seperti [OWASP Cheat Sheet 'XXE Prevention'](https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html). 
+- bilamana aplikasi tersebut menggunakan SAML untuk tools dalam pemrosesan identitas dalam keamanan yang telah difederalkan atau dengan single sign on(SSO). SAML menggunakan XML untuk asersi identitas, dan sangat mungkin bahwa hal itu rentan.
+- bilamana aplikasi tersebut menggunakan versi SOAP sebelumnya hingga versi 1.2, biasanya hal yang rentan serangan XXE adalah saat entitas XML dikirim atau dioper menuju framework SOAP.
+- Untuk menjadi rentan dari serangan XXE biasanya berarti aplikasi tersebut cukup rentan untuk menolak serangan service termasuk metode Billion Laughs Attack.
 ## Cara untuk mencegah
 
 Pelatihan untuk Developer sangatlah esensial untuk mengidentifikasi dan memitigasi serangan XXE. Tak hanya itu, mencegah serangan XXE membutuhkan hal sebagai berikut : 
 
-* Bila memungkinkan, gunakan data format yang tidak terlalu kompleks seperti JSON, dan hindari serialisasi dari data yang bersifat sensitif.
-* patch atau tingkatkan seluru pemroses XML dan library yang digunakan oleh aplikasi tersebut atau yang berada diatas Sistem Operasi(OS). Gunakan Pemeriksa dependency. Kemudian update SOAP ke SOAP dengan versi 1.2 atau yang lebih tinggi
-* Nonaktifkan Eksternal Entitas XML dan Pemrosesan DTD di semua pengurai XML dalam aplikasi, sesuai dengan referensi [OWASP Cheat Sheet 'Pencegahan XXE'](https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html). 
-* Implementasikan daftar putih positif yang berada pada sisi server untuk validator input, pemfilteran atau sanitasi untuk mencegah data yang tidak bersahabat yang berada didalam dokumen XML.
-* Verifikasikan XML tersebut atau unggah file XSL fungsionalitas untuk memvalidasi XML yang akan masuk menggunakan validator seperti XSD atau yang lain yang persis.
-* Alat seperti SAST dapat membantu mendeteksi serangan XXE didalam sebuah source code, walau review code manual adalah alternatif terbaik dalam jumlah yang besar seperti aplikasi kompleks dengan banyak integrasi.
+- Bila memungkinkan, gunakan data format yang tidak terlalu kompleks seperti JSON, dan hindari serialisasi dari data yang bersifat sensitif.
+- patch atau tingkatkan seluru pemroses XML dan library yang digunakan oleh aplikasi tersebut atau yang berada diatas Sistem Operasi(OS). Gunakan Pemeriksa dependency. Kemudian update SOAP ke SOAP dengan versi 1.2 atau yang lebih tinggi
+- Nonaktifkan Eksternal Entitas XML dan Pemrosesan DTD di semua pengurai XML dalam aplikasi, sesuai dengan referensi [OWASP Cheat Sheet 'Pencegahan XXE'](https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html). 
+- Implementasikan daftar putih positif yang berada pada sisi server untuk validator input, pemfilteran atau sanitasi untuk mencegah data yang tidak bersahabat yang berada didalam dokumen XML.
+- Verifikasikan XML tersebut atau unggah file XSL fungsionalitas untuk memvalidasi XML yang akan masuk menggunakan validator seperti XSD atau yang lain yang persis.
+- Alat seperti SAST dapat membantu mendeteksi serangan XXE didalam sebuah source code, walau review code manual adalah alternatif terbaik dalam jumlah yang besar seperti aplikasi kompleks dengan banyak integrasi.
 
 bila kontrol ini tidak dimungkinkan maka dengan mempertimbangkan untuk menggunakan virtual patching, Gateway keamanan API, atau Firewall dari APlikasi (WAFs) untuk mendeteksi, memonitor dan melakukan blocking pada serangan XXE.
 
@@ -56,15 +56,15 @@ Banyak sekali serangan XXE pada publik yang telah ditemukan, termasuk serangan p
 
 ### OWASP
 
-* [OWASP Application Security Verification Standard](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x11-V2-Authentication.md)
-* [OWASP Testing Guide: Testing for XML Injection](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/07-Testing_for_XML_Injection)
-* [OWASP XXE Vulnerability](https://owasp.org/www-community/vulnerabilities/XML_External_Entity_(XXE)_Processing)
-* [OWASP Cheat Sheet: XXE Prevention](https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html)
-* [OWASP Cheat Sheet: XML Security](https://cheatsheetseries.owasp.org/cheatsheets/XML_Security_Cheat_Sheet.html)
+- [OWASP Application Security Verification Standard](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x11-V2-Authentication.md)
+- [OWASP Testing Guide: Testing for XML Injection](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/07-Testing_for_XML_Injection)
+- [OWASP XXE Vulnerability](https://owasp.org/www-community/vulnerabilities/XML_External_Entity_(XXE)_Processing)
+- [OWASP Cheat Sheet: XXE Prevention](https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html)
+- [OWASP Cheat Sheet: XML Security](https://cheatsheetseries.owasp.org/cheatsheets/XML_Security_Cheat_Sheet.html)
 
 ### External
 
-* [CWE-611: Improper Restriction of XXE](https://cwe.mitre.org/data/definitions/611.html)
-* [Billion Laughs Attack](https://en.wikipedia.org/wiki/Billion_laughs_attack)
-* [SAML Security XML External Entity Attack](https://secretsofappsecurity.blogspot.tw/2017/01/saml-security-xml-external-entity-attack.html)
-* [Detecting and exploiting XXE in SAML Interfaces](https://web-in-security.blogspot.tw/2014/11/detecting-and-exploiting-xxe-in-saml.html)
+- [CWE-611: Improper Restriction of XXE](https://cwe.mitre.org/data/definitions/611.html)
+- [Billion Laughs Attack](https://en.wikipedia.org/wiki/Billion_laughs_attack)
+- [SAML Security XML External Entity Attack](https://secretsofappsecurity.blogspot.tw/2017/01/saml-security-xml-external-entity-attack.html)
+- [Detecting and exploiting XXE in SAML Interfaces](https://web-in-security.blogspot.tw/2014/11/detecting-and-exploiting-xxe-in-saml.html)

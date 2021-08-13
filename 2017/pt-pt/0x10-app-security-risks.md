@@ -52,17 +52,17 @@ nomenclatura consensual e reduzir possível confusão.
 
 ### OWASP
 
-* [OWASP Risk Rating Methodology][0x106]
-* [Artigo sobre Threat/Risk Modeling][0x107]
+- [OWASP Risk Rating Methodology][0x106]
+- [Artigo sobre Threat/Risk Modeling][0x107]
 
 ### Externas
 
-* [ISO 31000: Risk Management Std][0x108]
-* [ISO 27001: ISMS][0x109]
-* [NIST Cyber Framework (US)][0x1010]
-* [ASD Strategic Mitigations (AU)][0x1011]
-* [NIST CVSS 3.0][0x1012]
-* [Microsoft Threat Modelling Tool][0x1013]
+- [ISO 31000: Risk Management Std][0x108]
+- [ISO 27001: ISMS][0x109]
+- [NIST Cyber Framework (US)][0x1010]
+- [ASD Strategic Mitigations (AU)][0x1011]
+- [NIST CVSS 3.0][0x1012]
+- [Microsoft Threat Modelling Tool][0x1013]
 
 [0x101]: images/0x10-risk-1.png
 [0x102]: https://owasp.org/www-project-top-ten/

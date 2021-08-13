@@ -16,11 +16,11 @@ This is the text version of the OWASP Top 10, and although it is useful for tran
 
 We strongly urge for any corrections or issues to be logged at GitHub:
 
-* [https://github.com/OWASP/Top10/issues](https://github.com/OWASP/Top10/issues)
+- [https://github.com/OWASP/Top10/issues](https://github.com/OWASP/Top10/issues)
 
 Through public transparency, we provide traceability and ensure that all voices are heard during this final month before publication.
 
-* Andrew van der Stock
-* Brian Glas
-* Neil Smithline
-* Torsten Gigler
+- Andrew van der Stock
+- Brian Glas
+- Neil Smithline
+- Torsten Gigler

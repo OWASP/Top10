@@ -59,7 +59,7 @@
 ![license](images/license.png)
 
 <p dir="rtl" align="right">
-  کپی رایت 2003-2017 بنیاد OWASP.
+  کپی رایت 2003-2021 بنیاد OWASP.
 </p>
 <p dir="rtl" align="right">
   این سند تحت لیسانس Creative Commons Attribution Share-Alike 4.0  منتشر شده است.

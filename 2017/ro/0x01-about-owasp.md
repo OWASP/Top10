@@ -6,15 +6,15 @@ Proiectul Open Web Application Security Project (OWASP) este o comunitate deschi
 
 La OWASP, veți găsi gratuit și liber:
 
-* Instrumente și standarde de securitate pentru aplicații.
-* Cărți complete despre testarea securității aplicației, dezvoltarea sigură a codului și revizuirea codului securizat.
-* Prezentări și [video-uri](https://www.youtube.com/user/OWASPGLOBAL).
-* [Cheat sheets](https://cheatsheetseries.owasp.org/) pe multe subiecte comune.
-* Controale de securitate și biblioteci standard.
-* [Capitole locale din întreaga lume](https://owasp.org/chapters/).
-* Cercetări de ultimă oră.
-* [Conferințe extensive la nivel mondial](https://owasp.org/events/).
-* [Google Groups](https://groups.google.com/a/owasp.org).
+- Instrumente și standarde de securitate pentru aplicații.
+- Cărți complete despre testarea securității aplicației, dezvoltarea sigură a codului și revizuirea codului securizat.
+- Prezentări și [video-uri](https://www.youtube.com/user/OWASPGLOBAL).
+- [Cheat sheets](https://cheatsheetseries.owasp.org/) pe multe subiecte comune.
+- Controale de securitate și biblioteci standard.
+- [Capitole locale din întreaga lume](https://owasp.org/chapters/).
+- Cercetări de ultimă oră.
+- [Conferințe extensive la nivel mondial](https://owasp.org/events/).
+- [Google Groups](https://groups.google.com/a/owasp.org).
 
 Aflați mai multe la: [https://owasp.org](https://owasp.org).
 
@@ -34,5 +34,5 @@ Vino alături de noi!
 
 ![license](images/license.png)
 
-Copyright © 2003-2017 Fundația OWASP. Acest document este lansat sub licența Creative Commons Attribution Share-Alike 4.0. Pentru orice reutilizare sau distribuție, trebuie să le lămuriți pe alții termenii de licență ai acestei lucrări.
+Copyright © 2003-2021 Fundația OWASP. Acest document este lansat sub licența Creative Commons Attribution Share-Alike 4.0. Pentru orice reutilizare sau distribuție, trebuie să le lămuriți pe alții termenii de licență ai acestei lucrări.
 

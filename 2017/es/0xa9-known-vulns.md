@@ -9,21 +9,21 @@
 
 Es potencialmente vulnerable si:
 
-* No conoce las versiones de todos los componentes que utiliza (tanto del lado del cliente como del servidor). Esto incluye componentes utilizados directamente como sus dependencias anidadas.
-* Su software es vulnerable, no posee soporte o se encuentra desactualizado Esto incluye el Sistema Operativo, Servidor Web o de Aplicaciones, DBMS, aplicaciones, APIS y todos los componentes, ambientes de ejecución y bibliotecas.
-* No analiza los componentes periódicamente y se suscribe a los boletines de seguridad de los componentes que utiliza.
-* No parchea o actualiza la plataforma subyacente, frameworks y dependencias en con un enfoque basado en riesgos. Esto sucede comunmente en ambientes en las cuales la aplicación de parches se realiza de forma mensual o trimestral bajo control de cambios, lo que deja a la organización abierta a varios días o meses de exposición innecesaria a vulnerabilidades ya solucionadas.
-* No asegura la configuración de los componentes correctamente (vea A6:2017-Configuración de Seguridad Incorrecta).
+- No conoce las versiones de todos los componentes que utiliza (tanto del lado del cliente como del servidor). Esto incluye componentes utilizados directamente como sus dependencias anidadas.
+- Su software es vulnerable, no posee soporte o se encuentra desactualizado Esto incluye el Sistema Operativo, Servidor Web o de Aplicaciones, DBMS, aplicaciones, APIS y todos los componentes, ambientes de ejecución y bibliotecas.
+- No analiza los componentes periódicamente y se suscribe a los boletines de seguridad de los componentes que utiliza.
+- No parchea o actualiza la plataforma subyacente, frameworks y dependencias en con un enfoque basado en riesgos. Esto sucede comunmente en ambientes en las cuales la aplicación de parches se realiza de forma mensual o trimestral bajo control de cambios, lo que deja a la organización abierta a varios días o meses de exposición innecesaria a vulnerabilidades ya solucionadas.
+- No asegura la configuración de los componentes correctamente (vea A6:2017-Configuración de Seguridad Incorrecta).
 
 ## ¿Como prevenirlo?
 
 Debe de existir un proceso de gestión de parches para:
 
-* Remover dependencias, funcionalidades, componentes, archivos y documentación innecesaria y no utilizada.
-* Utilizar una herramienta para mantener un inventario contínuo de las versiones de los componentes (por ejemplo frameworks o bibliotecas) tanto en el cliente como en el servidor tales como versions, DependencyCheck, retire.js, etc.
-* Monitorizar continuamente fuentes como CVE y NVD en búsqueda de vulnerabilidades en los componentes utilizados. Utilizar herramientas de análisis para automatizar el proceso. Suscribirse a alertas por email de alertas de seguridad en los componentes utilizados.
-* Obtener componentes únicamente de orígenes oficiales utilizando canales seguros.Utilizar preferentemente paquete firmados con el fin de reducir las probabilidades de uso de versiones manipiladas maliciosamente.
-* Monitorizar en búsqueda de bibliotecas y componentes que no poseen mantenimiento o no liberan parches de seguridad para sus versiones obsoletas o sin soporte. Si el parcheo no es posible, considere desplegar un parche virtual para monitorizar, detectar o protegerse contra la debilidad detectada.
+- Remover dependencias, funcionalidades, componentes, archivos y documentación innecesaria y no utilizada.
+- Utilizar una herramienta para mantener un inventario contínuo de las versiones de los componentes (por ejemplo frameworks o bibliotecas) tanto en el cliente como en el servidor tales como versions, DependencyCheck, retire.js, etc.
+- Monitorizar continuamente fuentes como CVE y NVD en búsqueda de vulnerabilidades en los componentes utilizados. Utilizar herramientas de análisis para automatizar el proceso. Suscribirse a alertas por email de alertas de seguridad en los componentes utilizados.
+- Obtener componentes únicamente de orígenes oficiales utilizando canales seguros.Utilizar preferentemente paquete firmados con el fin de reducir las probabilidades de uso de versiones manipiladas maliciosamente.
+- Monitorizar en búsqueda de bibliotecas y componentes que no poseen mantenimiento o no liberan parches de seguridad para sus versiones obsoletas o sin soporte. Si el parcheo no es posible, considere desplegar un parche virtual para monitorizar, detectar o protegerse contra la debilidad detectada.
 
 Cada organización debe asegurar la existencia de un plan en ejecución para monitorizar, evaluar amenazas y aplicar actualizaciones o cambios de configuraciones durante el ciclo de vida de las aplicaciones o su documentación.
 
@@ -31,8 +31,8 @@ Cada organización debe asegurar la existencia de un plan en ejecución para mon
 
 **Escenario #1**: Típicamente, los componentes ejecutan con los mismos privilegios de la aplicación que los contienen y, como consecuencia, fallas en éstos pueden resultar en impactos serios. Estas fallas pueden ser accidentales (errores de codificación, por ejemplo) o intencionales ( una puerta trasera en un componente, por ejemplo). Algunos ejemplos de vulnerabilidades en componentes explotables son:
 
-* [CVE-2017-5638](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5638), una ejecución remota de código en Struts 2 que ha sido culpada de grandes brechas de datos.
-* Aunque los dispositivos del [internet de las cosas (IoT)](https://en.wikipedia.org/wiki/Internet_of_things) frecuentemente son imposibles o muy dificultosos de ser actualizados, la importancia de éstas actualizaciones puede ser enorme ( por ejemplo dispositivos biomedicos).
+- [CVE-2017-5638](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5638), una ejecución remota de código en Struts 2 que ha sido culpada de grandes brechas de datos.
+- Aunque los dispositivos del [internet de las cosas (IoT)](https://en.wikipedia.org/wiki/Internet_of_things) frecuentemente son imposibles o muy dificultosos de ser actualizados, la importancia de éstas actualizaciones puede ser enorme ( por ejemplo dispositivos biomedicos).
 
 Existen herramientas automáticas que ayudan a los atacantes a descubrir sistemas mal configurados o desactualizados. A modo de ejemplo, el [motor de búsqueda Shodan IoT](https://www.shodan.io/) ayuda a descubrir dispositivos que aún son vulnerables a [Heartbleed](https://en.wikipedia.org/wiki/Heartbleed), la cual fue parcheada en abril del 2014.
 
@@ -40,16 +40,16 @@ Existen herramientas automáticas que ayudan a los atacantes a descubrir sistema
 
 ### OWASP
 
-* [Estándar de Verificación de Seguridad en Aplicaciones de OWASP: V1 Arquitectura, diseño y modelado de amenazas](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x10-V1-Architecture.md)
-* [Dependency Check de OWASP (para bibliotecas Java y .NET)](https://owasp.org/www-project-dependency-check/)
-* [Mejores Prácticas para el parcheo virtual de OWASP](https://owasp.org/www-community/Virtual_Patching_Best_Practices)
+- [Estándar de Verificación de Seguridad en Aplicaciones de OWASP: V1 Arquitectura, diseño y modelado de amenazas](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x10-V1-Architecture.md)
+- [Dependency Check de OWASP (para bibliotecas Java y .NET)](https://owasp.org/www-project-dependency-check/)
+- [Mejores Prácticas para el parcheo virtual de OWASP](https://owasp.org/www-community/Virtual_Patching_Best_Practices)
 
 ### Externas
 
-* [The Unfortunate Reality of Insecure Libraries](https://cdn2.hubspot.net/hub/203759/file-1100864196-pdf/docs/Contrast_-_Insecure_Libraries_2014.pdf)
-* [Búsquedas en MITRE Common Vulnerabilities and Exposures (CVE)](https://www.cvedetails.com/version-search.php)
-* [National Vulnerability Database (NVD)](https://nvd.nist.gov/)
-* [Retire.js para la detección de vulnerabilidades en bibliotecas de JavaScript](https://github.com/retirejs/retire.js/)
-* [Consejos de seguridad para bibliotecas de Node](https://nodesecurity.io/advisories)
-* [Base de datos de consejos de seguridad y herramientas para Ruby](https://rubysec.com/)
-* [Snyk: Herramientas y base de datos de vulnerabilidades para Node/JS, Ruby, Java y Python](https://snyk.io/vuln)
+- [The Unfortunate Reality of Insecure Libraries](https://cdn2.hubspot.net/hub/203759/file-1100864196-pdf/docs/Contrast_-_Insecure_Libraries_2014.pdf)
+- [Búsquedas en MITRE Common Vulnerabilities and Exposures (CVE)](https://www.cvedetails.com/version-search.php)
+- [National Vulnerability Database (NVD)](https://nvd.nist.gov/)
+- [Retire.js para la detección de vulnerabilidades en bibliotecas de JavaScript](https://github.com/retirejs/retire.js/)
+- [Consejos de seguridad para bibliotecas de Node](https://nodesecurity.io/advisories)
+- [Base de datos de consejos de seguridad y herramientas para Ruby](https://rubysec.com/)
+- [Snyk: Herramientas y base de datos de vulnerabilidades para Node/JS, Ruby, Java y Python](https://snyk.io/vuln)

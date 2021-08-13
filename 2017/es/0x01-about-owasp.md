@@ -6,15 +6,15 @@ El proyecto abierto de seguridad en aplicaciones Web (OWASP por sus siglas en in
 
 En OWASP, encontrará gratuitas y abiertas:
 
-* Herramientas y estándares de seguridad en aplicaciones.
-* Libros completos de revisiones de seguridad en aplicaciones, desarrollo de código fuente seguro, y revisiones de seguridad en código fuente.
-* Presentaciones y [videos](https://www.youtube.com/user/OWASPGLOBAL).
-* [Hojas de ayuda](https://cheatsheetseries.owasp.org/) en varios tópicos comunes.
-* Controles de seguridad estándar y bibliotecas.
-* [Capítulos locales en todo el mundo](https://owasp.org/chapters/).
-* Investigaciones de vanguardia.
-* Numerosas [conferencias alrededor del mundo](https://owasp.org/events/).
-* [Listas de correo](https://lists.owasp.org/mailman/listinfo).
+- Herramientas y estándares de seguridad en aplicaciones.
+- Libros completos de revisiones de seguridad en aplicaciones, desarrollo de código fuente seguro, y revisiones de seguridad en código fuente.
+- Presentaciones y [videos](https://www.youtube.com/user/OWASPGLOBAL).
+- [Hojas de ayuda](https://cheatsheetseries.owasp.org/) en varios tópicos comunes.
+- Controles de seguridad estándar y bibliotecas.
+- [Capítulos locales en todo el mundo](https://owasp.org/chapters/).
+- Investigaciones de vanguardia.
+- Numerosas [conferencias alrededor del mundo](https://owasp.org/events/).
+- [Listas de correo](https://lists.owasp.org/mailman/listinfo).
 
 Conozca más en: [https://owasp.org](https://owasp.org).
 

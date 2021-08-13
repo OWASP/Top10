@@ -9,22 +9,22 @@
 
 Aplicaciones y en particular servicios web basados en XML o integraciones que utilicen XML pueden ser vulnerables al ataque si:
 
-* La aplicación acepta XML directamente o carga XML, especialmente de fuentes no confiables, o inserta datos no confiables en documentos XML, los cuales son entonces analizados sintácticamente por un procesador XML.
-* Cualquiera de los procesadores XML en la aplicación o servicios web basados en SOAP poseen habilitadas las [definiciones de tipo de documento (DTDs)](https://en.wikipedia.org/wiki/Document_type_definition). Dado que los mecanismos exactos para deshabilitar el procesamiento de DTDs varía por procesador, se recomienda consultar una referencia como la [Hoja de ayuda para Prevención de XXE de OWASP](https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html).
-* Si la aplicación utiliza SAML para el procesamiento de identidades dentro de la seguridad federada o para propósitos de single sign on (SSO). SAML utiliza XML para aseveraciones de identidad, pudiendo ser vulnerable.
-* Si su aplicación utiliza SOAP en versión previa a la 1.2, es probablemente susceptible a ataques XXE si las entidades XML son pasadas a la infraestructura SOAP.
-* Ser vulnerable a ataques XXE significa que probablemente la aplicación es vulnerable a ataques de denegación de servicio incluyendo el ataque de Mil Millones de Risas.
+- La aplicación acepta XML directamente o carga XML, especialmente de fuentes no confiables, o inserta datos no confiables en documentos XML, los cuales son entonces analizados sintácticamente por un procesador XML.
+- Cualquiera de los procesadores XML en la aplicación o servicios web basados en SOAP poseen habilitadas las [definiciones de tipo de documento (DTDs)](https://en.wikipedia.org/wiki/Document_type_definition). Dado que los mecanismos exactos para deshabilitar el procesamiento de DTDs varía por procesador, se recomienda consultar una referencia como la [Hoja de ayuda para Prevención de XXE de OWASP](https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html).
+- Si la aplicación utiliza SAML para el procesamiento de identidades dentro de la seguridad federada o para propósitos de single sign on (SSO). SAML utiliza XML para aseveraciones de identidad, pudiendo ser vulnerable.
+- Si su aplicación utiliza SOAP en versión previa a la 1.2, es probablemente susceptible a ataques XXE si las entidades XML son pasadas a la infraestructura SOAP.
+- Ser vulnerable a ataques XXE significa que probablemente la aplicación es vulnerable a ataques de denegación de servicio incluyendo el ataque de Mil Millones de Risas.
 
 ## Cómo se previene
 
 El entrenamiento del desarrollador es esencial para identificar y mitigar defectos de XXE. Aparte de esto, prevenir XXE requiere:
 
-* De ser posible, utilice formatos de datos menos complejos como JSON y evite la serialización de datos confidenciales.
-* Parchee o actualice todos los procesadores y bibliotecas XML que utilice la aplicación o el sistema operativo subyacente. Utilice validadores de dependencias. Actualice SOAP a 1.2 o superior.
-* Deshabilitar entidades externas de XML y procesamiento DTD en todos los analizadores sintácticos XML en su aplicación, según se indica en la [Hoja de Ayuda Para Prevención de XXE de OWASP](https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html).
-* Implementar validación de entrada positiva ("lista blanca"), filtrado, o sanitización para prevenir datos hostiles dentro de documentos ,cabeceras o nodos XML.
-* Verificar que la funcionalidad de carga de archivos XML o XSL valida el XML entrante usando validación XSD o similar.
-* Herramientas SAST pueden ayudar a detectar XXE en el código fuente, aunque la revisión manual de código es la mejor alternativa en aplicaciones grandes y complejas con muchas integraciones.
+- De ser posible, utilice formatos de datos menos complejos como JSON y evite la serialización de datos confidenciales.
+- Parchee o actualice todos los procesadores y bibliotecas XML que utilice la aplicación o el sistema operativo subyacente. Utilice validadores de dependencias. Actualice SOAP a 1.2 o superior.
+- Deshabilitar entidades externas de XML y procesamiento DTD en todos los analizadores sintácticos XML en su aplicación, según se indica en la [Hoja de Ayuda Para Prevención de XXE de OWASP](https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html).
+- Implementar validación de entrada positiva ("lista blanca"), filtrado, o sanitización para prevenir datos hostiles dentro de documentos ,cabeceras o nodos XML.
+- Verificar que la funcionalidad de carga de archivos XML o XSL valida el XML entrante usando validación XSD o similar.
+- Herramientas SAST pueden ayudar a detectar XXE en el código fuente, aunque la revisión manual de código es la mejor alternativa en aplicaciones grandes y complejas con muchas integraciones.
 
 Si estos controles no son posibles, considere usar parcheo virtual, gateways de seguridad de API, o Firewalls de Aplicaciones Web (WAFs) para detectar, monitorear, y bloquear ataques XXE. 
 
@@ -57,13 +57,13 @@ Numerosos XXE han sido publicados, incluyendo el ataque a dispositivos embebidos
 
 ### OWASP
 
-* [Estándar de Verificación de Seguridad en Aplicaciones de OWASP](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x11-V2-Authentication.md)
-* [Guía de Pruebas de OWASP: Pruebas para Inyección XML](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/07-Testing_for_XML_Injection)
-* [Vulnerabilidad XXE de OWASP](https://owasp.org/www-community/vulnerabilities/XML_External_Entity_(XXE)_Processing)
-* [Hojas de ayuda de Prevención de XXE de OWASP](https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html)
-* [Hojas de ayuda de Seguridad XML de OWASP](https://cheatsheetseries.owasp.org/cheatsheets/XML_Security_Cheat_Sheet.html)
+- [Estándar de Verificación de Seguridad en Aplicaciones de OWASP](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x11-V2-Authentication.md)
+- [Guía de Pruebas de OWASP: Pruebas para Inyección XML](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/07-Testing_for_XML_Injection)
+- [Vulnerabilidad XXE de OWASP](https://owasp.org/www-community/vulnerabilities/XML_External_Entity_(XXE)_Processing)
+- [Hojas de ayuda de Prevención de XXE de OWASP](https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html)
+- [Hojas de ayuda de Seguridad XML de OWASP](https://cheatsheetseries.owasp.org/cheatsheets/XML_Security_Cheat_Sheet.html)
 
 ### Externas
 
-* [CWE-611 Restricción Impropia de XXE](https://cwe.mitre.org/data/definitions/611.html)
-* [Ataque Mil Millones de Risas](https://en.wikipedia.org/wiki/Billion_laughs_attack)
+- [CWE-611 Restricción Impropia de XXE](https://cwe.mitre.org/data/definitions/611.html)
+- [Ataque Mil Millones de Risas](https://en.wikipedia.org/wiki/Billion_laughs_attack)

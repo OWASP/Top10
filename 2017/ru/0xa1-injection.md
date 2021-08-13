@@ -9,30 +9,30 @@
 
 Приложение уязвимо, если:
 
-* вводимые пользователем данные не проверяются, не фильтруются или не очищаются;
-* динамические запросы или непараметризованные вызовы без контекстного экранирования напрямую используются в интерпретаторе;  
-* вредоносные данные используются в поисковых параметрах объектно-реляционного отображения для извлечения дополнительной или критически важной информации;
-* вредоносные данные используются или добавляются т.о., что SQL-код или команды содержат структурные и вредоносные данные в динамических запросах, командах или хранимых процедурах.
+- вводимые пользователем данные не проверяются, не фильтруются или не очищаются;
+- динамические запросы или непараметризованные вызовы без контекстного экранирования напрямую используются в интерпретаторе;  
+- вредоносные данные используются в поисковых параметрах объектно-реляционного отображения для извлечения дополнительной или критически важной информации;
+- вредоносные данные используются или добавляются т.о., что SQL-код или команды содержат структурные и вредоносные данные в динамических запросах, командах или хранимых процедурах.
 
 Наиболее распространенными являются SQL-, NoSQL-, ORM-, LDAP-, EL- или OGNL-внедрения, а также внедрения команд ОС. То же самое касается всех интерпретаторов. Анализ исходного кода является лучшим способом обнаружения внедрений, за которым следует полное автоматизированное тестирование всех вводимых параметров, заголовков, URL, куки, JSON-, SOAP- и XML-данных. Организации также могут включать в процесс непрерывной интеграции и развертывания ПО (CI/CD) статическое ([SAST](https://owasp.org/www-community/Source_Code_Analysis_Tools)) и динамическое ([DAST](https://owasp.org/www-community/Vulnerability_Scanning_Tools)) тестирование кода и приложений для обнаружения новых уязвимостей перед внедрением приложений в производство.
 
 ### ORM | LDAP | EL | OGNL
 
-* **ORM** - Объектно-реляционное отображение
-* **LDAP** - Облегченный протокол доступа к каталогам
-* **EL** - Язык выражений
-* **OGNL** - Объектно-графовый язык навигации
+- **ORM** - Объектно-реляционное отображение
+- **LDAP** - Облегченный протокол доступа к каталогам
+- **EL** - Язык выражений
+- **OGNL** - Объектно-графовый язык навигации
 
 ## Как предотвратить
 
 Для предотвращения внедрений необходимо изолировать данные от команд и запросов.
 
-* Используйте безопасный API, исключающий применение интерпретатора или предоставляющий параметризованный интерфейс, либо используйте инструменты объектно-реляционного отображения (ORM).
+- Используйте безопасный API, исключающий применение интерпретатора или предоставляющий параметризованный интерфейс, либо используйте инструменты объектно-реляционного отображения (ORM).
 __Примечание__: даже параметризованные хранимые процедуры могут привести к SQL-внедрениям, если PL/SQL или T-SQL позволяют присоединять запросы и данные или выполнять вредоносный код с помощью EXECUTE IMMEDIATE или exec().
-* Реализуйте на сервере белые списки для проверки входных данных. Это, конечно, не обеспечит полную защиту, поскольку многие приложения используют спецсимволы, например, в текстовых областях или API для мобильных приложений.
-* Для остальных динамических запросов реализуйте экранирование спецсимволов, используя соответствующий интерпретатору синтаксис.
+- Реализуйте на сервере белые списки для проверки входных данных. Это, конечно, не обеспечит полную защиту, поскольку многие приложения используют спецсимволы, например, в текстовых областях или API для мобильных приложений.
+- Для остальных динамических запросов реализуйте экранирование спецсимволов, используя соответствующий интерпретатору синтаксис.
 __Примечание__: элементы SQL-структуры, такие как названия таблиц или столбцов, нельзя экранировать, поэтому предоставляемые пользователями названия представляют опасность. Это обычная проблема программ для составления отчетов.
-* Используйте в запросах LIMIT или другие элементы управления SQL для предотвращения утечек данных.
+- Используйте в запросах LIMIT или другие элементы управления SQL для предотвращения утечек данных.
 
 ## Примеры сценариев атак
 
@@ -54,19 +54,19 @@ __Примечание__: элементы SQL-структуры, такие к
 
 ### OWASP
 
-* [Проактивная защита OWASP: Параметризация запросов](https://owasp.org/www-project-proactive-controls/v3/en/c3-secure-database)
-* [Стандарт подтверждения безопасности приложений OWASP (ASVS): V5 Проверка входных данных и кодировки](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x13-V5-Validation-Sanitization-Encoding.md)
-* [Руководство OWASP по тестированию: Внедрение SQL-кода](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/05-Testing_for_SQL_Injection), [команд](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/12-Testing_for_Command_Injection), [ORM](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/05.7-Testing_for_ORM_Injection)
-* [Памятка OWASP: Предотвращение внедрений](https://cheatsheetseries.owasp.org/cheatsheets/Injection_Prevention_Cheat_Sheet.html)
-* [Памятка OWASP: Предотвращение SQL-внедрений](https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html)
-* [Памятка OWASP: Предотвращение внедрений в Java](https://cheatsheetseries.owasp.org/cheatsheets/Injection_Prevention_Cheat_Sheet.html_in_Java)
-* [Памятка OWASP: Параметризация запросов](https://cheatsheetseries.owasp.org/cheatsheets/Query_Parameterization_Cheat_Sheet.html)
-* [Справочник OWASP по автоматизированным атакам на веб-приложения – OAT-014](https://owasp.org/www-project-automated-threats-to-web-applications/)
+- [Проактивная защита OWASP: Параметризация запросов](https://owasp.org/www-project-proactive-controls/v3/en/c3-secure-database)
+- [Стандарт подтверждения безопасности приложений OWASP (ASVS): V5 Проверка входных данных и кодировки](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x13-V5-Validation-Sanitization-Encoding.md)
+- [Руководство OWASP по тестированию: Внедрение SQL-кода](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/05-Testing_for_SQL_Injection), [команд](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/12-Testing_for_Command_Injection), [ORM](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/05.7-Testing_for_ORM_Injection)
+- [Памятка OWASP: Предотвращение внедрений](https://cheatsheetseries.owasp.org/cheatsheets/Injection_Prevention_Cheat_Sheet.html)
+- [Памятка OWASP: Предотвращение SQL-внедрений](https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html)
+- [Памятка OWASP: Предотвращение внедрений в Java](https://cheatsheetseries.owasp.org/cheatsheets/Injection_Prevention_Cheat_Sheet.html_in_Java)
+- [Памятка OWASP: Параметризация запросов](https://cheatsheetseries.owasp.org/cheatsheets/Query_Parameterization_Cheat_Sheet.html)
+- [Справочник OWASP по автоматизированным атакам на веб-приложения – OAT-014](https://owasp.org/www-project-automated-threats-to-web-applications/)
 
 ### Сторонние
 
-* [CWE-77: Внедрение команд](https://cwe.mitre.org/data/definitions/77.html)
-* [CWE-89: Внедрение SQL](https://cwe.mitre.org/data/definitions/89.html)
-* [CWE-564: Внедрение SQL-кода с использованием Hibernate](https://cwe.mitre.org/data/definitions/564.html)
-* [CWE-917: Внедрение кода языка выражений](https://cwe.mitre.org/data/definitions/917.html)
-* [PortSwigger: Внедрение в серверные шаблоны](https://portswigger.net/web-security/server-side-template-injection)
+- [CWE-77: Внедрение команд](https://cwe.mitre.org/data/definitions/77.html)
+- [CWE-89: Внедрение SQL](https://cwe.mitre.org/data/definitions/89.html)
+- [CWE-564: Внедрение SQL-кода с использованием Hibernate](https://cwe.mitre.org/data/definitions/564.html)
+- [CWE-917: Внедрение кода языка выражений](https://cwe.mitre.org/data/definitions/917.html)
+- [PortSwigger: Внедрение в серверные шаблоны](https://portswigger.net/web-security/server-side-template-injection)

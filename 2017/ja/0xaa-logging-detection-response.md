@@ -9,13 +9,13 @@
 
 ロギングや検知、モニタリング、適時の対応が十分に行われないという状況は、いつでも発生します:
 
-* ログイン、失敗したログイン、重要なトランザクションなどの監査可能なイベントがログに記録されていない。
-* 警告とエラーが発生してもログメッセージが生成されない、または不十分、不明確なメッセージが生成されている。
-* アプリケーションとAPIのログが、疑わしいアクティビティをモニタリングしていない。
-* ログがローカルにのみ格納されている。
-* アラートの適切なしきい値とレスポンスのエスカレーションプロセスが整えられていない、または有効ではない。
-* ペネトレーションテストや[DAST](https://owasp.org/www-community/Vulnerability_Scanning_Tools)ツール（[OWASP ZAP](https://owasp.org/www-project-zap/)など）によるスキャンがアラートをあげない。
-* アプリケーションがリアルタイム、準リアルタイムにアクティブな攻撃を検知、エスカレート、またはアラートすることができない。
+- ログイン、失敗したログイン、重要なトランザクションなどの監査可能なイベントがログに記録されていない。
+- 警告とエラーが発生してもログメッセージが生成されない、または不十分、不明確なメッセージが生成されている。
+- アプリケーションとAPIのログが、疑わしいアクティビティをモニタリングしていない。
+- ログがローカルにのみ格納されている。
+- アラートの適切なしきい値とレスポンスのエスカレーションプロセスが整えられていない、または有効ではない。
+- ペネトレーションテストや[DAST](https://owasp.org/www-community/Vulnerability_Scanning_Tools)ツール（[OWASP ZAP](https://owasp.org/www-project-zap/)など）によるスキャンがアラートをあげない。
+- アプリケーションがリアルタイム、準リアルタイムにアクティブな攻撃を検知、エスカレート、またはアラートすることができない。
 
 ユーザまたは攻撃者がログやアラートのイベントを閲覧できると、情報の漏えいが発生する可能性があります（**A3:2017-機微な情報の露出**を参照）。
 
@@ -23,11 +23,11 @@
 
 アプリケーションによって保存または処理されるデータのリスクに応じて対応する：
 
-* ログイン、アクセス制御の失敗、サーバサイドの入力検証の失敗を全てログとして記録するようにする。ログは、不審なアカウントや悪意のあるアカウントを特定するために十分なユーザコンテキストを持ち、後日、フォレンジック分析を行うのに十分な期間分保持するようにする。
-* 統合ログ管理ソリューションで簡単に使用できる形式でログが生成されていることを確認する。
-* 価値の高いトランザクションにおいて、監査証跡が取得されていること。その際、追記型データベースのテーブルなどのような、完全性を保つコントロールを用いて、改ざんや削除を防止する。
-* 疑わしい活動がタイムリーに検知されて対応されるように、効果的なモニタリングとアラートを確立する。
-* [NIST 800-61 rev 2](https://csrc.nist.gov/publications/detail/sp/800-61/rev-2/final)（またはそれ以降）のような、インシデント対応および復旧計画を策定または採用する。
+- ログイン、アクセス制御の失敗、サーバサイドの入力検証の失敗を全てログとして記録するようにする。ログは、不審なアカウントや悪意のあるアカウントを特定するために十分なユーザコンテキストを持ち、後日、フォレンジック分析を行うのに十分な期間分保持するようにする。
+- 統合ログ管理ソリューションで簡単に使用できる形式でログが生成されていることを確認する。
+- 価値の高いトランザクションにおいて、監査証跡が取得されていること。その際、追記型データベースのテーブルなどのような、完全性を保つコントロールを用いて、改ざんや削除を防止する。
+- 疑わしい活動がタイムリーに検知されて対応されるように、効果的なモニタリングとアラートを確立する。
+- [NIST 800-61 rev 2](https://csrc.nist.gov/publications/detail/sp/800-61/rev-2/final)（またはそれ以降）のような、インシデント対応および復旧計画を策定または採用する。
 
 [OWASP AppSensor](https://owasp.org/www-project-appsensor/)、[OWASP ModSecurity Core Rule Set](https://owasp.org/www-project-modsecurity-core-rule-set/)を使用したModSecurityなどのWebアプリケーションファイアウォール、カスタムダッシュボードとアラートを使用したログ相関分析ソフトウェアなど、商用およびオープンソースのアプリケーション保護フレームワークがあります。
 
@@ -43,12 +43,12 @@
 
 ### OWASP
 
-* [OWASP Proactive Controls: Implement Logging and Intrusion Detection](https://owasp.org/www-project-proactive-controls/v3/en/c9-security-logging)
-* [OWASP Application Security Verification Standard: V8 Logging and Monitoring](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x11-V2-Authentication.md)
-* [OWASP Testing Guide: Testing for Detailed Error Code](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x11-V2-Authentication.md)
-* [OWASP Cheat Sheet: Logging](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html)
+- [OWASP Proactive Controls: Implement Logging and Intrusion Detection](https://owasp.org/www-project-proactive-controls/v3/en/c9-security-logging)
+- [OWASP Application Security Verification Standard: V8 Logging and Monitoring](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x11-V2-Authentication.md)
+- [OWASP Testing Guide: Testing for Detailed Error Code](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x11-V2-Authentication.md)
+- [OWASP Cheat Sheet: Logging](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html)
 
 ### 外部資料
 
-* [CWE-223: Omission of Security-relevant Information](https://cwe.mitre.org/data/definitions/223.html)
-* [CWE-778: Insufficient Logging](https://cwe.mitre.org/data/definitions/778.html)
+- [CWE-223: Omission of Security-relevant Information](https://cwe.mitre.org/data/definitions/223.html)
+- [CWE-778: Insufficient Logging](https://cwe.mitre.org/data/definitions/778.html)

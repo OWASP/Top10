@@ -76,17 +76,17 @@
 
 ### <div dir="rtl" align="right">OWASP</div>
 
-* [OWASP Testing Guide: Configuration Management](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/README)
-* [OWASP Testing Guide: Testing for Error Codes](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/08-Testing_for_Error_Handling/README)
-* [OWASP Security Headers Project](https://owasp.org/www-project-secure-headers/)
+- [OWASP Testing Guide: Configuration Management](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/README)
+- [OWASP Testing Guide: Testing for Error Codes](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/08-Testing_for_Error_Handling/README)
+- [OWASP Security Headers Project](https://owasp.org/www-project-secure-headers/)
 
 <p dir="rtl" align="right">برای نیازمندیهای بیشتر در این زمینه ، استاندارد تایید امنیت برنامه کاربردی را ببینید .<a href="https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x22-V14-Config.md">V19 Configuration</a></p>
 
 ### <div dir="rtl" align="right">خارجی</div>
 
-* [NIST Guide to General Server Hardening](https://csrc.nist.gov/publications/detail/sp/800-123/final)
-* [CWE-2: Environmental Security Flaws](https://cwe.mitre.org/data/definitions/2.html)
-* [CWE-16: Configuration](https://cwe.mitre.org/data/definitions/16.html)
-* [CWE-388: Error Handling](https://cwe.mitre.org/data/definitions/388.html)
-* [CIS Security Configuration Guides/Benchmarks](https://www.cisecurity.org/cis-benchmarks/)
-* [Amazon S3 Bucket Discovery and Enumeration](https://blog.websecurify.com/2017/10/aws-s3-bucket-discovery.html)
+- [NIST Guide to General Server Hardening](https://csrc.nist.gov/publications/detail/sp/800-123/final)
+- [CWE-2: Environmental Security Flaws](https://cwe.mitre.org/data/definitions/2.html)
+- [CWE-16: Configuration](https://cwe.mitre.org/data/definitions/16.html)
+- [CWE-388: Error Handling](https://cwe.mitre.org/data/definitions/388.html)
+- [CIS Security Configuration Guides/Benchmarks](https://www.cisecurity.org/cis-benchmarks/)
+- [Amazon S3 Bucket Discovery and Enumeration](https://blog.websecurify.com/2017/10/aws-s3-bucket-discovery.html)

@@ -28,14 +28,14 @@
 
 ### OWASP
 
-* [Методика оценки рисков OWASP](https://owasp.org/www-community/OWASP_Risk_Rating_Methodology)
-* [Раздел о моделировании угроз/рисков](https://owasp.org/www-community/Threat_Modeling)
+- [Методика оценки рисков OWASP](https://owasp.org/www-community/OWASP_Risk_Rating_Methodology)
+- [Раздел о моделировании угроз/рисков](https://owasp.org/www-community/Threat_Modeling)
 
 ### Сторонние
 
-* [ISO 31000: Менеджмент рисков](https://www.iso.org/iso-31000-risk-management.html)
-* [ISO 27001: Менеджмент информационной безопасности](https://www.iso.org/isoiec-27001-information-security.html)
-* [Фреймворк кибербезопасности NIST (US)](https://www.nist.gov/cyberframework)
-* [Методы устранения последствий кибератак (AU)](https://www.cyber.gov.au/acsc/view-all-content/publications/strategies-mitigate-cyber-security-incidents)
-* [NIST CVSS 3.0](https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator)
-* [Средства моделирования угроз Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=49168)
+- [ISO 31000: Менеджмент рисков](https://www.iso.org/iso-31000-risk-management.html)
+- [ISO 27001: Менеджмент информационной безопасности](https://www.iso.org/isoiec-27001-information-security.html)
+- [Фреймворк кибербезопасности NIST (US)](https://www.nist.gov/cyberframework)
+- [Методы устранения последствий кибератак (AU)](https://www.cyber.gov.au/acsc/view-all-content/publications/strategies-mitigate-cyber-security-incidents)
+- [NIST CVSS 3.0](https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator)
+- [Средства моделирования угроз Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=49168)

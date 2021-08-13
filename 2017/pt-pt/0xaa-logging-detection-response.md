@@ -9,18 +9,18 @@
 
 Insuficiência do registo, deteção, monitorização e resposta acontece sempre que:
 
-* Eventos auditáveis como autenticação, autenticações falhadas e transações de
+- Eventos auditáveis como autenticação, autenticações falhadas e transações de
   valor relevante não são registados
-* Alertas e erros não são registados, ou geram mensagens desadequadas ou
+- Alertas e erros não são registados, ou geram mensagens desadequadas ou
   insuficientes.
-* Registos das aplicações e APIs não são monitorizados para deteção de atividade
+- Registos das aplicações e APIs não são monitorizados para deteção de atividade
   suspeita.
-* Registos são armazenados localmente.
-* Limites para geração de alertas e processos de elevação de resposta não estão
+- Registos são armazenados localmente.
+- Limites para geração de alertas e processos de elevação de resposta não estão
   definidos ou não são eficazes.
-* Testes de intrusão e verificações por ferramentas [DAST][0xaa2] (e.g. [OWASP
+- Testes de intrusão e verificações por ferramentas [DAST][0xaa2] (e.g. [OWASP
   ZAP][0xaa3]) não geram alertas.
-* A aplicação é incapaz de detetar, lidar com ou alertar em tempo real ou
+- A aplicação é incapaz de detetar, lidar com ou alertar em tempo real ou
   quase-real para ataques em curso.
 
 Está ainda vulnerável à fuga de informação se tornar os registos e alertas
@@ -32,19 +32,19 @@ Sensíveis][0xaa4]).
 Dependendo do risco inerente à informação armazenada ou processada pela
 aplicação:
 
-* Assegurar que todas as autenticações, falhas no controlo de acessos e falhas
+- Assegurar que todas as autenticações, falhas no controlo de acessos e falhas
   na validação de dados de entrada no servidor são registados com detalhe
   suficiente do contexto do utilizador que permita identificar contas suspeitas
   ou maliciosas e mantidos por tempo suficiente que permita a análise forense.
-* Assegurar que os registos usam um formato que possa ser facilmente consumido
+- Assegurar que os registos usam um formato que possa ser facilmente consumido
   por uma solução de gestão de registos centralizada.
-* Assegurar que as transações mais críticas têm registo pormenorizado para
+- Assegurar que as transações mais críticas têm registo pormenorizado para
   auditoria com controlos de integridade para prevenir adulteração ou remoção
   tais como tabelas de base de dados que permitam apenas adição de novos
   registos.
-* Definir processos de monitorização e alerta capazes de detetar atividade
+- Definir processos de monitorização e alerta capazes de detetar atividade
   suspeita e resposta atempada
-* Definir e adotar uma metodologia de resposta a incidentes e plano de
+- Definir e adotar uma metodologia de resposta a incidentes e plano de
   recuperação tal como [NIST 800-61 rev 2][0xaa5].
 
 Existem _frameworks_ comerciais e de código aberto para proteção de aplicações
@@ -77,15 +77,15 @@ em consequência de transações fraudulentas.
 
 ### OWASP
 
-* [OWASP Proactive Controls: Implement Logging and Intrusion Detection][0xaa8]
-* [OWASP Application Security Verification Standard: V8 Logging and Monitoring][0xaa9]
-* [OWASP Testing Guide: Testing for Error Code][0xaa10]
-* [OWASP Cheat Sheet: Logging][0xaa11]
+- [OWASP Proactive Controls: Implement Logging and Intrusion Detection][0xaa8]
+- [OWASP Application Security Verification Standard: V8 Logging and Monitoring][0xaa9]
+- [OWASP Testing Guide: Testing for Error Code][0xaa10]
+- [OWASP Cheat Sheet: Logging][0xaa11]
 
 ### Externas
 
-* [CWE-223: Omission of Security-relevant Information][0xaa12]
-* [CWE-778: Insufficient Logging][0xaa13]
+- [CWE-223: Omission of Security-relevant Information][0xaa12]
+- [CWE-778: Insufficient Logging][0xaa13]
 
 [0xaa1]: https://owasp.blogspot.com/2017/08/owasp-top-10-2017-project-update.html
 [0xaa2]: https://owasp.org/www-community/Vulnerability_Scanning_Tools

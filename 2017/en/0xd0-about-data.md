@@ -6,13 +6,13 @@ At the OWASP Project Summit, active participants and community members decided o
 
 For the survey, we collected the vulnerability categories that had been previously identified as being “on the cusp” or were mentioned in feedback to 2017 RC1 on the Top 10 mailing list. We put them into a ranked survey and asked respondents to rank the top four vulnerabilities that they felt should be included in the OWASP Top 10 - 2017. The survey was open from Aug 2 – Sep 18, 2017. 516 responses were collected and the vulnerabilities were ranked.
 
-| Rank | Survey Vulnerability Categories | Score |
-| -- | -- | -- |
-| 1 | Exposure of Private Information ('Privacy Violation') [CWE-359] | 748 |
-| 2 | Cryptographic Failures [CWE-310/311/312/326/327]| 584 |
-| 3 | Deserialization of Untrusted Data [CWE-502] | 514 |
-| 4 | Authorization Bypass Through User-Controlled Key (IDOR & Path Traversal) [CWE-639] | 493 |
-| 5 | Insufficient Logging and Monitoring [CWE-223 / CWE-778]| 440 |
+| Rank | Survey Vulnerability Categories                                                    | Score |
+| ---- | ---------------------------------------------------------------------------------- | ----- |
+| 1    | Exposure of Private Information ('Privacy Violation') [CWE-359]                    | 748   |
+| 2    | Cryptographic Failures [CWE-310/311/312/326/327]                                   | 584   |
+| 3    | Deserialization of Untrusted Data [CWE-502]                                        | 514   |
+| 4    | Authorization Bypass Through User-Controlled Key (IDOR & Path Traversal) [CWE-639] | 493   |
+| 5    | Insufficient Logging and Monitoring [CWE-223 / CWE-778]                            | 440   |
 
 Exposure of Private Information is clearly the highest-ranking vulnerability, but fits very easily as an additional emphasis into the existing **A3:2017-Sensitive Data Exposure**. Cryptographic Failures can fit within Sensitive Data Exposure. Insecure deserialization was ranked at number three, so it was added to the Top 10 as **A8:2017-Insecure Deserialization** after risk rating. The fourth ranked User-Controlled Key is included in **A5:2017-Broken Access Control**; it is good to see it rank highly on the survey, as there is not much data relating to authorization vulnerabilities. The number five ranked category in the survey is Insufficient Logging and Monitoring, which we believe is a good fit for the Top 10 list, which is why it has become **A10:2017-Insufficient Logging & Monitoring**. We have moved to a point where applications need to be able to define what may be an attack and generate appropriate logging, alerting, escalation and response. 
 

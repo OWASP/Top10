@@ -14,18 +14,18 @@ Sur le long terme, nous encourageons toutes les équipes de développement logic
 
 Nous espérons que l'OWASP Top 10 sera utile dans vos efforts de sécurisation de vos applications. N'hésitez pas à contacter l'OWASP pour toutes questions, commentaires, idées par le biais de notre dépôt Github :
 
-* [https://github.com/OWASP/Top10/issues](https://github.com/OWASP/Top10/issues)
+- [https://github.com/OWASP/Top10/issues](https://github.com/OWASP/Top10/issues)
 
 Vous trouverez le projet OWASP Top 10 ainsi que ses traductions à l'adresse suivante:
 
-* [https://owasp.org/www-project-top-ten/](https://owasp.org/www-project-top-ten/)
+- [https://owasp.org/www-project-top-ten/](https://owasp.org/www-project-top-ten/)
 
 Enfin, nous souhaitons remercier les membres fondateurs du projet OWASP Top 10, Dave Wichers et Jeff Williams, pour tous leurs efforts, et leur soutien sans faille en nous pour finir ce projet avec l'aide de la communauté. Merci!
 
-* Andrew van der Stock
-* Brian Glas
-* Neil Smithline
-* Torsten Gigler
+- Andrew van der Stock
+- Brian Glas
+- Neil Smithline
+- Torsten Gigler
 
 ## Attribution
 Merci à [Autodesk](https://www.autodesk.com) pour son parrainage de l'OWASP Top 10 - 2017

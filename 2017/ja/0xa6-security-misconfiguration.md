@@ -9,14 +9,14 @@
 
 アプリケーションが下記のようなら、恐らく脆弱です。
 
-* アプリケーションスタックのいずれかの部分におけるセキュリティ堅牢化の不足、あるいはクラウドサービスでパーミッションが不適切に設定されている。
-* 必要のない機能が有効、あるいはインストールされている(例えば、必要のないポートやサービス、ページ、アカウント、特権)。
-* デフォルトのアカウントとパスワードが有効になったまま変更されていない。
-* エラー処理がユーザに対して、スタックトレースやその他余計な情報を含むエラーメッセージを見せる。
-* アップグレードしたシステムでは、最新のセキュリティ機能が無効になっているか正しく設定されていない。
-* アプリケーションサーバやアプリケーションフレームワーク(例えば、Struts、Spring、 ASP.NET)、ライブラリ、データベース等のセキュリティの設定が、安全な値に設定されていない。
-* サーバがセキュリテイヘッダーやディレクティブを送らなかったり、安全な値に設定されていなかったりする。
-* ソフトウェアが古いか脆弱である (**A9:2017-既知の脆弱性のあるコンポーネントの使用** を参照)。
+- アプリケーションスタックのいずれかの部分におけるセキュリティ堅牢化の不足、あるいはクラウドサービスでパーミッションが不適切に設定されている。
+- 必要のない機能が有効、あるいはインストールされている(例えば、必要のないポートやサービス、ページ、アカウント、特権)。
+- デフォルトのアカウントとパスワードが有効になったまま変更されていない。
+- エラー処理がユーザに対して、スタックトレースやその他余計な情報を含むエラーメッセージを見せる。
+- アップグレードしたシステムでは、最新のセキュリティ機能が無効になっているか正しく設定されていない。
+- アプリケーションサーバやアプリケーションフレームワーク(例えば、Struts、Spring、 ASP.NET)、ライブラリ、データベース等のセキュリティの設定が、安全な値に設定されていない。
+- サーバがセキュリテイヘッダーやディレクティブを送らなかったり、安全な値に設定されていなかったりする。
+- ソフトウェアが古いか脆弱である (**A9:2017-既知の脆弱性のあるコンポーネントの使用** を参照)。
 
 アプリケーションのセキュリティを設定するプロセスを一致協力して繰り返さないと、システムのリスクはより高くなります。
 
@@ -24,12 +24,12 @@
 
 安全にインストールするプロセスにおいて、以下のことを実施すべきです:
 
-* 繰り返し強化するプロセスは、簡単にすぐ他の環境に展開され、正しくロックダウンすること。開発やQA、本番環境は完全に同じように設定し、それぞれの環境で別々の認証情報を使用すること。このプロセスを自動化し、新しい安全な環境をセットアップする際には、手間を最小限にすること。
-* プラットフォームは最小限のものとし、必要のない機能やコンポーネント、ドキュメント、サンプルを除くこと。使用しない機能とフレームワークは、削除もしくはインストールしないこと。
-* レビューを実施して、セキュリティ関連の記録と更新の全てに加え、パッチを管理するプロセスの一環としてパッチの設定を適切に更新すること(**A9:2017-既知の脆弱性のあるコンポーネントの使用** を参照)。クラウドストレージのパーミッションは、詳細にレビューすること (例えば、S3 バケットのパーミッション)。
-* セグメント化したアプリケーションアーキテクチャは、セグメンテーションやコンテナリゼーション、クラウドのセキュリティグループ(ACL)をともなったコンポーネントやテナント間に、効果的で安全な仕切りをもたらす。
-* セキュリティディレクティブをクライアントへ送ること。例えば [セキュリティヘッダー](https://owasp.org/www-project-secure-headers/)
-* プロセスを自動化して設定の有効性を検証し、環境すべてに適用すること。
+- 繰り返し強化するプロセスは、簡単にすぐ他の環境に展開され、正しくロックダウンすること。開発やQA、本番環境は完全に同じように設定し、それぞれの環境で別々の認証情報を使用すること。このプロセスを自動化し、新しい安全な環境をセットアップする際には、手間を最小限にすること。
+- プラットフォームは最小限のものとし、必要のない機能やコンポーネント、ドキュメント、サンプルを除くこと。使用しない機能とフレームワークは、削除もしくはインストールしないこと。
+- レビューを実施して、セキュリティ関連の記録と更新の全てに加え、パッチを管理するプロセスの一環としてパッチの設定を適切に更新すること(**A9:2017-既知の脆弱性のあるコンポーネントの使用** を参照)。クラウドストレージのパーミッションは、詳細にレビューすること (例えば、S3 バケットのパーミッション)。
+- セグメント化したアプリケーションアーキテクチャは、セグメンテーションやコンテナリゼーション、クラウドのセキュリティグループ(ACL)をともなったコンポーネントやテナント間に、効果的で安全な仕切りをもたらす。
+- セキュリティディレクティブをクライアントへ送ること。例えば [セキュリティヘッダー](https://owasp.org/www-project-secure-headers/)
+- プロセスを自動化して設定の有効性を検証し、環境すべてに適用すること。
 
 ## 攻撃シナリオの例
 
@@ -45,17 +45,17 @@
 
 ### OWASP
 
-* [OWASP Testing Guide: Configuration Management](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/README)
-* [OWASP Testing Guide: Testing for Error Codes](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/08-Testing_for_Error_Handling/README)
-* [OWASP Security Headers Project](https://owasp.org/www-project-secure-headers/)
+- [OWASP Testing Guide: Configuration Management](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/README)
+- [OWASP Testing Guide: Testing for Error Codes](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/08-Testing_for_Error_Handling/README)
+- [OWASP Security Headers Project](https://owasp.org/www-project-secure-headers/)
 
 この分野でさらに知りたいのなら、 Application Security Verification Standard [V19 Configuration](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x22-V14-Config.md)を参照してください。
 
 ### 外部資料
 
-* [NIST Guide to General Server Hardening](https://csrc.nist.gov/publications/detail/sp/800-123/final)
-* [CWE-2: Environmental Security Flaws](https://cwe.mitre.org/data/definitions/2.html)
-* [CWE-16: Configuration](https://cwe.mitre.org/data/definitions/16.html)
-* [CWE-388: Error Handling](https://cwe.mitre.org/data/definitions/388.html)
-* [CIS Security Configuration Guides/Benchmarks](https://www.cisecurity.org/cis-benchmarks/)
-* [Amazon S3 Bucket Discovery and Enumeration](https://blog.websecurify.com/2017/10/aws-s3-bucket-discovery.html)
+- [NIST Guide to General Server Hardening](https://csrc.nist.gov/publications/detail/sp/800-123/final)
+- [CWE-2: Environmental Security Flaws](https://cwe.mitre.org/data/definitions/2.html)
+- [CWE-16: Configuration](https://cwe.mitre.org/data/definitions/16.html)
+- [CWE-388: Error Handling](https://cwe.mitre.org/data/definitions/388.html)
+- [CIS Security Configuration Guides/Benchmarks](https://www.cisecurity.org/cis-benchmarks/)
+- [Amazon S3 Bucket Discovery and Enumeration](https://blog.websecurify.com/2017/10/aws-s3-bucket-discovery.html)

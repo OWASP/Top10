@@ -9,14 +9,14 @@ Los atacantes a menudo intentarán explotar defectos sin parchear o acceder a cu
 
 La aplicación puede ser vulnerable si:
 
-* Falta de hardening adecuado en cualquier parte del stack tecnológico, o permisos mal configurados en los servicios de la nube.
-* Se encuentran instaladas o habilitadas característica innecesarias (ej. puertos, servicios, páginas, cuentas o permisos)
-* Las cuentas predeterminadas y sus contraseñas siguen activas y sin cambios.
-* El manejo de errores revela trazas de la aplicación u otros mensajes de error demasiado informativos a los usuarios
-* Para los sistemas actualizados, las nuevas funciones de seguridad se encuentran desactivadas o no se encuentran configuradas de forma segura.
-* Las configuraciones de seguridad en el servidor de aplicaciones, en el framework de aplicación (ej., Struts, Spring, ASP.NET), bibliotecas, bases de datos no se encuentran especificados en valores seguros.
-* El servidor no envía directrices o cabezales de seguridad a los clientes o no se encuentran configurados con valores seguros
-* El software se encuentra desactualizado o posee vulnerabilidades (ver A9: 2017 Uso de componentes con vulnerabilidades conocidas)
+- Falta de hardening adecuado en cualquier parte del stack tecnológico, o permisos mal configurados en los servicios de la nube.
+- Se encuentran instaladas o habilitadas característica innecesarias (ej. puertos, servicios, páginas, cuentas o permisos)
+- Las cuentas predeterminadas y sus contraseñas siguen activas y sin cambios.
+- El manejo de errores revela trazas de la aplicación u otros mensajes de error demasiado informativos a los usuarios
+- Para los sistemas actualizados, las nuevas funciones de seguridad se encuentran desactivadas o no se encuentran configuradas de forma segura.
+- Las configuraciones de seguridad en el servidor de aplicaciones, en el framework de aplicación (ej., Struts, Spring, ASP.NET), bibliotecas, bases de datos no se encuentran especificados en valores seguros.
+- El servidor no envía directrices o cabezales de seguridad a los clientes o no se encuentran configurados con valores seguros
+- El software se encuentra desactualizado o posee vulnerabilidades (ver A9: 2017 Uso de componentes con vulnerabilidades conocidas)
 
 Sin un proceso de configuración de seguridad de aplicación concertado y repetible, los sistemas corren un mayor riesgo.
 
@@ -24,12 +24,12 @@ Sin un proceso de configuración de seguridad de aplicación concertado y repeti
 
 Deben implementarse procesos seguros de instalación, incluyendo:
 
-* Un proceso de fortalecimiento reproducible que agilite y facilite la implementación de otro entorno que esté asegurado de manera apropiada. Los entornos de desarrollo, de control de calidad (QA)  y de Producción deben configurarse de manera idéntica (con diferentes credenciales utilizadas en cada entorno). Este proceso puede automatizarse para minimizar el esfuerzo requerido para configurar un nuevo entorno seguro.
-* Una plataforma minimalista sin funcionalidades innecesarias, componentes, documentación o ejemplos. Elimine o no instale frameworks y funcionalidades no utilizadas.
-* Un proceso para revisar y actualizar las configuraciones apropiadas para todas las advertencias de seguridad, actualizaciones y parches como parte del proceso de gestión de parches (ver **A9:2017-Uso de Componentes con vulnerabilidades conocidas**). En particular, revise los permisos de almacenamiento en la nube (por ejemplo, los permisos de buckets de S3).
-* Una arquitectura de la aplicación segmentada que proporcione una separación efectiva y segura entre componentes o arrendatarios, utilizando segmentación, contenedorización o grupos de seguridad en la nube (ACL).
-* Enviando directivas de seguridad a clientes, p. ej.[Cabezales de seguridad](https://owasp.org/www-project-secure-headers/).
-* Un proceso automatizado para verificar la efectividad de los ajustes y configuraciones en todos los ambientes.
+- Un proceso de fortalecimiento reproducible que agilite y facilite la implementación de otro entorno que esté asegurado de manera apropiada. Los entornos de desarrollo, de control de calidad (QA)  y de Producción deben configurarse de manera idéntica (con diferentes credenciales utilizadas en cada entorno). Este proceso puede automatizarse para minimizar el esfuerzo requerido para configurar un nuevo entorno seguro.
+- Una plataforma minimalista sin funcionalidades innecesarias, componentes, documentación o ejemplos. Elimine o no instale frameworks y funcionalidades no utilizadas.
+- Un proceso para revisar y actualizar las configuraciones apropiadas para todas las advertencias de seguridad, actualizaciones y parches como parte del proceso de gestión de parches (ver **A9:2017-Uso de Componentes con vulnerabilidades conocidas**). En particular, revise los permisos de almacenamiento en la nube (por ejemplo, los permisos de buckets de S3).
+- Una arquitectura de la aplicación segmentada que proporcione una separación efectiva y segura entre componentes o arrendatarios, utilizando segmentación, contenedorización o grupos de seguridad en la nube (ACL).
+- Enviando directivas de seguridad a clientes, p. ej.[Cabezales de seguridad](https://owasp.org/www-project-secure-headers/).
+- Un proceso automatizado para verificar la efectividad de los ajustes y configuraciones en todos los ambientes.
 
 ## Ejemplos de escenarios de ataque
 
@@ -46,20 +46,20 @@ Deben implementarse procesos seguros de instalación, incluyendo:
 
 ### OWASP
 
-* [Guía de Pruebas de OWASP: Gestión de la Configuración](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/README)
-* [Guía de Pruebas de OWASP: Prueba de Error de Código](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/08-Testing_for_Error_Handling/README)
-* [Proyecto de Cabezalez de Seguridad de OWASP](https://owasp.org/www-project-secure-headers/)
+- [Guía de Pruebas de OWASP: Gestión de la Configuración](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/README)
+- [Guía de Pruebas de OWASP: Prueba de Error de Código](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/08-Testing_for_Error_Handling/README)
+- [Proyecto de Cabezalez de Seguridad de OWASP](https://owasp.org/www-project-secure-headers/)
 
 Para conocer más sobre requisitos adicionales en esta área, consulte el Estándar de Verificación de Seguridad en Aplicaciones [V19 Configuración](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x22-V14-Config.md).
 
 ### Externos
 
-* [Guía general del NIST para el hardening de servidores]((https://csrc.nist.gov/publications/detail/sp/800-123/final))
-* [CWE 2: Defectos en la seguridad del ambiente](https://cwe.mitre.org/data/definitions/2.html)
-* [CWE-16: Configuración](https://cwe.mitre.org/data/definitions/16.html)
-* [CWE-388: Manejo de Errores](https://cwe.mitre.org/data/definitions/388.html)
-* [Guías de configuración del CIS/Comparativas](https://www.cisecurity.org/cis-benchmarks/)
-* [Amazon S3 Bucket Descubribilidad y Enumeración](https://blog.websecurify.com/2017/10/aws-s3-bucket-discovery.html)
+- [Guía general del NIST para el hardening de servidores]((https://csrc.nist.gov/publications/detail/sp/800-123/final))
+- [CWE 2: Defectos en la seguridad del ambiente](https://cwe.mitre.org/data/definitions/2.html)
+- [CWE-16: Configuración](https://cwe.mitre.org/data/definitions/16.html)
+- [CWE-388: Manejo de Errores](https://cwe.mitre.org/data/definitions/388.html)
+- [Guías de configuración del CIS/Comparativas](https://www.cisecurity.org/cis-benchmarks/)
+- [Amazon S3 Bucket Descubribilidad y Enumeración](https://blog.websecurify.com/2017/10/aws-s3-bucket-discovery.html)
 
 
 

@@ -11,16 +11,16 @@
 
 主な2種類の攻撃:
 
-* オブジェクトとデータ構造に関連した攻撃：デシリアライズ中またはデシリアライズ後に、振る舞いを変更できるクラスがアプリケーションで使用可能な場合、攻撃者は、アプリケーションロジックの変更または、任意のリモートコード実行を行える攻撃である。
-* 典型的なデータ改ざん攻撃：既存のデータ構造が内容を変えられて使われるようなアクセス制御関連の攻撃である。
+- オブジェクトとデータ構造に関連した攻撃：デシリアライズ中またはデシリアライズ後に、振る舞いを変更できるクラスがアプリケーションで使用可能な場合、攻撃者は、アプリケーションロジックの変更または、任意のリモートコード実行を行える攻撃である。
+- 典型的なデータ改ざん攻撃：既存のデータ構造が内容を変えられて使われるようなアクセス制御関連の攻撃である。
 
 シリアライゼーションが、以下のような用途にアプリケーションで使用される場合：
 
-* リモート間またはローカル内でのプロセス間通信（RPCやIPC）
-* ワイヤプロトコル、Webサービス、メッセージブローカー
-* キャッシュ/永続化
-* データベース、キャッシュサーバ、ファイルシステム
-* HTTPクッキー、HTMLフォームのパラメータ、API認証トークン
+- リモート間またはローカル内でのプロセス間通信（RPCやIPC）
+- ワイヤプロトコル、Webサービス、メッセージブローカー
+- キャッシュ/永続化
+- データベース、キャッシュサーバ、ファイルシステム
+- HTTPクッキー、HTMLフォームのパラメータ、API認証トークン
 
 ## 防止方法
 
@@ -28,12 +28,12 @@
 
 上記の対策を取れない場合、以下の防止方法から一つ以上を検討してください：
 
-* 悪意のあるオブジェクトの生成やデータの改ざんを防ぐために、シリアライズされたオブジェクトにデジタル署名などの整合性チェックを実装する。
-* コードは定義可能なクラスに基づくため、オブジェクトを生成する前に、デシリアライゼーションにおいて厳密な型制約を強制する。ただし、この手法を回避する方法は実証済みなので、この手法頼みにすることはお勧め出来ない。
-* 可能であればデシリアライズに関するコードは分離して、低い権限の環境下で実行する。
-* 型の不整合やデシリアライズ時に生じた例外など、デシリアライゼーションで発生した失敗や例外はログに記録する。
-* デシリアライズするコンテナやサーバからの、送受信に関するネットワーク接続は、制限もしくはモニタリングする。
-* 特定のユーザが絶えずデシリアライズしていないか、デシリアライゼーションをモニタリングし、警告する。
+- 悪意のあるオブジェクトの生成やデータの改ざんを防ぐために、シリアライズされたオブジェクトにデジタル署名などの整合性チェックを実装する。
+- コードは定義可能なクラスに基づくため、オブジェクトを生成する前に、デシリアライゼーションにおいて厳密な型制約を強制する。ただし、この手法を回避する方法は実証済みなので、この手法頼みにすることはお勧め出来ない。
+- 可能であればデシリアライズに関するコードは分離して、低い権限の環境下で実行する。
+- 型の不整合やデシリアライズ時に生じた例外など、デシリアライゼーションで発生した失敗や例外はログに記録する。
+- デシリアライズするコンテナやサーバからの、送受信に関するネットワーク接続は、制限もしくはモニタリングする。
+- 特定のユーザが絶えずデシリアライズしていないか、デシリアライゼーションをモニタリングし、警告する。
 
 
 ## 攻撃シナリオの例
@@ -55,14 +55,14 @@
 
 ### OWASP
 
-* [OWASP Cheat Sheet: Deserialization](https://cheatsheetseries.owasp.org/cheatsheets/Deserialization_Cheat_Sheet.html)
-* [OWASP Proactive Controls: Validate All Inputs](https://owasp.org/www-project-proactive-controls/v3/en/c5-validate-inputs)
-* [OWASP Application Security Verification Standard: TBA](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x11-V2-Authentication.md)
-* [OWASP AppSecEU 2016: Surviving the Java Deserialization Apocalypse](https://speakerdeck.com/pwntester/surviving-the-java-deserialization-apocalypse)
-* [OWASP AppSecUSA 2017: Friday the 13th JSON Attacks](https://speakerdeck.com/pwntester/friday-the-13th-json-attacks)
+- [OWASP Cheat Sheet: Deserialization](https://cheatsheetseries.owasp.org/cheatsheets/Deserialization_Cheat_Sheet.html)
+- [OWASP Proactive Controls: Validate All Inputs](https://owasp.org/www-project-proactive-controls/v3/en/c5-validate-inputs)
+- [OWASP Application Security Verification Standard: TBA](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x11-V2-Authentication.md)
+- [OWASP AppSecEU 2016: Surviving the Java Deserialization Apocalypse](https://speakerdeck.com/pwntester/surviving-the-java-deserialization-apocalypse)
+- [OWASP AppSecUSA 2017: Friday the 13th JSON Attacks](https://speakerdeck.com/pwntester/friday-the-13th-json-attacks)
 
 ### 外部資料
 
-* [CWE-502: Deserialization of Untrusted Data](https://cwe.mitre.org/data/definitions/502.html)
-* [Java Unmarshaller Security](https://github.com/mbechler/marshalsec)
-* [OWASP AppSec Cali 2015: Marshalling Pickles](https://frohoff.github.io/appseccali-marshalling-pickles/)
+- [CWE-502: Deserialization of Untrusted Data](https://cwe.mitre.org/data/definitions/502.html)
+- [Java Unmarshaller Security](https://github.com/mbechler/marshalsec)
+- [OWASP AppSec Cali 2015: Marshalling Pickles](https://frohoff.github.io/appseccali-marshalling-pickles/)

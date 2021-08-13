@@ -9,14 +9,14 @@
 
 Eğer uygulama aşağıdaki şartları sağlıyorsa, uygulama açıklık içeriyor olabilir:
 
-* Uygulama katmanlarının herhangi bir parçasında uygun güvenlik sıkılaştırması bulunmuyorsa veya bulut servisleri üzerinde düzgün yapılandırılmamış izinler bulunuyorsa.
-* Gerek duyulmayan özellikler (örn. gereksiz portlar, servisler, sayfalar, hesaplar veya yetkiler) aktif edilmişse veya yüklenmişse.
-* Varsayılan hesaplar ve parolaları hala aktifse veya değiştirilmemişse.
-* Hata işleme mekanizması dizin detayları içeriyorsa veya olması gerekenden daha detaylı bilgi içeren hata mesajları kullanıcılara gösteriliyorsa.
-* Güncellenen sistemler için, son güvenlik özellikleri aktif değilse veya güvenli bir şekilde yapılandırılmamışsa.
-* Uygulama sunucularında, uygulama çerçeve yazılımlarında (örn. Struts, Spring, ASP.NET), kütüphanelerde, veri tabanlarında vb. güvenlik ayarları güvenli değerlere sahip değilse.
-* Sunucu güvenlik başlıklarını veya direktiflerini göndermiyorsa veya bunlar güvenli değerlere sahip değilse.
-* Yazılım güncel değilse veya zafiyet içeriyorsa. (bkz. **A9:2017-Bilinen Açıklık İçeren Bileşen Kullanımı**)
+- Uygulama katmanlarının herhangi bir parçasında uygun güvenlik sıkılaştırması bulunmuyorsa veya bulut servisleri üzerinde düzgün yapılandırılmamış izinler bulunuyorsa.
+- Gerek duyulmayan özellikler (örn. gereksiz portlar, servisler, sayfalar, hesaplar veya yetkiler) aktif edilmişse veya yüklenmişse.
+- Varsayılan hesaplar ve parolaları hala aktifse veya değiştirilmemişse.
+- Hata işleme mekanizması dizin detayları içeriyorsa veya olması gerekenden daha detaylı bilgi içeren hata mesajları kullanıcılara gösteriliyorsa.
+- Güncellenen sistemler için, son güvenlik özellikleri aktif değilse veya güvenli bir şekilde yapılandırılmamışsa.
+- Uygulama sunucularında, uygulama çerçeve yazılımlarında (örn. Struts, Spring, ASP.NET), kütüphanelerde, veri tabanlarında vb. güvenlik ayarları güvenli değerlere sahip değilse.
+- Sunucu güvenlik başlıklarını veya direktiflerini göndermiyorsa veya bunlar güvenli değerlere sahip değilse.
+- Yazılım güncel değilse veya zafiyet içeriyorsa. (bkz. **A9:2017-Bilinen Açıklık İçeren Bileşen Kullanımı**)
 
 Düzenlenmiş, tekrar edilebilir uygulama  güvenlik yapılandırması süreci olmadan, sistemler yüksek risk altında bulunmaktadır.
 
@@ -24,12 +24,12 @@ Düzenlenmiş, tekrar edilebilir uygulama  güvenlik yapılandırması süreci o
 
 Aşağıdakiler dahil güvenli yükleme süreçleri uygulanmalıdır:
 
-* Kapalı başka bir ortamda, kurulumu kolaylaştıracak ve hızlandıracak bir tekrarlanabilir sıkılaştırma süreci. Geliştirme, QA ve ürün ortamları, her bir ortamda farklı giriş bilgileri kullanılacak şekilde aynı şekilde yapılandırılmalıdır. Yeni bir güvenli ortamın hazırlanması için gereken iş yükünü azaltmak için bu süreç otomatize hale getirilmelidir.
-* Herhangi bir gereksiz özellik, bileşen, dokümantasyon veya örnek içermeyen minimal bir platform. Kullanılmayan özellikler veya çerçeveler yüklenmemeli ve varsa kaldırılmalıdır.
-* Yama yönetim sürecinin bir parçası olarak tüm güvenlik notlarına, güncellemelerine ve yamalarına uygun yapılandırmaları gözden geçirme ve güncelleme görevi (bkz. **A9:2017-Bilinen Açıklık İçeren Bileşen Kullanımı**). Özellikle, bulut depolama izinleri (örn. S3 bucket izinleri) gözden geçirilmelidir.
-* Segmentasyon, konteyner kullanımı veya bulut güvenlik grupları (ACL) ile bileşenler arasında güvenli ve etkin bir ayırım sağlayan parçalara ayrılmış bir uygulama mimarisi.
-* Güvenlik direktiflerinin istemciye gönderilmesi, örn. [Güvenlik Başlıkları](https://owasp.org/www-project-secure-headers/).
-* Tüm ortamlardaki yapılandırmanın ve ayarların etkinliğini doğrulamak için otomatize bir süreç.
+- Kapalı başka bir ortamda, kurulumu kolaylaştıracak ve hızlandıracak bir tekrarlanabilir sıkılaştırma süreci. Geliştirme, QA ve ürün ortamları, her bir ortamda farklı giriş bilgileri kullanılacak şekilde aynı şekilde yapılandırılmalıdır. Yeni bir güvenli ortamın hazırlanması için gereken iş yükünü azaltmak için bu süreç otomatize hale getirilmelidir.
+- Herhangi bir gereksiz özellik, bileşen, dokümantasyon veya örnek içermeyen minimal bir platform. Kullanılmayan özellikler veya çerçeveler yüklenmemeli ve varsa kaldırılmalıdır.
+- Yama yönetim sürecinin bir parçası olarak tüm güvenlik notlarına, güncellemelerine ve yamalarına uygun yapılandırmaları gözden geçirme ve güncelleme görevi (bkz. **A9:2017-Bilinen Açıklık İçeren Bileşen Kullanımı**). Özellikle, bulut depolama izinleri (örn. S3 bucket izinleri) gözden geçirilmelidir.
+- Segmentasyon, konteyner kullanımı veya bulut güvenlik grupları (ACL) ile bileşenler arasında güvenli ve etkin bir ayırım sağlayan parçalara ayrılmış bir uygulama mimarisi.
+- Güvenlik direktiflerinin istemciye gönderilmesi, örn. [Güvenlik Başlıkları](https://owasp.org/www-project-secure-headers/).
+- Tüm ortamlardaki yapılandırmanın ve ayarların etkinliğini doğrulamak için otomatize bir süreç.
 
 ## Örnek Saldırı Senaryoları
 
@@ -45,17 +45,17 @@ Aşağıdakiler dahil güvenli yükleme süreçleri uygulanmalıdır:
 
 ### OWASP
 
-* [OWASP Test Rehberi: Yapılandırma Yönetimi](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/README)
-* [OWASP Test Rehberi: Hata Kodlarının Testi](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/08-Testing_for_Error_Handling/README)
-* [OWASP Güvenlik Başlıkları Projesi](https://owasp.org/www-project-secure-headers/)
+- [OWASP Test Rehberi: Yapılandırma Yönetimi](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/README)
+- [OWASP Test Rehberi: Hata Kodlarının Testi](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/08-Testing_for_Error_Handling/README)
+- [OWASP Güvenlik Başlıkları Projesi](https://owasp.org/www-project-secure-headers/)
 
 Bu alanda ilave gereksinimler için, bkz. Uygulama Güvenliği Doğrulama Standardı [V19 Yapılandırma](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x22-V14-Config.md).
 
 ### Dış Kaynaklar
 
-* [NIST Guide to General Server Hardening](https://csrc.nist.gov/publications/detail/sp/800-123/final)
-* [CWE-2: Environmental Security Flaws](https://cwe.mitre.org/data/definitions/2.html)
-* [CWE-16: Configuration](https://cwe.mitre.org/data/definitions/16.html)
-* [CWE-388: Error Handling](https://cwe.mitre.org/data/definitions/388.html)
-* [CIS Security Configuration Guides/Benchmarks](https://www.cisecurity.org/cis-benchmarks/)
-* [Amazon S3 Bucket Discovery and Enumeration](https://blog.websecurify.com/2017/10/aws-s3-bucket-discovery.html)
+- [NIST Guide to General Server Hardening](https://csrc.nist.gov/publications/detail/sp/800-123/final)
+- [CWE-2: Environmental Security Flaws](https://cwe.mitre.org/data/definitions/2.html)
+- [CWE-16: Configuration](https://cwe.mitre.org/data/definitions/16.html)
+- [CWE-388: Error Handling](https://cwe.mitre.org/data/definitions/388.html)
+- [CIS Security Configuration Guides/Benchmarks](https://www.cisecurity.org/cis-benchmarks/)
+- [Amazon S3 Bucket Discovery and Enumeration](https://blog.websecurify.com/2017/10/aws-s3-bucket-discovery.html)

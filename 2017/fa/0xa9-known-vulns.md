@@ -67,16 +67,16 @@
 
 ### <div dir="rtl" align="right">OWASP</div> 
 
-* [OWASP Application Security Verification Standard: V1 Architecture, design and threat modelling](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x10-V1-Architecture.md)
-* [OWASP Dependency Check (for Java and .NET libraries)](https://owasp.org/www-project-dependency-check/)
-* [OWASP Testing Guide - Map Application Architecture (OTG-INFO-010)](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/01-Information_Gathering/10-Map_Application_Architecture)
-* [OWASP Virtual Patching Best Practices](https://owasp.org/www-community/Virtual_Patching_Best_Practices)
+- [OWASP Application Security Verification Standard: V1 Architecture, design and threat modelling](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x10-V1-Architecture.md)
+- [OWASP Dependency Check (for Java and .NET libraries)](https://owasp.org/www-project-dependency-check/)
+- [OWASP Testing Guide - Map Application Architecture (OTG-INFO-010)](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/01-Information_Gathering/10-Map_Application_Architecture)
+- [OWASP Virtual Patching Best Practices](https://owasp.org/www-community/Virtual_Patching_Best_Practices)
 
 ### <div dir="rtl" align="right">خارجی</div>
 
-* [The Unfortunate Reality of Insecure Libraries](https://cdn2.hubspot.net/hub/203759/file-1100864196-pdf/docs/Contrast_-_Insecure_Libraries_2014.pdf)
-* [MITRE Common Vulnerabilities and Exposures (CVE) search](https://www.cvedetails.com/version-search.php)
-* [National Vulnerability Database (NVD)](https://nvd.nist.gov/)
-* [Retire.js for detecting known vulnerable JavaScript libraries](https://github.com/retirejs/retire.js/)
+- [The Unfortunate Reality of Insecure Libraries](https://cdn2.hubspot.net/hub/203759/file-1100864196-pdf/docs/Contrast_-_Insecure_Libraries_2014.pdf)
+- [MITRE Common Vulnerabilities and Exposures (CVE) search](https://www.cvedetails.com/version-search.php)
+- [National Vulnerability Database (NVD)](https://nvd.nist.gov/)
+- [Retire.js for detecting known vulnerable JavaScript libraries](https://github.com/retirejs/retire.js/)
 
-* [Ruby Libraries Security Advisory Database and Tools](https://rubysec.com/)
+- [Ruby Libraries Security Advisory Database and Tools](https://rubysec.com/)

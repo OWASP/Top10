@@ -20,23 +20,23 @@ echo ""
 
 generate_pdf() {
     if command_exists xelatex; then
-        # pandoc -N --template ../templates/template.tex --variable mainfont="Merriweather" --variable sansfont="Roboto" --variable monofont="Menlo" --variable fontsize=10pt --variable version=1.17.2 --latex-engine=xelatex --toc -fmarkdown-implicit_figures -o "../OWASP-Top-10-2017-$1.pdf" *.md
-        echo " no PDF generated due to bugs"
+        pandoc -N --template ../templates/template.tex --variable mainfont="Merriweather" --variable sansfont="Roboto" --variable monofont="Source Code Pro for Powerline" --variable fontsize=10pt --variable version=1.17.2 --pdf-engine=xelatex --toc -fmarkdown-implicit_figures -o "../OWASP-Top-10-2017-$1.pdf" *.md
+        # echo " no PDF generated due to bugs"
     else
         echo " could not generate PDF, missing pdflatex"
     fi
 }
 
 generate_docx() {
-    pandoc -s -f markdown_github --reference-doc=../templates/reference.docx --columns 10000 -t docx -o "../OWASP-Top-10-2017-$1.docx" *.md
+    pandoc -s -f gfm --reference-doc=../templates/reference.docx --metadata title="OWASP Top 10 2017" --columns 10000 -t docx -o "../OWASP-Top-10-2017-$1.docx" *.md
 }
 
-generate_doc() {
-    pandoc -s -f gfm --reference-doc=../templates/reference.docx --columns 10000 -t docx -o "../OWASP-Top-10-2017-$1.docx" *.md
+generate_odt() {
+    pandoc -s -f gfm --reference-doc=../templates/reference.odt --metadata title="OWASP Top 10 2017" --columns 10000 -t odt -o "../OWASP-Top-10-2017-$1.odt" *.md
 }
 
 generate_html() {
-    pandoc -s -f markdown_github -t html5 -o "../OWASP-Top-10-2017-$1.html" *.md
+    pandoc -s -f gfm --metadata title="OWASP Top 10 2017" -t html5 -o "../OWASP-Top-10-2017-$1.html" *.md
 }
 
 generate() {
@@ -44,9 +44,9 @@ generate() {
     if [ -d "$1" ]; 
     then
         cd "$1"
-        generate_doc $1
-        #generate_docx $1
-        generate_pdf $1
+        generate_odt $1
+        generate_docx $1
+        # generate_pdf $1
         generate_html $1
         cd ..
         echo " done."
@@ -55,52 +55,44 @@ generate() {
     fi
 }
 
-# Arabic
-#generate "ar"
-
-# Brazil
-#generate "br"
-
-# Chinese 
-#generate "cn"
-
-# Czech
-#generate "cz"
-
 # English
-#generate "en"
+generate "en"
+
+# German
+generate "de"
+
+# Spanish
+generate "es"
+
+# Farsi
+generate "es"
 
 # French 
 generate "fr"
 
-# German
-#generate "de"
-
 # Hebrew
-#generate "heb"
-
-# Italian
-#generate "it"
+generate "he"
 
 # Bahasa indonesia
-#generate "id"
 generate "id"
 
 # Japanese
-#generate "jp"
 generate "ja"
 
-# Korean
-#generate "kr"
+# Korean - no source files
+# generate "ko"
 
-# Spanish
-#generate "es"
+# Portuguese - Brazil
+generate "pt-br"
 
-# Ukraine
-#generate "ukr"
-
-# Portuguese
+# Portuguese - Portugal
 generate "pt-pt"
+
+# Russian
+generate "ru"
+
+# Turkish
+generate "tr"
 
 echo 
 echo "Generated OWASP Top 10"

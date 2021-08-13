@@ -16,18 +16,18 @@ Software Assurance Maturity Model / OWASP SAMM.
 
 Kami berharap bahwa OWASP Top 10 bermanfaat dalam upaya peningkatan keamanan aplikasi Anda. Jangan ragu untuk menghubungi OWASP dengan pertanyaan, komentar, dan ide Anda di repositori proyek GitHub kami:
 
-* [https://github.com/OWASP/Top10/issues](https://github.com/OWASP/Top10/issues)
+- [https://github.com/OWASP/Top10/issues](https://github.com/OWASP/Top10/issues)
 
 Anda bisa mendapatkan Proyek OWASP Top 10  dan Terjemahannya di sini :
 
-* [https://owasp.org/www-project-top-ten/](https://owasp.org/www-project-top-ten/)
+- [https://owasp.org/www-project-top-ten/](https://owasp.org/www-project-top-ten/)
 
 Terakhir, kami mengucapkan terimakasih kepada pimpinan pendiri proyek OWASP Top 10, Dave Wichers dan Jeff Williams, atas semua upaya mereka, dan memercayai kami untuk menyelesaikannya dengan bantuan komunitas. Terima kasih!
 
-* Andrew van der Stock
-* Brian Glas
-* Neil Smithline
-* Torsten Gigler
+- Andrew van der Stock
+- Brian Glas
+- Neil Smithline
+- Torsten Gigler
 
 ## Atribusi
 Terimakasih kepada [Autodesk](https://www.autodesk.com) dalam mensponsori OWASP Top 10 - 2017.

@@ -9,20 +9,20 @@
 
 Una aplicación es vulnerable a ataque cuando:
 
-* Los datos suministrados por el usuario no son validados, filtrados o sanitizados por la aplicación.
-* Se invocan consultas dinámicas o no paremitrizadas sin codificar sus parámetros de forma acorde al contexto.
-* Datos hostiles se utilizan dentro de los parámetros de búsqueda en consultas object-relational mapping (ORM) para extraer registros adicionales y sensibles.
-* Datos hostiles se utilizan o concatenan directamente, de manera que el SQL o comando contiene tanto datos de estructura como hostiles en consultas dinámicas, comandos o procedimientos almacenados.
-* Algunas de las inyecciones más comunes son SQL, NoSQL, comando OS, Object Relational Mapping (ORM), LDAP y Expresiones del Language (EL), o la inyección de la Biblioteca de Navegación Gráfica de Objetos (OGNL). El concepto es idéntico entre todos los intérpretes. La revisión del código fuente es el mejor método para detectar si las aplicaciones son vulnerables a inyecciones, seguido de cerca por pruebas automatizadas  de todos los parámetros, encabezados, URL, cookies, JSON, SOAP y entradas de datos XML. Las organizaciones pueden incluir herramientas de análisis estático ([SAST](https://owasp.org/www-community/Source_Code_Analysis_Tools]) y pruebas dinámicas ([DAST](https://owasp.org/www-community/Vulnerability_Scanning_Tools)) en su pipeline de CI/CD para identificar defectos de inyecciones recientemente introducidas antes de su despliegue en producción.
+- Los datos suministrados por el usuario no son validados, filtrados o sanitizados por la aplicación.
+- Se invocan consultas dinámicas o no paremitrizadas sin codificar sus parámetros de forma acorde al contexto.
+- Datos hostiles se utilizan dentro de los parámetros de búsqueda en consultas object-relational mapping (ORM) para extraer registros adicionales y sensibles.
+- Datos hostiles se utilizan o concatenan directamente, de manera que el SQL o comando contiene tanto datos de estructura como hostiles en consultas dinámicas, comandos o procedimientos almacenados.
+- Algunas de las inyecciones más comunes son SQL, NoSQL, comando OS, Object Relational Mapping (ORM), LDAP y Expresiones del Language (EL), o la inyección de la Biblioteca de Navegación Gráfica de Objetos (OGNL). El concepto es idéntico entre todos los intérpretes. La revisión del código fuente es el mejor método para detectar si las aplicaciones son vulnerables a inyecciones, seguido de cerca por pruebas automatizadas  de todos los parámetros, encabezados, URL, cookies, JSON, SOAP y entradas de datos XML. Las organizaciones pueden incluir herramientas de análisis estático ([SAST](https://owasp.org/www-community/Source_Code_Analysis_Tools]) y pruebas dinámicas ([DAST](https://owasp.org/www-community/Vulnerability_Scanning_Tools)) en su pipeline de CI/CD para identificar defectos de inyecciones recientemente introducidas antes de su despliegue en producción.
 
 ## Cómo se previene
 
 Para prevenir inyecciones, se requiere separar los datos de los comandos y las consultas.
 
-* La opción preferida es utilizar una API segura, que evite el uso un intérprete en su totalidad o proporcione una interfaz parametrizada, o migrar a utilizar una Herramientas de Mapeo Relacional de Objetos (ORMs). Nota**: Incluso cuando se parametrizan, los procedimientos almacenados pueden introducir una inyección SQL si el procedimiento PL/SQL o T-SQL concatena consultas y datos, o ejecuta datos hostiles utilizando EXECUTE IMMEDIATE o exec().
-* Utilizar validaciones de las entradade datos en el servidor utilizando "listas blancas". Esto no es una defensa completa ya que muchas aplicaciones requieren caracteres especiales en sus entradas, como campos de texto o APIs para aplicaciones móviles.
-* Para cualquier consulta dinámica residual, escape caracteres especiales utilizando la sintaxis de escape de caracteres específica para ese intérprete. Nota**: La estructuras de SQL como nombres de tabla, nombres de columna, etc. no se puede escapar y, por lo tanto, los nombres de estructura suministrados por el usuario son peligrosos. Este es un problema común en el software de redacción de informes.
-* Utilice LIMIT y otros controles SQL dentro de las consultas para evitar la divulgación masiva de registros en caso de inyección de SQL.
+- La opción preferida es utilizar una API segura, que evite el uso un intérprete en su totalidad o proporcione una interfaz parametrizada, o migrar a utilizar una Herramientas de Mapeo Relacional de Objetos (ORMs). Nota**: Incluso cuando se parametrizan, los procedimientos almacenados pueden introducir una inyección SQL si el procedimiento PL/SQL o T-SQL concatena consultas y datos, o ejecuta datos hostiles utilizando EXECUTE IMMEDIATE o exec().
+- Utilizar validaciones de las entradade datos en el servidor utilizando "listas blancas". Esto no es una defensa completa ya que muchas aplicaciones requieren caracteres especiales en sus entradas, como campos de texto o APIs para aplicaciones móviles.
+- Para cualquier consulta dinámica residual, escape caracteres especiales utilizando la sintaxis de escape de caracteres específica para ese intérprete. Nota**: La estructuras de SQL como nombres de tabla, nombres de columna, etc. no se puede escapar y, por lo tanto, los nombres de estructura suministrados por el usuario son peligrosos. Este es un problema común en el software de redacción de informes.
+- Utilice LIMIT y otros controles SQL dentro de las consultas para evitar la divulgación masiva de registros en caso de inyección de SQL.
 
 ## Ejemplos de escenarios de ataque
 
@@ -36,7 +36,7 @@ Para prevenir inyecciones, se requiere separar los datos de los comandos y las c
 
 En ambos casos, al atacante modificar el parametro 'id' en su navegador para enviar:  ' or '1'='1. Por ejemplo:
 
-* `https://example.com/app/accountView?id=' or '1'='1`
+- `https://example.com/app/accountView?id=' or '1'='1`
 
 Esto cambia el significado de ambas consultas retornando todos los registro de la tabla "accounts". Ataques más peligrosos pueden modificar datos o incluso invocar procedimientos almacenados.
 
@@ -44,18 +44,18 @@ Esto cambia el significado de ambas consultas retornando todos los registro de l
 
 ### OWASP
 
-* [Controles Proactivos de OWASP: Consultas Parametrizadas](https://owasp.org/www-project-proactive-controls/v3/en/c3-secure-database)
-* [Estándar de Verificación de Seguridad en Aplicaciones de OWASP: V5 Validación de entradas de datos y codificación](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x13-V5-Validation-Sanitization-Encoding.md)
-* [Guía de Pruebas de OWASP: Inyecciones SQL](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/05-Testing_for_SQL_Injection), [Inyecciones de Comando](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/12-Testing_for_Command_Injection), [Inyecciones ORM](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/05.7-Testing_for_ORM_Injection)
-* [Hoja de ayuda de OWASP: Prevención de inyecciones SQL](https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html)
-* [Hoja de ayuda de OWASP: Prevención de inyecciones en Java](https://cheatsheetseries.owasp.org/cheatsheets/Injection_Prevention_Cheat_Sheet.html_in_Java)
-* [Hoja de ayuda de OWASP: Consultas parametrizadas](https://cheatsheetseries.owasp.org/cheatsheets/Query_Parameterization_Cheat_Sheet.html)
-* [Hoja de ayuda de OWASP: Defensas contra inyecciones de Comandos](https://cheatsheetseries.owasp.org/cheatsheets/OS_Command_Injection_Defense_Cheat_Sheet.html)
+- [Controles Proactivos de OWASP: Consultas Parametrizadas](https://owasp.org/www-project-proactive-controls/v3/en/c3-secure-database)
+- [Estándar de Verificación de Seguridad en Aplicaciones de OWASP: V5 Validación de entradas de datos y codificación](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x13-V5-Validation-Sanitization-Encoding.md)
+- [Guía de Pruebas de OWASP: Inyecciones SQL](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/05-Testing_for_SQL_Injection), [Inyecciones de Comando](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/12-Testing_for_Command_Injection), [Inyecciones ORM](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/05.7-Testing_for_ORM_Injection)
+- [Hoja de ayuda de OWASP: Prevención de inyecciones SQL](https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html)
+- [Hoja de ayuda de OWASP: Prevención de inyecciones en Java](https://cheatsheetseries.owasp.org/cheatsheets/Injection_Prevention_Cheat_Sheet.html_in_Java)
+- [Hoja de ayuda de OWASP: Consultas parametrizadas](https://cheatsheetseries.owasp.org/cheatsheets/Query_Parameterization_Cheat_Sheet.html)
+- [Hoja de ayuda de OWASP: Defensas contra inyecciones de Comandos](https://cheatsheetseries.owasp.org/cheatsheets/OS_Command_Injection_Defense_Cheat_Sheet.html)
 
 ### Externas
 
-* [CWE-77 Inyecciones de comandos](https://cwe.mitre.org/data/definitions/77.html)
-* [CWE-89 Inyecciones SQL](https://cwe.mitre.org/data/definitions/89.html)
-* [CWE-564 Inyecciones Hibernate](https://cwe.mitre.org/data/definitions/564.html)
-* [CWE-917 Inyecciones de expresiones de lenguajes](https://cwe.mitre.org/data/definitions/917.html)
-* [PortSwigger: Inyecciones de plantillas en el servidor](https://portswigger.net/knowledgebase/issues/details/00101080_serversidetemplateinjection)
+- [CWE-77 Inyecciones de comandos](https://cwe.mitre.org/data/definitions/77.html)
+- [CWE-89 Inyecciones SQL](https://cwe.mitre.org/data/definitions/89.html)
+- [CWE-564 Inyecciones Hibernate](https://cwe.mitre.org/data/definitions/564.html)
+- [CWE-917 Inyecciones de expresiones de lenguajes](https://cwe.mitre.org/data/definitions/917.html)
+- [PortSwigger: Inyecciones de plantillas en el servidor](https://portswigger.net/knowledgebase/issues/details/00101080_serversidetemplateinjection)

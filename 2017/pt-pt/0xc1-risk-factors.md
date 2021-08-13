@@ -22,17 +22,17 @@ Top 10, e outros não, incluindo novas técnicas de ataque que estão a ser
 identificadas a toda a hora. Outros riscos de segurança aplicacionais (ordenados
 por CWE-ID) que devem ser considerados, incluem:
 
-* [CWE-352: Cross-Site Request Forgery (CSRF)][0xc12]
-* [CWE-400: Uncontrolled Resource Consumption ('Resource Exhaustion',
+- [CWE-352: Cross-Site Request Forgery (CSRF)][0xc12]
+- [CWE-400: Uncontrolled Resource Consumption ('Resource Exhaustion',
   'AppDoS')][0xc13]
-* [CWE-434: Unrestricted Upload of File with Dangerous Type][0xc14]
-* [CWE-451: User Interface (UI) Misrepresentation of Critical Information
+- [CWE-434: Unrestricted Upload of File with Dangerous Type][0xc14]
+- [CWE-451: User Interface (UI) Misrepresentation of Critical Information
   (Clickjacking and others)][0xc15]
-* [CWE-601: Unvalidated Forward and Redirects][0xc16]
-* [CWE-799: Improper Control of Interaction Frequency (Anti-Automation)][0xc17]
-* [CWE-829: Inclusion of Functionality from Untrusted Control Sphere (3rd Party
+- [CWE-601: Unvalidated Forward and Redirects][0xc16]
+- [CWE-799: Improper Control of Interaction Frequency (Anti-Automation)][0xc17]
+- [CWE-829: Inclusion of Functionality from Untrusted Control Sphere (3rd Party
   Content)][0xc18]
-* [CWE-918: Server-Side Request Forgery (SSRF)][0xc19]
+- [CWE-918: Server-Side Request Forgery (SSRF)][0xc19]
 
 [0xc11]: images/0xc1-risk-factor-table.png
 [0xc12]: https://cwe.mitre.org/data/definitions/352.html

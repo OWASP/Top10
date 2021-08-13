@@ -14,18 +14,18 @@ OWASP Top 10のさまざまなユーザーに対して、次のステップを�
 
 OWASP Top 10がアプリケーションセキュリティに関わる努力の助けになって欲しいと考えています。質問やコメント、またアイデアがあればOWASPに遠慮なくお知らせください。Githubプロジェクトレポジトリはこちらです: 
 
-* [https://github.com/OWASP/Top10/issues](https://github.com/OWASP/Top10/issues)
+- [https://github.com/OWASP/Top10/issues](https://github.com/OWASP/Top10/issues)
 
 OWASP Top 10プロジェクトと翻訳はこちらです:
 
-* [https://owasp.org/www-project-top-ten/](https://owasp.org/www-project-top-ten/)
+- [https://owasp.org/www-project-top-ten/](https://owasp.org/www-project-top-ten/)
 
 最後に、OWASP Top 10 プロジェクトのリーダーシップを創設した Dave Wichers とJeff Williamsのすべてのご尽力と、コミュニティの助けがあればこれをやり遂げられると私たちチームを信じてくれたことに感謝を述べたいと思います。
 
-* Andrew van der Stock
-* Brian Glas
-* Neil Smithline
-* Torsten Gigler
+- Andrew van der Stock
+- Brian Glas
+- Neil Smithline
+- Torsten Gigler
 
 ## プロジェクトのスポンサー
 OWASP Top 10 - 2017のスポンサー [Autodesk](https://www.autodesk.com) 社に感謝します。

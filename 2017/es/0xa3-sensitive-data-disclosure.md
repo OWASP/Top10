@@ -9,11 +9,11 @@
 
 Lo primero es determinar las necesidades de protección de los datos en tránsito y en almacenamiento. Por ejemplo, contraseñas, números de tarjetas de crédito, registros médicos, información personal y datos sensibles del negocio requieren una protección adicional, especialmente si dichos datos se encuentran en el ámbito de aplicación de leyes de privacidad, como por ejemplo el Reglamento General de Protección de Datos de la UE (GDPR) o regulaciones como por ejemplo financieras, como PCI Data Security Standard (PCI DSS). Para todos estos datos:
 
-* ¿Se transmite algún dato en texto claro? Esto se refiere a protocolos como HTTP, SMTP y FTP. El tráfico en Internet es especialmente peligroso. Verifique también todo el tráfico interno, por ejemplo, entre los balanceadores de carga, servidores web o sistemas backend.
-* ¿Se utilizan algoritmos criptográficos antiguos o débiles, ya sea por defecto o en código antiguo?
-* ¿Se utilizan claves criptográficas predeterminadas, se generan o reutilizan claves criptográficas débiles, o falta una gestión o rotación adecuada de las claves?
-* ¿No se aplica el cifrado, por ejemplo, no se han configurado alguna de las directivas de seguridad o encabezados para el navegador?
-* ¿El Agente del usuario (aplicación o cliente de correo electrónico, por ejemplo), verifica que el certificado enviado por el servidor se válido?
+- ¿Se transmite algún dato en texto claro? Esto se refiere a protocolos como HTTP, SMTP y FTP. El tráfico en Internet es especialmente peligroso. Verifique también todo el tráfico interno, por ejemplo, entre los balanceadores de carga, servidores web o sistemas backend.
+- ¿Se utilizan algoritmos criptográficos antiguos o débiles, ya sea por defecto o en código antiguo?
+- ¿Se utilizan claves criptográficas predeterminadas, se generan o reutilizan claves criptográficas débiles, o falta una gestión o rotación adecuada de las claves?
+- ¿No se aplica el cifrado, por ejemplo, no se han configurado alguna de las directivas de seguridad o encabezados para el navegador?
+- ¿El Agente del usuario (aplicación o cliente de correo electrónico, por ejemplo), verifica que el certificado enviado por el servidor se válido?
 
 Véase también [criptografía en el almacenamiento (V7)](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x14-V6-Cryptography.md), [protección de datos (V9)](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x16-V8-Data-Protection.md) y [seguridad de la comunicaciones (V10)](https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x17-V9-Communications.md) del ASVS.
 
@@ -21,14 +21,14 @@ Véase también [criptografía en el almacenamiento (V7)](https://github.com/OWA
 
 Realice como mínimo las siguientes recomendaciones y consulte las referencias:
 
-* Clasificar los datos procesados, almacenados o transmitidos por el sistema. Identifique qué información es sensible de acuerdo a las regulaciones, leyes o requisitos del negocio.
-* Aplicar los controles para cada clasificación.
-* No almacene datos sensibles innecesariamente. Descártelos tan pronto como sea posible o utilice un sistema de tokens que cumpla con PCI DSS. Datos que no son retenidos no pueden ser robados.
-* Asegúrese de cifrar todos los datos sensibles cuando son almacenados.
-* Asegúrese de que se utilizan únicamente algoritmos y protocolos estándares  y fuertes, así como que para las claves se implementa una gestión adecuada.
-* Cifre todos los datos en tránsito utilizando protocolos seguros como TLS con cifradores que utilicen perfect forward secrecy (PFS), priorización de cifradores por el servidor y parámetros seguros. Aplique el cifrado utilizando directivas como HTTP Strict Transport Security (HSTS).
-* Almacene contraseñas utilizando funciones de hashing adaptables con un factor de trabajo (factor de retraso) además de sal, como [Argon2](https://github.com/p-h-c/phc-winner-argon2), [scrypt](https://wikipedia.org/wiki/Scrypt),[bcrypt](https://wikipedia.org/wiki/Bcrypt) o [PBKDF2](https://wikipedia.org/wiki/PBKDF2).
-* Verifique la efectividad de sus configuraciones y parámetros de forma independiente.
+- Clasificar los datos procesados, almacenados o transmitidos por el sistema. Identifique qué información es sensible de acuerdo a las regulaciones, leyes o requisitos del negocio.
+- Aplicar los controles para cada clasificación.
+- No almacene datos sensibles innecesariamente. Descártelos tan pronto como sea posible o utilice un sistema de tokens que cumpla con PCI DSS. Datos que no son retenidos no pueden ser robados.
+- Asegúrese de cifrar todos los datos sensibles cuando son almacenados.
+- Asegúrese de que se utilizan únicamente algoritmos y protocolos estándares  y fuertes, así como que para las claves se implementa una gestión adecuada.
+- Cifre todos los datos en tránsito utilizando protocolos seguros como TLS con cifradores que utilicen perfect forward secrecy (PFS), priorización de cifradores por el servidor y parámetros seguros. Aplique el cifrado utilizando directivas como HTTP Strict Transport Security (HSTS).
+- Almacene contraseñas utilizando funciones de hashing adaptables con un factor de trabajo (factor de retraso) además de sal, como [Argon2](https://github.com/p-h-c/phc-winner-argon2), [scrypt](https://wikipedia.org/wiki/Scrypt),[bcrypt](https://wikipedia.org/wiki/Bcrypt) o [PBKDF2](https://wikipedia.org/wiki/PBKDF2).
+- Verifique la efectividad de sus configuraciones y parámetros de forma independiente.
 
 
 ## Ejemplos de escenarios de ataque
@@ -43,20 +43,20 @@ Realice como mínimo las siguientes recomendaciones y consulte las referencias:
 
 ### OWASP
 
-* [Controles Proactivos de OWASP: Protección de Datos](https://owasp.org/www-project-proactive-controls/v3/en/c8-protect-data-everywhere)
-* [Estándar de Verificación de Seguridad en Aplicaciones de OWASP: V9, V10, V11](https://owasp.org/www-project-application-security-verification-standard/)
-* [Hoja de ayuda de OWASP: Protección de Capa Transporte](https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Protection_Cheat_Sheet.html)
-* [Hoja de ayuda de OWASP: Protección de Seguridad de Usuario](https://cheatsheetseries.owasp.org/cheatsheets/User_Privacy_Protection_Cheat_Sheet.html)
-* [Hoja de ayuda de OWASP: Almacenamiento de Contraseña](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html)
-* [Hoja de ayuda de OWASP: Almacenamiento Criptográfico](https://cheatsheetseries.owasp.org/cheatsheets/Cryptographic_Storage_Cheat_Sheet.html)
-* [Proyecto de Cabezales de Seguridad de OWASP](https://owasp.org/www-project-secure-headers/)
-* [Guía de Pruebas de OWASP: Pruebas de Criptografía débil](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/09-Testing_for_Weak_Cryptography/README)
+- [Controles Proactivos de OWASP: Protección de Datos](https://owasp.org/www-project-proactive-controls/v3/en/c8-protect-data-everywhere)
+- [Estándar de Verificación de Seguridad en Aplicaciones de OWASP: V9, V10, V11](https://owasp.org/www-project-application-security-verification-standard/)
+- [Hoja de ayuda de OWASP: Protección de Capa Transporte](https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Protection_Cheat_Sheet.html)
+- [Hoja de ayuda de OWASP: Protección de Seguridad de Usuario](https://cheatsheetseries.owasp.org/cheatsheets/User_Privacy_Protection_Cheat_Sheet.html)
+- [Hoja de ayuda de OWASP: Almacenamiento de Contraseña](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html)
+- [Hoja de ayuda de OWASP: Almacenamiento Criptográfico](https://cheatsheetseries.owasp.org/cheatsheets/Cryptographic_Storage_Cheat_Sheet.html)
+- [Proyecto de Cabezales de Seguridad de OWASP](https://owasp.org/www-project-secure-headers/)
+- [Guía de Pruebas de OWASP: Pruebas de Criptografía débil](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/09-Testing_for_Weak_Cryptography/README)
 
 ### Externas
 
-* [CWE-359: Exposición de Información Privada - Violación de Privacidad](https://cwe.mitre.org/data/definitions/359.html)
-* [CWE-220: Exposición de Información Sensible a Través de Consultas de Datos](https://cwe.mitre.org/data/definitions/220.html)
-* [CWE-310: Problemas Criptográficos](https://cwe.mitre.org/data/definitions/310.html)
-* [CWE-312: Almacenamiento en Texto Plano de Información Sensible](https://cwe.mitre.org/data/definitions/312.html)
-* [CWE-319: Transmisión en Texto Plano de Información Sensible](https://cwe.mitre.org/data/definitions/319.html)
-* [CWE-326: Cifrado Débil](https://cwe.mitre.org/data/definitions/326.html)
+- [CWE-359: Exposición de Información Privada - Violación de Privacidad](https://cwe.mitre.org/data/definitions/359.html)
+- [CWE-220: Exposición de Información Sensible a Través de Consultas de Datos](https://cwe.mitre.org/data/definitions/220.html)
+- [CWE-310: Problemas Criptográficos](https://cwe.mitre.org/data/definitions/310.html)
+- [CWE-312: Almacenamiento en Texto Plano de Información Sensible](https://cwe.mitre.org/data/definitions/312.html)
+- [CWE-319: Transmisión en Texto Plano de Información Sensible](https://cwe.mitre.org/data/definitions/319.html)
+- [CWE-326: Cifrado Débil](https://cwe.mitre.org/data/definitions/326.html)

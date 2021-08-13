@@ -12,21 +12,21 @@ Aplicações e APIs são vulneráveis se desserializarem dados não confiáveis 
 objetos adulterados fornecidos pelo atacante. Isto resulta em dois tipos
 principais de ataques:
 
-* Ataques relacionados com objetos e estruturas de dados em que o atacante
+- Ataques relacionados com objetos e estruturas de dados em que o atacante
   consegue modificar lógica aplicacional ou executar remotamente código
   arbitrário se existirem classes cujo comportamento possa ser alterado durante
   ou depois da desserialização.
-* Ataques de adulteração de dados, tais como os relacionados com o controlo de
+- Ataques de adulteração de dados, tais como os relacionados com o controlo de
   acessos, onde são utilizadas estruturas de dados existentes mas cujo conteúdo
   foi alterado.
 
 A serialização pode ser usada numa aplicação para:
 
-* Comunicação remota e inter-processos (RPC/IPC)
-* _Wire protocols_, _web services_, _message brokers_
-* _Caching_/Persistência
-* Base de Dados, servidores de _cache_, sistemas de ficheiros
-* HTTP _cookies_, parâmetros de formulários HTML, _tokens_ de autenticação em
+- Comunicação remota e inter-processos (RPC/IPC)
+- _Wire protocols_, _web services_, _message brokers_
+- _Caching_/Persistência
+- Base de Dados, servidores de _cache_, sistemas de ficheiros
+- HTTP _cookies_, parâmetros de formulários HTML, _tokens_ de autenticação em
   APIs
 
 ## Como Prevenir
@@ -37,20 +37,20 @@ dados primitivos.
 
 Se isto não for possível, considere uma ou  mais das seguintes recomendações:
 
-* Implementar verificações de integridade como assinatura digital nos objetos
+- Implementar verificações de integridade como assinatura digital nos objetos
   serializados como forma de prevenir a criação de dados hostis ou adulteração
   de dados
-* Aplicar uma política rigorosa de tipos de dados durante a desserialização,
+- Aplicar uma política rigorosa de tipos de dados durante a desserialização,
   antes da criação do objeto uma vez que a lógica tipicamente espera um conjunto
   de classes bem definido. Uma vez que existem formas demonstradas de contornar
   esta técnica, ela não deve ser usada individualmente.
-* Isolar e correr a lógica de desserialização, sempre que possível, num ambiente
+- Isolar e correr a lógica de desserialização, sempre que possível, num ambiente
   com privilégios mínimos.
-* Registar exceções e falhas na desserialização tais como tipos de dados não
+- Registar exceções e falhas na desserialização tais como tipos de dados não
   expectáveis.
-* Restringir e monitorizar o tráfego de entrada e saída dos containers e
+- Restringir e monitorizar o tráfego de entrada e saída dos containers e
   servidores que realizam desserialização.
-* Monitorizar a desserialização, gerando alertas quando esta operação é
+- Monitorizar a desserialização, gerando alertas quando esta operação é
   realizada com frequência anómala.
 
 ## Exemplos de Cenários de Ataque
@@ -78,17 +78,17 @@ administrador:
 
 ### OWASP
 
-* [OWASP Cheat Sheet: Deserialization][0xa82]
-* [OWASP Proactive Controls: Validate All Inputs][0xa83]
-* [OWASP Application Security Verification Standard: TBA][0xa84]
-* [OWASP AppSecEU 2016: Surviving the Java Deserialization Apocalypse][0xa85]
-* [OWASP AppSecUSA 2017: Friday the 13th JSON Attacks][0xa86]
+- [OWASP Cheat Sheet: Deserialization][0xa82]
+- [OWASP Proactive Controls: Validate All Inputs][0xa83]
+- [OWASP Application Security Verification Standard: TBA][0xa84]
+- [OWASP AppSecEU 2016: Surviving the Java Deserialization Apocalypse][0xa85]
+- [OWASP AppSecUSA 2017: Friday the 13th JSON Attacks][0xa86]
 
 ### Externas
 
-* [CWE-502: Deserialization of Untrusted Data][0xa87]
-* [Java Unmarshaller Security][0xa88]
-* [OWASP AppSec Cali 2015: Marshalling Pickles][0xa89]
+- [CWE-502: Deserialization of Untrusted Data][0xa87]
+- [Java Unmarshaller Security][0xa88]
+- [OWASP AppSec Cali 2015: Marshalling Pickles][0xa89]
 
 [0xa81]: https://owasp.blogspot.com/2017/08/owasp-top-10-2017-project-update.html
 [0xa82]: https://cheatsheetseries.owasp.org/cheatsheets/Deserialization_Cheat_Sheet.html
