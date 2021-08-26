@@ -8,8 +8,6 @@ A huge thank you to everyone that contributed their time and data for
 this iteration. Without you, this installment would not happen. **THANK
 YOU**.
 
-## 
-
 ## What's changed in the Top 10 for 2021 
 
 There are three new categories, four categories with naming and scoping

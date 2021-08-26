@@ -1,17 +1,17 @@
 # Project information
-site_name: OWASP Cheat Sheet Series
-site_url: https://cheatsheetseries.owasp.org/
-site_description: Website with the collection of all the cheat sheets of the project.
+site_name: OWASP Top 10
+site_url: https://owasp.org/Top10
+site_description: OWASP Top 10 2021 Draft
 # Repository
-repo_name: OWASP/CheatSheetSeries
-repo_url: https://github.com/OWASP/CheatSheetSeries
+repo_name: OWASP/Top10
+repo_url: https://github.com/OWASP/Top10
 edit_uri: ""
 
 # Copyright
-copyright: ©Copyright 2021 - CheatSheets Series Team - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.
+copyright: © Copyright 2021 - OWASP Top 10 team - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.
 
 #Config
-docs_dir: cheatsheets/
+docs_dir: 2021/en
 google_analytics:
   - !!python/object/apply:os.getenv ["WORKFLOW_GOOGLE_ANALYTICS_KEY", "none"]
   - auto

@@ -1,10 +1,12 @@
 # Top10
- 
-ترجمه فارسی
-
-OWASP Top 10 2017
 
 Official OWASP Top 10 Document Repository
+
+## OWASP Top 10 2021 - DRAFT
+
+Please review the latest draft of the [OWASP Top 10 2021](https://owasp.org/Top10) and provide [peer review, feedback, comments, or log issues](https://github.com/OWASP/Top10/issues) here.
+
+## OWASP Top 10 2017 - RELEASED
 
 We have released the OWASP Top 10 - 2017 (Final)
 
@@ -23,7 +25,7 @@ There are currently four co-leaders for the OWASP Top 10. We meet every Friday a
 * Torsten Gigler [@sslHello](https://github.com/sslHello)
 * Andrew van der Stock [@vanderaj](https://github.com/vanderaj)
 
-# OWASP T10 References
-- [OWASP T10 Wiki homepage](https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project)
+# OWASP Top 10 References
+- [OWASP Top 10 Project Page](https://owasp.org/www-project-top-ten)
 - [OWASP 2017 Summit Outcomes](https://owaspsummit.org/Outcomes/Owasp-Top-10-2017/Owasp-Top-10-2017.html)
  

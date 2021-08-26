@@ -12,12 +12,18 @@ An ATOM feed is available [here](News.xml) with the latest updates.
 
 Project leaders:
 
-- [Jim Manico](https://github.com/jmanico)
-- [Jakub Maćkowski](https://github.com/mackowski)
+- [Andrew van der Stock](mailto:vanderaj@owasp.org)
+- [Brian Glas](mailto:brian.glas@owasp.org)
+- []()
+- []()
+
+Authors (2021)
+
+- [Orange Tsai](https://twitter.com/orange_8361)
 
 Project links:
 
-- [Homepage](https://owasp.org/www-project-cheat-sheets/)
-- [GitHub repository](https://github.com/OWASP/CheatSheetSeries)
-- [How to contribute?](https://github.com/OWASP/CheatSheetSeries/blob/master/CONTRIBUTING.md)
-- [Logo](https://github.com/OWASP/owasp-swag/tree/master/projects/cheat-sheet-series)
+- [Homepage](https://owasp.org/www-project-top-ten/)
+- [GitHub repository](https://github.com/OWASP/Top10)
+- [How to contribute?](https://github.com/OWASP/Top10/blob/master/CONTRIBUTING.md)
+- [Logo](TBA)
