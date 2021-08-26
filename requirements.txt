@@ -1,0 +1,7 @@
+requests
+feedgen
+wheel
+mkdocs
+mkdocs-material
+pymdown-extensions
+Pygments
