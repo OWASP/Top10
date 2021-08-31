@@ -12,10 +12,10 @@ An ATOM feed is available [here](News.xml) with the latest updates.
 
 Project leaders:
 
-- [Andrew van der Stock](mailto:vanderaj@owasp.org)
-- [Brian Glas](mailto:brian.glas@owasp.org)
-- []()
-- []()
+- Neil Smithline [@neil-smithline](https://github.com/Neil-Smithline)
+- Brian Glas [@infosecdad](https://github.com/infosecdad)
+- Torsten Gigler [@sslHello](https://github.com/sslHello)
+- Andrew van der Stock [@vanderaj](https://github.com/vanderaj)
 
 Authors (2021)
 

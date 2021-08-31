@@ -23,7 +23,7 @@ from datetime import datetime
 ## API to retrieve the list of Issues/PR (GitHub REST API v3 considers every pull request an issue, but not every issue is a pull request)
 ## Ask to the API to sort the list by the updated date in order to have the oldest on the top on the list
 ## See https://developer.github.com/v3/issues/#list-issues-for-a-repository for explanation
-ISSUE_API = "https://api.github.com/repos/OWASP/CheatSheetSeries/issues?page=1&per_page=1000&sort=updated&direction=asc"
+ISSUE_API = "https://api.github.com/repos/OWASP/Top10/issues?page=1&per_page=1000&sort=updated&direction=asc"
 ## Expiration delay
 MAX_MONTHS_ALLOWED = 1
 
