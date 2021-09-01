@@ -1,0 +1,51 @@
+site_name: OWASP Top 10
+site_description: OWASP Top 10 2021 Draft
+repo_name: OWASP/Top10
+repo_url: https://github.com/OWASP/Top10
+copyright: © Copyright 2021 - OWASP Top 10 team - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.
+docs_dir: docs
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.sections
+
+nav:
+  - Home: index.md
+  - About: 'A00-about-owasp.md'
+  - How to use the OWASP Top 10 as a standard: 'A00_2021_How_to_use_the_OWASP_Top_10_as_a_standard.md'
+  - How to start an AppSec program with the OWASP Top 10: 'A00_2021-How_to_start_an_AppSec_program_with_the_OWASP_Top_10.md'
+  - Top 10 List:
+    - A01 Broken Access Control: 'A01_2021-Broken_Access_Control.md'
+    - A02 Cryptographic Failures: 'A02_2021-Cryptographic_Failures.md'
+    - A03 Injection: 'A03_2021-Injection.md'
+    - A04 Insecure Design: 'A04_2021-Insecure_Design.md'
+    - A05 Security Misconfiguration: 'A05_2021-Security_Misconfiguration.md'
+    - A06 Vulnerable and Outdated Components: 'A06_2021-Vulnerable_and_Outdated_Components.md'
+    - A07 Identification and Authentication Failures: 'A07_2021-Identification_and_Authentication_Failures.md'
+    - A08 Software and Data Integrity Failures: 'A08_2021-Software_and_Data_Integrity_Failures.md'
+    - A09 Security Logging and Monitoring Failures: 'A09_2021-Security_Logging_and_Monitoring_Failures.md'
+    - A10 Server Side Request Forgery (SSRF): 'A10_2021-Server-Side_Request_Forgery_(SSRF).md'
+  - Next Steps: 'A11_2021-Next_Steps.md'
+
+plugins:
+  - i18n:
+      default_language: en
+      languages:
+        en: English
+        it: Italiano
+        fr: Français
+      nav_translations:
+        fr:
+          Home: Page d'accueil
+          About: À propos
+          How to use the OWASP Top 10 as a standard: Comment utiliser le Top 10 OWASP comme standard
+          How to start an AppSec program with the OWASP Top 10: Comment démarrer un programme AppSec avec le Top 10 OWASP
+          Top 10 List: Liste top 10
+          A01 Broken Access Control: A01 Contrôle d'accès cassé
+        it:
+          About: Riguardo ad OWASP
+          How to use the OWASP Top 10 as a standard: Come utilizzare l'OWASP Top 10 come standard
+          How to start an AppSec program with the OWASP Top 10: Come avviare un programma AppSec con OWASP Top 10
+          Top 10 List: Lista top 10
+          A01 Broken Access Control: A01 Controllo accessi rotto
