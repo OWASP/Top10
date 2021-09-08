@@ -12,9 +12,11 @@ theme:
 
 nav:
   - Home: index.md
-  - About: 'A00-about-owasp.md'
+  - Notice: '0x00-notice.md'
+  - Introduction: 'A00_2021_Introduction.md'
   - How to use the OWASP Top 10 as a standard: 'A00_2021_How_to_use_the_OWASP_Top_10_as_a_standard.md'
   - How to start an AppSec program with the OWASP Top 10: 'A00_2021-How_to_start_an_AppSec_program_with_the_OWASP_Top_10.md'
+  - About OWASP: 'A00-about-owasp.md'
   - Top 10 List:
     - A01 Broken Access Control: 'A01_2021-Broken_Access_Control.md'
     - A02 Cryptographic Failures: 'A02_2021-Cryptographic_Failures.md'
