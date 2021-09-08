@@ -8,12 +8,12 @@ A huge thank you to everyone that contributed their time and data for
 this iteration. Without you, this installment would not happen. **THANK
 YOU**.
 
-## What's changed in the Top 10 for 2021 
+## What's changed in the Top 10 for 2021
 
 There are three new categories, four categories with naming and scoping
 changes, and some consolidation in the Top 10 for 2021.
 
-<img src=".//media/image1.png" style="width:6.5in;height:1.78889in" alt="Mapping of the relationship between the Top 10 2017 and the new Top 10 2021" />
+<img src="./assets/image1.png" style="width:6.5in;height:1.78889in" alt="Mapping of the relationship between the Top 10 2017 and the new Top 10 2021" />
 
 **A01:2021-Broken Access Control** moves up from the fifth position; 94%
 of applications were tested for some form of broken access control. The
@@ -79,7 +79,7 @@ and Impact potential. This category represents the scenario where the
 industry professionals are telling us this is important, even though
 it's not illustrated in the data at this time.
 
-## Methodology 
+## Methodology
 
 This installment of the Top 10 is more data-driven than ever but not
 blindly data-driven. We selected eight of the ten categories from
@@ -297,7 +297,7 @@ isn't any overlap. However, conceptually, there can be overlap or
 interactions based on the higher-level naming. Venn diagrams are many
 times used to show overlap like this.
 
-<img src=".//media/image2.png" style="width:4.31736in;height:3.71339in" alt="Diagram Description automatically generated" />
+<img src="./assets/image2.png" style="width:4.31736in;height:3.71339in" alt="Diagram Description automatically generated" />
 
 The Venn diagram above represents the interactions between the Top Ten
 2017 risk categories. While doing so, a couple of essential points

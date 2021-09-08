@@ -11,7 +11,7 @@ edit_uri: ""
 copyright: © Copyright 2021 - OWASP Top 10 team - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.
 
 #Config
-docs_dir: 2021/en
+docs_dir: 2021/docs
 google_analytics:
   - !!python/object/apply:os.getenv ["WORKFLOW_GOOGLE_ANALYTICS_KEY", "none"]
   - auto

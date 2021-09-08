@@ -5,3 +5,4 @@ mkdocs
 mkdocs-material
 pymdown-extensions
 Pygments
+mkdocs-static-i18n

@@ -1,6 +1,4 @@
-# O About OWASP
-
-## About OWASP
+# About OWASP
 
 The Open Web Application Security Project (OWASP) is an open community dedicated to enabling organizations to develop, purchase, and maintain applications and APIs that can be trusted.
 
@@ -32,6 +30,6 @@ Come join us!
 
 ## Copyright and License
 
-![license](images/license.png)
+![license](assets/license.png)
 
 Copyright © 2003-2021 The OWASP&tm; Foundation. This document is released under the Creative Commons Attribution Share-Alike 4.0 license. For any reuse or distribution, you must make it clear to others the license terms of this work.
