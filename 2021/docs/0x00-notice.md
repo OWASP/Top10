@@ -10,9 +10,9 @@ Taking comments on this draft, and preparing the graphic refresh in time for the
 
 ## Lead Authors
 
-- Andrew van der Stock [@vanderaj](https://twitter/vanderaj)
-- Brian Glas [@infosecdad](https://twitter/infosecdad)
-- Neil Smithline [@]
+- Andrew van der Stock [@vanderaj](https://twitter.com/vanderaj)
+- Brian Glas [@infosecdad](https://twitter.com/infosecdad)
+- Neil Smithline [@appsecneil](https://twitter.com/appsecneil)
 - Torsten Gigler []
 
 ## Contributors
