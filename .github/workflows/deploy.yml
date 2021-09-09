@@ -8,6 +8,9 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
       - name: Checkout 🛎️
         uses: actions/checkout@v2.3.1
       - name: Install and Build
