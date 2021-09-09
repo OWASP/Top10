@@ -37,6 +37,7 @@ plugins:
         en: English
         it: Italiano
         fr: Français
+        ja: Japanese
       nav_translations:
         fr:
           Home: Page d'accueil
