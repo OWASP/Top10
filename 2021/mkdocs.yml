@@ -6,9 +6,55 @@ copyright: © Copyright 2021 - OWASP Top 10 team - This work is licensed under a
 docs_dir: docs
 theme:
   name: material
-  language: en
+  custom_dir: overrides
+  favicon: assets/OWASP-logo.svg
+  logo: assets/OWASP-logo.svg
+  font: false
   features:
     - navigation.sections
+    - navigation.tracking
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - search.share
+  palette:
+    - media: "(prefers-color-scheme: dark)"
+      scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+extra_css:
+  - stylesheets/extra.css
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/OWASP/Top10/
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/owasp
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/owasp/
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/user/owaspglobal
+
+markdown_extensions:
+  - abbr
+  - pymdownx.snippets
+  - admonition
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - footnotes
+  - toc:
+      permalink: ⚓︎
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
 
 nav:
   - Home: index.md
@@ -31,6 +77,8 @@ nav:
   - Next Steps: 'A11_2021-Next_Steps.md'
 
 plugins:
+  - search
+  - git-revision-date
   - i18n:
       default_language: en
       languages:
@@ -40,14 +88,15 @@ plugins:
       nav_translations:
         fr:
           Home: Page d'accueil
-          About: À propos
+          About OWASP: À propos de l'OWASP
           How to use the OWASP Top 10 as a standard: Comment utiliser le Top 10 OWASP comme standard
           How to start an AppSec program with the OWASP Top 10: Comment démarrer un programme AppSec avec le Top 10 OWASP
           Top 10 List: Liste top 10
-          A01 Broken Access Control: A01 Contrôle d'accès cassé
+          Next Steps: Prochaines étapes
         it:
-          About: Riguardo ad OWASP
+          About OWASP: Riguardo ad OWASP
+          Introduction: Introduzione
           How to use the OWASP Top 10 as a standard: Come utilizzare l'OWASP Top 10 come standard
           How to start an AppSec program with the OWASP Top 10: Come avviare un programma AppSec con OWASP Top 10
           Top 10 List: Lista top 10
-          A01 Broken Access Control: A01 Controllo accessi rotto
+          Next Steps: Passi successivi

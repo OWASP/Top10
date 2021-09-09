@@ -10,7 +10,7 @@ A huge thank you to everyone that contributed their time and data for this itera
 
 There are three new categories, four categories with naming and scoping changes, and some consolidation in the Top 10 for 2021.
 
-![license](assets/mapping.png)
+![mapping](assets/mapping.png)
 
 - **A01:2021-Broken Access Control** moves up from the fifth position; 94% of applications were tested for some form of broken access control. The 34 CWEs mapped to Broken Access Control had more occurrences in applications than any other category.
 - **A02:2021-Cryptographic Failures** shifts up one position to #2, previously known as Sensitive Data Exposure, which was broad symptom rather than a root cause. The renewed focus here is on failures related to cryptography which often leads to sensitive data exposure or system compromise.
@@ -111,3 +111,5 @@ The following organizations (along with some anonymous donors) kindly donated da
 - Sqreen
 - Veracode
 - WhiteHat (NTT)
+
+--8<-- "includes/abbreviations.md"

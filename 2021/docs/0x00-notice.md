@@ -1,8 +1,7 @@
 # DRAFT
 
-## DO NOT USE THIS UNTIL IT'S DONE!
-
-This is a draft. Do not use this version. The presence of an Axx does not mean it's going to be in the final or the ordering of the final version.
+!!! warning "DO NOT USE THIS UNTIL IT'S DONE!"
+    This is a draft. Do not use this version. The presence of an Axx does not mean it's going to be in the final or the ordering of the final version.
 
 ## Current status
 

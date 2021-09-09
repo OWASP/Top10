@@ -6,3 +6,4 @@ mkdocs-material
 pymdown-extensions
 Pygments
 mkdocs-static-i18n
+mkdocs-git-revision-date-plugin
