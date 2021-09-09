@@ -26,8 +26,8 @@ control vulnerabilities include:
     application state, or the HTML page, or simply using a custom API
     attack tool.
 
--   Allowing the primary key to be changed to another user's record,
-    permitting viewing or editing someone else's account.
+-   Permitting viewing or editing someone else's account, simply providing
+    it's unique identifier.
 
 -   Elevation of privilege. Acting as a user without being logged in or
     acting as an admin when logged in as a user.
