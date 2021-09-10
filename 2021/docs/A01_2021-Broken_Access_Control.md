@@ -36,7 +36,8 @@ control vulnerabilities include:
     Web Token (JWT) access control token, or a cookie or hidden field
     manipulated to elevate privileges or abusing JWT invalidation.
 
--   CORS misconfiguration allows unauthorized API access.
+-   CORS misconfiguration allows API access from unauthorized/untrusted
+    origins.
 
 -   Force browsing to authenticated pages as an unauthenticated user or
     to privileged pages as a standard user. Accessing API with missing
