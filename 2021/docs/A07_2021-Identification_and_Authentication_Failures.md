@@ -37,9 +37,9 @@ attacks. There may be authentication weaknesses if the application:
 
 -   Has missing or ineffective multi-factor authentication.
 
--   Exposes Session IDs in the URL (e.g., URL rewriting).
+-   Exposes session identifier in the URL.
 
--   Do not rotate Session IDs after successful login.
+-   Reuse session identifier after successful login.
 
 -   Does not correctly invalidate Session IDs. User sessions or
     authentication tokens (mainly single sign-on (SSO) tokens) aren't
@@ -70,7 +70,7 @@ attacks. There may be authentication weaknesses if the application:
     other attacks are detected.
 
 -   Use a server-side, secure, built-in session manager that generates a
-    new random session ID with high entropy after login. Session IDs
+    new random session ID with high entropy after login. Session identifier
     should not be in the URL, be securely stored, and invalidated after
     logout, idle, and absolute timeouts.
 
