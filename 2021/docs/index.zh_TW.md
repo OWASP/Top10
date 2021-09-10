@@ -13,35 +13,35 @@
 
 <img src="./assets/image1.png" style="width:6.5in;height:1.78889in" alt="Mapping of the relationship between the Top 10 2017 and the new Top 10 2021" />
 
-**A01:2021-Broken Access Control** moves up from the fifth position; 94%
+**A01:2021-權限控制失效** moves up from the fifth position; 94%
 of applications were tested for some form of broken access control. The
 34 CWEs mapped to Broken Access Control had more occurrences in
 applications than any other category.
 
-**A02:2021-Cryptographic Failures** shifts up one position to #2,
+**A02:2021-加密機制失效** shifts up one position to #2,
 previously known as *Sensitive Data Exposure,* which was broad symptom
 rather than a root cause. The renewed focus here is on failures related
 to cryptography which often leads to sensitive data exposure or system
 compromise.
 
-**A03:2021-Injection** slides down to the third position. 94% of the
+**A03:2021-注入式攻擊** slides down to the third position. 94% of the
 applications were tested for some form of injection, and the 33 CWEs
 mapped into this category have the second most occurrences in
 applications. Cross-site Scripting is now part of this category in this
 edition.
 
-**A04:2021-Insecure Design** is a new category for 2021, with a focus on
+**A04:2021-不安全設計** is a new category for 2021, with a focus on
 risks related to design flaws. If we genuinely want to "move left" as an
 industry, it calls for more use of threat modeling, secure design
 patterns and principles, and reference architectures.
 
-**A05:2021-Security Misconfiguration** moves up from #6 in the previous
+**A05:2021-安全設定缺陷** moves up from #6 in the previous
 edition; 90% of applications were tested for some form of
 misconfiguration. With more shifts into highly configurable software,
 it's not surprising to see this category move up. The former category
 for XML External Entities (XXE) is now part of this category.
 
-**A06:2021-Vulnerable and Outdated Components** was previously titled
+**A06:2021-危險或過舊的元件** was previously titled
 *Using Components with Known Vulnerabilities* and is #2 in the industry
 survey, but also had enough data to make the Top 10 via data analysis.
 This category moves up from #9 in 2017 and is a known issue that we
@@ -49,20 +49,20 @@ struggle to test and assess risk. It is the only category not to have
 any CVEs mapped to the included CWEs, so a default exploit and impact
 weights of 5.0 are factored into their scores.
 
-**A07:2021-Identification and Authentication Failures** was previously
+**A07:2021-認證及驗證機制失效** was previously
 *Broken Authentication* and is sliding down from the second position,
 and now includes CWEs that are more related to identification failures.
 This category is still an integral part of the Top 10, but the increased
 availability of standardized frameworks seems to be helping.
 
-**A08:2021-Software and Data Integrity Failures** is a new category for
+**A08:2021-軟體及資料完整性失效** is a new category for
 2021, focusing on making assumptions related to software updates,
 critical data, and CI/CD pipelines without verifying integrity. One of
 the highest weighted impacts from CVE/CVSS data mapped to the 10 CWEs in
 this category. Insecure Deserialization from 2017 is now a part of this
 larger category.
 
-**A09:2021-Security Logging and Monitoring Failures** was previously
+**A09:2021-資安記錄及監控失效** was previously
 *Insufficient Logging &* Monitoring and is added from the industry
 survey (#3), moving up from #10 previously. This category is expanded to
 include more types of failures, is challenging to test for, and isn't
@@ -70,7 +70,7 @@ well represented in the CVE/CVSS data. However, failures in this
 category can directly impact visibility, incident alerting, and
 forensics.
 
-**A10:2021-Server-Side Request Forgery** is added from the industry
+**A10:2021-伺服端請求偽造** is added from the industry
 survey (#1). The data shows a relatively low incidence rate with above
 average testing coverage, along with above-average ratings for Exploit
 and Impact potential. This category represents the scenario where the
