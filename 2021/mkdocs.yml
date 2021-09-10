@@ -37,7 +37,7 @@ plugins:
         en: English
         it: Italiano
         fr: Français
-        zh-tw: 繁體中文
+        zh_TW: 繁體中文
       nav_translations:
         fr:
           Home: Page d'accueil
@@ -52,9 +52,10 @@ plugins:
           How to start an AppSec program with the OWASP Top 10: Come avviare un programma AppSec con OWASP Top 10
           Top 10 List: Lista top 10
           A01 Broken Access Control: A01 Controllo accessi rotto
-        zh-tw:
+        zh_TW:
           Home: 首頁
           Notice: 注意事項
+          Introduction: OWASP 2021 介紹
           About OWASP: OWASP 相關
           How to use the OWASP Top 10 as a standard: 如何正確使用 OWASP Top 10 為標準
           How to start an AppSec program with the OWASP Top 10: 如何使用 OWASP Top 10 啟動 AppSec
