@@ -37,6 +37,7 @@ plugins:
         en: English
         it: Italiano
         fr: Français
+        ar: Arabic
       nav_translations:
         fr:
           Home: Page d'accueil
@@ -51,3 +52,22 @@ plugins:
           How to start an AppSec program with the OWASP Top 10: Come avviare un programma AppSec con OWASP Top 10
           Top 10 List: Lista top 10
           A01 Broken Access Control: A01 Controllo accessi rotto
+        ar:
+          Home: الصفحة الرئيسية
+          Notice: ملاحظات
+          Introduction: المقدمة 
+          How to use the OWASP Top 10 as a standard: كيف تستخدم اطار OWASP TOP 10 كنموذج معياري
+          How to start an AppSec program with the OWASP Top 10: كيف تبدء امن التطبيقات مع OWASP TOP 10
+          About OWASP: عن OWASP 
+          Top 10 List: قائمة اعلى عشر مخاطر
+          A01 Broken Access Control: A01 تخطي صلاحيات الوصول
+          A02 Cryptographic Failures: فشل آلية التشفير
+          A03 Injection: الحقن
+          A04 Insecure Design: التصميم الغير الامن
+          A05 Security Misconfiguration: الاعدادات الخاطئة
+          A06 Vulnerable and Outdated Components: الثغرات و الانظمة الغير قابلة للتحديثات
+          A07 Identification and Authentication Failures: الهوية و فشل عملية التحقق
+          A08 Software and Data Integrity Failures: فشل سلامة البيانات والبرمجيات
+          A09 Security Logging and Monitoring Failures: فشل عملية تسجيل الاحداث والمراقبة
+          A10 Server Side Request Forgery (SSRF): تزوير الطلبات من جانب الخادم SSRF
+          Next Steps: انتقل للتالي
