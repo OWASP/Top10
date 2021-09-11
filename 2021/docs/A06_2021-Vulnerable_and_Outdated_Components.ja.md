@@ -1,12 +1,25 @@
+# A06:2021 – 脆弱で古いコンポーネント
 # A06:2021 – Vulnerable and Outdated Components
 
+## 因子
 ## Factors
+
+| 対応する CWE 数 | 最大発生率 | 平均発生率 | 最大網羅率 | 平均網羅率 | 加重平均（攻撃の難易度） | 加重平均（攻撃による影響） | 総発生数 | CVE 合計件数 |
+|:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
+| 3           | 27.96%             | 8.77%              | 51.78%       | 22.47%       | 5.00                 | 5.00                | 30,457            | 0          |
+
 
 | CWEs Mapped | Max Incidence Rate | Avg Incidence Rate | Max Coverage | Avg Coverage | Avg Weighted Exploit | Avg Weighted Impact | Total Occurrences | Total CVEs |
 |:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
 | 3           | 27.96%             | 8.77%              | 51.78%       | 22.47%       | 5.00                 | 5.00                | 30,457            | 0          |
 
+## 概要
 ## Overview
+
+この項目は業界調査では 2 位でしたが、Top10 に入る十分なデータもありました。
+脆弱なコンポーネントは、テストやリスク評価に苦労する問題として知られており、含まれるCWEにマッピングされたCVEがない唯一のカテゴリーです。
+このため標準の攻撃の難易度および、攻撃による影響のウェイトは5.0を使用しています。
+注目すべき CWE は CWE-1104 メンテナンスされていないサードパーティー製コンポーネントの使用と、OWASP Top10 2013 A9 および 2017 A9 を参照する２つの CWE です。
 
 It was #2 from the industry survey but also had enough data to make the
 Top 10 via data. Vulnerable Components are a known issue that we
@@ -16,42 +29,69 @@ weight of 5.0 is used. Notable CWEs included are *CWE-1104: Use of
 Unmaintained Third-Party Components* and the two CWEs from Top 10 2013
 and 2017.
 
+## 説明
 ## Description 
 
+以下に該当する場合、脆弱と言えます。
 You are likely vulnerable:
 
--   If you do not know the versions of all components you use (both
+
+-   使用しているすべてのコンポーネントのバージョンを知らない場合（クライアントサイド・サーバサイドの両方について）。
+    これには直接使用するコンポーネントだけでなく、ネストされた依存関係も含む。
+
+    If you do not know the versions of all components you use (both
     client-side and server-side). This includes components you directly
     use as well as nested dependencies.
 
--   If the software is vulnerable, unsupported, or out of date. This
+-   ソフトウェアが脆弱な場合やサポートがない場合、また使用期限が切れている場合。
+    これには、OSやWebサーバ、アプリケーションサーバ、データベース管理システム（DBMS）、アプリケーション、API、すべてのコンポーネント、ランタイム環境とライブラリを含む。
+
+    If the software is vulnerable, unsupported, or out of date. This
     includes the OS, web/application server, database management system
     (DBMS), applications, APIs and all components, runtime environments,
     and libraries.
 
--   If you do not scan for vulnerabilities regularly and subscribe to
+-   脆弱性スキャンを定期的にしていない場合や、使用しているコンポーネントに関するセキュリティ情報を購読していない場合。
+
+    If you do not scan for vulnerabilities regularly and subscribe to
     security bulletins related to the components you use.
 
--   If you do not fix or upgrade the underlying platform, frameworks,
+-   基盤プラットフォームやフレームワークおよび依存関係をリスクに基づきタイムリーに修正またはアップグレードしない場合。
+    パッチ適用が変更管理の下、月次や四半期のタスクとされている環境でよく起こる。
+    これにより、当該組織は、解決済みの脆弱性について、何日も、場合によっては何ヶ月も不必要な危険にさらされることになる。
+
+    If you do not fix or upgrade the underlying platform, frameworks,
     and dependencies in a risk-based, timely fashion. This commonly
     happens in environments when patching is a monthly or quarterly task
     under change control, leaving organizations open to days or months
     of unnecessary exposure to fixed vulnerabilities.
 
--   If software developers do not test the compatibility of updated,
+-   ソフトウェア開発者が、更新やアップグレードまたはパッチの互換性をテストしない場合。
+
+    If software developers do not test the compatibility of updated,
     upgraded, or patched libraries.
 
--   If you do not secure the components’ configurations (see
+-   コンポーネントの設定をセキュアにしていない場合。（A05-2021: 不適切なセキュリティ設定 参照）
+
+    If you do not secure the components’ configurations (see
     A05:2021-Security Misconfiguration).
 
+## 防止方法
 ## How to Prevent
 
+以下に示すパッチ管理プロセスが必要です。
 There should be a patch management process in place to:
 
--   Remove unused dependencies, unnecessary features, components, files,
+-   未使用の依存関係、不要な機能、コンポーネント、ファイルや文書を取り除く。
+    
+    Remove unused dependencies, unnecessary features, components, files,
     and documentation.
 
--   Continuously inventory the versions of both client-side and
+-   Versions Maven Plugin, OWASP Dependency Check, Retire.jsなどのツールを使用して、クライアントおよびサーバの両方のコンポーネント（フレームワークやライブラリなど）とその依存関係の棚卸しを継続的に行う。
+    コンポーネントの脆弱性についてCVEやNVD などの情報ソースを継続的にモニタリングする。ソフトウェア構成分析ツールを使用してプロセスを自動化する。
+    使用しているコンポーネントに関するセキュリティ脆弱性の電子メールアラートに登録する。
+
+    Continuously inventory the versions of both client-side and
     server-side components (e.g., frameworks, libraries) and their
     dependencies using tools like versions, OWASP Dependency Check,
     retire.js, etc. Continuously monitor sources like CVE and NVD for
@@ -59,41 +99,65 @@ There should be a patch management process in place to:
     tools to automate the process. Subscribe to email alerts for
     security vulnerabilities related to components you use.
 
--   Only obtain components from official sources over secure links.
+-   安全なリンクを介し、公式ソースからのみコンポーネントを取得する。
+    変更された悪意あるコンポーネントを取得する可能性を減らすため、署名付きのパッケージを選ぶようにする。
+    (A08-2021: ソフトウェアおよび、データの完全性に関する欠陥 参照)
+
+    Only obtain components from official sources over secure links.
     Prefer signed packages to reduce the chance of including a modified,
     malicious component (See A08:2021-Software and Data Integrity
     Failures).
 
--   Monitor for libraries and components that are unmaintained or do not
+-   メンテナンスされていない、もしくはセキュリティパッチが作られていない古いバージョンのライブラリとコンポーネントを監視する。
+    パッチ適用が不可能な場合は、発見された問題を監視、検知または保護するために、仮想パッチの適用を検討する。
+    
+    Monitor for libraries and components that are unmaintained or do not
     create security patches for older versions. If patching is not
     possible, consider deploying a virtual patch to monitor, detect, or
     protect against the discovered issue.
 
+いかなる組織も、アプリケーションまたはポートフォリオの存続期間は、モニタリングとトリアージを行い更新または設定変更を行う継続的な計画があることを確認する必要があります。
 Every organization must ensure an ongoing plan for monitoring, triaging,
 and applying updates or configuration changes for the lifetime of the
 application or portfolio.
 
+## 攻撃シナリオの例
 ## Example Attack Scenarios
 
-**Scenario #1:** Components typically run with the same privileges as
+**シナリオ #1:** 
+**Scenario #1:** 
+
+コンポーネントは通常、アプリケーション自体と同じ権限で実行されるため、どんなコンポーネントに存在する欠陥も、深刻な影響を及ぼす可能性があります。
+そのような欠陥は、偶発的（例：コーディングエラー）または意図的（例：コンポーネントのバックドア）両方の可能性があります。
+発見済みの悪用可能なコンポーネントの脆弱性の例：
+
+Components typically run with the same privileges as
 the application itself, so flaws in any component can result in serious
 impact. Such flaws can be accidental (e.g., coding error) or intentional
 (e.g., a backdoor in a component). Some example exploitable component
 vulnerabilities discovered are:
 
--   CVE-2017-5638, a Struts 2 remote code execution vulnerability that
+-   Apache Struts 2においてリモートで任意のコードが実行される脆弱性CVE-2017-5638は、重大な侵害をもたらしています。
+
+    CVE-2017-5638, a Struts 2 remote code execution vulnerability that
     enables the execution of arbitrary code on the server, has been
     blamed for significant breaches.
 
--   While the internet of things (IoT) is frequently difficult or
+-   Internet of things (IoT)は、頻繁なパッチ適用が困難もしくは不可能ですが、一方でパッチ適用の重要性はますます高まっています。（例：医療機器）
+
+    While the internet of things (IoT) is frequently difficult or
     impossible to patch, the importance of patching them can be great
     (e.g., biomedical devices).
+
+攻撃者を助けるようなツールがあり、パッチが未適用なシステムやシステムの設定ミスを自動的に見つけることができます。
+例えば、Shodan IoT search engineは、2014年4月にパッチが適用されたHeartbleedの脆弱性などセキュリティに問題のある機器を見つけることができます。
 
 There are automated tools to help attackers find unpatched or
 misconfigured systems. For example, the Shodan IoT search engine can
 help you find devices that still suffer from Heartbleed vulnerability
 patched in April 2014.
 
+## 参考資料
 ## References
 
 -   OWASP Application Security Verification Standard: V1 Architecture,
@@ -119,10 +183,14 @@ patched in April 2014.
 
 -   https://safecode.org/publication/SAFECode_Software_Integrity_Controls0610.pdf
 
+## 対応する CWE のリスト
 ## List of Mapped CWEs
 
+CWE-937 OWASP Top 10 2013: 既知の脆弱性のあるコンポーネントの使用
 CWE-937 OWASP Top 10 2013: Using Components with Known Vulnerabilities
 
+CWE-1035 2017 Top 10 A9: 既知の脆弱性のあるコンポーネントの使用
 CWE-1035 2017 Top 10 A9: Using Components with Known Vulnerabilities
 
+CWE-1104 メンテナンスされていないサードパーティー製コンポーネントの使用
 CWE-1104 Use of Unmaintained Third Party Components
