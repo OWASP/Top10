@@ -1,12 +1,12 @@
 # RASCUNHO
 
-## DO NOT USE THIS UNTIL IT'S DONE!
+## NÃO UTILIZE ATÉ QUE ESTÁ FINALIZADO!
 
 This is a draft. Do not use this version. The presence of an Axx does not mean it's going to be in the final or the ordering of the final version.
 
-## Current status
+## Estado atual
 
-Taking comments on this draft, and preparing the graphic refresh in time for the official release on OWASP's 20th Anniversary.
+Recebendo comentários sobre este rascunho e preparando a atualização gráfica a tempo para o lançamento oficial no 20º aniversário do OWASP.
 
 ## Lead Authors
 
@@ -15,22 +15,22 @@ Taking comments on this draft, and preparing the graphic refresh in time for the
 - Neil Smithline [@]
 - Torsten Gigler []
 
-## Contributors
+## Contribuidores
 
-- Orange Tsai, Author of A10-2021: Server Side Request Forgery
-- Jim Manico and Jakub Maćkowski - OWASP CheatSheets Coordination
+- Orange Tsai, Autor de A10-2021: Server Side Request Forgery
+- Jim Manico e Jakub Maćkowski - OWASP CheatSheets Coordination
 
-## How you can help
+## Como você pode ajudar
 
-At this stage, we are asking for
+Nesta fase, estamos pedindo
 
-- Data scientists - please peer review our analysis
-- Web designers - we need to make a mobile friendly version
-- Translators - please review the English text to make sure it's translatable
-- ASVS, Testing Guide, and Code Review Guide leadership - please use our data and help us link our documents and standards together
+- Cientistas de dados - por favor revise por pares nossas análises
+- Web designers - precisamos fazer uma versão amigável para celular
+- Tradutores - reveja o texto em inglês para se certificar de que é traduzível
+- ASVS, Guia de Teste e Liderança do Guia de Revisão de Código - utilize nossos dados e nos ajudar a conectar os nossos documentos e padrões juntos
 
-## Log issues and pull requests
+## Registre issues e pull requests
 
-Please log any corrections or issues:
+Por favor registra qualquer correção ou issues:
 
 - [https://github.com/OWASP/Top10/issues](https://github.com/OWASP/Top10/issues)
