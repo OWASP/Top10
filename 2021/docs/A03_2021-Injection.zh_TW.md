@@ -2,18 +2,18 @@
 
 ## Factors
 
-| CWEs Mapped | Max Incidence Rate | Avg Incidence Rate | Max Coverage | Avg Coverage | Avg Weighted Exploit | Avg Weighted Impact | Total Occurrences | Total CVEs |
+| 可對照 CWEs 數量 | 最大發生率 | 平均發生率 | 最大覆蓋範圍 | 平均覆蓋範圍 | 平均加權弱點 | 平均加權影響 | 出現次數 | 所有有關 CVEs 數量|
 |:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
 | 33          | 19.09%             | 3.37%              | 94.04%       | 47.90%       | 7.25                 | 7.15                | 274,228           | 32,078     |
 
-## Overview
+## 概述
 
 Injection slides down to the third position. 94% of the applications
 were tested for some form of injection. Notable CWEs included are
 *CWE-79: Cross-site Scripting*, *CWE-89: SQL Injection*, and *CWE-73:
 External Control of File Name or Path*.
 
-## Description 
+## 描述 
 
 An application is vulnerable to attack when:
 
