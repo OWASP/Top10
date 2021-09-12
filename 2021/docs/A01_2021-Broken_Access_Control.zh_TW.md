@@ -22,9 +22,7 @@
 
 -   容許主鍵被更改為其他用戶的記錄，允許查看或編輯其他人的帳戶。
 
--   Elevation of privilege. Acting as a user without being logged in or
-    acting as an admin when logged in as a user.
-    特權提升。未登入即成為用戶，或以用戶身份登入即成為管理員。
+-   特權提升。未登入即成為用戶，或以用戶身份登入即成為管理員。
 
 -   中繼資料操作，例如重放或篡改JSON網站令牌(JWT)之存取控制令牌，或被操縱以提升特權或濫用
 	JWT失效的cookie或隱藏欄位。
@@ -40,9 +38,7 @@
 
 -   除公開資源外，以拒絕為預設值。
 
--   Implement access control mechanisms once and re-use them throughout
-    the application, including minimizing CORS usage.
-    一次性地建置存取控制機制，之後在整個應用程式中重複使用它們，包括最大限度地減少使用CORS。
+-   一次性地建置存取控制機制，之後在整個應用程式中重複使用它們，包括最大限度地減少使用CORS。
 
 -   模型的存取控制措施應該強化記錄所有權，而不是讓用戶可以創建、讀取、更新或刪除任何記錄。
 
@@ -52,18 +48,13 @@
 
 -   記錄存取控制失效，並在適當的時間警示管理員（例如，重覆性失效）。
 
--   Rate limit API and controller access to minimize the harm from
-    automated attack tooling.
-    對API和控制器存取進行流量限制，以最小化自動攻擊工具所帶來的損害。
+-   對API和控制器存取進行流量限制，以最小化自動攻擊工具所帶來的損害。
 
 -   JWT令牌於登出後，在伺服器端應使其失效。
 
 開發人員和QA品保人員應納入與功能有關之存取控制的單元和整合測試。
 
 ## 攻擊情境範例
-
-**Scenario #1:** The application uses unverified data in a SQL call that
-is accessing account information:
 
 **情境 #1：** 應用程式在存取帳戶資訊的SQL呼叫中使用未經驗證的資料：
 
@@ -75,9 +66,6 @@ is accessing account information:
 攻擊者可以存取任何用戶的帳戶。
 
 https://example.com/app/accountInfo?acct=notmyacct
-
-**Scenario #2:** An attacker simply forces browses to target URLs. Admin
-rights are required for access to the admin page.
 
 **情境#2：** 攻擊者僅強迫瀏覽某些目標網址。存取管理頁面需要管理員權限。
 
