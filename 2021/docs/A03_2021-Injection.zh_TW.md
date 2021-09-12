@@ -41,7 +41,7 @@ source (SAST) and dynamic application test (DAST) tools into the CI/CD
 pipeline to identify introduced injection flaws before production
 deployment.
 
-## How to Prevent
+## 如何預防
 
 -   Preventing injection requires keeping data separate from commands
     and queries.
@@ -68,7 +68,7 @@ deployment.
 -   Use LIMIT and other SQL controls within queries to prevent mass
     disclosure of records in case of SQL injection.
 
-## Example Attack Scenarios
+## 攻擊情境範例
 
 **Scenario #1:** An application uses untrusted data in the construction
 of the following vulnerable SQL call:
@@ -92,7 +92,7 @@ This changes the meaning of both queries to return all the records from
 the accounts table. More dangerous attacks could modify or delete data
 or even invoke stored procedures.
 
-## References
+## 參考
 
 -   [OWASP Proactive Controls: Secure Database
     Access](https://owasp.org/www-project-proactive-controls/v3/en/c3-secure-database)
@@ -124,7 +124,7 @@ or even invoke stored procedures.
 -   [PortSwigger: Server-side template
     injection](https://portswigger.net/kb/issues/00101080_serversidetemplateinjection)
 
-## List of Mapped CWEs
+## 對應的 CWE 列表
 
 CWE-20 Improper Input Validation
 
