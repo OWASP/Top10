@@ -70,13 +70,13 @@ deployment.
 
 ## 攻擊情境範例
 
-**Scenario #1:** An application uses untrusted data in the construction
+**情境 #1:** An application uses untrusted data in the construction
 of the following vulnerable SQL call:
 
 String query = "SELECT \* FROM accounts WHERE custID='" +
 request.getParameter("id") + "'";
 
-**Scenario #2:** Similarly, an application’s blind trust in frameworks
+**情境 #2:** Similarly, an application’s blind trust in frameworks
 may result in queries that are still vulnerable, (e.g., Hibernate Query
 Language (HQL)):
 
