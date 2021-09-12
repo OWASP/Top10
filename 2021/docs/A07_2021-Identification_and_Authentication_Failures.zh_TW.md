@@ -1,100 +1,63 @@
-# A07:2021 – Identification and Authentication Failures
+# A07:2021 – 認證及驗證機制失效
 
-## Factors
+## 弱點因素
 
-| CWEs Mapped | Max Incidence Rate | Avg Incidence Rate | Max Coverage | Avg Coverage | Avg Weighted Exploit | Avg Weighted Impact | Total Occurrences | Total CVEs |
+| 可對照 CWEs 數量 | 最大發生率 | 平均發生率 |最大覆蓋範圍 | 平均覆蓋範圍 | 平均加權漏洞 | 平均加權影響 | 出現次數 | 所有相關 CVEs 數量 |
 |:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
 | 22          | 14.84%             | 2.55%              | 79.51%       | 45.72%       | 7.40                 | 6.50                | 132,195           | 3,897      |
 
-## Overview
+## 弱點簡介
 
-Previously known as *Broken Authentication*, this category slid down
-from the second position and now includes CWEs related to identification
-failures. Notable CWEs included are *CWE-297: Improper Validation of
-Certificate with Host Mismatch*, *CWE-287: Improper Authentication*, and
-*CWE-384: Session Fixation*.
+之前被稱之為"無效的身份認證"，此類別從第二名下滑，現在包含了與身份識別失效相關的CWEs，如知名的"CWE-297: 與不匹配的服務端進行不適當的憑證確認", "CWE-287: 不適當的認證", "CWE-384: 會話(session)固定攻擊"
 
-## Description 
+## 弱點描述 
 
-Confirmation of the user's identity, authentication, and session
-management is critical to protect against authentication-related
-attacks. There may be authentication weaknesses if the application:
+確認用戶的身分、認證、會話(session)管理對於防止與認證相關的攻擊至關重要，如果應用程式存在以下情況，則可能有認證的漏洞:
 
--   Permits automated attacks such as credential stuffing, where the
-    attacker has a list of valid usernames and passwords.
+-   允許像是攻擊者已經擁有有效用戶名稱和密碼列表的撞庫自動化攻擊。
 
--   Permits brute force or other automated attacks.
+-   允許暴力或其他自動化攻擊。
 
--   Permits default, weak, or well-known passwords, such as "Password1"
-    or "admin/admin. "
+-   允許預設、脆弱、常見的密碼，像是"Password1"或"admin/admin"。
 
--   Uses weak or ineffective credential recovery and forgot-password
-    processes, such as "knowledge-based answers," which cannot be made
-    safe.
+-   使用脆弱或無效的認證資訊回復或忘記密碼的流程，如不安全的"知識相關問答"。
 
--   Uses plain text, encrypted, or weakly hashed passwords (see
-    A3:2017-Sensitive Data Exposure).
+-   使用明碼、被加密的或使用較脆弱雜湊法的密碼(參考A3: 2017-敏感性資料洩漏)。
+    (TODO) https://github.com/OWASP/Top10/issues/553
 
--   Has missing or ineffective multi-factor authentication.
+-   不具有或是無效的多因素認證。
 
--   Exposes Session IDs in the URL (e.g., URL rewriting).
+-   於URL中洩漏會話(session) ID(如 URL重寫)。
 
--   Do not rotate Session IDs after successful login.
+-   成功登入後沒有輪換會話(session) ID。
 
--   Does not correctly invalidate Session IDs. User sessions or
-    authentication tokens (mainly single sign-on (SSO) tokens) aren't
-    properly invalidated during logout or a period of inactivity.
+-   沒有正確的註銷會話(session) ID。 用戶的會話(session)或認證tokens(主要是單一登入(SSO)token) 沒有在登出時或一段時間沒活動時被適當的註銷。
 
-## How to Prevent
+## 如何預防
 
--   Where possible, implement multi-factor authentication to prevent
-    automated credential stuffing, brute force, and stolen credential
-    reuse attacks.
+-   在可能的情況下，實作多因素認證來防止自動化撞庫攻擊、暴力破解、以及遭竊認證資訊被重複利用的攻擊。
 
--   Do not ship or deploy with any default credentials, particularly for
-    admin users.
+-   不要交付或部署任何預設的認證資訊，特別是管理者。
 
--   Implement weak password checks, such as testing new or changed
-    passwords against the top 10,000 worst passwords list.
+-   實作脆弱密碼的檢查，如測試新設定或變更的密碼是否存在於前10,000個最差密碼清單。
 
--   Align password length, complexity, and rotation policies with NIST
-    800-63b's guidelines in section 5.1.1 for Memorized Secrets or other
-    modern, evidence-based password policies.
+-   將密碼長度、複雜度、和輪換政策與"NIST 800-63b第5.1.1節-被記憶的秘密或其他現代基於證據的密碼政策"保持一致。
 
--   Ensure registration, credential recovery, and API pathways are
-    hardened against account enumeration attacks by using the same
-    messages for all outcomes.
+-   對所有結果使用相同的訊息回應，確保註冊、認證資訊回復、以及API路徑能夠抵禦帳號列舉攻擊。
 
--   Limit or increasingly delay failed login attempts. Log all failures
-    and alert administrators when credential stuffing, brute force, or
-    other attacks are detected.
+-   限制或增加失敗登入嘗試的延遲。記錄所有失敗並於偵測到撞庫、暴力破解或其他攻擊時發出告警。
 
--   Use a server-side, secure, built-in session manager that generates a
-    new random session ID with high entropy after login. Session IDs
-    should not be in the URL, be securely stored, and invalidated after
-    logout, idle, and absolute timeouts.
+-   使用伺服器端、安全的內建會話(session)管理器，在登入後產生新的高亂數隨機程度(entropy)的隨機會話(session)ID。會話(session)ID不應出現在URL中，必須被安全的儲存，並且在登出後、閒置、超時後被註銷。
 
-## Example Attack Scenarios
+## 攻擊情境範例
 
-**Scenario #1:** Credential stuffing, the use of lists of known
-passwords, is a common attack. Suppose an application does not implement
-automated threat or credential stuffing protection. In that case, the
-application can be used as a password oracle to determine if the
-credentials are valid.
+**情境 #1:** 使用已知列表密碼的撞庫攻擊是一種常見的攻擊方式，假設應用程式沒有實施自動化威脅或撞庫攻擊的保護，在這種情況下，應用程式會被利用為密碼預報的工具來判斷認證資訊是否有效。
 
-**Scenario #2:** Most authentication attacks occur due to the continued
-use of passwords as a sole factor. Once considered, best practices,
-password rotation, and complexity requirements encourage users to use
-and reuse weak passwords. Organizations are recommended to stop these
-practices per NIST 800-63 and use multi-factor authentication.
+**情境 #2:** 大多數的認證攻擊是因為持續的使用密碼作為唯一因素，最佳實務、密碼輪換、以及複雜度的要求會鼓勵用戶使用和重複使用脆弱的密碼。建議組織按照NIST 800-63停止這些做法並使用多因素認證。
 
-**Scenario #3:** Application session timeouts aren't set correctly. A
-user uses a public computer to access an application. Instead of
-selecting "logout," the user simply closes the browser tab and walks
-away. An attacker uses the same browser an hour later, and the user is
-still authenticated.
+**情境 #3:** 應用程式的會話超時沒有被設定正確。一個用戶使用公用電腦來存取應用程式時，用戶沒有選擇"登出"而是簡單的關閉瀏覽器分頁就離開，此時一個攻擊者在一小時後使用同一個瀏覽器，前一個用戶仍然處於通過認證的狀態。
 
-## References
+## 參考文獻
 
 -   [OWASP Proactive Controls: Implement Digital
     Identity](https://owasp.org/www-project-proactive-controls/v3/en/c6-digital-identity)
@@ -122,48 +85,48 @@ still authenticated.
 
 -   NIST 800-63b: 5.1.1 Memorized Secrets
 
-## List of Mapped CWEs
+## 對應的 CWEs 清單
 
-CWE-255 Credentials Management Errors
+CWE-255 認證資訊管理的錯誤
 
-CWE-259 Use of Hard-coded Password
+CWE-259 密碼寫死
 
-CWE-287 Improper Authentication
+CWE-287 不適當的認證
 
-CWE-288 Authentication Bypass Using an Alternate Path or Channel
+CWE-288 使用備用的路徑或管道繞過認證
 
-CWE-290 Authentication Bypass by Spoofing
+CWE-290 以欺騙來繞過認證
 
-CWE-294 Authentication Bypass by Capture-replay
+CWE-294 以攔截重送來繞過認證
 
-CWE-295 Improper Certificate Validation
+CWE-295 不適當的憑證確認
 
-CWE-297 Improper Validation of Certificate with Host Mismatch
+CWE-297 與不匹配的服務端進行不適當的憑證確認
 
-CWE-300 Channel Accessible by Non-Endpoint
+CWE-300 通道可被非端點存取
 
-CWE-302 Authentication Bypass by Assumed-Immutable Data
+CWE-302 驗證被假設不變的資料繞過
 
-CWE-304 Missing Critical Step in Authentication
+CWE-304 於認證中缺少關鍵的步驟
 
-CWE-306 Missing Authentication for Critical Function
+CWE-306 關鍵的功能中缺少認證
 
-CWE-307 Improper Restriction of Excessive Authentication Attempts
+CWE-307 過度認證的嘗試沒有被適當的限制
 
-CWE-346 Origin Validation Error
+CWE-346 原始資料確認上的錯誤
 
-CWE-384 Session Fixation
+CWE-384 會話(Session)固定
 
-CWE-521 Weak Password Requirements
+CWE-521 脆弱密碼的要求
 
-CWE-613 Insufficient Session Expiration
+CWE-613 不適當的會話超時
 
-CWE-620 Unverified Password Change
+CWE-620 沒有被驗證的密碼變更
 
-CWE-640 Weak Password Recovery Mechanism for Forgotten Password
+CWE-640 忘記密碼的脆弱密碼回復機制
 
-CWE-798 Use of Hard-coded Credentials
+CWE-798 認證資訊寫死
 
-CWE-940 Improper Verification of Source of a Communication Channel
+CWE-940 不當的通訊通道來源驗證
 
-CWE-1216 Lockout Mechanism Errors
+CWE-1216 鎖定機制相關的錯誤
