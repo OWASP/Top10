@@ -13,29 +13,30 @@
 
 <img src="./assets/image1.png" style="width:6.5in;height:1.78889in" alt="Mapping of the relationship between the Top 10 2017 and the new Top 10 2021" />
 
-**A01:2021-權限控制失效** moves up from the fifth position; 94%
-of applications were tested for some form of broken access control. The
-34 CWEs mapped to Broken Access Control had more occurrences in
-applications than any other category.
+**A01:2021-權限控制失效** 從第五名移上來; 94% 被測試的應用程式都有驗測到某種類別
+權限控制失效的問題。在權限控制失效這個類別中被對應到的 34 個 CWEs 在驗測資料中出現
+的次數都高於其他的弱點類別。
 
-**A02:2021-加密機制失效** shifts up one position to #2,
-previously known as *Sensitive Data Exposure,* which was broad symptom
-rather than a root cause. The renewed focus here is on failures related
-to cryptography which often leads to sensitive data exposure or system
-compromise.
+**A02:2021-加密機制失效** 提升一名到第二名，在之前為 *敏感資料外曝*，在此定義下比
+較類似於一個廣泛的問題而非根本原因。在此重新定義並將問題核心定義在加密機制的失敗，並
+因此造成敏感性資料外洩或是系統被破壞。
 
-**A03:2021-注入式攻擊** slides down to the third position. 94% of the
-applications were tested for some form of injection, and the 33 CWEs
-mapped into this category have the second most occurrences in
-applications. Cross-site Scripting is now part of this category in this
-edition.
+**A03:2021-注入式攻擊** 下滑到第三名。94% 被測試的應用程式都有驗測到某種類別
+注入式攻擊的問題。在注入式攻擊這個類別中被對應到的 33 個 CWEs 在驗測資料中出現
+的次數為弱點問題的第二高。跨站腳本攻擊現在在新版本屬於這個類別。
 
-**A04:2021-不安全設計** is a new category for 2021, with a focus on
-risks related to design flaws. If we genuinely want to "move left" as an
-industry, it calls for more use of threat modeling, secure design
-patterns and principles, and reference architectures.
+**A04:2021-不安全設計** 這是 2021 年版本的新類別，並特別針注在與設計相關的缺失。
+如果我們真的希望讓整個產業"向左移動"＊註一＊，那我們必須進一步的往威脅建模，安全設計
+模塊的觀念，和安全參考架構前進。
 
-**A05:2021-安全設定缺陷** moves up from #6 in the previous
+＊註一: Move Left 於英文原文中代表在軟體開發及交付過程中，在早期找出及處理相關問題，
+同 Shift Left Testing。＊ 
+
+**A05:2021-安全設定缺陷** 從上一版本的第六名移動上來。90% 被測試的應用程式都有驗測
+到某種類別的安全設定缺陷。在更多的軟體往更高度和有彈性的設定移動，我們並不意外這個類別
+的問題往上移動。
+
+moves up from #6 in the previous
 edition; 90% of applications were tested for some form of
 misconfiguration. With more shifts into highly configurable software,
 it's not surprising to see this category move up. The former category
