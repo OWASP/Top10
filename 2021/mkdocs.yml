@@ -61,13 +61,13 @@ plugins:
           About OWASP: عن OWASP 
           Top 10 List: قائمة اعلى عشر مخاطر
           A01 Broken Access Control: A01 تخطي صلاحيات الوصول
-          A02 Cryptographic Failures: فشل آلية التشفير
-          A03 Injection: الحقن
-          A04 Insecure Design: التصميم الغير الامن
-          A05 Security Misconfiguration: الاعدادات الخاطئة
-          A06 Vulnerable and Outdated Components: الثغرات و الانظمة الغير قابلة للتحديثات
-          A07 Identification and Authentication Failures: الهوية و فشل عملية التحقق
-          A08 Software and Data Integrity Failures: فشل سلامة البيانات والبرمجيات
-          A09 Security Logging and Monitoring Failures: فشل عملية تسجيل الاحداث والمراقبة
-          A10 Server Side Request Forgery (SSRF): تزوير الطلبات من جانب الخادم SSRF
+          A02 Cryptographic Failures: A02 فشل آلية التشفير
+          A03 Injection: A03 الحقن
+          A04 Insecure Design: A04 التصميم الغير الامن
+          A05 Security Misconfiguration: A05 الاعدادات الخاطئة
+          A06 Vulnerable and Outdated Components: A06 الثغرات و الانظمة الغير قابلة للتحديثات
+          A07 Identification and Authentication Failures: A07 الهوية و فشل عملية التحقق
+          A08 Software and Data Integrity Failures: A08  فشل سلامة البيانات والبرمجيات
+          A09 Security Logging and Monitoring Failures: A09 فشل عملية تسجيل الاحداث والمراقبة
+          A10 Server Side Request Forgery (SSRF): A10 تزوير الطلبات من جانب الخادم SSRF
           Next Steps: انتقل للتالي
