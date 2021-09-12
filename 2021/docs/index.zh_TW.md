@@ -34,21 +34,13 @@
 
 **A05:2021-安全設定缺陷** 從上一版本的第六名移動上來。90% 被測試的應用程式都有驗測
 到某種類別的安全設定缺陷。在更多的軟體往更高度和有彈性的設定移動，我們並不意外這個類別
-的問題往上移動。
+的問題往上移動。在前版本中的 XML 外部實體注入攻擊 （XML External Entities）現在屬
+於這個類別。
 
-moves up from #6 in the previous
-edition; 90% of applications were tested for some form of
-misconfiguration. With more shifts into highly configurable software,
-it's not surprising to see this category move up. The former category
-for XML External Entities (XXE) is now part of this category.
-
-**A06:2021-危險或過舊的元件** was previously titled
-*Using Components with Known Vulnerabilities* and is #2 in the industry
-survey, but also had enough data to make the Top 10 via data analysis.
-This category moves up from #9 in 2017 and is a known issue that we
-struggle to test and assess risk. It is the only category not to have
-any CVEs mapped to the included CWEs, so a default exploit and impact
-weights of 5.0 are factored into their scores.
+**A06:2021-危險或過舊的元件** 在之前標題為 *使用有已知弱點的元件*。在本次版本中於業
+界問卷中排名第二，但也有足夠的統計資料讓它可以進入 Top 10。這個類別從 2017 版本的第
+九名爬升到第六，也是我們持續掙扎做測試和評估風險的類別。這也是唯一一個沒有任何 CVE 能被
+對應到 CWE 內的類別，所以預設的威脅及影響權重在這類別的分數上被預設為 5.0。
 
 **A07:2021-認證及驗證機制失效** was previously
 *Broken Authentication* and is sliding down from the second position,
