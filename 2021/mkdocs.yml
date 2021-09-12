@@ -37,6 +37,8 @@ plugins:
         en: English
         it: Italiano
         fr: Français
+        pt_BR: Português (Brasil)
+
       nav_translations:
         fr:
           Home: Page d'accueil
@@ -51,3 +53,13 @@ plugins:
           How to start an AppSec program with the OWASP Top 10: Come avviare un programma AppSec con OWASP Top 10
           Top 10 List: Lista top 10
           A01 Broken Access Control: A01 Controllo accessi rotto
+        pt_BR:
+          Home: Início
+          Notice: Notas
+          Introduction: Introdução
+          About OWASP: Sobre OWASP
+          How to use the OWASP Top 10 as a standard: Como usar o OWASP Top 10 como padrão
+          How to start an AppSec program with the OWASP Top 10: Como iniciar um programa AppSec com o OWASP Top 10
+          Top 10 List: Lista top 10
+          A01 Broken Access Control: A01 Quebra de Controle de Acesso
+
