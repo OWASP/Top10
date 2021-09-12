@@ -1,19 +1,19 @@
-# A03:2021 – Injection
+# A03:2021 – 注入
 
-## Factors
+## 對照因素
 
-| CWEs Mapped | Max Incidence Rate | Avg Incidence Rate | Max Coverage | Avg Coverage | Avg Weighted Exploit | Avg Weighted Impact | Total Occurrences | Total CVEs |
+| 可對照 CWEs 數量 | 最大發生率 | 平均發生率 | 最大覆蓋範圍 | 平均覆蓋範圍 | 平均加權弱點 | 平均加權影響 | 出現次數 | 所有有關 CVEs 數量|
 |:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
 | 33          | 19.09%             | 3.37%              | 94.04%       | 47.90%       | 7.25                 | 7.15                | 274,228           | 32,078     |
 
-## Overview
+## 概述
 
 Injection slides down to the third position. 94% of the applications
 were tested for some form of injection. Notable CWEs included are
 *CWE-79: Cross-site Scripting*, *CWE-89: SQL Injection*, and *CWE-73:
 External Control of File Name or Path*.
 
-## Description 
+## 描述 
 
 An application is vulnerable to attack when:
 
@@ -41,7 +41,7 @@ source (SAST) and dynamic application test (DAST) tools into the CI/CD
 pipeline to identify introduced injection flaws before production
 deployment.
 
-## How to Prevent
+## 如何預防
 
 -   Preventing injection requires keeping data separate from commands
     and queries.
@@ -68,15 +68,15 @@ deployment.
 -   Use LIMIT and other SQL controls within queries to prevent mass
     disclosure of records in case of SQL injection.
 
-## Example Attack Scenarios
+## 攻擊情境範例
 
-**Scenario #1:** An application uses untrusted data in the construction
+**情境 #1:** An application uses untrusted data in the construction
 of the following vulnerable SQL call:
 
 String query = "SELECT \* FROM accounts WHERE custID='" +
 request.getParameter("id") + "'";
 
-**Scenario #2:** Similarly, an application’s blind trust in frameworks
+**情境 #2:** Similarly, an application’s blind trust in frameworks
 may result in queries that are still vulnerable, (e.g., Hibernate Query
 Language (HQL)):
 
@@ -92,7 +92,7 @@ This changes the meaning of both queries to return all the records from
 the accounts table. More dangerous attacks could modify or delete data
 or even invoke stored procedures.
 
-## References
+## 參考
 
 -   [OWASP Proactive Controls: Secure Database
     Access](https://owasp.org/www-project-proactive-controls/v3/en/c3-secure-database)
@@ -124,7 +124,7 @@ or even invoke stored procedures.
 -   [PortSwigger: Server-side template
     injection](https://portswigger.net/kb/issues/00101080_serversidetemplateinjection)
 
-## List of Mapped CWEs
+## 對應的 CWE 列表
 
 CWE-20 Improper Input Validation
 
