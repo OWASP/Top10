@@ -2,51 +2,43 @@
 # مقدمة الى  OWASP Top 10 2021
 
 
+مرحبا بكم في احدث اصدار من OWASP TOP 10  وهي نسخة لعام 2021، والتي تأتي بشكل جديد كلياً ومدعمة برسومات انفوجرافيك التي تستطيع طابعتها واستخدامها ويمكن الحصول عليها من صفحتنا الرئيسية.
 
-Welcome to the latest installment of the OWASP Top 10! The OWASP Top 10
-2021 is all-new, with a new graphic design and an available one-page
-infographic you can print or obtain from our home page.
+كما ان نتقدم بالشكر الجزيل لكل من ساهم بوقته وبياناته من اجل الخروج بهذا الجهد الذي لا يمكن الخروج به لولا دعمكم. * شكراً لك *
 
-A huge thank you to everyone that contributed their time and data for
-this iteration. Without you, this installment would not happen. **THANK
-YOU**.
+## ماهي التغيرات التي طرأت على TOP 10 2021
 
-## What's changed in the Top 10 for 2021
+بشكل عام تم اضافة 3 تصنيفات جديدة، و 4 تصنيفات تم تغير الاسم وكذلك النطاق الخاص بها، وبعض عمليات الدمج التي تأتي مع TOP 10  لعام 2021
 
-There are three new categories, four categories with naming and scoping
-changes, and some consolidation in the Top 10 for 2021.
 
 <img src="./assets/image1.png" style="width:6.5in;height:1.78889in" alt="Mapping of the relationship between the Top 10 2017 and the new Top 10 2021" />
 
-**A01:2021-Broken Access Control** moves up from the fifth position; 94%
-of applications were tested for some form of broken access control. The
-34 CWEs mapped to Broken Access Control had more occurrences in
-applications than any other category.
+**A01:2021-تخطي صلاحيات الوصول**احتل (تخطي صلاحيات الوصول) المرتبة الأولى بعد ان كان في الترتيب الخامس، حيث انه تم اجراء اختبار لنقاط الضعف وكانت النسبة هي 94% من التطبيقات مصابه بتخطي صلاحيات الوصول، ان تخطي صلاحيات الوصول والمرتبط بـ34 CWEs هو من اكثر الثغرات التي تحدث على مستوى التطبيقات. 
 
-**A02:2021-Cryptographic Failures** shifts up one position to #2,
+**A02:2021-فشل آلية التشفير** shifts up one position to #2,
 previously known as *Sensitive Data Exposure,* which was broad symptom
 rather than a root cause. The renewed focus here is on failures related
 to cryptography which often leads to sensitive data exposure or system
 compromise.
 
-**A03:2021-Injection** slides down to the third position. 94% of the
+**A03:2021-الحقن** slides down to the third position. 94% of the
 applications were tested for some form of injection, and the 33 CWEs
 mapped into this category have the second most occurrences in
 applications. Cross-site Scripting is now part of this category in this
 edition.
 
-**A04:2021-Insecure Design** is a new category for 2021, with a focus on
+**A04:2021-التصميم الغير الامن** is a new category for 2021, with a focus on
 risks related to design flaws. If we genuinely want to "move left" as an
 industry, it calls for more use of threat modeling, secure design
 patterns and principles, and reference architectures.
 
-**A05:2021-Security Misconfiguration** moves up from #6 in the previous
+**A05:2021-الاعدادات الخاطئة** moves up from #6 in the previous
 edition; 90% of applications were tested for some form of
 misconfiguration. With more shifts into highly configurable software,
 it's not surprising to see this category move up. The former category
 for XML External Entities (XXE) is now part of this category.
 
-**A06:2021-Vulnerable and Outdated Components** was previously titled
+**A06:2021-الثغرات و الانظمة الغير قابلة للتحديثات** was previously titled
 *Using Components with Known Vulnerabilities* and is #2 in the industry
 survey, but also had enough data to make the Top 10 via data analysis.
 This category moves up from #9 in 2017 and is a known issue that we
@@ -54,20 +46,20 @@ struggle to test and assess risk. It is the only category not to have
 any CVEs mapped to the included CWEs, so a default exploit and impact
 weights of 5.0 are factored into their scores.
 
-**A07:2021-Identification and Authentication Failures** was previously
+**A07:2021-الهوية و فشل عملية التحقق** was previously
 *Broken Authentication* and is sliding down from the second position,
 and now includes CWEs that are more related to identification failures.
 This category is still an integral part of the Top 10, but the increased
 availability of standardized frameworks seems to be helping.
 
-**A08:2021-Software and Data Integrity Failures** is a new category for
+**A08:2021-فشل سلامة البيانات والبرمجيات** is a new category for
 2021, focusing on making assumptions related to software updates,
 critical data, and CI/CD pipelines without verifying integrity. One of
 the highest weighted impacts from CVE/CVSS data mapped to the 10 CWEs in
 this category. Insecure Deserialization from 2017 is now a part of this
 larger category.
 
-**A09:2021-Security Logging and Monitoring Failures** was previously
+**A09:2021-فشل عملية تسجيل الاحداث والمراقبة** was previously
 *Insufficient Logging &* Monitoring and is added from the industry
 survey (#3), moving up from #10 previously. This category is expanded to
 include more types of failures, is challenging to test for, and isn't
@@ -75,14 +67,14 @@ well represented in the CVE/CVSS data. However, failures in this
 category can directly impact visibility, incident alerting, and
 forensics.
 
-**A10:2021-Server-Side Request Forgery** is added from the industry
+**A10:2021-تزوير الطلبات من جانب الخادم SSRF** is added from the industry
 survey (#1). The data shows a relatively low incidence rate with above
 average testing coverage, along with above-average ratings for Exploit
 and Impact potential. This category represents the scenario where the
 industry professionals are telling us this is important, even though
 it's not illustrated in the data at this time.
 
-## Methodology
+## المنهجية
 
 This installment of the Top 10 is more data-driven than ever but not
 blindly data-driven. We selected eight of the ten categories from
@@ -98,7 +90,7 @@ what they see as essential weaknesses that the data may not show yet.
 There are a few critical changes that we adopted to continue to mature
 the Top 10.
 
-### How the categories are structured
+### كيف يتم تنظيم التصنيفات
 
 A few categories have changed from the previous installment of the OWASP
 Top Ten. Here is a high-level summary of the category changes.
@@ -138,7 +130,7 @@ this installment, with the lower bounds at 1 CWE for
 additional training benefits as companies can focus on CWEs that make
 sense for a language/framework.
 
-### How the data is used for selecting categories
+### كيف يتم استخدام البيانات لبعض التصنيفات المختارة
 
 In 2017, we selected categories by incidence rate to determine
 likelihood, then ranked them by team discussion based on decades of
@@ -173,7 +165,7 @@ to get an overall average. We mapped these averages to the CWEs in the
 dataset to use as Exploit and Impact scoring for the other half of the
 risk equation.
 
-## Why not just pure statistical data?
+## لماذا لا تكون مجرد بيانات إحصائية بحتة؟
 
 The results in the data are primarily limited to what we can test for in
 an automated fashion. Talk to a seasoned AppSec professional, and they
@@ -190,7 +182,7 @@ It allows the practitioners on the front lines to vote for what they see
 as the highest risks that might not be in the data (and may never be
 expressed in data).
 
-## Why incidence rate instead of frequency?
+## لماذا معدل الحدوث بدلا من التكرار؟
 
 There are three primary sources of data. We identify them as
 Human-assisted Tooling (HaT), Tool-assisted Human (TaH), and raw
@@ -230,7 +222,7 @@ know how many applications had at least one instance, which helps
 provide a clearer view of the testing is findings across multiple
 testing types without drowning the data in high-frequency results.
 
-## What is your data collection and analysis process?
+## ما هي عملية جمع البيانات وتحليلها؟
 
 We formalized the OWASP Top 10 data collection process at the Open
 Security Summit in 2017. OWASP Top 10 leaders and the community spent
@@ -263,7 +255,7 @@ two places in the Top 10. Once all ten were selected, we applied
 generalized factors for exploitability and impact; to help rank the Top
 10 in order.
 
-## Data Factors
+## العوامل المستخدمة مع البيانات
 
 There are data factors that are listed for each of the Top 10
 Categories, here is what they mean:
@@ -292,7 +284,7 @@ Categories, here is what they mean:
 -   *Total CVEs*: Total number of CVEs in the NVD DB that were mapped to
     the CWEs mapped to a category.
 
-## Category Relationships from 2017
+## علاقات التصنيفات لعام 2021 مع تصنيفات عام 2017
 
 There has been a lot of talk about the overlap between the Top Ten
 risks. By the definition of each (list of CWEs included), there really
@@ -326,7 +318,7 @@ became obvious:
     different responsibilities. The other types are typically
     representing first-party risks.
 
-# Thank you to our data contributors
+# شكراً لكل من ساهم معنا في جمع هذه البيانات
 
 The following organizations (along with some anonymous donors) kindly
 donated data for over 500,000 applications to make this the largest and
