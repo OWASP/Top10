@@ -61,28 +61,17 @@
 因為業界專家重複申明這類別的問題相當重要，即使在本次資料中並沒有足夠的資料去顯示這個
 問題。
 
-## 方法
+## 分析方法
 
 本次 Top 10 的選擇方式比以往更重視資料分析，但並不是完全以資料分析為主。我們從資料分
 析中挑選了八個風險類別，然後由業界問卷中挑選兩個風險類別。我們從過往的分享資料中去瞭解
 ，並有我們一個基本的理由。原因是所有的資安研究人員都不斷的在找新的弱點並找出方法去驗證
 弱點，但會需要時間才能將這些驗測方法納入到既有的工具和測試流程中。當我們能有效的大量測試
-這個弱點時，有可能已經過了多年的時間。
-This installment of the Top 10 is more data-driven than ever but not
-blindly data-driven. We selected eight of the ten categories from
-contributed data and two categories from an industry survey at a high
-level. We do this for a fundamental reason, looking at the contributed
-data is looking into the past. AppSec researchers take time to find new
-vulnerabilities and new ways to test for them. It takes time to
-integrate these tests into tools and processes. By the time we can
-reliably test a weakness at scale, years have likely passed. To balance
-that view, we use an industry survey to ask people on the front lines
-what they see as essential weaknesses that the data may not show yet.
+這個弱點時，有可能已經過了多年的時間。為了要讓兩者之間有平衡，我們使用業界問卷請教在前
+線的資安研究專家們並瞭解他們覺得有哪些是他們覺得嚴重但尚未出現在測試資料中的漏洞及問題。
 
-There are a few critical changes that we adopted to continue to mature
-the Top 10.
-
-### How the categories are structured
+這是幾個我們為了要讓 OWASP Top 10 更加成熟的重要改變。
+### 如何建構風險類別
 
 A few categories have changed from the previous installment of the OWASP
 Top Ten. Here is a high-level summary of the category changes.
