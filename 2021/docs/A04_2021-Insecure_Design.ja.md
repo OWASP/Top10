@@ -1,12 +1,18 @@
+# A04:2021 - 安全が確認されない不安な設計
 # A04:2021 – Insecure Design
 
+## 因子
 ## Factors
 
-| CWEs Mapped | Max Incidence Rate | Avg Incidence Rate | Max Coverage | Avg Coverage | Avg Weighted Exploit | Avg Weighted Impact | Total Occurrences | Total CVEs |
+| 対応する CWE 数 | 最大発生率 | 平均発生率 | 最大網羅率 | 平均網羅率 | 加重平均（攻撃の難易度） | 加重平均（攻撃による影響） | 総発生数 | CVE 合計件数 |
 |:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
 | 40          | 24.19%             | 3.00%              | 77.25%       | 42.51%       | 6.46                 | 6.78                | 262,407           | 2,691      |
 
+## 概要
 ## Overview
+2021年の新カテゴリーでは、設計やアーキテクチャの欠陥に関するリスクに焦点を当てています。
+私たちは脅威のモデル化、セキュアなデザインパターンおよび、リファレンスアーキテクチャなどをもっと利用していくことが必要です。
+注目すべき CWE は、CWE-209: 機密情報を含むエラーメッセージの生成、CWE-256: 保護されていない認証情報の保存、CWE-501: 信頼境界線の侵害および、CWE-522: 適切に保護されていないクレデンシャル などです。
 
 A new category for 2021 focuses on risks related to design and
 architectural flaws, with a call for more use of threat modeling, secure
@@ -15,7 +21,13 @@ design patterns, and reference architectures. Notable CWEs include
 *CWE-256: Unprotected Storage of Credentials*, *CWE-501: Trust Boundary
 Violation*, and *CWE-522: Insufficiently Protected Credentials*.
 
+## 説明
 ## Description 
+
+「安全が確認されない不安な設計」とは、様々な弱点を表す幅広いカテゴリーで、「安全な設計が行われていない」または、「効果的ではない設計が行われている」と表現されます。
+「安全な設計が行われていない」とは、管理策が欠如していることを意味します。例として、センシティブなデータを暗号化すべきコードに、暗号化するためのメソッドがない場合があげられます。
+「効果的ではない設計が行われている」とは、脅威が発生する可能性があるにもかかわらず、ドメイン（ビジネス）ロジックの検証が不十分であるために、リスクが顕在化する場合を意味します。
+例として、所得区分に基づいてパンデミック税の軽減措置を処理することになっているドメインロジックが、すべての入力が正しく署名されているかどうかを検証しておらず、本来付与されるべきものよりもはるかに大きな軽減措置を提供している場合が挙げられます。
 
 Insecure design is a broad category representing many different
 weaknesses, expressed as “missing or ineffective control design.”
@@ -28,12 +40,16 @@ tax relief based upon income brackets but does not validate that all
 inputs are correctly signed and provides a much more significant relief
 benefit than should be granted.
 
+「安全が確認された安心な設計」とは、常に脅威を評価し、既知の攻撃方法を防ぐためにコードを堅牢に設計し、テストする文化と方法論のことです。
+「安全が確認された安心な設計」には、セキュアな開発ライフサイクル、セキュアなデザインパターンまたは信頼性が高く安全性も検証されているコンポーネントライブラリまたはツール、および脅威のモデル化が必要です。
+
 Secure design is a culture and methodology that constantly evaluates
 threats and ensures that code is robustly designed and tested to prevent
 known attack methods. Secure design requires a secure development
 lifecycle, some form of secure design pattern or paved road component
 library or tooling, and threat modeling.
 
+## 防止方法
 ## How to Prevent
 
 -   Establish and use a secure development lifecycle with AppSec
@@ -49,21 +65,31 @@ library or tooling, and threat modeling.
 -   Write unit and integration tests to validate that all critical flows
     are resistant to the threat model
 
+## 攻撃シナリオの例
 ## Example Attack Scenarios
 
-**Scenario #1:** A credential recovery workflow might include “questions
+**シナリオ #1:** 
+**Scenario #1:** 
+
+A credential recovery workflow might include “questions
 and answers,” which is prohibited by NIST 800-63b, the OWASP ASVS, and
 the OWASP Top 10. Questions and answers cannot be trusted as evidence of
 identity as more than one person can know the answers, which is why they
 are prohibited. Such code should be removed and replaced with a more
 secure design.
 
-**Scenario #2:** A cinema chain allows group booking discounts and has a
+**シナリオ #2:** 
+**Scenario #2:** 
+
+A cinema chain allows group booking discounts and has a
 maximum of fifteen attendees before requiring a deposit. Attackers could
 threat model this flow and test if they could book six hundred seats and
 all cinemas at once in a few requests, causing a massive loss of income.
 
-**Scenario #3:** A retail chain’s e-commerce website does not have
+**シナリオ #3:** 
+**Scenario #3:** 
+
+A retail chain’s e-commerce website does not have
 protection against bots run by scalpers buying high-end video cards to
 resell auction websites. This creates terrible publicity for the video
 card makers and retail chain owners and enduring bad blood with
@@ -72,6 +98,7 @@ design and domain logic rules, such as purchases made within a few
 seconds of availability, might identify inauthentic purchases and
 rejected such transactions.
 
+## 参考資料
 ## References
 
 -   \[OWASP Cheat Sheet: Secure Design Principles\] (TBD)
@@ -80,6 +107,7 @@ rejected such transactions.
     > Software  
     > https://www.nist.gov/system/files/documents/2021/07/09/Developer%20Verification%20of%20Software.pdf
 
+## 対応する CWE のリスト
 ## List of Mapped CWEs
 
 CWE-73 External Control of File Name or Path
