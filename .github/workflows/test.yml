@@ -1,9 +1,5 @@
-name: Build and Deploy
-on:
-  push:
-    branches:
-      - 'master'
-      - 'main'
+name: Test
+on: [push, pull_request]
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -16,9 +12,7 @@ jobs:
       - name: Install and Build
         run: |
           make install-python-requirements
+          make install-python-requirements-test
           make generate-site
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@4.1.5
-        with:
-          branch: gh-pages
-          folder: 2021/site
+      - name: Links validation
+        run: make check-links
