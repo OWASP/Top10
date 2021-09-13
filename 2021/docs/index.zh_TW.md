@@ -42,36 +42,32 @@
 九名爬升到第六，也是我們持續掙扎做測試和評估風險的類別。這也是唯一一個沒有任何 CVE 能被
 對應到 CWE 內的類別，所以預設的威脅及影響權重在這類別的分數上被預設為 5.0。
 
-**A07:2021-認證及驗證機制失效** was previously
-*Broken Authentication* and is sliding down from the second position,
-and now includes CWEs that are more related to identification failures.
-This category is still an integral part of the Top 10, but the increased
-availability of standardized frameworks seems to be helping.
+**A07:2021-認證及驗證機制失效** 在之前標題為 *錯誤的認證機制*。在本次版本中油第二名
+下滑至此，並同時包含了將認證相關缺失的 CWE 包含在內。這個類別仍是 Top 10 不可缺少的
+一環，但同時也有發現現在標準化的架構有協助降低次風險發生機率。
 
-**A08:2021-軟體及資料完整性失效** is a new category for
-2021, focusing on making assumptions related to software updates,
-critical data, and CI/CD pipelines without verifying integrity. One of
-the highest weighted impacts from CVE/CVSS data mapped to the 10 CWEs in
-this category. Insecure Deserialization from 2017 is now a part of this
-larger category.
+**A08:2021-軟體及資料完整性失效** 這是 2021 年版本全新的類別，並在軟體更新，機敏及
+重要資料，和 CI/CD 管道中並沒有做完整性的確認為前提做假設並進行評估。在評估中影響權重
+最高分的 CVE/CVSS 資料都與這類別中的 10 個 CWE 對應到。2017 年版本中不安全的反序列
+化現在被合併至此類別。
 
-**A09:2021-資安記錄及監控失效** was previously
-*Insufficient Logging &* Monitoring and is added from the industry
-survey (#3), moving up from #10 previously. This category is expanded to
-include more types of failures, is challenging to test for, and isn't
-well represented in the CVE/CVSS data. However, failures in this
-category can directly impact visibility, incident alerting, and
-forensics.
+**A09:2021-資安記錄及監控失效** 在之前為*不完整的紀錄及監控*並納入在業界問卷中在本次
+列名為第三名並從之前的第十名上移。這個類別將擴充去納入更多相關的缺失，但這也是相當難去驗
+證，並沒有相當多的 CVE/CVSS 資料可以佐證。但是在這個類別中的缺失會直接影響到整體安全的
+可視性，事件告警及鑑識。
 
-**A10:2021-伺服端請求偽造** is added from the industry
-survey (#1). The data shows a relatively low incidence rate with above
-average testing coverage, along with above-average ratings for Exploit
-and Impact potential. This category represents the scenario where the
-industry professionals are telling us this is important, even though
-it's not illustrated in the data at this time.
+**A10:2021-伺服端請求偽造** 這個類別是在業界問卷排名第一名，並在此版本內納入。由資料
+顯示此問題有較低被驗測次數和範圍，但有高於平均的威脅及影響權重比率。這個類別的出現也是
+因為業界專家重複申明這類別的問題相當重要，即使在本次資料中並沒有足夠的資料去顯示這個
+問題。
 
-## Methodology
+## 方法
 
+本次 Top 10 的選擇方式比以往更重視資料分析，但並不是完全以資料分析為主。我們從資料分
+析中挑選了八個風險類別，然後由業界問卷中挑選兩個風險類別。我們從過往的分享資料中去瞭解
+，並有我們一個基本的理由。原因是所有的資安研究人員都不斷的在找新的弱點並找出方法去驗證
+弱點，但會需要時間才能將這些驗測方法納入到既有的工具和測試流程中。當我們能有效的大量測試
+這個弱點時，有可能已經過了多年的時間。
 This installment of the Top 10 is more data-driven than ever but not
 blindly data-driven. We selected eight of the ten categories from
 contributed data and two categories from an industry survey at a high
