@@ -19,7 +19,7 @@ Insufficient Logging* to include *CWE-117 Improper Output Neutralization
 for Logs*, *CWE-223 Omission of Security-relevant Information*, and
 *CWE-532* *Insertion of Sensitive Information into Log File*.
 
-## Description 
+## Description
 
 Returning to the OWASP Top 10 2021, this category is to help detect,
 escalate, and respond to active breaches. Without logging and
@@ -112,9 +112,6 @@ result by the privacy regulator.
 
 -   [OWASP Application Security Verification Standard: V8 Logging and
     Monitoring](https://owasp.org/www-project-application-security-verification-standard)
-
--   [OWASP Testing Guide: Testing for Detailed Error
-    Code](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/08-Testing_for_Error_Handling/01-Testing_for_Error_Code)
 
 -   [OWASP Cheat Sheet:
     Logging](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html)
