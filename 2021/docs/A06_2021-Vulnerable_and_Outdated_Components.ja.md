@@ -1,4 +1,4 @@
-# A06:2021 – 脆弱で古いコンポーネント
+# A06:2021 – 脆弱で古くなったコンポーネント
 # A06:2021 – Vulnerable and Outdated Components
 
 ## 因子
@@ -71,7 +71,7 @@ You are likely vulnerable:
     If software developers do not test the compatibility of updated,
     upgraded, or patched libraries.
 
--   コンポーネントの設定をセキュアにしていない場合。（A05-2021: 不適切なセキュリティ設定 参照）
+-   コンポーネントの設定をセキュアにしていない場合。（A05-2021: セキュリティの設定ミス 参照）
 
     If you do not secure the components’ configurations (see
     A05:2021-Security Misconfiguration).
@@ -101,7 +101,7 @@ There should be a patch management process in place to:
 
 -   安全なリンクを介し、公式ソースからのみコンポーネントを取得する。
     変更された悪意あるコンポーネントを取得する可能性を減らすため、署名付きのパッケージを選ぶようにする。
-    (A08-2021: ソフトウェアおよび、データの完全性に関する欠陥 参照)
+    (A08-2021: ソフトウェアとデータの整合性の不具合 参照)
 
     Only obtain components from official sources over secure links.
     Prefer signed packages to reduce the chance of including a modified,
