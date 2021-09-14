@@ -1,12 +1,15 @@
 
-# مقدمة الى  OWASP Top 10 2021
+# مقدمة الى   أعلى عشر مخاطر لعام 2021 حسب تصنيف منظمة آواسب 
 
 
-مرحبا بكم في احدث اصدار من OWASP TOP 10  وهي نسخة لعام 2021، والتي تأتي بشكل جديد كلياً ومدعمة برسومات انفوجرافيك التي تستطيع طابعتها واستخدامها ويمكن الحصول عليها من صفحتنا الرئيسية.
+مرحبا بكم في أحدث اصدار من اعلى عشر مخاطر من منظمة آواسب وهي النسخة الحديثة لعام 2021، والتي تأتي بشكل جديد كلياً ومدعمة برسومات انفوجرافيك التي تستطيع طابعتها واستخدامها ويمكن الحصول عليها من صفحتنا الرئيسية.
 
-كما ان نتقدم بالشكر الجزيل لكل من ساهم بوقته وبياناته من اجل الخروج بهذا الجهد الذي لا يمكن الخروج به لولا دعمكم. * شكراً لك *
+كما نتقدم بالشكر الجزيل لكل من ساهم بوقته وبياناته من اجل الخروج بهذا الجهد الذي لا يمكن الخروج به لولا دعمكم. 
+شكراً لك 
 
-## ماهي التغيرات التي طرأت على TOP 10 2021
+
+
+## ماهي التغيرات التي طرأت على أعلى عشر مخاطر لعام 2021
 
 بشكل عام تم اضافة 3 تصنيفات جديدة، و 4 تصنيفات تم تغير الاسم وكذلك النطاق الخاص بها، وبعض عمليات الدمج التي تأتي مع TOP 10  لعام 2021
 
@@ -21,138 +24,46 @@
 
 **A04:2021-التصميم الغير الامن** هو تصنيف جديد تم أضافته في هذه النسخة لعام 2021، والتي تركز على المخاطر المتعلقة بعيوب وأخطاء التصميم. وإذا أردنا التحرك لأثبات أهمية التصميم الامن فنحن بحاجة الى نمذجة التهديدات وطرق التصميم الأمنه وكذلك وجود بنية التحتية مبنية على افضل المراجع وامتثالات. 
 
-**A05:2021-الاعدادات الخاطئة** moves up from #6 in the previous
-edition; 90% of applications were tested for some form of
-misconfiguration. With more shifts into highly configurable software,
-it's not surprising to see this category move up. The former category
-for XML External Entities (XXE) is now part of this category.
+**A05:2021-الاعدادات الخاطئة** بعد ان كان هو الخطر رقم #6 الان نراه في المرتبة #4، حيث انه تم اجراء اختبار لنقاط الضعف وكانت النسبة هي 90% من التطبيقات كانت توجد بها أخطاء في طريقة الاعدادات الصحيحة. وهذا يحدث مع البرمجيات الحديثة والتي تستلزم تغير الاعدادات بشكل مستمر مما يجعل نسبة الخطاء في ارتفاع وهذا الذي جعل (الاعدادات الخاطئة) ترتفع من المرتبة السادسة الى الرابعة. والجدير بالذكر انه تم ضم " XML External Entities XXE" لهذا النوع من الإعدادات الخاطئة.
 
-**A06:2021-الثغرات و الانظمة الغير قابلة للتحديثات** was previously titled
-*Using Components with Known Vulnerabilities* and is #2 in the industry
-survey, but also had enough data to make the Top 10 via data analysis.
-This category moves up from #9 in 2017 and is a known issue that we
-struggle to test and assess risk. It is the only category not to have
-any CVEs mapped to the included CWEs, so a default exploit and impact
-weights of 5.0 are factored into their scores.
+**A06:2021-الثغرات و الانظمة الغير قابلة للتحديثات** سابقاً كانت تعرف بـ “استخدام الأنظمة والمنتجات ذات ثغرات معروفة". وبناء على استطلاع كانت هي #2 اعلى ثغرة على مستوى خطر المنتجات. ومن خلال التحليل للبيانات وبعد ان كانت هي الخطر رقم #9 في الإصدار السابق لعام #2017 ارتفعت في اصدار #2021 الى الخطر رقم #6. وعند النظر الى معايير CVEs او CWEs لا نرى لها أي تصنيف للخطورة. ولذلك يتم تصنيف خطورتها بشكل افتراضي بناء على مستوى التأثير وهو 5.0.
 
-**A07:2021-الهوية و فشل عملية التحقق** was previously
-*Broken Authentication* and is sliding down from the second position,
-and now includes CWEs that are more related to identification failures.
-This category is still an integral part of the Top 10, but the increased
-availability of standardized frameworks seems to be helping.
+**A07:2021-الهوية و فشل عملية التحقق** والتي كانت تعرف في الإصدارات السابقة "فشل المصادقة" وبعد ان كانت كذلك هي الخطر رقم #2. وبعد عملية ربطها مع إطار CWEs وتسميتها بـ “فشل عملية التحقق". وكما نقول ان زيادة المعايير ادت الى تقليل المخاطر ولكن ليس بشكل كامل لذلك نراها من ضمن أعلى عشر مخاطر هنا.
 
-**A08:2021-فشل سلامة البيانات والبرمجيات** is a new category for
-2021, focusing on making assumptions related to software updates,
-critical data, and CI/CD pipelines without verifying integrity. One of
-the highest weighted impacts from CVE/CVSS data mapped to the 10 CWEs in
-this category. Insecure Deserialization from 2017 is now a part of this
-larger category.
+**A08:2021-فشل سلامة البيانات والبرمجيات** تم إضافتها حديثاً في هذا الاصدار 2021. والتي تركز بشكل كبير على تحديث البرمجيات والبيانات مع التأكيد على عدم تأثر سلامة دورة حياة CI/CD. وعند النظر الى تقييم للمخاطر المحتملة حسب تصنيف CVE/CVSS وارتباطها مع CWEs نجد ان تقييم الخطر هو 10 ويعتبر مرتفع جداً. الجدير بالذكر ان "Insecure Deserialization" اصبحت جزء من هذا التصنيف. 
 
-**A09:2021-فشل عملية تسجيل الاحداث والمراقبة** was previously
-*Insufficient Logging &* Monitoring and is added from the industry
-survey (#3), moving up from #10 previously. This category is expanded to
-include more types of failures, is challenging to test for, and isn't
-well represented in the CVE/CVSS data. However, failures in this
-category can directly impact visibility, incident alerting, and
-forensics.
+**A09:2021-فشل عملية تسجيل الاحداث والمراقبة** والتي كانت تعرف سابقاً بـ “تسجيل الاحداث والمراقبة بشكل غير صحيح". وبعد عمل الاستطلاع رقم 3. تم صعودها مرتبه واحده بعد ان كانت في المرتبة 10. الجدير بالذكر ان هناك العديد من عمليات الفشل التي تحدث في المراقبة وتسجيل الاحداث تم ضمها هنا.  وحينما نرى CVE/CVSS لا نرى لها اي تصنيف واضح ولكن مع القصور في عمليات المراقبة وتسجيل الاحداث والتي تشكل تأثيرًا بالغاً في عملية التغطية على مستوى الأنظمة، والتنبيه في حال وجود حوادث او الاستفادة منها في عمليات التحقيق الجنائي الرقمي.
 
-**A10:2021-تزوير الطلبات من جانب الخادم SSRF** is added from the industry
-survey (#1). The data shows a relatively low incidence rate with above
-average testing coverage, along with above-average ratings for Exploit
-and Impact potential. This category represents the scenario where the
-industry professionals are telling us this is important, even though
-it's not illustrated in the data at this time.
+**A10:2021-تزوير الطلبات من جانب الخادم SSRF** تم اضافة هذا التصنيف بناءً على الاستطلاع رقم #1. وتظهر البيانات حسب الاختبارات التي تم اجراءها ان هذا التصنيف معدل الاصابة به فوق المتوسط مع ارتفاع منخفض. ومدى ارتباطه بمعدل التأثير وإمكانية الاستغلال. ويفيد المختصين في المجال ان وجود هذا التصنيف من ضمن المخاطر هو امر مهم جداً حتى وان كانت البيانات الحالية غير متكاملة في الوقت الحالي.
 
 ## المنهجية
 
-This installment of the Top 10 is more data-driven than ever but not
-blindly data-driven. We selected eight of the ten categories from
-contributed data and two categories from an industry survey at a high
-level. We do this for a fundamental reason, looking at the contributed
-data is looking into the past. AppSec researchers take time to find new
-vulnerabilities and new ways to test for them. It takes time to
-integrate these tests into tools and processes. By the time we can
-reliably test a weakness at scale, years have likely passed. To balance
-that view, we use an industry survey to ask people on the front lines
-what they see as essential weaknesses that the data may not show yet.
+لأول مره يتم الاعتماد على البيانات في تصنيف أعلى عشر مخاطر ويجب التنويه انها لا تعتمد على البيانات بشكل كلي. حيث تم اختيار ثمان تصنيفات من أصل عشرة بناء على البيانات واثنين منهم بناء على الاستطلاع الذي تم اجراءه في نطاق المخاطر. وتقوم منظمة آواسب بالاعتماد على البيانات السابقة أكثر من أي من المصادر أخرى وذلك بسبب ان الباحثين في امن التطبيقات يستغرقون وقت وجهد كبيرين في إيجاد الثغرات او طرق جديدة لاستغلالها. مما يجعل عملية التحقق من النتائج والأدوات والطرق المستخدمة يستغرق وقت أكبر وقد تصل الى سنوات. ولتحقيق التوازن قمنا باستخدام استطلاع على المخاطر التي تستهدف صناعة امن التطبيقات وقمنا بتوجيه أسئلة للمختصين عن نقاط الضعف التي قد لا تظهرها البيانات.
 
-There are a few critical changes that we adopted to continue to mature
-the Top 10.
+وكما ان هناك بعض التغيرات الجوهرية التي تم اعتمادها من قبل منظمة آواسب لمواصلة المنهجية المتبعة في تصنيف أعلى عشر مخاطر. 
+
 
 ### كيف يتم تنظيم التصنيفات
 
-A few categories have changed from the previous installment of the OWASP
-Top Ten. Here is a high-level summary of the category changes.
+تم تغيير بعض التصنيفات من الإصدار السابق لأعلى عشر مخاطر وهنا ملخص لما تم تغيره على مستوى التصنيفات
 
-Previous data collection efforts were focused on a prescribed subset of
-approximately 30 CWEs with a field asking for additional findings. We
-learned that organizations would primarily focus on just those 30 CWEs
-and rarely add additional CWEs that they saw. In this iteration, we
-opened it up and just asked for data, with no restriction on CWEs. We
-asked for the number of applications tested for a given year (starting
-in 2017), and the number of applications with at least one instance of a
-CWE found in testing. This format allows us to track how prevalent each
-CWE is within the population of applications. We ignore frequency for
-our purposes; while it may be necessary for other situations, it only
-hides the actual prevalence in the application population. Whether an
-application has four instances of a CWE or 4,000 instances is not part
-of the calculation for the Top 10. We went from approximately 30 CWEs to
-almost 400 CWEs to analyze in the dataset. We plan to do additional data
-analysis as a supplement in the future. This significant increase in the
-number of CWEs necessitates changes to how the categories are
-structured.
+تركز الجهود المبذولة في جمع البيانات على مجموعات فرعية من CWEs بعدد 30 مجال مع الاخذ بالاعتبار ان بعض التصنيفات الفرعية تحتاج الى بيانات ونتائج إضافية.
+لذلك قررت المنظمة انها ستقوم بالتركيز على 30 تصنيف من CWEs بشكل أساسي وقد يتطلب التركيز في بعض الأحيان النظر في التصنيفات المتفرعة منها وسيكون في نطاق محدود وضيق. وكالعادة قمنا بطلب البيانات وبدون أي قيود على CWEs. وقمنا بطلب عدد من التطبيقات التي تم اختبارها لسنوات محددة (بدءًا من عام 2017)، او التطبيقات التي تم تقييمها بإصابتها بأحد CWEs على الأقل. وتسمح لنا هذه الطريقة معرفة مدى ارتباط التطبيقات بتصنيفات CWEs. مع الاخذ بعين الاعتبار اننا تجاهلنا التكرار لأسباب معينة مع الاخذ بالاعتبار انه في بعض الحالات يكون ضرورياً الاخذ به والذي قد يؤثر في بعض الأحيان في حال كان التطبيق منتشر ومشهور ومستخدم بكثرة. والجدير بالذكر ان مهما كان التطبيق مصاب سواء كان مصاب بـ 4 من CWEs او 4,000 فهذا لا يؤثر على آلية احتساب أعلى عشر مخاطر لدينا. ولقد كان لدينا تقريباً حوالي 400 CWEs وقمنا بحصرها وتقليلها الى 30 CWEs وذلك من خلال تحليل مجموعة من البيانات. وكما نخطط في المستقبل في اجراء تحليلات إضافية والتي بدورها ستنعكس على إضافة بعض من CWEs وقد يكون هناك تغير كذلك على هيكلة وتصنيف أعلى عشر مخاطر.
 
-We spent several months grouping and categorizing CWEs and could have
-continued for additional months. We had to stop at some point. There are
-both *root cause* and *symptom* types of CWEs, where *root cause* types
-are like "Cryptographic Failure" and "Misconfiguration" contrasted to
-*symptom* types like "Sensitive Data Exposure" and "Denial of Service."
-We decided to focus on the root cause whenever possible as it's more
-logical for providing identification and remediation guidance. Focusing
-on the root cause over the symptom isn't a new concept; the Top Ten has
-been a mix of *symptom* and *root cause*. CWEs are also a mix of
-*symptom* and *root cause*; we are simply being more deliberate about it
-and calling it out. There is an average of 19.6 CWEs per category in
-this installment, with the lower bounds at 1 CWE for
-*A10:2021-Server-Side Request Forgery (SSRF)* to 40 CWEs in
-*A04:2021-Insecure Design*. This updated category structure offers
-additional training benefits as companies can focus on CWEs that make
-sense for a language/framework.
+
+لقد أمضينا عدة أشهر في تجميع وتصنيف CWEs وكان من الممكن أن نستمر لأشهر إضافية. ولكن كان علينا التوقف عند نقطة ما. كما ان هناك أنواع في CWEs ما يسمى بـ “سبب جذري" و "الاعراض". وعلى سبيل المثال على "سبب جذري" كفشل التشفير او الاعدادات الخاطئة والذي يتم اقرانه بالأعراض مثل بيانات حساسة مكشوفة او حجب الخدمة. لذلك قررنا ان نركز على "السبب الجذري" قدر الإمكان وذلك لتوفر التوصيات والارشادات وطرق تلافي تلك الأسباب. كما ان التركيز على الأسباب الجذرية أكثر من الاعراض ليس مفهوم جديد، كما ان أعلى عشر مخاطر جات بشكل مختلط ما بين "الأسباب الجذرية" و "الاعراض" وهو الأسلوب المتبع في CWEs كذلك. وهدفنا ان نكون متوازنين. ان متوسط التصنيفات حسب CWEs هو 19.6 حيث حصلت A10 تزوير الطلبات من جانب الخادم SSRF على 1 CWEs و 40 CWEs لصالح A04:2021-التصميم الغير الامن . ان التحديث الذي تم على التصنيفات مفيد جداً للمنظمات من ناحية التركيز على منافع الاستفادة من التدريب على CWEs واستخدمها كلغة عمل وأطار.
 
 ### كيف يتم استخدام البيانات لبعض التصنيفات المختارة
 
-In 2017, we selected categories by incidence rate to determine
-likelihood, then ranked them by team discussion based on decades of
-experience for Exploitability, Detectability (also likelihood), and
-Technical Impact. For 2021, we want to use data for Exploitability and
-Impact if possible.
+في الإصدار السابق لعام 2017، جعلنا التصنيفات مبنيه على معدل الحدوث لتحديد احتماليتها. بعد ذلك قمنا بتصنيفهم من خلال مجموعة نقاش المبني على عقود من الخبرات في الاختراق والاستغلال والاكتشاف واحتمالية حدوثها ايضاً وماهوا الأثر التقني الذي سيحدث. لذلك أردنا في النسخة الجديدة من عام 2021 من الاستفادة من بيانات الاستغلال والأثر ان امكن ذلك.
 
-We downloaded OWASP Dependency Check and extracted the CVSS Exploit, and
-Impact scores grouped by related CWEs. It took a fair bit of research
-and effort as all the CVEs have CVSSv2 scores, but there are flaws in
-CVSSv2 that CVSSv3 should address. After a certain point in time, all
-CVEs are assigned a CVSSv3 score as well. Additionally, the scoring
-ranges and formulas were updated between CVSSv2 and CVSSv3.
+قمنا بتنزيل " OWASP Dependency Check" واستخرجنا نتائج CVSS للاختراق والأثر التي تم جمعها سابقاً من CWEs ذات العلاقة. ولا يخفى عليكم ان هذا الجهد من البحث اخذ قدر لا باس به لان جميع CVEs لديها درجات من CVSSv2 كذلك. ولكن هنا بعض الخلل ما بين CVSSv2 وCVSSv3 والذي يجب معالجته. وسنرى في القريب ان جميع CVEs ستقوم باستخدام CVSSv3. ونود ان نلفت الانتباه ان معادلة CVSSv2 وCVSSv3 والدرجات متغيرة ومتحدثة.
 
-In CVSSv2, both Exploit and Impact could be up to 10.0, but the formula
-would knock them down to 60% for Exploit and 40% for Impact. In CVSSv3,
-the theoretical max was limited to 6.0 for Exploit and 4.0 for Impact.
-With the weighting considered, the Impact scoring shifted higher, almost
-a point and a half on average in CVSSv3, and exploitability moved nearly
-half a point lower on average.
+في CVSSv2، من الممكن ان يصل الأثر و الاستغلال الى 10.0، ولكن بعد استخدام المعادلة قد تنخفض الى 60%  لاستغلال و 40% للتأثير. وفي CVSSv3 كان الحد الأعلى هو 6.0  للاستغلال و 4.0 للأثر. مع الاخذ بالاعتبار مدى ثقل أحدهما. وعند النظر الى CVSSv3 نرى ان الأثر ارتفع حوالي نقطة ونصف، والاستغلال انخفض بمقدر النصف نقطة تقريباً.
 
-There are 125k records of a CVE mapped to a CWE in the NVD data
-extracted from OWASP Dependency Check, and there are 241 unique CWEs
-mapped to a CVE. 62k CWE maps have a CVSSv3 score, which is
-approximately half of the population in the data set.
+هناك أكثر من 125 ألف سجل من CVE تم ربطها مع CWEs في منصة NVD والتي تم استخدمها في " OWASP Dependency Check". وهناك أكثر من 241 تصنيف فرعي فريد في CWEs تم ربطها في أكثر من CVE. وهناك أكثر من 62 ألف من CWE تم ربطها في CVSSv3. والتي تمثل نصف البيانات التي تم حصرها.
 
-For the Top Ten, we calculated average exploit and impact scores in the
-following manner. We grouped all the CVEs with CVSS scores by CWE and
-weighted both exploit and impact scored by the percentage of the
-population that had CVSSv3 + the remaining population of CVSSv2 scores
-to get an overall average. We mapped these averages to the CWEs in the
-dataset to use as Exploit and Impact scoring for the other half of the
-risk equation.
+في قائمة أعلى عشر مخاطر، قمنا بحساب متوسط نقاط الاستغلال والأثر بالطرق التالية. قمنا بتجميع درجات CVEs مع CVSS بواسطة CWE وقمنا بتقييم كل من الأثر والاستغلال باستخدام النسبة مئوية الموجودة في CVSSv3 بالإضافة الى جميع ما يوجد في CVSSv2 لاحتساب المتوسط الإجمالي. وبعد ذلك قمنا بربط المتوسط بـ CWEs في قاعدة البيانات وذلك لاستخدمها لتقييم درجات الأثر والاستغلال والاستفادة منها كذلك في احتساب المخاطر بناء على المعادلة المستخدمة.
 
 ## لماذا لا تكون مجرد بيانات إحصائية بحتة؟
 
