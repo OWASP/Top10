@@ -13,12 +13,13 @@
 | [A04_2021-Insecure_Design.ar.md](/2021/docs/A04_2021-Insecure_Design.ar.md)                                                                           | الجوهرة السبيعي | نورة السبيعي | جاري العمل | 18/09/2021     |
 | [A05_2021-Security_Misconfiguration.ar.md](/2021/docs/A05_2021-Security_Misconfiguration.ar.md)                                                       | رنا الزهراني    | نورة السبيعي | جاري العمل | 18/09/2021     |
 | [A06_2021-Vulnerable_and_Outdated_Components.ar.md](/2021/docs/A06_2021-Vulnerable_and_Outdated_Components.ar.md)                                     | محمد الشيخي     |              | جاري العمل | 18/09/2021     |
-| [A07_2021-Identification_and_Authentication_Failures.ar.md](/2021/docs/A07_2021-Identification_and_Authentication_Failures.ar.md)                     | سماح الصغير     |              | جاري العمل | 18/09/2021     |
+| [A07_2021-Identification_and_Authentication_Failures.ar.md](/2021/docs/A07_2021-Identification_and_Authentication_Failures.ar.md)                     | سماح الصغير     | عبير الوليعي | جاري العمل | 18/09/2021     |
 | [A08_2021-Software_and_Data_Integrity_Failures.ar.md](/2021/docs/A08_2021-Software_and_Data_Integrity_Failures.ar.md)                                 | saja            |              | جاري العمل | 20/09/2021     |
-| [A09_2021-Security_Logging_and_Monitoring_Failures.ar.md](/2021/docs/A09_2021-Security_Logging_and_Monitoring_Failures.ar.md)                         | نورة الرميحي    |              | جاري العمل | 19/09/2021     |
+| [A09_2021-Security_Logging_and_Monitoring_Failures.ar.md](/2021/docs/A09_2021-Security_Logging_and_Monitoring_Failures.ar.md)                         | نورة الرميحي    | محمد السحيمي | جاري العمل | 19/09/2021     |
 | [A10_2021-Server-Side_Request_Forgery_(SSRF).ar.md](/2021/docs/A10_2021-Server-Side_Request_Forgery_(SSRF).ar.md)                                     | نوير            |              | جاري العمل | 18/09/2021     |
 | [A11_2021-Next_Steps.ar.md](/2021/docs/A11_2021-Next_Steps.ar.md)                                                                                     | yara ajeebi     |              | جاري العمل | 19/09/2021     |
 | [index.ar.md](/2021/docs/index.ar.md)                                                                                                                 | مالك الدوسري    |              | جاري العمل | 15/09/2021     |
+
 
 
 
