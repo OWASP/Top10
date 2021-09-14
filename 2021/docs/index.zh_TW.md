@@ -73,32 +73,26 @@
 這是幾個我們為了要讓 OWASP Top 10 更加成熟的重要改變。
 ### 如何建構風險類別
 
-A few categories have changed from the previous installment of the OWASP
-Top Ten. Here is a high-level summary of the category changes.
+有別於上一個版本，在這次的 OWASP Top 10 有一些風險類別的修改。我們在此以比較高的角度
+說明一下這次的類別修改。
 
-Previous data collection efforts were focused on a prescribed subset of
-approximately 30 CWEs with a field asking for additional findings. We
-learned that organizations would primarily focus on just those 30 CWEs
-and rarely add additional CWEs that they saw. In this iteration, we
-opened it up and just asked for data, with no restriction on CWEs. We
-asked for the number of applications tested for a given year (starting
-in 2017), and the number of applications with at least one instance of a
-CWE found in testing. This format allows us to track how prevalent each
-CWE is within the population of applications. We ignore frequency for
-our purposes; while it may be necessary for other situations, it only
-hides the actual prevalence in the application population. Whether an
-application has four instances of a CWE or 4,000 instances is not part
-of the calculation for the Top 10. We went from approximately 30 CWEs to
-almost 400 CWEs to analyze in the dataset. We plan to do additional data
-analysis as a supplement in the future. This significant increase in the
-number of CWEs necessitates changes to how the categories are
-structured.
+在上一次的資料收集當中，我們將資料收集的重心放在預先定義好的約 30 個 CWEs 並納入一個
+欄位徵求其他的發現。從這裡我們看到決多數的組織都只會專注在這 30 個 CWEs 而不常加入其
+他他們可能發現的 CWEs。在這次的改版中，我們將所有的問題都以開放式的方法處理，並沒有限
+制在任何一個 CWEs。我們請教了從 2017 年開始所測試的網頁應用程式數量，然後在這些程式中
+至少有一個 CWE 被發現的數量。這個格式讓我們能夠追蹤每個 CWE 跟所有被驗測及統計的應用
+程式的數量跟關係。我們也忽略了 CWE 出現的頻率，雖然在某些狀況下這也許是必須的，但這卻
+隱藏了風險類別本身與應用程式數量整體的關係。所以一個應用程式有 4 個或是 4,000 個弱點
+並不是被計算在 Top 10 的基礎。但同時我們也從原本的 30 多個 CWEs 增長到快 400 多個
+CWEs 去進行分析。我們因此也計畫未來做更多的資料分析，並在對此版本進行補充說明。而這些
+增加的 CWEs 也同時影響了這次風險類別的規劃。
 
-We spent several months grouping and categorizing CWEs and could have
-continued for additional months. We had to stop at some point. There are
-both *root cause* and *symptom* types of CWEs, where *root cause* types
-are like "Cryptographic Failure" and "Misconfiguration" contrasted to
-*symptom* types like "Sensitive Data Exposure" and "Denial of Service."
+我們花了好幾個月將 CWEs 進行分組跟分類，而且其實可以一直花更多個月去做這件事情。但我
+們必須在某一個時間點停住。在 CWEs 當中，同時有 *原因* 以及 *症狀* 的問題，而像是 "
+加密機制失效" 和 "設定問題" 這類型的 *原因* 與 "機敏資料外洩" 和 "阻斷服務" 這類型
+的 *症狀* 是對立的。因此我們決定在可以的時候要更專注於底層的
+
+
 We decided to focus on the root cause whenever possible as it's more
 logical for providing identification and remediation guidance. Focusing
 on the root cause over the symptom isn't a new concept; the Top Ten has
