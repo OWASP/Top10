@@ -17,8 +17,9 @@
 | [A08_2021-Software_and_Data_Integrity_Failures.ar.md](/2021/docs/A08_2021-Software_and_Data_Integrity_Failures.ar.md)                                 | saja            |              | جاري العمل | 20/09/2021     |
 | [A09_2021-Security_Logging_and_Monitoring_Failures.ar.md](/2021/docs/A09_2021-Security_Logging_and_Monitoring_Failures.ar.md)                         | نورة الرميحي    |              | جاري العمل | 19/09/2021     |
 | [A10_2021-Server-Side_Request_Forgery_(SSRF).ar.md](/2021/docs/A10_2021-Server-Side_Request_Forgery_(SSRF).ar.md)                                     | نوير            |              | جاري العمل | 18/09/2021     |
-| [A11_2021-Next_Steps.ar.md](/2021/docs/A11_2021-Next_Steps.ar.md)                                                                                     |                 |              |            |                |
+| [A11_2021-Next_Steps.ar.md](/2021/docs/A11_2021-Next_Steps.ar.md)                                                                                     | yara ajeebi     |              | جاري العمل | 19/09/2021     |
 | [index.ar.md](/2021/docs/index.ar.md)                                                                                                                 | مالك الدوسري    |              | جاري العمل | 15/09/2021     |
+
 
 
 
