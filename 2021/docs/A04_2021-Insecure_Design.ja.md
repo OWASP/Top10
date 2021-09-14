@@ -52,17 +52,25 @@ library or tooling, and threat modeling.
 ## 防止方法
 ## How to Prevent
 
--   Establish and use a secure development lifecycle with AppSec
+-   セキュリティおよびプライバシー関連の管理策の評価および設計を支援するために、アプリケーションセキュリティの専門家とともにセキュアな開発ライフサイクルを確立し、使用する
+    
+    Establish and use a secure development lifecycle with AppSec
     professionals to help evaluate and design security and
     privacy-related controls
 
--   Establish and use a library of secure design patterns or paved road
+-   セキュアなデザインパターンまたは、信頼性が高く安全性も検証されているコンポーネントライブラリを構築し、使用する
+
+    Establish and use a library of secure design patterns or paved road
     ready to use components
 
--   Use threat modeling for critical authentication, access control,
+-   重要な認証、アクセスコントロール、ビジネスロジック、および暗号鍵の管理フローに脅威モデルを使用する
+
+    Use threat modeling for critical authentication, access control,
     business logic, and key flows
 
--   Write unit and integration tests to validate that all critical flows
+-   ユニットテストおよび統合テストを実施し、すべての重要なフローが脅威モデルに対して耐性があることを検証する
+
+    Write unit and integration tests to validate that all critical flows
     are resistant to the threat model
 
 ## 攻撃シナリオの例
@@ -70,6 +78,11 @@ library or tooling, and threat modeling.
 
 **シナリオ #1:** 
 **Scenario #1:** 
+
+クレデンシャルの回復フローには「秘密の質問と答え」が含まれることがあります。
+「秘密の質問と答え」は、NIST 800-63b、OWASP ASVS、および OWASP Top 10 で禁止されています。
+「秘密の質問と答え」は複数の人が答えを知ることができるため、アイデンティティの証拠として信頼できないためです。
+このようなコードは削除し、より安全な設計に置き換えるべきです。
 
 A credential recovery workflow might include “questions
 and answers,” which is prohibited by NIST 800-63b, the OWASP ASVS, and
@@ -81,6 +94,9 @@ secure design.
 **シナリオ #2:** 
 **Scenario #2:** 
 
+ある映画館チェーンでは団体予約による割引を認めており、最大 15 名までは予約保証金が必要ありません。
+攻撃者は、このフローに対する脅威モデルを作成し、数回のリクエストで600席とすべての映画館を一度に予約できるかどうかをテストし、大規模な損失を引き起こすことができます。
+
 A cinema chain allows group booking discounts and has a
 maximum of fifteen attendees before requiring a deposit. Attackers could
 threat model this flow and test if they could book six hundred seats and
@@ -88,6 +104,10 @@ all cinemas at once in a few requests, causing a massive loss of income.
 
 **シナリオ #3:** 
 **Scenario #3:** 
+
+ある小売チェーンの電子商取引サイトでは、ダフ屋がオークションサイトに転売するために高級ビデオカードを購入するボットへの対策がなされていません。
+この結果、ビデオカードメーカーや小売チェーン店にとっては最悪の評判となり、これらのカードをまったく手に入れることができない熱狂的なファンにとっては不幸をもたらします。
+注意深いボット対策の設計や、入手可能になってから数秒以内に購入された場合などのドメインロジックを作成することで、非正規の購入を識別し、そのような取引を拒否することができるかもしれません。
 
 A retail chain’s e-commerce website does not have
 protection against bots run by scalpers buying high-end video cards to
@@ -144,8 +164,7 @@ CWE-430 Deployment of Wrong Handler
 
 CWE-434 Unrestricted Upload of File with Dangerous Type
 
-CWE-444 Inconsistent Interpretation of HTTP Requests ('HTTP Request
-Smuggling')
+CWE-444 Inconsistent Interpretation of HTTP Requests ('HTTP Request Smuggling')
 
 CWE-451 User Interface (UI) Misrepresentation of Critical Information
 
