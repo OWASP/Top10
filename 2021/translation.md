@@ -7,7 +7,7 @@
 | [A00_2021_How_to_use_the_OWASP_Top_10_as_a_standard.ar.md](/2021/docs/A00_2021_How_to_use_the_OWASP_Top_10_as_a_standard.ar.md)                       | محمد البوسعيدي  |              | جاري العمل | 18/09/2021     |
 | [A00_2021_Introduction.ar.md](/2021/docs/A00_2021_Introduction.ar.md)                                                                                 | مالك الدوسري    |              | جاري العمل | 15/09/2021     |
 | [A00-about-owasp.ar.md](/2021/docs/A00-about-owasp.ar.md)                                                                                             | محمد البوسعيدي  |              | جاري العمل | 18/09/2021     |
-| [A01_2021-Broken_Access_Control.ar.md](/2021/docs/A01_2021-Broken_Access_Control.ar.md)                                                               |                 |              |            |                |
+| [A01_2021-Broken_Access_Control.ar.md](/2021/docs/A01_2021-Broken_Access_Control.ar.md)                                                               | wesal majed     |              | جاري العمل | 20/09/2021     |
 | [A02_2021-Cryptographic_Failures.ar.md](/2021/docs/A02_2021-Cryptographic_Failures.ar.md)                                                             | نورة السبيعي    | رنا الزهراني | جاري العمل | 18/09/2021     |
 | [A03_2021-Injection.ar.md](/2021/docs/A03_2021-Injection.ar.md)                                                                                       | المها           |              | جاري العمل | 18/09/2021     |
 | [A04_2021-Insecure_Design.ar.md](/2021/docs/A04_2021-Insecure_Design.ar.md)                                                                           | الجوهرة السبيعي | نورة السبيعي | جاري العمل | 18/09/2021     |
@@ -19,6 +19,7 @@
 | [A10_2021-Server-Side_Request_Forgery_(SSRF).ar.md](/2021/docs/A10_2021-Server-Side_Request_Forgery_(SSRF).ar.md)                                     | نوير            |              | جاري العمل | 18/09/2021     |
 | [A11_2021-Next_Steps.ar.md](/2021/docs/A11_2021-Next_Steps.ar.md)                                                                                     |                 |              |            |                |
 | [index.ar.md](/2021/docs/index.ar.md)                                                                                                                 | مالك الدوسري    |              | جاري العمل | 15/09/2021     |
+
 
 
  
