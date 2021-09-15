@@ -12,7 +12,7 @@
 ## Overview
 2021年の新カテゴリーでは、設計やアーキテクチャの欠陥に関するリスクに焦点を当てています。
 私たちは脅威のモデル化、セキュアなデザインパターンおよび、リファレンスアーキテクチャなどをもっと利用していくことが必要です。
-注目すべき CWE は、CWE-209: 機密情報を含むエラーメッセージの生成、CWE-256: 保護されていない認証情報の保存、CWE-501: 信頼境界線の侵害および、CWE-522: 適切に保護されていないクレデンシャル などです。
+注目すべき CWE は、CWE-209: エラーメッセージからの情報漏洩、CWE-256: 保護されていない認証情報の保存、CWE-501: 信頼境界線の侵害および、CWE-522: 適切に保護されていないクレデンシャル などです。
 
 A new category for 2021 focuses on risks related to design and
 architectural flaws, with a call for more use of threat modeling, secure
@@ -130,82 +130,122 @@ rejected such transactions.
 ## 対応する CWE のリスト
 ## List of Mapped CWEs
 
+CWE-73 ファイル名やパス名の外部制御
 CWE-73 External Control of File Name or Path
 
+CWE-183 許容範囲が広すぎる入力制限
 CWE-183 Permissive List of Allowed Inputs
 
+CWE-209 エラーメッセージからの情報漏洩
 CWE-209 Generation of Error Message Containing Sensitive Information
 
+CWE-213 互換性のないポリシーによる機密情報の漏洩
 CWE-213 Exposure of Sensitive Information Due to Incompatible Policies
 
+CWE-235 想定を超えたパラメータの不適切な処理
 CWE-235 Improper Handling of Extra Parameters
 
+CWE-256 パスワードなどのアカウント情報が平文のまま格納されている問題
 CWE-256 Unprotected Storage of Credentials
 
+CWE-257 復元可能な形式で保存されたパスワード
 CWE-257 Storing Passwords in a Recoverable Format
 
+CWE-266 不正確な特権の割り当て
 CWE-266 Incorrect Privilege Assignment
 
+CWE-269 不適切な特権管理
 CWE-269 Improper Privilege Management
 
+CWE-280 権限管理の不備
 CWE-280 Improper Handling of Insufficient Permissions or Privileges
 
+CWE-311 重要な情報を暗号化していない問題
 CWE-311 Missing Encryption of Sensitive Data
 
+CWE-312 重要な情報が平文のまま格納されている問題
 CWE-312 Cleartext Storage of Sensitive Information
 
+CWE-313 ファイルやディスクに平文のまま格納されている問題
 CWE-313 Cleartext Storage in a File or on Disk
 
+CWE-316 メモリ上に平文のまま格納されている問題
 CWE-316 Cleartext Storage of Sensitive Information in Memory
 
+CWE-419 保護されていないプライマリーチャネル
 CWE-419 Unprotected Primary Channel
 
+CWE-430 誤ったハンドラーの配置
 CWE-430 Deployment of Wrong Handler
 
+CWE-434 適切でないアップロートファイル制限
 CWE-434 Unrestricted Upload of File with Dangerous Type
 
+CWE-444 HTTPリクエストの矛盾した解釈（HTTPリクエストスマグリング
 CWE-444 Inconsistent Interpretation of HTTP Requests ('HTTP Request Smuggling')
 
+CWE-451 ユーザーインターフェース（UI）による重要情報の誤表示
 CWE-451 User Interface (UI) Misrepresentation of Critical Information
 
+CWE-472 不変と仮定される Web パラメータの外部制御
 CWE-472 External Control of Assumed-Immutable Web Parameter
 
+CWE-501 信頼境界線の侵害
 CWE-501 Trust Boundary Violation
 
+CWE-522 十分でない資格情報保護
 CWE-522 Insufficiently Protected Credentials
 
+CWE-525 機密情報を含むWebブラウザのキャッシュの使用
 CWE-525 Use of Web Browser Cache Containing Sensitive Information
 
+CWE-539 機密情報を含むパーシステントクッキーの使用
 CWE-539 Use of Persistent Cookies Containing Sensitive Information
 
+CWE-579 J2EEのバッドプラクティス：セッションに格納されたシリアライズ不可能なオブジェクト
 CWE-579 J2EE Bad Practices: Non-serializable Object Stored in Session
 
+CWE-598 GETリクエストのクエリ文字列からの情報漏洩
 CWE-598 Use of GET Request Method With Sensitive Query Strings
 
+CWE-602 サーバサイドのセキュリティをクライアントサイドで実施
 CWE-602 Client-Side Enforcement of Server-Side Security
 
+CWE-642 重要な状態データの外部制御
 CWE-642 External Control of Critical State Data
 
+CWE-646 外部から提供されたファイルのファイル名や拡張子への依存
 CWE-646 Reliance on File Name or Extension of Externally-Supplied File
 
+CWE-650 サーバーサイドにおける HTTP メソッドへの過剰な信頼
 CWE-650 Trusting HTTP Permission Methods on the Server Side
 
+CWE-653 不十分なコンパートメント化
 CWE-653 Insufficient Compartmentalization
 
+CWE-656 隠ぺいによるセキュリティへの依存
 CWE-656 Reliance on Security Through Obscurity
 
+CWE-657 セキュリティ設計原則の違反
 CWE-657 Violation of Secure Design Principles
 
+CWE-799 適切でない相互作用に対する頻度制御
 CWE-799 Improper Control of Interaction Frequency
 
+CWE-807 信頼できない入力に基づいた判断への依存
 CWE-807 Reliance on Untrusted Inputs in a Security Decision
 
+CWE-840 ビジネスロジックのエラー
 CWE-840 Business Logic Errors
 
+CWE-841 ユーザーの振る舞いに基づいたワークフローに依存した不適切な処理の実施
 CWE-841 Improper Enforcement of Behavioral Workflow
 
+CWE-927 センシティブなコミュニケーションへの暗黙的インテントの使用
 CWE-927 Use of Implicit Intent for Sensitive Communication
 
+CWE-1021 レンダリングされたUIレイヤーやフレームの不適切な制限
 CWE-1021 Improper Restriction of Rendered UI Layers or Frames
 
+CWE-1173 バリデーションフレームワークの不適切な使用
 CWE-1173 Improper Use of Validation Framework
