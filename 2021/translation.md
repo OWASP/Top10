@@ -4,7 +4,7 @@
 
 | الصفحة                                                                                                                                                | المترجم         | المدقق            | الحالة     | تاريخ الانتهاء |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|-------------------|------------|----------------|
-| [A00_2021-How_to_start_an_AppSec_program_with_the_OWASP_Top_10.ar.md](/2021/docs/A00_2021-How_to_start_an_AppSec_program_with_the_OWASP_Top_10.ar.md) | محمد البوسعيدي  |                   | جاري العمل | 18/09/2021     |
+| [A00_2021-How_to_start_an_AppSec_program_with_the_OWASP_Top_10.ar.md](/2021/docs/A00_2021-How_to_start_an_AppSec_program_with_the_OWASP_Top_10.ar.md) | محمد البوسعيدي  | ابتسام الطريف     | جاري العمل | 18/09/2021     |
 | [A00_2021_How_to_use_the_OWASP_Top_10_as_a_standard.ar.md](/2021/docs/A00_2021_How_to_use_the_OWASP_Top_10_as_a_standard.ar.md)                       | محمد البوسعيدي  | roaa              | جاري العمل | 18/09/2021     |
 | [A00_2021_Introduction.ar.md](/2021/docs/A00_2021_Introduction.ar.md)                                                                                 | مالك الدوسري    | غيداء             | جاري العمل | 15/09/2021     |
 | [A00-about-owasp.ar.md](/2021/docs/A00-about-owasp.ar.md)                                                                                             | محمد البوسعيدي  | I Fad             | جاري العمل | 18/09/2021     |
