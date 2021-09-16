@@ -67,60 +67,21 @@
 
 ## لماذا لا تكون مجرد بيانات إحصائية بحتة؟
 
-The results in the data are primarily limited to what we can test for in
-an automated fashion. Talk to a seasoned AppSec professional, and they
-will tell you about stuff they find and trends they see that aren't yet
-in the data. It takes time for people to develop testing methodologies
-for certain vulnerability types and then more time for those tests to be
-automated and run against a large population of applications. Everything
-we find is looking back in the past and might be missing trends from the
-last year, which are not present in the data.
+تقتصر النتائج بشكل أساسي على ما يمكننا اختباره بشكل آلي. وحينما تتحدث الى أحد المختصين المحترفين في مجال امن التطبيقات سيخبرونك ان بعض المخرجات والاحصائيات لا يوجد لها بيانات بعد. ومع ذلك فإعداد منهجيات الاختبار تستغرق فترة من الزمن ومن ثم انت بحاجة الى المزيد من الوقت لكي تقوم بأتمتة تلك الاختبارات وتشغيلها على مجموعة كبيرة من التطبيقات. 
 
-Therefore, we only pick eight of ten categories from the data because
-it's incomplete. The other two categories are from the industry survey.
-It allows the practitioners on the front lines to vote for what they see
-as the highest risks that might not be in the data (and may never be
-expressed in data).
+ولذلك قمنا باختيار ثماني تصنيفات من أصل عشرة من البيانات بسبب عدم اكتمال ونضج البيانات، التصنيفان الباقية قمنا بعمل استطلاع في صناعة الامن السيبراني. مما يسمح للمختصين بالتصويت لما يرونه من المخاطر تستحق ان تضاف الى قائمة أعلى عشر مخاطر والتي قد لا يكون لها بيانات او بيانات غير متناسقة ومناسبه.
 
 ## لماذا معدل الحدوث بدلا من التكرار؟
 
-There are three primary sources of data. We identify them as
-Human-assisted Tooling (HaT), Tool-assisted Human (TaH), and raw
-Tooling.
+هناك ثلاثة مصادر أساسية للبيانات. نحددها على أنها الانسان يساعد الأدوات (HaT) ، او الأدوات تساعد الإنسان (TaH) ، او الأدوات من غير أي تعديلات.
 
-Tooling and HaT are high-frequency finding generators. Tools will look
-for specific vulnerabilities and tirelessly attempt to find every
-instance of that vulnerability and will generate high finding counts for
-some vulnerability types. Look at Cross-Site Scripting, which is
-typically one of two flavors: it's either a more minor, isolated mistake
-or a systemic issue. When it's a systemic issue, the finding counts can
-be in the thousands for an application. This high frequency drowns out
-most other vulnerabilities found in reports or data.
+تقوم HaT والأدوات بعمليات اكتشاف على مستوى عالي. حيث ان الأدوات تبحث عن نقاط ضعف محددة مع تجربة جميع الاحتمالات المتوقعة لاكتشاف الثغرة. وعند النظر الى ثغرة XSS والتي بالعادة اما ان تكون منخفضة الخطورة او بسيطة والتي تأتي بسبب أخطاء الأنظمة او أخطاء في عملية التصفية. وعندما تكون الثغرة بسبب خطاء في الأنظمة ترتفع نسبت تكرار الاكتشاف لهذه الثغرة والتي من الممكن ان تؤثر على مخرجات التقرير او البيانات.
 
-TaH, on the other hand, will find a broader range of vulnerability types
-but at a much lower frequency due to time constraints. When humans test
-an application and see something like Cross-Site Scripting, they will
-typically find three or four instances and stop. They can determine a
-systemic finding and write it up with a recommendation to fix on an
-application-wide scale. There is no need (or time) to find every
-instance.
+ومن ناحية أخرى نجد ان TaH أخرجت لنا نطاق واسع من الثغرات ولكن مع تكرار اقل بكثير بسبب ضيق الوقت. وذلك بسبب عندما يقومون المختصين بفحص التطبيقات ويرون في بعض الأحيان مثل XSS سيقومون بإيجاد ٣ او ٤ وبعد ذلك يتوقفون عن البحث عنها وإيجاد سبب الخطاء وكتابة تقرير عنها والتوصيات الممكنة لكي تقوم بإصلاحها والتي ستقوم بإصلاح جميع التطبيق. وليس هناك حاجة او وقت للعثور على جميع الثغرات بشكل متكرر.
 
-Suppose we take these two distinct data sets and try to merge them on
-frequency. In that case, the Tooling and HaT data will drown the more
-accurate (but broad) TaH data and is a good part of why something like
-Cross-Site Scripting has been so highly ranked in many lists when the
-impact is generally low to moderate. It's because of the sheer volume of
-findings. (Cross-Site Scripting is also reasonably easy to test for, so
-there are many more tests for it as well).
+لنفترض اننا اخذنا مجموعتي بيانات مميزة وغير متشابهة وحاولنا دمجهما على مستوى التكرار. في هذه الحالة سنجد ان البيانات الدقيقة المستخرجة من الأدوات وHaT غير قابلة للملاحظة مع بيانات TaH. وهذا يظهر في بعض الأحيان بشكل إيجابي في بعض الثغرات مثل ثغرة XSS والذي في بعض الأحيان يقوم برفع مستوى التصنيف من منخفض الى متوسط بسبب العدد الهائل من النتائج. (ثغرات مثل XSS  من السهل اختبارها والخروج بنتائج معقولة)
 
-In 2017, we introduced using incidence rate instead to take a fresh look
-at the data and cleanly merge Tooling and HaT data with TaH data. The
-incidence rate asks what percentage of the application population had at
-least one instance of a vulnerability type. We don't care if it was
-one-off or systemic. That's irrelevant for our purposes; we just need to
-know how many applications had at least one instance, which helps
-provide a clearer view of the testing is findings across multiple
-testing types without drowning the data in high-frequency results.
+في عام 2017 قمنا باستخدام معدل الحدوث بدل من القاء نظرة مره أخرى على البيانات ودمجها بشكل مناسب مع البيانات المستخرجة من الأدوات وHaT وTaH.  حيث يكون معدل الحدوث يعتمد على نسبة التطبيقات التي لديها نوع من أنواع الثغرات. وحقيقة نحن في المنظمة لا نهتم في حال كانت الثغرة واحدة معدل حدوثها متكرر. وهدفنا هو معرفة عدد التطبيقات التي لديها ثغرة واحده على الأقل. وهذا يعطينا تصور واضح من نتائج الاختبار والتي هي لدينا أفضل من اغراق البيانات بتكرار غير ذا فائدة.
 
 ## ما هي عملية جمع البيانات وتحليلها؟
 
