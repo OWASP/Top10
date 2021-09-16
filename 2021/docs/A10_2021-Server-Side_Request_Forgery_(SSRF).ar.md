@@ -1,87 +1,62 @@
-# A10:2021 – Server-Side Request Forgery (SSRF)
+# A10 تزوير الطلبات من جانب الخادم SSRF
 
-## Factors
+## العوامل
 
 | CWEs Mapped | Max Incidence Rate | Avg Incidence Rate | Max Coverage | Avg Coverage | Avg Weighted Exploit | Avg Weighted Impact | Total Occurrences | Total CVEs |
 |:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
 | 1           | 2.72%              | 2.72%              | 67.72%       | 67.72%       | 8.28                 | 6.72                | 9,503             | 385        |
 
-## Overview
+## نظرة عامة:
 
-This category is added from the industry survey (#1). The data shows a
-relatively low incidence rate with above average testing coverage and
-above-average Exploit and Impact potential ratings. As new entries are
-likely to be a single or small cluster of CWEs for attention and
-awareness, the hope is that they are subject to focus and can be rolled
-into a larger category in a future edition.
+حيث تظهر البيانات ان معدل الحوادث كان منخفض نسبياً مع ان نسبة الاختبار كانت فوق المتوسط وان معدل الاختراق واثارة ستكون اعلى من المتوسط 
+ومن المحتمل أن تكون هناك مجموعة مساهمات صغيرة أو فردية لهذا التصنيف في CWEs وذلك من أجل رفع الوعي، لذا نأمل ان يتم التركيز عليها وان يتم وإدراجها ضمن تصنيف أكبر في الإصدارات المقبلة.
 
-## Description 
+## الوصف 
 
-SSRF flaws occur whenever a web application is fetching a remote
-resource without validating the user-supplied URL. It allows an attacker
-to coerce the application to send a crafted request to an unexpected
-destination, even when protected by a firewall, VPN, or another type of
-network ACL.
+يتم تزوير طلبات الخادم عندما يقوم تطبيق الويب بجلب موارد عن بعد دون التحقق من صحة العنوان المقدم من قبل المستخدم. حيث يسمح ذلك للمهاجم بإجبار التطبيق على إرسال طلب معدل إلى وجهة غير متوقعة للخادم، حتى عندما يكون محمي بجدار حماية، شبكة خاصة افتراضية VPN أو أية نوع من قائمة التحكم بالوصول إلى الشبكة.
 
-As modern web applications provide end-users with convenient features,
-fetching a URL becomes a common scenario. As a result, the incidence of
-SSRF is increasing. Also, the severity of SSRF is becoming higher due to
-cloud services and the complexity of architectures.
+نظرًا لأن تطبيقات الويب (الموقع) الحديثة توفر للمستخدمين ميزات متقدمة، فإن جلب العناوين من الخادم يصبح سيناريو شائعًا. نتيجة لذلك، فإن معدل حدوث تزوير لطلبات الخادم آخذ في الازدياد. أيضًا، لذلك أصبحت استغلال هذه الثغرة اشد خطورة على الخادم بسبب الخدمات السحابية وتعقيد البنية المعمارية.
 
-## How to Prevent
+## كيفية الحماية منها 
 
-Developers can prevent SSRF by implementing some or all the following
-defense in depth controls:
+يستطيع المطورين منع تزوير طلبات الخادم بتنفيذ بعض أو كل وسائل الدفاع التالية في ضوابط الدفاع العميق (defense in depth) :
+## **من خلال طبقات الشبكة:**
 
-## **From Network layer**
+-   تقسيم وظائف الوصول إلى الموارد عن بعد في شبكات منفصلة لتقليل تأثير تزوير طلبات الخادم.
 
--   Segment remote resource access functionality in separate networks to
-    reduce the impact of SSRF
+-   فرض سياسات جدار الحماية "الرفض افتراضيًا" أو ضبط آليات التحكم في الوصول إلى الشبكة لحظر جميع حركات مرور للشبكة الداخلية باستثناء حركة المرور الأساسية.
 
--   Enforce “deny by default” firewall policies or network access
-    control rules to block all but essential intranet traffic
+## **من خلال طبقات التطبيقات:**
 
-## **From Application layer:**
+-   تصفية والتحقق من صحة جميع بيانات الإدخال المقدمة من قبل المستخدم.
 
--   Sanitize and validate all client-supplied input data
+-   استخدام عناوين محددة في الروابط URL، وكذلك استخدم منافذ محددة مع تحديد قائمة من العناوين محددة مسبقاً في قائمة مسموح بها.
 
--   Enforce the URL schema, port, and destination with a positive allow
-    list
+-   لا تقم برد الطلبات للعميل على شكل بيانات خام
 
--   Do not send raw responses to clients
+-   قم بتعطيل اعادة التوجيهة الى HTTP.
 
--   Disable HTTP redirections
+-   كن على حذر من هجمات اعادة الترتيب الرابط او الاحرف والتي قد تأتي في بعض الهجمات من خلال برتوكول DNS او من خلال استخدام TOCTOU.
 
--   Be aware of the URL consistency to avoid attacks such as DNS
-    rebinding and “time of check, time of use” (TOCTOU) race conditions
+لا تقم بتخفيف المخاطر على هجمات SSRF من خلال استخدام سياسة المنع المبنية على قائمة التعبيرات المنطقية او (regular expression). حيث ان المهاجمين لديهم قوائم معدة مسبقاً ومتعددة لمحاولة تخطي عمليات الحجب تلك.
 
-Do not mitigate SSRF via the use of a deny list or regular expression.
-Attackers have payload lists, tools, and skills to bypass deny lists.
+## أمثلة على سيناريوهات الهجوم
 
-## Example Attack Scenarios
+يستطيع المهاجمين استخدام تزوير طلبات الخادم لمهاجمة الأنظمة المحمية خلف جدران حماية تطبيقات الويب(WAF)، وجدران الحماية أو قائمة التحكم للوصول للشبكة باستخدام سيناريو مثل:
 
-Attackers can use SSRF to attack systems protected behind web
-application firewalls, firewalls, or network ACLs, using scenarios such
-as:
+**سيناريو #1:** فحص المنافذ للخوادم الداخلية في معمارية الشبكة:
+الشبكات الغير مقسمة بشكل جيد تمكن المهاجمين من رسم الشبكات الداخلية بشكل دقيق ويصل الى تمكين المهاجم لمعرفة في حال كانت المنافذ مفتوحة ام مغلقة للخوادم والخدمات الداخلية من خلال دراسة اما استجابة الخادم لطلبات او من خلال الوقت المستغرق لكل طلب على كل منفذ مختلف وذلك لمعرفة في حال كان استغلال SSRF نجح ام فشل.
 
-**Scenario #1:** Port scan internal servers. If the network architecture
-is unsegmented, attackers can map out internal networks and determine if
-ports are open or closed on internal servers from connection results or
-elapsed time to connect or reject SSRF payload connections.
+**سيناريو #2:** بيانات حساسة غير محمية والتي يستطيع المهاجم الوصول لها:
+يستطيع المهاجم الوصول للبيانات الحساسة الداخلية مثل ملف (  file:///etc/passwd)او حتى للخدمات الداخلية من خلال استغلال هذه الثغرة
 
-**Scenario #2:** Sensitive data exposure. Attackers can access local
-files such as <file:///etc/passwd> or internal services to gain
-sensitive information.
+**سيناريو #3:** الوصول إلى تخزين البيانات الوصفية للخدمات السحابية :
+يمتلك معظم موفري السحابة تخزين البيانات الوصفية مثل http://169.254.169.254    ويمكن للمهاجم قراءة تلك البيانات الوصفية للحصول على معلومات حساسة منها.
 
-**Scenario #3:** Access metadata storage of cloud services. Most cloud
-providers have metadata storage such as <http://169.254.169.254/>. An
-attacker can read the metadata to gain sensitive information.
+**سيناريو #4:** اختراق الخدمات الداخلية وإساءة استخدامها من قبل المهاجم:
+يمكن للمهاجم إساءة استخدام الخدمات الداخلية لإجراء مزيد من الهجمات مثل تنفيذ التعليمات البرمجية عن بُعد (RCE) أو هجوم حجب الخدمة (DoS).
 
-**Scenario #4:** Compromise internal services – The attacker can abuse
-internal services to conduct further attacks such as Remote Code
-Execution (RCE) or Denial of Service (DoS).
-
-## References
+## المصادر
 
 -   [OWASP - Server-Side Request Forgery Prevention Cheat
     Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html)
@@ -98,6 +73,6 @@ Execution (RCE) or Denial of Service (DoS).
 -   [A New Era of SSRF - Exploiting URL Parser in Trending Programming
     Languages!](https://www.blackhat.com/docs/us-17/thursday/us-17-Tsai-A-New-Era-Of-SSRF-Exploiting-URL-Parser-In-Trending-Programming-Languages.pdf)
 
-## List of Mapped CWEs
+## قائمة الربط مع إطار CWEs
 
 CWE-918 Server-Side Request Forgery (SSRF)
