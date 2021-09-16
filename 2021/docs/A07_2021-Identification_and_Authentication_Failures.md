@@ -39,7 +39,7 @@ attacks. There may be authentication weaknesses if the application:
 
 -   Exposes Session IDs in the URL (e.g., URL rewriting).
 
--   Do not rotate Session IDs after successful login.
+-   Does not rotate Session IDs after successful login.
 
 -   Does not correctly invalidate Session IDs. User sessions or
     authentication tokens (mainly single sign-on (SSO) tokens) aren't
