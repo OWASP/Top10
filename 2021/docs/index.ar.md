@@ -85,106 +85,51 @@
 
 ## ما هي عملية جمع البيانات وتحليلها؟
 
-We formalized the OWASP Top 10 data collection process at the Open
-Security Summit in 2017. OWASP Top 10 leaders and the community spent
-two days working out formalizing a transparent data collection process.
-The 2021 edition is the second time we have used this methodology.
+تم إضفاء الطابع الرسمي على عملية جمع بيانات أعلى عشر مخاطر في قمة Open Security Summit في عام 2017. وبعد ذلك أمضى المسؤولين في منظمة آواسب   يومين في العمل على جعل عملية جمع البيانات مبنية على سياسة واضحة وشفافة. تعد نسخة 2021 هي المرة الثانية التي نستخدم فيها هذه المنهجية.
 
-We publish a call for data through social media channels available to
-us, both project and OWASP. On the [OWASP Project
-page](https://owasp.org/www-project-top-ten/#div-data_2020), we list the
-data elements and structure we are looking for and how to submit them.
-In the [GitHub
-project](https://github.com/OWASP/Top10/tree/master/2020/Data), we have
-example files that serve as templates. We work with organizations as
-needed to help figure out the structure and mapping to CWEs.
+قمنا بدعوة للحصول على البيانات من خلال قنوات التواصل الاجتماعي المتاحة لنا، لكلًّا من المشروع و OWASP. وفي  [صفحة مشروع OWASP](https://owasp.org/www-project-top-ten/#div-data_2020), نقوم بإدراج عناصر وهيكل البيانات التي نبحث عنها وكيفية إرسالها.
+وفي  [مشروع GitHub](https://github.com/OWASP/Top10/tree/master/2020/Data), لدينا أمثلة لملفات تعمل كقوالب. نعمل مع المنظمات الأخرى  حسب الحاجة للمساعدة في تحديد الهيكل ورسم وربطها بـ CWEs.
 
-We get data from organizations that are testing vendors by trade, bug
-bounty vendors, and organizations that contribute internal testing data.
-Once we have the data, we load it together and run a fundamental
-analysis of what CWEs map to risk categories. There is overlap between
-some CWEs, and others are very closely related (ex. Cryptographic
-vulnerabilities). Any decisions related to the raw data submitted are
-documented and published to be open and transparent with how we
-normalized the data.
 
-We look at the eight categories with the highest incidence rates for
-inclusion in the Top 10. We also look at the industry survey results to
-see which ones may already be present in the data. The top two votes
-that aren't already present in the data will be selected for the other
-two places in the Top 10. Once all ten were selected, we applied
-generalized factors for exploitability and impact; to help rank the Top
-10 in order.
+نحصل على البيانات من المؤسسات التي بالاختبارات من خلال المبادلة، ومن خلال منصات اكتشاف الثغرات، والمؤسسات التي تساهم ببياناتها الخاصة بالاختبار الداخلية. وبمجرد حصولنا على البيانات، نقوم بتحميلها معًا ونجري تحليلًا وفهماً عن أساسيًات الربط بـ CWEs لتصنيفات المخاطر. هناك تداخل بين بعض CWEs، بسبب التشابه بينهم (مثل نقاط الضعف في التشفير). حيث يتم توثيق ونشر أي قرارات تتعلق بالبيانات الأولية المقدمة لتكون مفتوحة وواضحة مع كيفية موائمة البيانات.
+
+يتم النظر إلى التصنيفات الثمانية ذات أعلى معدلات حدوث لإدراجها في أعلى عشر مخاطر. وننظر أيضًا في نتائج الاستطلاع في قطاع الامن السيبراني لمعرفة في حال وجود أي منها في البيانات. سيتم اختيار أعلى تقييمين غير موجودين بالفعل في البيانات المحللة سابقاً واضفتها الى أعلى عشر مخاطر. بمجرد اختيار جميع العشرة ، يتم تطبيق العوامل التي تم الاتفاق عليها وهي (الاستغلال والتأثير)؛ للمساعدة في ترتيب أعلى عشر مخاطر.
 
 ## العوامل المستخدمة مع البيانات
 
-There are data factors that are listed for each of the Top 10
-Categories, here is what they mean:
+هناك عوامل بيانات مدرجة لكل تصنيف من تصنيفات أعلى عشر مخاطر، وإليك ما تعنيه:
 
--   *CWEs Mapped*: The number of CWEs mapped to a category by the Top 10
-    team.
+-   *ربط بـ CWEs*: عدد CWEs الذي تم ربطها بواسطة الفريق.
 
--   *Incidence Rate*: Incidence rate is the percentage of applications
-    vulnerable to that CWE from the population tested by that org for
-    that year.
+-   *معدل الحدوث/الحوادث*: معدل الحدوث وهو النسبة المئوية للتطبيقات المعرضة لثغرات ومعرفة مدى ارتباطه بمعيار CWE خلال الاختبارات التي. أجرتها المؤسسات في سنة محددة.
 
--   (Testing) *Coverage*: The percentage of applications tested by all
-    organizations for a given CWE.
+-   (الاختبارات) *والتغطية*:النسبة المئوية للتطبيقات التي تم اختبارها من قبل جميع المنظمات لـ CWE مُعيّن.
 
--   *Weighted Exploit*: The Exploit sub-score from CVSSv2 and CVSSv3
-    scores assigned to CVEs mapped to CWEs, normalized, and placed on a
-    10pt scale.
+-   *خطورة الاستغلال*: معرفة الاستغلال و النقاط الفرعية  له من CVSSv2 و CVSSv3 والتي لديها CVEs ومرتبطة بـ CWEs، ،موائمتها  ، ووضعها على مقياس 10pt.
 
--   *Weighted Impact*: The Impact sub-score from CVSSv2 and CVSSv3
-    scores assigned to CVEs mapped to CWEs, normalized, and placed on a
-    10pt scale.
+-   *التأثير المتوقع*: تأثير النقاط الفرعية من CVSSv2 و CVSSv3 والتي لديها CVEs ومرتبطة بـ CWEs، ،موائمتها  ، ووضعها على مقياس 10pt.
 
--   *Total Occurrences*: Total number of applications found to have the
-    CWEs mapped to a category.
+-   *إجمالي التكرارات/الحوادث*: إجمالي عدد التطبيقات التي تم ربطها بـ CWEs وتم وضع لها تصنيف محدد.
 
--   *Total CVEs*: Total number of CVEs in the NVD DB that were mapped to
-    the CWEs mapped to a category.
+-   *إجمالي CVEs*: إجمالي عدد CVEs في NVD DB التي تم ربطها بـ CWEs وتم وضع لها تصنيف محدد.
 
 ## علاقات التصنيفات لعام 2021 مع تصنيفات عام 2017
 
-There has been a lot of talk about the overlap between the Top Ten
-risks. By the definition of each (list of CWEs included), there really
-isn't any overlap. However, conceptually, there can be overlap or
-interactions based on the higher-level naming. Venn diagrams are many
-times used to show overlap like this.
+هناك الكثير من الحديث عن التداخل بين المخاطر العشرة الأولى. ومن خلال تعريف كل (القوائم المدرجة في CWEs)، ولكن الذي يظهر لنا انه لا يوجد أي تداخل في. ومع ذلك، من الناحية النظرية، يمكن أن يكون هناك تداخل أو تأثر بناءً على التسمية. ونقوم باستخدام مخططات Venn لإظهار التداخل كما في المثال ادناه.
 
 <img src="./assets/image2.png" style="width:4.31736in;height:3.71339in" alt="Diagram Description automatically generated" />
 
-The Venn diagram above represents the interactions between the Top Ten
-2017 risk categories. While doing so, a couple of essential points
-became obvious:
+يمثل مخطط Venn أعلاه الترابط بين التصنيفات في أعلى عشر مخاطر لعام 2017. وأثناء القيام بذلك، أصبحت بضع نقاط أساسية واضحة:
 
-1.  One could argue that Cross-Site Scripting ultimately belongs within
-    Injection as it's essentially Content Injection. Looking at the 2021
-    data, it became even more evident that XSS needed to move into
-    Injection.
+1.  كان يُرى بأن هجوم - ثغرات XSS  تنتمي في حقيقة الأمر إلى ثغرات الحقن(Injection) لأنها في الأساس عبارة عن حقن المحتوى. بالنظر إلى بيانات عام 2021 ، أصبح من الواضح أن ( XSS )بحاجة إلى الانتقال إلى الحقن(Injection).
 
-2.  The overlap is only in one direction. We will often classify a
-    vulnerability by the end manifestation or "symptom," not the
-    (potentially deep) root cause. For instance, "Sensitive Data
-    Exposure" may have been the result of a "Security Misconfiguration";
-    however, you won't see it in the other direction. As a result,
-    arrows are drawn in the interaction zones to indicate which
-    direction it occurs.
+2.  التداخل فيما بينهم غالباً في اتجاه واحد. غالبًا ما نصنف الثغرة من خلال "العَرَض"، وليس السبب الجذري (الذي يحتمل أن يكون عميقًا). على سبيل المثال، قد يكون " البيانات الحساسة المكشوفة " نتيجة "لإعدادات خاطئة للأمان"؛ وفي الغالب لن تراها بالاتجاه المعاكس. نتيجة لذلك، يتم رسم الأسهم في مناطق التأثر للإشارة إلى الاتجاه الذي يحدث فيه.
 
-3.  Sometimes these diagrams are drawn with everything in *A06:2021
-    Using Components with Known Vulnerabilities*. While some of these
-    risk categories may be the root cause of third-party
-    vulnerabilities, they are generally managed differently and with
-    different responsibilities. The other types are typically
-    representing first-party risks.
+3.  أحيانًا يتم رسم هذه المخططات بشكل كامل كما في  *A06: 2021 الثغرات والانظمة الغير قابلة للتحديثات*. في حين أن بعض التصنيفات من هذه المخاطر قد يكون السبب الجذري هو ثغرات من الطرف الثالث، فإنها يتم ادارتها بشكل مختلف ومسؤوليات مختلفة. والمخاطر الأخرى المتبقية تمثل الطرف الأول.
 
 # شكراً لكل من ساهم معنا في جمع هذه البيانات
 
-The following organizations (along with some anonymous donors) kindly
-donated data for over 500,000 applications to make this the largest and
-most comprehensive application security data set. Without you, this
-would not be possible.
+ساهمت المنظمات التالية (جنبًا إلى جنب مع بعض المساهمين-المتبرعين المجهولين) ببيانات لأكثر من 500,000 تطبيقاً لجعلها هي القائمة الأكبر والأكثر والاشمل من التطبيقات التي تم اجراء اختيارات الأمان عليها وجعلها في قاعدة بيانات. وتأكد انه من غير اسهاماتك لن يكون هذا ممكن. 
 
 
 | | | | |
