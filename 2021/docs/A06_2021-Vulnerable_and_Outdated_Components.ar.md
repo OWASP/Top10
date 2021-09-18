@@ -1,100 +1,59 @@
-# A06:2021 – Vulnerable and Outdated Components
+# A06:2021 الثغرات و الانظمة الغير قابلة للتحديثات
 
-## Factors
+## العوامل
 
 | CWEs Mapped | Max Incidence Rate | Avg Incidence Rate | Max Coverage | Avg Coverage | Avg Weighted Exploit | Avg Weighted Impact | Total Occurrences | Total CVEs |
 |:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
 | 3           | 27.96%             | 8.77%              | 51.78%       | 22.47%       | 5.00                 | 5.00                | 30,457            | 0          |
 
-## Overview
+## نظرة عامة
 
-It was #2 from the industry survey but also had enough data to make the
-Top 10 via data. Vulnerable Components are a known issue that we
-struggle to test and assess risk and is the only category to not have
-any CVEs mapped to the included CWEs, so a default exploits/impact
-weight of 5.0 is used. Notable CWEs included are *CWE-1104: Use of
-Unmaintained Third-Party Components* and the two CWEs from Top 10 2013
-and 2017.
 
-## Description 
+كانت تحتل المرتبة الثانية في عملية الاستطلاع التي تم اجراءها في قطاع الامن السيبراني ولكنها أيضا تمتلك بيانات كافية لتصبح من أعلى عشر مخاطر من خلال تحليل البيانات. يعتبر تصنيف "الثغرات والانظمة الغير قابلة للتحديثات" من المشاكل المعروفة التي نواجه صعوبات من اجل اختبارها وتقييم مخاطرها وتعتبر التصنيف الوحيدة التي لا يتضمن CVEs مرتبطة بـ CWEs. لذلك تم استخدام معيار الاستغلال أو التأثير بالقيم الافتراضية وهي 5.0. ومن الملحوظ ان نقاط CWEs هي (CWE - 1104) وهي مرتبطة باستخدام مكونات الطرف الثالث والتي لم يتم الاشراف عليها وهي مرتبطة بأعلى عشر مخاطر لعامي 2013  و2017.
+.
 
-You are likely vulnerable:
+## الوصف 
 
--   If you do not know the versions of all components you use (both
-    client-side and server-side). This includes components you directly
-    use as well as nested dependencies.
+من المحتمل ان تكون عرضة للاختراق: 
 
--   If the software is vulnerable, unsupported, or out of date. This
-    includes the OS, web/application server, database management system
-    (DBMS), applications, APIs and all components, runtime environments,
-    and libraries.
+-   إذا كنت لا تعرف إصدارات جميع المكونات التي تستخدمها (من جانب المستخدم ومن جانب الخادم). وهذا يتضمن المكونات التي تستخدمها مباشرةً بالإضافة إلى المكونات الفرعية المستخدمة.
 
--   If you do not scan for vulnerabilities regularly and subscribe to
-    security bulletins related to the components you use.
+-   إذا كان البرنامج عرضة للاختراق أو غير مدعوم أو قديم. يتضمن ذلك نظام التشغيل وخادم الويب أو التطبيقات ونظام إدارة قواعد البيانات (DBMS) والتطبيقات وواجهات برمجة التطبيقاتAPI وجميع المكونات وبيئات التي تعمل مع التشغيل (runtime) والمكتبات.
 
--   If you do not fix or upgrade the underlying platform, frameworks,
-    and dependencies in a risk-based, timely fashion. This commonly
-    happens in environments when patching is a monthly or quarterly task
-    under change control, leaving organizations open to days or months
-    of unnecessary exposure to fixed vulnerabilities.
+-   إذا لم تقم بالمسح الأمني عن الثغرات بانتظام والاشتراك في نشرات الأمن المتعلقة بالمكونات التي تستخدمها.
 
--   If software developers do not test the compatibility of updated,
-    upgraded, or patched libraries.
+-   • إذا لم تقم بإصلاح أو ترقية النظام الأساسي والأطر والتبعيات الأساسية بطريقة قائمة على تقييم المخاطر وفي الوقت المناسب. يحدث هذا عادةً في البيئات التي يكون فيها اغلاق الثغرات وتنصيب التحديثات مهمة شهرية أو ربع سنوية تحت إدارة التغييرات، مما يترك المؤسسات عرضة للمدة أيام أو شهور من عدم تحديث الثغرات الضرورية.
 
--   If you do not secure the components’ configurations (see
-    A05:2021-Security Misconfiguration).
+-   إذا لم يقم مطورو البرامج باختبار توافق المكتبات المحدثة أو المصححة
 
-## How to Prevent
+-   إذا لم تقم بتأمين الاعدادات بالشكل السليم. (انظر A05: 2021 – الاعدادات الخاطئة).
 
-There should be a patch management process in place to:
+## كيفية الحماية منها 
 
--   Remove unused dependencies, unnecessary features, components, files,
-    and documentation.
+يجب أن تكون هناك عملية لإدارة اغلاق الثغرات وذلك لتلبية ما يلي:
 
--   Continuously inventory the versions of both client-side and
-    server-side components (e.g., frameworks, libraries) and their
-    dependencies using tools like versions, OWASP Dependency Check,
-    retire.js, etc. Continuously monitor sources like CVE and NVD for
-    vulnerabilities in the components. Use software composition analysis
-    tools to automate the process. Subscribe to email alerts for
-    security vulnerabilities related to components you use.
+-   إزالة المكونات الغير المستخدمة والميزات والملفات والوثائق الغير الضرورية.
 
--   Only obtain components from official sources over secure links.
-    Prefer signed packages to reduce the chance of including a modified,
-    malicious component (See A08:2021-Software and Data Integrity
-    Failures).
+-   عمل جرد بشكل دوري لإصدارات كل من جانب المستخدم والمكونات من جانب الخادم (على سبيل المثال، أطر العمل والمكتبات) ومكوناتها باستخدام أدوات مثل versions, OWASP Dependency Check, retire.js، وما إلى ذلك، مراقبة المصادر باستمرار مثل CVE وNVD بحثًا عن الثغرات في المكونات. وقم باستخدام أدوات تحليل اعدادات البرامج لأتمتة العملية. وقم بالاشتراك في تنبيهات البريد الإلكتروني الخاصة بالثغرات الأمنية المتعلقة بالمكونات التي تستخدمها.
 
--   Monitor for libraries and components that are unmaintained or do not
-    create security patches for older versions. If patching is not
-    possible, consider deploying a virtual patch to monitor, detect, or
-    protect against the discovered issue.
+-   الحصول على المكونات من المصادر الرسمية فقط عبر الروابط الآمنة. يفضل التأكد من ان الحزم موقعه رقمياً لتقليل فرصة تثبيت مكونات معدلة وضارة (انظر A08: 2021- فشل سلامة البيانات والبرمجيات).
 
-Every organization must ensure an ongoing plan for monitoring, triaging,
-and applying updates or configuration changes for the lifetime of the
-application or portfolio.
+-   مراقبة المكتبات والمكونات التي لا يتم صيانتها أو التي لا تقوم بعمل تحديثات الأمان للإصدارات الأقدم. إذا لم يكن عملية سد الثغرات ممكنًا، ففكر في انشاء آلية افتراضي لمراقبة تلك المكونات ورصد المحاولات الضارة والحماية منها.
 
-## Example Attack Scenarios
+يجب أن تضمن كل مؤسسة خطة مستمرة للمراقبة، وتصنيف، وتطبيق التحديثات أو تغيير الاعدادات طوال الحياة الافتراضية للتطبيقات.
 
-**Scenario #1:** Components typically run with the same privileges as
-the application itself, so flaws in any component can result in serious
-impact. Such flaws can be accidental (e.g., coding error) or intentional
-(e.g., a backdoor in a component). Some example exploitable component
-vulnerabilities discovered are:
+## أمثلة على سيناريوهات الهجوم
 
--   CVE-2017-5638, a Struts 2 remote code execution vulnerability that
-    enables the execution of arbitrary code on the server, has been
-    blamed for significant breaches.
+**سيناريو #1:** 
+تعمل المكونات عادةً بنفس الامتيازات التي يتمتع بها التطبيق نفسه، لذا فإن العيوب في أي مكون يمكن أن تؤدي إلى تأثير خطير.  يمكن أن تكون هذه العيوب عرضية (على سبيل المثال، الأخطاء البرمجية) أو عيوب مقصودة (على سبيل المثال، باب خلفي في أحد المكونات).  بعض الأمثلة على ثغرات المكونات القابلة للاستغلال التي تم اكتشافها هي:
 
--   While the internet of things (IoT) is frequently difficult or
-    impossible to patch, the importance of patching them can be great
-    (e.g., biomedical devices).
+-  تم إلقاء اللوم على CVE-2017-5638، وهي ثغرة أمنية في تنفيذ التعليمات البرمجية عن بُعد لـ Struts 2 والتي تتيح تنفيذ تعليمات برمجية عشوائية على الخادم، والتي تسبب اختراقات خطيرة.
 
-There are automated tools to help attackers find unpatched or
-misconfigured systems. For example, the Shodan IoT search engine can
-help you find devices that still suffer from Heartbleed vulnerability
-patched in April 2014.
+-  على الرغم من صعوبة أو استحالة تحديث إنترنت الأشياء (IoT)، إلا أن أهمية تحديثها يمكن ان يكون له أهمية كبيرة (مثل الأجهزة الطبية).
 
-## References
+هناك أدوات آلية لمساعدة المهاجمين في العثور على أنظمة غير محدثة أو معدة بشكل خاطئ.  على سبيل المثال، يمكن أن يساعدك محرك بحث Shodan IoT في العثور على الأجهزة التي لا تزال تعاني من الثغرة الأمنية Heartbleed والتي تم سدها وتحديثها في أبريل من عام 2014.
+
+## المصادر
 
 -   OWASP Application Security Verification Standard: V1 Architecture,
     design and threat modelling
@@ -119,7 +78,7 @@ patched in April 2014.
 
 -   https://safecode.org/publication/SAFECode_Software_Integrity_Controls0610.pdf
 
-## List of Mapped CWEs
+## قائمة الربط مع إطار CWEs
 
 CWE-937 OWASP Top 10 2013: Using Components with Known Vulnerabilities
 
