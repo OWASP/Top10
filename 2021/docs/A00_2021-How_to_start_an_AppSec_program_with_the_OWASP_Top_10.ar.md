@@ -1,115 +1,45 @@
-# How to start an AppSec Program with the OWASP Top 10 
+# كيف تبدأ برنامج أمن التطبيقات مع أواسب – أعلى عشرة مخاطر   
 
-Previously, the OWASP Top 10 was never designed to be the basis for an
-AppSec program. However, it's essential to start somewhere for many
-organizations just starting out on their application security journey.
-The OWASP Top 10 2021 is a good start as a baseline for checklists and
-so on, but it's not in itself sufficient.
+في السابق، لم يتم تصميم أواسب – أعلى عشرة أبدًا ليكون أساسًا لبرامج أمن التطبيقات. ومع ذلك، من الضروري أن تبدأ من مكان ما للعديد من المؤسسات التي بدأت للتو في رحلة أمان التطبيقات الخاصة بها. تعد أواسب – اعلى عشرة مخاطر لعام 2021 بداية جيدة كخط أساس لقوائم المراجعة وما إلى ذلك، ولكنها ليست كافية في حد ذاتها.
 
-## Stage 1. Identify the gaps and goals of your appsec program
+## المرحلة الأولى: تحديد الثغرات والأهداف الخاصة ببرنامج أمن التطبيقات
 
-Many Application Security (AppSec) programs try to run before they can
-crawl or walk. These efforts are doomed to failure. We strongly
-encourage CISOs and AppSec leadership to use OWASP Software Assurance
-Maturity Model (SAMM) \[<https://owaspsamm.org>\] to identify weaknesses
-and areas for improvement over a 1-3 year period. The first step is to
-evaluate where you are now, identify the gaps in governance, design,
-implementation, verification, and operations you need to resolve
-immediately versus those that can wait, and prioritize implementing or
-improving the fifteen OWASP SAMM security practices. OWASP SAMM can help
-you build and measure improvements in your software assurance efforts.
+تحاول العديد من برامج أمن التطبيقات (AppSec) الجري قبل أن تتمكن من الزحف أو المشي. هذه الجهود محكوم عليها بالفشل. نحن نشجع بشدة مدراء أمن المعلومات CISOs وكبار مختصي أمن التطبيقات على استخدام نموذج أواسب لنضج وضمان البرامج (SAMM)\[<https://owaspsamm.org>\]  لتحديد نقاط الضعف ومجالات التحسين على مدى فترة تتراوح من 1-3 سنوات. تتمثل الخطوة الأولى في تقييم وضعك الحالي، وتحديد الثغرات في الحوكمة والتصميم والتنفيذ والتحقق والعمليات التي تحتاج إلى حلها على الفور مقابل تلك التي يمكن أن تنتظر، وتحديد أولويات تنفيذ أو تحسين الخمسة عشر لنموذج أواسب لنضج وضمان البرامج (SAMM). يمكن أن يساعدك نموذج أواسب (SAMM) في بناء وقياس التحسينات في البرنامج لضمان الجهود.
 
-## Stage 2. Plan for a paved road secure development lifecycle
+## المرحلة الثانية. التخطيط لمفهوم الطريق الممهد لدورة حياة تطوير البرمجيات بطريقة آمنة
 
-Traditionally the preserve of so-called "unicorns," the paved road
-concept is the easiest way to make the most impact and scale AppSec
-resources with development team velocity, which only increases every
-year.
+تقليديا، الحفاظ على ما يسمى "أحادي القرن"، مفهوم الطريق الممهد هو أسهل طريقة لتحقيق أكبر قدر من التأثير وتوسيع نطاق موارد أمن التطبيقات مع سرعة فريق التطوير، والتي تزيد كل عام فقط.
 
-The paved road concept is "the easiest way is also the most secure way"
-and should involve a culture of deep partnerships between the
-development team and the security team, preferably such that they are
-one and the same team. The paved road aims to continuously improve,
-measure, detect and replace insecure alternatives by having an
-enterprise-wide library of drop-in secured replacements, with tooling to
-help see where improvements can be made by adopting the paved road. This
-allows existing development tools to report on insecure builds and help
-development teams self-correct away from insecure alternatives.
+يعتبر مفهوم الطريق الممهدة “أسهل طريقة وأيضًا الطريقة الأكثر أمانًا" ويجب أن تتضمن ثقافة الشراكة العميقة بين فريق التطوير والفريق الأمني، ويفضل أن يكونا نفس الفريق. يهدف الطريق الممهد إلى التحسين المستمر للبدائل غير الآمنة وقياسها واكتشافها واستبدالها من خلال وجود مكتبة على مستوى المؤسسة من البدائل المؤمنة، مع أدوات للمساعدة في معرفة أين يمكن إجراء التحسينات من خلال اعتماد الطريق الممهد. يسمح ذلك لأدوات التطوير الحالية بالإبلاغ عن البنيات غير الآمنة ومساعدة فرق التطوير على التصحيح الذاتي بعيدًا عن البدائل غير الآمنة.
 
-The paved road might seem a lot to take in, but it should be built
-incrementally over time. There are other forms of appsec programs out
-there, notably the Microsoft Agile Secure Development Lifecycle. Not
-every appsec program methodology suits every business.
+قد يبدو أن الطريق الممهد يتطلب الكثير من الوقت، ولكن يجب أن يتم بناؤه تدريجياً بمرور الوقت. هناك أشكال أخرى من برامج أمن التطبيقات، لا سيما دورة حياة التطوير الآمن اجايل مايكروسوفت Microsoft Agile. ليس بالضرورة ان تناسب منهجية برنامج أمن التطبيقات كل الأعمال.
 
-## Stage 3. Implement the paved road with your development teams
+##  المرحلة الثالثة. تنفيذ مفهوم الطريق الممهد مع فرق التطوير الخاصة بك
 
-Paved roads are built with the consent and direct involvement of the
-relevant development and operations teams. The paved road should be
-aligned strategically with the business and help deliver more secure
-applications faster. Developing the paved road should be a holistic
-exercise covering the entire enterprise or application ecosystem, not a
-per-app band-aid, as in the old days.
+يتم بناء منهجية الطريق الممهد بالموافقة والمشاركة المباشرة من قبل فرق التطوير والعمليات ذات الصلة. يجب مواءمة منهجية الطريق الممهد بشكل استراتيجي مع الأعمال والمساعدة في تقديم تطبيقات أكثر أمانًا بشكل أسرع. يجب أن يكون تطوير الطريق الممهد تمرينًا شاملاً يغطي النظام البيئي للمؤسسة أو التطبيق بالكامل، وليس أداة مساعدة لكل تطبيق، كما في الزمن السابق.
 
-## Stage 4. Migrate all upcoming and existing applications to the paved road
 
-Add paved road detection tools as you develop them and provide
-information to development teams to improve the security of their
-applications by how they can directly adopt elements of the paved road.
-Once an aspect of the paved road has been adopted, organizations should
-implement continuous integration checks that inspect existing code and
-check-ins that use prohibited alternatives and warn or reject the build
-or check-in. This prevents insecure options from creeping into code over
-time, preventing technical debt and a defective insecure application.
-Such warnings should link to the secure alternative, so the development
-team is given the correct answer immediately. They can refactor and
-adopt the paved road component quickly.
+## المرحلة الرابعة. ترحيل جميع التطبيقات الحالية والقادمة إلى منهجية الطريق الممهد
 
-## Stage 5. Test that the paved road has mitigated the issues found in the OWASP Top 10
+أضف أدوات اكتشاف منهجية الطريق الممهد أثناء تطويرها وقدم معلومات لفرق التطوير لتحسين أمان تطبيقاتهم من خلال كيفية اعتمادهم المباشر لعناصر مفهوم الطريق الممهد. وبمجرد اعتماد جانب من جوانب مفهوم الطريق الممهد، يجب على المؤسسات تنفيذ فحوصات تكامل مستمرة لفحص الشفرة الحالية وعمليات تسجيل الوصول التي تستخدم بدائل محظورة وتحذر أو تمنع إنشاءها أو الوصول لها. هذا يمنع الخيارات غير الآمنة من التسلل إلى الشفرة بمرور الوقت، مما يمنع الأعباء التقنية والتطبيق غير الآمن المعيب. يجب أن ترتبط هذه التحذيرات بالبديل الآمن، حتى يتم إعطاء فريق التطوير الإجابة الصحيحة على الفور. يمكنهم إعادة بناء واعتماد مكون الطريق الممهد بسرعة.
 
-Paved road components should address a significant issue with the OWASP
-Top 10, for example, how to automatically detect or fix vulnerable
-components, or a static code analysis IDE plugin to detect injections or
-even better a library that is known safe against injection, such as
-React or Vue. The more of these secure drop-in replacements provided to
-teams, the better. A vital task of the appsec team is to ensure that the
-security of these components is continuously evaluated and improved.
-Once they are improved, some form of communication pathway with
-consumers of the component should indicate that an upgrade should occur,
-preferably automatically, but if not, as least highlighted on a
-dashboard or similar.
+## المرحلة الخامسة. اختبار مفهوم الطريق الممهد إن كان قد خفف من المشكلات الموجودة في أواسب – أعلى عشرة مخاطر
 
-## Stage 6. Build your program into a mature AppSec program
+يجب أن تعالج مكونات الطريق الممهد المشاكل الكبيرة في أواسب – اعلى عشرة مخاطر، على سبيل المثال، كيفية اكتشاف أو إصلاح المكونات الضعيفة تلقائيًا، أو مكون بيئة تطوير متكاملة IDE لتحليل النص البرمجي الثابت لاكتشاف الحقن أو حتى مكتبة معروفة بأنها آمنة ضد الحقن، مثل مكتبة React أو Vue. كلما زاد عدد هذه البدائل الآمنة التي يتم توفيرها للفرق، كان ذلك أفضل. تتمثل إحدى المهام الحيوية لفريق "أمان التطبيقات" في التأكد من أن أمان هذه المكونات يتم تقييمه وتحسينه باستمرار. وبمجرد تحسينها، يجب أن يشير شكل من أشكال مسار الاتصال مع مستخدمي المكون إلى أنه يجب إجراء ترقية، ويفضل أن يكون ذلك تلقائيًا، وإن لم يكن الأمر كذلك، يجب على الأقل تسليط الضوء على اللوحة الرئيسية للتحكم أو ما شابه ذلك.
 
-You must not stop at the OWASP Top 10. It only covers 10 risk
-categories. We strongly encourage organizations to adopt the Application
-Security Verification Standard and progressively add paved road
-components and tests for Level 1, 2, and 3, depending on the developed
-applications' risk level.
+## المرحلة السادسة. قم ببناء برنامجك في بيئة برمجة أمنه
 
-## Going beyond
+يجب ألا يقتصر اعتمادك على أواسب- اعلى عشرة مخاطر فقط. فهو يغطي فقط 10 فئات من المخاطر. نحن نشجع المؤسسات بشدة على اعتماد معيار التحقق من أمن التطبيقات وإضافة مكونات منهجية الطرق الممهدة واختبارات المستوى 1 و2 و3 تدريجيًا، اعتمادًا على مستوى مخاطر التطبيقات المطورة.
 
-All great AppSec programs go beyond the bare minimum. Everyone must keep
-going if we're ever going to get on top of appsec vulnerabilities.
+##  الذهاب إلى أبعد من ذلك
 
--   **Conceptual integrity**. Mature AppSec programs must contain some
-    concept of security architecture, whether a formal cloud or
-    enterprise security architecture or threat modeling
+جميع برامج حماية التطبيقات الرائعة تتجاوز الحد الأدنى. يجب على الجميع الاستمرار إذا أردنا أن نتغلب على الثغرات الأمنية للتطبيقات.
 
--   **Automation and scale**. Mature AppSec programs try to automate as
-    much of their deliverables as possible, using scripts to emulate
-    complex penetration testing steps, static code analysis tools
-    directly available to the development teams, assisting dev teams in
-    building appsec unit and integration tests, and more.
 
--   **Culture**. Mature AppSec programs try to build out the insecure
-    design and eliminate the technical debt of existing code by being a
-    part of the development team and not to the side. AppSec teams who
-    see development teams as "us" and "them" are doomed to failure.
+-   **تكامل المفاهيم**. يجب أن تحتوي برامج أمن التطبيقات المتطورة على بعض المفاهيم الخاصة بهندسة الأمن، سواء كانت بنية سحابية رسمية أو بنية أمان مؤسسية أو نمذجة للتهديدات
 
--   **Continuous improvement**. Mature AppSec programs look to
-    constantly improve. If something is not working, stop doing it. If
-    something is clunky or not scalable, work to improve it. If
-    something is not being used by the development teams and has no or
-    limited impact, do something different. Just because we've done
-    testing like desk checks since the 1970s doesn't mean it's a good
-    idea. Measure, evaluate, and then build or improve.
+-   **الأتمتة والقياس**. تحاول برامج أمن التطبيقات المتطورة أتمتة أكبر قدر ممكن من مخرجاتها، باستخدام البرامج النصية لمحاكاة خطوات اختبار الاختراق المعقدة، وأدوات تحليل النص البرمجي الثابت المتاحة لفرق التطوير، ومساعدة فرق التطوير في بناء وحدة أمن التطبيقات واختبارات التكامل، وغيرها
+
+-   **الثقافة**.  تحاول برامج أمن التطبيقات المتطورة بناء تصميم غير آمن والقضاء على الدين التقني للنص البرمجي الحالي من خلال كونها جزءًا من فريق التطوير وليس عملا جانبًيا. فرق أمن التطبيقات التي ترى فرق التطوير على أنها "نحن" و "هم" محكوم عليها بالفشل.
+
+-   **التحسين المستمر**. تتطلع البرمجة الامنة للتطبيقات المتطورة إلى التحسين المستمر. إذا كان هناك شيء لا يتحسن او يتطور، فتوقف عنه او إذا كان هناك شيء غير قابل للتطوير، اعمل على تحسينه. إذا لم يتم استخدام شيء من قبل فرق التطوير ولم يكن له تأثير أو تأثير محدود، فافعل شيئًا مختلفًا. لمجرد أننا أجرينا اختبارات مثل الفحوصات المكتبية منذ السبعينيات لا يعني أنها فكرة جيدة. قم بالقياس والتقييم ثم البناء أو التحسين المستمر.
