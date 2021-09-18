@@ -1,106 +1,84 @@
-# A05:2021 – Security Misconfiguration
+# A05:2021-セキュリティの設定ミス
 
-## Factors
+## 因子
 
-| CWEs Mapped | Max Incidence Rate | Avg Incidence Rate | Max Coverage | Avg Coverage | Avg Weighted Exploit | Avg Weighted Impact | Total Occurrences | Total CVEs |
+| 対応する CWE 数 | 最大発生率 | 平均発生率 | 最大網羅率 | 平均網羅率 | 加重平均（攻撃の難易度） | 加重平均（攻撃による影響） | 総発生数 | CVE 合計件数 |
 |:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
 | 20          | 19.84%             | 4.51%              | 89.58%       | 44.84%       | 8.12                 | 6.56                | 208,387           | 789        |
 
-## Overview
+## 概要
 
-Moving up from #6 in the previous edition, 90% of applications were
-tested for some form of misconfiguration. With more shifts into highly
-configurable software, it's not surprising to see this category move up.
-Notable CWEs included are *CWE-16 Configuration* and *CWE-611 Improper
-Restriction of XML External Entity Reference*.
+前回の 6 位から順位を上げました。アプリケーションの 90 ％には何らかの設定ミスが見られます。
+高度な設定が可能なソフトウェアへの移行が進む中で、このカテゴリーの順位が上がったことは当然と言えます。
+注目すべき CWE は *CWE-16 設定の問題* と *CWE-611 外部に置かれたファイルを呼び出す XXE (Xml eXternal Entity) 問題* です。
 
-## Description 
+## 説明
 
-The application might be vulnerable if the application is:
+アプリケーションが下記のようなら、恐らく脆弱です:
 
--   Missing appropriate security hardening across any part of the
-    application stack or improperly configured permissions on cloud
-    services.
+-   アプリケーションスタックのいずれかの部分におけるセキュリティ堅牢化の不足、あるいはクラウドサービスでパーミッションが不適切に設定されている。
 
--   Unnecessary features are enabled or installed (e.g., unnecessary
-    ports, services, pages, accounts, or privileges).
+-   必要のない機能が有効、あるいはインストールされている(例えば、必要のないポートやサービス、ページ、アカウント、特権)。
 
--   Default accounts and their passwords are still enabled and
-    unchanged.
+-   デフォルトのアカウントとパスワードが有効になったまま変更されていない。
 
--   Error handling reveals stack traces or other overly informative
-    error messages to users.
+-   エラー処理がユーザに対して、スタックトレースやその他余計な情報を含むエラーメッセージを見せる。
 
--   For upgraded systems, the latest security features are disabled or
-    not configured securely.
+-   アップグレードしたシステムでは、最新のセキュリティ機能が無効になっているか正しく設定されていない。
 
--   The security settings in the application servers, application
-    frameworks (e.g., Struts, Spring, ASP.NET), libraries, databases,
-    etc., are not set to secure values.
+-   アプリケーションサーバやアプリケーションフレームワーク(例えば、Struts、Spring、 ASP.NET)、ライブラリ、データベース等のセキュリティの設定が、安全な値に設定されていない。
 
--   The server does not send security headers or directives, or they are
-    not set to secure values.
+-   サーバがセキュリテイヘッダーやディレクティブを送らなかったり、安全な値に設定されていなかったりする。
 
--   The software is out of date or vulnerable (see A06:2021-Vulnerable
-    and Outdated Components).
+-   ソフトウェアが古いか脆弱である。(# A06:2021 – 脆弱で古くなったコンポーネント を参照)
 
-Without a concerted, repeatable application security configuration
-process, systems are at a higher risk.
+アプリケーションのセキュリティを設定するプロセスを協調して繰り返すことができなければ、システムはより高いリスクにさらされます。
 
-## How to Prevent
+## 防止方法
 
-Secure installation processes should be implemented, including:
+安全にインストールするプロセスにおいて、以下のことを実施すべきです:
 
--   A repeatable hardening process makes it fast and easy to deploy
-    another environment that is appropriately locked down. Development,
-    QA, and production environments should all be configured
-    identically, with different credentials used in each environment.
-    This process should be automated to minimize the effort required to
-    set up a new secure environment.
+-   繰り返し堅牢化するプロセスは、素早くかつ容易に他の環境に展開され、正しくロックダウンすること。
+    開発やQA、本番環境は完全に同じように設定し、それぞれの環境で別々の認証情報を使用すること。
+    このプロセスを自動化し、新しい安全な環境をセットアップする際には、手間を最小限にすること。
 
--   A minimal platform without any unnecessary features, components,
-    documentation, and samples. Remove or do not install unused features
-    and frameworks.
+-   プラットフォームは最小限のものとし、必要のない機能やコンポーネント、ドキュメント、サンプルを除くこと。
+    使用しない機能とフレームワークは、削除もしくはインストールしないこと。
 
--   A task to review and update the configurations appropriate to all
-    security notes, updates, and patches as part of the patch management
-    process (see A06:2021-Vulnerable and Outdated Components). Review
-    cloud storage permissions (e.g., S3 bucket permissions).
+-   レビューを実施して、セキュリティ関連の記録と更新の全てに加え、パッチを管理するプロセスの一環としてパッチの設定を適切に更新すること(# A09:2021 – セキュリティログとモニタリングの失敗 を参照)。
+    クラウドストレージのパーミッションは、詳細にレビューすること (例えば、S3 バケットのパーミッション)。
 
--   A segmented application architecture provides effective and secure
-    separation between components or tenants, with segmentation,
-    containerization, or cloud security groups (ACLs).
+-   セグメント化したアプリケーションアーキテクチャは、セグメンテーションやコンテナリゼーション、クラウドのセキュリティグループ(ACL)をともなったコンポーネントやテナント間に、効果的で安全な仕切りをもたらす。
 
--   Sending security directives to clients, e.g., Security Headers.
+-   セキュリティディレクティブをクライアントへ送ること。例としては セキュリティヘッダー が挙げられる。
 
--   An automated process to verify the effectiveness of the
-    configurations and settings in all environments.
+-   プロセスを自動化して設定の有効性を検証し、環境すべてに適用すること。
 
-## Example Attack Scenarios
+## 攻撃シナリオの例
 
-**Scenario #1:** The application server comes with sample applications
-not removed from the production server. These sample applications have
-known security flaws attackers use to compromise the server. Suppose one
-of these applications is the admin console, and default accounts weren't
-changed. In that case, the attacker logs in with default passwords and
-takes over.
+**シナリオ #1:** 
 
-**Scenario #2:** Directory listing is not disabled on the server. An
-attacker discovers they can simply list directories. The attacker finds
-and downloads the compiled Java classes, which they decompile and
-reverse engineer to view the code. The attacker then finds a severe
-access control flaw in the application.
+アプリケーションのサンプルが付属しているアプリケーションサーバであるにもかかわらず、プロダクションサーバからサンプルが削除されていません。
+このサンプルアプリケーションには、攻撃者がサーバに侵入する際によく使う既知の脆弱性があります。
+そのアプリケーションが管理用のコンソールでデフォルトのアカウントが変更されていないと、攻撃者はデフォルトのパスワードを使ってログインし、乗っ取ってしまいます。
 
-**Scenario #3:** The application server's configuration allows detailed
-error messages, e.g., stack traces, to be returned to users. This
-potentially exposes sensitive information or underlying flaws such as
-component versions that are known to be vulnerable.
+**シナリオ #2:** 
 
-**Scenario #4:** A cloud service provider has default sharing
-permissions open to the Internet by other CSP users. This allows
-sensitive data stored within cloud storage to be accessed.
+ディレクトリリスティングがサーバ上で無効になっていません。攻撃者はそれを見つけ出し、やすやすとディレクトリを表示してしまいます。
+攻撃者はコンパイル済みのJavaクラスを見つけてダウンロードし、デコンパイルしてからリバースエンジニアリングしてコードを見ます。
+そして攻撃者は、そのアプリケーションの深刻なアクセス制御上の穴を見つけます。
 
-## References
+**シナリオ #3:** 
+
+アプリケーションサーバの設定が、詳細なエラーメッセージ(例えば、スタックトレース)をユーザに返すようになっています。
+これによって機微な情報や脆弱であるとされているコンポーネントのバージョンといった潜在的な欠陥がさらされる恐れがあります。
+
+**シナリオ #4:** 
+
+クラウドサービスプロバイダは、他のCSPユーザによるデフォルトでインターネットに公開された共有パーミッションを用意しています。
+こうなると、機微な情報がクラウドストレージに保存され、アクセスされてしまいます。
+
+## 参考資料
 
 -   [OWASP Testing Guide: Configuration
     Management](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/README)
@@ -118,46 +96,44 @@ sensitive data stored within cloud storage to be accessed.
 -   [Amazon S3 Bucket Discovery and
     Enumeration](https://blog.websecurify.com/2017/10/aws-s3-bucket-discovery.html)
 
-## List of Mapped CWEs
+## 対応する CWE のリスト
 
-CWE-2 Configuration
+CWE-2 環境設定
 
-CWE-11 ASP.NET Misconfiguration: Creating Debug Binary
+CWE-11 ASP.NET における設定ミス: デバッグバイナリの作成
 
-CWE-13 ASP.NET Misconfiguration: Password in Configuration File
+CWE-13 ASP.NET における設定ミス: パスワードが設定ファイルに格納されている問題
 
-CWE-15 External Control of System or Configuration Setting
+CWE-15 システムやコンフィグレーション設定の外部制御
 
-CWE-16 Configuration
+CWE-16 設定の問題
 
-CWE-260 Password in Configuration File
+CWE-260 パスワードが設定ファイルに格納されている問題
 
-CWE-315 Cleartext Storage of Sensitive Information in a Cookie
+CWE-315 クッキーへの機密情報の平文保存
 
-CWE-520 .NET Misconfiguration: Use of Impersonation
+CWE-520 .NET における設定ミス: 偽装の使用
 
-CWE-526 Exposure of Sensitive Information Through Environmental
-Variables
+CWE-526 環境変数による機密情報の暴露
 
-CWE-537 Java Runtime Error Message Containing Sensitive Information
+CWE-537 機密情報を含む Java ランタイムエラーメッセージ
 
-CWE-541 Inclusion of Sensitive Information in an Include File
+CWE-541 インクルードファイルへの機密情報の取り込み
 
-CWE-547 Use of Hard-coded, Security-relevant Constants
+CWE-547 ハードコードされたセキュリティ関連の定数の使用
 
-CWE-611 Improper Restriction of XML External Entity Reference
+CWE-611 外部に置かれたファイルを呼び出す XXE (Xml eXternal Entity) 問題
 
-CWE-614 Sensitive Cookie in HTTPS Session Without 'Secure' Attribute
+CWE-614 'Secure' 属性のない HTTPS セッションにおける機密性の高いクッキー
 
-CWE-756 Missing Custom Error Page
+CWE-756 カスタムエラーページが表示されない問題
 
-CWE-776 Improper Restriction of Recursive Entity References in DTDs
-('XML Entity Expansion')
+CWE-776 適切でない再帰的なエンティティ参照制限 (XML Entity Expansion) 問題
 
-CWE-942 Overly Permissive Cross-domain Whitelist
+CWE-942 過剰に許可されたクロスドメイン・ホワイトリスト
 
-CWE-1004 Sensitive Cookie Without 'HttpOnly' Flag
+CWE-1004 'HttpOnly' フラグのない 機密性の高いクッキー
 
-CWE-1032 OWASP Top Ten 2017 Category A6 - Security Misconfiguration
+CWE-1032 OWASP Top Ten 2017 Category A6 - 不適切なセキュリティ設定
 
-CWE-1174 ASP.NET Misconfiguration: Improper Model Validation
+CWE-1174 ASP.NET における設定ミス: 不適切なモデル検証
