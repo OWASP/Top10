@@ -1,7 +1,6 @@
 <div dir="rtl" align='right'>
   
 هذه الصفحة مؤقته لحصر العاملين على الترجمةوحالة الترجمة وكذلك تاريخ الانتهاء منها
-
 | الصفحة                                                                                                                                                | المترجم         | حالة الترجمة | المدقق            | حالة التدقيق | تاريخ الانتهاء |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|--------------|-------------------|--------------|----------------|
 | [A00_2021-How_to_start_an_AppSec_program_with_the_OWASP_Top_10.ar.md](/2021/docs/A00_2021-How_to_start_an_AppSec_program_with_the_OWASP_Top_10.ar.md) | محمد البوسعيدي  | ✅ تمت        | ابتسام الطريف     | جاري العمل⏳  | 18/09/2021     |
@@ -12,7 +11,7 @@
 | [A02_2021-Cryptographic_Failures.ar.md](/2021/docs/A02_2021-Cryptographic_Failures.ar.md)                                                             | نورة السبيعي    | جاري العمل⏳  | رنا الزهراني      | جاري العمل⏳  | 18/09/2021     |
 | [A03_2021-Injection.ar.md](/2021/docs/A03_2021-Injection.ar.md)                                                                                       | المها           | جاري العمل⏳  | Zainab al hussain | جاري العمل⏳  | 18/09/2021     |
 | [A04_2021-Insecure_Design.ar.md](/2021/docs/A04_2021-Insecure_Design.ar.md)                                                                           | الجوهرة السبيعي | ✅ تمت        | نورة السبيعي      | جاري العمل⏳  | 18/09/2021     |
-| [A05_2021-Security_Misconfiguration.ar.md](/2021/docs/A05_2021-Security_Misconfiguration.ar.md)                                                       | رنا الزهراني    | جاري العمل⏳  | نورة السبيعي      | جاري العمل⏳  | 18/09/2021     |
+| [A05_2021-Security_Misconfiguration.ar.md](/2021/docs/A05_2021-Security_Misconfiguration.ar.md)                                                       | رنا الزهراني    | ✅ تمت        | نورة السبيعي      | جاري العمل⏳  | 18/09/2021     |
 | [A06_2021-Vulnerable_and_Outdated_Components.ar.md](/2021/docs/A06_2021-Vulnerable_and_Outdated_Components.ar.md)                                     | محمد الشيخي     | ✅ تمت        | فهدة              | جاري العمل⏳  | 18/09/2021     |
 | [A07_2021-Identification_and_Authentication_Failures.ar.md](/2021/docs/A07_2021-Identification_and_Authentication_Failures.ar.md)                     | سماح الصغير     | ✅ تمت        | عبير الوليعي      | جاري العمل⏳  | 18/09/2021     |
 | [A08_2021-Software_and_Data_Integrity_Failures.ar.md](/2021/docs/A08_2021-Software_and_Data_Integrity_Failures.ar.md)                                 | saja            | ✅ تمت        | الجوهرة السبيعي   | جاري العمل⏳  | 20/09/2021     |
