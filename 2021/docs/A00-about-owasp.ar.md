@@ -1,35 +1,38 @@
-# About OWASP
+#  عن أواسب
 
-The Open Web Application Security Project (OWASP) is an open community dedicated to enabling organizations to develop, purchase, and maintain applications and APIs that can be trusted.
+مشروع أمان تطبيق الويب المفتوح أواسب (OWASP) هو مجتمع مفتوح المصدر ويركز على تمكين المؤسسات من تطوير وشراء وصيانة التطبيقات وواجهات برمجة التطبيقات (APIs) التي يمكن الوثوق بها.
 
-At OWASP, you'll find free and open:
+في أواسب ستجد:
 
-- Application security tools and standards
-- Cutting edge research
-- Standard security controls and libraries
-- Complete books on application security testing, secure code development, and secure code review
-- Presentations and [videos](https://www.youtube.com/user/OWASPGLOBAL)
-- [Cheat sheets](https://cheatsheetseries.owasp.org/) on many common topics
-- [Chapters meetings](https://owasp.org/chapters/)
-- [Events, training, and conferences](https://owasp.org/events/).
-- [Google Groups](TBA)
 
-Learn more at: [https://www.owasp.org](https://www.owasp.org).
+- أدوات ومعايير أمان التطبيق
+- الأبحاث المتطورة
+- الضوابط الأمنية الأساسية المبنية على افضل السياسات.
+- كتب كاملة عن اختبار أمن التطبيقات، وتطوير النص البرمجي الآمن، ومراجعة النص البرمجي الآمن
+- العروض التقديمية و  [مقاطع الفيديو](https://www.youtube.com/user/OWASPGLOBAL)
+- [Cheat sheets](https://cheatsheetseries.owasp.org/) حول العديد من الموضوعات الشائعة
+- [اجتماعات المجموعات](https://owasp.org/chapters/)
+- [الأحداث والتدريب والمؤتمرات](https://owasp.org/events/).
+- [ مجموعات قوقل ](TBA)
 
-All OWASP tools, documents, videos, presentations, and chapters are free and open to anyone interested in improving application security.
+اعرف المزيد على: [https://www.owasp.org](https://www.owasp.org).
 
-We advocate approaching application security as a people, process, and technology problem, because the most effective approaches to application security require improvements in these areas.
+جميع أدوات أواسب والمستندات ومقاطع الفيديو والعروض التقديمية والفصول مجانية ومفتوحة لأي شخص مهتم بتحسين أمن التطبيق.
 
-OWASP is a new kind of organization. Our freedom from commercial pressures allows us to provide unbiased, practical, and cost-effective information about application security.
 
-OWASP is not affiliated with any technology company, although we support the informed use of commercial security technology. OWASP produces many types of materials in a collaborative, transparent, and open way.
+نحن ندعو إلى التعامل مع أمن التطبيق باعتباره مشكلة تتعلق بالأشخاص والسياسات والتقنية، لأن الأساليب الأكثر فاعلية لأمن التطبيقات تتطلب تحسينات في هذه المجالات.
 
-The OWASP Foundation is the non-profit entity that ensures the project's long-term success. Almost everyone associated with OWASP is a volunteer, including the OWASP board, chapter leaders, project leaders, and project members. We support innovative security research with grants and infrastructure.
+أواسب نوع جديد من التنظيم. يسمح لنا التحرر من الضغوط التجارية بتقديم معلومات غير متحيزة وعملية وفعالة من حيث التكلفة حول أمن التطبيقات.
 
-Come join us!
+أواسب ليست تابعة لأي شركة تقنية، على الرغم من أننا ندعم الاستخدام المستنير لتقنيات الأمن التجارية. تنتج أواسب أنواعًا عديدة من المواد بطريقة تعاونية وشفافة ومنفتحة.
 
-## Copyright and License
+
+مؤسسة أواسب هي كيان غير ربحي والذي يضمن نجاح المشروع على المدى الطويل. كل شخص مرتبط بـ أواسب تقريبًا متطوع، بما في ذلك مجلس أواسب وقادة الفروع وقادة المشروع وأعضاء المشروع. نحن ندعم الأبحاث الأمنية المبتكرة من خلال المنح والبنية التحتية.
+
+انضم إلينا!
+
+##  حقوق النشر والترخيص
 
 ![license](assets/license.png)
 
-Copyright © 2003-2021 The OWASP&tm; Foundation. This document is released under the Creative Commons Attribution Share-Alike 4.0 license. For any reuse or distribution, you must make it clear to others the license terms of this work.
+حقوق النشر © مؤسسة أواسب 2003-2021. تم إصدار هذا المستند بموجب ترخيص الإبداعي الترخيص بالمثل 4.0. لأي إعادة استخدام أو توزيع، يجب أن توضح للآخرين شروط ترخيص هذا العمل.
