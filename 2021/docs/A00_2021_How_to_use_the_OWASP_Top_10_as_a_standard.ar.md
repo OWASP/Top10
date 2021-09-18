@@ -1,47 +1,26 @@
-# How to use the OWASP Top 10 as a standard
+# كيف تستخدم إطار أعلى عشر مخاطر من أواسب كنموذج معياري. 
 
-The OWASP Top 10 is primarily an awareness document. However, this has
-not stopped organizations using it as a de facto industry AppSec
-standard since its inception in 2003. If you want to use the OWASP Top
-10 as a coding or testing standard, know that it is the bare minimum and
-just a starting point.
+يعتبر مشروع (أواسب –أعلى عشرة مخاطر) وثيقة توعوية، إلا أن ذلك لم يمنع المنظمات من استخدامه معيارا فعليا لأمن التطبيقات منذ بداية نشره في عام 2003. إذا كنت ترغب في استخدام (أواسب –اعلى عشرة مخاطر) بصفته معيار ترميز أو اختبار، فاعلم أنه يعتبر الحد الأدنى ونقطة بداية.
 
-One of the difficulties of using the OWASP Top 10 as a standard is that
-we document appsec risks, and not necessarily easily testable issues.
-For example, A04:2021-Insecure Design is beyond the scope of most forms
-of testing. Another example is testing in place, in use, and effective
-logging and monitoring can only be done with interviews and requesting a
-sampling of effective incident responses. A static code analysis tool
-can look for the absence of logging, but it might be impossible to
-determine if business logic or access control is logging critical
-security breaches. Penetration testers may only be able to determine
-that they have invoked incident response in a test environment, which
-are rarely monitored in the same way as production.
+إحدى صعوبات استخدام (أواسب –اعلى عشرة مخاطر) كمعيار هو أننا نقوم بتوثيق مخاطر أمن التطبيقات، وهي ليست بالضرورة مشاكل قابلة للاختبار بسهولة. على سبيل المثال، A04: 2021-التصميم غير الآمن خارج نطاق معظم نماذج الاختبار. مثال آخر هو الاختبار المعمول به في الاستخدام والتسجيل الفعال والمراقبة لا يمكن أن يتم إلا من خلال المقابلات وطلب عينات من الاستجابات الفعالة للحوادث. يمكن لأداة تحليل الرموز البرمجية الثابتة البحث عن عدم وجود السجلات، ولكن قد يكون من المستحيل تحديد ما إذا كان طريقة العمل أو التحكم في الوصول يسجل الانتهاكات الأمنية الخطيرة. قد يتمكن مختبرو الاختراق فقط من تحديد طريقة الاستجابة للحوادث في بيئة العمل التجريبية، والتي نادرًا ما تتم مراقبتها بنفس الطريقة في بيئة العمل الفعلية.
 
-Here are our recommendations for when it is appropriate to use the OWASP
-Top 10:
+فيما يلي توصياتنا لاستخدام (أواسب – أعلى عشرة مخاطر) عندما يكون ذلك متاح
 
-| Use Case                | OWASP Top 10 2021 | OWASP Application Security Verification Standard |
-|-------------------------|:-------------------:|:--------------------------------------------------:|
-| Awareness               | Yes               |                                                  |
-| Training                | Entry level       | Comprehensive                                    |
-| Design and architecture | Occasionally      | Yes                                              |
-| Coding standard         | Bare minimum      | Yes                                              |
-| Secure Code review      | Bare minimum      | Yes                                              |
-| Peer review checklist   | Bare minimum      | Yes                                              |
-| Unit testing            | Occasionally      | Yes                                              |
-| Integration testing     | Occasionally      | Yes                                              |
-| Penetration testing     | Bare minimum      | Yes                                              |
-| Tool support            | Bare minimum      | Yes                                              |
-| Secure Supply Chain     | Occasionally      | Yes                                              |
+| حالة الاستخدام                     | أواسب –أعلى عشرة 2021 | معيار أواسب للتحقق من أمان التطبي |
+|------------------------------------|-----------------------|-----------------------------------|
+| التوعية                            | نعم                   |                                   |
+| التدريب                            | المستوى الأول         | شامل                              |
+|  التصميم والبنية المعمارية         | احيانا                | نعم                               |
+| معيار النص البرمجي                 | الحد الأدنى           | نعم                               |
+|  مراجعة النص البرمجي الامن         | الحد الأدنى           | نعم                               |
+| قائمة التحقق من البرمجيات المشابهه | الحد الأدنى           | نعم                               |
+| اختبار الوحدة                      | احيانا                | نعم                               |
+| اختبار التكامل                     | احيانا                | نعم                               |
+| اختبار الاختراق                    | الحد الأدنى           | نعم                               |
+| دعم الادوات                        | الحد الأدنى           | نعم                               |
+| سلسة التوريد الامنة                | احيانا                | نعم                               |
 
-We would encourage anyone wanting to adopt an application security
-standard to use the OWASP Application Security Verification Standard
-(ASVS), as it’s designed to be verifiable and tested, and can be used in
-all parts of a secure development lifecycle.
 
-The ASVS is the only acceptable choice for tool vendors. Tools cannot
-comprehensively detect, test, or protect against the OWASP Top 10 due to
-the nature of several of the OWASP Top 10 risks, with reference to
-A04:2021-Insecure Design. OWASP discourages any claims of full coverage
-of the OWASP Top 10, because it’s simply untrue.
+نشجع أي شخص يرغب في اعتماد معيار لأمن التطبيقات على استخدام معيار أواسب للتحقق من أمن التطبيقات (ASVS)، حيث انه مصمم لكي يمكننا التحقق منه واختباره، ويمكن استخدامه في جميع أجزاء دورة حياة التطوير الآمن
+
+معيار التحقق من أمن التطبيقات (ASVS) هو الخيار الوحيد المقبول لمزودي الأدوات. لا يمكن للأدوات الكشف الشامل أو الاختبار أو الحماية ضد (أواسب – أعلى عشرة مخاطر) نظرًا لطبيعة العديد من مخاطر (أواسب –اعلى عشرةمخاطر )، مع الإشارة إلى A04: 2021-التصميم الغير آمن. لا تتفق أواسب مع أي ادعاءات بالتغطية الكاملة لـ (أواسب – أعلى عشرة مخاطر )، لأنها ببساطة غير صحيحة.
