@@ -1,100 +1,66 @@
-# A07:2021 – Identification and Authentication Failures
+# A07:2021 –  الهوية و فشل عملية التحقق 
 
-## Factors
+## العوامل
 
-| CWEs Mapped | Max Incidence Rate | Avg Incidence Rate | Max Coverage | Avg Coverage | Avg Weighted Exploit | Avg Weighted Impact | Total Occurrences | Total CVEs |
-|:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
-| 22          | 14.84%             | 2.55%              | 79.51%       | 45.72%       | 7.40                 | 6.50                | 132,195           | 3,897      |
+| ربطها مع CWEs | الحد الأقصى للحدوث | متوسط معدل الحدوث | التغطية القصوى | متوسط معدل التغطية | متوسط استغلال الثغرات | متوسط التأثير | إجمالي التكرار | إجمالي نقاط الضعف CVEs |
+|---------------|--------------------|-------------------|----------------|--------------------|-----------------------|---------------|----------------|------------------------|
+| 22            | 14.84%             | 2.55%             | 79.51%         | 45.72%             | 7.40                  | 6.50          | 132,195        | 3,897                  |
 
-## Overview
 
-Previously known as *Broken Authentication*, this category slid down
-from the second position and now includes CWEs related to identification
-failures. Notable CWEs included are *CWE-297: Improper Validation of
-Certificate with Host Mismatch*, *CWE-287: Improper Authentication*, and
-*CWE-384: Session Fixation*.
 
-## Description 
+## نظرة عامة
 
-Confirmation of the user's identity, authentication, and session
-management is critical to protect against authentication-related
-attacks. There may be authentication weaknesses if the application:
+هذه الفئة تُعرف سابقًا باسم فشل المصادقة (Broken Authentication) وكانت هي الخطر رقم#2 في الاصدار السابق. وحاليًا تشمل CWEs المتعلقة بفشل عملية التحقق. يتضمن هذا التصنيف كل من (CWE-384,CWE-297,CWE-287).
 
--   Permits automated attacks such as credential stuffing, where the
-    attacker has a list of valid usernames and passwords.
+## الوصف 
 
--   Permits brute force or other automated attacks.
+يعد تأكيد هوية المستخدم والمصادقة وإدارة الجلسة أمرًا بالغ الأهمية وذلك للحماية من الهجمات المتعلقة بالمصادقة. قد يكون هناك ضعف في المصادقة إذا كان التطبيق:
 
--   Permits default, weak, or well-known passwords, such as "Password1"
-    or "admin/admin. "
+-   يسمح بالهجمات الآلية مثل هجمات بيانات الاعتماد (credential stuffing)، حيث يكون لدى المهاجم قائمة بأسماء المستخدمين وكلمات مرورهم.
 
--   Uses weak or ineffective credential recovery and forgot-password
-    processes, such as "knowledge-based answers," which cannot be made
-    safe.
+-   يسمح باستخدام هجوم كسر كلمات المرور (brute force) أو الهجمات الآلية الأخرى. 
 
--   Uses plain text, encrypted, or weakly hashed passwords (see
-    A3:2017-Sensitive Data Exposure).
+-   يسمح بكلمات المرور الافتراضية أو الضعيفة أو المعروفة ، مثل "Password1" أو " admin / admin".
 
--   Has missing or ineffective multi-factor authentication.
+-   يستخدم عمليات ضعيفة وغير فعالة لاستعادة كلمات المرور واسترجاع بيانات الاعتماد والتي لا يمكن جعلها آمنة، مثل "الأجوبة المستندة على المعرفة".
 
--   Exposes Session IDs in the URL (e.g., URL rewriting).
+-   يستخدم كلمات مرور غير مشفرة، أو مشفرة أو مجزأة بشكل ضعيف (راجع A3:2017-البيانات الحساسة الغير محمية أو المكشوفة).
 
--   Do not rotate Session IDs after successful login.
+-   لا يستخدم مصادقة متعددة العوامل أو تكون غير فعالة.
 
--   Does not correctly invalidate Session IDs. User sessions or
-    authentication tokens (mainly single sign-on (SSO) tokens) aren't
-    properly invalidated during logout or a period of inactivity.
+-   يعرض معرفات الجلسة (session IDs) في عنوان URL
 
-## How to Prevent
+-   لا يقوم بإعادة تدوير معرفات الجلسة بعد تسجيل الدخول بنجاح.
 
--   Where possible, implement multi-factor authentication to prevent
-    automated credential stuffing, brute force, and stolen credential
-    reuse attacks.
+-   لا ينهي معرفات الجلسة بشكل صحيح.  لا يتم إبطال جلسات المستخدم أو رموز المصادقة (authentication tokens) وخاصة رموز الدخول الموحد (SSO) بشكل صحيح خلال تسجيل الخروج أو في فترة الخمول.
 
--   Do not ship or deploy with any default credentials, particularly for
-    admin users.
+## كيفية الحماية منها 
 
--   Implement weak password checks, such as testing new or changed
-    passwords against the top 10,000 worst passwords list.
+-   حيثما أمكن ذلك، قم بتنفيذ المصادقة متعددة العوامل لمنع الهمات الآلية لبيانات الاعتماد(credential stuffing)، وهجوم كسر كلمات المرور (brute force) وهجمات إعادة استخدام بيانات الاعتماد المسروقة.
 
--   Align password length, complexity, and rotation policies with NIST
-    800-63b's guidelines in section 5.1.1 for Memorized Secrets or other
-    modern, evidence-based password policies.
+-   لا ترسل أو تضع بيانات اعتماد افتراضية، خاصة بالنسبة للمستخدمين المشرفين (المسؤولين)
 
--   Ensure registration, credential recovery, and API pathways are
-    hardened against account enumeration attacks by using the same
-    messages for all outcomes.
+-   نفِّذ عمليات التحقق من كلمات المرور الضعيفة، مثل اختبار كلمات المرور الجديدة أو التي تم تغييرها ومقارنتها.  بقائمة أسوأ 10,000 كلمة مرور.
 
--   Limit or increasingly delay failed login attempts. Log all failures
-    and alert administrators when credential stuffing, brute force, or
-    other attacks are detected.
+-   أضبط طول كلمة المرور، وصعوبتها وسياسة الإرشادات في NIST 800-63b في القسم 5.1.1 تذكر كلمات السر المحفوظة أو سياسات كلمة المرور المبنية على الأدلة الحديثة الأخرى
 
--   Use a server-side, secure, built-in session manager that generates a
-    new random session ID with high entropy after login. Session IDs
-    should not be in the URL, be securely stored, and invalidated after
-    logout, idle, and absolute timeouts.
+-   تأكد من أن مسارات كلا من التسجيل واستعادة بيانات الاعتماد وواجهة برمجة التطبيقات (API) محمية ضد هجمات فحص الحسابات (account enumeration)  باستخدام نفس رسائل الخطاء لجميع النتائج.
 
-## Example Attack Scenarios
+-   الحد من محاولات تسجيل الدخول الفاشلة. سجل جميع حالات الفشل و قم بتنبيه المسؤولين عند اكتشاف هجمات بيانات الاعتماد (credential stuffing) أو هجوم كسر كلمات المرور (brute force) أو أي هجمات أخرى.
 
-**Scenario #1:** Credential stuffing, the use of lists of known
-passwords, is a common attack. Suppose an application does not implement
-automated threat or credential stuffing protection. In that case, the
-application can be used as a password oracle to determine if the
-credentials are valid.
+-   استخدم مدير جلسة مدمج وآمن من جانب الخادم يقوم بإنشاء معرف جلسة عشوائي جديد مع (entropy) عالية بعد تسجيل الدخول. معرفات الجلسات يجب ألا تكون موجودة في عنوان URL، ويجب تخزينها بشكل آمن، وإبطال مفعولها بعد تسجيل الخروج، والخمول، والانتهاء المطلق. (انتهاء أو نفاذ الوقت)
 
-**Scenario #2:** Most authentication attacks occur due to the continued
-use of passwords as a sole factor. Once considered, best practices,
-password rotation, and complexity requirements encourage users to use
-and reuse weak passwords. Organizations are recommended to stop these
-practices per NIST 800-63 and use multi-factor authentication.
+## أمثلة على سيناريوهات الهجوم
 
-**Scenario #3:** Application session timeouts aren't set correctly. A
-user uses a public computer to access an application. Instead of
-selecting "logout," the user simply closes the browser tab and walks
-away. An attacker uses the same browser an hour later, and the user is
-still authenticated.
+**سيناريو #1:** هجمات بيانات الاعتماد وهو استخدام قوائم معروفة لكلمات المرور، هو هجوم شائع. لنفترض أن أحد التطبيقات لا ينفذ الحماية التلقائية من التهديدات أو هجمات بيانات الاعتماد. في هذه الحالة، يمكن استخدام التطبيق كمعيار لتحديد ما إذا كانت بيانات الاعتماد صالحة
 
-## References
+**سيناريو #2:** تحدث معظم هجمات المصادقة بسبب الاستخدام المستمر لكلمات المرور كعامل وحيد. اعتماد أفضل الممارسات والتغير المستمر لكلمات المرور، ان جعل السياسات معقدة يشجع المستخدمين على استخدام كلمات المرور الضعيفة او إعادة استخدامها. تُنصح المؤسسات بإيقاف هذه الممارسات وفقًا لـ NIST 800-63 واستخدام المصادقة متعددة العوامل.
+
+**سيناريو #3:** لا يتم تعيين مدة انتهاء الجلسة (timeouts) للتطبيق بشكل صحيح. يستخدم المستخدم جهاز كمبيوتر عام للوصول إلى أحد التطبيقات. بدلاً من اختيار "تسجيل الخروج"، المستخدم ببساطة يغلق علامة تبويب المتصفح. يستخدم المهاجم نفس المتصفح بعد ساعة، ولا يزال المستخدم قيد تسجيل الدخول (authenticated).
+
+
+
+## المصادر
 
 -   [OWASP Proactive Controls: Implement Digital
     Identity](https://owasp.org/www-project-proactive-controls/v3/en/c6-digital-identity)
@@ -122,7 +88,7 @@ still authenticated.
 
 -   NIST 800-63b: 5.1.1 Memorized Secrets
 
-## List of Mapped CWEs
+## قائمة الربط مع إطار CWEs
 
 CWE-255 Credentials Management Errors
 
