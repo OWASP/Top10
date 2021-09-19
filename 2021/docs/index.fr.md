@@ -1,4 +1,4 @@
-# Introduction a OWASP Top 10 2021
+# Introduction à l'OWASP Top 10 2021
 
 Welcome to the latest installment of the OWASP Top 10! The OWASP Top 10
 2021 is all-new, with a new graphic design and an available one-page
