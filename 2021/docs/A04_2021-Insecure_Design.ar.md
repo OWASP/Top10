@@ -1,86 +1,49 @@
-# A04:2021 – Insecure Design
+# A04:2021 – التصميم الغير آمن
 
-## Factors
+## العوامل
 
-| CWEs Mapped | Max Incidence Rate | Avg Incidence Rate | Max Coverage | Avg Coverage | Avg Weighted Exploit | Avg Weighted Impact | Total Occurrences | Total CVEs |
-|:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
-| 40          | 24.19%             | 3.00%              | 77.25%       | 42.51%       | 6.46                 | 6.78                | 262,407           | 2,691      |
+| ربطها مع CWEs | الحد الأقصى للحدوث | متوسط معدل الحدوث | التغطية القصوى | متوسط معدل التغطية | متوسط استغلال الثغرات | متوسط التأثير | إجمالي التكرار | إجمالي نقاط الضعف CVEs |
+|---------------|--------------------|-------------------|----------------|--------------------|-----------------------|---------------|----------------|------------------------|
+| 40            | 24.19%             | 3.00%             | 77.25%         | 42.51%             | 6.46                  | 6.78          | 262,407        | 2,691                  |
 
-## Overview
 
-A new category for 2021 focuses on risks related to design and
-architectural flaws, with a call for more use of threat modeling, secure
-design patterns, and reference architectures. Notable CWEs include
-*CWE-209: Generation of Error Message Containing Sensitive Information*,
-*CWE-256: Unprotected Storage of Credentials*, *CWE-501: Trust Boundary
-Violation*, and *CWE-522: Insufficiently Protected Credentials*.
 
-## Description 
+## نظرة عامة
 
-Insecure design is a broad category representing many different
-weaknesses, expressed as “missing or ineffective control design.”
-Missing insecure design is where a control is absent. For example,
-imagine code that should be encrypting sensitive data, but there is no
-method. Ineffective insecure design is where a threat could be realized,
-but insufficient domain (business) logic validation prevents the action.
-For example, imagine domain logic that is supposed to process pandemic
-tax relief based upon income brackets but does not validate that all
-inputs are correctly signed and provides a much more significant relief
-benefit than should be granted.
+هو تصنيف جديد تم اضافته في هذه النسخة لعام ٢٠٢١ والذي يركز على المخاطر المتعلقة بعيوب وأخطاء التصميم، مما يدعو الى مزيد من الاستخدام لنمذجة التهديدات، أنماط التصميم الآمنة وبنية تحتية مبنية على أفضل الامتثالات. الجدير بالذكر أن إطار CWE تضمن ال CWEs التالية: CWE-209، CWE-256، CWE-501، CWE-522.
 
-Secure design is a culture and methodology that constantly evaluates
-threats and ensures that code is robustly designed and tested to prevent
-known attack methods. Secure design requires a secure development
-lifecycle, some form of secure design pattern or paved road component
-library or tooling, and threat modeling.
+## الوصف 
+التصميم الغير آمن تصنيف واسع تمثل العديد من نقاط الضعف المختلفة، يوصف على انه" تصميم يفتقد لعنصر تحكم او يحتوي على عنصر تحكم غير فعال"، التصميم الغير آمن هو المكان الذي يكون فيه عنصر التحكم غائبا. 
+على سبيل المثال، افترض انه يجب أن يكون هنالك تشفير للبيانات الحساسة في الشفرة المصدرية، ولكن لا توجد طريقة لتطبيق التشفير. التصميم الغير آمن والغير فعال هو المكان الذي يمكن ان يحدث فيه التهديد، لكن التحقق الغير كافي من صحة منطق المجال (الأعمال) يمنع تنفيذ الإجراء. على سبيل المثال افترض ان هنالك مجال يجب ان يقوم بمعالجة الاعفاء الضريبي للجائحة بناءً على فئات الدخل لكنه لا يقوم بالتحقق فيما إذا كانت المدخلات موقعة بشكل صحيح أو لا فيوفر فائدة أكثر مما ينبغي منحه. 
 
-## How to Prevent
 
--   Establish and use a secure development lifecycle with AppSec
-    professionals to help evaluate and design security and
-    privacy-related controls
+التصميم الآمن عبارة عن ثقافة ومنهجية تقوم بتقييم التهديدات باستمرار وتضمن ان الشفرة المصدرية مصممة بشكل قوي ومختبرة ضد طرق الهجوم المعروفة. يتطلب التصميم الآمن دورة حياة تطوير آمنة، البعض من أنماط التصميم الآمنة أو مكتبة مكونات أو أدوات مسبقة وجاهزة للاستخدام، ونمذجة للتهديدات. 
 
--   Establish and use a library of secure design patterns or paved road
-    ready to use components
+## كيفية الحماية منها
 
--   Use threat modeling for critical authentication, access control,
-    business logic, and key flows
+-   انشاء واستخدام دورة حياة تطوير آمنة مع الاستعانة بأخصائي أمن تطبيقات لتقييم وتصميم عناصر التحكم المتعلقة بالأمان والخصوصية.
 
--   Write unit and integration tests to validate that all critical flows
-    are resistant to the threat model
+-   انشاء واستخدام مكتبة تحتوي على أنماط التصميم الآمن او مكونات مسبقة وجاهزة للاستخدام. 
 
-## Example Attack Scenarios
+-   استخدام نمذجة التهديدات لعمليات المصادقة (التحقق من الهوية) الحرجة، التحكم في الوصول، منطق التطبيق، المسارات الأساسية للتطبيق.
 
-**Scenario #1:** A credential recovery workflow might include “questions
-and answers,” which is prohibited by NIST 800-63b, the OWASP ASVS, and
-the OWASP Top 10. Questions and answers cannot be trusted as evidence of
-identity as more than one person can know the answers, which is why they
-are prohibited. Such code should be removed and replaced with a more
-secure design.
+-   كتابة اختبارات والوحدة وتكامل للتحقق من أن جميع المسارات الحرجة مقاومة لنموذج التهديد المتوقع.
 
-**Scenario #2:** A cinema chain allows group booking discounts and has a
-maximum of fifteen attendees before requiring a deposit. Attackers could
-threat model this flow and test if they could book six hundred seats and
-all cinemas at once in a few requests, causing a massive loss of income.
+## أمثلة على سيناريوهات الهجوم
 
-**Scenario #3:** A retail chain’s e-commerce website does not have
-protection against bots run by scalpers buying high-end video cards to
-resell auction websites. This creates terrible publicity for the video
-card makers and retail chain owners and enduring bad blood with
-enthusiasts who cannot obtain these cards at any price. Careful anti-bot
-design and domain logic rules, such as purchases made within a few
-seconds of availability, might identify inauthentic purchases and
-rejected such transactions.
+**سيناريو #1:**  قد يتضمن مسار عملية استرداد عناصر اعتماد المصداقية" أسئلة وإجابات"، الذي يحظره اطار NIST 800-63b وOWASP ASVS وOWASP Top 10، فلا يمكن الوثوق في الأسئلة والإجابات كأدلة على صحة هوية المستخدم حيث يمكن لأكثر من شخص معرفة الإجابات، وهذا هو سبب حظرهم. يجب إزالة الشفرة المصدرية تلك واستبدالها بتصميم أكثر أماناً.
 
-## References
+**سيناريو #2:** تقوم دور سينما بعمل خصومات لعمليات الحجز الجماعي ل١٥ شخص كحد أقصى قبل الدفع. هذا المسار قد يشكل خطرا ويسمح للمهاجم باختبار ما إذا كان بإمكانه حجز ٦٠٠ مقعد دفعة واحدة من خلال طلبات قليلة، مما يتسبب في خسارة هائلة للدخل.
 
--   \[OWASP Cheat Sheet: Secure Design Principles\] (TBD)
+**سيناريو #3:** لا تتمتع مواقع التجارة الإلكترونية من الحماية ضد الروبوتات التي يديرها مستثمرون يقومون بشراء قطع كروت الفيديو المطورة لإعادة بيعها لاحقاً في مواقع المزادات بأسعار اعلى. هذا يجعل من صانعي كروت الفيديو وكذلك متاجر البيع بالتجزئة في موقف حرج، قد يؤدي التصميم الامن لتقليل ومنع وحماية ضد الروبوت كذلك اضافة القواعد التي تحد من الروبوتات التي تتصل بالنطاق، مثل عمليات الشراء التي تتم في غضون ثوان معدودة من تحديد عمليات الشراء الغير مصادق عليها ورفضها. 
 
--   NIST – Guidelines on Minimum Standards for Developer Verification of
-    > Software  
-    > https://www.nist.gov/system/files/documents/2021/07/09/Developer%20Verification%20of%20Software.pdf
+## المصادر
 
-## List of Mapped CWEs
+-   [OWASP Cheat Sheet: Secure Design Principles](TBD)
+
+-   [NIST – Guidelines on Minimum Standards for Developer Verification of Software](https://www.nist.gov/system/files/documents/2021/07/09/Developer%20Verification%20of%20Software.pdf)
+
+## قائمة الربط مع إطار CWEs
 
 CWE-73 External Control of File Name or Path
 
