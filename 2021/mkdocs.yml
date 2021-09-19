@@ -43,8 +43,19 @@ plugins:
           About: À propos
           How to use the OWASP Top 10 as a standard: Comment utiliser le Top 10 OWASP comme standard
           How to start an AppSec program with the OWASP Top 10: Comment démarrer un programme AppSec avec le Top 10 OWASP
+          About OWASP: À propos de l'OWASP
           Top 10 List: Liste top 10
-          A01 Broken Access Control: A01 Contrôle d'accès cassé
+          A01 Broken Access Control: A01 Contrôle d'accès rompu
+          A02 Cryptographic Failures: A02 Défaillances cryptographiques
+          A03 Injection: A03 Injection
+          A04 Insecure Design: A04 Conception fragile
+          A05 Security Misconfiguration: A05 Mauvaise configuration de sécurité
+          A06 Vulnerable and Outdated Components: A06 Composants vulnérables et obsolètes
+          A07 Identification and Authentication Failures: A07 Identification et authentification de mauvaise qualité
+          A08 Software and Data Integrity Failures: A08 Manque d'intégrité des données et du logiciel
+          A09 Security Logging and Monitoring Failures: A09 Carence des systèmes de contrôle et de journalisation
+          A10 Server Side Request Forgery (SSRF): A10 Falsification de requête côté serveur
+          Next Steps: Étapes suivantes
         it:
           About: Riguardo ad OWASP
           How to use the OWASP Top 10 as a standard: Come utilizzare l'OWASP Top 10 come standard
