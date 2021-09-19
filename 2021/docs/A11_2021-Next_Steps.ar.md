@@ -1,100 +1,70 @@
-# A11:2021 – Next Steps
-Organizations working towards a mature appsec program or security
-consultancies or tool vendors wishing to expand coverage for their
-offerings, the following four issues are well worth the effort to
-identify and remediate.
+# A11:2021 – الخطوات المقبلة
+المنظمات التي تعمل لبناء برنامج أمني متكامل للتطبيقات أو تقديم استشارات أمنية أو خلق أدوات برمجية؛ تأمل في توسيع نطاق خدماتها. خلال ذلك قد تواجه هذه المشكلات الأربعة التالية التي تستحق الالتفات لها وتحديدها ومعالجتها:
 
-## Code Quality issues
+## مشكلات جودة الشفرة المصدرية
 
-| CWEs Mapped  | Max Incidence Rate  | Avg Incidence Rate  | Max Coverage  | Avg Coverage  | Avg Weighted Exploit  | Avg Weighted Impact  | Total Occurrences  | Total CVEs  |
-|:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
-| 38           | 49.46%              | 2.22%               | 60.85%        | 23.42%        |                       |                      | 101736             | 7564        |
+| ربطها مع CWEs  | الحد الأقصى للحدوث | متوسط معدل الحدوث | التغطية القصوى | متوسط معدل التغطية | متوسط استغلال الثغرات | متوسط التأثير | إجمالي التكرار | إجمالي نقاط الضعف CVEs |
+|----------------|--------------------|-------------------|----------------|--------------------|-----------------------|---------------|----------------|------------------------|
+| 38             | 49.46%             | 2.22%             | 60.85%         | 23.42%             |                       |               | 101736         | 7564                   |
 
--   **Description.** Code quality issues include known security defects
-    or patterns, reusing variables for multiple purposes, exposure of
-    sensitive information in debugging output, off-by-one errors, time
-    of check/time of use (TOCTOU) race conditions, unsigned or signed
-    conversion errors, use after free, and more. The hallmark of this
-    section is that they can usually be identified with stringent
-    compiler flags, static code analysis tools, and linter IDE plugins.
-    Modern languages by design eliminated many of these issues, such as
-    Rust’s memory ownership and borrowing concept, Rust’s threading
-    design, and Go’s strict typing and bounds checking.
 
--   **How to prevent**. Enable and use your editor and language’s static
-    code analysis options. Consider using a static code analysis tool.
-    Consider if it might be possible to use or migrate to a language or
-    framework that eliminates bug classes, such as Rust or Go.
 
--   **Example attack scenarios**. An attacker might obtain or update
-    sensitive information by exploiting a race condition using a
-    statically shared variable across multiple threads.
+-   **الوصف.** تتضمن مشكلات جودة الشفرة المصدرية: عيوبًا أمنية، أو انماطًا معروفة، أو إعادة استخدام المتغيرات لأغراض متعددة، ظهور معلومات حساسة في نمط التصحيح “debugging output”، تكون سلسلة من الأخطاء المتتابعة، ظهور خطأ برمجي بسبب تغير في للنظام ما بين عملية فحص الشرط البرمجي/استخدام مخرجات هذا الشرط، ظهور unassigned أو signed conversion والتي يقوم بها البرنامج باسم” use after free errors”، ومشكلات أخرى.
+ما يميز هذه المشاكل أنها يمكن تحديدها عادةً بأدوات تحليل التعليمات البرمجية الثابتة وstringent compiler flags وlinter IDE plugins، ألغت اللغات الحديثة العديد من هذه المشكلات، مثل ملكية الذاكرة او (memory ownership) او مفهوم (borrowing concept) او مفهوم (Rust’s threading  design) وتطبيق مفاهيم أخرى تطبق في آلية الكتابة.
 
--   **References**. TBA
 
-## Denial of Service
+-   **كيفية الحماية منها **.قم بتمكين واستخدام المحرر وخيارات تحليل الكود الثابتة للغة، ضع في اعتبارك استخدام أداة تحليل التعليمات البرمجية الثابتة. ضع في اعتبارك ما إذا كان من الممكن استخدام لغة أو إطار عمل يعمل على التخلص من الأخطاء المعتادة، مثل Rust أو Go.
 
-| CWEs Mapped  | Max Incidence Rate  | Avg Incidence Rate  | Max Coverage  | Avg Coverage  | Avg Weighted Exploit  | Avg Weighted Impact  | Total Occurrences  | Total CVEs  |
-|:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
-| 8            | 17.54%              | 4.89%               | 79.58%        | 33.26%        |                       |                      | 66985              | 973         |
+-   **مثال على سيناريو هجوم**. قد يقوم المهاجم بالحصول على معلومات حساسة او يقوم بالتغير الغير مصرح به على المعلومات من خلال استغلال ما يسمى (race condition) عبر مؤشرات مترابطة ومتعددة
 
--   **Description**. Denial of service is always possible given
-    sufficient resources. However, design and coding practices have a
-    significant bearing on the magnitude of the denial of service.
-    Suppose anyone with the link can access a large file, or a
-    computationally expensive transaction occurs on every page. In that
-    case, denial of service requires less effort to conduct.
+-   **المصادر**. ستعلن لاحقًا.
 
--   **How to prevent**. Performance test code for CPU, I/O, and memory
-    usage, re-architect, optimize, or cache expensive operations.
-    Consider access controls for larger objects to ensure that only
-    authorized individuals can access huge files or objects or serve
-    them by an edge caching network.
+## حجب الخدمة
 
--   **Example attack scenarios**. An attacker might determine that an
-    operation takes 5-10 seconds to complete. When running four
-    concurrent threads, the server seems to stop responding. The
-    attacker uses 1000 threads and takes the entire system offline.
+| ربطها مع CWEs | الحد الأقصى للحدوث | متوسط معدل الحدوث | التغطية القصوى | متوسط معدل التغطية | متوسط استغلال الثغرات | متوسط التأثير | إجمالي التكرار | إجمالي نقاط الضعف CVEs |
+|---------------|--------------------|-------------------|----------------|--------------------|-----------------------|---------------|----------------|------------------------|
+| 8             | 17.54%             | 4.89%             | 79.58%         | 33.26%             |                       |               | 66985          | 973                    |
 
--   **References**. TBA
 
-## Memory Management Errors
 
-| CWEs Mapped  | Max Incidence Rate  | Avg Incidence Rate  | Max Coverage  | Avg Coverage  | Avg Weighted Exploit  | Avg Weighted Impact  | Total Occurrences  | Total CVEs  |
-|:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
-| 14           | 7.03%               | 1.16%               | 56.06%        | 31.74%        |                       |                      | 26576              | 16184       |
+-   **الوصف**. دائمًا ما يكون هجمات حجب الخدمة ممكنًا إذا توفرت المصادر الكافية. ولكن ممارسات التصميم والتشفير لها تأثير كبير على قوة حجب الخدمة. لنفترض ان أي شخص 
+افترض أن أي شخص لديه صلاحية الدخول لملف كبير، أو أنه يقوم بعملية حسابية تستهلك الموارد وتحدث في كل صفحة من صفحات الموقع. في هذه الحالة، تحدث هجمات حجب الخدمة من دون أي جهود تذكر.
 
--   **Description**. Web applications tend to be written in managed
-    memory languages, such as Java, .NET, or node.js (JavaScript or
-    TypeScript). However, these languages are written in systems
-    languages that have memory management issues, such as buffer or heap
-    overflows, use after free, integer overflows, and more. There have
-    been many sandbox escapes over the years that prove that just
-    because the web application language is nominally memory “safe,” the
-    foundations are not.
 
--   **How to prevent**. Many modern APIs are now written in memory-safe
-    languages such as Rust or Go. In the case of Rust, memory safety is
-    a crucial feature of the language. For existing code, the use of
-    strict compiler flags, strong typing, static code analysis, and fuzz
-    testing can be beneficial in identifying memory leaks, memory, and
-    array overruns, and more.
+-   **كيفية الحماية منها**. -	قم بعمل اختبار الشفرة المصدرية لوحدة المعالجة المركزيةCPU، والمدخلات / المخرجات، والذاكرة المستخدمة. قم بإعادة هندسة العمليات التي تستهلك المصادر أو تحسينها أو تخزينها مؤقتًا. ضع في اعتبارك ضوابط الوصول للأشياء ذات الاحجام الكبيرة لضمان أن الأفراد المصرح لهم فقط يمكنهم الوصول إلى ملفات أو أشياء ضخمة أو قم بخدمتهم عن طريق شبكة تخزين مؤقت.
 
--   **Example attack scenarios**. Buffer and heap overflows have been a
-    mainstay of
+-   **مثال على سيناريو هجوم**. -	قد يتوقع المهاجم أن كل عملية تستغرق لتنفيذها من 5 إلى 10 ثوانٍ حتى تكتمل. لذلك يقوم بتشغيل أربع عمليات في نفس الوقت ولها (thread) محدد، سيبدو لك أن الخادم قد يتوقف عن الاستجابة بسبب عملية الضغط. لذلك يعود المهاجم (1000 thread )  لكي يتعطل النظام ولا يستجيب بشكل كامل
 
--   **References**. TBA
+-   **المصادر**. ستعلن لاحقًا.
 
-## Security Control Failures
+## ادارة اخطاء الذاكرة
 
-| CWEs Mapped  | Max Incidence Rate  | Avg Incidence Rate  | Max Coverage  | Avg Coverage  | Avg Weighted Exploit  | Avg Weighted Impact  | Total Occurrences  | Total CVEs  |
-|:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
-| 2            | 11.35%              | 9.64%               | 76.60%        | 45.23%        |                       |                      | 44911              | 329         |
+| ربطها مع CWEs | الحد الأقصى للحدوث | متوسط معدل الحدوث | التغطية القصوى | متوسط معدل التغطية | متوسط استغلال الثغرات | متوسط التأثير | إجمالي التكرار | إجمالي نقاط الضعف CVEs |
+|---------------|--------------------|-------------------|----------------|--------------------|-----------------------|---------------|----------------|------------------------|
+| 14            | 7.03%              | 1.16%             | 56.06%         | 31.74%             |                       |               | 26576          | 16184                  |
 
--   **Description**.
 
--   **How to prevent**.
 
--   **Example attack scenarios**.
+-   **الوصف**. غالبًا ما تتم كتابة تطبيقات الويب بلغات يمكن التحكم بذاكرتها، مثل Java أو .NET أو node.js (JavaScript أو TypeScript). ومع ذلك، تتم كتابة هذه اللغات بلغات الأنظمة التي بها مشكلات في إدارة الذاكرة، مثل (buffer or heap  overflows، use after free، integer overflows، ومشكلات أخرى)، كما ان هناك العديد من حالات التهرب من وضع الحماية (Sandbox) على مر السنين، والتي تثبت ان لغة تطبيق الويب اساساً ليست امنه كما تم وصفها.
 
--   **References**. TBA
+-   **كيفية الحماية منها**. تتم الآن كتابة العديد من واجهات برمجة التطبيقات الحديثة بلغات آمنة للذاكرة مثل Rust أو Go. بالنسبة لـRust، تعتبر سلامة الذاكرة سمة أساسية للغة. بالنسبة للشفرة المصدرية الحالية، يمكن أن يكون استخدام علامات المترجم “strict compiler flags” و (strong typing, static code analysis, ، fuzz testing) مفيدًا في تحديد تسرب الذاكرة والذاكرة وتجاوز الوقت المحدد وغير ذلك
+
+-   **مثال على سيناريو هجوم**. ستعلن لاحقًا.
+
+-   **المصادر**. ستعلن لاحقًا.
+
+## فشل انظمة التحكم بالحماية
+
+| ربطها مع CWEs | الحد الأقصى للحدوث | متوسط معدل الحدوث | التغطية القصوى | متوسط معدل التغطية | متوسط استغلال الثغرات | متوسط التأثير | إجمالي التكرار | إجمالي نقاط الضعف CVEs |
+|---------------|--------------------|-------------------|----------------|--------------------|-----------------------|---------------|----------------|------------------------|
+| 2             | 11.35%             | 9.64%             | 76.60%         | 45.23%             |                       |               | 44911          | 329                    |
+
+
+
+-   **الوصف**. ستعلن لاحقًا.
+
+-   **كيفية الحماية منها**. ستعلن لاحقًا.
+
+-   **مثال على سيناريو هجوم**.ستعلن لاحقًا.
+
+-   **المصادر**. ستعلن لاحقًا.
