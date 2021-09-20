@@ -1,32 +1,32 @@
 # About OWASP
 
-The Open Web Application Security Project (OWASP) is an open community dedicated to enabling organizations to develop, purchase, and maintain applications and APIs that can be trusted.
+Open Web Application Security Project (OWASP) adalah komunitas terbuka yang didedikasikan untuk memungkinkan organisasi mengembangkan, membeli, dan memelihara aplikasi yang dapat dipercaya.
 
-At OWASP, you'll find free and open:
+Di OWASP, anda akan menemukan kebebasan dan keterbukaan:
 
-- Application security tools and standards
-- Cutting edge research
-- Standard security controls and libraries
-- Complete books on application security testing, secure code development, and secure code review
-- Presentations and [videos](https://www.youtube.com/user/OWASPGLOBAL)
-- [Cheat sheets](https://cheatsheetseries.owasp.org/) on many common topics
-- [Chapters meetings](https://owasp.org/chapters/)
-- [Events, training, and conferences](https://owasp.org/events/).
+- Alat dan standar dalam keamanan aplikasi.
+- Penelitian terkini.
+- Kendali keamanan dan pustaka standar.
+- Buku tentang uji keamanan aplikasi, pengembangan kode aman, dan peninjauan kode keamanan.
+- Presentasi dan [video](https://www.youtube.com/user/OWASPGLOBAL).
+- [Cheat sheets](https://cheatsheetseries.owasp.org/) untuk banyak topik umum.
+- [Pertemuan Chapter](https://owasp.org/chapters/).
+- [Kegiatan, pelatihan, dan konferensi](https://owasp.org/events/).
 - [Google Groups](TBA)
 
-Learn more at: [https://www.owasp.org](https://www.owasp.org).
+Pelajari lebih lanjut di: [https://www.owasp.org](https://www.owasp.org).
 
-All OWASP tools, documents, videos, presentations, and chapters are free and open to anyone interested in improving application security.
+seluruh alat OWASP, dokumen, video, presentasi, dan bagian adalah kebebasan dan keterbukaan bagi semua orang yang tertarik dalam meningkatkan keamanan aplikasi
 
-We advocate approaching application security as a people, process, and technology problem, because the most effective approaches to application security require improvements in these areas.
+Kami menganjurkan mendekati keamanan aplikasi sebagai masalah orang, proses, dan teknologi, karena pendekatan yang paling efektif untuk keamanan aplikasi memerlukan peningkatan pada bidang-bidang ini.
 
-OWASP is a new kind of organization. Our freedom from commercial pressures allows us to provide unbiased, practical, and cost-effective information about application security.
+OWASP adalah jenis organisasi baru. Kebebasan kami dari tekanan komersial memungkinkan kami memberikan informasi yang tidak bias, praktis, dan hemat biaya tentang keamanan aplikasi.
 
-OWASP is not affiliated with any technology company, although we support the informed use of commercial security technology. OWASP produces many types of materials in a collaborative, transparent, and open way.
+OWASP tidak berafiliasi dengan perusahaan teknologi mana pun, meskipun kami mendukung penggunaan teknologi keamanan komersial yang diinformasikan. OWASP memproduksi berbagai jenis bahan secara kolaboratif, transparan, dan terbuka.
 
-The OWASP Foundation is the non-profit entity that ensures the project's long-term success. Almost everyone associated with OWASP is a volunteer, including the OWASP board, chapter leaders, project leaders, and project members. We support innovative security research with grants and infrastructure.
+Yayasan OWASP adalah entitas nonprofit yang memastikan kesuksesan jangka panjang proyek. Hampir semua orang yang terkait dengan OWASP adalah relawan, termasuk OWASP Board, OWASP Chapter Leader, Project Leader, dan Project Member. Kami mendukung penelitian keamanan yang inovatif dengan hibah dan infrastruktur.
 
-Come join us!
+Ayo bergabung dengan kami!
 
 ## Copyright and License
 

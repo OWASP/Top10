@@ -1,68 +1,66 @@
-# How to start an AppSec Program with the OWASP Top 10 
+# Bagaimana cara untuk memulai program AppSec dengan OWASP Top 10
 
-Previously, the OWASP Top 10 was never designed to be the basis for an
-AppSec program. However, it's essential to start somewhere for many
-organizations just starting out on their application security journey.
-The OWASP Top 10 2021 is a good start as a baseline for checklists and
-so on, but it's not in itself sufficient.
+Sebelumnya, OWASP Top 10 tidak pernah dirancang untuk menjadi basis dari sebuah
+program AppSec. Bagaimanapun, hal ini diperlukan untuk memulai darimanapun bagi
+berbagai organisasi yang baru saja memulai perjalanan mereka dalam keamanan
+aplikasi OWASP Top 10 2021 merupakan awal yang baik sebagai landasan untuk daftar
+periksa dan sebagainya, tapi itu sendiri tidak cukup.
 
-## Stage 1. Identify the gaps and goals of your appsec program
+## Tahap 1. Identifikasi kesenjangan dan tujuan dari program appsec anda
 
-Many Application Security (AppSec) programs try to run before they can
-crawl or walk. These efforts are doomed to failure. We strongly
-encourage CISOs and AppSec leadership to use OWASP Software Assurance
-Maturity Model (SAMM) \[<https://owaspsamm.org>\] to identify weaknesses
-and areas for improvement over a 1-3 year period. The first step is to
-evaluate where you are now, identify the gaps in governance, design,
-implementation, verification, and operations you need to resolve
-immediately versus those that can wait, and prioritize implementing or
-improving the fifteen OWASP SAMM security practices. OWASP SAMM can help
-you build and measure improvements in your software assurance efforts.
+Banyak program Keamanan Aplikasi (AppSec) mencoba untuk berlali sebelum mereka
+dapat merangkak atau berjalan. Usaha seperti ini pasti akan gagal. Kami sangat
+mendorong pimpinan CISO dan AppSec untuk menggunakan Jaminan Perangkat Lunak OWASP
+Model Kematangan (SAMM) \[<https://owaspsamm.org>\] untuk mengidentifikasi
+kelemahan dan wilayah untuk perbaikan selama periode 1-3 tahun. Tahap pertama
+adalah untuk evaluasi dimana anda sekarang, identifikasi kesenjangan pada
+pemerintahan, perencanaan, implementasi, verifikasi, dan operasi yang anda
+butuhkan untuk menyelesaikan segera versus yang bisa menunggu, dan memprioritaskan
+implementasi atau memperbaiki lima belas praktik keamanan OWASP SAMM. OWASP SAMM
+dapat membantu you build and measure improvements in your software assurance
+efforts. anda membangun dan menimbang perbaikan dalam jaminan usaha perangkat
+lunak anda.
 
-## Stage 2. Plan for a paved road secure development lifecycle
+## Tahap 2. Rencana untuk siklus hidup pengembangan jalan beraspal yang aman
 
-Traditionally the preserve of so-called "unicorns," the paved road
-concept is the easiest way to make the most impact and scale AppSec
-resources with development team velocity, which only increases every
-year.
+Secara tradisional melestarikan apa yang disebut dengan "unicorns," konsep
+jalan beraspal adalah jalan termudah untuk membuat sumber daya Aplikasi Keamanan
+yang sangat berdampak dan berskala dengan kecepatan pengembangan tim, yang mana
+meningkat setiap tahun. 
 
-The paved road concept is "the easiest way is also the most secure way"
-and should involve a culture of deep partnerships between the
-development team and the security team, preferably such that they are
-one and the same team. The paved road aims to continuously improve,
-measure, detect and replace insecure alternatives by having an
-enterprise-wide library of drop-in secured replacements, with tooling to
-help see where improvements can be made by adopting the paved road. This
-allows existing development tools to report on insecure builds and help
-development teams self-correct away from insecure alternatives.
+Konsep jalan beraspal adalah "jalan termudah dan juga jalur teraman" dan harus
+melibatkan budaya kemitraan yang mendalam antara team pengembang dan tim
+keamanan, sebaiknya seperti mereka adalah satu dan dalam tim yang sama. Jalan
+beraspal bertujuan untuk terus memperbaiki, menimbang, mendeteksi dan mengubah
+alternatif yang tidak aman dengan memiliki sebuah perpustakaan dengan skala
+seluruh perusahaan untuk menempatkan perubahan yang aman dengan alat untuk
+membantu melihat dimana perbaikan dapat dibuat dengan mengadopsi konsep jalan
+beraspal. Ini memungkinkan alat pengembangan yang ada untuk melaporkan pembuatan
+dan membantu tim pengembang untuk mengoreksi kembali dari alternatif yang tidak
+aman.
 
-The paved road might seem a lot to take in, but it should be built
-incrementally over time. There are other forms of appsec programs out
-there, notably the Microsoft Agile Secure Development Lifecycle. Not
-every appsec program methodology suits every business.
+Konsep jalan beraspal mungkin tampak banyak yang harus dilalui, tetapi itu harus dibangun secara bertahap dari waktu ke waktu. Ada bentuk lain dari program keamanan aplikasi diluar sana, terutama Microsoft Agile Secure Development Lifecycle. Tidak semua metode program keamanan aplikasi sesuai dengan semua bisnis.
 
-## Stage 3. Implement the paved road with your development teams
+## Tahap 3. Mengimplementasikan konsep jalan beraspal dengan tim pengembang anda.
 
-Paved roads are built with the consent and direct involvement of the
-relevant development and operations teams. The paved road should be
-aligned strategically with the business and help deliver more secure
-applications faster. Developing the paved road should be a holistic
-exercise covering the entire enterprise or application ecosystem, not a
-per-app band-aid, as in the old days.
+Konsep jalan beraspal dibentuk dengan persetujuan dan keterlibatan langsung dari tim pengembang dan operasi yang relevan. Konsep jalan beraspal harus disejajarkan secara strategis dengan sisi bisnis dan membantu mengantarkan kembali aplikasi yang aman lebih cepat. Mengembangkan konsep jalan beraspal harus menjadi panduan penjagaan latihan yang mencakup seluruh perusahaan ataupun ekosistem aplikasi, bukan sebagai tambalan untuk aplikasi yang belum siap, seperti di hari-hari sebelumnya.
 
-## Stage 4. Migrate all upcoming and existing applications to the paved road
+## Tahap 4. Migrasikan semua aplikasi yang akan datang dan yang sudah ada ke jalan beraspal.
 
-Add paved road detection tools as you develop them and provide
-information to development teams to improve the security of their
-applications by how they can directly adopt elements of the paved road.
-Once an aspect of the paved road has been adopted, organizations should
-implement continuous integration checks that inspect existing code and
-check-ins that use prohibited alternatives and warn or reject the build
-or check-in. This prevents insecure options from creeping into code over
-time, preventing technical debt and a defective insecure application.
-Such warnings should link to the secure alternative, so the development
-team is given the correct answer immediately. They can refactor and
-adopt the paved road component quickly.
+Tambahkan Alat pendeteksi pada Konsep Jalan Beraspal saat anda
+mengembangkannya dan menyediakan informasi untuk tim pengembang
+untuk meningkatkan keamanan dari aplikasi mereka dengan bagaimana
+mereka bisa langsung mengadopsi elemen dari konsep jalan beraspal.
+Ketika sebuah aspekdari konsep jalan beraspal telah diadopsi, organisasi
+harus mengimplementasikan pemeriksaan integrasi yang berkelanjutan
+yang mana memeriksa kode yang telah ada dan check-in yang menggunakan
+alternatif terlarang dan memperingatkan atau menolak build program
+atau check-in. Hal ini mencegah opsi yang tidak aman dapat merayap 
+ke dalam kode sepanjang waktu, mencegah hutang teknis dan aplikasi 
+tidak aman yang rusak. Peringatan semacam itu harus terhubung kepada 
+alternatif yang aman, sehingga tim pengembang dapat diberikan jawaban
+yang benar sesegera mungkin. Mereka dapat melakukan refactoring dan
+mengadopsi kompnen pada konsep jalan beraspal dengan cepat.
 
 ## Stage 5. Test that the paved road has mitigated the issues found in the OWASP Top 10
 
