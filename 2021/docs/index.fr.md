@@ -1,12 +1,11 @@
 # Introduction à l'OWASP Top 10 2021
 
-Welcome to the latest installment of the OWASP Top 10! The OWASP Top 10
-2021 is all-new, with a new graphic design and an available one-page
-infographic you can print or obtain from our home page.
+Bienvenue pour cette nouvelle édition de l'OWASP Top 10 ! L'OWASP Top 10 2021 apporte de nombreux changements, avec
+notamment une nouvelle interface et une nouvelle infographie, disponible sur un format d'une page qu'il est possible
+de se procurer depuis notre page d'accueil.
 
-A huge thank you to everyone that contributed their time and data for
-this iteration. Without you, this installment would not happen. **THANK
-YOU**.
+Un très grand merci à l'ensemble des personnes qui ont contribué de leur temps et leurs données pour cette itération.
+Sans vous, cette mouture n'aurait pas vu le jour. **MERCI**.
 
 ## What's changed in the Top 10 for 2021
 
