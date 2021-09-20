@@ -1,98 +1,74 @@
 # A03:2021 – Injection
 
-## Factors
+## العوامل
 
-| CWEs Mapped | Max Incidence Rate | Avg Incidence Rate | Max Coverage | Avg Coverage | Avg Weighted Exploit | Avg Weighted Impact | Total Occurrences | Total CVEs |
-|:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
-| 33          | 19.09%             | 3.37%              | 94.04%       | 47.90%       | 7.25                 | 7.15                | 274,228           | 32,078     |
+| ربطها مع CWEs | الحد الأقصى للحدوث | متوسط معدل الحدوث | التغطية القصوى | متوسط معدل التغطية | متوسط استغلال الثغرات | متوسط التأثير | إجمالي التكرار | إجمالي نقاط الضعف CVEs |
+|---------------|--------------------|-------------------|----------------|--------------------|-----------------------|---------------|----------------|------------------------|
+| 33            | 19.09%             | 3.37%             | 94.04%         | 47.90%             | 7.25                  | 7.15          | 274,228        | 32,078                 |
 
-## Overview
 
-Injection slides down to the third position. 94% of the applications
-were tested for some form of injection. Notable CWEs included are
-*CWE-79: Cross-site Scripting*, *CWE-89: SQL Injection*, and *CWE-73:
-External Control of File Name or Path*.
 
-## Description 
+## نظرة عامة
 
-An application is vulnerable to attack when:
 
--   User-supplied data is not validated, filtered, or sanitized by the
-    application.
+هجمات الحقن تحتل المركز الثالث، حيث ان ٩٤٪ من التطبيقات التي تم فحصها تحتوي على صنف او أكثر من هجمات الحقن ومرتبطه مع CWE-79، CWE-89، CWE-73
 
--   Dynamic queries or non-parameterized calls without context-aware
-    escaping are used directly in the interpreter.
 
--   Hostile data is used within object-relational mapping (ORM) search
-    parameters to extract additional, sensitive records.
+## الوصف 
 
--   Hostile data is directly used or concatenated. The SQL or command
-    contains the structure and malicious data in dynamic queries,
-    commands, or stored procedures.
+يكون البرنامج معرض للإصابة بهذه الهجمات عندما: 
 
-Some of the more common injections are SQL, NoSQL, OS command, Object
-Relational Mapping (ORM), LDAP, and Expression Language (EL) or Object
-Graph Navigation Library (OGNL) injection. The concept is identical
-among all interpreters. Source code review is the best method of
-detecting if applications are vulnerable to injections. Automated
-testing of all parameters, headers, URL, cookies, JSON, SOAP, and XML
-data inputs is strongly encouraged. Organizations can include the static
-source (SAST) and dynamic application test (DAST) tools into the CI/CD
-pipeline to identify introduced injection flaws before production
-deployment.
+-   البيانات المزودة من المستخدم، غير مُوثقة، او لم يتم تصفيتها، او فلترتها من قِبل البرنامج. 
 
-## How to Prevent
+-  طلبات الاستعلامات الديناميكية او البيانات (non-parameterized)، بدون استخدام  (Context-aware escaping) والتي تكون مستخدمة بشكل مباشر في مترجم الأوامر.
 
--   Preventing injection requires keeping data separate from commands
-    and queries.
+-   المدخلات الضارة التي يتم استخدامها والبحث عنها في (Object-relational mapping ORM) والتي قد تقوم بتسريب بيانات اضافية غير مطلوبة او بيانات حساسة
 
--   The preferred option is to use a safe API, which avoids using the
-    interpreter entirely, provides a parameterized interface, or
-    migrates to Object Relational Mapping Tools (ORMs).
 
--   Note: Even when parameterized, stored procedures can still introduce
-    SQL injection if PL/SQL or T-SQL concatenates queries and data or
-    executes hostile data with EXECUTE IMMEDIATE or exec().
+-   استخدام المدخلات الضارة بشكل مباشر او بشكل مجدول، والتي يتم استخدام بعض الاوامر في لغة SQL والتي قد تعتبر ضارة عند تشغيلها بشكل آلي.
 
--   Use positive or "whitelist" server-side input validation. This is
-    not a complete defense as many applications require special
-    characters, such as text areas or APIs for mobile applications.
+بعض أشهر انواع الحقن مثل، ال SQL و NoSQL و أوامر التي تعمل على انظمة التشغيل، و (Object-relational mapping ORM) و LDAP، ولغة التعبير (Expression Language  (EL او حقن المكتبات Object Graph Navigation (OGNL). المفهوم مرتبط بجميع تلك اللغات والمفسرات لها، مراجعة مصدر الشفرة المصدرية هي افضل وسيلة لتحقق ما إذا كان البرنامج عُرضة للحقن، أتمتة اختبار المداخل، والعناوين، وفحص الروابط (URL)، و ملفات الإرتباط (Cookies)، و JASO و الSOAP ومدخلات معطيات الXML، مهم جداً. المنظمات بإمكانها إضافة أدوات ثوابت المصدر (static source (SAST او الاختبارات الديناميكية للبرامج (Dynamic application testing (DAST واستخدامها في مسارات CI/CD ، لتحديد العيوب الموجودة قبل عملية استخدام المنتج. 
 
--   For any residual dynamic queries, escape special characters using
-    the specific escape syntax for that interpreter.
 
--   Note: SQL structures such as table names, column names, and so on
-    cannot be escaped, and thus user-supplied structure names are
-    dangerous. This is a common issue in report-writing software.
+## كيفية الحماية منها 
 
--   Use LIMIT and other SQL controls within queries to prevent mass
-    disclosure of records in case of SQL injection.
+-   لتفادي هجمات الحقن يتطلب فصل البيانات عن الأوامر والاستعلامات. 
 
-## Example Attack Scenarios
+-   يفضل استخدام واجهة التطبيق البرمجية (API) آمنة، وذلك لتفادي استخدام مفسر الأوامر بشكل كلي، او الترقية واستخدام (Object Relational Mapping Tools (ORMs))
 
-**Scenario #1:** An application uses untrusted data in the construction
-of the following vulnerable SQL call:
+-   ملاحظة: حتى في حال استخدام المَعْلمات (Parametrized)، العمليات المخزنة لا تزال مُعرضة لهجمات حقن كانت  الSQL في حال الPL/SQL او T-SQL عندما يقوم بربط البيانات بالاستعلامات، او تنفيذ تعليمات برمجية ضارة من خلال EXECUTE IMMEDIATE او exec(). 
+
+-   استخدام المدخلات الموافق عليها والمدرجة في “القوائم البيضاء”  المُوثقة من جانب الخادم. لكن هذه لا تعتبر حماية متكاملة حيث ان عديد من البرامج تتطلب حروف خاصة، مثل حقل النص (TextArea) او واجهات تطبيق البرامج (APIs) لتطبيقات الهواتف. 
+
+-   في حال وجود استعلامات ديناميكية متبقية، استخدم حالة التصفية من الحروف الخاصة من خلال استخدام الأمر المحدد لتصفيته في مفسر الأوامر.  
+
+
+-   ملاحظة: هيكلة SQL مثل اسماء الجداول او الأعمدة وغيرها، لايمكن اجراء عوامل التصفيه عليها، لذلك يجب الحذر من الهيكلة-المزودة من المستخدم حيث تعتبر خطرة. وهذا خطأ شائع عند كتابة-تقارير البرمجيات. 
+
+
+-   استخدم الحد او ضوابط اخرى عند استخدام الاستعلامات داخل SQL، لتجنب كشف للسجلات الحساسة في حال وجود هجمات حقن الSQL
+
+
+## أمثلة على سيناريوهات الهجوم
+
+**سيناريو #1:** برنامج يستخدم بيانات غير موثقة في بناء الاستعلام في قاعدة بيانات الSQL  والتي قد يعرضها للحقن: 
 
 String query = "SELECT \* FROM accounts WHERE custID='" +
 request.getParameter("id") + "'";
 
-**Scenario #2:** Similarly, an application’s blind trust in frameworks
-may result in queries that are still vulnerable, (e.g., Hibernate Query
-Language (HQL)):
+**سيناريو #2:** الثقة العمياء للبرنامج في اطر العمل (Framework) والتي قد تؤدي تلك الاستعلامات الى ثغرات الحقن مثل Hibernate Query Language (HQL): 
 
 > Query HQLQuery = session.createQuery("FROM accounts WHERE custID='" +
 > request.getParameter("id") + "'");
 
-In both cases, the attacker modifies the ‘id’ parameter value in their
-browser to send: ‘ or ‘1’=’1. For example:
+في كلا الحالتين السابقتين، المُخترق قام بتعديل قيمة متغير الid في المتصفح لإرسال ‘ or ‘1’=’1. مثلاً:
 
 http://example.com/app/accountView?id=' or '1'='1
 
-This changes the meaning of both queries to return all the records from
-the accounts table. More dangerous attacks could modify or delete data
-or even invoke stored procedures.
+وهذا يُنتج تغيير في معنى الاستعلام للحصول على جميع السجلات من جدول الحسابات. وقد يستغلها المخترق بشكل اخطر لتعديل و حذف او حتى استدعاء العمليات المخزنة. 
 
-## References
+
+## المصادر
 
 -   [OWASP Proactive Controls: Secure Database
     Access](https://owasp.org/www-project-proactive-controls/v3/en/c3-secure-database)
@@ -124,7 +100,7 @@ or even invoke stored procedures.
 -   [PortSwigger: Server-side template
     injection](https://portswigger.net/kb/issues/00101080_serversidetemplateinjection)
 
-## List of Mapped CWEs
+## قائمة الربط مع إطار CWEs
 
 CWE-20 Improper Input Validation
 
