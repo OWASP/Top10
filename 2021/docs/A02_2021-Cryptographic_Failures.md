@@ -35,12 +35,37 @@ For all such data:
 
 -   Are default crypto keys in use, weak crypto keys generated or
     re-used, or is proper key management or rotation missing?
+    Are crypto keys checked into source code repositories?
 
 -   Is encryption not enforced, e.g., are any user agent (browser)
     security directives or headers missing?
 
 -   Does the user agent (e.g., app, mail client) not verify if the
     received server certificate is valid?
+
+-   Are initialization vectors ignored, reused, or not generated
+    sufficiently secure for the cryptographic mode of operation?
+    Is an insecure mode of operation such as ECB in use? Is encryption
+    used when authenticated encryption is more appropriate?
+
+-   Are passwords being used as cryptographic keys in absence of a
+    password base key derivation function?
+
+-   Is randomness used for cryptographic purposes that was not designed
+    to meet cryptographic requirements? Even if the correct function is
+    chosen, does it need to be seeded by the developer, and if not, has
+    the developer over-written the strong seeding functionality built into
+    it with a seed that lacks sufficient entropy/unpredictability?
+
+-   Are deprecated hash functions such as MD5 or SHA1 in use, or are
+    non-cryptographic hash functions used when cryptographic hash functions
+    are needed?
+
+-   Are deprecated cryptographic padding methods such as PCKS number 1 v1.5
+    in use?
+
+-   Are cryptographic error messages or side channel information
+    exploitable, for example in the form of padding oracle attacks?
 
 See ASVS Crypto (V7), Data Protection (V9), and SSL/TLS (V10)
 
@@ -51,8 +76,6 @@ Do the following, at a minimum, and consult the references:
 -   Classify data processed, stored, or transmitted by an application.
     Identify which data is sensitive according to privacy laws,
     regulatory requirements, or business needs.
-
--   Apply controls as per the classification.
 
 -   Don't store sensitive data unnecessarily. Discard it as soon as
     possible or use PCI DSS compliant tokenization or even truncation.
@@ -70,9 +93,34 @@ Do the following, at a minimum, and consult the references:
 
 -   Disable caching for response that contain sensitive data.
 
+-   Apply required security controls as per the data classification.
+
+-   Do not use legacy protocols such as FTP and SMTP for transporting
+    sensitive data.
+
 -   Store passwords using strong adaptive and salted hashing functions
     with a work factor (delay factor), such as Argon2, scrypt, bcrypt or
     PBKDF2.
+
+-   Initialization vectors must be chosen appropriate for the mode of
+    operation.  For many modes, this means using a CSPRNG (cryptographically
+    secure pseudo random number generator).  For modes that require a
+    nonce, then the IV does not need a CSPRNG.  In all cases, the IV
+    should never be used twice for a fixed key.
+
+-   Always use authenticated encryption instead of just encryption.
+
+-   Keys should be generated cryptographically randomly and stored in
+    memory as byte arrays. If a password is used, then it must be converted
+    to a key via an appropriate password base key derivation function.
+
+-   Ensure that cryptographic randomness is used where appropriate, and
+    that it has not been seeded in a predictable way or with low entropy.
+    Most modern APIs do not require the developer to seed the CSPRNG to
+    get security.
+
+-   Avoid deprecated cryptographic functions and padding schemes, such as
+    MD5, SHA1, PKCS number 1 V1.5, etc....
 
 -   Verify independently the effectiveness of configuration and
     settings.
