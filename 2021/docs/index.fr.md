@@ -7,76 +7,61 @@ de se procurer depuis notre page d'accueil.
 Un très grand merci à l'ensemble des personnes qui ont contribué de leur temps et leurs données pour cette itération.
 Sans vous, cette mouture n'aurait pas vu le jour. **MERCI**.
 
-## What's changed in the Top 10 for 2021
+## Les changements du Top 10 pour 2021
 
-There are three new categories, four categories with naming and scoping
-changes, and some consolidation in the Top 10 for 2021.
+Il y a trois nouvelles catégories, quatre catégories avec un changement de nom et de périmètre, ainsi que des
+consolidations dans ce Top 10 2021.
 
-<img src="./assets/image1.png" style="width:6.5in;height:1.78889in" alt="Mapping of the relationship between the Top 10 2017 and the new Top 10 2021" />
+<img src="./assets/image1.png" style="width:6.5in;height:1.78889in" alt="Représentation des relations entre le Top 10 2017 et le nouveau Top 10 2021" />
 
-**A01:2021-Broken Access Control** moves up from the fifth position; 94%
-of applications were tested for some form of broken access control. The
-34 CWEs mapped to Broken Access Control had more occurrences in
-applications than any other category.
+**A01:2021-Ruptures de contrôles d'accès** monte en première position depuis la cinquième place ; 94% des applications
+ont été testées sur des vulnérabilités de ce type. Les 34 CWEs associées ont eu plus d'occurrences dans les applications
+auditées que n'importe quelle autre catégorie.
 
-**A02:2021-Cryptographic Failures** shifts up one position to #2,
-previously known as *Sensitive Data Exposure,* which was broad symptom
-rather than a root cause. The renewed focus here is on failures related
-to cryptography which often leads to sensitive data exposure or system
-compromise.
+**A02:2021-Défaillances cryptographiques** gagne une position et prend la deuxième place, précédemment connu sous le
+nom de *Exposition de données sensibles*, qui était un symptôme large plutôt qu'une cause principale. L'accent est mis
+sur des défaillances liées à la cryptographie, qui souvent entraînent une exposition de données sensibles ou une
+compromission de système.
 
-**A03:2021-Injection** slides down to the third position. 94% of the
-applications were tested for some form of injection, and the 33 CWEs
-mapped into this category have the second most occurrences in
-applications. Cross-site Scripting is now part of this category in this
-edition.
+**A03:2021-Injection** glisse à la troisième position. 94% des applications ont été testées sur des vulnérabilités
+de ce type. Les 33 CWEs associées à cette catégorie ont eu le deuxième plus grand nombre d'occurrences. *Cross-Site
+Scripting* fait désormais partie de cette catégorie dans cette édition.
 
-**A04:2021-Insecure Design** is a new category for 2021, with a focus on
-risks related to design flaws. If we genuinely want to "move left" as an
-industry, it calls for more use of threat modeling, secure design
-patterns and principles, and reference architectures.
+**A04:2021-Conception non sécurisée** est une nouvelle catégorie, avec un accent sur les défauts de conception. Si nous
+voulons ajouter des contrôles en amont, cela appel à avoir recours aux modèles de menaces, aux modèles et principes de
+conception sécurisés, et aux architectures de référence.
 
-**A05:2021-Security Misconfiguration** moves up from #6 in the previous
-edition; 90% of applications were tested for some form of
-misconfiguration. With more shifts into highly configurable software,
-it's not surprising to see this category move up. The former category
-for XML External Entities (XXE) is now part of this category.
+**A05:2021-Mauvaise configuration de sécurité** gagne une place ; 90% des applications ont été testées sur des
+vulnérabilités de ce type. Avec des logiciels de plus en plus paramétrables, il n'est pas surprenant de voir cette
+catégorie prendre de l'ampleur. L'ancienne catégorie *XML Entités externes (XXE)* est incluse dans celle-ci.
 
-**A06:2021-Vulnerable and Outdated Components** was previously titled
-*Using Components with Known Vulnerabilities* and is #2 in the industry
-survey, but also had enough data to make the Top 10 via data analysis.
-This category moves up from #9 in 2017 and is a known issue that we
-struggle to test and assess risk. It is the only category not to have
-any CVEs mapped to the included CWEs, so a default exploit and impact
-weights of 5.0 are factored into their scores.
+**A06:2021-Composants vulnérables et obsolètes** était précédemment nommée *Utilisation de Composants avec des
+Vulnérabilités Connues*. Elle se place deuxième de l'enquête auprès de l'industrie, mais pouvait également entrer dans
+le Top 10 via l'analyse de données. Cette catégorie progresse depuis sa neuvième place en 2017, elle est un problème
+connu dont nous avons du mal à tester et à mesurer les risques. Il s'agit de la seule catégorie à n'avoir aucune CVE
+associée aux CWEs concernées, en conséquence les coefficients d'impact et de poids ont été renseignés à 5.0 par défaut.
 
-**A07:2021-Identification and Authentication Failures** was previously
-*Broken Authentication* and is sliding down from the second position,
-and now includes CWEs that are more related to identification failures.
-This category is still an integral part of the Top 10, but the increased
-availability of standardized frameworks seems to be helping.
+**A07:2021-Identification et authentification de mauvaise qualité** était précédemment *Authentification de mauvaise
+qualité*, elle perd la deuxième place. Elle inclut désormais des CWEs également liées aux échecs d'identification. Cette
+catégorie est toujours présente dans le Top 10, mais la disponibilité croissante de frameworks standardisés
+semble aider.
 
-**A08:2021-Software and Data Integrity Failures** is a new category for
-2021, focusing on making assumptions related to software updates,
-critical data, and CI/CD pipelines without verifying integrity. One of
-the highest weighted impacts from CVE/CVSS data mapped to the 10 CWEs in
-this category. Insecure Deserialization from 2017 is now a part of this
-larger category.
+**A08:2021-Manque d'intégrité des données et du logiciel** est une nouvelle catégorie, se concentrant sur la formulation
+d'hypothèses sur les mises à jour logicielles, les données critiques et les pipelines CI/CD sans vérifier leur
+intégrité. L'un des impacts les plus élevés à partir des données de CVE/CVSS associées aux 10 CWEs de cette catégorie.
+*Désérialisation non sécurisée*, listée en 2017, est désormais partie intégrante de cette catégorie.
 
-**A09:2021-Security Logging and Monitoring Failures** was previously
-*Insufficient Logging &* Monitoring and is added from the industry
-survey (#3), moving up from #10 previously. This category is expanded to
-include more types of failures, is challenging to test for, and isn't
-well represented in the CVE/CVSS data. However, failures in this
-category can directly impact visibility, incident alerting, and
-forensics.
+**A09:2021-Carence des systèmes de contrôle et de journalisation**, précédemment *Supervision et Journalisation
+Insuffisantes*, est ajoutée de l'enquête auprès de l'industrie (3ème), précédemment à la dixième place. Cette catégorie
+a été étendue pour inclure plus de types de défaillances, est difficile à tester et est dès lors mal représentée dans les
+données CVE/CVSS. Toutefois, des incidents dans cette catégorie peuvent impacter directement la visibilité, la levée
+d'alertes et l'analyse forensique.
 
-**A10:2021-Server-Side Request Forgery** is added from the industry
-survey (#1). The data shows a relatively low incidence rate with above
-average testing coverage, along with above-average ratings for Exploit
-and Impact potential. This category represents the scenario where the
-industry professionals are telling us this is important, even though
-it's not illustrated in the data at this time.
+**A10:2021-Falsification de requête côté serveur** provient de l'enquête auprès de l'industrie (1ère). Les données
+montrent une incidence faible, avec un taux de couverture des tests supérieur à la moyenne, accompagné de notes de
+potentiel d'exploitabilité et d'impact supérieur à la moyenne. Cette catégorie est un exemple où les professionnels
+de l'industrie nous indiquent que cette catégorie est importante, même si cela ne transparaît pas encore dans les
+données.
 
 ## Methodology
 
