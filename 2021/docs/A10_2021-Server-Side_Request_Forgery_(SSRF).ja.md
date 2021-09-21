@@ -8,25 +8,18 @@
 
 ## 概要
 
-This category is added from the industry survey (#1). The data shows a
-relatively low incidence rate with above average testing coverage and
-above-average Exploit and Impact potential ratings. As new entries are
-likely to be a single or small cluster of CWEs for attention and
-awareness, the hope is that they are subject to focus and can be rolled
-into a larger category in a future edition.
+このカテゴリは業界の調査（第1位）から追加されました。
+調査データからわかることは、よくあるテストより広範な範囲において、問題の発生率は比較的低いものの、問題が起きた場合のエクスプロイトとインパクトは平均以上のものとなり得ます。
+新しい項目は注意とアウェアネスのために単一または小さなCWEの集合であることが多いので、将来の版にてそれらが注目されより大きなカテゴリとなることが期待されます。
 
 ## 説明
 
-SSRF flaws occur whenever a web application is fetching a remote
-resource without validating the user-supplied URL. It allows an attacker
-to coerce the application to send a crafted request to an unexpected
-destination, even when protected by a firewall, VPN, or another type of
-network ACL.
+SSRFの欠陥は、Webアプリケーションがユーザーから提供されたURLを検証することなしにリモートのリソースを取得する場合にもれなく発生します。
+ファイアウォールやVPNあるいはその他の種類のネットワークACLによってアプリケーションが保護されている場合でも、SSRFはアプリケーションに対し、意図しない宛先への加工されたリクエストの送信を強要することを可能にします。
 
-As modern web applications provide end-users with convenient features,
-fetching a URL becomes a common scenario. As a result, the incidence of
-SSRF is increasing. Also, the severity of SSRF is becoming higher due to
-cloud services and the complexity of architectures.
+モダンなアプリケーションがエンドユーザーに便利な機能を提供するようになり、アプリケーションがURLを取得をすることは珍しくないシナリオとなりした。
+その結果、SSRFの発生は増加しています。
+またSSRFの深刻度も、クラウドサービスやアーキテクチャの複雑性を背景として、段々と大きくなりつつあります。
 
 ## 防止方法
 
@@ -34,14 +27,14 @@ cloud services and the complexity of architectures.
 
 ## **ネットワーク層から**
 
--   SSRFの影響を減らすために、リモートリソースへのアクセス機能を分離されたネットワークにセグメント化します。
+-   SSRFの影響を減らすために、リモートのリソースへアクセスする機能を分離されたネットワークに切り出します。
 
 -   必須のイントラネット通信を除く全ての通信をブロックするために、「デフォルト拒否」のファイアウォールポリシーまたはネットワークアクセス制御を強制します。
 ## **アプリケーション層から:**
 
 -   クライアントが提供した全ての入力データをサニタイズし、検証します。
 
--   明確な許可リスト用いてURLスキーマ、ポート、宛先を強制します。
+-   明確な許可リスト用いてURLスキーム、ポート、宛先を強制します。
 
 -   生のレスポンスをクライアントに送信しないようにします。
 
