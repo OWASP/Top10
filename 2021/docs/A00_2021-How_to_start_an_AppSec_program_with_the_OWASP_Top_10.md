@@ -47,34 +47,33 @@ Konsep jalan beraspal dibentuk dengan persetujuan dan keterlibatan langsung dari
 
 ## Tahap 4. Migrasikan semua aplikasi yang akan datang dan yang sudah ada ke jalan beraspal.
 
-Tambahkan Alat pendeteksi pada Konsep Jalan Beraspal saat anda
-mengembangkannya dan menyediakan informasi untuk tim pengembang
-untuk meningkatkan keamanan dari aplikasi mereka dengan bagaimana
-mereka bisa langsung mengadopsi elemen dari konsep jalan beraspal.
-Ketika sebuah aspekdari konsep jalan beraspal telah diadopsi, organisasi
-harus mengimplementasikan pemeriksaan integrasi yang berkelanjutan
-yang mana memeriksa kode yang telah ada dan check-in yang menggunakan
-alternatif terlarang dan memperingatkan atau menolak build program
-atau check-in. Hal ini mencegah opsi yang tidak aman dapat merayap 
-ke dalam kode sepanjang waktu, mencegah hutang teknis dan aplikasi 
-tidak aman yang rusak. Peringatan semacam itu harus terhubung kepada 
-alternatif yang aman, sehingga tim pengembang dapat diberikan jawaban
-yang benar sesegera mungkin. Mereka dapat melakukan refactoring dan
-mengadopsi kompnen pada konsep jalan beraspal dengan cepat.
+Tambahkan Alat pendeteksi pada Konsep Jalan Beraspal saat anda mengembangkannya 
+dan menyediakan informasi untuk tim pengembang untuk meningkatkan keamanan dari 
+aplikasi mereka dengan bagaimana mereka bisa langsung mengadopsi elemen dari konsep 
+jalan beraspal. Ketika sebuah aspekdari konsep jalan beraspal telah diadopsi, 
+organisasi harus mengimplementasikan pemeriksaan integrasi yang berkelanjutan yang 
+mana memeriksa kode yang telah ada dan check-in yang menggunakan alternatif terlarang 
+dan memperingatkan atau menolak build program atau check-in. Hal ini mencegah opsi 
+yang tidak aman dapat merayap ke dalam kode sepanjang waktu, mencegah hutang teknis 
+dan aplikasi tidak aman yang rusak. Peringatan semacam itu harus terhubung kepada 
+alternatif yang aman, sehingga tim pengembang dapat diberikan jawaban yang benar 
+sesegera mungkin. Mereka dapat melakukan refactoring dan mengadopsi kompnen pada 
+konsep jalan beraspal dengan cepat.
 
-## Stage 5. Test that the paved road has mitigated the issues found in the OWASP Top 10
+## Tahap 5. Uji apakah konsep jalan beraspal telah mengurangi masalah yang ditemukan di OWASP Top 10
 
-Paved road components should address a significant issue with the OWASP
-Top 10, for example, how to automatically detect or fix vulnerable
-components, or a static code analysis IDE plugin to detect injections or
-even better a library that is known safe against injection, such as
-React or Vue. The more of these secure drop-in replacements provided to
-teams, the better. A vital task of the appsec team is to ensure that the
-security of these components is continuously evaluated and improved.
-Once they are improved, some form of communication pathway with
-consumers of the component should indicate that an upgrade should occur,
-preferably automatically, but if not, as least highlighted on a
-dashboard or similar.
+Komponen konsep jalan beraspal harus mengatasi masalah  yang signifikan
+dengan OWASP Top 10, sebagai contohnya, bagaimana untuk mendeteksi secara
+otomatis atau memperbaiki komponen yang rentan, atau plugin IDE analisis
+kode statis untuk mendeteksi injeksi atau bahkan lebih seperti perpustakaan
+yang dikenal aman terhadap injeksi, seperti React atau Vue. Semakin banyak
+penggantian pengiriman aman yang diberikan kepada tim, semakin baik. sebuah
+tugas penting pada tim keamanan aplikasi adalah untuk memastikan bahwa
+keamanan komponen-komponen ini adalah ditingkatkan dan dievaluasi secara
+berkelanjutan. Setelah mereka diperbaiki, beberapa bentuk jalur komunikasi
+dengan konsumen dari komponen harus mengindikasikan bahwa peningkatan harus
+terjadi, sebaiknya secara otomatis, tapi apabila tidak, setidaknya disorot
+pada sebuah tampilan dasar atau sejenisnya.
 
 ## Stage 6. Build your program into a mature AppSec program
 
