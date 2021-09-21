@@ -68,6 +68,8 @@ Do the following, at a minimum, and consult the references:
 
 -   Disable caching for response that contain sensitive data.
 
+-   Apply required security controls as per the data classification.
+
 -   Do not use legacy protocols such as FTP and SMTP for transporting
     sensitive data.
 
