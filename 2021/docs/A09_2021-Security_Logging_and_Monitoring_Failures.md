@@ -8,7 +8,7 @@
 
 ## Overview
 
-Security logging and monitoring came from the industry survey (#3), up
+Security logging and monitoring came from the community survey (#3), up
 slightly from the tenth position in the OWASP Top 10 2017. Logging and
 monitoring can be challenging to test, often involving interviews or
 asking if attacks were detected during a penetration test. There isn't
