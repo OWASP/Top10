@@ -65,7 +65,7 @@ this category. Insecure Deserialization from 2017 is now a part of this
 larger category.
 
 **A09:2021-Security Logging and Monitoring Failures** was previously
-*Insufficient Logging &* Monitoring and is added from the industry
+*Insufficient Logging & Monitoring* and is added from the industry
 survey (#3), moving up from #10 previously. This category is expanded to
 include more types of failures, is challenging to test for, and isn't
 well represented in the CVE/CVSS data. However, failures in this

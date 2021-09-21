@@ -52,8 +52,6 @@ Do the following, at a minimum, and consult the references:
     Identify which data is sensitive according to privacy laws,
     regulatory requirements, or business needs.
 
--   Apply controls as per the classification.
-
 -   Don't store sensitive data unnecessarily. Discard it as soon as
     possible or use PCI DSS compliant tokenization or even truncation.
     Data that is not retained cannot be stolen.
@@ -69,6 +67,11 @@ Do the following, at a minimum, and consult the references:
     like HTTP Strict Transport Security (HSTS).
 
 -   Disable caching for response that contain sensitive data.
+
+-   Apply required security controls as per the data classification.
+
+-   Do not use legacy protocols such as FTP and SMTP for transporting
+    sensitive data.
 
 -   Store passwords using strong adaptive and salted hashing functions
     with a work factor (delay factor), such as Argon2, scrypt, bcrypt or
