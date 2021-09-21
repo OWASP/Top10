@@ -36,6 +36,7 @@ plugins:
       languages:
         en: English
         it: Italiano
+        ja: Japanese
         fr: Français
       nav_translations:
         fr:
