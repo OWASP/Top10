@@ -52,7 +52,7 @@ Control).
 
 ## How to Prevent
 
-Developers should implement some or all the following controls,
+Developers should implement some or all the following controls, 
 depending on the risk of the application:
 
 -   Ensure all login, access control, and server-side input validation
