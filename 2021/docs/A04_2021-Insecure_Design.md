@@ -15,7 +15,7 @@ design patterns, and reference architectures. Notable CWEs include
 *CWE-256: Unprotected Storage of Credentials*, *CWE-501: Trust Boundary
 Violation*, and *CWE-522: Insufficiently Protected Credentials*.
 
-## Description 
+## Description
 
 Insecure design is a broad category representing many different
 weaknesses, expressed as “missing or ineffective control design.”
@@ -74,11 +74,13 @@ rejected such transactions.
 
 ## References
 
--   \[OWASP Cheat Sheet: Secure Design Principles\] (TBD)
+-   [OWASP Cheat Sheet: Secure Design Principles](TBD)
 
--   NIST – Guidelines on Minimum Standards for Developer Verification of
-    > Software  
-    > https://www.nist.gov/system/files/documents/2021/07/09/Developer%20Verification%20of%20Software.pdf
+-   [NIST – Guidelines on Minimum Standards for Developer Verification of Software](https://www.nist.gov/system/files/documents/2021/07/09/Developer%20Verification%20of%20Software.pdf)
+
+-   [The Threat Modeling Manifesto](https://threatmodelingmanifesto.org)
+
+-   [Awesome Threat Modeling](https://github.com/hysnsec/awesome-threat-modelling)
 
 ## List of Mapped CWEs
 

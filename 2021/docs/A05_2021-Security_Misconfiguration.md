@@ -120,7 +120,7 @@ sensitive data stored within cloud storage to be accessed.
 
 ## List of Mapped CWEs
 
-CWE-2 Configuration
+CWE-2 7PK - Environment
 
 CWE-11 ASP.NET Misconfiguration: Creating Debug Binary
 
