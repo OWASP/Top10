@@ -34,7 +34,7 @@ edition.
 
 **A04:2021-Insecure Design** is a new category for 2021, with a focus on
 risks related to design flaws. If we genuinely want to "move left" as an
-industry, it calls for more use of threat modeling, secure design
+ICT community, it calls for more use of threat modeling, secure design
 patterns and principles, and reference architectures.
 
 **A05:2021-Security Misconfiguration** moves up from #6 in the previous
@@ -44,7 +44,7 @@ it's not surprising to see this category move up. The former category
 for XML External Entities (XXE) is now part of this category.
 
 **A06:2021-Vulnerable and Outdated Components** was previously titled
-*Using Components with Known Vulnerabilities* and is #2 in the industry
+*Using Components with Known Vulnerabilities* and is #2 in the community
 survey, but also had enough data to make the Top 10 via data analysis.
 This category moves up from #9 in 2017 and is a known issue that we
 struggle to test and assess risk. It is the only category not to have
@@ -65,31 +65,32 @@ this category. Insecure Deserialization from 2017 is now a part of this
 larger category.
 
 **A09:2021-Security Logging and Monitoring Failures** was previously
-*Insufficient Logging & Monitoring* and is added from the industry
+*Insufficient Logging & Monitoring* and is added from the community
 survey (#3), moving up from #10 previously. This category is expanded to
 include more types of failures, is challenging to test for, and isn't
 well represented in the CVE/CVSS data. However, failures in this
 category can directly impact visibility, incident alerting, and
 forensics.
 
-**A10:2021-Server-Side Request Forgery** is added from the industry
+**A10:2021-Server-Side Request Forgery** is added from the community
 survey (#1). The data shows a relatively low incidence rate with above
 average testing coverage, along with above-average ratings for Exploit
 and Impact potential. This category represents the scenario where the
-industry professionals are telling us this is important, even though
+community members are telling us this is important, even though
 it's not illustrated in the data at this time.
 
 ## Methodology
 
 This installment of the Top 10 is more data-driven than ever but not
 blindly data-driven. We selected eight of the ten categories from
-contributed data and two categories from an industry survey at a high
+contributed data and two categories from a community survey at a high
 level. We do this for a fundamental reason, looking at the contributed
 data is looking into the past. AppSec researchers take time to find new
 vulnerabilities and new ways to test for them. It takes time to
 integrate these tests into tools and processes. By the time we can
 reliably test a weakness at scale, years have likely passed. To balance
-that view, we use an industry survey to ask people on the front lines
+that view, we use use a survey througthout the OWASP community of AppSec
+experts and professional developers to ask people on the front lines
 what they see as essential weaknesses that the data may not show yet.
 
 There are a few critical changes that we adopted to continue to mature
