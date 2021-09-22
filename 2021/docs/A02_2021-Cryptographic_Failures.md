@@ -90,7 +90,7 @@ Do the following, at a minimum, and consult the references:
     unauthorized access and export; use proper key management.
 
 -   Encrypt all data in transit with secure protocols such as TLS with
-    perfect forward secrecy (PFS) ciphers, cipher prioritization by the
+    forward secrecy (FS) ciphers, cipher prioritization by the
     server, and secure parameters. Enforce encryption using directives
     like HTTP Strict Transport Security (HSTS).
 
