@@ -36,10 +36,11 @@ vulnérabilités de ce type. Avec des logiciels de plus en plus paramétrables, 
 catégorie prendre de l'ampleur. L'ancienne catégorie *XML Entités externes (XXE)* est incluse dans celle-ci.
 
 **A06:2021-Composants vulnérables et obsolètes** était précédemment nommée *Utilisation de Composants avec des
-Vulnérabilités Connues*. Elle se place deuxième de l'enquête auprès de l'industrie, mais pouvait également entrer dans
-le Top 10 via l'analyse de données. Cette catégorie progresse depuis sa neuvième place en 2017, elle est un problème
-connu dont nous avons du mal à tester et à mesurer les risques. Il s'agit de la seule catégorie à n'avoir aucune CVE
-associée aux CWEs concernées, en conséquence les coefficients d'impact et de poids ont été renseignés à 5.0 par défaut.
+Vulnérabilités Connues*. Elle se place deuxième de l'enquête auprès de la communauté du Top 10, mais pouvait également
+entrer dans le Top 10 via l'analyse de données. Cette catégorie progresse depuis sa neuvième place en 2017, elle est un
+problème connu dont nous avons du mal à tester et à mesurer les risques. Il s'agit de la seule catégorie à n'avoir
+aucune CVE associée aux CWEs concernées, en conséquence les coefficients d'impact et de poids ont été renseignés à 5.0
+par défaut.
 
 **A07:2021-Identification et authentification de mauvaise qualité** était précédemment *Authentification de mauvaise
 qualité*, elle perd la deuxième place. Elle inclut désormais des CWEs également liées aux échecs d'identification. Cette
@@ -57,9 +58,9 @@ a été étendue pour inclure plus de types de défaillances, est difficile à t
 données CVE/CVSS. Toutefois, des incidents dans cette catégorie peuvent impacter directement la visibilité, la levée
 d'alertes et l'analyse forensique.
 
-**A10:2021-Falsification de requête côté serveur** provient de l'enquête auprès de l'industrie (1ère). Les données
-montrent une incidence faible, avec un taux de couverture des tests supérieur à la moyenne, accompagné de notes de
-potentiel d'exploitabilité et d'impact supérieur à la moyenne. Cette catégorie est un exemple où les professionnels
+**A10:2021-Falsification de requête côté serveur** provient de l'enquête auprès de la communauté Top 10 (1ère). Les
+données montrent une incidence faible, avec un taux de couverture des tests supérieur à la moyenne, accompagné de notes
+de potentiel d'exploitabilité et d'impact supérieur à la moyenne. Cette catégorie est un exemple où les professionnels
 de l'industrie nous indiquent que cette catégorie est importante, même si cela ne transparaît pas encore dans les
 données.
 
