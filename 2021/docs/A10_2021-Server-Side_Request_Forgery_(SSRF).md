@@ -33,15 +33,24 @@ cloud services and the complexity of architectures.
 Developers can prevent SSRF by implementing some or all the following
 defense in depth controls:
 
-## **From Network layer**
+### **From Network layer**
 
 -   Segment remote resource access functionality in separate networks to
     reduce the impact of SSRF
 
 -   Enforce “deny by default” firewall policies or network access
-    control rules to block all but essential intranet traffic
+    control rules to block all but essential intranet traffic. 
+    Log all accepted *and* blocked network flows 
+    (see A09:2021-Security Logging and Monitoring Failures).
+    Establish an ownership and a lifecycle for firewall rules based on applications
+    
+-   Don't deploy other security relevant services on front systems. 
+    Control local traffic on these systems (e.g. localhost)
+    
+-   For frontends with dedicated and manageable user groups use network encryption (e.g. VPNs)
+    on independant systems to consider very high protection needs  
 
-## **From Application layer:**
+### **From Application layer:**
 
 -   Sanitize and validate all client-supplied input data
 
