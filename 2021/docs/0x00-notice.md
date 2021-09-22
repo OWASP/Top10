@@ -16,8 +16,8 @@ Taking comments on this draft, and preparing the graphic refresh in time for the
 
 ## Contributors
 
-- Orange Tsai, Author of A10-2021: Server Side Request Forgery
-- Jim Manico and Jakub Maćkowski - OWASP CheatSheets Coordination
+- Orange Tsai [@orange_8361](https://twitter/orange_8361), Author of A10-2021: Server Side Request Forgery
+- Jim Manico [@manicode](https://twitter/manicode) and Jakub Maćkowski [@kubamackowski](https://twitter/kubamackowski) - OWASP CheatSheets Coordination
 
 ## How you can help
 
