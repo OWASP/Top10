@@ -44,7 +44,7 @@ it's not surprising to see this category move up. The former category
 for XML External Entities (XXE) is now part of this category.
 
 **A06:2021-Vulnerable and Outdated Components** was previously titled
-*Using Components with Known Vulnerabilities* and is #2 in the industry
+*Using Components with Known Vulnerabilities* and is #2 in the Top 10 community
 survey, but also had enough data to make the Top 10 via data analysis.
 This category moves up from #9 in 2017 and is a known issue that we
 struggle to test and assess risk. It is the only category not to have
@@ -72,24 +72,24 @@ well represented in the CVE/CVSS data. However, failures in this
 category can directly impact visibility, incident alerting, and
 forensics.
 
-**A10:2021-Server-Side Request Forgery** is added from the industry
+**A10:2021-Server-Side Request Forgery** is added from the Top 10 community
 survey (#1). The data shows a relatively low incidence rate with above
 average testing coverage, along with above-average ratings for Exploit
 and Impact potential. This category represents the scenario where the
-industry professionals are telling us this is important, even though
+security community members are telling us this is important, even though
 it's not illustrated in the data at this time.
 
 ## Methodology
 
 This installment of the Top 10 is more data-driven than ever but not
 blindly data-driven. We selected eight of the ten categories from
-contributed data and two categories from an industry survey at a high
+contributed data and two categories from an the Top 10 community survey at a high
 level. We do this for a fundamental reason, looking at the contributed
 data is looking into the past. AppSec researchers take time to find new
 vulnerabilities and new ways to test for them. It takes time to
 integrate these tests into tools and processes. By the time we can
 reliably test a weakness at scale, years have likely passed. To balance
-that view, we use an industry survey to ask people on the front lines
+that view, we use an community survey to ask application security and development experts on the front lines
 what they see as essential weaknesses that the data may not show yet.
 
 There are a few critical changes that we adopted to continue to mature
@@ -182,7 +182,7 @@ we find is looking back in the past and might be missing trends from the
 last year, which are not present in the data.
 
 Therefore, we only pick eight of ten categories from the data because
-it's incomplete. The other two categories are from the industry survey.
+it's incomplete. The other two categories are from the Top 10 community survey.
 It allows the practitioners on the front lines to vote for what they see
 as the highest risks that might not be in the data (and may never be
 expressed in data).
