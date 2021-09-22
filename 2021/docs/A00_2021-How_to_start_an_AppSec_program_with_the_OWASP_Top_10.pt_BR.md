@@ -1,25 +1,29 @@
-# How to start an AppSec Program with the OWASP Top 10 
+[comment]: <> ([WIP - Working in progress])
 
-Previously, the OWASP Top 10 was never designed to be the basis for an
-AppSec program. However, it's essential to start somewhere for many
-organizations just starting out on their application security journey.
-The OWASP Top 10 2021 is a good start as a baseline for checklists and
-so on, but it's not in itself sufficient.
+# Como iniciar um programa AppSec com o OWASP Top 10
 
-## Stage 1. Identify the gaps and goals of your appsec program
+Antes, o OWASP Top 10 nunca foi projetado para ser a base de um programa AppSec.
+No entanto, é essencial começar de algum lugar para muitas organizações que
+estão apenas começando em sua jornada de segurança de aplicações.
+O OWASP Top 10 2021 é um bom começo como base para listas de verificação de segurança
+e assim por diante, mas não é suficiente por si só.
 
-Many Application Security (AppSec) programs try to run before they can
-crawl or walk. These efforts are doomed to failure. We strongly
-encourage CISOs and AppSec leadership to use OWASP Software Assurance
-Maturity Model (SAMM) \[<https://owaspsamm.org>\] to identify weaknesses
-and areas for improvement over a 1-3 year period. The first step is to
-evaluate where you are now, identify the gaps in governance, design,
-implementation, verification, and operations you need to resolve
-immediately versus those that can wait, and prioritize implementing or
-improving the fifteen OWASP SAMM security practices. OWASP SAMM can help
-you build and measure improvements in your software assurance efforts.
+## Etapa 1. Identifique as lacunas e os objetivos de seu programa appsec
 
-## Stage 2. Plan for a paved road secure development lifecycle
+Muitos programas de Aplicações de Segurança (AppSec) tentam correr antes 
+que possam engatinhar ou andar. Esses esforços estão fadados ao fracasso. 
+Incentivamos fortemente os CISOs e a liderança de AppSec a usar
+o Modelo de Maturidade de Garantia de Software OWASP 
+(Software Assurance Maturity Model - SAMM)\[<https://owaspsamm.org>\] para identificar 
+pontos fracos e áreas de melhoria em um período de 1-3 anos. A primeira etapa
+é avaliar onde você está agora, identificar as lacunas na governança,
+design, implementação, verificação e operações que você precisa resolver
+imediatamente em comparação com aquelas que podem esperar, e priorizar
+a implementação ou melhoria das quinze práticas de segurança OWASP SAMM.
+O OWASP SAMM pode ajudá-lo a construir e medir melhorias em seus
+esforços de garantia de software.
+
+## Etapa 2. Plano para um ciclo de vida de desenvolvimento seguro de estrada pavimentada
 
 Traditionally the preserve of so-called "unicorns," the paved road
 concept is the easiest way to make the most impact and scale AppSec
@@ -69,10 +73,10 @@ adopt the paved road component quickly.
 Paved road components should address a significant issue with the OWASP
 Top 10, for example, how to automatically detect or fix vulnerable
 components, or a static code analysis IDE plugin to detect injections or
-even better start using a library that is known safe against injection.
-The more of these secure drop-in replacements provided to teams, the better.
-A vital task of the appsec team is to ensure that the security of these
-components is continuously evaluated and improved.
+even better a library that is known safe against injection, such as
+React or Vue. The more of these secure drop-in replacements provided to
+teams, the better. A vital task of the appsec team is to ensure that the
+security of these components is continuously evaluated and improved.
 Once they are improved, some form of communication pathway with
 consumers of the component should indicate that an upgrade should occur,
 preferably automatically, but if not, as least highlighted on a

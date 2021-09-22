@@ -15,7 +15,7 @@ design patterns, and reference architectures. Notable CWEs include
 *CWE-256: Unprotected Storage of Credentials*, *CWE-501: Trust Boundary
 Violation*, and *CWE-522: Insufficiently Protected Credentials*.
 
-## Description 
+## Description
 
 Insecure design is a broad category representing many different
 weaknesses, expressed as “missing or ineffective control design.”
@@ -30,9 +30,14 @@ benefit than should be granted.
 
 Secure design is a culture and methodology that constantly evaluates
 threats and ensures that code is robustly designed and tested to prevent
-known attack methods. Secure design requires a secure development
+known attack methods. Learn from mistakes and offer positive incentives 
+to promote improvements. Secure design is neither an add-on nor a tool 
+that you can add to a software. It requires a secure development
 lifecycle, some form of secure design pattern or paved road component
-library or tooling, and threat modeling.
+library or tooling, and threat modeling. Reach out for your security 
+specialists at the beginning of a software project to get accompaignet 
+throughout the whole project and maintainance of your software.
+
 
 ## How to Prevent
 
@@ -45,9 +50,20 @@ library or tooling, and threat modeling.
 
 -   Use threat modeling for critical authentication, access control,
     business logic, and key flows
+    
+-   Integrate plausibility checks at each tier of your application
+    (from frontend to backend)
 
 -   Write unit and integration tests to validate that all critical flows
-    are resistant to the threat model
+    are resistant to the threat model. Compile use-cases *and* misuse-cases
+    for each tier of your application.
+
+-   Segregate tier layers on system and network layers depending on the 
+    exposure and protection needs
+    
+-   Segregate tanants robustly by design throughout all tiers     
+    
+-   Limit ressource consumption by user or service    
 
 ## Example Attack Scenarios
 
@@ -74,11 +90,13 @@ rejected such transactions.
 
 ## References
 
--   \[OWASP Cheat Sheet: Secure Design Principles\] (TBD)
+-   [OWASP Cheat Sheet: Secure Design Principles](TBD)
 
--   NIST – Guidelines on Minimum Standards for Developer Verification of
-    > Software  
-    > https://www.nist.gov/system/files/documents/2021/07/09/Developer%20Verification%20of%20Software.pdf
+-   [NIST – Guidelines on Minimum Standards for Developer Verification of Software](https://www.nist.gov/system/files/documents/2021/07/09/Developer%20Verification%20of%20Software.pdf)
+
+-   [The Threat Modeling Manifesto](https://threatmodelingmanifesto.org)
+
+-   [Awesome Threat Modeling](https://github.com/hysnsec/awesome-threat-modelling)
 
 ## List of Mapped CWEs
 
