@@ -2,9 +2,9 @@
 
 ## Factors
 
-| CWEs Mapped | Max Incidence Rate | Avg Incidence Rate | Max Coverage | Avg Coverage | Avg Weighted Exploit | Avg Weighted Impact | Total Occurrences | Total CVEs |
+| CWEs Mapped | Max Incidence Rate | Avg Incidence Rate | Avg Weighted Exploit | Avg Weighted Impact | Max Coverage | Avg Coverage | Total Occurrences | Total CVEs |
 |:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
-| 4           | 19.23%             | 6.51%              | 53.67%       | 39.97%       | 6.87                 | 4.99                | 53,615            | 242        |
+| 4           | 19.23%             | 6.51%              | 6.87                 | 4.99                | 53.67%       | 39.97%       | 53,615            | 242        |
 
 ## Overview
 
@@ -135,10 +135,10 @@ result by the privacy regulator.
 
 ## List of Mapped CWEs
 
-CWE-117 Improper Output Neutralization for Logs
+[CWE-117 Improper Output Neutralization for Logs](https://cwe.mitre.org/data/definitions/117.html)
 
-CWE-223 Omission of Security-relevant Information
+[CWE-223 Omission of Security-relevant Information](https://cwe.mitre.org/data/definitions/223.html)
 
-CWE-532 Insertion of Sensitive Information into Log File
+[CWE-532 Insertion of Sensitive Information into Log File](https://cwe.mitre.org/data/definitions/532.html)
 
-CWE-778 Insufficient Logging
+[CWE-778 Insufficient Logging](https://cwe.mitre.org/data/definitions/778.html)
