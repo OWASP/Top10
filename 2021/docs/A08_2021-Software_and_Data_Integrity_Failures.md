@@ -57,7 +57,7 @@ installations.
 set of Spring Boot microservices. Being functional programmers, they
 tried to ensure that their code is immutable. The solution they came up
 with is serializing the user state and passing it back and forth with
-each request. An attacker notices the "R00" Java object signature and
+each request. An attacker notices the "rO0" Java object signature (in base64) and
 uses the Java Serial Killer tool to gain remote code execution on the
 application server.
 
