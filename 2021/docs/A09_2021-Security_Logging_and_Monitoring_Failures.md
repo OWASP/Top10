@@ -117,7 +117,10 @@ result by the privacy regulator.
     Code](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/08-Testing_for_Error_Handling/01-Testing_for_Error_Code)
 
 -   [OWASP Cheat Sheet:
-    Logging](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html)
+    Application Logging Vocabulary](https://cheatsheetseries.owasp.org/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html)
+
+-   [OWASP Cheat Sheet:
+    Logging](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html))   
 
 -   [Data Integrity: Recovering from Ransomware and Other Destructive
     Events](https://csrc.nist.gov/publications/detail/sp/1800-11/final)
