@@ -9,11 +9,10 @@ This is a draft. Do not use this version. The presence of an Axx does not mean i
 Taking comments on this draft, and preparing the graphic refresh in time for the official release on OWASP's 20th Anniversary.
 
 ## Lead Authors
-
-- Andrew van der Stock [@vanderaj](https://twitter.com/vanderaj)
-- Brian Glas [@infosecdad](https://twitter.com/infosecdad)
-- Neil Smithline [@appsecneil](https://twitter.com/appsecneil)
-- Torsten Gigler []
+- [Andrew van der Stock](mailto:vanderaj@owasp.org) (twitter: [@vanderaj](https://twitter.com/vanderaj))
+- [Brian Glas](mailto:brian.glas@owasp.org) (twitter: [@infosecdad](https://twitter.com/infosecdad))
+- [Neil Smithline](mailto:neil.smithline@owasp.org) (twitter: [@appsecneil](https://twitter.com/appsecneil))
+- [Torsten Gigler](mailto:torsten.gigler@owasp.org) (twitter: [@torsten_tweet](https://twitter.com/torsten_tweet))
 
 ## Contributors
 
