@@ -69,7 +69,9 @@ check or metadata.
 -   Rate limit API and controller access to minimize the harm from
     automated attack tooling.
 
--   JWT tokens should be invalidated on the server after logout.
+-   Stateful session idnetifiers should be invalidated on the server after logout.
+    Stateless JWT tokens should rather be short-lived so that the window of 
+    opportunity for an attacker is minimized.
 
 Developers and QA staff should include functional access control unit
 and integration tests.
