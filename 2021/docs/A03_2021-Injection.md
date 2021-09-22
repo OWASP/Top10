@@ -43,14 +43,12 @@ deployment.
 
 ## How to Prevent
 
--   Preventing injection requires keeping data separate from commands
-    and queries.
+Preventing injection requires keeping data separate from commands and queries:
 
 -   The preferred option is to use a safe API, which avoids using the
     interpreter entirely, provides a parameterized interface, or
-    migrates to Object Relational Mapping Tools (ORMs).
-
--   Note: Even when parameterized, stored procedures can still introduce
+    migrates to Object Relational Mapping Tools (ORMs).<br/>
+    **Note:** Even when parameterized, stored procedures can still introduce
     SQL injection if PL/SQL or T-SQL concatenates queries and data or
     executes hostile data with EXECUTE IMMEDIATE or exec().
 
@@ -59,9 +57,8 @@ deployment.
     characters, such as text areas or APIs for mobile applications.
 
 -   For any residual dynamic queries, escape special characters using
-    the specific escape syntax for that interpreter.
-
--   Note: SQL structures such as table names, column names, and so on
+    the specific escape syntax for that interpreter.<br/>
+    **Note:** SQL structures such as table names, column names, and so on
     cannot be escaped, and thus user-supplied structure names are
     dangerous. This is a common issue in report-writing software.
 
@@ -73,8 +70,8 @@ deployment.
 **Scenario #1:** An application uses untrusted data in the construction
 of the following vulnerable SQL call:
 
-String query = "SELECT \* FROM accounts WHERE custID='" +
-request.getParameter("id") + "'";
+> String query = "SELECT \* FROM accounts WHERE custID='" +
+> request.getParameter("id") + "'";
 
 **Scenario #2:** Similarly, an application’s blind trust in frameworks
 may result in queries that are still vulnerable, (e.g., Hibernate Query
@@ -86,7 +83,7 @@ Language (HQL)):
 In both cases, the attacker modifies the ‘id’ parameter value in their
 browser to send: ‘ or ‘1’=’1. For example:
 
-http://example.com/app/accountView?id=' or '1'='1
+> htt<span>p://example.com/app/accountView?id=' or '1'='1</span>
 
 This changes the meaning of both queries to return all the records from
 the accounts table. More dangerous attacks could modify or delete data
@@ -94,35 +91,24 @@ or even invoke stored procedures.
 
 ## References
 
--   [OWASP Proactive Controls: Secure Database
-    Access](https://owasp.org/www-project-proactive-controls/v3/en/c3-secure-database)
+-   [OWASP Proactive Controls: Secure Database Access](https://owasp.org/www-project-proactive-controls/v3/en/c3-secure-database)
 
--   [OWASP ASVS: V5 Input Validation and
-    Encoding](https://owasp.org/www-project-application-security-verification-standard)
+-   [OWASP ASVS: V5 Input Validation and Encoding](https://owasp.org/www-project-application-security-verification-standard)
 
--   [OWASP Testing Guide: SQL
-    Injection,](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/05-Testing_for_SQL_Injection) [Command
-    Injection](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/12-Testing_for_Command_Injection),
-    and [ORM
-    Injection](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/05.7-Testing_for_ORM_Injection)
+-   [OWASP Testing Guide: SQL Injection,](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/05-Testing_for_SQL_Injection) [Command Injection](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/12-Testing_for_Command_Injection),
+    and [ORM Injection](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/05.7-Testing_for_ORM_Injection)
 
--   [OWASP Cheat Sheet: Injection
-    Prevention](https://cheatsheetseries.owasp.org/cheatsheets/Injection_Prevention_Cheat_Sheet.html)
+-   [OWASP Cheat Sheet: Injection Prevention](https://cheatsheetseries.owasp.org/cheatsheets/Injection_Prevention_Cheat_Sheet.html)
 
--   [OWASP Cheat Sheet: SQL Injection
-    Prevention](https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html)
+-   [OWASP Cheat Sheet: SQL Injection Prevention](https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html)
 
--   [OWASP Cheat Sheet: Injection Prevention in
-    Java](https://cheatsheetseries.owasp.org/cheatsheets/Injection_Prevention_Cheat_Sheet_in_Java.html)
+-   [OWASP Cheat Sheet: Injection Prevention in Java](https://cheatsheetseries.owasp.org/cheatsheets/Injection_Prevention_Cheat_Sheet_in_Java.html)
 
--   [OWASP Cheat Sheet: Query
-    Parameterization](https://cheatsheetseries.owasp.org/cheatsheets/Query_Parameterization_Cheat_Sheet.html)
+-   [OWASP Cheat Sheet: Query Parameterization](https://cheatsheetseries.owasp.org/cheatsheets/Query_Parameterization_Cheat_Sheet.html)
 
--   [OWASP Automated Threats to Web Applications –
-    OAT-014](https://owasp.org/www-project-automated-threats-to-web-applications/)
+-   [OWASP Automated Threats to Web Applications – OAT-014](https://owasp.org/www-project-automated-threats-to-web-applications/)
 
--   [PortSwigger: Server-side template
-    injection](https://portswigger.net/kb/issues/00101080_serversidetemplateinjection)
+-   [PortSwigger: Server-side template injection](https://portswigger.net/kb/issues/00101080_serversidetemplateinjection)
 
 ## List of Mapped CWEs
 
