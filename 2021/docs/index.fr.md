@@ -64,21 +64,19 @@ de potentiel d'exploitabilité et d'impact supérieur à la moyenne. Cette caté
 de l'industrie nous indiquent que cette catégorie est importante, même si cela ne transparaît pas encore dans les
 données.
 
-## Methodology
+## Méthodologie
 
-This installment of the Top 10 is more data-driven than ever but not
-blindly data-driven. We selected eight of the ten categories from
-contributed data and two categories from an industry survey at a high
-level. We do this for a fundamental reason, looking at the contributed
-data is looking into the past. AppSec researchers take time to find new
-vulnerabilities and new ways to test for them. It takes time to
-integrate these tests into tools and processes. By the time we can
-reliably test a weakness at scale, years have likely passed. To balance
-that view, we use an industry survey to ask people on the front lines
-what they see as essential weaknesses that the data may not show yet.
+Cette version du Top 10 est bien plus basée sur des données que les précédentes, mais elle n'est pas pour autant
+aveuglée par celles-ci. Parmi les dix catégories, huit proviennent des données fournies et les deux dernières
+proviennent d'une enquête à haut niveau auprès de la communauté. Nous faisons ceci pour une raison fondamentale,
+observer les données consiste à observer le passé. Les chercheurs en sécurité s'investissent pour trouver de nouvelles
+vulnérabilités et de nouveaux moyens pour les détecter. Un temps certain est nécessaire pour intégrer ces tests au sein
+des outils et des processus. Au moment où nous pouvons tester ces vulnérabilités à l'échelle, des années se sont bien
+souvent écoulées. Pour équilibrer cette approche, nous avons utilisé une enquête communautaire pour demander aux experts
+en sécurité applicative et en développement, en première ligne, ce qu'ils constatent comme failles essentielles, que les
+données pourraient ne pas encore montrer.
 
-There are a few critical changes that we adopted to continue to mature
-the Top 10.
+Nous avons adopté quelques changements importants pour continuer à faire mûrir le Top 10.
 
 ### How the categories are structured
 
@@ -167,7 +165,7 @@ we find is looking back in the past and might be missing trends from the
 last year, which are not present in the data.
 
 Therefore, we only pick eight of ten categories from the data because
-it's incomplete. The other two categories are from the industry survey.
+it's incomplete. The other two categories are from the Top 10 community survey.
 It allows the practitioners on the front lines to vote for what they see
 as the highest risks that might not be in the data (and may never be
 expressed in data).
