@@ -75,38 +75,44 @@ dengan konsumen dari komponen harus mengindikasikan bahwa peningkatan harus
 terjadi, sebaiknya secara otomatis, tapi apabila tidak, setidaknya disorot
 pada sebuah tampilan dasar atau sejenisnya.
 
-## Stage 6. Build your program into a mature AppSec program
+## Tahap 6. Bangun program anda menjadi program keamanan aplikasi yang matang
 
-You must not stop at the OWASP Top 10. It only covers 10 risk
-categories. We strongly encourage organizations to adopt the Application
-Security Verification Standard and progressively add paved road
-components and tests for Level 1, 2, and 3, depending on the developed
-applications' risk level.
+Anda tidak boleh berhenti hanya di OWASP Top 10. Itu hanya mencakup
+10 kategori resiko. Kami sangat mendorong organisasi untuk mengadopsi
+Application Security Verification Standard dan semakin menambah
+komponen jalan beraspal dan menguji untuk tingkat 1, 2, dan 3,
+tergantung pada pengembangan tingkat resiko pada aplikasi 
 
-## Going beyond
+## Melampaui
 
-All great AppSec programs go beyond the bare minimum. Everyone must keep
-going if we're ever going to get on top of appsec vulnerabilities.
+Semua program aplikasi keamanan yang hebat pergi melampaui batas minimal.
+Semua orang harus terus melaju jika kita akan berada di atas untuk
+kerentanan keamanan aplikasi.
 
--   **Conceptual integrity**. Mature AppSec programs must contain some
-    concept of security architecture, whether a formal cloud or
-    enterprise security architecture or threat modeling
+-   **Integritas Konseptual**. Program aplikasi keamanan yang matang
+    harus mengandung beberapa konsep dari arsitektur keamanan,
+    Apakah berupa cloud yang formal atau arsitektur keamanan
+    perusahaan atau threat modeling.
 
--   **Automation and scale**. Mature AppSec programs try to automate as
-    much of their deliverables as possible, using scripts to emulate
-    complex penetration testing steps, static code analysis tools
-    directly available to the development teams, assisting dev teams in
-    building appsec unit and integration tests, and more.
+-   **Skala dan otomasi**. Program aplikasi keamanan yang matang mencoba
+    untuk mengotomasi sebanyak pengiriman yang dapat dilakukan,
+    menggunakan skrip untuk meniru tahapan penetration testing yang
+    kompleks, alat analisis kode statis tersedia secara langsung ke
+    tim pengembang, membantu tim pengembang dalam membangun unit aplikasi
+    keamanan dan pengujian integrasi, dan banyak lagi.
 
--   **Culture**. Mature AppSec programs try to build out the insecure
-    design and eliminate the technical debt of existing code by being a
-    part of the development team and not to the side. AppSec teams who
-    see development teams as "us" and "them" are doomed to failure.
+-   **Budaya**. Program Aplikasi Keamanan yang matang mencoba untuk
+    membongkar rancangan yang tidak aman dan menghapuskan hutang teknis
+    dari kode yang telah ada dengan menjadi bagian dari tim pengembang
+    dan tidak menyampingkannya. tim aplikasi keamanan yang melihat tim
+    pengembang sebagai "kami" atau "mereka" ditakdirkan untuk gagal.
 
--   **Continuous improvement**. Mature AppSec programs look to
-    constantly improve. If something is not working, stop doing it. If
-    something is clunky or not scalable, work to improve it. If
-    something is not being used by the development teams and has no or
-    limited impact, do something different. Just because we've done
-    testing like desk checks since the 1970s doesn't mean it's a good
-    idea. Measure, evaluate, and then build or improve.
+-   **Peningkatan berkelanjutan**. Program Aplikasi Keamanan yang matang
+    merujuk kepada peningkatan yang konstan. Apabila terjadi hal yang
+    tidak bekerja atau berhenti melakukan hal tersebut. Apabila sesuatu
+    kikuk atau tidak terukur, bekerjalah untuk meningkatkan nya. Apabila
+    sesuatu tidak digunakan oleh tim pengembang dan tidak memiliki atau
+    memiliki dampak yang terbatas, lakukan sesuatu yang berbeda. Hanya
+    karena kita telah melakukan pengujian seperti desk checks sejak
+    tahun 1970-an tidak berarti itu adalah ide bagus. Ukur, evaluasi, 
+    lalu bangun atau tingkatkan.
