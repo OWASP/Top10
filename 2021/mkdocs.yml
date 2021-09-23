@@ -17,7 +17,7 @@ nav:
   - How to use the OWASP Top 10 as a standard: 'A00_2021_How_to_use_the_OWASP_Top_10_as_a_standard.md'
   - How to start an AppSec program with the OWASP Top 10: 'A00_2021-How_to_start_an_AppSec_program_with_the_OWASP_Top_10.md'
   - About OWASP: 'A00-about-owasp.md'
-  - Top 10 List:
+  - Top 10:2021 List:
     - A01 Broken Access Control: 'A01_2021-Broken_Access_Control.md'
     - A02 Cryptographic Failures: 'A02_2021-Cryptographic_Failures.md'
     - A03 Injection: 'A03_2021-Injection.md'
@@ -48,7 +48,7 @@ plugins:
           How to use the OWASP Top 10 as a standard: Comment utiliser le Top 10 OWASP comme standard
           How to start an AppSec program with the OWASP Top 10: Comment démarrer un programme AppSec avec le Top 10 OWASP
           About OWASP: À propos de l'OWASP
-          Top 10 List: Liste top 10
+          Top 10:2021 List: Liste top 10
           A01 Broken Access Control: A01 Ruptures de contrôles d'accès
           A02 Cryptographic Failures: A02 Défaillances cryptographiques
           A03 Injection: A03 Injection
@@ -64,7 +64,7 @@ plugins:
           About: Riguardo ad OWASP
           How to use the OWASP Top 10 as a standard: Come utilizzare l'OWASP Top 10 come standard
           How to start an AppSec program with the OWASP Top 10: Come avviare un programma AppSec con OWASP Top 10
-          Top 10 List: Lista top 10
+          Top 10:2021 List: Lista top 10
           A01 Broken Access Control: A01 Controllo accessi rotto
         pt_BR:
           Home: Início
@@ -73,7 +73,7 @@ plugins:
           About OWASP: Sobre OWASP
           How to use the OWASP Top 10 as a standard: Como usar o OWASP Top 10 como padrão
           How to start an AppSec program with the OWASP Top 10: Como iniciar um programa AppSec com o OWASP Top 10
-          Top 10 List: Lista top 10
+          Top 10:2021 List: Lista top 10
           A01 Broken Access Control: A01 Quebra de Controle de Acesso
           Next Steps: Próximos passos
         zh_TW:
@@ -83,7 +83,7 @@ plugins:
           About OWASP: OWASP 相關
           How to use the OWASP Top 10 as a standard: 如何正確使用 OWASP Top 10 為標準
           How to start an AppSec program with the OWASP Top 10: 如何使用 OWASP Top 10 啟動 AppSec
-          Top 10 List: Top 10 名單
+          Top 10:2021 List: Top 10 名單
           A01 Broken Access Control: A01 權限控制失效
           A02 Cryptographic Failures: A02 加密機制失效
           A03 Injection: A03 注入式攻擊
