@@ -1,3 +1,97 @@
+# A08:2021 – ソフトウェアとデータの整合性の不具合
+
+## 因子
+
+| CWEs Mapped | Max Incidence Rate | Avg Incidence Rate | Max Coverage | Avg Coverage | Avg Weighted Exploit | Avg Weighted Impact | Total Occurrences | Total CVEs |
+|:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
+| 10          | 16.67%             | 2.05%              | 75.04%       | 45.35%       | 6.94                 | 7.94                | 47,972            | 1,152      |
+
+## 概要
+
+これは2021年に新設されたカテゴリーで、ソフトウェアの更新、重要なデータを、CI/CDパイプラインにおいて整合性を検証せずに見込みで進めることによる問題にフォーカスしています。
+CVSSのデータから最も重大な影響を受けたものの1つです。
+注目すべきCWEは、*CWE-502: 信頼できないデータのデシリアライゼーション*, *CWE-829: 信頼できない制御領域からの機能の組み込み*, そして*CWE-494: ダウンロードしたコードの完全性検証不備*です。
+
+## 説明
+
+ソフトウェアとデータの整合性の不具合は、コードやインフラストラクチャが整合性違反から保護されていないことに関連しています。
+例として、オブジェクトやデータが攻撃者が目で見て修正することが可能な構造としてエンコードまたはシリアライズされるような場合は、安全でないデシリアライゼーションに対して脆弱であると言えます。
+他の例としては、アプリケーションが信頼されていないソースに由来するプラグインやライブラリ、モジュールに依存している場合が挙げられます。
+また、安全でないCI/CDパイプラインも、権限のないアクセスや悪意のあるコード、システムののっとりの可能性を高めます。
+最後に、今では多くのアプリケーションが自動更新の機能を備えていますが、そこで、十分な整合性の検証を行うことなくアップデートがダウンロードされ、信頼済みアプリケーションに対して適用されています。
+攻撃者は自前のアップデートをアップロードし、全てのインストール対象に対して配信を行う可能性があります。
+
+## 防止方法
+
+-   シリアライズされたデータの改ざんや再生成を検出する何らかの整合性確認やデジタル署名を行うことなしに、信頼されていないクライアントに対して未署名もしくは暗号化されていないシリアライズされたデータを送信しません。
+
+-   署名あるいは類似のメカニズムを用いて、ソフトウェアやデータが意図されたソースから取得されたものであることを検証します。
+
+-   npmやMavenなど、ライブラリや依存関係が信頼されたリポジトリを使用していることを確認します。
+
+-   コンポーネントが既知の脆弱性を含まないことを検証するために、OWASP Dependency CheckやOWASP CycloneDXといったソフトウェアサプライチェーンセキュリティツールが使用されていることを確認します。
+
+-   CI/CDパイプラインが適切に設定されアクセス制御が行われていること、また、ビルドやデプロイのプロセスに至るコードフローの整合性が確保されていることを確認します。
+
+## 攻撃シナリオの例
+
+**シナリオ #1 安全でないでシリアライゼーション:** Reactアプリケーションが、一連のSpring Bootマイクロサービスを呼び出します。
+関数型言語のプログラマーは、イミュータブルなコードを書こうとします。
+そこで、プログラマーは、呼び出しの前後でシリアライズしたユーザーの状態を渡す、と言う解決策を思いつきます。
+攻撃者は "rO0" というJavaオブジェクトのシグネチャに気づき、Java Serial Killerツールを使用してアプリケーションサーバ上でリモートコードを実行します。
+
+**シナリオ #2 署名のないアップデート:** 多くのホームルーター、セットトップボックス、デバイスファームウェア等は、署名済みファームウェアによるアップデートの検証を行いません。
+未署名のファームウェアは、攻撃者にとって拡大しつつある標的であり、悪化の一途が予想されます。
+多くの場合においてこの問題を解決するためには、将来のバージョンにて修正を行った上で以前のバージョンが使用されなくなるのを待つほかないことから、これは非常に大きな懸念事項です。
+
+**シナリオ #3 SolarWindsの悪意のあるアップデート**: 最近の注目すべき攻撃がSolarWinds Orionでの攻撃であるということと併せて、国家はアップデートの機構を攻撃することが知られています。
+そのソフトウェアを開発した企業は、安全なビルドとアップデートの整合プロセスを備えていました。
+しかし、それらは破壊することが可能であったために、その企業は、数ヶ月にわたって、高度に標的化された悪意のあるアップデートを18,000を超える組織に配信し、そのうち100ほどの組織が影響を受けました。
+この一件は、この類の侵害としては、歴史上最も広範囲に影響が広がり、また最も重大であったものの一つです。
+
+## 参考資料
+
+-   \[OWASP Cheat Sheet: Deserialization\](
+    <https://www.owasp.org/index.php/Deserialization_Cheat_Sheet>)
+
+-   \[OWASP Cheat Sheet: Software Supply Chain Security\]()
+
+-   \[OWASP Cheat Sheet: Secure build and deployment\]()
+
+-   \[SAFECode Software Integrity Controls\](
+    https://safecode.org/publication/SAFECode_Software_Integrity_Controls0610.pdf)
+
+-   \[A 'Worst Nightmare' Cyberattack: The Untold Story Of The
+    SolarWinds
+    Hack\](<https://www.npr.org/2021/04/16/985439655/a-worst-nightmare-cyberattack-the-untold-story-of-the-solarwinds-hack>)
+
+-   <https://www.manning.com/books/securing-devops>
+
+## 対応する CWE のリスト
+
+CWE-345 Insufficient Verification of Data Authenticity
+
+CWE-353 Missing Support for Integrity Check
+
+CWE-426 Untrusted Search Path
+
+CWE-494 Download of Code Without Integrity Check
+
+CWE-502 Deserialization of Untrusted Data
+
+CWE-565 Reliance on Cookies without Validation and Integrity Checking
+
+CWE-784 Reliance on Cookies without Validation and Integrity Checking in
+a Security Decision
+
+CWE-829 Inclusion of Functionality from Untrusted Control Sphere
+
+CWE-830 Inclusion of Web Functionality from an Untrusted Source
+
+CWE-915 Improperly Controlled Modification of Dynamically-Determined
+Object Attributes
+
+
 # A08:2021 – Software and Data Integrity Failures
 
 ## Factors
@@ -15,7 +109,7 @@ Notable CWEs include *CWE-502: Deserialization of Untrusted Data*,
 *CWE-829: Inclusion of Functionality from Untrusted Control Sphere*, and
 *CWE-494: Download of Code Without Integrity Check*.
 
-## Description 
+## Description
 
 Software and data integrity failures relate to code and infrastructure
 that does not protect against integrity violations. For example, where
