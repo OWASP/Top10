@@ -26,14 +26,14 @@ attacks. There may be authentication weaknesses if the application:
 -   Permits brute force or other automated attacks.
 
 -   Permits default, weak, or well-known passwords, such as "Password1"
-    or "admin/admin. "
+    or "admin/admin".
 
 -   Uses weak or ineffective credential recovery and forgot-password
     processes, such as "knowledge-based answers," which cannot be made
     safe.
 
--   Uses plain text, encrypted, or weakly hashed passwords (see
-    A2:2021-Cryptographic Failures).
+-   Uses plain text, encrypted, or weakly hashed passwords data stores (see
+    **A02:2021-Cryptographic Failures**).
 
 -   Has missing or ineffective multi-factor authentication.
 

@@ -69,7 +69,10 @@ check or metadata.
 -   Rate limit API and controller access to minimize the harm from
     automated attack tooling.
 
--   JWT tokens should be invalidated on the server after logout.
+-   Stateful session identifiers should be invalidated on the server after logout.
+    Stateless JWT tokens should rather be short-lived so that the window of 
+    opportunity for an attacker is minimized. For longer lived JWTs it's highy recommended to
+    follow the OAUTH standards to revoke access.
 
 Developers and QA staff should include functional access control unit
 and integration tests.
@@ -119,6 +122,8 @@ non-admin can access the admin page, this is a flaw.
 
 -   [PortSwigger: Exploiting CORS
     misconfiguration](https://portswigger.net/blog/exploiting-cors-misconfigurations-for-bitcoins-and-bounties)
+    
+-   [OAUTH ](https://www.oauth.com/oauth2-servers/listing-authorizations/revoking-access/)
 
 ## List of Mapped CWEs
 
