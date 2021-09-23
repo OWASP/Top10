@@ -14,19 +14,12 @@ CVSSのデータから最も重大な影響を受けたものの1つです。
 
 ## 説明
 
-Software and data integrity failures relate to code and infrastructure
-that does not protect against integrity violations. For example, where
-objects or data are encoded or serialized into a structure that an
-attacker can see and modify is vulnerable to insecure deserialization.
-Another form of this is where an application relies upon plugins,
-libraries, or modules from untrusted sources, repositories, and content
-delivery networks (CDNs). An insecure CI/CD pipeline can introduce the
-potential for unauthorized access, malicious code, or system compromise.
-Lastly, many applications now include auto-update functionality, where
-updates are downloaded without sufficient integrity verification and
-applied to the previously trusted application. Attackers could
-potentially upload their own updates to be distributed and run on all
-installations.
+ソフトウェアとデータの整合性の不具合は、コードやインフラストラクチャが整合性違反から保護されていないことに関連しています。
+例として、オブジェクトやデータが攻撃者が目で見て修正することが可能な構造としてエンコードまたはシリアライズされるような場合は、安全でないデシリアライゼーションに対して脆弱であると言えます。
+他の例としては、アプリケーションが信頼されていないソースに由来するプラグインやライブラリ、モジュールに依存している場合が挙げられます。
+また、安全でないCI/CDパイプラインも、権限のないアクセスや悪意のあるコード、システムののっとりの可能性を高めます。
+最後に、今では多くのアプリケーションが自動更新の機能を備えていますが、そこで、十分な整合性の検証を行うことなくアップデートがダウンロードされ、信頼済みアプリケーションに対して適用されています。
+攻撃者は自前のアップデートをアップロードし、全てのインストール対象に対して配信を行う可能性があります。
 
 ## 防止方法
 
@@ -42,7 +35,7 @@ installations.
 
 ## 攻撃シナリオの例
 
-**シナリオ #1 安全でないデシリアライゼーション:** Reactアプリケーションが、一連のSpring Bootマイクロサービスを呼び出します。
+**シナリオ #1 安全でないでシリアライゼーション:** Reactアプリケーションが、一連のSpring Bootマイクロサービスを呼び出します。
 関数型言語のプログラマーは、イミュータブルなコードを書こうとします。
 そこで、プログラマーは、呼び出しの前後でシリアライズしたユーザーの状態を渡す、と言う解決策を思いつきます。
 攻撃者は "rO0" というJavaオブジェクトのシグネチャに気づき、Java Serial Killerツールを使用してアプリケーションサーバ上でリモートコードを実行します。
