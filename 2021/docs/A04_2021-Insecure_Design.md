@@ -28,12 +28,26 @@ tax relief based upon income brackets but does not validate that all
 inputs are correctly signed and provides a much more significant relief
 benefit than should be granted.
 
+### Requirements and Resource Management
+Collect and negotiate the business requirements for an application with 
+the business, including the protection requirements with regard to 
+confidentiality, authenticity, integrity and availability of all data assets,
+and the expected business logic. Take into account how exposed your application
+is going to be and if you need a segregation of tenants (additionally to access control).
+Compile the technical requirements including functional and nonfunctional security requirements.
+Plan and negotiate the budget that covers all aspects of design, build, testing and operation, 
+including security activities.
+
+### Secure Design
 Secure design is a culture and methodology that constantly evaluates
 threats and ensures that code is robustly designed and tested to prevent
 known attack methods. Learn from mistakes and offer positive incentives 
 to promote improvements. Secure design is neither an add-on nor a tool 
-that you can add to a software. It requires a secure development
-lifecycle, some form of secure design pattern or paved road component
+that you can add to a software. 
+
+### Secure Development Lifecycle
+It requires a secure development lifecycle, some form of 
+secure design pattern or paved road component
 library or tooling, and threat modeling. Reach out for your security 
 specialists at the beginning of a software project to get accompaignet 
 throughout the whole project and maintainance of your software.
