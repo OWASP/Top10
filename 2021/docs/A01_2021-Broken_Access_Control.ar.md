@@ -1,105 +1,76 @@
-# A01:2021 – Broken Access Control
+# A01:2021 –  تخطي صلاحيات الوصول 
 
-## Factors
+## العوامل
 
-| CWEs Mapped | Max Incidence Rate | Avg Incidence Rate | Max Coverage | Avg Coverage | Avg Weighted Exploit | Avg Weighted Impact | Total Occurrences | Total CVEs |
-|:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
-| 34          | 55.97%             | 3.81%              | 94.55%       | 47.72%       | 6.92                 | 5.93                | 318,487           | 19,013     |
+| ربطها مع CWEs | الحد الأقصى للحدوث | متوسط معدل الحدوث | التغطية القصوى | متوسط معدل التغطية | متوسط استغلال الثغرات | متوسط التأثير | إجمالي التكرار | إجمالي نقاط الضعف CVEs |
+|---------------|--------------------|-------------------|----------------|--------------------|-----------------------|---------------|----------------|------------------------|
+| 34            | 55.97%             | 3.81%             | 94.55%         | 47.72%             | 6.92                  | 5.93          | 318,487        | 19,013                 |
 
-## Overview
 
-Moving up from the fifth position, 94% of applications were tested for
-some form of broken access control. Notable CWEs included are *CWE-200:
-Exposure of Sensitive Information to an Unauthorized Actor*, *CWE-201:
-Exposure of Sensitive Information Through Sent Data*, and *CWE-352:
-Cross-Site Request Forgery*.
 
-## Description 
+## نظرة عامة
 
-Access control enforces policy such that users cannot act outside of
-their intended permissions. Failures typically lead to unauthorized
-information disclosure, modification, or destruction of all data or
-performing a business function outside the user's limits. Common access
-control vulnerabilities include:
+انتقالا من المركز الخامس الى الأول ، تم اختبار بعض انواع تخطي صلاحيات التحكم بالوصول لـ 94% من التطبيقات ان CWEs المرتبطة به هي. CWEs وهي: CWE-200، CWE-201 ، CWE-352 
 
--   Bypassing access control checks by modifying the URL, internal
-    application state, or the HTML page, or simply using a custom API
-    attack tool.
+## الوصف 
 
--   Allowing the primary key to be changed to another user's record,
-    permitting viewing or editing someone else's account.
+تفرض صلاحيات التحكم بالوصول سياسات و قوانين مثل ان المستخدم  لا يمكنه التصرف خارج نطاق الأذونات الممنوحة له. عادة ما تؤدي هذه الاخطاء الى كشف المعلومات الغير مصرح به ، او التعديل، او تخريب جميع البيانات أو حتى تنفيذ أعمال خارج حدود صلاحيات المستخدم المسموحة له.تتضمن نقاط الضعف الشائعة لصلاحيات التحكم بالوصول:
 
--   Elevation of privilege. Acting as a user without being logged in or
-    acting as an admin when logged in as a user.
+-   تجاوز عمليات التحقق من التحكم في الوصول من خلال تعديل محدد فيURL ، او في الحالة الداخلية للبرنامج،أو صفحة الـ HTML  ،أو ببساطة استخدام أداة هجوم مخصصة لمهاجمة API. 
 
--   Metadata manipulation, such as replaying or tampering with a JSON
-    Web Token (JWT) access control token, or a cookie or hidden field
-    manipulated to elevate privileges or abusing JWT invalidation.
+-   السماح بتغيير المفتاح الرئيسي إلى سجل مسخدم آخر، السماح بعرض والتي تؤدي الى تعديل بعض الحسابات الأخرى.
 
--   CORS misconfiguration allows unauthorized API access.
+-   تصعيد الصلاحيات التصرف كمستخدم من دون تسجيل الدخول او التصرف كمدير عند تسجيل الدخول كمستخدم.
 
--   Force browsing to authenticated pages as an unauthenticated user or
-    to privileged pages as a standard user. Accessing API with missing
-    access controls for POST, PUT and DELETE.
+-   معالجة مجموعة البيانات الوصفية، كإعادة التشغيل او التلاعب برمز التحكم بصلاحيات الدخول JSON Web Token (JWT)، أو معالجة ملفات الإرتباط او الحقول المخفية لغرض تصعيد الصلاحيات أو إساءة استخدام الـ JWT .
 
-## How to Prevent
+-   التهيئة الغير صحيحة لـ CORS تسمح بالدخول الغير مصرح به لواجهة برمجة التطبيقات API. 
 
-Access control is only effective in trusted server-side code or
-server-less API, where the attacker cannot modify the access control
-check or metadata.
+-   اجبار المتصفحات على إتمام عملية المصادقة للمستخدمين او بعض الصفحات التي تتطلب ان تكون مستخدم قبل الوصول لها، وضبط صلاحيات الوصول الى واجهة برمجة التطبيقات API وحتى صلاحيات الوصول لطلبات على الموقع من (POST, PUT ، DELETE.) 
 
--   Except for public resources, deny by default.
+## كيفية الحماية منها 
 
--   Implement access control mechanisms once and re-use them throughout
-    the application, including minimizing CORS usage.
+يكون التحكم بالوصول فعالا فقط في -الشفرة المصدرية الموثوق بها من جهة الخادم- trusted server-side code او واجهة برمجة التطبيقات  API التي تسمى (server-less API)، حيث لا يستطيع المهاجم تعديل صلاحيات التحكم بالوصول أو البيانات الوصفية.
 
--   Model access controls should enforce record ownership rather than
-    accepting that the user can create, read, update, or delete any
-    record.
+-   في وجود أي طلبات على الموارد غير العامة يتم رفضها بشكل تلقائي.
 
--   Unique application business limit requirements should be enforced by
-    domain models.
+-   تنفيذ آليات التحكم بصلاحيات الوصول لمرة واحدة و اعادة استخدامها من خلال التطبيق، مع تقليل استخدام CORS  
 
--   Disable web server directory listing and ensure file metadata (e.g.,
-    .git) and backup files are not present within web roots.
+-   نموذج التحكم بالوصول يجب أن يفرض ملكية السجلات بدلا من الموافقة على ان المستخدم يستطيع انشاء، قراءة، تحديث، او حذف أي سجل.
 
--   Log access control failures, alert admins when appropriate (e.g.,
-    repeated failures).
+-   يجب أن يتم فرض حد لمتطلبات عمل التطبيقات المميزة من خلال استخدام نماذج المجال (domain models).
 
--   Rate limit API and controller access to minimize the harm from
-    automated attack tooling.
+-   تعطيل عرض مجلدات خادم الويب و التأكد بأن ملف مجموعة البيانات الوصفية و ملفات النسخ الاحتياطي لا يتم عرضها مع مجلد الموقع الرئيسي.
 
--   JWT tokens should be invalidated on the server after logout.
+-   تسجيل وتنبيه المسؤولين عند وقوع أخطاء في سجل صلاحيات التحكم بالوصول.
 
-Developers and QA staff should include functional access control unit
-and integration tests.
+-   حد معدل الوصول لواجهة برمجة التطبيقات  API وحد معدل الطلبات لتقليل الضرر الناجم عن أدوات الهجوم الآلي.
 
-## Example Attack Scenarios
+-   يجب انهاء  رموز JWT على الخادم بعد تسجيل الخروج.
 
-**Scenario #1:** The application uses unverified data in a SQL call that
-is accessing account information:
+يجب على المطورين و موظفي الجودة تضمين اختبارات وظيفية لوحدة التحكم في الوصول والتكامل. 
+
+## أمثلة على سيناريوهات الهجوم
+
+**سيناريو #1:** يستخدم التطبيق بيانات لم يتم التحقق منها في استدعاء  SQL التي بدورها تصل الى معلومات الحساب: 
 
 > pstmt.setString(1, request.getParameter("acct"));
 >
 > ResultSet results = pstmt.executeQuery( );
 
-An attacker simply modifies the browser's 'acct' parameter to send
-whatever account number they want. If not correctly verified, the
-attacker can access any user's account.
+ببساطة يقوم المهاجم بتعديل browser's 'acct' parameter لارسال أي رقم حساب يريده. واذا لم يتم التحقق منه بشكل صحيح، يستطيع المهاجم الوصول لأي حساب مستخدم.
 
 https://example.com/app/accountInfo?acct=notmyacct
 
-**Scenario #2:** An attacker simply forces browses to target URLs. Admin
-rights are required for access to the admin page.
+**سيناريو #2:** : ببساطة يجبر المهاجم المتصفحات على زيارة العناوين الـURLs المستهدفة. والتي تتطلب صلاحيات المسؤوول للدخول على صفحة.
 
 > https://example.com/app/getappInfo
 >
 > https://example.com/app/admin_getappInfo
 
-If an unauthenticated user can access either page, it's a flaw. If a
-non-admin can access the admin page, this is a flaw.
+يعتبر خللا اذا كان يمكن للمستخدم غير المصرح له الوصول الى اي من الصفحتين. يعتبر خللا اذا كان يمكن لغير المسؤول الوصول لصفحة المسؤول.
 
-## References
+## المصادر
 
 -   [OWASP Proactive Controls: Enforce Access
     Controls](https://owasp.org/www-project-proactive-controls/v3/en/c7-enforce-access-controls)
@@ -115,7 +86,7 @@ non-admin can access the admin page, this is a flaw.
 -   [PortSwigger: Exploiting CORS
     misconfiguration](https://portswigger.net/blog/exploiting-cors-misconfigurations-for-bitcoins-and-bounties)
 
-## List of Mapped CWEs
+## قائمة الربط مع إطار CWEs
 
 CWE-22 Improper Limitation of a Pathname to a Restricted Directory
 ('Path Traversal')

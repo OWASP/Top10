@@ -1,106 +1,66 @@
-# A02:2021 – Cryptographic Failures
+# A02:2021 –  فشل آلية التشفير 
 
-## Factors
+## العوامل
 
-| CWEs Mapped | Max Incidence Rate | Avg Incidence Rate | Max Coverage | Avg Coverage | Avg Weighted Exploit | Avg Weighted Impact | Total Occurrences | Total CVEs |
-|:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
-| 29          | 46.44%             | 4.49%              | 79.33%       | 34.85%       | 7.29                 | 6.81                | 233,788           | 3,075      |
+| ربطها مع CWEs | الحد الأقصى للحدوث | متوسط معدل الحدوث | التغطية القصوى | متوسط معدل التغطية | متوسط استغلال الثغرات | متوسط التأثير | إجمالي التكرار | إجمالي نقاط الضعف CVEs |
+|---------------|--------------------|-------------------|----------------|--------------------|-----------------------|---------------|----------------|------------------------|
+| 29            | 46.44%             | 4.49%             | 79.33%         | 34.85%             | 7.29                  | 6.81          | 233,788        | 3,075                  |
 
-## Overview
 
-Shifting up one position to #2, previously known as *Sensitive Data
-Exposure*, which is more of a broad symptom rather than a root cause,
-the focus is on failures related to cryptography (or lack thereof).
-Which often lead to exposure of sensitive data. Notable CWEs included
-are *CWE-259: Use of Hard-coded Password*, *CWE-327: Broken or Risky
-Crypto Algorithm*, and *CWE-331 Insufficient Entropy* .
 
-## Description 
+## نظرة عامة
 
-The first thing is to determine the protection needs of data in transit
-and at rest. For example, passwords, credit card numbers, health
-records, personal information, and business secrets require extra
-protection, mainly if that data falls under privacy laws, e.g., EU's
-General Data Protection Regulation (GDPR), or regulations, e.g.,
-financial data protection such as PCI Data Security Standard (PCI DSS).
-For all such data:
+يأتي فشل آلية التشفير في المرتبة رقم #2 والتي كانت تعرف بالبيانات الحساسة الغير محمية أو المكشوفة، والتي قد تكون أسبابها متعددة أكثر من كونها سبباً جذرياً، ويأتي التركيز هنا على حالات الفشل في الطرق المتعلقة بالتشفير والتي غالباً ما تؤدي إلى كشف غير مصرح به إلى بيانات حساسة. ومن بين الـCWEs البارزة والمتضمنة هي CWE-259: استخدام كلمة المرور المشفرة، CWE-327: خوارزمية تشفير معطلة أو محفوفة بالمخاطر، و CWE-331 Insufficient Entropy.
 
--   Is any data transmitted in clear text? This concerns protocols such
-    as HTTP, SMTP, and FTP. External internet traffic is hazardous.
-    Verify all internal traffic, e.g., between load balancers, web
-    servers, or back-end systems.
+## الوصف 
 
--   Are any old or weak cryptographic algorithms used either by default
-    or in older code?
+أول شيء هو تحديد احتياجات حماية البيانات أثناء النقل (Data in transit) وأثناء حالة التخزين (Data at rest). على سبيل المثال، تتطلب كلمات المرور وأرقام بطاقات الائتمان والسجلات الصحية والمعلومات الشخصية وأسرار العمل حماية إضافية خاصةً إذا كانت تلك البيانات تندرج تحت قوانين الخصوصية مثل اللائحة العامة لحماية البيانات في الاتحاد الأوروبي (GDPR)، أو اللوائح على سبيل المثال حماية البيانات المالية مثل معيار  PCIلأمان البيانات (PCI DSS)  لجميع هذه البيانات:
 
--   Are default crypto keys in use, weak crypto keys generated or
-    re-used, or is proper key management or rotation missing?
+-   هل يتم نقل أي بيانات من غير تشفير؟ يتعلق هذا ببروتوكولات مثل HTTP وSMTP وFTP. كذلك لابد من التحقق لكل حركة المرور الداخلية، على سبيل المثال ، بين موازنات التحميل (load balancers) أو خوادم الويب أو الأنظمة الخلفية (Back-end systems) .
 
--   Is encryption not enforced, e.g., are any user agent (browser)
-    security directives or headers missing?
+-   هل يتم استخدام أي خوارزميات تشفير قديمة أو ضعيفة إما بشكل افتراضي أو في التعليمات البرمجية القديمة؟
 
--   Does the user agent (e.g., app, mail client) not verify if the
-    received server certificate is valid?
+-   هل مفاتيح التشفير الافتراضية قيد الاستخدام، هل يتم توليد مفاتيح تشفير ضعيفة، أو إعادة استخدامها، أم لا تتم إدارة المفاتيح أو تدويرها بشكل جيد (rotation missing)؟
 
-See ASVS Crypto (V7), Data Protection (V9), and SSL/TLS (V10)
+-   هل التشفير غير مفروض ، على سبيل المثال هل يتم إرسال واستخدام عناوين "Headers" الصحيحة والمطلوبة عند نقل البيانات الحساسة للمتصفح أو عند استقبالها من قبل المتصفح؟
 
-## How to Prevent
+-   هل وكيل المستخدم (مثل المتصفح أو برمجية استخدام البريد الالكتروني) لا يتحقق مما إذا كانت شهادة الخادم المستلمة صالحة وفعالة؟
 
-Do the following, at a minimum, and consult the references:
+هناك الكثير من القائمة للمشاكل التي يجب تجنبها، انظر ASVS Crypto (V7), Data Protection (V9), and SSL/TLS (V10)
 
--   Classify data processed, stored, or transmitted by an application.
-    Identify which data is sensitive according to privacy laws,
-    regulatory requirements, or business needs.
+## كيفية الحماية منها 
 
--   Apply controls as per the classification.
+يجب عمل ما يلي على الأقل لحماية البيانات الحساسة:
 
--   Don't store sensitive data unnecessarily. Discard it as soon as
-    possible or use PCI DSS compliant tokenization or even truncation.
-    Data that is not retained cannot be stolen.
+-   تصنيف البيانات التي تتم معالجتها أو تخزينها أو إرسالها بواسطة تطبيق ما. تحديد البيانات الحساسة وفقًا لقوانين الخصوصية أو المتطلبات التنظيمية أو احتياجات العمل.
 
--   Make sure to encrypt all sensitive data at rest.
+-   تطبيق الضوابط حسب التصنيف.
 
--   Ensure up-to-date and strong standard algorithms, protocols, and
-    keys are in place; use proper key management.
+-   لا تقم بتخزين البيانات الحساسة الغير مطلوبة، قم بتجاهلها والتخلص منها في أقرب وقت ممكن، لان البيانات التي لا تملكها لا يمكن سرقتها.
 
--   Encrypt all data in transit with secure protocols such as TLS with
-    perfect forward secrecy (PFS) ciphers, cipher prioritization by the
-    server, and secure parameters. Enforce encryption using directives
-    like HTTP Strict Transport Security (HSTS).
+-   تأكد من تشفير كل البيانات الحساسة المخزنة 
 
--   Disable caching for response that contain sensitive data.
+-   ضمان وجود خوارزميات وبروتوكولات ومعيارية قوية ومحدثة؛ كذلك استخدام الإدارة الجيدة والمناسبة للمفاتيح.
 
--   Store passwords using strong adaptive and salted hashing functions
-    with a work factor (delay factor), such as Argon2, scrypt, bcrypt or
-    PBKDF2.
+-   قم بتشفير جميع البيانات أثناء النقل باستخدام بروتوكولات آمنة مثل TLS مع شفرة الـ Perfect Forward Secrecy (PFS)، وتحديد أولويات التشفير بواسطة الخادم والمعطيات الآمنة. كذلك فرض التشفير باستخدام توجيهات مثل HTTP Strict Transport Security (HSTS).
 
--   Verify independently the effectiveness of configuration and
-    settings.
+-   تعطيل خاصية التخزين المؤقت في الصفحات "caching" للرد الذي يحتوي على بيانات حساسة.
 
-## Example Attack Scenarios
+-   قم بتخزين كلمات المرور باستخدام خوارزمية مخصصة وقوية مع بيانات عشوائية إضافية، مثل Argon2 أو scrypt أو bcrypt أو PBKDF2.
 
-**Scenario #1**: An application encrypts credit card numbers in a
-database using automatic database encryption. However, this data is
-automatically decrypted when retrieved, allowing a SQL injection flaw to
-retrieve credit card numbers in clear text.
+-   تحقق بشكل مستقل من فعالية التكوين والإعدادات.
 
-**Scenario #2**: A site doesn't use or enforce TLS for all pages or
-supports weak encryption. An attacker monitors network traffic (e.g., at
-an insecure wireless network), downgrades connections from HTTPS to
-HTTP, intercepts requests, and steals the user's session cookie. The
-attacker then replays this cookie and hijacks the user's (authenticated)
-session, accessing or modifying the user's private data. Instead of the
-above they could alter all transported data, e.g., the recipient of a
-money transfer.
+## أمثلة على سيناريوهات الهجوم
 
-**Scenario #3**: The password database uses unsalted or simple hashes to
-store everyone's passwords. A file upload flaw allows an attacker to
-retrieve the password database. All the unsalted hashes can be exposed
-with a rainbow table of pre-calculated hashes. Hashes generated by
-simple or fast hash functions may be cracked by GPUs, even if they were
-salted.
+**سيناريو #1**: تطبيق يقوم بتشفير أرقام البطاقات الائتمانية باستخدام التشفير الآلي المتوفر مع قاعدة البيانات. لكن هذا يعني أنه بإمكان قاعدة البيانات فك التشفير آلياً عند طلب بيانات منها، مما قد يعرض أرقام البطاقات الائتمانية للسرقة عند استغلال ثغرة حقن "SQL" ، كان يجب تشفير أرقام البطاقات الائتمانية باستخدام مفتاح عام "Public Key" والسماح فقط للبنية التحتية للتطبيق بفك التشفير باستخدام المفتاح الخاص "Private Key".
 
-## References
+**سيناريو #2**: الموقع الذي لا يستخدم بروتوكولTLS لكافة الصفحات أو يدعم التشفير الضعيف. حيث يراقب المهاجم حركة مرور البيانات في الشبكة (على سبيل المثال، في الشبكات اللاسلكية الغير آمنة)، ويقلل من مستوى HTTPS إلى HTTP، ويعترض الطلبات، وسرقة جلسات الاتصالات "Session Cookie" للمستخدم. ثم يعيد المهاجم إرسال واستخدام جلسة اتصال المستخدم (المصادق عليها)، فيتمكن من الوصول إلى بيانات المستخدم الخاصة أو تعديلها. وبدلا من ذلك، يمكنها أن تغير جميع البيانات المنقولة، مثل الجهة المتلقية لتحويل الأموال
+
+**سيناريو #3**: قاعدة بيانات كلمات المرورلا تستخدم بيانات عشوائية إضافية أو إضافة بيانات عشوائية بسيطة
+ "unsalted hashes" لتخزين كلمات مرور لجميع المستخدمين. عند وجود ثغرة في خاصية رفع الملفات والتي تسمح للمهاجم باستعادة وتحميل قاعدة بيانات كلمات المرور. بالتالي تتعرض جميع كلمات المرور التي تم الكشف عنها لكسر حمايتها وخوارزمياتها باستخدام جداول تحتوي على كلمات سرية معدة مسبقاً "rainbow table of pre-calculated hashes". قد يتم كسر الـ"hashes" التي تم إنشائها بشكل بسيط وسريع من قبل GPUs  حتى وإن تم إضافة بيانات عشوائية "salt".
+
+
+## المصادر
 
 -   [OWASP Proactive Controls: Protect Data
     Everywhere](https://owasp.org/www-project-proactive-controls/v3/en/c8-protect-data-everywhere)
@@ -122,7 +82,7 @@ salted.
 -   OWASP Testing Guide: Testing for weak cryptography
 
 
-## List of Mapped CWEs
+## قائمة الربط مع إطار CWEs
 
 CWE-261 Weak Encoding for Password
 

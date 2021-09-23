@@ -1,106 +1,68 @@
-# A05:2021 – Security Misconfiguration
+# A05:2021 –  الإعدادات الأمنية الخاطئة 
 
-## Factors
+## العوامل
 
-| CWEs Mapped | Max Incidence Rate | Avg Incidence Rate | Max Coverage | Avg Coverage | Avg Weighted Exploit | Avg Weighted Impact | Total Occurrences | Total CVEs |
-|:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
-| 20          | 19.84%             | 4.51%              | 89.58%       | 44.84%       | 8.12                 | 6.56                | 208,387           | 789        |
+| ربطها مع CWEs | الحد الأقصى للحدوث | متوسط معدل الحدوث | التغطية القصوى | متوسط معدل التغطية | متوسط استغلال الثغرات | متوسط التأثير | إجمالي التكرار | إجمالي نقاط الضعف CVEs |
+|---------------|--------------------|-------------------|----------------|--------------------|-----------------------|---------------|----------------|------------------------|
+| 20            | 19.84%             | 4.51%             | 89.58%         | 44.84%             | 8.12                  | 6.56          | 208,387        | 789                    |
 
-## Overview
 
-Moving up from #6 in the previous edition, 90% of applications were
-tested for some form of misconfiguration. With more shifts into highly
-configurable software, it's not surprising to see this category move up.
-Notable CWEs included are *CWE-16 Configuration* and *CWE-611 Improper
-Restriction of XML External Entity Reference*.
 
-## Description 
+## نظرة عامة
 
-The application might be vulnerable if the application is:
+بعد أن كان الخطر السادس في الإصدار السابق لعام 2017 الأن نراه في المرتبة الخامسة، حيث أنه تم اجراء اختبار %90 من البرامج والتطبيقات للتأكد إن كانت تحتوي على أية أخطاء في طريقة الإعدادات والتكوين الصحيحة، فليس من المستغرب انتقال هذا الخطر من المرتبة السادسة إلى الخامسة. كذلك تم ضم "XML External Entities XXE" لهذا النوع من الإعدادات والتكوين الخاطئة. تضمن الـ CWEs التالية CWE-16 (Configuration), CWE-611 (Improper Restriction of XML External Entity).
 
--   Missing appropriate security hardening across any part of the
-    application stack or improperly configured permissions on cloud
-    services.
+## الوصف 
 
--   Unnecessary features are enabled or installed (e.g., unnecessary
-    ports, services, pages, accounts, or privileges).
+من المحتمل ان يكون التطبيق ضعيف امنياً إذا احتوى على النقاط التالية:
 
--   Default accounts and their passwords are still enabled and
-    unchanged.
+-   عند عدم مراجعة عملية التكوين والضبط الأمن لإعدادات التطبيق او في أي جزء من أجزاء التطبيق أو تكوين أذونات خاطئة في الخدمات السحابية.
 
--   Error handling reveals stack traces or other overly informative
-    error messages to users.
+-   تثبيت وإتاحة خدمات وميزات غير الضرورية (منافذ غير ضرورية، والخدمات، والصفحات، والحسابات، والصلاحيات).
 
--   For upgraded systems, the latest security features are disabled or
-    not configured securely.
+-   تفعيل أو عدم تغيير الحسابات الافتراضية وكلمات المرور الخاصة بها.
 
--   The security settings in the application servers, application
-    frameworks (e.g., Struts, Spring, ASP.NET), libraries, databases,
-    etc., are not set to secure values.
+-   كشف رسائل معالجة الأخطاء (error handling) عن تتبعات (stack traces) أو عرض بعض رسائل الخطأ التي تحتوي على معلومات تفصيلية يمكن أن تُستغل من قبل المستخدم.
 
--   The server does not send security headers or directives, or they are
-    not set to secure values.
+-   في الأنظمة التي تمت ترقيتها، تكون الميزات الأمنية الأحدث معطلة أو لم يتم تكوينها بشكل آمن. 
 
--   The software is out of date or vulnerable (see A06:2021-Vulnerable
-    and Outdated Components).
+-   لم يتم تعيين إعدادات الأمان في خوادم التطبيقات وأطر التطبيقات على سبيل المثال (Struts, Spring, ASP.NET) والمكتبات وقواعد البيانات وما إلى ذلك الى قيم آمنة.
 
-Without a concerted, repeatable application security configuration
-process, systems are at a higher risk.
+-   الخادم لا يرسل أو يستخدم عناوين "headers" عند نقل البيانات الحساسة للمتصفح أو عند تقديمها من قبل المتصفح.
 
-## How to Prevent
+-   البرنامج لم يعد مدعوماً من قبل مزودي الخدمات  أو ضعيف أمنياً لاحتوائه على الثغرات الأمنية (انظر إلى - A06:2021 الثغرات و الانظمة الغير قابلة للتحديثات).
 
-Secure installation processes should be implemented, including:
+من دون امتلاك آلية مخططة وقابلة للتكرار للإعدادات الأمنية لتكوين البرنامج بما يتوافق مع الضوابط الأمنية، تكون الأنظمة في خطر عالي.
 
--   A repeatable hardening process makes it fast and easy to deploy
-    another environment that is appropriately locked down. Development,
-    QA, and production environments should all be configured
-    identically, with different credentials used in each environment.
-    This process should be automated to minimize the effort required to
-    set up a new secure environment.
+## كيفية الحماية منها 
 
--   A minimal platform without any unnecessary features, components,
-    documentation, and samples. Remove or do not install unused features
-    and frameworks.
+يجب تطبيق آلية آمنة لتكوين البرامج أو الأجهزة، متضمنة:
 
--   A task to review and update the configurations appropriate to all
-    security notes, updates, and patches as part of the patch management
-    process (see A06:2021-Vulnerable and Outdated Components). Review
-    cloud storage permissions (e.g., S3 bucket permissions).
+-   تكرار عملية مراجعة التكوين الأمن والتي سوف تؤدي الى تسريع وتسهيل من مهمة إنشاء بيئة جديدة مكونة بشكل آمن. كما يجب ان يتم تكوين بيئات التطوير وضمان الجودة وبيئة الإنتاج بشكل مطابق، مع استخدام كلمات مرور مختلفة في كل بيئة. ايضاً يجب أن تكون هذه العملية آلية للتقليل من الجهد المتطلب عند إعداد بيئة جديدة وآمنة.
 
--   A segmented application architecture provides effective and secure
-    separation between components or tenants, with segmentation,
-    containerization, or cloud security groups (ACLs).
+-   الحد الأدنى من النظام الأساسي بدون تفعيل ميزات، أو مكونات، أو وثائق، أو عينات غير ضرورية، مع حذف وإبطال الميزات والأطر غير المستخدمة أو عدم تثبيتها.
 
--   Sending security directives to clients, e.g., Security Headers.
+-   مراجعة وتحديث الاعدادات بما يواكب ويتناسب مع كافة ملاحظات الأمان والتحديثات والإصلاحات كجزء من عملية إدارة حزم الإصلاحات والتحديثات. (انظر الى- A06:2021 الثغرات و الانظمة الغير قابلة للتحديثات). بالإضافة إلى مراجعة أذونات التخزين السحابي على سبيل المثال (S3 bucket permissions).
 
--   An automated process to verify the effectiveness of the
-    configurations and settings in all environments.
+-   تتيح بنية التطبيق المقسمة فصلًا فعالًا وآمنًا بين المكونات، مع التجزئة في مجموعات أمان السحابة (ACLs).
 
-## Example Attack Scenarios
+-   إرسال توجيهات الأمان إلى المستخدمين على سبيل المثال Security Headers.
 
-**Scenario #1:** The application server comes with sample applications
-not removed from the production server. These sample applications have
-known security flaws attackers use to compromise the server. Suppose one
-of these applications is the admin console, and default accounts weren't
-changed. In that case, the attacker logs in with default passwords and
-takes over.
+-   أتمتة عملية التحقق من التحديثات الأمن للتحقق من فعالية التكوينات والإعدادات في جميع البيئات.
 
-**Scenario #2:** Directory listing is not disabled on the server. An
-attacker discovers they can simply list directories. The attacker finds
-and downloads the compiled Java classes, which they decompile and
-reverse engineer to view the code. The attacker then finds a severe
-access control flaw in the application.
+-   تشغيل أدوات الفحص للتحقق من فعالية التكوينات والإعدادات في جميع البيئات للكشف عن الإعدادات الخاطئة.
 
-**Scenario #3:** The application server's configuration allows detailed
-error messages, e.g., stack traces, to be returned to users. This
-potentially exposes sensitive information or underlying flaws such as
-component versions that are known to be vulnerable.
+## أمثلة على سيناريوهات الهجوم
 
-**Scenario #4:** A cloud service provider has default sharing
-permissions open to the Internet by other CSP users. This allows
-sensitive data stored within cloud storage to be accessed.
+**Scenario #1:** عند احتواء خادم التطبيق على عينة تطبيق لم يتم حذفه من خادم الإنتاج. هذه العينات من التطبيق قد تحتوي على أخطاء أمنية يمكن أن يستخدمها المهاجم في اختراق الخادم، وبافتراض أن أحد هذه البرامج هي وحدة تحكم لإدارة الخادم ولم تُغير في هذه الحالة، المهاجم سوف يسجل الدخول باستخدام الرقم السري الافتراضي ويتحكم بالخادم.
 
-## References
+**Scenario #2:** عندما تكون قائمة الدليل "Directory Listing" غير معطلة في الخادم الخاص بك، قد يكتشف المهاجم أن بإمكانه سرد الأدلة ببساطة للعثور على أي ملف. وبعد ذلك بإمكانه العثور وتثبيت جميع فئات جافا (compiled Java classes) ومن ثم يقوم بفكها وتطبيق الهندسة العكسية لعرض الشفرة المصدرية. وبعد ذلك يحاول المهاجم إيجاد خطأ أمنى للتحكم في الوصول إلى الخادم.
+
+**Scenario #3:** عندما تقوم إعدادات خادم التطبيق بإرجاع رسائل خطأ تفصيلية، على سبيل المثال stack traces إلى المستخدم. ومن المحتمل أن يؤدي هذا إلى الكشف عن معلومات حساسة أو ثغرات أمنية أخرى أو معلومات مثل إصدارات المكونات المعروفة بإنها قابلة للاستغلال. 
+
+**Scenario #4:** أن يكون مقدم الخدمة السحابية لديه أذونات مشاركة افتراضية مفتوحة على الإنترنت من قبل مستخدمي CSP الآخرين. يسمح هذا بالوصول إلى البيانات الحساسة المخزنة في سحابة التخزين.
+
+## المصادر
 
 -   [OWASP Testing Guide: Configuration
     Management](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/README)
@@ -118,7 +80,7 @@ sensitive data stored within cloud storage to be accessed.
 -   [Amazon S3 Bucket Discovery and
     Enumeration](https://blog.websecurify.com/2017/10/aws-s3-bucket-discovery.html)
 
-## List of Mapped CWEs
+## قائمة الربط مع إطار CWEs
 
 CWE-2 Configuration
 

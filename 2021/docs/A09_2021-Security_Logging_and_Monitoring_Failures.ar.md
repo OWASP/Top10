@@ -1,111 +1,66 @@
-# A09:2021 – Security Logging and Monitoring Failures
+# A09:2021 – فشل عملية تسجيل الاحداث والمراقبة 
 
-## Factors
+## العوامل
 
-| CWEs Mapped | Max Incidence Rate | Avg Incidence Rate | Max Coverage | Avg Coverage | Avg Weighted Exploit | Avg Weighted Impact | Total Occurrences | Total CVEs |
-|:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
-| 4           | 19.23%             | 6.51%              | 53.67%       | 39.97%       | 6.87                 | 4.99                | 53,615            | 242        |
+| ربطها مع CWEs | الحد الأقصى للحدوث | متوسط معدل الحدوث | التغطية القصوى | متوسط معدل التغطية | متوسط استغلال الثغرات | متوسط التأثير | إجمالي التكرار | إجمالي نقاط الضعف CVEs |
+|---------------|--------------------|-------------------|----------------|--------------------|-----------------------|---------------|----------------|------------------------|
+| 4             | 19.23%             | 6.51%             | 53.67%         | 39.97%             | 6.87                  | 4.99          | 53,615         | 242                    |
 
-## Overview
 
-Security logging and monitoring came from the industry survey (#3), up
-slightly from the tenth position in the OWASP Top 10 2017. Logging and
-monitoring can be challenging to test, often involving interviews or
-asking if attacks were detected during a penetration test. There isn't
-much CVE/CVSS data for this category, but detecting and responding to
-breaches is critical. Still, it can be very impactful for visibility,
-incident alerting, and forensics. This category expands beyond *CWE-778
-Insufficient Logging* to include *CWE-117 Improper Output Neutralization
-for Logs*, *CWE-223 Omission of Security-relevant Information*, and
-*CWE-532* *Insertion of Sensitive Information into Log File*.
 
-## Description 
+## نظرة عامة
 
-Returning to the OWASP Top 10 2021, this category is to help detect,
-escalate, and respond to active breaches. Without logging and
-monitoring, breaches cannot be detected. Insufficient logging,
-detection, monitoring, and active response occurs any time:
+شهد تسجيل ومراقبه الاحداث ارتفاع بسيط من المرتبة العاشرة في اعلى عشره مخاطر لعام 2017 الى المرتبة التاسعة في استطلاع الذي تم اجرائه في قطاع الامن السيبراني. حيث يشكل تسجيل ومراقبه الاحداث تحديا لإيجاد طريقة لاختباره، غالبا ما يتطلب ‏مقابلات او واستفسارات ما ان كانت الهجمات تم اكتشفها اثناء اختبار الاختراق. لا يوجد لهذا التصنيف الكثير من بيانات في قاعدتي بيانات cve/cvss,، ولكن عملية الاكتشاف والرصد والاستجابة لهذا التصنيف امر في غاية الأهمية. مع ذلك يمكن ان يكون مؤثرا عدم فعالية المراقبة للأحداث على الانتباه للإنذارات والتي قد تسبب الحوادث او عند القيام بالتحاليل الجنائي 
+هذا التصنيف يرتبط بي CWE-778  وكذلك CWE-117  و CWE-223 وCWE-532. 
 
--   Auditable events, such as logins, failed logins, and high-value
-    transactions, are not logged.
 
--   Warnings and errors generate no, inadequate, or unclear log
-    messages.
+## الوصف 
 
--   Logs of applications and APIs are not monitored for suspicious
-    activity.
+وعند العودة الى أعلى عشر مخاطر لعام 2021، يقوم هذا التصنيف بالمساعدة على رصد واكتشاف والاستجابة للثغرات النشطة او لعمليات الاختراق التي تحدث، ومن غير عملية تسجيل الاحداث ومراقبتها، لن تستطيع اكتشاف او رصد او حتى الاستجابة للاختراقات التي تحدث، لذلك وجود عملية تسجيل الاحداث ومراقبتها يساعد على الاستجابة في أي وقت:
 
--   Logs are only stored locally.
+-   الاحداث القابلة لإجراءات التدقيق والمتابعة، مثل عمليات تسجيل الدخول الفاشلة والناجحة منها وكذلك عمليات النقل العالية التي لم يتم تسجيلها.
 
--   Appropriate alerting thresholds and response escalation processes
-    are not in place or effective.
+-   التنبيهات والانذارات لا يتم تسجيلها او يتم تسجيلها من دون وصف واضح او رساله واضحها.
 
--   Penetration testing and scans by DAST tools (such as OWASP ZAP) do
-    not trigger alerts.
+-   لا يتم متابعة وتسجيل الاحداث ومراقبتها للتطبيقات او واجهة برمجة التطبيقات API لأي أنشطة ضارة.
 
--   The application cannot detect, escalate, or alert for active attacks
-    in real-time or near real-time.
+-   يتم تخزين سجلات الاحداث محليا فقط 
 
-You are vulnerable to information leakage by making logging and alerting
-events visible to a user or an attacker (see A01:2021 – Broken Access
-Control).
+-   وضع معايير مناسبه للتنبيهات الأمنية مثل ( حد للعمليات تسجيل الدخول) ،وكذلك إيجاد سياسة واضحة لعملية تصعيد التنبيهات الأمنية والعمل عليها بالشكل الصحيح.
 
-## How to Prevent
+-   عدم وجود أي إنذارات عند اجراء اختيارات الاختراق او الفحص بواسطة أداة DAST مثل OWASP ZAP 
 
-Developers should implement some or all the following controls, d
-epending on the risk of the application:
+-   التطبيقات لا تستطيع اكتشاف وتصعيد او حتى عملية التنبيه عند وجود أنشطة ضارة تحدث في الوقت الحالي.
 
--   Ensure all login, access control, and server-side input validation
-    failures can be logged with sufficient user context to identify
-    suspicious or malicious accounts and held for enough time to allow
-    delayed forensic analysis.
+انت معرض لتسريب البيانات والمعلومات في حال عدم ضبطك لعملية تسجيل الاحداث والتنبيهات بالشكل الصحيح والتي قد تسمح للمستخدم  او حتى المهاجم من مشاهدتها انظر الى (A02- تخطي صلاحيات الوصول.)
 
--   Ensure that logs are generated in a format that log management
-    solutions can easily consume.
+## كيفية الحماية منها 
 
--   Ensure log data is encoded correctly to prevent injections or
-    attacks on the logging or monitoring systems.
+يجب على المطورين تطبيق بعض  او جميع عناصر التحكم التالية والذي يعتمد على مدى استهداف ومخاطر التطبيق:
 
--   Ensure high-value transactions have an audit trail with integrity
-    controls to prevent tampering or deletion, such as append-only
-    database tables or similar.
+-   يجب التأكيد على ان جميع عمليات الدخول، التحكم بالوصول، والمدخلات التي تحدث على جانب الخادم مسجلة بطريقة صحيح وواضحة، وذلك لكشف عمليات الضارة التي تساعدك فيما بعد في عملية التحليل الجنائي الرقمي.
 
--   DevSecOps teams should establish effective monitoring and alerting
-    such that suspicious activities are detected and responded to
-    quickly.
+-   التأكد ان عمليات تسجيل الاحداث تتم بشكل منسق وصحيح وذلك لكي يتم ادارتها بشكل صحيح.
 
--   Establish or adopt an incident response and recovery plan, such as
-    NIST 800-61r2 or later.
+-   التأكد من ان البيانات مشفرة بالشكل الصحيح وذلك للحماية من عمليات الحقن او الهجمات التي قد تحدث على انظمة المراقبة.
 
-There are commercial and open-source application protection frameworks
-such as the OWASP ModSecurity Core Rule Set, and open-source log
-correlation software, such as the ELK stack, that feature custom
-dashboards and alerting.
+-   التأكد من ان عمليات نقل البيانات الحساسة تتم مراقبتها وكذلك التأكد من سلامتها وذلك لسلامتها من التخريب او التلاعب او الحذف.
 
-## Example Attack Scenarios
+-   يجب ان يكون لدى فريق DevSecOps آلية فعالة لعملية المراقبة والتي تقوم بعملية الاكتشاف والاستجابة للتنبيهات، مثل الأنشطة الضارة. ومن اهم المرتكزات هي سرعة الاكتشاف والاستجابة لها.
 
-**Scenario #1:** A childrens' health plan provider's website operator
-couldn't detect a breach due to a lack of monitoring and logging. An
-external party informed the health plan provider that an attacker had
-accessed and modified thousands of sensitive health records of more than
-3.5 million children. A post-incident review found that the website
-developers had not addressed significant vulnerabilities. As there was
-no logging or monitoring of the system, the data breach could have been
-in progress since 2013, a period of more than seven years.
+-   قم بإيجاد خطة للاستجابة للحوادث السيبرانية وتستطيع الاعتماد على NIST 800-61r2 او النسخ الاحدث ان توفرت.
 
-**Scenario #2:** A major Indian airline had a data breach involving more
-than ten years' worth of personal data of millions of passengers,
-including passport and credit card data. The data breach occurred at a
-third-party cloud hosting provider, who notified the airline of the
-breach after some time.
+هناك تطبيقات و اطر  مفتوحة المصدر وتجارية مثل (OWASP ModSecurity Core Rule Set,، open-source log) وهنا كذلك منصات تقوم بعملية جمع وربط الاحداث مثل منصة ELK stack والتي تتيح لك مميزات إضافية منها لوح للمراقبة وكذلك تنبيهات.
 
-**Scenario #3:** A major European airline suffered a GDPR reportable
-breach. The breach was reportedly caused by payment application security
-vulnerabilities exploited by attackers, who harvested more than 400,000
-customer payment records. The airline was fined 20 million pounds as a
-result by the privacy regulator.
+##  أمثلة على سيناريوهات الهجوم
 
-## References
+**سيناريو #1:** ‎المشغّل لموقع تابع لشركة تؤمّن خطط التأمين الطبي للأطفال لم يتمكن من اكتشاف ثغرة امنية لعدم توفر أدوات تسجيل الاحداث الأمنية ومراقبتها. حيث قام أحد الأطراف الخارجية بإبلاغ شركة التأمين الطبي عن وجود هجمة سيبرانية تضمنت الدخول والتعديل على آلاف السجلات الصحية لأكثر من 3.5 مليون طفل. وفي التقرير المعدّ بعد الهجمة وُجِد أن مطوّري موقع الويب أهملوا نقاط ضعف امنية مهمّة. ولعدم وجود أدوات تسجيل الاحدث الأمنية ومراقبتها، قد يكون تسريب البيانات قد حدث من بداية عام 2013 وامتد الى أكثر من 7 سنوات.
+
+**سيناريو #2:** ‎ واجهت شركة طيران هندية كبرى تسريب بيانات يضم بيانات جُمعت لأكثر من عشر سنوات لمعلومات مسافريها الشخصية مما يتضمن بيانات الجوازات والبطاقات البنكية. تسريب البيانات حدث في خدمة تخزين سحابية من موفّر خدمات سحابية والذي قام بدوره بتنبيه شركة الطيران بوجود التسريب بعد مدة.
+
+**سيناريو #3:** ‎عانت شركة طيران أوروبية كبرى من تسريب ضمن لائحة النظام العام لحماية البيانات (GDPR). وقد عُلم أن التسريب حدث بسبب ثغرات في نظام الدفع تم استغلالها من قبل منفذي الهجوم والذين جمعوا سجلات الدفع لأكثر من 400,000 عميل. نتيجة لذلك، قام مشرّع الخصوصية بتغريم شركة الطيران 20  مليون باوند.
+
+## المصادر
 
 -   [OWASP Proactive Controls: Implement Logging and
     Monitoring](https://owasp.org/www-project-proactive-controls/v3/en/c9-security-logging.html)
@@ -130,7 +85,7 @@ result by the privacy regulator.
     Destructive
     Events](https://csrc.nist.gov/publications/detail/sp/1800-26/final)
 
-## List of Mapped CWEs
+## قائمة الربط مع إطار CWEs
 
 CWE-117 Improper Output Neutralization for Logs
 
