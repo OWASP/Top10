@@ -10,8 +10,10 @@
 
 A new category for 2021 focuses on making assumptions related to
 software updates, critical data, and CI/CD pipelines without verifying
-integrity. One of the highest weighted impacts from CVE/CVSS data.
-Notable CWEs include *CWE-502: Deserialization of Untrusted Data*,
+integrity. One of the highest weighted impacts from 
+Common Vulnerability and Exposures/Common Vulnerability Scoring System (CVE/CVSS) 
+data. Notable Common Weakness Enumerations (CWEs)CWEs include
+*CWE-502: Deserialization of Untrusted Data*,
 *CWE-829: Inclusion of Functionality from Untrusted Control Sphere*, and
 *CWE-494: Download of Code Without Integrity Check*.
 

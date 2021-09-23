@@ -10,7 +10,7 @@
 
 A new category for 2021 focuses on risks related to design and
 architectural flaws, with a call for more use of threat modeling, secure
-design patterns, and reference architectures. Notable CWEs include
+design patterns, and reference architectures. Notable Common Weakness Enumerations (CWEs) include
 *CWE-209: Generation of Error Message Containing Sensitive Information*,
 *CWE-256: Unprotected Storage of Credentials*, *CWE-501: Trust Boundary
 Violation*, and *CWE-522: Insufficiently Protected Credentials*.

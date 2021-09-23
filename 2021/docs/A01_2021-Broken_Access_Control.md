@@ -9,7 +9,7 @@
 ## Overview
 
 Moving up from the fifth position, 94% of applications were tested for
-some form of broken access control with the average incidence rate of 3.81%, and has the most occurrences in the contributed dataset with over 318k. Notable CWEs included are *CWE-200: Exposure of Sensitive Information to an Unauthorized Actor*, *CWE-201:
+some form of broken access control with the average incidence rate of 3.81%, and has the most occurrences in the contributed dataset with over 318k. Notable Common Weakness Enumerations (CWEs) included are *CWE-200: Exposure of Sensitive Information to an Unauthorized Actor*, *CWE-201:
 Exposure of Sensitive Information Through Sent Data*, and *CWE-352:
 Cross-Site Request Forgery*.
 
@@ -51,7 +51,7 @@ check or metadata.
 -   Except for public resources, deny by default.
 
 -   Implement access control mechanisms once and re-use them throughout
-    the application, including minimizing CORS usage.
+    the application, including minimizing Cross-Origin Resource Sharing (CORS) usage.
 
 -   Model access controls should enforce record ownership rather than
     accepting that the user can create, read, update, or delete any
@@ -72,7 +72,7 @@ check or metadata.
 -   Stateful session identifiers should be invalidated on the server after logout.
     Stateless JWT tokens should rather be short-lived so that the window of 
     opportunity for an attacker is minimized. For longer lived JWTs it's highy recommended to
-    follow the OAUTH standards to revoke access.
+    follow the OAuth standards to revoke access.
 
 Developers and QA staff should include functional access control unit
 and integration tests.
@@ -123,7 +123,7 @@ non-admin can access the admin page, this is a flaw.
 -   [PortSwigger: Exploiting CORS
     misconfiguration](https://portswigger.net/blog/exploiting-cors-misconfigurations-for-bitcoins-and-bounties)
     
--   [OAUTH ](https://www.oauth.com/oauth2-servers/listing-authorizations/revoking-access/)
+-   [OAuth](https://www.oauth.com/oauth2-servers/listing-authorizations/revoking-access/)
 
 ## List of Mapped CWEs
 

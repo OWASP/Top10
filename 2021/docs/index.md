@@ -17,7 +17,7 @@ changes, and some consolidation in the Top 10 for 2021.
 
 **A01:2021-Broken Access Control** moves up from the fifth position; 94%
 of applications were tested for some form of broken access control. The
-34 CWEs mapped to Broken Access Control had more occurrences in
+34 Common Weakness Enumerations (CWEs) mapped to Broken Access Control had more occurrences in
 applications than any other category.
 
 **A02:2021-Cryptographic Failures** shifts up one position to #2,
@@ -60,7 +60,7 @@ availability of standardized frameworks seems to be helping.
 **A08:2021-Software and Data Integrity Failures** is a new category for
 2021, focusing on making assumptions related to software updates,
 critical data, and CI/CD pipelines without verifying integrity. One of
-the highest weighted impacts from CVE/CVSS data mapped to the 10 CWEs in
+the highest weighted impacts from Common Vulnerability and Exposures/Common Vulnerability Scoring System (CVE/CVSS) data mapped to the 10 CWEs in
 this category. Insecure Deserialization from 2017 is now a part of this
 larger category.
 
@@ -286,7 +286,7 @@ Categories, here is what they mean:
 -   *Total Occurrences*: Total number of applications found to have the
     CWEs mapped to a category.
 
--   *Total CVEs*: Total number of CVEs in the NVD DB that were mapped to
+-   *Total CVEs*: Total number of CVEs in the National Vulnerability Database (NVD) DB that were mapped to
     the CWEs mapped to a category.
 
 ## Category Relationships from 2017

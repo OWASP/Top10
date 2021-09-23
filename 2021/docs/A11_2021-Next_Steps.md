@@ -37,8 +37,6 @@ identify and remediate.
     sensitive information by exploiting a race condition using a
     statically shared variable across multiple threads.
 
--   **References**. TBA
-
 ## Denial of Service
 
 | CWEs Mapped  | Max Incidence Rate  | Avg Incidence Rate  | Max Coverage  | Avg Coverage  | Avg Weighted Exploit  | Avg Weighted Impact  | Total Occurrences  | Total CVEs  |
@@ -62,8 +60,6 @@ identify and remediate.
     operation takes 5-10 seconds to complete. When running four
     concurrent threads, the server seems to stop responding. The
     attacker uses 1000 threads and takes the entire system offline.
-
--   **References**. TBA
 
 ## Memory Management Errors
 
@@ -89,19 +85,3 @@ identify and remediate.
 
 -   **Example attack scenarios**. Buffer and heap overflows have been a
     mainstay of
-
--   **References**. TBA
-
-## Security Control Failures
-
-| CWEs Mapped  | Max Incidence Rate  | Avg Incidence Rate  | Max Coverage  | Avg Coverage  | Avg Weighted Exploit  | Avg Weighted Impact  | Total Occurrences  | Total CVEs  |
-|:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
-| 2            | 11.35%              | 9.64%               | 76.60%        | 45.23%        |                       |                      | 44911              | 329         |
-
--   **Description**.
-
--   **How to prevent**.
-
--   **Example attack scenarios**.
-
--   **References**. TBA

@@ -11,7 +11,8 @@
 This category is added from the Top 10 community survey (#1). The data shows a
 relatively low incidence rate with above average testing coverage and
 above-average Exploit and Impact potential ratings. As new entries are
-likely to be a single or small cluster of CWEs for attention and
+likely to be a single or small cluster of Common Weakness Enumerations (CWEs)
+for attention and
 awareness, the hope is that they are subject to focus and can be rolled
 into a larger category in a future edition.
 
@@ -21,7 +22,7 @@ SSRF flaws occur whenever a web application is fetching a remote
 resource without validating the user-supplied URL. It allows an attacker
 to coerce the application to send a crafted request to an unexpected
 destination, even when protected by a firewall, VPN, or another type of
-network ACL.
+network access control list (ACL).
 
 As modern web applications provide end-users with convenient features,
 fetching a URL becomes a common scenario. As a result, the incidence of

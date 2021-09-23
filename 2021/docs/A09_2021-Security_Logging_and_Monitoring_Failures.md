@@ -40,7 +40,7 @@ detection, monitoring, and active response occurs any time:
 -   Appropriate alerting thresholds and response escalation processes
     are not in place or effective.
 
--   Penetration testing and scans by DAST tools (such as OWASP ZAP) do
+-   Penetration testing and scans by dynamic application security testing (DAST) tools (such as OWASP ZAP) do
     not trigger alerts.
 
 -   The application cannot detect, escalate, or alert for active attacks
@@ -75,12 +75,12 @@ depending on the risk of the application:
     quickly.
 
 -   Establish or adopt an incident response and recovery plan, such as
-    NIST 800-61r2 or later.
+    National Institute of Standards and Technology (NIST) 800-61r2 or later.
 
 There are commercial and open-source application protection frameworks
 such as the OWASP ModSecurity Core Rule Set, and open-source log
-correlation software, such as the ELK stack, that feature custom
-dashboards and alerting.
+correlation software, such as the Elasticsearch, Logstash, Kibana (ELK)
+stack, that feature custom dashboards and alerting.
 
 ## Example Attack Scenarios
 

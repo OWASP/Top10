@@ -9,7 +9,7 @@
 ## Overview
 
 Moving up from #6 in the previous edition, 90% of applications were
-tested for some form of misconfiguration, with an average incidence rate of 4.%, and over 208k occurences of a CWE in this risk category. With more shifts into highly configurable software, it's not surprising to see this category move up.
+tested for some form of misconfiguration, with an average incidence rate of 4.%, and over 208k occurences of a Common Weakness Enumeration (CWE) in this risk category. With more shifts into highly configurable software, it's not surprising to see this category move up.
 Notable CWEs included are *CWE-16 Configuration* and *CWE-611 Improper
 Restriction of XML External Entity Reference*.
 
@@ -96,7 +96,7 @@ potentially exposes sensitive information or underlying flaws such as
 component versions that are known to be vulnerable.
 
 **Scenario #4:** A cloud service provider has default sharing
-permissions open to the Internet by other CSP users. This allows
+permissions open to the Internet by other Content Security Policy header (CSP) users. This allows
 sensitive data stored within cloud storage to be accessed.
 
 ## References

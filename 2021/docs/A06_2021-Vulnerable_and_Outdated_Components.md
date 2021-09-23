@@ -11,7 +11,7 @@
 It was #2 from the Top 10 community survey but also had enough data to make the
 Top 10 via data. Vulnerable Components are a known issue that we
 struggle to test and assess risk and is the only category to not have
-any CVEs mapped to the included CWEs, so a default exploits/impact
+any Common Weakness Enumerations (CWEs) mapped to the included CWEs, so a default exploits/impact
 weight of 5.0 is used. Notable CWEs included are *CWE-1104: Use of
 Unmaintained Third-Party Components* and the two CWEs from Top 10 2013
 and 2017.
@@ -54,7 +54,8 @@ There should be a patch management process in place to:
 -   Continuously inventory the versions of both client-side and
     server-side components (e.g., frameworks, libraries) and their
     dependencies using tools like versions, OWASP Dependency Check,
-    retire.js, etc. Continuously monitor sources like CVE and NVD for
+    retire.js, etc. Continuously monitor sources like Common Vulnerability and 
+    Exposures (CVE) and National Vulnerability Database (NVD) for
     vulnerabilities in the components. Use software composition analysis
     tools to automate the process. Subscribe to email alerts for
     security vulnerabilities related to components you use.
