@@ -39,17 +39,11 @@ defense in depth controls:
     reduce the impact of SSRF
 
 -   Enforce “deny by default” firewall policies or network access
-    control rules to block all but essential intranet traffic. 
+    control rules to block all but essential intranet traffic.<br/>  
+    *Hints:* Establish an ownership and a lifecycle for firewall rules based on applications.<br/>
     Log all accepted *and* blocked network flows 
     (see A09:2021-Security Logging and Monitoring Failures).
-    Establish an ownership and a lifecycle for firewall rules based on applications
     
--   Don't deploy other security relevant services on front systems. 
-    Control local traffic on these systems (e.g. localhost)
-    
--   For frontends with dedicated and manageable user groups use network encryption (e.g. VPNs)
-    on independant systems to consider very high protection needs  
-
 ### **From Application layer:**
 
 -   Sanitize and validate all client-supplied input data
@@ -67,6 +61,14 @@ defense in depth controls:
 Do not mitigate SSRF via the use of a deny list or regular expression.
 Attackers have payload lists, tools, and skills to bypass deny lists.
 
+### **Additional Measures to consider:**
+    
+-   Don't deploy other security relevant services on front systems. 
+    Control local traffic on these systems (e.g. localhost)
+    
+-   For frontends with dedicated and manageable user groups use network encryption (e.g. VPNs)
+    on independant systems to consider very high protection needs  
+
 ## Example Attack Scenarios
 
 Attackers can use SSRF to attack systems protected behind web
@@ -78,9 +80,9 @@ is unsegmented, attackers can map out internal networks and determine if
 ports are open or closed on internal servers from connection results or
 elapsed time to connect or reject SSRF payload connections.
 
-**Scenario #2:** Sensitive data exposure. Attackers can access local
-files such as <file:///etc/passwd> or internal services to gain
-sensitive information.
+**Scenario #2:** Sensitive data exposure. Attackers can access local 
+files such as or internal services to gain sensitive information such
+as `file:///etc/passwd</span>` and `http://localhost:28017/`.
 
 **Scenario #3:** Access metadata storage of cloud services. Most cloud
 providers have metadata storage such as <http://169.254.169.254/>. An
