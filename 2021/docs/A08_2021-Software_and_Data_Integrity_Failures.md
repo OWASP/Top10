@@ -95,7 +95,9 @@ most significant breaches of this nature in history.
     SolarWinds
     Hack](<https://www.npr.org/2021/04/16/985439655/a-worst-nightmare-cyberattack-the-untold-story-of-the-solarwinds-hack>)
 
--   <https://www.manning.com/books/securing-devops>
+-   [CodeCov Bash Uploader Compromise](https://about.codecov.io/security-update)
+
+-   [Securing DevOps by Julien Vehent](https://www.manning.com/books/securing-devops)
 
 ## List of Mapped CWEs
 
