@@ -86,7 +86,7 @@ files such as or internal services to gain sensitive information such
 as `file:///etc/passwd</span>` and `http://localhost:28017/`.
 
 **Scenario #3:** Access metadata storage of cloud services. Most cloud
-providers have metadata storage such as <http://169.254.169.254/>. An
+providers have metadata storage such as `http://169.254.169.254/`. An
 attacker can read the metadata to gain sensitive information.
 
 **Scenario #4:** Compromise internal services – The attacker can abuse
