@@ -39,10 +39,11 @@ defense in depth controls:
     reduce the impact of SSRF
 
 -   Enforce “deny by default” firewall policies or network access
-    control rules to block all but essential intranet traffic.<br/>  
-    *Hints:* Establish an ownership and a lifecycle for firewall rules based on applications.<br/>
-    Log all accepted *and* blocked network flows 
-    (see A09:2021-Security Logging and Monitoring Failures).
+    control rules to block all but essential intranet traffic.<br/> 
+    *Hints:*<br> 
+    ~ Establish an ownership and a lifecycle for firewall rules based on applications.<br/>
+    ~ Log all accepted *and* blocked network flows on firewalls
+    (see **A09:2021-Security Logging and Monitoring Failures**).
     
 ### **From Application layer:**
 
