@@ -32,7 +32,7 @@ attacks. There may be authentication weaknesses if the application:
     processes, such as "knowledge-based answers," which cannot be made
     safe.
 
--   Uses plain text, encrypted, or weakly hashed passwords (see
+-   Uses plain text, encrypted, or weakly hashed passwords data stores (see
     **A2:2021-Cryptographic Failures**).
 
 -   Has missing or ineffective multi-factor authentication.
