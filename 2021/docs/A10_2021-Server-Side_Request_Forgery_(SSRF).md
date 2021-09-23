@@ -64,7 +64,7 @@ Attackers have payload lists, tools, and skills to bypass deny lists.
 
 ### **Additional Measures to consider:**
     
--   Don't deploy other security relevant services on front systems. 
+-   Don't deploy other security relevant services on front systems (e.g. OpenID). 
     Control local traffic on these systems (e.g. localhost)
     
 -   For frontends with dedicated and manageable user groups use network encryption (e.g. VPNs)
