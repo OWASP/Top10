@@ -123,7 +123,7 @@ non-admin can access the admin page, this is a flaw.
 -   [PortSwigger: Exploiting CORS
     misconfiguration](https://portswigger.net/blog/exploiting-cors-misconfigurations-for-bitcoins-and-bounties)
     
--   [OAuth Revoking Access](https://www.oauth.com/oauth2-servers/listing-authorizations/revoking-access/)
+-   [OAuth: Revoking Access](https://www.oauth.com/oauth2-servers/listing-authorizations/revoking-access/)
 
 ## List of Mapped CWEs
 
