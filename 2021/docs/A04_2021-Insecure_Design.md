@@ -92,7 +92,7 @@ rejected such transactions.
 
 -   [OWASP Cheat Sheet: Secure Design Principles](TBD)
 
--   [NIST – Guidelines on Minimum Standards for Developer Verification of Software](https://www.nist.gov/system/files/documents/2021/07/09/Developer%20Verification%20of%20Software.pdf)
+-   [NIST – Guidelines on Minimum Standards for Developer Verification of Software](https://www.nist.gov/system/files/documents/2021/07/13/Developer%20Verification%20of%20Software.pdf)
 
 -   [The Threat Modeling Manifesto](https://threatmodelingmanifesto.org)
 
