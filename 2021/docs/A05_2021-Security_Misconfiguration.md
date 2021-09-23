@@ -40,8 +40,8 @@ The application might be vulnerable if the application is:
 -   The server does not send security headers or directives, or they are
     not set to secure values.
 
--   The software is out of date or vulnerable (see A06:2021-Vulnerable
-    and Outdated Components).
+-   The software is out of date or vulnerable (see [A06:2021-Vulnerable
+    and Outdated Components](A06_2021-Vulnerable_and_Outdated_Components.md)).
 
 Without a concerted, repeatable application security configuration
 process, systems are at a higher risk.
@@ -63,7 +63,8 @@ Secure installation processes should be implemented, including:
 
 -   A task to review and update the configurations appropriate to all
     security notes, updates, and patches as part of the patch management
-    process (see A06:2021-Vulnerable and Outdated Components). Review
+    process (see [A06:2021-Vulnerable
+    and Outdated Components](A06_2021-Vulnerable_and_Outdated_Components.md)). Review
     cloud storage permissions (e.g., S3 bucket permissions).
 
 -   A segmented application architecture provides effective and secure

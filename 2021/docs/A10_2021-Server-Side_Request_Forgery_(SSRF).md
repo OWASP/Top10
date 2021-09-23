@@ -44,7 +44,7 @@ defense in depth controls:
     *Hints:*<br> 
     ~ Establish an ownership and a lifecycle for firewall rules based on applications.<br/>
     ~ Log all accepted *and* blocked network flows on firewalls
-    (see **A09:2021-Security Logging and Monitoring Failures**).
+    (see [A09:2021-Security Logging and Monitoring Failures](A09_2021-Security_Logging_and_Monitoring_Failures.md)).
     
 ### **From Application layer:**
 

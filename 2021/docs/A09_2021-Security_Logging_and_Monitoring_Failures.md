@@ -47,8 +47,7 @@ detection, monitoring, and active response occurs any time:
     in real-time or near real-time.
 
 You are vulnerable to information leakage by making logging and alerting
-events visible to a user or an attacker (see A01:2021 – Broken Access
-Control).
+events visible to a user or an attacker (see [A01:2021-Broken Access Control](A01_2021-Broken_Access_Control.md)).
 
 ## How to Prevent
 
