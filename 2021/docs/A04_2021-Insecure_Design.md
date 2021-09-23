@@ -21,7 +21,7 @@ Insecure design is a broad category representing many different
 weaknesses, expressed as “missing or ineffective control design.”
 Missing insecure design is where a control is absent. For example,
 imagine code that should be encrypting sensitive data, but there is no
-method. Ineffective insecure design is where a threat could be realized,
+method. Ineffective insecure design is where an attacker could realize a threat,
 but insufficient domain (business) logic validation prevents the action.
 For example, imagine domain logic that is supposed to process pandemic
 tax relief based upon income brackets but does not validate that all
@@ -29,29 +29,28 @@ inputs are correctly signed and provides a much more significant relief
 benefit than should be granted.
 
 ### Requirements and Resource Management
-Collect and negotiate the business requirements for an application with 
-the business, including the protection requirements with regard to 
-confidentiality, authenticity, integrity and availability of all data assets,
-and the expected business logic. Take into account how exposed your application
-is going to be and if you need a segregation of tenants (additionally to access control).
-Compile the technical requirements including functional and nonfunctional security requirements.
-Plan and negotiate the budget that covers all aspects of design, build, testing and operation, 
-including security activities.
+
+Collect and negotiate the business requirements for an application with the
+business, including the protection requirements concerning confidentiality,
+authenticity, integrity, availability of all data assets, and the expected
+business logic. Take into account how exposed your application will be and
+if you need segregation of tenants (additionally to access control). Compile
+the technical requirements, including functional and non-functional security
+requirements. Plan and negotiate the budget covering all design, build,
+testing, and operation, including security activities.
 
 ### Secure Design
+
 Secure design is a culture and methodology that constantly evaluates
 threats and ensures that code is robustly designed and tested to prevent
-known attack methods. Learn from mistakes and offer positive incentives 
-to promote improvements. Secure design is neither an add-on nor a tool 
-that you can add to a software. 
+known attack methods. Learn from mistakes and offer positive incentives to promote improvements. Secure design is neither an add-on nor a tool that you can add to software.
 
 ### Secure Development Lifecycle
-It requires a secure development lifecycle, some form of 
-secure design pattern or paved road component
-library or tooling, and threat modeling. Reach out for your security 
-specialists at the beginning of a software project to get accompaignet 
-throughout the whole project and maintainance of your software.
 
+Secure software requires a secure development lifecycle, some form of secure 
+design pattern or paved road componentlibrary or tooling, and threat modeling. 
+Reach out for your security specialists at the beginning of a software project
+throughout the whole project and maintenance of your software.
 
 ## How to Prevent
 
@@ -64,20 +63,20 @@ throughout the whole project and maintainance of your software.
 
 -   Use threat modeling for critical authentication, access control,
     business logic, and key flows
-    
+
 -   Integrate plausibility checks at each tier of your application
     (from frontend to backend)
 
--   Write unit and integration tests to validate that all critical flows
+-   Write unit and integration tests to validate that all critical flows 
     are resistant to the threat model. Compile use-cases *and* misuse-cases
     for each tier of your application.
 
--   Segregate tier layers on system and network layers depending on the 
+-   Segregate tier layers on the system and network layers depending on the
     exposure and protection needs
-    
--   Segregate tanants robustly by design throughout all tiers     
-    
--   Limit ressource consumption by user or service    
+
+-   Segregate tenants robustly by design throughout all tiers
+
+-   Limit resource consumption by user or service
 
 ## Example Attack Scenarios
 
