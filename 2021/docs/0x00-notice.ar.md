@@ -1,36 +1,41 @@
-# DRAFT
+# مسودة
 
-## DO NOT USE THIS UNTIL IT'S DONE!
+## لا تستخدم هذا الإطار حتى يتم الانتهاء منه بشكل كامل.
 
-This is a draft. Do not use this version. The presence of an Axx does not mean it's going to be in the final or the ordering of the final version.
+هذه النسخة هي مسودة وليست الإصدار النهائي، ولا يعني وجود التصنيف لكل جزء من الأجزاء انها هي النسخة النهاية او انه هو الترتيب الصحيح والنهائي.
 
-## Current status
+## الوضع الحالي
 
-Taking comments on this draft, and preparing the graphic refresh in time for the official release on OWASP's 20th Anniversary.
+سيتم اخذ التعليقات على هذه المسودة بالحسبان وتحديثها وتجهيز عملية التصميم للصور استعداداً للإطلاق مع الذكرى 20 لمنظمة آواسب.
 
-## Lead Authors
+## المؤلفون الرئيسيون
 
-- Andrew van der Stock [@vanderaj](https://twitter/vanderaj)
-- Brian Glas [@infosecdad](https://twitter/infosecdad)
+- Andrew van der Stock [@vanderaj](https://twitter.com/vanderaj)
+- Brian Glas [@infosecdad](https://twitter.com/infosecdad)
 - Neil Smithline [@]
 - Torsten Gigler []
 
-## Contributors
+## المساهمين
 
 - Orange Tsai, Author of A10-2021: Server Side Request Forgery
 - Jim Manico and Jakub Maćkowski - OWASP CheatSheets Coordination
 
-## How you can help
+## المترجمين
 
-At this stage, we are asking for
+-  [Malek Aldossary](https://twitter.com/Malajab), [Mohammed Alsuhaymi](https://twitter.com/msuhaymi),[Thamer Alshammeri](https://twitter.com/t44t_), [Yara Eissa Abdu Ajeebi](https://twitter.com/YE_A1), [Wesal Majeed Alobaidi](https://twitter.com/Wesal_m6), [Amal Almutairi](http://linkedin.com/in/amal-almutairi-9a617915b), [Noura Abdulmohsen Alsubaie](https://twitter.com/NouraAlsubaie97), [Mohammed Ibrahem Alsheky](https://www.linkedin.com/in/mohammed-ibrahem-6b088368), [Zainab Hussain Al Hussain](https://twitter.com/zain303), [FAHAD ALOTAIFEE](https://twitter.com/fad_777), [Nowayer](https://twitter.com/_Nowayer_), [Saja Alqurashi](https://twitter.com/saja_alqurashi), [Raghad Aljabr](http://linkedin.com/in/raghad-aljabr-3b3846124), [Majed alrhyel](https://twitter.com/1en_majed), [Almaha](https://twitter.com/emy797kay), [Mohammed AL Busaidi](https://www.linkedin.com/in/mohammed-al-busaidi-124988ab), [Aljohara Alsubaie](http://linkedin.com/in/aljohara-alsubaie-538b3b168), [Rana Gharmallah Alzahrani](http://linkedin.com/in/rana-alzahrani-26447b19b), [Haniya](https://twitter.com/_______HAA), [Fahdah Alhadayan ](https://www.linkedin.com/in/fahdahmh ), [Ibtisam AlTuraif](https://twitter.com/EbAlturaif), [Abeer Alwelaie ](https://twitter.com/abeerp7_), [Nasser bin Hasen ](https://twitter.com/r00t_nasser)
 
-- Data scientists - please peer review our analysis
-- Web designers - we need to make a mobile friendly version
-- Translators - please review the English text to make sure it's translatable
-- ASVS, Testing Guide, and Code Review Guide leadership - please use our data and help us link our documents and standards together
 
-## Log issues and pull requests
+## كيف تقوم بمساعدتنا
 
-Please log any corrections or issues:
+في هذه المرحل، نطلب مساعدتك ف:
+
+- علماء البيانات - يرجى مراجعة النظراء لتحليلنا
+- مصممو الويب - نحتاج إلى إنشاء نسخة متوافقة مع الأجهزة المحمولة
+- المترجمون - يرجى مراجعة النص الإنجليزي للتأكد من أنه قابل للترجمة
+- ASVS,ودليل الاختبار ودليل مراجعة التعليمات البرمجية - يرجى استخدام بياناتنا ومساعدتنا في ربط مستنداتنا ومعاييرنا معًا
+
+## طلبات الرفع وتسجيل التذاكر
+
+في حال وجود أي مشكلة او تعديل أتمنى زيارة:
 
 - [https://github.com/OWASP/Top10/issues](https://github.com/OWASP/Top10/issues)
