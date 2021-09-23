@@ -8,7 +8,7 @@
 
 ## Overview
 
-It was #2 from the industry survey but also had enough data to make the
+It was #2 from the Top 10 community survey but also had enough data to make the
 Top 10 via data. Vulnerable Components are a known issue that we
 struggle to test and assess risk and is the only category to not have
 any CVEs mapped to the included CWEs, so a default exploits/impact

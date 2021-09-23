@@ -1,4 +1,4 @@
-# How to start an AppSec Program with the OWASP Top 10
+# How to start an AppSec Program with the OWASP Top 10 
 
 Previously, the OWASP Top 10 was never designed to be the basis for an
 AppSec program. However, it's essential to start somewhere for many
@@ -69,10 +69,10 @@ adopt the paved road component quickly.
 Paved road components should address a significant issue with the OWASP
 Top 10, for example, how to automatically detect or fix vulnerable
 components, or a static code analysis IDE plugin to detect injections or
-even better start using a library that is known safe against injection.
-The more of these secure drop-in replacements provided to teams, the better.
-A vital task of the appsec team is to ensure that the security of these
-components is continuously evaluated and improved.
+even better a library that is known safe against injection, such as
+React or Vue. The more of these secure drop-in replacements provided to
+teams, the better. A vital task of the appsec team is to ensure that the
+security of these components is continuously evaluated and improved.
 Once they are improved, some form of communication pathway with
 consumers of the component should indicate that an upgrade should occur,
 preferably automatically, but if not, as least highlighted on a
@@ -113,5 +113,3 @@ going if we're ever going to get on top of appsec vulnerabilities.
     limited impact, do something different. Just because we've done
     testing like desk checks since the 1970s doesn't mean it's a good
     idea. Measure, evaluate, and then build or improve.
-
---8<-- "includes/abbreviations.md"

@@ -2,14 +2,15 @@
 
 ## Factors
 
-| CWEs Mapped | Max Incidence Rate | Avg Incidence Rate | Avg Weighted Exploit | Avg Weighted Impact | Max Coverage | Avg Coverage | Total Occurrences | Total CVEs |
+| CWEs Mapped | Max Incidence Rate | Avg Incidence Rate | Max Coverage | Avg Coverage | Avg Weighted Exploit | Avg Weighted Impact | Total Occurrences | Total CVEs |
 |:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
-| 20          | 19.84%             | 4.51%              | 8.12                 | 6.56                | 89.58%       | 44.84%       | 208,387           | 789        |
+| 20          | 19.84%             | 4.51%              | 89.58%       | 44.84%       | 8.12                 | 6.56                | 208,387           | 789        |
 
 ## Overview
 
 Moving up from #6 in the previous edition, 90% of applications were
-tested for some form of misconfiguration, with an average incidence rate of 4.%, and over 208k occurences of a CWE in this risk category. With more shifts into highly configurable software, it's not surprising to see this category move up.
+tested for some form of misconfiguration. With more shifts into highly
+configurable software, it's not surprising to see this category move up.
 Notable CWEs included are *CWE-16 Configuration* and *CWE-611 Improper
 Restriction of XML External Entity Reference*.
 
@@ -104,7 +105,7 @@ sensitive data stored within cloud storage to be accessed.
 -   [OWASP Testing Guide: Configuration
     Management](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/README)
 
--   [OWASP Testing Guide: Testing for Error Codes](https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/08-Testing_for_Error_Handling/01-Testing_For_Improper_Error_Handling)
+-   OWASP Testing Guide: Testing for Error Codes
 
 -   Application Security Verification Standard V19 Configuration
 
@@ -119,42 +120,44 @@ sensitive data stored within cloud storage to be accessed.
 
 ## List of Mapped CWEs
 
-[CWE-2 7PK - Environment](https://cwe.mitre.org/data/definitions/2.html)
+CWE-2 Configuration
 
-[CWE-11 ASP.NET Misconfiguration: Creating Debug Binary](https://cwe.mitre.org/data/definitions/11.html)
+CWE-11 ASP.NET Misconfiguration: Creating Debug Binary
 
-[CWE-13 ASP.NET Misconfiguration: Password in Configuration File](https://cwe.mitre.org/data/definitions/13.html)
+CWE-13 ASP.NET Misconfiguration: Password in Configuration File
 
-[CWE-15 External Control of System or Configuration Setting](https://cwe.mitre.org/data/definitions/15.html)
+CWE-15 External Control of System or Configuration Setting
 
-[CWE-16 Configuration](https://cwe.mitre.org/data/definitions/16.html)
+CWE-16 Configuration
 
-[CWE-260 Password in Configuration File](https://cwe.mitre.org/data/definitions/260.html)
+CWE-260 Password in Configuration File
 
-[CWE-315 Cleartext Storage of Sensitive Information in a Cookie](https://cwe.mitre.org/data/definitions/315.html)
+CWE-315 Cleartext Storage of Sensitive Information in a Cookie
 
-[CWE-520 .NET Misconfiguration: Use of Impersonation](https://cwe.mitre.org/data/definitions/520.html)
+CWE-520 .NET Misconfiguration: Use of Impersonation
 
-[CWE-526 Exposure of Sensitive Information Through Environmental Variables](https://cwe.mitre.org/data/definitions/526.html)
+CWE-526 Exposure of Sensitive Information Through Environmental
+Variables
 
-[CWE-537 Java Runtime Error Message Containing Sensitive Information](https://cwe.mitre.org/data/definitions/537.html)
+CWE-537 Java Runtime Error Message Containing Sensitive Information
 
-[CWE-541 Inclusion of Sensitive Information in an Include File](https://cwe.mitre.org/data/definitions/541.html)
+CWE-541 Inclusion of Sensitive Information in an Include File
 
-[CWE-547 Use of Hard-coded, Security-relevant Constants](https://cwe.mitre.org/data/definitions/547.html)
+CWE-547 Use of Hard-coded, Security-relevant Constants
 
-[CWE-611 Improper Restriction of XML External Entity Reference](https://cwe.mitre.org/data/definitions/611.html)
+CWE-611 Improper Restriction of XML External Entity Reference
 
-[CWE-614 Sensitive Cookie in HTTPS Session Without 'Secure' Attribute](https://cwe.mitre.org/data/definitions/614.html)
+CWE-614 Sensitive Cookie in HTTPS Session Without 'Secure' Attribute
 
-[CWE-756 Missing Custom Error Page](https://cwe.mitre.org/data/definitions/756.html)
+CWE-756 Missing Custom Error Page
 
-[CWE-776 Improper Restriction of Recursive Entity References in DTDs ('XML Entity Expansion')](https://cwe.mitre.org/data/definitions/776.html)
+CWE-776 Improper Restriction of Recursive Entity References in DTDs
+('XML Entity Expansion')
 
-[CWE-942 Overly Permissive Cross-domain Whitelist](https://cwe.mitre.org/data/definitions/942.html)
+CWE-942 Overly Permissive Cross-domain Whitelist
 
-[CWE-1004 Sensitive Cookie Without 'HttpOnly' Flag](https://cwe.mitre.org/data/definitions/1004.html)
+CWE-1004 Sensitive Cookie Without 'HttpOnly' Flag
 
-[CWE-1032 OWASP Top Ten 2017 Category A6 - Security Misconfiguration](https://cwe.mitre.org/data/definitions/1032.html)
+CWE-1032 OWASP Top Ten 2017 Category A6 - Security Misconfiguration
 
-[CWE-1174 ASP.NET Misconfiguration: Improper Model Validation](https://cwe.mitre.org/data/definitions/1174.html)
+CWE-1174 ASP.NET Misconfiguration: Improper Model Validation

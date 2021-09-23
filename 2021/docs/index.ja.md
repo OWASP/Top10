@@ -1,99 +1,41 @@
-# Introduction à l'OWASP Top 10 2021
+# OWASP Top 10 2021の紹介
 
-Welcome to the latest installment of the OWASP Top 10! The OWASP Top 10
-2021 is all-new, with a new graphic design and an available one-page
-infographic you can print or obtain from our home page.
+OWASP トップ 10 の最新版へようこそ! OWASP トップ 10 2021年版は、グラフィックデザインが一新され、1ページのインフォグラフィックになっています。インフォグラフィックは、ホームページから入手でき、印刷することができます。
 
-A huge thank you to everyone that contributed their time and data for
-this iteration. Without you, this installment would not happen. **THANK
-YOU**.
+今回のトップ10の作成にあたって、貴重な時間やデータを提供してくださったすべての皆さんに感謝します。皆様のご協力なくしては、OWASP トップ 10 2021年版は存在し得ません。**本当に、感謝いたします**。
 
-## What's changed in the Top 10 for 2021
+## 2021年版トップ10の変更点
 
-There are three new categories, four categories with naming and scoping
-changes, and some consolidation in the Top 10 for 2021.
+2021年版トップ10では、3つの新しいカテゴリー、4つのカテゴリーの名称とスコープの変更がありました。統合されたものもいくつかあります。
 
 <img src="./assets/image1.png" style="width:6.5in;height:1.78889in" alt="Mapping of the relationship between the Top 10 2017 and the new Top 10 2021" />
 
-**A01:2021-Broken Access Control** moves up from the fifth position; 94%
-of applications were tested for some form of broken access control. The
-34 CWEs mapped to Broken Access Control had more occurrences in
-applications than any other category.
+**A01:2021-アクセス制御の不備** は、5位から順位を上げました。94%のアプリケーションで、何らかの形でアクセス制御の不備が確認されています。また、「アクセス制御の欠陥」にあたる34件のCWEは、他のカテゴリーよりもアプリケーションで多く発生しています。
 
-**A02:2021-Cryptographic Failures** shifts up one position to #2,
-previously known as *Sensitive Data Exposure,* which was broad symptom
-rather than a root cause. The renewed focus here is on failures related
-to cryptography which often leads to sensitive data exposure or system
-compromise.
+**A02:2021-暗号化の失敗** は、ひとつ順位を上げて2位になっています。
+以前は、「機微な情報の露出」と呼ばれていましたが、これは根本的な原因というより幅広くみられる症状と言えます。ここでは、機密データの漏えいやシステム侵害に多く関連する、暗号技術にまつわる失敗に焦点を当てています。
 
-**A03:2021-Injection** slides down to the third position. 94% of the
-applications were tested for some form of injection, and the 33 CWEs
-mapped into this category have the second most occurrences in
-applications. Cross-site Scripting is now part of this category in this
-edition.
+**A03:2021-インジェクション** は、3位に下がっています。94%のアプリケーションで、何らかのインジェクションに関する問題が確認されており、このカテゴリにあたる33のCWEは、アプリケーションでの発生数が2番目に多く見られます。今回から、クロスサイトスクリプティングは、このカテゴリに含まれています。
 
-**A04:2021-Insecure Design** is a new category for 2021, with a focus on
-risks related to design flaws. If we genuinely want to "move left" as an
-industry, it calls for more use of threat modeling, secure design
-patterns and principles, and reference architectures.
+**A04:2021-安全が確認されない不安な設計** は、2021年に新設されたカテゴリーで、設計上の欠陥に関するリスクに焦点を当てています。一業界として、我々が純粋に「シフトレフト」することを望むのであれば、脅威モデリングや、安全な設計パターンと原則、また、リファレンス・アーキテクチャをもっと利用していくことが必要です。
 
-**A05:2021-Security Misconfiguration** moves up from #6 in the previous
-edition; 90% of applications were tested for some form of
-misconfiguration. With more shifts into highly configurable software,
-it's not surprising to see this category move up. The former category
-for XML External Entities (XXE) is now part of this category.
+**A05:2021-セキュリティの設定ミス** は、前回の6位から順位を上げました。アプリケーションの90％には何らかの設定ミスが見られます。高度な設定が可能なソフトウェアへの移行が進む中で、このカテゴリーの順位が上がったことは当然と言えます。以前の、XML外部エンティティ参照(XXE)のカテゴリーは、このカテゴリーに含まれています。
 
-**A06:2021-Vulnerable and Outdated Components** was previously titled
-*Using Components with Known Vulnerabilities* and is #2 in the industry
-survey, but also had enough data to make the Top 10 via data analysis.
-This category moves up from #9 in 2017 and is a known issue that we
-struggle to test and assess risk. It is the only category not to have
-any CVEs mapped to the included CWEs, so a default exploit and impact
-weights of 5.0 are factored into their scores.
+**A06:2021-脆弱で古くなったコンポーネント** は、以前は「既知の脆弱性のあるコンポーネントの使用」というタイトルでした。この問題は、業界調査では2位であり、データ分析によってトップ10に入るだけのデータもありました。このカテゴリーは2017年の9位から順位を上げました。これは、テストやリスク評価に苦労する、よく知られた問題です。また、含まれるCWEにあたるCVEのない、唯一のカテゴリであるため、デフォルトのエクスプロイトとインパクトの重みは5.0としてスコアに反映されています。
 
-**A07:2021-Identification and Authentication Failures** was previously
-*Broken Authentication* and is sliding down from the second position,
-and now includes CWEs that are more related to identification failures.
-This category is still an integral part of the Top 10, but the increased
-availability of standardized frameworks seems to be helping.
+**A07:2021-識別と認証の失敗** 以前、第2位で「認証の不備」と呼ばれていましたが、この版では、識別の失敗に関連するCWEをより多く含む意味合いのカテゴリとなっています。このカテゴリーは依然としてトップ10に示すべき重要な項目ですが、標準化されたフレームワークの利用が進んだことが功を奏しているようです。
 
-**A08:2021-Software and Data Integrity Failures** is a new category for
-2021, focusing on making assumptions related to software updates,
-critical data, and CI/CD pipelines without verifying integrity. One of
-the highest weighted impacts from CVE/CVSS data mapped to the 10 CWEs in
-this category. Insecure Deserialization from 2017 is now a part of this
-larger category.
+**A08:2021-ソフトウェアとデータの整合性の不具合** これは2021年に新設されたカテゴリーで、ソフトウェアの更新、重要なデータを、CI/CDパイプラインにおいて整合性を検証せずに見込みで進めることによる問題にフォーカスしています。CVE/CVSSのデータから最も重大な影響を受けたものの1つが、このカテゴリーの10のCWEにマッピングされています。2017年の「安全でないデシリアライゼーション」は、このカテゴリーの一部となりました。
 
-**A09:2021-Security Logging and Monitoring Failures** was previously
-*Insufficient Logging &* Monitoring and is added from the industry
-survey (#3), moving up from #10 previously. This category is expanded to
-include more types of failures, is challenging to test for, and isn't
-well represented in the CVE/CVSS data. However, failures in this
-category can directly impact visibility, incident alerting, and
-forensics.
+**A09:2021-セキュリティログとモニタリングの失敗**  は、従来は「ロギングとモニタリングの不足」でしたが、業界の調査（第3位）から追加され、従来の第10位からランクアップしました。このカテゴリは、より多くの種類の失敗を含むように拡張されています。これは、テストが困難なものであり、かつ、CVE/CVSSのデータにはあまり反映されないものです。とはいえ、このカテゴリーで失敗が起きると、可視性、インシデントアラート、フォレンジックなどに直接影響を与える可能性があります。
 
-**A10:2021-Server-Side Request Forgery** is added from the industry
-survey (#1). The data shows a relatively low incidence rate with above
-average testing coverage, along with above-average ratings for Exploit
-and Impact potential. This category represents the scenario where the
-industry professionals are telling us this is important, even though
-it's not illustrated in the data at this time.
+**A10:2021-サーバーサイド・リクエスト・フォージェリ** は、業界の調査（第1位）から追加されたものです。調査データからわかることは、よくあるテストより広範な範囲において、問題の発生率は比較的低いものの、問題が起きた場合のエクスプロイトとインパクトは平均以上のものとなり得ます。このカテゴリは、現時点でデータとして現れるものではありませんでしたが、複数の業界の専門家により重要との示唆を得たシナリオとして反映しています。
 
-## Methodology
+## 方法論
 
-This installment of the Top 10 is more data-driven than ever but not
-blindly data-driven. We selected eight of the ten categories from
-contributed data and two categories from an industry survey at a high
-level. We do this for a fundamental reason, looking at the contributed
-data is looking into the past. AppSec researchers take time to find new
-vulnerabilities and new ways to test for them. It takes time to
-integrate these tests into tools and processes. By the time we can
-reliably test a weakness at scale, years have likely passed. To balance
-that view, we use an industry survey to ask people on the front lines
-what they see as essential weaknesses that the data may not show yet.
+今回のトップ10は、これまで以上にデータを重視していますが、やみくもにデータを重視しているわけではありません。10項目のうち8項目は提供されたデータから、2項目は業界調査から高いレベルで選びました。こうすることにはひとつの根本的な理由があります。提供されたデータを見ることは、過去を見ることを意味している、ということです。アプリケーションセキュリティのリサーチャーが新しい脆弱性や、それをテストする新しい方法を見つけるのには時間がかかります。これらのテストをツールやプロセスに組み込むには時間がかかります。こうした弱点を広く確実にテストできるようになるまでには、何年もかかってしまうことでしょう。そこで、データではわからないような本質的な弱点は何かということについては、業界の第一線で活躍されている方々にお聞きすることでバランスをとる、というわけです。
 
-There are a few critical changes that we adopted to continue to mature
-the Top 10.
+トップ10を継続的に成熟させるために私たちが採用した、重要な変更点がいくつかあります。
 
 ### How the categories are structured
 

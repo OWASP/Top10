@@ -2,13 +2,13 @@
 
 ## Factors
 
-| CWEs Mapped | Max Incidence Rate | Avg Incidence Rate | Max Coverage | Avg Coverage | Avg Weighted Exploit | Avg Weighted Impact | Total Occurrences | Total CVEs |
+| CWEs Mapped | Max Incidence Rate | Avg Incidence Rate | Avg Weighted Exploit | Avg Weighted Impact | Max Coverage | Avg Coverage | Total Occurrences | Total CVEs |
 |:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
-| 1           | 2.72%              | 2.72%              | 67.72%       | 67.72%       | 8.28                 | 6.72                | 9,503             | 385        |
+| 1           | 2.72%              | 2.72%              | 8.28                 | 6.72                | 67.72%       | 67.72%       | 9,503             | 385        |
 
 ## Overview
 
-This category is added from the industry survey (#1). The data shows a
+This category is added from the Top 10 community survey (#1). The data shows a
 relatively low incidence rate with above average testing coverage and
 above-average Exploit and Impact potential ratings. As new entries are
 likely to be a single or small cluster of CWEs for attention and
@@ -100,4 +100,4 @@ Execution (RCE) or Denial of Service (DoS).
 
 ## List of Mapped CWEs
 
-CWE-918 Server-Side Request Forgery (SSRF)
+[CWE-918 Server-Side Request Forgery (SSRF)](https://cwe.mitre.org/data/definitions/918.html)

@@ -68,5 +68,8 @@ $RECYCLE.BIN/
 *.~vsd*
 2017/pt-pt/.vscode/settings.json
 
+# IDE folders
+.idea/
+
 # MkDocs generated website
 2021/site
