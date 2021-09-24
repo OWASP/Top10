@@ -7,6 +7,7 @@ docs_dir: docs
 theme:
   name: material
   language: en
+  logo: assets/OWASP_Logo_Transp.png
   features:
     - navigation.sections
 
