@@ -13,7 +13,7 @@ some form of broken access control with the average incidence rate of 3.81%, and
 Exposure of Sensitive Information Through Sent Data*, and *CWE-352:
 Cross-Site Request Forgery*.
 
-## Description 
+## Description
 
 Access control enforces policy such that users cannot act outside of
 their intended permissions. Failures typically lead to unauthorized
@@ -21,12 +21,18 @@ information disclosure, modification, or destruction of all data or
 performing a business function outside the user's limits. Common access
 control vulnerabilities include:
 
--   Bypassing access control checks by modifying the URL, internal
-    application state, or the HTML page, or simply using a custom API
-    attack tool.
+-   Violation of the principle of least privilege or deny by default,
+    where access should only be granted for particular capabilities,
+    roles, or users, but is available to anyone.
 
--   Permitting viewing or editing someone else's account, simply providing
-    it's unique identifier.
+-   Bypassing access control checks by modifying the URL (parameter
+    tampering or force browsing), internal application state, or the
+    HTML page, or by using an attack tool modifying API requests.
+
+-   Permitting viewing or editing someone else's account, by providing
+    its unique identifier (insecure direct object references)
+
+-   Accessing API with missing access controls for POST, PUT and DELETE.
 
 -   Elevation of privilege. Acting as a user without being logged in or
     acting as an admin when logged in as a user.
@@ -39,8 +45,7 @@ control vulnerabilities include:
     origins.
 
 -   Force browsing to authenticated pages as an unauthenticated user or
-    to privileged pages as a standard user. Accessing API with missing
-    access controls for POST, PUT and DELETE.
+    to privileged pages as a standard user.
 
 ## How to Prevent
 
