@@ -1,4 +1,4 @@
-# A07:2021 – Identification and Authentication Failures
+# A07:2021 – Identification and Authentication Failures    ![icon](assets/TOP_10_Icons_Final_Identification_and_Authentication_Failures.png){: style="height:80px;width:80px" align="right"}
 
 ## Factors
 
