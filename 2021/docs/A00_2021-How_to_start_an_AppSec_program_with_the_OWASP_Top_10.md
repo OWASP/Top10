@@ -10,8 +10,8 @@ so on, but it's not in itself sufficient.
 
 Many Application Security (AppSec) programs try to run before they can
 crawl or walk. These efforts are doomed to failure. We strongly
-encourage CISOs and AppSec leadership to use OWASP Software Assurance
-Maturity Model (SAMM) \[<https://owaspsamm.org>\] to identify weaknesses
+encourage CISOs and AppSec leadership to use [OWASP Software Assurance
+Maturity Model (SAMM)](https://owaspsamm.org) to identify weaknesses
 and areas for improvement over a 1-3 year period. The first step is to
 evaluate where you are now, identify the gaps in governance, design,
 implementation, verification, and operations you need to resolve

@@ -1,4 +1,4 @@
-# A09:2021 – Security Logging and Monitoring Failures
+# A09:2021 – Security Logging and Monitoring Failures    ![icon](assets/TOP_10_Icons_Final_Security_Logging_and_Monitoring_Failures.png){: style="height:80px;width:80px" align="right"}
 
 ## Factors
 
@@ -13,7 +13,7 @@ slightly from the tenth position in the OWASP Top 10 2017. Logging and
 monitoring can be challenging to test, often involving interviews or
 asking if attacks were detected during a penetration test. There isn't
 much CVE/CVSS data for this category, but detecting and responding to
-breaches is critical. Still, it can be very impactful for visibility,
+breaches is critical. Still, it can be very impactful for accountability, visibility,
 incident alerting, and forensics. This category expands beyond *CWE-778
 Insufficient Logging* to include *CWE-117 Improper Output Neutralization
 for Logs*, *CWE-223 Omission of Security-relevant Information*, and
@@ -40,15 +40,14 @@ detection, monitoring, and active response occurs any time:
 -   Appropriate alerting thresholds and response escalation processes
     are not in place or effective.
 
--   Penetration testing and scans by DAST tools (such as OWASP ZAP) do
+-   Penetration testing and scans by dynamic application security testing (DAST) tools (such as OWASP ZAP) do
     not trigger alerts.
 
 -   The application cannot detect, escalate, or alert for active attacks
     in real-time or near real-time.
 
 You are vulnerable to information leakage by making logging and alerting
-events visible to a user or an attacker (see A01:2021 – Broken Access
-Control).
+events visible to a user or an attacker (see [A01:2021-Broken Access Control](A01_2021-Broken_Access_Control.md)).
 
 ## How to Prevent
 
@@ -75,12 +74,12 @@ depending on the risk of the application:
     quickly.
 
 -   Establish or adopt an incident response and recovery plan, such as
-    NIST 800-61r2 or later.
+    National Institute of Standards and Technology (NIST) 800-61r2 or later.
 
 There are commercial and open-source application protection frameworks
 such as the OWASP ModSecurity Core Rule Set, and open-source log
-correlation software, such as the ELK stack, that feature custom
-dashboards and alerting.
+correlation software, such as the Elasticsearch, Logstash, Kibana (ELK)
+stack, that feature custom dashboards and alerting.
 
 ## Example Attack Scenarios
 
