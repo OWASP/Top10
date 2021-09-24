@@ -1,4 +1,4 @@
-# A06:2021 – Vulnerable and Outdated Components
+# A06:2021 – Vulnerable and Outdated Components    ![icon](assets/TOP_10_Icons_Final_Vulnerable_Outdated_Components.png){: style="height:80px;width:80px" align="right"}
 
 ## Factors
 

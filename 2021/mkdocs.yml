@@ -30,6 +30,9 @@ nav:
     - A10 Server Side Request Forgery (SSRF): 'A10_2021-Server-Side_Request_Forgery_(SSRF).md'
   - Next Steps: 'A11_2021-Next_Steps.md'
 
+markdown_extensions:
+  - attr_list
+
 plugins:
   - i18n:
       default_language: en

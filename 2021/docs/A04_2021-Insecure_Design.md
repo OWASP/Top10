@@ -1,4 +1,4 @@
-# A04:2021 – Insecure Design
+# A04:2021 – Insecure Design   ![icon](assets/TOP_10_Icons_Final_Insecure_Design.png){: style="height:80px;width:80px" align="right"} 
 
 ## Factors
 
