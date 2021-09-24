@@ -13,7 +13,7 @@ slightly from the tenth position in the OWASP Top 10 2017. Logging and
 monitoring can be challenging to test, often involving interviews or
 asking if attacks were detected during a penetration test. There isn't
 much CVE/CVSS data for this category, but detecting and responding to
-breaches is critical. Still, it can be very impactful for visibility,
+breaches is critical. Still, it can be very impactful for accountability, visibility,
 incident alerting, and forensics. This category expands beyond *CWE-778
 Insufficient Logging* to include *CWE-117 Improper Output Neutralization
 for Logs*, *CWE-223 Omission of Security-relevant Information*, and

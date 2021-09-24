@@ -8,49 +8,23 @@
 
 ## Overview
 
-A new category for 2021 focuses on risks related to design and
-architectural flaws, with a call for more use of threat modeling, secure
-design patterns, and reference architectures. Notable Common Weakness Enumerations (CWEs) include
-*CWE-209: Generation of Error Message Containing Sensitive Information*,
-*CWE-256: Unprotected Storage of Credentials*, *CWE-501: Trust Boundary
-Violation*, and *CWE-522: Insufficiently Protected Credentials*.
+A new category for 2021 focuses on risks related to design and architectural flaws, with a call for more use of threat modeling, secure design patterns, and reference architectures. As a community we need to move beyond  "shift-left" in the coding space to pre-code activities that are critical for the principles of Secure by Design. Notable Common Weakness Enumerations (CWEs) include *CWE-209: Generation of Error Message Containing Sensitive Information*, *CWE-256: Unprotected Storage of Credentials*, *CWE-501: Trust Boundary Violation*, and *CWE-522: Insufficiently Protected Credentials*.
 
 ## Description
 
-Insecure design is a broad category representing many different
-weaknesses, expressed as “missing or ineffective control design.”
-Missing insecure design is where a control is absent. For example,
-imagine code that should be encrypting sensitive data, but there is no
-method. Ineffective insecure design is where an attacker could realize a threat,
-but insufficient domain (business) logic validation prevents the action.
-For example, imagine domain logic that is supposed to process pandemic
-tax relief based upon income brackets but does not validate that all
-inputs are correctly signed and provides a much more significant relief
-benefit than should be granted.
+Insecure design is a broad category representing different weaknesses, expressed as “missing or ineffective control design.” Insecure design is not the source for all other Top 10 risk categories. There is a difference between insecure design and insecure implementation. We differentiate between design flaws and implementation defects for a reason, they have different root causes and remediation. A secure design can still have implementation defects leading to vulnerabilities that may be exploited. An insecure design cannot be fixed by a perfect implementation as by definition, needed security controls were never created to defend against specific attacks. One of the factors that contribute to insecure design is the lack of business risk profiling inherent in the software or system being developed, and thus the failure to determine what level of security design is required.
 
 ### Requirements and Resource Management
 
-Collect and negotiate the business requirements for an application with the
-business, including the protection requirements concerning confidentiality,
-authenticity, integrity, availability of all data assets, and the expected
-business logic. Take into account how exposed your application will be and
-if you need segregation of tenants (additionally to access control). Compile
-the technical requirements, including functional and non-functional security
-requirements. Plan and negotiate the budget covering all design, build,
-testing, and operation, including security activities.
+Collect and negotiate the business requirements for an application with the business, including the protection requirements concerning confidentiality, integrity, availability, and authenticity of all data assets and the expected business logic. Take into account how exposed your application will be and if you need segregation of tenants (additionally to access control). Compile the technical requirements, including functional and non-functional security requirements. Plan and negotiate the budget covering all design, build, testing, and operation, including security activities.
 
 ### Secure Design
 
-Secure design is a culture and methodology that constantly evaluates
-threats and ensures that code is robustly designed and tested to prevent
-known attack methods. Learn from mistakes and offer positive incentives to promote improvements. Secure design is neither an add-on nor a tool that you can add to software.
+Secure design is a culture and methodology that constantly evaluates threats and ensures that code is robustly designed and tested to prevent known attack methods. Threat modeling should be integrated into grooming sessions (or similar activities), look for changes in data flows and access control or other security controls. In the user story development determine the correct flow and failure states, ensure they are well understood and agreed upon by responsible and impacted parties. Analyze assumptions and conditions for expected and failure flows, ensure they are still accurate and desirable. Determine how to validate the assumptions and enforce conditions needed for proper behaviors. Ensure the results are documented in the user story. Learn from mistakes and offer positive incentives to promote improvements. Secure design is neither an add-on nor a tool that you can add to software.
 
 ### Secure Development Lifecycle
 
-Secure software requires a secure development lifecycle, some form of secure 
-design pattern or paved road componentlibrary or tooling, and threat modeling. 
-Reach out for your security specialists at the beginning of a software project
-throughout the whole project and maintenance of your software.
+Secure software requires a secure development lifecycle, some form of secure design pattern or paved road component library or tooling, and threat modeling. Reach out for your security specialists at the beginning of a software project throughout the whole project and maintenance of your software. Consider leveraging the [OWASP Software Assurance Maturity Model (SAMM)](https://owaspsamm.org) to help structure your secure software development efforts.
 
 ## How to Prevent
 
@@ -63,6 +37,8 @@ throughout the whole project and maintenance of your software.
 
 -   Use threat modeling for critical authentication, access control,
     business logic, and key flows
+
+-   Integrate security language and controls into user stories
 
 -   Integrate plausibility checks at each tier of your application
     (from frontend to backend)
@@ -103,7 +79,11 @@ rejected such transactions.
 
 ## References
 
--   [OWASP Cheat Sheet: Secure Design Principles](TBD)
+-   [OWASP Cheat Sheet: Secure Design Principles](Coming Soon)
+
+-   [OWASP SAMM: Design:Security Architecture](https://owaspsamm.org/model/design/security-architecture/)
+
+-   [OWASP SAMM: Design:Threat Assessment](https://owaspsamm.org/model/design/threat-assessment/) 
 
 -   [NIST – Guidelines on Minimum Standards for Developer Verification of Software](https://www.nist.gov/system/files/documents/2021/07/13/Developer%20Verification%20of%20Software.pdf)
 
