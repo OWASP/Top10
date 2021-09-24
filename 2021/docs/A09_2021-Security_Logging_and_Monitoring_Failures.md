@@ -1,4 +1,4 @@
-# A09:2021 – Security Logging and Monitoring Failures
+# A09:2021 – Security Logging and Monitoring Failures    ![icon](assets/TOP_10_Icons_Final_Security_Logging_and_Monitoring_Failures.png){: style="height:80px;width:80px" align="right"}
 
 ## Factors
 
