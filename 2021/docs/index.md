@@ -91,17 +91,7 @@ There are data factors that are listed for each of the Top 10 Categories, here i
 - Total Occurrences: Total number of applications found to have the CWEs mapped to a category.
 - Total CVEs: Total number of CVEs in the NVD DB that were mapped to the CWEs mapped to a category.
 
-### Category Relationships from 2017
-
-There has been a lot of talk about the overlap between the Top Ten risks. By the definition of each (list of CWEs included), there really isn't any overlap. However, conceptually, there can be overlap or interactions based on the higher-level naming. Venn diagrams are many times used to show overlap like this.
-
-The Venn diagram above represents the interactions between the Top Ten 2017 risk categories. While doing so, a couple of essential points became obvious:
-
-1. One could argue that Cross-Site Scripting ultimately belongs within Injection as it's essentially Content Injection. Looking at the 2021 data, it became even more evident that XSS needed to move into Injection.
-2. The overlap is only in one direction. We will often classify a vulnerability by the end manifestation or "symptom," not the (potentially deep) root cause. For instance, "Sensitive Data Exposure" may have been the result of a "Security Misconfiguration"; however, you won't see it in the other direction. As a result, arrows are drawn in the interaction zones to indicate which direction it occurs.
-3. Sometimes these diagrams are drawn with everything in **A06:2017 Using Components with Known Vulnerabilities**. While some of these risk categories may be the root cause of third-party vulnerabilities, they are generally managed differently and with different responsibilities. The other types are typically representing first-party risks.
-
-### Thank you to our data contributors
+## Thank you to our data contributors
 
 The following organizations (along with some anonymous donors) kindly donated data for over 500,000 applications to make this the largest and most comprehensive application security data set. Without you, this would not be possible.
 
@@ -118,7 +108,7 @@ The following organizations (along with some anonymous donors) kindly donated da
 - Veracode
 - WhiteHat (NTT)
 
-### Thank you to our sponsor
+## Thank you to our sponsor
 
 The OWASP Top 10 2021 team gratefully acknowledge the financial support of Secure Code Warrior.
 
