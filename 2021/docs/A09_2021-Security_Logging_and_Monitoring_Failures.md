@@ -119,7 +119,7 @@ result by the privacy regulator.
     Application Logging Vocabulary](https://cheatsheetseries.owasp.org/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html)
 
 -   [OWASP Cheat Sheet:
-    Logging](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html))   
+    Logging](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html)
 
 -   [Data Integrity: Recovering from Ransomware and Other Destructive
     Events](https://csrc.nist.gov/publications/detail/sp/1800-11/final)
