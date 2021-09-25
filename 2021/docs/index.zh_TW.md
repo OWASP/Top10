@@ -90,23 +90,18 @@ CWEs 去進行分析。我們因此也計畫未來做更多的資料分析，並
 我們花了好幾個月將 CWEs 進行分組跟分類，而且其實可以一直花更多個月去做這件事情。但我
 們必須在某一個時間點停住。在 CWEs 當中，同時有 *原因* 以及 *症狀* 的問題，而像是 "
 加密機制失效" 和 "設定問題" 這類型的 *原因* 與 "機敏資料外洩" 和 "阻斷服務" 這類型
-的 *症狀* 是對立的。因此我們決定在可以的時候要更專注於底層的
+的 *症狀* 是對立的。因此我們決定在可以的時候要更專注於底層的原因，因為這是可以有效指
+出問題的本體跟同時提供問題的解決方向。專注在問題核心而不將重心放在症狀並不是一個新的概
+念，Top Ten 有史以來一直是症狀跟問題核心的綜合體，只是這次我們更刻意的將他突顯出來。
+在這次的新版本中，每一個類別內的平均有 19.6 個 CWE，而最低的 *A10:2021-伺服端請求偽造* 
+有一個 CWE 到 *A04:2021-不安全設計* 有四十個 CWE。這個新的類別架構能提供企業更多的
+資安訓練的好處，因為在新的架構下可以更專注在某個語系或平台上的 CWE。
 
+### 選擇類別時資料的使用方式
 
-We decided to focus on the root cause whenever possible as it's more
-logical for providing identification and remediation guidance. Focusing
-on the root cause over the symptom isn't a new concept; the Top Ten has
-been a mix of *symptom* and *root cause*. CWEs are also a mix of
-*symptom* and *root cause*; we are simply being more deliberate about it
-and calling it out. There is an average of 19.6 CWEs per category in
-this installment, with the lower bounds at 1 CWE for
-*A10:2021-Server-Side Request Forgery (SSRF)* to 40 CWEs in
-*A04:2021-Insecure Design*. This updated category structure offers
-additional training benefits as companies can focus on CWEs that make
-sense for a language/framework.
-
-### How the data is used for selecting categories
-
+在 2017 年，我們用事件發生次數去判斷可能發生的機率去選擇類別，然後透過一群在業界擁有
+數十年經驗的專家團對討論並依照 *可發生性*，*可發現性（同可能性）*，和 *技術影響性*
+去做排名。在 2021 年，我們希望用
 In 2017, we selected categories by incidence rate to determine
 likelihood, then ranked them by team discussion based on decades of
 experience for Exploitability, Detectability (also likelihood), and
