@@ -36,7 +36,7 @@ Top 10:
 | Secure Supply Chain     | Occasionally      | Yes                                              |
 
 We would encourage anyone wanting to adopt an application security
-standard to use the OWASP Application Security Verification Standard
+standard to use the [OWASP Application Security Verification Standard](https://owasp.org/www-project-application-security-verification-standard/)
 (ASVS), as it’s designed to be verifiable and tested, and can be used in
 all parts of a secure development lifecycle.
 
