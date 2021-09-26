@@ -1,5 +1,6 @@
-# How to use the OWASP Top 10 as a standard
+# 如何將 OWASP Top 10 2021 做為標準使用
 
+OWASP Top 10 最主要是一個提升意識形態的文件。但是，從 2003 年開始，這並沒有讓任何的企業或組織停止使用它當作預設的 AppSec 標準。如果你想要用使用 OWASP Top 10 當作程式設計或是驗證測試的一個標準，要先知道這只是一個最低指標並且也只是一個開始。
 The OWASP Top 10 is primarily an awareness document. However, this has
 not stopped organizations using it as a de facto industry AppSec
 standard since its inception in 2003. If you want to use the OWASP Top
