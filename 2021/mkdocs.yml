@@ -104,10 +104,10 @@ plugins:
           Home: الصفحة الرئيسية
           Notice: ملاحظات
           Introduction: المقدمة 
-          How to use the OWASP Top 10 as a standard: كيف تستخدم إطار أعلى عشر مخاطر من أواسب كنموذج معياري.
-          How to start an AppSec program with the OWASP Top 10: كيف تبدأ امن التطبيقات مع أعلى عشر مخاطر من أواسب
+          How to use the OWASP Top 10 as a standard: كيف تستخدم إطار أعلى عشرة مخاطر من أواسب كنموذج معياري.
+          How to start an AppSec program with the OWASP Top 10: كيف تبدأ امن التطبيقات مع أعلى عشرة مخاطر من أواسب
           About OWASP: عن أواسب  
-          Top 10 List: قائمة اعلى عشر مخاطر
+          Top 10 List: قائمة اعلى عشرة مخاطر
           A01 Broken Access Control: A01 تخطي صلاحيات الوصول
           A02 Cryptographic Failures: A02 فشل آلية التشفير
           A03 Injection: A03 الحقن
