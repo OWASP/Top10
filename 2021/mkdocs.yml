@@ -37,7 +37,7 @@ plugins:
         en: English
         it: Italiano
         fr: Français
-        ar: Arabic
+        ar: العربية
       nav_translations:
         fr:
           Home: Page d'accueil
@@ -56,18 +56,18 @@ plugins:
           Home: الصفحة الرئيسية
           Notice: ملاحظات
           Introduction: المقدمة 
-          How to use the OWASP Top 10 as a standard: كيف تستخدم اطار OWASP TOP 10 كنموذج معياري
-          How to start an AppSec program with the OWASP Top 10: كيف تبدء امن التطبيقات مع OWASP TOP 10
-          About OWASP: عن OWASP 
+          How to use the OWASP Top 10 as a standard: كيف تستخدم إطار أعلى عشر مخاطر من أواسب كنموذج معياري.
+          How to start an AppSec program with the OWASP Top 10: كيف تبدأ امن التطبيقات مع أعلى عشر مخاطر من أواسب
+          About OWASP: عن أواسب  
           Top 10 List: قائمة اعلى عشر مخاطر
           A01 Broken Access Control: A01 تخطي صلاحيات الوصول
           A02 Cryptographic Failures: A02 فشل آلية التشفير
           A03 Injection: A03 الحقن
-          A04 Insecure Design: A04 التصميم الغير الامن
-          A05 Security Misconfiguration: A05 الاعدادات الخاطئة
-          A06 Vulnerable and Outdated Components: A06 الثغرات و الانظمة الغير قابلة للتحديثات
+          A04 Insecure Design: A04 التصميم الغير آمن
+          A05 Security Misconfiguration: A05 الإعدادات الأمنية الخاطئة
+          A06 Vulnerable and Outdated Components: A06 الثغرات و المكونات الغير المحدثة
           A07 Identification and Authentication Failures: A07 الهوية و فشل عملية التحقق
           A08 Software and Data Integrity Failures: A08  فشل سلامة البيانات والبرمجيات
-          A09 Security Logging and Monitoring Failures: A09 فشل عملية تسجيل الاحداث والمراقبة
+          A09 Security Logging and Monitoring Failures: A09 فشل في تسجيل السجلات الأمنية والمراقبة
           A10 Server Side Request Forgery (SSRF): A10 تزوير الطلبات من جانب الخادم SSRF
-          Next Steps: انتقل للتالي
+          Next Steps: الخطوات المقبلة 
