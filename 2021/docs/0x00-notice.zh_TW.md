@@ -1,36 +1,34 @@
-# DRAFT
+# 草稿版
 
-## DO NOT USE THIS UNTIL IT'S DONE!
+## 請不要在未完成前使用！
 
-This is a draft. Do not use this version. The presence of an Axx does not mean it's going to be in the final or the ordering of the final version.
+這是草稿版本。請不要使用這個版本，目前所出現的 Axx 的弱點不一定會照同樣的順序或甚至出現在最終版本中。
 
-## Current status
+## 目前現況
 
-Taking comments on this draft, and preparing the graphic refresh in time for the official release on OWASP's 20th Anniversary.
-
-## Lead Authors
+目前根據本草稿版本收集回饋及意見中，並在準備 OWASP 20 週年活動正式公開並準備的相關圖示。
+## 主要專案領袖
 
 - Andrew van der Stock [@vanderaj](https://twitter/vanderaj)
 - Brian Glas [@infosecdad](https://twitter/infosecdad)
 - Neil Smithline [@]
 - Torsten Gigler []
 
-## Contributors
+## 貢獻專家
 
-- Orange Tsai, Author of A10-2021: Server Side Request Forgery
-- Jim Manico and Jakub Maćkowski - OWASP CheatSheets Coordination
+- Orange Tsai, A10-2021: 伺服端請求偽造 的作者 [https://blog.orange.tw](https://blog.orange.tw)
+- Jim Manico and Jakub Maćkowski - OWASP CheatSheets 共做
 
-## How you can help
+## 你能如何幫助
 
-At this stage, we are asking for
+在目前階段，我們需要
 
-- Data scientists - please peer review our analysis
-- Web designers - we need to make a mobile friendly version
-- Translators - please review the English text to make sure it's translatable
-- ASVS, Testing Guide, and Code Review Guide leadership - please use our data and help us link our documents and standards together
+- 資料科學家 - 協助確認我們的資料分析結果
+- 網頁設計師 - 我們需要做一個對行動裝置友善的版本
+- 翻譯人員 - 請協助確認英文版本文字並確認可被翻譯到其他語言版本
+- ASVS, Testing Guide, 和 Code Review Guide 專案領袖 - 請使用我們的資料並協助我們把其他的文件和標準連接起來
+## 問題及 Pull Request
 
-## Log issues and pull requests
-
-Please log any corrections or issues:
+請將任何問題或是需被修改的地方記錄到此:
 
 - [https://github.com/OWASP/Top10/issues](https://github.com/OWASP/Top10/issues)

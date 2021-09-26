@@ -103,6 +103,7 @@ CWEs 去進行分析。我們因此也計畫未來做更多的資料分析，並
 數十年經驗的專家團對討論並依照 *可發生性*，*可發現性（同可能性）*，和 *技術影響性*
 去做排名。在 2021 年，我們希望如果可以的話用資料證明可發生性和技術影響性。
 
+我們下載了 OWASP 
 We downloaded OWASP Dependency Check and extracted the CVSS Exploit, and
 Impact scores grouped by related CWEs. It took a fair bit of research
 and effort as all the CVEs have CVSSv2 scores, but there are flaws in
