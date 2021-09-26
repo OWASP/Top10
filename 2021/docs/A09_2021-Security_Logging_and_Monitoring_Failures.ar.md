@@ -10,47 +10,50 @@
 
 ## نظرة عامة
 
-شهد تسجيل ومراقبه الاحداث ارتفاع بسيط من المرتبة العاشرة في اعلى عشره مخاطر لعام 2017 الى المرتبة التاسعة في استطلاع الذي تم اجرائه في قطاع الامن السيبراني. حيث يشكل تسجيل ومراقبه الاحداث تحديا لإيجاد طريقة لاختباره، غالبا ما يتطلب ‏مقابلات او واستفسارات ما ان كانت الهجمات تم اكتشفها اثناء اختبار الاختراق. لا يوجد لهذا التصنيف الكثير من بيانات في قاعدتي بيانات cve/cvss,، ولكن عملية الاكتشاف والرصد والاستجابة لهذا التصنيف امر في غاية الأهمية. مع ذلك يمكن ان يكون مؤثرا عدم فعالية المراقبة للأحداث على الانتباه للإنذارات والتي قد تسبب الحوادث او عند القيام بالتحاليل الجنائي 
-هذا التصنيف يرتبط بي CWE-778  وكذلك CWE-117  و CWE-223 وCWE-532. 
+شهد " فشل في تسجيل السجلات الأمنية والمراقبة " ارتفاع بسيط من المرتبة العاشرة في أعلى عشرة مخاطر لعام 2017 إلى المرتبة التاسعة في الاستطلاع الذي تم إجراؤه في قطاع أمن التطبيقات. حيث يُشكّل " فشل في تسجيل السجلات الأمنية والمراقبة " تحدّيًا لإيجاد طريقة لاختباره، غالبًا ما يتطلّب ‏مقابلات أو استفسارات ما إذا كانت الهجمات تم اكتشافها أثناء عمليات اختبار الاختراق. ومع ذلك لا يوجد لهذا التصنيف الكثير من البيانات في قاعدة البيانات CVE/CVSS,، ولكن عمليات الاكتشاف والرصد والاستجابة لهذا التصنيف أمر في غاية الأهمية.    و يمكن أن يكون مؤثرًا على عدم فعاليّة المراقبة للأحداث وعلى الانتباه للإنذارات والتي قد تُسبّب الحوادث، أو عدم وجود أدلة كافية عند القيام بالتحاليل الجنائية وهذا التصنيف يرتبط بـ
+ CWE-778 وكذلك CWE-117 و CWE-223 و CWE-532.
+
 
 
 ## الوصف 
 
-وعند العودة الى أعلى عشر مخاطر لعام 2021، يقوم هذا التصنيف بالمساعدة على رصد واكتشاف والاستجابة للثغرات النشطة او لعمليات الاختراق التي تحدث، ومن غير عملية تسجيل الاحداث ومراقبتها، لن تستطيع اكتشاف او رصد او حتى الاستجابة للاختراقات التي تحدث، لذلك وجود عملية تسجيل الاحداث ومراقبتها يساعد على الاستجابة في أي وقت:
+عند العودة إلى أعلى عشرة مخاطر لعام 2021، نجد أن هذا التصنيف يقوم بالمساعدة على رصد واكتشاف واستجابة الثغرات النشِطة أو لعمليات الاختراق التي تحدث، ومن غير عملية تسجيل الأحداث ومراقبتها، لن تستطيع اكتشاف ورصد أو حتى الاستجابة للاختراقات، لذلك وجود عملية تسجيل الأحداث ومراقبتها يساعد على الاستجابة في الوقت المناسب:
 
--   الاحداث القابلة لإجراءات التدقيق والمتابعة، مثل عمليات تسجيل الدخول الفاشلة والناجحة منها وكذلك عمليات النقل العالية التي لم يتم تسجيلها.
+-  الأحداث القابلة لإجراءات التدقيق والمتابعة، مثل عمليات تسجيل الدخول الفاشلة وكذلك عمليات النقل للملفات ذات الأحجام العالية التي لم يتم تسجيلها.
 
--   التنبيهات والانذارات لا يتم تسجيلها او يتم تسجيلها من دون وصف واضح او رساله واضحها.
+-   التنبيهات والإنذارات التي لم يتم تسجيلها أو يتم تسجيلها من دون وصف واضح.
 
--   لا يتم متابعة وتسجيل الاحداث ومراقبتها للتطبيقات او واجهة برمجة التطبيقات API لأي أنشطة ضارة.
+-   لا يتم متابعة وتسجيل الأحداث ومراقبتها للتطبيقات أو واجهة برمجة التطبيقات API أي أنشطة ضارّة.
 
--   يتم تخزين سجلات الاحداث محليا فقط 
+-   يتم تخزين سجلات الأحداث محلّيًا فقط 
 
--   وضع معايير مناسبه للتنبيهات الأمنية مثل ( حد للعمليات تسجيل الدخول) ،وكذلك إيجاد سياسة واضحة لعملية تصعيد التنبيهات الأمنية والعمل عليها بالشكل الصحيح.
+-   وضع معايير مناسبة للتنبيهات الأمنية مثل (حد عمليات تسجيل الدخول) ، وكذلك إيجاد سياسة واضحة لعملية تصعيد التنبيهات الأمنية والعمل عليها بالشكل الصحيح.
 
--   عدم وجود أي إنذارات عند اجراء اختيارات الاختراق او الفحص بواسطة أداة DAST مثل OWASP ZAP 
+-   عدم وجود أي إنذارات عند إجراء اختبارات الاختراق أو الفحص بواسطة أداة DAST مثل OWASP ZAP  
 
--   التطبيقات لا تستطيع اكتشاف وتصعيد او حتى عملية التنبيه عند وجود أنشطة ضارة تحدث في الوقت الحالي.
+-   التطبيقات لا تستطيع اكتشاف أو  التنبيه عند وجود أنشطة ضارّة تحدث في الوقت الحالي.
 
-انت معرض لتسريب البيانات والمعلومات في حال عدم ضبطك لعملية تسجيل الاحداث والتنبيهات بالشكل الصحيح والتي قد تسمح للمستخدم  او حتى المهاجم من مشاهدتها انظر الى (A02- تخطي صلاحيات الوصول.)
+أنت مُعرّض لتسريب البيانات والمعلومات في حال عدم ضبط عملية تسجيل الأحداث والتنبيهات بالشكل الصحيح والتي قد تسمح للمستخدم أو حتى المهاجم من مشاهدتها انظر إلى (A02- تخطّي صلاحيات الوصول.)
+
 
 ## كيفية الحماية منها 
 
-يجب على المطورين تطبيق بعض  او جميع عناصر التحكم التالية والذي يعتمد على مدى استهداف ومخاطر التطبيق:
+يجب على المطوّرين تطبيق بعض أو كل عناصر التحكّم التالية والتي تعتمد على مدى استهداف وارتفاع المخاطر التي تستهدف التطبيق:
 
--   يجب التأكيد على ان جميع عمليات الدخول، التحكم بالوصول، والمدخلات التي تحدث على جانب الخادم مسجلة بطريقة صحيح وواضحة، وذلك لكشف عمليات الضارة التي تساعدك فيما بعد في عملية التحليل الجنائي الرقمي.
+-   يجب التأكد من أن جميع عمليات الدخول، التحكم بالوصول والمدخلات التي تحدث على جانب الخادم مسجّلة بطريقة صحيحة وواضحة، وذلك لكشف العمليات الضارّة التي تساعدك فيما بعد في عملية التحليل الجنائي الرقمي
 
--   التأكد ان عمليات تسجيل الاحداث تتم بشكل منسق وصحيح وذلك لكي يتم ادارتها بشكل صحيح.
+-   التأكد أن عمليات تسجيل الأحداث تتم بشكل منسّق وصحيح وذلك لكي يتم إدارتها بشكل صحيح.
 
--   التأكد من ان البيانات مشفرة بالشكل الصحيح وذلك للحماية من عمليات الحقن او الهجمات التي قد تحدث على انظمة المراقبة.
+-   التأكد من أن البيانات مشفّرة بالشكل الصحيح وذلك للحماية من عمليات الحقن أو الهجمات التي قد تحدث على أنظمة المراقبة
 
--   التأكد من ان عمليات نقل البيانات الحساسة تتم مراقبتها وكذلك التأكد من سلامتها وذلك لسلامتها من التخريب او التلاعب او الحذف.
+-   التأكد من أن عمليات نقل البيانات الحساسة تتم مراقبتها والتأكد من سلامتها، وذلك للتأكد من عدم تعرّضها لتخريب أو تلاعب أو أي حذف.
 
--   يجب ان يكون لدى فريق DevSecOps آلية فعالة لعملية المراقبة والتي تقوم بعملية الاكتشاف والاستجابة للتنبيهات، مثل الأنشطة الضارة. ومن اهم المرتكزات هي سرعة الاكتشاف والاستجابة لها.
+-   يجب أن يكون لدى فريق DevSecOps آلية فعّالة لعملية المراقبة والتي تقوم بعملية الاكتشاف والاستجابة للتنبيهات، مثل الأنشطة الضارّة. ومن أهم المرتكزات هي سرعة الاكتشاف والاستجابة لها.
 
--   قم بإيجاد خطة للاستجابة للحوادث السيبرانية وتستطيع الاعتماد على NIST 800-61r2 او النسخ الاحدث ان توفرت.
+-  قم بإيجاد خطة للاستجابة للحوادث السيبرانية وتستطيع الاعتماد على NIST 800-61r2 أو النسخ الأحدث إن توفّرت.
 
-هناك تطبيقات و اطر  مفتوحة المصدر وتجارية مثل (OWASP ModSecurity Core Rule Set,، open-source log) وهنا كذلك منصات تقوم بعملية جمع وربط الاحداث مثل منصة ELK stack والتي تتيح لك مميزات إضافية منها لوح للمراقبة وكذلك تنبيهات.
+هناك تطبيقات وإطارات مفتوحة المصدر وتجارية مثل (OWASP ModSecurity Core Rule Set,، Open-Source Log) وهنا كذلك منصّات تقوم بعملية جمع وربط سجلات الأحداث مثل منصّة ELK Stack والتي تُتيح لك مميزات إضافية منها لوح للمراقبة وكذلك تنبيهات.
+
 
 ##  أمثلة على سيناريوهات الهجوم
 
@@ -62,35 +65,30 @@
 
 ## المصادر
 
--   [OWASP Proactive Controls: Implement Logging and
-    Monitoring](https://owasp.org/www-project-proactive-controls/v3/en/c9-security-logging.html)
+-   [OWASP Proactive Controls: Implement Logging and Monitoring](https://owasp.org/www-project-proactive-controls/v3/en/c9-security-logging.html)
 
--   [OWASP Application Security Verification Standard: V8 Logging and
-    Monitoring](https://owasp.org/www-project-application-security-verification-standard)
+-   [OWASP Application Security Verification Standard: V8 Logging and Monitoring](https://owasp.org/www-project-application-security-verification-standard)
 
--   [OWASP Testing Guide: Testing for Detailed Error
-    Code](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/08-Testing_for_Error_Handling/01-Testing_for_Error_Code)
+-   [OWASP Testing Guide: Testing for Detailed Error Code](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/08-Testing_for_Error_Handling/01-Testing_for_Error_Code)
 
--   [OWASP Cheat Sheet:
-    Logging](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html)
+-   [OWASP Cheat Sheet: Application Logging Vocabulary](https://cheatsheetseries.owasp.org/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html)
 
--   [Data Integrity: Recovering from Ransomware and Other Destructive
-    Events](https://csrc.nist.gov/publications/detail/sp/1800-11/final)
+-   [OWASP Cheat Sheet: Logging](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html))   
 
--   [Data Integrity: Identifying and Protecting Assets Against
-    Ransomware and Other Destructive
-    Events](https://csrc.nist.gov/publications/detail/sp/1800-25/final)
+-   [Data Integrity: Recovering from Ransomware and Other Destructive Events](https://csrc.nist.gov/publications/detail/sp/1800-11/final)
 
--   [Data Integrity: Detecting and Responding to Ransomware and Other
-    Destructive
-    Events](https://csrc.nist.gov/publications/detail/sp/1800-26/final)
+-   [Data Integrity: Identifying and Protecting Assets Against Ransomware and Other Destructive Events](https://csrc.nist.gov/publications/detail/sp/1800-25/final)
+
+-   [Data Integrity: Detecting and Responding to Ransomware and Other Destructive Events](https://csrc.nist.gov/publications/detail/sp/1800-26/final)
+
 
 ## قائمة الربط مع إطار CWEs
 
-CWE-117 Improper Output Neutralization for Logs
+[CWE-117 Improper Output Neutralization for Logs](https://cwe.mitre.org/data/definitions/117.html)
 
-CWE-223 Omission of Security-relevant Information
+[CWE-223 Omission of Security-relevant Information](https://cwe.mitre.org/data/definitions/223.html)
 
-CWE-532 Insertion of Sensitive Information into Log File
+[CWE-532 Insertion of Sensitive Information into Log File](https://cwe.mitre.org/data/definitions/532.html)
 
-CWE-778 Insufficient Logging
+[CWE-778 Insufficient Logging](https://cwe.mitre.org/data/definitions/778.html)
+

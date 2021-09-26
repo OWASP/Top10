@@ -1,4 +1,5 @@
-# A01:2021 –  تخطي صلاحيات الوصول 
+# A01:2021 –  تخطي صلاحيات الوصول  
+
 
 ## العوامل
 
@@ -10,59 +11,59 @@
 
 ## نظرة عامة
 
-انتقالا من المركز الخامس الى الأول ، تم اختبار بعض انواع تخطي صلاحيات التحكم بالوصول لـ 94% من التطبيقات ان CWEs المرتبطة به هي. CWEs وهي: CWE-200، CWE-201 ، CWE-352 
+صعد هذا المعيار من المركز الخامس في الإصدار السابق إلى الأول في هذا الإصدار بعد اختبار ثغرات "تخطي صلاحيات التحكم بالوصول" على 94% من التطبيقات وقد لوحظ أنها تعاني من نقاط الضعف الشائعة "CWEs” تشمل : CWE-200 و CWE-201 و CWE-352
 
 ## الوصف 
 
-تفرض صلاحيات التحكم بالوصول سياسات و قوانين مثل ان المستخدم  لا يمكنه التصرف خارج نطاق الأذونات الممنوحة له. عادة ما تؤدي هذه الاخطاء الى كشف المعلومات الغير مصرح به ، او التعديل، او تخريب جميع البيانات أو حتى تنفيذ أعمال خارج حدود صلاحيات المستخدم المسموحة له.تتضمن نقاط الضعف الشائعة لصلاحيات التحكم بالوصول:
+تفرض صلاحيات التحكم بالوصول سياسات وقوانين مثل ان المستخدم لا يمكنه التصرف خارج نطاق الأذونات الممنوحة له. عادة ما تؤدي هذه الاخطاء الى كشف معلومات غير مصرح بها او التعديل عليها، او تخريب جميع البيانات أو حتى تنفيذ إجراءات خارج صلاحيات المستخدم المسموحة. تتضمن نقاط الضعف الشائعة لصلاحيات التحكم بالوصول:
 
--   تجاوز عمليات التحقق من التحكم في الوصول من خلال تعديل محدد فيURL ، او في الحالة الداخلية للبرنامج،أو صفحة الـ HTML  ،أو ببساطة استخدام أداة هجوم مخصصة لمهاجمة API. 
+-   تجاوز إجراءات **التحقق من التحكم في الوصول** من خلال تعديل محدد فيURL، او تعديل الكائنات “objects” المرتبطة بالبرنامج داخل الذاكرة أو تعديل صفحة الـ HTML، أو ببساطة استخدام أداة هجوم مخصصة لمهاجمة API 
 
--   السماح بتغيير المفتاح الرئيسي إلى سجل مسخدم آخر، السماح بعرض والتي تؤدي الى تعديل بعض الحسابات الأخرى.
+-   السماح بالتبديل بين مفتاح رئيسي “primary key” وسجلات مستخدم آخر “users record”، مما قد يسمح باستعراض أو التعديل على حسابات أخرى   
 
--   تصعيد الصلاحيات التصرف كمستخدم من دون تسجيل الدخول او التصرف كمدير عند تسجيل الدخول كمستخدم.
+-   تصعيد الصلاحيات: التصرف كمستخدم من دون تسجيل الدخول او التصرف كمدير عند تسجيل الدخول بصلاحيات كمستخدم.
 
--   معالجة مجموعة البيانات الوصفية، كإعادة التشغيل او التلاعب برمز التحكم بصلاحيات الدخول JSON Web Token (JWT)، أو معالجة ملفات الإرتباط او الحقول المخفية لغرض تصعيد الصلاحيات أو إساءة استخدام الـ JWT .
+-   التلاعب في البيانات الوصفية "meta data” كإعادة إدخال أو التلاعب برمز التوثيق "JSON Web Token (JWT)،" أو التلاعب في ملفات الارتباط أو الحقول المخفية لغرض تصعيد الصلاحيات أو إساءة استخدام الـ JWT 
 
--   التهيئة الغير صحيحة لـ CORS تسمح بالدخول الغير مصرح به لواجهة برمجة التطبيقات API. 
+-   التهيئة الغير صحيحة لـ CORS تسمح بالدخول الغير مصرح به لواجهة برمجة التطبيقات API.
 
--   اجبار المتصفحات على إتمام عملية المصادقة للمستخدمين او بعض الصفحات التي تتطلب ان تكون مستخدم قبل الوصول لها، وضبط صلاحيات الوصول الى واجهة برمجة التطبيقات API وحتى صلاحيات الوصول لطلبات على الموقع من (POST, PUT ، DELETE.) 
+-   استعراض صفحات "تستلزم المصادقة" عبر مستخدمين "غير مصادق عليهم" أو الوصول الى صفحات ذات امتيازات عليا باستخدام صلاحيات “حساب مستخدم “، أو الوصول الى واجهة برمجة التطبيقات "API” بوجود قصور في "التحكم في صلاحيات الوصول" مما يؤدي الى تنفيذ طلباتPOST، PUT، DELETE.
 
 ## كيفية الحماية منها 
 
-يكون التحكم بالوصول فعالا فقط في -الشفرة المصدرية الموثوق بها من جهة الخادم- trusted server-side code او واجهة برمجة التطبيقات  API التي تسمى (server-less API)، حيث لا يستطيع المهاجم تعديل صلاحيات التحكم بالوصول أو البيانات الوصفية.
+يكون "التحكم بصلاحيات الوصول" فعالا فقط عندما عند تطبيقه على **الشفرة المصدرية** من جهة الخوادم الموثوقة- trusted server-side code، أو الخوادم التي لا تملك واجهة برمجة تطبيقات والتي يطلق عليها (server-less API)، حيث لا يستطيع المهاجم تعديل "صلاحيات التحكم بالوصول" أو التلاعب في البيانات الوصفية.
 
--   في وجود أي طلبات على الموارد غير العامة يتم رفضها بشكل تلقائي.
+-   باستثناء طلبات الوصول "للموارد المتاحة للعامة" يتم حظر جميع الطلبات بشكل افتراضي.
 
--   تنفيذ آليات التحكم بصلاحيات الوصول لمرة واحدة و اعادة استخدامها من خلال التطبيق، مع تقليل استخدام CORS  
+-   وضع الأليات التي تتحكم بالوصول لمرة واحدة في البرنامج/التطبيق مع إعادة استخدامها -هي نفسها- عند الحاجة، وأيضا تقليل استخدام CORS. 
 
--   نموذج التحكم بالوصول يجب أن يفرض ملكية السجلات بدلا من الموافقة على ان المستخدم يستطيع انشاء، قراءة، تحديث، او حذف أي سجل.
+-   نموذج التحكم بالوصول يجب أن يفرض مُلكية السجل " record ownership" بدلًا من الموافقة على أن المستخدم يستطيع إنشاء، قراءة، تحديث، أو حذف أي سجل.
 
--   يجب أن يتم فرض حد لمتطلبات عمل التطبيقات المميزة من خلال استخدام نماذج المجال (domain models).
+-    متطلّبات حدود تطبيقات الأعمال الفريدة من نوعها "Unique application business limit" يجب أن يتم فرضها خلال استخدام نماذج المجال (domain models).
 
--   تعطيل عرض مجلدات خادم الويب و التأكد بأن ملف مجموعة البيانات الوصفية و ملفات النسخ الاحتياطي لا يتم عرضها مع مجلد الموقع الرئيسي.
+-   تعطيل استعراض مجلدات خادم الويب والتأكد بأن ملف البيانات الوصفية "Meta Data” وملفات النسخ الاحتياطي لا يتم الوصول اليها من خلال مجلد المسار الرئيسي "Root".
 
--   تسجيل وتنبيه المسؤولين عند وقوع أخطاء في سجل صلاحيات التحكم بالوصول.
+-   توثيق سجلات فشل التحكم في صلاحيات الوصول وتنبيه المسؤولين عند وقوع هذه الأخطاء.
 
--   حد معدل الوصول لواجهة برمجة التطبيقات  API وحد معدل الطلبات لتقليل الضرر الناجم عن أدوات الهجوم الآلي.
+-   تقييم حد الوصول إلى واجهة برمجة التطبيقات API ووضع حد لمعدّل الطلبات لتقليل الضرر الناجم عن أدوات الهجوم الآلي.
 
--   يجب انهاء  رموز JWT على الخادم بعد تسجيل الخروج.
+-   يجب التخلص من رموز JWT على الخادم بعد تسجيل الخروج.
 
-يجب على المطورين و موظفي الجودة تضمين اختبارات وظيفية لوحدة التحكم في الوصول والتكامل. 
+يجب على فرق المطوّرين وموظفين قسم ضمان الجودة "QA" أن تتضمّن  وحدة  فعالة للتحكم في الوصول وإجراء اختبارات التكامل .
 
 ## أمثلة على سيناريوهات الهجوم
 
-**سيناريو #1:** يستخدم التطبيق بيانات لم يتم التحقق منها في استدعاء  SQL التي بدورها تصل الى معلومات الحساب: 
+**سيناريو #1:** يستخدم التطبيق بيانات لم يتم التحقق منها في استدعاء SQL التي بدورها تصل الى معلومات الحساب:
 
 > pstmt.setString(1, request.getParameter("acct"));
 >
 > ResultSet results = pstmt.executeQuery( );
 
-ببساطة يقوم المهاجم بتعديل browser's 'acct' parameter لارسال أي رقم حساب يريده. واذا لم يتم التحقق منه بشكل صحيح، يستطيع المهاجم الوصول لأي حساب مستخدم.
+ببساطة يقوم المهاجم بتعديل browser's 'acct' parameter لأرسال أي رقم حساب يريده. وإذا لم يتم التحقق منه بشكل صحيح، يستطيع المهاجم الوصول لأي حساب مستخدم.
 
 https://example.com/app/accountInfo?acct=notmyacct
 
-**سيناريو #2:** : ببساطة يجبر المهاجم المتصفحات على زيارة العناوين الـURLs المستهدفة. والتي تتطلب صلاحيات المسؤوول للدخول على صفحة.
+**سيناريو #2:** : ببساطة يجبر المهاجم المتصفحات على زيارة العناوين الـ URLsالمستهدفة. والتي لا يستطيع الوصول اليها الا بصلاحيات المسؤول.
 
 > https://example.com/app/getappInfo
 >
@@ -72,92 +73,90 @@ https://example.com/app/accountInfo?acct=notmyacct
 
 ## المصادر
 
--   [OWASP Proactive Controls: Enforce Access
-    Controls](https://owasp.org/www-project-proactive-controls/v3/en/c7-enforce-access-controls)
+-   [OWASP Proactive Controls: Enforce Access Controls](https://owasp.org/www-project-proactive-controls/v3/en/c7-enforce-access-controls)
 
--   [OWASP Application Security Verification Standard: V4 Access
-    Control](https://owasp.org/www-project-application-security-verification-standard)
+-   [OWASP Application Security Verification Standard: V4 Access Control](https://owasp.org/www-project-application-security-verification-standard)
 
--   [OWASP Testing Guide: Authorization
-    Testing](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/05-Authorization_Testing/README)
+-   [OWASP Testing Guide: Authorization Testing](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/05-Authorization_Testing/README)
 
--   [OWASP Cheat Sheet: Access Control]()
+-   [OWASP Cheat Sheet: Access Control](https://cheatsheetseries.owasp.org/cheatsheets/Access_Control_Cheat_Sheet.html)
+
+-   [OWASP Cheat Sheet: Authorization](https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html)
 
 -   [PortSwigger: Exploiting CORS
     misconfiguration](https://portswigger.net/blog/exploiting-cors-misconfigurations-for-bitcoins-and-bounties)
+    
+-   [OAuth: Revoking Access](https://www.oauth.com/oauth2-servers/listing-authorizations/revoking-access/)
 
 ## قائمة الربط مع إطار CWEs
 
-CWE-22 Improper Limitation of a Pathname to a Restricted Directory
-('Path Traversal')
 
-CWE-23 Relative Path Traversal
 
-CWE-35 Path Traversal: '.../...//'
 
-CWE-59 Improper Link Resolution Before File Access ('Link Following')
+[CWE-22 Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')](https://cwe.mitre.org/data/definitions/22.html)
 
-CWE-200 Exposure of Sensitive Information to an Unauthorized Actor
+[CWE-23 Relative Path Traversal](https://cwe.mitre.org/data/definitions/23.html)
 
-CWE-201 Exposure of Sensitive Information Through Sent Data
+[CWE-35 Path Traversal: '.../...//'](https://cwe.mitre.org/data/definitions/35.html)
 
-CWE-219 Storage of File with Sensitive Data Under Web Root
+[CWE-59 Improper Link Resolution Before File Access ('Link Following')](https://cwe.mitre.org/data/definitions/59.html)
 
-CWE-264 Permissions, Privileges, and Access Controls (should no longer
-be used)
+[CWE-200 Exposure of Sensitive Information to an Unauthorized Actor](https://cwe.mitre.org/data/definitions/200.html)
 
-CWE-275 Permission Issues
+[CWE-201 Exposure of Sensitive Information Through Sent Data](https://cwe.mitre.org/data/definitions/201.html)
 
-CWE-276 Incorrect Default Permissions
+[CWE-219 Storage of File with Sensitive Data Under Web Root](https://cwe.mitre.org/data/definitions/219.html)
 
-CWE-284 Improper Access Control
+[CWE-264 Permissions, Privileges, and Access Controls (should no longer be used)](https://cwe.mitre.org/data/definitions/264.html)
 
-CWE-285 Improper Authorization
+[CWE-275 Permission Issues](https://cwe.mitre.org/data/definitions/275.html)
 
-CWE-352 Cross-Site Request Forgery (CSRF)
+[CWE-276 Incorrect Default Permissions](https://cwe.mitre.org/data/definitions/276.html)
 
-CWE-359 Exposure of Private Personal Information to an Unauthorized
-Actor
+[CWE-284 Improper Access Control](https://cwe.mitre.org/data/definitions/284.html)
 
-CWE-377 Insecure Temporary File
+[CWE-285 Improper Authorization](https://cwe.mitre.org/data/definitions/285.html)
 
-CWE-402 Transmission of Private Resources into a New Sphere ('Resource
-Leak')
+[CWE-352 Cross-Site Request Forgery (CSRF)](https://cwe.mitre.org/data/definitions/352.html)
 
-CWE-425 Direct Request ('Forced Browsing')
+[CWE-359 Exposure of Private Personal Information to an Unauthorized Actor](https://cwe.mitre.org/data/definitions/359.html)
 
-CWE-441 Unintended Proxy or Intermediary ('Confused Deputy')
+[CWE-377 Insecure Temporary File](https://cwe.mitre.org/data/definitions/377.html)
 
-CWE-497 Exposure of Sensitive System Information to an Unauthorized
-Control Sphere
+[CWE-402 Transmission of Private Resources into a New Sphere ('Resource Leak')](https://cwe.mitre.org/data/definitions/402.html)
 
-CWE-538 Insertion of Sensitive Information into Externally-Accessible
-File or Directory
+[CWE-425 Direct Request ('Forced Browsing')](https://cwe.mitre.org/data/definitions/425.html)
 
-CWE-540 Inclusion of Sensitive Information in Source Code
+[CWE-441 Unintended Proxy or Intermediary ('Confused Deputy')](https://cwe.mitre.org/data/definitions/441.html)
 
-CWE-548 Exposure of Information Through Directory Listing
+[CWE-497 Exposure of Sensitive System Information to an Unauthorized Control Sphere](https://cwe.mitre.org/data/definitions/497.html)
 
-CWE-552 Files or Directories Accessible to External Parties
+[CWE-538 Insertion of Sensitive Information into Externally-Accessible File or Directory](https://cwe.mitre.org/data/definitions/538.html)
 
-CWE-566 Authorization Bypass Through User-Controlled SQL Primary Key
+[CWE-540 Inclusion of Sensitive Information in Source Code](https://cwe.mitre.org/data/definitions/540.html)
 
-CWE-601 URL Redirection to Untrusted Site ('Open Redirect')
+[CWE-548 Exposure of Information Through Directory Listing](https://cwe.mitre.org/data/definitions/548.html)
 
-CWE-639 Authorization Bypass Through User-Controlled Key
+[CWE-552 Files or Directories Accessible to External Parties](https://cwe.mitre.org/data/definitions/552.html)
 
-CWE-651 Exposure of WSDL File Containing Sensitive Information
+[CWE-566 Authorization Bypass Through User-Controlled SQL Primary Key](https://cwe.mitre.org/data/definitions/566.html)
 
-CWE-668 Exposure of Resource to Wrong Sphere
+[CWE-601 URL Redirection to Untrusted Site ('Open Redirect')](https://cwe.mitre.org/data/definitions/601.html)
 
-CWE-706 Use of Incorrectly-Resolved Name or Reference
+[CWE-639 Authorization Bypass Through User-Controlled Key](https://cwe.mitre.org/data/definitions/639.html)
 
-CWE-862 Missing Authorization
+[CWE-651 Exposure of WSDL File Containing Sensitive Information](https://cwe.mitre.org/data/definitions/651.html)
 
-CWE-863 Incorrect Authorization
+[CWE-668 Exposure of Resource to Wrong Sphere](https://cwe.mitre.org/data/definitions/668.html)
 
-CWE-913 Improper Control of Dynamically-Managed Code Resources
+[CWE-706 Use of Incorrectly-Resolved Name or Reference](https://cwe.mitre.org/data/definitions/706.html)
 
-CWE-922 Insecure Storage of Sensitive Information
+[CWE-862 Missing Authorization](https://cwe.mitre.org/data/definitions/862.html)
 
-CWE-1275 Sensitive Cookie with Improper SameSite Attribute
+[CWE-863 Incorrect Authorization](https://cwe.mitre.org/data/definitions/863.html)
+
+[CWE-913 Improper Control of Dynamically-Managed Code Resources](https://cwe.mitre.org/data/definitions/913.html)
+
+[CWE-922 Insecure Storage of Sensitive Information](https://cwe.mitre.org/data/definitions/922.html)
+
+[CWE-1275 Sensitive Cookie with Improper SameSite Attribute](https://cwe.mitre.org/data/definitions/1275.html)
