@@ -101,12 +101,7 @@ CWEs 去進行分析。我們因此也計畫未來做更多的資料分析，並
 
 在 2017 年，我們用事件發生次數去判斷可能發生的機率去選擇類別，然後透過一群在業界擁有
 數十年經驗的專家團對討論並依照 *可發生性*，*可發現性（同可能性）*，和 *技術影響性*
-去做排名。在 2021 年，我們希望用
-In 2017, we selected categories by incidence rate to determine
-likelihood, then ranked them by team discussion based on decades of
-experience for Exploitability, Detectability (also likelihood), and
-Technical Impact. For 2021, we want to use data for Exploitability and
-Impact if possible.
+去做排名。在 2021 年，我們希望如果可以的話用資料證明可發生性和技術影響性。
 
 We downloaded OWASP Dependency Check and extracted the CVSS Exploit, and
 Impact scores grouped by related CWEs. It took a fair bit of research
