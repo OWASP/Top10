@@ -48,55 +48,22 @@
 
 ### 選擇類別時資料的使用方式
 
-在 2017 年，我們用事件發生次數去判斷可能發生的機率去選擇類別，然後透過一群在業界擁有數十年經驗的專家團對討論並依照 *可發生性*，*可發現性（同可能性）*，和 *技術影響性*去做排名。在 2021 年，我們希望如果可以的話用資料證明可發生性和技術影響性。
+在 2017 年，我們用事件發生次數去判斷可能發生的機率去選擇類別，然後透過一群在業界擁有數十年經驗的專家團對討論並依照 *可發生性*，*可發現性（同可能性）*，和 *技術影響力* 去做排名。在 2021 年，我們希望如果可以的話用資料證明可發生性和技術影響性。
 
-我們下載了 OWASP 
+我們下載了 OWASP Depndency Check 並取出了 CVSS 漏洞，並將相關的 CWE 用影響力分數分群。這花了一些時間和力氣去研究因為所有的 CVEs 都有 CVSSv2 分數，但是在其中因為 CVSSv2 跟 CVSSv3 之間有一些缺失是必須被修正的。經過了一段時間後，所有的 CVEs 都會有對應的 CVSSv3 的分數。再者，分數的範圍和計算的公式在 CVSSv2 和 CVSSv3 之間也做了更新。
 
-We downloaded OWASP Dependency Check and extracted the CVSS Exploit, and
-Impact scores grouped by related CWEs. It took a fair bit of research
-and effort as all the CVEs have CVSSv2 scores, but there are flaws in
-CVSSv2 that CVSSv3 should address. After a certain point in time, all
-CVEs are assigned a CVSSv3 score as well. Additionally, the scoring
-ranges and formulas were updated between CVSSv2 and CVSSv3.
+在 CVSSv2 中，漏洞和影響力兩者都可達到 10.0 分，但是公式本身會將兩者調整為漏洞佔 60%，然後影響力佔 40%。在 CVSSv3 中，理論上的最高值將漏洞限制在 6.0 分而影響力在 4.0 分。當考慮到權重比率時，影響力的分數會偏高，在 CVSSv3 中幾乎平均會多出 1.5 分，而漏洞分數卻會平均少 0.5 分。
 
-In CVSSv2, both Exploit and Impact could be up to 10.0, but the formula
-would knock them down to 60% for Exploit and 40% for Impact. In CVSSv3,
-the theoretical max was limited to 6.0 for Exploit and 4.0 for Impact.
-With the weighting considered, the Impact scoring shifted higher, almost
-a point and a half on average in CVSSv3, and exploitability moved nearly
-half a point lower on average.
+從 OWASP Dependcy Check 翠取出的 NVD 資料當中有將近 12.5 萬筆 CVE 資料有對應到 CWE，而有 241 筆獨特的 CWEs 有對應到 CVE。6.2萬筆 CWE 有對應到 CVSSv3 分數，所以大約是整體資料中一半的部分。
 
-There are 125k records of a CVE mapped to a CWE in the NVD data
-extracted from OWASP Dependency Check, and there are 241 unique CWEs
-mapped to a CVE. 62k CWE maps have a CVSSv3 score, which is
-approximately half of the population in the data set.
+而在 Top Ten，我們計算漏洞和影響力的平均分數的方式如下。我們將所有有 CVSS 分數的 CVE 依照 CWE 分組，然後依照有 CVSSv3 的漏洞和影響力在所有資料中的百分比作權重，在加上資料中有 CVSSv2 的資料去做平均。我們將這些平均後的 CWEs 對應到資料中，然後將他的漏洞和引想力分數使用在另一半的風險公式中。
 
-For the Top Ten, we calculated average exploit and impact scores in the
-following manner. We grouped all the CVEs with CVSS scores by CWE and
-weighted both exploit and impact scored by the percentage of the
-population that had CVSSv3 + the remaining population of CVSSv2 scores
-to get an overall average. We mapped these averages to the CWEs in the
-dataset to use as Exploit and Impact scoring for the other half of the
-risk equation.
+## 為什麼就不純粹做統計分析？
 
-## Why not just pure statistical data?
+這些資料的結果最主要是被限制在能使用自動工具測試出來的結果。可是當你跟一位有經驗的應用程式安全專家聊的時候，他們會跟你說絕大多數他們找到的問題都不在這些資料裡面。原因是一個測試要被自動化的時候，需要花時間去開發這些弱點測試的方法論，當你需要將這個測試自動化並能對大量的應用程式去驗證時，又會花上更多的時間。當我們回頭看去年獲以前有可能沒出現的一些問題的趨勢，我們發現其實都沒有在這些資料當中。
 
-The results in the data are primarily limited to what we can test for in
-an automated fashion. Talk to a seasoned AppSec professional, and they
-will tell you about stuff they find and trends they see that aren't yet
-in the data. It takes time for people to develop testing methodologies
-for certain vulnerability types and then more time for those tests to be
-automated and run against a large population of applications. Everything
-we find is looking back in the past and might be missing trends from the
-last year, which are not present in the data.
-
-Therefore, we only pick eight of ten categories from the data because
-it's incomplete. The other two categories are from the industry survey.
-It allows the practitioners on the front lines to vote for what they see
-as the highest risks that might not be in the data (and may never be
-expressed in data).
-
-## Why incidence rate instead of frequency?
+因此，由於資料不完全的關係，我們只有從資料中選出 8 個類別，而並不是 10 個。剩下的兩個類別是從業界問卷中所選出的。這會允許在前線的參與者去選出他們認為的高風險，而不是純粹依據資料去判斷（甚至可能資料永遠都不會有出現的蹤跡）。
+## 為什麼用事故率而不是用發生次數
 
 There are three primary sources of data. We identify them as
 Human-assisted Tooling (HaT), Tool-assisted Human (TaH), and raw
