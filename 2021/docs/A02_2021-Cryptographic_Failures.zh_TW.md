@@ -7,7 +7,7 @@
 | 29          | 46.44%             | 4.49%              | 79.33%       | 34.85%       | 7.29                 | 6.81                | 233,788           | 3,075      |
 
 ## 弱點簡介
-上升一個名次來到第二名，之前稱之為"敏感性資料洩漏"，正更像是一種廣泛的症狀而非根因，聚焦於密碼學相關的失效(或缺乏加密)，這往往會導致敏感資料的洩漏。著名的CWE包含"CWE259: 密碼寫死", "CWE-327: 被破解或是有風險的加密演算法", 以及"CWE-331: 不足的亂數隨機程度(entropy)"。
+上升一個名次來到第二名，之前版本稱為"敏感性資料洩漏"，更像是一種廣泛的症狀而非根因，本版本聚焦於密碼學相關的失效(或缺乏加密)，並因此常常導致敏感資料的洩漏。著名的CWE包含"CWE259: Use of Hard-coded Password", "CWE-327: Broken or Risky Crypto Algorithm", 以及"CWE-331: Insufficient Entropy"。
 
 ## 弱點描述 
 首先確定靜態資料及資料傳輸的防護需求，舉例來說，密碼、信用卡卡號、健康紀錄、個資、以及需要額外保護的營業祕密...等等主要被隱私法所保護的資料，如歐盟GDPR或PCIDSS等等金融業相關的資料保護法或標準。對於這些資料需考量:
@@ -18,7 +18,7 @@
 
 -   是否有任何預設的加密金鑰被使用、脆弱的加密金鑰被重複使用，是否有適當的金鑰管理或金鑰輪換?
 
--   加密是否非強制? 舉例: 使用者代理(瀏覽器)是否有遺失安全相關的指令或標頭?
+-   加密是否非強制? 舉例: 使用者代理(瀏覽器)是否有遺失安全相關的指令或標題?
 
 -   使用者代理(如: app, 郵件客戶端)是否有驗證伺服器的憑證是有效的?
 
@@ -78,60 +78,60 @@
 
 ## 對應的CWEs清單
 
-CWE-261 密碼的脆弱編碼
+[CWE-261 Weak Encoding for Password](https://cwe.mitre.org/data/definitions/261.html)
 
-CWE-296 不當遵循憑證信任鏈
+[CWE-296 Improper Following of a Certificate's Chain of Trust](https://cwe.mitre.org/data/definitions/296.html)
 
-CWE-310 密碼學議題
+[CWE-310 Cryptographic Issues](https://cwe.mitre.org/data/definitions/310.html)
 
-CWE-319 敏感性資訊明碼傳輸
+[CWE-319 Cleartext Transmission of Sensitive Information](https://cwe.mitre.org/data/definitions/319.html)
 
-CWE-321 寫死加密金鑰
+[CWE-321 Use of Hard-coded Cryptographic Key](https://cwe.mitre.org/data/definitions/321.html)
 
-CWE-322 沒有經過實體認證的金鑰交換
+[CWE-322 Key Exchange without Entity Authentication](https://cwe.mitre.org/data/definitions/322.html)
 
-CWE-323 加密時使用重複的隨機數(nonce)金鑰對
+[CWE-323 Reusing a Nonce, Key Pair in Encryption](https://cwe.mitre.org/data/definitions/323.html)
 
-CWE-324 使用過期的金鑰
+[CWE-324 Use of a Key Past its Expiration Date](https://cwe.mitre.org/data/definitions/324.html)
 
-CWE-325 缺少所需的加密步驟
+[CWE-325 Missing Required Cryptographic Step](https://cwe.mitre.org/data/definitions/325.html)
 
-CWE-326 加密長度不足
+[CWE-326 Inadequate Encryption Strength](https://cwe.mitre.org/data/definitions/326.html)
 
-CWE-327 使用被破解或是有風險的加密演算法
+[CWE-327 Use of a Broken or Risky Cryptographic Algorithm](https://cwe.mitre.org/data/definitions/327.html)
 
-CWE-328 可逆的單向雜湊
+[CWE-328 Reversible One-Way Hash](https://cwe.mitre.org/data/definitions/328.html)
 
-CWE-329 在密碼分組鏈接(CBC)模式下沒有使用隨機初始向量(IV)
+[CWE-329 Not Using a Random IV with CBC Mode](https://cwe.mitre.org/data/definitions/329.html)
 
-CWE-330 使用不充分的隨機亂數
+[CWE-330 Use of Insufficiently Random Values](https://cwe.mitre.org/data/definitions/330.html)
 
-CWE-331 不足的亂數隨機程度(entropy)
+[CWE-331 Insufficient Entropy](https://cwe.mitre.org/data/definitions/331.html)
 
-CWE-335 於虛擬亂數產生器(PRNG)不當使用種子(seeds)
+[CWE-335 Incorrect Usage of Seeds in Pseudo-Random Number Generator(PRNG)](https://cwe.mitre.org/data/definitions/335.html)
 
-CWE-336 於虛擬亂數產生器(PRNG)使用同一組種子(seeds)
+[CWE-336 Same Seed in Pseudo-Random Number Generator (PRNG)](https://cwe.mitre.org/data/definitions/336.html)
 
-CWE-337 於虛擬亂數產生器(PRNG)使用可預測的種子(seeds)
+[CWE-337 Predictable Seed in Pseudo-Random Number Generator (PRNG)](https://cwe.mitre.org/data/definitions/337.html)
 
-CWE-338 使用脆弱演算法的虛擬亂數產生器(PRNG)
+[CWE-338 Use of Cryptographically Weak Pseudo-Random Number Generator(PRNG)](https://cwe.mitre.org/data/definitions/338.html)
 
-CWE-340 產生可預測的數字或是標識符
+[CWE-340 Generation of Predictable Numbers or Identifiers](https://cwe.mitre.org/data/definitions/340.html)
 
-CWE-347 不適當的密碼簽章驗證
+[CWE-347 Improper Verification of Cryptographic Signature](https://cwe.mitre.org/data/definitions/347.html)
 
-CWE-523 未受保護的驗證資訊傳輸
+[CWE-523 Unprotected Transport of Credentials](https://cwe.mitre.org/data/definitions/523.html)
 
-CWE-720 OWASP Top Ten 2007 Category A9 - 不安全的傳輸
+[CWE-720 OWASP Top Ten 2007 Category A9 - Insecure Communications](https://cwe.mitre.org/data/definitions/720.html)
 
-CWE-757 通訊時使用較不安全的演算法(降級的演算法)
+[CWE-757 Selection of Less-Secure Algorithm During Negotiation('Algorithm Downgrade')](https://cwe.mitre.org/data/definitions/757.html)
 
-CWE-759 使用單向雜湊時沒有加鹽
+[CWE-759 Use of a One-Way Hash without a Salt](https://cwe.mitre.org/data/definitions/759.html)
 
-CWE-760 使用單向雜湊時加了可預測的鹽
+[CWE-760 Use of a One-Way Hash with a Predictable Salt](https://cwe.mitre.org/data/definitions/760.html)
 
-CWE-780 使用RSA演算法時沒有使用OAEP
+[CWE-780 Use of RSA Algorithm without OAEP](https://cwe.mitre.org/data/definitions/780.html)
 
-CWE-818 不足的傳輸層保護
+[CWE-818 Insufficient Transport Layer Protection](https://cwe.mitre.org/data/definitions/818.html)
 
-CWE-916 使用運算量不足的密碼雜湊
+[CWE-916 Use of Password Hash With Insufficient Computational Effort](https://cwe.mitre.org/data/definitions/916.html)
