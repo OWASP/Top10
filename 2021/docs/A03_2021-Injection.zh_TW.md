@@ -70,8 +70,7 @@ deployment.
 
 ## 攻擊情境範例
 
-**情境 #1:** An application uses untrusted data in the construction
-of the following vulnerable SQL call:
+**情境 #1:** 應用程式使用了不被信任的資料在脆弱的 SQL 呼叫中：
 
 String query = "SELECT \* FROM accounts WHERE custID='" +
 request.getParameter("id") + "'";
