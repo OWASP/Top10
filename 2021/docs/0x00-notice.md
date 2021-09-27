@@ -2,10 +2,6 @@
 
 Released 24th September 2021
 
-## Current status
-
-This version will be released at the OWASP 20th Anniversary Celebration.
-
 ## Lead Authors
 
 - [Andrew van der Stock](mailto:vanderaj@owasp.org) (twitter: [@vanderaj](https://twitter.com/vanderaj))
