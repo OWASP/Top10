@@ -8,17 +8,17 @@ This is a draft. Do not use this version. The presence of an Axx does not mean i
 
 Recebendo comentários sobre este rascunho e preparando a atualização gráfica a tempo para o lançamento oficial no 20º aniversário do OWASP.
 
-## Lead Authors
+## Autores Principais
 
-- Andrew van der Stock [@vanderaj](https://twitter/vanderaj)
-- Brian Glas [@infosecdad](https://twitter/infosecdad)
-- Neil Smithline [@]
-- Torsten Gigler []
+- [Andrew van der Stock](mailto:vanderaj@owasp.org) (twitter: [@vanderaj](https://twitter.com/vanderaj))
+- [Brian Glas](mailto:brian.glas@owasp.org) (twitter: [@infosecdad](https://twitter.com/infosecdad))
+- [Neil Smithline](mailto:neil.smithline@owasp.org) (twitter: [@appsecneil](https://twitter.com/appsecneil))
+- [Torsten Gigler](mailto:torsten.gigler@owasp.org) (twitter: [@torsten_tweet](https://twitter.com/torsten_tweet))
 
 ## Contribuidores
 
-- Orange Tsai, Autor de A10-2021: Server Side Request Forgery
-- Jim Manico e Jakub Maćkowski - OWASP CheatSheets Coordination
+- Orange Tsai [@orange_8361](https://twitter/orange_8361), Autor de A10-2021: Server Side Request Forgery
+- Jim Manico [@manicode](https://twitter/manicode) e Jakub Maćkowski [@kubamackowski](https://twitter/kubamackowski)  - OWASP CheatSheets Coordination
 
 ## Como você pode ajudar
 
