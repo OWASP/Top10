@@ -20,13 +20,6 @@ OWASP Top 10 最主要是一個提升意識及資安認知形態的文件。但�
 | 支援工具            | 最低限度      | 可以                                              |
 | 安全供應鏈     | 偶而可以      | 可以                                              |
 
-We would encourage anyone wanting to adopt an application security
-standard to use the OWASP Application Security Verification Standard
-(ASVS), as it’s designed to be verifiable and tested, and can be used in
-all parts of a secure development lifecycle.
+我們鼓勵任何希望能套用應用安全標準的人可以利用 OWASP 應用安全驗證標準（ASVS），因為它本身的設計就是可被測試及驗證的，並可以在安全軟體開發生命週期的所有階段都可被運用。
 
-The ASVS is the only acceptable choice for tool vendors. Tools cannot
-comprehensively detect, test, or protect against the OWASP Top 10 due to
-the nature of several of the OWASP Top 10 risks, with reference to
-A04:2021-Insecure Design. OWASP discourages any claims of full coverage
-of the OWASP Top 10, because it’s simply untrue.
+ASVS 也是唯一工具提供者能被接受的選擇。測試工具沒辦法全面的偵測，測試，或保護 OWASP Top 10 當中的一些項目。是因為 OWASP Top 10 的風險類別的區分有一部分也是跟 A04:2021-不安全的設計有所相關。OWASP 強烈不建議用 OWASP Top 10 去函蓋所有的安全規範及需求，因為這本身就不是真的。
