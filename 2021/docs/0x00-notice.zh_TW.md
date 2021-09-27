@@ -1,23 +1,19 @@
-# 草稿版
 
-## 請不要在未完成前使用！
+# 發表版本
 
-這是草稿版本。請不要使用這個版本，目前所出現的 Axx 的弱點不一定會照同樣的順序或甚至出現在最終版本中。
+於 2021 年 9 月 24 日正式發表
 
-## 目前現況
+## 專案領袖
 
-目前根據本草稿版本收集回饋及意見中，並在準備 OWASP 20 週年活動正式公開並準備的相關圖示。
-## 主要專案領袖
-
-- Andrew van der Stock [@vanderaj](https://twitter/vanderaj)
-- Brian Glas [@infosecdad](https://twitter/infosecdad)
-- Neil Smithline [@]
-- Torsten Gigler []
+- [Andrew van der Stock](mailto:vanderaj@owasp.org) (twitter: [@vanderaj](https://twitter.com/vanderaj))
+- [Brian Glas](mailto:brian.glas@owasp.org) (twitter: [@infosecdad](https://twitter.com/infosecdad))
+- [Neil Smithline](mailto:neil.smithline@owasp.org) (twitter: [@appsecneil](https://twitter.com/appsecneil))
+- [Torsten Gigler](mailto:torsten.gigler@owasp.org) (twitter: [@torsten_tweet](https://twitter.com/torsten_tweet))
 
 ## 貢獻專家
 
 - Orange Tsai, A10-2021: 伺服端請求偽造 的作者 [https://blog.orange.tw](https://blog.orange.tw)
-- Jim Manico and Jakub Maćkowski - OWASP CheatSheets 共做
+- Jim Manico [@manicode](https://twitter/manicode) 和 Jakub Maćkowski [@kubamackowski](https://twitter/kubamackowski)
 
 ## 你能如何幫助
 
