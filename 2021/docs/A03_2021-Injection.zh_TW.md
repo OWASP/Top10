@@ -126,6 +126,7 @@ or even invoke stored procedures.
 ## 對應的 CWE 列表
 
 CWE-20 Improper Input Validation
+
 CWE-20 不當的輸入確認
 
 CWE-74 Improper Neutralization of Special Elements in Output Used by a
