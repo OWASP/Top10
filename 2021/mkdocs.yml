@@ -39,14 +39,33 @@ plugins:
       default_language: en
       languages:
         en: English
+        ar: العربية
         it: Italiano
         ja: Japanese
         fr: Français
         pt_BR: Português (Brasil)
         zh_TW: 繁體中文
-        ar: العربية
         
       nav_translations:
+        ar:
+          Home: الصفحة الرئيسية
+          Notice: ملاحظات
+          Introduction: المقدمة 
+          How to use the OWASP Top 10 as a standard: كيف تستخدم إطار أعلى عشرة مخاطر من أواسب كنموذج معياري.
+          How to start an AppSec program with the OWASP Top 10: كيف تبدأ امن التطبيقات مع أعلى عشرة مخاطر من أواسب
+          About OWASP: عن أواسب  
+          Top 10 List: قائمة اعلى عشرة مخاطر
+          A01 Broken Access Control: A01 تخطي صلاحيات الوصول
+          A02 Cryptographic Failures: A02 فشل آلية التشفير
+          A03 Injection: A03 الحقن
+          A04 Insecure Design: A04 التصميم الغير آمن
+          A05 Security Misconfiguration: A05 الإعدادات الأمنية الخاطئة
+          A06 Vulnerable and Outdated Components: A06 الثغرات و المكونات الغير المحدثة
+          A07 Identification and Authentication Failures: A07 الهوية و فشل عملية التحقق
+          A08 Software and Data Integrity Failures: A08  فشل سلامة البيانات والبرمجيات
+          A09 Security Logging and Monitoring Failures: A09 فشل في تسجيل السجلات الأمنية والمراقبة
+          A10 Server Side Request Forgery (SSRF): A10 تزوير الطلبات من جانب الخادم SSRF
+          Next Steps: الخطوات المقبلة 
         fr:
           Home: Page d'accueil
           About: À propos
@@ -100,22 +119,3 @@ plugins:
           A09 Security Logging and Monitoring Failures: A09 資安記錄及監控失效
           A10 Server Side Request Forgery (SSRF): A10 伺服端請求偽造
           Next Steps: 下一步
-        ar:
-          Home: الصفحة الرئيسية
-          Notice: ملاحظات
-          Introduction: المقدمة 
-          How to use the OWASP Top 10 as a standard: كيف تستخدم إطار أعلى عشرة مخاطر من أواسب كنموذج معياري.
-          How to start an AppSec program with the OWASP Top 10: كيف تبدأ امن التطبيقات مع أعلى عشرة مخاطر من أواسب
-          About OWASP: عن أواسب  
-          Top 10 List: قائمة اعلى عشرة مخاطر
-          A01 Broken Access Control: A01 تخطي صلاحيات الوصول
-          A02 Cryptographic Failures: A02 فشل آلية التشفير
-          A03 Injection: A03 الحقن
-          A04 Insecure Design: A04 التصميم الغير آمن
-          A05 Security Misconfiguration: A05 الإعدادات الأمنية الخاطئة
-          A06 Vulnerable and Outdated Components: A06 الثغرات و المكونات الغير المحدثة
-          A07 Identification and Authentication Failures: A07 الهوية و فشل عملية التحقق
-          A08 Software and Data Integrity Failures: A08  فشل سلامة البيانات والبرمجيات
-          A09 Security Logging and Monitoring Failures: A09 فشل في تسجيل السجلات الأمنية والمراقبة
-          A10 Server Side Request Forgery (SSRF): A10 تزوير الطلبات من جانب الخادم SSRF
-          Next Steps: الخطوات المقبلة 
