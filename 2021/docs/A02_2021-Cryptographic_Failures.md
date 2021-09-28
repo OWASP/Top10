@@ -1,4 +1,4 @@
-# A02:2021 – Cryptographic Failures
+# A02:2021 – Cryptographic Failures    ![icon](assets/TOP_10_Icons_Final_Crypto_Failures.png){: style="height:80px;width:80px" align="right"}
 
 ## Factors
 
@@ -11,7 +11,7 @@
 Shifting up one position to #2, previously known as *Sensitive Data
 Exposure*, which is more of a broad symptom rather than a root cause,
 the focus is on failures related to cryptography (or lack thereof).
-Which often lead to exposure of sensitive data. Notable CWEs included
+Which often lead to exposure of sensitive data. Notable Common Weakness Enumerations (CWEs) included
 are *CWE-259: Use of Hard-coded Password*, *CWE-327: Broken or Risky
 Crypto Algorithm*, and *CWE-331 Insufficient Entropy* .
 
@@ -104,7 +104,7 @@ Do the following, at a minimum, and consult the references:
 -   Initialization vectors must be chosen appropriate for the mode of
     operation.  For many modes, this means using a CSPRNG (cryptographically
     secure pseudo random number generator).  For modes that require a
-    nonce, then the IV does not need a CSPRNG.  In all cases, the IV
+    nonce, then the initialization vector (IV) does not need a CSPRNG.  In all cases, the IV
     should never be used twice for a fixed key.
 
 -   Always use authenticated encryption instead of just encryption.

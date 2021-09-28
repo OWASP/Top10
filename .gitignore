@@ -5,7 +5,7 @@
 .LSOverride
 
 # Icon must end with two \r
-Icon
+Icon
 
 
 # Thumbnails
@@ -73,4 +73,8 @@ $RECYCLE.BIN/
 
 # mkdocs site (this is built using mkdocs gh-deploy
 2021/site/
+2021/site/0x00-notice/index.html
+
+# Pipenv
+Pipfile
 2021/site/0x00-notice/index.html

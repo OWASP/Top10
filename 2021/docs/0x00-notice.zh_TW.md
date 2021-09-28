@@ -1,36 +1,30 @@
-# DRAFT
 
-## DO NOT USE THIS UNTIL IT'S DONE!
+# 發表版本
 
-This is a draft. Do not use this version. The presence of an Axx does not mean it's going to be in the final or the ordering of the final version.
+於 2021 年 9 月 24 日正式發表
 
-## Current status
+## 專案領袖
 
-Taking comments on this draft, and preparing the graphic refresh in time for the official release on OWASP's 20th Anniversary.
+- [Andrew van der Stock](mailto:vanderaj@owasp.org) (twitter: [@vanderaj](https://twitter.com/vanderaj))
+- [Brian Glas](mailto:brian.glas@owasp.org) (twitter: [@infosecdad](https://twitter.com/infosecdad))
+- [Neil Smithline](mailto:neil.smithline@owasp.org) (twitter: [@appsecneil](https://twitter.com/appsecneil))
+- [Torsten Gigler](mailto:torsten.gigler@owasp.org) (twitter: [@torsten_tweet](https://twitter.com/torsten_tweet))
 
-## Lead Authors
+## 貢獻專家
 
-- Andrew van der Stock [@vanderaj](https://twitter/vanderaj)
-- Brian Glas [@infosecdad](https://twitter/infosecdad)
-- Neil Smithline [@]
-- Torsten Gigler []
+- Orange Tsai, [@orange_8361](https://twitter/orange_8361) A10-2021: 伺服端請求偽造 的作者
+- Jim Manico [@manicode](https://twitter/manicode) 和 Jakub Maćkowski [@kubamackowski](https://twitter/kubamackowski)
 
-## Contributors
+## 你能如何幫助
 
-- Orange Tsai, Author of A10-2021: Server Side Request Forgery
-- Jim Manico and Jakub Maćkowski - OWASP CheatSheets Coordination
+在目前階段，我們需要
 
-## How you can help
+- 資料科學家 - 協助確認我們的資料分析結果
+- 網頁設計師 - 我們需要做一個對行動裝置友善的版本
+- 翻譯人員 - 請協助確認英文版本文字並確認可被翻譯到其他語言版本
+- ASVS, Testing Guide, 和 Code Review Guide 專案領袖 - 請使用我們的資料並協助我們把其他的文件和標準連接起來
+## 問題及 Pull Request
 
-At this stage, we are asking for
-
-- Data scientists - please peer review our analysis
-- Web designers - we need to make a mobile friendly version
-- Translators - please review the English text to make sure it's translatable
-- ASVS, Testing Guide, and Code Review Guide leadership - please use our data and help us link our documents and standards together
-
-## Log issues and pull requests
-
-Please log any corrections or issues:
+請將任何問題或是需被修改的地方記錄到此:
 
 - [https://github.com/OWASP/Top10/issues](https://github.com/OWASP/Top10/issues)

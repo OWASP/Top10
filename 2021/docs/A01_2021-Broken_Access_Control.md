@@ -1,4 +1,4 @@
-# A01:2021 – Broken Access Control
+# A01:2021 – Broken Access Control    ![icon](assets/TOP_10_Icons_Final_Broken_Access_Control.png){: style="height:80px;width:80px" align="right"}
 
 ## Factors
 
@@ -9,11 +9,11 @@
 ## Overview
 
 Moving up from the fifth position, 94% of applications were tested for
-some form of broken access control with the average incidence rate of 3.81%, and has the most occurrences in the contributed dataset with over 318k. Notable CWEs included are *CWE-200: Exposure of Sensitive Information to an Unauthorized Actor*, *CWE-201:
+some form of broken access control with the average incidence rate of 3.81%, and has the most occurrences in the contributed dataset with over 318k. Notable Common Weakness Enumerations (CWEs) included are *CWE-200: Exposure of Sensitive Information to an Unauthorized Actor*, *CWE-201:
 Exposure of Sensitive Information Through Sent Data*, and *CWE-352:
 Cross-Site Request Forgery*.
 
-## Description 
+## Description
 
 Access control enforces policy such that users cannot act outside of
 their intended permissions. Failures typically lead to unauthorized
@@ -21,12 +21,18 @@ information disclosure, modification, or destruction of all data or
 performing a business function outside the user's limits. Common access
 control vulnerabilities include:
 
--   Bypassing access control checks by modifying the URL, internal
-    application state, or the HTML page, or simply using a custom API
-    attack tool.
+-   Violation of the principle of least privilege or deny by default,
+    where access should only be granted for particular capabilities,
+    roles, or users, but is available to anyone.
 
--   Permitting viewing or editing someone else's account, simply providing
-    it's unique identifier.
+-   Bypassing access control checks by modifying the URL (parameter
+    tampering or force browsing), internal application state, or the
+    HTML page, or by using an attack tool modifying API requests.
+
+-   Permitting viewing or editing someone else's account, by providing
+    its unique identifier (insecure direct object references)
+
+-   Accessing API with missing access controls for POST, PUT and DELETE.
 
 -   Elevation of privilege. Acting as a user without being logged in or
     acting as an admin when logged in as a user.
@@ -39,8 +45,7 @@ control vulnerabilities include:
     origins.
 
 -   Force browsing to authenticated pages as an unauthenticated user or
-    to privileged pages as a standard user. Accessing API with missing
-    access controls for POST, PUT and DELETE.
+    to privileged pages as a standard user.
 
 ## How to Prevent
 
@@ -51,7 +56,7 @@ check or metadata.
 -   Except for public resources, deny by default.
 
 -   Implement access control mechanisms once and re-use them throughout
-    the application, including minimizing CORS usage.
+    the application, including minimizing Cross-Origin Resource Sharing (CORS) usage.
 
 -   Model access controls should enforce record ownership rather than
     accepting that the user can create, read, update, or delete any
@@ -69,7 +74,10 @@ check or metadata.
 -   Rate limit API and controller access to minimize the harm from
     automated attack tooling.
 
--   JWT tokens should be invalidated on the server after logout.
+-   Stateful session identifiers should be invalidated on the server after logout.
+    Stateless JWT tokens should rather be short-lived so that the window of 
+    opportunity for an attacker is minimized. For longer lived JWTs it's highy recommended to
+    follow the OAuth standards to revoke access.
 
 Developers and QA staff should include functional access control unit
 and integration tests.
@@ -79,23 +87,26 @@ and integration tests.
 **Scenario #1:** The application uses unverified data in a SQL call that
 is accessing account information:
 
-> pstmt.setString(1, request.getParameter("acct"));
->
-> ResultSet results = pstmt.executeQuery( );
+```
+ pstmt.setString(1, request.getParameter("acct"));
+ ResultSet results = pstmt.executeQuery( );
+```
 
 An attacker simply modifies the browser's 'acct' parameter to send
 whatever account number they want. If not correctly verified, the
 attacker can access any user's account.
 
-https://example.com/app/accountInfo?acct=notmyacct
+```
+ https://example.com/app/accountInfo?acct=notmyacct
+```
 
 **Scenario #2:** An attacker simply forces browses to target URLs. Admin
 rights are required for access to the admin page.
 
-> https://example.com/app/getappInfo
->
-> https://example.com/app/admin_getappInfo
-
+```
+ https://example.com/app/getappInfo
+ https://example.com/app/admin_getappInfo
+```
 If an unauthenticated user can access either page, it's a flaw. If a
 non-admin can access the admin page, this is a flaw.
 
@@ -116,6 +127,8 @@ non-admin can access the admin page, this is a flaw.
 
 -   [PortSwigger: Exploiting CORS
     misconfiguration](https://portswigger.net/blog/exploiting-cors-misconfigurations-for-bitcoins-and-bounties)
+    
+-   [OAuth: Revoking Access](https://www.oauth.com/oauth2-servers/listing-authorizations/revoking-access/)
 
 ## List of Mapped CWEs
 

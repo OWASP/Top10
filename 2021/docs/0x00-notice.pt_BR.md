@@ -1,12 +1,10 @@
-# RASCUNHO
+# Lançamento
 
-## NÃO UTILIZE ATÉ QUE ESTÁ FINALIZADO!
+Lançado em 24 de setembro de 2021 
 
-This is a draft. Do not use this version. The presence of an Axx does not mean it's going to be in the final or the ordering of the final version.
+## Status atual
 
-## Estado atual
-
-Recebendo comentários sobre este rascunho e preparando a atualização gráfica a tempo para o lançamento oficial no 20º aniversário do OWASP.
+Esta versão será lançada na celebração do 20º aniversário da OWASP. 
 
 ## Autores Principais
 
@@ -17,7 +15,7 @@ Recebendo comentários sobre este rascunho e preparando a atualização gráfica
 
 ## Contribuidores
 
-- Orange Tsai [@orange_8361](https://twitter/orange_8361), Autor de A10-2021: Server Side Request Forgery
+- Orange Tsai - [@orange_8361](https://twitter/orange_8361), Autor de A10-2021: Server Side Request Forgery
 - Jim Manico [@manicode](https://twitter/manicode) e Jakub Maćkowski [@kubamackowski](https://twitter/kubamackowski)  - OWASP CheatSheets Coordination
 
 ## Como você pode ajudar
