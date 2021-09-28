@@ -2,35 +2,63 @@
 
 ## 因子
 
-| 対応する CWE 数 | 最大発生率 | 平均発生率 | 最大網羅率 | 平均網羅率 | 加重平均（攻撃の難易度） | 加重平均（攻撃による影響） | 総発生数 | CVE 合計件数 |
+| 対応する CWE 数 | 最大発生率 | 平均発生率 |  加重平均（攻撃の難易度） | 加重平均（攻撃による影響） | 最大網羅率 | 平均網羅率 | 総発生数 | CVE 合計件数 |
 |:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
-| 40          | 24.19%             | 3.00%              | 77.25%       | 42.51%       | 6.46                 | 6.78                | 262,407           | 2,691      |
+| 40          | 24.19%             | 3.00%              | 6.46                 | 6.78                | 77.25%       | 42.51%       | 262,407           | 2,691      |
 
 ## 概要
 
 2021年の新カテゴリーでは、設計やアーキテクチャの欠陥に関するリスクに焦点を当てています。
 私たちは脅威のモデル化、セキュアなデザインパターンおよび、リファレンスアーキテクチャなどをもっと利用していくことが必要です。
-注目すべき CWE は、CWE-209: エラーメッセージからの情報漏洩、CWE-256: 保護されていない認証情報の保存、CWE-501: 信頼境界線の侵害および、CWE-522: 適切に保護されていないクレデンシャル などです。
+注目すべき CWE (Common Weakness Enumerations) は、CWE-209: エラーメッセージからの情報漏洩、CWE-256: 保護されていない認証情報の保存、CWE-501: 信頼境界線の侵害および、CWE-522: 適切に保護されていないクレデンシャル などです。
 
 ## 説明
 
 「安全が確認されない不安な設計」とは、様々な弱点を表す幅広いカテゴリーで、「安全な設計が行われていない」または、「効果的ではない設計が行われている」と表現されます。
 「安全な設計が行われていない」とは、管理策が欠如していることを意味します。例として、センシティブなデータを暗号化すべきコードに、暗号化するためのメソッドがない場合があげられます。
-「効果的ではない設計が行われている」とは、脅威が発生する可能性があるにもかかわらず、ドメイン（ビジネス）ロジックの検証が不十分であるために、リスクが顕在化する場合を意味します。
+「効果的ではない設計が行われている」とは、攻撃者が脅威を発生させる可能性があるにもかかわらず、ドメイン（ビジネス）ロジックの検証が不十分であるために、リスクが顕在化する場合を意味します。
 例として、所得区分に基づいてパンデミック税の軽減措置を処理することになっているドメインロジックが、すべての入力が正しく署名されているかどうかを検証しておらず、本来付与されるべきものよりもはるかに大きな軽減措置を提供している場合が挙げられます。
 
+### 要件とリソースマネジメント
+
+すべてのデータ資産の機密性、真正性、完全性、可用性に関する保護要件および、期待されるビジネスロジックなど、アプリケーションのビジネス要件を収集し、事業部門と協議します。
+アプリケーションが公開される程度に応じて、（アクセス制御に加えて）テナントを分離する必要があるか検討してください。
+機能的および非機能的なセキュリティ要件を含む、技術的な要件をまとめます。
+セキュリティ活動を含む設計、構築、テストおよび、運用のすべてをカバーする予算を計画し、事業部門と協議します。
+
+### 安全が確認された安心な設計
+
 「安全が確認された安心な設計」とは、常に脅威を評価し、既知の攻撃方法を防ぐためにコードを堅牢に設計し、テストする文化と方法論のことです。
-「安全が確認された安心な設計」には、セキュアな開発ライフサイクル、セキュアなデザインパターンまたは信頼性が高く安全性も検証されているコンポーネントライブラリまたはツール、および脅威のモデル化が必要です。
+データフローやアクセスコントロールなどのセキュリティコントロールの変更を確認するセッション（または同様の活動）に脅威のモデル化を統合するべきです。
+ユーザストーリーの開発においては、正常なフロー及び障害の状態を決定し、責任者および、影響を受ける当事者がそれらを十分に理解し合意していることを確認してください。
+正常系と異常系のフローの仮説と条件を分析し、それらが正確であり期待される物であることを確認します。仮説を検証し、適切な動作に必要な条件を実行する方法を決定し、結果をユーザーストーリーとして確実に文書化しましょう。
+失敗から学び、改善を促進するための積極的なインセンティブを提供していくことが肝要です。「安全が確認された安心な設計」とは、ソフトウェアに追加できるアドオンでもツールでもありません。
+
+### Secure Development Lifecycle
+
+「安全が確認された安心なソフトウェア」を実現するには、セキュア開発ライフサイクル、何らかのセキュアデザインパターン、「ペイブド・ロード」方法論、安全なコンポーネントライブラリ、ツール、および脅威のモデル化が必要です。
+全てのソフトウェアの開発プロジェクトとメンテナンス期間を通して、ソフトウェアプロジェクトの開始時にセキュリティの専門家に声をかけてください。
+[OWASP ソフトウエアセキュリティ保証成熟度モデル(OWASP SAMM)](https://owaspsamm.org) を活用して、安全なソフトウェア開発に取り組みましょう。
 
 ## 防止方法
 
--   セキュリティおよびプライバシー関連の管理策の評価および設計を支援するために、アプリケーションセキュリティの専門家とともにセキュアな開発ライフサイクルを確立し、使用する
+-   セキュリティおよびプライバシー関連の管理策の評価および設計を支援するために、アプリケーションセキュリティの専門家とともにセキュアな開発ライフサイクルを確立し使用する
     
--   セキュアなデザインパターンまたは、信頼性が高く安全性も検証されているコンポーネントライブラリを構築し、使用する
+-   セキュアなデザインパターンまたは、信頼性が高く安全性も検証されているコンポーネントライブラリを構築し使用する
 
 -   重要な認証、アクセスコントロール、ビジネスロジック、および暗号鍵の管理フローに脅威モデルを使用する
 
--   ユニットテストおよび統合テストを実施し、すべての重要なフローが脅威モデルに対して耐性があることを検証する
+-   ユーザーストーリーにセキュリティ言語とコントロールを組み込む
+
+-   (フロントエンドからバックエンドまで)アプリケーションの各層に妥当性チェックを統合する
+
+-   ユニットテストおよび統合テストを実施し、すべての重要なフローが脅威モデルに対して耐性があることを検証する。アプリケーションの各階層のユースケース*と*ミスユースケースをまとめる
+
+-   リスク管理における保護の必要性に応じて、システム層とネットワーク層の階層を分ける
+
+-   すべての階層でテナントを分離した堅牢な設計を行う
+
+-   ユーザーやサービスによる過剰なリソース消費を制限する
 
 ## 攻撃シナリオの例
 
@@ -54,93 +82,99 @@
 
 ## 参考資料
 
--   \[OWASP Cheat Sheet: Secure Design Principles\] (TBD)
+-   [OWASP Cheat Sheet: Secure Design Principles](Coming Soon)
 
--   NIST – Guidelines on Minimum Standards for Developer Verification of
-    > Software  
-    > https://www.nist.gov/system/files/documents/2021/07/09/Developer%20Verification%20of%20Software.pdf
+-   [OWASP SAMM: Design:Security Architecture](https://owaspsamm.org/model/design/security-architecture/)
+
+-   [OWASP SAMM: Design:Threat Assessment](https://owaspsamm.org/model/design/threat-assessment/) 
+
+-   [NIST – Guidelines on Minimum Standards for Developer Verification of Software](https://www.nist.gov/system/files/documents/2021/07/13/Developer%20Verification%20of%20Software.pdf)
+
+-   [The Threat Modeling Manifesto](https://threatmodelingmanifesto.org)
+
+-   [Awesome Threat Modeling](https://github.com/hysnsec/awesome-threat-modelling)
 
 ## 対応する CWE のリスト
 
-CWE-73 ファイル名やパス名の外部制御
+[CWE-73 ファイル名やパス名の外部制御](https://cwe.mitre.org/data/definitions/73.html)
 
-CWE-183 許容範囲が広すぎる入力制限
+[CWE-183 許容範囲が広すぎる入力制限](https://cwe.mitre.org/data/definitions/183.html)
 
-CWE-209 エラーメッセージからの情報漏洩
+[CWE-209 エラーメッセージからの情報漏洩](https://cwe.mitre.org/data/definitions/209.html)
 
-CWE-213 互換性のないポリシーによる機密情報の漏洩
+[CWE-213 互換性のないポリシーによる機密情報の漏洩](https://cwe.mitre.org/data/definitions/213.html)
 
-CWE-235 想定を超えたパラメータの不適切な処理
+[CWE-235 想定を超えたパラメータの不適切な処理](https://cwe.mitre.org/data/definitions/235.html)
 
-CWE-256 パスワードなどのアカウント情報が平文のまま格納されている問題
+[CWE-256 パスワードなどのアカウント情報が平文のまま格納されている問題](https://cwe.mitre.org/data/definitions/256.html)
 
-CWE-257 復元可能な形式で保存されたパスワード
+[CWE-257 復元可能な形式で保存されたパスワード](https://cwe.mitre.org/data/definitions/257.html)
 
-CWE-266 不正確な特権の割り当て
+[CWE-266 不正確な特権の割り当て](https://cwe.mitre.org/data/definitions/266.html)
 
-CWE-269 不適切な特権管理
+[CWE-269 不適切な特権管理](https://cwe.mitre.org/data/definitions/269.html)
 
-CWE-280 権限管理の不備
+[CWE-280 権限管理の不備](https://cwe.mitre.org/data/definitions/280.html)
 
-CWE-311 重要な情報を暗号化していない問題
+[CWE-311 重要な情報を暗号化していない問題](https://cwe.mitre.org/data/definitions/311.html)
 
-CWE-312 重要な情報が平文のまま格納されている問題
+[CWE-312 重要な情報が平文のまま格納されている問題](https://cwe.mitre.org/data/definitions/312.html)
 
-CWE-313 ファイルやディスクに平文のまま格納されている問題
+[CWE-313 ファイルやディスクに平文のまま格納されている問題](https://cwe.mitre.org/data/definitions/313.html)
 
-CWE-316 メモリ上に平文のまま格納されている問題
+[CWE-316 メモリ上に平文のまま格納されている問題](https://cwe.mitre.org/data/definitions/316.html)
 
-CWE-419 保護されていないプライマリーチャネル
+[CWE-419 保護されていないプライマリーチャネル](https://cwe.mitre.org/data/definitions/419.html)
 
-CWE-430 誤ったハンドラーの配置
+[CWE-430 誤ったハンドラーの配置](https://cwe.mitre.org/data/definitions/430.html)
 
-CWE-434 適切でないアップロートファイル制限
+[CWE-434 適切でないアップロートファイル制限](https://cwe.mitre.org/data/definitions/434.html)
 
-CWE-444 HTTPリクエストの矛盾した解釈（HTTPリクエストスマグリング
+[CWE-444 HTTPリクエストの矛盾した解釈（HTTPリクエストスマグリング）](https://cwe.mitre.org/data/definitions/444.html)
 
-CWE-451 ユーザーインターフェース（UI）による重要情報の誤表示
+[CWE-451 ユーザーインターフェース（UI）による重要情報の誤表示](https://cwe.mitre.org/data/definitions/451.html)
 
-CWE-472 不変と仮定される Web パラメータの外部制御
+[CWE-472 不変と仮定される Web パラメータの外部制御](https://cwe.mitre.org/data/definitions/472.html)
 
-CWE-501 信頼境界線の侵害
+[CWE-501 信頼境界線の侵害](https://cwe.mitre.org/data/definitions/501.html)
 
-CWE-522 十分でない資格情報保護
+[CWE-522 十分でない資格情報保護](https://cwe.mitre.org/data/definitions/522.html)
 
-CWE-525 機密情報を含むWebブラウザのキャッシュの使用
+[CWE-525 機密情報を含むWebブラウザのキャッシュの使用](https://cwe.mitre.org/data/definitions/525.html)
 
-CWE-539 機密情報を含むパーシステントクッキーの使用
+[CWE-539 機密情報を含むパーシステントクッキーの使用](https://cwe.mitre.org/data/definitions/539.html)
 
-CWE-579 J2EEのバッドプラクティス：セッションに格納されたシリアライズ不可能なオブジェクト
+[CWE-579 J2EEのバッドプラクティス：セッションに格納されたシリアライズ不可能なオブジェクト](https://cwe.mitre.org/data/definitions/579.html)
 
-CWE-598 GETリクエストのクエリ文字列からの情報漏洩
+[CWE-598 GETリクエストのクエリ文字列からの情報漏洩](https://cwe.mitre.org/data/definitions/598.html)
 
-CWE-602 サーバサイドのセキュリティをクライアントサイドで実施
+[CWE-602 サーバサイドのセキュリティをクライアントサイドで実施](https://cwe.mitre.org/data/definitions/602.html)
 
-CWE-642 重要な状態データの外部制御
+[CWE-642 重要な状態データの外部制御](https://cwe.mitre.org/data/definitions/642.html)
 
-CWE-646 外部から提供されたファイルのファイル名や拡張子への依存
+[CWE-646 外部から提供されたファイルのファイル名や拡張子への依存](https://cwe.mitre.org/data/definitions/646.html)
 
-CWE-650 サーバーサイドにおける HTTP メソッドへの過剰な信頼
+[CWE-650 サーバーサイドにおける HTTP メソッドへの過剰な信頼](https://cwe.mitre.org/data/definitions/650.html)
 
-CWE-653 不十分なコンパートメント化
+[CWE-653 不十分なコンパートメント化](https://cwe.mitre.org/data/definitions/653.html)
 
-CWE-656 隠ぺいによるセキュリティへの依存
+[CWE-656 隠ぺいによるセキュリティへの依存](https://cwe.mitre.org/data/definitions/656.html)
 
-CWE-657 セキュリティ設計原則の違反
+[CWE-657 セキュリティ設計原則の違反](https://cwe.mitre.org/data/definitions/657.html)
 
-CWE-799 適切でない相互作用に対する頻度制御
+[CWE-799 適切でない相互作用に対する頻度制御](https://cwe.mitre.org/data/definitions/799.html)
 
-CWE-807 信頼できない入力に基づいた判断への依存
+[CWE-807 信頼できない入力に基づいた判断への依存](https://cwe.mitre.org/data/definitions/807.html)
 
-CWE-840 ビジネスロジックのエラー
+[CWE-840 ビジネスロジックのエラー](https://cwe.mitre.org/data/definitions/840.html)
 
-CWE-841 ユーザーの振る舞いに基づいたワークフローに依存した不適切な処理の実施
+[CWE-841 ユーザーの振る舞いに基づいたワークフローに依存した不適切な処理の実施](https://cwe.mitre.org/data/definitions/841.html)
 
-CWE-927 センシティブなコミュニケーションへの暗黙的インテントの使用
+[CWE-927 センシティブなコミュニケーションへの暗黙的インテントの使用](https://cwe.mitre.org/data/definitions/927.html)
 
-CWE-1021 レンダリングされたUIレイヤーやフレームの不適切な制限
+[CWE-1021 レンダリングされたUIレイヤーやフレームの不適切な制限](https://cwe.mitre.org/data/definitions/1021.html)
 
-CWE-1173 バリデーションフレームワークの不適切な使用
+[CWE-1173 バリデーションフレームワークの不適切な使用](https://cwe.mitre.org/data/definitions/1173.html)
 
 # A04:2021 – Insecure Design   ![icon](assets/TOP_10_Icons_Final_Insecure_Design.png){: style="height:80px;width:80px" align="right"} 
 
