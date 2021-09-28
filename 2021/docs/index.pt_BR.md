@@ -9,7 +9,6 @@ esta iteração. Sem você, esta parcela não aconteceria. **OBRIGADO**.
 
 ## O que mudou no Top 10 para 2021
 
-
 Existem três novas categorias, quatro categorias com alterações em nomenclaturas e escopo,
 e alguma consolidação no Top 10 para 2021.
 
