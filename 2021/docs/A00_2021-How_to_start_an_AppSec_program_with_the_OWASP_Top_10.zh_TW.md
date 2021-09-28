@@ -1,4 +1,4 @@
-# How to start an AppSec Program with the OWASP Top 10 
+# How to start an AppSec Program with the OWASP Top 10
 
 Previously, the OWASP Top 10 was never designed to be the basis for an
 AppSec program. However, it's essential to start somewhere for many

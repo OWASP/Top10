@@ -70,8 +70,7 @@ deployment.
 
 ## 攻擊情境範例
 
-**情境 #1:** An application uses untrusted data in the construction
-of the following vulnerable SQL call:
+**情境 #1:** 應用程式使用了不被信任的資料在脆弱的 SQL 呼叫中：
 
 String query = "SELECT \* FROM accounts WHERE custID='" +
 request.getParameter("id") + "'";
@@ -127,6 +126,8 @@ or even invoke stored procedures.
 ## 對應的 CWE 列表
 
 CWE-20 Improper Input Validation
+
+CWE-20 不當的輸入確認
 
 CWE-74 Improper Neutralization of Special Elements in Output Used by a
 Downstream Component ('Injection')
