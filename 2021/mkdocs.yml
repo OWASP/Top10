@@ -100,6 +100,7 @@ plugins:
           Top 10:2021 List: Lista top 10:2021
           A01 Broken Access Control: A01 Quebra de Controle de Acesso
           A02 Cryptographic Failures: A02 Falhas Criptográficas
+          A03 Injection: A03 Injeção
           Next Steps: Próximos passos
         zh_TW:
           Home: 首頁
