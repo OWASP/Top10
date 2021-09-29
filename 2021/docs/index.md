@@ -118,5 +118,6 @@ The OWASP Top 10 2021 team gratefully acknowledge the financial support of Secur
 | Cobalt.io | HackerOne | PenTest-Tools | Veracode |
 | Contrast Security | HCL Technologies | Probely | WhiteHat (NTT) |
 
---8<-- "includes/abbreviations.md"
 [![Secure Code Warrior](assets/securecodewarrior.png)](https://securecodewarrior.com)]
+
+--8<-- "includes/abbreviations.md"
