@@ -26,7 +26,7 @@ OWASP トップ 10 をスタンダードとして使うことの難しさの 1 �
 | ツール支援            | 必要最低限      | 推奨                                              |
 | セキュアサプライチェーン     | 適切である場合もある      | 推奨                                              |
 
-アプリケーション・セキュリティにおけるスタンダードをを採用したいと考えている人には、OWASP Application Security Verification Standard（ASVS）を使用することをお勧めします。
+アプリケーション・セキュリティにおけるスタンダードをを採用したいと考えている人には、[OWASP Application Security Verification Standard](https://owasp.org/www-project-application-security-verification-standard/)（ASVS）を使用することをお勧めします。
 
 OWASP ASVS は、ツールベンダーにとって唯一受け入れられる選択肢です。
 OWASP トップ 10 におけるリスクの性質上、ツールは OWASP トップ 10 を包括的に検出、テスト、あるいは保護することはできません。例えば「A04:2021-安全が確認されない不安な設計」があげられます。
@@ -70,7 +70,7 @@ Top 10:
 | Secure Supply Chain     | Occasionally      | Yes                                              |
 
 We would encourage anyone wanting to adopt an application security
-standard to use the OWASP Application Security Verification Standard
+standard to use the [OWASP Application Security Verification Standard](https://owasp.org/www-project-application-security-verification-standard/)
 (ASVS), as it’s designed to be verifiable and tested, and can be used in
 all parts of a secure development lifecycle.
 
