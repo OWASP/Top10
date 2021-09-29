@@ -101,6 +101,7 @@ plugins:
           A01 Broken Access Control: A01 Quebra de Controle de Acesso
           A02 Cryptographic Failures: A02 Falhas Criptográficas
           A03 Injection: A03 Injeção
+          A04 Insecure Design: A04 Design Inseguro
           Next Steps: Próximos passos
         zh_TW:
           Home: 首頁
