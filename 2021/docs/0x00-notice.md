@@ -1,13 +1,9 @@
-# DRAFT
+# Release
 
-!!! warning "DO NOT USE THIS UNTIL IT'S DONE!"
-    This is a draft. Do not use this version. The presence of an Axx does not mean it's going to be in the final or the ordering of the final version.
-
-## Current status
-
-Taking comments on this draft, and preparing the graphic refresh in time for the official release on OWASP's 20th Anniversary.
+Released 24th September 2021
 
 ## Lead Authors
+
 - [Andrew van der Stock](mailto:vanderaj@owasp.org) (twitter: [@vanderaj](https://twitter.com/vanderaj))
 - [Brian Glas](mailto:brian.glas@owasp.org) (twitter: [@infosecdad](https://twitter.com/infosecdad))
 - [Neil Smithline](mailto:neil.smithline@owasp.org) (twitter: [@appsecneil](https://twitter.com/appsecneil))

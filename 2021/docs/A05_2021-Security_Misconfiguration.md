@@ -1,4 +1,4 @@
-# A05:2021 – Security Misconfiguration
+# A05:2021 – Security Misconfiguration    ![icon](assets/TOP_10_Icons_Final_Security_Misconfiguration.png){: style="height:80px;width:80px" align="right"}
 
 ## Factors
 
@@ -9,7 +9,7 @@
 ## Overview
 
 Moving up from #6 in the previous edition, 90% of applications were
-tested for some form of misconfiguration, with an average incidence rate of 4.%, and over 208k occurences of a CWE in this risk category. With more shifts into highly configurable software, it's not surprising to see this category move up.
+tested for some form of misconfiguration, with an average incidence rate of 4.%, and over 208k occurences of a Common Weakness Enumeration (CWE) in this risk category. With more shifts into highly configurable software, it's not surprising to see this category move up.
 Notable CWEs included are *CWE-16 Configuration* and *CWE-611 Improper
 Restriction of XML External Entity Reference*.
 
@@ -40,8 +40,8 @@ The application might be vulnerable if the application is:
 -   The server does not send security headers or directives, or they are
     not set to secure values.
 
--   The software is out of date or vulnerable (see A06:2021-Vulnerable
-    and Outdated Components).
+-   The software is out of date or vulnerable (see [A06:2021-Vulnerable
+    and Outdated Components](A06_2021-Vulnerable_and_Outdated_Components.md)).
 
 Without a concerted, repeatable application security configuration
 process, systems are at a higher risk.
@@ -63,7 +63,8 @@ Secure installation processes should be implemented, including:
 
 -   A task to review and update the configurations appropriate to all
     security notes, updates, and patches as part of the patch management
-    process (see A06:2021-Vulnerable and Outdated Components). Review
+    process (see [A06:2021-Vulnerable
+    and Outdated Components](A06_2021-Vulnerable_and_Outdated_Components.md)). Review
     cloud storage permissions (e.g., S3 bucket permissions).
 
 -   A segmented application architecture provides effective and secure
@@ -96,7 +97,7 @@ potentially exposes sensitive information or underlying flaws such as
 component versions that are known to be vulnerable.
 
 **Scenario #4:** A cloud service provider has default sharing
-permissions open to the Internet by other CSP users. This allows
+permissions open to the Internet by other Content Security Policy header (CSP) users. This allows
 sensitive data stored within cloud storage to be accessed.
 
 ## References

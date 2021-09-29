@@ -1,5 +1,5 @@
-site_name: OWASP Top 10:2021 (DRAFT FOR PEER REVIEW)
-site_description: OWASP Top 10:2021 (DRAFT)
+site_name: OWASP Top 10:2021
+site_description: OWASP Top 10:2021
 repo_name: OWASP/Top10
 repo_url: https://github.com/OWASP/Top10
 copyright: © Copyright 2021 - OWASP Top 10 team - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.
@@ -10,6 +10,7 @@ theme:
   favicon: assets/OWASP-logo.svg
   logo: assets/OWASP-logo.svg
   font: false
+  language: en
   features:
     - navigation.sections
     - navigation.tracking
@@ -63,7 +64,7 @@ nav:
   - How to use the OWASP Top 10 as a standard: 'A00_2021_How_to_use_the_OWASP_Top_10_as_a_standard.md'
   - How to start an AppSec program with the OWASP Top 10: 'A00_2021-How_to_start_an_AppSec_program_with_the_OWASP_Top_10.md'
   - About OWASP: 'A00-about-owasp.md'
-  - Top 10 List:
+  - Top 10:2021 List:
     - A01 Broken Access Control: 'A01_2021-Broken_Access_Control.md'
     - A02 Cryptographic Failures: 'A02_2021-Cryptographic_Failures.md'
     - A03 Injection: 'A03_2021-Injection.md'
@@ -76,6 +77,9 @@ nav:
     - A10 Server Side Request Forgery (SSRF): 'A10_2021-Server-Side_Request_Forgery_(SSRF).md'
   - Next Steps: 'A11_2021-Next_Steps.md'
 
+markdown_extensions:
+  - attr_list
+
 plugins:
   - search
   - git-revision-date
@@ -83,39 +87,59 @@ plugins:
       default_language: en
       languages:
         en: English
+        ar: العربية
         it: Italiano
         ja: Japanese
         fr: Français
         pt_BR: Português (Brasil)
         zh_TW: 繁體中文
-        
+
       nav_translations:
+        ar:
+          Home: الصفحة الرئيسية
+          Notice: ملاحظات
+          Introduction: المقدمة
+          How to use the OWASP Top 10 as a standard: كيف تستخدم إطار أعلى عشرة مخاطر من أواسب كنموذج معياري.
+          How to start an AppSec program with the OWASP Top 10: كيف تبدأ امن التطبيقات مع أعلى عشرة مخاطر من أواسب
+          About OWASP: عن أواسب
+          Top 10:2021 List:   قائمة اعلى عشرة مخاطر لعام 2021
+          A01 Broken Access Control: A01 تخطي صلاحيات الوصول
+          A02 Cryptographic Failures: A02 فشل آلية التشفير
+          A03 Injection: A03 الحقن
+          A04 Insecure Design: A04 التصميم الغير آمن
+          A05 Security Misconfiguration: A05 الإعدادات الأمنية الخاطئة
+          A06 Vulnerable and Outdated Components: A06 الثغرات و المكونات الغير المحدثة
+          A07 Identification and Authentication Failures: A07 الهوية و فشل عملية التحقق
+          A08 Software and Data Integrity Failures: A08  فشل سلامة البيانات والبرمجيات
+          A09 Security Logging and Monitoring Failures: A09 فشل في تسجيل السجلات الأمنية والمراقبة
+          A10 Server Side Request Forgery (SSRF): A10 تزوير الطلبات من جانب الخادم SSRF
+          Next Steps: الخطوات المقبلة
         fr:
           Home: Page d'accueil
           About OWASP: À propos de l'OWASP
           How to use the OWASP Top 10 as a standard: Comment utiliser le Top 10 OWASP comme standard
           How to start an AppSec program with the OWASP Top 10: Comment démarrer un programme AppSec avec le Top 10 OWASP
           About OWASP: À propos de l'OWASP
-          Top 10 List: Liste top 10
-          A01 Broken Access Control: A01 Contrôle d'accès rompu
+          Top 10:2021 List: Liste top 10:2021
+          A01 Broken Access Control: A01 Ruptures de contrôles d'accès
           A02 Cryptographic Failures: A02 Défaillances cryptographiques
           A03 Injection: A03 Injection
-          A04 Insecure Design: A04 Conception fragile
+          A04 Insecure Design: A04 Conception non sécurisée
           A05 Security Misconfiguration: A05 Mauvaise configuration de sécurité
           A06 Vulnerable and Outdated Components: A06 Composants vulnérables et obsolètes
           A07 Identification and Authentication Failures: A07 Identification et authentification de mauvaise qualité
           A08 Software and Data Integrity Failures: A08 Manque d'intégrité des données et du logiciel
           A09 Security Logging and Monitoring Failures: A09 Carence des systèmes de contrôle et de journalisation
-          A10 Server Side Request Forgery (SSRF): A10 Falsification de requête côté serveur
+          A10 Server Side Request Forgery (SSRF): A10 Falsification de requête côté serveur (SSRF)
           Next Steps: Étapes suivantes
         it:
           About OWASP: Riguardo ad OWASP
           Introduction: Introduzione
           How to use the OWASP Top 10 as a standard: Come utilizzare l'OWASP Top 10 come standard
           How to start an AppSec program with the OWASP Top 10: Come avviare un programma AppSec con OWASP Top 10
-          Top 10 List: Lista top 10
-          Next Steps: Passi successivi
+          Top 10:2021 List: Lista top 10:2021
           A01 Broken Access Control: A01 Controllo accessi rotto
+          Next Steps: Passi successivi
         pt_BR:
           Home: Início
           Notice: Notas
@@ -123,7 +147,7 @@ plugins:
           About OWASP: Sobre OWASP
           How to use the OWASP Top 10 as a standard: Como usar o OWASP Top 10 como padrão
           How to start an AppSec program with the OWASP Top 10: Como iniciar um programa AppSec com o OWASP Top 10
-          Top 10 List: Lista top 10
+          Top 10:2021 List: Lista top 10:2021
           A01 Broken Access Control: A01 Quebra de Controle de Acesso
           Next Steps: Próximos passos
         zh_TW:
@@ -133,7 +157,7 @@ plugins:
           About OWASP: OWASP 相關
           How to use the OWASP Top 10 as a standard: 如何正確使用 OWASP Top 10 為標準
           How to start an AppSec program with the OWASP Top 10: 如何使用 OWASP Top 10 啟動 AppSec
-          Top 10 List: Top 10 名單
+          Top 10:2021 List: Top 10:2021 名單
           A01 Broken Access Control: A01 權限控制失效
           A02 Cryptographic Failures: A02 加密機制失效
           A03 Injection: A03 注入式攻擊

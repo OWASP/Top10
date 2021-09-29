@@ -5,7 +5,7 @@
 .LSOverride
 
 # Icon must end with two \r
-Icon
+Icon
 
 
 # Thumbnails
@@ -73,3 +73,6 @@ $RECYCLE.BIN/
 
 # MkDocs generated website
 2021/site
+
+# Pipenv
+Pipfile
