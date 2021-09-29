@@ -99,6 +99,7 @@ plugins:
           How to start an AppSec program with the OWASP Top 10: Como iniciar um programa AppSec com o OWASP Top 10
           Top 10:2021 List: Lista top 10:2021
           A01 Broken Access Control: A01 Quebra de Controle de Acesso
+          A02 Cryptographic Failures: A02 Falhas Criptográficas
           Next Steps: Próximos passos
         zh_TW:
           Home: 首頁
