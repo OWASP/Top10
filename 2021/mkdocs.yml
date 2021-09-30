@@ -102,6 +102,7 @@ plugins:
           A02 Cryptographic Failures: A02 Falhas Criptográficas
           A03 Injection: A03 Injeção
           A04 Insecure Design: A04 Design Inseguro
+          A05 Security Misconfiguration: A05 Configuração Incorreta de Segurança
           Next Steps: Próximos passos
         zh_TW:
           Home: 首頁
