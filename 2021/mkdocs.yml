@@ -118,6 +118,11 @@ plugins:
           How to start an AppSec program with the OWASP Top 10: Como iniciar um programa AppSec com o OWASP Top 10
           Top 10:2021 List: Lista top 10:2021
           A01 Broken Access Control: A01 Quebra de Controle de Acesso
+          A02 Cryptographic Failures: A02 Falhas Criptográficas
+          A03 Injection: A03 Injeção
+          A04 Insecure Design: A04 Design Inseguro
+          A05 Security Misconfiguration: A05 Configuração Incorreta de Segurança
+          A06 Vulnerable and Outdated Components: A06 Componentes Vulneráveis e Desatualizados
           Next Steps: Próximos passos
         zh_TW:
           Home: 首頁
