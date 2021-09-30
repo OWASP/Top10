@@ -103,6 +103,7 @@ plugins:
           A03 Injection: A03 Injeção
           A04 Insecure Design: A04 Design Inseguro
           A05 Security Misconfiguration: A05 Configuração Incorreta de Segurança
+          A06 Vulnerable and Outdated Components: A06 Componentes Vulneráveis e Desatualizados
           Next Steps: Próximos passos
         zh_TW:
           Home: 首頁
