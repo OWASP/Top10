@@ -8,29 +8,19 @@
 
 
 
-## 弱點簡介(Overview)
-It was #2 from the industry survey but also had enough data to make the
-Top 10 via data. Vulnerable Components are a known issue that we
-struggle to test and assess risk and is the only category to not have
-	@@ -16,40 +17,61 @@ weight of 5.0 is used. Notable CWEs included are *CWE-1104: Use of
-Unmaintained Third-Party Components* and the two CWEs from Top 10 2013
-and 2017.
+## 弱點簡介
 
-此弱點在產業調查中排名第二，但有足夠的資料讓它進入前十。 
-易受攻擊的組件是一個已知問題，我們爭論(struggle)測試和評估的風險，而且該弱點是在 CWEs 中唯一沒有任何 CVE 對應的類別，
-包括的名的 CWEs：
-*CWE-1104：使用未維護的第三方組件*
-以及兩個 2013 年度、2017 年度 TOP 10 CWEs。
+此弱點在產業調查中排名第二，但也有足夠的統計資料讓它可以進入前十。 
+易受攻擊的組件是一個已知問題，我們極難做測試和評估的風險的類，而且該弱點是在 CWEs 中唯一沒有任何 CVE 對應的類別，
+著名的 CWEs 包含：
+*CWE-1104：Use of Unmaintained Third-Party Components* 以及兩個 2013 年度、2017 年度 TOP 10 CWEs。
 
 
-## 弱點描述(Description)
-You are likely vulnerable:
-您可能容易受到攻擊 \ 您可能很脆弱：
+## 弱點描述
 
--   If you do not know the versions of all components you use (both
-    client-side and server-side). This includes components you directly
-    use as well as nested dependencies.
--   如果您不知道您使用的所有組件的版本（用戶端和伺服器端）。 這包括您直接使用的組件以及嵌入的相依套件(nested dependencies)。
+您可能容易受到攻擊：
+
+-   如果您並不知道您使用的所有組件的版本（含用戶端和伺服器端）。 這包括您直接使用的組件以及嵌入的相依套件。
 
 -   If the software is vulnerable, unsupported, or out of date. This
     includes the OS, web/application server, database management system
@@ -136,44 +126,31 @@ patched in April 2014.
 
 -   OWASP Application Security Verification Standard: V1 Architecture,
     design and threat modelling
--   OWASP 應用程式安全驗證標準：V1 架構、設計和威脅建模
 
 -   OWASP Dependency Check (for Java and .NET libraries)
--   OWASP 相依性套件檢查（針對 Java 和 .NET 程式庫） 
 
 -   OWASP Testing Guide - Map Application Architecture (OTG-INFO-010)
--   OWASP 測試指南 - 對應應用程式架構 (OTG-INFO-010)
 
 -   OWASP Virtual Patching Best Practices
--   OWASP 虛擬修復最佳實務
 
 -   The Unfortunate Reality of Insecure Libraries
--   現實中不適合的不安全程式庫
 
 -   MITRE Common Vulnerabilities and Exposures (CVE) search
--   MITRE 常見漏洞和暴露 (CVE) 搜尋引擎
 -   
 -   National Vulnerability Database (NVD)
--   國家漏洞數據庫（NVD）
 
 -   Retire.js for detecting known vulnerable JavaScript libraries
--   Retire.js 用於檢測已知的易受攻擊的 JavaScript 程式庫
 
 -   Node Libraries Security Advisories
--   Node 程式庫安全建議
 
 -   [Ruby Libraries Security Advisory Database and Tools]()
--   Ruby 程式庫安全諮詢資料庫及工具
 
 -   https://safecode.org/publication/SAFECode_Software_Integrity_Controls0610.pdf
 
 ## 對應的 CWEs 清單(List of Mapped CWEs)
 
 CWE-937 OWASP Top 10 2013: Using Components with Known Vulnerabilities
-CWE-937 OWASP Top 10 2013：使用具有已知漏洞的組件
 
 CWE-1035 2017 Top 10 A9: Using Components with Known Vulnerabilities
-CWE-1035 2017 Top 10 A9：使用具有已知漏洞的組件
 
 CWE-1104 Use of Unmaintained Third Party Components
-CWE-1104 使用未維護的第三方組件
