@@ -2,16 +2,16 @@
 
 ## 因子
 
-| 対応する CWE 数 | 最大発生率 | 平均発生率 | 最大網羅率 | 平均網羅率 | 加重平均（攻撃の難易度） | 加重平均（攻撃による影響） | 総発生数 | CVE 合計件数 |
+| 対応する CWE 数 | 最大発生率 | 平均発生率 |  加重平均（攻撃の難易度） | 加重平均（攻撃による影響） | 最大網羅率 | 平均網羅率 | 総発生数 | CVE 合計件数 |
 |:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
-| 4           | 19.23%             | 6.51%              | 53.67%       | 39.97%       | 6.87                 | 4.99                | 53,615            | 242        |
+| 4           | 19.23%             | 6.51%              | 6.87                 | 4.99                | 53.67%       | 39.97%       | 53,615            | 242        |
 
 ## 概要
 
-セキュリティロギングとモニタリングは、業界調査（第3位）で、OWASP トップ 10 2017 の第 10 位からわずかに上昇しました。
+セキュリティロギングとモニタリングは、OWASP Top10 コミュニティによる調査にて第3位で、OWASP トップ 10 2017 の第 10 位からわずかに上昇しました。
 ロギングとモニタリングはテストが難しく、インタビューやペネトレーションテストで攻撃が検出されたかどうかを確認することがよくあります。
 このカテゴリの CVE/CVSS データはあまりありませんが、侵害を検知して対応することは重要です。
-とはいえ、このカテゴリーで失敗が起きると、可視化、インシデントアラート、フォレンジックなどに影響があります。
+とはいえ、このカテゴリーで失敗が起きると、説明責任、可視化、インシデントアラート、フォレンジックなどに影響があります。
 このカテゴリは、*CWE-778 ロギングの不足* だけでなく、*CWE-117 ログファイルへの不適切な出力*、*CWE-223 セキュリティに関連する情報の省略*、*CWE-532 ログファイルからの情報漏洩* なども含まれます。
 
 ## 説明
@@ -30,11 +30,11 @@ OWASP Top 10 2021 に話を戻すと、このカテゴリは、アクティブ�
 
 -   アラートの適切なしきい値とレスポンスのエスカレーションプロセスが整えられていない、または有効ではない。
 
--   ペネトレーションテストやDASTツール（OWASP ZAPなど）によるスキャンがアラートをあげない。
+-   ペネトレーションテストやDAST(dynamic application security testing)ツール（OWASP ZAPなど）によるスキャンがアラートをあげない。
 
 -   アプリケーションがリアルタイム、準リアルタイムにアクティブな攻撃を検知、エスカレート、またはアラートすることができない。
 
-ユーザまたは攻撃者がログやアラートのイベントを閲覧できると、情報の漏えいが発生する可能性があります (A01:2021-アクセス制御の不備 を参照).
+ユーザまたは攻撃者がログやアラートのイベントを閲覧できると、情報の漏えいが発生する可能性があります ([A01:2021-アクセス制御の不備](A01_2021-Broken_Access_Control.md) を参照).
 
 ## 防止方法
 
@@ -51,10 +51,10 @@ OWASP Top 10 2021 に話を戻すと、このカテゴリは、アクティブ�
 
 -   DevSecOps チームが疑わしい活動をタイムリーに検知して対応できるように、効果的なモニタリングとアラートを確立する。
 
--   NIST 800-61 rev 2（またはそれ以降）のような、インシデント対応および復旧計画を策定または採用する。
+-   NIST(National Institute of Standards and Technology) 800-61 rev 2（またはそれ以降）のような、インシデント対応および復旧計画を策定または採用する。
 
 OWASP AppSensor、OWASP ModSecurity Core Rule Setを使用したModSecurityなどのWebアプリケーションファイアウォール、
-カスタムダッシュボードとアラートを使用したログ相関分析ソフトウェアなど、商用およびオープンソースのアプリケーション保護フレームワークがあります。
+カスタムダッシュボードとアラートを使用したログ相関分析ソフトウェア（Elasticsearch, Logstash, Kibana (ELK) ）など、商用およびオープンソースのアプリケーション保護フレームワークがあります。
 
 ## 攻撃シナリオの例
 
@@ -88,7 +88,10 @@ OWASP AppSensor、OWASP ModSecurity Core Rule Setを使用したModSecurityな�
     Code](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/08-Testing_for_Error_Handling/01-Testing_for_Error_Code)
 
 -   [OWASP Cheat Sheet:
-    Logging](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html)
+    Application Logging Vocabulary](https://cheatsheetseries.owasp.org/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html)
+
+-   [OWASP Cheat Sheet:
+    Logging](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html))   
 
 -   [Data Integrity: Recovering from Ransomware and Other Destructive
     Events](https://csrc.nist.gov/publications/detail/sp/1800-11/final)
@@ -103,30 +106,30 @@ OWASP AppSensor、OWASP ModSecurity Core Rule Setを使用したModSecurityな�
 
 ## 対応する CWE のリスト
 
-CWE-117 ログファイルへの不適切な出力
+[CWE-117 ログファイルへの不適切な出力](https://cwe.mitre.org/data/definitions/117.html)
 
-CWE-223 セキュリティに関連する情報の省略
+[CWE-223 セキュリティに関連する情報の省略](https://cwe.mitre.org/data/definitions/223.html)
 
-CWE-532 ログファイルからの情報漏洩
+[CWE-532 ログファイルからの情報漏洩](https://cwe.mitre.org/data/definitions/532.html)
 
-CWE-778 ロギングの不足
+[CWE-778 ロギングの不足](https://cwe.mitre.org/data/definitions/778.html)
 
-# A09:2021 – Security Logging and Monitoring Failures
+# A09:2021 – Security Logging and Monitoring Failures    ![icon](assets/TOP_10_Icons_Final_Security_Logging_and_Monitoring_Failures.png){: style="height:80px;width:80px" align="right"}
 
 ## Factors
 
-| CWEs Mapped | Max Incidence Rate | Avg Incidence Rate | Max Coverage | Avg Coverage | Avg Weighted Exploit | Avg Weighted Impact | Total Occurrences | Total CVEs |
+| CWEs Mapped | Max Incidence Rate | Avg Incidence Rate | Avg Weighted Exploit | Avg Weighted Impact | Max Coverage | Avg Coverage | Total Occurrences | Total CVEs |
 |:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
-| 4           | 19.23%             | 6.51%              | 53.67%       | 39.97%       | 6.87                 | 4.99                | 53,615            | 242        |
+| 4           | 19.23%             | 6.51%              | 6.87                 | 4.99                | 53.67%       | 39.97%       | 53,615            | 242        |
 
 ## Overview
 
-Security logging and monitoring came from the industry survey (#3), up
+Security logging and monitoring came from the Top 10 community survey (#3), up
 slightly from the tenth position in the OWASP Top 10 2017. Logging and
 monitoring can be challenging to test, often involving interviews or
 asking if attacks were detected during a penetration test. There isn't
 much CVE/CVSS data for this category, but detecting and responding to
-breaches is critical. Still, it can be very impactful for visibility,
+breaches is critical. Still, it can be very impactful for accountability, visibility,
 incident alerting, and forensics. This category expands beyond *CWE-778
 Insufficient Logging* to include *CWE-117 Improper Output Neutralization
 for Logs*, *CWE-223 Omission of Security-relevant Information*, and
@@ -153,20 +156,19 @@ detection, monitoring, and active response occurs any time:
 -   Appropriate alerting thresholds and response escalation processes
     are not in place or effective.
 
--   Penetration testing and scans by DAST tools (such as OWASP ZAP) do
+-   Penetration testing and scans by dynamic application security testing (DAST) tools (such as OWASP ZAP) do
     not trigger alerts.
 
 -   The application cannot detect, escalate, or alert for active attacks
     in real-time or near real-time.
 
 You are vulnerable to information leakage by making logging and alerting
-events visible to a user or an attacker (see A01:2021 – Broken Access
-Control).
+events visible to a user or an attacker (see [A01:2021-Broken Access Control](A01_2021-Broken_Access_Control.md)).
 
 ## How to Prevent
 
-Developers should implement some or all the following controls, d
-epending on the risk of the application:
+Developers should implement some or all the following controls, 
+depending on the risk of the application:
 
 -   Ensure all login, access control, and server-side input validation
     failures can be logged with sufficient user context to identify
@@ -188,12 +190,12 @@ epending on the risk of the application:
     quickly.
 
 -   Establish or adopt an incident response and recovery plan, such as
-    NIST 800-61r2 or later.
+    National Institute of Standards and Technology (NIST) 800-61r2 or later.
 
 There are commercial and open-source application protection frameworks
 such as the OWASP ModSecurity Core Rule Set, and open-source log
-correlation software, such as the ELK stack, that feature custom
-dashboards and alerting.
+correlation software, such as the Elasticsearch, Logstash, Kibana (ELK)
+stack, that feature custom dashboards and alerting.
 
 ## Example Attack Scenarios
 
@@ -230,7 +232,10 @@ result by the privacy regulator.
     Code](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/08-Testing_for_Error_Handling/01-Testing_for_Error_Code)
 
 -   [OWASP Cheat Sheet:
-    Logging](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html)
+    Application Logging Vocabulary](https://cheatsheetseries.owasp.org/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html)
+
+-   [OWASP Cheat Sheet:
+    Logging](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html))   
 
 -   [Data Integrity: Recovering from Ransomware and Other Destructive
     Events](https://csrc.nist.gov/publications/detail/sp/1800-11/final)
@@ -245,10 +250,10 @@ result by the privacy regulator.
 
 ## List of Mapped CWEs
 
-CWE-117 Improper Output Neutralization for Logs
+[CWE-117 Improper Output Neutralization for Logs](https://cwe.mitre.org/data/definitions/117.html)
 
-CWE-223 Omission of Security-relevant Information
+[CWE-223 Omission of Security-relevant Information](https://cwe.mitre.org/data/definitions/223.html)
 
-CWE-532 Insertion of Sensitive Information into Log File
+[CWE-532 Insertion of Sensitive Information into Log File](https://cwe.mitre.org/data/definitions/532.html)
 
-CWE-778 Insufficient Logging
+[CWE-778 Insufficient Logging](https://cwe.mitre.org/data/definitions/778.html)
