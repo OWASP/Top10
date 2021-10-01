@@ -1,100 +1,62 @@
-# A10:2021 – Server-Side Request Forgery (SSRF)    ![icon](assets/TOP_10_Icons_Final_SSRF.png){: style="height:80px;width:80px" align="right"}
+# A10:2021 – Falsificação de Solicitação do Lado do Servidor (SSRF)    ![icon](assets/TOP_10_Icons_Final_SSRF.png)
 
-## Factors
+## Fatores
 
-| CWEs Mapped | Max Incidence Rate | Avg Incidence Rate | Avg Weighted Exploit | Avg Weighted Impact | Max Coverage | Avg Coverage | Total Occurrences | Total CVEs |
+| CWEs Mapeadas | Taxa de Incidência Máxima | Taxa Média de Incidência | Exploração Média Ponderada | Impacto Médio Ponderado | Cobertura Máxima | Média de Cobertura | Total de Ocorrências | Total de CVEs |
 |:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
 | 1           | 2.72%              | 2.72%              | 8.28                 | 6.72                | 67.72%       | 67.72%       | 9,503             | 385        |
 
-## Overview
+## Visão Geral
 
-This category is added from the Top 10 community survey (#1). The data shows a
-relatively low incidence rate with above average testing coverage and
-above-average Exploit and Impact potential ratings. As new entries are
-likely to be a single or small cluster of Common Weakness Enumerations (CWEs)
-for attention and
-awareness, the hope is that they are subject to focus and can be rolled
-into a larger category in a future edition.
+Esta categoria foi adicionada a partir de uma pesquisa com a comunidade levando o primeiro lugar no Top 10. Os dados mostram uma taxa de incidência relativamente baixa com cobertura de teste acima da média e classificações de potencial de exploração e impacto acima da média. Como acontece com novas entradas, provavelmente seja um único ou pequeno grupo de CWEs para atenção e conscientização, a esperança é que eles estejam sujeitos ao foco de estudo da comunidade e possamos incluir em uma categoria maior em uma edição futura.
 
-## Description 
+## Descrição
 
-SSRF flaws occur whenever a web application is fetching a remote
-resource without validating the user-supplied URL. It allows an attacker
-to coerce the application to send a crafted request to an unexpected
-destination, even when protected by a firewall, VPN, or another type of
-network access control list (ACL).
+As falhas de SSRF ocorrem sempre que um aplicativo da web busca um recurso remoto sem validar a URL fornecida pelo usuário. Ele permite que um invasor force o aplicativo a enviar uma solicitação criada para um destino inesperado, mesmo quando protegido por um firewall, VPN ou outro tipo de lista de controle de acesso à rede (ACL).
 
-As modern web applications provide end-users with convenient features,
-fetching a URL becomes a common scenario. As a result, the incidence of
-SSRF is increasing. Also, the severity of SSRF is becoming higher due to
-cloud services and the complexity of architectures.
+Como os aplicativos da web modernos fornecem aos usuários finais recursos convenientes, buscar uma URL se torna um cenário comum. Como resultado, a incidência de SSRF está aumentando. Além disso, a gravidade do SSRF está se tornando mais alta devido aos serviços em nuvem e à complexidade crescente das arquiteturas.
 
-## How to Prevent
+## Como Previnir
 
-Developers can prevent SSRF by implementing some or all the following
-defense in depth controls:
+Os desenvolvedores podem evitar o SSRF implementando alguns ou todos os seguintes controles de defesa em profundidade:
 
-### **From Network layer**
+### **Para a Camada de Rede**
 
--   Segment remote resource access functionality in separate networks to
-    reduce the impact of SSRF
-
--   Enforce “deny by default” firewall policies or network access
-    control rules to block all but essential intranet traffic.<br/> 
-    *Hints:*<br> 
-    ~ Establish an ownership and a lifecycle for firewall rules based on applications.<br/>
-    ~ Log all accepted *and* blocked network flows on firewalls
-    (see [A09:2021-Security Logging and Monitoring Failures](A09_2021-Security_Logging_and_Monitoring_Failures.md)).
+- Segmente a funcionalidade de acesso a recursos remotos em redes separadas para reduzir o impacto de SSRF;
+- Imponha políticas de firewall para “negar por padrão” ou regras de controle de acesso à rede para bloquear todo o tráfego da intranet, exceto o essencial.
+- *Dicas:*
+~ Estabeleça uma propriedade e um ciclo de vida para regras de firewall baseadas em aplicativos.
+~ Registrar todos os fluxos de rede aceitos *e* bloqueados em firewalls.
+(veja [A09:2021-Monitoramento de Falhas e Registros de Segurança](A09_2021-Security_Logging_and_Monitoring_Failures.pt-BR.md)).
     
-### **From Application layer:**
+### **Para a Camada de Aplicação:**
 
--   Sanitize and validate all client-supplied input data
+- Higienize e valide todos os dados de entrada fornecidos pelo cliente;
+- Aplique o esquema de URL, porta e destino com uma lista de permissões positiva;
+- Não envie a resposta crua ao cliente
+- Desabilite redirecionamentos de HTTP;
+- Tenha cuidado com a consistência URL contra ataques que mirem a resolução de nomes através do DNS e CWE-367.
 
--   Enforce the URL schema, port, and destination with a positive allow
-    list
+Não reduza o SSRF por meio do uso de uma lista de negação ou expressão regular. Os invasores têm listas gigantes de possíveis entradas, ferramentas e habilidades para contornar as listas de negação.
 
--   Do not send raw responses to clients
-
--   Disable HTTP redirections
-
--   Be aware of the URL consistency to avoid attacks such as DNS
-    rebinding and “time of check, time of use” (TOCTOU) race conditions
-
-Do not mitigate SSRF via the use of a deny list or regular expression.
-Attackers have payload lists, tools, and skills to bypass deny lists.
-
-### **Additional Measures to consider:**
+### **Medidas Adicionais a Considerar:**
     
--   Don't deploy other security relevant services on front systems (e.g. OpenID). 
-    Control local traffic on these systems (e.g. localhost)
-    
--   For frontends with dedicated and manageable user groups use network encryption (e.g. VPNs)
-    on independant systems to consider very high protection needs  
+- Não implemente outros serviços de segurança relevantes em sistemas frontais (por exemplo, OpenID). Controle o tráfego local nesses sistemas (por exemplo, localhost)
+- Para *frontends* com grupos de usuários dedicados e gerenciáveis, use criptografia de rede (por exemplo, VPNs) em sistemas independentes para as necessidades de proteção muito altas.
 
-## Example Attack Scenarios
+## Cenário de exemplo de um ataque
 
-Attackers can use SSRF to attack systems protected behind web
-application firewalls, firewalls, or network ACLs, using scenarios such
-as:
+Os invasores podem usar SSRF para atacar sistemas protegidos por firewalls de aplicativos da web, firewalls ou ACLs de rede, usando cenários como:
 
-**Scenario #1:** Port scan internal servers – If the network architecture
-is unsegmented, attackers can map out internal networks and determine if
-ports are open or closed on internal servers from connection results or
-elapsed time to connect or reject SSRF payload connections.
+**Cenário #1:** Varredura de portas em servidores internos - se a arquitetura de rede não for segmentada, os invasores podem mapear as redes internas e determinar se as portas estão abertas ou fechadas em servidores internos a partir dos resultados da conexão ou do tempo decorrido para conectar ou rejeitar as conexões de carga SSRF.
 
-**Scenario #2:** Sensitive data exposure – Attackers can access local 
-files such as or internal services to gain sensitive information such
-as `file:///etc/passwd</span>` and `http://localhost:28017/`.
+**Cenário #2:** Exposição de dados confidenciais - os invasores podem acessar arquivos locais, como ou serviços internos, para obter informações confidenciais, como `file:///etc/passwd` e `http://localhost:28017/`.
 
-**Scenario #3:** Access metadata storage of cloud services – Most cloud
-providers have metadata storage such as `http://169.254.169.254/`. An
-attacker can read the metadata to gain sensitive information.
+**Cenário #3:** Acesse o armazenamento de metadados de serviços em nuvem - a maioria dos provedores de nuvem possui armazenamento de metadados, como `http://169.254.169.254/`. Um invasor pode ler os metadados para obter informações confidenciais.
 
-**Scenario #4:** Compromise internal services – The attacker can abuse
-internal services to conduct further attacks such as Remote Code
-Execution (RCE) or Denial of Service (DoS).
+**Cenário #4:** Comprometimento dos serviços internos - O invasor pode abusar dos serviços internos para conduzir outros ataques, como Execução Remota de Código/Remote Code Execution (RCE) ou Negação de Serviço/Denial of Service (DoS). 
 
-## References
+## Referências
 
 -   [OWASP - Server-Side Request Forgery Prevention Cheat
     Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html)
@@ -111,6 +73,6 @@ Execution (RCE) or Denial of Service (DoS).
 -   [A New Era of SSRF - Exploiting URL Parser in Trending Programming
     Languages!](https://www.blackhat.com/docs/us-17/thursday/us-17-Tsai-A-New-Era-Of-SSRF-Exploiting-URL-Parser-In-Trending-Programming-Languages.pdf)
 
-## List of Mapped CWEs
+## Lista de CWEs mapeadas
 
 [CWE-918 Server-Side Request Forgery (SSRF)](https://cwe.mitre.org/data/definitions/918.html)
