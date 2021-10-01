@@ -23,7 +23,7 @@ CWE yang patut diperhatikan *CWE-502: Deserialization of Untrusted Data*,
 *CWE-829: Inclusion of Functionality from Untrusted Control Sphere*,
 and *CWE-494: Download of Code Without Integrity Check*.
 
-## Penjelasan Detail
+## Deskripsi
 _Software and data integrity failures relate to code and infrastructure that does not protect against integrity violations. An example of this is where an application relies upon plugins, libraries, or modules from untrusted sources, repositories, and content delivery networks (CDNs). An insecure CI/CD pipeline can introduce the potential for unauthorized access, malicious code, or system compromise. Lastly, many applications now include auto-update functionality, where updates are downloaded without sufficient integrity verification and applied to the previously trusted application. Attackers could potentially upload their own updates to be distributed and run on all installations. Another example is where objects or data are encoded or serialized into a structure that an attacker can see and modify is vulnerable to insecure deserialization._
 
 Gagalnya Menjaga Integritas Data dan Perangkat Lunak disebabkan oleh kode dan infrastruktur yang tidak mencegah terjadinya pelanggaran integritas.

@@ -18,7 +18,7 @@ _This category is added from the industry survey (#1). The data shows a relative
 Kategori ini ditambahkan dari survei industri (#1). Data ini menunjukan tingkat insiden yang relatif rendah dengan cakupan pengujian di atas rata-rata serta
 nilai dampak dan potensial eksploitasi di atas rata-rata. Entri-entri baru kemungkinan besar menjadi cluster kecil atau tunggal dari CWE - CWE karena tingkat atensi dan tingkat kesadarannya, harapannnya entri-entri baru ini dapat menjadi fokusan riset keamanan dan dapat digolongkan/dimasukkan kedalam kategori/cluster yang lebih besar di edisi mendatang.
 
-## Penjelasan Detail
+## Deskripsi
 
 _SSRF flaws occur whenever a web application is fetching a remote resource without validating the user-supplied URL. It allows an attacker to coerce the application to send a crafted request to an unexpected destination, even when protected by a firewall, VPN, or another type of network ACL._
 
@@ -116,6 +116,6 @@ seperti _Remote Code Execution (RCE)_ atau _Denial Of Service (DOS)_.
 -   [A New Era of SSRF - Exploiting URL Parser in Trending Programming
     Languages!](https://www.blackhat.com/docs/us-17/thursday/us-17-Tsai-A-New-Era-Of-SSRF-Exploiting-URL-Parser-In-Trending-Programming-Languages.pdf)
 
-## Daftar Klasifikasi CWE-CWE
+## Daftar Klasifikasi CWE
 
 CWE-918 Server-Side Request Forgery (SSRF) 
