@@ -10,7 +10,6 @@
 
 インジェクションは3位に下がっています。
 94%のアプリケーションで、何らかのインジェクションに関する問題が確認されており、最大発生率は19%、平均発生率は3%、そして発生件数は27万4千件でした。
-were tested for some form of injection with a max incidence rate of 19%, an average incidence rate of 3%, and 274k occurances.
 注目すべき共通脆弱性識別子 (CWEs) は、*CWE-79:クロスサイト・スクリプティング*、 *CWE-89:SQLインジェクション*、そして*CWE-73:ファイル名やパス名の外部制御*です。
 
 ## 説明
