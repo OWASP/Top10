@@ -16,15 +16,11 @@
 
 -   應用程式未驗證、過濾或清理使用者提供的資料。
 
--   Dynamic queries or non-parameterized calls without context-aware
-    escaping are used directly in the interpreter.
+-   在直譯器中未使用上下文感知轉義的動態查詢或無參數呼叫。
 
--   Hostile data is used within object-relational mapping (ORM) search
-    parameters to extract additional, sensitive records.
+-   在物件關係對映 (ORM) 的搜尋參數中，使用惡意的資料來提取額外的敏感紀錄。
 
--   Hostile data is directly used or concatenated. The SQL or command
-    contains the structure and malicious data in dynamic queries,
-    commands, or stored procedures.
+-   在動態查詢、命令或儲存的程序，SQL、指令或儲存的程序中，直接使用或連結了惡意資料。
 
 Some of the more common injections are SQL, NoSQL, OS command, Object
 Relational Mapping (ORM), LDAP, and Expression Language (EL) or Object
@@ -78,8 +74,7 @@ Language (HQL)):
 > Query HQLQuery = session.createQuery("FROM accounts WHERE custID='" +
 > request.getParameter("id") + "'");
 
-In both cases, the attacker modifies the ‘id’ parameter value in their
-browser to send: ‘ or ‘1’=’1. For example:
+在這兩個情境中，攻擊者在他們的瀏覽器修改了 "id" 參數值，送出 ‘ or ‘1’=’1，例如：
 
 http://example.com/app/accountView?id=' or '1'='1
 
