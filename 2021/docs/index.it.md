@@ -87,8 +87,8 @@ Ci sono alcune etichette che sono elencati per ciascuna delle 10 categorie princ
 - CWEs mappati: Il numero di CWE mappati in una categoria dal team Top 10.
 - Tasso di incidenza:  Il tasso di incidenza è la percentuale di applicazioni vulnerabili a quel CWE dalla popolazione testata da quella org per quell'anno.
 - Copertura (di test): La percentuale di applicazioni testate da tutte le organizzazioni per un dato CWE.
-- Weighted Exploit: Il sub-score Exploit dai punteggi CVSSv2 e CVSSv3 assegnati ai CVE mappati ai CWE, normalizzati e posizionati su una scala di 10 punti.
-- Weighted Impact: Il sub-score di impatto dai punteggi CVSSv2 e CVSSv3 assegnati ai CVE mappati ai CWE, normalizzato e posizionato su una scala di 10 punti.
+- Sfruttabilità pesata: Il sub-score Exploit dai punteggi CVSSv2 e CVSSv3 assegnati ai CVE mappati ai CWE, normalizzati e posizionati su una scala di 10 punti.
+- Impatto pesato: Il sub-score di impatto dai punteggi CVSSv2 e CVSSv3 assegnati ai CVE mappati ai CWE, normalizzato e posizionato su una scala di 10 punti.
 - Occorrenze totali: Numero totale di applicazioni trovate che hanno i CWE mappati ad una categoria.
 - CVE totali: Numero totale di CVE nel DB NVD che sono stati mappati ai CWE mappati a una categoria.
 
