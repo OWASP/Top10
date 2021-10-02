@@ -8,10 +8,7 @@
 
 ## 概述
 
-Injection slides down to the third position. 94% of the applications
-were tested for some form of injection. Notable CWEs included are
-*CWE-79: Cross-site Scripting*, *CWE-89: SQL Injection*, and *CWE-73:
-External Control of File Name or Path*.
+植入式攻擊下滑到了第三名。94% 被測試的應用程式都有驗測到某種類型的注入式攻擊問題。值得注意的 CWEs 包括了 CWE-79：跨網站攻擊、CWE-89：SQL 注入式攻擊以及 CWE-73 在外部控制檔案名稱或路徑。 
 
 ## 描述 
 
