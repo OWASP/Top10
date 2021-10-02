@@ -1,4 +1,8 @@
-# Introdução ao OWASP Top 10 2021
+# Introdução
+
+## Bem-vindo ao OWASP Top 10 - 2021
+
+![OWASP Top 10 Logo](./assets/TOP_10_logo_Final_Logo_Colour.png){:class="img-responsive"}
 
 Bem-vindo à última edição do OWASP Top 10! O OWASP Top 10
 2021 é totalmente novo, com um novo design gráfico e um infográfico 
@@ -8,7 +12,6 @@ Um grande obrigado a todos que contribuíram com seu tempo e dados para
 esta iteração. Sem você, esta parcela não aconteceria. **OBRIGADO**.
 
 ## O que mudou no Top 10 para 2021
-
 
 Existem três novas categorias, quatro categorias com alterações em nomenclaturas e escopo,
 e alguma consolidação no Top 10 para 2021.
