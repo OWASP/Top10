@@ -48,7 +48,7 @@
 
 **情境 #1:** 應用程式使用了不被信任的資料在脆弱的 SQL 呼叫中：
 
-String query = "SELECT \* FROM accounts WHERE custID='" +
+查詢字串 = "SELECT \* FROM accounts WHERE custID='" +
 request.getParameter("id") + "'";
 
 **情境 #2:** Similarly, an application’s blind trust in frameworks
