@@ -12,10 +12,9 @@
 
 ## 描述 
 
-An application is vulnerable to attack when:
+應用程式在以下情況容易遭受攻擊：
 
--   User-supplied data is not validated, filtered, or sanitized by the
-    application.
+-   應用程式未驗證、過濾或清理使用者提供的資料。
 
 -   Dynamic queries or non-parameterized calls without context-aware
     escaping are used directly in the interpreter.
