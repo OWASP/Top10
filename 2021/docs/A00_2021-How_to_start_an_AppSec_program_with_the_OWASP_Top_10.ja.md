@@ -7,7 +7,7 @@ OWASP トップ 10 2021 は、チェックリストなどのベースライン�
 ## ステージ1. 自社のセキュリティプログラムのギャップと目標を特定する
 
 アプリケーション・セキュリティプログラムの多くは、地道に丁寧に進めるのではなく、一気に進められようとします。このような取り組みは、失敗する運命にあります。
-私たちは、CISO と アプリケーションセキュリティのリーダーに、ソフトウエア セキュリティ保証 成熟度モデル (OWASP SAMM) を使用して、1～3 年の期間で弱点と改善点を特定することを強くお勧めします。
+私たちは、CISO と アプリケーションセキュリティのリーダーに、[ソフトウエアセキュリティ保証成熟度モデル](https://owaspsamm.org) (OWASP SAMM) を使用して、1～3 年の期間で弱点と改善点を特定することを強くお勧めします。
 最初のステップは、現在の状況を評価し、すぐに解決しなければならないガバナンス、設計、実装、検証、および運用におけるギャップと、後回しにしてもよいギャップを特定し、15 の OWASP SAMM セキュリティ・プラク ティスの実施または改善を優先することです。
 OWASP SAMM は、ソフトウェア保証の取り組みを構築し、成熟度を測定するのに役立ちます。
 
@@ -40,7 +40,7 @@ OWASP SAMM は、ソフトウェア保証の取り組みを構築し、成熟度
 ## ステージ 5. 「ペイブド・ロード」コンセプトが OWASP トップ 10 で発見された問題を軽減していることをテストする
 
 「ペイブド・ロード」コンポーネントは、OWASP トップ 10 の重要な問題に対処する必要があります。
-例えば、脆弱なコンポーネントを自動的に検出または修正する方法や、インジェクションを検出するための静的コード分析 IDE プラグイン、さらには React や Vue のようなインジェクションに対して安全であることが知られているライブラリなどがあります。
+例えば、脆弱なコンポーネントを自動的に検出または修正する方法や、インジェクションを検出するための静的コード分析 IDE プラグイン、さらにはインジェクションに対して安全であることが知られているライブラリなどがあります。
 このような安全なそのまま置換え可能な代替品がチームに提供されればされるほど良いでしょう。
 アプリケーションセキュリティチームの重要な任務は、これらのコンポーネントのセキュリティを継続的に評価し、改善することです。
 改善されたら、そのコンポーネントの消費者との何らかのコミュニケーションチャネルで、アップグレードが必要であることを示す必要があります。
@@ -85,8 +85,8 @@ so on, but it's not in itself sufficient.
 
 Many Application Security (AppSec) programs try to run before they can
 crawl or walk. These efforts are doomed to failure. We strongly
-encourage CISOs and AppSec leadership to use OWASP Software Assurance
-Maturity Model (SAMM) \[<https://owaspsamm.org>\] to identify weaknesses
+encourage CISOs and AppSec leadership to use [OWASP Software Assurance
+Maturity Model (SAMM)](https://owaspsamm.org) to identify weaknesses
 and areas for improvement over a 1-3 year period. The first step is to
 evaluate where you are now, identify the gaps in governance, design,
 implementation, verification, and operations you need to resolve
@@ -144,10 +144,10 @@ adopt the paved road component quickly.
 Paved road components should address a significant issue with the OWASP
 Top 10, for example, how to automatically detect or fix vulnerable
 components, or a static code analysis IDE plugin to detect injections or
-even better a library that is known safe against injection, such as
-React or Vue. The more of these secure drop-in replacements provided to
-teams, the better. A vital task of the appsec team is to ensure that the
-security of these components is continuously evaluated and improved.
+even better start using a library that is known safe against injection.
+The more of these secure drop-in replacements provided to teams, the better.
+A vital task of the appsec team is to ensure that the security of these
+components is continuously evaluated and improved.
 Once they are improved, some form of communication pathway with
 consumers of the component should indicate that an upgrade should occur,
 preferably automatically, but if not, as least highlighted on a
