@@ -22,16 +22,7 @@
 
 -   在動態查詢、命令或儲存的程序，SQL、指令或儲存的程序中，直接使用或連結了惡意資料。
 
-Some of the more common injections are SQL, NoSQL, OS command, Object
-Relational Mapping (ORM), LDAP, and Expression Language (EL) or Object
-Graph Navigation Library (OGNL) injection. The concept is identical
-among all interpreters. Source code review is the best method of
-detecting if applications are vulnerable to injections. Automated
-testing of all parameters, headers, URL, cookies, JSON, SOAP, and XML
-data inputs is strongly encouraged. Organizations can include the static
-source (SAST) and dynamic application test (DAST) tools into the CI/CD
-pipeline to identify introduced injection flaws before production
-deployment.
+一些常見的注入式攻擊是 SQL、NoSQL、OS 指令、物件關係對映 (ORM)、LDAP以及表達式語言 (EL) 或對象導航圖語言 (OGNL) 注入。這個概念在所有的直譯器都是相同的。假若應用程式存在注入式攻擊的弱點，源碼檢測是最好的方式。強烈建議對所有輸入的參數、標頭、URL、cookies、JSON、SOAP 以及 XML 的資料進行自動化測試。組織可以將靜態源碼測試 (SAST) 以及動態應用程式檢測 (DAST) 工具，包含到持續整合與持續部署 (CI/CD)管道中，以達成在上線部署前能識別注入攻擊的缺陷。
 
 ## 如何預防
 
