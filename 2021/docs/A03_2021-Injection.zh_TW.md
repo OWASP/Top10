@@ -26,20 +26,13 @@
 
 ## 如何預防
 
--   Preventing injection requires keeping data separate from commands
-    and queries.
+-   需要將命令與查詢資料分開，以防止注入式攻擊。
 
--   The preferred option is to use a safe API, which avoids using the
-    interpreter entirely, provides a parameterized interface, or
-    migrates to Object Relational Mapping Tools (ORMs).
+-   首要的選項是使用安全的應用程式界面 (API)，完全避免使用直譯器，以提供參數化的界面或整合到物件關係對映 (ORMs) 工具中。
 
--   Note: Even when parameterized, stored procedures can still introduce
-    SQL injection if PL/SQL or T-SQL concatenates queries and data or
-    executes hostile data with EXECUTE IMMEDIATE or exec().
+-   注意：即使已經參數化了，在儲存的程序中仍然可以引入 SQL 注入攻擊，如果透過 PL/SQL 或 T-SQL 連接查詢與資料，並使用 EXECUTE IMMEDIATE 或 exec() 執行惡意資料。
 
--   Use positive or "whitelist" server-side input validation. This is
-    not a complete defense as many applications require special
-    characters, such as text areas or APIs for mobile applications.
+-   使用正面或白名單在伺服器端驗證輸入的資料。這並不是一個完整的防禦機制，因許多應用程序需要使用特殊的字符，例如：應用程式的文本區域或應用程式界面 (API)應用於行動裝置上的應用程式。
 
 -   For any residual dynamic queries, escape special characters using
     the specific escape syntax for that interpreter.
