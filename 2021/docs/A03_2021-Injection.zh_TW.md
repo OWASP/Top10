@@ -55,16 +55,14 @@ request.getParameter("id") + "'";
 may result in queries that are still vulnerable, (e.g., Hibernate Query
 Language (HQL)):
 
-> Query HQLQuery = session.createQuery("FROM accounts WHERE custID='" +
+> 查詢 HQLQuery = session.createQuery("FROM accounts WHERE custID='" +
 > request.getParameter("id") + "'");
 
 在這兩個情境中，攻擊者在他們的瀏覽器修改了 "id" 參數值，送出 ‘ or ‘1’=’1，例如：
 
 http://example.com/app/accountView?id=' or '1'='1
 
-This changes the meaning of both queries to return all the records from
-the accounts table. More dangerous attacks could modify or delete data
-or even invoke stored procedures.
+這兩個查詢的含義將產生改變，而回應所有帳戶資料表中的紀錄，更危險的攻擊將可能修改或刪除資料，以及影響了資料的儲存過程。
 
 ## 參考
 
