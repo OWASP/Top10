@@ -122,7 +122,7 @@ Se un utente non autenticato può accedere a una delle due pagine, è una falla.
     
 -   [OAuth: Revoking Access](https://www.oauth.com/oauth2-servers/listing-authorizations/revoking-access/)
 
-## Lista dei CWEs rilevanti
+## Lista dei CWEs correlati
 
 [CWE-22 Improper Limitation of a Pathname to a Restricted Directory
 ('Path Traversal')](https://cwe.mitre.org/data/definitions/22.html)
