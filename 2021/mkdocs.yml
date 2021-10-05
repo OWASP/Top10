@@ -87,7 +87,7 @@ plugins:
         en: English
         ar: العربية
         it: Italiano
-        ja: Japanese
+        ja: 日本語
         fr: Français
         pt_BR: Português (Brasil)
         zh_TW: 繁體中文
@@ -131,13 +131,42 @@ plugins:
           A10 Server Side Request Forgery (SSRF): A10 Falsification de requête côté serveur (SSRF)
           Next Steps: Étapes suivantes
         it:
-          About OWASP: Riguardo ad OWASP
+          Notice: Avvisi
           Introduction: Introduzione
-          How to use the OWASP Top 10 as a standard: Come utilizzare l'OWASP Top 10 come standard
-          How to start an AppSec program with the OWASP Top 10: Come avviare un programma AppSec con OWASP Top 10
+          About OWASP: A proposito di OWASP
+          How to use the OWASP Top 10 as a standard: Come utilizzare la OWASP Top 10 come standard
+          How to start an AppSec program with the OWASP Top 10: Come avviare un programma di AppSec con la OWASP Top 10
           Top 10:2021 List: Lista top 10:2021
-          A01 Broken Access Control: A01 Controllo accessi rotto
-          Next Steps: Passi successivi
+          A01 Broken Access Control: A01 Broken Access Control
+          A02 Cryptographic Failures: A02 Cryptographic Failures
+          A03 Injection: A03 Injection
+          A04 Insecure Design: A04 Insecure Design
+          A05 Security Misconfiguration: A05 Security Misconfiguration
+          A06 Vulnerable and Outdated Components: A06 Vulnerable and Outdated Components
+          A07 Identification and Authentication Failures: A07 Identification and Authentication Failures
+          A08 Software and Data Integrity Failures: A08 Software and Data Integrity Failures
+          A09 Security Logging and Monitoring Failures: A09 Security Logging and Monitoring Failures
+          A10 Server Side Request Forgery (SSRF): A10 Server Side Request Forgery (SSRF)
+          Next Steps: Passi seguenti
+        ja:
+          Home: ホーム
+          Notice: 注意事項
+          Introduction: 導入
+          How to use the OWASP Top 10 as a standard: OWASP Top 10 をスタンダードとして使うには
+          How to start an AppSec program with the OWASP Top 10: OWASP Top 10 を使ってアプリケーションセキュリティプログラムを始めるには
+          About OWASP: OWASPについて
+          Top 10:2021 List: Top 10:2021 一覧
+          A01 Broken Access Control: A01 アクセス制御の不備
+          A02 Cryptographic Failures: A02 暗号化の失敗
+          A03 Injection: A03 インジェクション
+          A04 Insecure Design: A04 安全が確認されない不安な設計
+          A05 Security Misconfiguration: A05 セキュリティの設定ミス
+          A06 Vulnerable and Outdated Components: A06 脆弱で古くなったコンポーネント
+          A07 Identification and Authentication Failures: A07 識別と認証の失敗
+          A08 Software and Data Integrity Failures: A08 ソフトウェアとデータの整合性の不具合
+          A09 Security Logging and Monitoring Failures: A09 セキュリティログとモニタリングの失敗
+          A10 Server Side Request Forgery (SSRF): A10 サーバーサイドリクエストフォージェリ (SSRF)
+          Next Steps: Next Steps
         pt_BR:
           Home: Início
           Notice: Notas
@@ -147,6 +176,11 @@ plugins:
           How to start an AppSec program with the OWASP Top 10: Como iniciar um programa AppSec com o OWASP Top 10
           Top 10:2021 List: Lista top 10:2021
           A01 Broken Access Control: A01 Quebra de Controle de Acesso
+          A02 Cryptographic Failures: A02 Falhas Criptográficas
+          A03 Injection: A03 Injeção
+          A04 Insecure Design: A04 Design Inseguro
+          A05 Security Misconfiguration: A05 Configuração Incorreta de Segurança
+          A06 Vulnerable and Outdated Components: A06 Componentes Vulneráveis e Desatualizados
           Next Steps: Próximos passos
         zh_TW:
           Home: 首頁
