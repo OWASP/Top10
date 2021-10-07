@@ -48,21 +48,19 @@
 
 **情境 #1:** 應用程式使用了不被信任的資料在脆弱的 SQL 呼叫中：
 
-查詢字串 = "SELECT \* FROM accounts WHERE custID='" +
+String query = "SELECT \* FROM accounts WHERE custID='" +
 request.getParameter("id") + "'";
 
-**情境 #2:** Similarly, an application’s blind trust in frameworks
-may result in queries that are still vulnerable, (e.g., Hibernate Query
-Language (HQL)):
+**情境 #2:** 類似地，應用程式對框架的盲目信任，可能導致仍然在漏洞的查詢，(例如：Hibernate 查詢語言 (HQL))： 
 
-> 查詢 HQLQuery = session.createQuery("FROM accounts WHERE custID='" +
+> Query HQLQuery = session.createQuery("FROM accounts WHERE custID='" +
 > request.getParameter("id") + "'");
 
 在這兩個情境中，攻擊者在他們的瀏覽器修改了 "id" 參數值，送出 ‘ or ‘1’=’1，例如：
 
 http://example.com/app/accountView?id=' or '1'='1
 
-這兩個查詢的含義將產生改變，而回應所有帳戶資料表中的紀錄，更危險的攻擊將可能修改或刪除資料，以及影響了資料的儲存過程。
+這兩個查詢的含義將產生改變，而回應所有帳戶資料表中的紀錄，更危險的攻擊將可能修改或刪除資料，以及影響資料的儲存過程。
 
 ## 參考
 
@@ -109,13 +107,13 @@ CWE-75 Failure to Sanitize Special Elements into a Different Plane
 (Special Element Injection)
 
 CWE-77 Improper Neutralization of Special Elements used in a Command
-('Command Injection')
+('命令注入')
 
 CWE-78 Improper Neutralization of Special Elements used in an OS Command
-('OS Command Injection')
+('作業系統命令注入')
 
 CWE-79 Improper Neutralization of Input During Web Page Generation
-('Cross-site Scripting')
+('跨網站腳本攻擊')
 
 CWE-80 Improper Neutralization of Script-Related HTML Tags in a Web Page
 (Basic XSS)
@@ -169,7 +167,7 @@ CWE-470 Use of Externally-Controlled Input to Select Classes or Code
 
 CWE-471 Modification of Assumed-Immutable Data (MAID)
 
-CWE-564 SQL Injection: Hibernate
+CWE-564 SQL 注入: Hibernate
 
 CWE-610 Externally Controlled Reference to a Resource in Another Sphere
 
