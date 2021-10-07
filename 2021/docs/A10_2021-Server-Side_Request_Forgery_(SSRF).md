@@ -1,4 +1,4 @@
-# A10:2021 – Server-Side Request Forgery (SSRF) - Pemalsuan Permintaan Sisi Server
+# A10:2021 – Server-Side Request Forgery (SSRF) - Pemalsuan Permintaan di Sisi Server
 <img src="https://raw.githubusercontent.com/OWASP/Top10/master/2021/docs/assets/TOP_10_Icons_Final_SSRF.png" alt="icon" height=80px width=80px align="center">
 
 ## Faktor
