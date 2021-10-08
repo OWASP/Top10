@@ -98,8 +98,6 @@ http://example.com/app/accountView?id=' or '1'='1
 
 CWE-20 Improper Input Validation
 
-CWE-20 不當的輸入確認
-
 CWE-74 Improper Neutralization of Special Elements in Output Used by a
 Downstream Component ('Injection')
 
@@ -107,13 +105,13 @@ CWE-75 Failure to Sanitize Special Elements into a Different Plane
 (Special Element Injection)
 
 CWE-77 Improper Neutralization of Special Elements used in a Command
-('命令注入')
+('Command Injection')
 
 CWE-78 Improper Neutralization of Special Elements used in an OS Command
-('作業系統命令注入')
+('OS Command Injection')
 
 CWE-79 Improper Neutralization of Input During Web Page Generation
-('跨網站腳本攻擊')
+('Cross-site Scripting')
 
 CWE-80 Improper Neutralization of Script-Related HTML Tags in a Web Page
 (Basic XSS)
@@ -167,7 +165,7 @@ CWE-470 Use of Externally-Controlled Input to Select Classes or Code
 
 CWE-471 Modification of Assumed-Immutable Data (MAID)
 
-CWE-564 SQL 注入: Hibernate
+CWE-564 SQL Injection: Hibernate
 
 CWE-610 Externally Controlled Reference to a Resource in Another Sphere
 
