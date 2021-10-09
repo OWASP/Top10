@@ -34,15 +34,11 @@
 
 -   使用正面或白名單在伺服器端驗證輸入的資料。這並不是一個完整的防禦機制，因許多應用程序需要使用特殊的字符，例如：應用程式的文本區域或應用程式界面 (API)應用於行動裝置上的應用程式。
 
--   For any residual dynamic queries, escape special characters using
-    the specific escape syntax for that interpreter.
+-   對於任何剩餘的動態查詢，在轉譯中使用特殊符號進行查詢將對查詢語法帶來不同的涵義。
 
--   Note: SQL structures such as table names, column names, and so on
-    cannot be escaped, and thus user-supplied structure names are
-    dangerous. This is a common issue in report-writing software.
+-   注意：在 SQL 結構中，例如：資料表名稱、欄位名稱是無法被轉譯的，因此使用者提供資料結構的名稱是危險的，這是一個在編寫軟體時常見的問題。
 
--   Use LIMIT and other SQL controls within queries to prevent mass
-    disclosure of records in case of SQL injection.
+-   在查詢中使用 LIMIT 以及其它的 SQL 控制器，可以防止當遭受 SQL 注入式攻擊時被大量洩露紀錄。
 
 ## 攻擊情境範例
 
