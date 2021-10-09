@@ -1,4 +1,4 @@
-# A11:2021 – Next Steps
+# A11:2021 – 下個階段
 
 By design, the OWASP Top 10 is innately limited to the ten most
 significant risks. Every OWASP Top 10 has “on the cusp” risks considered
@@ -13,7 +13,7 @@ identify and remediate.
 
 ## Code Quality issues
 
-| CWEs Mapped  | Max Incidence Rate  | Avg Incidence Rate  | Max Coverage  | Avg Coverage  | Avg Weighted Exploit  | Avg Weighted Impact  | Total Occurrences  | Total CVEs  |
+| 可對照 CWEs 數量 | 最大發生率 | 平均發生率 | 最大覆蓋範圍 | 平均覆蓋範圍 | 平均加權弱點 | 平均加權影響 | 出現次數 | 所有有關 CVEs 數量|
 |:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
 | 38           | 49.46%              | 2.22%               | 60.85%        | 23.42%        |                       |                      | 101736             | 7564        |
 
