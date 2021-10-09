@@ -94,7 +94,7 @@ identify and remediate.
 
 ## Security Control Failures
 
-| CWEs Mapped  | Max Incidence Rate  | Avg Incidence Rate  | Max Coverage  | Avg Coverage  | Avg Weighted Exploit  | Avg Weighted Impact  | Total Occurrences  | Total CVEs  |
+| 可對照 CWEs 數量 | 最大發生率 | 平均發生率 | 最大覆蓋範圍 | 平均覆蓋範圍 | 平均加權弱點 | 平均加權影響 | 出現次數 | 所有有關 CVEs 數量|
 |:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
 | 2            | 11.35%              | 9.64%               | 76.60%        | 45.23%        |                       |                      | 44911              | 329         |
 
