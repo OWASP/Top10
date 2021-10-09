@@ -1,4 +1,4 @@
-# A11:2021 – 下個階段
+# A11:2021 – 下一步
 
 By design, the OWASP Top 10 is innately limited to the ten most
 significant risks. Every OWASP Top 10 has “on the cusp” risks considered
@@ -41,7 +41,7 @@ identify and remediate.
 
 ## Denial of Service
 
-| CWEs Mapped  | Max Incidence Rate  | Avg Incidence Rate  | Max Coverage  | Avg Coverage  | Avg Weighted Exploit  | Avg Weighted Impact  | Total Occurrences  | Total CVEs  |
+| 可對照 CWEs 數量 | 最大發生率 | 平均發生率 | 最大覆蓋範圍 | 平均覆蓋範圍 | 平均加權弱點 | 平均加權影響 | 出現次數 | 所有有關 CVEs 數量|
 |:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
 | 8            | 17.54%              | 4.89%               | 79.58%        | 33.26%        |                       |                      | 66985              | 973         |
 
@@ -67,7 +67,7 @@ identify and remediate.
 
 ## Memory Management Errors
 
-| CWEs Mapped  | Max Incidence Rate  | Avg Incidence Rate  | Max Coverage  | Avg Coverage  | Avg Weighted Exploit  | Avg Weighted Impact  | Total Occurrences  | Total CVEs  |
+| 可對照 CWEs 數量 | 最大發生率 | 平均發生率 | 最大覆蓋範圍 | 平均覆蓋範圍 | 平均加權弱點 | 平均加權影響 | 出現次數 | 所有有關 CVEs 數量|
 |:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
 | 14           | 7.03%               | 1.16%               | 56.06%        | 31.74%        |                       |                      | 26576              | 16184       |
 
