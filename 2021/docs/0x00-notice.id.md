@@ -5,11 +5,11 @@ Rilis tanggal 24 September 2021
 
 ## Penulis Utama
 
-- Andrew van der Stock [@vanderaj](https://twitter/vanderaj)
-- Brian Glas [@infosecdad](https://twitter/infosecdad)
-- Neil Smithline [neil.smithline@owasp.org]
-- Torsten Gigler [torsten.gigler@owasp.org]
-
+- [Andrew van der Stock](mailto:vanderaj@owasp.org) (twitter: [@vanderaj](https://twitter.com/vanderaj))
+- [Brian Glas](mailto:brian.glas@owasp.org) (twitter: [@infosecdad](https://twitter.com/infosecdad))
+- [Neil Smithline](mailto:neil.smithline@owasp.org) (twitter: [@appsecneil](https://twitter.com/appsecneil))
+- [Torsten Gigler](mailto:torsten.gigler@owasp.org) (twitter: [@torsten_tweet](https://twitter.com/torsten_tweet))
+- 
 ## Kontributor
 
 - Orange Tsai, penulis A10-2021: Server Side Request Forgery
