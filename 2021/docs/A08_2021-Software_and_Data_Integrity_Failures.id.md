@@ -19,9 +19,9 @@ _A new category for 2021 focuses on making assumptions related to software updat
 Kategori baru pada tahun 2021 yang berhubungan dengan pembaharuan perangkat lunak, data penting, dan CI/CD pipeline yang dilakukan tanpa memverifikasi kredibilitasnya.
 Berdasarkan data dari CVE/CVSS **Gagalnya Menjaga Integritas Data dan Perangkat Lunak** merupakan salah satu celah keamanan dengan dampak tertinggi.
 
-CWE yang patut diperhatikan *CWE-502: Deserialization of Untrusted Data*,
-*CWE-829: Inclusion of Functionality from Untrusted Control Sphere*,
-and *CWE-494: Download of Code Without Integrity Check*.
+CWE yang patut diperhatikan *CWE-829: Inclusion of Functionality from Untrusted Control Sphere*,
+*CWE-494: Download of Code Without Integrity Check*,
+dan *CWE-502: Deserialization of Untrusted Data*.
 
 ## Deskripsi
 _Software and data integrity failures relate to code and infrastructure that does not protect against integrity violations. An example of this is where an application relies upon plugins, libraries, or modules from untrusted sources, repositories, and content delivery networks (CDNs). An insecure CI/CD pipeline can introduce the potential for unauthorized access, malicious code, or system compromise. Lastly, many applications now include auto-update functionality, where updates are downloaded without sufficient integrity verification and applied to the previously trusted application. Attackers could potentially upload their own updates to be distributed and run on all installations. Another example is where objects or data are encoded or serialized into a structure that an attacker can see and modify is vulnerable to insecure deserialization._
