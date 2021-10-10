@@ -112,4 +112,4 @@ The following organizations (along with some anonymous donors) kindly donated da
 
 The OWASP Top 10 2021 team gratefully acknowledge the financial support of Secure Code Warrior.
 
-[![Secure Code Warrior](assets/securecodewarrior.png)](https://securecodewarrior.com)]
+[![Secure Code Warrior](assets/securecodewarrior.png)](https://securecodewarrior.com)
