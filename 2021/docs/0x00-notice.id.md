@@ -1,19 +1,14 @@
-# KONSEP
 
-## JANGAN GUNAKAN KONSEP INI SAMPAI KONSEP INI SELESAI
+## Rilis
 
-Ini adalah sebuah konsep. Jangan gunakan versi ini. Pernyataan yang muncul dengan Axx tidak berarti akan menjadi final atau disusun sebagai versi akhir.
-
-## Status saat ini
-
-Mengambil komentar pada konsep ini, dan menyiapkan grafik yang diperbarui waktu untuk rilis resmi pada ulang tahun OWASP ke-20.
+Rilis tanggal 24 September 2021
 
 ## Penulis Utama
 
 - Andrew van der Stock [@vanderaj](https://twitter/vanderaj)
 - Brian Glas [@infosecdad](https://twitter/infosecdad)
-- Neil Smithline [@]
-- Torsten Gigler []
+- Neil Smithline [neil.smithline@owasp.org]
+- Torsten Gigler [torsten.gigler@owasp.org]
 
 ## Kontributor
 
