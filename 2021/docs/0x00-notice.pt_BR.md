@@ -6,7 +6,7 @@ Lançado em 24 de setembro de 2021
 
 Esta versão será lançada na celebração do 20º aniversário da OWASP. 
 
-## Lead Authors
+## Autores Principais
 
 - [Andrew van der Stock](mailto:vanderaj@owasp.org) (twitter: [@vanderaj](https://twitter.com/vanderaj))
 - [Brian Glas](mailto:brian.glas@owasp.org) (twitter: [@infosecdad](https://twitter.com/infosecdad))
@@ -16,7 +16,7 @@ Esta versão será lançada na celebração do 20º aniversário da OWASP.
 ## Contribuidores
 
 - Orange Tsai - [@orange_8361](https://twitter/orange_8361), Autor de A10-2021: Server Side Request Forgery
-- Jim Manico [@manicode](https://twitter/manicode) e Jakub Maćkowski [@kubamackowski](https://twitter/kubamackowski)
+- Jim Manico [@manicode](https://twitter/manicode) e Jakub Maćkowski [@kubamackowski](https://twitter/kubamackowski)  - OWASP CheatSheets Coordination
 
 ## Como você pode ajudar
 
