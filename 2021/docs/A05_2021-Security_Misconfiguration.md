@@ -107,7 +107,7 @@ sensitive data stored within cloud storage to be accessed.
 
 -   [OWASP Testing Guide: Testing for Error Codes](https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/08-Testing_for_Error_Handling/01-Testing_For_Improper_Error_Handling)
 
--   Application Security Verification Standard V19 Configuration
+-   [Application Security Verification Standard V14 Configuration](https://github.com/OWASP/ASVS/blob/master/4.0/en/0x22-V14-Config.md)
 
 -   [NIST Guide to General Server
     Hardening](https://csrc.nist.gov/publications/detail/sp/800-123/final)
