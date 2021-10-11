@@ -3,17 +3,17 @@
 
 ## 對照因素
 
-| 可對照 CWEs 數量 | 最大發生率 | 平均發生率 |最大覆蓋範圍 | 平均覆蓋範圍 | 平均加權弱點 | 平均加權影響 | 出現次數 | 所有相關 CVEs 數量 |
+| 可對照 CWEs 數量 | 最大發生率 | 平均發生率 |最大覆蓋範圍 | 平均覆蓋範圍 | 平均加權漏洞 | 平均加權影響 | 出現次數 | 所有相關 CVEs 數量 |
 |:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
 | 34          | 55.97%             | 3.81%              | 94.55%       | 47.72%       | 6.92                 | 5.93                | 318,487           | 19,013     |
 
 ## 概述
 
-從第五名晋升至第一名，94% 的應用程式都對中斷的存取控制進行了某種形式的測試。著名的CWE包括 *CWE-200：將敏感資訊暴露給未經授權的行為者*，*CWE-201：通過發送資料* 和 *CWE-352曝露敏感資訊：跨站請求偽造*。
+從第五名晋升至第一名，94% 被測試的應用程式，都有被驗測到某種類別權限控制失效的問題。著名的CWE包括 *CWE-200：Exposure of Sensitive Information to an Unauthorized Actor*，*CWE-201：Exposure of Sensitive Information Through Sent Data* 和 *CWE-352 Cross-Site Request Forgery。
 
 ## 描述 
 
-存取控制強化政策，使得用戶不能採取在預期權限之外的行動。故障通常會導致未經授權的資訊洩露、修改或破壞所有資料，或執行超出用戶限制的業務功能。常見的存取控制弱點包括：
+存取控制強化政策，使用戶不能採取在預期權限之外的行動。控制失效通常會導致未經授權的資訊洩露、修改或損壞所有資料，或執行超出用戶權限的業務功能。常見的存取控制弱點包括：
 
 -   通過修改URL、內部應用程式狀態或HTML頁面，或僅使用自定義API攻擊工具來繞過存取控制檢查。
 
@@ -29,9 +29,9 @@
 
 ## 如何預防
 
-存取控制僅在受信任的伺服器端代碼或無伺服器的API有效果，攻擊者無法修改這裏的存取控制檢查或中繼資料。
+存取控制僅在受信任的伺服器端代碼或無伺服器的API有效，攻擊者無法修改這裏的存取控制檢查或中繼資料。
 
--   除公開的資源外，以拒絕為預設值。
+-   除公開的資源外，默認為拒絕存取。
 
 -   一次性地建置存取控制機制，之後在整個應用程式中重複使用它們，包括最大限度地減少使用CORS。
 
@@ -71,82 +71,93 @@ https://example.com/app/accountInfo?acct=notmyacct
 
 ## 參考
 
--   [OWASP主動控制：實施存取控制](https://owasp.org/www-project-proactive-controls/v3/en/c7-enforce-access-controls)
+-   [OWASP Proactive Controls: Enforce Access
+    Controls](https://owasp.org/www-project-proactive-controls/v3/en/c7-enforce-access-controls)
 
--   [OWASP 應用安全驗證標準：V4 存取控制](https://owasp.org/www-project-application-security-verification-standard)
+-   [OWASP Application Security Verification Standard: V4 Access
+    Control](https://owasp.org/www-project-application-security-verification-standard)
 
--   [OWASP 測試指南：授權測試](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/05-Authorization_Testing/README)
+-   [OWASP Testing Guide: Authorization
+    Testing](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/05-Authorization_Testing/README)
 
--   [OWASP 備忘單：存取控制]()
+-   [OWASP Cheat Sheet: Access Control](https://cheatsheetseries.owasp.org/cheatsheets/Access_Control_Cheat_Sheet.html)
 
--   [PortSwigger：利用CORS的錯誤配置](https://portswigger.net/blog/exploiting-cors-misconfigurations-for-bitcoins-and-bounties)
+-   [OWASP Cheat Sheet: Authorization](https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html)
+
+-   [PortSwigger: Exploiting CORS
+    misconfiguration](https://portswigger.net/blog/exploiting-cors-misconfigurations-for-bitcoins-and-bounties)
+    
+-   [OAuth: Revoking Access](https://www.oauth.com/oauth2-servers/listing-authorizations/revoking-access/)
+
 
 ## 對應的CWE列表
 
-CWE-22 不當限制受限目錄的路徑名稱（路徑遍訪）
 
-CWE-23 相對路徑遍訪
+[CWE-22 Improper Limitation of a Pathname to a Restricted Directory
+('Path Traversal')](https://cwe.mitre.org/data/definitions/22.html)
 
-CWE-35 路徑遍訪: '.../...//'
+[CWE-23 Relative Path Traversal](https://cwe.mitre.org/data/definitions/23.html)
 
-CWE-59 檔案存取前不當的路徑解析 ('連結指向')
+[CWE-35 Path Traversal: '.../...//'](https://cwe.mitre.org/data/definitions/35.html)
 
-CWE-200 將敏感資訊曝露給未經授權的行為者
+[CWE-59 Improper Link Resolution Before File Access ('Link Following')](https://cwe.mitre.org/data/definitions/59.html)
 
-CWE-201 經由發送的資料曝露敏感資訊
+[CWE-200 Exposure of Sensitive Information to an Unauthorized Actor](https://cwe.mitre.org/data/definitions/200.html)
 
-CWE-219 在網站根目錄下存放敏感資料
+[CWE-201 Exposure of Sensitive Information Through Sent Data](https://cwe.mitre.org/data/definitions/201.html)
 
-CWE-264 權限、特權和存取控制（不應再使用）
+[CWE-219 Storage of File with Sensitive Data Under Web Root](https://cwe.mitre.org/data/definitions/219.html)
 
-CWE-275 權限問題
+[CWE-264 Permissions, Privileges, and Access Controls (should no longer be used)](https://cwe.mitre.org/data/definitions/264.html)
 
-CWE-276 不正確的預設權限
+[CWE-275 Permission Issues](https://cwe.mitre.org/data/definitions/275.html)
 
-CWE-284 不當的存取控制
+[CWE-276 Incorrect Default Permissions](https://cwe.mitre.org/data/definitions/276.html)
 
-CWE-285 不當的授權
+[CWE-284 Improper Access Control](https://cwe.mitre.org/data/definitions/284.html)
 
-CWE-352 跨站請求偽造 (CSRF)
+[CWE-285 Improper Authorization](https://cwe.mitre.org/data/definitions/285.html)
 
-CWE-359 將私有的個人資訊曝露給未經授權的行為者
+[CWE-352 Cross-Site Request Forgery (CSRF)](https://cwe.mitre.org/data/definitions/352.html)
 
-CWE-377 不安全的暫存檔案
+[CWE-359 Exposure of Private Personal Information to an Unauthorized Actor](https://cwe.mitre.org/data/definitions/359.html)
 
-CWE-402 私有資源輸入新領域（“資源洩漏”）
+[CWE-377 Insecure Temporary File](https://cwe.mitre.org/data/definitions/377.html)
 
-CWE-425 直接請求（“強制瀏覽”）
+[CWE-402 Transmission of Private Resources into a New Sphere ('Resource Leak')](https://cwe.mitre.org/data/definitions/402.html)
 
-CWE-441 意外代理或中介（“困惑的代理”）
+[CWE-425 Direct Request ('Forced Browsing')](https://cwe.mitre.org/data/definitions/425.html)
 
-CWE-497 將敏感系統資訊曝露給未經授權的控制領域
+[CWE-441 Unintended Proxy or Intermediary ('Confused Deputy')](https://cwe.mitre.org/data/definitions/441.html)
 
-CWE-538 將敏感資訊插入外部可存取的檔案或目錄
+[CWE-497 Exposure of Sensitive System Information to an Unauthorized Control Sphere](https://cwe.mitre.org/data/definitions/497.html)
 
-CWE-540 原始程式中包含敏感資訊
+[CWE-538 Insertion of Sensitive Information into Externally-Accessible File or Directory](https://cwe.mitre.org/data/definitions/538.html)
 
-CWE-548 透過列示目錄而曝露資訊
+[CWE-540 Inclusion of Sensitive Information in Source Code](https://cwe.mitre.org/data/definitions/540.html)
 
-CWE-552 外部各方可存取的檔案或目錄
+[CWE-548 Exposure of Information Through Directory Listing](https://cwe.mitre.org/data/definitions/548.html)
 
-CWE-566 通過用戶控制的 SQL 主鍵繞過授權
+[CWE-552 Files or Directories Accessible to External Parties](https://cwe.mitre.org/data/definitions/552.html)
 
-CWE-601 URL重新導向至不受信任的站台（“開放而不受限的重新導向”）
+[CWE-566 Authorization Bypass Through User-Controlled SQL Primary Key](https://cwe.mitre.org/data/definitions/566.html)
 
-CWE-639 通過用戶控制的金鑰繞過授權
+[CWE-601 URL Redirection to Untrusted Site ('Open Redirect')](https://cwe.mitre.org/data/definitions/601.html)
 
-CWE-651 曝露包含敏感資訊的WSDL檔案
+[CWE-639 Authorization Bypass Through User-Controlled Key](https://cwe.mitre.org/data/definitions/639.html)
 
-CWE-668 資源曝露於錯誤領域
+[CWE-651 Exposure of WSDL File Containing Sensitive Information](https://cwe.mitre.org/data/definitions/651.html)
 
-CWE-706 使用被不正確解析的名稱或參考
+[CWE-668 Exposure of Resource to Wrong Sphere](https://cwe.mitre.org/data/definitions/668.html)
 
-CWE-862 缺少授權
+[CWE-706 Use of Incorrectly-Resolved Name or Reference](https://cwe.mitre.org/data/definitions/706.html)
 
-CWE-863 不正確的授權
+[CWE-862 Missing Authorization](https://cwe.mitre.org/data/definitions/862.html)
 
-CWE-913 不當的動態管理的代碼資源控制
+[CWE-863 Incorrect Authorization](https://cwe.mitre.org/data/definitions/863.html)
 
-CWE-922 不安全儲存的敏感資訊
+[CWE-913 Improper Control of Dynamically-Managed Code Resources](https://cwe.mitre.org/data/definitions/913.html)
 
-CWE-1275 具有不當SameSite屬性設定的敏感Cookie
+[CWE-922 Insecure Storage of Sensitive Information](https://cwe.mitre.org/data/definitions/922.html)
+
+[CWE-1275 Sensitive Cookie with Improper SameSite Attribute](https://cwe.mitre.org/data/definitions/1275.html)

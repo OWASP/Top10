@@ -1,4 +1,4 @@
-# A11:2021 – Next Steps
+# A11:2021 – 下一步
 
 By design, the OWASP Top 10 is innately limited to the ten most
 significant risks. Every OWASP Top 10 has “on the cusp” risks considered
@@ -11,9 +11,9 @@ consultancies or tool vendors wishing to expand coverage for their
 offerings, the following four issues are well worth the effort to
 identify and remediate.
 
-## Code Quality issues
+## 程式碼品質問題
 
-| CWEs Mapped  | Max Incidence Rate  | Avg Incidence Rate  | Max Coverage  | Avg Coverage  | Avg Weighted Exploit  | Avg Weighted Impact  | Total Occurrences  | Total CVEs  |
+| 可對照 CWEs 數量 | 最大發生率 | 平均發生率 | 最大覆蓋範圍 | 平均覆蓋範圍 | 平均加權弱點 | 平均加權影響 | 出現次數 | 所有有關 CVEs 數量|
 |:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
 | 38           | 49.46%              | 2.22%               | 60.85%        | 23.42%        |                       |                      | 101736             | 7564        |
 
@@ -39,9 +39,9 @@ identify and remediate.
 
 -   **References**. TBA
 
-## Denial of Service
+## 阻斷服務攻擊
 
-| CWEs Mapped  | Max Incidence Rate  | Avg Incidence Rate  | Max Coverage  | Avg Coverage  | Avg Weighted Exploit  | Avg Weighted Impact  | Total Occurrences  | Total CVEs  |
+| 可對照 CWEs 數量 | 最大發生率 | 平均發生率 | 最大覆蓋範圍 | 平均覆蓋範圍 | 平均加權弱點 | 平均加權影響 | 出現次數 | 所有有關 CVEs 數量|
 |:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
 | 8            | 17.54%              | 4.89%               | 79.58%        | 33.26%        |                       |                      | 66985              | 973         |
 
@@ -65,9 +65,9 @@ identify and remediate.
 
 -   **References**. TBA
 
-## Memory Management Errors
+## 記憶體管理錯誤
 
-| CWEs Mapped  | Max Incidence Rate  | Avg Incidence Rate  | Max Coverage  | Avg Coverage  | Avg Weighted Exploit  | Avg Weighted Impact  | Total Occurrences  | Total CVEs  |
+| 可對照 CWEs 數量 | 最大發生率 | 平均發生率 | 最大覆蓋範圍 | 平均覆蓋範圍 | 平均加權弱點 | 平均加權影響 | 出現次數 | 所有有關 CVEs 數量|
 |:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
 | 14           | 7.03%               | 1.16%               | 56.06%        | 31.74%        |                       |                      | 26576              | 16184       |
 
@@ -92,9 +92,9 @@ identify and remediate.
 
 -   **References**. TBA
 
-## Security Control Failures
+## 安全控制失誤
 
-| CWEs Mapped  | Max Incidence Rate  | Avg Incidence Rate  | Max Coverage  | Avg Coverage  | Avg Weighted Exploit  | Avg Weighted Impact  | Total Occurrences  | Total CVEs  |
+| 可對照 CWEs 數量 | 最大發生率 | 平均發生率 | 最大覆蓋範圍 | 平均覆蓋範圍 | 平均加權弱點 | 平均加權影響 | 出現次數 | 所有有關 CVEs 數量|
 |:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
 | 2            | 11.35%              | 9.64%               | 76.60%        | 45.23%        |                       |                      | 44911              | 329         |
 

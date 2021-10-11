@@ -1,96 +1,94 @@
 # A03:2021 – Injection    ![icon](assets/TOP_10_Icons_Final_Injection.png){: style="height:80px;width:80px" align="right"} 
 
-## Factors
+## Fattori
 
-| CWEs Mapped | Max Incidence Rate | Avg Incidence Rate | Avg Weighted Exploit | Avg Weighted Impact | Max Coverage | Avg Coverage | Total Occurrences | Total CVEs |
+| CWEs corrispondenti | Tasso di incidenza Max | Tasso di incidenza Medio | Sfruttabilità pesata | Impatto Medio | Copertura Max | Copertura media | Occorrenze Totali | CVE Totali |
 |:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
 | 33          | 19.09%             | 3.37%              | 7.25                 | 7.15                | 94.04%       | 47.90%       | 274,228           | 32,078     |
 
-## Overview
+## Panoramica
 
-Injection slides down to the third position. 94% of the applications
-were tested for some form of injection with a max incidence rate of 19%, an average incidence rate of 3%, and 274k occurances. Notable Common Weakness Enumerations (CWEs) included are
+Injection scende alla terza posizione. Il 94% delle applicazioni
+sono state testate per qualche forma di injection con un tasso massimo di incidenza del 19%, un tasso medio di incidenza del 3% e 274k occorrenze. Le Common Weakness Enumerations (CWEs) incluse sono
 *CWE-79: Cross-site Scripting*, *CWE-89: SQL Injection*, and *CWE-73:
 External Control of File Name or Path*.
 
-## Description 
+## Descrizione 
 
-An application is vulnerable to attack when:
+Un'applicazione è vulnerabile alle injection quando:
 
--   User-supplied data is not validated, filtered, or sanitized by the
-    application.
+- I dati forniti dall'utente non sono validati, filtrati o sanificati dall'applicazione.
 
--   Dynamic queries or non-parameterized calls without context-aware
-    escaping are used directly in the interpreter.
+- Le query dinamiche o le chiamate non parametrizzate senza escaping contestuale vengono passate direttamente    all'interprete.
 
--   Hostile data is used within object-relational mapping (ORM) search
-    parameters to extract additional, sensitive records.
+- Input malevolo viene usato all'interno di parametri di ricerca di un ORM (object-relational mapping)
+    per estrarre ulteriori record sensibili.
 
--   Hostile data is directly used or concatenated. The SQL or command
-    contains the structure and malicious data in dynamic queries,
-    commands, or stored procedures.
+- Input malevolo viene usato in modo diretto o concatenato. Le query SQL o i comandi
+    includono i dati ostili nelle query dinamiche, nei comandi o nelle stored procedure.
 
-Some of the more common injections are SQL, NoSQL, OS command, Object
-Relational Mapping (ORM), LDAP, and Expression Language (EL) or Object
-Graph Navigation Library (OGNL) injection. The concept is identical
-among all interpreters. Source code review is the best method of
-detecting if applications are vulnerable to injections. Automated
-testing of all parameters, headers, URL, cookies, JSON, SOAP, and XML
-data inputs is strongly encouraged. Organizations can include
-static (SAST), dynamic (DAST), and interactive (IAST) application security testing tools into the CI/CD
-pipeline to identify introduced injection flaws before production
-deployment.
 
-## How to Prevent
+Alcune delle forme di injection più comuni sono SQL, NoSQL, OS command, Object
+Relational Mapping (ORM), LDAP, e Expression Language (EL) o Object
+Graph Navigation Library (OGNL). Il concetto è identico
+tra tutti gli interpreti. La revisione del codice sorgente è il metodo migliore per
+rilevare se le applicazioni sono vulnerabili alle injection. È fortemente consigliato il testing
+automatico di tutti i parametri, headers, URL, cookie, e sui formati di dato come JSON, SOAP e XML. 
+Le organizzazioni possono includere strumenti statici (SAST), dinamici (DAST) e interattivi (IAST) per i test di sicurezza delle applicazioni nella pipeline CI/CD
+per identificare prima della messa in produzione le problematiche di injection eventualmente presenti.
 
-Preventing injection requires keeping data separate from commands and queries:
 
--   The preferred option is to use a safe API, which avoids using the
-    interpreter entirely, provides a parameterized interface, or
-    migrates to Object Relational Mapping Tools (ORMs).<br/>
-    **Note:** Even when parameterized, stored procedures can still introduce
-    SQL injection if PL/SQL or T-SQL concatenates queries and data or
-    executes hostile data with EXECUTE IMMEDIATE or exec().
+## Come prevenire
 
--   Use positive or "whitelist" server-side input validation. This is
-    not a complete defense as many applications require special
-    characters, such as text areas or APIs for mobile applications.
+Prevenire le forme di injection richiede di mantenere i dati separati dai comandi e dalle query:
 
--   For any residual dynamic queries, escape special characters using
-    the specific escape syntax for that interpreter.<br/>
-    **Note:** SQL structures such as table names, column names, and so on
-    cannot be escaped, and thus user-supplied structure names are
-    dangerous. This is a common issue in report-writing software.
+- L'opzione preferita è quella di usare un'API sicura, che eviti di usare l'interprete
+    interamente, che fornisce un'interfaccia parametrizzata o
+    migra verso strumenti di Object Relational Mapping (ORM).<br/>
+    **Nota:** Anche quando sono parametrizzate, le stored procedure possono ancora introdurre
+    SQL injection se PL/SQL o T-SQL concatena query e dati o
+    esegue input ostili con EXECUTE IMMEDIATE o exec().
 
--   Use LIMIT and other SQL controls within queries to prevent mass
-    disclosure of records in case of SQL injection.
+- Usare una validazione degli input lato server positiva o "whitelist". Questa
+    non è una difesa completa, poiché molte applicazioni richiedono caratteri speciali, 
+    come aree di testo o API per applicazioni mobili.
 
-## Example Attack Scenarios
+- Per qualsiasi query dinamica residua, svolgera l'escaping dei caratteri speciali usando
+    la sintassi di escape specifica per quell'interprete.<br/>
+    **Nota:** Le strutture SQL come i nomi delle tabelle, i nomi delle colonne e così via
+    non possono essere oggetto di escape, e quindi i nomi di queste strutture fornite dall'utente sono
+    e rimangono pericolose. Questo è un problema comune nel software di reportistica.
 
-**Scenario #1:** An application uses untrusted data in the construction
-of the following vulnerable SQL call:
+- Usare LIMIT e altri controlli SQL all'interno delle query per prevenire la
+    divulgazione di massa dei record in caso di SQL injection.
+
+
+## Esempi di scenari d'attacco
+
+**Scenario #1:** Un'applicazione usa dati non fidati nella costruzione
+della seguente chiamata SQL vulnerabile:
 ```
 String query = "SELECT \* FROM accounts WHERE custID='" + request.getParameter("id") + "'";
 ```
 
-**Scenario #2:** Similarly, an application’s blind trust in frameworks
-may result in queries that are still vulnerable, (e.g., Hibernate Query
+**Scenario #2:** Allo stesso modo, la fiducia cieca di un'applicazione nei framework
+può risultare in query che sono ancora vulnerabili, (ad esempio, Hibernate Query
 Language (HQL)):
 ```
  Query HQLQuery = session.createQuery("FROM accounts WHERE custID='" + request.getParameter("id") + "'");
 ```
 
-In both cases, the attacker modifies the ‘id’ parameter value in their
-browser to send: ‘ or ‘1’=’1. For example:
+In entrambi i casi, l'attaccante modifica il valore del parametro 'id' nel suo
+browser per inviare: ' or '1'='1. Per esempio:
 ```
  http://example.com/app/accountView?id=' or '1'='1
 ```
 
-This changes the meaning of both queries to return all the records from
-the accounts table. More dangerous attacks could modify or delete data
-or even invoke stored procedures.
+Questo cambia il significato di entrambe le query per restituire tutti i record dalla
+della tabella degli account. Attacchi più pericolosi potrebbero modificare o cancellare i dati
+o anche invocare stored procedures.
 
-## References
+## Riferimenti
 
 -   [OWASP Proactive Controls: Secure Database Access](https://owasp.org/www-project-proactive-controls/v3/en/c3-secure-database)
 
@@ -111,7 +109,7 @@ or even invoke stored procedures.
 
 -   [PortSwigger: Server-side template injection](https://portswigger.net/kb/issues/00101080_serversidetemplateinjection)
 
-## List of Mapped CWEs
+## Lista dei CWE correlati
 
 [CWE-20 Improper Input Validation](https://cwe.mitre.org/data/definitions/20.html)
 
@@ -183,4 +181,4 @@ Downstream Component ('Injection')](https://cwe.mitre.org/data/definitions/74.ht
 
 [CWE-652 Improper Neutralization of Data within XQuery Expressions ('XQuery Injection')](https://cwe.mitre.org/data/definitions/652.html)
 
-[CWE-917 Improper Neutralization of Special Elements used in an Expression Language Statement ('Expression Language Injection')](https://cwe.mitre.org/data/definitions/917.html)
+[CWE-917 Improper Neutralization of Special Elements used in an Expression Language Statement ('Expression Language Injection')] (https://cwe.mitre.org/data/definitions/917.html)

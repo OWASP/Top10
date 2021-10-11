@@ -8,65 +8,37 @@
 
 ## 概述
 
-Injection slides down to the third position. 94% of the applications
-were tested for some form of injection. Notable CWEs included are
-*CWE-79: Cross-site Scripting*, *CWE-89: SQL Injection*, and *CWE-73:
-External Control of File Name or Path*.
+植入式攻擊下滑到了第三名。94% 被測試的應用程式都有驗測到某種類型的注入式攻擊問題。值得注意的 CWEs 包括了 CWE-79：跨網站攻擊、CWE-89：SQL 注入式攻擊以及 CWE-73：在外部控制檔案名稱或路徑。 
 
 ## 描述 
 
-An application is vulnerable to attack when:
+應用程式在以下情況容易遭受攻擊：
 
--   User-supplied data is not validated, filtered, or sanitized by the
-    application.
+-   應用程式未驗證、過濾或清理使用者提供的資料。
 
--   Dynamic queries or non-parameterized calls without context-aware
-    escaping are used directly in the interpreter.
+-   在直譯器中未使用上下文感知轉義的動態查詢或無參數呼叫。
 
--   Hostile data is used within object-relational mapping (ORM) search
-    parameters to extract additional, sensitive records.
+-   在物件關係對映 (ORM) 的搜尋參數中，使用惡意的資料來提取額外的敏感紀錄。
 
--   Hostile data is directly used or concatenated. The SQL or command
-    contains the structure and malicious data in dynamic queries,
-    commands, or stored procedures.
+-   在動態查詢、命令或儲存的程序，SQL、指令或儲存的程序中，直接使用或連結了惡意資料。
 
-Some of the more common injections are SQL, NoSQL, OS command, Object
-Relational Mapping (ORM), LDAP, and Expression Language (EL) or Object
-Graph Navigation Library (OGNL) injection. The concept is identical
-among all interpreters. Source code review is the best method of
-detecting if applications are vulnerable to injections. Automated
-testing of all parameters, headers, URL, cookies, JSON, SOAP, and XML
-data inputs is strongly encouraged. Organizations can include the static
-source (SAST) and dynamic application test (DAST) tools into the CI/CD
-pipeline to identify introduced injection flaws before production
-deployment.
+一些常見的注入式攻擊是 SQL、NoSQL、OS 指令、物件關係對映 (ORM)、LDAP以及表達式語言 (EL) 或對象導航圖語言 (OGNL) 注入。這個概念在所有的直譯器都是相同的。假若應用程式存在注入式攻擊的弱點，源碼檢測是最好的方式。強烈建議對所有輸入的參數、標頭、URL、cookies、JSON、SOAP 以及 XML 的資料進行自動化測試。組織可以將靜態源碼測試 (SAST) 以及動態應用程式檢測 (DAST) 工具，包含到持續整合與持續部署 (CI/CD)管道中，以達成在上線部署前能識別注入攻擊的缺陷。
 
 ## 如何預防
 
--   Preventing injection requires keeping data separate from commands
-    and queries.
+-   需要將命令與查詢資料分開，以防止注入式攻擊。
 
--   The preferred option is to use a safe API, which avoids using the
-    interpreter entirely, provides a parameterized interface, or
-    migrates to Object Relational Mapping Tools (ORMs).
+-   首要的選項是使用安全的應用程式界面 (API)，完全避免使用直譯器，以提供參數化的界面或整合到物件關係對映 (ORMs) 工具中。
 
--   Note: Even when parameterized, stored procedures can still introduce
-    SQL injection if PL/SQL or T-SQL concatenates queries and data or
-    executes hostile data with EXECUTE IMMEDIATE or exec().
+-   注意：即使已經參數化了，在儲存的程序中仍然可以引入 SQL 注入攻擊，如果透過 PL/SQL 或 T-SQL 連接查詢與資料，並使用 EXECUTE IMMEDIATE 或 exec() 執行惡意資料。
 
--   Use positive or "whitelist" server-side input validation. This is
-    not a complete defense as many applications require special
-    characters, such as text areas or APIs for mobile applications.
+-   使用正面或白名單在伺服器端驗證輸入的資料。這並不是一個完整的防禦機制，因許多應用程序需要使用特殊的字符，例如：應用程式的文本區域或應用程式界面 (API)應用於行動裝置上的應用程式。
 
--   For any residual dynamic queries, escape special characters using
-    the specific escape syntax for that interpreter.
+-   對於任何剩餘的動態查詢，在轉譯中使用特殊符號進行查詢將對查詢語法帶來不同的涵義。
 
--   Note: SQL structures such as table names, column names, and so on
-    cannot be escaped, and thus user-supplied structure names are
-    dangerous. This is a common issue in report-writing software.
+-   注意：在 SQL 結構中，例如：資料表名稱、欄位名稱是無法被轉譯的，因此使用者提供資料結構的名稱是危險的，這是一個在編寫軟體時常見的問題。
 
--   Use LIMIT and other SQL controls within queries to prevent mass
-    disclosure of records in case of SQL injection.
+-   在查詢中使用 LIMIT 以及其它的 SQL 控制器，可以防止當遭受 SQL 注入式攻擊時被大量洩露紀錄。
 
 ## 攻擊情境範例
 
@@ -75,21 +47,16 @@ deployment.
 String query = "SELECT \* FROM accounts WHERE custID='" +
 request.getParameter("id") + "'";
 
-**情境 #2:** Similarly, an application’s blind trust in frameworks
-may result in queries that are still vulnerable, (e.g., Hibernate Query
-Language (HQL)):
+**情境 #2:** 類似地，應用程式對框架的盲目信任，可能導致仍然在漏洞的查詢，(例如：Hibernate 查詢語言 (HQL))： 
 
 > Query HQLQuery = session.createQuery("FROM accounts WHERE custID='" +
 > request.getParameter("id") + "'");
 
-In both cases, the attacker modifies the ‘id’ parameter value in their
-browser to send: ‘ or ‘1’=’1. For example:
+在這兩個情境中，攻擊者在他們的瀏覽器修改了 "id" 參數值，送出 ‘ or ‘1’=’1，例如：
 
 http://example.com/app/accountView?id=' or '1'='1
 
-This changes the meaning of both queries to return all the records from
-the accounts table. More dangerous attacks could modify or delete data
-or even invoke stored procedures.
+這兩個查詢的含義將產生改變，而回應所有帳戶資料表中的紀錄，更危險的攻擊將可能修改或刪除資料，以及影響資料的儲存過程。
 
 ## 參考
 
@@ -126,8 +93,6 @@ or even invoke stored procedures.
 ## 對應的 CWE 列表
 
 CWE-20 Improper Input Validation
-
-CWE-20 不當的輸入確認
 
 CWE-74 Improper Neutralization of Special Elements in Output Used by a
 Downstream Component ('Injection')
