@@ -8,49 +8,35 @@
 
 ## Tinjauan
 
-kategori baru untuk OWASP 2021 ini berfokus pada resiko yang berhubungan
-ke desain dan kekurangan arsitektur, kategori ini mencakup penggunaan
-permodelan ancaman, design pattern yang jauh lebih aman dan referensi arsitektur.
-Penting bahwa CWE termasuk *CWE-209: Generation of Error Message Containing Sensitive Information*,
-*CWE-256: Unprotected Storage of Credentials*, CWE-501: Trust Boundary
-Violation*, dan *CWE-522: Insufficiently Protected Credentials*.
+Kategori baru untuk 2021 ini berfokus pada resiko yang berhubungan ke desain dan kekurangan arsitektur, kategori ini mencakup penggunaan permodelan ancaman, design pattern yang jauh lebih aman dan referensi arsitektur. Sebagai sebuah komunitas kami perlu bergerak lebih dari "shift-left" dalam ruang pengodean untuk aktivitas-aktivtas pra-kode yang kritis bagi prinsip-prinsip Aman dari Disain. Contoh CWE termasuk *CWE-209: Generation of Error Message Containing Sensitive Information*, *CWE-256: Unprotected Storage of Credentials*, CWE-501: Trust Boundary Violation*, dan *CWE-522: Insufficiently Protected Credentials*.
 
 ## Deskripsi
 
-Desain yang tidak aman adalah sebuah representasi kategori yang luas
-dari banyak perbedaan kelemahan, yang diekspresikan sebagai "desain
-kontrol yang tidak ada atau kurang efisien." desain tidak aman
-yang hilang adalah dimana tidak ada nya kontrol(absen). Sebagai contoh,
-bayangkan sebuah code/class yang seharusnya mengenkripsikan data sensitif,
-tetapi saat implementasinya tidak ada atau tidak dipakai. Sedangkan
-desain tidak aman yang kurang efektif adalah dimana sebuah ancaman dapat
-terealisasi tetapi karena ada nya kurang nya validasi logic domain(business)
-sehingga hal tersebut dapat tercegah. Sebagai contoh, bayangkan logika domain
-yang seharusnya untuk memproses keringanan pajak yang berdasarkan
-golongan pendapatan tidak dapat memvalidasi bahwa semua input telah
-ditandai dengan benar dan bahkan memberikan keringanan pajak yang sangat banyak
-daripada yang seharusnya diberikan.
+Desain yang tidak aman adalah sebuah representasi kategori yang luas dari banyak kelemahan yang berbeda, yang diekspresikan sebagai "desain kontrol yang tidak ada atau kurang efisien." Desain tidak aman bukan sumber dari semua kategori risiko Top 10 yang lain. Ada perbedaan antara desain tidak aman dan implementasi tidak aman. Kami membedakan antara cacat desain dan kerusakan implementasi karena suatu alasan, mereka memiliki root cause dan remediasi yang berbeda. Sebuah desain aman masih bisa memiliki kerusakan implementasi yang mengarah ke kerentanan yang dapat dieksploitasi. Suatu desain tidak aman tidak dapat diperbaiki oleh sebuah implementasi yang sempurna karena menurut definisi, kendali keamanan yang diperlukan tidak pernah dibuat untuk bertahan terhadap serangan tertentu. Satu dari faktor yang berkontribusi terhadap desain tidak aman adalah ketiadaan pembuatan profil risiko bisnis yang inheren dalam perangkat lunak atau sistem yang sedang dikembangkan, maka menjadi kegagagalan untuk menentukan desain keamanan level apa yang diperlukan.
 
-Desain yang aman adalah sebuah budaya dan metodologi yang secara konstan
-mengevaluasi ancaman dan memastikan bahwa kode yang telah didesain dan dites
-sudah kuat untuk mencegah metode penyerangan yang telah diketahui.
-Desain yang aman membutuhkan sebuah alur pengembangan yang aman, 
-seperti desain pattern yang aman, komponen library, tooling dan permodelan untuk ancaman.
+### Persyaratan dan Manajemen Sumber Daya
+
+Kumpulkan dan negosiasikan persyaratan bisnis bagi suatu aplikasi dengan pemilik bisnis, termasuk persyaratan perlindungan menyangkut kerahasiaan, integritas, ketersediaan, dan otentisitas dari semua aset data dan logika bisnis yang diharapkan. Perhitungkan akan seberapa terpapar aplikasi Anda dan bila Anda perlu segregasi tenant (sebagai tambahan ke kendali akses). Kompail persyaratkan teknis, termasuk persyaratan keamanan fungsional dan non-fungsional. Rencanakan dan negosiasikan budget yang mencakup semua desain, build, uji coba, dan operasi, termasuk aktivitas-aktivitas keamanan.
+
+### Desain Aman
+
+Desain yang aman adalah sebuah budaya dan metodologi yang secara konstan mengevaluasi ancaman dan memastikan bahwa kode yang telah didesain dan dites sudah kuat (robust) untuk mencegah metode penyerangan yang telah diketahui. Pemodelan ancaman mesti diintegrasikan ke sesi-sesi 'refinement' (atau aktivitas-aktivitas serupa); cari perubahan dalam aliran data dan kendali akses atau kendali keamanan lain. Dalam pengembangan cerita pengguna tentukan aliran yang benar dan keadaan-keadaan gagal, memastikan bahwa mereka dipahami dengan baik dan disetujui oleh pihak-pihak yang bertanggung jawab dan terdampak. Analisis asumsi dan kondisi bagi aliran gagal dan yang diharapkan, pastikan bahwa mereka masih akurat dan dikehendaki. Tentukan bagaimana memvalidasi asumsi dan menegakkan kondisi yang diperlukan untuk perilaku yang layak. Pastikan hasil didokumentasikan dalam cerita pengguna. Belajar dari kesalahan dan tawarkan insentif positif untuk mempromosikan perbaikan. Desain aman bukanlah tambahan atau perkakas yang dapat Anda tambahkan ke perangkat lunak.
+
+### Siklus Hidup Pengembangan Aman
+
+Perangkat lunak aman memerlukan sebuah siklus hidup pengembangan aman, beberapa bentuk pola desain aman, metodologi 'paved road', pustaka komponen yang diamankan, 'tooling', dan pemodelan ancaman. Hubungi spesialis keamanan Anda di awal proyek perangkat lunak untuk keseluruhan proyek dan pemeliharaan perangkat lunak Anda. Pertimbangkan untuk memanfaatkan Software Assurance Maturity Model (SAMM) untuk membantu menstrukturkan upaya pengembangan perangkat lunak aman Anda.
 
 ## Cara Mencegah
 
--   Buat dan gunakan alur pengembangan amana dengan
-    profesional untuk membantu dalam mengevaluasi dan mendesain keamanan
-    serta kontrol yang terkait privasi
-
--   Bust dan gunakan sebuah library dari design pattern yang aman
-    atau gunakan komponen yang sudah dapat dipakai. 
-
--   Gunakan permodelan ancaman untuk autentikasi genting, kontrol akses
-    business logic dan key flows.
-
--   Tulis unit dan tes integrasi untuk memvalidasi bahwa semua aliran
-    genting tahan ke permodelan ancaman.
+-   Buat dan gunakan alur pengembangan aman dengan profesional untuk membantu dalam mengevaluasi dan mendesain keamanan serta kontrol yang terkait privasi
+-   Buat dan gunakan sebuah pustaka dari design pattern yang aman atau gunakan komponen yang sudah dapat dipakai
+-   Gunakan permodelan ancaman untuk autentikasi genting, kontrol akses, business logic, dan key flows
+-   Integrasikan kendali dan bahasa keamanan ke dalam cerita pengguna
+-   Integrasikan uji plausabilitu pada setiap tier dari aplikasi Anda (dari frontend ke backend)
+-   Tulis tes unit dan tes integrasi untuk memvalidasi bahwa semua aliran genting tahan ke permodelan ancaman. Kompail use-case dan misuse-case bagi setiap tier aplikasi Anda
+-   Segregasikan lapisan tier pada sistem dan lapisan jaringa bergantung pada kebutuhan eksposur dan proteksi
+-   Segregasikan tenant secara robust dengan desain pada seluruh tier
+-   Batasi konsumsi sumber daya oleh pengguna atau layanan
 
 ## Contoh Skenario Penyerang
 
