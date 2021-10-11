@@ -1,27 +1,15 @@
-# A08:2021 - Software and Data Integrity Failures - Gagalnya Menjaga Integritas Data dan Perangkat Lunak
+# A08:2021 - Kegagalan Integritas Data dan Perangkat Lunak
 <img src="https://raw.githubusercontent.com/OWASP/Top10/master/2021/docs/assets/TOP_10_Icons_Final_Software_and_Data_Integrity_Failures.png" alt="icon" height=80px width=80px align="center">
 
 ## Faktor
 
-| CWEs Mapped | Max Incidence Rate | Avg Incidence Rate | Max Coverage | Avg Coverage | Avg Weighted Exploit | Avg Weighted Impact | Total Occurrences | Total CVEs |
-|:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
-| 10          | 16.67%             | 2.05%              | 75.04%       | 45.35%       | 6.94                 | 7.94                | 47,972            | 1,152      |
-
-
-| Klasifikasi CWE | Tingkat Kejadian Maksimum | Rata - Rata Tingkat Kejadian | Cakupan Maksimum | Rata - Rata Cakupan | Rata - Rata Bobot Exploitasi | Rata - Rata Bobot Dampak | Total Kejadian | Total CVEs |
+| Klasifikasi CWE | Tingkat Kejadian Maksimum | Rata-rata Tingkat Kejadian | Cakupan Maksimum | Rata-rata Cakupan | Rata-rata Bobot Exploitasi | Rata-rata Bobot Dampak | Total Kejadian | Total CVEs |
 |:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
 | 10          | 16.67%             | 2.05%              | 75.04%       | 45.35%       | 6.94                 | 7.94                | 47,972            | 1,152      |
 
 ## Penjelasan Singkat
 
-_A new category for 2021 focuses on making assumptions related to software updates, critical data, and CI/CD pipelines without verifying integrity. One of the highest weighted impacts from Common Vulnerability and Exposures/Common Vulnerability Scoring System (CVE/CVSS) data. Notable Common Weakness Enumerations (CWEs) include CWE-829: Inclusion of Functionality from Untrusted Control Sphere, CWE-494: Download of Code Without Integrity Check, and CWE-502: Deserialization of Untrusted Data._
-
-Kategori baru pada tahun 2021 yang berhubungan dengan pembaharuan perangkat lunak, data penting, dan CI/CD pipeline yang dilakukan tanpa memverifikasi kredibilitasnya.
-Berdasarkan data dari CVE/CVSS **Gagalnya Menjaga Integritas Data dan Perangkat Lunak** merupakan salah satu celah keamanan dengan dampak tertinggi.
-
-CWE yang patut diperhatikan *CWE-829: Inclusion of Functionality from Untrusted Control Sphere*,
-*CWE-494: Download of Code Without Integrity Check*,
-dan *CWE-502: Deserialization of Untrusted Data*.
+Kategori baru pada tahun 2021 yang berfokus pada membuat asumsi terkait pembaruan perangkat lunak, data kritis, dan pipeline CI/CD tanpa memverifikasi integritas. Satu dari dampak dibobot tertinggi dari data Common Vulnerability and Exposures/Common Vulnerability Scoring System (CVE/CVSS). CWE yang patut diperhatikan *CWE-829: Inclusion of Functionality from Untrusted Control Sphere*, *CWE-494: Download of Code Without Integrity Check*, dan *CWE-502: Deserialization of Untrusted Data*.
 
 ## Deskripsi
 _Software and data integrity failures relate to code and infrastructure that does not protect against integrity violations. An example of this is where an application relies upon plugins, libraries, or modules from untrusted sources, repositories, and content delivery networks (CDNs). An insecure CI/CD pipeline can introduce the potential for unauthorized access, malicious code, or system compromise. Lastly, many applications now include auto-update functionality, where updates are downloaded without sufficient integrity verification and applied to the previously trusted application. Attackers could potentially upload their own updates to be distributed and run on all installations. Another example is where objects or data are encoded or serialized into a structure that an attacker can see and modify is vulnerable to insecure deserialization._
