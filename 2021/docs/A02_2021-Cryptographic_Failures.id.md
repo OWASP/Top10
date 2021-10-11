@@ -2,38 +2,40 @@
 
 ## Faktor
 
-| Klasifikasi CWE | Tingkat Kejadian Maksimum | Rata - Rata Tingkat kejadian | Cakupan Maksimum | Rata - Rata Cakupan | Rata-rata Bobot Eksploitasi | Rata - Rata Bobot Dampak | Total Kejadian | Total CVE |
+| Klasifikasi CWE | Tingkat Kejadian Maksimum | Rata-rata Tingkat kejadian | Cakupan Maksimum | Rata-rata Cakupan | Rata-rata Bobot Eksploitasi | Rata-rata Bobot Dampak | Total Kejadian | Total CVE |
 |:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
 | 29          | 46.44%             | 4.49%              | 79.33%       | 34.85%       | 7.29                 | 6.81                | 233,788           | 3,075      |
 
 ## Ikhtisar
 
-Bergeser satu posisi ke #2, sebelumnya dikenal sebagai *Sensitif Data
+Bergeser satu posisi ke #2, sebelumnya dikenal sebagai *Sensitive Data
 Exposure*, yang lebih merupakan gejala yang luas daripada akar penyebab,
 fokusnya adalah kegagalan yang terkait dengan kriptografi (atau ketiadaannya),
 yang sering menyebabkan paparan data sensitif. CWE terkenal yang disertakan
 adalah *CWE-259: Use of Hard-coded Password*, *CWE-327: Broken or Risky
-Crypto Algorithm*, dan *CWE-331 Insufficient Entropy* .
+Crypto Algorithm*, dan *CWE-331 Insufficient Entropy*.
 
 ## Deskripsi
 
 Hal pertama adalah menentukan kebutuhan perlindungan data dalam perjalanan
-dan pada saat istirahat. Misalnya, kata sandi, nomor kartu kredit, catatan kesehatan, informasi pribadi, dan rahasia bisnis yang memerlukan ekstra
-perlindungan, terutama jika data tersebut termasuk dalam undang-undang privasi, misalnya, EU's General Data Protection Regulation (GDPR), atau peraturan, misalnya,
-perlindungan data keuangan seperti PCI Data Security Standard (PCI DSS).
+dan pada saat istirahat. Misalnya, kata sandi, nomor kartu kredit, catatan 
+kesehatan, informasi pribadi, dan rahasia bisnis yang memerlukan ekstra
+perlindungan, terutama jika data tersebut termasuk dalam undang-undang privasi, 
+misalnya, General Data Protection Regulation (GDPR) Uni Eropa, atau peraturan, 
+misalnya, perlindungan data keuangan seperti PCI Data Security Standard (PCI DSS).
 Untuk semua data tersebut:
 
 -   Apakah ada data yang dikirimkan dalam bentuk teks yang jelas? 
-    ini menyangkut protokol seperti 
-    HTTP, SMTP, and FTP. Lalu lintas internet luar yang berbahaya.
-    Verifikasi semua lalu lintas yang ada di internal, misalnya antara penyeimbang beban,web server, atau sistem back-end.
+    ini menyangkut protokol seperti  HTTP, SMTP, and FTP. Lalu lintas internet 
+    luar yang berbahaya. Verifikasi semua lalu lintas yang ada di internal,
+    misalnya antara penyeimbang beban, server web, atau sistem back-end.
 
--   Apakah ada algoritma kriptografi lama atau lemah yang digunakan baik secara default
-    atau dalam kode yang lebih lama?
+-   Apakah ada algoritma kriptografi lama atau lemah yang digunakan baik secara
+    default atau dalam kode yang lebih lama?
 
 -   Apakah kunci kripto bawaan sedang digunakan, 
     kunci kripto yang lemah dihasilkan atau digunakan kembali, 
-    atau apakah manajemen atau rotasi kunci yang tepat hilang?
+    atau apakah kurangnya manajemen atau rotasi kunci yang tepat?
 
 -   Apakah enkripsi tidak diterapkan, misalnya, apakah ada agen pengguna (browser) 
     yang arahan atau header keamanan hilang?
@@ -47,7 +49,7 @@ Lihat ASVS Crypto (V7), Data Protection (V9), dan SSL/TLS (V10)
 
 Lakukan minimal hal berikut, dan lihat referensi: 
 
--   Mengklasifikasikan data yang diproses, disimpan, atau dikirim oleh aplikasi .
+-   Mengklasifikasikan data yang diproses, disimpan, atau dikirim oleh aplikasi.
     Identifikasi data mana yang sensitif menurut undang-undang privasi,
     persyaratan peraturan, atau kebutuhan bisnis.
 
@@ -70,33 +72,33 @@ Lakukan minimal hal berikut, dan lihat referensi:
 -   Menonaktifkan caching untuk respons yang berisi data sensitif.
 
 -   Simpan kata sandi menggunakan fungsi hashing adaptif dan salted yang kuat
-    dengan faktor kerja (faktor penundaan), seperti Argon2, scrypt, bcrypt atau
+    dengan faktor kerja (faktor penundaan), seperti Argon2, scrypt, bcrypt, atau
     PBKDF2.
 
--   Verifikasi secara independen efektivitas konfigurasi dan
-    pengaturan.
+-   Verifikasi secara independen efektivitas konfigurasi dan pengaturan.
 
-## Contoh Scenario Serangan
+## Contoh Skenario Serangan
 
 **Skenario #1**: Aplikasi mengenkripsi nomor kartu kredit dalam
 database menggunakan enkripsi database otomatis. Namun, data ini
 secara otomatis didekripsi ketika diambil, memungkinkan cacat injeksi SQL untuk
-mengambil nomor kartu kredit dalam teks yang jelas.
+mengambil nomor kartu kredit dalam teks polos.
 
 **Skenario #2**: Situs tidak menggunakan atau menerapkan TLS untuk semua halaman atau
 mendukung enkripsi yang lemah. Penyerang memantau lalu lintas jaringan (misalnya, di
 jaringan nirkabel yang tidak aman), menurunkan versi koneksi dari HTTPS ke
 HTTP, memotong permintaan, dan mencuri cookie sesi pengguna.
-Penyerang Kemudian replay cookie ini dan membajak pengguna sesi (dikonfirmasi), mengakses atau memodifikasi data pribadi pengguna. Alih-alih diatas, 
+Penyerang kemudian replay cookie ini dan membajak pengguna sesi (dikonfirmasi), mengakses 
+atau memodifikasi data pribadi pengguna. Alih-alih di atas, 
 mereka dapat mengubah semua data yang diangkut, misalnya, penerima
 mentransfer uang.
 
-**Skenario #3**: Kata sandi pada database  menggunakan hash tanpa garam atau sederhana untuk
+**Skenario #3**: Kata sandi pada database menggunakan hash tanpa salt atau sederhana untuk
 menyimpan kata sandi semua orang. Cacat unggah file memungkinkan penyerang untuk
 mengambil basis data kata sandi. Semua unsalted hashes dapat diekspos
 dengan tabel pelangi dari hash yang telah dihitung sebelumnya. Hash yang dihasilkan oleh
 fungsi hash sederhana atau cepat dapat dipecahkan oleh GPU, meskipun telah
-diasinkan.
+di-salt.
 
 ## Referensi
 
