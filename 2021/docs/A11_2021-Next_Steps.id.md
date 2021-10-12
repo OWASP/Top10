@@ -17,25 +17,11 @@ identify and remediate.
 |:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
 | 38           | 49.46%              | 2.22%               | 7.1                   | 6.7                  | 60.85%        | 23.42%        | 101736             | 7564        |
 
--   **Deskripsi.** Code quality issues include known security defects
-    or patterns, reusing variables for multiple purposes, exposure of
-    sensitive information in debugging output, off-by-one errors, time
-    of check/time of use (TOCTOU) race conditions, unsigned or signed
-    conversion errors, use after free, and more. The hallmark of this
-    section is that they can usually be identified with stringent
-    compiler flags, static code analysis tools, and linter IDE plugins.
-    Modern languages by design eliminated many of these issues, such as
-    Rust’s memory ownership and borrowing concept, Rust’s threading
-    design, and Go’s strict typing and bounds checking.
+-   **Deskripsi.** Masalah kualitas kode termasuk pola atau cacat keamanan, memakai ulang variabel untuk berbagai kegunaan, eksposur informasi sensitif dalam luaran pengawakutuan, kesalahan off-by-one, kondisi race saat pemeriksaan/saat penggunaan (time of check/time of use, TOCTOU), kesalahan konversi unsigned atau signed, use after free, dan lebih banyak lagi. Ciri khas bagian ini adalah mereka biasanya bisa diidentifikasi dengan flag kompiler yang ketat, alat analisis kode statik, dan plugin IDE linter. Bahasa-bahasa modern dari desain mengeliminasi banyak masalah ini, seperti konsep peminjaman dan kepemilikan memori Rust, desain thread Rust, dan penentuan tipe ketat dan pemeriksaan batas Go.
 
--   **Bagaimana mencegahnya**. Enable and use your editor and language’s static
-    code analysis options. Consider using a static code analysis tool.
-    Consider if it might be possible to use or migrate to a language or
-    framework that eliminates bug classes, such as Rust or Go.
+-   **Bagaimana mencegahnya**. Fungsikan dan gunakan opsi analisis kode statik bahasa dan penyunting Anda. Pertimbangkan memakai alat analisis kode statik. Pertimbangkan apakah mungkin memakai atau bermigrasi ke suatu bahasa atau framework yang mengeliminasi kelas-kelas bug, seperti Rust atau Go.
 
--   **Contoh skenario serangan**. An attacker might obtain or update
-    sensitive information by exploiting a race condition using a
-    statically shared variable across multiple threads.
+-   **Contoh skenario serangan**. Seorang penyerang mungkin mendapatkan atau memutakhirkan informasi sensitif dengan mengeksploitasi suatu 'race condition' memakai sebuah variable yang dipakai bersama secara statik melintas beberapa thread.
 
 -   **Referensi**
     - [OWASP Code Review Guide](https://owasp.org/www-pdf-archive/OWASP_Code_Review_Guide_v2.pdf)
