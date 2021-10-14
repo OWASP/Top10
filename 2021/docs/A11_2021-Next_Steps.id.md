@@ -1,15 +1,8 @@
 # A11:2021 – Langkah Selanjutnya
 
-By design, the OWASP Top 10 is innately limited to the ten most
-significant risks. Every OWASP Top 10 has “on the cusp” risks considered
-at length for inclusion, but in the end, they didn’t make it. No matter
-how we tried to interpret or twist the data, the other risks were more
-prevalent and impactful.
+Secara desaiin, OWASP Top 10 secara bawaan terbatas ke 10 risiko yang paling signifikan. Setiap OWASP Top 10 memiliki risiko-risiko yang lama dipertimbangkan untuk disertakan dan nyaris lolos, tapi pada akhirnya, mereka tidak berhasil. Tak peduli bagaimana kami mencoba menginterpretasi atau memelintir data, risiko-risiko lain lebih unggul dan berdampak.
 
-Organizations working towards a mature appsec program or security
-consultancies or tool vendors wishing to expand coverage for their
-offerings, the following four issues are well worth the effort to
-identify and remediate.
+Bagi organisasi yang sedang menuju ke program appsec yang matang atau konsultasi keamanan atau vendor peralatan yang berharap mengembangkan cakupan bagi tawaran mereka, empat masalah berikut layak ditempuh untuk diidentifikasi dan diperbaiki.
 
 ## Masalah-masalah Kualitas Kode
 
@@ -35,23 +28,11 @@ identify and remediate.
 |:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
 | 8            | 17.54%              | 4.89%               | 8.3                   | 5.9                  | 79.58%        | 33.26%        | 66985              | 973         |
 
--   **Deskripsi**. Denial of service is always possible given
-    sufficient resources. However, design and coding practices have a
-    significant bearing on the magnitude of the denial of service.
-    Suppose anyone with the link can access a large file, or a
-    computationally expensive transaction occurs on every page. In that
-    case, denial of service requires less effort to conduct.
+-   **Deskripsi**. Denial of service selalu mungkin dengan sumber daya yang cukup. Namun, desain dan praktek pengodan memiliki hubungan yang signifikan pada magnituda dari penyangkalan layanan. Misalkan seseorang dengan tautan dapat mengakses sebuah berkas besar, atau transaksi yang mahal secara komputasi terjadi pada setiap halaman. Dalam kasus itu, penyangkalan layanan memerlukan upaya lebih sedikit untuk dijalankan.
 
--   **Bagaimana mencegahnya**. Performance test code for CPU, I/O, and memory
-    usage, re-architect, optimize, or cache expensive operations.
-    Consider access controls for larger objects to ensure that only
-    authorized individuals can access huge files or objects or serve
-    them by an edge caching network. 
+-   **Bagaimana mencegahnya**. Uji kinerja kode untuk penggunaan CPU, I/O, dan memori; rancang ulang, optimasikan, atau singgahkan (cache) operasi-operasi yang mahal. Pertimbangkan kendali akses untuk obyek-obyek yang lebih besar untuk memastikan bahwa hanya individu yang terotorisasi yang dapat mengakses obyek atau berkas sangat besar atau menyajikan mereka memakai jaringan singgahan tepi.
 
--   **Contoh skenario serangan**. An attacker might determine that an
-    operation takes 5-10 seconds to complete. When running four
-    concurrent threads, the server seems to stop responding. The
-    attacker uses 1000 threads and takes the entire system offline.
+-   **Contoh skenario serangan**. Penyerang mungkin mendapatkan bahwa suatu operasi makan waktu 5-10 detik sampai selesai ketika menjalankan empat thread konkuren, server tampaknya berhenti merespon. Penyerang memakai 1000 thread dan membuat seluruh sistem luring.
 
 -   **Referensi**
     - [OWASP Cheet Sheet: Denial of Service](https://cheatsheetseries.owasp.org/cheatsheets/Denial_of_Service_Cheat_Sheet.html)
