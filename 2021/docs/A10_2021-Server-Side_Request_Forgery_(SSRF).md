@@ -1,5 +1,4 @@
-# A10:2021 – Server-Side Request Forgery (SSRF)
-<img src="https://raw.githubusercontent.com/OWASP/Top10/master/2021/docs/assets/TOP_10_Icons_Final_SSRF.png" alt="icon" height=80px width=80px align="center">
+# A10:2021 – Server-Side Request Forgery (SSRF)    ![icon](assets/TOP_10_Icons_Final_SSRF.png){: style="height:80px;width:80px" align="right"}
 
 ## Factors
 

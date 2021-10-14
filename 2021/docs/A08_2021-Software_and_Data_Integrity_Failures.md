@@ -1,5 +1,4 @@
-# A08:2021 – Software and Data Integrity Failures
-<img src="https://raw.githubusercontent.com/OWASP/Top10/master/2021/docs/assets/TOP_10_Icons_Final_Software_and_Data_Integrity_Failures.png" alt="icon" height=80px width=80px align="center">
+# A08:2021 – Software and Data Integrity Failures    ![icon](assets/TOP_10_Icons_Final_Software_and_Data_Integrity_Failures.png){: style="height:80px;width:80px" align="right"}
 
 ## Factors
 
