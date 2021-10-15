@@ -97,7 +97,7 @@ potentially exposes sensitive information or underlying flaws such as
 component versions that are known to be vulnerable.
 
 **Scenario #4:** A cloud service provider has default sharing
-permissions open to the Internet by other Content Security Policy header (CSP) users. This allows
+permissions open to the Internet by other CSP users. This allows
 sensitive data stored within cloud storage to be accessed.
 
 ## References
