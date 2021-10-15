@@ -1,105 +1,66 @@
-# A11:2021 – Next Steps
+# A11:2021 – Siguientes pasos
 
-By design, the OWASP Top 10 is innately limited to the ten most
-significant risks. Every OWASP Top 10 has “on the cusp” risks considered
-at length for inclusion, but in the end, they didn’t make it. No matter
-how we tried to interpret or twist the data, the other risks were more
-prevalent and impactful.
+Por diseño, el Top 10 de OWASP se limita de forma innata a los diez riesgos más importantes. Cada Top 10 de OWASP tiene riesgos "en el umbral" considerados detenidamente para su inclusión, pero al final, no fueron incluidos. No importando cuanto intentáramos interpretar o tergiversar los datos, los otros riesgos fueron más frecuentes e impactantes.
 
-Organizations working towards a mature appsec program or security
-consultancies or tool vendors wishing to expand coverage for their
-offerings, the following four issues are well worth the effort to
-identify and remediate.
+Aquellas organizaciones que trabajan en pos de un programa de appsec maduro o consultores de seguridad o proveedores de herramientas que deseen ampliar la cobertura de sus ofertas, vale la pena el esfuerzo de identificar y solucionar los siguientes cuatro problemas.
+																														
+## Problemas de calidad del código
 
-## Code Quality issues
-
-| CWEs Mapped  | Max Incidence Rate  | Avg Incidence Rate  | Avg Weighted Exploit  | Avg Weighted Impact  | Max Coverage  | Avg Coverage  | Total Occurrences  | Total CVEs  |
+| CWEs mapeados  | Tasa de incidencia máx | Tasa de incidencia prom  | Exploit ponderado prom  | Impacto ponderado prom | Cobertura máx  | Cobertura prom | Total de Incidencias   | Total de CVEs  |
 |:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
 | 38           | 49.46%              | 2.22%               | 7.1                   | 6.7                  | 60.85%        | 23.42%        | 101736             | 7564        |
+								
+-   **Descripción.** Los problemas de calidad del código incluyen patrones o defectos de seguridad conocidos, reutilización de variables para múltiples propósitos, exposición de información sensible en la salida de depuración, errores uno por uno, condiciones de carrera de tiempo de verificación / tiempo de uso (TOC/TOU) , errores de conversión firmados o no firmados, uso de memoria liberada y más. El sello distintivo de esta sección es que generalmente se pueden identificar con estrictas marcas de compilación, herramientas de análisis de código estático y complementos de IDE para analisis de tipo lint.
+    Los lenguajes modernos por diseño eliminaron muchos de estos problemas, como la propiedad de la memoria de Rust y el concepto de préstamo, el diseño de hilos de subproceso de Rust y la tipificación estricta y la verificación de límites de Go.
 
--   **Description.** Code quality issues include known security defects
-    or patterns, reusing variables for multiple purposes, exposure of
-    sensitive information in debugging output, off-by-one errors, time
-    of check/time of use (TOCTOU) race conditions, unsigned or signed
-    conversion errors, use after free, and more. The hallmark of this
-    section is that they can usually be identified with stringent
-    compiler flags, static code analysis tools, and linter IDE plugins.
-    Modern languages by design eliminated many of these issues, such as
-    Rust’s memory ownership and borrowing concept, Rust’s threading
-    design, and Go’s strict typing and bounds checking.
+-   **Cómo prevenir**. Habilite y use las opciones de análisis de código estático de su editor para específicos para cada lenguaje. Considere el uso de una herramienta de análisis de código estático
+    Considere si fuera posible usar o migrar a un lenguaje o marco que elimine este tipo de errores, como Rust o Go.
+	
+-   **Ejemplos de escenarios de ataque**. Un atacante puede obtener o actualizar información confidencial aprovechando una condición de carrera utilizando una variable compartida estáticamente en varios subprocesos.		  
 
--   **How to prevent**. Enable and use your editor and language’s static
-    code analysis options. Consider using a static code analysis tool.
-    Consider if it might be possible to use or migrate to a language or
-    framework that eliminates bug classes, such as Rust or Go.
+-   **Referencias**
+    - [Guía de revisión de código de OWASP](https://owasp.org/www-pdf-archive/OWASP_Code_Review_Guide_v2.pdf)
 
--   **Example attack scenarios**. An attacker might obtain or update
-    sensitive information by exploiting a race condition using a
-    statically shared variable across multiple threads.
+    - [Guía de revisión de código de Google](https://google.github.io/eng-practices/review/)
 
--   **References**
-    - [OWASP Code Review Guide](https://owasp.org/www-pdf-archive/OWASP_Code_Review_Guide_v2.pdf)
+## Denegación de servicio
 
-    - [Google Code Review Guide](https://google.github.io/eng-practices/review/)
-
-
-## Denial of Service
-
-| CWEs Mapped  | Max Incidence Rate  | Avg Incidence Rate  | Avg Weighted Exploit  | Avg Weighted Impact  | Max Coverage  | Avg Coverage  | Total Occurrences  | Total CVEs  |
+| CWEs mapeados  | Tasa de incidencia máx  | Tasa de incidencia prom  | Exploit ponderado prom  | Impacto ponderado prom  | Cobertura máx  | Cobertura prom  | Incidencias totales  | Total CVEs   |
 |:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
 | 8            | 17.54%              | 4.89%               | 8.3                   | 5.9                  | 79.58%        | 33.26%        | 66985              | 973         |
+					
+-   **Descripción**. La denegación de servicio siempre es posible con suficientes recursos. Sin embargo, las prácticas de diseño y codificación tienen una influencia significativa en la magnitud de la denegación de servicio. Supongamos que cualquier persona con el enlace puede acceder a un archivo grande, o que se produce una transacción computacionalmente costosa en cada página. En ese caso, la denegación de servicio requiere menos esfuerzo para llevarse a cabo.
 
--   **Description**. Denial of service is always possible given
-    sufficient resources. However, design and coding practices have a
-    significant bearing on the magnitude of the denial of service.
-    Suppose anyone with the link can access a large file, or a
-    computationally expensive transaction occurs on every page. In that
-    case, denial of service requires less effort to conduct.
+-   **Cómo prevenir**. Realizar prueba de rendimiento para el uso de CPU, E/S y memoria, rediseñar, optimizar o almacenar en caché las operaciones pesadas.
+    Considere los controles de acceso para objetos más grandes para asegurarse de que solo las personas autorizadas puedan acceder a archivos u objetos grandes o servirlos a través de una red de almacenamiento en caché perimetral.
+																														 
+-   **Ejemplos de escenarios de ataque**. Un atacante podría determinar que una operación tarda entre 5 y 10 segundos en completarse. Cuando se ejecutan cuatro subprocesos simultáneos, el servidor parece dejar de responder. El atacante entonces usa 1000 subprocesos y saca de servicio todo el sistema.
 
--   **How to prevent**. Performance test code for CPU, I/O, and memory
-    usage, re-architect, optimize, or cache expensive operations.
-    Consider access controls for larger objects to ensure that only
-    authorized individuals can access huge files or objects or serve
-    them by an edge caching network. 
 
--   **Example attack scenarios**. An attacker might determine that an
-    operation takes 5-10 seconds to complete. When running four
-    concurrent threads, the server seems to stop responding. The
-    attacker uses 1000 threads and takes the entire system offline.
-
--   **References**
-    - [OWASP Cheet Sheet: Denial of Service](https://cheatsheetseries.owasp.org/cheatsheets/Denial_of_Service_Cheat_Sheet.html)
+-   **Referencias**
+    - [Hoja de Referencia de OWASP (Cheet Sheet): Denegación de servicio](https://cheatsheetseries.owasp.org/cheatsheets/Denial_of_Service_Cheat_Sheet.html)
     
-    - [OWASP Attacks: Denial of Service](https://owasp.org/www-community/attacks/Denial_of_Service)
+    - [Ataques OWASP: Denegación de servicio](https://owasp.org/www-community/attacks/Denial_of_Service)
 
-## Memory Management Errors
+## Errores de administración de memoria
+				  
 
-| CWEs Mapped  | Max Incidence Rate  | Avg Incidence Rate  | Avg Weighted Exploit  | Avg Weighted Impact  | Max Coverage  | Avg Coverage  | Total Occurrences  | Total CVEs  |
+| CWEs mapeados  | Tasa de incidencia máx  | Tasa de incidencia prom  | Exploit ponderado prom  | Impacto ponderado prom  | Cobertura máx  | Cobertura prom  | Incidencias totales  | Total CVEs  |
 |:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
 | 14           | 7.03%               | 1.16%               | 6.7                   | 8.1                  | 56.06%        | 31.74%        | 26576              | 16184       |
 
--   **Description**. Web applications tend to be written in managed
-    memory languages, such as Java, .NET, or node.js (JavaScript or
-    TypeScript). However, these languages are written in systems
-    languages that have memory management issues, such as buffer or heap
-    overflows, use after free, integer overflows, and more. There have
-    been many sandbox escapes over the years that prove that just
-    because the web application language is nominally memory “safe,” the
-    foundations are not.
+-   **Descripción**. Las aplicaciones web usualmente se escriben en lenguajes de memoria administrada, como Java, .NET o node.js (JavaScript o TypeScript). Sin embargo, estos lenguajes están escritos en lenguajes de sistema que tienen problemas de administración de memoria, como desbordamientos de búfer o de heap, uso de memoria liberada, desbordamiento de números enteros y más. A lo largo de los años, ha habido muchos escapes de espacio aislado(sandbox escapes) que demuestran que aunque el lenguaje de la aplicación web es nominalmente "seguro" para la memoria, la estructura de base no siempre es segura.
+				 
 
--   **How to prevent**. Many modern APIs are now written in memory-safe
-    languages such as Rust or Go. In the case of Rust, memory safety is
-    a crucial feature of the language. For existing code, the use of
-    strict compiler flags, strong typing, static code analysis, and fuzz
-    testing can be beneficial in identifying memory leaks, memory, and
-    array overruns, and more.
+-   **Cómo prevenir**. Muchas API modernas ahora están escritas en lenguajes seguros para la memoria como Rust o Go. En el caso de Rust, la seguridad de la memoria es una característica crucial del lenguaje. Para el código existente, el uso de banderas de compilador estrictas, tipeado fuerte, análisis de código estático y pruebas de fuzz puede ser beneficioso para identificar pérdidas de memoria, desbordamientos de matrices y memoria, y más.
+					
 
--   **Example attack scenarios**. Buffer and heap overflows have been a
-    mainstay of attackers over the years. The attacker sends data to a program, which it stores in an undersized stack buffer. The result is that information on the call stack is overwritten, including the function’s return pointer. The data sets the value of the return pointer so that when the function returns, it transfers control to malicious code contained in the attacker’s data.
+-   **Ejemplos de escenarios de ataque**. Los desbordamientos de búfer y heap han sido un pilar de los atacantes a lo largo de los años. El atacante envía datos a un programa, que almacena en un búfer de pila de tamaño insuficiente. El resultado es que se sobrescribe la información de la pila de llamadas, incluido el puntero de retorno de la función. Los datos establecen el valor del puntero de retorno para que cuando la función regrese, transfiera el control al código malicioso contenido en los datos del atacante.
+				   	
 
--   **References**
-    - [OWASP Vulnerabilities: Buffer Overflow](https://owasp.org/www-community/vulnerabilities/Buffer_Overflow)
+-   **Referencias**
+    - [Vulnerabilidades OWASP: desbordamiento de búfer](https://owasp.org/www-community/vulnerabilities/Buffer_Overflow)
     
-    - [OWASP Attacks: Buffer Overflow](https://owasp.org/www-community/attacks/Buffer_overflow_attack)
+    - [Ataques OWASP: desbordamiento de búfer](https://owasp.org/www-community/attacks/Buffer_overflow_attack)
     
-    - [Science Direct: Integer Overflow](https://www.sciencedirect.com/topics/computer-science/integer-overflow)
+    - [Science Direct: desbordamiento de enteros](https://www.sciencedirect.com/topics/computer-science/integer-overflow)
