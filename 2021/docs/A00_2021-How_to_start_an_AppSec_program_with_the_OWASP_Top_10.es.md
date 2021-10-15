@@ -1,115 +1,50 @@
-# How to start an AppSec Program with the OWASP Top 10 
+# Cómo iniciar un programa AppSec con OWASP Top 10 
 
-Previously, the OWASP Top 10 was never designed to be the basis for an
-AppSec program. However, it's essential to start somewhere for many
-organizations just starting out on their application security journey.
-The OWASP Top 10 2021 is a good start as a baseline for checklists and
-so on, but it's not in itself sufficient.
+En el pasado, el OWASP Top 10 nunca fue diseñado para ser la base de un programa AppSec. Sin embargo, es esencial comenzar en algún lugar para muchas organizaciones que recién comienzan en su travesia en seguridad de aplicaciones.
+El OWASP Top 10 2021 es un buen comienzo como base para las listas de control, etc., pero no es suficiente en sí mismo.
 
-## Stage 1. Identify the gaps and goals of your appsec program
+## Etapa 1. Identifique las necesidades y los objetivos de su programa appsec
 
-Many Application Security (AppSec) programs try to run before they can
-crawl or walk. These efforts are doomed to failure. We strongly
-encourage CISOs and AppSec leadership to use [OWASP Software Assurance
-Maturity Model (SAMM)](https://owaspsamm.org) to identify weaknesses
-and areas for improvement over a 1-3 year period. The first step is to
-evaluate where you are now, identify the gaps in governance, design,
-implementation, verification, and operations you need to resolve
-immediately versus those that can wait, and prioritize implementing or
-improving the fifteen OWASP SAMM security practices. OWASP SAMM can help
-you build and measure improvements in your software assurance efforts.
+Muchos programas de seguridad de aplicaciones (AppSec) intentan correr antes de poder gatear o caminar. Estos esfuerzos están condenados al fracaso. Recomendamos encarecidamente a los CISO y a los líderes de AppSec que utilicen el Modelo de madurez de aseguramiento de software (SAMM) de OWASP para identificar debilidades y áreas de mejora durante un período de 1 a 3 años. El primer paso es evaluar dónde se encuentra ahora, identificar las necesidades en la administracion, el diseño, la implementación, la verificación y las operaciones que necesita resolver de inmediato frente a las que pueden esperar,y priorizar la implementación o mejora de las quince prácticas de seguridad SAMM de OWASP. OWASP SAMM puede ayudar a construir y medir mejoras en sus esfuerzos de aseguramiento de software.
+															   																	  
+## Etapa 2. Planifique un ciclo de vida de desarrollo seguro de "carretera pavimentada"
 
-## Stage 2. Plan for a paved road secure development lifecycle
+Tradicionalmente, el refugio de los llamados "unicornios", el concepto de carretera pavimentada es la forma más fácil de generar el mayor impacto y escalar los recursos de AppSec con la velocidad del equipo de desarrollo, que solo aumenta cada año.
+																   
+El concepto de camino pavimentado es "la forma más fácil es también la forma más segura" y debe involucrar una cultura de asociaciones profundas entre el equipo de desarrollo y el equipo de seguridad, preferiblemente de manera que sean el mismo equipo. El camino pavimentado tiene como objetivo mejorar, medir, detectar y reemplazar continuamente alternativas inseguras al tener una biblioteca de reemplazos seguros para toda la empresa, con herramientas para ayudar a ver dónde se pueden realizar mejoras al adoptar el camino pavimentado. Esto permite que las herramientas de desarrollo existentes informen sobre compilaciones inseguras y ayude a los equipos de desarrollo a autocorregirse de las alternativas inseguras.
 
-Traditionally the preserve of so-called "unicorns," the paved road
-concept is the easiest way to make the most impact and scale AppSec
-resources with development team velocity, which only increases every
-year.
+La carretera pavimentada puede parecer mucho para asimilar, pero debe construirse gradualmente con el tiempo. Existen otras formas de programas appsec, en particular, el ciclo de vida de desarrollo seguro ágil de Microsoft. No todas las metodologías de programas de appsec se adaptan a todas las empresas.
+																	 
+## Etapa 3. Implemente la carretera pavimentada con sus equipos de desarrollo.
 
-The paved road concept is "the easiest way is also the most secure way"
-and should involve a culture of deep partnerships between the
-development team and the security team, preferably such that they are
-one and the same team. The paved road aims to continuously improve,
-measure, detect and replace insecure alternatives by having an
-enterprise-wide library of drop-in secured replacements, with tooling to
-help see where improvements can be made by adopting the paved road. This
-allows existing development tools to report on insecure builds and help
-development teams self-correct away from insecure alternatives.
+Las carreteras pavimentadas se construyen con el consentimiento y la participación directa de los equipos de desarrollo y operaciones involucrados. La carretera pavimentada debe estar alineada estratégicamente con el negocio y ayudar a entregar aplicaciones más seguras con mayor rapidez. El desarrollo de la carretera pavimentada debería ser un ejercicio holístico que cubra todo el ecosistema empresarial o de aplicaciones, no una curita por aplicación, como en los viejos tiempos.
+																   
+## Etapa 4. Migre todas las aplicaciones existentes y futuras a la carretera pavimentada.
 
-The paved road might seem a lot to take in, but it should be built
-incrementally over time. There are other forms of appsec programs out
-there, notably the Microsoft Agile Secure Development Lifecycle. Not
-every appsec program methodology suits every business.
+Agregue herramientas de detección de carreteras pavimentadas a medida que las desarrolle y proporcione información a los equipos de desarrollo para mejorar la seguridad de sus aplicaciones mediante la forma en que pueden adoptar directamente elementos de la carretera pavimentada.
+Una vez que se ha adoptado un aspecto de la carretera pavimentada, las organizaciones deben implementar controles de integración continuos que inspeccionen el código existente y los check-ins que utilizan alternativas prohibidas y advierten o rechazan el build o el check-in. Esto evita que las opciones inseguras se introduzcan en el código con el tiempo, evitando la deuda técnica y una aplicación insegura defectuosa.
+Dichas advertencias deben estar ligadas a la alternativa segura, de modo que el equipo de desarrollo reciba la respuesta correcta de inmediato. Ellos pueden refactorizar y adoptar rápidamente el componente de carretera pavimentada.
+																	   
+## Etapa 5. Pruebe que la carretera pavimentada haya mitigado los problemas encontrados en el Top 10 de OWASP
 
-## Stage 3. Implement the paved road with your development teams
+Los componentes de carreteras pavimentadas deben abordar un problema importante del OWASP Top 10, por ejemplo, cómo detectar o reparar automáticamente componentes vulnerables, o un complemento IDE de análisis de código estático para detectar inyecciones o, mejor aún, comenzar a usar una biblioteca que se sabe que es segura contra inyecciones.
+Cuantos más de estos reemplazos seguros directos se proporcionen a los equipos, mejor.
+Una tarea vital del equipo de appsec es garantizar que la seguridad de estos componentes se evalúe y mejore continuamente.
+Una vez que se mejoran, alguna forma de vía de comunicación con los consumidores del componente debe indicar que debe ocurrir una actualización, preferiblemente de forma automática, pero si no, al menos resaltado en un dashboard o algo parecido.
+																								 
+## Etapa 6. Construya su programa en un programa de AppSec maduro
 
-Paved roads are built with the consent and direct involvement of the
-relevant development and operations teams. The paved road should be
-aligned strategically with the business and help deliver more secure
-applications faster. Developing the paved road should be a holistic
-exercise covering the entire enterprise or application ecosystem, not a
-per-app band-aid, as in the old days.
+No debe detenerse en el Top 10 de OWASP. Solo cubre 10 categorías de riesgo. Recomendamos encarecidamente a las organizaciones que adopten el Estándar de verificación de seguridad de aplicaciones y agreguen progresivamente componentes de carreteras pavimentadas y pruebas para los niveles 1, 2 y 3, según el nivel de riesgo de las aplicaciones desarrolladas.
+	
+## Yendo más allá
 
-## Stage 4. Migrate all upcoming and existing applications to the paved road
+Todos los grandes programas de AppSec van más allá del mínimo indispensable. Todos deben ir mas alla si queremos realmente  superar las vulnerabilidades de appsec.
 
-Add paved road detection tools as you develop them and provide
-information to development teams to improve the security of their
-applications by how they can directly adopt elements of the paved road.
-Once an aspect of the paved road has been adopted, organizations should
-implement continuous integration checks that inspect existing code and
-check-ins that use prohibited alternatives and warn or reject the build
-or check-in. This prevents insecure options from creeping into code over
-time, preventing technical debt and a defective insecure application.
-Such warnings should link to the secure alternative, so the development
-team is given the correct answer immediately. They can refactor and
-adopt the paved road component quickly.
+-   **Integridad conceptual**. Los programas maduros de AppSec deben contener algún concepto de arquitectura de seguridad, ya sea una arquitectura formal de seguridad en la nube o empresarial o modelado de amenazas.
+									   
+-   **Automatización y escala**. Los programas maduros de AppSec intentan automatizar la mayor cantidad posible de sus entregables, utilizando scripts para emular pasos complejos de pruebas de penetración,  herramientas de análisis de código estático directamente disponibles para los equipos de desarrollo, ayudan a los equipos de desarrollo a crear pruebas de integración y unidad de appsec, y más.
+			
+-   **Cultura**. Los programas maduros de AppSec intentan construir el diseño inseguro y eliminar la deuda técnica del código existente al ser parte del equipo de desarrollo y no fuera del mismo. Los equipos de AppSec que ven a los equipos de desarrollo como "nosotros" y "ellos" están condenados al fracaso.
 
-## Stage 5. Test that the paved road has mitigated the issues found in the OWASP Top 10
+-   **Mejora continua**. Los programas maduros de AppSec buscan mejorar constantemente. Si algo no funciona, deje de hacerlo. Si algo es inútil o no escalable, trabaje para mejorarlo. Si los equipos de desarrollo no están utilizando algo y tiene un impacto nulo o limitado, haga algo diferente. El hecho de que hayamos realizado pruebas como comprobaciones de escritorio desde la década de 1970 no significa que sea una buena idea. Haga mediciones, evaluaciones y luego cree o mejore.
 
-Paved road components should address a significant issue with the OWASP
-Top 10, for example, how to automatically detect or fix vulnerable
-components, or a static code analysis IDE plugin to detect injections or
-even better start using a library that is known safe against injection.
-The more of these secure drop-in replacements provided to teams, the better.
-A vital task of the appsec team is to ensure that the security of these
-components is continuously evaluated and improved.
-Once they are improved, some form of communication pathway with
-consumers of the component should indicate that an upgrade should occur,
-preferably automatically, but if not, as least highlighted on a
-dashboard or similar.
-
-## Stage 6. Build your program into a mature AppSec program
-
-You must not stop at the OWASP Top 10. It only covers 10 risk
-categories. We strongly encourage organizations to adopt the Application
-Security Verification Standard and progressively add paved road
-components and tests for Level 1, 2, and 3, depending on the developed
-applications' risk level.
-
-## Going beyond
-
-All great AppSec programs go beyond the bare minimum. Everyone must keep
-going if we're ever going to get on top of appsec vulnerabilities.
-
--   **Conceptual integrity**. Mature AppSec programs must contain some
-    concept of security architecture, whether a formal cloud or
-    enterprise security architecture or threat modeling
-
--   **Automation and scale**. Mature AppSec programs try to automate as
-    much of their deliverables as possible, using scripts to emulate
-    complex penetration testing steps, static code analysis tools
-    directly available to the development teams, assisting dev teams in
-    building appsec unit and integration tests, and more.
-
--   **Culture**. Mature AppSec programs try to build out the insecure
-    design and eliminate the technical debt of existing code by being a
-    part of the development team and not to the side. AppSec teams who
-    see development teams as "us" and "them" are doomed to failure.
-
--   **Continuous improvement**. Mature AppSec programs look to
-    constantly improve. If something is not working, stop doing it. If
-    something is clunky or not scalable, work to improve it. If
-    something is not being used by the development teams and has no or
-    limited impact, do something different. Just because we've done
-    testing like desk checks since the 1970s doesn't mean it's a good
-    idea. Measure, evaluate, and then build or improve.
