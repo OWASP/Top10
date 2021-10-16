@@ -80,7 +80,7 @@ plugins:
           A03 Injection: A03 Inyección
           A04 Insecure Design: A04 Diseño Inseguro
           A05 Security Misconfiguration: A05 Configuración de Seguridad Incorrecta
-          A06 Vulnerable and Outdated Components: A06 Componentes Vulnerables y Obsoletos
+          A06 Vulnerable and Outdated Components: A06 Componentes Vulnerables y Desactualizados
           A07 Identification and Authentication Failures: A07 Fallas de Identificación y Autenticación
           A08 Software and Data Integrity Failures: A08 Fallas en el Software y en la Integridad de los Datos
           A09 Security Logging and Monitoring Failures: A09 Fallas en el Registro y Monitoreo

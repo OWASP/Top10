@@ -12,7 +12,7 @@ En OWASP, encontrará gratis y con licencia de código abierto:
 - [Cheat sheets(Hojas de Referencia)](https://cheatsheetseries.owasp.org/) Sobre muchos temas comunes
 - [Chapters meetings](https://owasp.org/chapters/)
 - [Events, training, and conferences.](https://owasp.org/events/).
-- [grupos de Google](TBA)
+- [Grupos de Google](TBA)
 
 Obtenga más información en: [https://www.owasp.org](https://www.owasp.org).
 

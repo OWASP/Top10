@@ -41,10 +41,9 @@ No debe detenerse en el Top 10 de OWASP. Solo cubre 10 categorías de riesgo. Re
 Todos los grandes programas de AppSec van más allá del mínimo indispensable. Todos deben ir mas alla si queremos realmente  superar las vulnerabilidades de appsec.
 
 -   **Integridad conceptual**. Los programas maduros de AppSec deben contener algún concepto de arquitectura de seguridad, ya sea una arquitectura formal de seguridad en la nube o empresarial o modelado de amenazas.
-									   
+
 -   **Automatización y escala**. Los programas maduros de AppSec intentan automatizar la mayor cantidad posible de sus entregables, utilizando scripts para emular pasos complejos de pruebas de penetración,  herramientas de análisis de código estático directamente disponibles para los equipos de desarrollo, ayudan a los equipos de desarrollo a crear pruebas de integración y unidad de appsec, y más.
-			
+
 -   **Cultura**. Los programas maduros de AppSec intentan construir el diseño inseguro y eliminar la deuda técnica del código existente al ser parte del equipo de desarrollo y no fuera del mismo. Los equipos de AppSec que ven a los equipos de desarrollo como "nosotros" y "ellos" están condenados al fracaso.
 
 -   **Mejora continua**. Los programas maduros de AppSec buscan mejorar constantemente. Si algo no funciona, deje de hacerlo. Si algo es inútil o no escalable, trabaje para mejorarlo. Si los equipos de desarrollo no están utilizando algo y tiene un impacto nulo o limitado, haga algo diferente. El hecho de que hayamos realizado pruebas como comprobaciones de escritorio desde la década de 1970 no significa que sea una buena idea. Haga mediciones, evaluaciones y luego cree o mejore.
-
