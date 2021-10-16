@@ -2,9 +2,9 @@
 
 ## Selamat datang di OWASP Top 10 - 2021
 
-Selamat datang di pemasangan terbaru dari OWASP TOP 10! OWASP TOP 10 2021 semuanya baru, dengan desain grafis baru dan tersedia infografis satu halaman yang dapat anda cetak atau dapatkan dari halaman kami.
+Selamat datang di rilis terbaru dari OWASP TOP 10! OWASP TOP 10 2021 semuanya baru, dengan desain grafis baru dan tersedia infografis satu halaman yang dapat anda cetak atau dapatkan dari halaman kami.
 
-Terima kasih banyak untuk semuanya yang telah menyumbangkan waktu dan datanya untuk iterasi ini. Tanpa anda, instalasi ini tidak akan selesai. **Terima Kasih**
+Terima kasih banyak untuk semuanya yang telah menyumbangkan waktu dan datanya untuk iterasi ini. Tanpa anda, rilis ini tidak akan selesai. **Terima Kasih**
 
 ## Apa yang berubah di Top 10 untuk 2021
 
@@ -13,7 +13,7 @@ Terdapat tiga kategori baru, empat kategori dengan penamaan dan perbuahan ruang 
 ![license](assets/mapping.png)
 
 - **A01:2021-Broken Access Control** naik dari posisi kelima; 94% dari aplikasi yang telah diuji dengan broken access kontrol dalam beberapa bentuk. 34 CWE yang dipetakan ke Broken Access Control memiliki lebih banyak kemunculan dalam aplikasi daripada kategori lainnya.
-- **A02:2021-Cryptographic Failures** menggeser satu posisi menjadi #2, sebelumnya dikenal sebagai Paparan data sensitif, yang merupakan gejala luas dan bukan penyebab utama. Fokus baru di sini adalah pada kegagalan yang terkait dengan kriptografi yang sering mengarah pada Paparan Data Sensitif atau kompromi sistem.
+- **A02:2021-Cryptographic Failures** menggeser satu posisi menjadi #2, sebelumnya dikenal sebagai Pengungkapan data sensitif, yang merupakan gejala luas dan bukan penyebab utama. Fokus baru di sini adalah pada kegagalan yang terkait dengan kriptografi yang sering mengarah pada Paparan Data Sensitif atau kompromi sistem.
 - **A03:2021-Injection** turun ke posisi ketiga. 94% aplikasi diuji untuk beberapa bentuk injeksi, dan 33 CWE yang dipetakan ke dalam kategori ini memiliki kejadian terbanyak kedua dalam aplikasi. Skrip cross-site sekarang menjadi bagian dari kategori ini dalam edisi ini. 
 - **A04:2021-Insecure Design** adalah kategori baru untuk tahun 2021, dengan fokus pada resiko yang terkait dengan kekurangan desain. Jika kita ingin benar-benar bergerak sebagai industri, itu membutuhkan lebih banyak penggunaan pemodelan ancaman, pola dan desain yang aman, dan arsitektur referensi
 - **A05:2021-Security Misconfiguration** naik dari #6 di edisi sebelumnya; 90% aplikasi diuji untuk beberapa bentuk kesalahan konfigurasi. Dengan lebih banyak perubahan ke software dengan konfigurasi yang banyak, tidak mengherankan melihat kategori ini naik. Kategori sebelumnya untuk XML External Entities (XXE) sekarang menjadi bagian dari kategori ini.
@@ -92,7 +92,7 @@ Ada banyak pembicaraan tentang tumpang tindih antara risiko Top 10. Menurut defi
 Diagram Venn di atas merepresentasikan interaksi antara Sepuluh Kategori Risiko Teratas 2017. Saat melakukannya, beberapa poin penting menjadi jelas:
 
 1. Orang bisa berargumen bahwa Cross-Site Scripting pada akhirnya termasuk dalam Injeksi karena pada dasarnya adalah Injeksi Konten. Melihat data tahun 2021, semakin jelas bahwa XSS perlu pindah ke Injeksi.
-2. Tumpang tindih hanya satu arah. Kita akan sering mengklasifikasikan kerentanan berdasarkan manifestasi akhir atau "gejala", bukan akar penyebab (yang berpotensi dalam). Misalnya, "Eksposur Data Sensitif" mungkin merupakan hasil dari "Kesalahan Konfigurasi Keamanan"; namun, Anda tidak akan melihatnya ke arah lain. Akibatnya, panah digambar di zona interaksi untuk menunjukkan arah mana itu terjadi.
+2. Tumpang tindih hanya satu arah. Kita akan sering mengklasifikasikan kerentanan berdasarkan manifestasi akhir atau "gejala", bukan akar penyebab (yang berpotensi dalam). Misalnya, "Pengungkapan Data Sensitif" mungkin merupakan hasil dari "Kesalahan Konfigurasi Keamanan"; namun, Anda tidak akan melihatnya ke arah lain. Akibatnya, panah digambar di zona interaksi untuk menunjukkan arah mana itu terjadi.
 3. Terkadang diagram ini digambar dengan semua yang ada di A06:2021 Menggunakan Komponen dengan Kerentanan yang Diketahui. Sementara beberapa kategori risiko ini mungkin menjadi akar penyebab kerentanan pihak ketiga, mereka umumnya dikelola secara berbeda dan dengan tanggung jawab yang berbeda. Jenis lainnya biasanya mewakili risiko pihak pertama.
 
 ### Terima kasih kepada kontributor data kami
