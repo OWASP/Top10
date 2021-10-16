@@ -51,11 +51,11 @@ Il y a 125&nbsp;000 enregistrements d'une CVE associée à une CWE dans les donn
 
 Pour le Top Ten 2021, nous avons calculé les scores moyens d'*exploitabilité* et d'*impact* de la manière suivante. Nous avons regroupé toutes les CVEs avec des scores CVSS par CWE et pondéré à la fois *exploitabilité* et *impact* notés par le pourcentage de la population qui disposait d'un score CVSSv3, plus la population restante de scores CVSSv2 pour obtenir une moyenne globale. Nous avons associé ces moyennes aux CWEs de l'ensemble de données à utiliser comme notes d'*Exploitabilité* et d'*Impact (technique)* pour l'autre moitié de l'équation de risque.
 
-## Why not just pure statistical data?
+## Pourquoi ne pas se reposer uniquement sur des données statistiques ?
 
-The results in the data are primarily limited to what we can test for in an automated fashion. Talk to a seasoned AppSec professional, and they will tell you about stuff they find and trends they see that aren't yet in the data. It takes time for people to develop testing methodologies for certain vulnerability types and then more time for those tests to be automated and run against a large population of applications. Everything we find is looking back in the past and might be missing trends from the last year, which are not present in the data.
+Les résultats obtenus à partir des données sont principalement limités à ce que nous pouvons tester de manière automatisée. Parlez à un professionnel chevronné de la sécurité, il vous parlera de ce qu'il trouve et des tendances qu'il observe qui ne sont pas encore dans les données. Il faut du temps aux gens pour développer des méthodologies de test pour certains types de vulnérabilités, puis plus de temps pour que ces tests soient automatisés et exécutés sur un grand nombre d'applications. Tout ce que nous trouvons sont des vestiges du passé qui pourraient manquer les tendances de l'année écoulée, qui ne sont pas présentes dans les données.
 
-Therefore, we only pick eight of ten categories from the data because it's incomplete. The other two categories are from the Top 10 community survey. It allows the practitioners on the front lines to vote for what they see as the highest risks that might not be in the data (and may never be expressed in data).
+Par conséquent, nous ne sélectionnons que huit catégories sur dix à partir des données, car elles sont incomplètes. Les deux autres catégories proviennent de l'enquête communautaire Top 10. Cela permet aux praticiens en première ligne de voter pour ce qu'ils considèrent comme les risques les plus élevés qui pourraient ne pas être représentés par les données (et qui pourraient ne jamais être exprimés par les données).
 
 ## Why incidence rate instead of frequency?
 
