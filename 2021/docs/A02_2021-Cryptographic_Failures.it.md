@@ -57,7 +57,7 @@ Per tutti questi dati:
 -   Vengono utilizzate funzioni hash deprecate come MD5 o SHA1, o vengono utilizzate
     funzioni hash non crittografiche quando sono necessarie funzioni hash crittografiche?
 
--   Sono utilizzati metodi deprecati di padding crittografico come PCKS#1 v1.5?
+-   Sono utilizzati metodi deprecati di padding crittografico come PKCS#1 v1.5?
 
 -   I messaggi di errore crittografici o le informazioni ottenute da un side channel sono
     sfruttabili, per esempio per svolgere attacchi padding oracle?
