@@ -96,7 +96,7 @@ error messages, e.g., stack traces, to be returned to users. This
 potentially exposes sensitive information or underlying flaws such as
 component versions that are known to be vulnerable.
 
-**Scenario #4:** A cloud service provider has default sharing
+**Scenario #4:** A cloud service provider (CSP) has default sharing
 permissions open to the Internet by other CSP users. This allows
 sensitive data stored within cloud storage to be accessed.
 
