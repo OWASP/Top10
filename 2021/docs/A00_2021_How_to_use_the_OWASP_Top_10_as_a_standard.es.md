@@ -1,47 +1,26 @@
-# How to use the OWASP Top 10 as a standard
+# Cómo utilizar OWASP Top 10 como un estándar
 
-The OWASP Top 10 is primarily an awareness document. However, this has
-not stopped organizations using it as a de facto industry AppSec
-standard since its inception in 2003. If you want to use the OWASP Top
-10 as a coding or testing standard, know that it is the bare minimum and
-just a starting point.
+El OWASP Top 10 es principalmente un documento de concientización. Sin embargo, esto no ha impedido que las organizaciones lo utilicen como estándar de facto de la industria AppSec desde su creación en 2003. Si desea utilizar OWASP Top 10 como un estándar de codificación o prueba, sepa que es lo mínimo y apenas un punto de partida.
 
-One of the difficulties of using the OWASP Top 10 as a standard is that
-we document appsec risks, and not necessarily easily testable issues.
-For example, A04:2021-Insecure Design is beyond the scope of most forms
-of testing. Another example is testing in place, in use, and effective
-logging and monitoring can only be done with interviews and requesting a
-sampling of effective incident responses. A static code analysis tool
-can look for the absence of logging, but it might be impossible to
-determine if business logic or access control is logging critical
-security breaches. Penetration testers may only be able to determine
-that they have invoked incident response in a test environment, which
-are rarely monitored in the same way as production.
+Una de las dificultades de utilizar OWASP Top 10 como estándar es que documentamos riesgos de appsec y no necesariamente problemas fácilmente comprobables.
+Por ejemplo, A04: 2021-Diseño inseguro está más allá del alcance de la mayoría de las formas de prueba.Otro ejemplo son las pruebas en el lugar, en uso, y el registro y el monitoreo efectivos solo se pueden realizar con entrevistas y solicitando un muestreo de respuestas efectivas a incidentes. Una herramienta de análisis de código estático puede buscar la ausencia de registro, pero puede ser imposible determinar si la lógica de negocios o el control de acceso están registrando brechas de seguridad críticas. Los testers de penetración solo pueden determinar que han invocado la respuesta a incidentes en un entorno de prueba, el cual rara vez se monitorea de la misma manera que en un entorno de producción.
 
-Here are our recommendations for when it is appropriate to use the OWASP
-Top 10:
+Aquí están nuestras recomendaciones sobre cuándo es apropiado utilizar OWASP Top 10:
 
-| Use Case                | OWASP Top 10 2021 | OWASP Application Security Verification Standard |
-|-------------------------|:-------------------:|:--------------------------------------------------:|
-| Awareness               | Yes               |                                                  |
-| Training                | Entry level       | Comprehensive                                    |
-| Design and architecture | Occasionally      | Yes                                              |
-| Coding standard         | Bare minimum      | Yes                                              |
-| Secure Code review      | Bare minimum      | Yes                                              |
-| Peer review checklist   | Bare minimum      | Yes                                              |
-| Unit testing            | Occasionally      | Yes                                              |
-| Integration testing     | Occasionally      | Yes                                              |
-| Penetration testing     | Bare minimum      | Yes                                              |
-| Tool support            | Bare minimum      | Yes                                              |
-| Secure Supply Chain     | Occasionally      | Yes                                              |
+| Caso de uso                                 | OWASP Top 10 2021   | Estándar de verificación de seguridad de aplicaciones OWASP |
+|---------------------------------------------|:-------------------:|:-----------------------------------------------------------:|
+| Conocimiento                                | Sí                  |                                                             |
+| Capacitación                                | Nivel Básico        | Exhaustivo                                                  |
+| Diseño y arquitectura                       | Ocasionalmente      | Sí                                                          |
+| Estándar de codificación                    | Mínimo              | Sí                                                          |
+| Revisión de código seguro                   | Mínimo              | Sí                                                          |
+| Lista de verificación de revisión por pares | Mínimo              | Sí                                                          |
+| Pruebas de Unidad                           | Ocasionalmente      | Sí                                                          |
+| Pruebas de integración                      | Ocasionalmente      | Sí                                                          |
+| Pruebas de penetración                      | Mínimo              | Sí                                                          |
+| Soporte de herramientas                     | Mínimo              | Sí                                                          |
+| Cadena de suministro segura                 | Ocasionalmente      | Sí                                                          |
 
-We would encourage anyone wanting to adopt an application security
-standard to use the [OWASP Application Security Verification Standard](https://owasp.org/www-project-application-security-verification-standard/)
-(ASVS), as it’s designed to be verifiable and tested, and can be used in
-all parts of a secure development lifecycle.
+Alentamos a cualquiera que desee adoptar un estándar de seguridad de aplicaciones a usar el Estándar de verificación de seguridad de aplicaciones (ASVS) de OWASP, ya que está diseñado para ser verificable y testeado, y puede usarse en todas las partes del ciclo de vida de desarrollo seguro.
 
-The ASVS is the only acceptable choice for tool vendors. Tools cannot
-comprehensively detect, test, or protect against the OWASP Top 10 due to
-the nature of several of the OWASP Top 10 risks, with reference to
-A04:2021-Insecure Design. OWASP discourages any claims of full coverage
-of the OWASP Top 10, because it’s simply untrue.
+El ASVS es la única opción aceptable para los proveedores de herramientas. Las herramientas no pueden detectar, probar o proteger de manera integral contra el OWASP Top 10 debido a la naturaleza de varios de los riesgos OWASP Top 10, con referencia a A04: 2021-Insecure Design. OWASP desaconseja cualquier afirmación pretensiosa de cobertura completa de OWASP Top 10, porque simplemente no es cierto.
