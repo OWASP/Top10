@@ -1,4 +1,4 @@
-# Comment utiliser le Top 10 OWASP comme standard
+# Comment utiliser le Top 10 OWASP en tant que standard
 
 Le Top 10 OWASP est avant tout un document informatif. Cependant, cela n'a
 pas empêché un bon nombre d'organisations de l'utiliser en tant que standard
@@ -16,9 +16,9 @@ journalisation et de surveillance en place, qui ne peut être fait que par le bi
 d'interviews et d'une demande d'exemples concrets de réponses à incident.
 Un outil d'analyse de code statique peut vérifier l'absence de journalisation,
 mais il lui sera sans doute incapable de déterminer si les parties de
-logique métier ou de contrôle d'accès journalisent les violations de sécurité
-critiques. Les pentesters pourrait seulement être capables de déterminer
-s'ils ont provoquer une réponse à incident dans environnement de test,
+logique métier ou de contrôle d'accès journalisent les atteintes critiques à 
+la sécurité. De même des pentesters ne pourraient qu'être capables de déterminer
+s'ils ont provoqué une réponse à incident dans environnement de test,
 qui est rarement surveillé de la même manière qu'un environnement de
 production.
 
