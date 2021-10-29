@@ -83,7 +83,7 @@ ports are open or closed on internal servers from connection results or
 elapsed time to connect or reject SSRF payload connections.
 
 **Scenario #2:** Sensitive data exposure – Attackers can access local 
-files such as or internal services to gain sensitive information such
+files or internal services to gain sensitive information such
 as `file:///etc/passwd</span>` and `http://localhost:28017/`.
 
 **Scenario #3:** Access metadata storage of cloud services – Most cloud
