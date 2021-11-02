@@ -1,161 +1,116 @@
-# A05:2021 – Security Misconfiguration    ![icon](assets/TOP_10_Icons_Final_Security_Misconfiguration.png){: style="height:80px;width:80px" align="right"}
+# A05:2021 – Configuración incorrecta de seguridad    ![icon](assets/TOP_10_Icons_Final_Security_Misconfiguration.png){: style="height:80px;width:80px" align="right"}
 
-## Factors
+## Factores
 
-| CWEs Mapped | Max Incidence Rate | Avg Incidence Rate | Avg Weighted Exploit | Avg Weighted Impact | Max Coverage | Avg Coverage | Total Occurrences | Total CVEs |
+| CWEs mapeados | Tasa de incidencia máx | Tasa de incidencia prom | Exploit ponderado prom| Impacto ponderado prom | Cobertura máx | Cobertura prom | Incidencias totales | Total CVEs |
 |:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
 | 20          | 19.84%             | 4.51%              | 8.12                 | 6.56                | 89.58%       | 44.84%       | 208,387           | 789        |
 
-## Overview
+## Resumen
 
-Moving up from #6 in the previous edition, 90% of applications were
-tested for some form of misconfiguration, with an average incidence rate of 4.%, and over 208k occurences of a Common Weakness Enumeration (CWE) in this risk category. With more shifts into highly configurable software, it's not surprising to see this category move up.
-Notable CWEs included are *CWE-16 Configuration* and *CWE-611 Improper
-Restriction of XML External Entity Reference*.
+Pasando del puesto #6 en la edición anterior, el 90% de las aplicaciones se probaron para detectar algún tipo de configuración incorrecta, con una tasa de incidencia promedio del 4.% y más de 208k ocurrencias de una enumeración de debilidad común (CWE) en esta categoría de riesgo. Con más cambios en software altamente configurable, no es sorprendente ver que esta categoría asciende. Los CWE notables incluidos son *CWE-16 Configuración* y *CWE-611 Restricción incorrecta de la referencia de entidad externa XML*.
 
-## Description 
+## Descripción 
 
-The application might be vulnerable if the application is:
+La aplicación puede ser vulnerable si la aplicación:
 
--   Missing appropriate security hardening across any part of the
-    application stack or improperly configured permissions on cloud
-    services.
+-   Le falta el refuerzo de seguridad adecuado en cualquier parte de la pila de aplicaciones o permisos configurados incorrectamente en los servicios en la nube
 
--   Unnecessary features are enabled or installed (e.g., unnecessary
-    ports, services, pages, accounts, or privileges).
+-   Tiene funciones innecesarias habilitadas o instaladas (por ejemplo, puertos, servicios, páginas, cuentas o privilegios innecesarios).
 
--   Default accounts and their passwords are still enabled and
-    unchanged.
+-   Las cuentas predeterminadas y sus contraseñas aún están habilitadas y sin cambios.
 
--   Error handling reveals stack traces or other overly informative
-    error messages to users.
+-   El manejo de errores revela a los usuarios rastros de pila u otros mensajes de error demasiado informativos.
 
--   For upgraded systems, the latest security features are disabled or
-    not configured securely.
+-   Para sistemas actualizados, las últimas funciones de seguridad están deshabilitadas o no configuradas de forma segura.
 
--   The security settings in the application servers, application
-    frameworks (e.g., Struts, Spring, ASP.NET), libraries, databases,
-    etc., are not set to secure values.
+-   Las configuraciones de seguridad en los servidores de aplicaciones, frameworks de aplicaciones (por ejemplo, Struts, Spring, ASP.NET), bibliotecas, bases de datos, etc., no tienen configurados valores seguros.
 
--   The server does not send security headers or directives, or they are
-    not set to secure values.
+-   El servidor no envía encabezados o directivas de seguridad, o no tienen configurados valores seguros.
 
--   The software is out of date or vulnerable (see [A06:2021-Vulnerable
-    and Outdated Components](A06_2021-Vulnerable_and_Outdated_Components.md)).
+-   El software está desactualizado o es vulnerable (consulte A06: 2021-Componentes vulnerables y desactualizados).
 
-Without a concerted, repeatable application security configuration
-process, systems are at a higher risk.
+Sin un proceso de configuración de seguridad de aplicaciones coordinado y repetible, los sistemas corren un mayor riesgo.
 
-## How to Prevent
+## Cómo prevenir
 
-Secure installation processes should be implemented, including:
+Deben implementarse procesos de instalación seguros, incluidos:
 
--   A repeatable hardening process makes it fast and easy to deploy
-    another environment that is appropriately locked down. Development,
-    QA, and production environments should all be configured
-    identically, with different credentials used in each environment.
-    This process should be automated to minimize the effort required to
-    set up a new secure environment.
+-   Un proceso de endurecimiento repetible agiliza y facilita la implementación de otro entorno que esté debidamente bloqueado. Los entornos de desarrollo, control de calidad y producción deben configurarse de forma idéntica, con diferentes credenciales utilizadas en cada entorno.
+    Este proceso debe automatizarse para minimizar el esfuerzo necesario para configurar un nuevo entorno seguro.
 
--   A minimal platform without any unnecessary features, components,
-    documentation, and samples. Remove or do not install unused features
-    and frameworks.
+-   Una plataforma mínima sin funciones, componentes, documentación ni ejemplos innecesarios. Elimine o no instale caracteristicas y marcos no utilizados.
 
--   A task to review and update the configurations appropriate to all
-    security notes, updates, and patches as part of the patch management
-    process (see [A06:2021-Vulnerable
-    and Outdated Components](A06_2021-Vulnerable_and_Outdated_Components.md)). Review
-    cloud storage permissions (e.g., S3 bucket permissions).
+-   Una tarea para revisar y actualizar las configuraciones apropiadas para todas las notas de seguridad, actualizaciones y parches como parte del proceso de administración de parches (consulte A06: 2021-Componentes vulnerables y desactualizados). Revise los permisos de almacenamiento en la nube (por ejemplo, Permisos de bucket de S3).
 
--   A segmented application architecture provides effective and secure
-    separation between components or tenants, with segmentation,
-    containerization, or cloud security groups (ACLs).
+-   Una arquitectura de aplicación segmentada proporciona una separación efectiva y segura entre componentes o instancias, con segmentación, organización en contenedores o grupos de seguridad en la nube (ACLs).
 
--   Sending security directives to clients, e.g., Security Headers.
+-   Envío de directivas de seguridad a los clientes, por ejemplo, encabezados de seguridad.
 
--   An automated process to verify the effectiveness of the
-    configurations and settings in all environments.
+-   Un proceso automatizado para verificar la efectividad de las configuraciones y ajustes en todos los entornos.
 
-## Example Attack Scenarios
+## Ejemplos de escenarios de ataque
 
-**Scenario #1:** The application server comes with sample applications
-not removed from the production server. These sample applications have
-known security flaws attackers use to compromise the server. Suppose one
-of these applications is the admin console, and default accounts weren't
-changed. In that case, the attacker logs in with default passwords and
-takes over.
+**Escenario #1:** El servidor de aplicaciones viene con aplicaciones de muestra que no se eliminan del servidor de producción. Estas aplicaciones de muestra tienen fallas de seguridad conocidas que los atacantes utilizan para comprometer el servidor. Supongamos que una de estas aplicaciones es la consola de administración y no se modificaron las cuentas predeterminadas. En ese caso, el atacante inicia sesión con las contraseñas predeterminadas y toma el control.
 
-**Scenario #2:** Directory listing is not disabled on the server. An
-attacker discovers they can simply list directories. The attacker finds
-and downloads the compiled Java classes, which they decompile and
-reverse engineer to view the code. The attacker then finds a severe
-access control flaw in the application.
+**Escenario #2:** La lista de directorios no está deshabilitada en el servidor. Un atacante descubre que simplemente puede enumerar directorios. El atacante encuentra y descarga las clases Java compiladas, que descompila y aplica ingeniería inversa para ver el código. El atacante luego encuentra una falla severa de control de acceso en la aplicación.
 
-**Scenario #3:** The application server's configuration allows detailed
-error messages, e.g., stack traces, to be returned to users. This
-potentially exposes sensitive information or underlying flaws such as
-component versions that are known to be vulnerable.
+**Escenario #3:** La configuración del servidor de aplicaciones permite que se devuelvan a los usuarios mensajes de error detallados, por ejemplo, seguimientos de pila(stack traces). Esto potencialmente expone información confidencial o fallas subyacentes, como versiones de componentes que se sabe que son vulnerables.
 
-**Scenario #4:** A cloud service provider has default sharing
-permissions open to the Internet by other Content Security Policy header (CSP) users. This allows
-sensitive data stored within cloud storage to be accessed.
+**Escenario #4:** Un proveedor de servicios en la nube tiene permisos de uso compartido predeterminados abiertos a Internet por otros usuarios del encabezado de política de seguridad de contenido (CSP). Esto permite acceder a los datos confidenciales almacenados en el almacenamiento en la nube.
 
-## References
+## Referencias
 
--   [OWASP Testing Guide: Configuration
-    Management](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/README)
+-   [OWASP Guía de testeo: gestión de la configuración](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/README)
 
--   [OWASP Testing Guide: Testing for Error Codes](https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/08-Testing_for_Error_Handling/01-Testing_For_Improper_Error_Handling)
+-   [OWASP Guía de testeo: prueba de códigos de error](https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/08-Testing_for_Error_Handling/01-Testing_For_Improper_Error_Handling)
 
--   Application Security Verification Standard V19 Configuration
+-   Estándar de verificación de seguridad de aplicaciones OWASP Configuración V19 
 
--   [NIST Guide to General Server
-    Hardening](https://csrc.nist.gov/publications/detail/sp/800-123/final)
+-   [Guía NIST para endurecimiento general del servidor](https://csrc.nist.gov/publications/detail/sp/800-123/final)
 
--   [CIS Security Configuration
-    Guides/Benchmarks](https://www.cisecurity.org/cis-benchmarks/)
+-   [Guías de configuración de seguridad de CIS / puntos de referencia](https://www.cisecurity.org/cis-benchmarks/)
 
--   [Amazon S3 Bucket Discovery and
-    Enumeration](https://blog.websecurify.com/2017/10/aws-s3-bucket-discovery.html)
+-   [Enumeración y descubrimiento de buckets de Amazon S3](https://blog.websecurify.com/2017/10/aws-s3-bucket-discovery.html)
 
-## List of Mapped CWEs
+## Lista de CWEs mapeadas
 
-[CWE-2 7PK - Environment](https://cwe.mitre.org/data/definitions/2.html)
+[CWE-2 7PK - Entorno](https://cwe.mitre.org/data/definitions/2.html)
 
-[CWE-11 ASP.NET Misconfiguration: Creating Debug Binary](https://cwe.mitre.org/data/definitions/11.html)
+[CWE-11 Configuración incorrecta de ASP.NET: contraseña en el archivo de configuración](https://cwe.mitre.org/data/definitions/11.html)
 
-[CWE-13 ASP.NET Misconfiguration: Password in Configuration File](https://cwe.mitre.org/data/definitions/13.html)
+[CWE-13 Configuración incorrecta de ASP.NET: contraseña en el archivo de configuración](https://cwe.mitre.org/data/definitions/13.html)
 
-[CWE-15 External Control of System or Configuration Setting](https://cwe.mitre.org/data/definitions/15.html)
+[CWE-15 Control externo del sistema o ajuste de configuración](https://cwe.mitre.org/data/definitions/15.html)
 
-[CWE-16 Configuration](https://cwe.mitre.org/data/definitions/16.html)
+[CWE-16 Configuración](https://cwe.mitre.org/data/definitions/16.html)
 
-[CWE-260 Password in Configuration File](https://cwe.mitre.org/data/definitions/260.html)
+[CWE-260 Contraseña en el archivo de configuración](https://cwe.mitre.org/data/definitions/260.html)
 
-[CWE-315 Cleartext Storage of Sensitive Information in a Cookie](https://cwe.mitre.org/data/definitions/315.html)
+[CWE-315 Almacenamiento de información confidencial en texto sin cifrar en una cookie](https://cwe.mitre.org/data/definitions/315.html)
 
-[CWE-520 .NET Misconfiguration: Use of Impersonation](https://cwe.mitre.org/data/definitions/520.html)
+[CWE-520 Configuración incorrecta de .NET: uso de suplantación](https://cwe.mitre.org/data/definitions/520.html)
 
-[CWE-526 Exposure of Sensitive Information Through Environmental Variables](https://cwe.mitre.org/data/definitions/526.html)
+[CWE-526 Exposición de información sensible a través de variables de entorno](https://cwe.mitre.org/data/definitions/526.html)
 
-[CWE-537 Java Runtime Error Message Containing Sensitive Information](https://cwe.mitre.org/data/definitions/537.html)
+[CWE-537 Mensaje de error de tiempo de ejecución de Java que contiene información confidencial](https://cwe.mitre.org/data/definitions/537.html)
 
-[CWE-541 Inclusion of Sensitive Information in an Include File](https://cwe.mitre.org/data/definitions/541.html)
+[CWE-541 Inclusión de información confidencial en un archivo Include](https://cwe.mitre.org/data/definitions/541.html)
 
-[CWE-547 Use of Hard-coded, Security-relevant Constants](https://cwe.mitre.org/data/definitions/547.html)
+[CWE-547 Uso de constantes codificadas de forma rígida y relevantes para la seguridad](https://cwe.mitre.org/data/definitions/547.html)
 
-[CWE-611 Improper Restriction of XML External Entity Reference](https://cwe.mitre.org/data/definitions/611.html)
+[CWE-611 Restricción incorrecta de la referencia de entidad externa XML](https://cwe.mitre.org/data/definitions/611.html)
 
-[CWE-614 Sensitive Cookie in HTTPS Session Without 'Secure' Attribute](https://cwe.mitre.org/data/definitions/614.html)
+[CWE-614 Cookie sensible en sesión HTTPS sin atributo 'Secure'](https://cwe.mitre.org/data/definitions/614.html)
 
-[CWE-756 Missing Custom Error Page](https://cwe.mitre.org/data/definitions/756.html)
+[CWE-756 Página de error personalizada faltante](https://cwe.mitre.org/data/definitions/756.html)
 
-[CWE-776 Improper Restriction of Recursive Entity References in DTDs ('XML Entity Expansion')](https://cwe.mitre.org/data/definitions/776.html)
+[CWE-776 Restricción inadecuada de referencias de entidades recursivas en DTDs ('Expansión de entidades XML')](https://cwe.mitre.org/data/definitions/776.html)
 
-[CWE-942 Overly Permissive Cross-domain Whitelist](https://cwe.mitre.org/data/definitions/942.html)
+[CWE-942 Lista blanca de dominios cruzados demasiado permisiva](https://cwe.mitre.org/data/definitions/942.html)
 
-[CWE-1004 Sensitive Cookie Without 'HttpOnly' Flag](https://cwe.mitre.org/data/definitions/1004.html)
+[CWE-1004 Cookie sensible sin el flag 'HttpOnly'](https://cwe.mitre.org/data/definitions/1004.html)
 
-[CWE-1032 OWASP Top Ten 2017 Category A6 - Security Misconfiguration](https://cwe.mitre.org/data/definitions/1032.html)
+[CWE-1032 OWASP Top Ten 2017 Categoría A6 - Configuración incorrecta de seguridad](https://cwe.mitre.org/data/definitions/1032.html)
 
-[CWE-1174 ASP.NET Misconfiguration: Improper Model Validation](https://cwe.mitre.org/data/definitions/1174.html)
+[CWE-1174 Configuración incorrecta de ASP.NET: validación de modelo incorrecta](https://cwe.mitre.org/data/definitions/1174.html)
