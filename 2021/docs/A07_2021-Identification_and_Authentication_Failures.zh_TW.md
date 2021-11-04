@@ -22,8 +22,7 @@
 
 -   使用脆弱或無效的認證資訊回復或忘記密碼的流程，如不安全的"知識相關問答"。
 
--   使用明碼、被加密的或使用較脆弱雜湊法的密碼(參考A3: 2017-敏感性資料洩漏)。
-    (TODO) https://github.com/OWASP/Top10/issues/553
+-   將密碼使用明碼、加密或較脆弱雜湊法的方式儲存(參考A3: 2017-敏感性資料洩漏)。
 
 -   不具有或是無效的多因素認證。
 
@@ -87,46 +86,46 @@
 
 ## 對應的 CWEs 清單
 
-CWE-255 認證資訊管理的錯誤
+[CWE-255 Credentials Management Errors](https://cwe.mitre.org/data/definitions/255.html)
 
-CWE-259 密碼寫死
+[CWE-259 Use of Hard-coded Password](https://cwe.mitre.org/data/definitions/259.html)
 
-CWE-287 不適當的認證
+[CWE-287 Improper Authentication](https://cwe.mitre.org/data/definitions/287.html)
 
-CWE-288 使用備用的路徑或管道繞過認證
+[CWE-288 Authentication Bypass Using an Alternate Path or Channel](https://cwe.mitre.org/data/definitions/288.html)
 
-CWE-290 以欺騙來繞過認證
+[CWE-290 Authentication Bypass by Spoofing](https://cwe.mitre.org/data/definitions/290.html)
 
-CWE-294 以攔截重送來繞過認證
+[CWE-294 Authentication Bypass by Capture-replay](https://cwe.mitre.org/data/definitions/294.html)
 
-CWE-295 不適當的憑證確認
+[CWE-295 Improper Certificate Validation](https://cwe.mitre.org/data/definitions/295.html)
 
-CWE-297 與不匹配的服務端進行不適當的憑證確認
+[CWE-297 Improper Validation of Certificate with Host Mismatch](https://cwe.mitre.org/data/definitions/297.html)
 
-CWE-300 通道可被非端點存取
+[CWE-300 Channel Accessible by Non-Endpoint](https://cwe.mitre.org/data/definitions/300.html)
 
-CWE-302 驗證被假設不變的資料繞過
+[CWE-302 Authentication Bypass by Assumed-Immutable Data](https://cwe.mitre.org/data/definitions/302.html)
 
-CWE-304 於認證中缺少關鍵的步驟
+[CWE-304 Missing Critical Step in Authentication](https://cwe.mitre.org/data/definitions/304.html)
 
-CWE-306 關鍵的功能中缺少認證
+[CWE-306 Missing Authentication for Critical Function](https://cwe.mitre.org/data/definitions/306.html)
 
-CWE-307 過度認證的嘗試沒有被適當的限制
+[CWE-307 Improper Restriction of Excessive Authentication Attempts](https://cwe.mitre.org/data/definitions/307.html)
 
-CWE-346 原始資料確認上的錯誤
+[CWE-346 Origin Validation Error](https://cwe.mitre.org/data/definitions/346.html)
 
-CWE-384 會話(Session)固定
+[CWE-384 Session Fixation](https://cwe.mitre.org/data/definitions/384.html)
 
-CWE-521 脆弱密碼的要求
+[CWE-521 Weak Password Requirements](https://cwe.mitre.org/data/definitions/521.html)
 
-CWE-613 不適當的會話超時
+[CWE-613 Insufficient Session Expiration](https://cwe.mitre.org/data/definitions/613.html)
 
-CWE-620 沒有被驗證的密碼變更
+[CWE-620 Unverified Password Change](https://cwe.mitre.org/data/definitions/620.html)
 
-CWE-640 忘記密碼的脆弱密碼回復機制
+[CWE-640 Weak Password Recovery Mechanism for Forgotten Password](https://cwe.mitre.org/data/definitions/640.html)
 
-CWE-798 認證資訊寫死
+[CWE-798 Use of Hard-coded Credentials](https://cwe.mitre.org/data/definitions/798.html)
 
-CWE-940 不當的通訊通道來源驗證
+[CWE-940 Improper Verification of Source of a Communication Channel](https://cwe.mitre.org/data/definitions/940.html)
 
-CWE-1216 鎖定機制相關的錯誤
+[CWE-1216 Lockout Mechanism Errors](https://cwe.mitre.org/data/definitions/1216.html)

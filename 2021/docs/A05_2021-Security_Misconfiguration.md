@@ -96,8 +96,8 @@ error messages, e.g., stack traces, to be returned to users. This
 potentially exposes sensitive information or underlying flaws such as
 component versions that are known to be vulnerable.
 
-**Scenario #4:** A cloud service provider has default sharing
-permissions open to the Internet by other Content Security Policy header (CSP) users. This allows
+**Scenario #4:** A cloud service provider (CSP) has default sharing
+permissions open to the Internet by other CSP users. This allows
 sensitive data stored within cloud storage to be accessed.
 
 ## References
@@ -107,7 +107,7 @@ sensitive data stored within cloud storage to be accessed.
 
 -   [OWASP Testing Guide: Testing for Error Codes](https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/08-Testing_for_Error_Handling/01-Testing_For_Improper_Error_Handling)
 
--   Application Security Verification Standard V19 Configuration
+-   [Application Security Verification Standard V14 Configuration](https://github.com/OWASP/ASVS/blob/master/4.0/en/0x22-V14-Config.md)
 
 -   [NIST Guide to General Server
     Hardening](https://csrc.nist.gov/publications/detail/sp/800-123/final)
