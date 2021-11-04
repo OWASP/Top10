@@ -1,4 +1,4 @@
-# A04:2021 - 安全が確認されない不安な設計
+# A04:2021 - 安全が確認されない不安な設計   ![icon](assets/TOP_10_Icons_Final_Insecure_Design.png){: style="height:80px;width:80px" align="right"} 
 
 ## 因子
 
@@ -10,18 +10,16 @@
 
 2021年の新カテゴリーでは、設計やアーキテクチャの欠陥に関するリスクに焦点を当てています。
 私たちは脅威のモデル化、セキュアなデザインパターンおよび、リファレンスアーキテクチャなどをもっと利用していくことが必要です。
+As a community we need to move beyond  "shift-left" in the coding space to pre-code activities that are critical for the principles of Secure by Design. 
 注目すべき CWE (Common Weakness Enumerations) は、CWE-209: エラーメッセージからの情報漏洩、CWE-256: 保護されていない認証情報の保存、CWE-501: 信頼境界線の侵害および、CWE-522: 適切に保護されていないクレデンシャル などです。
 
 ## 説明
 
-「安全が確認されない不安な設計」とは、様々な弱点を表す幅広いカテゴリーで、「安全な設計が行われていない」または、「効果的ではない設計が行われている」と表現されます。
-「安全な設計が行われていない」とは、管理策が欠如していることを意味します。例として、センシティブなデータを暗号化すべきコードに、暗号化するためのメソッドがない場合があげられます。
-「効果的ではない設計が行われている」とは、攻撃者が脅威を発生させる可能性があるにもかかわらず、ドメイン（ビジネス）ロジックの検証が不十分であるために、リスクが顕在化する場合を意味します。
-例として、所得区分に基づいてパンデミック税の軽減措置を処理することになっているドメインロジックが、すべての入力が正しく署名されているかどうかを検証しておらず、本来付与されるべきものよりもはるかに大きな軽減措置を提供している場合が挙げられます。
+Insecure design is a broad category representing different weaknesses, expressed as “missing or ineffective control design.” Insecure design is not the source for all other Top 10 risk categories. There is a difference between insecure design and insecure implementation. We differentiate between design flaws and implementation defects for a reason, they have different root causes and remediation. A secure design can still have implementation defects leading to vulnerabilities that may be exploited. An insecure design cannot be fixed by a perfect implementation as by definition, needed security controls were never created to defend against specific attacks. One of the factors that contribute to insecure design is the lack of business risk profiling inherent in the software or system being developed, and thus the failure to determine what level of security design is required.
 
 ### 要件とリソースマネジメント
 
-すべてのデータ資産の機密性、真正性、完全性、可用性に関する保護要件および、期待されるビジネスロジックなど、アプリケーションのビジネス要件を収集し、事業部門と協議します。
+すべてのデータ資産の機密性、完全性、可用性、そして真正性に関する保護要件および、期待されるビジネスロジックなど、アプリケーションのビジネス要件を収集し、事業部門と協議します。
 アプリケーションが公開される程度に応じて、（アクセス制御に加えて）テナントを分離する必要があるか検討してください。
 機能的および非機能的なセキュリティ要件を含む、技術的な要件をまとめます。
 セキュリティ活動を含む設計、構築、テストおよび、運用のすべてをカバーする予算を計画し、事業部門と協議します。
@@ -186,36 +184,15 @@
 
 ## Overview
 
-A new category for 2021 focuses on risks related to design and
-architectural flaws, with a call for more use of threat modeling, secure
-design patterns, and reference architectures. Notable Common Weakness Enumerations (CWEs) include
-*CWE-209: Generation of Error Message Containing Sensitive Information*,
-*CWE-256: Unprotected Storage of Credentials*, *CWE-501: Trust Boundary
-Violation*, and *CWE-522: Insufficiently Protected Credentials*.
+A new category for 2021 focuses on risks related to design and architectural flaws, with a call for more use of threat modeling, secure design patterns, and reference architectures. As a community we need to move beyond  "shift-left" in the coding space to pre-code activities that are critical for the principles of Secure by Design. Notable Common Weakness Enumerations (CWEs) include *CWE-209: Generation of Error Message Containing Sensitive Information*, *CWE-256: Unprotected Storage of Credentials*, *CWE-501: Trust Boundary Violation*, and *CWE-522: Insufficiently Protected Credentials*.
 
 ## Description
 
-Insecure design is a broad category representing many different
-weaknesses, expressed as “missing or ineffective control design.”
-Missing insecure design is where a control is absent. For example,
-imagine code that should be encrypting sensitive data, but there is no
-method. Ineffective insecure design is where an attacker could realize a threat,
-but insufficient domain (business) logic validation prevents the action.
-For example, imagine domain logic that is supposed to process pandemic
-tax relief based upon income brackets but does not validate that all
-inputs are correctly signed and provides a much more significant relief
-benefit than should be granted.
+Insecure design is a broad category representing different weaknesses, expressed as “missing or ineffective control design.” Insecure design is not the source for all other Top 10 risk categories. There is a difference between insecure design and insecure implementation. We differentiate between design flaws and implementation defects for a reason, they have different root causes and remediation. A secure design can still have implementation defects leading to vulnerabilities that may be exploited. An insecure design cannot be fixed by a perfect implementation as by definition, needed security controls were never created to defend against specific attacks. One of the factors that contribute to insecure design is the lack of business risk profiling inherent in the software or system being developed, and thus the failure to determine what level of security design is required.
 
 ### Requirements and Resource Management
 
-Collect and negotiate the business requirements for an application with the
-business, including the protection requirements concerning confidentiality,
-authenticity, integrity, availability of all data assets, and the expected
-business logic. Take into account how exposed your application will be and
-if you need segregation of tenants (additionally to access control). Compile
-the technical requirements, including functional and non-functional security
-requirements. Plan and negotiate the budget covering all design, build,
-testing, and operation, including security activities.
+Collect and negotiate the business requirements for an application with the business, including the protection requirements concerning confidentiality, integrity, availability, and authenticity of all data assets and the expected business logic. Take into account how exposed your application will be and if you need segregation of tenants (additionally to access control). Compile the technical requirements, including functional and non-functional security requirements. Plan and negotiate the budget covering all design, build, testing, and operation, including security activities.
 
 ### Secure Design
 
@@ -246,7 +223,7 @@ Secure software requires a secure development lifecycle, some form of secure des
     are resistant to the threat model. Compile use-cases *and* misuse-cases
     for each tier of your application.
 
--   Segregate tier layers on the system and network layers depending on the 
+-   Segregate tier layers on the system and network layers depending on the
     exposure and protection needs
 
 -   Segregate tenants robustly by design throughout all tiers
