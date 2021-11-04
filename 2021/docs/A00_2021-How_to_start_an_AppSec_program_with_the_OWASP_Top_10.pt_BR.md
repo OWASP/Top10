@@ -1,5 +1,3 @@
-[comment]: <> ([WIP - Working in progress])
-
 # Como iniciar um programa AppSec com o OWASP Top 10
 
 Antes, o OWASP Top 10 nunca foi projetado para ser a base de um programa AppSec.
@@ -23,97 +21,94 @@ a implementação ou melhoria das quinze práticas de segurança OWASP SAMM.
 O OWASP SAMM pode ajudá-lo a construir e medir melhorias em seus
 esforços de garantia de software.
 
-## Etapa 2. Plano para um ciclo de vida de desenvolvimento seguro de estrada pavimentada
+## Etapa 2. Plano para um ciclo de vida de desenvolvimento de um Paved Road seguro
 
-Traditionally the preserve of so-called "unicorns," the paved road
-concept is the easiest way to make the most impact and scale AppSec
-resources with development team velocity, which only increases every
-year.
+Tradicionalmente, a preservação dos chamados "unicórnios", o conceito de
+paved road é a maneira mais fácil de causar o máximo impacto e
+dimensionar os recursos do AppSec com a velocidade da equipe de desenvolvimento,
+que só aumenta a cada ano.
 
-The paved road concept is "the easiest way is also the most secure way"
-and should involve a culture of deep partnerships between the
-development team and the security team, preferably such that they are
-one and the same team. The paved road aims to continuously improve,
-measure, detect and replace insecure alternatives by having an
-enterprise-wide library of drop-in secured replacements, with tooling to
-help see where improvements can be made by adopting the paved road. This
-allows existing development tools to report on insecure builds and help
-development teams self-correct away from insecure alternatives.
+O conceito de paved road é "o caminho mais fácil é também o mais seguro" e
+deve envolver uma cultura de parcerias profundas entre a equipe de desenvolvimento
+e a equipe de segurança, de preferência de forma que sejam uma só equipe.
+O paved road visa melhorar, medir, detectar e substituir continuamente
+alternativas inseguras por meio de uma biblioteca corporativa de reduções de
+substituições seguras, com ferramentas para ajudar a ver onde melhorias podem ser
+feitas ao adotar o paved road. Isso permite que as ferramentas
+de desenvolvimento existentes relatem compilações inseguras e ajudem
+as equipes de desenvolvimento a se autocorrigirem, evitando alternativas inseguras.
 
-The paved road might seem a lot to take in, but it should be built
-incrementally over time. There are other forms of appsec programs out
-there, notably the Microsoft Agile Secure Development Lifecycle. Not
-every appsec program methodology suits every business.
+O paved road pode parecer muito a fazer, mas deve ser construída gradativamente ao
+longo do tempo. Existem outras formas de programas appsec, notavelmente o 
+_Microsoft Agile Secure Development Lifecycle_. Nem toda metodologia de programa
+appsec se adapta a todas as empresas.
 
-## Stage 3. Implement the paved road with your development teams
+## Etapa 3. Implemente o Paved Road com suas equipes de desenvolvimento
 
-Paved roads are built with the consent and direct involvement of the
-relevant development and operations teams. The paved road should be
-aligned strategically with the business and help deliver more secure
-applications faster. Developing the paved road should be a holistic
-exercise covering the entire enterprise or application ecosystem, not a
-per-app band-aid, as in the old days.
+Paved roads são construídos com o consentimento e envolvimento direto das equipes
+de desenvolvimento e operações relevantes. O paved road deve estar estrategicamente
+alinhado com os negócios e ajudar a entregar aplicativos mais seguros com mais rapidez.
+O desenvolvimento do paved road deve ser um exercício holístico cobrindo toda a empresa
+ou ecossistema de aplicativos, não um band-aid por aplicativo, como nos velhos tempos.
 
-## Stage 4. Migrate all upcoming and existing applications to the paved road
+## Etapa 4. Migre todos os aplicativos futuros e existentes para o Paved Road
 
-Add paved road detection tools as you develop them and provide
-information to development teams to improve the security of their
-applications by how they can directly adopt elements of the paved road.
-Once an aspect of the paved road has been adopted, organizations should
-implement continuous integration checks that inspect existing code and
-check-ins that use prohibited alternatives and warn or reject the build
-or check-in. This prevents insecure options from creeping into code over
-time, preventing technical debt and a defective insecure application.
-Such warnings should link to the secure alternative, so the development
-team is given the correct answer immediately. They can refactor and
-adopt the paved road component quickly.
+Adicione ferramentas de detecção de paved road conforme você as desenvolve e fornece
+informações para equipes de desenvolvimento para melhorar a segurança de seus aplicativos
+por meio de como eles podem adotar diretamente elementos do paved road. Uma vez que
+um aspecto do paved road tenha sido adotado, as organizações devem implementar verificações
+de integração contínua que inspecionam o código existente e check-ins que usam alternativas
+proibidas e avisam ou rejeitam a compilação ou check-in. Isso evita que opções inseguras
+entrem no código ao longo do tempo, evitando dívidas técnicas e um aplicativo inseguro
+com defeito. Esses avisos devem ser vinculados à alternativa segura, para que a equipe
+de desenvolvimento receba a resposta correta imediatamente. Eles podem refatorar
+e adotar o componente do paved road rapidamente.
 
-## Stage 5. Test that the paved road has mitigated the issues found in the OWASP Top 10
+## Etapa 5. Teste se o Paved Road mitigou os problemas encontrados no OWASP Top 10
 
-Paved road components should address a significant issue with the OWASP
-Top 10, for example, how to automatically detect or fix vulnerable
-components, or a static code analysis IDE plugin to detect injections or
-even better a library that is known safe against injection, such as
-React or Vue. The more of these secure drop-in replacements provided to
-teams, the better. A vital task of the appsec team is to ensure that the
-security of these components is continuously evaluated and improved.
-Once they are improved, some form of communication pathway with
-consumers of the component should indicate that an upgrade should occur,
-preferably automatically, but if not, as least highlighted on a
-dashboard or similar.
+Os componentes do paved road devem abordar um problema significativo do OWASP Top 10,
+por exemplo, como detectar ou consertar componentes vulneráveis automaticamente ou um plug-in IDE
+de análise de código estático para detectar injeções ou, melhor ainda, uma biblioteca
+que é sabidamente segura contra injeção, como React ou Vue. Quanto mais dessas substituições
+seguras forem fornecidas às equipes, melhor. Uma tarefa vital da equipe do appsec é
+garantir que a segurança desses componentes seja continuamente avaliada e aprimorada.
+Depois de aprimoradas, alguma forma de via de comunicação com os consumidores do componente
+deve indicar que uma atualização deve ocorrer, de preferência automaticamente,
+mas se não, pelo menos destacada em um painel ou similar.
 
-## Stage 6. Build your program into a mature AppSec program
+## Etapa 6. Construa o seu programa em um programa AppSec maduro
 
-You must not stop at the OWASP Top 10. It only covers 10 risk
-categories. We strongly encourage organizations to adopt the Application
-Security Verification Standard and progressively add paved road
-components and tests for Level 1, 2, and 3, depending on the developed
-applications' risk level.
+Você não deve parar no OWASP Top 10. Ele cobre apenas 10 categorias de riscos.
+Recomendamos fortemente que as organizações adotem o Padrão de Verificação de Segurança
+de Aplicativos (ASVS) e adicionem progressivamente componentes de paved road e testes para
+os Níveis 1, 2 e 3, dependendo do nível de risco dos aplicativos desenvolvidos.
 
-## Going beyond
+## Indo além
 
-All great AppSec programs go beyond the bare minimum. Everyone must keep
-going if we're ever going to get on top of appsec vulnerabilities.
+Todos os grandes programas AppSec vão além do mínimo. Todos devem continuar
+se quisermos superar as vulnerabilidades do appsec.
 
--   **Conceptual integrity**. Mature AppSec programs must contain some
-    concept of security architecture, whether a formal cloud or
-    enterprise security architecture or threat modeling
+- **Integridade conceitual**. Os programas AppSec maduros devem conter
+    algum conceito de arquitetura de segurança, seja uma nuvem formal
+    ou arquitetura de segurança corporativa ou modelagem de ameaças.
 
--   **Automation and scale**. Mature AppSec programs try to automate as
-    much of their deliverables as possible, using scripts to emulate
-    complex penetration testing steps, static code analysis tools
-    directly available to the development teams, assisting dev teams in
-    building appsec unit and integration tests, and more.
+- **Automação e escala**. Programas maduros de AppSec tentam automatizar
+    o máximo possível de seus resultados, usando scripts para emular
+    etapas de teste de penetração complexas, ferramentas de análise
+    de código estático disponíveis diretamente para as equipes de
+    desenvolvimento, auxiliando as equipes de desenvolvimento na construção
+    de unidades de appsec e testes de integração e muito mais.
 
--   **Culture**. Mature AppSec programs try to build out the insecure
-    design and eliminate the technical debt of existing code by being a
-    part of the development team and not to the side. AppSec teams who
-    see development teams as "us" and "them" are doomed to failure.
+- **Cultura**. Programas maduros de AppSec tentam construir o design
+    inseguro e eliminar a dívida técnica do código existente, sendo
+    parte da equipe de desenvolvimento e não à margem. As equipes da 
+    AppSec que veem as equipes de desenvolvimento como "nós" e "eles"
+    estão fadadas ao fracasso.
 
--   **Continuous improvement**. Mature AppSec programs look to
-    constantly improve. If something is not working, stop doing it. If
-    something is clunky or not scalable, work to improve it. If
-    something is not being used by the development teams and has no or
-    limited impact, do something different. Just because we've done
-    testing like desk checks since the 1970s doesn't mean it's a good
-    idea. Measure, evaluate, and then build or improve.
+- **Melhoria continua**. Programas maduros de AppSec procuram melhorar
+    constantemente. Se algo não estiver funcionando, pare de fazer isso.
+    Se algo é desajeitado ou não escalável, trabalhe para melhorá-lo.
+    Se algo não está sendo usado pelas equipes de desenvolvimento e não
+    tem impacto ou tem impacto limitado, faça algo diferente. Só porque
+    temos feito testes como _deskcheck_ desde os anos 1970, não significa
+    que seja uma boa ideia. Meça, avalie e depois construa ou melhore.
