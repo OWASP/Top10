@@ -79,17 +79,17 @@ Nous obtenons des données d'organisations spécialisées dans l'audit de sécur
 
 Nous examinons les huit catégories avec les taux d'incidence les plus élevés pour l'inclusion dans le Top 10. Nous examinons également les résultats de l'enquête communautaire Top 10 pour voir lesquels peuvent déjà être présents dans les données. Les deux premiers votes qui ne sont pas déjà présents dans les données seront sélectionnés pour les deux autres places du Top 10. Une fois les dix sélectionnées, nous avons appliqué des facteurs généralisés pour l'exploitabilité et l'impact ; pour aider à classer le Top 10 2021 dans un ordre basé sur les risques.
 
-## Data Factors
+## Facteurs des données
 
-There are data factors that are listed for each of the Top 10 Categories, here is what they mean:
+Des facteurs sont répertoriés pour chacune des 10 principales catégories, voici ce qu'ils signifient :
 
-- CWEs Mapped: The number of CWEs mapped to a category by the Top 10 team.
-- Incidence Rate: Incidence rate is the percentage of applications vulnerable to that CWE from the population tested by that org for that year.
-- (Testing) Coverage: The percentage of applications tested by all organizations for a given CWE.
-- Weighted Exploit: The Exploit sub-score from CVSSv2 and CVSSv3 scores assigned to CVEs mapped to CWEs, normalized, and placed on a 10pt scale.
-- Weighted Impact: The Impact sub-score from CVSSv2 and CVSSv3 scores assigned to CVEs mapped to CWEs, normalized, and placed on a 10pt scale.
-- Total Occurrences: Total number of applications found to have the CWEs mapped to a category.
-- Total CVEs: Total number of CVEs in the NVD DB that were mapped to the CWEs mapped to a category.
+- CWEs associées : le nombre de CWEs associées à une catégorie par l'équipe du Top 10.
+- Taux d'incidence : le taux d'incidence est le pourcentage d'applications vulnérables à cette CWE parmi la population testée par cette organisation pour cette année.
+- Couverture (Test) : Le pourcentage d'applications testées par toutes les organisations pour une CWE donnée.
+- Exploitation pondérée : le sous-score Exploitation des scores CVSSv2 et CVSSv3 attribués aux CVEs associées aux CWEs, normalisés et placés sur une échelle de 10 points.
+- Impact pondéré : le sous-score d'impact des scores CVSSv2 et CVSSv3 attribués aux CVEs associées aux CWEs, normalisés et placés sur une échelle de 10 points.
+- Nombre total d'occurrences : nombre total d'applications trouvées pour lesquelles les CWEs sont associées à une catégorie.
+- Nombre total de CVEs : nombre total de CVEs dans la base de données NVD qui ont été associées aux CWEs associées à une catégorie.
 
 ## Thank you to our data contributors
 
