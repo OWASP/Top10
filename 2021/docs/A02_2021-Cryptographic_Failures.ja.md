@@ -44,7 +44,7 @@
     non-cryptographic hash functions used when cryptographic hash functions
     are needed?
 
--   Are deprecated cryptographic padding methods such as PCKS number 1 v1.5
+-   Are deprecated cryptographic padding methods such as PKCS number 1 v1.5
     in use?
 
 -   Are cryptographic error messages or side channel information
@@ -249,7 +249,7 @@ For all such data:
     non-cryptographic hash functions used when cryptographic hash functions
     are needed?
 
--   Are deprecated cryptographic padding methods such as PCKS number 1 v1.5
+-   Are deprecated cryptographic padding methods such as PKCS number 1 v1.5
     in use?
 
 -   Are cryptographic error messages or side channel information

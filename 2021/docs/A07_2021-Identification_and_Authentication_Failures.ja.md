@@ -191,8 +191,8 @@ attacks. There may be authentication weaknesses if the application:
 -   Implement weak password checks, such as testing new or changed
     passwords against the top 10,000 worst passwords list.
 
--   Align password length, complexity, and rotation policies with N
--   National Institute of Standards and Technology (NIST)
+-   Align password length, complexity, and rotation policies with
+    National Institute of Standards and Technology (NIST)
     800-63b's guidelines in section 5.1.1 for Memorized Secrets or other
     modern, evidence-based password policies.
 

@@ -158,7 +158,7 @@ Downstream Component ('Injection')](https://cwe.mitre.org/data/definitions/74.ht
 
 [CWE-652 Improper Neutralization of Data within XQuery Expressions ('XQuery Injection')](https://cwe.mitre.org/data/definitions/652.html)
 
-[CWE-917 Improper Neutralization of Special Elements used in an Expression Language Statement ('Expression Language Injection')] (https://cwe.mitre.org/data/definitions/917.html)
+[CWE-917 Improper Neutralization of Special Elements used in an Expression Language Statement ('Expression Language Injection')](https://cwe.mitre.org/data/definitions/917.html)
 
 # A03:2021 – Injection    ![icon](assets/TOP_10_Icons_Final_Injection.png){: style="height:80px;width:80px" align="right"}
 
@@ -345,4 +345,4 @@ Downstream Component ('Injection')](https://cwe.mitre.org/data/definitions/74.ht
 
 [CWE-652 Improper Neutralization of Data within XQuery Expressions ('XQuery Injection')](https://cwe.mitre.org/data/definitions/652.html)
 
-[CWE-917 Improper Neutralization of Special Elements used in an Expression Language Statement ('Expression Language Injection')] (https://cwe.mitre.org/data/definitions/917.html)
+[CWE-917 Improper Neutralization of Special Elements used in an Expression Language Statement ('Expression Language Injection')](https://cwe.mitre.org/data/definitions/917.html)

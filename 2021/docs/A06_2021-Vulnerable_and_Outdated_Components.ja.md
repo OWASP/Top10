@@ -1,4 +1,4 @@
-# A06:2021 – 脆弱で古くなったコンポーネント
+# A06:2021 – 脆弱で古くなったコンポーネント    ![icon](assets/TOP_10_Icons_Final_Vulnerable_Outdated_Components.png){: style="height:80px;width:80px" align="right"}
 
 ## 因子
 
