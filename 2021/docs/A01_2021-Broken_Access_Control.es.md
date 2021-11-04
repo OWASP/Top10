@@ -1,4 +1,4 @@
-# A01:2021 – Pérdida de Control de Acceso    ![icon](assets/TOP_10_Icons_Final_Broken_Access_Control.png){: style="height:80px;width:80px" align="right"}
+# A01:2021 – Pérdida de Control de Acceso    ![icon](assets/TOP_10_Icons_Final_Broken_Access_Control.png)
 
 ## Factores
 

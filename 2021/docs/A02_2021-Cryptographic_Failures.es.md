@@ -1,4 +1,4 @@
-# A02:2021 – Fallos criptográficos    ![icon](assets/TOP_10_Icons_Final_Crypto_Failures.png){: style="height:80px;width:80px" align="right"}
+# A02:2021 – Fallos criptográficos    ![icon](assets/TOP_10_Icons_Final_Crypto_Failures.png)
 
 ## Factores
 
