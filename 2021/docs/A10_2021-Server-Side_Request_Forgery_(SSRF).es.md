@@ -1,4 +1,4 @@
-# A10:2021 – Server-Side Request Forgery (SSRF)    ![icon](assets/TOP_10_Icons_Final_SSRF.png){: style="height:80px;width:80px" align="right"}
+# A10:2021 – Server-Side Request Forgery (SSRF)    ![icon](assets/TOP_10_Icons_Final_SSRF.png)
 
 ## Factors
 

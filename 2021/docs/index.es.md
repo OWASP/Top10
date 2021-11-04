@@ -2,7 +2,7 @@
 
 ## Bienvenido al OWASP Top 10 - 2021
 
-![OWASP Top 10 Logo](./assets/TOP_10_logo_Final_Logo_Colour.png){:class="img-responsive"}
+![OWASP Top 10 Logo](./assets/TOP_10_logo_Final_Logo_Colour.png)
 
 ¡Bienvenido a la última entrega del OWASP Top 10! El OWASP Top 10 2021 ha sido totalmente renovado, con un nuevo diseño gráfico y una infografía de una sola página que puedes imprimir u obtener desde nuestra pagina web.
 
@@ -112,4 +112,4 @@ Las siguientes organizaciones (junto con algunos donantes anónimos) han tenido 
 
 El equipo del OWASP Top 10 2021 agradece el apoyo financiero de Secure Code Warrior.
 
-[![Secure Code Warrior](assets/securecodewarrior.png)](https://securecodewarrior.com)]
+[![Secure Code Warrior](assets/securecodewarrior.png)](https://securecodewarrior.com)
