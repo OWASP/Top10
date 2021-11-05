@@ -1,143 +1,87 @@
-# A09:2021 – Security Logging and Monitoring Failures    ![icon](assets/TOP_10_Icons_Final_Security_Logging_and_Monitoring_Failures.png)
+# A09:2021 – Fallos de monitoreo y registros de seguridad    ![icon](assets/TOP_10_Icons_Final_Security_Logging_and_Monitoring_Failures.png){: style="height:80px;width:80px" align="right"}
 
-## Factors
+## Factores
 
 | CWEs Mapped | Max Incidence Rate | Avg Incidence Rate | Avg Weighted Exploit | Avg Weighted Impact | Max Coverage | Avg Coverage | Total Occurrences | Total CVEs |
 |:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
 | 4           | 19.23%             | 6.51%              | 6.87                 | 4.99                | 53.67%       | 39.97%       | 53,615            | 242        |
 
-## Overview
+## Resumen
 
-Security logging and monitoring came from the Top 10 community survey (#3), up
-slightly from the tenth position in the OWASP Top 10 2017. Logging and
-monitoring can be challenging to test, often involving interviews or
-asking if attacks were detected during a penetration test. There isn't
-much CVE/CVSS data for this category, but detecting and responding to
-breaches is critical. Still, it can be very impactful for accountability, visibility,
-incident alerting, and forensics. This category expands beyond *CWE-778
-Insufficient Logging* to include *CWE-117 Improper Output Neutralization
-for Logs*, *CWE-223 Omission of Security-relevant Information*, and
-*CWE-532* *Insertion of Sensitive Information into Log File*.
+Monitoreo y registro de seguridad provienen de la encuesta de la comunidad TOP 10, subió levemente desde la décima posición en el OWASP Top 10 2017. El registro y monitoreo pueden ser desafiantes para ser testeados, a menudo implica entrevistas o preguntas si los ataques fueron detectados durante una prueba de penetración. No hay muchos datos CVE para esta categoría, pero detectar y responder a las brechas es crítico. Aun así, puede tener un gran impacto para la responsabilidad, visibilidad, alertas de incidentes y forense. Esta categoría se expande más allá de *CWE-117 Neutralización de salida incorrecta para registros*, *CWE-223 Omisión de información relevante para la seguridad*, y
+*CWE-532 Inserción de información sensible en el archivo de registro*.
 
-## Description 
+## Descripcion
 
-Returning to the OWASP Top 10 2021, this category is to help detect,
-escalate, and respond to active breaches. Without logging and
-monitoring, breaches cannot be detected. Insufficient logging,
-detection, monitoring, and active response occurs any time:
+Volviendo al OWASP Top 10 2021, la intención es detectar, escalar y responder ante brechas activas. Sin registros y monitoreo, las brechas no pueden ser detectadas. Registros, detecciones, monitoreo y respuestas activas insuficientes pueden ocurrir en cualquier momento:
 
--   Auditable events, such as logins, failed logins, and high-value
-    transactions, are not logged.
+-   Eventos auditables, tales como los inicios de sesión, fallas en el inicio de sesión y transacciones de alto valor, no son registradas.
 
--   Warnings and errors generate no, inadequate, or unclear log
-    messages.
+-   Advertencias y errores generan registros poco claros, inadecuados y en algunos casos ni se generan.
 
--   Logs of applications and APIs are not monitored for suspicious
-    activity.
+-   Registros en aplicaciones y API no son monitoreados para detectar actividades sospechosas.
 
--   Logs are only stored locally.
+-   Los registros son únicamente almacenados en forma local..
 
--   Appropriate alerting thresholds and response escalation processes
-    are not in place or effective.
+-   Los umbrales de alerta y procesos de escalamiento no están correctamente implementados o no son efectivos.
 
--   Penetration testing and scans by dynamic application security testing (DAST) tools (such as OWASP ZAP) do
-    not trigger alerts.
+-   Las pruebas de penetración y los escaneos utilizando herramientas de pruebas dinámicas de seguridad en aplicaciones (como ser OWASP ZAP) no generan alertas.
 
--   The application cannot detect, escalate, or alert for active attacks
-    in real-time or near real-time.
+-   Las aplicaciones no logran detectar, escalar, o alertar sobre ataques activos en tiempo real ni cercanos al tiempo real.
 
-You are vulnerable to information leakage by making logging and alerting
-events visible to a user or an attacker (see [A01:2021-Broken Access Control](A01_2021-Broken_Access_Control.md)).
+Se es vulnerable a la fuga de información haciendo registros y eventos de alertas que sean visibles para un usuario o un atacante (see [A01:2021-Pérdida de control de acceso](A01_2021-Broken_Access_Control.es.md)).
 
-## How to Prevent
+## Como se previene
 
-Developers should implement some or all the following controls, 
-depending on the risk of the application:
+Los desarrolladores deberían implementar algunos o todos los siguientes controles, dependiendo del riesgo de la aplicación:
 
--   Ensure all login, access control, and server-side input validation
-    failures can be logged with sufficient user context to identify
-    suspicious or malicious accounts and held for enough time to allow
-    delayed forensic analysis.
+-   Asegúrese de que todos los errores de inicio de sesión, de control de acceso y de validación de entradas de datos del lado del servidor se pueden registrar con suficiente  contexto como para identificar cuentas sospechosas o maliciosas y mantenerlo durante el tiempo suficiente para
+permitir un posterior análisis forense.
 
--   Ensure that logs are generated in a format that log management
-    solutions can easily consume.
+-   Asegúrese de que los registros se generen en un formato fácil de procesar por las herramientas de gestión de registros.
 
--   Ensure log data is encoded correctly to prevent injections or
-    attacks on the logging or monitoring systems.
+-   Asegúrese de que los datos de registros estén codificados correctamente para prevenir inyecciones o ataques en el sistema de monitoreo o registros.
 
--   Ensure high-value transactions have an audit trail with integrity
-    controls to prevent tampering or deletion, such as append-only
-    database tables or similar.
+-   Asegúrese de que las transacciones de alto valor poseen una traza de auditoria con controles de integridad para evitar la modificación o el borrado, tales como permitir únicamente la inserción en las tablas de base de datos o similares.
 
--   DevSecOps teams should establish effective monitoring and alerting
-    such that suspicious activities are detected and responded to
-    quickly.
+-   El equipo de DevSecOps debe establecer alertas y monitoreo efectivo tal que se detecte actividades sospechosas y responderlas rápidamente.
 
--   Establish or adopt an incident response and recovery plan, such as
-    National Institute of Standards and Technology (NIST) 800-61r2 or later.
+-   Establecer o adoptar un plan de respuesta y recuperación, tal como NIST 800-61r2 o posterior.
 
-There are commercial and open-source application protection frameworks
-such as the OWASP ModSecurity Core Rule Set, and open-source log
-correlation software, such as the Elasticsearch, Logstash, Kibana (ELK)
-stack, that feature custom dashboards and alerting.
+Existen frameworks de protección de aplicaciones comerciales y de código abierto, tales como el conjunto de reglas de ModSecurity de OWASP y el conjunto de programas de correlación de registros de código abierto como ser ELK (Elasticsearch, Logstash, Kibana) con paneles personalizados y alertas
 
-## Example Attack Scenarios
+## Ejemplos de escenarios de ataque
 
-**Scenario #1:** A childrens' health plan provider's website operator
-couldn't detect a breach due to a lack of monitoring and logging. An
-external party informed the health plan provider that an attacker had
-accessed and modified thousands of sensitive health records of more than
-3.5 million children. A post-incident review found that the website
-developers had not addressed significant vulnerabilities. As there was
-no logging or monitoring of the system, the data breach could have been
-in progress since 2013, a period of more than seven years.
+**Escenario #1:** Un operador de salud que provea un plan de salud para niños no pudieron detectar una brecha debido a la falta de monitoreo y registro. Alguien externo informo al proveedor de salud que un atacante había accedido y modificados miles de registros médicos sensibles de mas de 3.5 millones de niños. Una revisión post incidente encontró que los desarrolladores del sitio web no habían encontrado vulnerabilidades significativas. Como no hubo ni registro ni monitores del sistema, la brecha de datos pudo haber estado en proceso desde el 2013, un periodo de mas de 7 años.
 
-**Scenario #2:** A major Indian airline had a data breach involving more
-than ten years' worth of personal data of millions of passengers,
-including passport and credit card data. The data breach occurred at a
-third-party cloud hosting provider, who notified the airline of the
-breach after some time.
+**Escenario #2:** Una gran aerolínea India tuvo una brecha de seguridad que involucro a la perdida de datos personales de millones de pasajeros por mas de 10 años, incluyendo pasaportes y tarjetas de crédito. La brecha se produjo por un proveedor de servicios de almacenamiento en la nube, quien notifico a la aerolínea después de un cierto tiempo.
 
-**Scenario #3:** A major European airline suffered a GDPR reportable
-breach. The breach was reportedly caused by payment application security
-vulnerabilities exploited by attackers, who harvested more than 400,000
-customer payment records. The airline was fined 20 million pounds as a
-result by the privacy regulator.
+**Escenario #3:** Una gran aerolínea Europea sufrió un incumplimiento de la GRPD. Se reporta que la causa de la brecha se debió a que un atacante exploto una vulnerabilidad en una aplicación de pago, obteniendo mas de 400,000 registros de pagos de usuarios. La aerolínea fue multada con 20 millones de libras como resultado del regulador de privacidad.
 
-## References
+## Referencias
 
--   [OWASP Proactive Controls: Implement Logging and
-    Monitoring](https://owasp.org/www-project-proactive-controls/v3/en/c9-security-logging.html)
+-   [Controles proactivos de OWASP: Implementar registros de seguridad y monitoreo](https://owasp.org/www-project-proactive-controls/v3/en/c9-security-logging.html)
 
--   [OWASP Application Security Verification Standard: V8 Logging and
-    Monitoring](https://owasp.org/www-project-application-security-verification-standard)
+-   [Estándar de verificación de seguridad de aplicaciones de OWASP: V8 Registro y monitoreo](https://owasp.org/www-project-application-security-verification-standard)
 
--   [OWASP Testing Guide: Testing for Detailed Error
-    Code](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/08-Testing_for_Error_Handling/01-Testing_for_Error_Code)
+-   [Guía de prueba de OWASP: Prueba de código de error detallado](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/08-Testing_for_Error_Handling/01-Testing_for_Error_Code)
 
--   [OWASP Cheat Sheet:
-    Application Logging Vocabulary](https://cheatsheetseries.owasp.org/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html)
+-   [Hoja de referencia de OWASP:Vocabulario de registro de aplicaciones](https://cheatsheetseries.owasp.org/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html)
 
--   [OWASP Cheat Sheet:
-    Logging](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html))   
+-   [Hoja de referencia de OWASP:Registros](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html))   
 
--   [Data Integrity: Recovering from Ransomware and Other Destructive
-    Events](https://csrc.nist.gov/publications/detail/sp/1800-11/final)
+-   [Integridad de datos: Recuperación de ransomware y otros eventos destructivos](https://csrc.nist.gov/publications/detail/sp/1800-11/final)
 
--   [Data Integrity: Identifying and Protecting Assets Against
-    Ransomware and Other Destructive
-    Events](https://csrc.nist.gov/publications/detail/sp/1800-25/final)
+-   [Integridad de datos: Identificación y protección de activos contra ransomware y otros eventos destructivos](https://csrc.nist.gov/publications/detail/sp/1800-25/final)
 
--   [Data Integrity: Detecting and Responding to Ransomware and Other
-    Destructive
-    Events](https://csrc.nist.gov/publications/detail/sp/1800-26/final)
+-   [Integridad de datos: Detección y respuesta al ransomware y otros eventos destructivos](https://csrc.nist.gov/publications/detail/sp/1800-26/final)
 
 ## List of Mapped CWEs
 
-[CWE-117 Improper Output Neutralization for Logs](https://cwe.mitre.org/data/definitions/117.html)
+[CWE-117 Neutralización de salida incorrecta para registros](https://cwe.mitre.org/data/definitions/117.html)
 
-[CWE-223 Omission of Security-relevant Information](https://cwe.mitre.org/data/definitions/223.html)
+[CWE-223 Omision de información relevante para la seguridad](https://cwe.mitre.org/data/definitions/223.html)
 
-[CWE-532 Insertion of Sensitive Information into Log File](https://cwe.mitre.org/data/definitions/532.html)
+[CWE-532 Inserción de información sensible en el archivo de registros](https://cwe.mitre.org/data/definitions/532.html)
 
-[CWE-778 Insufficient Logging](https://cwe.mitre.org/data/definitions/778.html)
+[CWE-778 Registro insuficiente](https://cwe.mitre.org/data/definitions/778.html)
