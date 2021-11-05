@@ -61,12 +61,15 @@
 **シナリオ #1:** アプリケーションが、アカウント情報にアクセスするSQL呼出しに未検証のデータを使用しています。
 
 ```
- https://example.com/app/accountInfo?acct=notmyacct
+ pstmt.setString(1, request.getParameter("acct"));
+ ResultSet results = pstmt.executeQuery( );
 ```
 
 攻撃者は、単にブラウザでパラメータ'acct'を任意のアカウント番号に改変して送信します。適切な検証がない場合、攻撃者は任意のアカウントにアクセスできます。
 
-https://example.com/app/accountInfo?acct=notmyacct
+```
+ https://example.com/app/accountInfo?acct=notmyacct
+```
 
 **シナリオ #2:** ある攻撃者は、ブラウザでURLを指定してアクセスします。管理者ページにアクセスするには管理者権限が必要です。
 
