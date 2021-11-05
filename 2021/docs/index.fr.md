@@ -108,8 +108,8 @@ Les organisations suivantes (ainsi que certains donateurs anonymes) ont aimablem
 - Veracode
 - WhiteHat (NTT)
 
-## Thank you to our sponsor
+## Merci à notre sponsor
 
-The OWASP Top 10 2021 team gratefully acknowledge the financial support of Secure Code Warrior.
+L'équipe de l'OWASP Top 10 2021 remercie le soutien financier de Secure Code Warrior.
 
 [![Secure Code Warrior](assets/securecodewarrior.png)](https://securecodewarrior.com)
