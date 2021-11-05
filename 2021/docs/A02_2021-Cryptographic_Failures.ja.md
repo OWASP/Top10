@@ -12,7 +12,7 @@
 このカテゴリは根本的な要因よりも、暗号化技術の不適切な使用、または暗号化の欠如に関連した幅広い障害に焦点を当てています。こうした障害は、時に機微な情報の露出を結果としてもたらします。
 考慮すべき共通脆弱性タイプ一覧 (CWE)には、*CWE-259:ハードコードされたパスワードの使用*、*CWE-327:不適切な暗号化アルゴリズム*、*CWE-331:不十分なエントロピー*があります。
 
-## 解説
+## 説明
 
 まず、送信あるいは保存するデータが保護を必要とするか見極めます。例えば、パスワード、クレジットカード番号、健康記録、個人データやビジネス上の機密は特別な保護が必要になります。データに対して、EUの一般データ保護規則(GDPR)のようなプライバシー関連の法律が適用される場合、また、PCIデータセキュリティスタンダード(PCI DSS)など金融の情報保護の要求があるような規定がある場合には、特に注意が必要です。そのようなデータすべてについて、以下を確認してください:
 
@@ -127,7 +127,7 @@ ASVS Crypto (V7)、Data Protection (V9)、および SSL/TLS (V10) を参照。
 -   [OWASP Testing Guide: Testing for weak cryptography](https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/09-Testing_for_Weak_Cryptography/README)
 
 
-## 対応するCWE一覧
+## 対応する CWE のリスト
 
 [CWE-261 Weak Encoding for Password](https://cwe.mitre.org/data/definitions/261.html)
 
