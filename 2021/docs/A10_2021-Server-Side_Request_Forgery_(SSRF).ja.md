@@ -161,7 +161,7 @@ Attackers have payload lists, tools, and skills to bypass deny lists.
     Control local traffic on these systems (e.g. localhost)
 
 -   For frontends with dedicated and manageable user groups use network encryption (e.g. VPNs)
-    on independant systems to consider very high protection needs
+    on independent systems to consider very high protection needs
 
 ## Example Attack Scenarios
 
