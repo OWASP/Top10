@@ -91,9 +91,9 @@ Des facteurs sont répertoriés pour chacune des 10 principales catégories, voi
 - Nombre total d'occurrences : nombre total d'applications trouvées pour lesquelles les CWEs sont associées à une catégorie.
 - Nombre total de CVEs : nombre total de CVEs dans la base de données NVD qui ont été associées aux CWEs associées à une catégorie.
 
-## Thank you to our data contributors
+## Merci à nos contributeurs de données
 
-The following organizations (along with some anonymous donors) kindly donated data for over 500,000 applications to make this the largest and most comprehensive application security data set. Without you, this would not be possible.
+Les organisations suivantes (ainsi que certains donateurs anonymes) ont aimablement fait don des données de plus de 500 000 applications pour en faire l'ensemble de données de sécurité des applications le plus vaste et le plus complet. Sans vous, cela ne serait pas possible.
 
 - AppSec Labs
 - Cobalt.io
