@@ -86,13 +86,13 @@ la autenticación. Puede haber debilidades de autenticación si la aplicación:
 
 ## Ejemplos de escenarios de ataque
 
-**Scenario #1:** Relleno de credenciales, el uso de listas de contraseñas
+**Escenario #1:** Relleno de credenciales, el uso de listas de contraseñas
 conocidas, es un ataque común. Supongamos que una aplicación no se implementa
 protección automatizada de relleno de credenciales. En ese caso, la aplicación
 puede usarse como oráculo de contraseñas para determinar si las credenciales son
 válidas.
 
-**Scenario #2:** La mayoría de los ataques de autenticación ocurren debido al
+**Escenario #2:** La mayoría de los ataques de autenticación ocurren debido al
 uso de contraseñas como único factor. Las consideradas mejores prácticas de
 requerir de una rotación y complejidad de las contraseñas, son vistos como
 alentadoras del uso y reúso de contraseñas débiles por parte de los usuarios.
@@ -100,7 +100,7 @@ Se le recomienda a las organizaciones que detengan dichas prácticas y utilicen
 las prácticas recomendadas en la guía NIST 800-63 y utilicen autenticación
 multi-factor.
 
-**Scenario #3:** Los tiempos de espera (timeouts) de las sesiones de aplicación
+**Escenario #3:** Los tiempos de espera (timeouts) de las sesiones de aplicación
 no están configurados correctamente. Un usuario utiliza una computadora pública
 para acceder a una aplicación. En lugar de seleccionar "cerrar sesión", el
 usuario simplemente cierra la pestaña del navegador y se aleja. Un atacante usa
