@@ -2,9 +2,9 @@
 
 ## Selamat datang di OWASP Top 10 - 2021
 
-Selamat datang di rilis terbaru dari OWASP TOP 10! OWASP TOP 10 2021 semuanya baru, dengan desain grafis baru dan tersedia infografis satu halaman yang dapat anda cetak atau dapatkan dari halaman kami.
+Selamat datang ke versi terakhir dari OWASP Top 10! OWASP Top 10 2021 semua baru, dengan desain grafis baru dan suatu infografis satu-halaman yang dapat Anda cetak atau dapatkan dari beranda kami.
 
-Terima kasih banyak untuk semuanya yang telah menyumbangkan waktu dan datanya untuk iterasi ini. Tanpa anda, rilis ini tidak akan selesai. **Terima Kasih**
+Terima kasih sebesar-besarnya ke semua orang yang menyumbangkan waktu dan data mereka ke iterasi ini. Tanpa Anda, versi ini tidak akan ada. **TERIMA KASIH**
 
 ## Apa yang berubah di Top 10 untuk 2021
 
