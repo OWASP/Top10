@@ -1,88 +1,62 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+# A08:2021 – Fallas en el Software y en la Integridad de los Datos    ![icon](assets/TOP_10_Icons_Final_Software_and_Data_Integrity_Failures.png){: style="height:80px;width:80px" align="right"}
+=======
 # A08:2021 – Software and Data Integrity Failures    ![icon](assets/TOP_10_Icons_Final_Software_and_Data_Integrity_Failures.png)
+>>>>>>> ce54c754a6f41a80097437a73ca22efb1b5e3a06
+=======
+# A08:2021 – Software and Data Integrity Failures    ![icon](assets/TOP_10_Icons_Final_Software_and_Data_Integrity_Failures.png)
+>>>>>>> ce54c754a6f41a80097437a73ca22efb1b5e3a06
 
-## Factors
+## Factores
 
-| CWEs Mapped | Max Incidence Rate | Avg Incidence Rate | Avg Weighted Exploit | Avg Weighted Impact | Max Coverage | Avg Coverage | Total Occurrences | Total CVEs |
+| CWEs mapeados | Tasa de incidencia máx | Tasa de incidencia prom | Cobertura máx | Cobertura prom | Exploit ponderado prom | Impacto ponderado prom | Incidencias totales | Total CVEs |
 |:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
 | 10          | 16.67%             | 2.05%              | 6.94                 | 7.94                | 75.04%       | 45.35%       | 47,972            | 1,152      |
 
-## Overview
+## Resumen
 
-A new category for 2021 focuses on making assumptions related to
-software updates, critical data, and CI/CD pipelines without verifying
-integrity. One of the highest weighted impacts from 
-Common Vulnerability and Exposures/Common Vulnerability Scoring System (CVE/CVSS) 
-data. Notable Common Weakness Enumerations (CWEs) include
-*CWE-829: Inclusion of Functionality from Untrusted Control Sphere*,
-*CWE-494: Download of Code Without Integrity Check*, and 
-*CWE-502: Deserialization of Untrusted Data*.
+Una nueva categoría en la versión 2021 que se centra en hacer suposiciones relacionadas con las actualizaciones de software, los datos críticos y los pipelines de CI/CD sin verificación de integridad. Corresponde a uno de los mayores impactos según los sistemas de ponderación de vulnerabilidades (CVE/CVSS, siglas en inglés para Common Vulnerability and Exposures/Common Vulnerability Scoring System). Entre estos, se destacan los siguiente CWEs:
+*CWE-829: Inclusión de funcionalidades provenientes de fuera de la zona de confianza*,
+*CWE-494: Ausencia de verificación de integridad en el código descargado*, y 
+*CWE-502: Deserialización de datos no confiables*.
 
-## Description 
+## Descripción 
 
-Software and data integrity failures relate to code and infrastructure
-that does not protect against integrity violations. An example of this is where an application relies upon plugins, libraries, or modules from untrusted sources, repositories, and content
-delivery networks (CDNs). An insecure CI/CD pipeline can introduce the
-potential for unauthorized access, malicious code, or system compromise.
-Lastly, many applications now include auto-update functionality, where
-updates are downloaded without sufficient integrity verification and
-applied to the previously trusted application. Attackers could
-potentially upload their own updates to be distributed and run on all
-installations. Another example is where
-objects or data are encoded or serialized into a structure that an
-attacker can see and modify is vulnerable to insecure deserialization.
+Los fallos de integridad del software y de los datos están relacionados con código e infraestructura
+no protegidos contra alteraciones (integridad). Ejemplos de esto son cuando una aplicación depende de plugins, bibliotecas o módulos de fuentes, repositorios o redes de entrega de contenidos (CDN) no confiables.
+Un pipeline CI/CD inseguro puede conducir a accesos no autorizados, la inclusión de código malicioso o el compromiso del sistema en general.
+Además, es común en la actualidad que las aplicaciones implementen funcionalidades de actualización, a través de las cuales se descargan nuevas versiones de la misma sin los debidas verificaciones integridad que fueron realizadas previamente al instalar la aplicación. Los atacantes potencialmente pueden cargar sus propias actualizaciones para que sean distribuidas y ejecutadas en todas las instalaciones. Otro ejemplo es cuando objetos o datos son codificados o serializados en estructuras que un atacante puede ver y modificar, produciéndose una deserialización insegura.
 
-## How to Prevent
+## Cómo se previene
 
--   Use digital signatures or similar mechanisms to verify the software or data is from the expected source and has not been altered.
+-   Utilice firmas digitales o mecanismos similares para verificar que el software o datos provienen efectivamente de la fuente esperada y no fueron alterados.
 
--   Ensure libraries and dependencies, such as npm or Maven, are
-    consuming trusted repositories. If you have a higher risk profile, consider hosting an internal known-good repository that's vetted.
+-   Asegúrese que las bibliotecas y dependencias, tales como npm o maven son utilizadas desde repositorios confiables. Si su perfil de riesgo es alto, considere alojarlas en un repositorio interno cuyo contenido ha sido previamente analizado.
 
--   Ensure that a software supply chain security tool, such as OWASP
-    Dependency Check or OWASP CycloneDX, is used to verify that
-    components do not contain known vulnerabilities
+-   Asegúrese que se utilice una herramienta de análisis de componentes de terceros, como OWASP Dependency Check u OWASP CycloneDX, con el fin de verificar la ausencia de vulnerabilidades conocidas.
 
--   Ensure that there is a review process for code and configuration changes to minimize the chance that malicious code or configuration could be introduced into your software pipeline.
+-   Asegúrese que se utilice un proceso de revisión de cambios de código y configuraciones para minimizar las posibilidades de que código o configuraciones maliciosas sean introducidos en su pipeline.
 
--   Ensure that your CI/CD pipeline has proper segregation, configuration, and access
-    control to ensure the integrity of the code flowing through the
-    build and deploy processes.
+-   Asegúrese que su pipeline CI/CD posee adecuados controles de acceso, segregación y configuraciones que permitan asegurar la integridad del código a traves del proceso de build y despliegue.
 
--   Ensure that unsigned or unencrypted serialized data is not sent to
-    untrusted clients without some form of integrity check or digital
-    signature to detect tampering or replay of the serialized data
+-   Asegúrese que datos sin cifrar o firmar no son enviados a clientes no confiables sin alguna forma de verificación de integridad o firma electrónica con el fin de detectar modificaciones o la reutilización de datos previamente serializados. 
 
-## Example Attack Scenarios
+## Ejemplos de escenarios de ataque
 
-**Scenario #1 Update without signing:** Many home routers, set-top
-boxes, device firmware, and others do not verify updates via signed
-firmware. Unsigned firmware is a growing target for attackers and is
-expected to only get worse. This is a major concern as many times there
-is no mechanism to remediate other than to fix in a future version and
-wait for previous versions to age out.
+**Escenario #1 Actualizaciones no firmadas:** 
+Muchos routers domésticos, decodificadores de televisión, firmware de dispositivos, entre otros, no verifican las firmas de sus actualizaciones de firmware. El firmware sin firmar es un objetivo creciente para los atacantes y se
+se espera que empeore. Esto es una gran preocupación ya que muchas veces no existe otro mecanismo para remediarlo  que corregirlo en una versión futura y esperar a que las versiones anteriores caduquen.
 
-**Scenario #2 SolarWinds malicious update**: Nation-states have been
-known to attack update mechanisms, with a recent notable attack being
-the SolarWinds Orion attack. The company that develops the software had
-secure build and update integrity processes. Still, these were able to
-be subverted, and for several months, the firm distributed a highly
-targeted malicious update to more than 18,000 organizations, of which
-around 100 or so were affected. This is one of the most far-reaching and
-most significant breaches of this nature in history.
+**Escenario #2 Actualización maliciosa de SolarWinds**: Se sabe que los Estados-Naciones utilizan como vector de ataque los mecanismos de actualización, siendo un caso reciente de pública notoriedad el sufrido por SolarWinds Orion. La compañía que desarrolla el software poseía procesos seguros de construcción y mecanismos de integridad en sus actualizaciones. Sin embargo, éstos fueron comprometidos y,durante varios meses, la firma distribuyó una actualización maliciosa a más de 18.000 organizaciones, de las cuales alrededor de un centenar se vieron afectadas. Se trata de una de las brechas de este tipo de mayor alcance y más importantes de la historia.
 
-**Scenario #3 Insecure Deserialization:** A React application calls a
-set of Spring Boot microservices. Being functional programmers, they
-tried to ensure that their code is immutable. The solution they came up
-with is serializing the user state and passing it back and forth with
-each request. An attacker notices the "rO0" Java object signature (in base64) and
-uses the Java Serial Killer tool to gain remote code execution on the
-application server.
+**Escenario #3 Deserialización insegura:**:Una aplicación React utiliza un conjunto de microservicios implementados en Spring Boot. Tratándose de programadores funcionales, intentaron asegurarse de que su código sea inmutable. La solución implementada consistió en serializar el estado de la sesión para el usuario y enviarlo entre los componentes con cada solicitud. Un atacante advierte el uso de un objeto Java serializado y codificado en base64(identifica un string que comienza con "rO0" ) y utiliza la herramienta Java Serial Killer para obtener una ejecución remota de código en el en el servidor de aplicación.
 
-## References
+## Referencias (en inglés)
 
--   \[OWASP Cheat Sheet: Software Supply Chain Security\](Coming Soon)
+-   \[OWASP Cheat Sheet: Software Supply Chain Security\](Próximamente)
 
--   \[OWASP Cheat Sheet: Secure build and deployment\](Coming Soon)
+-   \[OWASP Cheat Sheet: Secure build and deployment\](Próximamente)
 
 -    [OWASP Cheat Sheet: Infrastructure as Code](https://cheatsheetseries.owasp.org/cheatsheets/Infrastructure_as_Code_Security_Cheat_Sheet.html) 
  
@@ -100,24 +74,24 @@ application server.
 
 -   [Securing DevOps by Julien Vehent](https://www.manning.com/books/securing-devops)
 
-## List of Mapped CWEs
+## Lista de CWEs mapeadas
 
-[CWE-345 Insufficient Verification of Data Authenticity](https://cwe.mitre.org/data/definitions/345.html)
+[CWE-345 Verificación insuficiente de Autenticidad de los datos](https://cwe.mitre.org/data/definitions/345.html)
 
-[CWE-353 Missing Support for Integrity Check](https://cwe.mitre.org/data/definitions/353.html)
+[CWE-353 Falta de soporte para la verificación de integridad](https://cwe.mitre.org/data/definitions/353.html)
 
-[CWE-426 Untrusted Search Path](https://cwe.mitre.org/data/definitions/426.html)
+[CWE-426 Búsqueda en camino no confiable](https://cwe.mitre.org/data/definitions/426.html)
 
-[CWE-494 Download of Code Without Integrity Check](https://cwe.mitre.org/data/definitions/494.html)
+[CWE-494 Ausencia de verificación de integridad en el código descargado](https://cwe.mitre.org/data/definitions/494.html)
 
-[CWE-502 Deserialization of Untrusted Data](https://cwe.mitre.org/data/definitions/502.html)
+[CWE-502 Deserialización de datos no confiables](https://cwe.mitre.org/data/definitions/502.html)
 
-[CWE-565 Reliance on Cookies without Validation and Integrity Checking](https://cwe.mitre.org/data/definitions/565.html)
+[CWE-565 Confianza en cookies sin realizar verificaciones de validación e integridad](https://cwe.mitre.org/data/definitions/565.html)
 
-[CWE-784 Reliance on Cookies without Validation and Integrity Checking in a Security Decision](https://cwe.mitre.org/data/definitions/784.html)
+[CWE-784 Confianza en cookies sin realizar verificaciones de validación e integridad en una decisión de seguridad](https://cwe.mitre.org/data/definitions/784.html)
 
-[CWE-829 Inclusion of Functionality from Untrusted Control Sphere](https://cwe.mitre.org/data/definitions/829.html)
+[CWE-829 Inclusión de funcionalidades provenientes de fuera de la zona de confianza](https://cwe.mitre.org/data/definitions/829.html)
 
-[CWE-830 Inclusion of Web Functionality from an Untrusted Source](https://cwe.mitre.org/data/definitions/830.html)
+[CWE-830 Inclusión de una funcionalidad provenientes de una fuente no confiable](https://cwe.mitre.org/data/definitions/830.html)
 
-[CWE-915 Improperly Controlled Modification of Dynamically-Determined Object Attributes](https://cwe.mitre.org/data/definitions/915.html)
+[CWE-915 Modificación inadecuada de atributos de objetos determinados dinámicamente](https://cwe.mitre.org/data/definitions/915.html)
