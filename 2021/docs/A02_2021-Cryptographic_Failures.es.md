@@ -2,7 +2,7 @@
 
 ## Factores
 
-| CWEs mapeados | Tasa de incidencia máx | Tasa de incidencia prom | Exploit ponderado prom | Impacto ponderado prom | Cobertura máx | Cobertura prom | Incidencias totales | Total CVEs |
+| CWEs mapeadas | Tasa de incidencia máx | Tasa de incidencia prom | Exploit ponderado prom| Impacto ponderado prom | Cobertura máx | Cobertura prom | Incidencias totales | Total CVEs |
 |:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
 | 29          | 46.44%             | 4.49%              |7.29                 | 6.81                |  79.33%       | 34.85%       | 233,788           | 3,075      |
 
@@ -42,7 +42,7 @@ Para todos esos datos:
 
 Consulte ASVS Crypto (V7), Protección de datos (V9) y SSL / TLS (V10)
 
-## Cómo prevenir
+## Cómo se previene
 
 Haga lo siguiente, como mínimo, y consulte las referencias:
 

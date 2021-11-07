@@ -2,7 +2,7 @@
 
 ## Factores
 
-| CWEs mapeados | Tasa de incidencia máx | Tasa de incidencia prom | Cobertura máx | Cobertura prom | Exploit ponderado prom | Impacto ponderado prom | Incidencias totales | Total CVEs |
+| CWEs mapeadas | Tasa de incidencia máx | Tasa de incidencia prom | Exploit ponderado prom| Impacto ponderado prom | Cobertura máx | Cobertura prom | Incidencias totales | Total CVEs |
 |:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
 | 22          | 14.84%             | 2.55%              | 7.40                 | 6.50                | 79.51%       | 45.72%       | 132,195           | 3,897      |
 
@@ -49,7 +49,7 @@ la autenticación. Puede haber debilidades de autenticación si la aplicación:
     único (SSO)) no son correctamente invalidados durante el cierre de sesión
     o luego de un período de inactividad.
 
-## Cómo prevenir
+## Cómo se previene
 
 -   Cuando sea posible, implemente la autenticación multi-factor para evitar
     ataques automatizados de reutilización de credenciales conocidas,

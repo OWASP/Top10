@@ -2,7 +2,7 @@
 
 ## Factores
 
-| CWEs mapeados | Tasa de incidencia máx | Tasa de incidencia prom | Cobertura máx | Cobertura prom | Exploit ponderado prom | Impacto ponderado prom | Incidencias totales | Total CVEs |
+| CWEs mapeadas | Tasa de incidencia máx | Tasa de incidencia prom | Exploit ponderado prom| Impacto ponderado prom | Cobertura máx | Cobertura prom | Incidencias totales | Total CVEs |
 |:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
 | 3           | 27.96%             | 8.77%              | 51.78%       | 22.47%       | 5.00                 | 5.00                | 30,457            | 0          |
 
@@ -26,7 +26,7 @@ Probablemente sea vulnerable:
 
 -   Si no asegura las configuraciones de los componentes (consulte A05: 2021-Configuración incorrecta de seguridad).
 
-## Cómo prevenir
+## Cómo se previene
 
 Debe existir un proceso de administración de parches para:
 
@@ -75,7 +75,7 @@ Existen herramientas automatizadas para ayudar a los atacantes a encontrar siste
 
 -   https://safecode.org/publication/SAFECode_Software_Integrity_Controls0610.pdf
 
-## List of Mapped CWEs
+## Lista de CWEs mapeadas 
 
 CWE-937 OWASP Top 10 2013: Uso de componentes con vulnerabilidades conocidas
 

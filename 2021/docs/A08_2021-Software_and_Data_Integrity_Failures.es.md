@@ -1,16 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 # A08:2021 – Fallas en el Software y en la Integridad de los Datos    ![icon](assets/TOP_10_Icons_Final_Software_and_Data_Integrity_Failures.png){: style="height:80px;width:80px" align="right"}
-=======
-# A08:2021 – Software and Data Integrity Failures    ![icon](assets/TOP_10_Icons_Final_Software_and_Data_Integrity_Failures.png)
->>>>>>> ce54c754a6f41a80097437a73ca22efb1b5e3a06
-=======
-# A08:2021 – Software and Data Integrity Failures    ![icon](assets/TOP_10_Icons_Final_Software_and_Data_Integrity_Failures.png)
->>>>>>> ce54c754a6f41a80097437a73ca22efb1b5e3a06
 
 ## Factores
 
-| CWEs mapeados | Tasa de incidencia máx | Tasa de incidencia prom | Cobertura máx | Cobertura prom | Exploit ponderado prom | Impacto ponderado prom | Incidencias totales | Total CVEs |
+| CWEs mapeadas | Tasa de incidencia máx | Tasa de incidencia prom | Exploit ponderado prom| Impacto ponderado prom | Cobertura máx | Cobertura prom | Incidencias totales | Total CVEs |
 |:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
 | 10          | 16.67%             | 2.05%              | 6.94                 | 7.94                | 75.04%       | 45.35%       | 47,972            | 1,152      |
 
@@ -52,7 +44,7 @@ se espera que empeore. Esto es una gran preocupación ya que muchas veces no exi
 
 **Escenario #3 Deserialización insegura:**:Una aplicación React utiliza un conjunto de microservicios implementados en Spring Boot. Tratándose de programadores funcionales, intentaron asegurarse de que su código sea inmutable. La solución implementada consistió en serializar el estado de la sesión para el usuario y enviarlo entre los componentes con cada solicitud. Un atacante advierte el uso de un objeto Java serializado y codificado en base64(identifica un string que comienza con "rO0" ) y utiliza la herramienta Java Serial Killer para obtener una ejecución remota de código en el en el servidor de aplicación.
 
-## Referencias (en inglés)
+## Referencias
 
 -   \[OWASP Cheat Sheet: Software Supply Chain Security\](Próximamente)
 

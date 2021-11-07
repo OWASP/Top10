@@ -2,11 +2,11 @@
 
 ## Factores
 
-| CWEs Mapeados | Tasa de Incidencia Máxima | Tasa de Incidencia Promeedia | Explotación Ponderada Promedio | Impacto Ponderado Promedio | Covertura Màxima | Coverturra Promedia | Incidencias Totales| CVEs Totales |
+| CWEs mapeadas | Tasa de incidencia máx | Tasa de incidencia prom | Exploit ponderado prom| Impacto ponderado prom | Cobertura máx | Cobertura prom | Incidencias totales | Total CVEs |
 |:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
 | 33          | 19.09%             | 3.37%              | 7.25                 | 7.15                | 94.04%       | 47.90%       | 274,228           | 32,078     |
 
-## Vision General
+## Resumen
 
 la Inyección se desliza hasta la tercera posicion. El 94% de las aplicaciones fueron probadas sobre alguna forma de inyeccón con una tasa de incidencia máxima del 19%, una tasa de incidencia promedio del 3% y 274 mil ocurrencias. Los CWE notables incluidos son *CWE-79: Cross-site Scripting*, *CWE-89: SQL Injection*, y la *CWE-73:Control Externo de Nombre de archivos o ruta*. 
 
@@ -28,7 +28,7 @@ El concepto es idéntico entre todos los intérpretes. La revisión del código 
 
 Las organizaciones pueden incluir herramientas de análisis estático (SAST) y pruebas dinámicas (DAST) para identificar errores de inyecciones recientemente introducidas y antes del despliegue de la aplicación en producción.
 
-## Cómo prevenir
+## Cómo se previene
 
 Para prevenir inyecciones, se requiere separar los datos de los comandos y las consultas.
 

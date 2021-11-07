@@ -2,7 +2,7 @@
 
 ## Factores
 
-| CWEs Mapped | Max Incidence Rate | Avg Incidence Rate | Avg Weighted Exploit | Avg Weighted Impact | Max Coverage | Avg Coverage | Total Occurrences | Total CVEs |
+| CWEs mapeadas | Tasa de incidencia máx | Tasa de incidencia prom | Exploit ponderado prom| Impacto ponderado prom | Cobertura máx | Cobertura prom | Incidencias totales | Total CVEs |
 |:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
 | 4           | 19.23%             | 6.51%              | 6.87                 | 4.99                | 53.67%       | 39.97%       | 53,615            | 242        |
 
@@ -11,7 +11,7 @@
 Monitoreo y registro de seguridad provienen de la encuesta de la comunidad TOP 10, subió levemente desde la décima posición en el OWASP Top 10 2017. El registro y monitoreo pueden ser desafiantes para ser testeados, a menudo implica entrevistas o preguntas si los ataques fueron detectados durante una prueba de penetración. No hay muchos datos CVE para esta categoría, pero detectar y responder a las brechas es crítico. Aun así, puede tener un gran impacto para la responsabilidad, visibilidad, alertas de incidentes y forense. Esta categoría se expande más allá de *CWE-117 Neutralización de salida incorrecta para registros*, *CWE-223 Omisión de información relevante para la seguridad*, y
 *CWE-532 Inserción de información sensible en el archivo de registro*.
 
-## Descripcion
+## Descripción
 
 Volviendo al OWASP Top 10 2021, la intención es detectar, escalar y responder ante brechas activas. Sin registros y monitoreo, las brechas no pueden ser detectadas. Registros, detecciones, monitoreo y respuestas activas insuficientes pueden ocurrir en cualquier momento:
 
@@ -76,7 +76,7 @@ Existen frameworks de protección de aplicaciones comerciales y de código abier
 
 -   [Integridad de datos: Detección y respuesta al ransomware y otros eventos destructivos](https://csrc.nist.gov/publications/detail/sp/1800-26/final)
 
-## List of Mapped CWEs
+## Lista de CWEs mapeadas
 
 [CWE-117 Neutralización de salida incorrecta para registros](https://cwe.mitre.org/data/definitions/117.html)
 

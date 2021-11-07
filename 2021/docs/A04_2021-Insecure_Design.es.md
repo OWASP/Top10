@@ -2,7 +2,7 @@
 
 ## Factores
 
-| CWEs Mapeados | Tasa de Incidencia Máxima | Tasa de Incidencia Promeedia | Explotación Ponderada Promedio | Impacto Ponderado Promedio | Covertura Màxima | Coverturra Promedia | Incidencias Totales| CVEs Totales |
+| CWEs mapeadas | Tasa de incidencia máx | Tasa de incidencia prom | Exploit ponderado prom| Impacto ponderado prom | Cobertura máx | Cobertura prom | Incidencias totales | Total CVEs |
 |:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
 | 40          | 24.19%             | 3.00%              | 6.46                 | 6.78                | 77.25%       | 42.51%       | 262,407           | 2,691      |
 
@@ -26,7 +26,7 @@ Secure design is a culture and methodology that constantly evaluates threats and
 
 El software seguro requiere un ciclo de vida de desarrollo seguro, alguna forma de patrón de diseño seguro, metodologías "Paved Road", biblioteca de componentes seguros, herramientas y modelado de amenazas. Comuníquese con sus especialistas en seguridad al comienzo de un proyecto de software durante todo el proyecto y el mantenimiento de su software. Considere aprovechar el [Modelo de madurez de garantía de software de OWASP (SAMM)](https://owaspsamm.org) para ayudar a estructurar sus esfuerzos de desarrollo de software seguro.
 
-## Cómo prevenir
+## Cómo se previene
 
 - Establezca y use un ciclo de vida de desarrollo seguro con Aplicaciones de Seguridad profesionales para ayudar a evaluar y diseñar la seguridad y controles relacionados con la privacidad.
 
@@ -48,15 +48,15 @@ El software seguro requiere un ciclo de vida de desarrollo seguro, alguna forma 
 
 ## Ejemplos de Escenarios de Ataque
 
-**Escenario N° 1:**
+**Escenario #1:**
 
 Un flujo de trabajo de recuperación de credenciales puede incluir "preguntas y respuestas", lo cual está prohibido por NIST 800-63b, OWASP ASVS y OWASP Top 10. No se puede confiar en preguntas y respuestas como evidencia de identidad como más de una persona puede conocer las respuestas, por lo que están prohibidas. Dicho código debe eliminarse y reemplazarse por un diseño más seguro.
 
-**Escenario N° 2:** 
+**Escenario #2:** 
 
 Una cadena de cines permite descuentos en la reserva de grupos y tiene un máximo de quince asistentes antes de solicitar un depósito. Los atacantes podrían modelar este flujo y probar si podían reservar seiscientos asientos y todos los cines a la vez en unas pocas solicitudes, lo que provocaría una pérdida masiva de ingresos.
 
-**Escenario N° 3:** 
+**Escenario #3:** 
 
 El sitio web de comercio electrónico de una cadena minorista no tiene protección contra bots administrados por revendedores que compran tarjetas de video de alta gama para revender sitios web de subastas. Esto crea una publicidad terrible para los fabricantes de tarjetas de video y los propietarios de cadenas minoristas y una mala sangre duradera con
 entusiastas que no pueden obtener estas tarjetas a ningún precio. El diseño cuidadoso de anti-bot y las reglas de lógica de dominio, como las compras realizadas a los pocos segundos de disponibilidad, pueden identificar compras no auténticas y rechazar dichas transacciones.
