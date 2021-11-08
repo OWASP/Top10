@@ -2,7 +2,7 @@
 
 ## Factores
 
-| CWEs mapeadas | Tasa de incidencia máx | Tasa de incidencia prom | Exploit ponderado prom| Impacto ponderado prom | Cobertura máx | Cobertura prom | Incidencias totales | Total CVEs |
+| CWEs mapeadas | Tasa de incidencia máx | Tasa de incidencia prom | Explotabilidad ponderada prom| Impacto ponderado prom | Cobertura máx | Cobertura prom | Incidencias totales | Total CVEs |
 |:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
 | 20          | 19.84%             | 4.51%              | 8.12                 | 6.56                | 89.58%       | 44.84%       | 208,387           | 789        |
 
@@ -28,20 +28,20 @@ La aplicación puede ser vulnerable si la aplicación:
 
 -   El servidor no envía encabezados o directivas de seguridad, o no tienen configurados valores seguros.
 
--   El software está desactualizado o es vulnerable (consulte A06: 2021-Componentes vulnerables y desactualizados).
+-   El software está desactualizado o es vulnerable (consulte A06: 2021-Componentes vulnerables y obsoletos).
 
 Sin un proceso de configuración de seguridad de aplicaciones coordinado y repetible, los sistemas corren un mayor riesgo.
 
 ## Cómo se previene
 
-Deben implementarse procesos de instalación seguros, incluidos:
+Deben implementarse procesos de instalación seguros, incluyendo:
 
 -   Un proceso de endurecimiento repetible agiliza y facilita la implementación de otro entorno que esté debidamente bloqueado. Los entornos de desarrollo, control de calidad y producción deben configurarse de forma idéntica, con diferentes credenciales utilizadas en cada entorno.
     Este proceso debe automatizarse para minimizar el esfuerzo necesario para configurar un nuevo entorno seguro.
 
--   Una plataforma mínima sin funciones, componentes, documentación ni ejemplos innecesarios. Elimine o no instale caracteristicas y marcos no utilizados.
+-   Una plataforma mínima sin funciones, componentes, documentación ni ejemplos innecesarios. Elimine o no instale características y frameworks no utilizados.
 
--   Una tarea para revisar y actualizar las configuraciones apropiadas para todas las notas de seguridad, actualizaciones y parches como parte del proceso de administración de parches (consulte A06: 2021-Componentes vulnerables y desactualizados). Revise los permisos de almacenamiento en la nube (por ejemplo, Permisos de bucket de S3).
+-   Una tarea para revisar y actualizar las configuraciones apropiadas para todas las notas de seguridad, actualizaciones y parches como parte del proceso de administración de parches (consulte A06: 2021-Componentes vulnerables y obsoletos). Revise los permisos de almacenamiento en la nube (por ejemplo, Permisos de bucket de S3).
 
 -   Una arquitectura de aplicación segmentada proporciona una separación efectiva y segura entre componentes o instancias, con segmentación, organización en contenedores o grupos de seguridad en la nube (ACLs).
 
