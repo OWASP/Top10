@@ -2,13 +2,13 @@
 
 ## Factores
 
-| CWEs mapeadas | Tasa de incidencia máx | Tasa de incidencia prom | Exploit ponderado prom| Impacto ponderado prom | Cobertura máx | Cobertura prom | Incidencias totales | Total CVEs |
+| CWEs mapeadas | Tasa de incidencia máx | Tasa de incidencia prom | Explotabilidad ponderada prom| Impacto ponderado prom | Cobertura máx | Cobertura prom | Incidencias totales | Total CVEs |
 |:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
 | 40          | 24.19%             | 3.00%              | 6.46                 | 6.78                | 77.25%       | 42.51%       | 262,407           | 2,691      |
 
 ## Resumen
 
-Una nueva categoría para 2021 se centra en los riesgos relacionados con el diseño y las fallas arquitectónicas, con un llamado a un mayor uso del modelado de amenazas, patrones de diseño seguros y arquitecturas de referencia. Como comunidad, debemos ir más allá del "desplazamiento a la izquierda" en el espacio de codificación para precodificar actividades que son críticas para los principios de Secure by Design. NLos CWE notables incluidos son *CWE-209: Generación de mensaje de error que contiene información confidencial*, *CWE-256: Almacenamiento desprotegido de credenciales*, *CWE-501: Infracción de límites de confianza* y *CWE-522: Insuficiente Credenciales protegidas*.
+Una nueva categoría para 2021 se centra en los riesgos relacionados con el diseño y las fallas arquitectónicas, con un llamado a un mayor uso del modelado de amenazas, patrones de diseño seguros y arquitecturas de referencia. Como comunidad, debemos ir más allá de solo abandonar las metodologias tradicionales (movimiento "shift-left" en inglés) en el espacio de codificación para precodificar actividades que son críticas para los principios de Secure by Design. Los CWE notables incluidos son *CWE-209: Generación de mensaje de error que contiene información confidencial*, *CWE-256: Almacenamiento desprotegido de credenciales*, *CWE-501: Infracción de límites de confianza* y *CWE-522: Credenciales protegidas insuficientemente*.
 
 ## Descripción
 
@@ -18,9 +18,9 @@ El diseño inseguro es una categoría amplia que representa diferentes debilidad
 
 Recopile y negocie los requerimientos comerciales para una aplicación con la empresa, incluidos los requisitos de protección relacionados con la confidencialidad, integridad, disponibilidad y autenticidad de todos los activos de datos y la lógica de negocio esperada. Tenga en cuenta qué tan expuesta estará su aplicación y si necesita segregación de tenants (además del control de acceso). Compile los requisitos técnicos, incluidos los requerimientos de seguridad funcionales y no funcionales. Planifique y negocie el presupuesto que cubra todo el diseño, construcción, prueba y operación, incluidas las actividades de seguridad.
 
-### Secure Design
+### Diseño seguro
 
-Secure design is a culture and methodology that constantly evaluates threats and ensures that code is robustly designed and tested to prevent known attack methods. Threat modeling should be integrated into refinement sessions (or similar activities); look for changes in data flows and access control or other security controls. In the user story development determine the correct flow and failure states, ensure they are well understood and agreed upon by responsible and impacted parties. Analyze assumptions and conditions for expected and failure flows, ensure they are still accurate and desirable. Determine how to validate the assumptions and enforce conditions needed for proper behaviors. Ensure the results are documented in the user story. Learn from mistakes and offer positive incentives to promote improvements. Secure design is neither an add-on nor a tool that you can add to software.
+El diseño seguro es una cultura y metodología que evalúa constantemente las amenazas y garantiza que el código esté diseñado y probado de manera sólida para prevenir métodos de ataque conocidos. El modelado de amenazas debe estar integrado en sesiones de refinamiento (o actividades similares); buscar cambios en los flujos de datos y el control de acceso u otros controles de seguridad. Durante el desarrollo de la historia de usuario, determine el flujo correcto y los estados de falla, asegúrese de que sean bien entendidos y acordados por las partes responsables e impactadas. Analice las suposiciones y las condiciones para los flujos esperados y de falla, asegúrese de que aún sean precisos y deseables. Determine cómo validar las suposiciones y hacer cumplir las condiciones necesarias para los comportamientos adecuados. Asegúrese de que los resultados estén documentados en la historia del usuario. Aprenda de los errores y ofrezca incentivos positivos para promover mejoras. El diseño seguro no es un complemento ni una herramienta que pueda agregar al software.
 
 ### Ciclo de Vida de Desarrollo Seguro (S-SDLC)
 
@@ -48,17 +48,11 @@ El software seguro requiere un ciclo de vida de desarrollo seguro, alguna forma 
 
 ## Ejemplos de Escenarios de Ataque
 
-**Escenario #1:**
+**Escenario #1:** Un flujo de trabajo de recuperación de credenciales puede incluir "preguntas y respuestas", lo cual está prohibido por NIST 800-63b, OWASP ASVS y OWASP Top 10. No se puede confiar en preguntas y respuestas como evidencia de identidad como más de una persona puede conocer las respuestas, por lo que están prohibidas. Dicho código debe eliminarse y reemplazarse por un diseño más seguro.
 
-Un flujo de trabajo de recuperación de credenciales puede incluir "preguntas y respuestas", lo cual está prohibido por NIST 800-63b, OWASP ASVS y OWASP Top 10. No se puede confiar en preguntas y respuestas como evidencia de identidad como más de una persona puede conocer las respuestas, por lo que están prohibidas. Dicho código debe eliminarse y reemplazarse por un diseño más seguro.
+**Escenario #2:** Una cadena de cines permite descuentos en la reserva de grupos y tiene un máximo de quince asistentes antes de solicitar un depósito. Los atacantes podrían modelar este flujo y probar si podían reservar seiscientos asientos y todos los cines a la vez en unas pocas solicitudes, lo que provocaría una pérdida masiva de ingresos.
 
-**Escenario #2:** 
-
-Una cadena de cines permite descuentos en la reserva de grupos y tiene un máximo de quince asistentes antes de solicitar un depósito. Los atacantes podrían modelar este flujo y probar si podían reservar seiscientos asientos y todos los cines a la vez en unas pocas solicitudes, lo que provocaría una pérdida masiva de ingresos.
-
-**Escenario #3:** 
-
-El sitio web de comercio electrónico de una cadena minorista no tiene protección contra bots administrados por revendedores que compran tarjetas de video de alta gama para revender sitios web de subastas. Esto crea una publicidad terrible para los fabricantes de tarjetas de video y los propietarios de cadenas minoristas y una mala sangre duradera con
+**Escenario #3:** El sitio web de comercio electrónico de una cadena minorista no tiene protección contra bots administrados por revendedores que compran tarjetas de video de alta gama para revender sitios web de subastas. Esto crea una publicidad terrible para los fabricantes de tarjetas de video y los propietarios de cadenas minoristas y una mala sangre duradera con
 entusiastas que no pueden obtener estas tarjetas a ningún precio. El diseño cuidadoso de anti-bot y las reglas de lógica de dominio, como las compras realizadas a los pocos segundos de disponibilidad, pueden identificar compras no auténticas y rechazar dichas transacciones.
 
 ## Referencias
@@ -75,11 +69,11 @@ entusiastas que no pueden obtener estas tarjetas a ningún precio. El diseño cu
 
 - [Increíble modelado de amenazas](https://github.com/hysnsec/awesome-threat-modelling)
 
-## Lista de CWE mapeadas
+## Lista de CWEs mapeadas
 
 [CWE-73 Control externo de nombre de archivo o ruta](https://cwe.mitre.org/data/definitions/73.html)
 
-[Lista permisiva de entradas permitidas CWE-183](https://cwe.mitre.org/data/definitions/183.html)
+[CWE-183 Lista permisiva de entradas permitidas](https://cwe.mitre.org/data/definitions/183.html)
 
 [CWE-209 Generación de mensaje de error que contiene información confidencial](https://cwe.mitre.org/data/definitions/209.html)
 
@@ -87,7 +81,7 @@ entusiastas que no pueden obtener estas tarjetas a ningún precio. El diseño cu
 
 [CWE-235 Manejo inadecuado de parámetros adicionales](https://cwe.mitre.org/data/definitions/235.html)
 
-[Almacenamiento de credenciales sin protección CWE-256](https://cwe.mitre.org/data/definitions/256.html)
+[CWE-256 Almacenamiento de credenciales sin protección](https://cwe.mitre.org/data/definitions/256.html)
 
 [CWE-257 Almacenamiento de contraseñas en un formato recuperable](https://cwe.mitre.org/data/definitions/257.html)
 
@@ -105,7 +99,7 @@ entusiastas que no pueden obtener estas tarjetas a ningún precio. El diseño cu
 
 [CWE-316 Almacenamiento de texto sin cifrar de información confidencial en la memoria](https://cwe.mitre.org/data/definitions/316.html)
 
-[Canal principal desprotegido CWE-419](https://cwe.mitre.org/data/definitions/419.html)
+[CWE-419 Canal principal desprotegido](https://cwe.mitre.org/data/definitions/419.html)
 
 [CWE-430 Implementación de un controlador incorrecto](https://cwe.mitre.org/data/definitions/430.html)
 
@@ -113,11 +107,11 @@ entusiastas que no pueden obtener estas tarjetas a ningún precio. El diseño cu
 
 [CWE-444 Interpretación inconsistente de solicitudes HTTP ('Contrabando de solicitudes HTTP')](https://cwe.mitre.org/data/definitions/444.html)
 
-[Interfaz de usuario (UI) CWE-451 Tergiversación de información crítica](https://cwe.mitre.org/data/definitions/451.html)
+[CWE-451 Tergiversación de información crítica en la Interfaz de usuario(UI)](https://cwe.mitre.org/data/definitions/451.html)
 
 [CWE-472 Control externo de parámetro web supuestamente inmutable](https://cwe.mitre.org/data/definitions/472.html)
 
-[Violación de los límites de confianza de CWE-501](https://cwe.mitre.org/data/definitions/501.html)
+[CWE-501 Violación de los límites de confianza](https://cwe.mitre.org/data/definitions/501.html)
 
 [CWE-522 Credenciales insuficientemente protegidas](https://cwe.mitre.org/data/definitions/522.html)
 
@@ -125,7 +119,7 @@ entusiastas que no pueden obtener estas tarjetas a ningún precio. El diseño cu
 
 [CWE-539 Uso de cookies persistentes que contienen información confidencial](https://cwe.mitre.org/data/definitions/539.html)
 
-[CWE-579 J2EE Bad Practices: Objeto no serializable almacenado en la sesión](https://cwe.mitre.org/data/definitions/579.html)
+[CWE-579 J2EE Malas prácticas: Objeto no serializable almacenado en la sesión](https://cwe.mitre.org/data/definitions/579.html)
 
 [CWE-598 Uso del método de solicitud GET con cadenas de consulta sensibles](https://cwe.mitre.org/data/definitions/598.html)
 
@@ -147,7 +141,7 @@ entusiastas que no pueden obtener estas tarjetas a ningún precio. El diseño cu
 
 [CWE-807 Dependencia de entradas no confiables en una decisión de seguridad](https://cwe.mitre.org/data/definitions/807.html)
 
-[Errores de lógica empresarial CWE-840](https://cwe.mitre.org/data/definitions/840.html)
+[CWE-840 Errores de lógica empresarial](https://cwe.mitre.org/data/definitions/840.html)
 
 [CWE-841 Aplicación inadecuada del flujo de trabajo conductual](https://cwe.mitre.org/data/definitions/841.html)
 
