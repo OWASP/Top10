@@ -1,8 +1,8 @@
-# A09:2021 – Fallos de monitoreo y registros de seguridad    ![icon](assets/TOP_10_Icons_Final_Security_Logging_and_Monitoring_Failures.png){: style="height:80px;width:80px" align="right"}
+# A09:2021 – Fallos de monitoreo y registros de seguridad    ![icon](assets/TOP_10_Icons_Final_Security_Logging_and_Monitoring_Failures.png)
 
 ## Factores
 
-| CWEs mapeadas | Tasa de incidencia máx | Tasa de incidencia prom | Exploit ponderado prom| Impacto ponderado prom | Cobertura máx | Cobertura prom | Incidencias totales | Total CVEs |
+| CWEs mapeadas | Tasa de incidencia máx | Tasa de incidencia prom | Explotabilidad ponderada prom| Impacto ponderado prom | Cobertura máx | Cobertura prom | Incidencias totales | Total CVEs |
 |:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
 | 4           | 19.23%             | 6.51%              | 6.87                 | 4.99                | 53.67%       | 39.97%       | 53,615            | 242        |
 
@@ -21,7 +21,7 @@ Volviendo al OWASP Top 10 2021, la intención es detectar, escalar y responder a
 
 -   Registros en aplicaciones y API no son monitoreados para detectar actividades sospechosas.
 
--   Los registros son únicamente almacenados en forma local..
+-   Los registros son únicamente almacenados en forma local.
 
 -   Los umbrales de alerta y procesos de escalamiento no están correctamente implementados o no son efectivos.
 
@@ -29,13 +29,13 @@ Volviendo al OWASP Top 10 2021, la intención es detectar, escalar y responder a
 
 -   Las aplicaciones no logran detectar, escalar, o alertar sobre ataques activos en tiempo real ni cercanos al tiempo real.
 
-Se es vulnerable a la fuga de información haciendo registros y eventos de alertas que sean visibles para un usuario o un atacante (see [A01:2021-Pérdida de control de acceso](A01_2021-Broken_Access_Control.es.md)).
+Se es vulnerable a la fuga de información haciendo registros y eventos de alertas que sean visibles para un usuario o un atacante (consulte [A01:2021-Pérdida de control de acceso](A01_2021-Broken_Access_Control.es.md)).
 
-## Como se previene
+## Cómo se previene
 
 Los desarrolladores deberían implementar algunos o todos los siguientes controles, dependiendo del riesgo de la aplicación:
 
--   Asegúrese de que todos los errores de inicio de sesión, de control de acceso y de validación de entradas de datos del lado del servidor se pueden registrar con suficiente  contexto como para identificar cuentas sospechosas o maliciosas y mantenerlo durante el tiempo suficiente para
+-   Asegúrese de que todos los errores de inicio de sesión, de control de acceso y de validación de entradas de datos del lado del servidor se pueden registrar con suficiente contexto como para identificar cuentas sospechosas o maliciosas y mantenerlo durante el tiempo suficiente para
 permitir un posterior análisis forense.
 
 -   Asegúrese de que los registros se generen en un formato fácil de procesar por las herramientas de gestión de registros.
@@ -48,15 +48,15 @@ permitir un posterior análisis forense.
 
 -   Establecer o adoptar un plan de respuesta y recuperación, tal como NIST 800-61r2 o posterior.
 
-Existen frameworks de protección de aplicaciones comerciales y de código abierto, tales como el conjunto de reglas de ModSecurity de OWASP y el conjunto de programas de correlación de registros de código abierto como ser ELK (Elasticsearch, Logstash, Kibana) con paneles personalizados y alertas
+Existen frameworks de protección de aplicaciones comerciales y de código abierto, tales como el conjunto de reglas de ModSecurity de OWASP y el conjunto de programas de correlación de registros de código abierto como ser ELK (Elasticsearch, Logstash, Kibana) con paneles personalizados y alertas.
 
 ## Ejemplos de escenarios de ataque
 
-**Escenario #1:** Un operador de salud que provea un plan de salud para niños no pudieron detectar una brecha debido a la falta de monitoreo y registro. Alguien externo informo al proveedor de salud que un atacante había accedido y modificados miles de registros médicos sensibles de mas de 3.5 millones de niños. Una revisión post incidente encontró que los desarrolladores del sitio web no habían encontrado vulnerabilidades significativas. Como no hubo ni registro ni monitores del sistema, la brecha de datos pudo haber estado en proceso desde el 2013, un periodo de mas de 7 años.
+**Escenario #1:** Un operador de salud que provea un plan de salud para niños no pudieron detectar una brecha debido a la falta de monitoreo y registro. Alguien externo informo al proveedor de salud que un atacante había accedido y modificados miles de registros médicos sensibles de más de 3.5 millones de niños. Una revisión post incidente encontró que los desarrolladores del sitio web no habían encontrado vulnerabilidades significativas. Como no hubo ni registro ni monitores del sistema, la brecha de datos pudo haber estado en proceso desde el 2013, un período de más de 7 años.
 
-**Escenario #2:** Una gran aerolínea India tuvo una brecha de seguridad que involucro a la perdida de datos personales de millones de pasajeros por mas de 10 años, incluyendo pasaportes y tarjetas de crédito. La brecha se produjo por un proveedor de servicios de almacenamiento en la nube, quien notifico a la aerolínea después de un cierto tiempo.
+**Escenario #2:** Una gran aerolínea India tuvo una brecha de seguridad que involucró a la pérdida de datos personales de millones de pasajeros por más de 10 años, incluyendo pasaportes y tarjetas de crédito. La brecha se produjo por un proveedor de servicios de almacenamiento en la nube, quien notificó a la aerolínea después de un cierto tiempo.
 
-**Escenario #3:** Una gran aerolínea Europea sufrió un incumplimiento de la GRPD. Se reporta que la causa de la brecha se debió a que un atacante exploto una vulnerabilidad en una aplicación de pago, obteniendo mas de 400,000 registros de pagos de usuarios. La aerolínea fue multada con 20 millones de libras como resultado del regulador de privacidad.
+**Escenario #3:** Una gran aerolínea Europea sufrió un incumplimiento de la GRPD. Se reporta que la causa de la brecha se debió a que un atacante explotó una vulnerabilidad en una aplicación de pago, obteniendo más de 400,000 registros de pagos de usuarios. La aerolínea fue multada con 20 millones de libras como resultado del regulador de privacidad.
 
 ## Referencias
 
@@ -66,9 +66,9 @@ Existen frameworks de protección de aplicaciones comerciales y de código abier
 
 -   [Guía de prueba de OWASP: Prueba de código de error detallado](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/08-Testing_for_Error_Handling/01-Testing_for_Error_Code)
 
--   [Hoja de referencia de OWASP:Vocabulario de registro de aplicaciones](https://cheatsheetseries.owasp.org/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html)
+-   [Hoja de referencia de OWASP: Vocabulario de registro de aplicaciones](https://cheatsheetseries.owasp.org/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html)
 
--   [Hoja de referencia de OWASP:Registros](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html))   
+-   [Hoja de referencia de OWASP: Registros](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html))   
 
 -   [Integridad de datos: Recuperación de ransomware y otros eventos destructivos](https://csrc.nist.gov/publications/detail/sp/1800-11/final)
 
@@ -76,11 +76,11 @@ Existen frameworks de protección de aplicaciones comerciales y de código abier
 
 -   [Integridad de datos: Detección y respuesta al ransomware y otros eventos destructivos](https://csrc.nist.gov/publications/detail/sp/1800-26/final)
 
-## Lista de CWEs mapeadas
+## Lista de CWEs mapeadas 
 
 [CWE-117 Neutralización de salida incorrecta para registros](https://cwe.mitre.org/data/definitions/117.html)
 
-[CWE-223 Omision de información relevante para la seguridad](https://cwe.mitre.org/data/definitions/223.html)
+[CWE-223 Omisión de información relevante para la seguridad](https://cwe.mitre.org/data/definitions/223.html)
 
 [CWE-532 Inserción de información sensible en el archivo de registros](https://cwe.mitre.org/data/definitions/532.html)
 
