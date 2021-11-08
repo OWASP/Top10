@@ -2,21 +2,21 @@
 
 ## Factores
 
-| CWEs mapeadas | Tasa de incidencia máx | Tasa de incidencia prom | Exploit ponderado prom| Impacto ponderado prom | Cobertura máx | Cobertura prom | Incidencias totales | Total CVEs |
+| CWEs mapeadas | Tasa de incidencia máx | Tasa de incidencia prom | Explotabilidad ponderada prom| Impacto ponderado prom | Cobertura máx | Cobertura prom | Incidencias totales | Total CVEs |
 |:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
 | 3           | 27.96%             | 8.77%              | 51.78%       | 22.47%       | 5.00                 | 5.00                | 30,457            | 0          |
 
 ## Resumen
 
-Era el #2 de la encuesta de la comunidad Top 10, pero también tuvo datos suficientes para llegar al Top 10 a través de datos. Los componentes vulnerables son un problema conocido que es dificil de testear y evaluar el riesgo y es la única categoría que no tiene enumeraciones de debilidades comunes (CWE) asignadas a las CWE incluidas, por lo que se utiliza un peso de impacto / exploits predeterminado de 5.0.Los CWE notables incluidos son *CWE-1104: Uso de componentes de terceros no mantenidos* y los dos CWE del Top 10 2013 y 2017.
+Era el #2 de la encuesta de la comunidad Top 10, pero también tuvo datos suficientes para llegar al Top 10 a través del análisis de  datos. Los componentes vulnerables son un problema conocido que es difícil de testear y evaluar el riesgo y es la única categoría que no tiene enumeraciones de debilidades comunes (CWE) asignadas a las CWE incluidas, por lo que se utiliza un peso de impacto/exploits predeterminado de 5.0. Los CWE notables incluidos son *CWE-1104: Uso de componentes de terceros no mantenidos* y los dos CWE del Top 10 2013 y 2017.
 
 ## Descripción
 
-Probablemente sea vulnerable:
+Usted probablemente sea vulnerable:
 
 -   Si no conoce las versiones de todos los componentes que utiliza (tanto del lado del cliente como del lado del servidor). Esto incluye los componentes que usa directamente, así como las dependencias anidadas.
 
--   Si el software es vulnerable, carece de soporte o no está actualizado.Esto incluye el sistema operativo, el servidor web / de aplicaciones, el sistema de administración de bases de datos (DBMS), las aplicaciones, las API y todos los componentes, los entornos de ejecución y las bibliotecas.
+-   Si el software es vulnerable, carece de soporte o no está actualizado. Esto incluye el sistema operativo, el servidor web/de aplicaciones, el sistema de administración de bases de datos (DBMS), las aplicaciones, las API y todos los componentes, los entornos de ejecución y las bibliotecas.
 
 -   Si no se actualiza sobre nuevas vulnerabilidades con regularidad y se suscribe a los boletines de seguridad relacionados con los componentes que utiliza.
 
@@ -28,7 +28,7 @@ Probablemente sea vulnerable:
 
 ## Cómo se previene
 
-Debe existir un proceso de administración de parches para:
+Debe existir un proceso de administración de parches que:
 
 -   Elimine las dependencias que no son utilizadas, las funciones, los componentes, los archivos y la documentación innecesarios.
 
