@@ -21,7 +21,7 @@ En esta fase, necesitamos
 - Científicos de datos: por favor, revisen nuestro análisis
 - Diseñadores de páginas web: tenemos que hacer una versión adaptada para móviles
 - Traductores: por favor, revisen que el texto en inglés sea traducible
-- Líderes del ASVS, de la Guía de Pruebas y de la Guía de Revisión del Código - por favor, utilice nuestros datos y ayúdenos a enlazar nuestros documentos y estándares.
+- Líderes del ASVS, de la Guía de Pruebas y de la Guía de Revisión del Código: por favor, utilicen nuestros datos y ayúdenos a enlazar nuestros documentos y estándares
 
 ## Registrar issues y pull requests
 
