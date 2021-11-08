@@ -1,8 +1,8 @@
-# A08:2021 – Fallas en el Software y en la Integridad de los Datos    ![icon](assets/TOP_10_Icons_Final_Software_and_Data_Integrity_Failures.png){: style="height:80px;width:80px" align="right"}
+# A08:2021 – Fallas en el Software y en la Integridad de los Datos    ![icon](assets/TOP_10_Icons_Final_Software_and_Data_Integrity_Failures.png)
 
 ## Factores
 
-| CWEs mapeadas | Tasa de incidencia máx | Tasa de incidencia prom | Exploit ponderado prom| Impacto ponderado prom | Cobertura máx | Cobertura prom | Incidencias totales | Total CVEs |
+| CWEs mapeadas | Tasa de incidencia máx | Tasa de incidencia prom | Explotabilidad ponderada prom | Impacto ponderado prom | Cobertura máx | Cobertura prom | Incidencias totales | Total CVEs |
 |:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
 | 10          | 16.67%             | 2.05%              | 6.94                 | 7.94                | 75.04%       | 45.35%       | 47,972            | 1,152      |
 
@@ -36,13 +36,12 @@ Además, es común en la actualidad que las aplicaciones implementen funcionalid
 
 ## Ejemplos de escenarios de ataque
 
-**Escenario #1 Actualizaciones no firmadas:** 
-Muchos routers domésticos, decodificadores de televisión, firmware de dispositivos, entre otros, no verifican las firmas de sus actualizaciones de firmware. El firmware sin firmar es un objetivo creciente para los atacantes y se
-se espera que empeore. Esto es una gran preocupación ya que muchas veces no existe otro mecanismo para remediarlo  que corregirlo en una versión futura y esperar a que las versiones anteriores caduquen.
+**Escenario #1 Actualizaciones no firmadas:** Muchos routers domésticos, decodificadores de televisión, firmware de dispositivos, entre otros, no verifican las firmas de sus actualizaciones de firmware. El firmware sin firmar es un objetivo creciente para los atacantes y se
+ espera que empeore. Esto es una gran preocupación ya que muchas veces no existe otro mecanismo para remediarlo  que corregirlo en una versión futura y esperar a que las versiones anteriores caduquen.
 
-**Escenario #2 Actualización maliciosa de SolarWinds**: Se sabe que los Estados-Naciones utilizan como vector de ataque los mecanismos de actualización, siendo un caso reciente de pública notoriedad el sufrido por SolarWinds Orion. La compañía que desarrolla el software poseía procesos seguros de construcción y mecanismos de integridad en sus actualizaciones. Sin embargo, éstos fueron comprometidos y,durante varios meses, la firma distribuyó una actualización maliciosa a más de 18.000 organizaciones, de las cuales alrededor de un centenar se vieron afectadas. Se trata de una de las brechas de este tipo de mayor alcance y más importantes de la historia.
+**Escenario #2 Actualización maliciosa de SolarWinds:** Se sabe que los Estados-Naciones utilizan como vector de ataque los mecanismos de actualización, siendo un caso reciente de pública notoriedad el sufrido por SolarWinds Orion. La compañía que desarrolla el software poseía procesos seguros de construcción y mecanismos de integridad en sus actualizaciones. Sin embargo, éstos fueron comprometidos y,durante varios meses, la firma distribuyó una actualización maliciosa a más de 18.000 organizaciones, de las cuales alrededor de un centenar se vieron afectadas. Se trata de una de las brechas de este tipo de mayor alcance y más importantes de la historia.
 
-**Escenario #3 Deserialización insegura:**:Una aplicación React utiliza un conjunto de microservicios implementados en Spring Boot. Tratándose de programadores funcionales, intentaron asegurarse de que su código sea inmutable. La solución implementada consistió en serializar el estado de la sesión para el usuario y enviarlo entre los componentes con cada solicitud. Un atacante advierte el uso de un objeto Java serializado y codificado en base64(identifica un string que comienza con "rO0" ) y utiliza la herramienta Java Serial Killer para obtener una ejecución remota de código en el en el servidor de aplicación.
+**Escenario #3 Deserialización insegura:** Una aplicación React utiliza un conjunto de microservicios implementados en Spring Boot. Tratándose de programadores funcionales, intentaron asegurarse de que su código sea inmutable. La solución implementada consistió en serializar el estado de la sesión para el usuario y enviarlo entre los componentes con cada solicitud. Un atacante advierte el uso de un objeto Java serializado y codificado en base64(identifica un string que comienza con "rO0" ) y utiliza la herramienta Java Serial Killer para obtener una ejecución remota de código en el servidor de aplicación.
 
 ## Referencias
 
@@ -84,6 +83,6 @@ se espera que empeore. Esto es una gran preocupación ya que muchas veces no exi
 
 [CWE-829 Inclusión de funcionalidades provenientes de fuera de la zona de confianza](https://cwe.mitre.org/data/definitions/829.html)
 
-[CWE-830 Inclusión de una funcionalidad provenientes de una fuente no confiable](https://cwe.mitre.org/data/definitions/830.html)
+[CWE-830 Inclusión de una funcionalidad proveniente de una fuente no confiable](https://cwe.mitre.org/data/definitions/830.html)
 
 [CWE-915 Modificación inadecuada de atributos de objetos determinados dinámicamente](https://cwe.mitre.org/data/definitions/915.html)
