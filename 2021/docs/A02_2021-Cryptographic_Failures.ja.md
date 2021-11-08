@@ -24,31 +24,23 @@
 
 -   HTTPヘッダー（ブラウザ）のセキュリティに関するディレクティブやヘッダーが欠落しているなど、暗号化が強制されていない箇所はないか。
 
--   Is the received server certificate and the trust chain properly validated?
+-   受け取ったサーバー証明書とその信頼チェーンが適切に検証されているか。
 
--   Are initialization vectors ignored, reused, or not generated
-    sufficiently secure for the cryptographic mode of operation?
-    Is an insecure mode of operation such as ECB in use? Is encryption
-    used when authenticated encryption is more appropriate?
+-   初期化ベクトルが無視されたり、再利用されたりされていないか。また、暗号利用モードにとって十分にセキュアではない状態で生成されていないか。
+    ECBといった安全でないモードが使用されていないか。
+    認証付き暗号がより適切な場合において、暗号が使用されていないか。
 
--   Are passwords being used as cryptographic keys in absence of a
-    password base key derivation function?
+-   鍵導出関数を使うことなしにパスワードを暗号鍵として使用していないか。
 
--   Is randomness used for cryptographic purposes that was not designed
-    to meet cryptographic requirements? Even if the correct function is
-    chosen, does it need to be seeded by the developer, and if not, has
-    the developer over-written the strong seeding functionality built into
-    it with a seed that lacks sufficient entropy/unpredictability?
+-   暗号学的要件を満たすように設計されていない目的でランダム性が使用されていないか。
+    適切な関数が選ばれている場合でも、関数は開発者による初期化が必要か。
+    必要でない場合、開発者が十分なエントロピーや予測不可能性を欠いたシードを用いて組み込みの強力な初期化機能を上書きしていないか。
+    
+-   MD5やSHA1といった非推奨のハッシュ関数が使用されていないか。また暗号学的ハッシュ関数が必要とされる場合において、暗号学的でないハッシュ関数が使用されていないか。
 
--   Are deprecated hash functions such as MD5 or SHA1 in use, or are
-    non-cryptographic hash functions used when cryptographic hash functions
-    are needed?
+-   PKCS#1 v1.5といった非推奨の暗号学的パディング方式が使用されていないか。
 
--   Are deprecated cryptographic padding methods such as PKCS number 1 v1.5
-    in use?
-
--   Are cryptographic error messages or side channel information
-    exploitable, for example in the form of padding oracle attacks?
+-   暗号時のエラーメッセージやサイドチャネルの情報が、パディングオラクル攻撃のような種類の攻撃に利用可能ではないか。
 
 ASVS Crypto (V7)、Data Protection (V9)、および SSL/TLS (V10) を参照。
 
@@ -68,32 +60,25 @@ ASVS Crypto (V7)、Data Protection (V9)、および SSL/TLS (V10) を参照。
 
 -   機微な情報を含むレスポンスのキャッシングを無効にする。
 
--   Apply required security controls as per the data classification.
+-   データ分類に応じて必要なセキュリティ制御を適用する。
 
--   Do not use legacy protocols such as FTP and SMTP for transporting
-    sensitive data.
+-   FTPやSMTPといったレガシーなプロトコルを機密データの伝送に使用しない。
 
 -   パスワードを保存する際、Argon2、scrypt、bcrypt、PBKDF2のようなワークファクタ(遅延ファクタ)のある、強くかつ適応可能なレベルのソルト付きハッシュ関数を用いる。
 
--   Initialization vectors must be chosen appropriate for the mode of
-    operation.  For many modes, this means using a CSPRNG (cryptographically
-    secure pseudo random number generator).  For modes that require a
-    nonce, then the initialization vector (IV) does not need a CSPRNG.  In all cases, the IV
-    should never be used twice for a fixed key.
+-   初期化ベクトルは利用モードに応じて適切なものを選択しなければならない。これは多くのモードにおいてCSPRNG(暗号論的擬似乱数生成器)を使用することを意味する。
+    nonceを必要とするモードの場合は、初期化ベクトル(IV)はCSPRNGを必要としない。
+    すべての場合において、IVは単一の固定の鍵に対し二度使ってはならない。
 
--   Always use authenticated encryption instead of just encryption.
+-   単なる暗号ではなく、認証付き暗号を常に使用する。
 
--   Keys should be generated cryptographically randomly and stored in
-    memory as byte arrays. If a password is used, then it must be converted
-    to a key via an appropriate password base key derivation function.
+-   鍵は暗号学的にランダムに生成し、またバイト配列としてメモリーに保存する。
+    もしパスワードを使用する場合は、適切な鍵導出関数を用いて鍵へと変換されなければならない。
 
--   Ensure that cryptographic randomness is used where appropriate, and
-    that it has not been seeded in a predictable way or with low entropy.
-    Most modern APIs do not require the developer to seed the CSPRNG to
-    get security.
+-   暗号学的乱数が適切な場所で使用されていること、またそれが予測可能な方法や低いエントロピーによって初期化されていないことを確認する。
+    多くのモダンなAPIでは、セキュリティを確保するために開発者がCSPRNGを初期化する必要はない。
 
--   Avoid deprecated cryptographic functions and padding schemes, such as
-    MD5, SHA1, PKCS number 1 v1.5 .
+-   MD5やSHA1、PKCS#1 v1.5といった非推奨の暗号学的関数やパディング方式の使用を避ける。
 
 -   設定とその設定値がそれぞれ独立して効果があるか検証する。
 
