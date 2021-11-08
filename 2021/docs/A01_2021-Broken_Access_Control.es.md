@@ -2,7 +2,7 @@
 
 ## Factores
 
-| CWEs mapeadas | Tasa de incidencia máx | Tasa de incidencia prom | Exploit ponderado prom| Impacto ponderado prom | Cobertura máx | Cobertura prom | Incidencias totales | Total CVEs |
+| CWEs mapeadas | Tasa de incidencia máx | Tasa de incidencia prom | Explotabilidad ponderada prom| Impacto ponderado prom | Cobertura máx | Cobertura prom | Incidencias totales | Total CVEs |
 |:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
 | 34          | 55.97%             | 3.81%              | 6.92                 | 5.93                | 94.55%       | 47.72%       | 318,487           | 19,013     |
 
@@ -43,7 +43,7 @@ El control de acceso solo es efectivo en código del lado del servidor confiable
 
 -   Los modelos de dominio deben hacer cumplir los requisitos únicos de límite de negocio de aplicaciones.
 
--   Deshabilite la lista de directorios del servidor web y asegúrese de que los metadatos de archivos (por ejemplo, .git) y archivos de respaldo no estén presentes dentro de los directorios raiz del sitio web
+-   Deshabilite la lista de directorios del servidor web y asegúrese de que los metadatos de archivos (por ejemplo, .git) y archivos de respaldo no estén presentes dentro de los directorios raiz del sitio web.
 
 -   Registrar en un log las fallas de control de acceso, alertar a los administradores cuando sea apropiado (por ejemplo, fallas repetidas).
 
@@ -52,7 +52,7 @@ El control de acceso solo es efectivo en código del lado del servidor confiable
 -   Los identificadores de sesión con estado deben invalidarse en el servidor después de cerrar la sesión.
     Los tokens JWT sin estado deberían ser preferiblemente de corta duración para minimizar la ventana de oportunidad para un atacante. Para los JWT de mayor duración, es sumamente recomendable seguir los estándares de OAuth para revocar el acceso.
 
-Tanto desarrolladores como personal de control de calidad deberían incluír una unidad de control de acceso funcional y pruebas de integración.
+Tanto desarrolladores como personal de control de calidad deberían incluir una unidad de control de acceso funcional y pruebas de integración.
 
 ## Ejemplos de escenarios de ataque
 
@@ -161,4 +161,4 @@ Si un usuario no autenticado puede acceder a cualquiera de las páginas, es una 
 
 [CWE-922 Almacenamiento inseguro de información confidencial](https://cwe.mitre.org/data/definitions/922.html)
 
-[CWE-1275 Cookie sensible con atributo de SameSite incorrecto](https://cwe.mitre.org/data/definitions/1275.html)
+[CWE-1275 Cookie sensible con atributo de "SameSite" incorrecto](https://cwe.mitre.org/data/definitions/1275.html)
