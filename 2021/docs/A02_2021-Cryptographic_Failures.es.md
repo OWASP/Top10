@@ -2,21 +2,21 @@
 
 ## Factores
 
-| CWEs mapeadas | Tasa de incidencia máx | Tasa de incidencia prom | Exploit ponderado prom| Impacto ponderado prom | Cobertura máx | Cobertura prom | Incidencias totales | Total CVEs |
+| CWEs mapeadas | Tasa de incidencia máx | Tasa de incidencia prom | Explotabilidad ponderada prom| Impacto ponderado prom | Cobertura máx | Cobertura prom | Incidencias totales | Total CVEs |
 |:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
 | 29          | 46.44%             | 4.49%              |7.29                 | 6.81                |  79.33%       | 34.85%       | 233,788           | 3,075      |
 
 ## Resumen
 
 Subiendo una posición al #2, anteriormente conocido como Exposición de datos sensibles, que es más un síntoma amplio que una causa raíz, la atención se centra en las fallas relacionadas con la criptografía (o la falta de ella).
-Lo que a menudo conduce a la exposición de datos sensibles. Las enumeraciones de debilidades comunes (CWE) notables incluídas son *CWE-259: Uso de contraseña en código fuente*, *CWE-327: Algoritmo criptográfico vulnerado o inseguro* y *CWE-331: Entropía insuficiente*.
+Lo que a menudo conduce a la exposición de datos sensibles. Las enumeraciones de debilidades comunes (CWE) notables incluidas son *CWE-259: Uso de contraseña en código fuente*, *CWE-327: Algoritmo criptográfico vulnerado o inseguro* y *CWE-331: Entropía insuficiente*.
 
 ## Descripción
 
 Lo primero es determinar las necesidades de protección de los datos en tránsito y en reposo. Por ejemplo, las contraseñas, los números de tarjetas de crédito, los registros médicos, la información personal y los secretos comerciales requieren protección adicional. Principalmente si esos datos están sujetos a leyes de privacidad, por ejemplo, el Reglamento General de Protección de Datos (GDPR) de la UE, o regulaciones, por ejemplo, protección de datos financieros como el Estándar de Seguridad de Datos de PCI (PCI DSS).
 Para todos esos datos:
 
--   ¿Se transmiten datos en texto claro? Esto se refiere a protocolos como HTTP, SMTP, FTP que también utilizan actualizaciones de TLS como STARTTLS. El tráfico externo de Internet es peligroso. Verifique todo el tráfico interno, por ejemplo, entre balanceadores de carga, servidores web o sistemas de back-end
+-   ¿Se transmiten datos en texto claro? Esto se refiere a protocolos como HTTP, SMTP, FTP que también utilizan actualizaciones de TLS como STARTTLS. El tráfico externo de Internet es peligroso. Verifique todo el tráfico interno, por ejemplo, entre balanceadores de carga, servidores web o sistemas de back-end.
 
 -   ¿Se utilizan algoritmos o protocolos criptográficos antiguos o débiles de forma predeterminada o en código antiguo?
 
@@ -32,7 +32,7 @@ Para todos esos datos:
 
 -   ¿Las contraseñas se utilizan como claves criptográficas en ausencia de una función de derivación de claves base de contraseñas?
 
--   ¿Se utiliza la aleatoriedad con fines criptográficos que no se diseñaron para cumplir con los requisitos criptográficos? Incluso si se elige la función correcta, debe ser sembrada por el desarrollador y, de no ser así, ¿el desarrollador ha sobrescrito la funcionalidad robusta de siembra incorporada con una semilla que carece de suficiente entropía / imprevisibilidad?
+-   ¿Se utiliza la aleatoriedad con fines criptográficos que no se diseñaron para cumplir con los requisitos criptográficos? Incluso si se elige la función correcta, debe ser sembrada por el desarrollador y, de no ser así, ¿el desarrollador ha sobrescrito la funcionalidad de siembra fuerte incorporada con una semilla que carece de suficiente entropía/imprevisibilidad?
 
 -   ¿Se utilizan funciones hash en desuso, como MD5 o SHA1, o se utilizan funciones hash no criptográficas cuando se necesitan funciones hash criptográficas?
 
@@ -40,7 +40,7 @@ Para todos esos datos:
 
 -   ¿Se pueden explotar los mensajes de error criptográficos o la información del canal lateral, por ejemplo, en forma de ataques de relleno(padding) de Oracle?
 
-Consulte ASVS Crypto (V7), Protección de datos (V9) y SSL / TLS (V10)
+Consulte ASVS Crypto (V7), Protección de datos (V9) y SSL/TLS (V10)
 
 ## Cómo se previene
 
@@ -52,11 +52,11 @@ Haga lo siguiente, como mínimo, y consulte las referencias:
 -   No almacene datos sensibles innecesariamente. Deséchelos lo antes posible o utilice la tokenización compatible con PCI DSS o incluso el truncamiento.
     Los datos que no se conservan no se pueden robar.
 
--   Asegúrese de cifrar todos los datos confidenciales que no estan en movimiento.
+-   Asegúrese de cifrar todos los datos confidenciales que no están en movimiento.
 
 -   Garantice la implementación de algoritmos, protocolos y claves que sean estándar sólidos y actualizados; utilice una gestión de claves adecuada.
 
--   Cifre todos los datos en tránsito con protocolos seguros como TLS con cifrado de confidencialidad directa (FS), priorización de cifrado por parte del servidor y parámetros segurosAplique el cifrado mediante directivas como HTTP Strict Transport Security (HSTS).
+-   Cifre todos los datos en tránsito con protocolos seguros como TLS con cifrado de confidencialidad directa (FS), priorización de cifrado por parte del servidor y parámetros seguros. Aplique el cifrado mediante directivas como HTTP Strict Transport Security (HSTS).
 
 -   Deshabilite el almacenamiento en caché para respuestas que contengan datos confidenciales.
 
@@ -81,11 +81,11 @@ Haga lo siguiente, como mínimo, y consulte las referencias:
 
 ## Ejemplos de escenarios de ataque
 
-**Escenario #1**: Una aplicación cifra los números de tarjetas de crédito en una base de datos mediante el cifrado automático de la base de datos. Sin embargo, estos datos se descifran automáticamente cuando se recuperan, lo que permite que un error de inyección SQL recupere números de tarjetas de crédito en texto sin cifrar.
+**Escenario #1**: Una aplicación cifra los números de tarjetas de crédito en una base de datos mediante el cifrado automático de la base de datos. Sin embargo, estos datos se descifran automáticamente cuando se recuperan, lo que permite que por un error de inyección SQL se recuperen números de tarjetas de crédito en texto sin cifrar.
 
 **Escenario #2**: Un sitio no usa ni aplica TLS para todas las páginas o admite un cifrado débil. Un atacante monitorea el tráfico de la red (por ejemplo, en una red inalámbrica insegura), degrada las conexiones de HTTPS a HTTP, intercepta solicitudes y roba la cookie de sesión del usuario. El atacante luego reproduce esta cookie y secuestra la sesión (autenticada) del usuario, accediendo o modificando los datos privados del usuario. En lugar de lo anterior, podrían alterar todos los datos transportados, por ejemplo, el destinatario de una transferencia de dinero.
 
-**Escenario #3**: La base de datos de contraseñas utiliza hashes simples o sin un valor inicial aleatorio único(salt) para almacenar las contraseñas de todos. Una falla en la carga de archivos permite a un atacante recuperar la base de datos de contraseñas. Todos los hashes sin salt se pueden exponer con una tabla arcoíris de hashes precalculados. Los hash generados por funciones hash simples o rápidas pueden ser descifrados por las GPU, incluso si usan un salt.
+**Escenario #3**: La base de datos de contraseñas utiliza hashes simples o sin un valor inicial aleatorio único(salt) para almacenar todas las contraseñas. Una falla en la carga de archivos permite a un atacante recuperar la base de datos de contraseñas. Todos los hashes sin salt se pueden exponer con una tabla arcoíris de hashes precalculados. Los hash generados por funciones hash simples o rápidas pueden ser descifrados por las GPU, incluso si usan un salt.
 
 ## Referencias
 
@@ -93,15 +93,15 @@ Haga lo siguiente, como mínimo, y consulte las referencias:
 
 -   [Estándar de verificación de seguridad de aplicaciones OWASP (V7, 9, 10)](https://owasp.org/www-project-application-security-verification-standard)
 
--   [Hoja de referencia de OWASP: Protección de la capa de transporte](https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Protection_Cheat_Sheet.html)
+-   [OWASP Hoja de referencia: Protección de la capa de transporte](https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Protection_Cheat_Sheet.html)
 
--   [Hoja de referencia de OWASP: Protección de la privacidad del usuario](https://cheatsheetseries.owasp.org/cheatsheets/User_Privacy_Protection_Cheat_Sheet.html)
+-   [OWASP Hoja de referencia: Protección de la privacidad del usuario](https://cheatsheetseries.owasp.org/cheatsheets/User_Privacy_Protection_Cheat_Sheet.html)
 
--   [Hoja de referencia de OWASP: contraseña y almacenamiento criptográfico](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html)
+-   [OWASP Hoja de referencia: contraseña y almacenamiento criptográfico](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html)
 
--   [Hoja de referencia de OWASP: HSTS](https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html)
+-   [OWASP Hoja de referencia: HSTS](https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html)
 
--   [Guía de testeo de OWASP: testeo de criptografía débil](https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/09-Testing_for_Weak_Cryptography/README)
+-   [Guía de pruebas de OWASP: testeo de criptografía débil](https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/09-Testing_for_Weak_Cryptography/README)
 
 
 ## Lista de CWEs mapeadas
@@ -118,7 +118,7 @@ Haga lo siguiente, como mínimo, y consulte las referencias:
 
 [CWE-322 Intercambio de claves sin autenticación de entidad](https://cwe.mitre.org/data/definitions/322.html)
 
-[CWE-323 Reutilización de un par clave-Nonce en cifrado](https://cwe.mitre.org/data/definitions/323.html)
+[CWE-323 Reutilización de un par clave-nonce en cifrado](https://cwe.mitre.org/data/definitions/323.html)
 
 [CWE-324 Uso de una clave pasada su fecha de vencimiento](https://cwe.mitre.org/data/definitions/324.html)
 
@@ -136,13 +136,13 @@ Haga lo siguiente, como mínimo, y consulte las referencias:
 
 [CWE-331 Entropía insuficiente](https://cwe.mitre.org/data/definitions/331.html)
 
-[CWE-335 Uso incorrecto de semillas en el generador de números pseudoaleatorios (PRNG)](https://cwe.mitre.org/data/definitions/335.html)
+[CWE-335 Uso incorrecto de semillas en el generador de números pseudoaleatorios(PRNG)](https://cwe.mitre.org/data/definitions/335.html)
 
-[CWE-336 Misma semilla en el generador de números pseudoaleatorios (PRNG)](https://cwe.mitre.org/data/definitions/336.html)
+[CWE-336 Misma semilla en el generador de números pseudoaleatorios(PRNG)](https://cwe.mitre.org/data/definitions/336.html)
 
-[CWE-337 Semilla predecible en generador de números pseudoaleatorios (PRNG)](https://cwe.mitre.org/data/definitions/337.html)
+[CWE-337 Semilla predecible en generador de números pseudoaleatorios(PRNG)](https://cwe.mitre.org/data/definitions/337.html)
 
-[CWE-338 Uso de un generador de números pseudoaleatorios criptográficamente débil (PRNG)](https://cwe.mitre.org/data/definitions/338.html)
+[CWE-338 Uso de un generador de números pseudoaleatorios criptográficamente débil(PRNG)](https://cwe.mitre.org/data/definitions/338.html)
 
 [CWE-340 Generación de números o identificadores predecibles](https://cwe.mitre.org/data/definitions/340.html)
 
@@ -152,7 +152,7 @@ Haga lo siguiente, como mínimo, y consulte las referencias:
 
 [CWE-720 OWASP Top Ten 2007 Categoría A9 - Comunicaciones inseguras](https://cwe.mitre.org/data/definitions/720.html)
 
-[CWE-757 Selección de algoritmo menos seguro durante la negociación ('degradación del algoritmo')](https://cwe.mitre.org/data/definitions/757.html)
+[CWE-757 Selección de algoritmo menos seguro durante la negociación('degradación del algoritmo')](https://cwe.mitre.org/data/definitions/757.html)
 
 [CWE-759 Uso de un hash unidireccional sin salt](https://cwe.mitre.org/data/definitions/759.html)
 
