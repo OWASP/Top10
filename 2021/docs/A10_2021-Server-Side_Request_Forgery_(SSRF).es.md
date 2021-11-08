@@ -2,7 +2,7 @@
 
 ## Factores
 
-| CWEs mapeadas | Tasa de incidencia máx | Tasa de incidencia prom | Exploit ponderado prom| Impacto ponderado prom | Cobertura máx | Cobertura prom | Incidencias totales | Total CVEs |
+| CWEs mapeadas | Tasa de incidencia máx | Tasa de incidencia prom | Explotabilidad ponderada prom| Impacto ponderado prom | Cobertura máx | Cobertura prom | Incidencias totales | Total CVEs |
 |:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
 | 1           | 2.72%              | 2.72%              | 8.28                 | 6.72                | 67.72%       | 67.72%       | 9,503             | 385        |
 
@@ -22,12 +22,12 @@ Los desarrolladores pueden prevenir SSRF implementando algunos o todos los sigui
 
 ### **Desde la capa de red**
 
--   Segmentar la funcionalidad de acceso a recursos remotos en redes separadas para reducir el impacto de SSRF
+-   Segmente la funcionalidad de acceso a recursos remotos en redes separadas para reducir el impacto de SSRF
 
 -   Haga cumplir las políticas de firewall "denegar por defecto" o las reglas de control de acceso a la red para bloquear todo el tráfico de la intranet excepto el esencial.<br/> 
     *Consejos:*<br> 
     ~ Establezca la propiedad y un ciclo de vida para las reglas de firewall basadas en aplicaciones.<br/>
-    ~ Registre en logs todos los flujos de red aceptados y bloqueados en firewalls(ver [A09: 2021-Fallos de monitoreo y registro de seguridad](A09_2021-Security_Logging_and_Monitoring_Failures.md))..
+    ~ Registre en logs todos los flujos de red aceptados y bloqueados en firewalls(consulte [A09: 2021-Fallos de monitoreo y registros de seguridad](A09_2021-Security_Logging_and_Monitoring_Failures.md)).
     
 ### **Desde la capa de aplicación:**
 
@@ -37,7 +37,7 @@ Los desarrolladores pueden prevenir SSRF implementando algunos o todos los sigui
 
 -   No envíe respuestas en formato "crudo" a los clientes
 
--   Deshabilitar las redirecciones HTTP
+-   Deshabilite las redirecciones HTTP
 
 -   Tenga en cuenta la coherencia de la URL para evitar ataques como el reenlace de DNS y las condiciones de carrera de "tiempo de verificación, tiempo de uso" (TOCTOU)
 
@@ -73,6 +73,6 @@ Los atacantes pueden usar SSRF para atacar sistemas protegidos detrás de firewa
 
 -   [Una nueva era de SSRF: ¡Explotación del analizador de URL en lenguajes de programación populares!](https://www.blackhat.com/docs/us-17/thursday/us-17-Tsai-A-New-Era-Of-SSRF-Exploiting-URL-Parser-In-Trending-Programming-Languages.pdf)
 
-## Lista de CWE mapeadas
+## Lista de CWEs mapeadas
 
 [CWE-918 Falsificación de solicitud del lado del servidor(SSRF)](https://cwe.mitre.org/data/definitions/918.html)
