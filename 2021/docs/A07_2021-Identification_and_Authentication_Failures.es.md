@@ -2,7 +2,7 @@
 
 ## Factores
 
-| CWEs mapeadas | Tasa de incidencia máx | Tasa de incidencia prom | Exploit ponderado prom| Impacto ponderado prom | Cobertura máx | Cobertura prom | Incidencias totales | Total CVEs |
+| CWEs mapeadas | Tasa de incidencia máx | Tasa de incidencia prom | Explotabilidad ponderada prom | Impacto ponderado prom | Cobertura máx | Cobertura prom | Incidencias totales | Total CVEs |
 |:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
 | 22          | 14.84%             | 2.55%              | 7.40                 | 6.50                | 79.51%       | 45.72%       | 132,195           | 3,897      |
 
@@ -33,7 +33,7 @@ la autenticación. Puede haber debilidades de autenticación si la aplicación:
 -   Posee procesos débiles o no efectivos para las funcionalidades de
     olvido de contraseña o recuperación de credenciales, como
     "respuestas basadas en el conocimiento", las cuales no se
-    pueden implementar de forma segura seguras.
+    pueden implementar de forma segura.
 
 -   Almacena las contraseñas en texto claro, cifradas o utilizando funciones
     de hash débiles (vea **A02:2021 – Fallos criptográficos**).
@@ -64,20 +64,20 @@ la autenticación. Puede haber debilidades de autenticación si la aplicación:
 
 -   Alinear las políticas de largo, complejidad y rotación de las contraseñas
     con las pautas de la sección 5.1.1 para Secretos Memorizados de la guía del
-    NIST 800-63 B's u otras políticas de contraseñas modernas,
+    NIST 800-63b u otras políticas de contraseñas modernas,
     basadas en evidencias.
 
 -   Asegúrese que el registro, la recuperación de las credenciales y el
     uso de APIs, no permiten los ataques de enumeración de usuarios, mediante
     la utilización de los mismos mensajes genéricos en todas las salidas.
 
--   Limite o incremente el tiempo de respuesta cada vez más los intentos
+-   Limite o incremente el tiempo de espera entre intentos
     fallidos de inicio de sesión, pero tenga cuidado de no crear un escenario
     de denegación de servicio. Registre todos los fallos y avise a los
     administradores cuando se detecten ataques de rellenos automatizado de
     credenciales, fuerza bruta u otros.
 
--   Utilice un gestor de sesión en el servidor, integrado, seguro y que generé
+-   Utilice un gestor de sesión en el servidor, integrado, seguro y que genere
     un nuevo ID de sesión aleatorio con alta entropía después de iniciar sesión.
     Los identificadores de sesión no deben incluirse en la URL,
     deben almacenarse de forma segura y deben ser invalidados después del
@@ -108,7 +108,7 @@ el mismo navegador una hora más tarde, y el usuario continúa autenticado.
 
 ## Referencias
 
--   [OWASP Controles Proavtivos: Implementar la identidad digital](https://owasp.org/www-project-proactive-controls/v3/en/c6-digital-identity)
+-   [OWASP Controles Proactivos: Implementar la identidad digital](https://owasp.org/www-project-proactive-controls/v3/en/c6-digital-identity)
 
 -   [OWASP Estándar de Verificación de Seguridad en Aplicaciones: V2 Autenticación](https://owasp.org/www-project-application-security-verification-standard)
 
@@ -116,13 +116,13 @@ el mismo navegador una hora más tarde, y el usuario continúa autenticado.
 
 -   [OWASP Guía de Pruebas: Identificación](https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/03-Identity_Management_Testing/README), [Autenticación](https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/04-Authentication_Testing/README)
 
--   [OWASP Cheat Sheet: Autenticación](https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html)
+-   [OWASP Hoja de Referencia: Autenticación](https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html)
 
--   [OWASP Cheat Sheet: Reutilización de credenciales conocidas](https://cheatsheetseries.owasp.org/cheatsheets/Credential_Stuffing_Prevention_Cheat_Sheet.html)
+-   [OWASP Hoja de Referencia: Reutilización de credenciales conocidas](https://cheatsheetseries.owasp.org/cheatsheets/Credential_Stuffing_Prevention_Cheat_Sheet.html)
 
--   [OWASP Cheat Sheet: Olvide mi contraseña](https://cheatsheetseries.owasp.org/cheatsheets/Forgot_Password_Cheat_Sheet.html)
+-   [OWASP Hoja de Referencia: Contraseña olvidada](https://cheatsheetseries.owasp.org/cheatsheets/Forgot_Password_Cheat_Sheet.html)
 
--   [OWASP Cheat Sheet: Gestión de Sesiones](https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html)
+-   [OWASP Hoja de Referencia: Gestión de Sesiones](https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html)
 
 -   [OWASP Amenazas automatizadas para aplicaciones web]
     (https://owasp.org/www-project-automated-threats-to-web-applications/)    
@@ -161,7 +161,7 @@ el mismo navegador una hora más tarde, y el usuario continúa autenticado.
 
 [CWE-384 Fijación de sesión](https://cwe.mitre.org/data/definitions/384.html)
 
-[CWE-521 Requisitos debiles para las contraseñas](https://cwe.mitre.org/data/definitions/521.html)
+[CWE-521 Requisitos débiles para las contraseñas](https://cwe.mitre.org/data/definitions/521.html)
 
 [CWE-613 Caducidad de sesión insuficiente](https://cwe.mitre.org/data/definitions/613.html)
 
