@@ -1,6 +1,6 @@
 # Acerca de OWASP
 
-El Proyecto de seguridad de aplicaciones web abiertas (OWASP) es una comunidad abierta dedicada a ayudar a que las organizaciones desarrollen, compren y mantengan aplicaciones y API en las que se pueda confiar.
+El Proyecto Abierto de Seguridad de Aplicaciones Web(OWASP) es una comunidad abierta dedicada a ayudar a que las organizaciones desarrollen, compren y mantengan aplicaciones y API en las que se pueda confiar.
 
 En OWASP, encontrará gratis y con licencia de código abierto:
 
@@ -10,13 +10,13 @@ En OWASP, encontrará gratis y con licencia de código abierto:
 - Libros completos sobre pruebas de seguridad de aplicaciones, desarrollo de código seguro y revisión de código seguro
 - Presentaciones y [videos](https://www.youtube.com/user/OWASPGLOBAL)
 - [Cheat sheets(Hojas de Referencia)](https://cheatsheetseries.owasp.org/) Sobre muchos temas comunes
-- [Chapters meetings](https://owasp.org/chapters/)
-- [Events, training, and conferences.](https://owasp.org/events/).
-- [Grupos de Google](TBA)
+- [Reuniones de Capítulos](https://owasp.org/chapters/)
+- [Eventos, capacitaciones y conferencias](https://owasp.org/events/).
+- [Grupos de Google](próximamente)
 
 Obtenga más información en: [https://www.owasp.org](https://www.owasp.org).
 
-Todas las herramientas, documentos, videos, presentaciones y capítulos de OWASP son gratuitos y están abiertos a cualquier persona interesada en mejorar la seguridad de las aplicaciones.
+Todas las herramientas, documentos, videos, presentaciones y capítulos de OWASP son gratuitos y están abiertos a cualquier persona interesada en mejorar la seguridad de sus aplicaciones.
 
 Apoyamos abordar la seguridad de las aplicaciones como un problema de personas, procesos y tecnología, porque los enfoques más efectivos para la seguridad de las aplicaciones requieren mejoras en estas áreas.
 
