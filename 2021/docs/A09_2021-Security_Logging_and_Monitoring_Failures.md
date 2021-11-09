@@ -83,7 +83,7 @@ stack, that feature custom dashboards and alerting.
 
 ## Example Attack Scenarios
 
-**Scenario #1:** A childrens' health plan provider's website operator
+**Scenario #1:** A children's health plan provider's website operator
 couldn't detect a breach due to a lack of monitoring and logging. An
 external party informed the health plan provider that an attacker had
 accessed and modified thousands of sensitive health records of more than
