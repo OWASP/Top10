@@ -14,75 +14,27 @@ Le concept de voie pavée est "le moyen le plus simple est aussi le moyen le plu
 
 La voie pavée peut sembler beaucoup de choses à digérer, mais elle devrait être construite progressivement au fil du temps. Il existe d'autres formes de programmes SecApp, notamment le cycle de vie du développement de la sécurité de Microsoft. Toutes les méthodologies de programme SecApp ne conviennent pas à toutes les entreprises.
 
-## Stage 3. Implement the paved road with your development teams
+## Étape 3. Mettez en place la voie pavée avec vos équipes de développement
 
-Paved roads are built with the consent and direct involvement of the
-relevant development and operations teams. The paved road should be
-aligned strategically with the business and help deliver more secure
-applications faster. Developing the paved road should be a holistic
-exercise covering the entire enterprise or application ecosystem, not a
-per-app band-aid, as in the old days.
+Les voies pavées sont construites avec le consentement et la participation directe des équipes de développement et d'exploitation concernées. La voie pavée doit être alignée sur la stratégie de l'entreprise et aider à fournir plus rapidement des applications plus sécurisées. Développer la voie pavée devrait être un exercice holistique couvrant l'ensemble de l'entreprise ou de l'écosystème d'applications, et non un pansement par application, comme autrefois.
 
-## Stage 4. Migrate all upcoming and existing applications to the paved road
+## Étape 4. Migrer toutes les applications à venir et existantes vers la voie pavée
 
-Add paved road detection tools as you develop them and provide
-information to development teams to improve the security of their
-applications by how they can directly adopt elements of the paved road.
-Once an aspect of the paved road has been adopted, organizations should
-implement continuous integration checks that inspect existing code and
-check-ins that use prohibited alternatives and warn or reject the build
-or check-in. This prevents insecure options from creeping into code over
-time, preventing technical debt and a defective insecure application.
-Such warnings should link to the secure alternative, so the development
-team is given the correct answer immediately. They can refactor and
-adopt the paved road component quickly.
+Ajoutez des outils de détection à la voie pavée au fur et à mesure que vous les développez et fournissez des informations aux équipes de développement pour améliorer la sécurité de leurs applications en leur expliquant comment elles peuvent adopter directement des éléments de la voie pavée. Une fois qu'un aspect de la voie pavée a été adopté, les organisations doivent mettre en œuvre des contrôles d'intégration continue qui inspectent le code existant et les nouvelles contributions qui utilisent des alternatives interdites et avertissent ou rejettent la version ou la contribution. Cela empêche les options non sécurisées de s'infiltrer dans le code au fil du temps, évitant ainsi une dette technique et une application non sécurisée défectueuse. De tels avertissements doivent être liés à l'alternative sécurisée, afin que l'équipe de développement reçoive immédiatement la bonne réponse. Ils peuvent remanier et adopter rapidement le composant de la voie pavée.
 
-## Stage 5. Test that the paved road has mitigated the issues found in the OWASP Top 10
+## Étape 5. Tester que la voie pavée a atténué les problèmes signalés dans le Top 10 de l'OWASP
 
-Paved road components should address a significant issue with the OWASP
-Top 10, for example, how to automatically detect or fix vulnerable
-components, or a static code analysis IDE plugin to detect injections or
-even better start using a library that is known safe against injection.
-The more of these secure drop-in replacements provided to teams, the better.
-A vital task of the appsec team is to ensure that the security of these
-components is continuously evaluated and improved.
-Once they are improved, some form of communication pathway with
-consumers of the component should indicate that an upgrade should occur,
-preferably automatically, but if not, as least highlighted on a
-dashboard or similar.
+Les composants de la voie pavée devraient résoudre un problème important signalé dans l'OWASP Top 10, par exemple, comment détecter ou réparer automatiquement les composants vulnérables, ou un plugin IDE d'analyse de code statique pour détecter les injections, ou encore mieux, commencer à utiliser une dépendance connue pour être sécurisée contre les injections. Plus ces remplacements sécurisés sont fournis aux équipes, mieux c'est. Une tâche vitale de l'équipe SecApp est de s'assurer que la sécurité de ces composants est continuellement évaluée et améliorée. Une fois qu'ils sont améliorés, une forme de voie de communication avec les consommateurs du composant doit indiquer qu'une mise à niveau doit se produire, de préférence automatiquement, mais sinon, au moins mise en évidence sur un tableau de bord ou similaire.
 
-## Stage 6. Build your program into a mature AppSec program
+## Étape 6. Transformez votre programme en un programme SecApp mature
 
-You must not stop at the OWASP Top 10. It only covers 10 risk
-categories. We strongly encourage organizations to adopt the Application
-Security Verification Standard and progressively add paved road
-components and tests for Level 1, 2, and 3, depending on the developed
-applications' risk level.
+Il ne faut pas s'arrêter au Top 10 de l'OWASP. Il ne couvre que 10 catégories de risques. Nous encourageons fortement les organisations à adopter l'OWASP Application Security Verification Standard (ASVS) et à ajouter progressivement des composants et des tests de voies pavées pour les niveaux 1, 2 et 3, en fonction du niveau de risque des applications développées.
 
-## Going beyond
+## Aller plus loin
 
-All great AppSec programs go beyond the bare minimum. Everyone must keep
-going if we're ever going to get on top of appsec vulnerabilities.
+Les meilleurs programmes SecApp vont au-delà du strict minimum. Tout le monde doit continuer les efforts si nous voulons un jour maîtriser les vulnérabilités.
 
--   **Conceptual integrity**. Mature AppSec programs must contain some
-    concept of security architecture, whether a formal cloud or
-    enterprise security architecture or threat modeling
-
--   **Automation and scale**. Mature AppSec programs try to automate as
-    much of their deliverables as possible, using scripts to emulate
-    complex penetration testing steps, static code analysis tools
-    directly available to the development teams, assisting dev teams in
-    building appsec unit and integration tests, and more.
-
--   **Culture**. Mature AppSec programs try to build out the insecure
-    design and eliminate the technical debt of existing code by being a
-    part of the development team and not to the side. AppSec teams who
-    see development teams as "us" and "them" are doomed to failure.
-
--   **Continuous improvement**. Mature AppSec programs look to
-    constantly improve. If something is not working, stop doing it. If
-    something is clunky or not scalable, work to improve it. If
-    something is not being used by the development teams and has no or
-    limited impact, do something different. Just because we've done
-    testing like desk checks since the 1970s doesn't mean it's a good
-    idea. Measure, evaluate, and then build or improve.
+-   **Intégrité conceptuelle**. Les programmes SecApp matures doivent contenir un certain concept d'architecture de sécurité, qu'il s'agisse d'une architecture formelle de sécurité cloud ou d'entreprise ou d'une modélisation des menaces ;
+-   **Automatisation et échelle**. Les programmes SecApp matures essaient d'automatiser autant que possible leurs livrables, en utilisant des scripts pour émuler des tests d'intrusion complexes, des outils d'analyse de code statique directement disponibles pour les équipes de développement, en aidant les équipes de développement à créer des tests unitaires et d'intégration de sécurité, et plus encore.
+-   **Culture**. Les programmes SecApp matures essaient de supprimer les conceptions non sécurisées et d'éliminer la dette technique du code existant en faisant partie de l'équipe de développement et non à côté. Les équipes SecApp qui voient les équipes de développement comme "nous" et "eux" sont vouées à l'échec.
+-   **Amélioration continue**. Les programmes SecApp matures cherchent à s'améliorer constamment. Si quelque chose ne fonctionne pas, arrêtez de le faire. Si quelque chose est poussif ou non évolutif, travaillez pour l'améliorer. Si quelque chose n'est pas utilisé par les équipes de développement et n'a pas ou peu d'impact, faites quelque chose de différent. Ce n'est pas parce que nous avons fait des tests comme des contrôles administratifs depuis les années 1970 que c'est une bonne idée. Mesurez, évaluez, puis construisez ou améliorez.
