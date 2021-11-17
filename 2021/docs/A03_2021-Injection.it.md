@@ -49,7 +49,7 @@ Prevenire le forme di injection richiede di mantenere i dati separati dai comand
     SQL injection se PL/SQL o T-SQL concatena query e dati o
     esegue input ostili con EXECUTE IMMEDIATE o exec().
 
-- Usare una validazione degli input lato server positiva o "whitelist". Questa
+- Usare una validazione degli input lato server positiva. Questa
     non è una difesa completa, poiché molte applicazioni richiedono caratteri speciali, 
     come aree di testo o API per applicazioni mobili.
 

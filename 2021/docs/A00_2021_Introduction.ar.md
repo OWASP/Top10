@@ -141,5 +141,6 @@
 | Cobalt.io | HackerOne | PenTest-Tools | Veracode |
 | Contrast Security | HCL Technologies | Probely | WhiteHat (NTT) |
 
-[![Secure Code Warrior](assets/securecodewarrior.png)](https://securecodewarrior.com)
+[![Secure Code Warrior](assets/securecodewarrior.png){ width="256" }](https://securecodewarrior.com)    
 
+[![Just Eats](assets/JustEat.png){ width="256" }](https://www.just-eat.co.uk/)
