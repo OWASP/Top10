@@ -239,7 +239,7 @@ deployment.
     SQL injection if PL/SQL or T-SQL concatenates queries and data or
     executes hostile data with EXECUTE IMMEDIATE or exec().
 
--   Use positive or "whitelist" server-side input validation. This is
+-   Use positive server-side input validation. This is
     not a complete defense as many applications require special
     characters, such as text areas or APIs for mobile applications.
 

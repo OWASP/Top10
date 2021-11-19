@@ -241,7 +241,7 @@ CWE-776 Improper Restriction of Recursive Entity References in DTDs
 CWE-776 DTDs中，不充足的遞迴物件引用限制
 (XML 物件擴張)
 
-CWE-942 Overly Permissive Cross-domain Whitelist
+CWE-942 Permissive Cross-domain Policy with Untrusted Domains
 
 CWE-942 跨網域白名單的過度權限
 
