@@ -1,51 +1,27 @@
 # A01:2021 – Contrôles d'accès défaillants   ![icon](assets/TOP_10_Icons_Final_Broken_Access_Control.png){: style="height:80px;width:80px" align="right"}
 
-## Factors
+## Facteurs
 
-| CWEs Mapped | Max Incidence Rate | Avg Incidence Rate | Avg Weighted Exploit | Avg Weighted Impact | Max Coverage | Avg Coverage | Total Occurrences | Total CVEs |
+| CWEs associées | Taux d'incidence max | Taux d'incidence moy | Exploitation pondérée moyenne | Impact pondéré moyenne | Couverture max | Couverture moyenne | Nombre total d'occurrences | Nombre total de CVEs |
 |:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
-| 34          | 55.97%             | 3.81%              | 6.92                 | 5.93                | 94.55%       | 47.72%       | 318,487           | 19,013     |
+| 34          | 55,97 %             | 3,81 %              | 6,92                 | 5,93                | 94,55 %       | 47,72 %       | 318 487           | 19 013     |
 
-## Overview
+## Aperçu
 
-Moving up from the fifth position, 94% of applications were tested for
-some form of broken access control with the average incidence rate of 3.81%, and has the most occurrences in the contributed dataset with over 318k. Notable Common Weakness Enumerations (CWEs) included are *CWE-200: Exposure of Sensitive Information to an Unauthorized Actor*, *CWE-201:
-Exposure of Sensitive Information Through Sent Data*, and *CWE-352:
-Cross-Site Request Forgery*.
+Précédemment à la cinquième place, 94 % des applications ont été testées pour une forme de contrôle d'accès défaillant avec un taux d'incidence moyen de 3,81 %. Cette catégorie a le plus d'occurrences dans l'ensemble de données contribué avec plus de 318&nbsp;000. Les *Common Weakness Enumerations* (CWE) notables incluses sont *CWE-200: Exposure of Sensitive Information to an Unauthorized Actor*, *CWE-201: Exposure of Sensitive Information Through Sent Data* et *CWE-352: Cross-Site Request Forgery* .
 
 ## Description
 
-Access control enforces policy such that users cannot act outside of
-their intended permissions. Failures typically lead to unauthorized
-information disclosure, modification, or destruction of all data or
-performing a business function outside the user's limits. Common access
-control vulnerabilities include:
+Le contrôle d'accès applique une stratégie telle que les utilisateurs ne peuvent pas agir en dehors de leurs autorisations prévues. Les défaillances entraînent généralement la divulgation, la modification ou la destruction d'informations non autorisées de toutes les données ou l'exécution d'une fonctionnalité métier en dehors des limites de l'utilisateur. Les vulnérabilités courantes du contrôle d'accès incluent :
 
--   Violation of the principle of least privilege or deny by default,
-    where access should only be granted for particular capabilities,
-    roles, or users, but is available to anyone.
-
--   Bypassing access control checks by modifying the URL (parameter
-    tampering or force browsing), internal application state, or the
-    HTML page, or by using an attack tool modifying API requests.
-
--   Permitting viewing or editing someone else's account, by providing
-    its unique identifier (insecure direct object references)
-
--   Accessing API with missing access controls for POST, PUT and DELETE.
-
--   Elevation of privilege. Acting as a user without being logged in or
-    acting as an admin when logged in as a user.
-
--   Metadata manipulation, such as replaying or tampering with a JSON
-    Web Token (JWT) access control token, or a cookie or hidden field
-    manipulated to elevate privileges or abusing JWT invalidation.
-
--   CORS misconfiguration allows API access from unauthorized/untrusted
-    origins.
-
--   Force browsing to authenticated pages as an unauthenticated user or
-    to privileged pages as a standard user.
+-   Violation du principe du moindre privilège ou de refus par défaut, où l'accès ne doit être accordé que pour des capacités, des rôles ou des utilisateurs particuliers, mais est accessible à tous.
+-   Contourner les contrôles d'accès en modifiant l'URL (falsification de paramètres ou navigation forcée), l'état interne de l'application ou la page HTML, ou en utilisant un outil d'attaque modifiant les requêtes API.
+-   Autoriser l'affichage ou la modification du compte de quelqu'un d'autre, en fournissant son identifiant unique (références directes d'objet non sécurisées)
+-   Accès à l'API avec des contrôles d'accès manquants pour POST, PUT et DELETE.
+-   Élévation de privilège. Agir en tant qu'utilisateur sans être connecté ou agir en tant qu'administrateur lorsqu'il est connecté en tant qu'utilisateur.
+-   Manipulation de métadonnées, telle que la relecture ou la falsification d'un jeton de contrôle d'accès JSON Web Token (JWT), ou un cookie ou un champ caché manipulé pour élever les privilèges ou abuser de l'invalidation JWT.
+-   La mauvaise configuration de CORS permettant l'accès à l'API à partir d'origines non autorisées/non approuvées.
+-   Forcer la navigation vers des pages authentifiées en tant qu'utilisateur non authentifié ou vers des pages privilégiées en tant qu'utilisateur standard.
 
 ## How to Prevent
 
