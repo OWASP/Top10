@@ -2,7 +2,7 @@
 
 ## Facteurs
 
-| CWEs associées | Taux d'incidence max | Taux d'incidence moy | Exploitation pondérée moyenne | Impact pondéré moyenne | Couverture max | Couverture moyenne | Nombre total d'occurrences | Nombre total de CVEs |
+| CWEs associées | Taux d'incidence max | Taux d'incidence moyen | Exploitation pondérée moyenne | Impact pondéré moyen | Couverture max | Couverture moyenne | Nombre total d'occurrences | Nombre total de CVEs |
 |:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
 | 34          | 55,97 %             | 3,81 %              | 6,92                 | 5,93                | 94,55 %       | 47,72 %       | 318 487           | 19 013     |
 
@@ -16,47 +16,27 @@ Le contrôle d'accès applique une stratégie telle que les utilisateurs ne peuv
 
 -   Violation du principe du moindre privilège ou de refus par défaut, où l'accès ne doit être accordé que pour des capacités, des rôles ou des utilisateurs particuliers, mais est accessible à tous.
 -   Contourner les contrôles d'accès en modifiant l'URL (falsification de paramètres ou navigation forcée), l'état interne de l'application ou la page HTML, ou en utilisant un outil d'attaque modifiant les requêtes API.
--   Autoriser l'affichage ou la modification du compte de quelqu'un d'autre, en fournissant son identifiant unique (références directes d'objet non sécurisées)
+-   Autoriser l'affichage ou la modification du compte de quelqu'un d'autre, en fournissant son identifiant unique (références directes d'objet non sécurisées).
 -   Accès à l'API avec des contrôles d'accès manquants pour POST, PUT et DELETE.
 -   Élévation de privilège. Agir en tant qu'utilisateur sans être connecté ou agir en tant qu'administrateur lorsqu'il est connecté en tant qu'utilisateur.
--   Manipulation de métadonnées, telle que la relecture ou la falsification d'un jeton de contrôle d'accès JSON Web Token (JWT), ou un cookie ou un champ caché manipulé pour élever les privilèges ou abuser de l'invalidation JWT.
+-   Manipulation de métadonnées, comme le rejeu ou la falsification de JSON Web Token (JWT), de cookies ou de champs cachés, afin d'élever les privilèges ou abuser de l'invalidation JWT.
 -   La mauvaise configuration de CORS permettant l'accès à l'API à partir d'origines non autorisées/non approuvées.
 -   Forcer la navigation vers des pages authentifiées en tant qu'utilisateur non authentifié ou vers des pages privilégiées en tant qu'utilisateur standard.
 
-## How to Prevent
+## Comment s'en prémunir
 
-Access control is only effective in trusted server-side code or
-server-less API, where the attacker cannot modify the access control
-check or metadata.
+Le contrôle d'accès n'est efficace que dans le code de confiance côté serveur ou des API serverless, où l'attaquant ne peut pas modifier la vérification du contrôle d'accès ou les métadonnées.
 
--   Except for public resources, deny by default.
+- À l'exception des ressources publiques, tout doit être bloqué par défaut.
+- Centraliser l'implémentation des mécanismes de contrôle d'accès et les réutiliser dans l'ensemble de l'application. Cela comprend de minimiser l'utilisation de CORS.
+- Le modèle de contrôle d'accès doit imposer l'appartenance des enregistrements, plutôt que de permettre à l'utilisateur de créer, lire, modifier ou supprimer n'importe quel enregistrement.
+- Les exigences métier spécifiques de l'application doivent être appliquées par domaines.
+- Désactiver le listing de dossier sur le serveur web, et vérifier que les fichiers de métadonnées (ex : .git) et de sauvegardes ne se trouvent pas dans l'arborescence web.
+- Tracer les échecs de contrôles d'accès, alerter les administrateurs quand c'est approprié (ex : échecs répétés).
+- Limiter la fréquence d'accès aux API et aux contrôleurs d'accès, afin de minimiser les dégâts que causeraient des outils d'attaques automatisés.
+- Les identifiants de session avec état doivent être invalidés côté serveur après une déconnexion. Les JWT, sans état, doivent être à durée de vie relativement courte pour que la fenêtre d'opportunité d'un attaquant est minimisée. Pour les JWT avec une durée de vie plus longue, il est fortement recommandé de suivre le standard OAuth de révocation d'accès.
 
--   Implement access control mechanisms once and re-use them throughout
-    the application, including minimizing Cross-Origin Resource Sharing (CORS) usage.
-
--   Model access controls should enforce record ownership rather than
-    accepting that the user can create, read, update, or delete any
-    record.
-
--   Unique application business limit requirements should be enforced by
-    domain models.
-
--   Disable web server directory listing and ensure file metadata (e.g.,
-    .git) and backup files are not present within web roots.
-
--   Log access control failures, alert admins when appropriate (e.g.,
-    repeated failures).
-
--   Rate limit API and controller access to minimize the harm from
-    automated attack tooling.
-
--   Stateful session identifiers should be invalidated on the server after logout.
-    Stateless JWT tokens should rather be short-lived so that the window of
-    opportunity for an attacker is minimized. For longer lived JWTs it's highy recommended to
-    follow the OAuth standards to revoke access.
-
-Developers and QA staff should include functional access control unit
-and integration tests.
+Les développeurs et les testeurs qualité doivent procéder à des tests unitaires et d'intégration sur les fonctionnalités de contrôle d'accès.
 
 ## Example Attack Scenarios
 
