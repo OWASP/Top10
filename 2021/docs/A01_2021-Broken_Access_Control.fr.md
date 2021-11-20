@@ -38,35 +38,30 @@ Le contrôle d'accès n'est efficace que dans le code de confiance côté serveu
 
 Les développeurs et les testeurs qualité doivent procéder à des tests unitaires et d'intégration sur les fonctionnalités de contrôle d'accès.
 
-## Example Attack Scenarios
+## Exemple de scénarios d'attaque
 
-**Scenario #1:** The application uses unverified data in a SQL call that
-is accessing account information:
+**Scenario 1 :** L'application utilise des données non vérifiées dans une requête SQL qui accède à des informations d'un compte :
 
 ```
  pstmt.setString(1, request.getParameter("acct"));
  ResultSet results = pstmt.executeQuery( );
 ```
 
-An attacker simply modifies the browser's 'acct' parameter to send
-whatever account number they want. If not correctly verified, the
-attacker can access any user's account.
+En modifiant simplement le paramètre 'acct' dans le navigateur, un attaquant peut envoyer le numéro de compte qu'il veut. Si ce numéro n'est pas vérifié, l'attaquant peut accéder à n'importe quel compte utilisateur.
 
 ```
  https://example.com/app/accountInfo?acct=notmyacct
 ```
 
-**Scenario #2:** An attacker simply forces browses to target URLs. Admin
-rights are required for access to the admin page.
+**Scenario 2 :** Un attaquant force le navigateur à visiter des URL arbitraires. Il faut imposer des droits pour accéder à une page d'administration.
 
 ```
  https://example.com/app/getappInfo
  https://example.com/app/admin_getappInfo
 ```
-If an unauthenticated user can access either page, it's a flaw. If a
-non-admin can access the admin page, this is a flaw.
+Si un utilisateur non-authentifié peut accéder à l'une des pages, c'est une faille. Si un non-administrateur peut accéder à une page d'administration, c'est une faille.
 
-## References
+## Références
 
 -   [OWASP Proactive Controls: Enforce Access
     Controls](https://owasp.org/www-project-proactive-controls/v3/en/c7-enforce-access-controls)
@@ -86,7 +81,7 @@ non-admin can access the admin page, this is a flaw.
 
 -   [OAuth: Revoking Access](https://www.oauth.com/oauth2-servers/listing-authorizations/revoking-access/)
 
-## List of Mapped CWEs
+## Liste des CWEs associées
 
 [CWE-22 Improper Limitation of a Pathname to a Restricted Directory
 ('Path Traversal')](https://cwe.mitre.org/data/definitions/22.html)
