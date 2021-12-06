@@ -25,7 +25,7 @@
 
 ## イシューとプルリクエストの起票
 
-修正やイシューの起票をお願いします:
+修正やイシューの起票をお願いします:
 
 - [https://github.com/OWASP/Top10/issues](https://github.com/OWASP/Top10/issues)
 
