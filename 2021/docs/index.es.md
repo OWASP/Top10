@@ -12,7 +12,7 @@ Un enorme agradecimiento a todos los que han contribuido con su tiempo y datos p
 
 Hay tres nuevas categorías, cuatro categorías con cambios de nombre y alcance, y alguna consolidación en el Top 10 de 2021. Hemos cambiado los nombres cuando ha sido necesario para centrarnos en la causa principal en lugar del síntoma.
 
-![Mapping](assets/mapping.png)
+![Mapping](es/assets/mapping.png)
 
 - **A01:2021-Pérdida de Control de Acceso** sube de la quinta posición a la categoría con el mayor riesgo en seguridad de aplicaciones web; los datos proporcionados indican que, en promedio, el 3,81% de las aplicaciones probadas tenían una o más Common Weakness Enumerations (CWEs) con más de 318 mil ocurrencias de CWEs en esta categoría de riesgo. Los 34 CWEs relacionados a Pérdida de Control de Acceso tuvieron más apariciones en las aplicaciones que cualquier otra categoría.
 - **A02:2021-Fallas Criptográficas** sube una posición ubicándose en la 2da, antes conocida como A3:2017-Exposición de Datos Sensibles, que era más una característica que una causa origen. El nuevo nombre se centra en las fallas relacionadas con la criptografía, como se ha hecho implícitamente antes. Esta categoría frecuentemente conlleva a la exposición de datos confidenciales o al compromiso del sistema.
