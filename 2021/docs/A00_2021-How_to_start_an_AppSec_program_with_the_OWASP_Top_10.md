@@ -21,7 +21,7 @@ you build and measure improvements in your software assurance efforts.
 
 ## Stage 2. Plan for a paved road secure development lifecycle
 
-Traditionally the preserve of so-called "unicorns," the paved road
+Traditionally the preserve of so-called "unicorns", the paved road
 concept is the easiest way to make the most impact and scale AppSec
 resources with development team velocity, which only increases every
 year.
