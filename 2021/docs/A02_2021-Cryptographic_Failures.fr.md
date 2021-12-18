@@ -28,61 +28,25 @@ Déterminer d’abord quelles données doivent bénéficier d’une protection c
 
 Se référer à l'*ASVS* *Crypto* (V7), *Data Protection* (V9), et *SSL/TLS* (V10).
 
-## How to Prevent
+## Comment s'en prémunir
 
-Do the following, at a minimum, and consult the references:
+On veillera au minimum à suivre les recommandations suivantes, mais il reste nécessaire de consulter les références.
 
--   Classify data processed, stored, or transmitted by an application.
-    Identify which data is sensitive according to privacy laws,
-    regulatory requirements, or business needs.
-
--   Don't store sensitive data unnecessarily. Discard it as soon as
-    possible or use PCI DSS compliant tokenization or even truncation.
-    Data that is not retained cannot be stolen.
-
--   Make sure to encrypt all sensitive data at rest.
-
--   Ensure up-to-date and strong standard algorithms, protocols, and
-    keys are in place; use proper key management.
-
--   Encrypt all data in transit with secure protocols such as TLS with
-    forward secrecy (FS) ciphers, cipher prioritization by the
-    server, and secure parameters. Enforce encryption using directives
-    like HTTP Strict Transport Security (HSTS).
-
--   Disable caching for response that contain sensitive data.
-
--   Apply required security controls as per the data classification.
-
--   Do not use legacy protocols such as FTP and SMTP for transporting
-    sensitive data.
-
--   Store passwords using strong adaptive and salted hashing functions
-    with a work factor (delay factor), such as Argon2, scrypt, bcrypt or
-    PBKDF2.
-
--   Initialization vectors must be chosen appropriate for the mode of
-    operation.  For many modes, this means using a CSPRNG (cryptographically
-    secure pseudo random number generator).  For modes that require a
-    nonce, then the initialization vector (IV) does not need a CSPRNG.  In all cases, the IV
-    should never be used twice for a fixed key.
-
--   Always use authenticated encryption instead of just encryption.
-
--   Keys should be generated cryptographically randomly and stored in
-    memory as byte arrays. If a password is used, then it must be converted
-    to a key via an appropriate password base key derivation function.
-
--   Ensure that cryptographic randomness is used where appropriate, and
-    that it has not been seeded in a predictable way or with low entropy.
-    Most modern APIs do not require the developer to seed the CSPRNG to
-    get security.
-
--   Avoid deprecated cryptographic functions and padding schemes, such as
-    MD5, SHA1, PKCS number 1 v1.5 .
-
--   Verify independently the effectiveness of configuration and
-    settings.
+- Classifier les données traitées, stockées ou transmises par l'application. Identifier quelles données sont sensibles selon les lois concernant la protection de la vie privée, les exigences réglementaires ou les besoins métier.
+- Ne pas stocker de données sensibles sans que cela ne soit nécessaire. Les rejeter ou utiliser une tokenisation conforme à la norme de sécurité de l’industrie des cartes de paiement (PCI DSS) ou même une troncature. Les données que l’on ne possède pas ne peuvent être volées.
+- S'assurer de chiffrer toutes les données sensibles au repos.
+- Choisir des algorithmes éprouvés et générer des clés robustes. S'assurer qu'une gestion des clés est en place.
+- Chiffrer toutes les données transmises avec des protocoles sécurisés tels que TLS avec des chiffres à confidentialité persistante (forward secrecy - FS). Chiffrer en priorité sur le serveur. Utiliser des paramètres sécurisés. Forcer le chiffrement en utilisant des directives comme HTTP Strict Transport Security (HSTS).
+- Désactiver le cache pour les réponses contenant des données sensibles.
+- Appliquer les contrôles de sécurité requis selon la classification de la donnée.
+- Ne pas utiliser de vieux protocoles tels que FTP et SMTP pour échanger des données sensibles.
+- Stocker les mots de passe en utilisant des fonctions de hachage avec salage et facteur de travail (facteur de délai), telles que Argon2, scrypt, bcrypt ou PBKDF2.
+- Les vecteurs d'initialisation doivent être choisis de façon appropriée au mode d'opération. Pour la plupart des modes, cela signifie utiliser un générateur de nombres pseudo-aléatoires cryptographiquement sécurisé (CSPRNG en anglais). Pour les modes requérant un nonce, alors le vecteur d'initialisation (VI) ne nécessite pas un CSPRNG. Dans tous les cas, un vecteur d'initialisation ne devrait pas être utilisé deux fois pour une clé fixe.
+- Utiliser toujours un chiffrement authentifié plutôt qu'un chiffrement simple
+- Les clés devraient toujours être générée de façon cryptographiquement aléatoire et stockées en mémoire sous la forme de tableau d'octets. Si un mot de passe est utilisée, alors il faut obligatoirement le transformer en clé via une fonction de dérivation de clé appropriée.
+- S'assurer qu'une génération cryptographiquement aléatoire est utilisée là où c'est approprié, et qu'elle n'a pas une graine aléatoire prévisible ou avec une faible entropie. La plupart des APIs modernes ne demandent pas au développeur de fournir une graine au CSPRNG pour être sécurisé.
+- Ne pas utiliser de fonctions cryptographiques et de méthodes de remplissage dépréciées telles que MD5, SHA1, PCKS 1 v1.5.
+- Vérifier indépendamment l'efficacité de la configuration et des paramètres.
 
 ## Example Attack Scenarios
 
