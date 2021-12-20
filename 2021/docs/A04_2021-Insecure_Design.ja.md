@@ -10,12 +10,17 @@
 
 2021年の新カテゴリーでは、設計やアーキテクチャの欠陥に関するリスクに焦点を当てています。
 私たちは脅威のモデル化、セキュアなデザインパターンおよび、リファレンスアーキテクチャなどをもっと利用していくことが必要です。
-As a community we need to move beyond  "shift-left" in the coding space to pre-code activities that are critical for the principles of Secure by Design. 
+コミュニティとして、私たちはコーディングスペースでの「shift-left」を超え、Secure by Designの原則に不可欠なプレコーディング活動に移行する必要があります。
 注目すべき CWE (Common Weakness Enumerations) は、CWE-209: エラーメッセージからの情報漏洩、CWE-256: 保護されていない認証情報の保存、CWE-501: 信頼境界線の侵害および、CWE-522: 適切に保護されていないクレデンシャル などです。
 
 ## 説明
 
-Insecure design is a broad category representing different weaknesses, expressed as “missing or ineffective control design.” Insecure design is not the source for all other Top 10 risk categories. There is a difference between insecure design and insecure implementation. We differentiate between design flaws and implementation defects for a reason, they have different root causes and remediation. A secure design can still have implementation defects leading to vulnerabilities that may be exploited. An insecure design cannot be fixed by a perfect implementation as by definition, needed security controls were never created to defend against specific attacks. One of the factors that contribute to insecure design is the lack of business risk profiling inherent in the software or system being developed, and thus the failure to determine what level of security design is required.
+安全が確認されない不安な設計とは、様々な脆弱性を表す広範なカテゴリーであり、「欠落した、あるいは不十分な制御設計」とも表されます。
+安全が確認されない不安な設計は、他のTop10リスクカテゴリの原因ではありません。
+安全でない設計と安全でない実装は異なります。設計上の欠陥と実装上の欠陥を区別するのには理由があり、根本的な原因と改善方法が異なるからです。
+安全な設計であっても、実装上の欠陥があると、それが悪用される可能性のある脆弱性につながります。
+安全でない設計は、完璧な実装によって修正することはできません。というのも、定義上、特定の攻撃を防御するために必要なセキュリティ制御が作成されたことはないからです。
+安全でない設計の要因の一つとして、開発するソフトウェアやシステムに内在するビジネスリスクのプロファイリングが行われていないために、どのレベルのセキュリティ設計が必要なのかを判断できないことが挙げられます。
 
 ### 要件とリソースマネジメント
 
