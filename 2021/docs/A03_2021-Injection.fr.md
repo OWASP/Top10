@@ -49,7 +49,7 @@ Dans les deux cas, l'attaquant modifie le paramètre ‘id’ dans son navigateu
 
 Ceci change le sens de chacune des requêtes pour récupérer tous les enregistrements de la table des comptes. Dans le pire des cas, l’attaquant exploite cette faiblesse pour modifier ou détruire des données, ou appeler des procédures stockées de la base de données.
 
-## References
+## Références
 
 -   [OWASP Proactive Controls: Secure Database Access](https://owasp.org/www-project-proactive-controls/v3/en/c3-secure-database)
 
@@ -70,7 +70,7 @@ Ceci change le sens de chacune des requêtes pour récupérer tous les enregistr
 
 -   [PortSwigger: Server-side template injection](https://portswigger.net/kb/issues/00101080_serversidetemplateinjection)
 
-## List of Mapped CWEs
+## Liste des CWEs associées
 
 [CWE-20 Improper Input Validation](https://cwe.mitre.org/data/definitions/20.html)
 
