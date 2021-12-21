@@ -12,31 +12,14 @@ Injection glisse à la troisième place. 94&nbsp;% des applications ont été te
 
 ## Description 
 
-An application is vulnerable to attack when:
+Une application est vulnérable quand :
 
--   User-supplied data is not validated, filtered, or sanitized by the
-    application.
+- les données venant de l'utilisateur ne sont pas validées, filtrées ou nettoyées par l'application&nbsp;;
+- des requêtes dynamiques ou des appels non paramétrés sans échappement par rapport au contexte sont envoyés à l'interpréteur&nbsp;;
+- des données hostiles sont utilisées au sein de paramètres de recherche de mapping objet - relationnel (ORM) pour extraire des données supplémentaires sensibles&nbsp;;
+- des données hostiles sont utilisées directement ou concaténées, par exemple lors de la construction de requête dynamiques, de commandes ou de procédures stockées pour des requêtes SQL ou des commandes OS.
 
--   Dynamic queries or non-parameterized calls without context-aware
-    escaping are used directly in the interpreter.
-
--   Hostile data is used within object-relational mapping (ORM) search
-    parameters to extract additional, sensitive records.
-
--   Hostile data is directly used or concatenated. The SQL or command
-    contains the structure and malicious data in dynamic queries,
-    commands, or stored procedures.
-
-Some of the more common injections are SQL, NoSQL, OS command, Object
-Relational Mapping (ORM), LDAP, and Expression Language (EL) or Object
-Graph Navigation Library (OGNL) injection. The concept is identical
-among all interpreters. Source code review is the best method of
-detecting if applications are vulnerable to injections. Automated
-testing of all parameters, headers, URL, cookies, JSON, SOAP, and XML
-data inputs is strongly encouraged. Organizations can include
-static (SAST), dynamic (DAST), and interactive (IAST) application security testing tools into the CI/CD
-pipeline to identify introduced injection flaws before production
-deployment.
+Les injections les plus courantes se font dans le SQL, le NoSQL, les commandes OS, le mapping objet - relationnel, le LDAP, l'Expression Language et le Object Graph Navigation Library (OGNL). La façon de faire est la même pour tous les interpréteurs. La revue de code source est la meilleure manière de détecter si une application est vulnérable à l'injection. Le test automatique de toutes les données d'entrée via les paramètres, en-têtes, URL, cookies, JSON, SOAP et XML est fortement encouragé. Les organisations peuvent tirer profit de la puissance des outils d'analyse statique de code (SAST) ou d'analyse dynamique de l'application (DAST) en les intégrant dans leur chaine d'intégration continue (CI / CD) pour identifier avant déploiement en production les vulnérabilités liées aux injections.
 
 ## How to Prevent
 
