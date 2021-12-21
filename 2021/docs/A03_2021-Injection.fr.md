@@ -21,29 +21,14 @@ Une application est vulnérable quand :
 
 Les injections les plus courantes se font dans le SQL, le NoSQL, les commandes OS, le mapping objet - relationnel, le LDAP, l'Expression Language et le Object Graph Navigation Library (OGNL). La façon de faire est la même pour tous les interpréteurs. La revue de code source est la meilleure manière de détecter si une application est vulnérable à l'injection. Le test automatique de toutes les données d'entrée via les paramètres, en-têtes, URL, cookies, JSON, SOAP et XML est fortement encouragé. Les organisations peuvent tirer profit de la puissance des outils d'analyse statique de code (SAST) ou d'analyse dynamique de l'application (DAST) en les intégrant dans leur chaine d'intégration continue (CI / CD) pour identifier avant déploiement en production les vulnérabilités liées aux injections.
 
-## How to Prevent
+## Comment s'en prémunir
 
-Preventing injection requires keeping data separate from commands and queries:
+Prévenir l’injection exige de séparer les données non fiables des commandes et requêtes :
 
--   The preferred option is to use a safe API, which avoids using the
-    interpreter entirely, provides a parameterized interface, or
-    migrates to Object Relational Mapping Tools (ORMs).<br/>
-    **Note:** Even when parameterized, stored procedures can still introduce
-    SQL injection if PL/SQL or T-SQL concatenates queries and data or
-    executes hostile data with EXECUTE IMMEDIATE or exec().
-
--   Use positive server-side input validation. This is
-    not a complete defense as many applications require special
-    characters, such as text areas or APIs for mobile applications.
-
--   For any residual dynamic queries, escape special characters using
-    the specific escape syntax for that interpreter.<br/>
-    **Note:** SQL structures such as table names, column names, and so on
-    cannot be escaped, and thus user-supplied structure names are
-    dangerous. This is a common issue in report-writing software.
-
--   Use LIMIT and other SQL controls within queries to prevent mass
-    disclosure of records in case of SQL injection.
+- la meilleure option est d’utiliser une API saine qui évite complètement l’utilisation de l’interpréteur ou fournit une interface paramétrable, ou bien de migrer pour utiliser les outils d'Object Relational Mapping Tools (ORMs).<br/>**Note** : Attention aux API, telles les procédures stockées, qui sont paramétrables, mais qui pourraient introduire une Injection SQL si PL/SQL ou T-SQL concatène requêtes et données ou exécute des données non saines avec EXECUTE IMMEDIATE ou exec() ;
+- pour les données en entrée, une liste autorisée avec normalisation est recommandée, mais n’est pas une défense complète dans la mesure où de nombreuses applications requièrent des caractères spéciaux, par exemple les zones de texte ou les API pour les applications mobiles ;
+- pour les requêtes dynamiques restantes, vous devriez soigneusement échapper les caractères spéciaux en utilisant la syntaxe d’échappement spécifique à l’interpréteur.<br/>**Note** : Les structures SQL telles que les noms de table, les noms de colonne, et d'autres ne peuvent pas être échappées et les noms de structures venant de l'utilisateur doivent donc être considérés comme dangereuses. Ceci est un problème courant dans les logiciels d'aide à l'écriture de rapports ;
+- il est conseillé d'utiliser LIMIT et autres contrôles SQL à l'intérieur des requêtes pour empêcher les divulgations massives de données dans le cas d'injection SQL.
 
 ## Example Attack Scenarios
 
