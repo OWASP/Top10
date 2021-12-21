@@ -30,30 +30,24 @@ Prévenir l’injection exige de séparer les données non fiables des commandes
 - pour les requêtes dynamiques restantes, vous devriez soigneusement échapper les caractères spéciaux en utilisant la syntaxe d’échappement spécifique à l’interpréteur.<br/>**Note** : Les structures SQL telles que les noms de table, les noms de colonne, et d'autres ne peuvent pas être échappées et les noms de structures venant de l'utilisateur doivent donc être considérés comme dangereuses. Ceci est un problème courant dans les logiciels d'aide à l'écriture de rapports ;
 - il est conseillé d'utiliser LIMIT et autres contrôles SQL à l'intérieur des requêtes pour empêcher les divulgations massives de données dans le cas d'injection SQL.
 
-## Example Attack Scenarios
+## Exemple de scénarios d'attaque
 
-**Scenario #1:** An application uses untrusted data in the construction
-of the following vulnerable SQL call:
+**Scenario #1** : L’application utilise des données non fiables dans la construction de l’appel SQL vulnérable suivant :
 ```
 String query = "SELECT \* FROM accounts WHERE custID='" + request.getParameter("id") + "'";
 ```
 
-**Scenario #2:** Similarly, an application’s blind trust in frameworks
-may result in queries that are still vulnerable, (e.g., Hibernate Query
-Language (HQL)):
+**Scenario #2** : De même, la confiance aveugle d'une application dans les frameworks qu'elle utilise peut faire que ses requêtes sont toujours vulnérables (par exemple Hibernate Query Language (HQL)) :
 ```
  Query HQLQuery = session.createQuery("FROM accounts WHERE custID='" + request.getParameter("id") + "'");
 ```
 
-In both cases, the attacker modifies the ‘id’ parameter value in their
-browser to send: ‘ or ‘1’=’1. For example:
+Dans les deux cas, l'attaquant modifie le paramètre ‘id’ dans son navigateur en : ' or '1'='1. Par exemple :
 ```
  http://example.com/app/accountView?id=' or '1'='1
 ```
 
-This changes the meaning of both queries to return all the records from
-the accounts table. More dangerous attacks could modify or delete data
-or even invoke stored procedures.
+Ceci change le sens de chacune des requêtes pour récupérer tous les enregistrements de la table des comptes. Dans le pire des cas, l’attaquant exploite cette faiblesse pour modifier ou détruire des données, ou appeler des procédures stockées de la base de données.
 
 ## References
 
