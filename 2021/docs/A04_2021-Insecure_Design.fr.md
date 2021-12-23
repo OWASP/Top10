@@ -6,9 +6,9 @@
 |:--------------:|:--------------------:|:----------------------:|:-----------------------------:|:--------------------:|:--------------:|:------------------:|:--------------------------:|:--------------------:|
 |       40       |       24,19 %        |         3,00 %         |             6,46              |         6,78         |    77,25 %     |      42,51 %       |          262 407           |        2 691         |
 
-## Overview
+## Aperçu
 
-A new category for 2021 focuses on risks related to design and architectural flaws, with a call for more use of threat modeling, secure design patterns, and reference architectures. As a community we need to move beyond  "shift-left" in the coding space to pre-code activities that are critical for the principles of Secure by Design. Notable Common Weakness Enumerations (CWEs) include *CWE-209: Generation of Error Message Containing Sensitive Information*, *CWE-256: Unprotected Storage of Credentials*, *CWE-501: Trust Boundary Violation*, and *CWE-522: Insufficiently Protected Credentials*.
+Une nouvelle catégorie pour 2021, l'accent est mis sur les risques liés aux failles de conception et d'architecture, avec un appel à l'augmentation du recours aux modèles de menaces, aux modèles et principes de conceptions sécurisés et aux architectures de référence. En tant que communauté, nous devons ajouter des contrôles en amont du développement, ces phases sont vitales pour une conception sécurisée. Les *Common Weakness Enumerations* (CWE) notables incluses sont *CWE-209: Generation of Error Message Containing Sensitive Information*, *CWE-256: Unprotected Storage of Credentials*, *CWE-501: Trust Boundary Violation* et *CWE-522: Insufficiently Protected Credentials*.
 
 ## Description
 
