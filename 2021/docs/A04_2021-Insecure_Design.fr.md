@@ -46,7 +46,7 @@ Un logiciel sécurisé nécessite un cycle de vie de développement sécurisé, 
 
 **Scénario 3 :** Le site e-commerce d'une chaîne de vente au détail n'est pas protégé contre les robots qui achètent des cartes vidéo haut de gamme pour les revendre sur le marché noir. Cela crée une mauvaise publicité pour les fabricants de cartes vidéo et les propriétaires de chaînes de vente au détail, provoque du ressentiment de la part des acheteurs qui ne peuvent pas se procurer ces cartes quel qu'en soit le prix. Des règles prudentes de conception anti-bot, telles que les achats effectués dans les quelques secondes suivant la disponibilité, peuvent identifier des achats non authentiques et rejeter de telles transactions.
 
-## References
+## Références
 
 -   [OWASP Cheat Sheet: Secure Design Principles](Coming Soon)
 
@@ -60,7 +60,7 @@ Un logiciel sécurisé nécessite un cycle de vie de développement sécurisé, 
 
 -   [Awesome Threat Modeling](https://github.com/hysnsec/awesome-threat-modelling)
 
-## List of Mapped CWEs
+## Liste des CWEs associées
 
 [CWE-73 External Control of File Name or Path](https://cwe.mitre.org/data/definitions/73.html)
 
