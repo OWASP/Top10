@@ -38,28 +38,13 @@ Un logiciel sécurisé nécessite un cycle de vie de développement sécurisé, 
 - séparez les tenants via une conception robuste sur l'ensemble des niveaux ;
 - restreignez les ressources par utilisateur ou service.
 
-## Example Attack Scenarios
+## Exemple de scénarios d'attaque
 
-**Scenario #1:** A credential recovery workflow might include “questions
-and answers,” which is prohibited by NIST 800-63b, the OWASP ASVS, and
-the OWASP Top 10. Questions and answers cannot be trusted as evidence of
-identity as more than one person can know the answers, which is why they
-are prohibited. Such code should be removed and replaced with a more
-secure design.
+**Scénario 1 :** Un processus de récupération d'informations d'identification peut inclure des «&nbsp;questions secrètes&nbsp;», ce qui est interdit par le NIST 800-63b, l'OWASP ASVS et le Top 10 de l'OWASP. Les questions et les réponses ne peuvent pas être considérées comme une preuve d'identité, car plus d'une personne peut connaître les réponses, c'est pourquoi elles sont interdites. Un tel code doit être supprimé et remplacé par une conception plus sécurisée.
 
-**Scenario #2:** A cinema chain allows group booking discounts and has a
-maximum of fifteen attendees before requiring a deposit. Attackers could
-threat model this flow and test if they could book six hundred seats and
-all cinemas at once in a few requests, causing a massive loss of income.
+**Scénario 2 :** Une chaîne de cinéma permet des réductions sur les réservations de groupe et compte un maximum de quinze participants avant d'exiger un acompte. Les attaquants pourraient modéliser ce cas d'usage et tester s'ils peuvent réserver six cents places et tous les cinémas à la fois en quelques demandes, provoquant une perte massive de revenus.
 
-**Scenario #3:** A retail chain’s e-commerce website does not have
-protection against bots run by scalpers buying high-end video cards to
-resell auction websites. This creates terrible publicity for the video
-card makers and retail chain owners and enduring bad blood with
-enthusiasts who cannot obtain these cards at any price. Careful anti-bot
-design and domain logic rules, such as purchases made within a few
-seconds of availability, might identify inauthentic purchases and
-rejected such transactions.
+**Scénario 3 :** Le site e-commerce d'une chaîne de vente au détail n'est pas protégé contre les robots qui achètent des cartes vidéo haut de gamme pour les revendre sur le marché noir. Cela crée une mauvaise publicité pour les fabricants de cartes vidéo et les propriétaires de chaînes de vente au détail, provoque du ressentiment de la part des acheteurs qui ne peuvent pas se procurer ces cartes quel qu'en soit le prix. Des règles prudentes de conception anti-bot, telles que les achats effectués dans les quelques secondes suivant la disponibilité, peuvent identifier des achats non authentiques et rejeter de telles transactions.
 
 ## References
 
