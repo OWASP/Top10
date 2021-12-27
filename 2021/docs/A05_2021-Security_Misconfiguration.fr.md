@@ -12,36 +12,18 @@ En progression depuis la sixième place, 90&nbsp;% des applications ont été te
 
 ## Description 
 
-The application might be vulnerable if the application is:
+L'application peut être vulnérable si :
 
--   Missing appropriate security hardening across any part of the
-    application stack or improperly configured permissions on cloud
-    services.
+-   elle n'a pas fait l'objet d'un durcissement sécurité approprié sur l'ensemble des couches protocolaires applicatives, ou si les permissions sont mal configurées sur les services cloud ;
+-   des fonctionnalités inutiles sont activées ou installées (ex : des ports, des services, des pages, des comptes ou des privilèges inutiles) ;
+-   les comptes par défaut et leurs mots de passe sont toujours activés et inchangés ;
+-   le traitement des erreurs révèle aux utilisateurs des traces des piles protocolaires ou d'autres messages d'erreur laissant transpirer trop d'informations ;
+-   pour les systèmes à jour ou mis à niveau, les dernières fonctionnalités de sécurité sont désactivées ou ne sont pas configurées de manière sécurisée ;
+-   les paramètres de sécurité dans les serveurs d'application, les frameworks applicatifs (ex : Struts, Spring, ASP.NET), les bibliothèques, les bases de données, etc. ne sont pas paramétrés avec des valeurs correctes du point de vue de la sécurité ;
+-   le serveur n'envoie pas d'en-têtes ou de directives de sécurité, ou s'ils ne sont pas paramétrés avec des valeurs correctes du point de vue de la sécurité ;
+-   La version du logiciel est obsolète ou vulnérable (voir [A06:2021-Composants vulnérables et obsolètes](A06_2021-Vulnerable_and_Outdated_Components.md)).
 
--   Unnecessary features are enabled or installed (e.g., unnecessary
-    ports, services, pages, accounts, or privileges).
-
--   Default accounts and their passwords are still enabled and
-    unchanged.
-
--   Error handling reveals stack traces or other overly informative
-    error messages to users.
-
--   For upgraded systems, the latest security features are disabled or
-    not configured securely.
-
--   The security settings in the application servers, application
-    frameworks (e.g., Struts, Spring, ASP.NET), libraries, databases,
-    etc., are not set to secure values.
-
--   The server does not send security headers or directives, or they are
-    not set to secure values.
-
--   The software is out of date or vulnerable (see [A06:2021-Vulnerable
-    and Outdated Components](A06_2021-Vulnerable_and_Outdated_Components.md)).
-
-Without a concerted, repeatable application security configuration
-process, systems are at a higher risk.
+Sans un processus concerté et répétable de configuration de la sécurité des applications, les systèmes courent un risque plus élevé.
 
 ## How to Prevent
 
