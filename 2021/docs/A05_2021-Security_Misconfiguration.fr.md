@@ -6,12 +6,9 @@
 |:--------------:|:--------------------:|:----------------------:|:-----------------------------:|:--------------------:|:--------------:|:------------------:|:--------------------------:|:--------------------:|
 |       20       |       19,84 %        |         4,51 %         |             8,12              |         6,56         |    89,58 %     |      44,84 %       |          208 387           |         789          |
 
-## Overview
+## Aperçu
 
-Moving up from #6 in the previous edition, 90% of applications were
-tested for some form of misconfiguration, with an average incidence rate of 4.%, and over 208k occurences of a Common Weakness Enumeration (CWE) in this risk category. With more shifts into highly configurable software, it's not surprising to see this category move up.
-Notable CWEs included are *CWE-16 Configuration* and *CWE-611 Improper
-Restriction of XML External Entity Reference*.
+En progression depuis la sixième place, 90&nbsp;% des applications ont été testées pour une forme de mauvaise configuration, avec un taux d'incidence moyen de 4,51&nbsp;% et plus de 208&nbsp;000 occurrences de *Common Weakness Enumeration* (CWE) dans cette catégorie. Avec une plus grande part de logiciels offrant une configuration riche, il n'est pas surprenant de voir cette catégorie gagner une place. Les CWEs notables incluses sont *CWE-16 Configuration* et *CWE-611 Improper Restriction of XML External Entity Reference*.
 
 ## Description 
 
