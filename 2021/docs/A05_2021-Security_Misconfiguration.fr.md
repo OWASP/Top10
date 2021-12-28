@@ -36,29 +36,15 @@ Des processus d'installation sécurisés doivent être mis en œuvre, avec notam
 - l'envoi de directives de sécurité aux clients, par exemple [En-têtes de sécurité](https://www.owasp.org/index.php/OWASP_Secure_Headers_Project) ;
 - un processus automatisé pour vérifier l'efficacité des configurations et des réglages dans tous les environnements.
 
-## Example Attack Scenarios
+## Exemple de scénarios d'attaque
 
-**Scenario #1:** The application server comes with sample applications
-not removed from the production server. These sample applications have
-known security flaws attackers use to compromise the server. Suppose one
-of these applications is the admin console, and default accounts weren't
-changed. In that case, the attacker logs in with default passwords and
-takes over.
+**Scénario 1** : Le serveur d'application est livré avec des applications classiques qui ne sont pas supprimées du serveur mis en production. Ces mêmes applications ont des failles de sécurité connues que les attaquants utilisent afin de compromettre le serveur. Si l'une de ces applications est la console d'administration, et que les comptes par défaut n'ont pas été modifiés, l'attaquant se connecte avec les mots de passe par défaut et prend la main sur la cible.
 
-**Scenario #2:** Directory listing is not disabled on the server. An
-attacker discovers they can simply list directories. The attacker finds
-and downloads the compiled Java classes, which they decompile and
-reverse engineer to view the code. The attacker then finds a severe
-access control flaw in the application.
+**Scénario 2** : La fonctionnalité de listage des répertoires n'est pas désactivée sur le serveur. Un attaquant découvre qu'il peut simplement lister les répertoires. L'attaquant trouve et télécharge les classes Java compilées, qu'il décompose et fait de l'ingénierie inversée pour visualiser le code. L'attaquant trouve alors un grave défaut dans le contrôle d'accès de l'application.
 
-**Scenario #3:** The application server's configuration allows detailed
-error messages, e.g., stack traces, to be returned to users. This
-potentially exposes sensitive information or underlying flaws such as
-component versions that are known to be vulnerable.
+**Scénario 3** : La configuration du serveur d'application permet de renvoyer aux utilisateurs des messages d'erreur détaillés, par exemple avec des traces des couches protocolaires applicatives. Cela peut ainsi exposer des informations sensibles ou des vulnérabilités sous-jacentes telles que les versions de composants dont on sait qu'elles sont vulnérables.
 
-**Scenario #4:** A cloud service provider (CSP) has default sharing
-permissions open to the Internet by other CSP users. This allows
-sensitive data stored within cloud storage to be accessed.
+**Scénario 4** : Un fournisseur de services Cloud (CSP) a positionné des droits de partage par défaut qui sont ouverts sur Internet par d'autres utilisateurs du CSP. Cela permet d'accéder à des données sensibles stockées dans le stockage Cloud.
 
 ## References
 
