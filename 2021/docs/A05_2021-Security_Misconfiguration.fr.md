@@ -46,7 +46,7 @@ Des processus d'installation sécurisés doivent être mis en œuvre, avec notam
 
 **Scénario 4** : Un fournisseur de services Cloud (CSP) a positionné des droits de partage par défaut qui sont ouverts sur Internet par d'autres utilisateurs du CSP. Cela permet d'accéder à des données sensibles stockées dans le stockage Cloud.
 
-## References
+## Références
 
 -   [OWASP Testing Guide: Configuration
     Management](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/README)
@@ -64,7 +64,7 @@ Des processus d'installation sécurisés doivent être mis en œuvre, avec notam
 -   [Amazon S3 Bucket Discovery and
     Enumeration](https://blog.websecurify.com/2017/10/aws-s3-bucket-discovery.html)
 
-## List of Mapped CWEs
+## Liste des CWEs associées
 
 [CWE-2 7PK - Environment](https://cwe.mitre.org/data/definitions/2.html)
 
