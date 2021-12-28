@@ -25,35 +25,16 @@ L'application peut être vulnérable si :
 
 Sans un processus concerté et répétable de configuration de la sécurité des applications, les systèmes courent un risque plus élevé.
 
-## How to Prevent
+## Comment s'en prémunir
 
-Secure installation processes should be implemented, including:
+Des processus d'installation sécurisés doivent être mis en œuvre, avec notamment :
 
--   A repeatable hardening process makes it fast and easy to deploy
-    another environment that is appropriately locked down. Development,
-    QA, and production environments should all be configured
-    identically, with different credentials used in each environment.
-    This process should be automated to minimize the effort required to
-    set up a new secure environment.
-
--   A minimal platform without any unnecessary features, components,
-    documentation, and samples. Remove or do not install unused features
-    and frameworks.
-
--   A task to review and update the configurations appropriate to all
-    security notes, updates, and patches as part of the patch management
-    process (see [A06:2021-Vulnerable
-    and Outdated Components](A06_2021-Vulnerable_and_Outdated_Components.md)). Review
-    cloud storage permissions (e.g., S3 bucket permissions).
-
--   A segmented application architecture provides effective and secure
-    separation between components or tenants, with segmentation,
-    containerization, or cloud security groups (ACLs).
-
--   Sending security directives to clients, e.g., Security Headers.
-
--   An automated process to verify the effectiveness of the
-    configurations and settings in all environments.
+- un processus de durcissement répétable qui permette de déployer rapidement et facilement un autre environnement correctement sécurisé avec une configuration verrouillée. Les environnements de développement, d'assurance qualité et de production doivent tous être configurés de manière identique, avec des droits différents pour chaque environnement. Ce processus devrait être automatisé afin de réduire au minimum les efforts requis pour mettre en place un nouvel environnement sécurisé ;
+- une plate-forme minimale sans fonctionnalité, composant, documentation et échantillon inutile. Supprimer ou ne pas installer des fonctionnalités et frameworks inutilisés ;
+- une tâche pour revoir et mettre à jour les configurations appropriées à tous les avis de sécurité, toutes les mises à jour et tous les correctifs dans le cadre du processus de gestion des correctifs (voir [A06:2021-Composants vulnérables et obsolètes](A06_2021-Vulnerable_and_Outdated_Components.md)). En particulier, examiner les permissions de stockage dans le Cloud (ex. les permissions des buckets AWS S3) ;
+- une architecture d'application segmentée qui fournit une séparation efficace et sécurisée entre les composants ou les environnements hébergés, avec de la segmentation, de la mise en conteneurs ou l'utilisation de groupes de sécurité dans le Cloud (ACL) ;
+- l'envoi de directives de sécurité aux clients, par exemple [En-têtes de sécurité](https://www.owasp.org/index.php/OWASP_Secure_Headers_Project) ;
+- un processus automatisé pour vérifier l'efficacité des configurations et des réglages dans tous les environnements.
 
 ## Example Attack Scenarios
 
