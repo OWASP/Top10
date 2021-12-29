@@ -90,7 +90,7 @@ plugins:
           Home: Page d'accueil
           About: À propos
           How to use the OWASP Top 10 as a standard: Comment utiliser le Top 10 OWASP comme standard
-          How to start an AppSec program with the OWASP Top 10: Comment démarrer un programme AppSec avec le Top 10 OWASP
+          How to start an AppSec program with the OWASP Top 10: Comment démarrer un programme SecApp avec l'OWASP Top 10
           About OWASP: À propos de l'OWASP
           Top 10:2021 List: Liste top 10:2021
           A01 Broken Access Control: A01 Contrôles d'accès défaillants
