@@ -1,4 +1,4 @@
-# A02:2021 – Fallos criptográficos    ![icon](assets/TOP_10_Icons_Final_Crypto_Failures.png)
+# A02:2021 – Fallos criptográficos    ![icon](assets/TOP_10_Icons_Final_Crypto_Failures.png){: style="height:80px;width:80px" align="right"}
 
 ## Factores
 
@@ -49,12 +49,12 @@ Haga lo siguiente, como mínimo, y consulte las referencias:
 -   Clasifique los datos procesados, almacenados o transmitidos por una aplicación.
     Identifique qué datos son confidenciales de acuerdo con las leyes de privacidad, los requisitos reglamentarios o las necesidades comerciales.
 
--   No almacene datos sensibles innecesariamente. Deséchelos lo antes posible o utilice la tokenización compatible con PCI DSS o incluso el truncamiento.
+-   No almacene datos sensibles innecesariamente. Deséchelos lo antes posible o utilice una utilización de tokens compatible con PCI DSS o incluso el truncamiento.
     Los datos que no se conservan no se pueden robar.
 
 -   Asegúrese de cifrar todos los datos confidenciales que no están en movimiento.
 
--   Garantice la implementación de algoritmos, protocolos y claves que sean estándar sólidos y actualizados; utilice una gestión de claves adecuada.
+-   Garantice la implementación de algoritmos, protocolos y claves que utilicen estándares sólidos y actualizados; utilice una gestión de claves adecuada.
 
 -   Cifre todos los datos en tránsito con protocolos seguros como TLS con cifrado de confidencialidad directa (FS), priorización de cifrado por parte del servidor y parámetros seguros. Aplique el cifrado mediante directivas como HTTP Strict Transport Security (HSTS).
 
@@ -64,7 +64,7 @@ Haga lo siguiente, como mínimo, y consulte las referencias:
 
 -   No utilice protocolos antiguos como FTP y SMTP para transportar datos confidenciales.
 
--   Almacene las contraseñas utilizando funciones robustas y flexibles de saltet hash y use un factor de trabajo (factor de retraso), como Argon2, scrypt, bcrypt o PBKDF2.
+-   Almacene las contraseñas utilizando funciones robustas y flexibles de salted hash y use un factor de trabajo (factor de retraso), como Argon2, scrypt, bcrypt o PBKDF2.
 
 -   Elija los vectores de inicialización apropiados para el modo de operación. Para muchos modos, esto significa usar un CSPRNG (generador de números pseudoaleatorios criptográficamente seguro).  Para los modos que requieren un nonce, entonces el vector de inicialización (IV) no necesita un CSPRNG.  En todos los casos, el IV nunca debe usarse dos veces para una clave fija.
 
@@ -89,77 +89,81 @@ Haga lo siguiente, como mínimo, y consulte las referencias:
 
 ## Referencias
 
--   [Controles proactivos de OWASP: proteja datos en todas partes](https://owasp.org/www-project-proactive-controls/v3/en/c8-protect-data-everywhere)
+-   [OWASP Proactive Controls: Protect Data
+    Everywhere](https://owasp.org/www-project-proactive-controls/v3/en/c8-protect-data-everywhere)
 
--   [Estándar de verificación de seguridad de aplicaciones OWASP (V7, 9, 10)](https://owasp.org/www-project-application-security-verification-standard)
+-   [OWASP Application Security Verification Standard (V7,
+    9, 10)](https://owasp.org/www-project-application-security-verification-standard)
 
--   [OWASP Hoja de referencia: Protección de la capa de transporte](https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Protection_Cheat_Sheet.html)
+-   [OWASP Cheat Sheet: Transport Layer
+    Protection](https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Protection_Cheat_Sheet.html)
 
--   [OWASP Hoja de referencia: Protección de la privacidad del usuario](https://cheatsheetseries.owasp.org/cheatsheets/User_Privacy_Protection_Cheat_Sheet.html)
+-   [OWASP Cheat Sheet: User Privacy
+    Protection](https://cheatsheetseries.owasp.org/cheatsheets/User_Privacy_Protection_Cheat_Sheet.html)
 
--   [OWASP Hoja de referencia: contraseña y almacenamiento criptográfico](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html)
+-   [OWASP Cheat Sheet: Password and Cryptographic Storage](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html)
 
--   [OWASP Hoja de referencia: HSTS](https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html)
+-   [OWASP Cheat Sheet:
+    HSTS](https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html)
 
--   [Guía de pruebas de OWASP: testeo de criptografía débil](https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/09-Testing_for_Weak_Cryptography/README)
-
+-   [OWASP Testing Guide: Testing for weak cryptography](https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/09-Testing_for_Weak_Cryptography/README)
 
 ## Lista de CWEs mapeadas
 
-[CWE-261 Codificación débil para contraseña](https://cwe.mitre.org/data/definitions/261.html)
+[CWE-261 Weak Encoding for Password](https://cwe.mitre.org/data/definitions/261.html)
 
-[CWE-296 Seguimiento indebido de la cadena de confianza de un certificado](https://cwe.mitre.org/data/definitions/296.html)
+[CWE-296 Improper Following of a Certificate's Chain of Trust](https://cwe.mitre.org/data/definitions/296.html)
 
-[CWE-310 Problemas criptográficos](https://cwe.mitre.org/data/definitions/310.html)
+[CWE-310 Cryptographic Issues](https://cwe.mitre.org/data/definitions/310.html)
 
-[CWE-319 Transmisión de texto sin cifrar con información confidencial](https://cwe.mitre.org/data/definitions/319.html)
+[CWE-319 Cleartext Transmission of Sensitive Information](https://cwe.mitre.org/data/definitions/319.html)
 
-[CWE-321 Uso de clave criptográfica en código fuente](https://cwe.mitre.org/data/definitions/321.html)
+[CWE-321 Use of Hard-coded Cryptographic Key](https://cwe.mitre.org/data/definitions/321.html)
 
-[CWE-322 Intercambio de claves sin autenticación de entidad](https://cwe.mitre.org/data/definitions/322.html)
+[CWE-322 Key Exchange without Entity Authentication](https://cwe.mitre.org/data/definitions/322.html)
 
-[CWE-323 Reutilización de un par clave-nonce en cifrado](https://cwe.mitre.org/data/definitions/323.html)
+[CWE-323 Reusing a Nonce, Key Pair in Encryption](https://cwe.mitre.org/data/definitions/323.html)
 
-[CWE-324 Uso de una clave pasada su fecha de vencimiento](https://cwe.mitre.org/data/definitions/324.html)
+[CWE-324 Use of a Key Past its Expiration Date](https://cwe.mitre.org/data/definitions/324.html)
 
-[CWE-325 Falta del paso criptográfico obligatorio](https://cwe.mitre.org/data/definitions/325.html)
+[CWE-325 Missing Required Cryptographic Step](https://cwe.mitre.org/data/definitions/325.html)
 
-[CWE-326 Fuerza de cifrado inadecuada](https://cwe.mitre.org/data/definitions/326.html)
+[CWE-326 Inadequate Encryption Strength](https://cwe.mitre.org/data/definitions/326.html)
 
-[CWE-327 Uso de un algoritmo criptográfico vulnerado o inseguro](https://cwe.mitre.org/data/definitions/327.html)
+[CWE-327 Use of a Broken or Risky Cryptographic Algorithm](https://cwe.mitre.org/data/definitions/327.html)
 
-[CWE-328 Hash unidireccional reversible](https://cwe.mitre.org/data/definitions/328.html)
+[CWE-328 Reversible One-Way Hash](https://cwe.mitre.org/data/definitions/328.html)
 
-[CWE-329 No usar un IV aleatorio con el modo CBC](https://cwe.mitre.org/data/definitions/329.html)
+[CWE-329 Not Using a Random IV with CBC Mode](https://cwe.mitre.org/data/definitions/329.html)
 
-[CWE-330 Uso de valores insuficientemente aleatorios](https://cwe.mitre.org/data/definitions/330.html)
+[CWE-330 Use of Insufficiently Random Values](https://cwe.mitre.org/data/definitions/330.html)
 
-[CWE-331 Entropía insuficiente](https://cwe.mitre.org/data/definitions/331.html)
+[CWE-331 Insufficient Entropy](https://cwe.mitre.org/data/definitions/331.html)
 
-[CWE-335 Uso incorrecto de semillas en el generador de números pseudoaleatorios(PRNG)](https://cwe.mitre.org/data/definitions/335.html)
+[CWE-335 Incorrect Usage of Seeds in Pseudo-Random Number Generator(PRNG)](https://cwe.mitre.org/data/definitions/335.html)
 
-[CWE-336 Misma semilla en el generador de números pseudoaleatorios(PRNG)](https://cwe.mitre.org/data/definitions/336.html)
+[CWE-336 Same Seed in Pseudo-Random Number Generator (PRNG)](https://cwe.mitre.org/data/definitions/336.html)
 
-[CWE-337 Semilla predecible en generador de números pseudoaleatorios(PRNG)](https://cwe.mitre.org/data/definitions/337.html)
+[CWE-337 Predictable Seed in Pseudo-Random Number Generator (PRNG)](https://cwe.mitre.org/data/definitions/337.html)
 
-[CWE-338 Uso de un generador de números pseudoaleatorios criptográficamente débil(PRNG)](https://cwe.mitre.org/data/definitions/338.html)
+[CWE-338 Use of Cryptographically Weak Pseudo-Random Number Generator(PRNG)](https://cwe.mitre.org/data/definitions/338.html)
 
-[CWE-340 Generación de números o identificadores predecibles](https://cwe.mitre.org/data/definitions/340.html)
+[CWE-340 Generation of Predictable Numbers or Identifiers](https://cwe.mitre.org/data/definitions/340.html)
 
-[CWE-347 Verificación incorrecta de la firma criptográfica](https://cwe.mitre.org/data/definitions/347.html)
+[CWE-347 Improper Verification of Cryptographic Signature](https://cwe.mitre.org/data/definitions/347.html)
 
-[CWE-523 Transporte de credenciales sin protección](https://cwe.mitre.org/data/definitions/523.html)
+[CWE-523 Unprotected Transport of Credentials](https://cwe.mitre.org/data/definitions/523.html)
 
-[CWE-720 OWASP Top Ten 2007 Categoría A9 - Comunicaciones inseguras](https://cwe.mitre.org/data/definitions/720.html)
+[CWE-720 OWASP Top Ten 2007 Category A9 - Insecure Communications](https://cwe.mitre.org/data/definitions/720.html)
 
-[CWE-757 Selección de algoritmo menos seguro durante la negociación('degradación del algoritmo')](https://cwe.mitre.org/data/definitions/757.html)
+[CWE-757 Selection of Less-Secure Algorithm During Negotiation('Algorithm Downgrade')](https://cwe.mitre.org/data/definitions/757.html)
 
-[CWE-759 Uso de un hash unidireccional sin salt](https://cwe.mitre.org/data/definitions/759.html)
+[CWE-759 Use of a One-Way Hash without a Salt](https://cwe.mitre.org/data/definitions/759.html)
 
-[CWE-760 Uso de un hash unidireccional con un salt predecible](https://cwe.mitre.org/data/definitions/760.html)
+[CWE-760 Use of a One-Way Hash with a Predictable Salt](https://cwe.mitre.org/data/definitions/760.html)
 
-[CWE-780 Uso de algoritmo RSA sin OAEP](https://cwe.mitre.org/data/definitions/780.html)
+[CWE-780 Use of RSA Algorithm without OAEP](https://cwe.mitre.org/data/definitions/780.html)
 
-[CWE-818 Protección insuficiente de la capa de transporte](https://cwe.mitre.org/data/definitions/818.html)
+[CWE-818 Insufficient Transport Layer Protection](https://cwe.mitre.org/data/definitions/818.html)
 
-[CWE-916 Uso de hash de contraseña con esfuerzo computacional insuficiente](https://cwe.mitre.org/data/definitions/916.html)
+[CWE-916 Use of Password Hash With Insufficient Computational Effort](https://cwe.mitre.org/data/definitions/916.html)

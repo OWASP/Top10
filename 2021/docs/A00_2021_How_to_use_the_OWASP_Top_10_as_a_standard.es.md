@@ -7,20 +7,20 @@ Por ejemplo, A04: 2021-Diseño inseguro está más allá del alcance de la mayor
 
 Aquí están nuestras recomendaciones sobre cuándo es apropiado utilizar OWASP Top 10:
 
-| Caso de uso                                 | OWASP Top 10 2021   | Estándar de verificación de seguridad de aplicaciones OWASP |
-|---------------------------------------------|:-------------------:|:-----------------------------------------------------------:|
-| Conocimiento                                | Sí                  |                                                             |
-| Capacitación                                | Nivel Básico        | Exhaustivo                                                  |
-| Diseño y arquitectura                       | Ocasionalmente      | Sí                                                          |
-| Estándar de codificación                    | Mínimo              | Sí                                                          |
-| Revisión de código seguro                   | Mínimo              | Sí                                                          |
-| Lista de verificación de revisión por pares | Mínimo              | Sí                                                          |
-| Pruebas de Unidad                           | Ocasionalmente      | Sí                                                          |
-| Pruebas de integración                      | Ocasionalmente      | Sí                                                          |
-| Pruebas de penetración                      | Mínimo              | Sí                                                          |
-| Soporte de herramientas                     | Mínimo              | Sí                                                          |
-| Cadena de suministro segura                 | Ocasionalmente      | Sí                                                          |
+| Caso de uso                                 | OWASP Top 10 2021   | Estándar de Verificación de Seguridad de Aplicaciones (ASVS) de OWASP |
+|---------------------------------------------|:-------------------:|:---------------------------------------------------------------------:|
+| Conocimiento                                | Sí                  |                                                                       |
+| Capacitación                                | Nivel Básico        |                              Exhaustivo                               |
+| Diseño y arquitectura                       | Ocasionalmente      |                                  Sí                                   |
+| Estándar de codificación                    | Mínimo              |                                  Sí                                   |
+| Revisión de código seguro                   | Mínimo              |                                  Sí                                   |
+| Lista de verificación de revisión por pares | Mínimo              |                                  Sí                                   |
+| Pruebas de Unidad                           | Ocasionalmente      |                                  Sí                                   |
+| Pruebas de integración                      | Ocasionalmente      |                                  Sí                                   |
+| Pruebas de penetración                      | Mínimo              |                                  Sí                                   |
+| Soporte de herramientas                     | Mínimo              |                                  Sí                                   |
+| Cadena de suministro segura                 | Ocasionalmente      |                                  Sí                                   |
 
-Alentamos a cualquiera que desee adoptar un estándar de seguridad de aplicaciones a usar el [Estándar de verificación de seguridad de aplicaciones](https://owasp.org/www-project-application-security-verification-standard/) (ASVS) de OWASP, ya que está diseñado para ser verificable y testeado, y puede usarse en todas las partes del ciclo de vida de desarrollo seguro.
+Alentamos a cualquiera que desee adoptar un estándar de seguridad de aplicaciones a usar el [Estándar de Verificación de Seguridad de Aplicaciones](https://owasp.org/www-project-application-security-verification-standard/) (ASVS) de OWASP, ya que está diseñado para ser verificable y testeado, y puede usarse en todas las partes del ciclo de vida de desarrollo seguro.
 
 El ASVS es la única opción aceptable para los proveedores de herramientas. Las herramientas no pueden detectar, probar o proteger de manera integral contra el OWASP Top 10 debido a la naturaleza de varios de los riesgos OWASP Top 10, con referencia a A04: 2021-Diseño Inseguro. OWASP desaconseja cualquier afirmación pretensiosa de cobertura completa de OWASP Top 10, porque simplemente no es cierto.

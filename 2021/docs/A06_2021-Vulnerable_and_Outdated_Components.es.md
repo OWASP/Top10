@@ -1,4 +1,4 @@
-# A06:2021 – Componentes vulnerables y obsoletos    ![icon](assets/TOP_10_Icons_Final_Vulnerable_Outdated_Components.png)
+# A06:2021 – Componentes vulnerables y obsoletos    ![icon](assets/TOP_10_Icons_Final_Vulnerable_Outdated_Components.png){: style="height:80px;width:80px" align="right"}
 
 ## Factores
 
@@ -8,7 +8,7 @@
 
 ## Resumen
 
-Era el #2 de la encuesta de la comunidad Top 10, pero también tuvo datos suficientes para llegar al Top 10 a través del análisis de  datos. Los componentes vulnerables son un problema conocido que es difícil de testear y evaluar el riesgo y es la única categoría que no tiene enumeraciones de debilidades comunes (CWE) asignadas a las CWE incluidas, por lo que se utiliza un peso de impacto/exploits predeterminado de 5.0. Los CWE notables incluidos son *CWE-1104: Uso de componentes de terceros no mantenidos* y los dos CWE del Top 10 2013 y 2017.
+Era el #2 de la encuesta de la comunidad Top 10, pero también tuvo datos suficientes para llegar al Top 10 a través del análisis de datos. Los componentes vulnerables son un problema conocido que es difícil de testear y evaluar el riesgo y es la única categoría que no tiene enumeraciones de debilidades comunes (CWE) asignadas a las CWE incluidas, por lo que se utiliza un peso de impacto/exploits predeterminado de 5.0. Las CWE notables incluidas son *CWE-1104: Uso de componentes de terceros no mantenidos* y las dos CWE del Top 10 2013 y 2017.
 
 ## Descripción
 
@@ -24,7 +24,7 @@ Usted probablemente sea vulnerable:
 
 -   Si los desarrolladores de software no testean la compatibilidad de las bibliotecas actualizadas, actualizadas o parchadas.
 
--   Si no asegura las configuraciones de los componentes (consulte A05: 2021-Configuración incorrecta de seguridad).
+-   Si no asegura las configuraciones de los componentes (consulte [A05: 2021-Configuración incorrecta de seguridad](A05_2021-Security_Misconfiguration.es.md)).
 
 ## Cómo se previene
 
@@ -47,38 +47,39 @@ Cada organización debe garantizar un plan continuo para monitorear, clasificar 
 
 -   CVE-2017-5638, una vulnerabilidad de ejecución remota de código de Struts 2 que permite la ejecución de código arbitrario en el servidor, ha sido acusada de infracciones importantes.
 
--   Si bien el Internet de las cosas (IoT) es con frecuencia difícil o imposible de parchar, la importancia de parcharlo puede ser grande (por ejemplo, dispositivos biomédicos).
+-   Si bien el Internet de las cosas (IoT) es con frecuencia difícil o imposible de parchear, la importancia de parchearlo puede ser grande (por ejemplo, dispositivos biomédicos).
 
 Existen herramientas automatizadas para ayudar a los atacantes a encontrar sistemas sin parches o mal configurados. Por ejemplo, el motor de búsqueda Shodan IoT puede ayudarlo a encontrar dispositivos que aún sufren la vulnerabilidad Heartbleed parchada en abril de 2014.
 
 ## Referencias
 
--   Estándar de verificación de seguridad de aplicaciones OWASP: arquitectura V1, diseño y modelado de amenazas
+-   OWASP Application Security Verification Standard: V1 Architecture,
+    design and threat modelling
 
--   Documentación del Proyecto OWASP Dependency-Check (para librerías Java y .NET )
+-   OWASP Dependency Check (for Java and .NET libraries)
 
--   Guía de pruebas de OWASP: arquitectura de la aplicación de mapas (OTG-INFO-010)
+-   OWASP Testing Guide - Map Application Architecture (OTG-INFO-010)
 
--   Mejores prácticas de parcheo virtual de OWASP
+-   OWASP Virtual Patching Best Practices
 
--   La desafortunada realidad de las librerías inseguras
+-   The Unfortunate Reality of Insecure Libraries
 
--   Búsqueda de Vulnerabilidades y exposiciones comunes MITRE (CVE)
+-   MITRE Common Vulnerabilities and Exposures (CVE) search
 
--   Base de datos nacional de vulnerabilidades (NVD)
+-   National Vulnerability Database (NVD)
 
--   Retire.js para detectar bibliotecas de JavaScript vulnerables conocidas
+-   Retire.js for detecting known vulnerable JavaScript libraries
 
--   Avisos de seguridad de librerías Node
+-   Node Libraries Security Advisories
 
--   [Herramientas y base de datos de asesoramiento de seguridad de las librerías Ruby]()
+-   [Ruby Libraries Security Advisory Database and Tools]()
 
 -   https://safecode.org/publication/SAFECode_Software_Integrity_Controls0610.pdf
 
 ## Lista de CWEs mapeadas 
 
-CWE-937 OWASP Top 10 2013: Uso de componentes con vulnerabilidades conocidas
+CWE-937 OWASP Top 10 2013: Using Components with Known Vulnerabilities
 
-CWE-1035 2017 Top 10 A9: Uso de componentes con vulnerabilidades conocidas
+CWE-1035 2017 Top 10 A9: Using Components with Known Vulnerabilities
 
-CWE-1104 Uso de componentes de terceros sin mantenimiento
+CWE-1104 Use of Unmaintained Third Party Components

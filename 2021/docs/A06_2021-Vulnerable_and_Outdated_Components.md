@@ -42,7 +42,7 @@ You are likely vulnerable:
     upgraded, or patched libraries.
 
 -   If you do not secure the components’ configurations (see
-    A05:2021-Security Misconfiguration).
+    [A05:2021-Security Misconfiguration](A05_2021-Security_Misconfiguration.md)).
 
 ## How to Prevent
 

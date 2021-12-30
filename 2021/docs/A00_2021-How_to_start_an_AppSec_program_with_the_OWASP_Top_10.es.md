@@ -5,7 +5,7 @@ El OWASP Top 10 2021 es un buen comienzo como base para las listas de control, e
 
 ## Etapa 1. Identifique las necesidades y los objetivos de su programa appsec
 
-Muchos programas de seguridad de aplicaciones (AppSec) intentan correr antes de poder gatear o caminar. Estos esfuerzos están condenados al fracaso. Recomendamos encarecidamente a los CISO y a los líderes de AppSec que utilicen el Modelo de madurez de aseguramiento de software (SAMM) de OWASP para identificar debilidades y áreas de mejora durante un período de 1 a 3 años. El primer paso es evaluar dónde se encuentra ahora, identificar las necesidades en la administracion, el diseño, la implementación, la verificación y las operaciones que necesita resolver de inmediato frente a las que pueden esperar, y priorizar la implementación o mejora de las quince prácticas de seguridad SAMM de OWASP. OWASP SAMM puede ayudar a construir y medir mejoras en sus esfuerzos de aseguramiento de software.
+Muchos programas de seguridad de aplicaciones (AppSec) intentan correr antes de poder gatear o caminar. Estos esfuerzos están condenados al fracaso. Recomendamos encarecidamente a los CISO y a los líderes de AppSec que utilicen el [Modelo de Madurez para el Aseguramiento del Software (SAMM)](https://owaspsamm.org) de OWASP para identificar debilidades y áreas de mejora durante un período de 1 a 3 años. El primer paso es evaluar dónde se encuentra ahora, identificar las necesidades en la administración, el diseño, la implementación, la verificación y las operaciones que necesita resolver de inmediato frente a las que pueden esperar, y priorizar la implementación o mejora de las quince prácticas de seguridad SAMM de OWASP. OWASP SAMM puede ayudar a construir y medir mejoras en sus esfuerzos de aseguramiento de software.
 															   																	  
 ## Etapa 2. Planifique un ciclo de vida de desarrollo seguro de carretera pavimentada("paved road")
 
@@ -23,8 +23,8 @@ Las carreteras pavimentadas se construyen con el consentimiento y la participaci
 
 Agregue herramientas de detección de tipo carretera pavimentada a medida que las desarrolle y proporcione información a los equipos de desarrollo para mejorar la seguridad de sus aplicaciones mediante la forma en que pueden adoptar directamente elementos de tipo carretera pavimentada.
 Una vez que se ha adoptado un aspecto de la carretera pavimentada, las organizaciones deben implementar controles de integración continuos que inspeccionen el código existente y los check-ins que utilizan alternativas prohibidas y que luego advierten o rechazan el build o el check-in. Esto evita que las opciones inseguras se introduzcan en el código con el tiempo, evitando la deuda técnica y una aplicación insegura defectuosa.
-Dichas advertencias deben estar ligadas a la alternativa segura, de modo que el equipo de desarrollo reciba la respuesta correcta de inmediato. Ellos pueden refactorizar y adoptar rápidamente el componente tipo carretera pavimentada.
-																	   
+Dichas advertencias deben estar ligadas a la alternativa segura, de modo que el equipo de desarrollo reciba la respuesta correcta de inmediato. Ellos pueden refactorizar y adoptar los componentes de la carretera pavimentada rápidamente.
+
 ## Etapa 5. Pruebe que la carretera pavimentada haya mitigado los problemas encontrados en el Top 10 de OWASP
 
 Los componentes de carretera pavimentada deben abordar un problema importante del OWASP Top 10, por ejemplo, cómo detectar o reparar automáticamente componentes vulnerables, o un complemento IDE de análisis de código estático para detectar inyecciones o, mejor aún, comenzar a usar una biblioteca que se sabe que es segura contra inyecciones.
@@ -34,7 +34,7 @@ Una vez que se mejoran, alguna forma de vía de comunicación con los consumidor
 																								 
 ## Etapa 6. Transforme su programa en un programa de AppSec maduro
 
-No debe detenerse en el Top 10 de OWASP. Éste sólo cubre 10 categorías de riesgo. Recomendamos enfáticamente a las organizaciones que adopten el Estándar de verificación de seguridad de aplicaciones y agreguen progresivamente componentes de carretera pavimentada y pruebas para los niveles 1, 2 y 3, según el nivel de riesgo de las aplicaciones desarrolladas.
+No debe detenerse en el Top 10 de OWASP. Este solo cubre 10 categorías de riesgo. Recomendamos enfáticamente a las organizaciones que adopten el Estándar de verificación de seguridad de aplicaciones y agreguen progresivamente componentes de carretera pavimentada y pruebas para los niveles 1, 2 y 3, según el nivel de riesgo de las aplicaciones desarrolladas.
 	
 ## Yendo más allá
 
@@ -42,7 +42,7 @@ Todos los grandes programas de AppSec van más allá del mínimo indispensable. 
 
 -   **Integridad conceptual**. Los programas maduros de AppSec deben contener algún concepto de arquitectura de seguridad, ya sea una arquitectura formal de seguridad en la nube o empresarial o modelado de amenazas.
 
--   **Automatización y escala**. Los programas maduros de AppSec intentan automatizar la mayor cantidad posible de sus entregables, utilizando scripts para emular pasos complejos de pruebas de penetración,  herramientas de análisis de código estático directamente disponibles para los equipos de desarrollo, ayudan a los equipos de desarrollo a crear pruebas de integración y unidad de appsec, y más.
+-   **Automatización y escala**. Los programas maduros de AppSec intentan automatizar la mayor cantidad posible de sus entregables, utilizando scripts para emular pasos complejos de pruebas de penetración, herramientas de análisis de código estático directamente disponibles para los equipos de desarrollo, ayudan a los equipos de desarrollo a crear pruebas de integración y unidad de appsec, y más.
 
 -   **Cultura**. Los programas maduros de AppSec intentan construir el diseño inseguro y eliminar la deuda técnica del código existente al ser parte del equipo de desarrollo y no fuera del mismo. Los equipos de AppSec que ven a los equipos de desarrollo como "nosotros" y "ellos" están condenados al fracaso.
 

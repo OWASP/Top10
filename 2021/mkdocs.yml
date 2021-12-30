@@ -85,7 +85,7 @@ plugins:
           A08 Software and Data Integrity Failures: A08 Fallas en el Software y en la Integridad de los Datos
           A09 Security Logging and Monitoring Failures: A09 Fallas en el Registro y Monitoreo
           A10 Server Side Request Forgery (SSRF): A10 Falsificación de Solicitud del Lado del Servidor (SSRF)
-          Next Steps: A11 Próximos pasos
+          Next Steps: Próximos pasos
         fr:
           Home: Page d'accueil
           About: À propos

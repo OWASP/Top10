@@ -168,7 +168,6 @@ salted.
 
 -   [OWASP Testing Guide: Testing for weak cryptography](https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/09-Testing_for_Weak_Cryptography/README)
 
-
 ## List of Mapped CWEs
 
 [CWE-261 Weak Encoding for Password](https://cwe.mitre.org/data/definitions/261.html)

@@ -19,9 +19,9 @@ Para aquellas organizaciones que trabajan en pos de un programa de appsec maduro
 -   **Ejemplos de escenarios de ataque**. Un atacante puede obtener o actualizar información confidencial aprovechando una condición de carrera utilizando una variable compartida estáticamente en varios subprocesos.		  
 
 -   **Referencias**
-    - [Guía de revisión de código de OWASP](https://owasp.org/www-pdf-archive/OWASP_Code_Review_Guide_v2.pdf)
+  - [OWASP Code Review Guide](https://owasp.org/www-pdf-archive/OWASP_Code_Review_Guide_v2.pdf)
 
-    - [Guía de revisión de código de Google](https://google.github.io/eng-practices/review/)
+  - [Google Code Review Guide](https://google.github.io/eng-practices/review/)
 
 ## Denegación de servicio
 
@@ -38,9 +38,9 @@ Para aquellas organizaciones que trabajan en pos de un programa de appsec maduro
 
 
 -   **Referencias**
-    - [Hoja de Referencia de OWASP (Cheet Sheet): Denegación de servicio](https://cheatsheetseries.owasp.org/cheatsheets/Denial_of_Service_Cheat_Sheet.html)
-    
-    - [Ataques OWASP: Denegación de servicio](https://owasp.org/www-community/attacks/Denial_of_Service)
+  - [OWASP Cheet Sheet: Denial of Service](https://cheatsheetseries.owasp.org/cheatsheets/Denial_of_Service_Cheat_Sheet.html)
+
+  - [OWASP Attacks: Denial of Service](https://owasp.org/www-community/attacks/Denial_of_Service)
 
 ## Errores de administración de memoria
 				  
@@ -52,15 +52,15 @@ Para aquellas organizaciones que trabajan en pos de un programa de appsec maduro
 -   **Descripción**. Las aplicaciones web usualmente se escriben en lenguajes de memoria administrada, como Java, .NET o node.js (JavaScript o TypeScript). Sin embargo, estos lenguajes están escritos en lenguajes de sistema que tienen problemas de administración de memoria, como desbordamientos de búfer o de heap, uso de memoria liberada, desbordamiento de números enteros y más. A lo largo de los años, ha habido muchos escapes de espacio aislado(sandbox escapes) que demuestran que aunque el lenguaje de la aplicación web es nominalmente "seguro" para la memoria, la estructura de base no siempre es segura.
 				 
 
--   **Cómo se previene**. Muchas API modernas ahora están escritas en lenguajes seguros para la memoria como Rust o Go. En el caso de Rust, la seguridad de la memoria es una característica crucial del lenguaje. Para el código existente, el uso de banderas de compilador estrictas, tipeado fuerte, análisis de código estático y pruebas de fuzz puede ser beneficioso para identificar pérdidas de memoria, desbordamientos de matrices y memoria, y más.
+-   **Cómo se previene**. Muchas API modernas ahora están escritas en lenguajes seguros para la memoria como Rust o Go. En el caso de Rust, la seguridad de la memoria es una característica crucial del lenguaje. Para el código existente, el uso de banderas de compilador estrictas, fuerte tipado, análisis de código estático y pruebas de fuzz puede ser beneficioso para identificar pérdidas de memoria, desbordamientos de matrices y memoria, y más.
 					
 
 -   **Ejemplos de escenarios de ataque**. Los desbordamientos de búfer y heap han sido un pilar de los atacantes a lo largo de los años. El atacante envía datos a un programa, que almacena en un búfer de pila de tamaño insuficiente. El resultado es que se sobrescribe la información de la pila de llamadas, incluido el puntero de retorno de la función. Los datos establecen el valor del puntero de retorno para que cuando la función regrese, transfiera el control al código malicioso contenido en los datos del atacante.
 				   	
 
 -   **Referencias**
-    - [Vulnerabilidades OWASP: desbordamiento de búfer](https://owasp.org/www-community/vulnerabilities/Buffer_Overflow)
-    
-    - [Ataques OWASP: desbordamiento de búfer](https://owasp.org/www-community/attacks/Buffer_overflow_attack)
-    
-    - [Science Direct: desbordamiento de enteros](https://www.sciencedirect.com/topics/computer-science/integer-overflow)
+  - [OWASP Vulnerabilities: Buffer Overflow](https://owasp.org/www-community/vulnerabilities/Buffer_Overflow)
+
+  - [OWASP Attacks: Buffer Overflow](https://owasp.org/www-community/attacks/Buffer_overflow_attack)
+
+  - [Science Direct: Integer Overflow](https://www.sciencedirect.com/topics/computer-science/integer-overflow)

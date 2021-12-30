@@ -1,4 +1,4 @@
-# A03:2021 – Inyección    ![icon](assets/TOP_10_Icons_Final_Injection.png)
+# A03:2021 – Inyección    ![icon](assets/TOP_10_Icons_Final_Injection.png){: style="height:80px;width:80px" align="right"}
 
 ## Factores
 
@@ -8,7 +8,7 @@
 
 ## Resumen
 
-La Inyección se desliza hasta la tercera posición. El 94% de las aplicaciones fueron probadas sobre alguna forma de inyeccón con una tasa de incidencia máxima del 19%, una tasa de incidencia promedio del 3% y 274 mil ocurrencias. Los CWE notables incluidos son *CWE-79: Cross-site Scripting*, *CWE-89: SQL Injection*, y la *CWE-73:Control Externo de Nombre de archivos o ruta*. 
+La Inyección se desliza hasta la tercera posición. El 94% de las aplicaciones fueron probadas sobre alguna forma de inyección con una tasa de incidencia máxima del 19%, una tasa de incidencia promedio del 3% y 274 mil ocurrencias. Las CWE notables incluidas son *CWE-79: Cross-site Scripting*, *CWE-89: SQL Injection*, y la *CWE-73:Control Externo de Nombre de archivos o ruta*. 
 
 ## Descripción 
 
@@ -32,10 +32,10 @@ Las organizaciones pueden incluir herramientas de análisis estático (SAST) y p
 
 Para prevenir inyecciones, se requiere separar los datos de los comandos y las consultas.
 
--   La opción preferida es utilizar una API segura, que evite el uso de un intérprete por completo y proporcione una interfaz parametrizada. Se debe migrar y utilizar una herramientas de Mapeo Relacional de Objetos (ORMs).<br/>
-    **Nota:** : Incluso cuando se parametrizan, los procedimientos almacenados pueden introducir una inyección SQL si el procedimiento PL/SQL o T-SQL concatena consultas y datos, o se ejecutan parámetros utilizando EXECUTE IMMEDIATE o exec().
+-   La opción preferida es utilizar una API segura, que evite el uso de un intérprete por completo y proporcione una interfaz parametrizada. Se debe migrar y utilizar una herramienta de Mapeo Relacional de Objetos (ORM).<br/>
+    **Nota:**: Incluso cuando se parametrizan, los procedimientos almacenados pueden introducir una inyección SQL si el procedimiento PL/SQL o T-SQL concatena consultas y datos, o se ejecutan parámetros utilizando EXECUTE IMMEDIATE o exec().
 
--   Realice validaciones de entradas de datos en el servidor,utilizando "listas blancas". De todos modos, esto no es una defensa completa ya que muchas aplicaciones requieren el uso de caracteres especiales, como en campos de texto, APIs o aplicaciones móviles.
+-   Realice validaciones de entradas de datos en el servidor, utilizando "listas blancas". De todos modos, esto no es una defensa completa, ya que muchas aplicaciones requieren el uso de caracteres especiales, como en campos de texto, APIs o aplicaciones móviles.
 
 -   Para cualquier consulta dinámica residual, escape caracteres especiales utilizando la sintaxis de caracteres específica para el intérprete que se trate.<br/>
     **Nota:** La estructura de SQL como nombres de tabla, nombres de columna, etc. no se pueden escapar y, por lo tanto, los nombres de estructura suministrados por el usuario son peligrosos. Este es un problema común en el software de redacción de informes.
@@ -50,7 +50,7 @@ String query = "SELECT \* FROM accounts WHERE custID='" + request.getParameter("
 ```
 
 **Escenario #2:** Del mismo modo, la confianza total de una aplicación en su framework
-puede resultar en consultas que aún son vulnerables a inyeccón, (por ejemplo: Hibernate Query
+puede resultar en consultas que aún son vulnerables a inyección, (por ejemplo: Hibernate Query
 Language (HQL)):
 ```
  Query HQLQuery = session.createQuery("FROM accounts WHERE custID='" + request.getParameter("id") + "'");
@@ -68,89 +68,95 @@ procedimientos almacenados.
 
 ## Referencias
 
--   [OWASP Controles Proactivos: Acceso Seguro a la Base de Datos](https://owasp.org/www-project-proactive-controls/v3/en/c3-secure-database)
+-   [OWASP Proactive Controls: Secure Database Access](https://owasp.org/www-project-proactive-controls/v3/en/c3-secure-database)
 
--   [OWASP ASVS: Validación y codificación de entrada V5](https://owasp.org/www-project-application-security-verification-standard)
+-   [OWASP ASVS: V5 Input Validation and Encoding](https://owasp.org/www-project-application-security-verification-standard)
 
--   [OWASP Guía de prueba: Inyección SQL,](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/05-Testing_for_SQL_Injection) [Inyección de comandos](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/12-Testing_for_Command_Injection),
-    [Inyección ORM](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/05.7-Testing_for_ORM_Injection)
+-   [OWASP Testing Guide: SQL Injection,](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/05-Testing_for_SQL_Injection) [Command Injection](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/12-Testing_for_Command_Injection),
+    and [ORM Injection](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/05.7-Testing_for_ORM_Injection)
 
--   [OWASP Hoja de Referencia: Prevención de Inyecciones](https://cheatsheetseries.owasp.org/cheatsheets/Injection_Prevention_Cheat_Sheet.html)
+-   [OWASP Cheat Sheet: Injection Prevention](https://cheatsheetseries.owasp.org/cheatsheets/Injection_Prevention_Cheat_Sheet.html)
 
--   [OWASP Hoja de Referencia: Prevención de Inyección SQL](https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html)
+-   [OWASP Cheat Sheet: SQL Injection Prevention](https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html)
 
--   [OWASP Hoja de Referencia: Prevención de Inyecciones en Java](https://cheatsheetseries.owasp.org/cheatsheets/Injection_Prevention_Cheat_Sheet_in_Java.html)
+-   [OWASP Cheat Sheet: Injection Prevention in Java](https://cheatsheetseries.owasp.org/cheatsheets/Injection_Prevention_Cheat_Sheet_in_Java.html)
 
--   [OWASP Hoja de Referencia: Parametrización de consultas](https://cheatsheetseries.owasp.org/cheatsheets/Query_Parameterization_Cheat_Sheet.html)
+-   [OWASP Cheat Sheet: Query Parameterization](https://cheatsheetseries.owasp.org/cheatsheets/Query_Parameterization_Cheat_Sheet.html)
 
--   [OWASP Amenazas automatizadas para aplicaciones web – OAT-014](https://owasp.org/www-project-automated-threats-to-web-applications/)
+-   [OWASP Automated Threats to Web Applications – OAT-014](https://owasp.org/www-project-automated-threats-to-web-applications/)
 
--   [PortSwigger: Inyeccón de plantilla del lado del servidor](https://portswigger.net/kb/issues/00101080_serversidetemplateinjection)
+-   [PortSwigger: Server-side template injection](https://portswigger.net/kb/issues/00101080_serversidetemplateinjection)
 
 ## Lista de CWEs mapeadas
 
-[CWE-20 Validación de entrada incorrecta](https://cwe.mitre.org/data/definitions/20.html)
+[CWE-20 Improper Input Validation](https://cwe.mitre.org/data/definitions/20.html)
 
-[CWE-74 Neutralización incorrecta de elementos especiales en la salida utilizada por un Componente descendente ('Inyección')](https://cwe.mitre.org/data/definitions/74.html)
+[CWE-74 Improper Neutralization of Special Elements in Output Used by a
+Downstream Component ('Injection')](https://cwe.mitre.org/data/definitions/74.html)
 
-[CWE-75 No desinfectar elementos especiales en un plano diferente (Inyección de elementos especiales)](https://cwe.mitre.org/data/definitions/75.html)
+[CWE-75 Failure to Sanitize Special Elements into a Different Plane
+(Special Element Injection)](https://cwe.mitre.org/data/definitions/75.html)
 
-[CWE-77 Neutralización incorrecta de elementos especiales utilizados en un comando ('Inyección de comandos')](https://cwe.mitre.org/data/definitions/77.html)
+[CWE-77 Improper Neutralization of Special Elements used in a Command
+('Command Injection')](https://cwe.mitre.org/data/definitions/77.html)
 
-[CWE-78 Neutralización incorrecta de elementos especiales utilizados en un comando del sistema operativo ('Inyección de comandos del sistema operativo')](https://cwe.mitre.org/data/definitions/78.html)
+[CWE-78 Improper Neutralization of Special Elements used in an OS Command
+('OS Command Injection')](https://cwe.mitre.org/data/definitions/78.html)
 
-[CWE-79 Neutralización incorrecta de la entrada durante la generación de la página web ('Cross-site Scripting')](https://cwe.mitre.org/data/definitions/79.html)
+[CWE-79 Improper Neutralization of Input During Web Page Generation
+('Cross-site Scripting')](https://cwe.mitre.org/data/definitions/79.html)
 
-[CWE-80 Neutralización incorrecta de etiquetas HTML relacionadas con secuencias de comandos en una página web (XSS básico)](https://cwe.mitre.org/data/definitions/80.html)
+[CWE-80 Improper Neutralization of Script-Related HTML Tags in a Web Page
+(Basic XSS)](https://cwe.mitre.org/data/definitions/80.html)
 
-[CWE-83 Neutralización incorrecta de secuencias de comandos en atributos en una página web](https://cwe.mitre.org/data/definitions/83.html)
+[CWE-83 Improper Neutralization of Script in Attributes in a Web Page](https://cwe.mitre.org/data/definitions/83.html)
 
-[CWE-87 Neutralización incorrecta de la sintaxis XSS alternativa](https://cwe.mitre.org/data/definitions/87.html)
+[CWE-87 Improper Neutralization of Alternate XSS Syntax](https://cwe.mitre.org/data/definitions/87.html)
 
-[CWE-88 Neutralización inadecuada de los delimitadores de argumentos en un comando ('Inyección de argumentos')](https://cwe.mitre.org/data/definitions/88.html)
+[CWE-88 Improper Neutralization of Argument Delimiters in a Command ('Argument Injection')](https://cwe.mitre.org/data/definitions/88.html)
 
-[CWE-89 Neutralización incorrecta de elementos especiales utilizados en un comando SQL ('Inyección SQL')](https://cwe.mitre.org/data/definitions/89.html)
+[CWE-89 Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')](https://cwe.mitre.org/data/definitions/89.html)
 
-[CWE-90 Neutralización incorrecta de elementos especiales utilizados en una consulta LDAP ('Inyección LDAP')](https://cwe.mitre.org/data/definitions/90.html)
+[CWE-90 Improper Neutralization of Special Elements used in an LDAP Query ('LDAP Injection')](https://cwe.mitre.org/data/definitions/90.html)
 
-[CWE-91 XML Injection (también conocido como Blind XPath Injection)](https://cwe.mitre.org/data/definitions/91.html)
+[CWE-91 XML Injection (aka Blind XPath Injection)](https://cwe.mitre.org/data/definitions/91.html)
 
-[CWE-93 Neutralización incorrecta de secuencias CRLF ('Inyección CRLF')](https://cwe.mitre.org/data/definitions/93.html)
+[CWE-93 Improper Neutralization of CRLF Sequences ('CRLF Injection')](https://cwe.mitre.org/data/definitions/93.html)
 
-[CWE-94 Control inadecuado de la generación de código ('Inyección de código')](https://cwe.mitre.org/data/definitions/94.html)
+[CWE-94 Improper Control of Generation of Code ('Code Injection')](https://cwe.mitre.org/data/definitions/94.html)
 
-[CWE-95 Neutralización incorrecta de directivas en código evaluado dinámicamente ('Inyección de evaluación')](https://cwe.mitre.org/data/definitions/95.html)
+[CWE-95 Improper Neutralization of Directives in Dynamically Evaluated Code ('Eval Injection')](https://cwe.mitre.org/data/definitions/95.html)
 
-[CWE-96 Neutralización incorrecta de directivas en código guardado estáticamente ('Inyección de código estático')](https://cwe.mitre.org/data/definitions/96.html)
+[CWE-96 Improper Neutralization of Directives in Statically Saved Code ('Static Code Injection')](https://cwe.mitre.org/data/definitions/96.html)
 
-[CWE-97 Neutralización incorrecta de las inclusiones del lado del servidor (SSI) dentro de una página web](https://cwe.mitre.org/data/definitions/97.html)
+[CWE-97 Improper Neutralization of Server-Side Includes (SSI) Within a Web Page](https://cwe.mitre.org/data/definitions/97.html)
 
-[CWE-98 Control incorrecto del nombre de archivo para la declaración Incluir / Requerir en el programa PHP ('Inclusión remota de archivos PHP')](https://cwe.mitre.org/data/definitions/98.html)
+[CWE-98 Improper Control of Filename for Include/Require Statement in PHP Program ('PHP Remote File Inclusion')](https://cwe.mitre.org/data/definitions/98.html)
 
-[CWE-99 Control inadecuado de identificadores de recursos ('Inyección de recursos')](https://cwe.mitre.org/data/definitions/99.html)
+[CWE-99 Improper Control of Resource Identifiers ('Resource Injection')](https://cwe.mitre.org/data/definitions/99.html)
 
-[CWE-100 En desuso: originalmente pensado como validación general para problemas de validación de entrada](https://cwe.mitre.org/data/definitions/100.html)
+[CWE-100 Deprecated: Was catch-all for input validation issues](https://cwe.mitre.org/data/definitions/100.html)
 
-[CWE-113 Neutralización incorrecta de secuencias CRLF en encabezados HTTP ('División de respuesta HTTP')](https://cwe.mitre.org/data/definitions/113.html)
+[CWE-113 Improper Neutralization of CRLF Sequences in HTTP Headers ('HTTP Response Splitting')](https://cwe.mitre.org/data/definitions/113.html)
 
-[CWE-116 Codificación incorrecta o escape de salida](https://cwe.mitre.org/data/definitions/116.html)
+[CWE-116 Improper Encoding or Escaping of Output](https://cwe.mitre.org/data/definitions/116.html)
 
-[CWE-138 Neutralización inadecuada de elementos especiales](https://cwe.mitre.org/data/definitions/138.html)
+[CWE-138 Improper Neutralization of Special Elements](https://cwe.mitre.org/data/definitions/138.html)
 
-[CWE-184 Lista incompleta de entradas no permitidas](https://cwe.mitre.org/data/definitions/184.html)
+[CWE-184 Incomplete List of Disallowed Inputs](https://cwe.mitre.org/data/definitions/184.html)
 
-[CWE-470 Uso de entrada controlada externamente para seleccionar clases o código ('Reflexión insegura')](https://cwe.mitre.org/data/definitions/470.html)
+[CWE-470 Use of Externally-Controlled Input to Select Classes or Code ('Unsafe Reflection')](https://cwe.mitre.org/data/definitions/470.html)
 
-[CWE-471 Modificación de datos supuestos-inmutables (MAID)](https://cwe.mitre.org/data/definitions/471.html)
+[CWE-471 Modification of Assumed-Immutable Data (MAID)](https://cwe.mitre.org/data/definitions/471.html)
 
-[CWE-564 Inyección SQL:  Hibernate](https://cwe.mitre.org/data/definitions/564.html)
+[CWE-564 SQL Injection: Hibernate](https://cwe.mitre.org/data/definitions/564.html)
 
-[CWE-610 Referencia controlada externamente a un recurso en otra esfera](https://cwe.mitre.org/data/definitions/610.html)
+[CWE-610 Externally Controlled Reference to a Resource in Another Sphere](https://cwe.mitre.org/data/definitions/610.html)
 
-[CWE-643 Neutralización incorrecta de datos dentro de expresiones XPath ('Inyección XPath')](https://cwe.mitre.org/data/definitions/643.html)
+[CWE-643 Improper Neutralization of Data within XPath Expressions ('XPath Injection')](https://cwe.mitre.org/data/definitions/643.html)
 
-[CWE-644 Neutralización incorrecta de encabezados HTTP para sintaxis de secuencias de comandos](https://cwe.mitre.org/data/definitions/644.html)
+[CWE-644 Improper Neutralization of HTTP Headers for Scripting Syntax](https://cwe.mitre.org/data/definitions/644.html)
 
-[CWE-652 Neutralización incorrecta de datos dentro de expresiones XQuery ('Inyección XQuery')](https://cwe.mitre.org/data/definitions/652.html)
+[CWE-652 Improper Neutralization of Data within XQuery Expressions ('XQuery Injection')](https://cwe.mitre.org/data/definitions/652.html)
 
-[CWE-917 Neutralización inadecuada de elementos especiales utilizados en una declaración de lenguaje de expresión ('Inyección de lenguaje de expresión')](https://cwe.mitre.org/data/definitions/917.html)
+[CWE-917 Improper Neutralization of Special Elements used in an Expression Language Statement ('Expression Language Injection')](https://cwe.mitre.org/data/definitions/917.html)

@@ -34,7 +34,7 @@ attacks. There may be authentication weaknesses if the application:
     safe.
 
 -   Uses plain text, encrypted, or weakly hashed passwords data stores (see
-    **A02:2021-Cryptographic Failures**).
+    [A02:2021-Cryptographic Failures](A02_2021-Cryptographic_Failures.md)).
 
 -   Has missing or ineffective multi-factor authentication.
 

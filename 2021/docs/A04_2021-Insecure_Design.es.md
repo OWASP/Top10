@@ -1,4 +1,4 @@
-# A04:2021 – Diseño Inseguro   ![icon](assets/TOP_10_Icons_Final_Insecure_Design.png)
+# A04:2021 – Diseño Inseguro   ![icon](assets/TOP_10_Icons_Final_Insecure_Design.png){: style="height:80px;width:80px" align="right"}
 
 ## Factores
 
@@ -8,11 +8,11 @@
 
 ## Resumen
 
-Una nueva categoría para 2021 se centra en los riesgos relacionados con el diseño y las fallas arquitectónicas, con un llamado a un mayor uso del modelado de amenazas, patrones de diseño seguros y arquitecturas de referencia. Como comunidad, debemos ir más allá de solo abandonar las metodologias tradicionales (movimiento "shift-left" en inglés) en el espacio de codificación para precodificar actividades que son críticas para los principios de Secure by Design. Los CWE notables incluidos son *CWE-209: Generación de mensaje de error que contiene información confidencial*, *CWE-256: Almacenamiento desprotegido de credenciales*, *CWE-501: Infracción de límites de confianza* y *CWE-522: Credenciales protegidas insuficientemente*.
+Una nueva categoría para 2021 se centra en los riesgos relacionados con el diseño y las fallas arquitectónicas, con un llamado a un mayor uso del modelado de amenazas, patrones de diseño seguros y arquitecturas de referencia. Como comunidad, debemos ir más allá de solo abandonar las metodologías tradicionales (movimiento "shift-left" en inglés) en el espacio de codificación para precodificar actividades que son críticas para los principios de Secure by Design. Las CWE notables incluidas son *CWE-209: Generación de mensaje de error que contiene información confidencial*, *CWE-256: Almacenamiento desprotegido de credenciales*, *CWE-501: Infracción de límites de confianza* y *CWE-522: Credenciales protegidas insuficientemente*.
 
 ## Descripción
 
-El diseño inseguro es una categoría amplia que representa diferentes debilidades, expresadas como "diseño de control faltante o ineficaz". El diseño inseguro no es la fuente de todas las otras 10 categorías de riesgo principales. Existe una diferencia entre un diseño inseguro y una implementación insegura. Distinguimos entre fallas de diseño y defectos de implementación por una razón, tienen diferentes causas y soluciones. Un diseño seguro aún puede tener defectos de implementación que conduzcan a vulnerabilidades que pueden explotarse. Un diseño inseguro no se puede arreglar con una implementación perfecta ya que, por definición, los controles de seguridad necesarios nunca se crearon para defenderse de ataques específicos. Uno de los factores que contribuyen al diseño inseguro es la falta de perfiles de riesgo empresarial inherentes al software o sistema que se está desarrollando y, por lo tanto, la falta de determinación del nivel de diseño de seguridad que se requiere.
+El diseño inseguro es una categoría amplia que representa diferentes debilidades, expresadas como "diseño de control faltante o ineficaz". El diseño inseguro no es la fuente de todas las otras 10 categorías de riesgo principales. Existe una diferencia entre un diseño inseguro y una implementación insegura. Distinguimos entre fallas de diseño y defectos de implementación por una razón, tienen diferentes causas y soluciones. Un diseño seguro aún puede tener defectos de implementación que conduzcan a vulnerabilidades que pueden explotarse. Un diseño inseguro no se puede arreglar con una implementación perfecta, ya que, por definición, los controles de seguridad necesarios nunca se crearon para defenderse de ataques específicos. Uno de los factores que contribuyen al diseño inseguro es la falta de perfiles de riesgo empresarial inherentes al software o sistema que se está desarrollando y, por lo tanto, la falta de determinación del nivel de diseño de seguridad que se requiere.
 
 ### Gestión de requerimientos y recursos
 
@@ -24,7 +24,7 @@ El diseño seguro es una cultura y metodología que evalúa constantemente las a
 
 ### Ciclo de Vida de Desarrollo Seguro (S-SDLC)
 
-El software seguro requiere un ciclo de vida de desarrollo seguro, alguna forma de patrón de diseño seguro, metodologías "Paved Road", biblioteca de componentes seguros, herramientas y modelado de amenazas. Comuníquese con sus especialistas en seguridad al comienzo de un proyecto de software durante todo el proyecto y el mantenimiento de su software. Considere aprovechar el [Modelo de madurez de garantía de software de OWASP (SAMM)](https://owaspsamm.org) para ayudar a estructurar sus esfuerzos de desarrollo de software seguro.
+El software seguro requiere un ciclo de vida de desarrollo seguro, alguna forma de patrón de diseño seguro, metodologías "Paved Road", biblioteca de componentes seguros, herramientas y modelado de amenazas. Comuníquese con sus especialistas en seguridad al comienzo de un proyecto de software durante todo el proyecto y el mantenimiento de su software. Considere aprovechar el [Modelo de Madurez para el Aseguramiento del Software (SAMM)](https://owaspsamm.org) para ayudar a estructurar sus esfuerzos de desarrollo de software seguro.
 
 ## Cómo se previene
 
@@ -57,96 +57,96 @@ entusiastas que no pueden obtener estas tarjetas a ningún precio. El diseño cu
 
 ## Referencias
 
-- Hoja de referencia de OWASP: Principios de diseño seguro (Próximamente)
+-   [OWASP Cheat Sheet: Secure Design Principles](Coming Soon)
 
-- [OWASP SAMM: Diseño: Arquitectura de seguridad](https://owaspsamm.org/model/design/security-architecture/)
+-   [OWASP SAMM: Design:Security Architecture](https://owaspsamm.org/model/design/security-architecture/)
 
-- [OWASP SAMM: Diseño: Evaluación de amenazas](https://owaspsamm.org/model/design/threat-assessment/)
+-   [OWASP SAMM: Design:Threat Assessment](https://owaspsamm.org/model/design/threat-assessment/)
 
-- [NIST - Directrices sobre estándares mínimos para la verificación de software por parte de desarrolladores](https://www.nist.gov/system/files/documents/2021/07/13/Developer%20Verification%20of%20Software.pdf)
+-   [NIST – Guidelines on Minimum Standards for Developer Verification of Software](https://www.nist.gov/publications/guidelines-minimum-standards-developer-verification-software)
 
-- [El manifiesto de modelado de amenazas](https://threatmodelingmanifesto.org)
+-   [The Threat Modeling Manifesto](https://threatmodelingmanifesto.org)
 
-- [Increíble modelado de amenazas](https://github.com/hysnsec/awesome-threat-modelling)
+-   [Awesome Threat Modeling](https://github.com/hysnsec/awesome-threat-modelling)
 
 ## Lista de CWEs mapeadas
 
-[CWE-73 Control externo de nombre de archivo o ruta](https://cwe.mitre.org/data/definitions/73.html)
+[CWE-73 External Control of File Name or Path](https://cwe.mitre.org/data/definitions/73.html)
 
-[CWE-183 Lista permisiva de entradas permitidas](https://cwe.mitre.org/data/definitions/183.html)
+[CWE-183 Permissive List of Allowed Inputs](https://cwe.mitre.org/data/definitions/183.html)
 
-[CWE-209 Generación de mensaje de error que contiene información confidencial](https://cwe.mitre.org/data/definitions/209.html)
+[CWE-209 Generation of Error Message Containing Sensitive Information](https://cwe.mitre.org/data/definitions/209.html)
 
-[CWE-213 Exposición de información confidencial debido a políticas incompatibles](https://cwe.mitre.org/data/definitions/213.html)
+[CWE-213 Exposure of Sensitive Information Due to Incompatible Policies](https://cwe.mitre.org/data/definitions/213.html)
 
-[CWE-235 Manejo inadecuado de parámetros adicionales](https://cwe.mitre.org/data/definitions/235.html)
+[CWE-235 Improper Handling of Extra Parameters](https://cwe.mitre.org/data/definitions/235.html)
 
-[CWE-256 Almacenamiento de credenciales sin protección](https://cwe.mitre.org/data/definitions/256.html)
+[CWE-256 Unprotected Storage of Credentials](https://cwe.mitre.org/data/definitions/256.html)
 
-[CWE-257 Almacenamiento de contraseñas en un formato recuperable](https://cwe.mitre.org/data/definitions/257.html)
+[CWE-257 Storing Passwords in a Recoverable Format](https://cwe.mitre.org/data/definitions/257.html)
 
-[CWE-266 Asignación de privilegios incorrecta](https://cwe.mitre.org/data/definitions/266.html)
+[CWE-266 Incorrect Privilege Assignment](https://cwe.mitre.org/data/definitions/266.html)
 
-[CWE-269 Gestión inadecuada de privilegios](https://cwe.mitre.org/data/definitions/269.html)
+[CWE-269 Improper Privilege Management](https://cwe.mitre.org/data/definitions/269.html)
 
-[CWE-280 Manejo inadecuado de permisos o privilegios insuficientes](https://cwe.mitre.org/data/definitions/280.html)
+[CWE-280 Improper Handling of Insufficient Permissions or Privileges](https://cwe.mitre.org/data/definitions/280.html)
 
-[CWE-311 Falta encriptación de datos confidenciales](https://cwe.mitre.org/data/definitions/311.html)
+[CWE-311 Missing Encryption of Sensitive Data](https://cwe.mitre.org/data/definitions/311.html)
 
-[CWE-312 Almacenamiento de texto sin cifrar de información confidencial](https://cwe.mitre.org/data/definitions/312.html)
+[CWE-312 Cleartext Storage of Sensitive Information](https://cwe.mitre.org/data/definitions/312.html)
 
-[CWE-313 Almacenamiento de texto sin cifrar en un archivo o en un disco](https://cwe.mitre.org/data/definitions/313.html)
+[CWE-313 Cleartext Storage in a File or on Disk](https://cwe.mitre.org/data/definitions/313.html)
 
-[CWE-316 Almacenamiento de texto sin cifrar de información confidencial en la memoria](https://cwe.mitre.org/data/definitions/316.html)
+[CWE-316 Cleartext Storage of Sensitive Information in Memory](https://cwe.mitre.org/data/definitions/316.html)
 
-[CWE-419 Canal principal desprotegido](https://cwe.mitre.org/data/definitions/419.html)
+[CWE-419 Unprotected Primary Channel](https://cwe.mitre.org/data/definitions/419.html)
 
-[CWE-430 Implementación de un controlador incorrecto](https://cwe.mitre.org/data/definitions/430.html)
+[CWE-430 Deployment of Wrong Handler](https://cwe.mitre.org/data/definitions/430.html)
 
-[CWE-434 Carga sin restricciones de archivo con tipo peligroso](https://cwe.mitre.org/data/definitions/434.html)
+[CWE-434 Unrestricted Upload of File with Dangerous Type](https://cwe.mitre.org/data/definitions/434.html)
 
-[CWE-444 Interpretación inconsistente de solicitudes HTTP ('Contrabando de solicitudes HTTP')](https://cwe.mitre.org/data/definitions/444.html)
+[CWE-444 Inconsistent Interpretation of HTTP Requests ('HTTP Request Smuggling')](https://cwe.mitre.org/data/definitions/444.html)
 
-[CWE-451 Tergiversación de información crítica en la Interfaz de usuario(UI)](https://cwe.mitre.org/data/definitions/451.html)
+[CWE-451 User Interface (UI) Misrepresentation of Critical Information](https://cwe.mitre.org/data/definitions/451.html)
 
-[CWE-472 Control externo de parámetro web supuestamente inmutable](https://cwe.mitre.org/data/definitions/472.html)
+[CWE-472 External Control of Assumed-Immutable Web Parameter](https://cwe.mitre.org/data/definitions/472.html)
 
-[CWE-501 Violación de los límites de confianza](https://cwe.mitre.org/data/definitions/501.html)
+[CWE-501 Trust Boundary Violation](https://cwe.mitre.org/data/definitions/501.html)
 
-[CWE-522 Credenciales insuficientemente protegidas](https://cwe.mitre.org/data/definitions/522.html)
+[CWE-522 Insufficiently Protected Credentials](https://cwe.mitre.org/data/definitions/522.html)
 
-[CWE-525 Uso de la caché del navegador web que contiene información confidencial](https://cwe.mitre.org/data/definitions/525.html)
+[CWE-525 Use of Web Browser Cache Containing Sensitive Information](https://cwe.mitre.org/data/definitions/525.html)
 
-[CWE-539 Uso de cookies persistentes que contienen información confidencial](https://cwe.mitre.org/data/definitions/539.html)
+[CWE-539 Use of Persistent Cookies Containing Sensitive Information](https://cwe.mitre.org/data/definitions/539.html)
 
-[CWE-579 J2EE Malas prácticas: Objeto no serializable almacenado en la sesión](https://cwe.mitre.org/data/definitions/579.html)
+[CWE-579 J2EE Bad Practices: Non-serializable Object Stored in Session](https://cwe.mitre.org/data/definitions/579.html)
 
-[CWE-598 Uso del método de solicitud GET con cadenas de consulta sensibles](https://cwe.mitre.org/data/definitions/598.html)
+[CWE-598 Use of GET Request Method With Sensitive Query Strings](https://cwe.mitre.org/data/definitions/598.html)
 
-[CWE-602 Cumplimiento de la seguridad del lado del servidor en el lado del cliente](https://cwe.mitre.org/data/definitions/602.html)
+[CWE-602 Client-Side Enforcement of Server-Side Security](https://cwe.mitre.org/data/definitions/602.html)
 
-[CWE-642 Control externo de datos de estado crítico](https://cwe.mitre.org/data/definitions/642.html)
+[CWE-642 External Control of Critical State Data](https://cwe.mitre.org/data/definitions/642.html)
 
-[CWE-646 Dependencia del nombre del archivo o la extensión del archivo suministrado externamente](https://cwe.mitre.org/data/definitions/646.html)
+[CWE-646 Reliance on File Name or Extension of Externally-Supplied File](https://cwe.mitre.org/data/definitions/646.html)
 
-[CWE-650 Confianza en los métodos de permisos HTTP en el lado del servidor](https://cwe.mitre.org/data/definitions/650.html)
+[CWE-650 Trusting HTTP Permission Methods on the Server Side](https://cwe.mitre.org/data/definitions/650.html)
 
-[CWE-653 Compartimentación insuficiente](https://cwe.mitre.org/data/definitions/653.html)
+[CWE-653 Insufficient Compartmentalization](https://cwe.mitre.org/data/definitions/653.html)
 
-[CWE-656 Confianza en la seguridad a través de la oscuridad](https://cwe.mitre.org/data/definitions/656.html)
+[CWE-656 Reliance on Security Through Obscurity](https://cwe.mitre.org/data/definitions/656.html)
 
-[CWE-657 Violación de los principios de diseño seguro](https://cwe.mitre.org/data/definitions/657.html)
+[CWE-657 Violation of Secure Design Principles](https://cwe.mitre.org/data/definitions/657.html)
 
-[CWE-799 Control inadecuado de la frecuencia de interacción](https://cwe.mitre.org/data/definitions/799.html)
+[CWE-799 Improper Control of Interaction Frequency](https://cwe.mitre.org/data/definitions/799.html)
 
-[CWE-807 Dependencia de entradas no confiables en una decisión de seguridad](https://cwe.mitre.org/data/definitions/807.html)
+[CWE-807 Reliance on Untrusted Inputs in a Security Decision](https://cwe.mitre.org/data/definitions/807.html)
 
-[CWE-840 Errores de lógica empresarial](https://cwe.mitre.org/data/definitions/840.html)
+[CWE-840 Business Logic Errors](https://cwe.mitre.org/data/definitions/840.html)
 
-[CWE-841 Aplicación inadecuada del flujo de trabajo conductual](https://cwe.mitre.org/data/definitions/841.html)
+[CWE-841 Improper Enforcement of Behavioral Workflow](https://cwe.mitre.org/data/definitions/841.html)
 
-[CWE-927 Uso de intención implícita para comunicación sensible](https://cwe.mitre.org/data/definitions/927.html)
+[CWE-927 Use of Implicit Intent for Sensitive Communication](https://cwe.mitre.org/data/definitions/927.html)
 
-[CWE-1021 Restricción inadecuada de capas o marcos de IU renderizados](https://cwe.mitre.org/data/definitions/1021.html)
+[CWE-1021 Improper Restriction of Rendered UI Layers or Frames](https://cwe.mitre.org/data/definitions/1021.html)
 
-[CWE-1173 Uso inadecuado del marco de validación](https://cwe.mitre.org/data/definitions/1173.html)
+[CWE-1173 Improper Use of Validation Framework](https://cwe.mitre.org/data/definitions/1173.html)

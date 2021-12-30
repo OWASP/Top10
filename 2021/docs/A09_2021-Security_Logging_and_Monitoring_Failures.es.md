@@ -1,4 +1,4 @@
-# A09:2021 – Fallos de monitoreo y registros de seguridad    ![icon](assets/TOP_10_Icons_Final_Security_Logging_and_Monitoring_Failures.png)
+# A09:2021 – Fallos de monitoreo y registros de seguridad    ![icon](assets/TOP_10_Icons_Final_Security_Logging_and_Monitoring_Failures.png){: style="height:80px;width:80px" align="right"}
 
 ## Factores
 
@@ -8,7 +8,7 @@
 
 ## Resumen
 
-Monitoreo y registro de seguridad provienen de la encuesta de la comunidad TOP 10, subió levemente desde la décima posición en el OWASP Top 10 2017. El registro y monitoreo pueden ser desafiantes para ser testeados, a menudo implica entrevistas o preguntas si los ataques fueron detectados durante una prueba de penetración. No hay muchos datos CVE para esta categoría, pero detectar y responder a las brechas es crítico. Aun así, puede tener un gran impacto para la responsabilidad, visibilidad, alertas de incidentes y forense. Esta categoría se expande más allá de *CWE-117 Neutralización de salida incorrecta para registros*, *CWE-223 Omisión de información relevante para la seguridad*, y
+Monitoreo y registro de seguridad provienen de la encuesta de la comunidad TOP 10, subió levemente desde la décima posición en el OWASP Top 10 2017. El registro y monitoreo pueden ser desafiantes para ser testeados, a menudo implica entrevistas o preguntas si los ataques fueron detectados durante una prueba de penetración. No hay muchos datos de CVEs para esta categoría, pero detectar y responder a las brechas es crítico. Aun así, puede tener un gran impacto para la responsabilidad, visibilidad, alertas de incidentes y forense. Esta categoría se expande más allá de *CWE-117 Neutralización de salida incorrecta para registros*, *CWE-223 Omisión de información relevante para la seguridad*, y
 *CWE-532 Inserción de información sensible en el archivo de registro*.
 
 ## Descripción
@@ -60,28 +60,38 @@ Existen frameworks de protección de aplicaciones comerciales y de código abier
 
 ## Referencias
 
--   [Controles proactivos de OWASP: Implementar registros de seguridad y monitoreo](https://owasp.org/www-project-proactive-controls/v3/en/c9-security-logging.html)
+-   [OWASP Proactive Controls: Implement Logging and
+    Monitoring](https://owasp.org/www-project-proactive-controls/v3/en/c9-security-logging.html)
 
--   [Estándar de verificación de seguridad de aplicaciones de OWASP: V8 Registro y monitoreo](https://owasp.org/www-project-application-security-verification-standard)
+-   [OWASP Application Security Verification Standard: V8 Logging and
+    Monitoring](https://owasp.org/www-project-application-security-verification-standard)
 
--   [Guía de prueba de OWASP: Prueba de código de error detallado](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/08-Testing_for_Error_Handling/01-Testing_for_Error_Code)
+-   [OWASP Testing Guide: Testing for Detailed Error
+    Code](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/08-Testing_for_Error_Handling/01-Testing_for_Error_Code)
 
--   [Hoja de referencia de OWASP: Vocabulario de registro de aplicaciones](https://cheatsheetseries.owasp.org/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html)
+-   [OWASP Cheat Sheet:
+    Application Logging Vocabulary](https://cheatsheetseries.owasp.org/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html)
 
--   [Hoja de referencia de OWASP: Registros](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html))   
+-   [OWASP Cheat Sheet:
+    Logging](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html)
 
--   [Integridad de datos: Recuperación de ransomware y otros eventos destructivos](https://csrc.nist.gov/publications/detail/sp/1800-11/final)
+-   [Data Integrity: Recovering from Ransomware and Other Destructive
+    Events](https://csrc.nist.gov/publications/detail/sp/1800-11/final)
 
--   [Integridad de datos: Identificación y protección de activos contra ransomware y otros eventos destructivos](https://csrc.nist.gov/publications/detail/sp/1800-25/final)
+-   [Data Integrity: Identifying and Protecting Assets Against
+    Ransomware and Other Destructive
+    Events](https://csrc.nist.gov/publications/detail/sp/1800-25/final)
 
--   [Integridad de datos: Detección y respuesta al ransomware y otros eventos destructivos](https://csrc.nist.gov/publications/detail/sp/1800-26/final)
+-   [Data Integrity: Detecting and Responding to Ransomware and Other
+    Destructive
+    Events](https://csrc.nist.gov/publications/detail/sp/1800-26/final)
 
 ## Lista de CWEs mapeadas 
 
-[CWE-117 Neutralización de salida incorrecta para registros](https://cwe.mitre.org/data/definitions/117.html)
+[CWE-117 Improper Output Neutralization for Logs](https://cwe.mitre.org/data/definitions/117.html)
 
-[CWE-223 Omisión de información relevante para la seguridad](https://cwe.mitre.org/data/definitions/223.html)
+[CWE-223 Omission of Security-relevant Information](https://cwe.mitre.org/data/definitions/223.html)
 
-[CWE-532 Inserción de información sensible en el archivo de registros](https://cwe.mitre.org/data/definitions/532.html)
+[CWE-532 Insertion of Sensitive Information into Log File](https://cwe.mitre.org/data/definitions/532.html)
 
-[CWE-778 Registro insuficiente](https://cwe.mitre.org/data/definitions/778.html)
+[CWE-778 Insufficient Logging](https://cwe.mitre.org/data/definitions/778.html)
