@@ -110,6 +110,8 @@ Las siguientes organizaciones (junto con algunos donantes anónimos) han tenido 
 
 ## Gracias a nuestro patrocinador
 
-El equipo del OWASP Top 10 2021 agradece el apoyo financiero de Secure Code Warrior.
+El equipo del OWASP Top 10 2021 agradece el apoyo financiero de Secure Code Warrior y Just Eat.
 
-[![Secure Code Warrior](assets/securecodewarrior.png)](https://securecodewarrior.com)
+[![Secure Code Warrior](assets/securecodewarrior.png){ width="256" }](https://securecodewarrior.com)
+
+[![Just Eats](assets/JustEat.png){ width="256" }](https://www.just-eat.co.uk/)

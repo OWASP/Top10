@@ -21,6 +21,6 @@ Aquí están nuestras recomendaciones sobre cuándo es apropiado utilizar OWASP 
 | Soporte de herramientas                     | Mínimo              | Sí                                                          |
 | Cadena de suministro segura                 | Ocasionalmente      | Sí                                                          |
 
-Alentamos a cualquiera que desee adoptar un estándar de seguridad de aplicaciones a usar el Estándar de verificación de seguridad de aplicaciones (ASVS) de OWASP, ya que está diseñado para ser verificable y testeado, y puede usarse en todas las partes del ciclo de vida de desarrollo seguro.
+Alentamos a cualquiera que desee adoptar un estándar de seguridad de aplicaciones a usar el [Estándar de verificación de seguridad de aplicaciones](https://owasp.org/www-project-application-security-verification-standard/) (ASVS) de OWASP, ya que está diseñado para ser verificable y testeado, y puede usarse en todas las partes del ciclo de vida de desarrollo seguro.
 
 El ASVS es la única opción aceptable para los proveedores de herramientas. Las herramientas no pueden detectar, probar o proteger de manera integral contra el OWASP Top 10 debido a la naturaleza de varios de los riesgos OWASP Top 10, con referencia a A04: 2021-Diseño Inseguro. OWASP desaconseja cualquier afirmación pretensiosa de cobertura completa de OWASP Top 10, porque simplemente no es cierto.
