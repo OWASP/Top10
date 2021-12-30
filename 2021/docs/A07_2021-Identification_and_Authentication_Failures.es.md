@@ -36,7 +36,7 @@ la autenticación. Puede haber debilidades de autenticación si la aplicación:
     pueden implementar de forma segura.
 
 -   Almacena las contraseñas en texto claro, cifradas o utilizando funciones
-    de hash débiles (consulte [A02:2021 – Fallos criptográficos](A02_2021-Cryptographic_Failures.es.md)).
+    de hash débiles (consulte [A02: 2021-Fallas Criptográficas](A02_2021-Cryptographic_Failures.es.md)).
 
 -   No posee una autenticación multi-factor o la implementada es ineficaz.
 

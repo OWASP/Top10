@@ -1,4 +1,4 @@
-# A06:2021 – Componentes vulnerables y obsoletos    ![icon](assets/TOP_10_Icons_Final_Vulnerable_Outdated_Components.png){: style="height:80px;width:80px" align="right"}
+# A06:2021 – Componentes Vulnerables y Desactualizados    ![icon](assets/TOP_10_Icons_Final_Vulnerable_Outdated_Components.png){: style="height:80px;width:80px" align="right"}
 
 ## Factores
 
@@ -24,7 +24,7 @@ Usted probablemente sea vulnerable:
 
 -   Si los desarrolladores de software no testean la compatibilidad de las bibliotecas actualizadas, actualizadas o parchadas.
 
--   Si no asegura las configuraciones de los componentes (consulte [A05: 2021-Configuración incorrecta de seguridad](A05_2021-Security_Misconfiguration.es.md)).
+-   Si no asegura las configuraciones de los componentes (consulte [A05: 2021-Configuración de Seguridad Incorrecta](A05_2021-Security_Misconfiguration.es.md)).
 
 ## Cómo se previene
 

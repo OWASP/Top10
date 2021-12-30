@@ -1,4 +1,4 @@
-# A09:2021 – Fallos de monitoreo y registros de seguridad    ![icon](assets/TOP_10_Icons_Final_Security_Logging_and_Monitoring_Failures.png){: style="height:80px;width:80px" align="right"}
+# A09:2021 – Fallas en el Registro y Monitoreo    ![icon](assets/TOP_10_Icons_Final_Security_Logging_and_Monitoring_Failures.png){: style="height:80px;width:80px" align="right"}
 
 ## Factores
 
@@ -29,7 +29,7 @@ Volviendo al OWASP Top 10 2021, la intención es detectar, escalar y responder a
 
 -   Las aplicaciones no logran detectar, escalar, o alertar sobre ataques activos en tiempo real ni cercanos al tiempo real.
 
-Se es vulnerable a la fuga de información haciendo registros y eventos de alertas que sean visibles para un usuario o un atacante (consulte [A01:2021-Pérdida de control de acceso](A01_2021-Broken_Access_Control.es.md)).
+Se es vulnerable a la fuga de información haciendo registros y eventos de alertas que sean visibles para un usuario o un atacante (consulte [A01: 2021-Pérdida de Control de Acceso](A01_2021-Broken_Access_Control.es.md)).
 
 ## Cómo se previene
 

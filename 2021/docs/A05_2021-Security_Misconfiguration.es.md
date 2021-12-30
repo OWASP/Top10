@@ -1,4 +1,4 @@
-# A05:2021 – Configuración incorrecta de seguridad    ![icon](assets/TOP_10_Icons_Final_Security_Misconfiguration.png){: style="height:80px;width:80px" align="right"}
+# A05:2021 – Configuración de Seguridad Incorrecta    ![icon](assets/TOP_10_Icons_Final_Security_Misconfiguration.png){: style="height:80px;width:80px" align="right"}
 
 ## Factores
 
@@ -28,7 +28,7 @@ La aplicación puede ser vulnerable si la aplicación:
 
 -   El servidor no envía encabezados o directivas de seguridad, o no tienen configurados valores seguros.
 
--   El software está desactualizado o es vulnerable (consulte A06: 2021-Componentes vulnerables y obsoletos).
+-   El software está desactualizado o es vulnerable (consulte [A06:2021-Componentes Vulnerables y Desactualizados](A06_2021-Vulnerable_and_Outdated_Components.es.md)).
 
 Sin un proceso de configuración de seguridad de aplicaciones coordinado y repetible, los sistemas corren un mayor riesgo.
 
@@ -41,7 +41,7 @@ Deben implementarse procesos de instalación seguros, incluyendo:
 
 -   Una plataforma mínima sin funciones, componentes, documentación ni ejemplos innecesarios. Elimine o no instale características y frameworks no utilizados.
 
--   Una tarea para revisar y actualizar las configuraciones apropiadas para todas las notas de seguridad, actualizaciones y parches como parte del proceso de administración de parches (consulte [A06: 2021-Componentes vulnerables y obsoletos](A06_2021-Vulnerable_and_Outdated_Components.es.md)). Revise los permisos de almacenamiento en la nube (por ejemplo, Permisos de bucket de S3).
+-   Una tarea para revisar y actualizar las configuraciones apropiadas para todas las notas de seguridad, actualizaciones y parches como parte del proceso de administración de parches (consulte [A06: 2021-Componentes Vulnerables y Desactualizados](A06_2021-Vulnerable_and_Outdated_Components.es.md)). Revise los permisos de almacenamiento en la nube (por ejemplo, Permisos de bucket de S3).
 
 -   Una arquitectura de aplicación segmentada proporciona una separación efectiva y segura entre componentes o instancias, con segmentación, organización en contenedores o grupos de seguridad en la nube (ACLs).
 
