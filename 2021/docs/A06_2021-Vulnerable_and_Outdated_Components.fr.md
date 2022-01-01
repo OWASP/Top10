@@ -6,15 +6,9 @@
 |:--------------:|:--------------------:|:----------------------:|:--------------:|:------------------:|:-----------------------------:|:--------------------:|:--------------------------:|:--------------------:|
 |       3        |       27,96 %        |         8,77 %         |    51,78 %     |      22,47 %       |             5,00              |         5,00         |           30 457           |          0           |
 
-## Overview
+## Aperçu
 
-It was #2 from the Top 10 community survey but also had enough data to make the
-Top 10 via data. Vulnerable Components are a known issue that we
-struggle to test and assess risk and is the only category to not have
-any Common Weakness Enumerations (CWEs) mapped to the included CWEs, so a default exploits/impact
-weight of 5.0 is used. Notable CWEs included are *CWE-1104: Use of
-Unmaintained Third-Party Components* and the two CWEs from Top 10 2013
-and 2017.
+Il figurait au deuxième rang lors du sondage communautaire du Top 10, mais il contenait également suffisamment de données pour l'intégrer par ce biais. Les composants vulnérables sont un problème connu pour lequel nous avons du mal à tester et à évaluer les risques. Elle est la seule catégorie à ne pas avoir de *Common Vulnerability and Exposures* (CVEs) associées aux CWEs concernées, en conséquence les coefficients d'impact et de poids ont été renseignés à 5.0 par défaut. Les CWEs notables incluses sont *CWE-1104: Use of Unmaintained Third-Party Components* et les deux CWE des Top 10 de 2013 et 2017.
 
 ## Description 
 
