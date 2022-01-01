@@ -12,31 +12,14 @@ Il figurait au deuxième rang lors du sondage communautaire du Top 10, mais il c
 
 ## Description 
 
-You are likely vulnerable:
+Vous êtes probablement vulnérable :
 
--   If you do not know the versions of all components you use (both
-    client-side and server-side). This includes components you directly
-    use as well as nested dependencies.
-
--   If the software is vulnerable, unsupported, or out of date. This
-    includes the OS, web/application server, database management system
-    (DBMS), applications, APIs and all components, runtime environments,
-    and libraries.
-
--   If you do not scan for vulnerabilities regularly and subscribe to
-    security bulletins related to the components you use.
-
--   If you do not fix or upgrade the underlying platform, frameworks,
-    and dependencies in a risk-based, timely fashion. This commonly
-    happens in environments when patching is a monthly or quarterly task
-    under change control, leaving organizations open to days or months
-    of unnecessary exposure to fixed vulnerabilities.
-
--   If software developers do not test the compatibility of updated,
-    upgraded, or patched libraries.
-
--   If you do not secure the components’ configurations (see
-    A05:2021-Security Misconfiguration).
+-   si vous ne savez pas quels sont tous les composants que vous utilisez (à la fois côté client et côté serveur). Cela comprend les composants que vous utilisez directement ou par l'intermédiaire des dépendances imbriquées ;
+-   si le logiciel est vulnérable, sans support ou obsolète. Cela concerne le système d'exploitation, le serveur web/application, le système de gestion de base de données (SGBD), les applications, API et autres composants, les environnements d'exécution et les bibliothèques ;
+-   si vous ne faites pas de recherche régulière de vulnérabilités et de souscription aux bulletins de sécurité des composants que vous utilisez ;
+-   si vous ne corrigez pas ni mettez à jour vos plateformes sous-jacentes, vos frameworks et leurs dépendances sur la base d'une analyse de risque, dans un délai convenable. Cela apparaît fréquemment dans les environnements où les mises à jour sont faites sur une base mensuelle ou trimestrielle au rythme des évolutions logicielles, ce qui laisse les organisations exposées inutilement, des jours et des mois, à des failles avant de corriger les vulnérabilités ;
+-   si les développeurs de logiciels ne testent pas la compatibilité des évolutions, des mises à jour et des correctifs des bibliothèques ;
+-   si vous ne sécurisez pas les configurations des composants (voir **A05:2021-Mauvaise configuration de sécurité**).
 
 ## How to Prevent
 
