@@ -21,35 +21,16 @@ Vous êtes probablement vulnérable :
 -   si les développeurs de logiciels ne testent pas la compatibilité des évolutions, des mises à jour et des correctifs des bibliothèques ;
 -   si vous ne sécurisez pas les configurations des composants (voir **A05:2021-Mauvaise configuration de sécurité**).
 
-## How to Prevent
+## Comment s'en prémunir
 
-There should be a patch management process in place to:
+Vous devez mettre en place une gestion des mises à jour pour :
 
--   Remove unused dependencies, unnecessary features, components, files,
-    and documentation.
+- supprimer les dépendances inutiles et les fonctionnalités, composants, fichiers et documentation non nécessaires ;
+- faire un inventaire en continu des versions de composants à la fois client et serveur (ex : frameworks, bibliothèques) et de leurs dépendances avec des outils tels que versions, OWASP Dependency Check, retire.js, etc. Surveiller en permanence les sources comme *Common Vulnerability and Exposures* (CVE) et *National Vulnerability Database* (NVD) pour suivre les vulnérabilités des composants. Utiliser des outils d'analyse de composants logiciels pour automatiser le processus. Souscrire aux alertes par courriel concernant les vulnérabilités sur les composants que vous utilisez ;
+- ne récupérer des composants qu'auprès de sources officielles via des liens sécurisés. Préférer des paquets signés pour minimiser les risques d'insertion de composants modifiés malicieux (voir A08:2021-Manque d'intégrité des données et du logiciel) ;
+- surveiller les bibliothèques et les composants qui ne sont plus maintenus ou pour lesquels il n'y a plus de correctifs de sécurité. Si les mises à jour ne sont pas possibles, penser à déployer des mises à jour virtuelles pour surveiller, détecter et se protéger d'éventuelles découvertes de failles.
 
--   Continuously inventory the versions of both client-side and
-    server-side components (e.g., frameworks, libraries) and their
-    dependencies using tools like versions, OWASP Dependency Check,
-    retire.js, etc. Continuously monitor sources like Common Vulnerability and 
-    Exposures (CVE) and National Vulnerability Database (NVD) for
-    vulnerabilities in the components. Use software composition analysis
-    tools to automate the process. Subscribe to email alerts for
-    security vulnerabilities related to components you use.
-
--   Only obtain components from official sources over secure links.
-    Prefer signed packages to reduce the chance of including a modified,
-    malicious component (See A08:2021-Software and Data Integrity
-    Failures).
-
--   Monitor for libraries and components that are unmaintained or do not
-    create security patches for older versions. If patching is not
-    possible, consider deploying a virtual patch to monitor, detect, or
-    protect against the discovered issue.
-
-Every organization must ensure an ongoing plan for monitoring, triaging,
-and applying updates or configuration changes for the lifetime of the
-application or portfolio.
+Chaque organisation doit s'assurer d'avoir un projet continu de surveillance, de tri, d'application des mises à jour et de modification de configuration pour la durée de vie d'une application ou de sa gamme.
 
 ## Example Attack Scenarios
 
