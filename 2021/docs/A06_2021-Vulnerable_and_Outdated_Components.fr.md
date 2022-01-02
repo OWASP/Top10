@@ -32,26 +32,14 @@ Vous devez mettre en place une gestion des mises à jour pour :
 
 Chaque organisation doit s'assurer d'avoir un projet continu de surveillance, de tri, d'application des mises à jour et de modification de configuration pour la durée de vie d'une application ou de sa gamme.
 
-## Example Attack Scenarios
+## Exemple de scénarios d'attaque
 
-**Scenario #1:** Components typically run with the same privileges as
-the application itself, so flaws in any component can result in serious
-impact. Such flaws can be accidental (e.g., coding error) or intentional
-(e.g., a backdoor in a component). Some example exploitable component
-vulnerabilities discovered are:
+**Scénario 1** : Les composants s'exécutent généralement avec le même niveau de privilèges que l'application, et donc les failles d'un quelconque composant peuvent aboutir à un impact sévère. Les failles peuvent être accidentelles (ex : erreur de développement) ou intentionnelles (ex : porte dérobée dans un composant). Voici quelques exemples de découvertes de vulnérabilités de composants exploitables :
 
--   CVE-2017-5638, a Struts 2 remote code execution vulnerability that
-    enables the execution of arbitrary code on the server, has been
-    blamed for significant breaches.
+- CVE-2017-5638, une vulnérabilité d'exécution à distance de Struts 2, qui permet l'exécution de code arbitraire sur le serveur, a été responsable d'importantes violations ;
+- bien que l'internet des objets (IoT) soit souvent difficile, voire impossible à mettre à jour, l'importance de ces mises à jour peut être énorme (ex : objets biomédicaux).
 
--   While the internet of things (IoT) is frequently difficult or
-    impossible to patch, the importance of patching them can be great
-    (e.g., biomedical devices).
-
-There are automated tools to help attackers find unpatched or
-misconfigured systems. For example, the Shodan IoT search engine can
-help you find devices that still suffer from Heartbleed vulnerability
-patched in April 2014.
+Il existe des outils automatiques qui aident les attaquants à trouver des systèmes mal configurés ou non mis à jour. Par exemple, le moteur de recherche IoT de Shodan peut vous aider à trouver des objets qui sont encore vulnérables à la faille Heartbleed corrigée en avril 2014.
 
 ## References
 
