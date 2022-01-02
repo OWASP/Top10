@@ -41,7 +41,7 @@ Chaque organisation doit s'assurer d'avoir un projet continu de surveillance, de
 
 Il existe des outils automatiques qui aident les attaquants à trouver des systèmes mal configurés ou non mis à jour. Par exemple, le moteur de recherche IoT de Shodan peut vous aider à trouver des objets qui sont encore vulnérables à la faille Heartbleed corrigée en avril 2014.
 
-## References
+## Références
 
 -   OWASP Application Security Verification Standard: V1 Architecture,
     design and threat modelling
@@ -66,7 +66,7 @@ Il existe des outils automatiques qui aident les attaquants à trouver des syst�
 
 -   https://safecode.org/publication/SAFECode_Software_Integrity_Controls0610.pdf
 
-## List of Mapped CWEs
+## Liste des CWEs associées
 
 CWE-937 OWASP Top 10 2013: Using Components with Known Vulnerabilities
 
