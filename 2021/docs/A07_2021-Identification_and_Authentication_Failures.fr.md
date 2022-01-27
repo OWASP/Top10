@@ -6,14 +6,9 @@
 |:--------------:|:--------------------:|:----------------------:|:-----------------------------:|:--------------------:|:--------------:|:------------------:|:--------------------------:|:--------------------:|
 |       22       |       14,84 %        |         2,55 %         |             7,40              |         6,50         |    79,51 %     |      45,72 %       |          132,195           |        3 897         |
 
-## Overview
+## Aperçu
 
-Previously known as *Broken Authentication*, this category slid down
-from the second position and now includes Common Weakness 
-Enumerations (CWEs) related to identification
-failures. Notable CWEs included are *CWE-297: Improper Validation of
-Certificate with Host Mismatch*, *CWE-287: Improper Authentication*, and
-*CWE-384: Session Fixation*.
+Précédemment connue sous le nom de *Authentification de mauvaise qualité*, cette catégorie a glissé de la deuxième position et comprend maintenant les Common Weakness Enumerations (CWEs) liées aux échecs d'identification. Les CWEs les plus importantes sont *CWE-297 : Improper Validation of Certificate with Host Mismatch*, *CWE-287 : Improper Authentication*, et *CWE-384 : Session Fixation*.
 
 ## Description 
 
