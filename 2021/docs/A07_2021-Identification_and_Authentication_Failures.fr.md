@@ -12,34 +12,17 @@ Précédemment connue sous le nom de *Authentification de mauvaise qualité*, ce
 
 ## Description 
 
-Confirmation of the user's identity, authentication, and session
-management is critical to protect against authentication-related
-attacks. There may be authentication weaknesses if the application:
+La confirmation de l'identité, de l'authentification et de la session de l'utilisateur sont essentielles pour se protéger des attaques liées à l'authentification. Il peut y avoir des faiblesses d'authentification si l'application :
 
--   Permits automated attacks such as credential stuffing, where the
-    attacker has a list of valid usernames and passwords.
-
--   Permits brute force or other automated attacks.
-
--   Permits default, weak, or well-known passwords, such as "Password1"
-    or "admin/admin".
-
--   Uses weak or ineffective credential recovery and forgot-password
-    processes, such as "knowledge-based answers," which cannot be made
-    safe.
-
--   Uses plain text, encrypted, or weakly hashed passwords data stores (see
-    **A02:2021-Cryptographic Failures**).
-
--   Has missing or ineffective multi-factor authentication.
-
--   Exposes session identifier in the URL.
-
--   Reuse session identifier after successful login.
-
--   Does not correctly invalidate Session IDs. User sessions or
-    authentication tokens (mainly single sign-on (SSO) tokens) aren't
-    properly invalidated during logout or a period of inactivity.
+- autorise les attaques automatisées telles que le *credential stuffing*, où l'attaquant dispose d'une liste de noms d'utilisateurs valides et mots de passe ;
+- permet la force brute ou d'autres attaques automatisées ;
+- autorise les mots de passe par défaut, faibles ou bien connus, tels que "Password1" ou "admin / admin" ;
+- utilise des processus de récupération des informations d'identification faibles ou inefficaces et des processus de mot de passe oublié, tels que «&nbsp;Questions secrètes&nbsp;», qui ne peuvent être sécurisées ;
+- utilise des mots de passe en texte brut, chiffrés ou faiblement hachés (voir **A02:2021 – Défaillances cryptographiques**) ;
+- absence ou utilisation inefficace de l’authentification multi-facteur ;
+- exposition des identifiants de session dans l'URL ;
+- réutilisation de l'identifiant de session après une connexion réussie ;
+- n'invalide pas correctement les identifiants de session. Les sessions utilisateurs ou les jetons d'authentification (en particulier les jetons SSO) ne sont pas correctement invalidés lors de la déconnexion ou après une période d'inactivité.
 
 ## How to Prevent
 
