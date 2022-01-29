@@ -42,7 +42,7 @@ La confirmation de l'identité, de l'authentification et de la session de l'util
 
 **Scénario 3** : Les timeouts de session d’application ne sont pas paramétrés correctement. Un utilisateur utilise un ordinateur public pour accéder à une application. À la place de se déconnecter correctement, l’utilisateur ferme le navigateur et quitte l’ordinateur. Un attaquant utilise ensuite le même navigateur quelque temps après et l’utilisateur est toujours authentifié.
 
-## References
+## Références
 
 -   [OWASP Proactive Controls: Implement Digital
     Identity](https://owasp.org/www-project-proactive-controls/v3/en/c6-digital-identity)
@@ -70,7 +70,7 @@ La confirmation de l'identité, de l'authentification et de la session de l'util
 
 -   NIST 800-63b: 5.1.1 Memorized Secrets
 
-## List of Mapped CWEs
+## Liste des CWEs associées
 
 [CWE-255 Credentials Management Errors](https://cwe.mitre.org/data/definitions/255.html)
 
