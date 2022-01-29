@@ -14,7 +14,7 @@ Précédemment connue sous le nom de *Authentification de mauvaise qualité*, ce
 
 La confirmation de l'identité, de l'authentification et de la session de l'utilisateur sont essentielles pour se protéger des attaques liées à l'authentification. Il peut y avoir des faiblesses d'authentification si l'application :
 
-- autorise les attaques automatisées telles que le *credential stuffing*, où l'attaquant dispose d'une liste de noms d'utilisateurs valides et mots de passe ;
+- autorise les attaques automatisées telles que le bourrage des informations d'identification, où l'attaquant dispose d'une liste de noms d'utilisateurs valides et mots de passe ;
 - permet la force brute ou d'autres attaques automatisées ;
 - autorise les mots de passe par défaut, faibles ou bien connus, tels que "Password1" ou "admin / admin" ;
 - utilise des processus de récupération des informations d'identification faibles ou inefficaces et des processus de mot de passe oublié, tels que «&nbsp;Questions secrètes&nbsp;», qui ne peuvent être sécurisées ;
@@ -24,35 +24,15 @@ La confirmation de l'identité, de l'authentification et de la session de l'util
 - réutilisation de l'identifiant de session après une connexion réussie ;
 - n'invalide pas correctement les identifiants de session. Les sessions utilisateurs ou les jetons d'authentification (en particulier les jetons SSO) ne sont pas correctement invalidés lors de la déconnexion ou après une période d'inactivité.
 
-## How to Prevent
+## Comment s'en prémunir
 
--   Where possible, implement multi-factor authentication to prevent
-    automated credential stuffing, brute force, and stolen credential
-    reuse attacks.
-
--   Do not ship or deploy with any default credentials, particularly for
-    admin users.
-
--   Implement weak password checks, such as testing new or changed
-    passwords against the top 10,000 worst passwords list.
-
--   Align password length, complexity, and rotation policies with
-    National Institute of Standards and Technology (NIST)
-    800-63b's guidelines in section 5.1.1 for Memorized Secrets or other
-    modern, evidence-based password policies.
-
--   Ensure registration, credential recovery, and API pathways are
-    hardened against account enumeration attacks by using the same
-    messages for all outcomes.
-
--   Limit or increasingly delay failed login attempts, but be careful not to create a denial of service scenario. Log all failures
-    and alert administrators when credential stuffing, brute force, or
-    other attacks are detected.
-
--   Use a server-side, secure, built-in session manager that generates a
-    new random session ID with high entropy after login. Session identifier
-    should not be in the URL, be securely stored, and invalidated after
-    logout, idle, and absolute timeouts.
+- lorsque cela est possible, implémentez l'authentification multi-facteur pour éviter les attaques automatisées, le bourrage des informations d'identification, la force brute et la réutilisation des informations d'identification volées ;
+- ne pas livrer ou déployer avec des informations d'identification par défaut, en particulier pour les utilisateurs avec privilèges ;
+- intégrer des tests de mots de passes faibles, à la création ou au changement. Comparer ce mot de passe avec la liste des 10000 mots de passe les plus faibles ;
+- respecter la longueur, la complexité et la rotation des mots de passe par rapport aux directives du *National Institute of Standards and Technology* (NIST) 800-63 B à la section 5.1.1 ou autres directives modernes ;
+- assurez-vous que l'inscription, la récupération des informations d'identification et les chemins d'accès aux API sont durcis contre les attaques d'énumération de compte en utilisant le même message pour tous les résultats ;
+- limitez ou retardez de plus en plus les tentatives de connexion échouées, mais veillez à ne pas créer un scénario de déni de service. Enregistrer tous les échecs et alerter les administrateurs lors du bourrage des informations d'identification, de brute force ou d'autres attaques détectées ;
+- utilisez un gestionnaire de session intégré et sécurisé côté serveur qui génère un nouvel identifiant de session aléatoire avec une entropie élevée après la connexion. Les identifiants de session ne doivent pas se trouver dans l'URL, ils doivent être stockés de manière sécurisée et être invalidés après la déconnexion, une inactivité et une certaine durée.
 
 ## Example Attack Scenarios
 
