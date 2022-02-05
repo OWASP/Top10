@@ -14,11 +14,11 @@ OWASP トップ 10 の最新版へようこそ! OWASP トップ 10 2021年版は
 
 ![マッピング](assets/mapping.png)
 
-- **[A01:2021-アクセス制御の不備](A01_2021-Broken_Access_Control.ja.md)** は、5位から最も深刻なWebアプリケーションのセキュリティリスクへと順位を上げました。the contributed data indicates that on average, 3.81% of applications tested had one or more Common Weakness Enumerations (CWEs) with more than 318k occurrences of CWEs in this risk category. また、「アクセス制御の欠陥」にあたる34件のCWEは、他のカテゴリーよりもアプリケーションで多く発生しています。
+- **[A01:2021-アクセス制御の不備](A01_2021-Broken_Access_Control.ja.md)** は、5位から最も深刻なWebアプリケーションのセキュリティリスクへと順位を上げました。貢献されたデータから、平均でテストされたアプリケーションの3.81%が1つ以上の共通脆弱性タイプ一覧（CWE）を持っており、このリスクカテゴリに該当するCWEは 318,000 件以上存在していたことがわかりました。他のカテゴリーに比べ、「アクセス制御の欠陥」にあたる34件のCWEがアプリケーション内で多く発生していました。
 - **[A02:2021-暗号化の失敗](A02_2021-Cryptographic_Failures.ja.md)** は、ひとつ順位を上げて2位になっています。以前は、**A3:2017-機微な情報の露出** と呼ばれていましたが、これは根本的な原因というより幅広くみられる症状と言えます。ここでは、機密データの漏えいやシステム侵害に多く関連する、暗号技術にまつわる失敗に焦点を当てています。
 - **[A03:2021-インジェクション](A03_2021-Injection.ja.md)** は、3位に下がっています。94%のアプリケーションで何らかのインジェクションに関する問題が確認されています。最大発生率は19%、平均発生率は3.37%であり、このカテゴリにあたる33のCWEは、アプリケーションでの発生数が2番目に多く見られます。発生数は27万4千件でした。今回から、クロスサイトスクリプティングは、このカテゴリに含まれています。
-- **[A04:2021-安全が確認されない不安な設計](A04_2021-Insecure_Design.ja.md)** は、2021年に新設されたカテゴリーで、設計上の欠陥に関するリスクに焦点を当てています。一業界として、我々が純粋に「シフトレフト」することを望むのであれば、脅威モデリングや、安全な設計パターンと原則、また、リファレンス・アーキテクチャをもっと利用していくことが必要です。 An insecure design cannot be fixed by a perfect implementation as by definition, needed security controls were never created to defend against specific attacks.
-- **[A05:2021-セキュリティの設定ミス](A05_2021-Security_Misconfiguration.ja.md)** は、前回の6位から順位を上げました。アプリケーションの90％には何らかの設定ミスが見られます。90% of applications were tested for some form of misconfiguration, with an average incidence rate of 4.5%, and over 208k occurrences of CWEs mapped to this risk category. 高度な設定が可能なソフトウェアへの移行が進む中で、このカテゴリーの順位が上がったことは当然と言えます。以前の、**A4:2017-XML 外部エンティティ参照 (XXE)**のカテゴリーは、このカテゴリーに含まれています。
+- **[A04:2021-安全が確認されない不安な設計](A04_2021-Insecure_Design.ja.md)** は、2021年に新設されたカテゴリーで、設計上の欠陥に関するリスクに焦点を当てています。一業界として、我々が純粋に「シフトレフト」することを望むのであれば、脅威モデリングや、安全な設計パターンと原則、また、リファレンス・アーキテクチャをもっと利用していくことが必要です。 安全が確認されない不安な設計は完璧な実装によって修正されることはありません。定義上、(つまり設計自体が問題なので)特定の攻撃に対して必要なセキュリティ対策が作られることがありえないからです。
+- **[A05:2021-セキュリティの設定ミス](A05_2021-Security_Misconfiguration.ja.md)** は、前回の6位から順位を上げました。アプリケーションの90％に何らかの設定ミスが見られ、インシデントの平均発生率としては4.5%、このリスクカテゴリに該当するCWEは 208,000 件以上存在していたことがわかりました。 高度な設定が可能なソフトウェアへの移行が進む中で、このカテゴリーの順位が上がったことは当然と言えます。以前の、**A4:2017-XML 外部エンティティ参照 (XXE)**のカテゴリーは、このカテゴリーに含まれています。
 - **[A06:2021-脆弱で古くなったコンポーネント](A06_2021-Vulnerable_and_Outdated_Components.ja.md)** は、以前は「既知の脆弱性のあるコンポーネントの使用」というタイトルでした。この問題は、Top 10コミュニティの調査では2位であり、データ分析によってトップ10に入るだけのデータもありました。このカテゴリーは2017年の9位から順位を上げました。これは、テストやリスク評価に苦労する、よく知られた問題です。また、含まれるCWEにあたる共通脆弱性識別子 (CVE)のない、唯一のカテゴリであるため、デフォルトのエクスプロイトとインパクトの重みは5.0としてスコアに反映されています。
 - **[A07:2021-識別と認証の失敗](A07_2021-Identification_and_Authentication_Failures.ja.md)** は以前、「認証の不備」と呼ばれていましたが、この版では第2位から順位を落とし、識別の失敗に関連するCWEをより多く含む意味合いのカテゴリとなっています。このカテゴリーは依然としてトップ10に示すべき重要な項目ですが、標準化されたフレームワークの利用が進んだことが功を奏しているようです。
 - **[A08:2021-ソフトウェアとデータの整合性の不具合](A08_2021-Software_and_Data_Integrity_Failures.ja.md)** は、2021年に新設されたカテゴリーで、ソフトウェアの更新、重要なデータを、CI/CDパイプラインにおいて整合性を検証せずに見込みで進めることによる問題にフォーカスしています。共通脆弱性識別子/共通脆弱性評価システム (CVE/CVSS) のデータから最も重大な影響を受けたものの1つが、このカテゴリーの10のCWEにマッピングされています。**A8:2017-安全でないデシリアライゼーション** は、このカテゴリーの一部となりました。
@@ -41,7 +41,7 @@ OWASP トップ 10 の最新版へようこそ! OWASP トップ 10 2021年版は
 
 CWEのグループ化と分類に数ヶ月を費やしました。さらに数ヶ月続けることもできたかもしれませんが、どこかの時点で止めなければなりません。CWEには「根本原因」と「症状」があり、「根本原因」には「暗号の欠陥」や「設定ミス」などがあり、「症状」には「機密データの漏えい」や「サービス妨害」などがあります。そこで私たちは、可能な限り根本的な原因に焦点を当てることにしました。識別と修復のためのガイダンスを提供するのに適しているからです。「症状」ではなく「根本原因」に焦点を当てることは、今に始まったコンセプトではありません。どの版のTop 10も、症状と原因が混在してきました。CWEもまた、「症状」と「根本原因」が混在しています。私たちはそのことをより慎重に考え、呼びかけています。今回のカテゴリごとに含まれるCWE数は平均19.6件で、最少で **A10:2021-サーバーサイドリクエストフォージェリ(SSRF)** の1件、そして最多のものは **A04:2021-安全が確認されない不安な設計** の40件となっています。このカテゴリー構造の変更はトレーニングにさらなる効果をもたらします。たとえば企業は、利用している言語やフレームワークにとって意味のあるCWEに集中して教えることができるでしょう。
 
-## How the data is used for selecting categories
+## カテゴリ選定にデータがどのように使用されたか
 
 In 2017, we selected categories by incidence rate to determine likelihood, then ranked them by team discussion based on decades of experience for *Exploitability*, *Detectability* (also *likelihood*), and *Technical Impact*. For 2021, we want to use data for *Exploitability* and *(Technical) Impact* if possible.
 
@@ -53,13 +53,13 @@ There are 125k records of a CVE mapped to a CWE in the National Vulnerability Da
 
 For the Top Ten 2021, we calculated average *exploit* and *impact* scores in the following manner. We grouped all the CVEs with CVSS scores by CWE and weighted both *exploit* and *impact* scored by the percentage of the population that had CVSSv3 + the remaining population of CVSSv2 scores to get an overall average. We mapped these averages to the CWEs in the dataset to use as *Exploit* and *(Technical) Impact* scoring for the other half of the risk equation.
 
-## Why not just pure statistical data?
+## なぜ純粋な統計データだけではないのか
 
 The results in the data are primarily limited to what we can test for in an automated fashion. Talk to a seasoned AppSec professional, and they will tell you about stuff they find and trends they see that aren't yet in the data. It takes time for people to develop testing methodologies for certain vulnerability types and then more time for those tests to be automated and run against a large population of applications. Everything we find is looking back in the past and might be missing trends from the last year, which are not present in the data.
 
 Therefore, we only pick eight of ten categories from the data because it's incomplete. The other two categories are from the Top 10 community survey. It allows the practitioners on the front lines to vote for what they see as the highest risks that might not be in the data (and may never be expressed in data).
 
-## Why incidence rate instead of frequency?
+## 頻度ではなく、発生率を基準とした理由
 
 There are three primary sources of data. We identify them as Human-assisted Tooling (HaT), Tool-assisted Human (TaH), and raw Tooling.
 
@@ -71,7 +71,7 @@ Suppose we take these two distinct data sets and try to merge them on frequency.
 
 In 2017, we introduced using incidence rate instead to take a fresh look at the data and cleanly merge Tooling and HaT data with TaH data. The incidence rate asks what percentage of the application population had at least one instance of a vulnerability type. We don't care if it was one-off or systemic. That's irrelevant for our purposes; we just need to know how many applications had at least one instance, which helps provide a clearer view of the testing is findings across multiple testing types without drowning the data in high-frequency results. This corresponds to a risk related view as an attacker needs only one instance to attack an application successfully via the category.
 
-## What is your data collection and analysis process?
+## データの収集と分析のプロセスについて
 
 We formalized the OWASP Top 10 data collection process at the Open Security Summit in 2017. OWASP Top 10 leaders and the community spent two days working out formalizing a transparent data collection process. The 2021 edition is the second time we have used this methodology.
 
@@ -81,7 +81,7 @@ We get data from organizations that are testing vendors by trade, bug bounty ven
 
 We look at the eight categories with the highest incidence rates for inclusion in the Top 10. We also look at the Top 10 community survey results to see which ones may already be present in the data. The top two votes that aren't already present in the data will be selected for the other two places in the Top 10. Once all ten were selected, we applied generalized factors for exploitability and impact; to help rank the Top 10 2021 in a risk based order.
 
-## Data Factors
+## 用語集
 
 There are data factors that are listed for each of the Top 10 Categories, here is what they mean:
 
@@ -93,7 +93,7 @@ There are data factors that are listed for each of the Top 10 Categories, here i
 - Total Occurrences: Total number of applications found to have the CWEs mapped to a category.
 - Total CVEs: Total number of CVEs in the NVD DB that were mapped to the CWEs mapped to a category.
 
-## Thank you to our data contributors
+## データ貢献者への謝辞
 
 この最も大規模で包括的なアプリケーションセキュリティのデータセットを作り上げるために、（何名かの匿名の提供者とともに）以下の組織には 50,000 を超えるアプリケーションに関するデータを提供いただきました。 これは皆様のご協力なくしては成し得ませんでした。
 
@@ -110,7 +110,7 @@ There are data factors that are listed for each of the Top 10 Categories, here i
 - Veracode
 - WhiteHat (NTT)
 
-## Thank you to our sponsor
+## スポンサーの方への謝辞
 
 OWASP Top 10 2021 チームは、資金面での援助をいただいた Secure Code Warrior に心より感謝いたします。
 
