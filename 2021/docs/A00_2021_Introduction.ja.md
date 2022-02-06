@@ -43,15 +43,15 @@ CWEのグループ化と分類に数ヶ月を費やしました。さらに数�
 
 ## カテゴリ選定にデータがどのように使用されたか
 
-In 2017, we selected categories by incidence rate to determine likelihood, then ranked them by team discussion based on decades of experience for *Exploitability*, *Detectability* (also *likelihood*), and *Technical Impact*. For 2021, we want to use data for *Exploitability* and *(Technical) Impact* if possible.
+2017年では、発生率よりカテゴリーを選定して可能性を判断し、数十年の経験に基づき、*悪用のしやすさ*、*検出のしやすさ*(および *可能性*)、*技術面への影響*についてチームの議論によりランク付けしました。2021年については、可能であれば*悪用のしやすさ*と*(技術面の) 影響*のデータを使用したいと思います。
 
-We downloaded OWASP Dependency Check and extracted the CVSS Exploit, and Impact scores grouped by related CWEs. It took a fair bit of research and effort as all the CVEs have CVSSv2 scores, but there are flaws in CVSSv2 that CVSSv3 should address. After a certain point in time, all CVEs are assigned a CVSSv3 score as well. Additionally, the scoring ranges and formulas were updated between CVSSv2 and CVSSv3.
+OWASP Dependency Checkをダウンロードし、CVSS Exploit、およびImpactのスコアを、関連するCWEでグループ化して抽出しました。CVSSv2にはCVSSv3で対処されるであろう欠陥があるにもかかわらず、すべてのCVEはCVSSv2のスコアを持っていたため、かなりの調査と労力を要しました。ですがある時点から、すべてのCVEにCVSSv3のスコアも割り当てられるようになりました。なお、CVSSv2とCVSSv3の間では、スコアの範囲と計算式が更新されています。
 
-In CVSSv2, both *Exploit* and *(Technical) Impact* could be up to 10.0, but the formula would knock them down to 60% for *Exploit* and 40% for *Impact*. In CVSSv3, the theoretical max was limited to 6.0 for *Exploit* and 4.0 for *Impact*. With the weighting considered, the Impact scoring shifted higher, almost a point and a half on average in CVSSv3, and exploitability moved nearly half a point lower on average.
+CVSSv2 では、*悪用性* と *(技術面の) 影響* の両方が 10.0 まで可能でしたが、計算式によって *悪用性* は 60%、*影響* は 40% に調整されました。CVSSv3では、理論的な最大値が*Exploit*が6.0、*Impact*が4.0に制限されています。この重み付けにより、CVSSv3ではインパクトのスコアが平均でほぼ1.5ポイント高くなり、悪用性のスコアは平均でほぼ0.5ポイント低くなりました。
 
-There are 125k records of a CVE mapped to a CWE in the National Vulnerability Database (NVD) data extracted from OWASP Dependency Check, and there are 241 unique CWEs mapped to a CVE. 62k CWE maps have a CVSSv3 score, which is approximately half of the population in the data set.
+OWASP Dependency Checkから抽出されたNVD（National Vulnerability Database）データには、CWEがマッピングされたCVEのレコードは125,000件あり、これらの中に一意のCWEは241件確認されました。CWEがマップされた 6,200件がCVSSv3スコアを持っており、これはデータセットの母数の約半分に相当します。
 
-For the Top Ten 2021, we calculated average *exploit* and *impact* scores in the following manner. We grouped all the CVEs with CVSS scores by CWE and weighted both *exploit* and *impact* scored by the percentage of the population that had CVSSv3 + the remaining population of CVSSv2 scores to get an overall average. We mapped these averages to the CWEs in the dataset to use as *Exploit* and *(Technical) Impact* scoring for the other half of the risk equation.
+2021年版Top10では、以下の方法で平均*悪用性*スコアと*影響*スコアを算出しました。CVSSスコアを持つすべてのCVEをCWEでグループ化し、*悪用性*と*影響*の両スコアを、CVSSv3スコアを持つ母集団の割合 + CVSSv2スコアを持つ残りの母集団で重み付けして全体の平均値を算出しました。この平均値をデータセットのCWEにマッピングし、リスク方程式のうち半分の*悪用性*および*(技術面の) 影響*スコアとして使用しました。
 
 ## なぜ純粋な統計データだけではないのか
 
