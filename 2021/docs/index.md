@@ -108,10 +108,8 @@ The following organizations (along with some anonymous donors) kindly donated da
 - Veracode
 - WhiteHat (NTT)
 
-## Thank you to our sponsors
+## Thank you to our sponsor
 
-The OWASP Top 10 2021 team gratefully acknowledge the financial support of Secure Code Warrior and Just Eat.
+The OWASP Top 10 2021 team gratefully acknowledge the financial support of Secure Code Warrior.
 
-[![Secure Code Warrior](assets/securecodewarrior.png){ width="256" }](https://securecodewarrior.com)    
-
-[![Just Eats](assets/JustEat.png){ width="256" }](https://www.just-eat.co.uk/)
+[![Secure Code Warrior](assets/securecodewarrior.png)](https://securecodewarrior.com)

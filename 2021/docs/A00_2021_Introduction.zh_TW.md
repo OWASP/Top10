@@ -120,9 +120,3 @@ The following organizations (along with some anonymous donors) kindly donated da
 - Sqreen
 - Veracode
 - WhiteHat (NTT)
-
-### Thank you to our financial supporters
-
-[![Secure Code Warrior](assets/securecodewarrior.png){ width="256" }](https://securecodewarrior.com)    
-
-[![Just Eats](assets/JustEat.png){ width="256" }](https://www.just-eat.co.uk/)

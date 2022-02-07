@@ -114,20 +114,4 @@ There are data factors that are listed for each of the Top 10 Categories, here i
 
 OWASP Top 10 2021 チームは、資金面での援助をいただいた Secure Code Warrior に心より感謝いたします。
 
-<<<<<<< HEAD
 [![Secure Code Warrior](assets/securecodewarrior.png)](https://securecodewarrior.com)
-=======
-| | | | |
-| :---: | :---: | :---: | :---: |
-| AppSec Labs | GitLab | Micro Focus | Sqreen |
-| Cobalt.io | HackerOne | PenTest-Tools | Veracode |
-| Contrast Security | HCL Technologies | Probely | WhiteHat (NTT) |
-
-## Thank you to our sponsors
-
-The OWASP Top 10 2021 team gratefully acknowledge the financial support of Secure Code Warrior and Just Eat.
-
-[![Secure Code Warrior](assets/securecodewarrior.png){ width="256" }](https://securecodewarrior.com)    
-
-[![Just Eats](assets/JustEat.png){ width="256" }](https://www.just-eat.co.uk/)
->>>>>>> 5010a4f6 (add Just Eat as a financial sponsor of the OWASP Top 10 (#672))
