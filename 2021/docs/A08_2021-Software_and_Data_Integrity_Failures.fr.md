@@ -6,16 +6,9 @@
 |:--------------:|:--------------------:|:----------------------:|:-----------------------------:|:--------------------:|:--------------:|:------------------:|:--------------------------:|:--------------------:|
 |       10       |       16,67 %        |         2,05 %         |             6,94              |         7,94         |    75,04 %     |      45,35 %       |           47 972           |        1 152         |
 
-## Overview
+## Aperçu
 
-A new category for 2021 focuses on making assumptions related to
-software updates, critical data, and CI/CD pipelines without verifying
-integrity. One of the highest weighted impacts from 
-Common Vulnerability and Exposures/Common Vulnerability Scoring System (CVE/CVSS) 
-data. Notable Common Weakness Enumerations (CWEs) include
-*CWE-829: Inclusion of Functionality from Untrusted Control Sphere*,
-*CWE-494: Download of Code Without Integrity Check*, and 
-*CWE-502: Deserialization of Untrusted Data*.
+Une nouvelle catégorie pour 2021 qui se concentre sur la formulation d'hypothèses relatives aux mises à jour logicielles, aux données critiques et aux pipelines CI/CD sans vérification de l'intégrité. Il s'agit de l'un des impacts pondérés les plus élevés des données CVE/CVSS (Common Vulnerability and Exposures/Common Vulnerability Scoring System). Les *Common Weakness Enumerations* (CWE) notables comprennent *CWE-829 : Inclusion of Functionality from Untrusted Control Sphere*, *CWE-494 : Download of Code Without Integrity Check*, et *CWE-502 : Deserialization of Untrusted Data*.
 
 ## Description 
 
