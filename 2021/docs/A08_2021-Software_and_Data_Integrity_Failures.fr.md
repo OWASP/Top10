@@ -12,17 +12,7 @@ Une nouvelle catégorie pour 2021 qui se concentre sur la formulation d'hypothè
 
 ## Description 
 
-Software and data integrity failures relate to code and infrastructure
-that does not protect against integrity violations. An example of this is where an application relies upon plugins, libraries, or modules from untrusted sources, repositories, and content
-delivery networks (CDNs). An insecure CI/CD pipeline can introduce the
-potential for unauthorized access, malicious code, or system compromise.
-Lastly, many applications now include auto-update functionality, where
-updates are downloaded without sufficient integrity verification and
-applied to the previously trusted application. Attackers could
-potentially upload their own updates to be distributed and run on all
-installations. Another example is where
-objects or data are encoded or serialized into a structure that an
-attacker can see and modify is vulnerable to insecure deserialization.
+Les défaillances de l'intégrité des logiciels et des données sont liées au code et à l'infrastructure qui ne sont pas protégés contre les violations de l'intégrité. C'est le cas, par exemple, lorsqu'une application s'appuie sur des plugins, des bibliothèques ou des modules provenant de sources, de dépôts et de réseaux de diffusion de contenu (CDN) non fiables. Un pipeline CI/CD non sécurisé peut introduire un risque d'accès non autorisé, de code malveillant ou de compromission du système. Enfin, de nombreuses applications intègrent désormais une fonctionnalité de mise à jour automatique, où les mises à jour sont téléchargées sans vérification d'intégrité suffisante et appliquées à l'application précédemment fiable. Les attaquants pourraient potentiellement télécharger leurs propres mises à jour pour les distribuer et les exécuter sur toutes les installations. Un autre exemple est celui des objets ou des données qui sont codés ou sérialisés dans une structure qu'un attaquant peut voir et modifier et qui sont vulnérables à une désérialisation non sécurisée.
 
 ## How to Prevent
 
