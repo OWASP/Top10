@@ -55,43 +55,43 @@ OWASP Dependency Checkから抽出されたNVD（National Vulnerability Database
 
 ## なぜ純粋な統計データだけではないのか
 
-The results in the data are primarily limited to what we can test for in an automated fashion. Talk to a seasoned AppSec professional, and they will tell you about stuff they find and trends they see that aren't yet in the data. It takes time for people to develop testing methodologies for certain vulnerability types and then more time for those tests to be automated and run against a large population of applications. Everything we find is looking back in the past and might be missing trends from the last year, which are not present in the data.
+データからの結果は、主に自動化された方法でテストできるものからに限られています。しかし、経験豊富なAppSecの専門家に話を聞けば、まだデータにはない発見や傾向について教えてくれるでしょう。とはいえ特定の脆弱性タイプに対するテスト手法を開発するのには時間が必要です。そのテストを自動化し、多くのアプリケーションに対して自動的に実行できるようにするのは、さらに時間がかかります。つまり、データから過去を振り返るだけでは限界があり、データにはない昨年のトレンドを見落としている可能性があります。
 
-Therefore, we only pick eight of ten categories from the data because it's incomplete. The other two categories are from the Top 10 community survey. It allows the practitioners on the front lines to vote for what they see as the highest risks that might not be in the data (and may never be expressed in data).
+そのため、不完全ともいえるデータの結果からのカテゴリ選定は10項目のうち8項目に留めています。残りの2つのカテゴリーは、トップ10コミュニティ調査によって選びました。これは、最前線で実際に活躍されている方々が、最も高いリスクにもかかわらず、データには現れないであろう（データでは表しようもない）と思われるものを選んでくれたものです。
 
 ## 頻度ではなく、発生率を基準とした理由
 
-There are three primary sources of data. We identify them as Human-assisted Tooling (HaT), Tool-assisted Human (TaH), and raw Tooling.
+データソースは主に3つあります。ここでは、HaT（Human-assisted Tooling:人間援助型自動テスト）、TaH（Tool-assisted Human:ツールを利用した手動テスト）、そしてRaw Tooling:完全自動テストと名付けました。
 
-Tooling and HaT are high-frequency finding generators. Tools will look for specific vulnerabilities and tirelessly attempt to find every instance of that vulnerability and will generate high finding counts for some vulnerability types. Look at Cross-Site Scripting, which is typically one of two flavors: it's either a more minor, isolated mistake or a systemic issue. When it's a systemic issue, the finding counts can be in the thousands for a single application. This high frequency drowns out most other vulnerabilities found in reports or data.
+自動テストとHaTは高頻度発見生成機です。これらは、特定の脆弱性に対して、その脆弱性を持つすべてのインスタンスをできる限り見つけようとします。このため、いくつかの脆弱性のタイプについて高い発見数を出力します。クロスサイトスクリプティングを例にしますと、この脆弱性は通常、軽微で孤立したミスによるものとシステム的な問題によるもの、の2種類があります。システム的な問題である場合、単一のアプリケーションで発見数が数千になることがあります。このようなデータで他のレポートやデータから発見された他のほとんどの脆弱性が埋もれてしまいます。
 
-TaH, on the other hand, will find a broader range of vulnerability types but at a much lower frequency due to time constraints. When humans test an application and see something like Cross-Site Scripting, they will typically find three or four instances and stop. They can determine a systemic finding and write it up with a recommendation to fix on an application-wide scale. There is no need (or time) to find every instance.
+一方、TaHでは、より幅広い種類の脆弱性を発見しますが、時間の制約上、発見頻度はかなり低くなります。人間がアプリケーションをテストしてクロスサイトスクリプティングといったものを発見した場合、通常3つか4つのインスタンスを発見して切り上げます。この時点でシステム的な発見を判断し、アプリケーション全体のスケールで修正するための推奨事項とともに、レポートを書き上げることができます。すべてのインスタンスを見つけることは(それにかける時間も)必要ありません。
 
-Suppose we take these two distinct data sets and try to merge them on frequency. In that case, the Tooling and HaT data will drown the more accurate (but broad) TaH data and is a good part of why something like Cross-Site Scripting has been so highly ranked in many lists when the impact is generally low to moderate. It's because of the sheer volume of findings. (Cross-Site Scripting is also reasonably easy to test for, so there are many more tests for it as well).
+この2つの異なるデータセットを取り出して、頻度の観点でマージしようとしたとします。その場合、自動テストとHaTのデータで、より正確で（ただし広く薄い）TaHのデータを埋もれてしまうでしょう。これがクロスサイトスクリプティングのように、影響は一般的に小さいか中程度であるようなものが、多くのリストにおいて高い順位に挙げられている理由の一つです。つまりまさしく発見が非常に多いからです。(クロスサイトスクリプティングはテストもしやすいので、それに対するテストも多く行われています）。
 
-In 2017, we introduced using incidence rate instead to take a fresh look at the data and cleanly merge Tooling and HaT data with TaH data. The incidence rate asks what percentage of the application population had at least one instance of a vulnerability type. We don't care if it was one-off or systemic. That's irrelevant for our purposes; we just need to know how many applications had at least one instance, which helps provide a clearer view of the testing is findings across multiple testing types without drowning the data in high-frequency results. This corresponds to a risk related view as an attacker needs only one instance to attack an application successfully via the category.
+2017年には、データを改めて見直し自動テスト及びHaTのデータをTaHのデータときれいに統合するために、代わりに発生率を用いることを導入しました。発生率とは、ある脆弱性タイプのインスタンスを一つ以上持っていたものが、アプリケーションの母集団のうち何％いたかを確認したものです。単発的なものかシステム的なものかは気にしません。それは私たちの目的に影響しないからです。つまり少なくとも1つのインスタンスを持つアプリケーションの数が分かればよいだけなのです。これは、高頻度の結果でデータを埋もれさせることなく、複数のテストタイプにまたがるテストの所見をより明確に示すのに役立ちます。リスク分析観点として、攻撃者はたった1つの脆弱なインスタンスがありさえすれば、カテゴリを経由してアプリケーション攻撃成功できる、ということにもあたります。 
 
 ## データの収集と分析のプロセスについて
 
-We formalized the OWASP Top 10 data collection process at the Open Security Summit in 2017. OWASP Top 10 leaders and the community spent two days working out formalizing a transparent data collection process. The 2021 edition is the second time we have used this methodology.
+2017年のオープンセキュリティサミットでOWASP Top 10のデータ収集プロセスを正式化しました。OWASP Top 10のリーダーとコミュニティは、2日間かけて透明性のあるデータ収集プロセスを正式化することに取り組みました。2021年版は、このプロセスを利用した2回目の取り組みになります。
 
-We publish a call for data through social media channels available to us, both project and OWASP. On the OWASP Project page, we list the data elements and structure we are looking for and how to submit them. In the GitHub project, we have example files that serve as templates. We work with organizations as needed to help figure out the structure and mapping to CWEs.
+私たちは、ソーシャルメディアのチャンネルを通じて、OWASPプロジェクトとOWASPのGithub両方でデータの募集を公表しています。OWASPプロジェクトのページでは、私たちが求めているデータの要素や構造、そして提出方法をリストアップしています。GitHubプロジェクトでは、テンプレートとなるサンプルファイルを用意しています。必要に応じて組織と協力し、構造の解析やCWEへのマッピングを行っています。
 
-We get data from organizations that are testing vendors by trade, bug bounty vendors, and organizations that contribute internal testing data. Once we have the data, we load it together and run a fundamental analysis of what CWEs map to risk categories. There is overlap between some CWEs, and others are very closely related (ex. Cryptographic vulnerabilities). Any decisions related to the raw data submitted are documented and published to be open and transparent with how we normalized the data.
+ベンダーのテスト業務を生業とする組織、バグバウンティベンダー、社内のデータテスト結果を提供してくれた組織などからデータを入手します。データを入手したら、それを読み込んで、どのようなCWEがどのリスクカテゴリにマッピングされるかを根本的に分析します。CWEの中にはリスクカテゴリが重複しているものもあれば、非常に密接に別のリスクカテゴリに関連しているものもあります（例：暗号の脆弱性）。提出された生データに関する決定はすべて文書化され、オープンとなるよう公開し、データをどのように正規化したかについて透明性のあるものとしています。
 
-We look at the eight categories with the highest incidence rates for inclusion in the Top 10. We also look at the Top 10 community survey results to see which ones may already be present in the data. The top two votes that aren't already present in the data will be selected for the other two places in the Top 10. Once all ten were selected, we applied generalized factors for exploitability and impact; to help rank the Top 10 2021 in a risk based order.
+トップ10に含めるために、発生率の高い8つのカテゴリーを調べます。また、トップ10のコミュニティアンケート結果を見て、すでにデータとして確認できているであろうものを確認します。そうしてデータからは確認できなかった上位2つを、Top10の残りの2箇所に選びます。10個すべてが選ばれたら、トップ10をリスクに基づく順序でランク付けするのに役立てるべく、悪用のしやすさと影響に関する一般要素をあてはめました。
 
 ## 用語集
 
-There are data factors that are listed for each of the Top 10 Categories, here is what they mean:
+トップ10カテゴリーのそれぞれの中にある下記用語について、意味を記載します。
 
-- CWEs Mapped: The number of CWEs mapped to a category by the Top 10 team.
-- Incidence Rate: Incidence rate is the percentage of applications vulnerable to that CWE from the population tested by that org for that year.
-- Weighted Exploit: The Exploit sub-score from CVSSv2 and CVSSv3 scores assigned to CVEs mapped to CWEs, normalized, and placed on a 10pt scale.
-- Weighted Impact: The Impact sub-score from CVSSv2 and CVSSv3 scores assigned to CVEs mapped to CWEs, normalized, and placed on a 10pt scale.
-- (Testing) Coverage: The percentage of applications tested by all organizations for a given CWE.
-- Total Occurrences: Total number of applications found to have the CWEs mapped to a category.
-- Total CVEs: Total number of CVEs in the NVD DB that were mapped to the CWEs mapped to a category.
+- CWEs Mapped(カテゴリにあたるCWEの数): Top10チームがカテゴリーにマッピングしたCWEの数です。
+- Incidence Rate(発生率): 発生率とは、当年に機関によってテストされた母集団のうち、カテゴリにマップされたCWEに脆弱なアプリケーションの割合を示します。
+- (Testing) Coverage(テスト)網羅範囲: カテゴリにマップされたCWEに対して、機関がテストできたアプリケーションの範囲。
+- Weighted Exploit(重み付けされた悪用性): CVEに割り当てられているCVSSv2およびCVSSv3スコアの悪用性サブスコアを正規化し、10ptのスケールで表示したものです。
+- Weighted Impact(重み付けされた影響度): CVEに割り当てられているCVSSv2およびCVSSv3スコアの影響サブスコアを正規化し、10ptのスケールで表示したものです。
+- Total Occurrences(総発生数): カテゴリにマッピングされたCWEを持つことが判明したアプリケーションの総数です。
+- Total CVEs(CVE合計数): カテゴリにマッピングされたCWEに該当する、NVD DB内のCVEの総数です。
 
 
 ## データ貢献者への謝辞
@@ -113,9 +113,11 @@ There are data factors that are listed for each of the Top 10 Categories, here i
 
 ## スポンサーの方への謝辞
 
-OWASP Top 10 2021 チームは、資金面での援助をいただいた Secure Code Warrior に心より感謝いたします。
+OWASP Top 10 2021 チームは、資金面での援助をいただいた Secure Code Warrior および Just Eat に心より感謝いたします。
 
-[![Secure Code Warrior](assets/securecodewarrior.png){: style="height:80px" align="left"}](https://securecodewarrior.com)
+[![Secure Code Warrior](assets/securecodewarrior.png){ width="256" }](https://securecodewarrior.com)    
+
+[![Just Eats](assets/JustEat.png){ width="256" }](https://www.just-eat.co.uk/)
 
 # Introduction
 
@@ -230,6 +232,8 @@ The following organizations (along with some anonymous donors) kindly donated da
 
 ## Thank you to our sponsor
 
-The OWASP Top 10 2021 team gratefully acknowledge the financial support of Secure Code Warrior.
+The OWASP Top 10 2021 team gratefully acknowledge the financial support of Secure Code Warrior and Just Eat.
 
-[![Secure Code Warrior](assets/securecodewarrior.png){: style="height:80px" align="left"}](https://securecodewarrior.com)
+[![Secure Code Warrior](assets/securecodewarrior.png){ width="256" }](https://securecodewarrior.com)    
+
+[![Just Eats](assets/JustEat.png){ width="256" }](https://www.just-eat.co.uk/)
