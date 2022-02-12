@@ -14,26 +14,14 @@ Une nouvelle catégorie pour 2021 qui se concentre sur la formulation d'hypothè
 
 Les défaillances de l'intégrité des logiciels et des données sont liées au code et à l'infrastructure qui ne sont pas protégés contre les violations de l'intégrité. C'est le cas, par exemple, lorsqu'une application s'appuie sur des plugins, des bibliothèques ou des modules provenant de sources, de dépôts et de réseaux de diffusion de contenu (CDN) non fiables. Un pipeline CI/CD non sécurisé peut introduire un risque d'accès non autorisé, de code malveillant ou de compromission du système. Enfin, de nombreuses applications intègrent désormais une fonctionnalité de mise à jour automatique, où les mises à jour sont téléchargées sans vérification d'intégrité suffisante et appliquées à l'application précédemment fiable. Les attaquants pourraient potentiellement télécharger leurs propres mises à jour pour les distribuer et les exécuter sur toutes les installations. Un autre exemple est celui des objets ou des données qui sont codés ou sérialisés dans une structure qu'un attaquant peut voir et modifier et qui sont vulnérables à une désérialisation non sécurisée.
 
-## How to Prevent
+## Comment s'en prémunir
 
--   Use digital signatures or similar mechanisms to verify the software or data is from the expected source and has not been altered.
-
--   Ensure libraries and dependencies, such as npm or Maven, are
-    consuming trusted repositories. If you have a higher risk profile, consider hosting an internal known-good repository that's vetted.
-
--   Ensure that a software supply chain security tool, such as OWASP
-    Dependency Check or OWASP CycloneDX, is used to verify that
-    components do not contain known vulnerabilities
-
--   Ensure that there is a review process for code and configuration changes to minimize the chance that malicious code or configuration could be introduced into your software pipeline.
-
--   Ensure that your CI/CD pipeline has proper segregation, configuration, and access
-    control to ensure the integrity of the code flowing through the
-    build and deploy processes.
-
--   Ensure that unsigned or unencrypted serialized data is not sent to
-    untrusted clients without some form of integrity check or digital
-    signature to detect tampering or replay of the serialized data
+-   utilisez des signatures numériques ou des mécanismes similaires pour vérifier que le logiciel ou les données proviennent de la source prévue et n'ont pas été modifiés ;
+-   assurez-vous que les bibliothèques et les dépendances, telles que npm ou Maven, consomment des dépôts de confiance. Si vous avez un profil de risque plus élevé, envisagez d'héberger un dépôt interne connu et approuvé ;
+-   assurez-vous qu'un outil de sécurité de la chaîne logistique logicielle, tel que OWASP Dependency Check ou OWASP CycloneDX, est utilisé pour vérifier que les composants ne contiennent pas de vulnérabilités connues ;
+-   veillez à ce qu'il existe un processus de révision des changements de code et de configuration afin de minimiser les risques d'introduction de code ou de configuration malveillants dans votre pipeline logiciel ;
+-   assurez-vous que votre pipeline CI/CD dispose d'une ségrégation, d'une configuration et d'un contrôle d'accès appropriés pour garantir l'intégrité du code passant par les processus de construction et de déploiement ;
+-   veillez à ce que les données sérialisées non signées ou non chiffrées ne soient pas envoyées à des clients non fiables sans une forme de contrôle d'intégrité ou de signature numérique permettant de détecter la falsification ou le rejeu des données sérialisées.
 
 ## Example Attack Scenarios
 
