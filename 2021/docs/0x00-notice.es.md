@@ -11,20 +11,20 @@ Publicado el 24 de septiembre de 2021
 
 ## Colaboradores
 
-- Orange Tsai [@orange_8361](https://twitter/orange_8361), Author of A10-2021: Server Side Request Forgery
-- Jim Manico [@manicode](https://twitter/manicode) and Jakub Maćkowski [@kubamackowski](https://twitter/kubamackowski) - OWASP CheatSheets Coordination
+- Orange Tsai [@orange_8361](https://twitter/orange_8361), autor de A10:2021 – Falsificación de Solicitudes del Lado del Servidor (SSRF)
+- Jim Manico [@manicode](https://twitter/manicode) y Jakub Maćkowski [@kubamackowski](https://twitter/kubamackowski) - Coordinación de Cheat Sheets de OWASP
 
 ## ¿Cómo puedes ayudar?
 
-En esta fase, necesitamos
+En esta fase, solicitamos:
 
 - Científicos de datos: por favor, revisen nuestro análisis
 - Diseñadores de páginas web: tenemos que hacer una versión adaptada para móviles
 - Traductores: por favor, revisen que el texto en inglés sea traducible
 - Líderes del ASVS, de la Guía de Pruebas y de la Guía de Revisión del Código: por favor, utilicen nuestros datos y ayúdenos a enlazar nuestros documentos y estándares
 
-## Registrar issues y pull requests
+## Reportar issues y pull requests
 
-Por favor, registre cualquier corrección o problema:
+Por favor, reporte cualquier corrección o problema a:
 
 - [https://github.com/OWASP/Top10/issues](https://github.com/OWASP/Top10/issues)
