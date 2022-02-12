@@ -23,33 +23,15 @@ Les défaillances de l'intégrité des logiciels et des données sont liées au 
 -   assurez-vous que votre pipeline CI/CD dispose d'une ségrégation, d'une configuration et d'un contrôle d'accès appropriés pour garantir l'intégrité du code passant par les processus de construction et de déploiement ;
 -   veillez à ce que les données sérialisées non signées ou non chiffrées ne soient pas envoyées à des clients non fiables sans une forme de contrôle d'intégrité ou de signature numérique permettant de détecter la falsification ou le rejeu des données sérialisées.
 
-## Example Attack Scenarios
+## Exemple de scénarios d'attaque
 
-**Scenario #1 Update without signing:** Many home routers, set-top
-boxes, device firmware, and others do not verify updates via signed
-firmware. Unsigned firmware is a growing target for attackers and is
-expected to only get worse. This is a major concern as many times there
-is no mechanism to remediate other than to fix in a future version and
-wait for previous versions to age out.
+**Scénario n°1 mise à jour sans signature :** de nombreux routeurs domestiques, décodeurs, firmwares de périphériques et autres ne vérifient pas les mises à jour via un firmware signé. Les microprogrammes non signés constituent une cible de plus en plus importante pour les attaquants et leur nombre ne devrait cesser d'augmenter. Il s'agit d'une préoccupation majeure car, bien souvent, il n'y a pas de mécanisme pour y remédier, si ce n'est de corriger dans une version future et d'attendre que les versions précédentes soient périmées.
 
-**Scenario #2 SolarWinds malicious update**: Nation-states have been
-known to attack update mechanisms, with a recent notable attack being
-the SolarWinds Orion attack. The company that develops the software had
-secure build and update integrity processes. Still, these were able to
-be subverted, and for several months, the firm distributed a highly
-targeted malicious update to more than 18,000 organizations, of which
-around 100 or so were affected. This is one of the most far-reaching and
-most significant breaches of this nature in history.
+**Scénario n°2 mise à jour malveillante de SolarWinds :** les États-nations sont connus pour attaquer les mécanismes de mise à jour, avec une attaque récente notable, l'attaque SolarWinds Orion. La société qui développe le logiciel a mis en place des processus sécurisés de construction et d'intégrité des mises à jour. Néanmoins, ces processus ont pu être contournés et, pendant plusieurs mois, la société a distribué une mise à jour malveillante très ciblée à plus de 18 000 organisations, dont une centaine ont été touchées. Il s'agit de l'une des violations de cette nature les plus étendues et les plus importantes de l'histoire.
 
-**Scenario #3 Insecure Deserialization:** A React application calls a
-set of Spring Boot microservices. Being functional programmers, they
-tried to ensure that their code is immutable. The solution they came up
-with is serializing the user state and passing it back and forth with
-each request. An attacker notices the "rO0" Java object signature (in base64) and
-uses the Java Serial Killer tool to gain remote code execution on the
-application server.
+**Scénario n°3 désérialisation non sécurisée :** une application React appelle un ensemble de microservices Spring Boot. Étant des programmeurs fonctionnels, ils ont essayé de s'assurer que leur code est immuable. La solution qu'ils ont trouvée consiste à sérialiser l'état de l'utilisateur et à le transmettre dans les deux sens à chaque requête. Un attaquant remarque la signature d'objet Java "rO0" (en base64) et utilise l'outil Java Serial Killer pour obtenir l'exécution de code à distance sur le serveur d'application.
 
-## References
+## Références
 
 -   \[OWASP Cheat Sheet: Software Supply Chain Security\](Coming Soon)
 
@@ -71,7 +53,7 @@ application server.
 
 -   [Securing DevOps by Julien Vehent](https://www.manning.com/books/securing-devops)
 
-## List of Mapped CWEs
+## Liste des CWEs associées
 
 [CWE-345 Insufficient Verification of Data Authenticity](https://cwe.mitre.org/data/definitions/345.html)
 
