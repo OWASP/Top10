@@ -14,47 +14,28 @@ La journalisation et la surveillance de la sécurité sont issues de l'enquête 
 
 De retour dans le Top 10 2021 de l'OWASP, cette catégorie a pour but d'aider à la détection, à l'escalade et à la réponse aux brèches actives. Sans journalisation et surveillance, les brèches ne peuvent être détectées. Une journalisation, une détection, une surveillance et une réponse active insuffisantes peuvent survenir à tout moment :
 
--   les traces d’audit, telles que les accès réussis ou échoués et les transactions sensibles, ne sont pas enregistrées ;
--   les alertes et les erreurs générées ne sont pas enregistrées, ou leur journalisation est inadéquate, ou imprécise ;
--   les journaux des applications et des API ne sont pas contrôlés pour détecter les actions suspectes ;
--   les journaux ne sont stockés que localement ;
--   aucun processus de seuil d’alerte convenable ni de remontées d'information pour y répondre n'ont été définis, ou ils sont inadéquats, ou inefficaces ;
--   les tests d'intrusion et de balayage avec des outils de test dynamique de sécurité des applications (DAST), tels que OWASP ZAP, ne génèrent pas d'alertes ;
--   l’application est incapable de détecter, de générer des remontées d'information et des alertes en temps réel, ou assimilé, en cas d’attaque active.
+- les traces d’audit, telles que les accès réussis ou échoués et les transactions sensibles, ne sont pas enregistrées ;
+- les alertes et les erreurs générées ne sont pas enregistrées, ou leur journalisation est inadéquate, ou imprécise ;
+- les journaux des applications et des API ne sont pas contrôlés pour détecter les actions suspectes ;
+- les journaux ne sont stockés que localement ;
+- aucun processus de seuil d’alerte convenable ni de remontées d'information pour y répondre n'ont été définis, ou ils sont inadéquats, ou inefficaces ;
+- les tests d'intrusion et de balayage avec des outils de test dynamique de sécurité des applications (DAST), tels que OWASP ZAP, ne génèrent pas d'alertes ;
+- l’application est incapable de détecter, de générer des remontées d'information et des alertes en temps réel, ou assimilé, en cas d’attaque active.
 
 Vous êtes vulnérable à une fuite d’information en rendant les enregistrements de journalisation et d’alertes accessibles à vos utilisateurs ou attaquants (voir [A01:2021-Contrôles d'accès défaillants](A01_2021-Broken_Access_Control.md)).
 
-## How to Prevent
+## Comment s'en prémunir
 
-Developers should implement some or all the following controls, 
-depending on the risk of the application:
+Les développeurs doivent mettre en œuvre tout ou partie des contrôles suivants, en fonction du risque de l'application :
 
--   Ensure all login, access control, and server-side input validation
-    failures can be logged with sufficient user context to identify
-    suspicious or malicious accounts and held for enough time to allow
-    delayed forensic analysis.
+- s'assurer que toutes les authentifications, les erreurs de contrôle d'accès et de contrôle des entrées côté serveur sont enregistrées, avec un contexte utilisateur suffisant pour identifier les comptes suspects ou malveillants, et conservées suffisamment longtemps pour permettre une analyse légale différée ;
+- s'assurer que les enregistrements des journaux sont dans un format standard pour permettre de les intégrer facilement à une solution de gestion de logs centralisée ;
+- veiller à ce que les données des journaux soient correctement encodées afin d'éviter les injections ou les attaques sur les systèmes de journalisation ou de surveillance ;
+- s'assurer que les transactions à haute valeur ajoutée ont une piste d'audit, avec un contrôle d'intégrité, pour éviter la modification ou la suppression, comme des tables de bases de données en ajout seul ou équivalent ;
+- les équipes DevSecOps devraient mettre en place une supervision et une gestion d'alertes efficaces pour détecter et réagir aux actions suspectes en temps opportun ;
+- définir ou adopter un plan de réaction et de reprise sur incident, comme celui du *National Institute of Standards and Technology* (NIST) 800-61r2 ou ultérieur.
 
--   Ensure that logs are generated in a format that log management
-    solutions can easily consume.
-
--   Ensure log data is encoded correctly to prevent injections or
-    attacks on the logging or monitoring systems.
-
--   Ensure high-value transactions have an audit trail with integrity
-    controls to prevent tampering or deletion, such as append-only
-    database tables or similar.
-
--   DevSecOps teams should establish effective monitoring and alerting
-    such that suspicious activities are detected and responded to
-    quickly.
-
--   Establish or adopt an incident response and recovery plan, such as
-    National Institute of Standards and Technology (NIST) 800-61r2 or later.
-
-There are commercial and open-source application protection frameworks
-such as the OWASP ModSecurity Core Rule Set, and open-source log
-correlation software, such as the Elasticsearch, Logstash, Kibana (ELK)
-stack, that feature custom dashboards and alerting.
+On trouve des logiciels, commerciaux ou open source, de protection d'applications tels que OWASP ModSecurity Core Rule Set, et des logiciels de corrélation de journaux, comme la pile Elasticsearch, Logstash, Kibana (ELK), qui propose des tableaux de bord et d'alertes configurables.
 
 ## Example Attack Scenarios
 
