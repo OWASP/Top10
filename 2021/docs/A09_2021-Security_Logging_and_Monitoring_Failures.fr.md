@@ -12,33 +12,17 @@ La journalisation et la surveillance de la sécurité sont issues de l'enquête 
 
 ## Description 
 
-Returning to the OWASP Top 10 2021, this category is to help detect,
-escalate, and respond to active breaches. Without logging and
-monitoring, breaches cannot be detected. Insufficient logging,
-detection, monitoring, and active response occurs any time:
+De retour dans le Top 10 2021 de l'OWASP, cette catégorie a pour but d'aider à la détection, à l'escalade et à la réponse aux brèches actives. Sans journalisation et surveillance, les brèches ne peuvent être détectées. Une journalisation, une détection, une surveillance et une réponse active insuffisantes peuvent survenir à tout moment :
 
--   Auditable events, such as logins, failed logins, and high-value
-    transactions, are not logged.
+-   les traces d’audit, telles que les accès réussis ou échoués et les transactions sensibles, ne sont pas enregistrées ;
+-   les alertes et les erreurs générées ne sont pas enregistrées, ou leur journalisation est inadéquate, ou imprécise ;
+-   les journaux des applications et des API ne sont pas contrôlés pour détecter les actions suspectes ;
+-   les journaux ne sont stockés que localement ;
+-   aucun processus de seuil d’alerte convenable ni de remontées d'information pour y répondre n'ont été définis, ou ils sont inadéquats, ou inefficaces ;
+-   les tests d'intrusion et de balayage avec des outils de test dynamique de sécurité des applications (DAST), tels que OWASP ZAP, ne génèrent pas d'alertes ;
+-   l’application est incapable de détecter, de générer des remontées d'information et des alertes en temps réel, ou assimilé, en cas d’attaque active.
 
--   Warnings and errors generate no, inadequate, or unclear log
-    messages.
-
--   Logs of applications and APIs are not monitored for suspicious
-    activity.
-
--   Logs are only stored locally.
-
--   Appropriate alerting thresholds and response escalation processes
-    are not in place or effective.
-
--   Penetration testing and scans by dynamic application security testing (DAST) tools (such as OWASP ZAP) do
-    not trigger alerts.
-
--   The application cannot detect, escalate, or alert for active attacks
-    in real-time or near real-time.
-
-You are vulnerable to information leakage by making logging and alerting
-events visible to a user or an attacker (see [A01:2021-Broken Access Control](A01_2021-Broken_Access_Control.md)).
+Vous êtes vulnérable à une fuite d’information en rendant les enregistrements de journalisation et d’alertes accessibles à vos utilisateurs ou attaquants (voir [A01:2021-Contrôles d'accès défaillants](A01_2021-Broken_Access_Control.md)).
 
 ## How to Prevent
 
