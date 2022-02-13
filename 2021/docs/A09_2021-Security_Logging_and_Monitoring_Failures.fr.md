@@ -6,18 +6,9 @@
 |:--------------:|:--------------------:|:----------------------:|:-----------------------------:|:--------------------:|:--------------:|:------------------:|:--------------------------:|:--------------------:|
 |       4        |       19,23 %        |         6,51 %         |             6,87              |         4,99         |    53,67 %     |      39,97 %       |           53 615           |         242          |
 
-## Overview
+## Aperçu
 
-Security logging and monitoring came from the Top 10 community survey (#3), up
-slightly from the tenth position in the OWASP Top 10 2017. Logging and
-monitoring can be challenging to test, often involving interviews or
-asking if attacks were detected during a penetration test. There isn't
-much CVE/CVSS data for this category, but detecting and responding to
-breaches is critical. Still, it can be very impactful for accountability, visibility,
-incident alerting, and forensics. This category expands beyond *CWE-778
-Insufficient Logging* to include *CWE-117 Improper Output Neutralization
-for Logs*, *CWE-223 Omission of Security-relevant Information*, and
-*CWE-532* *Insertion of Sensitive Information into Log File*.
+La journalisation et la surveillance de la sécurité sont issues de l'enquête de la communauté Top 10 (n°3), en légère hausse par rapport à la dixième position dans le Top 10 2017 de l'OWASP. La journalisation et la surveillance peuvent être difficiles à tester, impliquant souvent des entretiens ou demandant si des attaques ont été détectées lors d'un test d'intrusion. Il n'y a pas beaucoup de données CVE/CVSS pour cette catégorie, mais la détection et la réponse aux brèches sont essentielles. Il n'en reste pas moins qu'elle peut avoir un impact considérable sur la responsabilité, la visibilité, l'alerte en cas d'incident et la forensique. Cette catégorie s'étend au-delà de *CWE-778 Insufficient Logging* pour inclure *CWE-117 Improper Output Neutralization for Logs*, *CWE-223 Omission of Security-relevant Information*, et *CWE-532* *Insertion of Sensitive Information into Log File*.
 
 ## Description 
 
