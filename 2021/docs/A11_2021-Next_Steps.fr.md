@@ -4,35 +4,17 @@ De par sa conception, le Top 10 de l'OWASP est limité aux dix risques les plus 
 
 Qu'il s'agisse d'organisations travaillant à la mise en place d'un programme de sécurité des applications mature, de consultants en sécurité ou de fournisseurs d'outils souhaitant étendre la couverture de leurs offres, les quatre problèmes suivants valent la peine d'être identifiés et corrigés.
 
-## Code Quality issues
+## Problèmes de qualité du code
 
-| CWEs Mapped  | Max Incidence Rate  | Avg Incidence Rate  | Avg Weighted Exploit  | Avg Weighted Impact  | Max Coverage  | Avg Coverage  | Total Occurrences  | Total CVEs  |
-|:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
-| 38           | 49.46%              | 2.22%               | 7.1                   | 6.7                  | 60.85%        | 23.42%        | 101736             | 7564        |
+| CWEs associées | Taux d'incidence max | Taux d'incidence moyen | Exploitation pondérée moyenne | Impact pondéré moyen | Couverture max | Couverture moyenne | Nombre total d'occurrences | Nombre total de CVEs |
+|:--------------:|:--------------------:|:----------------------:|:-----------------------------:|:--------------------:|:--------------:|:------------------:|:--------------------------:|:--------------------:|
+|       38       |       49,46 %        |         2,22 %         |              7,1              |         6,7          |    60,85 %     |      23,42 %       |        101&nbsp;736        |      7&nbsp;564      |
 
--   **Description.** Code quality issues include known security defects
-    or patterns, reusing variables for multiple purposes, exposure of
-    sensitive information in debugging output, off-by-one errors, time
-    of check/time of use (TOCTOU) race conditions, unsigned or signed
-    conversion errors, use after free, and more. The hallmark of this
-    section is that they can usually be identified with stringent
-    compiler flags, static code analysis tools, and linter IDE plugins.
-    Modern languages by design eliminated many of these issues, such as
-    Rust’s memory ownership and borrowing concept, Rust’s threading
-    design, and Go’s strict typing and bounds checking.
-
--   **How to prevent**. Enable and use your editor and language’s static
-    code analysis options. Consider using a static code analysis tool.
-    Consider if it might be possible to use or migrate to a language or
-    framework that eliminates bug classes, such as Rust or Go.
-
--   **Example attack scenarios**. An attacker might obtain or update
-    sensitive information by exploiting a race condition using a
-    statically shared variable across multiple threads.
-
--   **References**
+- **Description**. Les problèmes de qualité du code comprennent les défauts ou les schémas de sécurité connus, la réutilisation de variables à des fins multiples, l'exposition d'informations sensibles dans les résultats de débogage, les erreurs "off-by-one", les situations de concurrence "time of check/time of use" (TOCTOU), les erreurs de conversion non signées ou signées, l'utilisation après libération, etc. La caractéristique de cette section est qu'elles peuvent généralement être identifiées à l'aide d'options de compilateur, d'outils d'analyse de code statique et de plugins IDE de linter. Les langages modernes ont, de par leur conception, éliminé bon nombre de ces problèmes, comme le concept de propriété et d'emprunt de la mémoire de Rust, la conception du threading de Rust et le typage strict et la vérification des limites de Go.
+- **Comment s'en prémunir**. Activez et utilisez les options d'analyse de code statique de votre éditeur et de votre langage. Envisagez d'utiliser un outil d'analyse statique du code. Envisagez la possibilité d'utiliser ou de migrer vers un langage ou un framework qui élimine des classes de bogues, comme Rust ou Go.
+- **Exemple de scénarios d'attaque**. Un attaquant peut obtenir ou mettre à jour des informations sensibles en exploitant une situation de concurrence utilisant une variable statiquement partagée entre plusieurs threads.
+- **Références**
     - [OWASP Code Review Guide](https://owasp.org/www-pdf-archive/OWASP_Code_Review_Guide_v2.pdf)
-
     - [Google Code Review Guide](https://google.github.io/eng-practices/review/)
 
 
