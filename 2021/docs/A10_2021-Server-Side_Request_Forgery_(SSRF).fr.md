@@ -12,16 +12,9 @@ Cette catégorie est ajoutée à partir de l'enquête communautaire Top 10 (n°1
 
 ## Description 
 
-SSRF flaws occur whenever a web application is fetching a remote
-resource without validating the user-supplied URL. It allows an attacker
-to coerce the application to send a crafted request to an unexpected
-destination, even when protected by a firewall, VPN, or another type of
-network access control list (ACL).
+Une faille SSRF se produit lorsqu'une application web récupère une ressource distante sans valider l'URL fournie par l'utilisateur. Elle permet à un attaquant de contraindre l'application à envoyer une requête élaborée à une destination inattendue, même si elle est protégée par un pare-feu, un VPN ou un autre type de liste de contrôle d'accès au réseau (ACL).
 
-As modern web applications provide end-users with convenient features,
-fetching a URL becomes a common scenario. As a result, the incidence of
-SSRF is increasing. Also, the severity of SSRF is becoming higher due to
-cloud services and the complexity of architectures.
+Comme les applications Web modernes offrent aux utilisateurs finaux des fonctions pratiques, la récupération d'une URL devient un scénario courant. Par conséquent, l'incidence du SSRF augmente. De même, la gravité de ce phénomène augmente en raison des services en nuage et de la complexité des architectures.
 
 ## How to Prevent
 
