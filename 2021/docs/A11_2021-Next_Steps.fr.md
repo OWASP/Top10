@@ -18,33 +18,17 @@ Qu'il s'agisse d'organisations travaillant à la mise en place d'un programme de
     - [Google Code Review Guide](https://google.github.io/eng-practices/review/)
 
 
-## Denial of Service
+## Déni de service
 
-| CWEs Mapped  | Max Incidence Rate  | Avg Incidence Rate  | Avg Weighted Exploit  | Avg Weighted Impact  | Max Coverage  | Avg Coverage  | Total Occurrences  | Total CVEs  |
-|:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
-| 8            | 17.54%              | 4.89%               | 8.3                   | 5.9                  | 79.58%        | 33.26%        | 66985              | 973         |
+| CWEs associées | Taux d'incidence max | Taux d'incidence moyen | Exploitation pondérée moyenne | Impact pondéré moyen | Couverture max | Couverture moyenne | Nombre total d'occurrences | Nombre total de CVEs |
+|:--------------:|:--------------------:|:----------------------:|:-----------------------------:|:--------------------:|:--------------:|:------------------:|:--------------------------:|:--------------------:|
+|       8        |       17,54 %        |         4,89 %         |              8,3              |         5,9          |    79,58 %     |      33,26 %       |        66&nbsp;985         |         973          |
 
--   **Description**. Denial of service is always possible given
-    sufficient resources. However, design and coding practices have a
-    significant bearing on the magnitude of the denial of service.
-    Suppose anyone with the link can access a large file, or a
-    computationally expensive transaction occurs on every page. In that
-    case, denial of service requires less effort to conduct.
-
--   **How to prevent**. Performance test code for CPU, I/O, and memory
-    usage, re-architect, optimize, or cache expensive operations.
-    Consider access controls for larger objects to ensure that only
-    authorized individuals can access huge files or objects or serve
-    them by an edge caching network. 
-
--   **Example attack scenarios**. An attacker might determine that an
-    operation takes 5-10 seconds to complete. When running four
-    concurrent threads, the server seems to stop responding. The
-    attacker uses 1000 threads and takes the entire system offline.
-
--   **References**
+- **Description**. Le déni de service est toujours possible si les ressources sont suffisantes. Cependant, les pratiques de conception et de développement ont une incidence importante sur l'ampleur du déni de service. Supposons que toute personne disposant d'un lien puisse accéder à un fichier volumineux, ou qu'une transaction coûteuse en termes de calcul se produise sur chaque page. Dans ce cas, le déni de service nécessite moins d'efforts pour être mené.
+- **Comment s'en prémunir**. Testez les performances du code en termes d'utilisation du processeur, des E/S et de la mémoire, ré-architecturez, optimisez ou mettez en cache les opérations coûteuses. Envisagez des contrôles d'accès pour les objets de grande taille afin de vous assurer que seules les personnes autorisées peuvent accéder aux fichiers ou objets volumineux ou les servir par un réseau de mise en cache en périphérie.
+- **Exemple de scénarios d'attaque**. Un attaquant peut déterminer qu'une opération prend 5 à 10 secondes pour se terminer. Lorsqu'il exécute quatre threads simultanés, le serveur semble ne plus répondre. L'attaquant utilise 1000 threads et met l'ensemble du système hors ligne.
+- **Références**
     - [OWASP Cheet Sheet: Denial of Service](https://cheatsheetseries.owasp.org/cheatsheets/Denial_of_Service_Cheat_Sheet.html)
-    
     - [OWASP Attacks: Denial of Service](https://owasp.org/www-community/attacks/Denial_of_Service)
 
 ## Memory Management Errors
