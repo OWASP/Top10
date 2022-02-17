@@ -6,15 +6,9 @@
 |:--------------:|:--------------------:|:----------------------:|:-----------------------------:|:--------------------:|:--------------:|:------------------:|:--------------------------:|:--------------------:|
 |       1        |        2,72 %        |         2,72 %         |             8,28              |         6,72         |    67,72 %     |      67,72 %       |           9 503            |         385          |
 
-## Overview
+## Aperçu
 
-This category is added from the Top 10 community survey (#1). The data shows a
-relatively low incidence rate with above average testing coverage and
-above-average Exploit and Impact potential ratings. As new entries are
-likely to be a single or small cluster of Common Weakness Enumerations (CWEs)
-for attention and
-awareness, the hope is that they are subject to focus and can be rolled
-into a larger category in a future edition.
+Cette catégorie est ajoutée à partir de l'enquête communautaire Top 10 (n°1). Les données montrent un taux d'incidence relativement faible avec une couverture de test supérieure à la moyenne et des évaluations du potentiel d'exploitation et d'impact supérieures à la moyenne. Comme les nouvelles entrées sont susceptibles d'être une seule ou un petit groupe de *Common Weakness Enumerations* (CWE) pour l'attention et la sensibilisation, l'espoir est qu'elles fassent l'objet d'une attention particulière et qu'elles puissent être intégrées dans une catégorie plus importante dans une prochaine édition.
 
 ## Description 
 
