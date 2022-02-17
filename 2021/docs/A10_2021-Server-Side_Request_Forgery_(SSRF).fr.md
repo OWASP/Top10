@@ -43,30 +43,19 @@ N'atténuez pas les SSRF par l'utilisation d'une liste de refus ou d'une express
 - ne pas déployer d'autres services liés à la sécurité sur les systèmes frontaux (par exemple, OpenID). Contrôlez le trafic local sur ces systèmes (par exemple, localhost) ;
 - pour les frontaux avec des groupes d'utilisateurs dédiés et gérables, utilisez le chiffrement du réseau (par exemple, les VPN) sur des systèmes indépendants pour prendre en compte les besoins de protection très élevés.
 
-## Example Attack Scenarios
+## Exemple de scénarios d'attaque
 
-Attackers can use SSRF to attack systems protected behind web
-application firewalls, firewalls, or network ACLs, using scenarios such
-as:
+Les attaquants peuvent utiliser SSRF pour attaquer des systèmes protégés derrière des pare-feu d'applications web, des pare-feu ou des ACL de réseau, en utilisant des scénarios tels que :
 
-**Scenario #1:** Port scan internal servers – If the network architecture
-is unsegmented, attackers can map out internal networks and determine if
-ports are open or closed on internal servers from connection results or
-elapsed time to connect or reject SSRF payload connections.
+**Scénario n°1 :** Analyse des ports des serveurs internes - Si l'architecture du réseau n'est pas segmentée, les attaquants peuvent cartographier les réseaux internes et déterminer si les ports sont ouverts ou fermés sur les serveurs internes à partir des résultats de connexion ou du temps écoulé pour connecter ou les connexions rejetées avec une charge utile de type SSRF.
 
-**Scenario #2:** Sensitive data exposure – Attackers can access local 
-files or internal services to gain sensitive information such
-as `file:///etc/passwd</span>` and `http://localhost:28017/`.
+**Scénario n°2 :** Exposition de données sensibles - Les attaquants peuvent accéder aux fichiers locaux ou aux services internes pour obtenir des informations sensibles telles que `file:///etc/passwd` et `http://localhost:28017/`.
 
-**Scenario #3:** Access metadata storage of cloud services – Most cloud
-providers have metadata storage such as `http://169.254.169.254/`. An
-attacker can read the metadata to gain sensitive information.
+**Scénario n°3 :** Accéder au stockage des métadonnées des services en nuage - La plupart des fournisseurs d'informatique en nuage ont un stockage de métadonnées tel que `http://169.254.169.254/`. Un attaquant peut lire les métadonnées pour obtenir des informations sensibles.
 
-**Scenario #4:** Compromise internal services – The attacker can abuse
-internal services to conduct further attacks such as Remote Code
-Execution (RCE) or Denial of Service (DoS).
+**Scénario n°4 :** Compromettre les services internes - L'attaquant peut abuser des services internes pour mener d'autres attaques telles que l'exécution de code à distance (RCE) ou le déni de service (DoS).
 
-## References
+## Références
 
 -   [OWASP - Server-Side Request Forgery Prevention Cheat
     Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html)
@@ -83,6 +72,6 @@ Execution (RCE) or Denial of Service (DoS).
 -   [A New Era of SSRF - Exploiting URL Parser in Trending Programming
     Languages!](https://www.blackhat.com/docs/us-17/thursday/us-17-Tsai-A-New-Era-Of-SSRF-Exploiting-URL-Parser-In-Trending-Programming-Languages.pdf)
 
-## List of Mapped CWEs
+## Liste des CWEs associées
 
 [CWE-918 Server-Side Request Forgery (SSRF)](https://cwe.mitre.org/data/definitions/918.html)
