@@ -14,49 +14,34 @@ Cette catégorie est ajoutée à partir de l'enquête communautaire Top 10 (n°1
 
 Une faille SSRF se produit lorsqu'une application web récupère une ressource distante sans valider l'URL fournie par l'utilisateur. Elle permet à un attaquant de contraindre l'application à envoyer une requête élaborée à une destination inattendue, même si elle est protégée par un pare-feu, un VPN ou un autre type de liste de contrôle d'accès au réseau (ACL).
 
-Comme les applications Web modernes offrent aux utilisateurs finaux des fonctions pratiques, la récupération d'une URL devient un scénario courant. Par conséquent, l'incidence du SSRF augmente. De même, la gravité de ce phénomène augmente en raison des services en nuage et de la complexité des architectures.
+Comme les applications Web modernes offrent aux utilisateurs finaux des fonctions pratiques, la récupération d'une URL devient un scénario courant. Par conséquent, l'incidence d'une SSRF augmente. De même, la gravité de ce phénomène augmente en raison des services en nuage et de la complexité des architectures.
 
-## How to Prevent
+## Comment s'en prémunir
 
-Developers can prevent SSRF by implementing some or all the following
-defense in depth controls:
+Les développeurs peuvent prévenir ce type de vulnérabilité en mettant en œuvre tout ou partie des contrôles de défense en profondeur suivants :
 
-### **From Network layer**
+### **Couche réseau :**
 
--   Segment remote resource access functionality in separate networks to
-    reduce the impact of SSRF
+- segmenter la fonctionnalité d'accès aux ressources à distance dans des réseaux distincts pour réduire l'impact d'une SSRF ;
+- appliquer des politiques de pare-feu ou des règles de contrôle d'accès au réseau "refusant par défaut" afin de bloquer tout le trafic intranet sauf celui qui est essentiel.<br/> 
+    *Conseils:*<br> 
+    - Établir une propriété et un cycle de vie pour les règles du pare-feu en fonction des applications.<br/>
+    - Consigner tous les flux réseau acceptés *et* bloqués sur les pare-feu (voir [A09:2021-Carence des systèmes de contrôle et de journalisation](A09_2021-Security_Logging_and_Monitoring_Failures.md)).
 
--   Enforce “deny by default” firewall policies or network access
-    control rules to block all but essential intranet traffic.<br/> 
-    *Hints:*<br> 
-    ~ Establish an ownership and a lifecycle for firewall rules based on applications.<br/>
-    ~ Log all accepted *and* blocked network flows on firewalls
-    (see [A09:2021-Security Logging and Monitoring Failures](A09_2021-Security_Logging_and_Monitoring_Failures.md)).
-    
-### **From Application layer:**
+### **Couche applicative :**
 
--   Sanitize and validate all client-supplied input data
+- assainir et valider toutes les données d'entrée fournies par le client ;
+- imposer le schéma d'URL, le port et la destination avec une liste positive d'autorisation ;
+- ne pas envoyer de réponses brutes aux clients ;
+- désactiver les redirections HTTP ;
+- veiller à la cohérence des URL pour éviter les attaques telles que le rebinding DNS et les situations de concurrence de type "time of check, time of use" (TOCTOU).
 
--   Enforce the URL schema, port, and destination with a positive allow
-    list
+N'atténuez pas les SSRF par l'utilisation d'une liste de refus ou d'une expression régulière. Les attaquants disposent de dictionnaires, d'outils et de compétences pour contourner les listes de refus.
 
--   Do not send raw responses to clients
+### **Mesures complémentaires :**
 
--   Disable HTTP redirections
-
--   Be aware of the URL consistency to avoid attacks such as DNS
-    rebinding and “time of check, time of use” (TOCTOU) race conditions
-
-Do not mitigate SSRF via the use of a deny list or regular expression.
-Attackers have payload lists, tools, and skills to bypass deny lists.
-
-### **Additional Measures to consider:**
-    
--   Don't deploy other security relevant services on front systems (e.g. OpenID). 
-    Control local traffic on these systems (e.g. localhost)
-    
--   For frontends with dedicated and manageable user groups use network encryption (e.g. VPNs)
-    on independent systems to consider very high protection needs  
+- ne pas déployer d'autres services liés à la sécurité sur les systèmes frontaux (par exemple, OpenID). Contrôlez le trafic local sur ces systèmes (par exemple, localhost) ;
+- pour les frontaux avec des groupes d'utilisateurs dédiés et gérables, utilisez le chiffrement du réseau (par exemple, les VPN) sur des systèmes indépendants pour prendre en compte les besoins de protection très élevés.
 
 ## Example Attack Scenarios
 
