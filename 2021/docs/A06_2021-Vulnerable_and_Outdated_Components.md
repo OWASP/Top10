@@ -11,7 +11,7 @@
 It was #2 from the Top 10 community survey but also had enough data to make the
 Top 10 via data. Vulnerable Components are a known issue that we
 struggle to test and assess risk and is the only category to not have
-any Common Weakness Enumerations (CWEs) mapped to the included CWEs, so a default exploits/impact
+any Common Vulnerability and Exposures (CVEs) mapped to the included CWEs, so a default exploits/impact
 weight of 5.0 is used. Notable CWEs included are *CWE-1104: Use of
 Unmaintained Third-Party Components* and the two CWEs from Top 10 2013
 and 2017.
