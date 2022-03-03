@@ -125,8 +125,6 @@ Se um não administrador pode acessar a página de administração, isso é uma 
 -   [OWASP Testing Guide: Authorization
     Testing](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/05-Authorization_Testing/README)
 
--   [OWASP Cheat Sheet: Access Control](https://cheatsheetseries.owasp.org/cheatsheets/Access_Control_Cheat_Sheet.html)
-
 -   [OWASP Cheat Sheet: Authorization](https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html)
 
 -   [PortSwigger: Exploiting CORS
