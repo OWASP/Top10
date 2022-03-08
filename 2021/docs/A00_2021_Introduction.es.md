@@ -51,9 +51,9 @@ Hay 125.000 registros de una CVE mapeadas a una CWE en los datos de la NVD (Nati
 
 Para el Top 10 2021, calculamos las puntuaciones promedio de *explotabilidad* e *impacto técnico* de la siguiente manera. Agrupamos todas las CVEs con puntuaciones CVSS por CWE y ponderamos las puntuaciones de *explotabilidad* e *impacto técnico* por el porcentaje de la población que tenía CVSSv3 + la población restante de puntuaciones CVSSv2 para obtener una media global. Mapeamos estos promedios a las CWEs en el conjunto de datos para utilizarlos como puntuación de *explotabilidad* e *impacto (Técnico)* para la otra mitad de la ecuación del riesgo.
 
-## ¿Por qué no solo los datos estadísticos puros?
+## ¿Por qué no únicamente los datos estadísticos puros?
 
-Los resultados de los datos se limitan principalmente a lo que podemos comprobar de forma automatizada. Si hablas con un profesional experimentado de la seguridad de las aplicaciones, te hablará de las cosas que encuentra y de las tendencias que ve y que aún no están en los datos. Se necesita tiempo para desarrollar metodologías de pruebas para ciertos tipos de vulnerabilidades y más tiempo aún para que esas pruebas sean automatizadas y ejecutadas contra una gran población de aplicaciones. Todo lo que hallamos está mirando al pasado y puede que falten algunas tendencias del último año, que aún no están presentes en los datos.
+Los resultados de los datos se limitan principalmente a lo que podemos comprobar de forma automatizada. Si hablas con un profesional experimentado de la seguridad de las aplicaciones, te hablará de las cosas que encuentra y de las tendencias que ve y que aún no están en los datos. Se necesita tiempo para desarrollar metodologías de pruebas para ciertos tipos de vulnerabilidades y más tiempo aún para que esas pruebas sean automatizadas y ejecutadas contra una gran población de aplicaciones. Todo lo que hallamos es mirando al pasado y puede que falten algunas tendencias del último año, que aún no están presentes en los datos.
 
 Es por eso que solo recogemos ocho de las diez categorías de los datos, porque están incompletos. Las otras dos categorías proceden de la encuesta a la comunidad del Top 10. Esto permite a los profesionales de primera línea votar por los que ellos consideran que son los mayores riesgos y que podrían no estar en los datos (y puede que nunca se expresen en ellos).
 
@@ -61,27 +61,27 @@ Es por eso que solo recogemos ocho de las diez categorías de los datos, porque 
 
 Hay tres fuentes principales de datos. Las identificamos como Herramienta asistida por Humanos (HaT), Humano asistido por Herramientas (TaH) y Herramientas en bruto.
 
-Herramientas y HaT son generadores de hallazgos de alta frecuencia. Las herramientas buscarán vulnerabilidades específicas e intentarán incansablemente encontrar cada instancia de esa vulnerabilidad y generarán un elevado número de hallazgos para algunos tipos de vulnerabilidades. Por ejemplo, el Cross-Site Scripting, suele ser de dos tipos: o bien es un error menor y aislado, o bien es un problema sistémico. Cuando se trata de un problema sistémico, el número de hallazgos puede ser de miles para una sola aplicación. Esta alta frecuencia ahoga a la mayoría de las demás vulnerabilidades encontradas en los informes o datos.
+Herramientas y HaT son generadores de hallazgos de alta frecuencia. Las herramientas buscarán vulnerabilidades específicas e intentarán incansablemente encontrar cada instancia de esa vulnerabilidad y generarán un elevado número de hallazgos para algunos tipos de vulnerabilidades. Por ejemplo el Cross-Site Scripting que suelen ser de dos tipos: o bien es un error menor y aislado, o bien es un problema sistémico. Cuando se trata de un problema sistémico, el número de hallazgos puede ser de miles para una sola aplicación. Esta alta frecuencia ahoga a la mayoría de las demás vulnerabilidades encontradas en los informes o datos.
 
-Por otro lado, TaH encontrará una gama más amplia de tipos de vulnerabilidades, pero con una frecuencia mucho menor debido a las limitaciones de tiempo. Cuando los humanos prueban una aplicación y ven algo como un Cross-Site Scripting, normalmente encontrarán tres o cuatro instancias y se detendrán. Pueden determinar un hallazgo sistémico y escribir una recomendación para corregirlo a gran escala en la aplicación. No hay necesidad (ni tiempo) de encontrar cada instancia.
+Por otro lado, TaH encontrará una gama más amplia de tipos de vulnerabilidades, pero con una frecuencia mucho menor debido a las limitaciones de tiempo. Cuando se prueba manualmente una aplicación y se ve algo como un Cross-Site Scripting, normalmente se encontrarán tres o cuatro instancias y se detendrá, siendo suficiente para determinar un hallazgo sistémico y escribir una recomendación para corregirlo en la aplicación en general. No hay necesidad (ni tiempo) de encontrar cada instancia en particular.
 
-Supongamos que tomamos estos dos conjuntos de datos distintos y tratamos de fusionarlos por su frecuencia. En ese caso, los datos de Herramientas y HaT ahogarán los datos más precisos (aunque amplios) de TaH y es en buena parte la razón por la que algo como el Cross-Site Scripting ha sido clasificado tan alto en muchas listas cuando el impacto es generalmente bajo o moderado. Se debe al gran volumen de hallazgos. (El Cross-Site Scripting es además razonablemente fácil de probar, por lo que hay muchas más pruebas para ello).
+Supongamos que tomamos estos dos conjuntos de datos distintos y tratamos de fusionarlos por su frecuencia. En ese caso, los datos de Herramientas y HaT enmascararán los datos más precisos (aunque amplios) de TaH y es en buena parte la razón por la que algo como el Cross-Site Scripting ha sido clasificado tan alto en muchas listas, cuando el impacto es generalmente bajo o moderado. Esto se debe al gran volumen de hallazgos. El Cross-Site Scripting es relativamente fácil de probar, por lo que hay muchas más pruebas para ello.
 
-En 2017, introdujimos el uso de la tasa de incidencia en su lugar para dar una nueva mirada a los datos y combinar de manera transparente los datos de Herramientas y HaT con los datos de TaH. La tasa de incidencia se refiere al porcentaje de la población de aplicaciones que tiene al menos una instancia de un tipo de vulnerabilidad. No nos importa si fue algo puntual o sistémico. Eso es irrelevante para nuestros objetivos; solo necesitamos saber cuántas aplicaciones tenían al menos una instancia, lo cual ayuda a proporcionar una visión más clara de los hallazgos de las pruebas a través de múltiples tipos de pruebas sin ahogar los datos en resultados de alta frecuencia. Esto corresponde a una visión relacionada con el riesgo, ya que un atacante solo necesita una instancia para atacar una aplicación con éxito a través de dicha categoría.
+En 2017, introdujimos el uso de la tasa de incidencia en su lugar para dar una nueva mirada y combinar de manera transparente los datos de Herramientas y HaT con los de TaH. La tasa de incidencia se refiere al porcentaje de la población de aplicaciones que tiene al menos una instancia de un tipo de vulnerabilidad. No nos importa si fue algo puntual o sistémico. Eso es irrelevante para nuestros objetivos, solo necesitamos saber cuántas aplicaciones tenían al menos una instancia, lo cual ayuda a proporcionar una visión más clara de los hallazgos de las pruebas a través de múltiples tipos de pruebas sin enmascarar los datos en resultados de alta frecuencia. Esto corresponde a una visión relacionada con el riesgo, ya que un atacante solo necesita una instancia para atacar una aplicación con éxito a través de dicha categoría.
 
-## ¿Cuál es su proceso de recopilación y análisis de datos?
+## ¿Cuál es el proceso de recopilación y análisis de datos?
 
-En el Open Security Summit de 2017 formalizamos el proceso de recopilación de datos del OWASP Top 10. Los líderes del OWASP Top 10 y la comunidad pasaron dos días trabajando en la formalización de un proceso de recopilación de datos transparente. La edición de 2021 es la segunda vez que utilizamos esta metodología.
+En el Open Security Summit de 2017 formalizamos el proceso de recopilación de datos del OWASP Top 10. Los líderes del OWASP Top 10 y la comunidad pasaron dos días trabajando en la formalización de un proceso de recopilación de datos transparente. La edición de 2021 es la segunda en la que utilizamos esta metodología.
 
-Publicamos la solicitud de datos a través de las redes sociales de las que disponemos, tanto del proyecto como de OWASP. En la página del proyecto, enumeramos los elementos y la estructura de los datos que buscamos y cómo presentarlos. En el proyecto de GitHub, disponemos de archivos de ejemplo que sirven como plantillas. También, en caso necesario, trabajamos con las organizaciones para ayudarles a determinar la estructura y el mapeo con las CWEs.
+Publicamos la solicitud de datos a través de las redes sociales que disponemos, tanto del proyecto como de OWASP. En la página del proyecto, enumeramos los elementos y la estructura de los datos que buscamos y cómo presentarlos. En el proyecto de GitHub, disponemos de archivos de ejemplo que sirven como plantillas. También, en caso necesario, trabajamos con las organizaciones para ayudarles a determinar la estructura y el mapeo con las CWEs.
 
-Recibimos estos datos de organizaciones que son proveedores de servicios de seguridad, proveedores de bug bounty y organizaciones que aportan datos de pruebas internas. Una vez que recibimos los datos, los cargamos y realizamos un análisis fundamental de las categorías de riesgo de las CWEs. Hay un solapamiento entre algunas CWEs, y otros están muy relacionados (por ejemplo, las fallas criptográficas). Toda decisión relacionada con los datos en bruto se ha documentado y publicado para ser abiertos y transparentes en cuanto a la normalización de los datos.
+Recibimos datos de organizaciones que son proveedores de servicios de seguridad, proveedores de bug bounty y organizaciones que aportan datos de pruebas internas. Una vez que recibimos los datos, los cargamos y realizamos un análisis fundamental de las categorías de riesgo de las CWEs. Hay un solapamiento entre algunas CWEs, y otros están muy relacionados (por ejemplo, las fallas criptográficas). Toda decisión relacionada con los datos en bruto se ha documentado y publicado para ser abiertos y transparentes en cuanto a su la normalización.
 
-Analizamos las ocho categorías con las tasas de incidencia más altas para incluirlas en el Top 10. También miramos los resultados de la encuesta a la comunidad del Top 10 para ver cuáles pueden estar ya presentes en los datos. Las dos más votadas que no estén ya presentes en los datos serán seleccionadas para los otros dos puestos del Top 10. Una vez seleccionados las diez, aplicamos factores generalizados de explotabilidad e impacto; para así poder ordenar el Top 10 2021 en función del riesgo.
+Analizamos las ocho categorías con las tasas de incidencia más altas para incluirlas en el Top 10. También miramos los resultados de la encuesta a la comunidad del Top 10 para ver cuáles ya se encuentran presentes en los datos. Las dos más votadas que no estén ya presentes fueron seleccionadas para los otros dos puestos del Top 10. Una vez seleccionados las diez, aplicamos factores generalizados de explotabilidad e impacto; para así poder ordenar el Top 10 2021 en función del riesgo.
 
-## Data Factors
+## Factores de datos
 
-Hay factores de datos que se enumeran para cada una de las 10 categorías, aquí está lo que significan:
+Existen factores de datos que se enumeran para cada una de las categorías, aquí se explica su significado:
 
 - CWEs mapeadas: El número de CWEs asignadas a una categoría por el equipo del Top 10.
 - Tasa de incidencia: La tasa de incidencia es el porcentaje de aplicaciones vulnerables a esa CWE de la población analizada por esa organización para ese año.
@@ -91,7 +91,7 @@ Hay factores de datos que se enumeran para cada una de las 10 categorías, aquí
 - Total de ocurrencias: Número total de aplicaciones en las que se han encontrado las CWEs asignados a una categoría.
 - Total de CVEs: Número total de CVEs en la base de datos del NVD que fueron asignadas a las CWEs asignados a una categoría.
 
-## Gracias a nuestros proveedores de datos
+## Agradecimiento a nuestros proveedores de datos
 
 Las siguientes organizaciones (junto con algunos donantes anónimos) han tenido la amabilidad de donar datos de más de 500.000 aplicaciones para hacer de este el mayor y más completo conjunto de datos sobre seguridad de las aplicaciones. Sin ustedes, esto no sería posible.
 
@@ -108,7 +108,7 @@ Las siguientes organizaciones (junto con algunos donantes anónimos) han tenido 
 - Veracode
 - WhiteHat (NTT)
 
-## Gracias a nuestro patrocinador
+## Gracias a nuestros patrocinadores
 
 El equipo del OWASP Top 10 2021 agradece el apoyo financiero de Secure Code Warrior y Just Eat.
 
