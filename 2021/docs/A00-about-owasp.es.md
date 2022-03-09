@@ -1,35 +1,35 @@
 # Acerca de OWASP
 
-El Proyecto Abierto de Seguridad de Aplicaciones Web(OWASP) es una comunidad abierta dedicada a ayudar a que las organizaciones desarrollen, compren y mantengan aplicaciones y API en las que se pueda confiar.
+El proyecto abierto de seguridad en aplicaciones Web (OWASP por sus siglas en inglés) es una comunidad abierta dedicada a facultar a las organizaciones a desarrollar, adquirir y mantener aplicaciones y APIS que pueden ser confiables.
 
-En OWASP, encontrará gratis y con licencia de código abierto:
+En OWASP, encontrará gratuitas y abiertas:
 
-- Estándares y herramientas de seguridad de aplicaciones
-- Investigación de vanguardia
-- Librerías y controles de seguridad estándar
-- Libros completos sobre pruebas de seguridad de aplicaciones, desarrollo de código seguro y revisión de código seguro
-- Presentaciones y [videos](https://www.youtube.com/user/OWASPGLOBAL)
-- [Cheat sheets(Hojas de Referencia)](https://cheatsheetseries.owasp.org/) Sobre muchos temas comunes
+- Herramientas y estándares de seguridad en aplicaciones.
+- Investigación de vanguardia.
+- Controles estándar de seguridad y bibliotecas.
+- Libros completos de revisiones de seguridad en aplicaciones, desarrollo de código fuente seguro, y revisiones de seguridad en código fuente.
+- Presentaciones y [videos](https://www.youtube.com/user/OWASPGLOBAL).
+- [Hojas de ayuda (Cheat sheets)](https://cheatsheetseries.owasp.org/) en varios tópicos comunes.
 - [Reuniones de Capítulos](https://owasp.org/chapters/)
-- [Eventos, capacitaciones y conferencias](https://owasp.org/events/).
+- [Eventos, entrenamientos y conferencias](https://owasp.org/events/).
 - [Grupos de Google](próximamente)
 
-Obtenga más información en: [https://www.owasp.org](https://www.owasp.org).
+Conozca más en: [https://www.owasp.org](https://www.owasp.org).
 
-Todas las herramientas, documentos, videos, presentaciones y capítulos de OWASP son gratuitos y están abiertos a cualquier persona interesada en mejorar la seguridad de sus aplicaciones.
+Todas las herramientas, documentos, videos, presentaciones y capítulos de OWASP son gratuitos y están abiertos a cualquier interesado en mejorar la seguridad en aplicaciones.
 
-Apoyamos abordar la seguridad de las aplicaciones como un problema de personas, procesos y tecnología, porque los enfoques más efectivos para la seguridad de las aplicaciones requieren mejoras en estas áreas.
+Abogamos por resolver la seguridad en aplicaciones como un problema de personas, procesos y tecnología, ya que los enfoques más efectivos para la seguridad en aplicaciones requieren mejoras en todas estas áreas.
 
-OWASP es un nuevo tipo de organización. Nuestra libertad de presiones comerciales nos permite brindar información imparcial, práctica y rentable sobre seguridad de aplicaciones.
+OWASP es un nuevo tipo de organización. Nuestra libertad de presiones comerciales nos permite proveer información sobre seguridad en aplicaciones sin sesgos, práctica y efectiva. 
 
-OWASP no está afiliada a ninguna empresa de tecnología, aunque apoyamos el uso informado de la tecnología de seguridad comercial. OWASP produce muchos tipos de materiales de manera colaborativa, transparente y abierta.
+OWASP no está afiliada con ninguna compañía de tecnología, aunque apoyamos el uso instruido de tecnologías de seguridad comercial. OWASP produce muchos tipos de materiales en una manera colaborativa, transparente y abierta.
 
-La Fundación OWASP es la entidad sin fines de lucro que garantiza el éxito a largo plazo del proyecto. Casi todos los asociados con OWASP son voluntarios, incluida la junta de OWASP, los líderes del capítulo, los líderes del proyecto y los miembros del proyecto. Apoyamos la investigación de seguridad innovadora con subvenciones e infraestructura.
+La fundación OWASP es una entidad sin fines de lucro para asegurar el éxito a largo plazo del proyecto. Casi todos los asociados con OWASP son voluntarios, incluyendo la junta directiva de OWASP, líderes de capítulos, líderes y miembros de proyectos. Apoyamos la investigación innovadora sobre seguridad a través de becas e infraestructura.
 
-¡Ven y únete a nosotros!
+¡Únase a nosotros!
 
-## Copyright y Licencia
+## Derechos de Autor y Licencia
 
 ![license](assets/license.png)
 
-Copyright © 2003-2021 Fundación OWASP™. Este documento se publica bajo la licencia Creative Commons Attribution Share-Alike 4.0. Para cualquier reutilización o distribución, debe dejar en claro a los demás los términos de la licencia de este trabajo.
+Copyright © 2003-2021 The OWASP™ Foundation. Este documento se publica bajo la licencia Creative Commons Attribution Share-Alike 4.0. Para cualquier reutilización o distribución, debe dejar en claro los términos de la licencia de este trabajo.
