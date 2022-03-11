@@ -8,51 +8,51 @@
 
 ## Resumen
 
-Subiendo desde la quinta posición, el 94% de las aplicaciones se probaron para detectar algún tipo de pérdida de control de acceso con una tasa de incidencia promedio del 3,81%, y tuvo la mayor cantidad de ocurrencias en el conjunto de datos contribuido con más de 318k. Las enumeraciones de debilidades comunes (CWE) más importantes incluidas son *CWE-200: Exposición de información sensible a un actor no autorizado*, *CWE-201:
-Exposición de información confidencial a través de datos enviados*, y *CWE-352: Falsificación de solicitudes entre sitios*.
+Subiendo desde la quinta posición, el 94% de las aplicaciones fueron probadas para detectar algún tipo de pérdida de control de acceso con una tasa de incidencia promedio del 3,81%. Tuvo la mayor cantidad de ocurrencias en el conjunto de datos analizado con más de 318.000. Las CWE (Common Weakness Enumerations) más importantes incluídas son *CWE-200: Exposición de información sensible a un actor no autorizado*, *CWE-201:
+Exposición de información confidencial a través de datos enviados*, y *CWE-352: Falsificación de Petciones en Sitos Cruzados (Cross Site Request Forgery, CSRF por su siglas en inglés)*.
 
 ## Descripción
 
-El control de acceso hace cumplir la política de modo que los usuarios no pueden actuar fuera de sus permisos previstos. Las fallas generalmente conducen a la divulgación de información no autorizada, la modificación o la destrucción de todos los datos o la realización de una función comercial fuera de los límites del usuario. Las vulnerabilidades comunes de control de acceso incluyen:
+El control de acceso implementa el cumplimiento de política de modo que los usuarios no pueden actuar fuera de los permisos que le fueron asignados. Las fallas generalmente conducen a la divulgación de información no autorizada, la modificación o la destrucción de todos los datos o la ejecución de una función de negocio fuera de los límites del usuario. Las vulnerabilidades comunes de control de acceso incluyen:
 
--   Violación del principio de privilegio mínimo o denegación por defecto, donde el acceso solo debería otorgarse para capacidades, roles o usuarios particulares, pero está disponible para cualquier persona.
+-   Violación del principio de mínimo privilegio o denegación por defecto, según el cual el acceso sólo debe ser permitido para capacidades, roles o usuarios particulares, y no disponible para cualquier persona.
 
--   Eludir las comprobaciones de control de acceso modificando la URL (alteración de parámetros o navegación forzada), el estado interno de la aplicación o la página HTML, o mediante el uso de una herramienta de ataque que modifique las solicitudes de API.
+-   Eludir las comprobaciones de control de acceso modificando la URL (alteración de parámetros o navegación forzada), el estado interno de la aplicación o la página HTML, o mediante el uso de una herramienta que modifique los pedidos a APIs.
 
--   Permitir ver o editar la cuenta de otra persona, proporcionando su identificador único (referencias de objeto directo inseguras)
+-   Permitir ver o editar la cuenta de otra persona, con tan solo conocer su identificador único (referencia directa insegura a objetos)
 
--   Acceso a API con controles de acceso inexistentes para POST, PUT y DELETE.
+-   Acceder a APIs con controles de acceso inexistentes para los métodos POST, PUT y DELETE.
 
--   Elevación de privilegios. Actuar como usuario sin haber iniciado sesión o actuar como administrador cuando se inició sesión solamente como usuario.
+-   Elevación de privilegios. Actuar como usuario sin haber iniciado sesión o actuar como administrador cuando se inició sesión como usuario regular.
 
--   Manipulación de metadatos, como reproducir o alterar un token de control de acceso JSON Web Token (JWT), o una cookie o un campo oculto manipulado para elevar privilegios o abusar de la invalidación de JWT.
+-   Manipulación de metadatos, como reutilizar o modificar un token de control de acceso JSON Web Token (JWT), una cookie o un campo oculto, manipulándolos para elevar privilegios o abusar de la invalidación de tokens JWT.
 
--   La configuración incorrecta de CORS(Uso compartido de recursos de origen cruzado) permite el acceso a la API desde orígenes no autorizados o no confiables.
+-   Configuraciones incorrectas de CORS (uso compartido de recursos de origen cruzado) que permiten el acceso a APIs desde orígenes no autorizados o confiables.
 
--   Forzar la navegación a páginas autenticadas siendo usuario no autenticado o páginas privilegiadas siendo usuario estándar.
+-   Forzar la navegación a páginas autenticadas siendo usuario no autenticado o a páginas privilegiadas siendo usuario regular.
 
 ## Cómo se previene
 
-El control de acceso solo es efectivo en código del lado del servidor confiable o API sin servidor, donde el atacante no puede modificar la verificación de control de acceso o los metadatos.
+El control de acceso solo es efectivo si es implementado en el servidor (server-side) o en la API (caso serverless), donde el atacante no puede modificarlo ni manipular metadatos.
 
 -   A excepción de los recursos públicos, denegar por defecto.
 
--   Implemente mecanismos de control de acceso una vez y reutilícelos en toda la aplicación, incluida la minimización del uso del intercambio de recursos entre orígenes (CORS).
+-   Implemente mecanismos de control de acceso una única vez y reutilícelos en toda la aplicación, incluyendo la minimización del uso de CORS.
 
--   Los controles de acceso del modelo deben hacer respetar la propiedad de los registros en lugar de aceptar que el usuario pueda crear, leer, actualizar o eliminar cualquier registro.
+-   El control de acceso debe implementar su cumplimiento a nivel de dato y no permitir que el usuario pueda crear, leer, actulizar o borrar cualquier dato.
 
 -   Los modelos de dominio deben hacer cumplir los requisitos únicos de límite de negocio de aplicaciones.
 
--   Deshabilite la lista de directorios del servidor web y asegúrese de que los metadatos de archivos (por ejemplo, .git) y archivos de respaldo no estén presentes dentro de los directorios raíz del sitio web.
+-   Deshabilite el listado de directorios del servidor web y asegúrese de que los archivos de metadatos (por ejemplo una carpeta .git) y archivos de respaldo no puedan ser accedidos a partir de la raíz del sitio web.
 
--   Registrar en un log las fallas de control de acceso, alertar a los administradores cuando sea apropiado (por ejemplo, fallas repetidas).
+-   Registre las fallas de control de acceso (loggin), alertando a los administradores cuando sea apropiado (por ejemplo, fallas repetidas).
 
--   Ponga límites al número de accesos permitidos a la API y al controlador para minimizar el daño de las herramientas de ataque automatizadas.
+-   Establezca límites a la tasa de accesos permitidos a APIs y controladores de forma de poder minimizar el daño provocado por herramientas automatizadas de ataque.
 
--   Los identificadores de sesión con estado deben invalidarse en el servidor después de cerrar la sesión.
-    Los tokens JWT sin estado deberían ser preferiblemente de corta duración para minimizar la ventana de oportunidad para un atacante. Para los JWT de mayor duración, es sumamente recomendable seguir los estándares de OAuth para revocar el acceso.
+-   Los identificadores de sesiones deben invalidarse en el servidor luego de cerrar la sesión.
+    Los tokens JWT deberían ser preferiblemente de corta duración para minimizar la ventana de oportunidad de ataque. Para tokens JWT de mayor duración, es sumamente recomendable seguir los estándares de OAuth de revocación de acceso.
 
-Tanto desarrolladores como personal de control de calidad deberían incluir una unidad de control de acceso funcional y pruebas de integración.
+Tanto desarrolladores como personal de control de calidad deben incluir pruebas funcionales de control de acceso tanto a nivel unitario como de integración.
 
 ## Ejemplos de escenarios de ataque
 
@@ -63,13 +63,13 @@ Tanto desarrolladores como personal de control de calidad deberían incluir una 
  ResultSet results = pstmt.executeQuery( );
 ```
 
-Un atacante simplemente modifica el parámetro 'acct' del navegador para enviar el número de cuenta que desee. Si no es verificado correctamente, el atacante puede acceder a la cuenta de cualquier usuario.
+Un atacante simplemente modifica el parámetro 'acct' en el navegador para enviar el número de cuenta que desee. Si no es verificado correctamente, el atacante puede acceder a la cuenta de cualquier usuario.
 
 ```
  https://example.com/app/accountInfo?acct=notmyacct
 ```
 
-**Escenario #2:** Un atacante simplemente obliga a los navegadores a apuntar a una URL específica. Se requieren derechos de administrador para acceder a la página de administración.
+**Escenario #2:** Un atacante simplemente navega a una URL específica. Se deberían requerir derechos de administrador para acceder a la página de administración.
 
 ```
  https://example.com/app/getappInfo

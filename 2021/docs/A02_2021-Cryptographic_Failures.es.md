@@ -8,12 +8,12 @@
 
 ## Resumen
 
-Subiendo una posición al #2, anteriormente conocido como Exposición de datos sensibles, que es más un síntoma amplio que una causa raíz, la atención se centra en las fallas relacionadas con la criptografía (o la falta de ella).
-Lo que a menudo conduce a la exposición de datos sensibles. Las enumeraciones de debilidades comunes (CWE) notables incluidas son *CWE-259: Uso de contraseña en código fuente*, *CWE-327: Algoritmo criptográfico vulnerado o inseguro* y *CWE-331: Entropía insuficiente*.
+Subiendo una posición al número 2, anteriormente conocido como *Exposición de datos sensibles*, que es más un amplio síntoma que una causa raíz, la atención se centra en las fallas relacionadas con la criptografía (o la falta de ésta).
+Esto a menudo conduce a la exposición de datos sensibles. Las CWE incluidas son *CWE-259: Uso de contraseña en código fuente*, *CWE-327: Algoritmo criptográfico vulnerado o inseguro* y *CWE-331: Entropía insuficiente*.
 
 ## Descripción
 
-Lo primero es determinar las necesidades de protección de los datos en tránsito y en reposo. Por ejemplo, las contraseñas, los números de tarjetas de crédito, los registros médicos, la información personal y los secretos comerciales requieren protección adicional. Principalmente si esos datos están sujetos a leyes de privacidad, por ejemplo, el Reglamento General de Protección de Datos (GDPR) de la UE, o regulaciones, por ejemplo, protección de datos financieros como el Estándar de Seguridad de Datos de PCI (PCI DSS).
+Lo primero es determinar las necesidades de protección de los datos en tránsito y en reposo. Por ejemplo, contraseñas, números de tarjetas de crédito, registros médicos, información personal y secretos comerciales requieren protección adicional, principalmente si están sujetos a leyes de privacidad (por ejemplo, el Reglamento General de Protección de Datos -GDPR- de la UE), o regulaciones, (por ejemplo, protección de datos financieros como el Estándar de Seguridad de Datos de PCI -PCI DSS-).
 Para todos esos datos:
 
 -   ¿Se transmiten datos en texto claro? Esto se refiere a protocolos como HTTP, SMTP, FTP que también utilizan actualizaciones de TLS como STARTTLS. El tráfico externo de Internet es peligroso. Verifique todo el tráfico interno, por ejemplo, entre balanceadores de carga, servidores web o sistemas de back-end.
@@ -21,58 +21,58 @@ Para todos esos datos:
 -   ¿Se utilizan algoritmos o protocolos criptográficos antiguos o débiles de forma predeterminada o en código antiguo?
 
 -   ¿Se utilizan claves criptográficas predeterminadas, se generan o reutilizan claves criptográficas débiles, o es inexistente la gestión o rotación de claves adecuadas?
-    ¿Se registran las claves criptográficas en los repositorios de código fuente?
+    ¿Se incluyen las claves criptográficas en los repositorios de código fuente?
 
--   ¿No es aplicada la encriptación, por ejemplo, faltan las directivas de seguridad de los encabezados HTTP (navegador) o los encabezados?
+-   ¿No es forzado el cifrado, por ejemplo, faltan las directivas de seguridad de los encabezados HTTP (navegador) o los encabezados?
 
--   ¿El certificado de servidor recibido y la cadena de confianza están debidamente validados?
+-   ¿El certificado de servidor recibido y la cadena de confianza se encuentran debidamente validados?
 
--   ¿Los vectores de inicialización se ignoran, se reutilizan o no se generan lo suficientemente seguros para el modo de operación criptográfico?
-    ¿Se utiliza un modo de funcionamiento inseguro como el ECB? ¿Se utiliza encriptación cuando la encriptación autenticada es más apropiada?
+-   ¿Los vectores de inicialización se ignoran, se reutilizan o no se generan de forma suficientemente seguros para el modo de operación criptográfico?
+    ¿Se utiliza un modo de funcionamiento inseguro como el ECB? ¿Se utiliza un cifrado cuando el cifrado autenticado es más apropiada?
 
--   ¿Las contraseñas se utilizan como claves criptográficas en ausencia de una función de derivación de claves base de contraseñas?
+-   ¿Las contraseñas se utilizan como claves criptográficas en ausencia de una función de derivación de claves a partir de contraseñas?
 
--   ¿Se utiliza la aleatoriedad con fines criptográficos que no se diseñaron para cumplir con los requisitos criptográficos? Incluso si se elige la función correcta, debe ser sembrada por el desarrollador y, de no ser así, ¿el desarrollador ha sobrescrito la funcionalidad de siembra fuerte incorporada con una semilla que carece de suficiente entropía/imprevisibilidad?
+-   ¿Se utiliza con fines criptográficos generadores de aleatoriedad que no fueron diseñaron para dicho fin? Incluso si se elige la función correcta, debe ser inicializada (seed) por el desarrollador y, de no ser así, ¿el desarrollador ha sobrescrito la funcionalidad de semilla fuerte incorporada con una semilla que carece de suficiente entropía/imprevisibilidad?
 
--   ¿Se utilizan funciones hash en desuso, como MD5 o SHA1, o se utilizan funciones hash no criptográficas cuando se necesitan funciones hash criptográficas?
+-   ¿Se utilizan funciones hash en obsoletas, como MD5 o SHA1, o se utilizan funciones hash no criptográficas cuando se necesitan funciones hash criptográficas?
 
 -   ¿Se utilizan métodos criptográficos de relleno(padding) obsoletos, como PCKS número 1 v1.5?
 
--   ¿Se pueden explotar los mensajes de error criptográficos o la información del canal lateral, por ejemplo, en forma de ataques de relleno(padding) de Oracle?
+-   ¿Se pueden explotar los mensajes de errores criptográficos como un canal lateral, por ejemplo, en forma de ataques de  criptoanálisis por modificación relleno (Oracle Padding)?
 
-Consulte ASVS Crypto (V7), Protección de datos (V9) y SSL/TLS (V10)
+Consulte ASVS Crypto (V7), Data Protection (V9) y SSL/TLS (V10)
 
 ## Cómo se previene
 
-Haga lo siguiente, como mínimo, y consulte las referencias:
+Haga lo siguiente como mínimo, y consulte las referencias:
 
 -   Clasifique los datos procesados, almacenados o transmitidos por una aplicación.
     Identifique qué datos son confidenciales de acuerdo con las leyes de privacidad, los requisitos reglamentarios o las necesidades comerciales.
 
--   No almacene datos sensibles innecesariamente. Deséchelos lo antes posible o utilice una utilización de tokens compatible con PCI DSS o incluso el truncamiento.
+-   No almacene datos sensibles innecesariamente. Descártelos lo antes posible o utilice una utilización de tokens compatible con PCI DSS o incluso el truncamiento.
     Los datos que no se conservan no se pueden robar.
 
--   Asegúrese de cifrar todos los datos confidenciales que no están en movimiento.
+-   Asegúrese de cifrar todos los datos sensibles en reposo (almacenamiento).
 
 -   Garantice la implementación de algoritmos, protocolos y claves que utilicen estándares sólidos y actualizados; utilice una gestión de claves adecuada.
 
--   Cifre todos los datos en tránsito con protocolos seguros como TLS con cifrado de confidencialidad directa (FS), priorización de cifrado por parte del servidor y parámetros seguros. Aplique el cifrado mediante directivas como HTTP Strict Transport Security (HSTS).
+-   Cifre todos los datos en tránsito con protocolos seguros como TLS con cifradores de confidencialidad adelantada (forward secrecy, o FS), priorización de cifradores por parte del servidor y parámetros seguros. Aplique el cifrado mediante directivas como HTTP Strict Transport Security (HSTS).
 
--   Deshabilite el almacenamiento en caché para respuestas que contengan datos confidenciales.
+-   Deshabilite el almacenamiento en caché para respuestas que contengan datos sensibles.
 
--   Aplique los controles de seguridad requeridos según la clasificación de datos.
+-   Aplique los controles de seguridad requeridos según la clasificación de los datos.
 
--   No utilice protocolos antiguos como FTP y SMTP para transportar datos confidenciales.
+-   No utilice protocolos antiguos como FTP y SMTP para transportar datos sensibles.
 
--   Almacene las contraseñas utilizando funciones robustas y flexibles de salted hash y use un factor de trabajo (factor de retraso), como Argon2, scrypt, bcrypt o PBKDF2.
+-   Almacene las contraseñas utilizando funciones robustas, flexibles, que utilicen sal en los hashes y use un factor de retraso (factor de trabajo), como Argon2, scrypt, bcrypt o PBKDF2.
 
--   Elija los vectores de inicialización apropiados para el modo de operación. Para muchos modos, esto significa usar un CSPRNG (generador de números pseudoaleatorios criptográficamente seguro).  Para los modos que requieren un nonce, entonces el vector de inicialización (IV) no necesita un CSPRNG.  En todos los casos, el IV nunca debe usarse dos veces para una clave fija.
+-   Elija vectores de inicialización apropiados para el modo de operación. Para muchos modos, esto significa usar un CSPRNG (generador de números pseudoaleatorios criptográficamente seguro).  Para los modos que requieren un nonce, el vector de inicialización (IV) no necesita un CSPRNG.  En todos los casos, el IV nunca debe usarse dos veces para una clave fija.
 
 -   Utilice siempre cifrado autenticado en lugar de solo cifrado.
 
--   Las claves deben generarse criptográficamente al azar y almacenarse en la memoria como arrays de bytes. Si se utiliza una contraseña, debe convertirse en una clave mediante una función de derivación de clave de base de contraseña adecuada.
+-   Las claves deben generarse criptográficamente al azar y almacenarse en la memoria como arrays de bytes. Si se utiliza una contraseña, debe convertirse en una clave mediante una función adecuada de derivación de claves basada en contraseña.
 
--   Asegúrese de que se utilice la aleatoriedad criptográfica cuando sea apropiado y que no se haya sembrado de una manera predecible o con baja entropía.
+-   Asegúrese de que se utilice la aleatoriedad criptográfica cuando sea apropiado y que no se utilice una semilla de una manera predecible o con baja entropía.
     La mayoría de las API modernas no requieren que el desarrollador genere el CSPRNG para obtener seguridad.
 
 -   Evite las funciones criptográficas y los esquemas de relleno(padding) en desuso, como MD5, SHA1, PKCS número 1 v1.5.
@@ -81,11 +81,11 @@ Haga lo siguiente, como mínimo, y consulte las referencias:
 
 ## Ejemplos de escenarios de ataque
 
-**Escenario #1**: Una aplicación cifra los números de tarjetas de crédito en una base de datos mediante el cifrado automático de la base de datos. Sin embargo, estos datos se descifran automáticamente cuando se recuperan, lo que permite que por un error de inyección SQL se recuperen números de tarjetas de crédito en texto sin cifrar.
+**Escenario #1**: Una aplicación cifra los números de tarjetas de crédito en una base de datos mediante el cifrado automático de la base de datos. Sin embargo, estos datos se descifran automáticamente cuando se recuperan, lo que permite que por una falla de inyección SQL se recuperen números de tarjetas de crédito en texto sin cifrar.
 
-**Escenario #2**: Un sitio no usa ni aplica TLS para todas las páginas o admite un cifrado débil. Un atacante monitorea el tráfico de la red (por ejemplo, en una red inalámbrica insegura), degrada las conexiones de HTTPS a HTTP, intercepta solicitudes y roba la cookie de sesión del usuario. El atacante luego reproduce esta cookie y secuestra la sesión (autenticada) del usuario, accediendo o modificando los datos privados del usuario. En lugar de lo anterior, podrían alterar todos los datos transportados, por ejemplo, el destinatario de una transferencia de dinero.
+**Escenario #2**: Un sitio no utiliza ni aplica TLS para todas sus páginas o admite un cifrado débil. Un atacante monitorea el tráfico de la red (por ejemplo, en una red inalámbrica insegura), degrada las conexiones de HTTPS a HTTP, intercepta solicitudes y roba la cookie de sesión del usuario. El atacante luego reutiliza esta cookie y secuestra la sesión (autenticada) del usuario, accediendo o modificando los datos privados del usuario. En lugar de lo anterior, podrían alterar todos los datos transportados, por ejemplo, el destinatario de una transferencia de dinero.
 
-**Escenario #3**: La base de datos de contraseñas utiliza hashes simples o sin un valor inicial aleatorio único(salt) para almacenar todas las contraseñas. Una falla en la carga de archivos permite a un atacante recuperar la base de datos de contraseñas. Todos los hashes sin salt se pueden exponer con una tabla arcoíris de hashes precalculados. Los hash generados por funciones hash simples o rápidas pueden ser descifrados por las GPU, incluso si usan un salt.
+**Escenario #3**: La base de datos de contraseñas utiliza hashes simples o sin un valor inicial aleatorio único(salt) para almacenar todas las contraseñas. Una falla en la carga de archivos permite a un atacante recuperar la base de datos de contraseñas. Todos los hashes sin salt se pueden calcular a partir de una rainbow table de hashes precalculados. Los hash generados por funciones hash simples o rápidas pueden ser descifrados a través de cálculos intensivos provistos por una o mas GPUs, incluso si utilizan un salt.
 
 ## Referencias
 
