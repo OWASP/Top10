@@ -80,8 +80,6 @@ Jika sebuah user yang belum di autentikasi dapat mengakses kedua page tersebut m
 - [OWASP Testing Guide: Authorization
   Testing](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/05-Authorization_Testing/README)
 
-- [OWASP Cheat Sheet: Access Control]()
-
 - [PortSwigger: Exploiting CORS
   misconfiguration](https://portswigger.net/blog/exploiting-cors-misconfigurations-for-bitcoins-and-bounties)
 
