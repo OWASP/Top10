@@ -38,11 +38,12 @@ plugins:
   - i18n:
       default_language: en
       languages:
-        en: English
         ar: العربية
+        en: English
+        es: Español
+        fr: Français
         it: Italiano
         ja: 日本語
-        fr: Français
         pt_BR: Português (Brasil)
         zh_TW: 繁體中文
 
@@ -50,10 +51,10 @@ plugins:
         ar:
           Home: الصفحة الرئيسية
           Notice: ملاحظات
-          Introduction: المقدمة 
+          Introduction: المقدمة
           How to use the OWASP Top 10 as a standard: كيف تستخدم إطار أعلى عشرة مخاطر من أواسب كنموذج معياري.
           How to start an AppSec program with the OWASP Top 10: كيف تبدأ امن التطبيقات مع أعلى عشرة مخاطر من أواسب
-          About OWASP: عن أواسب  
+          About OWASP: عن أواسب
           Top 10:2021 List:   قائمة اعلى عشرة مخاطر لعام 2021
           A01 Broken Access Control: A01 تخطي صلاحيات الوصول
           A02 Cryptographic Failures: A02 فشل آلية التشفير
@@ -65,7 +66,26 @@ plugins:
           A08 Software and Data Integrity Failures: A08  فشل سلامة البيانات والبرمجيات
           A09 Security Logging and Monitoring Failures: A09 فشل في تسجيل السجلات الأمنية والمراقبة
           A10 Server Side Request Forgery (SSRF): A10 تزوير الطلبات من جانب الخادم SSRF
-          Next Steps: الخطوات المقبلة 
+          Next Steps: الخطوات المقبلة
+        es:
+          Home: Inicio
+          Notice: Notas
+          Introduction: Introducción
+          How to use the OWASP Top 10 as a standard: Cómo utilizar el OWASP Top 10 como un estándar
+          How to start an AppSec program with the OWASP Top 10: Cómo iniciar un programa de AppSec con el OWASP Top 10
+          About OWASP: Acerca de OWASP
+          Top 10:2021 List: 'Top 10: Lista 2021'
+          A01 Broken Access Control: A01 Pérdida de Control de Acceso
+          A02 Cryptographic Failures: A02 Fallas Criptográficas
+          A03 Injection: A03 Inyección
+          A04 Insecure Design: A04 Diseño Inseguro
+          A05 Security Misconfiguration: A05 Configuración de Seguridad Incorrecta
+          A06 Vulnerable and Outdated Components: A06 Componentes Vulnerables y Desactualizados
+          A07 Identification and Authentication Failures: A07 Fallas de Identificación y Autenticación
+          A08 Software and Data Integrity Failures: A08 Fallas en el Software y en la Integridad de los Datos
+          A09 Security Logging and Monitoring Failures: A09 Fallas en el Registro y Monitoreo
+          A10 Server Side Request Forgery (SSRF): A10 Falsificación de Solicitud del Lado del Servidor (SSRF)
+          Next Steps: Próximos pasos
         fr:
           Home: Page d'accueil
           About: À propos
