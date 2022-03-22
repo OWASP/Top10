@@ -89,7 +89,8 @@ plugins:
           Next Steps: Próximos pasos
         fr:
           Home: Page d'accueil
-          About: À propos
+          Notice: Note
+          Introduction: Introduction
           How to use the OWASP Top 10 as a standard: Comment utiliser le Top 10 OWASP comme standard
           How to start an AppSec program with the OWASP Top 10: Comment démarrer un programme SecApp avec l'OWASP Top 10
           About OWASP: À propos de l'OWASP
@@ -106,11 +107,12 @@ plugins:
           A10 Server Side Request Forgery (SSRF): A10 Falsification de requête côté serveur (SSRF)
           Next Steps: Étapes suivantes
         it:
+          Home: Casa
           Notice: Avvisi
           Introduction: Introduzione
-          About OWASP: A proposito di OWASP
           How to use the OWASP Top 10 as a standard: Come utilizzare la OWASP Top 10 come standard
           How to start an AppSec program with the OWASP Top 10: Come avviare un programma di AppSec con la OWASP Top 10
+          About OWASP: A proposito di OWASP
           Top 10:2021 List: Lista top 10:2021
           A01 Broken Access Control: A01 Broken Access Control
           A02 Cryptographic Failures: A02 Cryptographic Failures
@@ -146,9 +148,9 @@ plugins:
           Home: Início
           Notice: Notas
           Introduction: Introdução
-          About OWASP: Sobre OWASP
           How to use the OWASP Top 10 as a standard: Como usar o OWASP Top 10 como padrão
           How to start an AppSec program with the OWASP Top 10: Como iniciar um programa AppSec com o OWASP Top 10
+          About OWASP: Sobre OWASP
           Top 10:2021 List: Lista top 10:2021
           A01 Broken Access Control: A01 Quebra de Controle de Acesso
           A02 Cryptographic Failures: A02 Falhas Criptográficas
@@ -161,9 +163,9 @@ plugins:
           Home: 首頁
           Notice: 注意事項
           Introduction: OWASP 2021 介紹
-          About OWASP: OWASP 相關
           How to use the OWASP Top 10 as a standard: 如何正確使用 OWASP Top 10 為標準
           How to start an AppSec program with the OWASP Top 10: 如何使用 OWASP Top 10 啟動 AppSec
+          About OWASP: OWASP 相關
           Top 10:2021 List: Top 10:2021 名單
           A01 Broken Access Control: A01 權限控制失效
           A02 Cryptographic Failures: A02 加密機制失效
@@ -176,13 +178,13 @@ plugins:
           A09 Security Logging and Monitoring Failures: A09 資安記錄及監控失效
           A10 Server Side Request Forgery (SSRF): A10 伺服端請求偽造
           Next Steps: 下一步
-         zh_CN:
+        zh_CN:
           Home: 首頁
           Notice: 注意事项
           Introduction: OWASP 2021 介紹
-          About OWASP: OWASP 相关
           How to use the OWASP Top 10 as a standard: 如何正确使用 OWASP Top 10 为标准
           How to start an AppSec program with the OWASP Top 10: 如何使用 OWASP Top 10 启动 AppSec
+          About OWASP: OWASP 相关
           Top 10:2021 List: Top 10:2021 名单
           A01 Broken Access Control: A01 权限控制失效
           A02 Cryptographic Failures: A02 加密机制失效
