@@ -38,8 +38,8 @@ plugins:
   - i18n:
       default_language: en
       languages:
-        ar: العربية
         en: English
+        ar: العربية
         es: Español
         fr: Français
         it: Italiano
