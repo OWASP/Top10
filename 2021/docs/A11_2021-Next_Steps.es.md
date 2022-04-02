@@ -1,8 +1,8 @@
 # A11:2021 – Siguientes pasos
 
-Por diseño, el Top 10 de OWASP se limita a los diez riesgos más importantes. Cada Top 10 de OWASP tuvo riesgos "en el umbral" considerados detenidamente para su inclusión, pero al final, no lo fueron. No importando cuanto intentáramos interpretar o tergiversar los datos, los otros riesgos fueron más prevalentes e impactantes.
+Por diseño, el Top 10 de OWASP se limita a los diez riesgos más importantes. Cada Top 10 de OWASP tuvo riesgos "en el umbral" considerados detenidamente para su inclusión, pero al final, no lo fueron. No importando cuánto intentáramos interpretar o tergiversar los datos, los otros riesgos fueron más prevalentes e impactantes.
 
-Para aquellas organizaciones que trabajan en pos de un programa de appsec maduro, consultores de seguridad o proveedores de herramientas que deseen ampliar la cobertura de sus ofertas, vale la pena el esfuerzo de identificar y solucionar los siguientes tres problemas.
+Para aquellas organizaciones que trabajan en pos de un programa de AppSec maduro, consultores de seguridad o proveedores de herramientas que deseen ampliar la cobertura de sus ofertas, vale la pena el esfuerzo de identificar y solucionar los siguientes tres problemas.
 																														
 ## Problemas de calidad de código
 
@@ -48,7 +48,7 @@ Considere los controles de acceso para objetos más grandes para asegurarse de q
 |:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
 | 14           | 7.03%               | 1.16%               | 6.7                   | 8.1                  | 56.06%        | 31.74%        | 26576              | 16184       |
 
--   **Descripción**. Las aplicaciones web usualmente se escriben en lenguajes de memoria administrada, como Java, .NET o node.js (JavaScript o TypeScript). Sin embargo, estos lenguajes están escritos en lenguajes de sistema que tienen problemas de administración de memoria, como desbordamientos de búfer o de pila, uso de memoria luego de liberada, desbordamiento de números enteros y más. A lo largo de los años, han habido muchos escapes de espacio aislado (sandbox escapes) que demuestran que aunque el lenguaje de la aplicación web es nominalmente "seguro" para la memoria, la estructura de base no siempre lo es.				 
+-   **Descripción**. Las aplicaciones web usualmente se escriben en lenguajes de memoria administrada, como Java, .NET o Node.js (JavaScript o TypeScript). Sin embargo, estos lenguajes están escritos en lenguajes de sistema que tienen problemas de administración de memoria, como desbordamientos de búfer o de pila, uso de memoria luego de liberada, desbordamiento de números enteros y más. A lo largo de los años, han habido muchos escapes de espacio aislado (sandbox escapes) que demuestran que aunque el lenguaje de la aplicación web es nominalmente "seguro" para la memoria, la estructura de base no siempre lo es.				 
 
 -   **Cómo se previene**. Muchas API modernas ahora están escritas en lenguajes seguros para la memoria como Rust o Go. En el caso de Rust, la seguridad de la memoria es una característica crucial del lenguaje. Para el código existente, el uso de banderas de compilador estrictas, fuerte tipado, análisis de código estático y pruebas de fuzzing puede ser beneficioso para identificar pérdidas de memoria, desbordamientos de matrices y memoria, y más.
 

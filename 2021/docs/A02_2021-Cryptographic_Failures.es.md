@@ -85,7 +85,7 @@ Haga lo siguiente como mínimo, y consulte las referencias:
 
 **Escenario #2**: Un sitio no utiliza ni aplica TLS para todas sus páginas o admite un cifrado débil. Un atacante monitorea el tráfico de la red (por ejemplo, en una red inalámbrica insegura), degrada las conexiones de HTTPS a HTTP, intercepta solicitudes y roba la cookie de sesión del usuario. El atacante luego reutiliza esta cookie y secuestra la sesión (autenticada) del usuario, accediendo o modificando los datos privados del usuario. En lugar de lo anterior, podrían alterar todos los datos transportados, por ejemplo, el destinatario de una transferencia de dinero.
 
-**Escenario #3**: La base de datos de contraseñas utiliza hashes simples o sin un valor inicial aleatorio único(salt) para almacenar todas las contraseñas. Una falla en la carga de archivos permite a un atacante recuperar la base de datos de contraseñas. Todos los hashes sin salt se pueden calcular a partir de una rainbow table de hashes precalculados. Los hash generados por funciones hash simples o rápidas pueden ser descifrados a través de cálculos intensivos provistos por una o mas GPUs, incluso si utilizan un salt.
+**Escenario #3**: La base de datos de contraseñas utiliza hashes simples o sin un valor inicial aleatorio único(salt) para almacenar todas las contraseñas. Una falla en la carga de archivos permite a un atacante recuperar la base de datos de contraseñas. Todos los hashes sin salt se pueden calcular a partir de una rainbow table de hashes pre calculados. Los hash generados por funciones hash simples o rápidas pueden ser descifrados a través de cálculos intensivos provistos por una o mas GPUs, incluso si utilizan un salt.
 
 ## Referencias
 

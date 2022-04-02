@@ -8,7 +8,7 @@
 
 ## Resumen
 
-Ascendiendo una posición desde el sexto puesto en la edición anterior, el 90% de las aplicaciones se probaron para detectar algún tipo de configuración incorrecta, con una tasa de incidencia promedio del 4,5% y más de 208.000 ocurrencias de CWEs en esta categoría de riesgo. Con mayor presencia de software altamente configurable, no es sorprendente ver que esta categoría asciendiera. Las CWE notables incluidas son *CWE-16 Configuración* y *CWE-611 Restricción incorrecta entidades externas referenciadas de XML*.
+Ascendiendo una posición desde el sexto puesto en la edición anterior, el 90% de las aplicaciones se probaron para detectar algún tipo de configuración incorrecta, con una tasa de incidencia promedio del 4,5% y más de 208.000 ocurrencias de CWEs en esta categoría de riesgo. Con mayor presencia de software altamente configurable, no es sorprendente ver que esta categoría ascendiera. Las CWE notables incluidas son *CWE-16 Configuración* y *CWE-611 Restricción incorrecta entidades externas referenciadas de XML*.
 
 ## Descripción 
 
@@ -53,7 +53,7 @@ Deben implementarse procesos de instalación seguros, incluyendo:
 
 **Escenario #1:** El servidor de aplicaciones contiene aplicaciones de ejemplo que no se eliminan del servidor de producción. Estas aplicaciones de ejemplo poseen fallas de seguridad conocidas que los atacantes utilizan para comprometer el servidor. Supongamos que una de estas aplicaciones es la consola de administración y no se modificaron las cuentas predeterminadas. En ese caso, el atacante inicia sesión con las contraseñas predeterminadas y toma el control.
 
-**Escenario #2:** El listado de directorios no se encuentra deshabilitado en el servidor. Un atacante descubre que simplemente puede enumerar directorios. El atacante detecta y descarga las clases Java compiladas, que descompila y aplica ingeniería inversa para ver el código. El atacante luego encuentra una falla severa de control de acceso en la aplicación.
+**Escenario #2:** El listado de directorios no se encuentra deshabilitado en el servidor. Un atacante descubre que simplemente puede enumerar directorios. El atacante detecta y descarga las clases Java compiladas, que decompila y aplica ingeniería inversa para ver el código. El atacante luego encuentra una falla severa de control de acceso en la aplicación.
 
 **Escenario #3:** La configuración del servidor de aplicaciones permite que se retornen a los usuarios mensajes de error detallados, por ejemplo, trazas de pila(stack traces). Esto potencialmente expone información confidencial o fallas subyacentes, como versiones de componentes que se sabe son vulnerables.
 

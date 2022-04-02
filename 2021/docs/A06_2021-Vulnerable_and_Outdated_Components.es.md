@@ -8,7 +8,7 @@
 
 ## Resumen
 
-Era el segundo de la encuesta de la comunidad Top 10, pero también tuvo datos suficientes para llegar al Top 10 a través del análisis de datos. Los componentes vulnerables son un problema conocido que es difícil de probar y evaluar el riesgo. Es la única categoría que no tiene enumeraciones de debilidades comunes (CWE) asignadas a las CWE incluidas, por lo que se utiliza un peso de impacto/exploits predeterminado de 5,0. Las CWE notables incluidas son *CWE-1104: Uso de componentes de terceros no mantenidos* y las dos CWE del Owasp Top 10 2013 y 2017.
+Era el segundo de la encuesta de la comunidad Top 10, pero también tuvo datos suficientes para llegar al Top 10 a través del análisis de datos. Los componentes vulnerables son un problema conocido que es difícil de probar y evaluar el riesgo. Es la única categoría que no tiene enumeraciones de debilidades comunes (CWE) asignadas a las CWE incluidas, por lo que se utiliza un peso de impacto/exploits predeterminado de 5,0. Las CWE notables incluidas son *CWE-1104: Uso de componentes de terceros no mantenidos* y las dos CWE del OWASP Top 10 2013 y 2017.
 
 ## Descripción
 

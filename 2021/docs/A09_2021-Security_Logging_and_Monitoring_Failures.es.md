@@ -8,11 +8,11 @@
 
 ## Resumen
 
-Monitoreo y registro de seguridad provienen de la encuesta de la comunidad (tercer lugar), subió levemente desde la décima posición en el Top 10 2017. El registro y monitoreo pueden ser desafiantes para ser testeados, implicando entrevistas o preguntar si los ataques fueron detectados durante las pruebas de penetración. No hay muchos datos de CVE/CVSS para esta categoría, pero detectar y responder a las brechas es crítico. Aún así, puede tener un gran impacto para la auditabilidad, visibilidad, alertas de incidentes y análisi forense. Esta categoría se expande más allá de *CWE-117 Neutralización de salida incorrecta para registros*, *CWE-223 Omisión de información relevante para la seguridad*, y *CWE-532 Inserción de información sensible en archivo de registro*.
+Monitoreo y registro de seguridad provienen de la encuesta de la comunidad (tercer lugar), subió levemente desde la décima posición en el Top 10 2017. El registro y monitoreo pueden ser desafiantes para ser testeados, implicando entrevistas o preguntar si los ataques fueron detectados durante las pruebas de penetración. No hay muchos datos de CVE/CVSS para esta categoría, pero detectar y responder a las brechas es crítico. Aún así, puede tener un gran impacto para la auditabilidad, visibilidad, alertas de incidentes y análisis forense. Esta categoría se expande más allá de *CWE-117 Neutralización de salida incorrecta para registros*, *CWE-223 Omisión de información relevante para la seguridad*, y *CWE-532 Inserción de información sensible en archivo de registro*.
 
 ## Descripción
 
-Volviendo al OWASP Top 10 2021, la intención es apoyar la detetción, escalamiento y respuesta ante brechas activas. Sin registros y monitoreo, las brechas no pueden ser detectadas. Registros, detecciones, monitoreo y respuesta activas insuficientes pueden ocurrir en cualquier momento:
+Volviendo al OWASP Top 10 2021, la intención es apoyar la detección, escalamiento y respuesta ante brechas activas. Sin registros y monitoreo, las brechas no pueden ser detectadas. Registros, detecciones, monitoreo y respuesta activas insuficientes pueden ocurrir en cualquier momento:
 
 -   Eventos auditables, tales como los inicios de sesión, fallas en el inicio de sesión y transacciones de alto valor no son registradas.
 
@@ -44,7 +44,7 @@ Los desarrolladores deberían implementar algunos o todos los siguientes control
 
 -   Los equipos de DevSecOps debe establecer alertas y monitoreo efectivo tal que se detecte actividades sospechosas y responderlas rápidamente.
 
--   Establecezca o adoptae un plan de respuesta y recuperación, tal como NIST 800-61r2 o posterior.
+-   Establezca o adopte un plan de respuesta y recuperación, tal como NIST 800-61r2 o posterior.
 
 Existen frameworks de protección de aplicaciones comerciales y de código abierto, tales como el conjunto de reglas de ModSecurity de OWASP y el conjunto de programas de correlación de registros de código abierto como ser ELK (Elasticsearch, Logstash, Kibana) con paneles personalizados y alertas.
 
