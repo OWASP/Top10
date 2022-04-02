@@ -8,7 +8,7 @@
 
 ## Resumen
 
-Esta categoría se agrega debido a la encuesta de la comunidad Top 10 (número 1). Los datos muestran una tasa de incidencia relativamente baja con una cobertura de pruebas por encima del promedio y calificaciones de potencial de explotación e impacto por encima del promedio. Como es probable que estas nuevas entradas sean una única o un pequeño grupo de Enumeraciones de debilidades comunes (CWE) para tomar en cuenta y concientizar sobre ellas, la esperanza es que se enfoque la atención en ellas y puedan integrarse en una categoría más amplia en una edición futura.
+Esta categoría se agrega debido a la encuesta de la comunidad Top 10 (primer lugar). Los datos muestran una tasa de incidencia relativamente baja con una cobertura de pruebas por encima del promedio, junto con calificaciones por encima del promedio para la capacidad de explotación e impacto. Como es probable que estas nuevas entradas sean una única o un pequeño grupo de Enumeraciones de debilidades comunes (CWE) para tomar en cuenta y concientizar sobre ellas, la esperanza es que se enfoque la atención en ellas y puedan integrarse en una categoría más amplia en una edición futura.
 
 ## Descripción 
 
