@@ -8,7 +8,7 @@
 
 ## Resumen
 
-Esta categoría se agrega de la encuesta de la comunidad Top 10(#1). Los datos muestran una tasa de incidencia relativamente baja con una cobertura de pruebas por encima del promedio y calificaciones de potencial de Explotación e Impacto por encima del promedio. Como es probable que estas nuevas entradas sean una única o un pequeño grupo de Enumeraciones de debilidades comunes (CWE) para tomar en cuenta y concientizar sobre ellas, la esperanza es que se enfoque la atención en ellas y puedan integrarse en una categoría más grande en una edición futura.
+Esta categoría se agrega debido a la encuesta de la comunidad Top 10 (número 1). Los datos muestran una tasa de incidencia relativamente baja con una cobertura de pruebas por encima del promedio y calificaciones de potencial de explotación e impacto por encima del promedio. Como es probable que estas nuevas entradas sean una única o un pequeño grupo de Enumeraciones de debilidades comunes (CWE) para tomar en cuenta y concientizar sobre ellas, la esperanza es que se enfoque la atención en ellas y puedan integrarse en una categoría más amplia en una edición futura.
 
 ## Descripción 
 
@@ -33,15 +33,15 @@ Los desarrolladores pueden prevenir SSRF implementando algunos o todos los sigui
 
 -   Sanitice y valide todos los datos de entrada proporcionados por el cliente
 
--   Haga cumplir el esquema de URL, el puerto y el destino con una lista positiva de items permitidos 
+-   Haga cumplir el esquema de URL, el puerto y destino a través de una lista positiva de items permitidos 
 
 -   No envíe respuestas en formato "crudo" a los clientes
 
 -   Deshabilite las redirecciones HTTP
 
--   Tenga en cuenta la coherencia de la URL para evitar ataques como el enlace de DNS y las condiciones de carrera de "tiempo de verificación, tiempo de uso" (TOCTOU)
+-   Tenga en cuenta la coherencia de la URL para evitar ataques como el enlace de DNS y las condiciones de carrera de "tiempo de verificación, tiempo de uso" (TOCTOU por sus siglas en inglés)
 
-No mitigue SSRF mediante el uso de una lista de denegación o una expresión regular. Los atacantes tienen listas de payloads, herramientas y habilidades para eludir las listas de denegación.
+No mitigue SSRF mediante el uso de una lista de denegación o una expresión regular. Los atacantes poseen listas de payloads, herramientas y habilidades para eludir las listas de denegación.
 
 ### **Medidas adicionales a considerar:**
     
@@ -53,7 +53,7 @@ No mitigue SSRF mediante el uso de una lista de denegación o una expresión reg
 
 Los atacantes pueden usar SSRF para atacar sistemas protegidos detrás de firewalls de aplicaciones web, firewalls o ACLs de red, utilizando escenarios tales como:
 
-**Escenario #1:** Escaneo de puertos de servidores internos – Si la arquitectura de la red no está segmentada, los atacantes pueden trazar un mapa de las redes internas y determinar si los puertos están abiertos o cerrados en los servidores internos a partir de los resultados de la conexión o del tiempo transcurrido para conectar o rechazar las conexiones de payload SSRF.
+**Escenario #1:** Escaneo de puertos de servidores internos – Si la arquitectura de red no se encuentra segmentada, los atacantes pueden trazar un mapa de las redes internas y determinar si los puertos están abiertos o cerrados en los servidores internos a partir de los resultados de la conexión o del tiempo transcurrido para conectar o rechazar las conexiones de payload SSRF.
 
 **Escenario #2:** Exposición de datos sensibles: los atacantes pueden acceder a archivos locales como servicios internos para obtener información confidencial como `file:///etc/passwd</span>` y `http://localhost:28017/`.
 
@@ -63,20 +63,15 @@ Los atacantes pueden usar SSRF para atacar sistemas protegidos detrás de firewa
 
 ## Referencias
 
--   [OWASP - Server-Side Request Forgery Prevention Cheat
-    Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html)
+-   [OWASP - Server-Side Request Forgery Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html)
 
--   [PortSwigger - Server-side request forgery
-    (SSRF)](https://portswigger.net/web-security/ssrf)
+-   [PortSwigger - Server-side request forgery (SSRF)](https://portswigger.net/web-security/ssrf)
 
--   [Acunetix - What is Server-Side Request Forgery
-    (SSRF)?](https://www.acunetix.com/blog/articles/server-side-request-forgery-vulnerability/)
+-   [Acunetix - What is Server-Side Request Forgery (SSRF)?](https://www.acunetix.com/blog/articles/server-side-request-forgery-vulnerability/)
 
--   [SSRF
-    bible](https://cheatsheetseries.owasp.org/assets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet_SSRF_Bible.pdf)
+-   [SSRF bible](https://cheatsheetseries.owasp.org/assets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet_SSRF_Bible.pdf)
 
--   [A New Era of SSRF - Exploiting URL Parser in Trending Programming
-    Languages!](https://www.blackhat.com/docs/us-17/thursday/us-17-Tsai-A-New-Era-Of-SSRF-Exploiting-URL-Parser-In-Trending-Programming-Languages.pdf)
+-   [A New Era of SSRF - Exploiting URL Parser in Trending Programming Languages!](https://www.blackhat.com/docs/us-17/thursday/us-17-Tsai-A-New-Era-Of-SSRF-Exploiting-URL-Parser-In-Trending-Programming-Languages.pdf)
 
 ## Lista de CWEs mapeadas
 
