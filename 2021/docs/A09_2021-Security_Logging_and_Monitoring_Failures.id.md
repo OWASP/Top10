@@ -110,7 +110,7 @@ sehingga menghasilkan pengatur privacy.
     Pemonitoran](https://owasp.org/www-project-application-security-verification-standard)
 
 -   [OWASP Panduan melakukan Tes: Tes untuk code Error yang 
-    mendetil ](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/08-Testing_for_Error_Handling/01-Testing_for_Error_Code)
+    mendetil ](https://owasp.org/www-project-web-security-testing-guide/v41/4-Web_Application_Security_Testing/08-Testing_for_Error_Handling/01-Testing_for_Error_Code)
 
 -   [OWASP Cheat Sheet:
     Logging](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html)
