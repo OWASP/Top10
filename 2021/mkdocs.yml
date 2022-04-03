@@ -46,6 +46,7 @@ plugins:
         ja: 日本語
         pt_BR: Português (Brasil)
         zh_TW: 繁體中文
+        zh_CN: 简体中文
 
       nav_translations:
         ar:
@@ -174,4 +175,23 @@ plugins:
           A08 Software and Data Integrity Failures: A08 軟體及資料完整性失效
           A09 Security Logging and Monitoring Failures: A09 資安記錄及監控失效
           A10 Server Side Request Forgery (SSRF): A10 伺服端請求偽造
+          Next Steps: 下一步
+         zh_CN:
+          Home: 首頁
+          Notice: 注意事项
+          Introduction: OWASP 2021 介紹
+          About OWASP: OWASP 相关
+          How to use the OWASP Top 10 as a standard: 如何正确使用 OWASP Top 10 为标准
+          How to start an AppSec program with the OWASP Top 10: 如何使用 OWASP Top 10 启动 AppSec
+          Top 10:2021 List: Top 10:2021 名单
+          A01 Broken Access Control: A01 权限控制失效
+          A02 Cryptographic Failures: A02 加密机制失效
+          A03 Injection: A03 注入式攻击
+          A04 Insecure Design: A04 不安全设计
+          A05 Security Misconfiguration: A05 安全设定缺陷
+          A06 Vulnerable and Outdated Components: A06 危险或过旧的组件
+          A07 Identification and Authentication Failures: A07 认证及体验机制失效
+          A08 Software and Data Integrity Failures: A08 软体及资料完整性失效
+          A09 Security Logging and Monitoring Failures: A09 安全记录及监控失效
+          A10 Server Side Request Forgery (SSRF): A10 服务端请求伪造
           Next Steps: 下一步
