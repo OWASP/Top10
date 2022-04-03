@@ -116,7 +116,7 @@ us, both project and OWASP. On the [OWASP Project
 page](https://owasp.org/www-project-top-ten/#div-data_2020), we list the
 data elements and structure we are looking for and how to submit them.
 In the [GitHub
-project](https://github.com/OWASP/Top10/tree/master/2020/Data), we have
+project](https://github.com/OWASP/Top10/tree/master/2021/Data), we have
 example files that serve as templates. We work with organizations as
 needed to help figure out the structure and mapping to CWEs.
 
