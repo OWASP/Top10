@@ -69,7 +69,7 @@ dan menolak beberapa transaksi.
 
 -   NIST - Pedoman Standar Minimum Untuk Verivikasi Pengembang Dari
     > Perangkat Lunak
-    > https://www.nist.gov/system/files/documents/2021/07/09/Developer%20Verification%20of%20Software.pdf
+    > https://nvlpubs.nist.gov/nistpubs/ir/2021/NIST.IR.8397.pdf
 
 ## Daftar Pemetaan CWE
 
