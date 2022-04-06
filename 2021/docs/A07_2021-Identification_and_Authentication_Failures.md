@@ -85,8 +85,8 @@ application can be used as a password oracle to determine if the
 credentials are valid.
 
 **Scenario #2:** Most authentication attacks occur due to the continued
-use of passwords as a sole factor. Once considered, best practices,
-password rotation, and complexity requirements encourage users to use
+use of passwords as a sole factor. Once considered best practices,
+password rotation and complexity requirements encourage users to use
 and reuse weak passwords. Organizations are recommended to stop these
 practices per NIST 800-63 and use multi-factor authentication.
 
