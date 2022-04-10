@@ -48,6 +48,7 @@ plugins:
         pt_BR: Português (Brasil)
         zh_CN: 简体中文
         zh_TW: 繁體中文
+#        pt_BR: pt_BR - Português (Brasil) # not finished yet
 
       nav_translations:
         ar:
@@ -164,21 +165,21 @@ plugins:
           A09 Security Logging and Monitoring Failures: A09 セキュリティログとモニタリングの失敗
           A10 Server Side Request Forgery (SSRF): A10 サーバーサイドリクエストフォージェリ (SSRF)
           Next Steps: Next Steps
-        pt_BR:
-          Home: Início
-          Notice: Notas
-          Introduction: Introdução
-          How to use the OWASP Top 10 as a standard: Como usar o OWASP Top 10 como padrão
-          How to start an AppSec program with the OWASP Top 10: Como iniciar um programa AppSec com o OWASP Top 10
-          About OWASP: Sobre OWASP
-          Top 10:2021 List: Lista top 10:2021
-          A01 Broken Access Control: A01 Quebra de Controle de Acesso
-          A02 Cryptographic Failures: A02 Falhas Criptográficas
-          A03 Injection: A03 Injeção
-          A04 Insecure Design: A04 Design Inseguro
-          A05 Security Misconfiguration: A05 Configuração Incorreta de Segurança
-          A06 Vulnerable and Outdated Components: A06 Componentes Vulneráveis e Desatualizados
-          Next Steps: Próximos passos
+#        pt_BR:
+#          Home: Início
+#          Notice: Notas
+#          Introduction: Introdução
+#          How to use the OWASP Top 10 as a standard: Como usar o OWASP Top 10 como padrão
+#          How to start an AppSec program with the OWASP Top 10: Como iniciar um programa AppSec com o OWASP Top 10
+#          About OWASP: Sobre OWASP
+#          Top 10:2021 List: Lista top 10:2021
+#          A01 Broken Access Control: A01 Quebra de Controle de Acesso
+#          A02 Cryptographic Failures: A02 Falhas Criptográficas
+#          A03 Injection: A03 Injeção
+#          A04 Insecure Design: A04 Design Inseguro
+#          A05 Security Misconfiguration: A05 Configuração Incorreta de Segurança
+#          A06 Vulnerable and Outdated Components: A06 Componentes Vulneráveis e Desatualizados
+#          Next Steps: Próximos passos
         zh_TW:
           Home: 首頁
           Notice: 注意事項
