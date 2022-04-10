@@ -8,11 +8,11 @@
 
 ## Resumen
 
-La Inyección se desliza hasta la tercera posición. El 94% de las aplicaciones fueron probadas sobre alguna forma de inyección con una tasa de incidencia máxima del 19%, una tasa de incidencia promedio del 3% y 274 mil ocurrencias. Las CWE notables incluidas son *CWE-79: Cross-site Scripting*, *CWE-89: SQL Injection*, y la *CWE-73:Control Externo de Nombre de archivos o ruta*. 
+La Inyección desciende a la tercera posición. El 94% de las aplicaciones fueron probadas para algún tipo de inyección con una tasa de incidencia máxima del 19%, una tasa de incidencia promedio del 3% y 274.000 ocurrencias. Las CWE incluidas son *CWE-79: Secuencia de Comandos en Sitios Cruzados (XSS)*, *CWE-89: Inyección SQL*, y la *CWE-73:Control Externo de Nombre de archivos o ruta*. 
 
 ## Descripción 
 
-Una aplicación es vulnerable a este ataque cuando:
+Una aplicación es vulnerable a estos tipos de ataque cuando:
 
 -   Los datos proporcionados por el usuario no son validados, filtrados ni sanitizados por la aplicación.
 
@@ -20,51 +20,44 @@ Una aplicación es vulnerable a este ataque cuando:
 
 -   Se utilizan datos dañinos dentro de los parámetros de búsqueda en consultas Object-Relational Mapping (ORM), para extraer registros adicionales sensibles.
 
--   Los datos dañinos se usan directamente o se concatenan, de modo que el SQL o comando resultante contiene datos y estructuras con consultas dinámicas, comandos o procedimientos almacenados.
+-   Se utilizan datos dañinos directamente o se concatenan, de modo que el SQL o comando resultante contiene datos y estructuras con consultas dinámicas, comandos o procedimientos almacenados.
 
-Algunas de las inyecciones más comunes son SQL, NoSQL, comandos de SO, Object-Relational Mapping (ORM), LDAP,
-expresiones de lenguaje u Object Graph Navigation Library (OGNL).
-El concepto es idéntico entre todos los intérpretes. La revisión del código fuente es el mejor método para detectar si las aplicaciones son vulnerables a inyecciones, seguido de cerca por pruebas automatizadas de todos los parámetros, encabezados, URL, cookies, JSON, SOAP y entradas de datos XML.
-
-Las organizaciones pueden incluir herramientas de análisis estático (SAST) y pruebas dinámicas (DAST) para identificar errores de inyecciones recientemente introducidas y antes del despliegue de la aplicación en producción.
+Algunas de las inyecciones más comunes son SQL, NoSQL, comandos de sistema operativo, Object-Relational Mapping (ORM), LDAP, expresiones de lenguaje u Object Graph Navigation Library (OGNL). El concepto es idéntico para todos los intérpretes. La revisión del código fuente es el mejor método para detectar si las aplicaciones son vulnerables a inyecciones. Las pruebas automatizadas en todos los parámetros, encabezados, URL, cookies, JSON, SOAP y XML son fuertemente recomendados. Las organizaciones pueden incluir herramientas de análisis estático (SAST), dinámico (DAST) o interactivo (IAST) en sus pipelines de CI/CD con el fin de identificar fallas recientemente introducidas, antes de ser desplegadas en producción..
 
 ## Cómo se previene
 
-Para prevenir inyecciones, se requiere separar los datos de los comandos y las consultas.
+Prevenir inyecciones requiere separar los datos de los comandos y las consultas.
 
--   La opción preferida es utilizar una API segura, que evite el uso de un intérprete por completo y proporcione una interfaz parametrizada. Se debe migrar y utilizar una herramienta de Mapeo Relacional de Objetos (ORM).<br/>
+-   La opción preferida es utilizar una API segura, que evite el uso de un intérprete por completo y proporcione una interfaz parametrizada o utilizar una herramienta de ORM.<br/>
     **Nota:**: Incluso cuando se parametrizan, los procedimientos almacenados pueden introducir una inyección SQL si el procedimiento PL/SQL o T-SQL concatena consultas y datos, o se ejecutan parámetros utilizando EXECUTE IMMEDIATE o exec().
 
--   Realice validaciones de entradas de datos en el servidor, utilizando "listas blancas". De todos modos, esto no es una defensa completa, ya que muchas aplicaciones requieren el uso de caracteres especiales, como en campos de texto, APIs o aplicaciones móviles.
+-   Implemente validaciones de entradas de datos en el servidor, utilizando "listas blancas". De todos modos, esto no es una defensa completa, ya que muchas aplicaciones requieren el uso de caracteres especiales, como en campos de texto o APIs para aplicaciones móviles.
 
--   Para cualquier consulta dinámica residual, escape caracteres especiales utilizando la sintaxis de caracteres específica para el intérprete que se trate.<br/>
+-   Para cualquier consulta dinámica restante, escape caracteres especiales utilizando la sintaxis de caracteres específica para el intérprete que se trate.<br/>
     **Nota:** La estructura de SQL como nombres de tabla, nombres de columna, etc. no se pueden escapar y, por lo tanto, los nombres de estructura suministrados por el usuario son peligrosos. Este es un problema común en el software de redacción de informes.
 
 -   Utilice LIMIT y otros controles SQL dentro de las consultas para evitar la fuga masiva de registros en caso de inyección SQL.
 
 ## Ejemplos de escenarios de ataque
 
-**Escenario #1:** Una aplicación usa datos no confiables en la construcción de la siguiente llamada SQL vulnerable:
+**Escenario #1:** Una aplicación usa datos no confiables en la construcción de la siguiente sentencia SQL vulnerable:
 ```
 String query = "SELECT \* FROM accounts WHERE custID='" + request.getParameter("id") + "'";
 ```
 
-**Escenario #2:** Del mismo modo, la confianza total de una aplicación en su framework
-puede resultar en consultas que aún son vulnerables a inyección, (por ejemplo: Hibernate Query
+**Escenario #2:** Del mismo modo, la confianza total de una aplicación en frameworks
+puede resultar en consultas que siguen siendo vulnerables a inyecciones, (por ejemplo: Hibernate Query
 Language (HQL)):
 ```
  Query HQLQuery = session.createQuery("FROM accounts WHERE custID='" + request.getParameter("id") + "'");
 ```
 
-En ambos casos, el atacante modifica el valor del parámetro "id" en su navegador para enviar: ‘ or ‘1’=’1. Por ejemplo:
+En ambos casos, el atacante modifica el valor del parámetro "id" en su navegador y enviar por ejemplo: ‘ or ‘1’=’1.
 ```
  http://example.com/app/accountView?id=' or '1'='1
 ```
 
-Esto cambia el significado de ambas consultas, devolviendo
-todos los registros de la tabla “accounts”. Ataques más
-peligrosos podrían modificar los datos o incluso invocar
-procedimientos almacenados.
+Esto modifica el significado de ambas consultas, retornando todos los registros de la tabla “accounts. Ataques más peligrosos podrían modificar datos o incluso invocar procedimientos almacenados.
 
 ## Referencias
 
