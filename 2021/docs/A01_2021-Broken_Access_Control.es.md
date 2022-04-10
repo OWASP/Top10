@@ -8,7 +8,7 @@
 
 ## Resumen
 
-Subiendo desde la quinta posición, el 94% de las aplicaciones fueron probadas para detectar algún tipo de pérdida de control de acceso con una tasa de incidencia promedio del 3,81%. Tuvo la mayor cantidad de ocurrencias en el conjunto de datos analizado con más de 318.000. Las CWE (Common Weakness Enumerations) más importantes incluídas son *CWE-200: Exposición de información sensible a un actor no autorizado*, *CWE-201:
+Subiendo desde la quinta posición, el 94% de las aplicaciones fueron probadas para detectar algún tipo de pérdida de control de acceso con una tasa de incidencia promedio del 3,81%. Tuvo la mayor cantidad de ocurrencias en el conjunto de datos analizado con más de 318.000. Las CWE (Common Weakness Enumerations) más importantes incluidas son *CWE-200: Exposición de información sensible a un actor no autorizado*, *CWE-201:
 Exposición de información confidencial a través de datos enviados*, y *CWE-352: Falsificación de Petciones en Sitos Cruzados (Cross Site Request Forgery, CSRF por su siglas en inglés)*.
 
 ## Descripción

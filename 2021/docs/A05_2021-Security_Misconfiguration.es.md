@@ -8,15 +8,15 @@
 
 ## Resumen
 
-Pasando del puesto #6 en la edición anterior, el 90% de las aplicaciones se probaron para detectar algún tipo de configuración incorrecta, con una tasa de incidencia promedio del 4.% y más de 208k ocurrencias de una enumeración de debilidad común (CWE) en esta categoría de riesgo. Con más cambios en software altamente configurable, no es sorprendente ver que esta categoría asciende. Las CWE notables incluidas son *CWE-16 Configuración* y *CWE-611 Restricción incorrecta de la referencia de entidad externa XML*.
+Ascendiendo una posición desde el sexto puesto en la edición anterior, el 90% de las aplicaciones se probaron para detectar algún tipo de configuración incorrecta, con una tasa de incidencia promedio del 4,5% y más de 208.000 ocurrencias de CWEs en esta categoría de riesgo. Con mayor presencia de software altamente configurable, no es sorprendente ver que esta categoría ascendiera. Las CWE notables incluidas son *CWE-16 Configuración* y *CWE-611 Restricción incorrecta entidades externas referenciadas de XML*.
 
 ## Descripción 
 
-La aplicación puede ser vulnerable si la aplicación:
+La aplicación puede ser vulnerable si:
 
--   Le falta el refuerzo de seguridad adecuado en cualquier parte de la pila de aplicaciones o permisos configurados incorrectamente en los servicios en la nube
+-   Le falta el *hardening* de seguridad adecuado en cualquier parte del *stack tecnológico* o permisos configurados incorrectamente en los servicios en la nube.
 
--   Tiene funciones innecesarias habilitadas o instaladas (por ejemplo, puertos, servicios, páginas, cuentas o privilegios innecesarios).
+-   Tiene funciones innecesarias habilitadas o instaladas (puertos, servicios, páginas, cuentas o privilegios innecesarios, por ejemplo).
 
 -   Las cuentas predeterminadas y sus contraseñas aún están habilitadas y sin cambios.
 
@@ -24,9 +24,9 @@ La aplicación puede ser vulnerable si la aplicación:
 
 -   Para sistemas actualizados, las últimas funciones de seguridad están deshabilitadas o no configuradas de forma segura.
 
--   Las configuraciones de seguridad en los servidores de aplicaciones, frameworks de aplicaciones (por ejemplo, Struts, Spring, ASP.NET), bibliotecas, bases de datos, etc., no tienen configurados valores seguros.
+-   Las configuraciones de seguridad en los servidores de aplicaciones, frameworks de aplicaciones (Struts, Spring o ASP.NET por ejemplo), bibliotecas, bases de datos, etc., no poseen configurados valores seguros.
 
--   El servidor no envía encabezados o directivas de seguridad, o no tienen configurados valores seguros.
+-   El servidor no envía encabezados o directivas de seguridad, o no poseen configurados valores seguros.
 
 -   El software está desactualizado o es vulnerable (consulte [A06:2021-Componentes Vulnerables y Desactualizados](A06_2021-Vulnerable_and_Outdated_Components.es.md)).
 
@@ -36,7 +36,7 @@ Sin un proceso de configuración de seguridad de aplicaciones coordinado y repet
 
 Deben implementarse procesos de instalación seguros, incluyendo:
 
--   Un proceso de endurecimiento repetible agiliza y facilita la implementación de otro entorno que esté debidamente bloqueado. Los entornos de desarrollo, control de calidad y producción deben configurarse de forma idéntica, con diferentes credenciales utilizadas en cada entorno.
+-   Un proceso de *hardening* repetible agiliza y facilita la implementación de otro entorno que esté debidamente inaccesible. Los entornos de desarrollo, control de calidad y producción deben configurarse de forma idéntica, con diferentes credenciales utilizadas en cada uno.
     Este proceso debe automatizarse para minimizar el esfuerzo necesario para configurar un nuevo entorno seguro.
 
 -   Una plataforma mínima sin funciones, componentes, documentación ni ejemplos innecesarios. Elimine o no instale características y frameworks no utilizados.
@@ -51,13 +51,13 @@ Deben implementarse procesos de instalación seguros, incluyendo:
 
 ## Ejemplos de escenarios de ataque
 
-**Escenario #1:** El servidor de aplicaciones viene con aplicaciones de muestra que no se eliminan del servidor de producción. Estas aplicaciones de muestra tienen fallas de seguridad conocidas que los atacantes utilizan para comprometer el servidor. Supongamos que una de estas aplicaciones es la consola de administración y no se modificaron las cuentas predeterminadas. En ese caso, el atacante inicia sesión con las contraseñas predeterminadas y toma el control.
+**Escenario #1:** El servidor de aplicaciones contiene aplicaciones de ejemplo que no se eliminan del servidor de producción. Estas aplicaciones de ejemplo poseen fallas de seguridad conocidas que los atacantes utilizan para comprometer el servidor. Supongamos que una de estas aplicaciones es la consola de administración y no se modificaron las cuentas predeterminadas. En ese caso, el atacante inicia sesión con las contraseñas predeterminadas y toma el control.
 
-**Escenario #2:** La lista de directorios no está deshabilitada en el servidor. Un atacante descubre que simplemente puede enumerar directorios. El atacante encuentra y descarga las clases Java compiladas, que descompila y aplica ingeniería inversa para ver el código. El atacante luego encuentra una falla severa de control de acceso en la aplicación.
+**Escenario #2:** El listado de directorios no se encuentra deshabilitado en el servidor. Un atacante descubre que simplemente puede enumerar directorios. El atacante detecta y descarga las clases Java compiladas, que decompila y aplica ingeniería inversa para ver el código. El atacante luego encuentra una falla severa de control de acceso en la aplicación.
 
-**Escenario #3:** La configuración del servidor de aplicaciones permite que se devuelvan a los usuarios mensajes de error detallados, por ejemplo, seguimientos de pila(stack traces). Esto potencialmente expone información confidencial o fallas subyacentes, como versiones de componentes que se sabe que son vulnerables.
+**Escenario #3:** La configuración del servidor de aplicaciones permite que se retornen a los usuarios mensajes de error detallados, por ejemplo, trazas de pila(stack traces). Esto potencialmente expone información confidencial o fallas subyacentes, como versiones de componentes que se sabe son vulnerables.
 
-**Escenario #4:** Un proveedor de servicios en la nube tiene permisos de uso compartido predeterminados abiertos a Internet por otros usuarios del encabezado de política de seguridad de contenido (CSP). Esto permite acceder a los datos confidenciales almacenados en el almacenamiento en la nube.
+**Escenario #4:** Un proveedor de servicios en la nube (CSP) posee permisos de uso compartido predeterminados abiertos a Internet a otros usuarios. Esto permite acceder a los datos confidenciales almacenados en el almacenamiento en la nube.
 
 ## Referencias
 
