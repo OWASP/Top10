@@ -116,16 +116,16 @@ plugins:
           How to start an AppSec program with the OWASP Top 10: Bagaimana cara untuk memulai program AppSec dengan OWASP Top 10
           About OWASP: Tentang OWASP
           Top 10:2021 List: Daftar top 10:2021
-          A01 Broken Access Control: A01 Broken Access Control
-          A02 Cryptographic Failures: A02 Cryptographic Failures
-          A03 Injection: A03 Injection
+          A01 Broken Access Control: A01 Kerusakan Akses Kontrol
+          A02 Cryptographic Failures: A02 Kegagalan Kriptografi
+          A03 Injection: A03 Injeksi
           A04 Insecure Design: A04 Insecure Design
-          A05 Security Misconfiguration: A05 Security Misconfiguration
-          A06 Vulnerable and Outdated Components: A06 Vulnerable and Outdated Components
-          A07 Identification and Authentication Failures: A07 Identification and Authentication Failures
-          A08 Software and Data Integrity Failures: A08 Software and Data Integrity Failures
-          A09 Security Logging and Monitoring Failures: A09 Security Logging and Monitoring Failures
-          A10 Server Side Request Forgery (SSRF): A10 Server Side Request Forgery (SSRF)
+          A05 Security Misconfiguration: A05 Miskonfigurasi Keamanan
+          A06 Vulnerable and Outdated Components: A06 Komponen yang Rentan dan Kedaluwarsa
+          A07 Identification and Authentication Failures: A07 Kegagalan Identifikasi dan Otentikasi
+          A08 Software and Data Integrity Failures: A08 Kegagalan Integritas Data dan Perangkat Lunak
+          A09 Security Logging and Monitoring Failures: A09 Keamanan dalam mencatat dan Kesalahan dalam Memonitor
+          A10 Server Side Request Forgery (SSRF): A10 Server-Side Request Forgery (SSRF) - Pemalsuan Permintaan di Sisi Server
           Next Steps: Langkah Selanjutnya
         it:
           Home: Casa
