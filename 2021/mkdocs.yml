@@ -42,11 +42,12 @@ plugins:
         ar: العربية
         es: Español
         fr: Français
+        id: Indonesian
         it: Italiano
         ja: 日本語
         pt_BR: Português (Brasil)
-        zh_TW: 繁體中文
         zh_CN: 简体中文
+        zh_TW: 繁體中文
 
       nav_translations:
         ar:
@@ -106,6 +107,25 @@ plugins:
           A09 Security Logging and Monitoring Failures: A09 Carence des systèmes de contrôle et de journalisation
           A10 Server Side Request Forgery (SSRF): A10 Falsification de requête côté serveur (SSRF)
           Next Steps: Étapes suivantes
+        id:
+          Home: Rumah
+          Notice: Memperhatikan
+          Introduction: Pengenalan
+          How to use the OWASP Top 10 as a standard: Bagaimana cara menggunakan OWASP Top 10 sebagai sebuah standarisasi
+          How to start an AppSec program with the OWASP Top 10: Bagaimana cara untuk memulai program AppSec dengan OWASP Top 10
+          About OWASP: Tentang OWASP
+          Top 10:2021 List: Daftar top 10:2021
+          A01 Broken Access Control: A01 Broken Access Control
+          A02 Cryptographic Failures: A02 Cryptographic Failures
+          A03 Injection: A03 Injection
+          A04 Insecure Design: A04 Insecure Design
+          A05 Security Misconfiguration: A05 Security Misconfiguration
+          A06 Vulnerable and Outdated Components: A06 Vulnerable and Outdated Components
+          A07 Identification and Authentication Failures: A07 Identification and Authentication Failures
+          A08 Software and Data Integrity Failures: A08 Software and Data Integrity Failures
+          A09 Security Logging and Monitoring Failures: A09 Security Logging and Monitoring Failures
+          A10 Server Side Request Forgery (SSRF): A10 Server Side Request Forgery (SSRF)
+          Next Steps: Langkah Selanjutnya
         it:
           Home: Casa
           Notice: Avvisi
