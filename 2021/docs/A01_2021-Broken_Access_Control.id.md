@@ -1,6 +1,6 @@
 # A01:2021 – Kerusakan Akses Kontrol
 
-## Faktor- Faktor
+## Faktor-Faktor
 
 | CWEs Mapped | Max Incidence Rate | Rata-Rata Incidence Rate | Max Coverage | Rata-Rata Coverage | Rata-Rata Weighted Exploit | Rata-Rata Weighted Impact | Total Kejadian | Total CVEs |
 | :---------: | :----------------: | :----------------------: | :----------: | :----------------: | :------------------------: | :-----------------------: | :------------: | :--------: |
