@@ -119,12 +119,12 @@ plugins:
           A02 Cryptographic Failures: A02 Kegagalan Kriptografi
           A03 Injection: A03 Injeksi
           A04 Insecure Design: A04 Insecure Design
-          A05 Security Misconfiguration: A05 Miskonfigurasi Keamanan
+          A05 Security Misconfiguration: A05 Kesalahan Konfigurasi Keamanan 
           A06 Vulnerable and Outdated Components: A06 Komponen yang Rentan dan Kedaluwarsa
           A07 Identification and Authentication Failures: A07 Kegagalan Identifikasi dan Otentikasi
           A08 Software and Data Integrity Failures: A08 Kegagalan Integritas Data dan Perangkat Lunak
-          A09 Security Logging and Monitoring Failures: A09 Keamanan dalam mencatat dan Kesalahan dalam Memonitor
-          A10 Server Side Request Forgery (SSRF): A10 Server-Side Request Forgery (SSRF) - Pemalsuan Permintaan di Sisi Server
+          A09 Security Logging and Monitoring Failures: A09 Kesalahan dalam Keamanan dan Memonitor Log
+          A10 Server Side Request Forgery (SSRF): A10 Server-Side Request Forgery (SSRF)
           Next Steps: Langkah Selanjutnya
         it:
           Home: Casa
