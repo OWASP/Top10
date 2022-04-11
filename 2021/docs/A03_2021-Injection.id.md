@@ -2,7 +2,7 @@
 
 ## Faktor-Faktor
 
-| CWEs yang dipetakan | Jumlah kejadian maksimum | Jumlah kejadian rata-rata | Cakupan maksimal | Cakupan rata-rata | Eksploit tertimbang rata-rata | Dampak tertimbang rata-rata | Total peristiwa | Total CVEs |
+| Klasifikasi CWE | Tingkat Kejadian Maksimum | Rata-rata Tingkat Kejadian | Cakupan Maksimum | Rata-rata Cakupan | Rata-rata Bobot Exploitasi | Rata-rata Bobot Dampak | Total Kejadian| Total CVEs |
 |:-------------------:|:------------------------:|:-------------------------:|:----------------:|:-----------------:|:-----------------------------:|:---------------------------:|:---------------:|:----------:|
 | 33        	      | 19.09%                   | 3.37%                     | 94.04%           | 47.90%            | 7.25                          | 7.15                        | 274,228         | 32,078     |
 
@@ -100,7 +100,7 @@ Serangan lebih berbahaya dapat merubah atau menghapus data atau bahkan prosedur 
 -   [PortSwigger: Server-side template
     injection](https://portswigger.net/kb/issues/00101080_serversidetemplateinjection)
 
-## Daftar dari Pemetaan CWEs
+## Daftar Klasifikasi CWE
 
 CWE-20 Validasi masukan yang tidak wajar
 
