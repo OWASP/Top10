@@ -41,7 +41,7 @@ aman.
 
 Konsep pengembangan yang aman mungkin tampak banyak yang harus dilalui, tetapi itu harus dibangun secara bertahap dari waktu ke waktu. Ada bentuk lain dari program keamanan aplikasi diluar sana, terutama Microsoft Agile Secure Development Lifecycle. Tidak semua metode program keamanan aplikasi sesuai dengan semua bisnis.
 
-## Tahap 3. Mengimplementasikan konsep jalan beraspal dengan tim pengembang anda.
+## Tahap 3. Mengimplementasikan konsep jalan pengembangan yang aman dengan tim pengembang anda.
 
 Konsep jalan beraspal dibentuk dengan persetujuan dan keterlibatan langsung dari tim pengembang dan operasi yang relevan. Pengembangan yang aman harus disejajarkan secara strategis dengan sisi bisnis dan membantu mengantarkan kembali aplikasi yang aman lebih cepat. Mengembangkan Konsep Pengembangan yang aman harus menjadi panduan penjagaan latihan yang mencakup seluruh perusahaan ataupun ekosistem aplikasi, bukan sebagai tambalan untuk aplikasi yang belum siap, seperti di hari-hari sebelumnya.
 
@@ -83,9 +83,9 @@ Application Security Verification Standard dan semakin menambah
 komponen jalan beraspal dan menguji untuk tingkat 1, 2, dan 3,
 tergantung pada pengembangan tingkat resiko pada aplikasi 
 
-## Melampaui
+## Lakukan yang terbaik 
 
-Semua program aplikasi keamanan yang hebat pergi melampaui batas minimal.
+Semua program aplikasi keamanan yang baik melakukan usaha yang lebih dari batas minimal.
 Semua orang harus terus melaju jika kita akan berada di atas untuk
 kerentanan keamanan aplikasi.
 
