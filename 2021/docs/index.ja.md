@@ -93,7 +93,7 @@ OWASP Dependency Checkから抽出されたNVD（National Vulnerability Database
 - Total Occurrences(総発生数): カテゴリにマッピングされたCWEを持つことが判明したアプリケーションの総数です。
 - Total CVEs(CVE合計数): カテゴリにマッピングされたCWEに該当する、NVD DB内のCVEの総数です。
 
-## データ貢献者への謝辞
+## データ提供者への謝辞
 
 この最も大規模で包括的なアプリケーションセキュリティのデータセットを作り上げるために、（何名かの匿名の提供者とともに）以下の組織には 50,000 を超えるアプリケーションに関するデータを提供いただきました。 これは皆様のご協力なくしては成し得ませんでした。
 
@@ -110,9 +110,7 @@ OWASP Dependency Checkから抽出されたNVD（National Vulnerability Database
 - Veracode
 - WhiteHat (NTT)
 
-## スポンサーの方への謝辞
-
-OWASP Top 10 2021 チームは、資金面での援助をいただいた Secure Code Warrior および Just Eat に心より感謝いたします。
+## スポンサーへの謝辞
 
 [![Secure Code Warrior](assets/securecodewarrior.png){ width="256" }](https://securecodewarrior.com)    
 

@@ -13,7 +13,7 @@ Es potencialmente vulnerable si:
 * Su software es vulnerable, no posee soporte o se encuentra desactualizado Esto incluye el Sistema Operativo, Servidor Web o de Aplicaciones, DBMS, aplicaciones, APIS y todos los componentes, ambientes de ejecución y bibliotecas.
 * No analiza los componentes periódicamente y se suscribe a los boletines de seguridad de los componentes que utiliza.
 * No parchea o actualiza la plataforma subyacente, frameworks y dependencias en con un enfoque basado en riesgos. Esto sucede comunmente en ambientes en las cuales la aplicación de parches se realiza de forma mensual o trimestral bajo control de cambios, lo que deja a la organización abierta a varios días o meses de exposición innecesaria a vulnerabilidades ya solucionadas.
-* No asegura la configuración de los componentes correctamente (vea A6:2017-Configuración de Seguridad Incorrecta).
+* No asegura la configuración de los componentes correctamente (consulte A6:2017-Configuración de Seguridad Incorrecta).
 
 ## ¿Como prevenirlo?
 
