@@ -21,14 +21,14 @@ dapat membantu you build and measure improvements in your software assurance
 efforts. anda membangun dan menimbang perbaikan dalam jaminan usaha perangkat
 lunak anda.
 
-## Tahap 2. Rencana untuk siklus hidup pengembangan jalan beraspal yang aman
+## Tahap 2. Rencana untuk siklus hidup pengembangan yang aman
 
 Secara tradisional melestarikan apa yang disebut dengan "unicorns," konsep
 jalan beraspal adalah jalan termudah untuk membuat sumber daya Aplikasi Keamanan
 yang sangat berdampak dan berskala dengan kecepatan pengembangan tim, yang mana
 meningkat setiap tahun. 
 
-Konsep jalan beraspal adalah "jalan termudah dan juga jalur teraman" dan harus
+Konsep pengembangan yang aman adalah "jalan termudah dan juga jalur teraman" dan harus
 melibatkan budaya kemitraan yang mendalam antara team pengembang dan tim
 keamanan, sebaiknya seperti mereka adalah satu dan dalam tim yang sama. Jalan
 beraspal bertujuan untuk terus memperbaiki, menimbang, mendeteksi dan mengubah
@@ -39,15 +39,15 @@ beraspal. Ini memungkinkan alat pengembangan yang ada untuk melaporkan pembuatan
 dan membantu tim pengembang untuk mengoreksi kembali dari alternatif yang tidak
 aman.
 
-Konsep jalan beraspal mungkin tampak banyak yang harus dilalui, tetapi itu harus dibangun secara bertahap dari waktu ke waktu. Ada bentuk lain dari program keamanan aplikasi diluar sana, terutama Microsoft Agile Secure Development Lifecycle. Tidak semua metode program keamanan aplikasi sesuai dengan semua bisnis.
+Konsep pengembangan yang aman mungkin tampak banyak yang harus dilalui, tetapi itu harus dibangun secara bertahap dari waktu ke waktu. Ada bentuk lain dari program keamanan aplikasi diluar sana, terutama Microsoft Agile Secure Development Lifecycle. Tidak semua metode program keamanan aplikasi sesuai dengan semua bisnis.
 
 ## Tahap 3. Mengimplementasikan konsep jalan beraspal dengan tim pengembang anda.
 
-Konsep jalan beraspal dibentuk dengan persetujuan dan keterlibatan langsung dari tim pengembang dan operasi yang relevan. Konsep jalan beraspal harus disejajarkan secara strategis dengan sisi bisnis dan membantu mengantarkan kembali aplikasi yang aman lebih cepat. Mengembangkan konsep jalan beraspal harus menjadi panduan penjagaan latihan yang mencakup seluruh perusahaan ataupun ekosistem aplikasi, bukan sebagai tambalan untuk aplikasi yang belum siap, seperti di hari-hari sebelumnya.
+Konsep jalan beraspal dibentuk dengan persetujuan dan keterlibatan langsung dari tim pengembang dan operasi yang relevan. Pengembangan yang aman harus disejajarkan secara strategis dengan sisi bisnis dan membantu mengantarkan kembali aplikasi yang aman lebih cepat. Mengembangkan Konsep Pengembangan yang aman harus menjadi panduan penjagaan latihan yang mencakup seluruh perusahaan ataupun ekosistem aplikasi, bukan sebagai tambalan untuk aplikasi yang belum siap, seperti di hari-hari sebelumnya.
 
-## Tahap 4. Migrasikan semua aplikasi yang akan datang dan yang sudah ada ke jalan beraspal.
+## Tahap 4. Migrasikan semua aplikasi yang akan datang dan yang sudah ada ke Konsep Pengembangan yang aman.
 
-Tambahkan Alat pendeteksi pada Konsep Jalan Beraspal saat anda mengembangkannya 
+Tambahkan Alat pendeteksi pada Konsep Pengembangan yang aman saat anda mengembangkannya 
 dan menyediakan informasi untuk tim pengembang untuk meningkatkan keamanan dari 
 aplikasi mereka dengan bagaimana mereka bisa langsung mengadopsi elemen dari konsep 
 jalan beraspal. Ketika sebuah aspekdari konsep jalan beraspal telah diadopsi, 
@@ -60,9 +60,9 @@ alternatif yang aman, sehingga tim pengembang dapat diberikan jawaban yang benar
 sesegera mungkin. Mereka dapat melakukan refactoring dan mengadopsi kompnen pada 
 konsep jalan beraspal dengan cepat.
 
-## Tahap 5. Uji apakah konsep jalan beraspal telah mengurangi masalah yang ditemukan di OWASP Top 10
+## Tahap 5. Uji apakah konsep Pengembangan yang aman telah mengurangi masalah yang ditemukan di OWASP Top 10
 
-Komponen konsep jalan beraspal harus mengatasi masalah  yang signifikan
+Komponen konsep Pengembangan yang aman harus mengatasi masalah  yang signifikan
 dengan OWASP Top 10, sebagai contohnya, bagaimana untuk mendeteksi secara
 otomatis atau memperbaiki komponen yang rentan, atau plugin IDE analisis
 kode statis untuk mendeteksi injeksi atau bahkan lebih seperti perpustakaan
