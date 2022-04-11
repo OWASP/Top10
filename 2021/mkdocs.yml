@@ -123,7 +123,7 @@ plugins:
           A06 Vulnerable and Outdated Components: A06 Komponen yang Rentan dan Kedaluwarsa
           A07 Identification and Authentication Failures: A07 Kegagalan Identifikasi dan Otentikasi
           A08 Software and Data Integrity Failures: A08 Kegagalan Integritas Data dan Perangkat Lunak
-          A09 Security Logging and Monitoring Failures: A09 Kegagalan Pencatatan dan Pemantauan Keamanan
+          A09 Security Logging and Monitoring Failures: A09 Kegagalan dalam Keamanan Logging dan Monitoring 
           A10 Server Side Request Forgery (SSRF): A10 Server-Side Request Forgery (SSRF)
           Next Steps: Langkah Selanjutnya
         it:
