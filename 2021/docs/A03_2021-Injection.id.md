@@ -1,6 +1,6 @@
 # A03:2021 – Injeksi
 
-## Faktor-faktor
+## Faktor-Faktor
 
 | CWEs yang dipetakan | Jumlah kejadian maksimum | Jumlah kejadian rata-rata | Cakupan maksimal | Cakupan rata-rata | Eksploit tertimbang rata-rata | Dampak tertimbang rata-rata | Total peristiwa | Total CVEs |
 |:-------------------:|:------------------------:|:-------------------------:|:----------------:|:-----------------:|:-----------------------------:|:---------------------------:|:---------------:|:----------:|
@@ -15,7 +15,7 @@ Kontrol eksternal dari nama file atau bagian*.
 
 ## Gambaran
 
-Sebuah aplikasi riskan untuk diserang ketika:
+Sebuah aplikasi rentan untuk diserang ketika:
 
 -   Pengguna memasukkan data yang tidak divalidasi, disaring atau dibersihkan oleh aplikasi.
 
@@ -35,25 +35,17 @@ pipeline untuk mengidentifikasi pengenalan serpihan-serpihan injeksi sebelum di 
 ## Bagaimana cara mencegah
 -   Pencegahan injeksi membutuhkan penyimpanan data terpisah dari perintah dan kueri.
 
--   Pilihan yang disukai adalah menggunakan API yang aman, dimana mencegah penggunaan mesin penerjemah secara keseluruhan
-    , menyediakan sebuah tatap muka berparameter, atau migrasi ke perangkat pemetaan relasi objek.
+-   Pilihan yang disukai adalah menggunakan API yang aman, dimana mencegah penggunaan mesin penerjemah secara keseluruhan, menyediakan sebuah tatap muka berparameter, atau migrasi ke perangkat pemetaan relasi objek.
 
--   Catatan : Bahkan ketika diparameterkan, prosedur tersimpan masih memperkenalkan injeksi 
-    SQL jika PL/SQL atau T-SQL menggabungkan kueri dan data atau
-    mengeksekusi data yang berlawanan dengan EXECUTE IMMEDIATE or exec().
+-   Catatan : Bahkan ketika diparameterkan, prosedur tersimpan masih memperkenalkan injeksi SQL jika PL/SQL atau T-SQL menggabungkan kueri dan data atau mengeksekusi data yang berlawanan dengan EXECUTE IMMEDIATE or exec().
 
--   Menggunakan positif atau "daftar putih" pada validasi masukan di sisi server. Ini bukan pertahanan komplit seperti banyak 
-    aplikasi membutuhkan karakter spesial, seperti area teks atau APIs untuk aplikasi portabel.
+-   Menggunakan positif atau "daftar putih" pada validasi masukan di sisi server. Ini bukan pertahanan komplit seperti banyak aplikasi membutuhkan karakter spesial, seperti area teks atau APIs untuk aplikasi portabel.
 
--   Untuk sisa apapun dari kueri dinamis, melewatkan karakter spesial menggunakan sintaks peralihan spesifik 
-    untuk mesin penerjemah.
+-   Untuk sisa apapun dari kueri dinamis, melewatkan karakter spesial menggunakan sintaks peralihan spesifik untuk mesin penerjemah.
 
--   Catatan: struktur SQL seperti nama tabel, nama kolom, dan lain sebagainya tidak bisa
-    dilewatkan, dan nama struktur yang diberikan pengguna adalah berbahaya. Ini adalah masalah yang sering terjadi
-    dalam pelaporan penulisan perangkat lunak.
+-   Catatan: struktur SQL seperti nama tabel, nama kolom, dan lain sebagainya tidak bisa dilewatkan, dan nama struktur yang diberikan pengguna adalah berbahaya. Ini adalah masalah yang sering terjadi dalam pelaporan penulisan perangkat lunak.
 
--   Menggunakan LIMIT dan kontrol SQL lainnya di antara kueri untuk mencegah penyingkapan rekaman data secara massal
-    dalam kasus injeksi SQL.
+-   Menggunakan LIMIT dan kontrol SQL lainnya di antara kueri untuk mencegah penyingkapan rekaman data secara massal dalam kasus injeksi SQL.
 
 ## Contoh skenario serangan
 
