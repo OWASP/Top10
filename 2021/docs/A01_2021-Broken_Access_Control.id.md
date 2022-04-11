@@ -83,7 +83,7 @@ Jika sebuah user yang belum di autentikasi dapat mengakses kedua page tersebut m
 - [PortSwigger: Exploiting CORS
   misconfiguration](https://portswigger.net/blog/exploiting-cors-misconfigurations-for-bitcoins-and-bounties)
 
-## Daftar Pemetaan CWE
+## Daftar Klasifikasi CWE
 
 CWE-22 Improper Limitation of a Pathname to a Restricted Directory
 ('Path Traversal')
