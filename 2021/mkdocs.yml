@@ -108,8 +108,8 @@ plugins:
           A10 Server Side Request Forgery (SSRF): A10 Falsification de requête côté serveur (SSRF)
           Next Steps: Étapes suivantes
         id:
-          Home: Rumah
-          Notice: Memperhatikan
+          Home: Beranda
+          Notice: Imbauan
           Introduction: Pengenalan
           How to use the OWASP Top 10 as a standard: Bagaimana cara menggunakan OWASP Top 10 sebagai sebuah standarisasi
           How to start an AppSec program with the OWASP Top 10: Bagaimana cara untuk memulai program AppSec dengan OWASP Top 10
