@@ -1,4 +1,4 @@
-# A05:2021 – Miskonfigurasi Keamanan
+# A05:2021 – Kesalahan Konfigurasi Keamanan 
 
 ## Faktor - Faktor
 
