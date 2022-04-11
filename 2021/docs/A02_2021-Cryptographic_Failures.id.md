@@ -1,6 +1,6 @@
 # A02:2021 – Kegagalan Kriptografi
 
-## Faktor
+## Faktor-Faktor
 
 | Klasifikasi CWE | Tingkat Kejadian Maksimum | Rata-rata Tingkat kejadian | Cakupan Maksimum | Rata-rata Cakupan | Rata-rata Bobot Eksploitasi | Rata-rata Bobot Dampak | Total Kejadian | Total CVE |
 |:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
