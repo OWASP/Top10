@@ -94,7 +94,7 @@ passport dan data kartu kredit. Pembobolan data terjadi saat
 third party cloud dari hosting provider, tidak menotifikasi
 bahwa sistem penerbangan tersebut telah di bobol untuk beberapa waktu.
 
-**Skenario #3:** Sebuah perushaan penerbangan eropa besar menderita sebuah kebobolan
+**Skenario #3:** Sebuah perusahaan penerbangan eropa besar menderita sebuah kebobolan
 laporan GDPR yang dapat dilaporkan. Kebobolan tersebut telah dikabrkan
 dikarenakan oleh kerentanan aplikasi keamanan pembayaran di eksploitasi
 penyerang yang telah memanen lebih dari 400.000 rekam pembayaran pelanggan.
@@ -125,7 +125,7 @@ sehingga menghasilkan pengatur privacy.
 -   [Integritas Data: Mendeteksi dan Merespon untuk ransomware dan peristiwa 
     destruktif lainnya](https://csrc.nist.gov/publications/detail/sp/1800-26/final)
 
-## List of Mapped CWEs
+## Daftar Pemetaan CWE
 
 CWE-117 Improper Output Neutralization for Logs
 
