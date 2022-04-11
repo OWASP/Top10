@@ -118,7 +118,7 @@ plugins:
           A01 Broken Access Control: A01 Kerusakan Akses Kontrol
           A02 Cryptographic Failures: A02 Kegagalan Kriptografi
           A03 Injection: A03 Injeksi
-          A04 Insecure Design: A04 Design Yang Tidak Aman
+          A04 Insecure Design: A04 Insecure Design
           A05 Security Misconfiguration: A05 Kesalahan Konfigurasi Keamanan 
           A06 Vulnerable and Outdated Components: A06 Komponen yang Rentan dan Kedaluwarsa
           A07 Identification and Authentication Failures: A07 Kegagalan Identifikasi dan Otentikasi
