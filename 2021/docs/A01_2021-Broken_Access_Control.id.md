@@ -69,7 +69,7 @@ https://example.com/app/accountInfo?acct=notmyacct
 
 Jika sebuah user yang belum di autentikasi dapat mengakses kedua page tersebut maka itu merupakan suatu kelemahan. Jika user yang non-admin dapat mengakses halaman admin, maka merupakan suatu kelemahan.
 
-## Referesi
+## Referensi
 
 - [OWASP Proactive Controls: Enforce Access
   Controls](https://owasp.org/www-project-proactive-controls/v3/en/c7-enforce-access-controls)
