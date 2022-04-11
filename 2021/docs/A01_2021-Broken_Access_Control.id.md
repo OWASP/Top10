@@ -2,7 +2,7 @@
 
 ## Faktor-Faktor
 
-| CWEs Mapped | Max Incidence Rate | Rata-Rata Incidence Rate | Max Coverage | Rata-Rata Coverage | Rata-Rata Weighted Exploit | Rata-Rata Weighted Impact | Total Kejadian | Total CVEs |
+| Klasifikasi CWE | Tingkat Kejadian Maksimum | Rata - Rata Tingkat kejadian | Cakupan Maksimum | Rata - Rata Cakupan | Rata-rata Bobot Eksploitasi | Rata - Rata Bobot Dampak |
 | :---------: | :----------------: | :----------------------: | :----------: | :----------------: | :------------------------: | :-----------------------: | :------------: | :--------: |
 |     34      |       55.97%       |          3.81%           |    94.55%    |       47.72%       |            6.92            |           5.93            |    318,487     |   19,013   |
 
