@@ -1,14 +1,14 @@
-# A09:2021 – Keamanan dalam mencatat dan Kesalahan dalam Memonitor
+# A09:2021 – Kegagalan dalam Keamanan Logging dan Monitoring 
 
-## Faktor
+## Faktor-Faktor
 
-| Pemetaan CWE | Rasio Maks Insiden | Rata-rata Rasio Insiden | Cakupan Maks | Rata-rata Cakupan | Rata-rata besaran Eksploitasi | Rata-rata besaran dampak | Total Kejadian | Total CVE |
+| Klasifikasi CWE | Tingkat Kejadian Maksimum | Rata - Rata Tingkat kejadian | Cakupan Maksimum | Rata - Rata Cakupan | Rata-rata Bobot Eksploitasi | Rata - Rata Bobot Dampak | Total Kejadian | Total CVEs |
 |:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
 | 4           | 19.23%             | 6.51%              | 53.67%       | 39.97%       | 6.87                 | 4.99                | 53,615            | 242        |
 
 ## Tinjauan
 
-Keamanan dalam mencatat dan Kesalahan dalam Memonitor datang dari survey industri (#3), naik 
+Kegagalan dalam Keamanan Logging dan Monitoring datang dari survey industri (#3), naik 
 sedikit dari posisi ke-10 di dalam OWASP top 10 2017. Mencatat dan memonitor dapat menjadi
 sebuah kesulitan untuk melakukan testing, seringkali harus menggunakan tindakan seperti 
 wawancara atau bertanya bila serangan telah terdeksi selama tes penetrasi. 
@@ -30,13 +30,13 @@ dapat dideteksi. Ketidakcukup melakukan log, deteksi, memonitor dan respon aktif
 -   Peringatan dan Error tidak menghasilkan pencatatan yang 
     memadai atau catatan pesan yang tidak jelas.
 
--   Catatan dari aplikasi dan API tidak di monitor untuk aktifitas mencurigakan.
+-   Log dari aplikasi dan API tidak di monitor untuk aktifitas mencurigakan.
 
--   catatan hanya disimpan secara lokal.
+-   Log hanya disimpan secara lokal.
 
 -   Threshold peringatan yang sesuai dan proses dari respon eskalasi tidak efektif.
 
--   Alat Tes Penertrasi dan Pemindaian dari DAST (seperti OWASP ZAP) tidak memicu peringatan.
+-   Tool Penetration testing dan Scan dari dynamic application security testing (DAST) (seperti OWASP ZAP) tidak memicu peringatan.
 
 -   Aplikasi tidak dapat mendeteksi, mengeskalasi atau memperingati untuk serangan aktif
     di waktu sebenarnya(real-time) atau bahkan mendekati waktu sebenarnya.
@@ -125,7 +125,7 @@ sehingga menghasilkan pengatur privacy.
 -   [Integritas Data: Mendeteksi dan Merespon untuk ransomware dan peristiwa 
     destruktif lainnya](https://csrc.nist.gov/publications/detail/sp/1800-26/final)
 
-## Daftar Pemetaan CWE
+## Daftar Klasifikasi CWE
 
 CWE-117 Improper Output Neutralization for Logs
 
