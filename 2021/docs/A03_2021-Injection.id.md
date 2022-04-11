@@ -102,81 +102,74 @@ Serangan lebih berbahaya dapat merubah atau menghapus data atau bahkan prosedur 
 
 ## Daftar Klasifikasi CWE
 
-CWE-20 Validasi masukan yang tidak wajar
+[CWE-20 Improper Input Validation](https://cwe.mitre.org/data/definitions/20.html)
 
-CWE-74 Naturalisasi yang tidak wajar dari elemen khusus dalam keluaran yang digunakan oleh komponen hilir ('Injeksi')
+[CWE-74 Improper Neutralization of Special Elements in Output Used by a
+Downstream Component ('Injection')](https://cwe.mitre.org/data/definitions/74.html)
 
-CWE-75 Kegagalan untuk membersihkan elemen spesial ke dalam sebuah plane yang berbeda          
-(Injeksi elemen khusus)
+[CWE-75 Failure to Sanitize Special Elements into a Different Plane
+(Special Element Injection)](https://cwe.mitre.org/data/definitions/75.html)
 
-CWE-77 Naturalisasi yang tidak wajar dari elemen khusus yang digunakan dalam perintah
-('Injeksi perintah')
+[CWE-77 Improper Neutralization of Special Elements used in a Command
+('Command Injection')](https://cwe.mitre.org/data/definitions/77.html)
 
-CWE-78 Naturalisasi yang tidak wajar dari elemen khusus yang digunakan dalam sebuah perintah OS
-('Injeksi perintah OS')
+[CWE-78 Improper Neutralization of Special Elements used in an OS Command
+('OS Command Injection')](https://cwe.mitre.org/data/definitions/78.html)
 
-CWE-79 Naturalisasi yang tidak wajar dari masukan selama proses memunculkan halaman web
-('Pengkodean lintas situs')
+[CWE-79 Improper Neutralization of Input During Web Page Generation
+('Cross-site Scripting')](https://cwe.mitre.org/data/definitions/79.html)
 
-CWE-80 Naturalisasi yang tidak wajar dari kode terkait HTML tags dalam sebuah halaman web
-(XSS dasar)
+[CWE-80 Improper Neutralization of Script-Related HTML Tags in a Web Page
+(Basic XSS)](https://cwe.mitre.org/data/definitions/80.html)
 
-CWE-83 Naturalisasi yang tidak wajar dari kode dalam atribut dalam sebuah halaman web
+[CWE-83 Improper Neutralization of Script in Attributes in a Web Page](https://cwe.mitre.org/data/definitions/83.html)
 
-CWE-87 Naturalisasi yang tidak wajar dari sintaks alternatif XSS 
+[CWE-87 Improper Neutralization of Alternate XSS Syntax](https://cwe.mitre.org/data/definitions/87.html)
 
-CWE-88 Naturalisasi yang tidak wajar dari pemisah argumen dalam sebuah perintah
-('Injeksi argumen')
+[CWE-88 Improper Neutralization of Argument Delimiters in a Command ('Argument Injection')](https://cwe.mitre.org/data/definitions/88.html)
 
-CWE-89 Naturalisasi yang tidak wajar dari elemen khusus yang digunakan dalam sebuah perintah SQL
-('Injeksi SQL')
+[CWE-89 Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')](https://cwe.mitre.org/data/definitions/89.html)
 
-CWE-90 Naturalisasi yang tidak wajar dari elemen khusus yang digunakan dalam kueri LDAP
-('Injeksi LDAP')
+[CWE-90 Improper Neutralization of Special Elements used in an LDAP Query ('LDAP Injection')](https://cwe.mitre.org/data/definitions/90.html)
 
-CWE-91 Injeksi XML (alias Blind XPath Injection)
+[CWE-91 XML Injection (aka Blind XPath Injection)](https://cwe.mitre.org/data/definitions/91.html)
 
-CWE-93 Naturalisasi yang tidak wajar dari urutan CRLF  ('Injeksi CRLF')
+[CWE-93 Improper Neutralization of CRLF Sequences ('CRLF Injection')](https://cwe.mitre.org/data/definitions/93.html)
 
-CWE-94 Kontrol yang tidak wajar dari kode yang digenerasi ('Injeksi kode')
+[CWE-94 Improper Control of Generation of Code ('Code Injection')](https://cwe.mitre.org/data/definitions/94.html)
 
-CWE-95 Naturalisasi yang tidak wajar dari arahan dalam kode yang dievaluasi secara dinamis ('Injeksi eval')
+[CWE-95 Improper Neutralization of Directives in Dynamically Evaluated Code ('Eval Injection')](https://cwe.mitre.org/data/definitions/95.html)
 
-CWE-96 Naturalisasi yang tidak wajar pada arahan dalam kode yang disimpan secara statis
-('Injeksi kode statis')
+[CWE-96 Improper Neutralization of Directives in Statically Saved Code ('Static Code Injection')](https://cwe.mitre.org/data/definitions/96.html)
 
-CWE-97 Naturalisasi yang tidak wajar pada sisi server meliputi (SSI) di antara sebuah halaman web
+[CWE-97 Improper Neutralization of Server-Side Includes (SSI) Within a Web Page](https://cwe.mitre.org/data/definitions/97.html)
 
-CWE-98 Kontrol yang tidak wajar dari nama berkas untuk menyertakan atau membutuhkan pernyataan dalam program PHP
-('Penyertaan berkas remote PHP')
+[CWE-98 Improper Control of Filename for Include/Require Statement in PHP Program ('PHP Remote File Inclusion')](https://cwe.mitre.org/data/definitions/98.html)
 
-CWE-99 Kontrol yang tidak wajar dari sumber daya pengenal ('Injeksi sumber daya')
+[CWE-99 Improper Control of Resource Identifiers ('Resource Injection')](https://cwe.mitre.org/data/definitions/99.html)
 
-CWE-100 Kedaluwarsa ; sebelumnya terkait semua masalah validasi masukan
+[CWE-100 Deprecated: Was catch-all for input validation issues](https://cwe.mitre.org/data/definitions/100.html)
 
-CWE-113 Naturalisasi yang tidak wajar dari urutan CRLF Sequences dalam HTTP Headers ('Pemisahan respon HTTP')
+[CWE-113 Improper Neutralization of CRLF Sequences in HTTP Headers ('HTTP Response Splitting')](https://cwe.mitre.org/data/definitions/113.html)
 
-CWE-116 Pengkodean enkode yang tidak wajar atau melewatkan keluaran
+[CWE-116 Improper Encoding or Escaping of Output](https://cwe.mitre.org/data/definitions/116.html)
 
-CWE-138 Naturalisasi yang tidak wajar dari elemen khusus
+[CWE-138 Improper Neutralization of Special Elements](https://cwe.mitre.org/data/definitions/138.html)
 
-CWE-184 Daftar yang tidak komplit atau input yang tidak diperbolehkan
+[CWE-184 Incomplete List of Disallowed Inputs](https://cwe.mitre.org/data/definitions/184.html)
 
-CWE-470 Penggunaan dari masukan yang dikontrol secara eksternal untuk memilih kelas-kelas atau kode
-('Pencerminan yang tidak aman')
+[CWE-470 Use of Externally-Controlled Input to Select Classes or Code ('Unsafe Reflection')](https://cwe.mitre.org/data/definitions/470.html)
 
-CWE-471 Modifikasi dari data yang diasumsikan tidak pernah usang(MAID)
+[CWE-471 Modification of Assumed-Immutable Data (MAID)](https://cwe.mitre.org/data/definitions/471.html)
 
-CWE-564 SQL Injeksi : Hibernate
+[CWE-564 SQL Injection: Hibernate](https://cwe.mitre.org/data/definitions/564.html)
 
-CWE-610 Referensi yang dikontrol secara eksternal untuk sebuah sumber daya dalam lapisan lainnya
+[CWE-610 Externally Controlled Reference to a Resource in Another Sphere](https://cwe.mitre.org/data/definitions/610.html)
 
-CWE-643 Naturalisasi yang tidak wajar dari data di antara ekspresi XPath ('Injeksi XPath')
+[CWE-643 Improper Neutralization of Data within XPath Expressions ('XPath Injection')](https://cwe.mitre.org/data/definitions/643.html)
 
-CWE-644 Naturalisasi yang tidak wajar dari HTTP Headers untuk naskah kode
+[CWE-644 Improper Neutralization of HTTP Headers for Scripting Syntax](https://cwe.mitre.org/data/definitions/644.html)
 
-CWE-652 Naturalisasi yang tidak wajar diantara ekspresi XQuery
-('Injeksi XQuery')
+[CWE-652 Improper Neutralization of Data within XQuery Expressions ('XQuery Injection')](https://cwe.mitre.org/data/definitions/652.html)
 
-CWE-917 Naturalisasi yang tidak wajar dari elemen khusus yang digunakan dalam sebuah
-pernyataan bahasa ekspresi('Injeksi bahasa ekspresi')
+[CWE-917 Improper Neutralization of Special Elements used in an Expression Language Statement ('Expression Language Injection')](https://cwe.mitre.org/data/definitions/917.html)
