@@ -2,7 +2,7 @@
 
 ## Faktor-Faktor
 
-| Klasifikasi CWE | Tingkat Kejadian Maksimum | Rata-rata Tingkat kejadian | Cakupan Maksimum | Rata-rata Cakupan | Rata-rata Bobot Eksploitasi | Rata-rata Bobot Dampak | Total Kejadian | Total CVE |
+| Klasifikasi CWE | Tingkat Kejadian Maksimum | Rata-rata Tingkat kejadian | Cakupan Maksimum | Rata-rata Cakupan | Rata-rata Bobot Eksploitasi | Rata-rata Bobot Dampak | Total Kejadian | Total CVEs |
 |:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
 | 29          | 46.44%             | 4.49%              | 79.33%       | 34.85%       | 7.29                 | 6.81                | 233,788           | 3,075      |
 
