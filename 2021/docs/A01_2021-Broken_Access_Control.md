@@ -10,7 +10,7 @@
 
 Moving up from the fifth position, 94% of applications were tested for
 some form of broken access control with the average incidence rate of 3.81%, and has the most occurrences in the contributed dataset with over 318k. Notable Common Weakness Enumerations (CWEs) included are *CWE-200: Exposure of Sensitive Information to an Unauthorized Actor*, *CWE-201:
-Exposure of Sensitive Information Through Sent Data*, and *CWE-352:
+Insertion of Sensitive Information Into Sent Data*, and *CWE-352:
 Cross-Site Request Forgery*.
 
 ## Description
@@ -76,7 +76,7 @@ check or metadata.
 
 -   Stateful session identifiers should be invalidated on the server after logout.
     Stateless JWT tokens should rather be short-lived so that the window of 
-    opportunity for an attacker is minimized. For longer lived JWTs it's highy recommended to
+    opportunity for an attacker is minimized. For longer lived JWTs it's highly recommended to
     follow the OAuth standards to revoke access.
 
 Developers and QA staff should include functional access control unit
@@ -120,8 +120,6 @@ non-admin can access the admin page, this is a flaw.
 
 -   [OWASP Testing Guide: Authorization
     Testing](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/05-Authorization_Testing/README)
-
--   [OWASP Cheat Sheet: Access Control](https://cheatsheetseries.owasp.org/cheatsheets/Access_Control_Cheat_Sheet.html)
 
 -   [OWASP Cheat Sheet: Authorization](https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html)
 

@@ -9,7 +9,7 @@
 ## Overview
 
 Injection slides down to the third position. 94% of the applications
-were tested for some form of injection with a max incidence rate of 19%, an average incidence rate of 3%, and 274k occurances. Notable Common Weakness Enumerations (CWEs) included are
+were tested for some form of injection with a max incidence rate of 19%, an average incidence rate of 3%, and 274k occurrences. Notable Common Weakness Enumerations (CWEs) included are
 *CWE-79: Cross-site Scripting*, *CWE-89: SQL Injection*, and *CWE-73:
 External Control of File Name or Path*.
 
@@ -52,7 +52,7 @@ Preventing injection requires keeping data separate from commands and queries:
     SQL injection if PL/SQL or T-SQL concatenates queries and data or
     executes hostile data with EXECUTE IMMEDIATE or exec().
 
--   Use positive or "whitelist" server-side input validation. This is
+-   Use positive server-side input validation. This is
     not a complete defense as many applications require special
     characters, such as text areas or APIs for mobile applications.
 

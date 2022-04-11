@@ -34,7 +34,7 @@ attacks. There may be authentication weaknesses if the application:
     safe.
 
 -   Uses plain text, encrypted, or weakly hashed passwords data stores (see
-    **A02:2021-Cryptographic Failures**).
+    [A02:2021-Cryptographic Failures](A02_2021-Cryptographic_Failures.md)).
 
 -   Has missing or ineffective multi-factor authentication.
 
@@ -85,8 +85,8 @@ application can be used as a password oracle to determine if the
 credentials are valid.
 
 **Scenario #2:** Most authentication attacks occur due to the continued
-use of passwords as a sole factor. Once considered, best practices,
-password rotation, and complexity requirements encourage users to use
+use of passwords as a sole factor. Once considered best practices,
+password rotation and complexity requirements encourage users to use
 and reuse weak passwords. Organizations are recommended to stop these
 practices per NIST 800-63 and use multi-factor authentication.
 

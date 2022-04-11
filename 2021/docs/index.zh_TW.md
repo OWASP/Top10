@@ -115,7 +115,7 @@ us, both project and OWASP. On the [OWASP Project
 page](https://owasp.org/www-project-top-ten/#div-data_2020), we list the
 data elements and structure we are looking for and how to submit them.
 In the [GitHub
-project](https://github.com/OWASP/Top10/tree/master/2020/Data), we have
+project](https://github.com/OWASP/Top10/tree/master/2021/Data), we have
 example files that serve as templates. We work with organizations as
 needed to help figure out the structure and mapping to CWEs.
 
@@ -212,4 +212,10 @@ would not be possible.
 | Cobalt.io | HackerOne | PenTest-Tools | Veracode |
 | Contrast Security | HCL Technologies | Probely | WhiteHat (NTT) |
 
+## Thank you to our sponsors
 
+The OWASP Top 10 2021 team gratefully acknowledge the financial support of Secure Code Warrior and Just Eat.
+
+[![Secure Code Warrior](assets/securecodewarrior.png){ width="256" }](https://securecodewarrior.com)    
+
+[![Just Eats](assets/JustEat.png){ width="256" }](https://www.just-eat.co.uk/)
