@@ -1,116 +1,67 @@
 # A01:2021 – Contrôles d'accès défaillants   ![icon](assets/TOP_10_Icons_Final_Broken_Access_Control.png){: style="height:80px;width:80px" align="right"}
 
-## Factors
+## Facteurs
 
-| CWEs Mapped | Max Incidence Rate | Avg Incidence Rate | Avg Weighted Exploit | Avg Weighted Impact | Max Coverage | Avg Coverage | Total Occurrences | Total CVEs |
+| CWEs associées | Taux d'incidence max | Taux d'incidence moyen | Exploitation pondérée moyenne | Impact pondéré moyen | Couverture max | Couverture moyenne | Nombre total d'occurrences | Nombre total de CVEs |
 |:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
-| 34          | 55.97%             | 3.81%              | 6.92                 | 5.93                | 94.55%       | 47.72%       | 318,487           | 19,013     |
+| 34          | 55,97 %             | 3,81 %              | 6,92                 | 5,93                | 94,55 %       | 47,72 %       | 318 487           | 19 013     |
 
-## Overview
+## Aperçu
 
-Moving up from the fifth position, 94% of applications were tested for
-some form of broken access control with the average incidence rate of 3.81%, and has the most occurrences in the contributed dataset with over 318k. Notable Common Weakness Enumerations (CWEs) included are *CWE-200: Exposure of Sensitive Information to an Unauthorized Actor*, *CWE-201:
-Exposure of Sensitive Information Through Sent Data*, and *CWE-352:
-Cross-Site Request Forgery*.
+Précédemment à la cinquième place, 94 % des applications ont été testées pour une forme de contrôle d'accès défaillant avec un taux d'incidence moyen de 3,81 %. Cette catégorie a le plus d'occurrences dans l'ensemble de données contribué avec plus de 318&nbsp;000. Les *Common Weakness Enumerations* (CWE) notables incluses sont *CWE-200: Exposure of Sensitive Information to an Unauthorized Actor*, *CWE-201: Exposure of Sensitive Information Through Sent Data* et *CWE-352: Cross-Site Request Forgery* .
 
 ## Description
 
-Access control enforces policy such that users cannot act outside of
-their intended permissions. Failures typically lead to unauthorized
-information disclosure, modification, or destruction of all data or
-performing a business function outside the user's limits. Common access
-control vulnerabilities include:
+Le contrôle d'accès applique une stratégie telle que les utilisateurs ne peuvent pas agir en dehors de leurs autorisations prévues. Les défaillances entraînent généralement la divulgation, la modification ou la destruction d'informations non autorisées de toutes les données ou l'exécution d'une fonctionnalité métier en dehors des limites de l'utilisateur. Les vulnérabilités courantes du contrôle d'accès incluent :
 
--   Violation of the principle of least privilege or deny by default,
-    where access should only be granted for particular capabilities,
-    roles, or users, but is available to anyone.
+-   Violation du principe du moindre privilège ou de refus par défaut, où l'accès ne doit être accordé que pour des capacités, des rôles ou des utilisateurs particuliers, mais est accessible à tous.
+-   Contourner les contrôles d'accès en modifiant l'URL (falsification de paramètres ou navigation forcée), l'état interne de l'application ou la page HTML, ou en utilisant un outil d'attaque modifiant les requêtes API.
+-   Autoriser l'affichage ou la modification du compte de quelqu'un d'autre, en fournissant son identifiant unique (références directes d'objet non sécurisées).
+-   Accès à l'API avec des contrôles d'accès manquants pour POST, PUT et DELETE.
+-   Élévation de privilège. Agir en tant qu'utilisateur sans être connecté ou agir en tant qu'administrateur lorsqu'il est connecté en tant qu'utilisateur.
+-   Manipulation de métadonnées, comme le rejeu ou la falsification de JSON Web Token (JWT), de cookies ou de champs cachés, afin d'élever les privilèges ou abuser de l'invalidation JWT.
+-   La mauvaise configuration de CORS permettant l'accès à l'API à partir d'origines non autorisées/non approuvées.
+-   Forcer la navigation vers des pages authentifiées en tant qu'utilisateur non authentifié ou vers des pages privilégiées en tant qu'utilisateur standard.
 
--   Bypassing access control checks by modifying the URL (parameter
-    tampering or force browsing), internal application state, or the
-    HTML page, or by using an attack tool modifying API requests.
+## Comment s'en prémunir
 
--   Permitting viewing or editing someone else's account, by providing
-    its unique identifier (insecure direct object references)
+Le contrôle d'accès n'est efficace que dans le code de confiance côté serveur ou des API serverless, où l'attaquant ne peut pas modifier la vérification du contrôle d'accès ou les métadonnées.
 
--   Accessing API with missing access controls for POST, PUT and DELETE.
+- À l'exception des ressources publiques, tout doit être bloqué par défaut.
+- Centraliser l'implémentation des mécanismes de contrôle d'accès et les réutiliser dans l'ensemble de l'application. Cela comprend de minimiser l'utilisation de CORS.
+- Le modèle de contrôle d'accès doit imposer l'appartenance des enregistrements, plutôt que de permettre à l'utilisateur de créer, lire, modifier ou supprimer n'importe quel enregistrement.
+- Les exigences métier spécifiques de l'application doivent être appliquées par domaines.
+- Désactiver le listing de dossier sur le serveur web, et vérifier que les fichiers de métadonnées (ex : .git) et de sauvegardes ne se trouvent pas dans l'arborescence web.
+- Tracer les échecs de contrôles d'accès, alerter les administrateurs quand c'est approprié (ex : échecs répétés).
+- Limiter la fréquence d'accès aux API et aux contrôleurs d'accès, afin de minimiser les dégâts que causeraient des outils d'attaques automatisés.
+- Les identifiants de session avec état doivent être invalidés côté serveur après une déconnexion. Les JWT, sans état, doivent être à durée de vie relativement courte pour que la fenêtre d'opportunité d'un attaquant est minimisée. Pour les JWT avec une durée de vie plus longue, il est fortement recommandé de suivre le standard OAuth de révocation d'accès.
 
--   Elevation of privilege. Acting as a user without being logged in or
-    acting as an admin when logged in as a user.
+Les développeurs et les testeurs qualité doivent procéder à des tests unitaires et d'intégration sur les fonctionnalités de contrôle d'accès.
 
--   Metadata manipulation, such as replaying or tampering with a JSON
-    Web Token (JWT) access control token, or a cookie or hidden field
-    manipulated to elevate privileges or abusing JWT invalidation.
+## Exemple de scénarios d'attaque
 
--   CORS misconfiguration allows API access from unauthorized/untrusted
-    origins.
-
--   Force browsing to authenticated pages as an unauthenticated user or
-    to privileged pages as a standard user.
-
-## How to Prevent
-
-Access control is only effective in trusted server-side code or
-server-less API, where the attacker cannot modify the access control
-check or metadata.
-
--   Except for public resources, deny by default.
-
--   Implement access control mechanisms once and re-use them throughout
-    the application, including minimizing Cross-Origin Resource Sharing (CORS) usage.
-
--   Model access controls should enforce record ownership rather than
-    accepting that the user can create, read, update, or delete any
-    record.
-
--   Unique application business limit requirements should be enforced by
-    domain models.
-
--   Disable web server directory listing and ensure file metadata (e.g.,
-    .git) and backup files are not present within web roots.
-
--   Log access control failures, alert admins when appropriate (e.g.,
-    repeated failures).
-
--   Rate limit API and controller access to minimize the harm from
-    automated attack tooling.
-
--   Stateful session identifiers should be invalidated on the server after logout.
-    Stateless JWT tokens should rather be short-lived so that the window of
-    opportunity for an attacker is minimized. For longer lived JWTs it's highy recommended to
-    follow the OAuth standards to revoke access.
-
-Developers and QA staff should include functional access control unit
-and integration tests.
-
-## Example Attack Scenarios
-
-**Scenario #1:** The application uses unverified data in a SQL call that
-is accessing account information:
+**Scenario 1 :** L'application utilise des données non vérifiées dans une requête SQL qui accède à des informations d'un compte :
 
 ```
  pstmt.setString(1, request.getParameter("acct"));
  ResultSet results = pstmt.executeQuery( );
 ```
 
-An attacker simply modifies the browser's 'acct' parameter to send
-whatever account number they want. If not correctly verified, the
-attacker can access any user's account.
+En modifiant simplement le paramètre 'acct' dans le navigateur, un attaquant peut envoyer le numéro de compte qu'il veut. Si ce numéro n'est pas vérifié, l'attaquant peut accéder à n'importe quel compte utilisateur.
 
 ```
  https://example.com/app/accountInfo?acct=notmyacct
 ```
 
-**Scenario #2:** An attacker simply forces browses to target URLs. Admin
-rights are required for access to the admin page.
+**Scenario 2 :** Un attaquant force le navigateur à visiter des URL arbitraires. Il faut imposer des droits pour accéder à une page d'administration.
 
 ```
  https://example.com/app/getappInfo
  https://example.com/app/admin_getappInfo
 ```
-If an unauthenticated user can access either page, it's a flaw. If a
-non-admin can access the admin page, this is a flaw.
+Si un utilisateur non-authentifié peut accéder à l'une des pages, c'est une faille. Si un non-administrateur peut accéder à une page d'administration, c'est une faille.
 
-## References
+## Références
 
 -   [OWASP Proactive Controls: Enforce Access
     Controls](https://owasp.org/www-project-proactive-controls/v3/en/c7-enforce-access-controls)
@@ -121,8 +72,6 @@ non-admin can access the admin page, this is a flaw.
 -   [OWASP Testing Guide: Authorization
     Testing](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/05-Authorization_Testing/README)
 
--   [OWASP Cheat Sheet: Access Control](https://cheatsheetseries.owasp.org/cheatsheets/Access_Control_Cheat_Sheet.html)
-
 -   [OWASP Cheat Sheet: Authorization](https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html)
 
 -   [PortSwigger: Exploiting CORS
@@ -130,7 +79,7 @@ non-admin can access the admin page, this is a flaw.
 
 -   [OAuth: Revoking Access](https://www.oauth.com/oauth2-servers/listing-authorizations/revoking-access/)
 
-## List of Mapped CWEs
+## Liste des CWEs associées
 
 [CWE-22 Improper Limitation of a Pathname to a Restricted Directory
 ('Path Traversal')](https://cwe.mitre.org/data/definitions/22.html)

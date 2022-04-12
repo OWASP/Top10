@@ -69,31 +69,31 @@ Supposons que nous prenions ces deux ensembles de données distincts et essayion
 
 En 2017, nous avons introduit le taux d'incidence pour jeter un nouveau regard sur les données et fusionner proprement les données d'outillage et d'OaH avec les données d'HaO. Le taux d'incidence demande quel pourcentage de la population d'applications avait au moins une instance d'un type de vulnérabilité. Peu nous importe si c'était ponctuel ou systémique. Ce n'est pas pertinent pour nos fins ; nous avons seulement besoin de savoir combien d'applications ont eu au moins une instance, ce qui permet de fournir une vue plus claire des résultats des tests sur plusieurs types de tests sans noyer les données dans des résultats à haute fréquence. Cela correspond à une vue liée au risque, car un attaquant n'a besoin que d'une seule instance pour attaquer une application avec succès via la catégorie.
 
-## What is your data collection and analysis process?
+## Quel est votre processus de collecte et d'analyse des données ?
 
-We formalized the OWASP Top 10 data collection process at the Open Security Summit in 2017. OWASP Top 10 leaders and the community spent two days working out formalizing a transparent data collection process. The 2021 edition is the second time we have used this methodology.
+Nous avons formalisé le processus de collecte de données de l'OWASP Top 10 lors de l'*Open Security Summit* en 2017. Les dirigeants de l'OWASP Top 10 et la communauté ont passé deux jours à formaliser un processus de collecte de données transparent. Cette méthodologie est utilisée pour la seconde fois lors de l'édition 2021.
 
-We publish a call for data through social media channels available to us, both project and OWASP. On the OWASP Project page, we list the data elements and structure we are looking for and how to submit them. In the GitHub project, we have example files that serve as templates. We work with organizations as needed to help figure out the structure and mapping to CWEs.
+Nous publions un appel à données via les canaux de réseaux sociaux à notre disposition, à la fois au niveau du projet et de l'OWASP. Sur la page du projet sur le site de l'OWASP, nous listons les éléments de données et la structure que nous recherchons et comment les soumettre. Dans le projet GitHub, nous avons des exemples de fichiers qui servent de modèles. Nous travaillons avec des organisations au besoin pour aider à comprendre la structure et la correspondance avec les CWEs.
 
-We get data from organizations that are testing vendors by trade, bug bounty vendors, and organizations that contribute internal testing data. Once we have the data, we load it together and run a fundamental analysis of what CWEs map to risk categories. There is overlap between some CWEs, and others are very closely related (ex. Cryptographic vulnerabilities). Any decisions related to the raw data submitted are documented and published to be open and transparent with how we normalized the data.
+Nous obtenons des données d'organisations spécialisées dans l'audit de sécurité, de plateformes de bug bounty et d'organisations qui fournissent des données de tests internes. Une fois que nous avons les données, nous les chargeons ensemble et effectuons une analyse fondamentale de quelles CWEs sont associées aux catégories de risque. Il existe un chevauchement entre certaines CWEs et d'autres sont très étroitement liées (par exemple, les vulnérabilités cryptographiques). Toutes les décisions liées aux données brutes soumises sont documentées et publiées pour être ouvertes et transparentes avec la façon dont nous avons normalisé les données.
 
-We look at the eight categories with the highest incidence rates for inclusion in the Top 10. We also look at the Top 10 community survey results to see which ones may already be present in the data. The top two votes that aren't already present in the data will be selected for the other two places in the Top 10. Once all ten were selected, we applied generalized factors for exploitability and impact; to help rank the Top 10 2021 in a risk based order.
+Nous examinons les huit catégories avec les taux d'incidence les plus élevés pour l'inclusion dans le Top 10. Nous examinons également les résultats de l'enquête communautaire Top 10 pour voir lesquels peuvent déjà être présents dans les données. Les deux premiers votes qui ne sont pas déjà présents dans les données seront sélectionnés pour les deux autres places du Top 10. Une fois les dix sélectionnées, nous avons appliqué des facteurs généralisés pour l'exploitabilité et l'impact ; pour aider à classer le Top 10 2021 dans un ordre basé sur les risques.
 
-## Data Factors
+## Facteurs des données
 
-There are data factors that are listed for each of the Top 10 Categories, here is what they mean:
+Des facteurs sont répertoriés pour chacune des 10 principales catégories, voici ce qu'ils signifient :
 
-- CWEs Mapped: The number of CWEs mapped to a category by the Top 10 team.
-- Incidence Rate: Incidence rate is the percentage of applications vulnerable to that CWE from the population tested by that org for that year.
-- (Testing) Coverage: The percentage of applications tested by all organizations for a given CWE.
-- Weighted Exploit: The Exploit sub-score from CVSSv2 and CVSSv3 scores assigned to CVEs mapped to CWEs, normalized, and placed on a 10pt scale.
-- Weighted Impact: The Impact sub-score from CVSSv2 and CVSSv3 scores assigned to CVEs mapped to CWEs, normalized, and placed on a 10pt scale.
-- Total Occurrences: Total number of applications found to have the CWEs mapped to a category.
-- Total CVEs: Total number of CVEs in the NVD DB that were mapped to the CWEs mapped to a category.
+- CWEs associées : le nombre de CWEs associées à une catégorie par l'équipe du Top 10.
+- Taux d'incidence : le taux d'incidence est le pourcentage d'applications vulnérables à cette CWE parmi la population testée par cette organisation pour cette année.
+- Couverture (Test) : Le pourcentage d'applications testées par toutes les organisations pour une CWE donnée.
+- Exploitation pondérée : le sous-score Exploitation des scores CVSSv2 et CVSSv3 attribués aux CVEs associées aux CWEs, normalisés et placés sur une échelle de 10 points.
+- Impact pondéré : le sous-score d'impact des scores CVSSv2 et CVSSv3 attribués aux CVEs associées aux CWEs, normalisés et placés sur une échelle de 10 points.
+- Nombre total d'occurrences : nombre total d'applications trouvées pour lesquelles les CWEs sont associées à une catégorie.
+- Nombre total de CVEs : nombre total de CVEs dans la base de données NVD qui ont été associées aux CWEs associées à une catégorie.
 
-## Thank you to our data contributors
+## Merci à nos contributeurs de données
 
-The following organizations (along with some anonymous donors) kindly donated data for over 500,000 applications to make this the largest and most comprehensive application security data set. Without you, this would not be possible.
+Les organisations suivantes (ainsi que certains donateurs anonymes) ont aimablement fait don des données de plus de 500 000 applications pour en faire l'ensemble de données de sécurité des applications le plus vaste et le plus complet. Sans vous, cela ne serait pas possible.
 
 - AppSec Labs
 - Cobalt.io
@@ -108,9 +108,9 @@ The following organizations (along with some anonymous donors) kindly donated da
 - Veracode
 - WhiteHat (NTT)
 
-## Thank you to our sponsor
+## Merci à notre sponsor
 
-The OWASP Top 10 2021 team gratefully acknowledge the financial support of Secure Code Warrior and Just Eat.
+L'équipe de l'OWASP Top 10 2021 remercie le soutien financier de Secure Code Warrior et Just Eat.
 
 [![Secure Code Warrior](assets/securecodewarrior.png){ width="256" }](https://securecodewarrior.com)    
 
