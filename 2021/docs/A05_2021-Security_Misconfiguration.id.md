@@ -1,8 +1,8 @@
-# A05:2021 – Miskonfigurasi Keamanan
+# A05:2021 – Kesalahan Konfigurasi Keamanan 
 
 ## Faktor - Faktor
 
-| CWEs Mapped | Max Incidence Rate | Rata-Rata Incidence Rate | Max Coverage | Rata-Rata Coverage | Rata-Rata Weighted Exploit | Rata-Rata Weighted Impact | Total Kejadian | Total CVEs |
+| Klasifikasi CWE | Tingkat Kejadian Maksimum | Rata-rata Tingkat Kejadian | Cakupan Maksimum | Rata-rata Cakupan | Rata-rata Bobot Exploitasi | Rata-rata Bobot Dampak | Total Kejadian| Total CVEs |
 | :---------: | :----------------: | :----------------------: | :----------: | :----------------: | :------------------------: | :-----------------------: | :------------: | :--------: |
 |     20      |       19.84%       |          4.51%           |    89.58%    |       44.84%       |            8.12            |           6.56            |    208,387     |    789     |
 
@@ -28,8 +28,7 @@ Aplikasi dapat dikatakan rentan apabila aplikasi tersebut :
 
 - Server tidak mengirim security header atau directives, atau tidak diatur dengan secure values.
 
-- Software bersifat lama atau rentan (lihat A06:2021-Vulnerable
-  and Outdated Components).
+- Software bersifat lama atau rentan (lihat A06:2021-Vulnerable and Outdated Components).
 
 Tanpa proses konfigurasi keamanan aplikasi yang berulang dan terpadu, sistem berada dalam resiko yang tinggi.
 
@@ -77,7 +76,7 @@ Proses instalasi yang aman harus diimplementasikan, termasuk :
 - [Amazon S3 Bucket Discovery and
   Enumeration](https://blog.websecurify.com/2017/10/aws-s3-bucket-discovery.html)
 
-## List of Mapped CWEs
+## Daftar Klasifikasi CWE
 
 CWE-2 Configuration
 

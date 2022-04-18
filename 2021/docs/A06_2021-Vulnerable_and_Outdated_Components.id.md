@@ -1,8 +1,8 @@
 # A06:2021 – Komponen yang Rentan dan Kedaluwarsa
 
-## Faktor
+## Faktor-Faktor
 
-| Klasifikasi CWE | Tingkat Kejadian Maksimum | Rata-rata Tingkat kejadian | Cakupan Maksimum | Rata-rata Cakupan | Rata-rata Bobot Eksploitasi | Rata-rata Bobot Dampak | Total Kejadian | Total CVE |
+| Klasifikasi CWE | Tingkat Kejadian Maksimum | Rata-rata Tingkat kejadian | Cakupan Maksimum | Rata-rata Cakupan | Rata-rata Bobot Eksploitasi | Rata-rata Bobot Dampak | Total Kejadian | Total CVEs |
 |:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
 | 3           | 27.96%             | 8.77%              | 51.78%       | 22.47%       | 5.00                 | 5.00                | 30,457            | 0          |
 
