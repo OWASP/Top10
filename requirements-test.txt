@@ -1,1 +1,1 @@
-linkcheckmd
+linkcheckmd==1.4.0
