@@ -76,3 +76,6 @@ $RECYCLE.BIN/
 
 # Pipenv
 Pipfile
+
+env
+venv
