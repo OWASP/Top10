@@ -1,32 +1,35 @@
-OWASP Top 10 2021
-
-Final Release
+# OWASP Top 10 2021
 
 ## Building a local copy
 
-- Install Python 3 for your platform
-- From the main folder, ...
+Make sure Python 3 is installed. Optionally create a virtual environment.
 
-```bash
+```sh
+# Install dependencies
 make install-python-requirements
+```
+
+```sh
+# Build HTML
+make generate-site
+# Browse /2021/site
 ```
 
 ### Test it locally
 
-You should test your changes locally:
+Alternatively you can spin up a hot-reloading server:
 
-```bash
-cd 2021
-mkdocs serve
+```sh
+make serve
 ```
 
 Once you are happy, check in your changes as a branch / PR and let someone on the main team know. We'll review your changes, and merge and redeploy.
 
-### Redeploy to gh-pages
+### Deploy to gh-pages
 
 This only works if you have commit privileges on master and Git is correctly setup in your environment.
 
-```bash
+```sh
 cd 2021
 mkdocs gh-deploy
 ```
