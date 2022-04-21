@@ -24,56 +24,28 @@ Terakhir, aplikasi sekarang banyak yang memiliki fitur pembaharuan otomatis, yan
 Penyerang memiliki kemungkinan besar untuk mengunggah pembaharuan milik mereka sendiri untuk di distribusikan dan dijalankan/diterapkan pada semua instalasi/pembaharuan.
 
 ## Bagaimana Cara Mencegahnya
-- _Use digital signatures or similar mechanisms to verify the software or data is from the expected source and has not been altered._
+
 - Gunakan tanda tangan digital atau mekanisme yang sama untuk memverifikasi bahwa perangkat lunak atau data berasal dari sumber yang diharapkan dan tidak di manipulasi.
 
-- _Ensure libraries and dependencies, such as npm or Maven, are consuming trusted repositories. If you have a higher risk profile, consider hosting an internal known-good repository that's vetted._
 - Pastikan *libaries* dan dependensi seperti npm atau Maven menggunakan repositori yang terpercaya. Apabila anda merupakan target berisiko tinggi, pertimbangkan untuk hos repositori yang dikenal baik dan sudah di periksa kepercayaannya.
 
-- _Ensure that a software supply chain security tool, such as OWASP Dependency Check or OWASP CycloneDX, is used to verify that components do not contain known vulnerabilities._
 - Pastikan alat keamanan rantai pasokan perangkat lunak, seperti OWASP Dependency Check atau OWASP CycloneDX digunakan untuk memverifikasi bahwa komponen komponen tersebut tidak memiliki kerentanan yang sudah diketahui.
 
-- _Ensure that there is a review process for code and configuration changes to minimize the chance that malicious code or configuration could be introduced into your software pipeline._
 - Pastikan adanya proses review ketika mengubah kode dan konfigurasi untuk meminimalisir kemungkinan kode atau konfigurasi berbahaya masuk ke dalam *pipeline* perangkat lunak anda.
 
-- _Ensure that your CI/CD pipeline has proper segregation, configuration, and access control to ensure the integrity of the code flowing through the build and deploy processes._
 - Pastikan *CI/CD pipeline* anda memiliki metode pemisahan, konfigurasi dan akses kontrol yang tepat untuk memastikan integritas kode yang masuk mulai dari proses *build* / pembangunan hinga proses *deployment* / penyebaran perangkat lunak.
 
-- _Ensure that unsigned or unencrypted serialized data is not sent to untrusted clients without some form of integrity check or digital signature to detect tampering or replay of the serialized data_
 - Pastikan data yang belum di tanda tangani atau tidak terenkripsi ini tidak terkirim ke klien yang tidak dipercaya tanpa adanya pengecekan integritas atau tanda tangan digital untuk mendeteksi apakah data telah di manipulasi atau pemutaran ulang data yang telah di serialisasi.
 
 ## Contoh Skenario Penyerangan
-_**Scenario #1 Update without signing:** Many home routers, set-top
-boxes, device firmware, and others do not verify updates via signed
-firmware. Unsigned firmware is a growing target for attackers and is
-expected to only get worse. This is a major concern as many times there
-is no mechanism to remediate other than to fix in a future version and
-wait for previous versions to age out._
 
 **Skenario #1 Pembaharuan tanpa tanda tangan**: Mayoritas dari router rumahan, decoder, firmware perangkat, dan perangkat lainnya tidak memverifikasi pembaharuan lewat firmware yang telah di tandatangani/sudah valid.
 Firmware yang tidak ditandatangani / tidak valid merupakan target yang menarik bagi penyerang dan diperkirakan daya tariknya semakin lama akan semakin tinggi
 Hal ini merupakan persoalan/ancaman yang cukup besar karena seringkali tidak ada mekanisme untuk memulihkan/memperbaiki selain memperbaikinya menggunakan versi firmware yang baru dan menunggu versi firmware sebelumnya kadaluarsa.
 
-_**Scenario #2 SolarWinds malicious update**: Nation-states have been
-known to attack update mechanisms, with a recent notable attack being
-the SolarWinds Orion attack. The company that develops the software had
-secure build and update integrity processes. Still, these were able to
-be subverted, and for several months, the firm distributed a highly
-targeted malicious update to more than 18,000 organizations, of which
-around 100 or so were affected. This is one of the most far-reaching and
-most significant breaches of this nature in history._
 
 **Skenario #2 Pembaharuan berbahaya SolarWinds**: Serangan siber bertingkat nasional atau serangan yang melibatkan suatu negara / bangsa terkenal dengan serangannya terhadap mekanisme pembaharuan, **SolarWinds Orion attack** merupakan salah satu serangan bertingkat nasional yang patut diperhatikan. Perlu diketahui perusahaan yang mengembangkan SolarWinds memiliki proses pembaharuan yang berintegritas atau aman dan proses pembuatan perangkat lunak yang aman. Meskipun demikian proses yang aman ini masih dapat di tumbangkan atau diganggu, dan selama beberapa bulan perusahaan ini mendistribusikan pembaharuan berbahaya yang ditargetkan ke lebih dari 18.000 organisasi, sekitar 100 atau lebih organisasi terkena dampak dari pembaharuan ini.
 Insiden ini termasuk salah satu insiden yang konsekuensi nya dapat berpengaruh besar, mempengaruhi banyak hal dan salah satu insiden yang paling signifikan dalam sejarah **Gagalnya Menjaga Integritas Data dan Perangkat Lunak**.
-
-
-_**Scenario #3 Insecure Deserialization:** A React application calls a
-set of Spring Boot microservices. Being functional programmers, they
-tried to ensure that their code is immutable. The solution they came up
-with is serializing the user state and passing it back and forth with
-each request. An attacker notices the "rO0" Java object signature (in base64) and
-uses the Java Serial Killer tool to gain remote code execution on the
-application server._
 
 **Skenario #3 Deserialisasi Yang Tidak Aman**: Aplikasi React memanggil satu set layanan mikro Spring Boot. Sebagai programmer fungsional, mereka mencoba memastikan bahwa kode mereka tidak dapat diubah. Solusi yang mereka hasilkan adalah membuat serial status pengguna dan meneruskannya bolak-balik dengan setiap permintaan. Seorang penyerang memperhatikan tanda tangan objek Java "R00", dan menggunakan alat Pembunuh Serial Java untuk mendapatkan eksekusi kode jarak jauh pada server aplikasi.
 
