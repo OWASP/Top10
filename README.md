@@ -1,4 +1,5 @@
 # Top10
+# need to add latest addition to top 10?
 Official OWASP Top 10 Document Repository
 
 We have released the OWASP Top 10 - 2017 (Final)
