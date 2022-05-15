@@ -14,7 +14,7 @@ En progression depuis la sixième place, 90&nbsp;% des applications ont été te
 
 L'application peut être vulnérable si :
 
--   elle n'a pas fait l'objet d'un durcissement sécurité approprié sur l'ensemble des couches protocolaires applicatives, ou si les permissions sont mal configurées sur les services cloud ;
+-   elle n'a pas fait l'objet d'un durcissement de la sécurité approprié sur l'ensemble des couches protocolaires applicatives, ou si les permissions sont mal configurées sur les services cloud ;
 -   des fonctionnalités inutiles sont activées ou installées (ex : des ports, des services, des pages, des comptes ou des privilèges inutiles) ;
 -   les comptes par défaut et leurs mots de passe sont toujours activés et inchangés ;
 -   le traitement des erreurs révèle aux utilisateurs des traces des piles protocolaires ou d'autres messages d'erreur laissant transpirer trop d'informations ;
