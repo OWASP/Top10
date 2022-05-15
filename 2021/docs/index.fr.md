@@ -4,7 +4,7 @@
 
 ![OWASP Top 10 Logo](./assets/TOP_10_logo_Final_Logo_Colour.png){:class="img-responsive"}
 
-Bienvenue pour cette nouvelle édition de l'OWASP Top 10 ! L'OWASP Top 10 2021 apporte de nombreux changements, avec notamment une nouvelle interface et une nouvelle infographie, disponible sur un format d'une page qu'il est possible de se procurer depuis notre page d'accueil.
+Bienvenue à cette nouvelle édition de l'OWASP Top 10 ! L'OWASP Top 10 2021 apporte de nombreux changements, avec notamment une nouvelle interface et une nouvelle infographie, disponible sur un format d'une page qu'il est possible de se procurer depuis notre page d'accueil.
 
 Un très grand merci à l'ensemble des personnes qui ont contribué de leur temps et leurs données pour cette itération. Sans vous, cette mouture n'aurait pas vu le jour. **MERCI**.
 
