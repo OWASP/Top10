@@ -32,4 +32,4 @@ The OWASP Foundation(オワスプ・ファウンデーション)は、このプ�
 
 ![license](assets/license.png)
 
-Copyright © 2003-2021 The OWASP&tm; Foundation. This document is released under the Creative Commons Attribution Share-Alike 4.0 license. For any reuse or distribution, you must make it clear to others the license terms of this work.
+Copyright © 2003-2021 The OWASP™ Foundation. This document is released under the Creative Commons Attribution Share-Alike 4.0 license. For any reuse or distribution, you must make it clear to others the license terms of this work.
