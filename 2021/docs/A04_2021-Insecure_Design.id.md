@@ -1,8 +1,8 @@
 # A04:2021 – Insecure Design
 
-## Faktor
+## Faktor-Faktor
 
-| Pemetaan CWE | Rasio Maks Insiden | Rata-rata Rasio Insiden | Cakupan Maks | Rata-rata Cakupan | Rata-rata besaran Eksploitasi | Rata-rata besaran dampak | Total Kejadian | Total CVE |
+| Klasifikasi CWE | Tingkat Kejadian Maksimum | Rata - Rata Tingkat kejadian | Cakupan Maksimum | Rata - Rata Cakupan | Rata-rata Bobot Eksploitasi | Rata - Rata Bobot Dampak | Total Kejadian | Total CVEs |
 |:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
 | 40          | 24.19%             | 3.00%              | 77.25%       | 42.51%       | 6.46                 | 6.78                | 262,407           | 2,691      |
 
@@ -71,7 +71,7 @@ dan menolak beberapa transaksi.
     > Perangkat Lunak
     > https://nvlpubs.nist.gov/nistpubs/ir/2021/NIST.IR.8397.pdf
 
-## Daftar Pemetaan CWE
+## Daftar Klasifikasi CWE
 
 CWE-73 External Control of File Name or Path
 

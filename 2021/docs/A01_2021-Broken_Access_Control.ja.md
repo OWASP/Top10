@@ -2,7 +2,11 @@
 
 ## 因子
 
+<<<<<<< HEAD
 | 対応する CWE 数 | 最大発生率 | 平均発生率 |  加重平均（攻撃の難易度） | 加重平均（攻撃による影響） | 最大網羅率 | 平均網羅率 | 総発生数 | CVE 合計件数 |
+=======
+| 対応する CWE 数 | 最大発生率 | 平均発生率 |加重平均（攻撃の難易度） | 加重平均（攻撃による影響） | 最大網羅率 | 平均網羅率 |  総発生数 | CVE 合計件数 |
+>>>>>>> fb884b3e8a77c65e61824e99ac62ce456ae20628
 |:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
 | 34          | 55.97%             | 3.81%              | 6.92                 | 5.93                | 94.55%       | 47.72%       | 318,487           | 19,013     |
 
@@ -38,7 +42,11 @@
 
 -   公開リソースへのアクセスを除いて、アクセスを原則として拒否する。
 
+<<<<<<< HEAD
 -   オリジン間リソース共有 (CORS) の使用箇所を最小限に抑えるなど、アクセス制御メカニズムを一か所で実装しアプリケーション全体でそれを再利用する。
+=======
+-   Cross-Origin Resource Sharing (CORS) の使用箇所を最小限に抑えるなど、アクセス制御メカニズムを一か所で実装しアプリケーション全体でそれを再利用する。
+>>>>>>> fb884b3e8a77c65e61824e99ac62ce456ae20628
 
 -   アクセス制御モデルは、ユーザがどのようなレコードでも作成、読取、更新、または削除できるようにするのではなく、レコードの所有権があることを前提としなければならない。
 
@@ -50,9 +58,13 @@
 
 -   レート制限するAPIとコントローラは自動攻撃ツールによる被害を最小限に抑えるための手段である。
 
+<<<<<<< HEAD
 -   ステートフルなセッション識別子は、ログアウト後サーバーにて無効化する。
     ステートフルなJWTトークンは、攻撃者にとっての格好の機会を最小化するため、短い期間のみ有効であるべきである。
     長い期間有効なJWTについては、アクセスの取り消しに関するOAuthの標準に従うことが強く推奨される。
+=======
+-   ステートフルなセッション識別子は、ログアウト後にはサーバー上で無効とされるべきである。ステートレスなJWTトークンは、攻撃者の機会を最小にするために、むしろ短命であるべきである。寿命の長いJWTの場合は、アクセスを取り消すためにOAuth標準に従うことが強く推奨される。
+>>>>>>> fb884b3e8a77c65e61824e99ac62ce456ae20628
 
 開発者とQAスタッフは、アクセス制御に関する機能面での単体及び結合テストを取り入れるべきです。
 
@@ -77,6 +89,10 @@
  https://example.com/app/getappInfo
  https://example.com/app/admin_getappInfo
 ```
+<<<<<<< HEAD
+=======
+
+>>>>>>> fb884b3e8a77c65e61824e99ac62ce456ae20628
 認証されていないユーザがこれらのページにアクセスすることができるなら、欠陥があります。
 管理者でない人が管理者のページにアクセスできるなら、それも欠陥です。
 
@@ -91,8 +107,11 @@
 -   [OWASP Testing Guide: Authorization
     Testing](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/05-Authorization_Testing/README)
 
+<<<<<<< HEAD
 -   [OWASP Cheat Sheet: Access Control](https://cheatsheetseries.owasp.org/cheatsheets/Access_Control_Cheat_Sheet.html)
 
+=======
+>>>>>>> fb884b3e8a77c65e61824e99ac62ce456ae20628
 -   [OWASP Cheat Sheet: Authorization](https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html)
 
 -   [PortSwigger: Exploiting CORS
@@ -183,7 +202,11 @@
 
 Moving up from the fifth position, 94% of applications were tested for
 some form of broken access control with the average incidence rate of 3.81%, and has the most occurrences in the contributed dataset with over 318k. Notable Common Weakness Enumerations (CWEs) included are *CWE-200: Exposure of Sensitive Information to an Unauthorized Actor*, *CWE-201:
+<<<<<<< HEAD
 Exposure of Sensitive Information Through Sent Data*, and *CWE-352:
+=======
+Insertion of Sensitive Information Into Sent Data*, and *CWE-352:
+>>>>>>> fb884b3e8a77c65e61824e99ac62ce456ae20628
 Cross-Site Request Forgery*.
 
 ## Description
@@ -201,10 +224,17 @@ control vulnerabilities include:
 -   Bypassing access control checks by modifying the URL (parameter
     tampering or force browsing), internal application state, or the
     HTML page, or by using an attack tool modifying API requests.
+<<<<<<< HEAD
 
 -   Permitting viewing or editing someone else's account, by providing
     its unique identifier (insecure direct object references)
 
+=======
+
+-   Permitting viewing or editing someone else's account, by providing
+    its unique identifier (insecure direct object references)
+
+>>>>>>> fb884b3e8a77c65e61824e99ac62ce456ae20628
 -   Accessing API with missing access controls for POST, PUT and DELETE.
 
 -   Elevation of privilege. Acting as a user without being logged in or
@@ -248,8 +278,13 @@ check or metadata.
     automated attack tooling.
 
 -   Stateful session identifiers should be invalidated on the server after logout.
+<<<<<<< HEAD
     Stateless JWT tokens should rather be short-lived so that the window of
     opportunity for an attacker is minimized. For longer lived JWTs it's highy recommended to
+=======
+    Stateless JWT tokens should rather be short-lived so that the window of 
+    opportunity for an attacker is minimized. For longer lived JWTs it's highly recommended to
+>>>>>>> fb884b3e8a77c65e61824e99ac62ce456ae20628
     follow the OAuth standards to revoke access.
 
 Developers and QA staff should include functional access control unit
@@ -293,6 +328,8 @@ non-admin can access the admin page, this is a flaw.
 
 -   [OWASP Testing Guide: Authorization
     Testing](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/05-Authorization_Testing/README)
+
+-   [OWASP Cheat Sheet: Authorization](https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html)
 
 -   [PortSwigger: Exploiting CORS
     misconfiguration](https://portswigger.net/blog/exploiting-cors-misconfigurations-for-bitcoins-and-bounties)
