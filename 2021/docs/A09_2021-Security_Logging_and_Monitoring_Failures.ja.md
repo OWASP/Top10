@@ -1,4 +1,4 @@
-# A09:2021 – セキュリティログとモニタリングの失敗
+# A09:2021 – セキュリティログとモニタリングの失敗    ![icon](assets/TOP_10_Icons_Final_Security_Logging_and_Monitoring_Failures.png){: style="height:80px;width:80px" align="right"}
 
 ## 因子
 
@@ -85,7 +85,7 @@ OWASP AppSensor、OWASP ModSecurity Core Rule Setを使用したModSecurityな�
     Monitoring](https://owasp.org/www-project-application-security-verification-standard)
 
 -   [OWASP Testing Guide: Testing for Detailed Error
-    Code](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/08-Testing_for_Error_Handling/01-Testing_for_Error_Code)
+    Code](https://owasp.org/www-project-web-security-testing-guide/v41/4-Web_Application_Security_Testing/08-Testing_for_Error_Handling/01-Testing_for_Error_Code)
 
 -   [OWASP Cheat Sheet:
     Application Logging Vocabulary](https://cheatsheetseries.owasp.org/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html)
@@ -199,7 +199,7 @@ stack, that feature custom dashboards and alerting.
 
 ## Example Attack Scenarios
 
-**Scenario #1:** A childrens' health plan provider's website operator
+**Scenario #1:** A children's health plan provider's website operator
 couldn't detect a breach due to a lack of monitoring and logging. An
 external party informed the health plan provider that an attacker had
 accessed and modified thousands of sensitive health records of more than
@@ -229,13 +229,13 @@ result by the privacy regulator.
     Monitoring](https://owasp.org/www-project-application-security-verification-standard)
 
 -   [OWASP Testing Guide: Testing for Detailed Error
-    Code](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/08-Testing_for_Error_Handling/01-Testing_for_Error_Code)
+    Code](https://owasp.org/www-project-web-security-testing-guide/v41/4-Web_Application_Security_Testing/08-Testing_for_Error_Handling/01-Testing_for_Error_Code)
 
 -   [OWASP Cheat Sheet:
     Application Logging Vocabulary](https://cheatsheetseries.owasp.org/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html)
 
 -   [OWASP Cheat Sheet:
-    Logging](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html))   
+    Logging](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html)
 
 -   [Data Integrity: Recovering from Ransomware and Other Destructive
     Events](https://csrc.nist.gov/publications/detail/sp/1800-11/final)

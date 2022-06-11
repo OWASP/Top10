@@ -6,7 +6,7 @@ Official OWASP Top 10 Document Repository
 
 Please log any [feedback, comments, or log issues](https://github.com/OWASP/Top10/issues) here.
 
-## OWASP Top 10 2017 - SUPERCEDED
+## OWASP Top 10 2017 - SUPERSEDED
 
 We have released the OWASP Top 10 - 2017 (Final)
 

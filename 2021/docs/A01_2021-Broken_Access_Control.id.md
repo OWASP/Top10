@@ -1,8 +1,8 @@
 # A01:2021 – Kerusakan Akses Kontrol
 
-## Faktor- Faktor
+## Faktor-Faktor
 
-| CWEs Mapped | Max Incidence Rate | Rata-Rata Incidence Rate | Max Coverage | Rata-Rata Coverage | Rata-Rata Weighted Exploit | Rata-Rata Weighted Impact | Total Kejadian | Total CVEs |
+| Klasifikasi CWE | Tingkat Kejadian Maksimum | Rata - Rata Tingkat kejadian | Cakupan Maksimum | Rata - Rata Cakupan | Rata-rata Bobot Eksploitasi | Rata - Rata Bobot Dampak | Total Kejadian | Total CVEs |
 | :---------: | :----------------: | :----------------------: | :----------: | :----------------: | :------------------------: | :-----------------------: | :------------: | :--------: |
 |     34      |       55.97%       |          3.81%           |    94.55%    |       47.72%       |            6.92            |           5.93            |    318,487     |   19,013   |
 
@@ -69,7 +69,7 @@ https://example.com/app/accountInfo?acct=notmyacct
 
 Jika sebuah user yang belum di autentikasi dapat mengakses kedua page tersebut maka itu merupakan suatu kelemahan. Jika user yang non-admin dapat mengakses halaman admin, maka merupakan suatu kelemahan.
 
-## Referesi
+## Referensi
 
 - [OWASP Proactive Controls: Enforce Access
   Controls](https://owasp.org/www-project-proactive-controls/v3/en/c7-enforce-access-controls)
@@ -80,12 +80,10 @@ Jika sebuah user yang belum di autentikasi dapat mengakses kedua page tersebut m
 - [OWASP Testing Guide: Authorization
   Testing](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/05-Authorization_Testing/README)
 
-- [OWASP Cheat Sheet: Access Control]()
-
 - [PortSwigger: Exploiting CORS
   misconfiguration](https://portswigger.net/blog/exploiting-cors-misconfigurations-for-bitcoins-and-bounties)
 
-## List of Mapped CWEs
+## Daftar Klasifikasi CWE
 
 CWE-22 Improper Limitation of a Pathname to a Restricted Directory
 ('Path Traversal')

@@ -75,7 +75,7 @@ A vital task of the appsec team is to ensure that the security of these
 components is continuously evaluated and improved.
 Once they are improved, some form of communication pathway with
 consumers of the component should indicate that an upgrade should occur,
-preferably automatically, but if not, as least highlighted on a
+preferably automatically, but if not, at least highlighted on a
 dashboard or similar.
 
 ## Stage 6. Build your program into a mature AppSec program

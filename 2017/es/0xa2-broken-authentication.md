@@ -15,7 +15,7 @@ Puede existir debilidades de autenticación si la aplicación:
 * Permite ataques de fuerza bruta u otros ataques automatizados.
 * Permite contraseñas por defecto, débiles o bien conocidas, como "Password1", "Contraseña1" o "admin/admin".
 * Posee procesos débiles o inefectivos para el olvido de contraseña o recuperación de credenciales, como "respuestas basadas en el conocimiento", las cuales no se pueden implementar de forma segura seguras.
-* Almacena las contraseñas en texto claro, cifradas o utilizando funciones de hash débiles (vea **A3:2017-Exposición de Datos Sensiblese**)..
+* Almacena las contraseñas en texto claro, cifradas o utilizando funciones de hash débiles (consulte **A3:2017-Exposición de Datos Sensiblese**)..
 * No posee una autenticación multi-factor  o la implementada es ineficaz.
 
 ## Cómo se previene
