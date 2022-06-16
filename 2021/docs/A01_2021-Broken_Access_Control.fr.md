@@ -8,7 +8,7 @@
 
 ## Aperçu
 
-Précédemment à la cinquième place, 94 % des applications ont été testées pour une forme de contrôle d'accès défaillant avec un taux d'incidence moyen de 3,81 %. Cette catégorie a le plus d'occurrences dans l'ensemble de données contribué avec plus de 318&nbsp;000. Les *Common Weakness Enumerations* (CWE) notables incluses sont *CWE-200: Exposure of Sensitive Information to an Unauthorized Actor*, *CWE-201: Exposure of Sensitive Information Through Sent Data* et *CWE-352: Cross-Site Request Forgery* .
+Précédemment à la cinquième place, 94 % des applications ont été testées pour une forme de contrôle d'accès défaillant avec un taux d'incidence moyen de 3,81 %. Cette catégorie a le plus d'occurrences dans l'ensemble de données contribué avec plus de 318&nbsp;000. Les *Common Weakness Enumerations* (CWE) notables incluses sont *CWE-200: Exposure of Sensitive Information to an Unauthorized Actor*, *CWE-201: Insertion of Sensitive Information Into Sent Data* et *CWE-352: Cross-Site Request Forgery* .
 
 ## Description
 
