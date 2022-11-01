@@ -79,7 +79,7 @@ rejected such transactions.
 
 ## References
 
--   [OWASP Cheat Sheet: Secure Design Principles](Coming Soon)
+-   OWASP Cheat Sheet: Secure Design Principles (Coming Soon)
 
 -   [OWASP SAMM: Design:Security Architecture](https://owaspsamm.org/model/design/security-architecture/)
 

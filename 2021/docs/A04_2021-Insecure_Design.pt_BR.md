@@ -111,7 +111,7 @@ podem identificar compras não autênticas e rejeitar tais transações.
 
 ## Referências
 
--   [OWASP Cheat Sheet: Secure Design Principles](Coming Soon)
+-   OWASP Cheat Sheet: Secure Design Principles (Coming Soon)
 
 -   [OWASP SAMM: Design:Security Architecture](https://owaspsamm.org/model/design/security-architecture/)
 

@@ -39,9 +39,9 @@
 
 ## المصادر
 
--   [OWASP Cheat Sheet: Software Supply Chain Security](Coming Soon)
+-   OWASP Cheat Sheet: Software Supply Chain Security (Coming Soon)
 
--   [OWASP Cheat Sheet: Secure build and deployment](Coming Soon)
+-   OWASP Cheat Sheet: Secure build and deployment (Coming Soon)
 
 -    [OWASP Cheat Sheet: Infrastructure as Code](https://cheatsheetseries.owasp.org/cheatsheets/Infrastructure_as_Code_Security_Cheat_Sheet.html) 
  

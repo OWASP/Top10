@@ -57,7 +57,7 @@ entusiastas que no pueden obtener estas tarjetas a ningún precio. El diseño cu
 
 ## Referencias
 
--   [OWASP Cheat Sheet: Secure Design Principles](Coming Soon)
+-   OWASP Cheat Sheet: Secure Design Principles (Coming Soon)
 
 -   [OWASP SAMM: Design:Security Architecture](https://owaspsamm.org/model/design/security-architecture/)
 
