@@ -27,13 +27,13 @@ Penyerang memiliki kemungkinan besar untuk mengunggah pembaharuan milik mereka s
 
 - Gunakan tanda tangan digital atau mekanisme yang sama untuk memverifikasi bahwa perangkat lunak atau data berasal dari sumber yang diharapkan dan tidak di manipulasi.
 
-- Pastikan *libaries* dan dependensi seperti npm atau Maven menggunakan repositori yang terpercaya. Apabila anda merupakan target berisiko tinggi, pertimbangkan untuk hos repositori yang dikenal baik dan sudah di periksa kepercayaannya.
+- Pastikan *libaries* dan dependensi seperti npm atau Maven menggunakan repositori yang terpercaya. Apabila Anda merupakan target berisiko tinggi, pertimbangkan untuk hos repositori yang dikenal baik dan sudah di periksa kepercayaannya.
 
 - Pastikan alat keamanan rantai pasokan perangkat lunak, seperti OWASP Dependency Check atau OWASP CycloneDX digunakan untuk memverifikasi bahwa komponen komponen tersebut tidak memiliki kerentanan yang sudah diketahui.
 
-- Pastikan adanya proses review ketika mengubah kode dan konfigurasi untuk meminimalisir kemungkinan kode atau konfigurasi berbahaya masuk ke dalam *pipeline* perangkat lunak anda.
+- Pastikan adanya proses review ketika mengubah kode dan konfigurasi untuk meminimalisir kemungkinan kode atau konfigurasi berbahaya masuk ke dalam *pipeline* perangkat lunak Anda.
 
-- Pastikan *CI/CD pipeline* anda memiliki metode pemisahan, konfigurasi dan akses kontrol yang tepat untuk memastikan integritas kode yang masuk mulai dari proses *build* / pembangunan hinga proses *deployment* / penyebaran perangkat lunak.
+- Pastikan *CI/CD pipeline* Anda memiliki metode pemisahan, konfigurasi dan akses kontrol yang tepat untuk memastikan integritas kode yang masuk mulai dari proses *build* / pembangunan hinga proses *deployment* / penyebaran perangkat lunak.
 
 - Pastikan data yang belum di tanda tangani atau tidak terenkripsi ini tidak terkirim ke klien yang tidak dipercaya tanpa adanya pengecekan integritas atau tanda tangan digital untuk mendeteksi apakah data telah di manipulasi atau pemutaran ulang data yang telah di serialisasi.
 
