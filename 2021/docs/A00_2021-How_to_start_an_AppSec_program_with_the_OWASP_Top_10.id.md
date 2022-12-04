@@ -6,20 +6,19 @@ berbagai organisasi yang baru saja memulai perjalanan mereka dalam keamanan
 aplikasi OWASP Top 10 2021 merupakan awal yang baik sebagai landasan untuk daftar
 periksa dan sebagainya, tapi itu sendiri tidak cukup.
 
-## Tahap 1. Identifikasi kesenjangan dan tujuan dari program appsec anda
+## Tahap 1. Identifikasi kesenjangan dan tujuan dari program appsec Anda
 
 Banyak program Keamanan Aplikasi (AppSec) mencoba untuk berlali sebelum mereka
 dapat merangkak atau berjalan. Usaha seperti ini pasti akan gagal. Kami sangat
 mendorong pimpinan CISO dan AppSec untuk menggunakan Jaminan Perangkat Lunak OWASP
 Model Kematangan (SAMM) \[<https://owaspsamm.org>\] untuk mengidentifikasi
 kelemahan dan wilayah untuk perbaikan selama periode 1-3 tahun. Tahap pertama
-adalah untuk evaluasi dimana anda sekarang, identifikasi kesenjangan pada
-pemerintahan, perencanaan, implementasi, verifikasi, dan operasi yang anda
+adalah untuk evaluasi dimana Anda sekarang, identifikasi kesenjangan pada
+pemerintahan, perencanaan, implementasi, verifikasi, dan operasi yang Anda
 butuhkan untuk menyelesaikan segera versus yang bisa menunggu, dan memprioritaskan
 implementasi atau memperbaiki lima belas praktik keamanan OWASP SAMM. OWASP SAMM
-dapat membantu you build and measure improvements in your software assurance
-efforts. anda membangun dan menimbang perbaikan dalam jaminan usaha perangkat
-lunak anda.
+dapat membantu Anda membangun dan mengukur peningkatan dalam upaya penjaminan
+perangkat lunak Anda.
 
 ## Tahap 2. Rencana untuk siklus hidup pengembangan yang aman
 
@@ -41,13 +40,13 @@ aman.
 
 Konsep pengembangan yang aman mungkin tampak banyak yang harus dilalui, tetapi itu harus dibangun secara bertahap dari waktu ke waktu. Ada bentuk lain dari program keamanan aplikasi diluar sana, terutama Microsoft Agile Secure Development Lifecycle. Tidak semua metode program keamanan aplikasi sesuai dengan semua bisnis.
 
-## Tahap 3. Mengimplementasikan konsep jalan pengembangan yang aman dengan tim pengembang anda.
+## Tahap 3. Mengimplementasikan konsep jalan pengembangan yang aman dengan tim pengembang Anda.
 
 Konsep jalan beraspal dibentuk dengan persetujuan dan keterlibatan langsung dari tim pengembang dan operasi yang relevan. Pengembangan yang aman harus disejajarkan secara strategis dengan sisi bisnis dan membantu mengantarkan kembali aplikasi yang aman lebih cepat. Mengembangkan Konsep Pengembangan yang aman harus menjadi panduan penjagaan latihan yang mencakup seluruh perusahaan ataupun ekosistem aplikasi, bukan sebagai tambalan untuk aplikasi yang belum siap, seperti di hari-hari sebelumnya.
 
 ## Tahap 4. Migrasikan semua aplikasi yang akan datang dan yang sudah ada ke Konsep Pengembangan yang aman.
 
-Tambahkan Alat pendeteksi pada Konsep Pengembangan yang aman saat anda mengembangkannya 
+Tambahkan Alat pendeteksi pada Konsep Pengembangan yang aman saat Anda mengembangkannya 
 dan menyediakan informasi untuk tim pengembang untuk meningkatkan keamanan dari 
 aplikasi mereka dengan bagaimana mereka bisa langsung mengadopsi elemen dari konsep 
 jalan beraspal. Ketika sebuah aspekdari konsep jalan beraspal telah diadopsi, 
@@ -75,7 +74,7 @@ dengan konsumen dari komponen harus mengindikasikan bahwa peningkatan harus
 terjadi, sebaiknya secara otomatis, tapi apabila tidak, setidaknya disorot
 pada sebuah tampilan dasar atau sejenisnya.
 
-## Tahap 6. Bangun program anda menjadi program keamanan aplikasi yang matang
+## Tahap 6. Bangun program Anda menjadi program keamanan aplikasi yang matang
 
 Anda tidak boleh berhenti hanya di OWASP Top 10. Itu hanya mencakup
 10 kategori resiko. Kami sangat mendorong organisasi untuk mengadopsi

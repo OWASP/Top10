@@ -3,7 +3,7 @@
 OWASP Top 10 terutama merupakan dokumen kesadaran. Bagaimanapun, hal ini
 tidak menutup organisasi untuk menggunakannya sebagai sebuah standar de 
 facto pada industri keamanan aplikasi sejak kelahirannya pada tahun 2003.
-Apabila anda ingin menggunakan OWASP Top 10 sebagai standar dalam coding 
+Apabila Anda ingin menggunakan OWASP Top 10 sebagai standar dalam coding 
 atau pengujian, ketahuilah bahwa ini adalah batas minimal dan hanya sebuah
 tahap awal.
 
