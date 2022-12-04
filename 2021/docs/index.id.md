@@ -10,7 +10,7 @@ Terima kasih sebesar-besarnya ke semua orang yang menyumbangkan waktu dan data m
 
 ## Apa yang berubah di Top 10 untuk 2021
 
-Terdapat tiga kategori baru, empat kategori dengan penamaan dan perbuahan ruang lingkup, dan beberapa konsolidasi baru di Top 10 untuk 2021
+Terdapat tiga kategori baru, empat kategori dengan penamaan dan perubahan ruang lingkup, dan beberapa konsolidasi baru di Top 10 untuk 2021
 
 ![license](assets/mapping.png)
 
@@ -114,8 +114,8 @@ Organisasi berikut (bersama dengan beberapa donor anonim) dengan baik hati menyu
 - Veracode
 - WhiteHat (NTT)
 
-## Thank you to our sponsor
+## Terima kasih kepada sponsor kami
 
-The OWASP Top 10 2021 team gratefully acknowledge the financial support of Secure Code Warrior.
+Tim OWASP Top 10 2021 berterimakasih atas dukungan finansial dari Secure Code Warrior.
 
 [![Secure Code Warrior](assets/securecodewarrior.png)](https://securecodewarrior.com)

@@ -21,8 +21,8 @@ Pada level ini, kami mengharapkan
 
 - Pengolah data - mereview analisa kami
 - Desainer web - kami membutuhkan versi yang sesuai untuk perangkat portabel
-- Translators - menolong meninjau teks bahasa Inggris untuk memastikan ini dapat diterjemahkan
-- ASVS, panduan testing, dan pemimpin panduan tinjauan kode - silahkan menggunakan data kami dan membantu kami menghubungkan 
+- Penerjemah - harap meninjau teks bahasa Inggris untuk memastikan ini dapat diterjemahkan
+- ASVS, panduan testing, dan pemimpin panduan tinjauan kode - silakan menggunakan data kami dan membantu kami menghubungkan 
 dokumen kami dan standarnya secara bersama-sama.
 
 ## Masalah log dan permintaan penarikan
