@@ -2,29 +2,43 @@
 
 ## Faktor-Faktor
 
-| Klasifikasi CWE | Tingkat Kejadian Maksimum | Rata - Rata Tingkat kejadian | Cakupan Maksimum | Rata - Rata Cakupan | Rata-rata Bobot Eksploitasi | Rata - Rata Bobot Dampak | Total Kejadian | Total CVEs |
+| Klasifikasi CWE | Tingkat Kejadian Maksimum | Rata-Rata Tingkat Kejadian | Cakupan Maksimum | Rata-Rata Cakupan | Rata-rata Bobot Eksploitasi | Rata-Rata Bobot Dampak | Total Kejadian | Total CVE |
 | :---------: | :----------------: | :----------------------: | :----------: | :----------------: | :------------------------: | :-----------------------: | :------------: | :--------: |
 |     34      |       55.97%       |          3.81%           |    94.55%    |       47.72%       |            6.92            |           5.93            |    318,487     |   19,013   |
 
 ## Gambaran
 
-Bergerak ke atas dari posisi ke 5, 94% aplikasi di tes untuk untuk berbagai jenis dari broken access control. CWE (Common Weakness Enumeration) atau kelemahan enumerasi umum yang perlu diperhatikan termasuk dari _CWE-200: Exposure of Sensitive Information to an Unauthorized Actor_, _CWE-201: Exposure of Sensitive Information Through Sent Data_, and _CWE-352: Cross-Site Request Forgery_.
+Bergerak ke atas dari posisi ke 5, 94% aplikasi diuji untuk untuk berbagai jenis dari broken access control. CWE (Common Weakness Enumeration) atau kelemahan enumerasi umum yang perlu diperhatikan termasuk dari _CWE-200: Exposure of Sensitive Information to an Unauthorized Actor_, _CWE-201: Exposure of Sensitive Information Through Sent Data_, and _CWE-352: Cross-Site Request Forgery_.
 
 ## Deskripsi
 
-Akses Kontrol menetapkan sebuah peraturan yang dimana user tidak dapat melakukan sebuah aksi diluar permission yang diberikan. Kegagalan atas hal ini dapat mengakibatkan pengeluaran informasi yang tidak diizinkan, modifikasi, atau penghancuran dari semua data atau pemberlakuan sebuah fungsi bisnis di luar limit sebuah user. Kelemahan Akses Kontrol termasuk dari :
+Akses Kontrol memberlakukan sebuah kebijalan sedemikian rupa sehingga pengguna tidak dapat bertindak di luar izin yang dimaksudkan. Kegagalan biasanya mengarah pada pengungkapan informasi yang tidak diizinkan, modifikasi, atau penghancuran dari semua data atau menjalankan sebuah fungsi bisnis di luar batas pengguna. Kelemahan Akses Kontrol termasuk:
 
-Melewati pengecekan akses kontrol dengan memodifikasi URL, internal application state, atau HTML page, atau menggunakan custom API attack tool.
+- Melewati pengecekan akses kontrol dengan memodifikasi URL 
+  (parameter tampering atau force browsing), state aplikasi 
+  internal, atau halaman HTML, atau menggunakan alat serang 
+  yang memodifikasi permintaan API.
 
-Membolehkan primary key untuk dapat diganti ke record user lain, membolehkan penglihatan atau perubahan akun orang lain.
+- Membolehkan primary key untuk dapat diganti ke record user 
+  lain, membolehkan penglihatan atau perubahan akun orang lain.
 
-Penaikan sebuah privilege (Elevation Privilege). Yang dimana sebuah orang dapat dianggap sebagai user tanpa melakukan logged in dan yang dimana sebuah user dapat dianggap sebagai admin tanpa melakukan logged in.
+- Penaikan sebuah privilege (Elevation Privilege). 
+  Yang dimana sebuah orang dapat dianggap sebagai user tanpa 
+  melakukan logged in dan yang dimana sebuah user dapat dianggap 
+  sebagai admin tanpa melakukan logged in.
 
-Manipulasi metadata, seperti memanipulasi dengan JSON Web Token (JWT) akses kontrol token, atau memanipulasi cookie atau hidden field untuk menaikan privilege (elevation privilege) atau menyalahgunakan penggunaan dari JWT invalidation.
+- Manipulasi metadata, seperti memanipulasi dengan JSON Web Token
+  (JWT) akses kontrol token, atau memanipulasi cookie atau hidden
+  field untuk menaikan privilege (elevation privilege) atau 
+  menyalahgunakan penggunaan dari JWT invalidation.
 
-Konfigurasi yang salah pada CORS sehingga menyebabkan API akses yang tidak diizinkan.
+- Konfigurasi yang salah pada CORS sehingga menyebabkan 
+  API akses yang tidak diizinkan.
 
-Force browsing untuk mengakses authenticated pages sebagai unauthenticated user atau mengakses privileged pages sebagai user standard. Mengakses API yang tidak memiliki akses kontrol untuk POST, PUT, dan DELETE.
+- Force browsing untuk mengakses authenticated pages sebagai 
+  unauthenticated user atau mengakses privileged pages sebagai 
+  user standard. Mengakses API yang tidak memiliki akses kontrol 
+  untuk POST, PUT, dan DELETE.
 
 ## Cara Mencegah
 
