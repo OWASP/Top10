@@ -106,7 +106,7 @@ sehingga menghasilkan pengatur privacy.
 -   [OWASP kontrol proaktif OWASP Proactive Controls: Mengimplementasi 
     Pencatatan dan Pemonitoran](https://owasp.org/www-project-proactive-controls/v3/en/c9-security-logging.html)
 
--   [OWASP standart verifikasi keamanan: Pencatatan V8 dan 
+-   [OWASP standar verifikasi keamanan: Pencatatan V8 dan 
     Pemonitoran](https://owasp.org/www-project-application-security-verification-standard)
 
 -   [OWASP Panduan melakukan Tes: Tes untuk code Error yang 
