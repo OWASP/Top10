@@ -49,7 +49,7 @@ Bagi organisasi yang sedang menuju ke program appsec yang matang atau konsultasi
 
 -   **Bagaimana mencegahnya**. Banyak API modern yang kini ditulis dalam bahasa-bahasa yang aman-memori seperti Rust atau Go. Dalam kasus Rust, keamanan memori adalah fitur sangat penting dari bahasa. Untuk kode yang telah ada, penggunaan flag compiler yang ketat, penentuan tipe yang kuat, analisis kode statik, dan uji fuzz bisa menguntungkan dalam mengidentifikasi kebocoran memori, memori, dan array overrun, dan lebih banyak lagi.
 
--   **Contoh skenario serangan**. Buffer overflow dan heap overflow masih menjadi andalah para penyerang selama bertahun-tahun. Penyerang mengirim data ke suatu program, yang disimpannya dalam buffer stack yang berukuran terlalu kecil. Hasilnya adalah informasi pada call stack ditimpa, termasuk pointer balik fungsi. Data menata nilai pointer balik sehingga ketika fungsi kembali, itu memindah kendali ke kode jahat yang dimuat dalam data penyerang.
+-   **Contoh skenario serangan**. Buffer overflow dan heap overflow masih menjadi andalan para penyerang selama bertahun-tahun. Penyerang mengirim data ke suatu program, yang disimpannya dalam buffer stack yang berukuran terlalu kecil. Hasilnya adalah informasi pada call stack ditimpa, termasuk pointer balik fungsi. Data menata nilai pointer balik sehingga ketika fungsi kembali, itu memindah kendali ke kode jahat yang dimuat dalam data penyerang.
 
 -   **Referensi**
     - [OWASP Vulnerabilities: Buffer Overflow](https://owasp.org/www-community/vulnerabilities/Buffer_Overflow)
