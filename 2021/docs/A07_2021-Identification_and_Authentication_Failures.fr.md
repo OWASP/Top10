@@ -18,15 +18,15 @@ La confirmation de l'identité, de l'authentification et de la session de l'util
 - permet la force brute ou d'autres attaques automatisées ;
 - autorise les mots de passe par défaut, faibles ou bien connus, tels que "Password1" ou "admin / admin" ;
 - utilise des processus de récupération des informations d'identification faibles ou inefficaces et des processus de mot de passe oublié, tels que «&nbsp;Questions secrètes&nbsp;», qui ne peuvent être sécurisées ;
-- utilise des mots de passe en texte brut, chiffrés ou faiblement hachés (voir **A02:2021 – Défaillances cryptographiques**) ;
-- absence ou utilisation inefficace de l’authentification multi-facteur ;
+- utilise des mots de passe en texte brut, chiffrés ou faiblement hachés (voir [A02:2021 – Défaillances cryptographiques](A02_2021-Cryptographic_Failures.md)) ;
+- absence ou utilisation inefficace de l’authentification multifacteur ;
 - exposition des identifiants de session dans l'URL ;
 - réutilisation de l'identifiant de session après une connexion réussie ;
 - n'invalide pas correctement les identifiants de session. Les sessions utilisateurs ou les jetons d'authentification (en particulier les jetons SSO) ne sont pas correctement invalidés lors de la déconnexion ou après une période d'inactivité.
 
 ## Comment s'en prémunir
 
-- lorsque cela est possible, implémentez l'authentification multi-facteur pour éviter les attaques automatisées, le bourrage des informations d'identification, la force brute et la réutilisation des informations d'identification volées ;
+- lorsque cela est possible, implémentez l'authentification multifacteur pour éviter les attaques automatisées, le bourrage des informations d'identification, la force brute et la réutilisation des informations d'identification volées ;
 - ne pas livrer ou déployer avec des informations d'identification par défaut, en particulier pour les utilisateurs avec privilèges ;
 - intégrer des tests de mots de passes faibles, à la création ou au changement. Comparer ce mot de passe avec la liste des 10000 mots de passe les plus faibles ;
 - respecter la longueur, la complexité et la rotation des mots de passe par rapport aux directives du *National Institute of Standards and Technology* (NIST) 800-63 B à la section 5.1.1 ou autres directives modernes ;
@@ -38,7 +38,7 @@ La confirmation de l'identité, de l'authentification et de la session de l'util
 
 **Scénario 1** : La réutilisation de mots de passe, l’utilisation de mots de passe connus, est une attaque classique. Supposons une application qui n’implémente pas une protection automatisée contre le bourrage d'informations ou l'utilisation des mots de passe connus. Dans ce cas, l'application peut être utilisée comme un oracle pour déterminer si les mots de passe sont valides.
 
-**Scénario 2** : La plupart des attaques d’authentification se produisent en raison de l’utilisation de mots de passe comme facteur unique. Une fois considérées, les exigences de rotation et de complexité des mots de passe, sont considérées comme encourageant les utilisateurs à utiliser et réutiliser des mots de passe faibles. Il est maintenant recommandé d’arrêter ces pratiques selon les directives NIST 800-63 et d’utiliser du multi-facteur.
+**Scénario 2** : La plupart des attaques d’authentification se produisent en raison de l’utilisation de mots de passe comme facteur unique. Un temps considérées comme de bonnes pratiques, les exigences de rotation et de complexité des mots de passe sont considérées comme encourageant les utilisateurs à utiliser et réutiliser des mots de passe faibles. Il est maintenant recommandé d’arrêter ces pratiques selon les directives NIST 800-63 et d’utiliser du multifacteur.
 
 **Scénario 3** : Les timeouts de session d’application ne sont pas paramétrés correctement. Un utilisateur utilise un ordinateur public pour accéder à une application. À la place de se déconnecter correctement, l’utilisateur ferme le navigateur et quitte l’ordinateur. Un attaquant utilise ensuite le même navigateur quelque temps après et l’utilisateur est toujours authentifié.
 
