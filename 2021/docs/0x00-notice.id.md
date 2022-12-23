@@ -1,7 +1,7 @@
 
 ## Rilis
 
-Rilis tanggal 24 September 2021
+Dirilis tanggal 24 September 2021
 
 ## Penulis Utama
 
@@ -12,17 +12,17 @@ Rilis tanggal 24 September 2021
 
 ## Kontributor
 
-- Orange Tsai, penulis A10-2021: Server Side Request Forgery
-- Jim Manico danJakub Maćkowski - OWASP CheatSheets Coordination
+- Orange Tsai [@orange_8361](https://twitter.com/orange_8361), penulis A10-2021: Server Side Request Forgery
+- Jim Manico [@manicode](https://twitter.com/manicode) dan Jakub Maćkowski [@kubamackowski](https://twitter.com/kubamackowski) - OWASP CheatSheets Coordination
 
-## Bagaimana Anda dapat berkontribusi
+## Bagaimana Anda dapat membantu 
 
-Pada level ini, kami mengharapkan
+Pada tahap ni, kami mengharapkan
 
-- Pengolah data - mereview analisa kami
-- Desainer web - kami membutuhkan versi yang sesuai untuk perangkat portabel
+- Ilmuwan data - harap meninjau analisa kami
+- Desainer web - kami perlu membuat suatu versi yang ramah ke perangkat bergerak
 - Penerjemah - harap meninjau teks bahasa Inggris untuk memastikan ini dapat diterjemahkan
-- ASVS, panduan testing, dan pemimpin panduan tinjauan kode - silakan menggunakan data kami dan membantu kami menghubungkan 
+- ASVS, Panduan Pengujian, dan pemimpin Panduan Tinjauan Kode - silakan menggunakan data kami dan membantu kami menghubungkan 
 dokumen kami dan standarnya secara bersama-sama.
 
 ## Masalah log dan permintaan penarikan
