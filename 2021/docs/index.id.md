@@ -10,20 +10,20 @@ Terima kasih sebesar-besarnya ke semua orang yang menyumbangkan waktu dan data m
 
 ## Apa yang berubah di Top 10 untuk 2021
 
-Terdapat tiga kategori baru, empat kategori dengan penamaan dan perubahan ruang lingkup, dan beberapa konsolidasi baru di Top 10 untuk 2021
+Terdapat tiga kategori baru, empat kategori dengan penamaan dan perubahan ruang lingkup, dan beberapa konsolidasi baru di Top 10 untuk 2021. Kami telah mengubah nama ketika diperlukan untuk berfokus pada akar masalah daripada gejala.
 
-![license](assets/mapping.png)
+![Mapping](assets/mapping.png)
 
-- **A01:2021-Broken Access Control** naik dari posisi kelima; 94% dari aplikasi yang telah diuji dengan broken access kontrol dalam beberapa bentuk. 34 CWE yang dipetakan ke Broken Access Control memiliki lebih banyak kemunculan dalam aplikasi daripada kategori lainnya.
-- **A02:2021-Cryptographic Failures** menggeser satu posisi menjadi #2, sebelumnya dikenal sebagai Pengungkapan Data Sensitif, yang merupakan gejala luas dan bukan penyebab utama. Fokus baru di sini adalah pada kegagalan yang terkait dengan Kriptografi yang sering mengarah pada Pengungkapan Data Sensitif atau sistem yang telah terinfeksi oleh hacker.
-- **A03:2021-Injection** turun ke posisi ketiga. 94% aplikasi diuji untuk beberapa bentuk injeksi, dan 33 CWE yang dipetakan ke dalam kategori ini memiliki kejadian terbanyak kedua dalam aplikasi. Skrip cross-site sekarang menjadi bagian dari kategori ini dalam edisi ini. 
-- **A04:2021-Insecure Design** adalah kategori baru untuk tahun 2021, dengan fokus pada resiko yang terkait dengan kekurangan desain. Jika kita ingin benar-benar bergerak sebagai industri, itu membutuhkan lebih banyak penggunaan pemodelan ancaman, pola dan desain yang aman, dan arsitektur referensi
-- **A05:2021-Security Misconfiguration** naik dari #6 di edisi sebelumnya; 90% aplikasi diuji untuk beberapa bentuk kesalahan konfigurasi. Dengan lebih banyak perubahan ke software dengan konfigurasi yang banyak, tidak mengherankan melihat kategori ini naik. Kategori sebelumnya untuk XML External Entities (XXE) sekarang menjadi bagian dari kategori ini.
-- **A06:2021-Vulnerable and Outdated Components** sebelumnya berjudul Using Components with Known Vulnerabilities dan #2 dalam survei industri, tapi juga memiliki cukup data untuk masuk TOP 10 melalui analisis data. Kategori ini naik dari #9 di tahun 2017 dan merupakan masalah umum yang kami perjuangkan untuk menguji dan menilai resiko. Ini adalah satu-satunya kategori yang tidak memiliki CVE yang dipetakan ke CWE yang disertakan, jadi eksploitasi default dan bobot dampak 5.0 diperhitungkan dalam skornya.
-- **A07:2021-Identification and Authentication Failures** sebelumnya dalah Broken Authentication dan turun dari posisi kedua, dan sekarang termasuk CWE yang lebih terkait dengan kegagalan identifikasi. Kategori ini masih merupakan bagian integral dari Top 10, tetapi peningkatan ketersediaan framework yang telah distandarisasi tampaknya membantu.
-- **A08:2021-Software and Data Integrity Failures** adalah kategori baru untuk tahun 2021, yang berfokus pada pembuatan asusmsi terkait pembaruan perangkat lunak, data penting, dan pipeline CI/CD tanpa memverifikasi integritas. Salah satu dampak tertinggi dari CVE/CVSS yang dipetakan ke 10 CWE dalam kategori ini. Insecure Deserialization dari tahun 2017 sekarang menjadi bagian dari kategori yang lebih besar ini.
-- **A09:2021-Security Logging and Monitoring Failures** sebelumnya Logging dan Monitoring tidak memadai dan ditambahkan dari survei industri (#3), naik dari #10 sebelumnya. Kategori ini diperluas untuk mencakup lebih banyak jenis kegagalan, suatu tantangan untuk diiuji, dan tidak terwakili dengan baik dalam data CVE/CVSS. Namun, kegagalan dalam kategori ini dapat secara langsung mempengaruhi visibilitas, alert pada insiden, dan forensik
-- **A10:2021-Server-Side Request Forgery** ditambahkan dari survei industri (#1). Data menunjukkan tingkat insiden yang relatif rendah dengan cakupan pengujian di atas rata-rata, bersama dengan peringkat di atas rata-rata untuk potensi eksploitasi dan dampak. Kategori ini mewakili skenario di mana para profesional industri memberi tahu kami bahwa ini penting, meskipun tidak diilustrasikan dalam data saat ini.
+- **[A01:2021-Broken Access Control](A01_2021-Broken_Access_Control.id.md)** naik dari posisi kelima ke kategori dengan risiko keamanan aplikasi web paling serius; data yang disumbangkan mengindikasikan bahwa rata-rata, 3,81% aplikasi yang diuji memiliki satu atau lebih Common Weakness Enumeration (CWE) dengan lebih dari 318k kemunculan CWE dalam kategori risiko ini. 34 CWE yang dipetakan ke Broken Access Control memiliki lebih banyak kemunculan dalam aplikasi daripada kategori lainnya.
+- **[A02:2021-Cryptographic Failures](A02_2021-Cryptographic_Failures.id.md)** naik satu posisi menjadi #2, sebelumnya dikenal sebagai **A3:2017-Pengungkapan Data Sensitif**, yang merupakan gejala luas dan bukan akar masalah. Nama yang diperbarui di sini berfokus pada kegagalan yang terkait dengan kriptografi seperti yang sebelumnya tersirat. Kategori ini sering mengarah pada pengungkapan data sensitif atau sistem terkompromi.
+- **[A03:2021-Injection](A03_2021-Injection.id.md)** turun ke posisi ketiga. 94% aplikasi diuji untuk beberapa bentuk injeksi dengan laju insidensi maks 19%, laju insidensi rata-rata 3,37%, dan 33 CWE yang dipetakan ke dalam kategori ini memiliki kejadian terbanyak kedua dalam aplikasi dengan 274k kemunculan. Cross-site Scripting sekarang menjadi bagian dari kategori ini dalam edisi ini. 
+- **[A04:2021-Insecure Design](A04_2021-Insecure_Design.id.md)** adalah kategori baru untuk tahun 2021, dengan fokus pada risiko yang terkait dengan cacat desain. Jika kita ingin benar-benar "bergerak ke kiri" sebagai industri, itu membutuhkan lebih banyak pemodelan ancaman, prinsip dan pola desain yang aman, dan arsitektur referensi. Suatu desain yang tidak aman tidak bisa diperbaiki dengan suatu implementasi sempurna karena secara definisi, kendali keamanan yang diperlukan tidak pernah diciptakan untuk bertahan atas serangan spesifik.
+- **[A05:2021-Security Misconfiguration](A05_2021-Security_Misconfiguration.id.md)** naik dari #6 di edisi sebelumnya; 90% aplikasi diuji untuk beberapa bentuk kesalahan konfigurasi, dengan laju insidensi rata-rata 4,5%, dan lebih dari 208k kemunculan dari CWE yang dipetakan ke kategori risiko ini. Dengan lebih banyak pergeseran ke software yang sangat bisa dikonfigurasi, tidak mengherankan melihat kategori ini naik. Kategori sebelumnya untuk **A4:2017-XML External Entities (XXE)** sekarang menjadi bagian dari kategori risiko ini.
+- **[A06:2021-Vulnerable and Outdated Components](A06_2021-Vulnerable_and_Outdated_Components.id.md)* sebelumnya berjudul Using Components with Known Vulnerabilities dan #2 dalam survei komunitas, tapi juga memiliki cukup data untuk masuk TOP 10 melalui analisis data. Kategori ini naik dari #9 di tahun 2017 dan merupakan masalah yang telah dikenal, yang kami mengalami kesulitan untuk menguji dan menilai risikonya. Ini adalah satu-satunya kategori yang tidak memiliki CVE yang dipetakan ke CWE yang disertakan, jadi eksploitasi default dan bobot dampak 5.0 diperhitungkan dalam skornya.
+- **[A07:2021-Identification and Authentication Failures](A07_2021-Identification_and_Authentication_Failures.id.md))** sebelumnya dalah **A2:2017-Broken Authentication** dan turun dari posisi kedua, dan sekarang termasuk CWE yang lebih terkait dengan kegagalan identifikasi. Kategori ini masih merupakan bagian integral dari Top 10, tetapi peningkatan ketersediaan framework yang telah distandarisasi tampaknya membantu.
+- **[A08:2021-Software and Data Integrity Failures](A08_2021-Software_and_Data_Integrity_Failures.id.md))** adalah kategori baru untuk tahun 2021, yang berfokus pada pembuatan asumsi terkait pembaruan perangkat lunak, data penting, dan pipeline CI/CD tanpa memverifikasi integritas. Salah satu dampak tertinggi dari Common Vulnerability and Exposures/Common Vulnerability Scoring System (CVE/CVSS) yang dipetakan ke 10 CWE dalam kategori ini. **A8:2017-Insecure Deserialization** dari tahun 2017 sekarang menjadi bagian dari kategori yang lebih besar ini.
+- **[A09:2021-Security Logging and Monitoring Failures](A09_2021-Security_Logging_and_Monitoring_Failures.id.md))** sebelumnya **A10:2017-Logging dan Monitoring** dan ditambahkan dari survei komunitas Top 10 (#3), naik dari #10 sebelumnya. Kategori ini diperluas untuk mencakup lebih banyak jenis kegagalan, suatu tantangan untuk diiuji, dan tidak terwakili dengan baik dalam data CVE/CVSS. Namun, kegagalan dalam kategori ini dapat secara langsung mempengaruhi visibilitas, alert atas insiden, dan forensik.
+- **[A10:2021-Server-Side Request Forgery](A10_2021-Server-Side_Request_Forgery.id.md)** ditambahkan dari survei komunitas Top 10 (#1). Data menunjukkan tingkat insiden yang relatif rendah dengan cakupan pengujian di atas rata-rata, bersama dengan peringkat di atas rata-rata untuk potensi Eksploitasi dan Dampak. Kategori ini mewakili skenario di mana para anggota komunitas keamanan memberi tahu kami bahwa ini penting, meskipun tidak diilustrasikan dalam data saat ini.
 
 ## Metodologi
 
@@ -51,13 +51,13 @@ Ada 125 ribu catatan CVE yang dipetakan ke CWE dalam data NVD yang diekstraksi d
 
 Untuk Top 10, kami menghitung rata-rata skor eksploitasi dan dampak dengan cara berikut. Kami mengelompokkan semua CVE dengan skor CVSS berdasarkan CWE dan memberi bobot pada skor eksploitasi dan dampak berdasarkan persentase populasi yang memiliki skor CVSSv3 + populasi yang tersisa dari skor CVSSv2 untuk mendapatkan rata-rata keseluruhan. Kami memetakan rata-rata ini ke CWE dalam kumpulan data untuk digunakan sebagai skor Eksploitasi dan Dampak untuk separuh persamaan risiko lainnya.
 
-## Kenapa tidak hanya bersumber dari data statistik murni?
+## Kenapa tidak hanya data statistik murni?
 
 Hasil dalam data utamanya terbatas pada apa yang dapat kami uji secara otomatis. Bicaralah dengan seorang Profesional AppSec, dan mereka akan memberi tahu Anda tentang hal-hal yang mereka temukan dan tren yang mereka lihat yang belum ada dalam data. Dibutuhkan waktu bagi orang untuk mengembangkan metodologi pengujian untuk jenis kerentanan tertentu dan kemudian lebih banyak waktu agar pengujian tersebut diotomatisasi dan dijalankan terhadap populasi aplikasi yang besar. Semua yang kami temukan adalah melihat kembali ke masa lalu dan mungkin kehilangan tren dari tahun lalu, yang tidak ada dalam data.
 
 Oleh karena itu, kami hanya memilih delapan dari sepuluh kategori dari data karena tidak lengkap. Dua kategori lainnya berasal dari survei industri. Hal ini memungkinkan para praktisi di garis depan untuk memilih apa yang mereka lihat sebagai risiko tertinggi yang mungkin tidak ada dalam data (dan mungkin tidak pernah diungkapkan dalam data).
 
-## Mengapa tingkatan insiden bukan bersumber dari frekuensi?
+## Mengapa tingkatan insiden, bukan frekuensi?
 
 Ada tiga sumber data utama. Kami mengidentifikasi mereka sebagai Human-assisted Tooling (HaT), Tool-assisted Human (TaH), dan raw Tooling.
 
@@ -87,7 +87,7 @@ Ada data faktor yang dicantumkan untuk masing-masing dari 10 Kategori Teratas, b
 - Total Kejadian: Jumlah total aplikasi yang ditemukan memiliki CWE yang dipetakan ke suatu kategori.
 - Total CVE: Jumlah total CVE dalam NVD DB yang dipetakan ke CWE yang dipetakan ke suatu kategori.
 
-### Hubungan Kategori dari 2017
+## Hubungan Kategori dari 2017
 
 Ada banyak pembicaraan tentang tumpang tindih antara risiko Top 10. Menurut definisi masing-masing (daftar CWE yang termasuk), sebenarnya tidak ada tumpang tindih. Namun, secara konseptual, dapat terjadi tumpang tindih atau interaksi berdasarkan penamaan tingkat yang lebih tinggi. Diagram Venn berkali-kali digunakan untuk menunjukkan tumpang tindih seperti ini.
 
@@ -97,7 +97,7 @@ Diagram Venn di atas merepresentasikan interaksi antara Sepuluh Kategori Risiko 
 2. Tumpang tindih hanya satu arah. Kita akan sering mengklasifikasikan kerentanan berdasarkan manifestasi akhir atau "gejala", bukan akar penyebab (yang berpotensi dalam). Misalnya, "Pengungkapan Data Sensitif" mungkin merupakan hasil dari "Kesalahan Konfigurasi Keamanan"; namun, Anda tidak akan melihatnya ke arah lain. Akibatnya, panah digambar di zona interaksi untuk menunjukkan arah mana itu terjadi.
 3. Terkadang diagram ini digambar dengan semua yang ada di A06:2021 Menggunakan Komponen dengan Kerentanan yang Diketahui. Sementara beberapa kategori risiko ini mungkin menjadi akar penyebab kerentanan pihak ketiga, mereka umumnya dikelola secara berbeda dan dengan tanggung jawab yang berbeda. Jenis lainnya biasanya mewakili risiko pihak pertama.
 
-### Terima kasih kepada kontributor data kami
+## Terima kasih kepada kontributor data kami
 
 Organisasi berikut (bersama dengan beberapa donor anonim) dengan baik hati menyumbangkan data untuk lebih dari 500.000 aplikasi untuk menjadikan ini kumpulan data keamanan aplikasi terbesar dan terlengkap. Tanpa Anda, ini tidak akan mungkin.
 
