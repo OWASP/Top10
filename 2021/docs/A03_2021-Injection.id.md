@@ -1,72 +1,93 @@
-# A03:2021 – Injeksi
+# A03:2021 – Injeksi    ![icon](assets/TOP_10_Icons_Final_Injection.png){: style="height:80px;width:80px" align="right"} 
 
 ## Faktor-Faktor
 
-| Klasifikasi CWE | Tingkat Kejadian Maksimum | Rata-rata Tingkat Kejadian | Cakupan Maksimum | Rata-rata Cakupan | Rata-rata Bobot Exploitasi | Rata-rata Bobot Dampak | Total Kejadian| Total CVEs |
-|:-------------------:|:------------------------:|:-------------------------:|:----------------:|:-----------------:|:-----------------------------:|:---------------------------:|:---------------:|:----------:|
-| 33        	      | 19.09%                   | 3.37%                     | 94.04%           | 47.90%            | 7.25                          | 7.15                        | 274,228         | 32,078     |
+| CWE Dipetakan | Tingkat Kejadian Maksimum | Rata-rata Tingkat Kejadian | Rata-rata Exploitasi Terbobot | Rata-rata Dampak Terbobot | Cakupan Maksimum | Rata-rata Cakupan | Total Kejadian| Total CVEs |
+|:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
+| 33          | 19,09%             | 3,37%              | 7,25                 | 7,15                | 94,04%       | 47,90%       | 274.228           | 32.078     |
 
-## Sudut pandang
+## Ringkasan
 
 Injeksi meluncur turun ke posisi tiga. 94% dari aplikasi-aplikasi yang 
-dites oleh beberapa bentuk dari injeksi. Yang dapat dicatat dari CWEs meliputi :
-*CWE-79: Pengkodean lintas situs*, *CWE-89: injeksi SQL*, and *CWE-73:
-Kontrol eksternal dari nama file atau bagian*.
+dites oleh beberapa bentuk dari injeksi dengan tingkat kejadian maksimum 19%,
+rata-rata tingkat kejadian 3%, dan total kejadian 274 ribu. CWE yang menonjol meliputi:
+*CWE-79: Cross-site Scripting*, *CWE-89: SQL Injection*, dan *CWE-73:
+External Control of File Name or Path*.
 
-## Gambaran
+## Deskripsi
 
 Sebuah aplikasi rentan untuk diserang ketika:
 
--   Pengguna memasukkan data yang tidak divalidasi, disaring atau dibersihkan oleh aplikasi.
+-   Pengguna memasukkan data yang tidak divalidasi, disaring, atau disanitasi
+    oleh aplikasi.
 
--   Kueri secara dinamis atau permintaan yang tidak diberikan parameter tanpa konteks-peringatan pengalihan biasanya langsung pada mesin penerjemah.
+-   Kueri secara dinamis atau pemanggilan yang tidak diparameterkan tanpa 
+    escape peka konteks dipakai secara langsung pada interpreter.
 
--   Data berlawanan digunakan di antara parameter pencari pemetaan relasi object (ORM) untuk mengekstraksi tambahan, rekaman sensitif.
+-   Data jahat digunakan di dalam parameter pencarian object-relational mapping
+    (ORM) untuk mengekstraksi rekaman sensitif tambahan.
 
--   Data berlawanan biasanya langsung digunakan atau digabungkan. SQL atau perintah mengandung struktur dan data malfungsi dalam perintah kueri dinamis,
-    perintah-perintah, atau prosedur tersimpan.
+-   Data jahat langsung digunakan atau digabungkan. SQL atau perintah 
+    mengandung struktur dan data jahat dalam kueri dinamis, perintah, atau 
+    stored procedure.
 
-Beberapa injeksi yang biasa terjadi adalah SQL, NoSQL, perintah OS, pemetaan relasi objek(ORM), LDAP, dan bahasa ekspresi(EL) atau injeksi perpustakaan navigasi grafik objek. Konsepnya adalah identik
-di antara semua mesin penerjemah. Penelaahan kode sumber adalah metode terbaik dalam mendeteksi apakah aplikasi tersebut beresiko untuk diinjeksi. Testing otomatis
-terhadap semua parameter-parameter, headers, URL, cookies, JSON, SOAP, and input data XML sangat disarankan. 
-Organisasi dapat menyertakan sumber statik (SAST) dan perangkat tes aplikasi dinamis (DAST) ke dalam CI/CD
-pipeline untuk mengidentifikasi pengenalan serpihan-serpihan injeksi sebelum di sebarkan ke produksi.
+Beberapa injeksi yang biasa terjadi adalah SQL, NoSQL, perintah OS, pemetaan 
+relasi objek (ORM), LDAP, dan bahasa ekspresi (EL), atau injeksi Object
+Graph Navigation Library (OGNL). Konsepnya identik di antara semua interpreter. 
+Peninjauan kode sumber adalah metode terbaik dalam mendeteksi apakah aplikasi 
+tersebut rentan injeksi. Testing otomatis terhadap semua parameter, header, 
+URL, cookies, JSON, SOAP, and masukan data XML sangat disarankan. 
+Organisasi dapat menyertakan alat uji keamanan aplikasi statik (SAST), dinamis 
+(DAST), dan interaktif (IAST) ke dalam CI/CD pipeline untuk mengidentifikasi
+cacat injeksi yang ditambahkan sebelum penggelaran produksi.
 
-## Bagaimana cara mencegah
--   Pencegahan injeksi membutuhkan penyimpanan data terpisah dari perintah dan kueri.
+## Bagaimana Mencegah
 
--   Pilihan yang disukai adalah menggunakan API yang aman, dimana mencegah penggunaan mesin penerjemah secara keseluruhan, menyediakan sebuah tatap muka berparameter, atau migrasi ke perangkat pemetaan relasi objek.
+Pencegahan injeksi membutuhkan pemisahan data dari perintah dan kueri:
 
--   Catatan : Bahkan ketika diparameterkan, prosedur tersimpan masih memperkenalkan injeksi SQL jika PL/SQL atau T-SQL menggabungkan kueri dan data atau mengeksekusi data yang berlawanan dengan EXECUTE IMMEDIATE or exec().
+-   Pilihan yang disukai adalah menggunakan API yang aman, yang mencegah 
+    penggunaan interpreter secara keseluruhan, menyediakan sebuah antar muka 
+    terparameterisasi, atau migrasi ke Object Relational Mapping Tools (ORMs).<br/>
+    **Catatan:** Bahkan ketika diparameterkan, stored procedure masih dapat 
+    memperkenalkan injeksi SQL jika PL/SQL atau T-SQL menggabungkan kueri dan 
+    data atau mengeksekusi data jahat dengan EXECUTE IMMEDIATE atau exec().
 
--   Menggunakan positif atau "daftar putih" pada validasi masukan di sisi server. Ini bukan pertahanan komplit seperti banyak aplikasi membutuhkan karakter spesial, seperti area teks atau APIs untuk aplikasi portabel.
+-   Menggunakan validasi masukan positif di sisi server. Ini bukan pertahanan 
+    komplit karena banyak aplikasi membutuhkan karakter spesial, seperti area 
+    teks atau API untuk aplikasi mobile.
 
--   Untuk sisa apapun dari kueri dinamis, melewatkan karakter spesial menggunakan sintaks peralihan spesifik untuk mesin penerjemah.
+-   Untuk sisa apapun dari kueri dinamis, escape-kan karakter khusus
+    menggunakan sintaks escape spesifik untuk interpreter tersebut.<br/>
+    **Catatan:** Struktur SQL seperti nama tabel, nama kolom, dan lain 
+    sebagainya tidak bisa di-escape, sehingga nama struktur yang diberikan 
+    pengguna itu berbahaya. Ini adalah masalah umum dalam perangkat lunak
+    penyusun laporan.
 
--   Catatan: struktur SQL seperti nama tabel, nama kolom, dan lain sebagainya tidak bisa dilewatkan, dan nama struktur yang diberikan pengguna adalah berbahaya. Ini adalah masalah yang sering terjadi dalam pelaporan penulisan perangkat lunak.
+-   Gunakan LIMIT dan kontrol SQL lainnya di dalam kueri untuk mencegah 
+    penyingkapan rekaman data secara masal dalam kasus injeksi SQL.
 
--   Menggunakan LIMIT dan kontrol SQL lainnya di antara kueri untuk mencegah penyingkapan rekaman data secara massal dalam kasus injeksi SQL.
+## Contoh Skenario Serangan
 
-## Contoh skenario serangan
+**Skenario #1:** Sebuah aplikasi menggunakan data yang tidak terpercaya dalam 
+konstruksi dari panggilan SQL yang rawan berikut ini:
+```
+String query = "SELECT \* FROM accounts WHERE custID='" + request.getParameter("id") + "'";
+```
+**Skenario #2:** Serupa itu, sebuah aplikasi dengan kepercayaan buta ke 
+framework akan menghasilkan kueri yang masih rawan, (contoh, Hibernate Query 
+Language (HQL)):
+```
+ Query HQLQuery = session.createQuery("FROM accounts WHERE custID='" + request.getParameter("id") + "'");
+```
 
-**Skenario #1:** sebuah aplikasi menggunakan data yang tidak terpercaya pada kontruksi dari panggilan SQL yang rawan berikut ini:
-
-String query = "SELECT \* FROM accounts WHERE custID='" +
-request.getParameter("id") + "'";
-
-**Skenario #2:** serupa dengan sebuah aplikasi dengan kepercayaan buta dalam frameworks
-akan menghasilkan kueri yang masih rawan, (contoh, bahasa kueri hibernate(HQL)):
-
-> Query HQLQuery = session.createQuery("FROM accounts WHERE custID='" +
-> request.getParameter("id") + "'");
-
-pada kedua kasus tersebut, penyerang akan memodifikasi nilai parameter ‘id’ pada peramban web 
-untuk mengirim :‘ or ‘1’=’1. Sebagai contoh:
-
+Pada kedua kasus, penyerang akan memodifikasi nilai parameter ‘id’ pada 
+peramban web untuk mengirim: ‘ or ‘1’=’1. Sebagai contoh:
+```
 http://example.com/app/accountView?id=' or '1'='1
-
-Ini akan merubah arti dari kedua kueri untuk mengembalikan semua rekaman data dari akun tabel. 
-Serangan lebih berbahaya dapat merubah atau menghapus data atau bahkan prosedur tersimpan.
+```
+Ini akan mengubah arti dari kedua kueri untuk mengembalikan semua rekaman 
+data dari akun tabel. Serangan yang lebih berbahaya dapat mengubah atau 
+menghapus data atau bahkan memanggil stored procedure.
 
 ## Referensi
 
