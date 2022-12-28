@@ -99,7 +99,7 @@ eksekusi kode jarak jauh pada server aplikasi.
 - [CodeCov Bash Uploader Compromise](https://about.codecov.io/security-update)
 - [Securing DevOps by Julien Vehent](https://www.manning.com/books/securing-devops)
 
-## Daftar Klasifikasi CWE
+## Daftar CWE yang Dipetakan
 [CWE-345 Insufficient Verification of Data Authenticity](https://cwe.mitre.org/data/definitions/345.html)
 
 [CWE-353 Missing Support for Integrity Check](https://cwe.mitre.org/data/definitions/353.html)
