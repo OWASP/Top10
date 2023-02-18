@@ -12,9 +12,9 @@ Anteriormente conhecida como *Quebra de Autenticação*, esta categoria caiu
 da segunda posição e agora inclui Fraquezas e
 Enumerações Comuns (CWEs) relacionadas à identificação de falhas. 
 CWEs notáveis incluídos são: 
-*CWE-297: Improper Validation of Certificate with Host Mismatch*, 
-*CWE-287: Improper Authentication*, e 
-*CWE-384: Session Fixation*.
+*CWE-297: Validação inadequada de certificado com inconsistência de host*,
+*CWE-287: Autenticação inadequada*, e
+*CWE-384: Fixação de sessão*.
 
 ## Descrição 
 

@@ -8,7 +8,7 @@
 
 ## Visão Geral
 
-O monitoramento e registro de segurança subiram da décima posição na lista OWASP Top 10 de 2017 para a terceira posição na pesquisa da comunidade Top 10. É desafiador testar o monitoramento e registro, muitas vezes envolvendo entrevistas ou perguntando se ataques foram detectados durante um teste de penetração. Não há muitos dados CVE/CVSS para essa categoria, mas detectar e responder a violações é crítico. Ainda assim, pode ser muito impactante para responsabilidade, visibilidade, alerta de incidentes e forense. Essa categoria se expande além da *CWE-778 Insufficient Logging* para incluir a *CWE-117 Improper Output Neutralization for Logs*, *CWE-223 Omission of Security-relevant Information* e *CWE-532 Insertion of Sensitive Information into Log File*.
+O monitoramento e registro de segurança subiram da décima posição na lista OWASP Top 10 de 2017 para a terceira posição na pesquisa da comunidade Top 10. É desafiador testar o monitoramento e registro, muitas vezes envolvendo entrevistas ou perguntando se ataques foram detectados durante um teste de penetração. Não há muitos dados CVE/CVSS para essa categoria, mas detectar e responder a violações é crítico. Ainda assim, pode ser muito impactante para responsabilidade, visibilidade, alerta de incidentes e forense. Essa categoria se expande além da *CWE-117 Neutralização inadequada de saída para logs* para incluir a *CWE-223 Omissão de informações relevantes para segurança*, *CWE-532 Inserção de informações sensíveis em arquivo de log* e *CWE-778 Registro insuficiente*.
 
 ## Descrição
 

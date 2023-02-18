@@ -13,9 +13,9 @@ dados críticos e pipelines de CI/CD sem verificar a integridade.
 Um dos impactos mais importantes ponderados pelos dados do 
 Common Vulnerability and Exposures/Common Vulnerability Scoring System (CVE/CVSS). 
 As Notáveis Enumerações de Fraquezas Comuns (CWEs) incluem:
-*CWE-829: Inclusion of Functionality from Untrusted Control Sphere*,
-*CWE-494: Download of Code Without Integrity Check*, e 
-*CWE-502: Deserialization of Untrusted Data*.
+*CWE-829: Inclusão de funcionalidade de esfera de controle não confiável*,
+*CWE-494: Download de código sem verificação de integridade*, e
+*CWE-502: Desserialização de dados não confiáveis*.
 
 ## Descrição
 
