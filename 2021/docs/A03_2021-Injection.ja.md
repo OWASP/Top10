@@ -57,10 +57,10 @@
  Query HQLQuery = session.createQuery("FROM accounts WHERE custID='" + request.getParameter("id") + "'");
 ```
 
-これら両方のケースにおいて、攻撃者はブラウザでパラメータ'id'の値を' or '1'='1に変更します。例えば:
+これら両方のケースにおいて、攻撃者はブラウザでパラメータ'id'の値を' UNION SELECT SLEEP(10);--に変更します。例えば:
 
 ```
- http://example.com/app/accountView?id=' or '1'='1
+ http://example.com/app/accountView?id=' UNION SELECT SLEEP(10);--
 ```
 
 これで、両方のクエリの意味が変えられ、accountsテーブルにあるレコードが全て返されることになります。さらなる攻撃により、データの改ざんや削除、ストアドプロシージャの呼び出しが可能です。
@@ -243,9 +243,9 @@ Language (HQL)):
 ```
 
 In both cases, the attacker modifies the ‘id’ parameter value in their
-browser to send: ‘ or ‘1’=’1. For example:
+browser to send: ' UNION SLEEP(10);--. For example:
 ```
- http://example.com/app/accountView?id=' or '1'='1
+ http://example.com/app/accountView?id=' UNION SELECT SLEEP(10);--
 ```
 
 This changes the meaning of both queries to return all the records from

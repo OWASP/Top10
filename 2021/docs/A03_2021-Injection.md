@@ -81,9 +81,9 @@ Language (HQL)):
 ```
 
 In both cases, the attacker modifies the ‘id’ parameter value in their
-browser to send: ‘ or ‘1’=’1. For example:
+browser to send: ' UNION SLEEP(10);--. For example:
 ```
- http://example.com/app/accountView?id=' or '1'='1
+ http://example.com/app/accountView?id=' UNION SELECT SLEEP(10);--
 ```
 
 This changes the meaning of both queries to return all the records from

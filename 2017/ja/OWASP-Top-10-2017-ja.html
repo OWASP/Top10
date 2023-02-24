@@ -283,8 +283,8 @@ Top 10におけるリスクは、理解の促進及び混乱を招くことを�
 <p><code>String query = &quot;SELECT * FROM accounts WHERE custID='&quot; + request.getParameter(&quot;id&quot;) + &quot;'&quot;;</code></p>
 <p><strong>シナリオ #2</strong>: 同様に、アプリケーションがフレームワークを盲信すると、脆弱性のあるクエリになりえます (例えば、Hibernateクエリ言語(HQL)):</p>
 <p><code>Query HQLQuery = session.createQuery(&quot;FROM accounts WHERE custID='&quot; + request.getParameter(&quot;id&quot;) + &quot;'&quot;);</code></p>
-<p>これら両方のケースにおいて、攻撃者はブラウザでパラメータ'id'の値を' or '1'='1に変更します。例えば:</p>
-<p><code>http://example.com/app/accountView?id=' or '1'='1</code></p>
+<p>これら両方のケースにおいて、攻撃者はブラウザでパラメータ'id'の値を' UNION SELECT SLEEP(10);--に変更します。例えば:</p>
+<p><code>http://example.com/app/accountView?id=' UNION SELECT SLEEP(10);--</code></p>
 <p>これで、両方のクエリの意味が変えられ、accountsテーブルにあるレコードが全て返されることになります。さらなる攻撃により、データの改ざんや削除、ストアドプロシージャの呼び出しが可能です。</p>
 <h2 id="-1">参考資料</h2>
 <h3 id="owasp-2">OWASP</h3>

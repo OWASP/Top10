@@ -34,9 +34,9 @@ Enjeksiyon saldırılarını önlemek verinin komutlardan ve sorgulardan uzak tu
 
 `Query HQLQuery = session.createQuery("FROM accounts WHERE custID='" + request.getParameter("id") + "'");`
 
-Her iki durumda da, saldırgan id parametresinin değerini ' or '1'='1 olarak tarayıcısı üzerinden değiştirmektedir. Örneğin:
+Her iki durumda da, saldırgan id parametresinin değerini ' UNION SELECT SLEEP(10);-- olarak tarayıcısı üzerinden değiştirmektedir. Örneğin:
 
-`http://example.com/app/accountView?id=' or '1'='1`
+`http://example.com/app/accountView?id=' UNION SELECT SLEEP(10);--`
 
 Bu değer, her iki sorgunun da anlamını değiştirmekte ve tablodaki tüm kayıtları döndürmektedir. Daha tehlikeli saldırılar veriyi değiştirebilir veya silebilir, hatta saklı yordamları çalıştırabilir.
 

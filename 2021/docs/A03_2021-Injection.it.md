@@ -79,9 +79,9 @@ Language (HQL)):
 ```
 
 In entrambi i casi, l'attaccante modifica il valore del parametro 'id' nel suo
-browser per inviare: ' or '1'='1. Per esempio:
+browser per inviare: ' UNION SELECT SLEEP(10);--. Per esempio:
 ```
- http://example.com/app/accountView?id=' or '1'='1
+ http://example.com/app/accountView?id=' UNION SELECT SLEEP(10);--
 ```
 
 Questo cambia il significato di entrambe le query per restituire tutti i record dalla

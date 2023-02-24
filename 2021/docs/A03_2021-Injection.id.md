@@ -63,7 +63,7 @@ akan menghasilkan kueri yang masih rawan, (contoh, bahasa kueri hibernate(HQL)):
 pada kedua kasus tersebut, penyerang akan memodifikasi nilai parameter ‘id’ pada peramban web 
 untuk mengirim :‘ or ‘1’=’1. Sebagai contoh:
 
-http://example.com/app/accountView?id=' or '1'='1
+http://example.com/app/accountView?id=' UNION SELECT SLEEP(10);--
 
 Ini akan merubah arti dari kedua kueri untuk mengembalikan semua rekaman data dari akun tabel. 
 Serangan lebih berbahaya dapat merubah atau menghapus data atau bahkan prosedur tersimpan.

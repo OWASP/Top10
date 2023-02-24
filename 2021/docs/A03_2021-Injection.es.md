@@ -52,9 +52,9 @@ Language (HQL)):
  Query HQLQuery = session.createQuery("FROM accounts WHERE custID='" + request.getParameter("id") + "'");
 ```
 
-En ambos casos, el atacante modifica el valor del parámetro "id" en su navegador y enviar por ejemplo: ‘ or ‘1’=’1.
+En ambos casos, el atacante modifica el valor del parámetro "id" en su navegador y enviar por ejemplo: ' UNION SLEEP(10);--.
 ```
- http://example.com/app/accountView?id=' or '1'='1
+ http://example.com/app/accountView?id=' UNION SELECT SLEEP(10);--
 ```
 
 Esto modifica el significado de ambas consultas, retornando todos los registros de la tabla “accounts. Ataques más peligrosos podrían modificar datos o incluso invocar procedimientos almacenados.

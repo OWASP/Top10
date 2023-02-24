@@ -62,9 +62,9 @@
 
 `Query HQLQuery = session.createQuery("FROM accounts WHERE custID='" + request.getParameter("id") + "'");`
 
-<p dir="rtl" align="right">در هر دو مورد، مهاجم مقدار پارامتر < id> را در مرورگر خود تغییر می دهد تا <span style="direction:ltr;display:inline-block">' or '1'='1 </span> را ارسال کند : به طور مثال: </p>
+<p dir="rtl" align="right">در هر دو مورد، مهاجم مقدار پارامتر < id> را در مرورگر خود تغییر می دهد تا <span style="direction:ltr;display:inline-block">' UNION SELECT SLEEP(10);-- </span> را ارسال کند : به طور مثال: </p>
 
-`http://example.com/app/accountView?id=' or '1'='1`
+`http://example.com/app/accountView?id=' UNION SELECT SLEEP(10);--`
 
 <p dir="rtl" align="right">این معنای هر دو درخواست را تغییر می‌دهد تا تمام رکوردها را از جدول حساب‌ها بازگرداند. حملات خطرناک ترمی‌توانند داده ها را تغییر داده یا حذف کنند یا حتی دستورالعمل‌های ذخیره شده را فراخوانی کنند. </p>
 
