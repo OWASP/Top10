@@ -65,7 +65,7 @@ dan menolak beberapa transaksi.
 
 ## Referensi
 
--   [OWASP Cheat Sheet: Secure Design Principles](https://cheatsheetseries.owasp.org/cheatsheets/Secure_Product_Design_Cheat_sheet.html)
+-   [OWASP Cheat Sheet: Secure Design Principles](https://cheatsheetseries.owasp.org/cheatsheets/Secure_Product_Design_Cheat_Sheet.html)
 
 -   NIST - Pedoman Standar Minimum Untuk Verivikasi Pengembang Dari
     > Perangkat Lunak
