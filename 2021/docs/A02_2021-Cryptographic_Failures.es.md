@@ -36,7 +36,7 @@ Para todos esos datos:
 
 -   ¿Se utilizan funciones hash en obsoletas, como MD5 o SHA1, o se utilizan funciones hash no criptográficas cuando se necesitan funciones hash criptográficas?
 
--   ¿Se utilizan métodos criptográficos de relleno(padding) obsoletos, como PCKS número 1 v1.5?
+-   ¿Se utilizan métodos criptográficos de relleno(padding) obsoletos, como PKCS número 1 v1.5?
 
 -   ¿Se pueden explotar los mensajes de errores criptográficos como un canal lateral, por ejemplo, en forma de ataques de  criptoanálisis por modificación relleno (Oracle Padding)?
 

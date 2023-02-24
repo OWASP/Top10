@@ -59,7 +59,7 @@ Standard (PCI DSS). Para todos esses dados:
 - Estão em uso funções hash obsoletas, como MD5 ou SHA1, ou funções hash não criptográficas
     usadas quando funções hash criptográficas são necessárias?
 
-- Estão em uso métodos de preenchimento criptográfico obsoletos, como PCKS número 1 v1.5?
+- Estão em uso métodos de preenchimento criptográfico obsoletos, como PKCS número 1 v1.5?
 
 - As mensagens de erro criptográficas ou as informações do canal lateral podem ser exploradas,
     por exemplo, na forma de ataques oracle de preenchimento?
