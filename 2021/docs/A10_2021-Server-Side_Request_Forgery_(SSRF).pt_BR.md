@@ -1,4 +1,4 @@
-# A10:2021 – Falsificação de Solicitação do Lado do Servidor (SSRF)    ![icon](assets/TOP_10_Icons_Final_SSRF.png)
+# A10:2021 – Falsificação de Solicitação do Lado do Servidor (SSRF)    ![icon](assets/TOP_10_Icons_Final_SSRF.png){: style="height:80px;width:80px" align="right"}
 
 ## Fatores
 
