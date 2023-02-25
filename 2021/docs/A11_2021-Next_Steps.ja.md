@@ -33,7 +33,7 @@ OWASPトップ10は、建て付け上、最も重要な10のリスクに限定�
 -   **攻撃シナリオ例** 攻撃者は、ある操作が完了するのに5～10秒かかると判断したとします。4つのスレッドを同時に実行するとサーバーが応答しなくなるように見えると、攻撃者は1000個のスレッドを使用し、システム全体をオフラインにします。
 
 -   **参考文献**
-    - [OWASP Cheet Sheet: Denial of Service](https://cheatsheetseries.owasp.org/cheatsheets/Denial_of_Service_Cheat_Sheet.html)
+    - [OWASP Cheat Sheet: Denial of Service](https://cheatsheetseries.owasp.org/cheatsheets/Denial_of_Service_Cheat_Sheet.html)
     
     - [OWASP Attacks: Denial of Service](https://owasp.org/www-community/attacks/Denial_of_Service)
 
@@ -125,7 +125,7 @@ identify and remediate.
     attacker uses 1000 threads and takes the entire system offline.
 
 -   **References**
-    - [OWASP Cheet Sheet: Denial of Service](https://cheatsheetseries.owasp.org/cheatsheets/Denial_of_Service_Cheat_Sheet.html)
+    - [OWASP Cheat Sheet: Denial of Service](https://cheatsheetseries.owasp.org/cheatsheets/Denial_of_Service_Cheat_Sheet.html)
     
     - [OWASP Attacks: Denial of Service](https://owasp.org/www-community/attacks/Denial_of_Service)
 

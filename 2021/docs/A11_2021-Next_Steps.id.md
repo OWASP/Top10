@@ -35,7 +35,7 @@ Bagi organisasi yang sedang menuju ke program appsec yang matang atau konsultasi
 -   **Contoh skenario serangan**. Penyerang mungkin mendapatkan bahwa suatu operasi makan waktu 5-10 detik sampai selesai ketika menjalankan empat thread konkuren, server tampaknya berhenti merespon. Penyerang memakai 1000 thread dan membuat seluruh sistem luring.
 
 -   **Referensi**
-    - [OWASP Cheet Sheet: Denial of Service](https://cheatsheetseries.owasp.org/cheatsheets/Denial_of_Service_Cheat_Sheet.html)
+    - [OWASP Cheat Sheet: Denial of Service](https://cheatsheetseries.owasp.org/cheatsheets/Denial_of_Service_Cheat_Sheet.html)
     
     - [OWASP Attacks: Denial of Service](https://owasp.org/www-community/attacks/Denial_of_Service)
 

@@ -60,7 +60,7 @@ identificate e risolte.
     utilizza 1000 thread e porta l'intero sistema offline.
 
 -   **Riferimenti**
-    - [OWASP Cheet Sheet: Denial of Service](https://cheatsheetseries.owasp.org/cheatsheets/Denial_of_Service_Cheat_Sheet.html)
+    - [OWASP Cheat Sheet: Denial of Service](https://cheatsheetseries.owasp.org/cheatsheets/Denial_of_Service_Cheat_Sheet.html)
     
     - [OWASP Attacks: Denial of Service](https://owasp.org/www-community/attacks/Denial_of_Service)
 

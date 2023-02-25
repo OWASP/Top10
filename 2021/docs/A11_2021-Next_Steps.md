@@ -68,7 +68,7 @@ identify and remediate.
     attacker uses 1000 threads and takes the entire system offline.
 
 -   **References**
-    - [OWASP Cheet Sheet: Denial of Service](https://cheatsheetseries.owasp.org/cheatsheets/Denial_of_Service_Cheat_Sheet.html)
+    - [OWASP Cheat Sheet: Denial of Service](https://cheatsheetseries.owasp.org/cheatsheets/Denial_of_Service_Cheat_Sheet.html)
     
     - [OWASP Attacks: Denial of Service](https://owasp.org/www-community/attacks/Denial_of_Service)
 

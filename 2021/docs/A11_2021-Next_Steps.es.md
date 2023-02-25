@@ -37,7 +37,7 @@ Considere los controles de acceso para objetos más grandes para asegurarse de q
 -   **Ejemplos de escenarios de ataque**. Un atacante podría determinar que una operación tarda entre 5 y 10 segundos en completarse. Cuando se ejecutan cuatro subprocesos simultáneos, el servidor parece dejar de responder. El atacante entonces usa 1000 subprocesos y saca de servicio todo el sistema.
 
 -   **Referencias**
-  - [OWASP Cheet Sheet: Denial of Service](https://cheatsheetseries.owasp.org/cheatsheets/Denial_of_Service_Cheat_Sheet.html)
+  - [OWASP Cheat Sheet: Denial of Service](https://cheatsheetseries.owasp.org/cheatsheets/Denial_of_Service_Cheat_Sheet.html)
 
   - [OWASP Attacks: Denial of Service](https://owasp.org/www-community/attacks/Denial_of_Service)
 
