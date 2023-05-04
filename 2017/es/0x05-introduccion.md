@@ -20,7 +20,7 @@ Uno de los principales objetivos del Top 10 de OWASP es educar a los desarrollad
 
 **Izquierda, derecha y todos lados**. Enfóquese en hacer de la seguridad una parte integral de la cultura en su organización de desarrollo. Obtenga más información en [OWASP Modelo de Madurez de Aseguramiento del Software](https://www.owasp.org/index.php/OWASP_SAMM_Project).
 
-##Atribución
+## Atribución
 
 Quisiéramos agradecer a las organizaciones que contribuyeron con sus datos de vulnerabilidades para apoyar la actualización de 2017. Recibimos más de 40 respuestas a la llamada de datos. Por primera vez, todos los datos que han contribuido a una publicación del Top 10, así como la lista completa de colaboradores, están a disposición del público. Creemos que esta es una de las colecciones más grandes y diversas de datos sobre vulnerabilidades que se hayan recopilado públicamente.
 
