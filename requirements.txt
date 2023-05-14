@@ -6,3 +6,5 @@ mkdocs-material
 pymdown-extensions
 Pygments
 mkdocs-static-i18n
+mkdocs-macros-plugin
+dacite
