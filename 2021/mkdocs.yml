@@ -221,3 +221,26 @@ plugins:
           A09 Security Logging and Monitoring Failures: A09 安全记录及监控失效
           A10 Server Side Request Forgery (SSRF): A10 服务端请求伪造
           Next Steps: 下一步
+  - macros:     # needs to be the last plugin to export the final osib-YAML file for all languages
+     module_name: 'osib_macro'
+     include_dir: include
+     verbose: false                                                  # debug
+     on_error_fail: false
+
+extra:
+    osib:
+     document:     osib.owasp.top10                    # e.g. osib.owasp.top10
+     version:      4-0, 2021-1-0    # e.g. 4-0, 2021-1-0
+     categories:   [document, awareness]        # list of all default categories
+     default_lang: en
+     yaml_file:    include/osib.yml
+     export_dir:   export
+     latest:       2                            # 2: add the latest version(s), if successor(s) exist, log an info
+     debug:        0                            # debug level (0-3)
+     cre:          osib.owasp.cre.1-0
+     successor_texts:
+       en:         successor
+       de:         Nachfolger
+     split_to_texts:
+       en:         splitted to
+       de:         Aufgeteilt in
