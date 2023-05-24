@@ -29,7 +29,7 @@ Pengembang dapat mencegah terjadinya _SSRF_ dengan mengimplementasikan beberapa 
 - Terapkan kebijakan firewall _deny by default_ atau aturan kontrol akses jaringan untuk memblokir semua lalu lintas eksternal kecuali lalu lintas intranet yang penting.  
   _Petunjuk:_  
   ~ Buat / Bangunlah siklus hidup dan hak kepemilikan untuk peraturan firewall berdasarkan aplikasinya.  
-  ~ Catat semua akses jaringan yang melewati firewall baik akses jaringan yang diterima ataupun yang diblokir/tolak (lihat [A09:2021-Security Logging and Monitoring Failures](A09_2021 Security_Logging_and_Monitoring_Failures.md)).  
+  ~ Catat semua akses jaringan yang melewati firewall baik akses jaringan yang diterima ataupun yang diblokir/tolak (lihat [A09:2021-Security Logging and Monitoring Failures](A09_2021-Security_Logging_and_Monitoring_Failures.id.md)).
 
 ### Dari Application Layer
 
