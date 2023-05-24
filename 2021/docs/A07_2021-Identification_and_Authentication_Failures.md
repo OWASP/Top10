@@ -122,7 +122,7 @@ still authenticated.
 -   [OWASP Automated Threats
     Handbook](https://owasp.org/www-project-automated-threats-to-web-applications/)
 
--   NIST 800-63b: 5.1.1 Memorized Secrets
+-   [NIST 800-63b: 5.1.1 Memorized Secrets](https://pages.nist.gov/800-63-3/sp800-63b.html#memsecret)
 
 ## List of Mapped CWEs
 
