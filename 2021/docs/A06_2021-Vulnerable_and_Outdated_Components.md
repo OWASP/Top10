@@ -112,7 +112,7 @@ patched in April 2014.
 
 - [Retire.js for detecting known vulnerable JavaScript libraries](https://github.com/retirejs/retire.js/)
 
-- [Node Libraries Security Advisories](https://nodesecurity.io/advisories)
+- [GitHub Advisory Database](https://github.com/advisories)
 
 - [Ruby Libraries Security Advisory Database and Tools](https://rubysec.com/)
 
