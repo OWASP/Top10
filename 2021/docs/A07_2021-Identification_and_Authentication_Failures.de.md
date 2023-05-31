@@ -14,49 +14,49 @@ Früher bekannt als *Broken Authentication*, ist diese Kategorie von der zweiten
 
 Die Bestätigung der Identität des Benutzers, die Authentifizierung und die Sitzungsverwaltung sind für den Schutz vor authentifizierungsbezogenen Angriffen von entscheidender Bedeutung. Es kann zu Authentifizierungsschwächen kommen, wenn die Anwendung:
 
-– Ermöglicht automatisierte Angriffe wie Credential Stuffing, bei denen der Angreifer über eine Liste gültiger Benutzernamen und Passwörter verfügt.
+– Automatisierte Angriffe wie Credential Stuffing ermöglicht, bei denen der Angreifer über eine Liste gültiger Benutzernamen und Passwörter verfügt.
 
-- Ermöglicht Brute-Force- oder andere automatisierte Angriffe.
+- Brute-Force- oder andere automatisierte Angriffe ermöglicht.
 
-– Ermöglicht standardmäßige, schwache oder bekannte Passwörter wie „Passwort1“ oder „admin/admin“.
+– Standardmäßige, schwache oder bekannte Passwörter wie „Passwort1“ oder „admin/admin“ verwendet werden.
 
-- Verwendet schwache oder ineffektive Verfahren zur Wiederherstellung von Anmeldeinformationen und zum Vergessen von Passwörtern, wie z. B. „wissensbasierte Antworten“, die nicht sicher gemacht werden können.
+- Schwache oder ineffektive Verfahren zur Wiederherstellung von Anmeldeinformationen und zum Vergessen von Passwörtern, wie z. B. „wissensbasierte Antworten“, die nicht sicher gemacht werden können, verwendet werden.
 
-– Verwendet reine Text-, verschlüsselte oder schwach gehashte Passwort-Datenspeicher (siehe [A02:2021-Cryptographic Failures](A02_2021-Cryptographic_Failures.md)).
+– Reine Text-, verschlüsselte oder schwach gehashte Passwort-Datenspeicher (siehe [A02:2021-Cryptographic Failures](A02_2021-Cryptographic_Failures.md)) verwendet werden.
 
-- Fehlende oder ineffektive Multi-Faktor-Authentifizierung.
+- Eine Multi-Faktor-Authentifizierung fehlt oder nur ineffektiv implementiert wurde.
 
-– Legt die Sitzungskennung in der URL offen.
+– Die Sitzungskennung in der URL dargestellt wird.
 
-- Sitzungskennung nach erfolgreicher Anmeldung wiederverwenden.
+- Die Sitzungskennung nach erfolgreicher Anmeldung wiederverwendet werden kann.
 
-– Sitzungs-IDs werden nicht korrekt ungültig gemacht. Benutzersitzungen oder Authentifizierungstoken (hauptsächlich Single-Sign-On-Tokens (SSO)) werden beim Abmelden oder während eines Zeitraums der Inaktivität nicht ordnungsgemäß ungültig gemacht.
+– Die Sitzungs-IDs nicht korrekt ungültig gemacht werden. Benutzersitzungen oder Authentifizierungstoken (hauptsächlich Single-Sign-On-Tokens (SSO)) werden beim Abmelden oder während eines Zeitraums der Inaktivität nicht ordnungsgemäß ungültig gemacht.
 
-## Wie man etwas vorbeugt
+## Gegenmaßnahmen
 
 - Implementieren Sie nach Möglichkeit eine Multi-Faktor-Authentifizierung, um automatisiertes Credential Stuffing, Brute Force und Angriffe auf die Wiederverwendung gestohlener Credentials zu verhindern.
 
-– Nicht mit Standardanmeldeinformationen versenden oder bereitstellen, insbesondere nicht für Administratorbenutzer.
+– Setzen Sie keine Software ein, in der noch die Standardanmeldeinformationen verwendet werden, insbesondere nicht für Administratorbenutzer.
 
 - Implementieren Sie schwache Passwortprüfungen, z. B. das Testen neuer oder geänderter Passwörter anhand der Liste der 10.000 schlechtesten Passwörter.
 
 - Passen Sie die Richtlinien für Passwortlänge, -komplexität und -rotation an die Richtlinien des National Institute of Standards and Technology (NIST) 800-63b in Abschnitt 5.1.1 für gespeicherte Geheimnisse oder andere moderne, evidenzbasierte Passwortrichtlinien an.
 
-– Stellen Sie sicher, dass die Registrierung, die Wiederherstellung von Anmeldeinformationen und die API-Pfade gegen Kontoaufzählungsangriffe geschützt sind, indem Sie für alle Ergebnisse dieselben Nachrichten verwenden.
+– Stellen Sie sicher, dass die Registrierung, die Wiederherstellung von Anmeldeinformationen und die API-Pfade gegen "Account Enumeration"-Angriffe geschützt sind, indem Sie für alle Prüfungsergebnisse dieselbe Nachricht verwenden.
 
-- Begrenzen oder verzögern Sie fehlgeschlagene Anmeldeversuche zunehmend, achten Sie jedoch darauf, kein Denial-of-Service-Szenario zu schaffen. Protokollieren Sie alle Fehler und benachrichtigen Sie Administratoren, wenn Credential Stuffing, Brute Force oder andere Angriffe erkannt werden.
+- Begrenzen sie die Anzahl oder verlängern Sie die Wartezeit Sie fehlgeschlagene Anmeldeversuche zunehmend, achten Sie jedoch darauf, kein Denial-of-Service-Szenario zu schaffen. Protokollieren Sie alle Fehler und benachrichtigen Sie Administratoren, wenn Credential Stuffing, Brute Force oder andere Angriffe erkannt werden.
 
-- Verwenden Sie einen serverseitigen, sicheren, integrierten Sitzungsmanager, der nach der Anmeldung eine neue zufällige Sitzungs-ID mit hoher Entropie generiert. Die Sitzungskennung sollte nicht in der URL enthalten sein, sicher gespeichert und nach Abmeldung, Leerlauf und absoluten Zeitüberschreitungen ungültig gemacht werden.
+- Verwenden Sie einen serverseitigen, sicheren, integrierten Sitzungsmanager, der nach der Anmeldung eine neue zufällige Sitzungs-ID mit hoher Entropie generiert. Die Sitzungskennung sollte nicht in der URL enthalten sein, sicher gespeichert und nach Abmeldung, Leerlauf und nach Überschreiten einer Gültigkeitsdauer ungültig gemacht werden.
 
 ## Beispielangriffsszenarien
 
 **Szenario Nr. 1:** Credential Stuffing, die Verwendung von Listen bekannter Passwörter, ist ein häufiger Angriff. Angenommen, eine Anwendung implementiert keinen automatisierten Bedrohungs- oder Credential-Stuffing-Schutz. In diesem Fall kann die Anwendung als Passwort-Orakel verwendet werden, um festzustellen, ob die Anmeldeinformationen gültig sind.
 
-**Szenario Nr. 2:** Die meisten Authentifizierungsangriffe erfolgen aufgrund der fortgesetzten Verwendung von Passwörtern als einzigem Faktor. Einmal als Best Practices betrachtet, ermutigen Anforderungen an die Passwortrotation und -komplexität Benutzer dazu, schwache Passwörter zu verwenden und wiederzuverwenden. Organisationen wird empfohlen, diese Praktiken gemäß NIST 800-63 zu stoppen und die Multi-Faktor-Authentifizierung zu verwenden.
+**Szenario Nr. 2:** Die meisten Authentifizierungsangriffe erfolgen aufgrund der kontinuierlichen Verwendung von Passwörtern als einzigem Faktor. Einmal als Best Practices betrachtet, ermutigen Anforderungen an die Passwortänderungen und -komplexität Benutzer dazu, schwache Passwörter zu verwenden und wiederzuverwenden. Organisationen wird empfohlen, diese Praktiken gemäß NIST 800-63 zu stoppen und eine Multi-Faktor-Authentifizierung zu verwenden.
 
-**Szenario Nr. 3:** Zeitüberschreitungen für Anwendungssitzungen sind nicht richtig eingestellt. Ein Benutzer verwendet einen öffentlichen Computer, um auf eine Anwendung zuzugreifen. Anstatt „Abmelden“ auszuwählen, schließt der Benutzer einfach den Browser-Tab und geht weg. Eine Stunde später verwendet ein Angreifer denselben Browser und der Benutzer ist immer noch authentifiziert.
+**Szenario Nr. 3:** Die Maximaldauer für Anwendungssitzungen ist nicht richtig eingestellt. Ein Benutzer verwendet einen öffentlichen Computer, um auf eine Anwendung zuzugreifen. Anstatt „Abmelden“ auszuwählen, schließt der Benutzer einfach den Browser-Tab und geht weg. Eine Stunde später verwendet ein Angreifer denselben Browser und der Benutzer ist immer noch authentifiziert.
 
-## Verweise
+## Referenzen
 
 - [OWASP Proactive Controls: Digitale Identität implementieren](https://owasp.org/www-project-proactive-controls/v3/en/c6-digital-identity)
 

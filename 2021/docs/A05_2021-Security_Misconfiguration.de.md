@@ -14,35 +14,35 @@ Im Vergleich zu Platz 6 in der vorherigen Ausgabe wurden 90 % der Anwendungen au
 
 Die Anwendung ist möglicherweise anfällig, wenn die Anwendung:
 
-– Fehlende angemessene Sicherheitshärtung in irgendeinem Teil des Anwendungsstapels oder falsch konfigurierte Berechtigungen für Cloud-Dienste.
+– Eine angemessene Sicherheitshärtung in irgendeinem Teil des Anwendungsstacks fehlt oder Berechtigungen für Cloud-Dienste falsch konfiguriert sind.
 
-- Unnötige Funktionen werden aktiviert oder installiert (z. B. unnötige Ports, Dienste, Seiten, Konten oder Berechtigungen).
+- Unnötige Funktionen aktiviert oder installiert werden (z. B. unnötige Ports, Dienste, Seiten, Konten oder Berechtigungen).
 
-- Standardkonten und ihre Passwörter sind weiterhin aktiviert und unverändert.
+- Standardkonten und ihre Passwörter aktiviert und unverändert bleiben.
 
-- Bei der Fehlerbehandlung werden den Benutzern Stapelspuren oder andere übermäßig informative Fehlermeldungen angezeigt.
+- Bei der Fehlerbehandlung den Benutzern Stack-Spuren oder andere übermäßig informative Fehlermeldungen angezeigt werden.
 
-– Bei aktualisierten Systemen sind die neuesten Sicherheitsfunktionen deaktiviert oder nicht sicher konfiguriert.
+– Bei aktualisierten Systemen die neuesten Sicherheitsfunktionen deaktiviert oder nicht sicher konfiguriert sind.
 
-- Die Sicherheitseinstellungen in den Anwendungsservern, Anwendungsframeworks (z. B. Struts, Spring, ASP.NET), Bibliotheken, Datenbanken usw. sind nicht auf sichere Werte eingestellt.
+- Die Sicherheitseinstellungen in den Anwendungsservern, Anwendungsframeworks (z. B. Struts, Spring, ASP.NET), Bibliotheken, Datenbanken usw. nicht auf sichere Werte eingestellt sind.
 
-– Der Server sendet keine Sicherheitsheader oder Anweisungen oder diese sind nicht auf sichere Werte eingestellt.
+– Der Server keine Sicherheitsheader oder Anweisungen sendet oder diese nicht auf sichere Werte eingestellt sind.
 
-- Die Software ist veraltet oder anfällig (siehe [A06:2021-Vulnerable and Outdated Components](A06_2021-Vulnerable_and_Outdated_Components.md)).
+- Die Software veraltet oder anfällig ist (siehe [A06:2021-Vulnerable and Outdated Components](A06_2021-Vulnerable_and_Outdated_Components.md)).
 
 Ohne einen konzertierten, wiederholbaren Konfigurationsprozess für die Anwendungssicherheit sind Systeme einem höheren Risiko ausgesetzt.
 
-## Wie man etwas vorbeugt
+## Gegenmaßnahmen
 
 Es sollten sichere Installationsprozesse implementiert werden, darunter:
 
-- Ein wiederholbarer Härtungsprozess ermöglicht die schnelle und einfache Bereitstellung einer anderen Umgebung, die entsprechend gesperrt ist. Entwicklungs-, Qualitätssicherungs- und Produktionsumgebungen sollten alle identisch konfiguriert sein, wobei in jeder Umgebung unterschiedliche Anmeldeinformationen verwendet werden sollten. Dieser Prozess sollte automatisiert werden, um den Aufwand für die Einrichtung einer neuen sicheren Umgebung zu minimieren.
+- Ein wiederholbarer Härtungsprozess soll die schnelle und einfache Bereitstellung einer anderen Umgebung ermöglichen, die entsprechend abgesichert ist. Entwicklungs-, Qualitätssicherungs- und Produktionsumgebungen sollten alle identisch konfiguriert sein, wobei in jeder Umgebung unterschiedliche Anmeldeinformationen verwendet werden sollten. Dieser Prozess sollte automatisiert werden, um den Aufwand für die Einrichtung einer neuen sicheren Umgebung zu minimieren.
 
 - Eine minimale Plattform ohne unnötige Funktionen, Komponenten, Dokumentation und Beispiele. Entfernen Sie nicht verwendete Funktionen und Frameworks oder installieren Sie sie nicht.
 
-– Eine Aufgabe zum Überprüfen und Aktualisieren der Konfigurationen, die für alle Sicherheitshinweise, Updates und Patches im Rahmen des Patch-Verwaltungsprozesses geeignet sind (siehe [A06:2021-Vulnerable and Outdated Components](A06_2021-Vulnerable_and_Outdated_Components.md)). Überprüfen Sie die Cloud-Speicherberechtigungen (z. B. S3-Bucket-Berechtigungen).
+– Die Konfigurationen sollen regelmäßig auf Sicherheitshinweise, Updates und geeignete Patches überprüft und aktualisiert werden (siehe [A06:2021-Vulnerable and Outdated Components](A06_2021-Vulnerable_and_Outdated_Components.md)). Überprüfen der Cloud-Speicherberechtigungen (z. B. S3-Bucket-Berechtigungen).
 
-– Eine segmentierte Anwendungsarchitektur sorgt mit Segmentierung, Containerisierung oder Cloud-Sicherheitsgruppen (ACLs) für eine effektive und sichere Trennung zwischen Komponenten oder Mandanten.
+– Eine segmentierte Anwendungsarchitektur sorgt durch Segmentierung, Containerisierung oder Cloud-Sicherheitsgruppen (ACLs) für eine effektive und sichere Trennung zwischen Komponenten oder Mandanten.
 
 - Senden von Sicherheitsanweisungen an Clients, z. B. Sicherheitsheader.
 
@@ -50,15 +50,15 @@ Es sollten sichere Installationsprozesse implementiert werden, darunter:
 
 ## Beispielangriffsszenarien
 
-**Szenario Nr. 1:** Der Anwendungsserver wird mit Beispielanwendungen geliefert, die nicht vom Produktionsserver entfernt wurden. Diese Beispielanwendungen weisen bekannte Sicherheitslücken auf, die Angreifer nutzen, um den Server zu gefährden. Angenommen, eine dieser Anwendungen ist die Admin-Konsole und die Standardkonten wurden nicht geändert. In diesem Fall meldet sich der Angreifer mit Standardkennwörtern an und übernimmt die Kontrolle.
+**Szenario Nr. 1:** Der Anwendungsserver wird mit Beispielanwendungen geliefert, die nicht vom Produktionsserver entfernt wurden. Diese Beispielanwendungen weisen bekannte Sicherheitslücken auf, die Angreifer ausnutzen, um den Server zu gefährden. Angenommen, eine dieser Anwendungen ist die Admin-Konsole und die Standardkonten wurden nicht geändert. In diesem Fall meldet sich der Angreifer mit Standardkennwörtern an und übernimmt die Kontrolle.
 
-**Szenario Nr. 2:** Die Verzeichnisliste ist auf dem Server nicht deaktiviert. Ein Angreifer entdeckt, dass er einfach Verzeichnisse auflisten kann. Der Angreifer findet die kompilierten Java-Klassen und lädt sie herunter, dekompiliert sie und entwickelt sie zurück, um den Code anzuzeigen. Der Angreifer findet dann einen schwerwiegenden Fehler in der Zugriffskontrolle in der Anwendung.
+**Szenario Nr. 2:** Die Verzeichnisliste ist auf dem Server nicht deaktiviert. Ein Angreifer entdeckt, dass er einfach Verzeichnisse auflisten kann. Der Angreifer findet die kompilierten Java-Klassen und lädt sie herunter, dekompiliert sie und führt Reverse-Engineering durch, um den Code anzuzeigen. Der Angreifer findet dann einen schwerwiegenden Fehler in der Zugriffskontrolle in der Anwendung.
 
-**Szenario Nr. 3:** Die Konfiguration des Anwendungsservers ermöglicht die Rückgabe detaillierter Fehlermeldungen, z. B. Stack-Traces, an Benutzer. Dadurch werden möglicherweise vertrauliche Informationen oder zugrunde liegende Fehler wie Komponentenversionen offengelegt, die bekanntermaßen anfällig sind.
+**Szenario Nr. 3:** Die Konfiguration des Anwendungsservers ermöglicht die Ausgabe detaillierter Fehlermeldungen, z. B. von Stack-Traces, an Benutzer. Dadurch werden möglicherweise vertrauliche Informationen oder zugrunde liegende Fehler wie Komponentenversionen offengelegt, die bekanntermaßen anfällig sind.
 
 **Szenario Nr. 4:** Ein Cloud-Dienstanbieter (CSP) verfügt über standardmäßige Freigabeberechtigungen für das Internet durch andere CSP-Benutzer. Dies ermöglicht den Zugriff auf sensible Daten, die im Cloud-Speicher gespeichert sind.
 
-## Verweise
+## Referenzen
 
 - [OWASP-Testleitfaden: Konfigurationsmanagement](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/README)
 

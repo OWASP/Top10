@@ -8,13 +8,13 @@
 
 ## Überblick
 
-Sicherheitsprotokollierung und -überwachung stammen aus der Top-10-Community-Umfrage (Nr. 3) und liegen damit leicht über dem zehnten Platz in den OWASP Top 10 2017. Protokollierung und Überwachung können schwierig zu testen sein und erfordern oft Interviews oder die Frage, ob während eines Eindringens Angriffe erkannt wurden prüfen. Für diese Kategorie gibt es nicht viele CVE/CVSS-Daten, aber die Erkennung und Reaktion auf Verstöße ist von entscheidender Bedeutung. Dennoch kann es große Auswirkungen auf die Verantwortlichkeit, Sichtbarkeit, Alarmierung von Vorfällen und die Forensik haben. Diese Kategorie geht über *CWE-778 Unzureichende Protokollierung* hinaus und umfasst *CWE-117 Unsachgemäße Ausgabeneutralisierung für Protokolle*, *CWE-223 Weglassen sicherheitsrelevanter Informationen* und *CWE-532* *Einfügung vertraulicher Informationen in die Protokolldatei *.
+Sicherheitsprotokollierung und -überwachung stammen aus der Top-10-Community-Umfrage (Nr. 3) und liegen damit leicht über dem zehnten Platz in den OWASP Top 10 2017. Protokollierung und Überwachung können schwierig zu testen sein und erfordern oft Interviews oder die Frage, ob während eines Eindringens Angriffe erkannt wurden prüfen. Für diese Kategorie gibt es nicht viele CVE/CVSS-Daten, aber die Erkennung und Reaktion auf Verstöße ist von entscheidender Bedeutung. Dennoch kann es große Auswirkungen auf die Verantwortlichkeit, Sichtbarkeit, Alarmierung von Vorfällen und die Forensik haben. Diese Kategorie geht über *CWE-778 Unzureichende Protokollierung* hinaus und umfasst *CWE-117 Unsachgemäße Ausgabeneutralisierung für Protokolle*, *CWE-223 Weglassen sicherheitsrelevanter Informationen* und *CWE-532* *Einfügung vertraulicher Informationen in die Protokolldatei*.
 
 ## Beschreibung
 
-Zurück zu den OWASP Top 10 2021: Diese Kategorie soll dabei helfen, aktive Verstöße zu erkennen, zu eskalieren und darauf zu reagieren. Ohne Protokollierung und Überwachung können Verstöße nicht erkannt werden. Es kommt jederzeit zu unzureichender Protokollierung, Erkennung, Überwachung und aktiver Reaktion:
+Zurück zu den OWASP Top 10 2021: Diese Kategorie soll dabei helfen, aktive Verstöße zu erkennen, zu eskalieren und darauf zu reagieren. Ohne Protokollierung und Überwachung können Verstöße nicht erkannt werden. Es kommt jederzeit zu unzureichender Protokollierung, Erkennung, Überwachung und fehlender Reaktion:
 
-– Überprüfbare Ereignisse wie Anmeldungen, fehlgeschlagene Anmeldungen und Transaktionen mit hohem Wert werden nicht protokolliert.
+– Überprüfbare Ereignisse wie Anmeldungen, fehlgeschlagene Anmeldungen und Finanztransaktionen von hohem Wert werden nicht protokolliert.
 
 - Warnungen und Fehler erzeugen keine, unzureichende oder unklare Protokollmeldungen.
 
@@ -22,19 +22,17 @@ Zurück zu den OWASP Top 10 2021: Diese Kategorie soll dabei helfen, aktive Vers
 
 - Protokolle werden nur lokal gespeichert.
 
-- Angemessene Warnschwellen und Reaktionseskalationsprozesse sind nicht vorhanden oder wirksam.
+- Angemessene Warnschwellen und Reaktionseskalationsprozesse sind nicht vorhanden oder unwirksam.
 
 - Penetrationstests und Scans durch DAST-Tools (Dynamic Application Security Testing) (wie OWASP ZAP) lösen keine Warnungen aus.
 
 - Die Anwendung kann aktive Angriffe nicht in Echtzeit oder nahezu in Echtzeit erkennen, eskalieren oder darauf hinweisen.
 
-Durch die Protokollierung und Warnung besteht die Gefahr von Informationslecks
-Ereignisse, die für einen Benutzer oder einen Angreifer sichtbar sind (siehe [A01:2021-Broken Access Control](A01_2021-Broken_Access_Control.md)).
+Sie sind anfällig für Informationslecks, wenn Sie Protokollierungs- und Warnereignisse Benutzern oder Angreifern anzeigen (siehe [A01:2021-Broken Access Control](A01_2021-Broken_Access_Control.md)).
 
-## Wie man etwas vorbeugt
+## Gegenmaßnahmen
 
-Entwickler sollten einige oder alle der folgenden Steuerelemente implementieren:
-je nach Risiko der Anwendung:
+Abhängig vom Risiko der Anwendung sollten Entwickler einige oder alle der folgenden Kontrollen implementieren:
 
 – Stellen Sie sicher, dass alle Anmelde-, Zugriffskontroll- und serverseitigen Eingabevalidierungsfehler mit ausreichendem Benutzerkontext protokolliert werden können, um verdächtige oder böswillige Konten zu identifizieren, und ausreichend lange aufbewahrt werden können, um eine verzögerte forensische Analyse zu ermöglichen.
 
@@ -58,7 +56,7 @@ Es gibt kommerzielle und Open-Source-Anwendungsschutz-Frameworks wie das OWASP M
 
 **Szenario Nr. 3:** Eine große europäische Fluggesellschaft erlitt einen meldepflichtigen Verstoß gegen die DSGVO. Der Verstoß wurde Berichten zufolge durch Sicherheitslücken in Zahlungsanwendungen verursacht, die von Angreifern ausgenutzt wurden und mehr als 400.000 Zahlungsdatensätze von Kunden abgegriffen haben. Die Datenschutzbehörde verhängte daraufhin eine Geldstrafe von 20 Millionen Pfund gegen die Fluggesellschaft.
 
-## Verweise
+## Referenzen
 
 - [OWASP Proactive Controls: Protokollierung und Überwachung implementieren](https://owasp.org/www-project-proactive-controls/v3/en/c9-security-logging.html)
 
