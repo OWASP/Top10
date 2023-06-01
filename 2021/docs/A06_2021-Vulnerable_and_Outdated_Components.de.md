@@ -52,27 +52,27 @@ Es gibt automatisierte Tools, die Angreifern helfen, nicht gepatchte oder falsch
 
 ## Referenzen
 
-- OWASP Application Security Verification Standard: V1 Architektur, Design und Bedrohungsmodellierung
+- [OWASP Application Security Verification Standard: V1 Architecture, design and threat modelling](/www-project-application-security-verification-standard)
 
-- OWASP-Abhängigkeitsprüfung (für Java- und .NET-Bibliotheken)
+- [OWASP Dependency Check (for Java and .NET libraries)](/www-project-dependency-check)
 
-– OWASP-Testleitfaden – Kartenanwendungsarchitektur (OTG-INFO-010)
+- [OWASP Testing Guide - Map Application Architecture (OTG-INFO-010)](/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/01-Information_Gathering/10-Map_Application_Architecture)
 
-- Best Practices für das virtuelle Patchen von OWASP
+- [OWASP Virtual Patching Best Practices](/www-community/Virtual_Patching_Best_Practices)
 
-– Die unglückliche Realität unsicherer Bibliotheken
+- [The Unfortunate Reality of Insecure Libraries](https://cdn2.hubspot.net/hub/203759/file-1100864196-pdf/docs/Contrast_-_Insecure_Libraries_2014.pdf)
 
-- MITRE-Suche nach Common Vulnerabilities and Exposures (CVE).
+- [MITRE Common Vulnerabilities and Exposures (CVE) search](https://www.cvedetails.com/version-search.php)
 
-- Nationale Schwachstellendatenbank (NVD)
+- [National Vulnerability Database (NVD)](https://nvd.nist.gov/)
 
-– Retire.js zum Erkennen bekanntermaßen anfälliger JavaScript-Bibliotheken
+- [Retire.js for detecting known vulnerable JavaScript libraries](https://github.com/retirejs/retire.js/)
 
-- Sicherheitshinweise für Knotenbibliotheken
+- [GitHub Advisory Database](https://github.com/advisories)
 
-- [Ruby Libraries Security Advisory Database and Tools]()
+- [Ruby Libraries Security Advisory Database and Tools](https://rubysec.com/)
 
--   https://safecode.org/publication/SAFECode_Software_Integrity_Controls0610.pdf
+- [SAFECode Software Integrity Controls \[PDF\]](https://safecode.org/publication/SAFECode_Software_Integrity_Controls0610.pdf)
 
 ## Liste der zugeordneten CWEs
 
