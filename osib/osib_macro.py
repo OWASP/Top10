@@ -4,7 +4,7 @@
 #!#                                                         Version: 2021-12-05
 #!# ------------------------------------------------------------------------------------------------------------------------------------------------
 #!#                            THIS Software is in BETA state, please give us feed back via the github repository
-#!#                                                   https://github.com/sslHello/OSIB-Test
+#!#                                                   https://github.com/OWASP/OSIB
 #!# ------------------------------------------------------------------------------------------------------------------------------------------------
 #!#
 #!# This MkDocs MACRO has been developed by the OWASP-Top 10 Project in 2021.
