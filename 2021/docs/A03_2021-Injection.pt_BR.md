@@ -96,7 +96,7 @@ pode resultar em consultas que ainda são vulneráveis
 Em ambos os casos, o invasor modifica o valor do parâmetro ‘_id_’ em seu
 navegador para enviar: _‘ or ‘1’=’1_. Por exemplo:
 ```
- http://example.com/app/accountView?id=' or '1'='1
+ http://example.com/app/accountView?id=' UNION SELECT SLEEP(10);--
 ```
 
 Isso muda o significado de ambas as consultas para retornar todos os registros da

@@ -34,9 +34,9 @@ Prévenir l’Injection exige de séparer les données non fiables des commandes
 
 `Query HQLQuery = session.createQuery("FROM accounts WHERE custID='" + request.getParameter("id") + "'");`
 
-Dans les deux cas, l'attaquant modifie le paramètre ‘id’ dans son navigateur en : ' or '1'='1. Par exemple :
+Dans les deux cas, l'attaquant modifie le paramètre ‘id’ dans son navigateur en : ' UNION SELECT SLEEP(10);--. Par exemple :
 
-`http://example.com/app/accountView?id=' or '1'='1`
+`http://example.com/app/accountView?id=' UNION SELECT SLEEP(10);--`
 
 Ceci change le sens de chacune des requêtes pour récupérer tous les enregistrements de la table des comptes. Dans le pire des cas, l’attaquant exploite cette faiblesse pour modifier ou détruire des données, ou appeler des procédures stockées de la base de données.
 

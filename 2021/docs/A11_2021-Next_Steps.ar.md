@@ -39,7 +39,7 @@
 -   **مثال على سيناريو هجوم**. -	قد يتوقع المهاجم أن كل عملية تستغرق لتنفيذها من 5 إلى 10 ثوانٍ حتى تكتمل. لذلك يقوم بتشغيل أربع عمليات في نفس الوقت ولها (thread) محدد، سيبدو لك أن الخادم قد يتوقف عن الاستجابة بسبب عملية الضغط. لذلك يعود المهاجم (1000 thread )  لكي يتعطل النظام ولا يستجيب بشكل كامل
 
 -   **المصادر**
-    - [OWASP Cheet Sheet: Denial of Service](https://cheatsheetseries.owasp.org/cheatsheets/Denial_of_Service_Cheat_Sheet.html)
+    - [OWASP Cheat Sheet: Denial of Service](https://cheatsheetseries.owasp.org/cheatsheets/Denial_of_Service_Cheat_Sheet.html)
     
     - [OWASP Attacks: Denial of Service](https://owasp.org/www-community/attacks/Denial_of_Service)
 

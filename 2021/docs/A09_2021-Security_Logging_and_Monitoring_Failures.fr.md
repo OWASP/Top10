@@ -50,7 +50,7 @@ On trouve des logiciels, commerciaux ou open source, de protection d'application
 -   [OWASP Proactive Controls: Implement Logging and
     Monitoring](https://owasp.org/www-project-proactive-controls/v3/en/c9-security-logging.html)
 
--   [OWASP Application Security Verification Standard: V8 Logging and
+-   [OWASP Application Security Verification Standard: V7 Logging and
     Monitoring](https://owasp.org/www-project-application-security-verification-standard)
 
 -   [OWASP Testing Guide: Testing for Detailed Error

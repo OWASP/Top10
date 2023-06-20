@@ -1,4 +1,4 @@
-# A10:2021 – Falsificação de Solicitação do Lado do Servidor (SSRF)    ![icon](assets/TOP_10_Icons_Final_SSRF.png)
+# A10:2021 – Falsificação de Solicitação do Lado do Servidor (SSRF)    ![icon](assets/TOP_10_Icons_Final_SSRF.png){: style="height:80px;width:80px" align="right"}
 
 ## Fatores
 
@@ -27,7 +27,7 @@ Os desenvolvedores podem evitar o SSRF implementando alguns ou todos os seguinte
 - *Dicas:*
 ~ Estabeleça uma propriedade e um ciclo de vida para regras de firewall baseadas em aplicativos.
 ~ Registrar todos os fluxos de rede aceitos *e* bloqueados em firewalls.
-(veja [A09:2021-Monitoramento de Falhas e Registros de Segurança](A09_2021-Security_Logging_and_Monitoring_Failures.pt-BR.md)).
+(veja [A09:2021-Monitoramento de Falhas e Registros de Segurança](A09_2021-Security_Logging_and_Monitoring_Failures.pt_BR.md)).
     
 ### **Para a Camada de Aplicação:**
 

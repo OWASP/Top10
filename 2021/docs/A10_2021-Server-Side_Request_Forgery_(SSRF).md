@@ -84,7 +84,7 @@ elapsed time to connect or reject SSRF payload connections.
 
 **Scenario #2:** Sensitive data exposure – Attackers can access local 
 files or internal services to gain sensitive information such
-as `file:///etc/passwd</span>` and `http://localhost:28017/`.
+as `file:///etc/passwd` and `http://localhost:28017/`.
 
 **Scenario #3:** Access metadata storage of cloud services – Most cloud
 providers have metadata storage such as `http://169.254.169.254/`. An

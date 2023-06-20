@@ -42,7 +42,7 @@ A aplicação pode ser vulnerável se for:
     não estão configurados para proteger os valores.
 
 - O software está desatualizado ou vulnerável (consulte
-  [A06: 2021-Componentes Vulneráveis e Desatualizados](A06_2021-Vulnerable_and_Outdated_Components.md)).
+  [A06: 2021-Componentes Vulneráveis e Desatualizados](A06_2021-Vulnerable_and_Outdated_Components.pt_BR.md)).
 
 Sem um processo de configuração de segurança de aplicações que seja integrado e
 repetível, os sistemas correm um risco maior.
@@ -64,7 +64,7 @@ Devem ser implementados processos de instalação segura, incluindo:
 - - Uma tarefa para revisar e atualizar as configurações apropriadas para todas
     as notas de segurança, atualizações e patches como parte do processo de
     gerenciamento de patch (consulte
-    [A06: 2021-Componentes Vulneráveis e Desatualizados](A06_2021 Vulnerable_and_Outdated_Components.md)).
+    [A06: 2021-Componentes Vulneráveis e Desatualizados](A06_2021-Vulnerable_and_Outdated_Components.pt_BR.md)).
     Revise as permissões de armazenamento em nuvem (por exemplo, _S3 bucket permissions_).
 
 - Uma arquitetura de aplicação segmentada fornece separação eficaz e

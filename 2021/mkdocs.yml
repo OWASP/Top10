@@ -91,7 +91,7 @@ plugins:
         id: id - Indonesian
         it: it - Italiano
         ja: ja - 日本語
-#        pt_BR: pt_BR - Português (Brasil) # not finished yet
+        pt_BR: pt_BR - Português (Brasil)
         zh_CN: zh_CN - 简体中文
         zh_TW: zh_TW - 繁體中文
 
@@ -154,23 +154,23 @@ plugins:
           A10 Server Side Request Forgery (SSRF): A10 Falsification de requête côté serveur (SSRF)
           Next Steps: Étapes suivantes
         id:
-          Home: Rumah
-          Notice: Memperhatikan
+          Home: Beranda
+          Notice: Pemberitahuan
           Introduction: Pengenalan
           How to use the OWASP Top 10 as a standard: Bagaimana cara menggunakan OWASP Top 10 sebagai sebuah standarisasi
           How to start an AppSec program with the OWASP Top 10: Bagaimana cara untuk memulai program AppSec dengan OWASP Top 10
           About OWASP: Tentang OWASP
-          Top 10:2021 List: Daftar top 10:2021
+          Top 10:2021 List: Daftar Top 10:2021
           A01 Broken Access Control: A01 Kerusakan Akses Kontrol
           A02 Cryptographic Failures: A02 Kegagalan Kriptografi
           A03 Injection: A03 Injeksi
           A04 Insecure Design: A04 Insecure Design
-          A05 Security Misconfiguration: A05 Miskonfigurasi Keamanan
+          A05 Security Misconfiguration: A05 Kesalahan Konfigurasi Keamanan 
           A06 Vulnerable and Outdated Components: A06 Komponen yang Rentan dan Kedaluwarsa
           A07 Identification and Authentication Failures: A07 Kegagalan Identifikasi dan Otentikasi
           A08 Software and Data Integrity Failures: A08 Kegagalan Integritas Data dan Perangkat Lunak
-          A09 Security Logging and Monitoring Failures: A09 Keamanan dalam mencatat dan Kesalahan dalam Memonitor
-          A10 Server Side Request Forgery (SSRF): A10 Server-Side Request Forgery (SSRF) - Pemalsuan Permintaan di Sisi Server
+          A09 Security Logging and Monitoring Failures: A09 Kegagalan dalam Keamanan Logging dan Monitoring 
+          A10 Server Side Request Forgery (SSRF): A10 Server-Side Request Forgery (SSRF)
           Next Steps: Langkah Selanjutnya
         it:
           Home: Casa
@@ -210,21 +210,25 @@ plugins:
           A09 Security Logging and Monitoring Failures: A09 セキュリティログとモニタリングの失敗
           A10 Server Side Request Forgery (SSRF): A10 サーバーサイドリクエストフォージェリ (SSRF)
           Next Steps: Next Steps
-#        pt_BR:
-#          Home: Início
-#          Notice: Notas
-#          Introduction: Introdução
-#          How to use the OWASP Top 10 as a standard: Como usar o OWASP Top 10 como padrão
-#          How to start an AppSec program with the OWASP Top 10: Como iniciar um programa AppSec com o OWASP Top 10
-#          About OWASP: Sobre OWASP
-#          Top 10:2021 List: Lista top 10:2021
-#          A01 Broken Access Control: A01 Quebra de Controle de Acesso
-#          A02 Cryptographic Failures: A02 Falhas Criptográficas
-#          A03 Injection: A03 Injeção
-#          A04 Insecure Design: A04 Design Inseguro
-#          A05 Security Misconfiguration: A05 Configuração Incorreta de Segurança
-#          A06 Vulnerable and Outdated Components: A06 Componentes Vulneráveis e Desatualizados
-#          Next Steps: Próximos passos
+        pt_BR:
+          Home: Início
+          Notice: Notas
+          Introduction: Introdução
+          How to use the OWASP Top 10 as a standard: Como usar o OWASP Top 10 como padrão
+          How to start an AppSec program with the OWASP Top 10: Como iniciar um programa AppSec com o OWASP Top 10
+          About OWASP: Sobre OWASP
+          Top 10:2021 List: Lista top 10:2021
+          A01 Broken Access Control: A01 Quebra de Controle de Acesso
+          A02 Cryptographic Failures: A02 Falhas Criptográficas
+          A03 Injection: A03 Injeção
+          A04 Insecure Design: A04 Design Inseguro
+          A05 Security Misconfiguration: A05 Configuração Incorreta de Segurança
+          A06 Vulnerable and Outdated Components: A06 Componentes Vulneráveis e Desatualizados
+          A07 Identification and Authentication Failures: A07 Falhas de identificação e autenticação
+          A08 Software and Data Integrity Failures: A08 Falhas de Software e Integridade de Dados
+          A09 Security Logging and Monitoring Failures: A09 Falhas de registro e monitoramento de segurança
+          A10 Server Side Request Forgery (SSRF): A10 Falsificação de Solicitação do Lado do Servidor (SSRF)
+          Next Steps: Próximos passos
         zh_TW:
           Home: 首頁
           Notice: 注意事項

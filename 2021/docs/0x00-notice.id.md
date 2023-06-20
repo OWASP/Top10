@@ -9,7 +9,7 @@ Rilis tanggal 24 September 2021
 - [Brian Glas](mailto:brian.glas@owasp.org) (twitter: [@infosecdad](https://twitter.com/infosecdad))
 - [Neil Smithline](mailto:neil.smithline@owasp.org) (twitter: [@appsecneil](https://twitter.com/appsecneil))
 - [Torsten Gigler](mailto:torsten.gigler@owasp.org) (twitter: [@torsten_tweet](https://twitter.com/torsten_tweet))
-- 
+
 ## Kontributor
 
 - Orange Tsai, penulis A10-2021: Server Side Request Forgery

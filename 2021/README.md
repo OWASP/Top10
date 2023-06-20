@@ -1,5 +1,7 @@
 # OWASP Top 10 2021
 
+Final Release
+
 ## Building a local copy
 
 Make sure Python 3 is installed. Optionally create a virtual environment.

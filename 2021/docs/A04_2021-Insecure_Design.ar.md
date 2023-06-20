@@ -38,7 +38,7 @@
 
 ## المصادر
 
--   [OWASP Cheat Sheet: Secure Design Principles](Coming Soon)
+-   [OWASP Cheat Sheet: Secure Design Principles](https://cheatsheetseries.owasp.org/cheatsheets/Secure_Product_Design_Cheat_Sheet.html)
 
 -   [OWASP SAMM: Design:Security Architecture](https://owaspsamm.org/model/design/security-architecture/)
 
@@ -131,5 +131,3 @@
 [CWE-1021 Improper Restriction of Rendered UI Layers or Frames](https://cwe.mitre.org/data/definitions/1021.html)
 
 [CWE-1173 Improper Use of Validation Framework](https://cwe.mitre.org/data/definitions/1173.html)
-
-

@@ -325,8 +325,8 @@
 <p><code>String query = &quot;SELECT * FROM accounts WHERE custID='&quot; + request.getParameter(&quot;id&quot;) + &quot;'&quot;;</code></p>
 <p><strong>Scenario #2</strong>: Similarly, an application’s blind trust in frameworks may result in queries that are still vulnerable, (e.g. Hibernate Query Language (HQL)):</p>
 <p><code>Query HQLQuery = session.createQuery(&quot;FROM accounts WHERE custID='&quot; + request.getParameter(&quot;id&quot;) + &quot;'&quot;);</code></p>
-<p>In both cases, the attacker modifies the ‘id’ parameter value in their browser to send: ' or '1'='1. For example:</p>
-<p><code>http://example.com/app/accountView?id=' or '1'='1</code></p>
+<p>In both cases, the attacker modifies the ‘id’ parameter value in their browser to send: ' UNION SELECT SLEEP(10);--. For example:</p>
+<p><code>http://example.com/app/accountView?id=' UNION SELECT SLEEP(10);--</code></p>
 <p>This changes the meaning of both queries to return all the records from the accounts table. More dangerous attacks could modify or delete data, or even invoke stored procedures.</p>
 <h2 id="references-1">References</h2>
 <h3 id="owasp-1">OWASP</h3>

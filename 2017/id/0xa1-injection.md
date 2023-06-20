@@ -37,7 +37,7 @@ Mencegah injeksi membutuhkan data terpisah dari perintah dan query.
 
 Dalam kedua kasus tersebut, penyerang memodifikasi nilai parameter 'id' di browser mereka untuk mengirim: 'atau' 1 '=' 1. Sebagai contoh:
 
-`http://example.com/app/accountView?id=' or '1'='1`
+`http://example.com/app/accountView?id=' UNION SELECT SLEEP(10);--`
 
 Ini mengubah arti kedua query untuk mengembalikan semua catatan dari tabel akun. Serangan yang lebih berbahaya bisa mengubah atau menghapus data, atau bahkan memanggil prosedur yang tersimpan.
 
