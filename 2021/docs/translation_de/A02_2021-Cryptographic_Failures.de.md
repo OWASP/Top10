@@ -19,7 +19,7 @@ lang:	"de"
 
 Beim Vorrücken um eine Position auf Platz 2, früher bekannt als *Sensible Data Exposure*, bei dem es sich eher um ein allgemeines Symptom als um eine Grundursache handelt, liegt der Schwerpunkt auf Fehlern im Zusammenhang mit der Kryptographie (oder deren Fehlen). Dies führt häufig zur Offenlegung sensibler Daten. Bemerkenswerte Common Weakness Enumerations (CWEs) sind *CWE-259: Verwendung eines hartcodierten Passworts*, *CWE-327: Defekter oder riskanter Kryptoalgorithmus* und *CWE-331 Unzureichende Entropie*.
 
-## Beschreibung {{ osib_anchor(osib=osib ~ ".description", id=id ~ "-description", name=title ~ ": Beschreibung", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
+## Ist die Anwendung verwundbar {{ osib_anchor(osib=osib ~ ".description", id=id ~ "-description", name=title ~ ": Beschreibung", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
 
 Zunächst gilt es, den Schutzbedarf der Daten während der Übertragung und im Ruhezustand zu ermitteln. Beispielsweise erfordern Passwörter, Kreditkartennummern, Gesundheitsakten, persönliche Informationen und Geschäftsgeheimnisse zusätzlichen Schutz, vor allem dann, wenn diese Daten unter Datenschutzgesetze, z. B. die Datenschutz-Grundverordnung (DSGVO) der EU, oder Vorschriften, z. B. Finanzdatenschutz, fallen wie PCI Data Security Standard (PCI DSS). Für alle diese Daten:
 
@@ -47,7 +47,7 @@ Zunächst gilt es, den Schutzbedarf der Daten während der Übertragung und im R
 
 Siehe {{ osib_link(link="osib.owasp.asvs.4-0.6", prefix="ASVS ", doc="", osib=osib) }}, {{ osib_link(link= "osib.owasp.asvs. 4-0.8", doc="", osib=osib) }}, {{ osib_link(link= "osib.owasp.asvs.4-0.9", doc="", osib=osib) }}<!-- - ASVS Crypto (V7), Datenschutz (V9) und SSL/TLS (V10)--->
 
-## Vorbeugende Maßnahmen " ~ id, parent=osib) }}
+## Wie kann ich das verhindern " ~ id, parent=osib) }}
 
 Gehen Sie mindestens wie folgt vor und konsultieren Sie die Referenzen:
 

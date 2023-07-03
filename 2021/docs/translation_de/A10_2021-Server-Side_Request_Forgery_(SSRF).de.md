@@ -19,13 +19,13 @@ lang:	"de"
 
 Diese Kategorie wurde aus der Top-10-Community-Umfrage (Nr. 1) hinzugefügt. Die Daten zeigen eine relativ niedrige Inzidenzrate mit überdurchschnittlicher Testabdeckung und überdurchschnittlichen Bewertungen des Exploit- und Impact-Potenzials. Da es sich bei neuen Einträgen wahrscheinlich um eine einzelne oder kleine Gruppe von Common Weakness Enumerations (CWEs) handelt, um Aufmerksamkeit und Aufmerksamkeit zu erregen, besteht die Hoffnung, dass sie einer Fokussierung unterliegen und in einer zukünftigen Ausgabe in eine größere Kategorie zusammengefasst werden können.
 
-## Beschreibung {{ osib_anchor(osib=osib ~ ".description", id=id ~ "-description", name=title ~ ": Beschreibung", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
+## Ist die Anwendung verwundbar {{ osib_anchor(osib=osib ~ ".description", id=id ~ "-description", name=title ~ ": Beschreibung", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
 
 SSRF-Fehler treten immer dann auf, wenn eine Webanwendung eine Remote-Ressource abruft, ohne die vom Benutzer angegebene URL zu überprüfen. Dadurch kann ein Angreifer die Anwendung dazu zwingen, eine manipulierte Anfrage an ein unerwartetes Ziel zu senden, selbst wenn sie durch eine Firewall, ein VPN oder eine andere Art von Netzwerkzugriffskontrollliste (ACL) geschützt ist.
 
 Da moderne Webanwendungen Endbenutzern praktische Funktionen bieten, wird das Abrufen einer URL zu einem häufigen Szenario. Infolgedessen nimmt die Inzidenz von SSRF zu. Außerdem nimmt der Schweregrad von SSRF aufgrund von Cloud-Diensten und der Komplexität der Architekturen zu.
 
-## Vorbeugende Maßnahmen " ~ id, parent=osib) }}
+## Wie kann ich das verhindern " ~ id, parent=osib) }}
 
 Entwickler können SSRF verhindern, indem sie einige oder alle der folgenden Tiefenverteidigungskontrollen implementieren:
 

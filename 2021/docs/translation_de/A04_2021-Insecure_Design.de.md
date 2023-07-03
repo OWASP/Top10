@@ -19,7 +19,7 @@ lang:	"de"
 
 Eine neue Kategorie für 2021 konzentriert sich auf Risiken im Zusammenhang mit Design- und Architekturfehlern und fordert einen stärkeren Einsatz von Bedrohungsmodellen, sicheren Designmustern und Referenzarchitekturen. Als Community müssen wir über die „Linksverschiebung“ im Codierungsbereich hinausgehen und Aktivitäten vorab codieren, die für die Prinzipien von „Secure by Design“ von entscheidender Bedeutung sind. Zu den bemerkenswerten Common Weakness Enumerations (CWEs) gehören *CWE-209: Generierung einer Fehlermeldung mit vertraulichen Informationen*, *CWE-256: Ungeschützte Speicherung von Anmeldeinformationen*, *CWE-501: Verletzung der Vertrauensgrenze* und *CWE-522: Unzureichend Geschützte Anmeldeinformationen*.
 
-## Beschreibung {{ osib_anchor(osib=osib ~ ".description", id=id ~ "-description", name=title ~ ": Beschreibung", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
+## Ist die Anwendung verwundbar {{ osib_anchor(osib=osib ~ ".description", id=id ~ "-description", name=title ~ ": Beschreibung", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
 
 Unsicheres Design ist eine weit gefasste Kategorie, die verschiedene Schwächen darstellt und als „fehlendes oder ineffektives Kontrolldesign“ ausgedrückt wird. Unsicheres Design ist nicht die Ursache für alle anderen Top-10-Risikokategorien. Es gibt einen Unterschied zwischen unsicherem Design und unsicherer Implementierung. Wir unterscheiden aus gutem Grund zwischen Designfehlern und Implementierungsfehlern, denn sie haben unterschiedliche Ursachen und Abhilfemaßnahmen. Ein sicheres Design kann immer noch Implementierungsfehler aufweisen, die zu Schwachstellen führen, die ausgenutzt werden können. Ein unsicheres Design kann nicht durch eine perfekte Implementierung behoben werden, da die erforderlichen Sicherheitskontrollen per Definition nie zur Abwehr bestimmter Angriffe geschaffen wurden. Einer der Faktoren, die zu einem unsicheren Design beitragen, ist das Fehlen eines Geschäftsrisikoprofils, das der zu entwickelnden Software oder dem zu entwickelnden System innewohnt, und daher das Versäumnis, zu bestimmen, welches Maß an Sicherheitsdesign erforderlich ist.
 
@@ -35,7 +35,7 @@ Sicheres Design ist eine Kultur und Methodik, die Bedrohungen kontinuierlich bew
 
 Sichere Software erfordert einen sicheren Entwicklungslebenszyklus, eine Art sicheres Entwurfsmuster, eine bewährte Methodik, eine sichere Komponentenbibliothek, Tools und Bedrohungsmodellierung. Wenden Sie sich zu Beginn eines Softwareprojekts während der gesamten Projektlaufzeit und Wartung Ihrer Software an Ihre Sicherheitsspezialisten. Erwägen Sie die Nutzung des [OWASP Software Assurance Maturity Model (SAMM)](https://owaspsamm.org), um Ihre Bemühungen zur sicheren Softwareentwicklung zu strukturieren.
 
-## Vorbeugende Maßnahmen {{ osib_anchor(osib=osib ~ ".how to prevent", id=id ~ "-how_to_prevent", name=title ~ ": How to Prevent", lang=lang, source=source ~ "#" ~ id, parent=osib) }}
+## Wie kann ich das verhindern {{ osib_anchor(osib=osib ~ ".how to prevent", id=id ~ "-how_to_prevent", name=title ~ ": How to Prevent", lang=lang, source=source ~ "#" ~ id, parent=osib) }}
 
 - Erstellen und nutzen Sie einen sicheren Entwicklungslebenszyklus mit AppSec-Experten, um bei der Bewertung und Gestaltung von Sicherheits- und Datenschutzkontrollen zu helfen
 

@@ -1,6 +1,6 @@
 ---
 source: "https://owasp.org/Top10/A05_2021-Security_Misconfiguration/“
-title: "A05:2021 – Fehlkonfiguration der Sicherheit“
+title: "A05:2021 – Sicherheitsrelevante Fehlkonfiguration“
 id: "A05:2021“
 lang:	"de"
 ---
@@ -19,7 +19,7 @@ lang:	"de"
 
 Im Vergleich zu Platz 6 in der vorherigen Ausgabe wurden 90 % der Anwendungen auf irgendeine Form von Fehlkonfiguration getestet, mit einer durchschnittlichen Inzidenzrate von 4 % und über 208.000 Vorkommen einer Common Weakness Enumeration (CWE) in dieser Risikokategorie. Angesichts der zunehmenden Verlagerung hin zu hoch konfigurierbarer Software ist es nicht verwunderlich, dass diese Kategorie aufsteigt. Bemerkenswerte enthaltene CWEs sind *CWE-16 Configuration* und *CWE-611 Unproper Restriction of XML External Entity Reference*.
 
-## Beschreibung {{ osib_anchor(osib=osib ~ ".description", id=id ~ "-description", name=title ~ ": Beschreibung", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
+## Ist die Anwendung verwundbar {{ osib_anchor(osib=osib ~ ".description", id=id ~ "-description", name=title ~ ": Beschreibung", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
 
 Die Anwendung ist möglicherweise anfällig, wenn die Anwendung:
 
@@ -39,7 +39,7 @@ Die Anwendung ist möglicherweise anfällig, wenn die Anwendung:
 
 - Die Software ist veraltet oder anfällig (siehe [A06:2021-Vulnerable and Outdated Components](A06_2021-Vulnerable_and_Outdated_Components.md)). Ohne einen konzertierten, wiederholbaren Konfigurationsprozess für die Anwendungssicherheit sind Systeme einem höheren Risiko ausgesetzt.
 
-## Vorbeugende Maßnahmen {{ osib_anchor(osib=osib ~ ".how to prevent", id=id ~ "-how_to_prevent", name=title ~ ": How to Prevent", lang=lang, source=source ~ "#" ~ id, parent=osib) }}
+## Wie kann ich das verhindern {{ osib_anchor(osib=osib ~ ".how to prevent", id=id ~ "-how_to_prevent", name=title ~ ": How to Prevent", lang=lang, source=source ~ "#" ~ id, parent=osib) }}
 
 Es sollten sichere Installationsprozesse implementiert werden, darunter:
 

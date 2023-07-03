@@ -39,6 +39,7 @@ plugins:
       default_language: en
       languages:
         en: en - English
+        de: de - Deutsch
         ar: ar - العربية
         es: es - Español
         fr: fr - Français
@@ -50,6 +51,25 @@ plugins:
         zh_TW: zh_TW - 繁體中文
 
       nav_translations:
+        de:
+          Home: Haupt
+          Notice: Anmerkungen
+          Introduction: Einführung
+          How to use the OWASP Top 10 as a standard: Wie man die OWASP Top 10 als Standard verwendet
+          How to start an AppSec program with the OWASP Top 10: So starten Sie ein AppSec-Programm mit den OWASP Top 10
+          About OWASP: Über OWASP
+          Top 10:2021 List:   Die Top 10:2021
+          A01 Broken Access Control: Fehler in der Zugriffskontrolle
+          A02 Cryptographic Failures: Kryptografische Fehler
+          A03 Injection: Injektion
+          A04 Insecure Design: Unsicheres Design
+          A05 Security Misconfiguration: Sicherheitsfehlkonfiguration
+          A06 Vulnerable and Outdated Components: Verwundbare und veraltete Komponenten
+          A07 Identification and Authentication Failures: Identifikations- und Authentifizierungsfehler
+          A08 Software and Data Integrity Failures: Software- und Datenintegritätsfehler
+          A09 Security Logging and Monitoring Failures: Sicherheitsprotokollierungs- und Überwachungsfehler
+          A10 Server Side Request Forgery (SSRF): Serverseitige Anforderungsfälschung (SSRF)
+          Next Steps: Weitere Schritte
         ar:
           Home: الصفحة الرئيسية
           Notice: ملاحظات

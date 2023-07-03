@@ -22,11 +22,11 @@ Eine neue Kategorie für 2021 konzentriert sich auf Annahmen im Zusammenhang mit
 *CWE-494: Herunterladen von Code ohne Integritätsprüfung* und
 *CWE-502: Deserialisierung nicht vertrauenswürdiger Daten*.
 
-## Beschreibung {{ osib_anchor(osib=osib ~ ".description", id=id ~ "-description", name=title ~ ": Beschreibung", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
+## Ist die Anwendung verwundbar {{ osib_anchor(osib=osib ~ ".description", id=id ~ "-description", name=title ~ ": Beschreibung", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
 
 Software- und Datenintegritätsfehler beziehen sich auf Code und Infrastruktur, die keinen Schutz vor Integritätsverletzungen bieten. Ein Beispiel hierfür ist, wenn eine Anwendung auf Plugins, Bibliotheken oder Module aus nicht vertrauenswürdigen sourcen, Repositorys und Content Delivery Networks (CDNs) angewiesen ist. Eine unsichere CI/CD-Pipeline kann das Potenzial für unbefugten Zugriff, bösartigen Code oder eine Systemkompromittierung mit sich bringen. Schließlich verfügen viele Anwendungen mittlerweile über eine Funktion zur automatischen Aktualisierung, bei der Aktualisierungen ohne ausreichende Integritätsprüfung heruntergeladen und auf die zuvor vertrauenswürdige Anwendung angewendet werden. Angreifer könnten möglicherweise ihre eigenen Updates hochladen, um sie zu verteilen und auf allen Installationen auszuführen. Ein weiteres Beispiel ist die Verschlüsselung oder Serialisierung von Objekten oder Daten in einer Struktur, die ein Angreifer sehen und ändern kann und die anfällig für unsichere Deserialisierung ist.
 
-## Vorbeugende Maßnahmen {{ osib_anchor(osib=osib ~ ".how to prevent", id=id ~ "-how_to_prevent", name=title ~ ": How to Prevent", lang=lang, source=source ~ "#" ~ id, parent=osib) }}
+## Wie kann ich das verhindern {{ osib_anchor(osib=osib ~ ".how to prevent", id=id ~ "-how_to_prevent", name=title ~ ": How to Prevent", lang=lang, source=source ~ "#" ~ id, parent=osib) }}
 
 - Verwenden Sie digitale Signaturen oder ähnliche Mechanismen, um zu überprüfen, ob die Software oder Daten von der erwarteten source stammen und nicht verändert wurden.
 

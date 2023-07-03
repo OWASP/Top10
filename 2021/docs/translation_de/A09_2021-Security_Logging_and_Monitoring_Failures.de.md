@@ -1,12 +1,12 @@
 ---
 source: "https://owasp.org/Top10/09_2021-Security_Logging_and_Monitoring_Failures/“
-title: "A09:2021 – Sicherheitsprotokollierungs- und Überwachungsfehler“
+title: "A09:2021 – Fehler beim Logging und Monitoring“
 id: "A09:2021“
 lang:	"de"
 ---
 {%- set parent = extra.osib.document ~ "." ~ extra.osib.version -%}
 {%- set osib = parent ~ ".9" -%}
-#A09:2021 – Sicherheitsprotokollierungs- und Überwachungsfehler ![icon](assets/TOP_10_Icons_Final_Security_Logging_and_Monitoring_Failures.png){: style="height:80px;width:80px" align="right"} {{ osib_anchor(osib=osib, id= id, name="Sicherheitsprotokollierungs- und Überwachungsfehler", lang=lang, source=source, parent=parent, previous=extra.osib.document ~ ".2017.10") }}
+#A09:2021 – Fehler beim Logging und Monitoring ![icon](assets/TOP_10_Icons_Final_Security_Logging_and_Monitoring_Failures.png){: style="height:80px;width:80px" align="right"} {{ osib_anchor(osib=osib, id= id, name="Fehler beim Logging und Monitoring", lang=lang, source=source, parent=parent, previous=extra.osib.document ~ ".2017.10") }}
 
 
 ## Faktoren {{ osib_anchor(osib=osib~".factors", id=id~"-factors", name=title~":Factors", aussehen=appearance, source=source~"#"~id, parent= osib) }}
@@ -19,7 +19,7 @@ lang:	"de"
 
 Sicherheitsprotokollierung und -überwachung stammen aus der Top-10-Community-Umfrage (Nr. 3) und liegen damit leicht über dem zehnten Platz in den OWASP Top 10 2017. Protokollierung und Überwachung können schwierig zu testen sein und erfordern oft Interviews oder die Frage, ob während eines Eindringens Angriffe erkannt wurden prüfen. Für diese Kategorie gibt es nicht viele CVE/CVSS-Daten, aber die Erkennung und Reaktion auf Verstöße ist von entscheidender Bedeutung. Dennoch kann es große Auswirkungen auf die Verantwortlichkeit, Sichtbarkeit, Alarmierung von Vorfällen und die Forensik haben. Diese Kategorie geht über *CWE-778 Unzureichende Protokollierung* hinaus und umfasst *CWE-117 Unsachgemäße Ausgabeneutralisierung für Protokolle*, *CWE-223 Weglassen sicherheitsrelevanter Informationen* und *CWE-532* *Einfügung vertraulicher Informationen in die Protokolldatei*.
 
-## Beschreibung {{ osib_anchor(osib=osib ~ ".description", id=id ~ "-description", name=title ~ ": Beschreibung", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
+## Ist die Anwendung verwundbar {{ osib_anchor(osib=osib ~ ".description", id=id ~ "-description", name=title ~ ": Beschreibung", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
 
 Wieder bei den OWASP Top 10 2021 dabei soll diese Kategorie dabei helfen, aktive Verstöße zu erkennen, zu eskalieren und darauf zu reagieren. Ohne Protokollierung und Überwachung können Verstöße nicht erkannt werden. Es kommt jederzeit zu unzureichender Protokollierung, Erkennung, Überwachung und aktiver Reaktion:
 – Überprüfbare Ereignisse wie Anmeldungen, fehlgeschlagene Anmeldungen und Transaktionen mit hohem Wert werden nicht protokolliert.
@@ -38,7 +38,7 @@ Wieder bei den OWASP Top 10 2021 dabei soll diese Kategorie dabei helfen, aktive
 
 Sie sind anfällig für Informationslecks, wenn Sie Protokollierungs- und Warnereignisse für einen Benutzer oder einen Angreifer sichtbar machen (siehe [A01:2021-Broken Access Control](A01_2021-Broken_Access_Control.md)).
 
-## Vorbeugende Maßnahmen {{ osib_anchor(osib=osib ~ ".how to prevent", id=id ~ "-how_to_prevent", name=title ~ ": How to Prevent", lang=lang, source=source ~ "#" ~ id, parent=osib) }}
+## Wie kann ich das verhindern {{ osib_anchor(osib=osib ~ ".how to prevent", id=id ~ "-how_to_prevent", name=title ~ ": How to Prevent", lang=lang, source=source ~ "#" ~ id, parent=osib) }}
 
 Abhängig vom Risiko der Anwendung sollten Entwickler einige oder alle der folgenden Kontrollen implementieren:
 

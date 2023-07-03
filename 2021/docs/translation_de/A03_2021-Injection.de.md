@@ -17,25 +17,25 @@ lang:	"de"
 
 ## Übersicht {{ osib_anchor(osib=osib ~ ".overview", id=id ~ "-overview", name=title ~ ": Übersicht", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
 
-Die Injektion gleitet in die dritte Position. 94 % der Anträge wurden auf irgendeine Form der Injektion getestet, mit einer maximalen Inzidenzrate von 19 %, einer durchschnittlichen Inzidenzrate von 3 % und 274.000 Vorkommnissen. Zu den bemerkenswerten Common Weakness Enumerations (CWEs) gehören *CWE-79: Cross-Site Scripting*, *CWE-89: SQL Injection* und *CWE-73: External Control of File Name or Path*.
+Die Injection gleitet auf die dritte Position. 94 % der Anträge wurden auf irgendeine Form der Injection getestet, mit einer maximalen Inzidenzrate von 19 %, einer durchschnittlichen Inzidenzrate von 3 % und 274.000 Vorkommnissen. Zu den bemerkenswerten Common Weakness Enumerations (CWEs) gehören *CWE-79: Cross-Site Scripting*, *CWE-89: SQL Injection* und *CWE-73: External Control of File Name or Path*.
 
-## Beschreibung {{ osib_anchor(osib=osib ~ ".description", id=id ~ "-description", name=title ~ ": Beschreibung", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
+## Ist die Anwendung verwundbar {{ osib_anchor(osib=osib ~ ".description", id=id ~ "-description", name=title ~ ": Beschreibung", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
 
 Eine Anwendung ist anfällig für Angriffe, wenn:
 
-- Vom Benutzer bereitgestellte Daten werden von der Anwendung nicht validiert, gefiltert oder bereinigt.
+- Vom Benutzer bereitgestellte Daten von der Anwendung nicht validiert, gefiltert oder bereinigt werden.
 
-- Dynamische Abfragen oder nicht parametrisierte Aufrufe ohne kontextbewusstes Escapen werden direkt im Interpreter verwendet.
+- Dynamische Abfragen oder nicht parametrisierte Aufrufe ohne kontextbewusstes Escapen direkt im Interpreter verwendet werden.
 
-- Gefährliche Daten werden in ORM-Suchparametern (Object-Relational Mapping) verwendet, um zusätzliche, sensible Datensätze zu extrahieren.
+- Gefährliche Daten in ORM-Suchparametern (Object-Relational Mapping) verwendet werden, um zusätzliche, sensible Datensätze zu extrahieren.
 
-- Feindliche Daten werden direkt verwendet oder verkettet. Das SQL oder der Befehl enthält die Struktur und schädliche Daten in dynamischen Abfragen, Befehlen oder gespeicherten Prozeduren.
+- Feindliche Daten werden direkt verwendet oder verkettet. Das SQL-Abfrage oder der Befehl enthält die Struktur und schädliche Daten in dynamischen Abfragen, Befehlen oder gespeicherten Prozeduren.
 
-Zu den häufigeren Injektionen gehören SQL, NoSQL, OS-Befehle, Object Relational Mapping (ORM), LDAP und Expression Language (EL) oder Object Graph Navigation Library (OGNL). Das Konzept ist bei allen Interpreten identisch. Die Überprüfung des Quellcodes ist die beste Methode, um festzustellen, ob Anwendungen anfällig für Injektionen sind. Das automatisierte Testen aller Parameter, Header, URLs, Cookies, JSON-, SOAP- und XML-Dateneingaben wird dringend empfohlen. Unternehmen können statische (SAST), dynamische (DAST) und interaktive (IAST) Tools zum Testen der Anwendungssicherheit in die CI/CD-Pipeline integrieren, um eingeführte Injektionsfehler vor der Produktionsbereitstellung zu identifizieren.
+Zu den häufigeren Injections gehören SQL, NoSQL, OS-Befehle, Object Relational Mapping (ORM), LDAP und Expression Language (EL) oder Object Graph Navigation Library (OGNL). Das Konzept ist bei allen Interpreten identisch. Die Überprüfung des Quellcodes ist die beste Methode, um festzustellen, ob Anwendungen anfällig für Injections sind. Das automatisierte Testen aller Parameter, Header, URLs, Cookies, JSON-, SOAP- und XML-Dateneingaben wird dringend empfohlen. Unternehmen können statische (SAST), dynamische (DAST) und interaktive (IAST) Tools zum Testen der Anwendungssicherheit in die CI/CD-Pipeline integrieren, um eingeführte Injection-Fehler vor der Produktionsbereitstellung zu identifizieren.
 
-## Vorbeugende Maßnahmen " ~ id, parent=osib) }}
+## Wie kann ich das verhindern " ~ id, parent=osib) }}
 
-Um die Injektion zu verhindern, müssen Daten von Befehlen und Abfragen getrennt gehalten werden:
+Um die Injection zu verhindern, müssen Daten von Befehlen und Abfragen getrennt gehalten werden:
 
 – Die bevorzugte Option ist die Verwendung einer sicheren API, die die Verwendung des Interpreters vollständig vermeidet, eine parametrisierte Schnittstelle bereitstellt oder auf Object Relational Mapping Tools (ORMs) migriert.<br/> **Hinweis:** Auch bei parametrisierten gespeicherten Prozeduren kann immer noch SQL-Injection einführen, wenn PL/SQL oder T-SQL Abfragen und Daten verkettet oder feindliche Daten mit EXECUTE IMMEDIATE oder exec() ausführt.
 
@@ -89,10 +89,10 @@ Dadurch ändert sich die Bedeutung beider Abfragen, sodass alle Datensätze aus 
 - {{ osib_link(link="osib.mitre.cwe.0.83", doc="", osib=osib) }} <!-- [CWE-83: Unsachgemäße Neutralisierung von Skripten in Attributen auf einer Webseite](https ://cwe.mitre.org/data/definitions/83.html) ->
 - {{ osib_link(link="osib.mitre.cwe.0.87", doc="", osib=osib) }} <!-- [CWE-87: Unsachgemäße Neutralisierung der alternativen XSS-Syntax](https://cwe .mitre.org/data/definitions/87.html) ->
 - {{ osib_link(link="osib.mitre.cwe.0.88", doc="", osib=osib) }} <!-- [CWE-88: Unsachgemäße Neutralisierung von Argumenttrennzeichen in einem Befehl („Argument Injection“ )](https://cwe.mitre.org/data/definitions/88.html) ->
-- {{ osib_link(link="osib.mitre.cwe.0.89", doc="", osib=osib) }} <!-- [CWE-89: Unsachgemäße Neutralisierung spezieller Elemente, die in einem SQL-Befehl verwendet werden ('SQL Injektion')](https://cwe.mitre.org/data/definitions/89.html) -->
-- {{ osib_link(link="osib.mitre.cwe.0.90", doc="", osib=osib) }} <!-- [CWE-90: Unsachgemäße Neutralisierung spezieller Elemente, die in einer LDAP-Abfrage verwendet werden ('LDAP Injektion')](https://cwe.mitre.org/data/definitions/90.html) -->
+- {{ osib_link(link="osib.mitre.cwe.0.89", doc="", osib=osib) }} <!-- [CWE-89: Unsachgemäße Neutralisierung spezieller Elemente, die in einem SQL-Befehl verwendet werden ('SQL Injection')](https://cwe.mitre.org/data/definitions/89.html) -->
+- {{ osib_link(link="osib.mitre.cwe.0.90", doc="", osib=osib) }} <!-- [CWE-90: Unsachgemäße Neutralisierung spezieller Elemente, die in einer LDAP-Abfrage verwendet werden ('LDAP Injection')](https://cwe.mitre.org/data/definitions/90.html) -->
 - {{ osib_link(link="osib.mitre.cwe.0.91", doc="", osib=osib) }} <!-- [CWE-91: XML-Injection (auch bekannt als Blind XPath Injection)](https:/ /cwe.mitre.org/data/definitions/91.html) ->
-- {{ osib_link(link="osib.mitre.cwe.0.93", doc="", osib=osib) }} <!-- [CWE-93: Unsachgemäße Neutralisierung von CRLF-Sequenzen ('CRLF-Injektion')]( https://cwe.mitre.org/data/definitions/93.html) ->
+- {{ osib_link(link="osib.mitre.cwe.0.93", doc="", osib=osib) }} <!-- [CWE-93: Unsachgemäße Neutralisierung von CRLF-Sequenzen ('CRLF-Injection')]( https://cwe.mitre.org/data/definitions/93.html) ->
 - {{ osib_link(link="osib.mitre.cwe.0.94", doc="", osib=osib) }} <!-- [CWE-94: Unsachgemäße Kontrolle der Codegenerierung („Code-Injection“)] (https://cwe.mitre.org/data/definitions/94.html) ->
 - {{ osib_link(link="osib.mitre.cwe.0.95", doc="", osib=osib) }} <!-- [CWE-95: Unsachgemäße Neutralisierung von Anweisungen in dynamisch ausgewertetem Code („Eval Injection“ )](https://cwe.mitre.org/data/definitions/95.html) ->
 - {{ osib_link(link="osib.mitre.cwe.0.96", doc="", osib=osib) }} <!-- [CWE-96: Unsachgemäße Neutralisierung von Anweisungen in statisch gespeichertem Code („Static Code Injection ')](https://cwe.mitre.org/data/definitions/96.html) ->

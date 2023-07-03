@@ -1,6 +1,6 @@
 ---
 source: "https://owasp.org/Top10/A01_2021-Broken_Access_Control/“
-title: 	"A01:2021 – Defekte Zugangskontrolle“
+title: 	"A01:2021 – Fehler in der Zugriffskontrolle“
 id: 	"A01:2021“
 lang:   "de"
 ---
@@ -19,7 +19,7 @@ lang:   "de"
 
 Vom fünften Platz aufsteigend wurden 94 % der Anwendungen auf irgendeine Form fehlerhafter Zugangskontrolle getestet, mit einer durchschnittlichen Inzidenzrate von 3,81 % und weist mit über 318.000 die meisten Vorkommnisse im bereitgestellten Datensatz auf. Bemerkenswerte Common Weakness Enumerations (CWEs) sind *CWE-200: Offenlegung sensibler Informationen gegenüber einem nicht autorisierten Akteur*, *CWE-201: Einfügen sensibler Informationen in gesendete Daten* und *CWE-352: Cross-Site Request Forgery* .
 
-## Beschreibung {{ osib_anchor(osib=osib ~ ".description", id=id ~ "-description", name=title ~ ": Beschreibung", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
+## Ist die Anwendung verwundbar {{ osib_anchor(osib=osib ~ ".description", id=id ~ "-description", name=title ~ ": Beschreibung", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
 
 Die Zugriffskontrolle erzwingt Richtlinien, sodass Benutzer nicht außerhalb ihrer vorgesehenen Berechtigungen handeln können. Fehler führen in der Regel zur unbefugten Offenlegung, Änderung oder Zerstörung aller Daten oder zur Ausführung einer Geschäftsfunktion außerhalb der Grenzen des Benutzers. Zu den häufigsten Schwachstellen bei der Zugriffskontrolle gehören:
 
@@ -39,7 +39,7 @@ Die Zugriffskontrolle erzwingt Richtlinien, sodass Benutzer nicht außerhalb ihr
 
 - Erzwingen Sie das Navigieren zu authentifizierten Seiten als nicht authentifizierter Benutzer oder zu privilegierten Seiten als Standardbenutzer.
 
-## Vorbeugende Maßnahmen {{ osib_anchor(osib=osib ~ ".how to prevent", id=id ~ "-how_to_prevent", name=title ~ ": How to Prevent", lang=lang, source=source ~ "#" ~ id, parent=osib) }}
+## Wie kann ich das verhindern {{ osib_anchor(osib=osib ~ ".how to prevent", id=id ~ "-how_to_prevent", name=title ~ ": How to Prevent", lang=lang, source=source ~ "#" ~ id, parent=osib) }}
 
 Die Zugriffskontrolle ist nur bei vertrauenswürdigem serverseitigem Code oder serverlosen APIs wirksam, bei denen der Angreifer die Zugriffskontrollprüfung oder Metadaten nicht ändern kann.
 

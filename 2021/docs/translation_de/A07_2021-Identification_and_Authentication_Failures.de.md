@@ -1,12 +1,12 @@
 ---
 source: "https://owasp.org/Top10/A07_2021-identification_and_Authentication_Failures/“
-title: "A07:2021 – identifikations- und Authentifizierungsfehler“
+title: "A07:2021 – Fehler in der Identifikation und Authentifizierung“
 id: "A07:2021“
 lang:	"de"
 ---
 {%- set parent = extra.osib.document ~ "." ~ extra.osib.version -%}
 {%- set osib = parent ~ ".7" -%}
-#A07:2021 – identifikations- und Authentifizierungsfehler ![icon](assets/TOP_10_Icons_Final_identification_and_Authentication_Failures.png){: style="height:80px;width:80px" align="right"} {{ osib_anchor(osib=osib, id=id , name="identifizierungs- und Authentifizierungsfehler", lang=lang, source=source, parent=parent, previous=extra.osib.document ~ ".2017.2") }}
+#A07:2021 – Fehler in der Authentifizierung ![icon](assets/TOP_10_Icons_Final_identification_and_Authentication_Failures.png){: style="height:80px;width:80px" align="right"} {{ osib_anchor(osib=osib, id=id , name="identifizierungs- und Authentifizierungsfehler", lang=lang, source=source, parent=parent, previous=extra.osib.document ~ ".2017.2") }}
 
 
 ## Faktoren {{ osib_anchor(osib=osib~".factors", id=id~"-factors", name=title~":Factors", aussehen=appearance, source=source~"#"~id, parent= osib) }}
@@ -17,9 +17,9 @@ lang:	"de"
 
 ## Übersicht {{ osib_anchor(osib=osib ~ ".overview", id=id ~ "-overview", name=title ~ ": Übersicht", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
 
-Früher bekannt als *Broken Authentication*, ist diese Kategorie von der zweiten Position abgerutscht und umfasst nun Common Weakness Enumerations (CWEs) im Zusammenhang mit identifikationsfehlern. Bemerkenswerte CWEs sind *CWE-297: Unsachgemäße Validierung des Zertifikats mit Host-Nichtübereinstimmung*, *CWE-287: Unsachgemäße Authentifizierung* und *CWE-384: Sitzungsfixierung*.
+Früher bekannt als *Fehler in der Authentifizierung*, ist diese Kategorie von der zweiten Position abgerutscht und umfasst nun Common Weakness Enumerations (CWEs) im Zusammenhang mit identifikationsfehlern. Bemerkenswerte CWEs sind *CWE-297: Unsachgemäße Validierung des Zertifikats mit Host-Nichtübereinstimmung*, *CWE-287: Unsachgemäße Authentifizierung* und *CWE-384: Sitzungsfixierung*.
 
-## Beschreibung {{ osib_anchor(osib=osib ~ ".description", id=id ~ "-description", name=title ~ ": Beschreibung", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
+## Ist die Anwendung verwundbar {{ osib_anchor(osib=osib ~ ".description", id=id ~ "-description", name=title ~ ": Beschreibung", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
 
 Die Bestätigung der identität des Benutzers, die Authentifizierung und die Sitzungsverwaltung sind für den Schutz vor authentifizierungsbezogenen Angriffen von entscheidender Bedeutung. Es kann zu Authentifizierungsschwächen kommen, wenn die Anwendung:
 
@@ -31,7 +31,7 @@ Die Bestätigung der identität des Benutzers, die Authentifizierung und die Sit
 
 - Verwendet schwache oder ineffektive Verfahren zur Wiederherstellung von Anmeldeinformationen und zum Vergessen von Passwörtern, wie z. B. „wissensbasierte Antworten“, die nicht sicher gemacht werden können.
 
-– Verwendet reine Text-, verschlüsselte oder schwach gehashte Passwort-Datenspeicher (siehe [A02:2021-Cryptographic Failures](A02_2021-Cryptographic_Failures.md)).
+– Verwendet reine Text-, verschlüsselte oder schwach gehashte Passwort-Datenspeicher (siehe [A02:2021-Fehlkonfiguration der Sicherheit](A02_2021-Cryptographic_Failures.md)).
 
 - Fehlende oder ineffektive Multi-Faktor-Authentifizierung.
 
@@ -41,7 +41,7 @@ Die Bestätigung der identität des Benutzers, die Authentifizierung und die Sit
 
 – Sitzungs-ids werden nicht korrekt ungültig gemacht. Benutzersitzungen oder Authentifizierungstoken (hauptsächlich Single-Sign-On-Tokens (SSO)) werden beim Abmelden oder während eines Zeitraums der Inaktivität nicht ordnungsgemäß ungültig gemacht.
 
-## Vorbeugende Maßnahmen {{ osib_anchor(osib=osib ~ ".how to prevent", id=id ~ "-how_to_prevent", name=title ~ ": How to Prevent", lang=lang, source=source ~ "#" ~ id, parent=osib) }}
+## Wie kann ich das verhindern {{ osib_anchor(osib=osib ~ ".how to prevent", id=id ~ "-how_to_prevent", name=title ~ ": How to Prevent", lang=lang, source=source ~ "#" ~ id, parent=osib) }}
 
 - Implementieren Sie nach Möglichkeit eine Multi-Faktor-Authentifizierung, um automatisiertes Credential Stuffing, Brute Force und Angriffe auf die Wiederverwendung gestohlener Credentials zu verhindern.
 
