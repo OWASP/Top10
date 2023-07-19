@@ -1,6 +1,6 @@
 # Wie baue ich mit den Top 10 ein Programm zur Anwendungssicherheit auf?
 
-Die OWASP Top 10 waren ursprünglich nicht als Grundlage für ein Programm zur Anwendungssicherheit gedacht. 
+Die OWASP Top 10 waren ursprünglich nicht als Grundlage für ein Programm zur Anwendungssicherheit (AppSec) gedacht. 
 Ein definierter Startpunkt ist jedoch für viele Organisationen, die gerade erst mit Anwendungssicherheit beginnen, elementar.
 Die OWASP Top 10 2021 stellen eine gute Baseline für Checklisten dar; sie alleine sind jedoch nicht ausreichend.
 
@@ -18,42 +18,110 @@ und die Prioritäten in der Umsetzung oder Verbesserung der 15 OWASP SAMM Sicher
 OWASP SAMM kann dabei helfen, 
 die Sicherheitslage ihrer Anwendungen zu messen und diese zu verbessern.
 
-## Schritt 2. Ebnen Sie den Weg für einen Sicheren Entwicklungs-Lebenszyklus
+## Schritt 2. Ebnen Sie den Weg für einen Sicheren Entwicklungs-Lebenszyklus (SDLC)
 
-Lange den "Einhörnern" vorbehalten, stellt das Konzept eines "geebneten Weges" die einfachste Möglichkeit dar,
-einen größtmöglichen Ausschlag zu geben
-und ihre Ressourcen für Anwendungssicherheit mit der jährlich steigenden Velocity der Teams zu skalieren.
+Lange den "Einhörnern" vorbehalten, stellt das Konzept eines "Geebneten Weges"[^1] die einfachste Möglichkeit dar,
+einen größtmöglichen Effekt zu erzielen
+und ihre Ressourcen für Anwendungssicherheit mit der jährlich steigenden Entwicklungsgeschwindigkeit zu skalieren.
 
-The paved road concept is "the easiest way is also the most secure way" and should involve a culture of deep partnerships between the development team and the security team, preferably such that they are one and the same team. The paved road aims to continuously improve, measure, detect and replace insecure alternatives by having an enterprise-wide library of drop-in secured replacements, with tooling to help see where improvements can be made by adopting the paved road. This allows existing development tools to report on insecure builds and help development teams self-correct away from insecure alternatives.
+Das Konzept des Geebneten Weges ist,
+dass der einfachste Weg gleichzeitig der sicherste Weg sein muss.
+Es propagiert eine Kultur der Partnerschaft zwischen Entwicklungs- und Security-Teams —
+idealerweise ist es ein und dasselbe Team.
+Der Geebnete Weg zielt darauf ab,
+kontinuierlich zu verbessern, zu messen sowie unsichere Optionen zu erkennen und zu ersetzen.
+Auf dem Geebneten Weg soll eine unternehmensweite Bibliothek mit einsatzbereiten sicheren Alternativen angeboten werden
+— sowie Werkzeuge, um Verbesserungspotentiale zu identifizieren.
 
-The paved road might seem a lot to take in, but it should be built incrementally over time. There are other forms of appsec programs out there, notably the Microsoft Agile Secure Development Lifecycle. Not every appsec program methodology suits every business.
+Der Geebnete Weg kann umfangreich scheinen,
+aber er sollte inkrementell über einen Zeitraum aufgebaut werden.
+Es gibt weitere Formen eines AppSec-Programms,
+insbesondere den Microsoft Agile Secure Development Lifecycle.
+Nicht jede Methodik für ein AppSec-Programm passt zu jedem Unternehmen.
 
-## Schritt 3. Implement the paved road with your development teams
+## Schritt 3. Setzen Sie den Geebneten Weg gemeinsam mit Ihren Entwicklungs-Teams um
 
-Paved roads are built with the consent and direct involvement of the relevant development and operations teams. The paved road should be aligned strategically with the business and help deliver more secure applications faster. Developing the paved road should be a holistic exercise covering the entire enterprise or application ecosystem, not a per-app band-aid, as in the old days.
+Der Geebnete Weg wird einvernehmlich und mit direkter Beteiligung
+der relevanten Entwicklungs- und Betriebsteams aufgebaut.
+Der Geebnete Weg sollte an den strategischen Zielen des Unternehmens ausgerichtet werden
+und soll dazu beitragen, schneller sicherere Anwendungen zu liefern.
+Den Geebneten Weg zu entwickeln sollte ein ganzheitliche Aufgabe sein,
+die das gesamte Unternehmen bzw. die gesamte Anwendungslandschaft umfasst
+— nicht als "Pro-Anwendung-Pflaster" wie früher.
 
-## Schritt 4. Migrate all upcoming and existing applications to the paved road
+## Schritt 4. Migrieren Sie alle zukünftigen und bestehenden Anwendungen zum Geebneten Weg
 
-Add paved road detection tools as you develop them and provide information to development teams to improve the security of their applications by how they can directly adopt elements of the paved road. Once an aspect of the paved road has been adopted, organizations should implement continuous integration checks that inspect existing code and check-ins that use prohibited alternatives and warn or reject the build or check-in. This prevents insecure options from creeping into code over time, preventing technical debt and a defective insecure application. Such warnings should link to the secure alternative, so the development team is given the correct answer immediately. They can refactor and adopt the paved road component quickly.
+Fügen Sie ihrem Entwicklungsprozess Werkzeuge hinzu,
+die Abweichungen vom Geebneten Weg erkennen,
+und informieren Sie Entwicklungsteams,
+wie diese die Sicherheit ihrer Anwendungen durch Elemente des Geebneten Weges verbessern können.
+Sobald eine Komponente des Geebneten Weges umgesetzt wird,
+sollten Organisationen Continuous Integration einsetzen,
+um bestehenden und neu eingecheckten Code auf unerlaubte Alternativen zu untersuchen
+und Warnungen auszugeben oder den Build oder Check-in zurückzuweisen.
+Damit wird verhindert,
+dass sich unsichere Optionen über die Zeit im Code einschleichen,
+was sonst zu technischen Schulden und einer unsicheren Anwendung führt.
+Solche Warnungen sollten auf eine sichere Alternative verweisen,
+damit das Entwicklungsteam direkt die korrekte Lösung erhält.
+Das Team kann dann schnell ein Refactoring durchführen
+und die Komponente des Geebneten Weges umsetzen.
 
-## Schritt 5. Test that the paved road has mitigated the issues found in the OWASP Top 10
+## Schritt 5. Prüfen Sie dass der Geebnete Weg die OWASP Top 10 mitigiert
 
-Paved road components should address a significant issue with the OWASP Top 10, for example, how to automatically detect or fix vulnerable components, or a static code analysis IDE plugin to detect injections or even better start using a library that is known safe against injection. The more of these secure drop-in replacements provided to teams, the better. A vital task of the appsec team is to ensure that the security of these components is continuously evaluated and improved. Once they are improved, some form of communication pathway with consumers of the component should indicate that an upgrade should occur, preferably automatically, but if not, at least highlighted on a dashboard or similar.
+Eine Komponente des Geebneten Weges sollte ein signifikantes Problem aus den OWASP Top 10 adressieren,
+z.B. automatisch Komponenten mit bekannten Schwachstellen erkennen oder beheben,
+ein IDE-Plugin für Statische Code-Analyse anbieten, um Injections zu erkennen,
+oder noch besser eine Bibliothek anbieten, die bewiesenermaßen sicher gegen Injections ist.
+Je mehr einsatzbereite Alternativen den Teams bereitgestellt werden desto besser.
+Eine essentielle Aufgabe des AppSec-Teams ist,
+dass die Sicherheit dieser Komponenten kontinuierlich evaluiert und verbessert wird.
+Sobald diese verbessert werden sollten Konsumenten über einen Kommunikationsweg auf ein Update hingewiesen werden,
+das bevorzugt automatisch erfolgen, mindestens aber auf einem Dashboard hervorgehoben werden sollte.
 
-## Schritt 6. Build your program into a mature AppSec program
 
-You must not stop at the OWASP Top 10. It only covers 10 risk categories. We strongly encourage organizations to adopt the Application Security Verification Standard and progressively add paved road components and tests for Level 1, 2, and 3, depending on the developed applications' risk level.
+## Schritt 6. Bauen Sie ihr Programm zu einem gereiften AppSec-Programm aus
+
+Sie dürfen nicht bei den OWASP Top 10 aufhören.
+Sie decken nur 10 Risiken ab.
+Wir legen allen Organsiation deutlich nahe,
+den Application Security Verification Standard zu übernehmen
+und zunehmend Komponenten des Geebneten Weges und Tests für Level 1, 2 und 3 hinzu zu nehmen,
+abhängig vom Risikoniveau der Anwendung.
+
 
 ## Weitere Schritte
 
 Alle guten Programme zur Anwendungssicherheit gehen über das Minimum hinaus.
 Alle Beteiligten müssen weiterhin Alles geben, um jemals Herr über die Schwachstellen in den Anwendungen zu werden.
 
--   **Conceptual integrity**. Mature AppSec programs must contain some concept of security architecture, whether a formal cloud or enterprise security architecture or threat modeling
+-   **Konzeptuelle Integrität**. Gereifte AppSec-Programme müssen über ein Konzept sicherer Architektur verfügen,
+egal ob eine formale Cloud- oder Enterprise-Architektur oder Bedrohungsanalyse.
 
--   **Automation and scale**. Mature AppSec programs try to automate as much of their deliverables as possible, using scripts to emulate
-    complex penetration testing steps, static code analysis tools directly available to the development teams, assisting dev teams in building appsec unit and integration tests, and more.
+-   **Automatisierung und Skalierung**.
+Gereifte AppSec-Programme versuchen möglichst viele Liefergegenstände zu automatisieren:
+Skripte um komplexe Penetrationstest-Schritte zu emulieren,
+Statische Codeanalyse direkt den Entwicklungsteams bereitstellen,
+Unterstützung für Entwicklungsteams um sicherheitsspezifische Unit- und Integrationstests zu verfassen, etc.
 
--   **Culture**. Mature AppSec programs try to build out the insecure design and eliminate the technical debt of existing code by being a part of the development team and not to the side. AppSec teams who see development teams as "us" and "them" are doomed to failure.
 
--   **Continuous improvement**. Mature AppSec programs look to constantly improve. If something is not working, stop doing it. If something is clunky or not scalable, work to improve it. If something is not being used by the development teams and has no or limited impact, do something different. Just because we've done testing like desk checks since the 1970s doesn't mean it's a good idea. Measure, evaluate, and then build or improve.
+-   **Kultur**.
+Gereifte AppSec-Programme versuchen, unsicheres Design auszuschließen
+und technische Schulden in Bestands-Code dadurch zu eliminieren,
+dass sie Bestandteil der Entwicklung sind und nicht daneben stehen.
+AppSec-Teams, die Entwicklungsteams als "die" und "wir" betrachten, sind zum Scheitern verurteilt.
+
+
+-   **Kontinuierliche Verbesserung**.
+Gereifte AppSec-Programme versuchen, sich permanent zu verbessern.
+Falls etwas nicht funktioniert, darf es nicht weiterverfolgt werden.
+Falls etwas klobig ist oder nicht skaliert, muss es verbessert werden.
+Falls etwas nicht von den Entwicklungsteams eingesetzt wird oder nur begrenzten Einfluss hat, sollte etwas Anderes getan werden.
+Nur weil wir seit den 1970ern wie eine Schreibtischkontrolle getestet haben,
+heißt das nicht, dass es eine gute Idee ist.
+Messen und evaluieren Sie und bauen Sie dann auf oder verbessern Sie.
+
+
+[^1]: Der "Geebnete Weg" ("The Paved Road") wurde 2017 von Netflix als Konzept vorgestellt,
+um eigenverantwortlichen Entwicklungsteams zentrale Services
+für möglichst einfache und gleichzeitig sichere Integration und Deployments zu bieten.
