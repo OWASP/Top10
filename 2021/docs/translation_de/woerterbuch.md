@@ -1,3 +1,4 @@
+```
 # Tabellenüberschriften
 CWEs Mapped                     Zugeordnete CWEs
 Max Incidence Rate              Maximale Häufigkeitsrate
@@ -11,7 +12,6 @@ Total CVEs                      Insgesamt CVEs
 
 
 # Überschriften
-
 Factors                         Faktoren
 Overview                        Übersicht
 Description                     Ist die Anwendung verwundbar
@@ -52,3 +52,4 @@ legacy options                                  Kompatibilitäten
 compromise                                      Kompromittierung
 security hardening                              Sicherheitshärtung
 stack traces                                    Stack-Traces
+```
