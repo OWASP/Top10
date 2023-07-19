@@ -8,66 +8,66 @@
 
 ## Überblick
 
-Vom fünften Platz aufgestiegen wurden 94 % der Anwendungen auf irgendeine Form fehlerhafter Zugangskontrolle getestet, mit einer durchschnittlichen Inzidenzrate von 3,81 % und weist mit über 318.000 die meisten Vorkommnisse im bereitgestellten Datensatz auf. Bemerkenswerte Common Weakness Enumerations (CWEs) sind *CWE-200: Offenlegung sensibler Informationen gegenüber einem nicht autorisierten Akteur*, *CWE-201: Einfügen sensibler Informationen in gesendete Daten* und *CWE-352: Cross-Site Request Forgery* .
+Vom fünften Platz aufgestiegen, wurden in 94 % der Anwendungen eine Form fehlerhafter Zugangskontrolle festgestellt. Mit einer durchschnittlichen Inzidenzrate von 3,81 % und weist mit über 318.000 die meisten Vorkommnisse im bereitgestellten Datensatz auf. Relevante Common Weakness Enumerations (CWEs) sind *CWE-200: Offenlegung sensibler Informationen gegenüber einem nicht autorisierten Akteur*, *CWE-201: Einfügen sensibler Informationen in gesendete Daten* und *CWE-352: Cross-Site Request Forgery* .
 
 ## Beschreibung
 
-Die Zugriffskontrolle erzwingt Richtlinien, sodass Benutzer nicht außerhalb ihrer vorgesehenen Berechtigungen handeln können. Fehler führen in der Regel zur unbefugten Offenlegung von Informationen, Änderung oder Zerstörung aller Daten oder zur Ausführung einer Geschäftsfunktion außerhalb der Grenzen des Benutzers. Zu den häufigsten Schwachstellen bei der Zugriffskontrolle gehören:
+Zugriffskontrollmechanismen setzen Richtlinien um, so dass Benutzer nur innerhalb ihrer beabsichtigten Berechtigungen handeln können. Fehlerfälle führen hier in der Regel zu unbefugter Offenlegung, Änderung oder Löschung von Daten oder zu einer Geschäftshandlung außerhalb der Befugnisse des Benutzers. Zu den häufigsten Schwachstellen gehören:
 
-- Verstoß gegen das Prinzip der geringsten Rechte oder der standardmäßigen Verweigerung, bei dem der Zugriff nur für bestimmte Befähigungen, Rollen oder Benutzern gewährt werden sollte, aber für jedermann verfügbar ist.
+- Verstoß gegen das Least-Priviledge-Prinzip oder Deny-by-Default an Stellen bei denen der Zugriff nur für bestimmte Rollen oder Benutzer gewährt werden sollte, aber für jedermann verfügbar ist.
 
-- Umgehen von Zugriffskontrollprüfungen durch Ändern der URL (Parametermanipulation oder erzwungenes Durchsuchen), des internen Anwendungsstatus oder der HTML-Seite oder durch Verwendung eines Angriffstools zur Änderung von API-Anfragen.
+- Umgehen von Zugriffskontrollprüfungen durch Ändern der URL (Verändern der Parameter oder force browsing), des internen Anwendungsstatus oder der HTML-Seite oder einfach durch Verwendung eines API-Angriffswerkzeugs.
 
-- Die Möglichkeit, das Konto einer anderen Person anzuzeigen oder zu bearbeiten, indem dessen eindeutige Kennung angegeben wird (unsichere direkte Objektreferenzen).
+- Anzeigen oder Bearbeiten eines Benutzerkontos durch verändern des Primärschlüssels (Unsichere, direkte Objekt-Referenzen).
 
-– Zugriff auf die API mit fehlenden Zugriffskontrollen für POST, PUT und DELETE.
+- Zugriff auf die API mit fehlenden Zugriffskontrollen für POST, PUT und DELETE.
 
-- Erhöhung der Privilegien. Als Benutzer fungieren, ohne angemeldet zu sein, oder als Administrator fungieren, wenn man als Benutzer angemeldet ist.
+- Rechteausweitung: Als Benutzer handeln, ohne angemeldet zu sein oder als Administrator handeln, wenn man als Benutzer angemeldet ist.
 
-- Metadatenmanipulation, wie z. B. das Wiedergeben oder Manipulieren eines JSON Web Token (JWT)-Zugriffskontrolltokens oder die Manipulation eines Cookies oder versteckten Felds, um Berechtigungen zu erhöhen oder die JWT-Ungültigmachung zu missbrauchen.
+- Metadatenmanipulationen, wie z.B. das erneute Verwenden/Manipulieren eines JSON Web Tokens (JWT), Zugriffskontroll-Tokens, Cookies oder versteckten Feldes, um Berechtigungen auszuweiten oder der Missbrauch der JWT-Invalidierung.
 
-– CORS-Fehlkonfiguration ermöglicht API-Zugriff von nicht autorisierten/nicht vertrauenswürdigen Quellen.
+- Fehlkonfigurationen von CORS ermöglichen einen API-Zugriff aus nicht vertrauenswürdigen Quellen.
 
-- Erfolgreicher Aufruf von Seiten die eine Authentifikation voraussetzen als nicht authentifizierter Benutzer oder zu privilegierten Seiten als Standardbenutzer.
+- Aufrufen authentifizierter Seiten als nicht authentifizierter Benutzer oder privilegierter Seiten als Standardbenutzer.
 
 ## Gegenmaßnahmen
 
-Die Zugriffskontrolle ist nur bei vertrauenswürdigem serverseitigem Code oder serverlosen APIs wirksam, bei denen der Angreifer die Zugriffskontrollprüfung oder Metadaten nicht ändern kann.
+Eine Zugriffskontrolle ist nur wirksam, wenn sie im vertrauenswürdigen serverseitigen Code oder über eine Serverless API betrieben wird, so dass der Angreifer die Zugriffskontrollprüfung oder die verwendeten Metadaten nicht manipulieren kann.
 
-– Mit Ausnahme öffentlicher Ressourcen standardmäßig verweigern.
+- Mit Ausnahme von Zugriffen auf öffentliche Ressourcen sollten Anfragen standardmäßig verweigert werden.
 
-- Implementieren Sie Zugriffskontrollmechanismen einmal und verwenden Sie sie in der gesamten Anwendung wieder, einschließlich der Minimierung der Nutzung von Cross-Origin Resource Sharing (CORS).
+- Zugriffskontrollmechanismen sollten einmalig implementiert und in der gesamten Anwendung wiederverwendet werden. Cross-Origin Resource Sharing (CORS) sollte ebenfalls minimiert werden.
 
-- Modellzugriffskontrollen sollten die Datensatzeigentümerschaft erzwingen, anstatt zu akzeptieren, dass der Benutzer Datensätze erstellen, lesen, aktualisieren oder löschen kann.
+- Zugriffskontrollmechanismen müssen die Berechtigung für Datensätze anhand des Besitzers kontrollieren anstatt zuzulassen, dass Benutzer beliebige Datensätze erstellen, lesen, aktualisieren oder löschen können. In Zugriffskontrollen müssen Subjekt, Aktion und Objekt geprüft werden.
 
-- Durch Domänenmodelle sollten eindeutige Geschäftslimitanforderungen für Anwendungen durchgesetzt werden.
+- (Sich gegenseitig ausschließende Rechte sollten durch Berechtigungskonzepte durchgesetzt werden.) ???
 
-– Deaktivieren Sie die Verzeichnisliste des Webservers und stellen Sie sicher, dass Dateimetadaten (z. B. .git) und Sicherungsdateien nicht in Web-Roots vorhanden sind.
+- Verzeichnisauflistungen bei Webservern müssen deaktiviert werden und es muss sichergestellt werden, dass keine Meta- und Backupdateien (z.B. .git) in Web-Roots abgelegt werden.
 
-- Protokollieren Sie Fehler bei der Zugriffskontrolle und benachrichtigen Sie Administratoren bei Bedarf (z. B. bei wiederholten Fehlversuchen).
+- Zugriffsfehler müssen protokolliert und ggf. Administratoren alarmiert werden (z.B. bei wiederholten Fehlern).
 
-- Einschränkungen für API- und Controller-Zugriff, um den Schaden durch automatisierte Angriffstools zu minimieren.
+- API- und Controller-Zugriffe sollten über Quotas beschränkt werden, um den Schaden durch automatisierte Angriffs-Tools zu minimieren.
 
-– Statusbehaftete Sitzungskennungen sollten nach dem Abmelden auf dem Server ungültig gemacht werden. Zustandslose JWT-Token sollten eher kurzlebig sein, damit das Zeitfenster für einen Angreifer minimiert wird. Für langlebigere JWTs wird dringend empfohlen, die OAuth-Standards zu befolgen, um den Zugriff zu widerrufen.
+– Stateful session sollten nach dem Abmelden auf dem Server ungültig gemacht werden. Zustandslose JWT-Token sollten kurzlebig sein, damit das Zeitfenster für einen Angreifer minimiert wird. Für langlebigere JWTs wird dringend empfohlen, die OAuth-Standards zu befolgen, um den Zugriff zu widerrufen.
 
-Entwickler und QA-Mitarbeiter sollten funktionale Zugriffskontrolleinheiten und Integrationstests durchführen.
+Entwickler und QA-Mitarbeiter sollten funktionale Unit- und Integrationstests der Zugriffskontrolle durchführen.
 
-## Beispielangriffsszenarien
+## Mögliche Angriffsszenarien
 
-**Szenario Nr. 1:** Die Anwendung verwendet nicht überprüfte Daten in einem SQL-Aufruf, der auf Kontoinformationen zugreift:
+**Szenario 1:** Eine Anwendung verarbeitet nicht verifizierte Daten in einem SQL-Aufruf, der auf Kontoinformationen zugreift:
 
 ```
 pstmt.setString(1, request.getParameter("acct"));
 ResultSet results = pstmt.executeQuery( );
 ```
 
-Ein Angreifer ändert einfach den „acct“-Parameter des Browsers, um die gewünschte Kontonummer zu senden. Bei nicht korrekter Überprüfung kann der Angreifer auf das Konto eines beliebigen Benutzers zugreifen.
+Ein Angreifer ändert nun den Parameter “acct” im Browser in eine beliebige Kontonummer. Werden Eingangsdaten nicht ordnungsgemäß verifiziert, kann ein Angreifer auf das Konto eines beliebigen Benutzers zugreifen.
 
 ```
 https://example.com/app/accountInfo?acct=notmyacct
 ```
 
-**Szenario Nr. 2:** Ein Angreifer erzwingt einfach die Suche nach Ziel-URLs. Für den Zugriff auf die Admin-Seite sind Admin-Rechte erforderlich.
+**Szenario 2:** Ein Angreifer erzwingt einfach die Suche nach Ziel-URLs. Für den Zugriff auf die Admin-Seite sind Admin-Rechte erforderlich.
 
 ```
 https://example.com/app/getappInfo
