@@ -76,8 +76,8 @@ Es gibt automatisierte Tools, die Angreifern helfen, nicht gepatchte oder falsch
 
 ## Liste der zugeordneten CWEs
 
-CWE-937 OWASP Top 10 2013: Verwendung von Komponenten mit bekannten Schwachstellen
+[CWE-937 OWASP Top 10 2013: Using Components with Known Vulnerabilities](https://cwe.mitre.org/data/definitions/937.html)
 
-CWE-1035 2017 Top 10 A9: Verwendung von Komponenten mit bekannten Schwachstellen
+[CWE-1035 2017 Top 10 A9: Using Components with Known Vulnerabilities](https://cwe.mitre.org/data/definitions/1035.html)
 
-CWE-1104 Verwendung nicht gewarteter Komponenten von Drittanbietern
+[CWE-1104 Use of Unmaintained Third Party Components](https://cwe.mitre.org/data/definitions/1104.html)
