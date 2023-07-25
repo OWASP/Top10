@@ -25,7 +25,7 @@ Cryptographic Failures                          Fehler in der Kryptographie
 Injection                                       Injection
 Insecure Design                                 Unsicheres Anwendungsdesign
 Security Misconfiguration                       Sicherheitsrelevante Fehlkonfiguration
-Vulnerable and Outdated Components              Verwundbare und veraltete Komponenten / Unsichere oder veraltete Komponenten / Anfällige und veraltete Komponenten / 
+Vulnerable and Outdated Components              Verwundbare und veraltete Komponenten / Einsatz von veralteten oder von Komponenten mit Schwachstellen / veraltete oder Komponenten mit Schwachstellen / Unsichere oder veraltete Komponenten / Anfällige und veraltete Komponenten / 
 Identification and Authentication Failures      Fehler in der Identifikation und Authentifizierung
 Software and Data Integrity Failures            Fehler beim Prüfen der Software- und Datenintegrität / Fehler beim Schutz der Software- und Datenintegrität / Software- und Datenintegritätsfehler 
 Security Logging and Monitoring Failures        Sicherheitsrelevante Fehler beim Logging & Monitoring /  Fehler beim Sicherheits-Logging & -Monitoring/ Fehler beim Logging und Monitoring
