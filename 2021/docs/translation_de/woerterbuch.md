@@ -33,23 +33,36 @@ Server-Side Request Forgery                     Server-Side Request Forgery (SSR
 # Häufig verwendete Fachbegriffe
 Cross site scripting                            Cross site scripting
 application stack                               Anwendungsstack
+application security                            Anwendungssicherheit
 network service                                 Netzwerkdienste
 platform                                        Plattform
 web server                                      Web-Server
 application server                              Anwendungsserver
 database                                        Datenbank
+drop-in                                         einsatzbereit
 frameworks                                      Frameworks
+gap                                             Gap
+governance                                      Governance
+library                                         Bibliothek
 custom code                                     Anwendungscode
 virtual machines                                virtuelle Maschinen
 containers                                      Container
 storage.                                        Speicher
 scanners                                        Scanner
 misconfigurations                               Fehlkonfigurationen
+mitigation                                      Mitigierung
+operations team                                 Betriebsteam
+paved road                                      Geebneter Weg
 default accounts                                Standard-Konten
 default configurations                          Standard-Konfigurationen
 unnecessary services                            nicht benötigte Dienste
 legacy options                                  Kompatibilitäten
 compromise                                      Kompromittierung
+scale                                           Skalierung
+security development lifecycle                  Sicherer Entwicklungs-Lebenszyklus
 security hardening                              Sicherheitshärtung
+security posture                                Sicherheitslage
 stack traces                                    Stack-Traces
+threat modelling                                Bedrohungsanalyse
+vulnerability                                   Schwachstelle
 ```
