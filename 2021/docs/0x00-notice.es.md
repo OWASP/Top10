@@ -12,7 +12,7 @@ Publicado el 24 de septiembre de 2021
 ## Colaboradores
 
 - Orange Tsai [@orange_8361](https://twitter/orange_8361), autor de A10:2021 – Falsificación de Solicitudes del Lado del Servidor (SSRF)
-- Jim Manico [@manicode](https://twitter/manicode) y Jakub Maćkowski [@kubamackowski](https://twitter/kubamackowski) - Coordinación de Cheat Sheets de OWASP
+- Jim Manico [@manicode](https://twitter.com/manicode) y Jakub Maćkowski [@kubamackowski](https://twitter.com/kubamackowski) - Coordinación de Cheat Sheets de OWASP
 
 ## ¿Cómo puedes ayudar?
 

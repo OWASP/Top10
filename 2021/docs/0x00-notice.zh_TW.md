@@ -12,8 +12,8 @@
 
 ## 貢獻專家
 
-- Orange Tsai, [@orange_8361](https://twitter/orange_8361) A10-2021: 伺服端請求偽造 的作者
-- Jim Manico [@manicode](https://twitter/manicode) 和 Jakub Maćkowski [@kubamackowski](https://twitter/kubamackowski)
+- Orange Tsai, [@orange_8361](https://twitter.com/orange_8361) A10-2021: 伺服端請求偽造 的作者
+- Jim Manico [@manicode](https://twitter.com/manicode) 和 Jakub Maćkowski [@kubamackowski](https://twitter.com/kubamackowski)
 
 ## 你能如何幫助
 
