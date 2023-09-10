@@ -6,20 +6,26 @@ lang:	"de"
 ---
 {%- set parent = extra.osib.document ~ "." ~ extra.osib.version -%}
 {%- set osib = parent ~ ".7" -%}
-#A07:2021 – Fehler in der Authentifizierung ![icon](assets/TOP_10_Icons_Final_identification_and_Authentication_Failures.png){: style="height:80px;width:80px" align="right"} {{ osib_anchor(osib=osib, id=id , name="identifizierungs- und Authentifizierungsfehler", lang=lang, source=source, parent=parent, previous=extra.osib.document ~ ".2017.2") }}
+#A07:2021 – Fehler in der Authentifizierung ![icon](assets/TOP_10_Icons_Final_identification_and_Authentication_Failures.png){: style="height:80px;width:80px" align="right"} {{ osib_anchor(osib=osib, id=id , name="Fehler in der Identifikation und Authentifizierung", lang=lang, source=source, parent=parent, previous=extra.osib.document ~ ".2017.2") }}
 
 
-## Faktoren {{ osib_anchor(osib=osib~".factors", id=id~"-factors", name=title~":Factors", aussehen=appearance, source=source~"#"~id, parent= osib) }}
+## Beurteilungskriterien {{ osib_anchor(osib=osib~".factors", id=id~"-factors", name=title~":Beurteilungskriterien", aussehen=appearance, source=source~"#"~id, parent= osib) }}
 
-| CWEs kartiert | Maximale Inzidenzrate | Durchschnittliche Inzidenzrate | Durchschnittlich gewichteter Exploit | Durchschnittliche gewichtete Auswirkung | Maximale Abdeckung | Durchschnittliche Abdeckung | Gesamtzahl der Vorkommen | CVEs insgesamt |
+| Zugeordnete CWEs | Maximale Häufigkeit | Durchschn. Häufigkeit | Durchschn. Ausnutzbarkeit (gewichtet) | Durchschn. Auswirkungen (gewichtet) | Maximale Abdeckung | Durchschnittliche Abdeckung | Gesamtanzahl | CVEs insgesamt |
 |:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
 | 22          | 14.84%             | 2.55%              | 7.40                 | 6.50                | 79.51%       | 45.72%       | 132,195           | 3,897      |
 
-## Übersicht {{ osib_anchor(osib=osib ~ ".overview", id=id ~ "-overview", name=title ~ ": Übersicht", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
+## Bezug / Kontext / Auswertung {{ osib_anchor(osib=osib ~ ".overview", id=id ~ "-overview", name=title ~ ":Bezug / Kontext / Auswertung", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
 
-Früher bekannt als *Fehler in der Authentifizierung*, ist diese Kategorie von der zweiten Position abgerutscht und umfasst nun Common Weakness Enumerations (CWEs) im Zusammenhang mit identifikationsfehlern. Bemerkenswerte CWEs sind *CWE-297: Unsachgemäße Validierung des Zertifikats mit Host-Nichtübereinstimmung*, *CWE-287: Unsachgemäße Authentifizierung* und *CWE-384: Sitzungsfixierung*.
+Vormals als *Fehler in der Authentifizierung* geführt,
+ist diese Kategorie von der zweiten Position abgerutscht
+und umfasst nun Common Weakness Enumerations (CWEs) im Zusammenhang mit Identifikationsfehlern. 
+Beachtenswerte CWEs sind 
+*CWE-297: Improper Validation of Certificate with Host Mismatch*, 
+*CWE-287: Improper Authentication* und 
+*CWE-384: Session Fixation*.
 
-## Ist die Anwendung verwundbar {{ osib_anchor(osib=osib ~ ".description", id=id ~ "-description", name=title ~ ": Beschreibung", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
+## Beschreibung {{ osib_anchor(osib=osib ~ ".description", id=id ~ "-description", name=title ~ ": Beschreibung", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
 
 Die Bestätigung der identität des Benutzers, die Authentifizierung und die Sitzungsverwaltung sind für den Schutz vor authentifizierungsbezogenen Angriffen von entscheidender Bedeutung. Es kann zu Authentifizierungsschwächen kommen, wenn die Anwendung:
 
@@ -41,7 +47,7 @@ Die Bestätigung der identität des Benutzers, die Authentifizierung und die Sit
 
 – Sitzungs-ids werden nicht korrekt ungültig gemacht. Benutzersitzungen oder Authentifizierungstoken (hauptsächlich Single-Sign-On-Tokens (SSO)) werden beim Abmelden oder während eines Zeitraums der Inaktivität nicht ordnungsgemäß ungültig gemacht.
 
-## Wie kann ich das verhindern {{ osib_anchor(osib=osib ~ ".how to prevent", id=id ~ "-how_to_prevent", name=title ~ ": How to Prevent", lang=lang, source=source ~ "#" ~ id, parent=osib) }}
+## Prävention und Gegenmaßnahmen {{ osib_anchor(osib=osib ~ ".how to prevent", id=id ~ "-how_to_prevent", name=title ~ ": Prävention und Gegenmaßnahmen", lang=lang, source=source ~ "#" ~ id, parent=osib) }}
 
 - Implementieren Sie nach Möglichkeit eine Multi-Faktor-Authentifizierung, um automatisiertes Credential Stuffing, Brute Force und Angriffe auf die Wiederverwendung gestohlener Credentials zu verhindern.
 
@@ -78,7 +84,7 @@ Die Bestätigung der identität des Benutzers, die Authentifizierung und die Sit
 - {{ osib_link(link="osib.owasp.oat", osib=osib) }} <!--- OWASP Automated Threats Handbook](https://owasp.org/www-project-automated-threats-to- Webanwendungen/)a --->
 - {{ osib_link(link="osib.nist.csrc.sp.800-63b.5.1.1", doc="osib.nist.csrc.sp.800-63b", osib=osib) }} <!- -- [NIST 800-63b: 5.1.1 Auswendig gelernte Geheimnisse](https://pages.nist.gov/800-63-3/sp800-63b.html#memsecret) --->
 
-## Liste der zugeordneten CWEs {{ osib_anchor(osib=osib~".mapped cwes", id=id~"-mapped_cwes", name=title~":List of Mapped CWEs", lang=lang, source=source~" #" ~id, parent=osib) }}
+## Liste der zugeordneten CWEs {{ osib_anchor(osib=osib~".mapped cwes", id=id~"-mapped_cwes", name=title~":Liste der zugeordneten CWEs", lang=lang, source=source~" #" ~id, parent=osib) }}
 
 - {{ osib_link(link="osib.mitre.cwe.0.255", doc="", osib=osib) }} <!-- [CWE-255: Fehler bei der Verwaltung von Anmeldeinformationen](https://cwe.mitre. org/data/definitions/255.html) ->
 - {{ osib_link(link="osib.mitre.cwe.0.259", doc="", osib=osib) }} <!-- [CWE-259: Verwendung eines hartcodierten Passworts](https://cwe .mitre.org/data/definitions/259.html) ->
