@@ -47,7 +47,7 @@ web server                                      Web-Server
 application server                              Anwendungsserver
 database                                        Datenbank
 frameworks                                      Frameworks
-Shift-Left					"Shift-Left-Ansatz"
+Shift-Left					                    "Shift-Left-Ansatz"
 governance                                      Governance
 library                                         Programmbibliothek
 custom code                                     selbstentwickelter Code
