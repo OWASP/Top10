@@ -58,7 +58,7 @@ werden beim Abmelden oder nach Inaktivität nicht invalidiert.
 - Implementieren Sie nach Möglichkeit eine Multi-Faktor-Authentifizierung, um automatisiertes Credential Stuffing,
 Brute Force und die Wiederverwendung gestohlener Zugangsdaten zu verhindern.
 
-- Liefern Sie die Anwendung nicht mit Standard-Zuängen aus, insbesondere nicht für Administratoren.
+- Liefern Sie die Anwendung nicht mit Standard-Zugängen aus, insbesondere nicht für Administratoren.
 
 - Implementieren Sie Prüfungen auf schwache Passwörter,
 z. B. die Prüfung neuer oder geänderter Passwörter gegen eine Liste der 10.000 schlechtesten Passwörter.
@@ -78,7 +78,7 @@ wenn Credential Stuffing, Brute Force oder andere Angriffe erkannt werden.
 - Verwenden Sie serverseitige, sichere, integrierte Sitzungsverwaltung,
 die nach der Anmeldung eine neue zufällige Session ID mit hoher Entropie generiert. 
 Die Session ID sollte nicht in der URL enthalten sein,
-sicher gespeichert und nach Abmeldung, Untätigkeit sowie absoluten Timeouts invalidiert werden.
+sicher gespeichert und nach Abmeldung, Untätigkeit sowie Ablauf von absoluten Timeouts invalidiert werden.
 
 ## Beispiel-Angriffsszenarien {{ osib_anchor(osib=osib ~ ".example attack Scenarios", id=id ~ "-example_attack_scenarios", name=title ~ ": Beispiel-Angriffsszenarien", lang=lang, source=source ~ "# " ~ id, parent=osib) }}
 
@@ -88,7 +88,7 @@ sicher gespeichert und nach Abmeldung, Untätigkeit sowie absoluten Timeouts inv
 von Passwörtern als einzigem Faktor. 
 Früher als Best Practices betrachtet, ermutigen Anforderungen an die Passwortrotation und -komplexität Benutzer dazu,
 schwache Passwörter zu verwenden oder wiederzuverwenden.
-Organisationen wird empfohlen, diese Praktiken gemäß NIST 800-63 zu stoppen und die Multi-Faktor-Authentifizierung zu verwenden.
+Organisationen wird empfohlen, diese Praktiken gemäß NIST 800-63 zu beenden und Multi-Faktor-Authentifizierung zu verwenden.
 
 **Szenario Nr. 3:** Sitzungs-Timeouts sind nicht richtig eingestellt. 
 Ein Benutzer verwendet einen öffentlichen Computer, um auf eine Anwendung zuzugreifen. 
