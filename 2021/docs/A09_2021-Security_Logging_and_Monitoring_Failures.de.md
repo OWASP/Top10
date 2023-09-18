@@ -1,58 +1,58 @@
 # A09:2021 – Sicherheitsprotokollierungs- und Überwachungsfehler ![icon](assets/TOP_10_Icons_Final_Security_Logging_and_Monitoring_Failures.png){: style="height:80px;width:80px" align="right"}
 
-## Faktoren
+## Beurteilungskriterien
 
 | CWEs kartiert | Maximale Inzidenzrate | Durchschnittliche Inzidenzrate | Durchschnittlich gewichteter Exploit | Durchschnittliche gewichtete Auswirkung | Maximale Abdeckung | Durchschnittliche Abdeckung | Gesamtzahl der Vorkommen | CVEs insgesamt |
 |:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
 | 4           | 19.23%             | 6.51%              | 6.87                 | 4.99                | 53.67%       | 39.97%       | 53,615            | 242        |
 
-## Überblick
+## Bezug / Kontext / Auswertung
 
-Sicherheitsprotokollierung und -überwachung stammen aus der Top-10-Community-Umfrage (Nr. 3) und liegen damit leicht über dem zehnten Platz in den OWASP Top 10 2017. Protokollierung und Überwachung können schwierig zu testen sein und erfordern oft Interviews oder die Frage, ob während eines Eindringens Angriffe erkannt wurden prüfen. Für diese Kategorie gibt es nicht viele CVE/CVSS-Daten, aber die Erkennung und Reaktion auf Verstöße ist von entscheidender Bedeutung. Dennoch kann es große Auswirkungen auf die Verantwortlichkeit, Sichtbarkeit, Alarmierung von Vorfällen und die Forensik haben. Diese Kategorie geht über *CWE-778 Unzureichende Protokollierung* hinaus und umfasst *CWE-117 Unsachgemäße Ausgabeneutralisierung für Protokolle*, *CWE-223 Weglassen sicherheitsrelevanter Informationen* und *CWE-532* *Einfügung vertraulicher Informationen in die Protokolldatei*.
+Sicherheitsprotokollierung und -überwachung stammen aus der Top-10-Community-Umfrage (Nr. 3) und stiegen leicht auf vom zehnten Platz in den OWASP Top 10 2017. Protokollierung und Überwachung können schwierig zu testen sein und erfordern oft Interviews oder die Prüfung, ob während eines Penetration Tests Angriffe erkannt wurden. Für diese Kategorie gibt es nicht viele CVE/CVSS-Daten, aber die Erkennung und Reaktion auf Vorfälle ist von entscheidender Bedeutung. Außerdem kann es große Auswirkungen auf die Verantwortlichkeit, Sichtbarkeit, Alarmierung und die Forensik haben. Diese Kategorie geht über *CWE-778 Insufficient Logging* hinaus und umfasst außerdem *CWE-117 Improper Output Neutralization for Logs*, *CWE-223 Omission of Security-relevant Information* und *CWE-532* *Insertion of Sensitive Information into Log File*.
 
 ## Beschreibung
 
-Zurück zu den OWASP Top 10 2021: Diese Kategorie soll dabei helfen, aktive Verstöße zu erkennen, zu eskalieren und darauf zu reagieren. Ohne Protokollierung und Überwachung können Verstöße nicht erkannt werden. Es kommt jederzeit zu unzureichender Protokollierung, Erkennung, Überwachung und fehlender Reaktion:
+Erneut in den OWASP Top 10 2021 soll diese Kategorie dabei helfen, aktive Verstöße zu erkennen, zu eskalieren und darauf zu reagieren. Ohne Protokollierung und Überwachung können Sichereheitsverstöße nicht erkannt werden. Es kommt in vielfältiger Weise zu unzureichender Protokollierung, Erkennung, Überwachung und fehlender Reaktion:
 
-– Überprüfbare Ereignisse wie Anmeldungen, fehlgeschlagene Anmeldungen und Finanztransaktionen von hohem Wert werden nicht protokolliert.
+– Auditierbare Ereignisse, wie Anmeldungen, fehlgeschlagene Anmeldungen und Finanztransaktionen von hohem Wert, werden nicht protokolliert.
 
-- Warnungen und Fehler erzeugen keine, unzureichende oder unklare Protokollmeldungen.
+- Warnungen und Fehler erzeugen keine, unzureichende oder uneindeutige Protokoll-Einträge.
 
-- Protokolle von Anwendungen und APIs werden nicht auf verdächtige Aktivitäten überwacht.
+- Protokolle von Anwendungen und Schnittstellen werden nicht ausreichend hinsichtlich verdächtiger Aktivitäten überwacht.
 
 - Protokolle werden nur lokal gespeichert.
 
-- Angemessene Warnschwellen und Reaktionseskalationsprozesse sind nicht vorhanden oder unwirksam.
+- Geeignete Alarmierungs-Schwellen und Eskalations-Prozesse als Reaktion auf (potentielle) Vorfälle liegen nicht vor oder sind nicht wirksam.
 
-- Penetrationstests und Scans durch DAST-Tools (Dynamic Application Security Testing) (wie OWASP ZAP) lösen keine Warnungen aus.
+- Penetrationstests und Scans durch DAST-Tools (Dynamic Application Security Testing) (wie OWASP ZAP) lösen keine Alarme aus.
 
-- Die Anwendung kann aktive Angriffe nicht in Echtzeit oder nahezu in Echtzeit erkennen, eskalieren oder darauf hinweisen.
+- Die eingesetzten Überwachungsverfahren sind nicht in der Lage aktive Angriffe zu erkennen und in Echtzeit oder nahezu Echtzeit Alarm auszulösen.
 
-Sie sind anfällig für Informationslecks, wenn Sie Protokollierungs- und Warnereignisse Benutzern oder Angreifern anzeigen (siehe [A01:2021-Broken Access Control](A01_2021-Broken_Access_Control.md)).
+Wenn Ihre Systeme Protokollierungs- und Alarmierungs-Nachrichten Benutzern oder Angreifern preisgeben, kann dies zum Abfluss von Daten führen (siehe [A01:2021-Broken Access Control](A01_2021-Broken_Access_Control.md)).
 
-## Gegenmaßnahmen
+## Prävention und Gegenmaßnahmen
 
 Abhängig vom Risiko der Anwendung sollten Entwickler einige oder alle der folgenden Kontrollen implementieren:
 
-– Stellen Sie sicher, dass alle Anmelde-, Zugriffskontroll- und serverseitigen Eingabevalidierungsfehler mit ausreichendem Benutzerkontext protokolliert werden können, um verdächtige oder böswillige Konten zu identifizieren, und ausreichend lange aufbewahrt werden können, um eine verzögerte forensische Analyse zu ermöglichen.
+- Stellen Sie sicher, dass alle erfolglosen Login- und Zugriffs-Versuche und Fehler bei der serverseitigen Eingabevalidierung mit aussagekräftigem Benutzerkontext protokolliert werden, um verdächtige oder schädliche Accounts zu identifizieren. Halten Sie diese Informationen ausreichend lange vor, um auch später forensische Analysen vorzunehmen zu können.
 
-– Stellen Sie sicher, dass Protokolle in einem Format generiert werden, das von Protokollverwaltungslösungen problemlos verarbeitet werden kann.
+– Stellen Sie sicher, dass Protokollierungen in einem Format erstellt werden, die eine einfache Verarbeitung durch zentrale Protokollanalyse- und -managementwerkzeuge ermöglicht.
 
-- Stellen Sie sicher, dass die Protokolldaten korrekt codiert sind, um Einschleusungen oder Angriffe auf die Protokollierungs- oder Überwachungssysteme zu verhindern.
+- Stellen Sie sicher, dass die Protokolldaten korrekt encodiert sind, um Injections oder Angriffe auf die Protokollierungs- oder Überwachungssysteme zu verhindern.
 
-- Stellen Sie sicher, dass hochwertige Transaktionen über einen Prüfpfad mit Integritätskontrollen verfügen, um Manipulationen oder Löschungen zu verhindern, z. B. Datenbanktabellen, die nur angehängt werden können, oder ähnliches.
+- Speichern Sie für wichtige Transaktionen Audit-Trails mit Integritätsschutz, um Verfälschung oder ein Löschen zu verhindern, z.B. durch Einsatz von Datenbanktabellen, die nur das Anhängen von Datensätzen zulassen.
 
-- DevSecOps-Teams sollten eine wirksame Überwachung und Alarmierung einrichten, damit verdächtige Aktivitäten schnell erkannt und darauf reagiert werden.
+- DevSecOps-Teams sollten wirksame Monitoring- und Alarmierungs-Verfahren einrichten, damit verdächtige Aktivitäten zeitnah entdeckt und bearbeitet werden.
 
-- Erstellen oder übernehmen Sie einen Plan zur Reaktion auf Vorfälle und zur Wiederherstellung, z. B. National Institute of Standards and Technology (NIST) 800-61r2 oder höher.
+- Etablieren Sie Notfall- und Wiederherstellungspläne für Sicherheitsvorfälle, z.B. auf Basis von NIST 800-61 rev 2.
 
-Es gibt kommerzielle und Open-Source-Anwendungsschutz-Frameworks wie das OWASP ModSecurity Core Rule Set und Open-Source-Protokollkorrelationssoftware wie den Elasticsearch-, Logstash- und Kibana-Stack (ELK), die über benutzerdefinierte Dashboards und Warnungen verfügen.
+Es gibt kommerzielle und Open-Source-Frameworks für den Schutz Ihrer Anwendungen, wie das OWASP ModSecurity Core Rule Set und Open-Source-Logging-Software, wie den Elasticsearch-, Logstash- und Kibana-Stack (ELK), die über benutzerdefinierte Dashboards und Warnungen verfügen.
 
-## Beispielangriffsszenarien
+## Beispielhafte Angriffsszenarien
 
-**Szenario Nr. 1:** Der Website-Betreiber eines Kinderkrankenversicherungsanbieters konnte aufgrund mangelnder Überwachung und Protokollierung keinen Verstoß feststellen. Eine externe Partei informierte den Krankenversicherungsanbieter darüber, dass ein Angreifer auf Tausende sensible Gesundheitsakten von mehr als 3,5 Millionen Kindern zugegriffen und diese verändert hatte. Eine Überprüfung nach dem Vorfall ergab, dass die Website-Entwickler keine wesentlichen Schwachstellen behoben hatten. Da es keine Protokollierung oder Überwachung des Systems gab, könnte die Datenschutzverletzung seit 2013 andauern, also über einen Zeitraum von mehr als sieben Jahren.
+**Szenario Nr. 1:** Der Website-Betreiber einer Kinderkrankenversicherung konnte aufgrund mangelnder Überwachung und Protokollierung einen Angriff nicht feststellen. Ein Dritter informierte den Krankenversicherungsanbieter darüber, dass ein Angreifer auf tausende sensible Gesundheitsakten zugegriffen und diese verändert hatte. Eine Überprüfung nach dem Vorfall ergab, dass die Website-Entwickler wesentlichen Schwachstellen nicht behoben hatten. Da es keine Protokollierung oder Überwachung des Systems gab, könnte die Datenschutzverletzung seit 2013 angedauert haben, über einen Zeitraum von mehr als sieben Jahren.
 
-**Szenario Nr. 2:** Bei einer großen indischen Fluggesellschaft kam es zu einem Datenverstoß, der personenbezogene Daten von Millionen von Passagieren im Wert von mehr als zehn Jahren betraf, darunter Pass- und Kreditkartendaten. Der Datenverstoß ereignete sich bei einem externen Cloud-Hosting-Anbieter, der die Fluggesellschaft nach einiger Zeit über den Verstoß informierte.
+**Szenario Nr. 2:** Bei einer großen indischen Fluggesellschaft kam es zu einem Datenverlust, der personenbezogene Daten von Millionen von Passagieren aus mehr als zehn Jahren betraf, darunter Pass- und Kreditkartendaten. Der Datenverstoß ereignete sich bei einem externen Cloud-Hosting-Anbieter, der die Fluggesellschaft nach einiger Zeit über den Verstoß informierte.
 
 **Szenario Nr. 3:** Eine große europäische Fluggesellschaft erlitt einen meldepflichtigen Verstoß gegen die DSGVO. Der Verstoß wurde Berichten zufolge durch Sicherheitslücken in Zahlungsanwendungen verursacht, die von Angreifern ausgenutzt wurden und mehr als 400.000 Zahlungsdatensätze von Kunden abgegriffen haben. Die Datenschutzbehörde verhängte daraufhin eine Geldstrafe von 20 Millionen Pfund gegen die Fluggesellschaft.
 

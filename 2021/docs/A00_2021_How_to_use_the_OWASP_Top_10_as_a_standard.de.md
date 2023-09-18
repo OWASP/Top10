@@ -6,20 +6,20 @@ Eine der Schwierigkeiten bei der Verwendung der OWASP Top 10 als Standard besteh
 
 Hier sind unsere Empfehlungen, wann es sinnvoll ist, die OWASP Top 10 zu verwenden:
 
-| Anwendungsfall | OWASP Top 10 2021 | OWASP-Standard zur Anwendungssicherheitsüberprüfung |
-|-------------------------|:-------------------:|:--------------------------------------------------:|
-| Bewusstsein | Ja | |
-| Training | Einstiegsniveau | Umfassend |
-| Design und Architektur | Gelegentlich | Ja |
-| Programmierstandard | Das absolute Minimum | Ja |
-| Überprüfung des sicheren Codes | Das absolute Minimum | Ja |
-| Checkliste für Peer-Reviews | Das absolute Minimum | Ja |
-| Unit-Tests | Gelegentlich | Ja |
-| Integrationstests | Gelegentlich | Ja |
-| Penetrationstests | Das absolute Minimum | Ja |
-| Werkzeugunterstützung | Das absolute Minimum | Ja |
-| Sichere Lieferkette | Gelegentlich | Ja |
+| Anwendungsfall für / als    | OWASP Top 10 2021    | OWASP Application Security Verification Standard |
+|-----------------------------|:--------------------:|:------------------------------------------------:|
+| Sensibilisierung            | Ja                   |                                                  |
+| Ausbildung                  | Einstiegsniveau      | Umfassend                                        |
+| Design und Architektur      | Teilweise            | Ja                                               |
+| Programmierstandard         | Absolutes Minimum    | Ja                                               |
+| Secure-Code-Review          | Absolutes Minimum    | Ja                                               |
+| Checkliste für Peer-Reviews | Absolutes Minimum    | Ja                                               |
+| Unit-Tests                  | Teilweise            | Ja                                               |
+| Integrationstests           | Teilweise            | Ja                                               |
+| Penetrationstests           | Absolutes Minimum    | Ja                                               |
+| Werkzeugunterstützung       | Absolutes Minimum    | Ja                                               |
+| Sichere Lieferkette         | Teilweise            | Ja                                               |
 
-Wir empfehlen jedem, der einen Anwendungssicherheitsstandard übernehmen möchte, den [OWASP Application Security Verification Standard](https://owasp.org/www-project-application-security-verification-standard/) (ASVS) zu verwenden, da er so konzipiert ist dass er nachweisbar zu sein und testbar ist, und in allen Teilen eines sicheren Entwicklungslebenszyklus verwendet werden kann.
+Wir empfehlen jedem, der einen Anwendungssicherheitsstandard anwenden möchte, den [OWASP Application Security Verification Standard](https://owasp.org/www-project-application-security-verification-standard/) (ASVS) zu verwenden, da er so konzipiert ist dass er nachweisbar und testbar ist und in allen Teilen eines sicheren Entwicklungslebenszyklus verwendet werden kann.
 
-Für Werkzeuganbieter ist das ASVS die einzig akzeptable Wahl. Tools können die in der OWASP-Top-10 beschriebenen Bedrohungen aufgrund der Art der Risiken nicht umfassend erkennen, darauf testen oder davor schützen, unter Verweis auf A04:2021 – Unsicheres Design. OWASP rät von jeglichen Behauptungen über eine vollständigen Schutz vor den Bedrohungen aus der OWASP Top 10 ab, da diese schlichtweg unwahr sind.
+Für Tool-Anbieter ist der ASVS die einzig akzeptable Wahl. Tools können die in der OWASP-Top-10 beschriebenen Bedrohungen aufgrund der Art der Risiken nicht umfassend erkennen, darauf testen oder davor schützen (z. B. A04:2021 – Unsicheres Design). Die OWASP lehnt jeglichen Behauptungen über einen vollständigen Schutz vor den Bedrohungen aus den OWASP Top 10 ab, da diese schlichtweg unwahr sind.
