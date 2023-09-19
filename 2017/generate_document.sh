@@ -3,36 +3,34 @@
 echo "OWASP Top 10 Markdown Conversion Tool"
 echo ""
 
-function command_exists () {
-    command -v $1 >/dev/null 2>&1;
+# Function to check if a command exists
+command_exists() {
+    command -v "$1" >/dev/null 2>&1
 }
 
+# Check for pandoc
 if ! command_exists pandoc; then
-    echo "Error: Please install pandoc. Cannot continue"
-    exit;
+    echo "Error: Please install pandoc. Cannot continue."
+    exit 1
 fi
 
+# Check for xelatex
 if ! command_exists xelatex; then
-    echo "Warning: Install xelatex to produce PDF output"
+    echo "Warning: Install xelatex to produce PDF output."
 fi
 
 echo ""
 
 generate_pdf() {
     if command_exists xelatex; then
-        # pandoc -N --template ../templates/template.tex --variable mainfont="Merriweather" --variable sansfont="Roboto" --variable monofont="Menlo" --variable fontsize=10pt --variable version=1.17.2 --latex-engine=xelatex --toc -fmarkdown-implicit_figures -o "../OWASP-Top-10-2017-$1.pdf" *.md
-        echo " no PDF generated due to bugs"
+        echo "No PDF generated due to bugs."
     else
-        echo " could not generate PDF, missing pdflatex"
+        echo "Could not generate PDF, missing pdflatex."
     fi
 }
 
 generate_docx() {
     pandoc -s -f markdown_github --reference-doc=../templates/reference.docx --columns 10000 -t docx -o "../OWASP-Top-10-2017-$1.docx" *.md
-}
-
-generate_doc() {
-    pandoc -s -f gfm --reference-doc=../templates/reference.docx --columns 10000 -t docx -o "../OWASP-Top-10-2017-$1.docx" *.md
 }
 
 generate_html() {
@@ -41,13 +39,11 @@ generate_html() {
 
 generate() {
     echo -n "Generating OWASP Top 10 2017 ($1)..."
-    if [ -d "$1" ]; 
-    then
-        cd "$1"
-        generate_doc $1
-        #generate_docx $1
-        generate_pdf $1
-        generate_html $1
+    if [ -d "$1" ]; then
+        cd "$1" || exit 1
+        generate_docx "$1"
+        generate_pdf "$1"
+        generate_html "$1"
         cd ..
         echo " done."
     else
@@ -55,52 +51,12 @@ generate() {
     fi
 }
 
-# Arabic
-#generate "ar"
+# List of languages
+languages=("fr" "id" "ja" "pt-pt")
 
-# Brazil
-#generate "br"
-
-# Chinese 
-#generate "cn"
-
-# Czech
-#generate "cz"
-
-# English
-#generate "en"
-
-# French 
-generate "fr"
-
-# German
-#generate "de"
-
-# Hebrew
-#generate "heb"
-
-# Italian
-#generate "it"
-
-# Bahasa indonesia
-#generate "id"
-generate "id"
-
-# Japanese
-#generate "jp"
-generate "ja"
-
-# Korean
-#generate "kr"
-
-# Spanish
-#generate "es"
-
-# Ukraine
-#generate "ukr"
-
-# Portuguese
-generate "pt-pt"
+for lang in "${languages[@]}"; do
+    generate "$lang"
+done
 
 echo 
 echo "Generated OWASP Top 10"
