@@ -62,8 +62,8 @@ There should be a patch management process in place to:
 
 -   Only obtain components from official sources over secure links.
     Prefer signed packages to reduce the chance of including a modified,
-    malicious component (See A08:2021-Software and Data Integrity
-    Failures).
+    malicious component (see [A08:2021-Software and Data Integrity
+    Failures](A08_2021-Software_and_Data_Integrity_Failures.md)).
 
 -   Monitor for libraries and components that are unmaintained or do not
     create security patches for older versions. If patching is not
