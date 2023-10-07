@@ -56,7 +56,8 @@ Entwickler können SSRF verhindern, indem sie folgende Defense-in-Depth-Controls
 
 - Achten Sie auf die Konsistenz von URLs, um Angriffe wie DNS-Rebinding und „Time of Check, Time of Use“ (TOCTOU)-Race-Conditions zu vermeiden.
 
-Mitigieren Sie SSRF nicht durch die Verwendung einer Negativliste oder eines regulären Ausdrucks. Angreifer verfügen über Payload-Listen, Werkzeuge und Fähigkeiten, um Negativlisten zu umgehen.
+Versuchen Sie nicht, SSRF durch die Verwendung einer Negativliste oder eines regulären Ausdrucks zu mitigieren. 
+Angreifer verfügen über Payload-Listen, Werkzeuge und Fähigkeiten, um Negativlisten zu umgehen.
 
 ### **Zusätzliche zu berücksichtigende Maßnahmen:**
 
