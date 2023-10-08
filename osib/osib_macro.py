@@ -85,6 +85,7 @@
 #!#
 #!##################################################################################################################################################
 
-from mkdocs_macro_osib import define_env, on_post_build
-#provides MkDocs macros 'osib_anchor' and 'osib_link'
+# import .mkdocsMacroOsib
+from mkdocsMacroOsib import define_env, on_post_build
+# provides MkDocs macros 'osib_anchor' and 'osib_link'
 

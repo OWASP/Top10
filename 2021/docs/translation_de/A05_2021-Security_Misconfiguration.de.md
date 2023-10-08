@@ -11,7 +11,7 @@ lang:	"de"
 
 ## Faktoren {{ osib_anchor(osib=osib~".factors", id=id~"-factors", name=title~":Factors", aussehen=appearance, source=source~"#"~id, parent= osib) }}
 
-| CWEs kartiert | Maximale Inzidenzrate | Durchschnittliche Inzidenzrate | Durchschnittlich gewichteter Exploit | Durchschnittliche gewichtete Auswirkung | Maximale Abdeckung | Durchschnittliche Abdeckung | Gesamtzahl der Vorkommen | CVEs insgesamt |
+| Zugeordnete CWEs | Maximale Häufigkeit | Durchschn. Häufigkeit | Durchschn. Ausnutzbarkeit (gewichtet) | Durchschn. Auswirkungen (gewichtet) | Maximale Abdeckung | Durchschnittliche Abdeckung | Gesamtanzahl | CVEs insgesamt |
 |:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
 | 20          | 19.84%             | 4.51%              | 8.12                 | 6.56                | 89.58%       | 44.84%       | 208,387           | 789        |
 
@@ -19,9 +19,9 @@ lang:	"de"
 
 Im Vergleich zu Platz 6 in der vorherigen Ausgabe wurden 90 % der Anwendungen auf irgendeine Form von Fehlkonfiguration getestet, mit einer durchschnittlichen Inzidenzrate von 4 % und über 208.000 Vorkommen einer Common Weakness Enumeration (CWE) in dieser Risikokategorie. Angesichts der zunehmenden Verlagerung hin zu hoch konfigurierbarer Software ist es nicht verwunderlich, dass diese Kategorie aufsteigt. Bemerkenswerte enthaltene CWEs sind *CWE-16 Configuration* und *CWE-611 Unproper Restriction of XML External Entity Reference*.
 
-## Ist die Anwendung verwundbar {{ osib_anchor(osib=osib ~ ".description", id=id ~ "-description", name=title ~ ": Beschreibung", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
+## Beschreibung {{ osib_anchor(osib=osib ~ ".description", id=id ~ "-description", name=title ~ ": Beschreibung", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
 
-Die Anwendung ist möglicherweise anfällig, wenn die Anwendung:
+Die Anwendung besitzt möglicherweise Schwachstellen, wenn folgendes zutrifft:
 
 – Mangelhafte Sicherheitshärtung des Anwendungsstacks oder ungeeignet konfigurierte Berechtigungen von Clouddiensten.
 
@@ -37,17 +37,17 @@ Die Anwendung ist möglicherweise anfällig, wenn die Anwendung:
 
 – Der Server sendet keine Sicherheits-Header oder -Direktiven, bzw. diese sind nicht sicher konfiguriert
 
-- Die Software ist veraltet oder verwundbar (siehe [A06:2021-Vulnerable and Outdated Components](A06_2021-Vulnerable_and_Outdated_Components.md)). Ohne einen abgestimmten und reproduzierbaren Prozess sind Systeme einem höheren Risiko ausgesetzt!
+- Die Software ist veraltet oder verwundbar (siehe [A06:2021-Unsichere oder veraltete Komponenten](A06_2021-Vulnerable_and_Outdated_Components.de.md)). Ohne einen abgestimmten und reproduzierbaren Prozess sind Systeme einem höheren Risiko ausgesetzt!
 
-## Wie kann ich das verhindern {{ osib_anchor(osib=osib ~ ".how to prevent", id=id ~ "-how_to_prevent", name=title ~ ": How to Prevent", lang=lang, source=source ~ "#" ~ id, parent=osib) }}
+## Prävention und Gegenmaßnahmen {{ osib_anchor(osib=osib ~ ".how to prevent", id=id ~ "-how_to_prevent", name=title ~ ": How to Prevent", lang=lang, source=source ~ "#" ~ id, parent=osib) }}
 
 Es sollten sichere Installationsprozesse implementiert werden, darunter:
 
 - Ein wiederholbarer Härtungsprozess ermöglicht die schnelle und einfache Bereitstellung einer anderen Umgebung, die entsprechend abgesichert ist. Entwicklungs-, Qualitätssicherungs- und Produktionsumgebungen sollten alle identisch konfiguriert sein, wobei in jeder Umgebung unterschiedliche Anmeldeinformationen verwendet werden sollten. Dieser Prozess sollte automatisiert werden, um den Aufwand für die Einrichtung einer neuen sicheren Umgebung zu minimieren.
 
-- Eine minimale Plattform ohne unnötige Funktionen, Komponenten, Dokumentation und Beispiele. Entfernen Sie nicht verwendete Funktionen und Frameworks oder installieren Sie sie nicht.
+- Eine minimale Plattform ohne unnötige Funktionen, Komponenten, Dokumentation und Beispiele. Entfernen Sie Funktionen und Frameworks die Sie nicht verwenden oder installieren Sie diese erst gar nicht.
 
-– Überprüfen und Aktualisieren der Konfigurationen, die für alle Sicherheitshinweise, Updates und Patches im Rahmen des Patch-Verwaltungsprozesses geeignet sind (siehe [A06:2021-Vulnerable and Outdated Components](A06_2021-Vulnerable_and_Outdated_Components.md)). Überprüfen Sie die Cloud-Speicherberechtigungen (z. B. S3-Bucket-Berechtigungen).
+– Überprüfen und Aktualisieren der Konfigurationen, die für alle Sicherheitshinweise, Updates und Patches im Rahmen des Patch-Verwaltungsprozesses geeignet sind (siehe [A06:2021-Unsichere oder veraltete Komponenten](A06_2021-Vulnerable_and_Outdated_Components.de.md)). Überprüfen Sie die Cloud-Speicherberechtigungen (z. B. S3-Bucket-Berechtigungen).
 
 – Eine segmentierte Anwendungsarchitektur sorgt durch Segmentierung, Containerisierung oder Cloud-Sicherheitsgruppen (ACLs) für eine effektive und sichere Trennung zwischen Komponenten oder Mandanten.
 
@@ -55,7 +55,7 @@ Es sollten sichere Installationsprozesse implementiert werden, darunter:
 
 - Ein automatisierter Prozess zur Überprüfung der Wirksamkeit der Konfigurationen und Einstellungen in allen Umgebungen.
 
-## Mögliche Angriffsszenarien {{ osib_anchor(osib=osib ~ ".example attack Scenarios", id=id ~ "-example_attack_scenarios", name=title ~ ": Mögliche-Angriffsszenarien", lang=lang, source=source ~ "# " ~ id, parent=osib) }}
+## Beispielhafte Angriffsszenarien {{ osib_anchor(osib=osib ~ ".example attack Scenarios", id=id ~ "-example_attack_scenarios", name=title ~ ": Mögliche-Angriffsszenarien", lang=lang, source=source ~ "# " ~ id, parent=osib) }}
 
 **Szenario Nr. 1:** Der Anwendungsserver wird mit Beispielanwendungen geliefert, die nicht vom Produktionsserver entfernt wurden. Diese Beispielanwendungen weisen bekannte Sicherheitslücken auf, die Angreifer nutzen, um den Server zu gefährden. Angenommen, eine dieser Anwendungen ist die Admin-Konsole und die Standardkonten wurden nicht geändert. In diesem Fall meldet sich der Angreifer mit Standardkennwörtern an und übernimmt die Kontrolle.
 
