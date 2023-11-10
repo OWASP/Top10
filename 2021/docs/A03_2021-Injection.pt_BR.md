@@ -29,15 +29,6 @@ Uma aplicação é vulnerável a ataques quando:
     relacional de objeto (ORM) para extrair registros confidenciais
     adicionais.
 
-- Os dados fornecidos pelo usuário não são validados, filtrados ou
-    higienizados pelo aplicativo.
-
-- Consultas dinâmicas ou chamadas não parametrizadas sem escape ciente
-    do contexto são usadas diretamente no interpretador.
-
-- Dados hostis são usados nos parâmetros de pesquisa de mapeamento
-    relacional de objeto (ORM) para extrair registros confidenciais adicionais.
-
 - Dados hostis são usados diretamente ou concatenados. O SQL ou comando
     contém a estrutura e os dados maliciosos em consultas dinâmicas, comandos
     ou procedimentos armazenados.
