@@ -1,0 +1,1112 @@
+####################################################################################
+# osib_short.yaml: Open Security Information Base (OSIB), (c) OWASP Top 10 team    #
+# This work is licenced under a Creative Commons Attribution 3.0 Unported Licence  #
+# ---------------------------------------------------------------------------------#
+# Version: 20211119 - DRAFT                                                        #
+# Usage:   Use macro calls to use it,n md-files,                                   #
+#          e.g. {{ osib_link(link=<path.to.osib.object>) }}                        #
+#          <path.to.osib.object> = e.g. "osib.owasp.top10.2021-1-0.1"              #
+####################################################################################
+---
+doctype:        OSIB
+schema:         v0.91
+date:           20211204
+children:
+  owasp:
+    aliases: ["open web application security project"]
+    attributes:
+      sources_i18n:
+        en:
+          name:             "Open Web Application Security Project&reg; (OWASP)"
+    children:
+      "asvs":
+        aliases: ["application security verification standard", "standard_asvs"]
+        attributes:
+          sources_i18n:
+            en:
+              name:         "OWASP Application Security Verification Standard (ASVS)"
+              source:       "https://owasp.org/www-project-application-security-verification-standard/"
+        children:
+          4-0:
+            aliases: ["4", "4-0-1", "4-0-2", "4-0-3"]
+            attributes:
+              source_id:    "ASVS 4.0.x"
+              sources_i18n:
+                en:
+                  name:     "OWASP Application Security Verification Standard (ASVS)-V.4.0.x"
+                  source:   "https://github.com/OWASP/ASVS/tree/v4.0.2/4.0"
+            children:
+              1: # 1
+                attributes:
+                  source_id: "V1"
+                  sources_i18n:
+                    en:
+                      name:     "V1-Architecture, Design and Threat Modeling Requirements"
+                      source:   "https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x10-V1-Architecture.md"
+                  links:
+                  - link: "osib.owasp.asvs.4-0-2"
+                    type: "parent"
+                  - link: "osib.owasp.asvs.4-0-2.1.1"
+                    type: "child"
+                  - link: "osib.owasp.asvs.4-0-2.1.2"
+                    type: "child"
+                  - link: "osib.owasp.asvs.4-0-2.1.4"
+                    type: "child"
+                  - link: "osib.owasp.asvs.4-0-2.1.5"
+                    type: "child"
+                  - link: "osib.owasp.asvs.4-0-2.1.6"
+                    type: "child"
+                  - link: "osib.owasp.asvs.4-0-2.1.7"
+                    type: "child"
+                  - link: "osib.owasp.asvs.4-0-2.1.8"
+                    type: "child"
+                  - link: "osib.owasp.asvs.4-0-2.1.9"
+                    type: "child"
+                  - link: "osib.owasp.asvs.4-0-2.1.10"
+                    type: "child"
+                  - link: "osib.owasp.asvs.4-0-2.1.11"
+                    type: "child"
+                  - link: "osib.owasp.asvs.4-0-2.1.12"
+                    type: "child"
+                  - link: "osib.owasp.asvs.4-0-2.1.14"
+                    type: "child"
+                children:
+                  1: # 1.1
+                    attributes:
+                      source_id: "V1.1"
+                      sources_i18n:
+                        en:
+                          name:   "V1.1-Secure Software Development Lifecycle Requirements"
+                          source: "https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x10-V1-Architecture.md"
+                      links:
+                      - link: "osib.owasp.asvs.4-0-2.1"
+                        type: "parent"
+                      - link: "osib.owasp.asvs.4-0-2.1.1.1"
+                        type: "child"
+                      - link: "osib.owasp.asvs.4-0-2.1.1.2"
+                        type: "child"
+                      - link: "osib.owasp.asvs.4-0-2.1.1.3"
+                        type: "child"
+                      - link: "osib.owasp.asvs.4-0-2.1.1.4"
+                        type: "child"
+                      - link: "osib.owasp.asvs.4-0-2.1.1.5"
+                        type: "child"
+                      - link: "osib.owasp.asvs.4-0-2.1.1.6"
+                        type: "child"
+                      - link: "osib.owasp.asvs.4-0-2.1.1.7"
+                        type: "child"
+                    children:
+                      1: # 1.1.1
+                        attributes:
+                          source_id: "V1.1.1"
+                          sources_i18n:
+                            en:
+                              name: "V1.1.1-Secure Software Development Lifecycle Requirements-1"
+                              source: "https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x10-V1-Architecture.md"
+                          links:
+                          - link: "osib.owasp.asvs.4-0-2.1.1"
+                            type: "parent"
+                      2: # 1.1.2
+                        attributes:
+                          source_id: "V1.1.2"
+                          sources_i18n:
+                            en:
+                              name: "V.1.1.2-Secure Software Development Lifecycle Requirements-2"
+                              source: "https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x10-V1-Architecture.md"
+                          links:
+                            - link: "osib.owasp.asvs.4-0-2.1.1"
+                              type: "parent"
+              4: # 4
+                attributes:
+                  source_id: "V4"
+                  sources_i18n:
+                    en:
+                      name: "V4-Access Control Verification Requirements"
+                      source: "https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x12-V4-Access-Control.md"
+                  links:
+                  - link: "osib.owasp.asvs.4-0-2"
+                    type: "parent"
+                  - link: "osib.owasp.asvs.4-0-2.4.1"
+                    type: "child"
+                  - link: "osib.owasp.asvs.4-0-2.4.2"
+                    type: "child"
+                  - link: "osib.owasp.asvs.4-0-2.4.3"
+                    type: "child"
+                children:
+                  1: # 4.1
+                    attributes:
+                      source_id: "V4.1"
+                      sources_i18n:
+                        en:
+                          name: "V4-General Access Control Design"
+                          source: "https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x12-V4-Access-Control.md"
+                      links:
+                      - link: "osib.owasp.asvs.4-0-2.4"
+                        type: "parent"
+                      - link: "osib.owasp.asvs.4-0-2.4.1.1"
+                        type: "child"
+                      - link: "osib.owasp.asvs.4-0-2.4.1.2"
+                        type: "child"
+                      - link: "osib.owasp.asvs.4-0-2.4.1.3"
+                        type: "child"
+                      - link: "osib.owasp.asvs.4-0-2.4.1.4"
+                        type: "child"
+                      - link: "osib.owasp.asvs.4-0-2.4.1.5"
+                        type: "child"
+                    children:
+                      1: # 4.1.1
+                        attributes:
+                          source_id: "V4.1.1"
+                          sources_i18n:
+                            en:
+                              name: "V4.1.1-General Access Control Design-1"
+                              source: "https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x12-V4-Access-Control.md"
+                          links:
+                          - link: "osib.owasp.asvs.4-0-2.4.1"
+                            type: "parent"
+                      2: # 4.1.2
+                        attributes:
+                          source_id: "V4.1.2"
+                          sources_i18n:
+                            en:
+                              name: "V4.1.2-General Access Control Design-2"
+              14: # 14
+                attributes:
+                  source_id: "V14"
+                  sources_i18n:
+                    en:
+                      name:   "V14-Configuration Verification Requirements"
+                      source: "https://github.com/OWASP/ASVS/blob/v4.0.2/4.0/en/0x22-V14-Config.md"
+                  links:
+                  - link:   "osib.owasp.asvs.4-0-2"
+                    type:   "parent"
+                  - link:   "osib.owasp.asvs.4-0-2.14.1"
+                    type:   "child"
+                  - link:   "osib.owasp.asvs.4-0-2.14.2"
+                    type:   "child"
+                  - link:   "osib.owasp.asvs.4-0-2.14.3"
+                    type:   "child"
+                  - link:   "osib.owasp.asvs.4-0-2.14.4"
+                    type:   "child"
+                  - link:   "osib.owasp.asvs.4-0-2.14.5"
+                    type:   "child"
+      top10:
+        aliases: ["top 10", "owasp top10", "owasp top 10", "top10 risks", "top 10 risks"]
+        attributes:
+          sources_i18n:
+            en:
+              name:         "OWASP Top10 - The Ten Most Critical Web Application Security Risks"
+              source:       "https://owasp.org/www-project-top-ten/"
+        children:
+          2010-1-0:
+            attributes:
+              status: "valid"
+              reviewed: 20211119
+              links:
+              - link: "osib.owasp.top10.2010-1-0.1"
+                type: "child"
+                status: "valid"
+                reviewed: 20211119
+              - link: "osib.owasp.top10.2010-1-0.2"
+                type: "child"
+                status: "valid"
+                reviewed: 20211119
+              - link: "osib.owasp.top10.2010-1-0.3"
+                type: "child"
+                status: "valid"
+                reviewed: 20211119
+              - link: "osib.owasp.top10.2010-1-0.4"
+                type: "child"
+                status: "valid"
+                reviewed: 20211119
+              - link: "osib.owasp.top10.2010-1-0.5"
+                type: "child"
+                status: "valid"
+                reviewed: 20211119
+              - link: "osib.owasp.top10.2010-1-0.6"
+                type: "child"
+                status: "valid"
+                reviewed: 20211119
+              - link: "osib.owasp.top10.2010-1-0.7"
+                type: "child"
+                status: "valid"
+                reviewed: 20211119
+              - link: "osib.owasp.top10.2010-1-0.8"
+                type: "child"
+                status: "valid"
+                reviewed: 20211119
+              - link: "osib.owasp.top10.2010-1-0.9"
+                type: "child"
+                status: "valid"
+                reviewed: 20211119
+              - link: "osib.owasp.top10.2010-1-0.10"
+                type: "child"
+                status: "valid"
+                reviewed: 20211119
+            children:
+              1: # osib.owasp.top10.2010-1-0.1
+                attributes:
+                  source_id: "A1:2010"
+                  sources_i18n:
+                    en:
+                      name: "A1:2010-Injection"
+                      source: "https://wiki.owasp.org/index.php/Top_10_2010-A1-Injection"
+                  links:
+                  - link: "osib.owasp.top10.2010-1-0"
+                    type: "parent"
+                    status: "valid"
+                    reviewed: 20211119
+                  - link: "osib.owasp.top10.2013-1-0.1"
+                    type: "successor"
+                    status: "active"
+                    change: "new"
+                    reviewed: 20211123
+              2: # osib.owasp.top10.2010-1-0.2
+                attributes:
+                  source_id: "A2:2010"
+                  sources_i18n:
+                    en:
+                      name: "A2:2010-Cross Site Scripting (XSS)"
+                      source: "https://wiki.owasp.org/index.php/Top_10_2010-A2-Cross-Site_Scripting_(XSS)"
+                  links:
+                  - link: "osib.owasp.top10.2010-1-0"
+                    type: "parent"
+                    status: "valid"
+                    reviewed: 20211119
+                  - link: "osib.owasp.top10.2013-1-0.3"
+                    type: "successor"
+                    status: "active"
+                    change: "new"
+                    reviewed: 20211123
+              3: # osib.owasp.top10.2010-1-0.3
+                attributes:
+                  source_id: "A3:2010"
+                  sources_i18n:
+                    en:
+                      name: "A3:2010-Broken Authentication and Session Management"
+                      source: "https://wiki.owasp.org/index.php/Top_10_2010-A3-Broken_Authentication_and_Session_Management"
+                  links:
+                  - link: "osib.owasp.top10.2010-1-0"
+                    type: "parent"
+                    status: "valid"
+                    reviewed: 20211119
+                  - link: "osib.owasp.top10.2013-1-0.2"
+                    type: "successor"
+                    status: "active"
+                    change: "new"
+                    reviewed: 20211123
+              4: # osib.owasp.top10.2010-1-0.4
+                attributes:
+                  source_id: "A4:2010"
+                  sources_i18n:
+                    en:
+                      name: "A4:2010-Insecure Direct Object References"
+                      source: "https://wiki.owasp.org/index.php/Top_10_2010-A4-Insecure_Direct_Object_References"
+                  links:
+                  - link: "osib.owasp.top10.2010-1-0"
+                    type: "parent"
+                    status: "valid"
+                    reviewed: 20211119
+                  - link: "osib.owasp.top10.2013-1-0.4"
+                    type: "successor"
+                    status: "active"
+                    change: "new"
+                    reviewed: 20211123
+              5: # osib.owasp.top10.2010-1-0.5
+                attributes:
+                  source_id: "A5:2010"
+                  sources_i18n:
+                    en:
+                      name: "A5:2010-Cross Site Request Forgery (CSRF)"
+                      source: "https://wiki.owasp.org/index.php/Top_10_2010-A5-Cross-Site_Request_Forgery_(CSRF)"
+                  links:
+                  - link: "osib.owasp.top10.2010-1-0"
+                    type: "parent"
+                    status: "valid"
+                    reviewed: 20211119
+                  - link: "osib.owasp.top10.2013-1-0.8"
+                    type: "successor"
+                    status: "active"
+                    change: "new"
+                    reviewed: 20211123
+              6: # osib.owasp.top10.2010-1-0.6
+                attributes:
+                  source_id: "A6:2010"
+                  sources_i18n:
+                    en:
+                      name: "A6:2010-Security Misconfiguration"
+                      source: "https://wiki.owasp.org/index.php/Top_10_2010-A6-Security_Misconfiguration"
+                  links:
+                  - link: "osib.owasp.top10.2010-1-0"
+                    type: "parent"
+                    status: "valid"
+                    reviewed: 20211119
+                  - link: "osib.owasp.top10.2013-1-0.5"
+                    type: "splitted_to"
+                    status: "active"
+                    change: "new"
+                    reviewed: 20211123
+                  - link: "osib.owasp.top10.2013-1-0.9"
+                    type: "splitted_to"
+                    status: "active"
+                    change: "new"
+                    reviewed: 20211123
+              7: # osib.owasp.top10.2010-1-0.7
+                attributes:
+                  source_id: "A7:2010"
+                  sources_i18n:
+                    en:
+                      name: "A7:2010-Insecure Cryptographic Storage"
+                      source: "https://wiki.owasp.org/index.php/Top_10_2010-A7-Insecure_Cryptographic_Storage"
+                  links:
+                  - link: "osib.owasp.top10.2010-1-0"
+                    type: "parent"
+                    status: "valid"
+                    reviewed: 20211119
+                  - link: "osib.owasp.top10.2013-1-0.6"
+                    type: "merged_to"
+                    status: "active"
+                    change: "new"
+                    reviewed: 20211123
+              8: # osib.owasp.top10.2010-1-0.8
+                attributes:
+                  source_id: "A8:2010"
+                  sources_i18n:
+                    en:
+                      name: "A8:2010-Failure to Restrict URL Access"
+                      source: "https://wiki.owasp.org/index.php/Top_10_2010-A8-Failure_to_Restrict_URL_Access"
+                  links:
+                  - link: "osib.owasp.top10.2010-1-0"
+                    type: "parent"
+                    status: "valid"
+                    reviewed: 20211119
+                  - link: "osib.owasp.top10.2013-1-0.7"
+                    type: "successor"
+                    status: "active"
+                    change: "new"
+                    reviewed: 20211123
+              9: # osib.owasp.top10.2010-1-0.9
+                attributes:
+                  source_id: "A9:2010"
+                  sources_i18n:
+                    en:
+                      name: "A9:2010-Insufficient Transport Layer Protection"
+                      source: "https://wiki.owasp.org/index.php/Top_10_2010-A9-Insufficient_Transport_Layer_Protection"
+                  links:
+                  - link: "osib.owasp.top10.2010-1-0"
+                    type: "parent"
+                    status: "valid"
+                    reviewed: 20211119
+                  - link: "osib.owasp.top10.2013-1-0.6"
+                    type: "merged_to"
+                    status: "active"
+                    change: "new"
+                    reviewed: 20211123
+              10: # osib.owasp.top10.2010-1-0.10
+                attributes:
+                  source_id: "A10:2010"
+                  sources_i18n:
+                    none:
+                      name: "A10:2010-Unvalidated Redirects and Forwards"
+                      source: "https://wiki.owasp.org/index.php/Top_10_2010-A10-Unvalidated_Redirects_and_Forwards"
+                  links:
+                  - link: "osib.owasp.top10.2010-1-0"
+                    type: "parent"
+                    status: "valid"
+                    reviewed: 20211119
+                  - link: "osib.owasp.top10.2013-1-0.10"
+                    type: "successor"
+                    status: "active"
+                    change: "new"
+                    reviewed: 20211123
+          2013-1-0:
+            attributes:
+              status: "valid"
+              reviewed: 20211119
+              links:
+              - link: "osib.owasp.top10.2013-1-0.1"
+                type: "child"
+                status: "valid"
+                reviewed: 20211119
+              - link: "osib.owasp.top10.2013-1-0.2"
+                type: "child"
+                status: "valid"
+                reviewed: 20211119
+              - link: "osib.owasp.top10.2013-1-0.3"
+                type: "child"
+                status: "valid"
+                reviewed: 20211119
+              - link: "osib.owasp.top10.2013-1-0.4"
+                type: "child"
+                status: "valid"
+                reviewed: 20211119
+              - link: "osib.owasp.top10.2013-1-0.5"
+                type: "child"
+                status: "valid"
+                reviewed: 20211119
+              - link: "osib.owasp.top10.2013-1-0.6"
+                type: "child"
+                status: "valid"
+                reviewed: 20211119
+              - link: "osib.owasp.top10.2013-1-0.7"
+                type: "child"
+                status: "valid"
+                reviewed: 20211119
+              - link: "osib.owasp.top10.2013-1-0.8"
+                type: "child"
+                status: "valid"
+                reviewed: 20211119
+              - link: "osib.owasp.top10.2013-1-0.9"
+                type: "child"
+                status: "valid"
+                reviewed: 20211119
+              - link: "osib.owasp.top10.2013-1-0.10"
+                type: "child"
+                status: "valid"
+                reviewed: 20211119
+            children:
+              1: # osib.owasp.top10.2013-1-0.1
+                attributes:
+                  source_id: "A1:2013"
+                  sources_i18n:
+                    en:
+                      name: "A1:2013-Injection"
+                      source: "https://wiki.owasp.org/index.php/Top_10_2013-A1-Injection"
+                  links:
+                  - link: "osib.owasp.top10.2013-1-0"
+                    type: "parent"
+                    status: "valid"
+                    reviewed: 20211119
+              2: # osib.owasp.top10.2013-1-0.2
+                attributes:
+                  source_id: "A2:2013"
+                  sources_i18n:
+                    en:
+                      name: "A2:2013-Broken Authentication and Session Management"
+                      source: "https://wiki.owasp.org/index.php/Top_10_2013-A2-Broken_Authentication_and_Session_Management"
+                  links:
+                  - link: "osib.owasp.top10.2013-1-0"
+                    type: "parent"
+                    status: "valid"
+                    reviewed: 20211119
+                  - link: "osib.owasp.top10.2010-1-0.1"
+                    type: "predecessor"
+                    status: "active"
+                    change: "new"
+                    reviewed: 20211122
+                  - link: "osib.owasp.top10.2017-1-0.2"
+                    type: "successor"
+                    status: "active"
+                    change: "new"
+                    reviewed: 20211122
+              3: # osib.owasp.top10.2013-1-0.3
+                attributes:
+                  source_id: "A3:2013"
+                  sources_i18n:
+                    en:
+                      name: "A3:2013-Cross-Site Scripting (XSS)"
+                      source: "https://wiki.owasp.org/index.php/Top_10_2013-A3-Cross-Site_Scripting_(XSS)"
+                  links:
+                  - link: "osib.owasp.top10.2013-1-0"
+                    type: "parent"
+                    status: "valid"
+                    reviewed: 20211119
+                  - link: "osib.owasp.top10.2010-1-0.3"
+                    type: "predecessor"
+                    status: "active"
+                    change: "new"
+                    reviewed: 20211122
+                  - link: "osib.owasp.top10.2017-1-0.7"
+                    type: "successor"
+                    status: "active"
+                    change: "new"
+                    reviewed: 20211122
+              4: # osib.owasp.top10.2013-1-0.4
+                attributes:
+                  source_id: "A4:2013"
+                  sources_i18n:
+                    en:
+                      name: "A4:2013-Insecure Direct Object References"
+                      source: "https://wiki.owasp.org/index.php/Top_10_2013-A4-Insecure_Direct_Object_References"
+                  links:
+                  - link: "osib.owasp.top10.2013-1-0"
+                    type: "parent"
+                    status: "valid"
+                    reviewed: 20211119
+                  - link: "osib.owasp.top10.2010-1-0.2"
+                    type: "predecessor"
+                    status: "active"
+                    change: "new"
+                    reviewed: 20211122
+                  - link: "osib.owasp.top10.2017-1-0.5"
+                    type: "merged_to"
+                    status: "active"
+                    change: "new"
+                    reviewed: 20211122
+              5: # osib.owasp.top10.2013-1-0.5
+                attributes:
+                  source_id: "A5:2013"
+                  sources_i18n:
+                    en:
+                      name: "A5:2013-Security Misconfiguration"
+                      source: "https://wiki.owasp.org/index.php/Top_10_2013-A5-Security_Misconfiguration"
+                  links:
+                  - link: "osib.owasp.top10.2013-1-0"
+                    type: "parent"
+                    status: "valid"
+                    reviewed: 20211119
+                  - link: "osib.owasp.top10.2010-1-0.4"
+                    type: "predecessor"
+                    status: "active"
+                    change: "new"
+                    reviewed: 20211122
+                  - link: "osib.owasp.top10.2017-1-0.6"
+                    type: "successor"
+                    status: "active"
+                    change: "new"
+                    reviewed: 20211122
+              6: # osib.owasp.top10.2013-1-0.6
+                attributes:
+                  source_id: "A6:2013"
+                  sources_i18n:
+                    en:
+                      name: "A6:2013-Sensitive Data Exposure"
+                      source: "https://wiki.owasp.org/index.php/Top_10_2013-A6-Sensitive_Data_Exposure"
+                  links:
+                  - link: "osib.owasp.top10.2013-1-0"
+                    type: "parent"
+                    status: "valid"
+                    reviewed: 20211119
+                  - link: "osib.owasp.top10.2010-1-0.7"
+                    type: "merged_from"
+                    status: "active"
+                    change: "new"
+                    reviewed: 20211122
+                  - link: "osib.owasp.top10.2010-1-0.9"
+                    type: "merged_from"
+                    status: "active"
+                    change: "new"
+                    reviewed: 20211122
+                  - link: "osib.owasp.top10.2017-1-0.3"
+                    type: "successor"
+                    status: "active"
+                    change: "new"
+                    reviewed: 20211122
+              7: # osib.owasp.top10.2013-1-0.7
+                attributes:
+                  source_id: "A7:2013"
+                  sources_i18n:
+                    en:
+                      name: "A7:2013-Missing Function Level Access Control"
+                      source: "https://wiki.owasp.org/index.php/Top_10_2013-A7-Missing_Function_Level_Access_Control"
+                  links:
+                  - link: "osib.owasp.top10.2013-1-0"
+                    type: "parent"
+                    status: "valid"
+                    reviewed: 20211119
+                  - link: "osib.owasp.top10.2010-1-0.7"
+                    type: "predecessor"
+                    status: "active"
+                    change: "new"
+                    reviewed: 20211122
+                  - link: "osib.owasp.top10.2017-1-0.5"
+                    type: "merged_to"
+                    status: "active"
+                    change: "new"
+                    reviewed: 20211122
+              8: # osib.owasp.top10.2013-1-0.8
+                attributes:
+                  source_id: "A8:2013"
+                  sources_i18n:
+                    en:
+                      name: "A8:2013-Cross-Site Request Forgery (CSRF)"
+                      source: "https://wiki.owasp.org/index.php/Top_10_2013-A8-Cross-Site_Request_Forgery_(CSRF)"
+                  links:
+                  - link: "osib.owasp.top10.2013-1-0"
+                    type: "parent"
+                    status: "valid"
+                    reviewed: 20211119
+                  - link: "osib.owasp.top10.2010-1-0.8"
+                    type: "predecessor"
+                    status: "active"
+                    change: "new"
+                    reviewed: 20211122
+              9: # osib.owasp.top10.2013-1-0.9
+                attributes:
+                  source_id: "A9:2013"
+                  sources_i18n:
+                    en:
+                      name: "A9:2013-Using Components with Known Vulnerabilities"
+                      source: "https://wiki.owasp.org/index.php/Top_10_2013-A9-Using_Components_with_Known_Vulnerabilities"
+                  links:
+                  - link: "osib.owasp.top10.2013-1-0"
+                    type: "parent"
+                    status: "valid"
+                    reviewed: 20211119
+                  - link: "osib.owasp.top10.2010-1-0.6"
+                    type: "splitted_from"
+                    status: "active"
+                    change: "new"
+                    reviewed: 20211122
+                  - link: "osib.owasp.top10.2017-1-0.9"
+                    type: "successor"
+                    status: "active"
+                    change: "new"
+                    reviewed: 20211122
+              10: # osib.owasp.top10.2013-1-0.10
+                attributes:
+                  source_id: "A10:2013"
+                  sources_i18n:
+                    en:
+                      name: "A10:2013-Unvalidated Redirects and Forwards"
+                      source: "https://wiki.owasp.org/index.php/Top_10_2013-A10-Unvalidated_Redirects_and_Forwards"
+                  links:
+                  - link: "osib.owasp.top10.2013-1-0"
+                    type: "parent"
+                    status: "valid"
+                    reviewed: 20211119
+                  - link: "osib.owasp.top10.2010-1-0.10"
+                    type: "predecessor"
+                    status: "active"
+                    change: "new"
+                    reviewed: 20211122
+          2017-1-0:
+            attributes:
+              sources_i18n:
+                en:
+                  name:     "OWASP Top10:2017, Version 1.0 (en)"
+                  source:   "https://owasp.org/www-project-top-ten/2017/"
+                de:
+                  name:     "OWASP Top10:2017, Version 1.0 (de)"
+                  source:   "https://owasp.org/www-project-top-ten/2017/de/"
+              status: "valid"
+              reviewed: 20211119
+              links:
+              - link: "osib.owasp.top10.2017-1-0.1"
+                type: "child"
+                status: "valid"
+                reviewed: 20211119
+              - link: "osib.owasp.top10.2017-1-0.2"
+                type: "child"
+                status: "valid"
+                reviewed: 20211119
+              - link: "osib.owasp.top10.2017-1-0.3"
+                type: "child"
+                status: "valid"
+                reviewed: 20211119
+              - link: "osib.owasp.top10.2017-1-0.4"
+                type: "child"
+                status: "valid"
+                reviewed: 20211119
+              - link: "osib.owasp.top10.2017-1-0.5"
+                type: "child"
+                status: "valid"
+                reviewed: 20211119
+              - link: "osib.owasp.top10.2017-1-0.6"
+                type: "child"
+                status: "valid"
+                reviewed: 20211119
+              - link: "osib.owasp.top10.2017-1-0.7"
+                type: "child"
+                status: "valid"
+                reviewed: 20211119
+              - link: "osib.owasp.top10.2017-1-0.8"
+                type: "child"
+                status: "valid"
+                reviewed: 20211119
+              - link: "osib.owasp.top10.2017-1-0.9"
+                type: "child"
+                status: "valid"
+                reviewed: 20211119
+              - link: "osib.owasp.top10.2017-1-0.10"
+                type: "child"
+                status: "valid"
+                reviewed: 20211119
+            children:
+              1:
+                attributes:
+                  source_id:      "A1:2017"
+                  sources_i18n:
+                    en:
+                      name:       "A1:2017-Injection"
+                      source:     "https://owasp.org/www-project-top-ten/2017/A1_2017-Injection"
+                    de:
+                      source:     "https://owasp.org/www-project-top-ten/2017/de/A1_2017-Injection.html"
+                  links:
+                  - link: "osib.owasp.top10.2017-1-0"
+                    type: "parent"
+                    status: "valid"
+                    reviewed: 20211119
+                  - link: "osib.owasp.top10.2013-1-0.1"
+                    type: "predecessor"
+                    status: "active"
+                    change: "new"
+                    reviewed: 20211122
+                  - link: "osib.owasp.top10.2021-1-0.3"
+                    type: "merged_to"
+                    status: "active"
+                    change: "new"
+                    reviewed: 20211122
+              2:
+                attributes:
+                  source_id:      "A2:2017"
+                  sources_i18n:
+                    en:
+                      name:       "A2:2017-Broken Authentication"
+                      source:     "https://owasp.org/www-project-top-ten/2017/A2_2017-Broken_Authentication"
+                    de:
+                      name:       "A2:2017-Fehler in der Authentifizierung"
+                      source:     "https://owasp.org/www-project-top-ten/2017/de/A2_2017-Fehler_in_der_Authentifizierung"
+                  links:
+                  - link: "osib.owasp.top10.2017-1-0"
+                    type: "parent"
+                    status: "valid"
+                    reviewed: 20211119
+                  - link: "osib.owasp.top10.2013-1-0.1"
+                    type: "predecessor"
+                    status: "active"
+                    change: "new"
+                    reviewed: 20211122
+                  - link: "osib.owasp.top10.2021-1-0.7"
+                    type: "successor"
+                    status: "active"
+                    change: "new"
+                    reviewed: 20211122
+              3:
+                attributes:
+                  source_id:      "A3:2017"
+                  sources_i18n:
+                    en:
+                      name:       "A3:2017-Sensitive Data Exposure"
+                      source:     "https://owasp.org/www-project-top-ten/2017/A3_2017-Sensitive_Data_Exposure"
+                    de:
+                      name:       "A3:2017-Verlust der Vertraulichkeit sensibler Daten"
+                      source:     "https://owasp.org/www-project-top-ten/2017/de/A3_2017-Verlust_der_Vertraulichkeit_sensibler_Daten"
+                  links:
+                  - link:         "osib.owasp.top10.2017-1-0"
+                    type:         "parent"
+                  - link:         "osib.owasp.top10.2021-1-0.2"
+                    type:         "successor"
+              4:
+                attributes:
+                  source_id:      "A4:2017"
+                  sources_i18n:
+                    en:
+                      name:       "A4:2017-XML External Entities (XXE)"
+                      source:     "https://owasp.org/www-project-top-ten/2017/A4_2017-XML_External_Entities_(XXE)"
+                    de:
+                      source:     "https://owasp.org/www-project-top-ten/2017/de/A4_2017-XML_External_Entities_(XXE)"
+                  links:
+                  - link: "osib.owasp.top10.2017-1-0"
+                    type: "parent"
+                    status: "valid"
+                    reviewed: 20211119
+              5:
+                attributes:
+                  source_id:      "A5:2017"
+                  sources_i18n:
+                    en:
+                      name:       "A5:2017-Broken Access Control"
+                      source:     "https://owasp.org/www-project-top-ten/2017/A5_2017-Broken_Access_Control"
+                    de:
+                      name:       "A5:2017-Fehler in der Zugriffskontrolle"
+                      source:     "https://owasp.org/www-project-top-ten/2017/de/A5_2017-Fehler_in_der_Zugriffskontrolle"
+                  links:
+                  - link: "osib.owasp.top10.2017-1-0"
+                    type: "parent"
+                    status: "valid"
+                    reviewed: 20211119
+                  - link: "osib.owasp.top10.2013-1-0.4"
+                    type: "merged_from"
+                    status: "active"
+                    change: "new"
+                    reviewed: 20211122
+                  - link: "osib.owasp.top10.2013-1-0.7"
+                    type: "merged_from"
+                    status: "active"
+                    change: "new"
+                    reviewed: 20211122
+                  - link: "osib.owasp.top10.2021-1-0.1"
+                    type: "successor"
+                    status: "active"
+                    change: "new"
+                    reviewed: 20211122
+              6:
+                attributes:
+                  source_id:      "A6:2017"
+                  sources_i18n:
+                    en:
+                      name:       "A6:2017-Security Misconfiguration"
+                      source:     "https://owasp.org/www-project-top-ten/2017/A6_2017-Security_Misconfiguration"
+                  links:
+                  - link: "osib.owasp.top10.2017-1-0"
+                    type: "parent"
+                    status: "valid"
+                    reviewed: 20211119
+                  - link: "osib.owasp.top10.2013-1-0.5"
+                    type: "predecessor"
+                    status: "active"
+                    change: "new"
+                    reviewed: 20211122
+                  - link: "osib.owasp.top10.2021-1-0.5"
+                    type: "merged_to"
+                    status: "active"
+                    change: "new"
+                    reviewed: 20211122
+              7:
+                attributes:
+                  source_id:      "A7:2017"
+                  sources_i18n:
+                    en:
+                      name:       "A7:2017-Cross-Site Scripting (XSS)"
+                      source:     "https://owasp.org/www-project-top-ten/2017/A7_2017-Cross-Site_Scripting_(XSS)"
+                  links:
+                  - link: "osib.owasp.top10.2017-1-0"
+                    type: "parent"
+                    status: "valid"
+                    reviewed: 20211119
+                  - link: "osib.owasp.top10.2013-1-0.3"
+                    type: "predecessor"
+                    status: "active"
+                    change: "new"
+                    reviewed: 20211122
+                  - link: "osib.owasp.top10.2021-1-0.3"
+                    type: "merged_to"
+                    status: "active"
+                    change: "new"
+                    reviewed: 20211122
+              8: # osib.owasp.top10.2017-1-0.8
+                attributes:
+                  source_id:      "A8:2017"
+                  sources_i18n:
+                    en:
+                      name:       "A8:2017-Insecure Deserialization"
+                      source:     "https://owasp.org/www-project-top-ten/2017/A8_2017-Insecure_Deserialization"
+                  links:
+                  - link: "osib.owasp.top10.2017-1-0"
+                    type: "parent"
+                    status: "valid"
+                    reviewed: 20211119
+              9:
+                attributes:
+                  source_id:      "A9:2017"
+                  sources_i18n:
+                    en:
+                      name:       "A9:2017-Using Components with Known Vulnerabilities"
+                      source:     "https://owasp.org/www-project-top-ten/2017/A9_2017-Using_Components_with_Known_Vulnerabilities"
+                  links:
+                  - link: "osib.owasp.top10.2017-1-0"
+                    type: "parent"
+                    status: "valid"
+                    reviewed: 20211119
+                  - link: "osib.owasp.top10.2013-1-0.9"
+                    type: "predecessor"
+                    status: "active"
+                    change: "new"
+                    reviewed: 20211122
+                  - link: "osib.owasp.top10.2021-1-0.6"
+                    type: "successor"
+                    status: "active"
+                    change: "new"
+                    reviewed: 20211122
+              10:
+                attributes:
+                  source_id:      "A10:2017"
+                  sources_i18n:
+                    en:
+                      name:       "A10:2017-Insufficient Logging & Monitoring"
+                      source:     "https://owasp.org/www-project-top-ten/2017/A10_2017-Insufficient_Logging%2526Monitoring"
+                  links:
+                  - link: "osib.owasp.top10.2017-1-0"
+                    type: "parent"
+                    status: "valid"
+                    reviewed: 20211119
+          2021-1-0:
+            attributes:
+              sources_i18n:
+                en:
+                  name:     "OWASP Top10:2021, Version 1.0 (en)"
+                  source:   "https://owasp.org/Top10/"
+              links:
+              - link:       "osib.owasp.top10.2021-1-0.1"
+                type:       "child"
+              - link:       "osib.owasp.top10.2021-1-0.2"
+                type:       "child"
+              - link:       "osib.owasp.top10.2021-1-0.3"
+                type:       "child"
+              - link:       "osib.owasp.top10.2021-1-0.4"
+                type:       "child"
+              - link:       "osib.owasp.top10.2021-1-0.5"
+                type:       "child"
+              - link:       "osib.owasp.top10.2021-1-0.6"
+                type:       "child"
+              - link:       "osib.owasp.top10.2021-1-0.7"
+                type:       "child"
+              - link:       "osib.owasp.top10.2021-1-0.8"
+                type:       "child"
+              - link:       "osib.owasp.top10.2021-1-0.9"
+                type:       "child"
+              - link:       "osib.owasp.top10.2021-1-0.10"
+                type:       "child"
+              - link:       "osib.owasp.top10.2021-1-0.11"
+                type:       "child"
+            children:
+              1:
+                attributes:
+                  source_id:       "A01:2021"
+                  sources_i18n:
+                    en:
+                      name:         "A01:2021-Broken Access Control"
+                      source:       "https://owasp.org/Top10/A01_2021-Broken_Access_Control"
+                  links:
+                  - link:         "osib.owasp.top10.2021-1-0"
+                    type:         "parent"
+              2:
+                attributes:
+                  source_id:       "A02:2021"
+                  sources_i18n:
+                    en:
+                      name:         "A02:2021-Cryptographic Failures"
+                      source:       "https://owasp.org/Top10/A02_2021-Cryptographic_Failures"
+                  links:
+                  - link:         "osib.owasp.top10.2021-1-0"
+                    type:         "parent"
+              3:
+                 attributes:
+                  source_id:       "A03:2021"
+                  sources_i18n:
+                    en:
+                      name:         "A03:2021-Injection"
+                      source:       "https://owasp.org/Top10/A03_2021-Injection"
+                  links:
+                  - link:         "osib.owasp.top10.2021-1-0"
+                    type:         "parent"
+              4:
+                attributes:
+                  source_id:       "A04:2021"
+                  sources_i18n:
+                    en:
+                      name:         "A04:2021-Insecure Design"
+                      source:       "https://owasp.org/Top10/A04_2021-Insecure_Design"
+                  links:
+                  - link:         "osib.owasp.top10.2021-1-0"
+                    type:         "parent"
+              5:
+                attributes:
+                  source_id:       "A05:2021"
+                  sources_i18n:
+                    en:
+                      name:         "A05:2021-Security Misconfiguratuion"
+                      source:       "https://owasp.org/Top10/A05_2021-Security_Misconfiguration"
+                  links:
+                  - link:         "osib.owasp.top10.2021-1-0"
+                    type:         "parent"
+              6:
+                attributes:
+                  source_id:       "A06:2021"
+                  sources_i18n:
+                    en:
+                      name:         "A06:2021-Vulnerable and Outdated Components"
+                      source:       "https://owasp.org/Top10/A06_2021-Vulnerable_and_Outdated_Components"
+                  links:
+                  - link:         "osib.owasp.top10.2021-1-0"
+                    type:         "parent"
+              7:
+                attributes:
+                  source_id:       "A07:2021"
+                  sources_i18n:
+                    en:
+                      name:         "A07:2021-Identification and Authentication Failures"
+                      source:       "https://owasp.org/Top10/A07_2021-Identification_and_Authentication_Failures"
+                  links:
+                  - link:         "osib.owasp.top10.2021-1-0"
+                    type:         "parent"
+              8:
+                attributes:
+                  source_id:       "A08:2021"
+                  sources_i18n:
+                    en:
+                      name:         "A08:2021-Software and Data Integrity Failures"
+                      source:       "https://owasp.org/Top10/A08_2021-Software_and_Data_Integrity_Failures"
+                  links:
+                  - link:         "osib.owasp.top10.2021-1-0"
+                    type:         "parent"
+              9:
+                attributes:
+                  source_id:       "A09:2021"
+                  sources_i18n:
+                    en:
+                      name:         "A09:2021-Security Logging and Monitoring Failures"
+                      source:       "https://owasp.org/Top10/A09_2021-Security_Logging_and_Monitoring_Failures"
+                  links:
+                  - link:         "osib.owasp.top10.2021-1-0"
+                    type:         "parent"
+              10:
+                attributes:
+                  source_id:       "A10:2021"
+                  sources_i18n:
+                    en:
+                      name:         "A10:2021-Server Side Request Forgery (SSRF)"
+                      source:       "https://owasp.org/Top10/A10_2021-Server-Side_Request_Forgery_%28SSRF%29"
+                  links:
+                  - link:         "osib.owasp.top10.2021-1-0"
+                    type:         "parent"
+              11:
+                attributes:
+                  source_id:       "A11:2021"
+                  sources_i18n:
+                    en:
+                      name:         "A11:2021-Next Steps"
+                      source:       "https://owasp.org/Top10/A11_2021-Next_Steps"
+                  links:
+                  - link:         "osib.owasp.top10.2021-1-0"
+                    type:         "parent"
+              "references":
+                attributes:
+                  source_id:       "List of other References"
+                  sources_i18n:
+                    en:
+                      name:         "External references"
+                children:
+                  "portswigger":
+                    attributes:
+                      source_id:     "Portswigger"
+                      sources_i18n:
+                        en:
+                          name:       "Portswigger"
+                    children:
+                      1:
+                        attributes:
+                          sources_i18n:
+                            en:
+                              name:     "Exploiting CORS misconfiguration"
+                              source:   "https://portswigger.net/research/exploiting-cors-misconfigurations-for-bitcoins-and-bounties"
+  "oauth":
+    attributes:
+      source_id:             "OAuth"
+      sources_i18n:
+        en:
+          name:               "OAuth"
+    children:
+      "oauth2-servers":                                             # Added by OWASP Top10 team, Torsten Gigler, 20210923
+        attributes:
+          sources_i18n:
+            en:
+              name:             "OAuth2 Servers"
+        children:
+          100:
+            children:
+              13:
+                attributes:
+                  sources_i18n:
+                    en:
+                      name:         "Listing Authorizations"
+                      source:       "https://www.oauth.com/oauth2-servers/listing-authorizations/"
+                children:
+                  1:
+                    attributes:
+                      sources_i18n:
+                        en:
+                          name:       "Revoking Access"
+                          source:     "https://www.oauth.com/oauth2-servers/listing-authorizations/revoking-access"
+
