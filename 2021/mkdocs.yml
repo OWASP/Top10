@@ -249,7 +249,7 @@ plugins:
 extra:
     osib:
      document:     osib.owasp.top10
-     version:      4-0, 2021-1-0
+     version:      2021-1-0
 #     document:     <osib-id>                    # e.g. osib.owasp.top10
 #     version:      <version-no, no dots '.'>    # e.g. 4-0, 2021-1-0
      categories:   [document, awareness]        # list of all default categories
@@ -263,5 +263,5 @@ extra:
        en:         successor
        de:         Nachfolger
      split_to_texts:
-       en:         splitted to
+       en:         split to
        de:         Aufgeteilt in
