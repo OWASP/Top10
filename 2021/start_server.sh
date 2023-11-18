@@ -1,2 +1,2 @@
 #!/bin/bash
-mkdocs serve -v
+mkdocs serve -v 2>&1
