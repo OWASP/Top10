@@ -14,17 +14,17 @@ Veröffentlicht am 24. September 2021
 – Orange Tsai [@orange_8361](https://twitter/orange_8361), Autor von A10-2021: Server Side Request Forgery
 – Jim Manico [@manicode](https://twitter/manicode) und Jakub Maćkowski [@kubamackowski](https://twitter/kubamackowski) – OWASP CheatSheets Coordination
 
-## Wie können Sie mithelfen
+## Wie kannst du helfen
 
-Zum jetzigen Zeitpunkt benötigen wir die Unterstützung von
+Zum jetzigen Zeitpunkt bitten wir darum
 
-- Datenwissenschaftler – bitte überprüfen Sie unsere Analysen
+- Datenwissenschaftler – bitte überprüfen Sie unsere Analyse
 - Webdesigner – wir müssen eine mobilfreundliche Version erstellen
-- Übersetzer – Bitte überprüfen Sie den englischen Text, um sicherzustellen, dass er übersetzbar ist
+- Übersetzer – Bitte überprüfen Sie die Übersetzung der englischen Texte, um sicherzustellen, dass sie korrekt sind
 - Führung von ASVS, Testing Guide und Code Review Guide – bitte nutzen Sie unsere Daten und helfen Sie uns, unsere Dokumente und Standards miteinander zu verknüpfen
 
-## Verbesserungsvorschläge und Pull-Anfragen
+## Protokollieren Sie Probleme und Pull-Anfragen
 
-Bitte tragen Sie mit Korrekturen oder Lösungen von Problemen bei unter:
+Bitte protokollieren Sie alle Korrekturen oder Probleme:
 
 - [https://github.com/OWASP/Top10/issues](https://github.com/OWASP/Top10/issues)
