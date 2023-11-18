@@ -1,83 +1,80 @@
-# A06:2021 – Verwundbare und veraltete Komponenten ![icon](assets/TOP_10_Icons_Final_Vulnerable_Outdated_Components.png){: style="height:80px;width:80px" align="right"}
+---
+source: "https://owasp.org/Top10/A06_2021-Vulnerable_and_Outdated_Components/"
+title: "A06:2021 – Unsichere oder veraltete Komponenten"
+id: "A06:2021"
+lang:	"de"
+---
+{%- set parent = extra.osib.document ~ "." ~ extra.osib.version -%}
+{%- set osib = parent ~ ".6" -%}
+#A06:2021 – Unsichere oder veraltete Komponenten ![icon](assets/TOP_10_Icons_Final_Vulnerable_Outdated_Components.png){: style="height:80px;width:80px" align="right"} {{ osib_anchor(osib=osib, id=id , name="Vulnerable and Outdated Components", lang=lang, source=source, parent=parent, previous=extra.osib.document ~ ".2017.9") }}
 
-## Faktoren
 
-| CWEs kartiert | Maximale Inzidenzrate | Durchschnittliche Inzidenzrate | Maximale Abdeckung | Durchschnittliche Abdeckung | Durchschnittlich gewichteter Exploit | Durchschnittliche gewichtete Auswirkung | Gesamtzahl der Vorkommen | CVEs insgesamt |
+## Beurteilungskriterien {{ osib_anchor(osib=osib ~ ".factors", id=id ~ "-factors", name=title ~ ": Factors", lang=lang, source=source ~ "#" ~ id, parent=osib) }}
+
+| Zugeordnete CWEs | Maximale Häufigkeit | Durchschn. Häufigkeit | Durchschn. Ausnutzbarkeit (gewichtet) | Durchschn. Auswirkungen (gewichtet) | Maximale Abdeckung | Durchschnittliche Abdeckung | Gesamtanzahl | CVEs insgesamt |
 |:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
 | 3           | 27.96%             | 8.77%              | 51.78%       | 22.47%       | 5.00                 | 5.00                | 30,457            | 0          |
 
-## Überblick
+## Übersicht {{ osib_anchor(osib=osib ~ ".overview", id=id ~ "-overview", name=title ~ ": Übersicht", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
 
-Es belegte Platz 2 in der Top-10-Community-Umfrage, verfügte aber auch über genügend Daten, um es datentechnisch in die Top 10 zu schaffen. Verwundbare Komponenten sind ein bekanntes Problem, das wir nur schwer testen und bewerten können. Sie stellen die einzige Kategorie dar, in der den enthaltenen CWEs keine Common Vulnerability and Exposures (CVEs) zugeordnet sind. Daher wird eine standardmäßige Exploit-/Auswirkungsgewichtung von 5,0 verwendet. Bemerkenswerte CWEs sind *CWE-1104: Verwendung nicht gewarteter Drittanbieterkomponenten* und die beiden CWEs aus den Top 10 2013 und 2017.
+Es belegte Platz 2 in der Top-10-Community-Umfrage, verfügte aber auch über genügend Daten, um es datentechnisch in die Top 10 zu schaffen. Vulnerable Komponenten sind ein bekanntes Problem, das wir nur schwer testen und bewerten können. Sie stellen die einzige Kategorie dar, in der den enthaltenen CWEs keine Common Vulnerability and Exposures (CVEs) zugeordnet sind. Daher wird eine standardmäßige Exploit-/Auswirkungsgewichtung von 5,0 verwendet. Bemerkenswerte CWEs sind *CWE-1104: Verwendung nicht gewarteter Drittanbieterkomponenten* und die beiden CWEs aus den Top 10 2013 und 2017.
 
-## Beschreibung
+## Beschreibung {{ osib_anchor(osib=osib ~ ".description", id=id ~ "-description", name=title ~ ": Beschreibung", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
 
-Sie sind wahrscheinlich gefährdet:
+Die Anwendung besitzt möglicherweise Schwachstellen, wenn folgendes zutrifft:
 
-- Wenn Sie nicht die Versionen aller von Ihnen verwendeten Komponenten kennen (sowohl clientseitig als auch serverseitig). Dazu gehören Komponenten, die Sie direkt verwenden, sowie darin eingebetete Abhängigkeiten.
+- Keine Kenntnis über Versionen der in der Anwendung benutzten Komponenten (sowohl client- als auch serverseitig). Dies beinhaltet sowohl direkte als auch indirekte, verschachtelte Abhängigkeiten.
 
-- Wenn die Software anfällig, nicht mehr unterstützt wird oder veraltet ist. Dazu gehören das Betriebssystem, der Web-/Anwendungsserver, das Datenbankverwaltungssystem (DBMS), Anwendungen, APIs und alle Komponenten, Laufzeitumgebungen und Bibliotheken.
+- Die verwendete Software besitzt Schwachstellen, wird nicht mehr unterstützt oder ist veraltet. Dies beinhaltet das Betriebssystem, den Web-/Applikationsserver, das Datenbankmanagementsystem (DBMS), Anwendungen, APIs und alle verwendeten Komponenten, Laufzeitumgebungen sowie Bibliotheken.
 
-- Wenn Sie nicht regelmäßig nach Schwachstellen suchen und Sicherheitsbulletins für die von Ihnen verwendeten Komponenten abonniert haben.
+- Schwachstellenscans werden nicht regelmäßig durchgeführt und die sicherheitsrelevante Bulletins der benutzten Komponenten sind nicht abonniert.
 
-- Wenn Sie die zugrunde liegende Plattform, Frameworks und Abhängigkeiten nicht risikobasiert und zeitnah reparieren oder aktualisieren. Dies geschieht häufig in Umgebungen, in denen das Patchen eine monatliche oder vierteljährliche Aufgabe unter Änderungskontrolle ist, wodurch Unternehmen tage- oder monatelang unnötig mit behobenen Schwachstellen konfrontiert werden.
+- Die zugrundeliegende Plattform, das Framework und die Abhängigkeiten werden nicht risikobasiert und rechtzeitig repariert oder aktualisiert. Dies passiert in der Regel in Umgebungen in denen Patchen eine monatliche oder quartalsweise Tätigkeit und einer Änderungskontrolle unterliegt. Dies setzt die Organisation unnötigerweise über Tage oder Monate dem Risiko von Schwachstellen aus, für die schon Patches existieren.
 
-- Wenn Softwareentwickler die Kompatibilität aktualisierter, aktualisierter oder gepatchter Bibliotheken nicht testen.
+- Softwareentwickler keine Kompatibilitäts-Tests der aktualisierten oder gepatchten Bibliotheken durchführen.
 
-- Wenn Sie die Konfigurationen der Komponenten nicht sichern (siehe [A05:2021-Security Misconfiguration](A05_2021-Security_Misconfiguration.de.md)).
+- Die Komponenten nicht sicher konfiguriert sind (siehe [A05:2021-Sicherheitsrelevante Fehlkonfiguration](A05_2021-Security_Misconfiguration.de.md)).
 
-## Gegenmaßnahmen
+## Prävention und Gegenmaßnahmen {{ osib_anchor(osib=osib ~ ".how to prevent", id=id ~ "-how_to_prevent", name=title ~ ": How to Prevent", lang=lang, source=source ~ "#" ~ id, parent=osib) }}
 
-Es sollte ein Patch-Management-Prozess vorhanden sein, in welchem:
+Es sollte ein Patch-Management-Prozess vorhanden sein:
 
-- Ungenutzte Abhängigkeiten, unnötige Funktionen, Komponenten, Dateien und Dokumentation entfernt werden.
+- Entfernen Sie ungenutzte Abhängigkeiten, unnötige Funktionen, Komponenten, Dateien und Dokumentation.
 
-- Eine kontinuierliche Bestandsaufnahme der Versionen, sowohl der clientseitigen als auch der serverseitigen Komponenten (z. B. Frameworks, Bibliotheken), und ihrer Abhängigkeiten mithilfe von Tools wie Versionen, OWASP Dependency Check, retire.js usw. durchgeführt wird. Überwachen Sie kontinuierlich Quellen wie Common Vulnerability and Exposures (CVE). ) und die National Vulnerability Database (NVD) für Schwachstellen in den Komponenten. Verwenden Sie Software-Tools zur Analyse der Zusammensetzung, um den Prozess zu automatisieren. Abonnieren Sie E-Mail-Benachrichtigungen zu Sicherheitslücken für die von Ihnen verwendeten Komponenten.
+- Kontinuierliche Bestandsaufnahme der Versionen sowohl der clientseitigen als auch der serverseitigen Komponenten (z. B. Frameworks, Bibliotheken) und ihrer Abhängigkeiten mithilfe von Tools wie "versions", "OWASP Dependency Check", "retire.js" usw. Überwachen Sie kontinuierlich Quellen wie Common Vulnerability and Exposures (CVE)) und die National Vulnerability Database (NVD) für Schwachstellen in den Komponenten. Verwenden Sie Software-Tools zur Analyse der Softwarebestandteile, um den Prozess zu automatisieren. Abonnieren Sie E-Mail-Benachrichtigungen zu Sicherheitslücken im Zusammenhang mit den von Ihnen verwendeten Komponenten.
 
-- Komponenten nur von offiziellen Quellen über sichere Links bezogen werden. Bevorzugen Sie signierte Pakete, um die Wahrscheinlichkeit zu verringern, dass eine modifizierte, bösartige Komponente enthalten ist (siehe A08:2021 – Software- und Datenintegritätsfehler).
+- Beziehen Sie Komponenten nur von offiziellen Quellen über sichere Links. Bevorzugen Sie signierte Pakete, um die Wahrscheinlichkeit zu verringern, dass eine modifizierte, bösartige Komponente enthalten ist (siehe [A08:2021-Fehlerhafte Prüfung der Software- und Datenintegrität](A08_2021-Software_and_Data_Integrity_Failures.de.md))
 
-- Bibliotheken und Komponenten, die nicht mehr gewartet werden oder keine Sicherheitspatches für ältere Versionen mehr erhalten, identifiziert werden. Wenn das Patchen nicht möglich ist, erwägen Sie die Bereitstellung eines virtuellen Patches zur Überwachung, Erkennung oder zum Schutz vor dem entdeckten Problem.
+- Überwachen Sie Bibliotheken und Komponenten, die nicht gewartet werden oder keine Sicherheitspatches für ältere Versionen erstellen. Wenn das Patchen nicht möglich ist, erwägen Sie die Bereitstellung eines virtuellen Patches zur Überwachung, Erkennung oder zum Schutz vor dem entdeckten Problem.
 
-Jede Organisation muss einen kontinuierlichen Plan für die Überwachung, Triage und Anwendung von Updates oder Konfigurationsänderungen während der gesamten Lebensdauer der Anwendung oder des Portfolios sicherstellen.
+Jede Organisation muss einen fortlaufenden Plan für die Überwachung, Triage und Anwendung von Updates oder Konfigurationsänderungen während der gesamten Lebensdauer der Anwendung oder des Portfolios sicherstellen.
 
-## Beispielangriffsszenarien
+## Beispielhafte Angriffsszenarien {{ osib_anchor(osib=osib ~ ".example attack Scenarios", id=id ~ "-example_attack_scenarios", name=title ~ ": Beispiel-Angriffsszenarien", lang=lang, source=source ~ "# " ~ id, parent=osib) }}
 
-**Szenario Nr. 1:** Komponenten werden normalerweise mit denselben Berechtigungen wie die Anwendung selbst ausgeführt, sodass Fehler in einer Komponente schwerwiegende Auswirkungen haben können. Solche Fehler können zufällig (z. B. ein Codierungsfehler) oder absichtlich (z. B. eine Hintertür in einer Komponente) sein. Einige Beispiele für entdeckte ausnutzbare Komponentenschwachstellen sind:
+**Szenario Nr. 1:** Komponenten werden normalerweise mit denselben Berechtigungen wie die Anwendung selbst ausgeführt, sodass Fehler in einer Komponente schwerwiegende Auswirkungen haben können. Solche Fehler können zufällig (z. B. ein Programmierfehler) oder absichtlich (z. B. eine Backdoor in einer Komponente) sein. Einige Beispiele für entdeckte ausnutzbare Komponentenschwachstellen sind:
 
-– CVE-2017-5638, eine Schwachstelle in Struts 2 zur Remote code execution, die die Ausführung beliebigen Codes auf dem Server ermöglicht, wurde für schwerwiegende Verstöße verantwortlich gemacht.
+– CVE-2017-5638, eine Remote Code Execution Schwachstelle in Struts 2, die den Angreifer ermächtigt beliebigen Code auf dem Server auszuführen, wurde für einige erhebliche Sicherheitsvorfälle verantwortlich gemacht.
 
-- Während das Internet of things (IoT) häufig nur schwer oder gar nicht gepatcht werden kann, kann es von großer Bedeutung sein, diese zu patchen (z. B. bei biomedizinischen Geräten).
+- Obwohl das Patchen von Geräten des Internet of Things (IoT) oft nur sehr schwierig oder unmöglich ist, kann dies sehr wichtig sein (z.B. biomedizinische Geräte).
 
-Es gibt automatisierte Tools, die Angreifern helfen, nicht gepatchte oder falsch konfigurierte Systeme zu finden. Die Shodan IoT-Suchmaschine kann Ihnen beispielsweise dabei helfen, Geräte zu finden, die immer noch unter der im April 2014 behobenen Heartbleed-Sicherheitslücke leiden.
+Es existieren automatisierte Tools, die Angreifern helfen, nicht gepatchte oder falsch konfigurierte Systeme zu finden. Die Shodan IoT-Suchmaschine kann Ihnen beispielsweise dabei helfen, Geräte zu finden, die immer noch für die im April 2014 gepatchte Heartbleed-Sicherheitslücke verwundbar sind.
 
-## Referenzen
+## Referenzen {{ osib_anchor(osib=osib ~ ".references", id=id ~ "-references", name=title ~ ": References", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
+- {{ osib_link(link="osib.owasp.asvs.4-0." ~ "1", osib=osib) }} <!-- [OWASP Application Security Verification Standard: V1 Architektur, Design und Bedrohungsmodellierung]( /www-project-application-security-verification-standard) ->
+- {{ osib_link(link="osib.owasp.dependency check", osib=osib) }} <!--- [OWASP-Abhängigkeitsprüfung (für Java- und .NET-Bibliotheken)](/www-project-dependency-check) --->
+- {{ osib_link(link="osib.owasp.wstg.4-2.4.1.10", osib=osib) }} <!--- [OWASP-Testhandbuch – Kartenanwendungsarchitektur (OTG-INFO-010)](/ www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/01-Information_Gathering/10-Map_Application_Architecture) --->
+- {{ osib_link(link="osib.owasp.community.0.other.virtual Patching Best Practices", osib=osib) }} <!--- [OWASP Virtual Patching Best Practices](/www-community/Virtual_Patching_Best_Practices) --->
+- {{ osib_link(link="osib.contrast.insecure Bibliotheken.2014", doc="osib.contrast", osib=osib) }} <!--- [Die unglückliche Realität unsicherer Bibliotheken](https:// cdn2.hubspot.net/hub/203759/file-1100864196-pdf/docs/Contrast_-_Insecure_Libraries_2014.pdf) --->
+- {{ osib_link(link="osib.cvedetails.search", osib=osib) }} <!--- [MITRE Common Vulnerabilities and Exposures (CVE)-Suche](https://www.cvedetails.com/version- search.php) --->
+- {{ osib_link(link="osib.nist.nvd", osib=osib) }} <!--- [National Vulnerability Database (NVD)](https://nvd.nist.gov/) --->
+- {{ osib_link(link="osib.retirejs", osib=osib) }} <!--- [Retire.js zur Erkennung bekanntermaßen anfälliger JavaScript-Bibliotheken](https://github.com/retirejs/retire.js/ ) --->
+- {{ osib_link(link="osib.github.advisories", osib=osib) }} <!--- [GitHub Advisory Database](https://github.com/advisories) --->
+- {{ osib_link(link="osib.rubysec", osib=osib) }} <!--- [Ruby Libraries Security Advisory Database and Tools](https://rubysec.com/) --->
+- {{ osib_link(link="osib.safecode.publications.Software Integrity Controls.0.pdf", doc="osib.safecode", osib=osib) }} <!--- [SAFECode Software Integrity Controls \[PDF \]](https://safecode.org/publication/SAFECode_Software_Integrity_Controls0610.pdf) --->
 
-- [OWASP Application Security Verification Standard: V1 Architecture, design and threat modelling](/www-project-application-security-verification-standard)
 
-- [OWASP Dependency Check (for Java and .NET libraries)](/www-project-dependency-check)
+## Liste der zugeordneten CWEs {{ osib_anchor(osib=osib~".mapped cwes", id=id~"-mapped_cwes", name=title~":List of Mapped CWEs", lang=lang, source=source~" #" ~id, parent=osib) }}
 
-- [OWASP Testing Guide - Map Application Architecture (OTG-INFO-010)](/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/01-Information_Gathering/10-Map_Application_Architecture)
-
-- [OWASP Virtual Patching Best Practices](/www-community/Virtual_Patching_Best_Practices)
-
-- [The Unfortunate Reality of Insecure Libraries](https://cdn2.hubspot.net/hub/203759/file-1100864196-pdf/docs/Contrast_-_Insecure_Libraries_2014.pdf)
-
-- [MITRE Common Vulnerabilities and Exposures (CVE) search](https://www.cvedetails.com/version-search.php)
-
-- [National Vulnerability Database (NVD)](https://nvd.nist.gov/)
-
-- [Retire.js for detecting known vulnerable JavaScript libraries](https://github.com/retirejs/retire.js/)
-
-- [GitHub Advisory Database](https://github.com/advisories)
-
-- [Ruby Libraries Security Advisory Database and Tools](https://rubysec.com/)
-
-- [SAFECode Software Integrity Controls \[PDF\]](https://safecode.org/publication/SAFECode_Software_Integrity_Controls0610.pdf)
-
-## Liste der zugeordneten CWEs
-
-[CWE-937 OWASP Top 10 2013: Using Components with Known Vulnerabilities](https://cwe.mitre.org/data/definitions/937.html)
-
-[CWE-1035 2017 Top 10 A9: Using Components with Known Vulnerabilities](https://cwe.mitre.org/data/definitions/1035.html)
-
-[CWE-1104 Use of Unmaintained Third Party Components](https://cwe.mitre.org/data/definitions/1104.html)
+- {{ osib_link(link="osib.mitre.cwe.0.937", doc="", osib=osib) }} <!-- [CWE-937: OWASP Top 10 2013: Verwendung von Komponenten mit bekannten Schwachstellen](https ://cwe.mitre.org/data/definitions/937.html) ->
+- {{ osib_link(link="osib.mitre.cwe.0.1035", doc="", osib=osib) }} <!-- [CWE-1035: 2017 Top 10 A9: Verwendung von Komponenten mit bekannten Schwachstellen](https ://cwe.mitre.org/data/definitions/1035.html) ->
+- {{ osib_link(link="osib.mitre.cwe.0.1104", doc="", osib=osib) }} <!-- [CWE-1104: Verwendung nicht gewarteter Drittanbieterkomponenten](https://cwe .mitre.org/data/definitions/1104.html) ->
