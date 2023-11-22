@@ -21,9 +21,9 @@ Vormals als *Fehler in der Authentifizierung* geführt,
 ist diese Kategorie von der zweiten Position abgestiegen
 und umfasst nun auch Common Weakness Enumerations (CWEs) im Zusammenhang mit Identifikationsfehlern. 
 Herausragende CWEs sind 
-*CWE-297: Improper Validation of Certificate with Host Mismatch*, 
-*CWE-287: Improper Authentication* und 
-*CWE-384: Session Fixation*.
+-   *{{ osib_link(link="osib.mitre.cwe.0.297", doc="", osib=osib) }}* <!-- *CWE-297: Improper Validation of Certificate with Host Mismatch*, -->
+-   *{{ osib_link(link="osib.mitre.cwe.0.287", doc="", osib=osib) }}* und <!-- *CWE-287: Improper Authentication* und -->
+-   *{{ osib_link(link="osib.mitre.cwe.0.384", doc="", osib=osib) }}* <!-- *CWE-384: Session Fixation*. -->
 
 ## Beschreibung {{ osib_anchor(osib=osib ~ ".description", id=id ~ "-description", name=title ~ ": Beschreibung", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
 
