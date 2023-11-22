@@ -60,14 +60,14 @@ Jede Organisation muss einen fortlaufenden Plan für die Überwachung, Triage un
 Es existieren automatisierte Tools, die Angreifern helfen, nicht gepatchte oder falsch konfigurierte Systeme zu finden. Die Shodan IoT-Suchmaschine kann Ihnen beispielsweise dabei helfen, Geräte zu finden, die immer noch für die im April 2014 gepatchte Heartbleed-Sicherheitslücke verwundbar sind.
 
 ## Referenzen {{ osib_anchor(osib=osib ~ ".references", id=id ~ "-references", name=title ~ ": References", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
-- {{ osib_link(link="osib.owasp.asvs.4-0." ~ "1", osib=osib) }} <!-- [OWASP Application Security Verification Standard: V1 Architektur, Design und Bedrohungsmodellierung]( /www-project-application-security-verification-standard) ->
+- {{ osib_link(link="osib.owasp.asvs.4-0." ~ "1", osib=osib) }} <!-- [OWASP Application Security Verification Standard: V1 Architektur, Design und Bedrohungsmodellierung]( /www-project-application-security-verification-standard) -->
 - {{ osib_link(link="osib.owasp.dependency check", osib=osib) }} <!--- [OWASP-Abhängigkeitsprüfung (für Java- und .NET-Bibliotheken)](/www-project-dependency-check) --->
-- {{ osib_link(link="osib.owasp.wstg.4-2.4.1.10", osib=osib) }} <!--- [OWASP-Testhandbuch – Kartenanwendungsarchitektur (OTG-INFO-010)](/ www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/01-Information_Gathering/10-Map_Application_Architecture) --->
+- {{ osib_link(link="osib.owasp.wstg.4-2.4.1.10", osib=osib) }} <!--- [OWASP-Testhandbuch – Kartenanwendungsarchitektur (OTG-INFO-010)](/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/01-Information_Gathering/10-Map_Application_Architecture) --->
 - {{ osib_link(link="osib.owasp.community.0.other.virtual Patching Best Practices", osib=osib) }} <!--- [OWASP Virtual Patching Best Practices](/www-community/Virtual_Patching_Best_Practices) --->
 - {{ osib_link(link="osib.contrast.insecure Bibliotheken.2014", doc="osib.contrast", osib=osib) }} <!--- [Die unglückliche Realität unsicherer Bibliotheken](https:// cdn2.hubspot.net/hub/203759/file-1100864196-pdf/docs/Contrast_-_Insecure_Libraries_2014.pdf) --->
-- {{ osib_link(link="osib.cvedetails.search", osib=osib) }} <!--- [MITRE Common Vulnerabilities and Exposures (CVE)-Suche](https://www.cvedetails.com/version- search.php) --->
+- {{ osib_link(link="osib.cvedetails.search", osib=osib) }} <!--- [MITRE Common Vulnerabilities and Exposures (CVE)-Suche](https://www.cvedetails.com/version-search.php) --->
 - {{ osib_link(link="osib.nist.nvd", osib=osib) }} <!--- [National Vulnerability Database (NVD)](https://nvd.nist.gov/) --->
-- {{ osib_link(link="osib.retirejs", osib=osib) }} <!--- [Retire.js zur Erkennung bekanntermaßen anfälliger JavaScript-Bibliotheken](https://github.com/retirejs/retire.js/ ) --->
+- {{ osib_link(link="osib.retirejs", osib=osib) }} <!--- [Retire.js zur Erkennung bekanntermaßen anfälliger JavaScript-Bibliotheken](https://github.com/retirejs/retire.js/) --->
 - {{ osib_link(link="osib.github.advisories", osib=osib) }} <!--- [GitHub Advisory Database](https://github.com/advisories) --->
 - {{ osib_link(link="osib.rubysec", osib=osib) }} <!--- [Ruby Libraries Security Advisory Database and Tools](https://rubysec.com/) --->
 - {{ osib_link(link="osib.safecode.publications.Software Integrity Controls.0.pdf", doc="osib.safecode", osib=osib) }} <!--- [SAFECode Software Integrity Controls \[PDF \]](https://safecode.org/publication/SAFECode_Software_Integrity_Controls0610.pdf) --->
@@ -75,6 +75,6 @@ Es existieren automatisierte Tools, die Angreifern helfen, nicht gepatchte oder 
 
 ## Liste der zugeordneten CWEs {{ osib_anchor(osib=osib~".mapped cwes", id=id~"-mapped_cwes", name=title~":List of Mapped CWEs", lang=lang, source=source~" #" ~id, parent=osib) }}
 
-- {{ osib_link(link="osib.mitre.cwe.0.937", doc="", osib=osib) }} <!-- [CWE-937: OWASP Top 10 2013: Verwendung von Komponenten mit bekannten Schwachstellen](https ://cwe.mitre.org/data/definitions/937.html) ->
-- {{ osib_link(link="osib.mitre.cwe.0.1035", doc="", osib=osib) }} <!-- [CWE-1035: 2017 Top 10 A9: Verwendung von Komponenten mit bekannten Schwachstellen](https ://cwe.mitre.org/data/definitions/1035.html) ->
-- {{ osib_link(link="osib.mitre.cwe.0.1104", doc="", osib=osib) }} <!-- [CWE-1104: Verwendung nicht gewarteter Drittanbieterkomponenten](https://cwe .mitre.org/data/definitions/1104.html) ->
+- {{ osib_link(link="osib.mitre.cwe.0.937", doc="", osib=osib) }} <!-- [CWE-937: OWASP Top 10 2013: Verwendung von Komponenten mit bekannten Schwachstellen](https://cwe.mitre.org/data/definitions/937.html) -->
+- {{ osib_link(link="osib.mitre.cwe.0.1035", doc="", osib=osib) }} <!-- [CWE-1035: 2017 Top 10 A9: Verwendung von Komponenten mit bekannten Schwachstellen](https://cwe.mitre.org/data/definitions/1035.html) -->
+- {{ osib_link(link="osib.mitre.cwe.0.1104", doc="", osib=osib) }} <!-- [CWE-1104: Verwendung nicht gewarteter Drittanbieterkomponenten](https://cwe.mitre.org/data/definitions/1104.html) -->

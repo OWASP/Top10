@@ -66,18 +66,18 @@ Es gibt kommerzielle und Open-Source-Anwendungsschutz-Frameworks wie das OWASP M
 
 ## Referenzen {{ osib_anchor(osib=osib ~ ".references", id=id ~ "-references", name=title ~ ": References", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
 
-- {{ osib_link(link="osib.owasp.opc.3." ~ "9", osib=osib) }} <!-- [OWASP Proaktive Kontrollen: Protokollierung und Überwachung implementieren](https://owasp.org /www-project-proactive-controls/v3/en/c9-security-logging.html) ->
-- {{ osib_link(link="osib.owasp.asvs.4-0." ~ "7", osib=osib) }} <!-- [OWASP Application Security Verification Standard: V7 Logging and Monitoring](https:/ /owasp.org/www-project-application-security-verification-standard) ->
-- {{ osib_link(link="osib.owasp.wstg.4-2.4.8.1", osib=osib) }} <!--- war: [OWASP-Testleitfaden: Testen auf detaillierte Fehlercodes](https:// owasp.org/www-project-web-security-testing-guide/v41/4-Web_Application_Security_Testing/08-Testing_for_Error_Handling/01-Testing_for_Error_Code) --->
-- {{ osib_link(link="osib.owasp.cheatsheetseries.0." ~ "Logging Vocabulary", osib=osib) }} <!-- [OWASP Cheat Sheet: Application Logging Vocabulary](https://cheatsheetseries.owasp .org/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html) ->
-- {{ osib_link(link="osib.owasp.cheatsheetseries.0." ~ "Logging", osib=osib) }} <!-- [OWASP Spickzettel: Protokollierung](https://cheatsheetseries.owasp.org/ cheatsheets/Logging_Cheat_Sheet.html) ->
-- {{ osib_link(link="osib.nist.csrc.sp.1800-11", osib=osib) }} <!--- [Datenintegrität: Wiederherstellung nach Ransomware und anderen zerstörerischen Ereignissen](https://csrc .nist.gov/publications/detail/sp/1800-11/final) --->
-- {{ osib_link(link="osib.nist.csrc.sp.1800-25", osib=osib) }} <!--- [Datenintegrität: identifizierung und Schutz von Vermögenswerten vor Ransomware und anderen zerstörerischen Ereignissen](https: //csrc.nist.gov/publications/detail/sp/1800-25/final) --->
-- {{ osib_link(link="osib.nist.csrc.sp.1800-26", osib=osib) }} <!--- [Datenintegrität: Erkennen und Reagieren auf Ransomware und andere zerstörerische Ereignisse](https:/ /csrc.nist.gov/publications/detail/sp/1800-26/final) --->
+- {{ osib_link(link="osib.owasp.opc.3." ~ "9", osib=osib) }} <!-- [OWASP Proaktive Kontrollen: Protokollierung und Überwachung implementieren](https://owasp.org/www-project-proactive-controls/v3/en/c9-security-logging.html) -->
+- {{ osib_link(link="osib.owasp.asvs.4-0." ~ "7", osib=osib) }} <!-- [OWASP Application Security Verification Standard: V7 Logging and Monitoring](https://owasp.org/www-project-application-security-verification-standard) -->
+- {{ osib_link(link="osib.owasp.wstg.4-2.4.8.1", osib=osib) }} <!--- war: [OWASP-Testleitfaden: Testen auf detaillierte Fehlercodes](https://owasp.org/www-project-web-security-testing-guide/v41/4-Web_Application_Security_Testing/08-Testing_for_Error_Handling/01-Testing_for_Error_Code) --->
+- {{ osib_link(link="osib.owasp.cheatsheetseries.0." ~ "Logging Vocabulary", osib=osib) }} <!-- [OWASP Cheat Sheet: Application Logging Vocabulary](https://cheatsheetseries.owasp.org/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html) -->
+- {{ osib_link(link="osib.owasp.cheatsheetseries.0." ~ "Logging", osib=osib) }} <!-- [OWASP Spickzettel: Protokollierung](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html) -->
+- {{ osib_link(link="osib.nist.csrc.sp.1800-11", osib=osib) }} <!--- [Datenintegrität: Wiederherstellung nach Ransomware und anderen zerstörerischen Ereignissen](https://csrc.nist.gov/publications/detail/sp/1800-11/final) --->
+- {{ osib_link(link="osib.nist.csrc.sp.1800-25", osib=osib) }} <!--- [Datenintegrität: identifizierung und Schutz von Vermögenswerten vor Ransomware und anderen zerstörerischen Ereignissen](https://csrc.nist.gov/publications/detail/sp/1800-25/final) --->
+- {{ osib_link(link="osib.nist.csrc.sp.1800-26", osib=osib) }} <!--- [Datenintegrität: Erkennen und Reagieren auf Ransomware und andere zerstörerische Ereignisse](https://csrc.nist.gov/publications/detail/sp/1800-26/final) --->
 
 ## Liste der zugeordneten CWEs {{ osib_anchor(osib=osib~".mapped cwes", id=id~"-mapped_cwes", name=title~":List of Mapped CWEs", lang=lang, source=source~" #" ~id, parent=osib) }}
 
-- {{ osib_link(link="osib.mitre.cwe.0.117", doc="", osib=osib) }} <!-- [CWE-117: Unsachgemäße Ausgabeneutralisierung für Protokolle](https://cwe. mitre.org/data/definitions/117.html) ->
-- {{ osib_link(link="osib.mitre.cwe.0.223", doc="", osib=osib) }} <!-- [CWE-223: Auslassung sicherheitsrelevanter Informationen](https://cwe .mitre.org/data/definitions/223.html) ->
-- {{ osib_link(link="osib.mitre.cwe.0.532", doc="", osib=osib) }} <!-- [CWE-532: Einfügen vertraulicher Informationen in die Protokolldatei](https:// cwe.mitre.org/data/definitions/532.html) ->
-- {{ osib_link(link="osib.mitre.cwe.0.778", doc="", osib=osib) }} <!-- [CWE-778: Unzureichende Protokollierung](https://cwe.mitre.org /data/definitions/778.html) ->
+- {{ osib_link(link="osib.mitre.cwe.0.117", doc="", osib=osib) }} <!-- [CWE-117: Unsachgemäße Ausgabeneutralisierung für Protokolle](https://cwe.mitre.org/data/definitions/117.html) -->
+- {{ osib_link(link="osib.mitre.cwe.0.223", doc="", osib=osib) }} <!-- [CWE-223: Auslassung sicherheitsrelevanter Informationen](https://cwe.mitre.org/data/definitions/223.html) -->
+- {{ osib_link(link="osib.mitre.cwe.0.532", doc="", osib=osib) }} <!-- [CWE-532: Einfügen vertraulicher Informationen in die Protokolldatei](https://cwe.mitre.org/data/definitions/532.html) -->
+- {{ osib_link(link="osib.mitre.cwe.0.778", doc="", osib=osib) }} <!-- [CWE-778: Unzureichende Protokollierung](https://cwe.mitre.org/data/definitions/778.html) -->

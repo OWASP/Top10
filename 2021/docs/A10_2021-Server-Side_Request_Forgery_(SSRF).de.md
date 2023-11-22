@@ -79,17 +79,12 @@ Angreifer können SSRF verwenden, um Systeme anzugreifen, die durch Webanwendung
 **Szenario Nr. 4:** Kompromittierung interner Dienste – Der Angreifer kann interne Dienste missbrauchen, um weitere Angriffe wie Remote Code Execution (RCE) oder Denial of Service (DoS) durchzuführen.
 
 ## Referenzen {{ osib_anchor(osib=osib ~ ".references", id=id ~ "-references", name=title ~ ":Referenzen", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
--   {{ osib_link(link="osib.owasp.cheatsheetseries.0.server side request forgery prevention", osib=osib) }} <!--- [OWASP - Server-Side Request Forgery Preven
-tion Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html) --->
--   {{ osib_link(link="osib.portswigger.web security.ssrf", osib=osib) }} <!--- [PortSwigger - Server-side request forgery (SSRF)](https://portswigger.net/we
-b-security/ssrf) --->
--   {{ osib_link(link="osib.acunetix.blog.ssrf", osib=osib) }} <!--- [Acunetix - What is Server-Side Request Forgery (SSRF)?](https://www.acunetix.com/blog/a
-rticles/server-side-request-forgery-vulnerability/)  --->
--   {{ osib_link(link="osib.wallarm.ssrf bible.pdf", doc="osib.wallarm", osib=osib) }} <!--- [SSRF bible](https://cheatsheetseries.owasp.org/assets/Server_Si
-de_Request_Forgery_Prevention_Cheat_Sheet_SSRF_Bible.pdf) --->
--   {{ osib_link(link="osib.blackhat.us-17.ssrf.pdf", osib=osib) }} <!--- [A New Era of SSRF - Exploiting URL Parser in Trending Programming Languages!](http
-s://www.blackhat.com/docs/us-17/thursday/us-17-Tsai-A-New-Era-Of-SSRF-Exploiting-URL-Parser-In-Trending-Programming-Languages.pdf) --->
+-   {{ osib_link(link="osib.owasp.cheatsheetseries.0.server side request forgery prevention", osib=osib) }} <!--- [OWASP - Server-Side Request Forgery Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html) --->
+-   {{ osib_link(link="osib.portswigger.web security.ssrf", osib=osib) }} <!--- [PortSwigger - Server-side request forgery (SSRF)](https://portswigger.net/web-security/ssrf) --->
+-   {{ osib_link(link="osib.acunetix.blog.ssrf", osib=osib) }} <!--- [Acunetix - What is Server-Side Request Forgery (SSRF)?](https://www.acunetix.com/blog/articles/server-side-request-forgery-vulnerability/)  --->
+-   {{ osib_link(link="osib.wallarm.ssrf bible.pdf", doc="osib.wallarm", osib=osib) }} <!--- [SSRF bible](https://cheatsheetseries.owasp.org/assets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet_SSRF_Bible.pdf) --->
+-   {{ osib_link(link="osib.blackhat.us-17.ssrf.pdf", osib=osib) }} <!--- [A New Era of SSRF - Exploiting URL Parser in Trending Programming Languages!](https://www.blackhat.com/docs/us-17/thursday/us-17-Tsai-A-New-Era-Of-SSRF-Exploiting-URL-Parser-In-Trending-Programming-Languages.pdf) --->
 
 
 ## Liste der zugeordneten CWEs {{ osib_anchor(osib=osib~".mapped cwes", id=id~"-mapped_cwes", name=title~":Liste der zugeordneten CWEs", lang=lang, source=source~" #" ~id, parent=osib) }}
-- {{ osib_link(link="osib.mitre.cwe.0.918", doc="", osib=osib) }} <!-- [CWE-918: Server-Side Request Forgery (SSRF)](https:/ /cwe.mitre.org/data/definitions/918.html) ->
+- {{ osib_link(link="osib.mitre.cwe.0.918", doc="", osib=osib) }} <!-- [CWE-918: Server-Side Request Forgery (SSRF)](https://cwe.mitre.org/data/definitions/918.html) -->
