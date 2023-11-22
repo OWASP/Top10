@@ -64,7 +64,7 @@ Es existieren automatisierte Tools, die Angreifern helfen, nicht gepatchte oder 
 - {{ osib_link(link="osib.owasp.dependency check", osib=osib) }} <!--- [OWASP-Abhängigkeitsprüfung (für Java- und .NET-Bibliotheken)](/www-project-dependency-check) --->
 - {{ osib_link(link="osib.owasp.wstg.4-2.4.1.10", osib=osib) }} <!--- [OWASP-Testhandbuch – Kartenanwendungsarchitektur (OTG-INFO-010)](/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/01-Information_Gathering/10-Map_Application_Architecture) --->
 - {{ osib_link(link="osib.owasp.community.0.other.virtual Patching Best Practices", osib=osib) }} <!--- [OWASP Virtual Patching Best Practices](/www-community/Virtual_Patching_Best_Practices) --->
-- {{ osib_link(link="osib.contrast.insecure Bibliotheken.2014", doc="osib.contrast", osib=osib) }} <!--- [Die unglückliche Realität unsicherer Bibliotheken](https:// cdn2.hubspot.net/hub/203759/file-1100864196-pdf/docs/Contrast_-_Insecure_Libraries_2014.pdf) --->
+- {{ osib_link(link="osib.contrast.insecure libraries.2014", doc="osib.contrast", osib=osib) }} <!--- [Die unglückliche Realität unsicherer Bibliotheken](https://cdn2.hubspot.net/hub/203759/file-1100864196-pdf/docs/Contrast_-_Insecure_Libraries_2014.pdf) --->
 - {{ osib_link(link="osib.cvedetails.search", osib=osib) }} <!--- [MITRE Common Vulnerabilities and Exposures (CVE)-Suche](https://www.cvedetails.com/version-search.php) --->
 - {{ osib_link(link="osib.nist.nvd", osib=osib) }} <!--- [National Vulnerability Database (NVD)](https://nvd.nist.gov/) --->
 - {{ osib_link(link="osib.retirejs", osib=osib) }} <!--- [Retire.js zur Erkennung bekanntermaßen anfälliger JavaScript-Bibliotheken](https://github.com/retirejs/retire.js/) --->

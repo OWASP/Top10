@@ -70,7 +70,7 @@ Sichere Software erfordert einen sicheren Entwicklungslebenszyklus, eine Art sic
 - {{ osib_link(link="osib.owasp.samm.2-0." ~ "Design.Threat Assessment", osib=osib) }} <!-- [OWASP SAMM:: Design Threat Assessment](https:/ /owaspsamm.org/model/design/threat-assessment/) -->
 - {{ osib_link(link="osib.nist.publications.guidelines Minimum Standards Developer Verification Software", osib=osib) }} <!--- [NIST – Guidelines on Minimum Standards for Developer Verification of Software](https:/ /www.nist.gov/publications/guidelines-minimum-standards-developer-verification-software) --->
 - {{ osib_link(link="osib.threatmodelingmanifesto", doc="", osib=osib) }} <!--- [Das Bedrohungsmodellierungsmanifest](https://threatmodelingmanifesto.org) --->
-- {{ osib_link(link="osib.hysnsec.awesome Threat Modeling", doc="", osib=osib) }} <!---[Awesome Threat Modeling](https://github.com/hysnsec/awesome -Bedrohungsmodellierung) --->
+- {{ osib_link(link="osib.hysnsec.awesome Threat Modelling", doc="", osib=osib) }} <!---[Awesome Threat Modeling](https://github.com/hysnsec/awesome -Bedrohungsmodellierung) --->
 
 ## Liste der zugeordneten CWEs {{ osib_anchor(osib=osib~".mapped cwes", id=id~"-mapped_cwes", name=title~":List of Mapped CWEs", lang=lang, source=source~" #" ~id, parent=osib) }}
 
