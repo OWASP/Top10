@@ -70,6 +70,25 @@ plugins:
           A09 Security Logging and Monitoring Failures: A09 فشل في تسجيل السجلات الأمنية والمراقبة
           A10 Server Side Request Forgery (SSRF): A10 تزوير الطلبات من جانب الخادم SSRF
           Next Steps: الخطوات المقبلة
+        de:
+          Home: Startseite
+          Notice: Anmerkung
+          Introduction: Einführung
+          How to use the OWASP Top 10 as a standard: Wie man die OWASP Top 10 als Standard verwendet
+          How to start an AppSec program with the OWASP Top 10: Wie man ein AppSec-Program mit der OWASP Top 10 beginnt
+          About OWASP: Über OWASP
+          Top 10:2021 List: Liste der Top 10:2021
+          A01 Broken Access Control: A01 - Mangelhafte Zugriffskontrolle
+          A02 Cryptographic Failures: A02 - Fehlerhafter Einsatz von Kryptographie
+          A03 Injection: A03 - Injection
+          A04 Insecure Design: A04 - Unsicheres Anwendungsdesign
+          A05 Security Misconfiguration: A05 - Sicherheitsrelevante Fehlkonfiguration
+          A06 Vulnerable and Outdated Components: A06 - Unsichere oder veraltete Komponenten
+          A07 Identification and Authentication Failures: A07 - Fehlerhafte Authentifizierung
+          A08 Software and Data Integrity Failures: A08 - Fehlerhafte Prüfung der Software- und Datenintegrität
+          A09 Security Logging and Monitoring Failures: A09 - Unzureichendes Logging und Sicherheitsmonitoring
+          A10 Server Side Request Forgery (SSRF): A10 - Server-Side Request Forgery (SSRF)
+          Next Steps: Nächste Schritte
         es:
           Home: Inicio
           Notice: Notas
@@ -108,25 +127,6 @@ plugins:
           A09 Security Logging and Monitoring Failures: A09 Carence des systèmes de contrôle et de journalisation
           A10 Server Side Request Forgery (SSRF): A10 Falsification de requête côté serveur (SSRF)
           Next Steps: Étapes suivantes
-        de:
-          Home: Startseite
-          Notice: Anmerkung
-          Introduction: Einführung
-          How to use the OWASP Top 10 as a standard: Wie man die OWASP Top 10 als Standard verwendet
-          How to start an AppSec program with the OWASP Top 10: Wie man ein AppSec-Program mit der OWASP Top 10 beginnt
-          About OWASP: Über OWASP
-          Top 10:2021 List: Liste der Top 10:2021
-          A01 Broken Access Control: A01 - Mangelhafte Zugriffskontrolle
-          A02 Cryptographic Failures: A02 - Fehlerhafter Einsatz von Kryptographie
-          A03 Injection: A03 - Injection
-          A04 Insecure Design: A04 - Unsicheres Anwendungsdesign
-          A05 Security Misconfiguration: A05 - Sicherheitsrelevante Fehlkonfiguration
-          A06 Vulnerable and Outdated Components: A06 - Unsichere oder veraltete Komponenten
-          A07 Identification and Authentication Failures: A07 - Fehlerhafte Authentifizierung
-          A08 Software and Data Integrity Failures: A8 - Fehlerhafte Prüfung der Software- und Datenintegrität
-          A09 Security Logging and Monitoring Failures: A9 - Unzureichendes Logging und Sicherheitsmonitoring
-          A10 Server Side Request Forgery (SSRF): A10 - Server-Side Request Forgery (SSRF)]
-          Next Steps: Nächste Schritte
         id:
           Home: Beranda
           Notice: Pemberitahuan
