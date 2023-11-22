@@ -1,8 +1,8 @@
 ---
-source:	"https://owasp.org/Top10/A02_2021-Cryptographic_Failures/"
-title:	"A02:2021 – Fehlerhafter Einsatz von Kryptographie"
-id:		"A02:2021"
-lang:	"de"
+source: "https://owasp.org/Top10/A02_2021-Cryptographic_Failures/"
+title:  "A02:2021 – Fehlerhafter Einsatz von Kryptographie"
+id:     "A02:2021"
+lang:   "de"
 ---
 {%- set parent = extra.osib.document ~ "." ~ extra.osib.version -%}
 {%- set osib = parent ~ ".2" -%}

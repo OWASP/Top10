@@ -1,8 +1,8 @@
 ---
 source: "https://owasp.org/Top10/A00_2021_Introduction/"
-title: "A00_2021_Einführung"
-id: "Einführung"
-lang: "de"
+title:  "A00_2021_Einführung"
+id:     "Einführung"
+lang:   "de"
 ---
 {%- set parent = extra.osib.document ~ "." ~ extra.osib.version -%}
 {%- set osib = parent ~ ".index" -%}

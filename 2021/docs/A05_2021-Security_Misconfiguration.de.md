@@ -1,8 +1,8 @@
 ---
 source: "https://owasp.org/Top10/A05_2021-Security_Misconfiguration/"
-title: "A05:2021 – Sicherheitsrelevante Fehlkonfiguration"
-id: "A05:2021"
-lang:	"de"
+title:  "A05:2021 – Sicherheitsrelevante Fehlkonfiguration"
+id:     "A05:2021"
+lang:   "de"
 ---
 {%- set parent = extra.osib.document ~ "." ~ extra.osib.version -%}
 {%- set osib = parent ~ ".5" -%}

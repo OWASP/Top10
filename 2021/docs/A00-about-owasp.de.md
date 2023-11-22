@@ -1,3 +1,13 @@
+---
+source: "https://owasp.org/Top10/A00-about-owasp/"
+title:  "A00_2021 Über OWASP"
+id:     "Über OWASP"
+lang:   "de"
+---
+{%- set parent = extra.osib.document ~ "." ~ extra.osib.version -%}
+{%- set osib = parent ~ ".index" -%}
+{%- set parent_20217 = extra.osib.document ~ ".2017" -%}
+
 # Über OWASP
 
 Das Open Web Application Security Project (OWASP) ist eine offene Community, die es Unternehmen ermöglicht, vertrauenswürdige Anwendungen und APIs zu entwickeln, zu kaufen und zu warten.

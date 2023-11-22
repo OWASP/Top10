@@ -1,8 +1,8 @@
 ---
 source: "https://owasp.org/Top10/A07_2021-identification_and_Authentication_Failures/"
-title: "A07:2021 – Fehlerhafte Authentifizierung"
-id: "A07:2021"
-lang:	"de"
+title:  "A07:2021 – Fehlerhafte Authentifizierung"
+id:     "A07:2021"
+lang:   "de"
 ---
 {%- set parent = extra.osib.document ~ "." ~ extra.osib.version -%}
 {%- set osib = parent ~ ".7" -%}

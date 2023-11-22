@@ -1,8 +1,8 @@
 ---
 source: "https://owasp.org/Top10/A08_2021-Software_and_Data_Integrity_Failures/"
-title: "A08:2021 – Fehlerhafte Prüfung der Software- und Datenintegrität"
-id: "A08:2021"
-lang:	"de"
+title:  "A08:2021 – Fehlerhafte Prüfung der Software- und Datenintegrität"
+id:     "A08:2021"
+lang:   "de"
 ---
 {%- set parent = extra.osib.document ~ "." ~ extra.osib.version -%}
 {%- set osib = parent ~ ".8" -%}

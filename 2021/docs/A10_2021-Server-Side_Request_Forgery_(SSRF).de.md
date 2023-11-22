@@ -1,8 +1,8 @@
 ---
 source: "https://owasp.org/Top10/A10_2021-Server-Side_Request_Forgery_(SSRF)/"
-title: "A10:2021 – Server-Side Request Forgery (SSRF)"
-id: "A10:2021"
-lang:	"de"
+title:  "A10:2021 – Server-Side Request Forgery (SSRF)"
+id:     "A10:2021"
+lang:   "de"
 ---
 {%- set parent = extra.osib.document ~ "." ~ extra.osib.version -%}
 {%- set osib = parent ~ ".10" -%}

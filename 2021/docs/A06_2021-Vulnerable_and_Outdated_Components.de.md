@@ -1,8 +1,8 @@
 ---
 source: "https://owasp.org/Top10/A06_2021-Vulnerable_and_Outdated_Components/"
-title: "A06:2021 – Unsichere oder veraltete Komponenten"
-id: "A06:2021"
-lang:	"de"
+title:  "A06:2021 – Unsichere oder veraltete Komponenten"
+id:     "A06:2021"
+lang:   "de"
 ---
 {%- set parent = extra.osib.document ~ "." ~ extra.osib.version -%}
 {%- set osib = parent ~ ".6" -%}

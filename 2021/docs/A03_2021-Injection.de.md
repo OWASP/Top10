@@ -2,7 +2,7 @@
 source: "https://owasp.org/Top10/A03_2021-Injection/"
 title:  "A03:2021 – Injektion"
 id:     "A03:2021"
-lang:	"de"
+lang:   "de"
 ---
 {%- set parent = extra.osib.document ~ "." ~ extra.osib.version -%}
 {%- set osib = parent ~ ".3" -%}

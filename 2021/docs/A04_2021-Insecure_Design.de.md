@@ -1,8 +1,8 @@
 ---
 source: "https://owasp.org/Top10/A04_2021-Insecure_Design/"
-title: 	"A04:2021 – Unsicheres Anwendungsdesign"
-id: 	"A04:2021"
-lang:	"de"
+title:  "A04:2021 – Unsicheres Anwendungsdesign"
+id:     "A04:2021"
+lang:   "de"
 ---
 {%- set parent = extra.osib.document ~ "." ~ extra.osib.version -%}
 {%- set osib = parent ~ ".4" -%}

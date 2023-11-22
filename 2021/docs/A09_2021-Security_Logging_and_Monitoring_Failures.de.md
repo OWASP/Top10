@@ -1,8 +1,8 @@
 ---
 source: "https://owasp.org/Top10/09_2021-Security_Logging_and_Monitoring_Failures/"
-title: "A09:2021 – Unzureichendes Logging und Sicherheitsmonitoring"
-id: "A09:2021"
-lang:	"de"
+title:  "A09:2021 – Unzureichendes Logging und Sicherheitsmonitoring"
+id:     "A09:2021"
+lang:   "de"
 ---
 {%- set parent = extra.osib.document ~ "." ~ extra.osib.version -%}
 {%- set osib = parent ~ ".9" -%}

@@ -1,8 +1,8 @@
 ---
-Quelle: "https://owasp.org/Top10/A11_2021-Next_Steps.md/"
-Titel: "A11:2021 – Nächste Schritte"
-ID: "A11:2021"
-lang: "de"
+source: "https://owasp.org/Top10/A11_2021-Next_Steps/"
+title:  "A11:2021 – Nächste Schritte"
+id:     "A11:2021"
+lang:   "de"
 ---
 {%- set parent = extra.osib.document ~ "." ~ extra.osib.version -%}
 {%- set osib = parent ~ ".11" -%}
