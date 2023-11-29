@@ -17,47 +17,48 @@ lang:   "de"
 
 ## Übersicht {{ osib_anchor(osib=osib ~ ".overview", id=id ~ "-overview", name=title ~ ": Übersicht", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
 
-Vom fünften Platz aufsteigend wurden 94 % der Anwendungen auf irgendeine Form fehlerhafter Zugangskontrolle getestet, mit einer durchschnittlichen Inzidenzrate von 3,81 % und weist mit über 318.000 die meisten Vorkommnisse im bereitgestellten Datensatz auf. Bemerkenswerte Common Weakness Enumerations (CWEs) sind *CWE-200: Offenlegung sensibler Informationen gegenüber einem nicht autorisierten Akteur*, *CWE-201: Einfügen sensibler Informationen in gesendete Daten* und *CWE-352: Cross-Site Request Forgery* .
+94 % der Anwendungen wurden auf irgendeine Form fehlerhafter Zugriffskontrolle getestet.
+Vom fünften Platz aufgestiegen, weist die fehlerhafte Zugriffskontrolle mit einer durchschnittlichen Inzidenzrate von 3,81 % und mit über 318.000 die meisten Vorkommnisse im vorliegenden Datensatz auf. Bemerkenswerte Common Weakness Enumerations (CWEs) sind *CWE-200: Offenlegung sensibler Informationen gegenüber einem nicht autorisierten Akteur*, *CWE-201: Einfügen sensibler Informationen in gesendete Daten* und *CWE-352: Cross-Site Request Forgery* .
 
 ## Beschreibung {{ osib_anchor(osib=osib ~ ".description", id=id ~ "-description", name=title ~ ": Beschreibung", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
 
-Die Zugriffskontrolle erzwingt Richtlinien, sodass Benutzer nicht außerhalb ihrer vorgesehenen Berechtigungen handeln können. Fehler führen in der Regel zur unbefugten Offenlegung, Änderung oder Zerstörung aller Daten oder zur Ausführung einer Geschäftsfunktion außerhalb der Grenzen des Benutzers. Zu den häufigsten Schwachstellen bei der Zugriffskontrolle gehören:
+Die Zugriffskontrolle erzwingt Richtlinien, sodass Benutzer nicht außerhalb ihrer vorgesehenen Berechtigungen handeln können. Fehler führen in der Regel zur unbefugten Offenlegung, Änderung oder Zerstörung aller Daten oder zur Ausführung einer Geschäftsfunktion außerhalb der Verfügungen des Benutzers. Zu den häufigsten Schwachstellen bei der Zugriffskontrolle gehören:
 
-- Verstoß gegen das Prinzip der geringsten Rechte oder der standardmäßigen Verweigerung, bei dem der Zugriff nur für bestimmte Fähigkeiten, Rollen oder Benutzer gewährt werden sollte, aber für jedermann verfügbar ist.
+- Verstoß gegen die Prinzipien der geringsten Rechte oder der standardmäßigen Verweigerung, bei dem der Zugriff nur für bestimmte Fähigkeiten, Rollen oder Benutzer gewährt werden sollte, aber für jedermann verfügbar ist
 
-- Umgehen von Zugriffskontrollprüfungen durch Ändern der URL (Parametermanipulation oder erzwungenes Durchsuchen), des internen Anwendungsstatus oder der HTML-Seite oder durch Verwendung eines Angriffstools zur Änderung von API-Anfragen.
+- Umgehen von Zugriffskontrollprüfungen durch Ändern der URL (Parametermanipulation oder erzwungenes Durchsuchen), des internen Anwendungsstatus oder der HTML-Seite oder durch Verwendung eines Angriffstools zur Änderung von API-Anfragen
 
-- Ermöglichen, das Konto einer anderen Person anzuzeigen oder zu bearbeiten, indem dessen eindeutige Kennung angegeben wird (unsichere direkte Objektreferenzen).
+- Ermöglichen, das Konto einer anderen Person anzuzeigen oder zu bearbeiten, indem dessen eindeutige Kennung angegeben wird (unsichere direkte Objektreferenzen)
 
-– Zugriff auf die API mit fehlenden Zugriffskontrollen für POST, PUT und DELETE.
+- Zugriff auf die API mit fehlenden Zugriffskontrollen für POST, PUT und DELETE
 
-- Erhöhung der Privilegien. Als Benutzer fungieren, ohne angemeldet zu sein, oder als Administrator fungieren, wenn man als Benutzer angemeldet ist.
+- Erhöhung der Privilegien. Als Benutzer fungieren, ohne angemeldet zu sein, oder als Administrator fungieren, wenn man als Benutzer angemeldet ist
 
-- Metadatenmanipulation, wie z. B. das Wiedergeben oder Manipulieren eines JSON Web Token (JWT)-Zugriffskontrolltokens oder die Manipulation eines Cookies oder versteckten Felds, um Berechtigungen zu erhöhen oder die JWT-Ungültigmachung zu missbrauchen.
+- Metadatenmanipulation, wie z. B. das Wiedergeben oder Manipulieren eines JSON Web Token (JWT)-Zugriffskontrolltokens oder die Manipulation eines Cookies oder versteckten Felds, um Berechtigungen zu erhöhen oder die JWT-Ungültigmachung zu missbrauchen
 
-– CORS-Fehlkonfiguration ermöglicht API-Zugriff von nicht autorisierten/nicht vertrauenswürdigen Quellen.
+- CORS-Fehlkonfiguration ermöglicht API-Zugriff von nicht autorisierten/nicht vertrauenswürdigen Quellen.
 
-- Erzwingen Sie das Navigieren zu authentifizierten Seiten als nicht authentifizierter Benutzer oder zu privilegierten Seiten als Standardbenutzer.
+- Erzwingen des Navigierens zu authentifizierten Seiten als nicht authentifizierter Benutzer oder zu privilegierten Seiten als Standardbenutzer
 
 ## Prävention und Gegenmaßnahmen {{ osib_anchor(osib=osib ~ ".how to prevent", id=id ~ "-how_to_prevent", name=title ~ ": How to Prevent", lang=lang, source=source ~ "#" ~ id, parent=osib) }}
 
-Die Zugriffskontrolle ist nur bei vertrauenswürdigem serverseitigem Code oder serverlosen APIs wirksam, bei denen der Angreifer die Zugriffskontrollprüfung oder Metadaten nicht ändern kann.
+Die Zugriffskontrolle ist nur wirksam bei vertrauenswürdigem serverseitigem Code oder serverlosen APIs, bei denen der Angreifer die Zugriffskontrollprüfung oder Metadaten nicht ändern kann.
 
-– Mit Ausnahme öffentlicher Ressourcen standardmäßig verweigern.
+- Verweigern Sie standardmäßig den Zugriff, mit Ausnahme öffentlicher Ressourcen.
 
-- Implementieren Sie Zugriffskontrollmechanismen einmal und verwenden Sie sie in der gesamten Anwendung wieder, einschließlich der Minimierung der Nutzung von Cross-Origin Resource Sharing (CORS).
+- Implementieren Sie Zugriffskontrollmechanismen einmalig und verwenden Sie diese in der gesamten Anwendung wieder, einschließlich der Minimierung der Nutzung von Cross-Origin Resource Sharing (CORS).
 
 - Modellzugriffskontrollen sollten die Datensatzeigentümerschaft erzwingen, anstatt zu akzeptieren, dass der Benutzer Datensätze erstellen, lesen, aktualisieren oder löschen kann.
 
 - Durch Domänenmodelle sollten eindeutige Geschäftslimitanforderungen für Anwendungen durchgesetzt werden.
 
-– Deaktivieren Sie die Verzeichnisliste des Webservers und stellen Sie sicher, dass Dateimetadaten (z. B. .git) und Sicherungsdateien nicht in Web-Roots vorhanden sind.
+- Deaktivieren Sie die Verzeichnisliste des Webservers und stellen Sie sicher, dass Dateimetadaten (z. B. .git) und Sicherungsdateien nicht in Web-Roots vorhanden sind.
 
 - Protokollieren Sie Fehler bei der Zugriffskontrolle und benachrichtigen Sie Administratoren bei Bedarf (z. B. wiederholte Fehler).
 
-- Ratenbegrenzung für API- und Controller-Zugriff, um den Schaden durch automatisierte Angriffstools zu minimieren.
+- Setzen Sie Ratenbegrenzung für API- und Controller-Zugriff, um den Schaden durch automatisierte Angriffstools zu minimieren.
 
-– Statusbehaftete Sitzungskennungen sollten nach dem Abmelden auf dem Server ungültig gemacht werden. Zustandslose JWT-Token sollten eher kurzlebig sein, damit das Zeitfenster für einen Angreifer minimiert wird. Für langlebigere JWTs wird dringend empfohlen, die OAuth-Standards zu befolgen, um den Zugriff zu widerrufen.
+- Statusbehaftete Sitzungskennungen sollten nach dem Abmelden auf dem Server ungültig gemacht werden. Zustandslose JWT-Token sollten eher kurzlebig sein, damit das Zeitfenster für einen Angreifer minimiert wird. Für langlebigere JWTs wird dringend empfohlen, die OAuth-Standards zu befolgen, um den Zugriff zu widerrufen.
 
 Entwickler und QA-Mitarbeiter sollten funktionale Zugriffskontrolleinheiten und Integrationstests durchführen.
 
