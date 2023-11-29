@@ -17,25 +17,26 @@ lang:   "de"
 
 ## Übersicht {{ osib_anchor(osib=osib ~ ".overview", id=id ~ "-overview", name=title ~ ": Übersicht", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
 
-Im Vergleich zu Platz 6 in der vorherigen Ausgabe wurden 90 % der Anwendungen auf irgendeine Form von Fehlkonfiguration getestet, mit einer durchschnittlichen Inzidenzrate von 4 % und über 208.000 Vorkommen einer Common Weakness Enumeration (CWE) in dieser Risikokategorie. Angesichts der zunehmenden Verlagerung hin zu hoch konfigurierbarer Software ist es nicht verwunderlich, dass diese Kategorie aufsteigt. Bemerkenswerte enthaltene CWEs sind *CWE-16 Configuration* und *CWE-611 Unproper Restriction of XML External Entity Reference*.
+Die Kategorie rückt auf von Platz 6 in der vorherigen Ausgabe:
+90% der Anwendungen wurden auf irgendeine Form von Fehlkonfiguration getestet, mit einer durchschnittlichen Inzidenzrate von 4% und über 208.000 Vorkommen einer Common Weakness Enumeration (CWE) in dieser Risikokategorie. Angesichts der zunehmenden Verlagerung hin zu hoch konfigurierbarer Software ist es nicht verwunderlich, dass diese Kategorie aufsteigt. Bemerkenswerte enthaltene CWEs sind *CWE-16 Configuration* und *CWE-611 Unproper Restriction of XML External Entity Reference*.
 
 ## Beschreibung {{ osib_anchor(osib=osib ~ ".description", id=id ~ "-description", name=title ~ ": Beschreibung", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
 
 Die Anwendung besitzt möglicherweise Schwachstellen, wenn folgendes zutrifft:
 
-– Mangelhafte Sicherheitshärtung des Anwendungsstacks oder ungeeignet konfigurierte Berechtigungen von Clouddiensten.
+- Mangelhafte Sicherheitshärtung des Anwendungsstacks oder ungeeignet konfigurierte Berechtigungen auf Cloud-Diensten
 
-- Nicht benötigte Features sind aktiviert oder installiert (z.B. unnötige Ports, Dienste, Seiten, Nutzer oder Rechte).
+- Nicht benötigte Features sind aktiviert oder installiert (z. B. unnötige Ports, Dienste, Seiten, Nutzer oder Rechte).
 
-- Standardnutzer und -passwörter sind aktiviert, bzw. unverändert.
+- Standardnutzer und -passwörter sind aktiviert bzw. unverändert.
 
 - Die Fehlerbehandlung gibt Stack-Traces oder andere interne technische Fehlermeldungen an den Nutzer preis.
 
-– Für aktualisierte Systeme sind die neuesten Sicherheitsfeatures deaktiviert oder nicht sicher konfiguriert.
+- Für aktualisierte Systeme sind die neuesten Sicherheitsfeatures deaktiviert oder nicht sicher konfiguriert.
 
-- Die Sicherheitseinstellungen in den Anwendungsservern und -frameworks (z.B. Struts, Spring, ASP.NET), Bibliotheken, Datenbanken etc. sind nicht auf sichere Werte gesetzt.
+- Die Sicherheitseinstellungen in den Anwendungsservern und -frameworks (z. B. Struts, Spring, ASP.NET), Bibliotheken, Datenbanken etc. sind nicht auf sichere Werte gesetzt.
 
-– Der Server sendet keine Sicherheits-Header oder -Direktiven, bzw. diese sind nicht sicher konfiguriert
+- Der Server sendet keine Sicherheits-Header oder -Direktiven, bzw. diese sind nicht sicher konfiguriert
 
 - Die Software ist veraltet oder verwundbar (siehe [A06:2021-Unsichere oder veraltete Komponenten](A06_2021-Vulnerable_and_Outdated_Components.de.md)). Ohne einen abgestimmten und reproduzierbaren Prozess sind Systeme einem höheren Risiko ausgesetzt!
 
@@ -45,15 +46,15 @@ Es sollten sichere Installationsprozesse implementiert werden, darunter:
 
 - Ein wiederholbarer Härtungsprozess ermöglicht die schnelle und einfache Bereitstellung einer anderen Umgebung, die entsprechend abgesichert ist. Entwicklungs-, Qualitätssicherungs- und Produktionsumgebungen sollten alle identisch konfiguriert sein, wobei in jeder Umgebung unterschiedliche Anmeldeinformationen verwendet werden sollten. Dieser Prozess sollte automatisiert werden, um den Aufwand für die Einrichtung einer neuen sicheren Umgebung zu minimieren.
 
-- Eine minimale Plattform ohne unnötige Funktionen, Komponenten, Dokumentation und Beispiele. Entfernen Sie Funktionen und Frameworks die Sie nicht verwenden oder installieren Sie diese erst gar nicht.
+- Eine minimale Plattform ohne unnötige Funktionen, Komponenten, Dokumentation und Beispiele: Entfernen Sie Funktionen und Frameworks die Sie nicht verwenden oder installieren Sie diese erst gar nicht.
 
-– Überprüfen und Aktualisieren der Konfigurationen, die für alle Sicherheitshinweise, Updates und Patches im Rahmen des Patch-Verwaltungsprozesses geeignet sind (siehe [A06:2021-Unsichere oder veraltete Komponenten](A06_2021-Vulnerable_and_Outdated_Components.de.md)). Überprüfen Sie die Cloud-Speicherberechtigungen (z. B. S3-Bucket-Berechtigungen).
+- Überprüfen und Aktualisieren der Konfigurationen, die für alle Sicherheitshinweise, Updates und Patches im Rahmen des Patch-Verwaltungsprozesses geeignet sind (siehe [A06:2021-Unsichere oder veraltete Komponenten](A06_2021-Vulnerable_and_Outdated_Components.de.md)). Überprüfen Sie die Cloud-Speicherberechtigungen (z. B. S3-Bucket-Berechtigungen).
 
-– Eine segmentierte Anwendungsarchitektur sorgt durch Segmentierung, Containerisierung oder Cloud-Sicherheitsgruppen (ACLs) für eine effektive und sichere Trennung zwischen Komponenten oder Mandanten.
+- Eine segmentierte Anwendungsarchitektur sorgt durch Segmentierung, Containerisierung oder Cloud-Sicherheitsgruppen (ACLs) für eine effektive und sichere Trennung zwischen Komponenten oder Mandanten.
 
-- Senden von Sicherheitsanweisungen an Clients, z. B. Sicherheitsheader.
+- Senden von Sicherheitsanweisungen an Clients, z. B. Sicherheits-Header
 
-- Ein automatisierter Prozess zur Überprüfung der Wirksamkeit der Konfigurationen und Einstellungen in allen Umgebungen.
+- Ein automatisierter Prozess zur Überprüfung der Wirksamkeit der Konfigurationen und Einstellungen in allen Umgebungen
 
 ## Beispielhafte Angriffsszenarien {{ osib_anchor(osib=osib ~ ".example attack Scenarios", id=id ~ "-example_attack_scenarios", name=title ~ ": Mögliche-Angriffsszenarien", lang=lang, source=source ~ "# " ~ id, parent=osib) }}
 
@@ -61,7 +62,7 @@ Es sollten sichere Installationsprozesse implementiert werden, darunter:
 
 **Szenario Nr. 2:** Die Directory Listings wurden auf dem Server nicht deaktiviert. Ein Angreifer entdeckt, dass er Verzeichnisse einfach auflisten kann. Der Angreifer findet die kompilierten Java-Klassen und lädt sie herunter, dekompiliert sie und betreibt Reverse Engineering, um den Code anzuzeigen. Der Angreifer findet dann einen schwerwiegenden Fehler in der Zugriffskontrolle in der Anwendung.
 
-**Szenario Nr. 3:** Die Konfiguration des Anwendungsservers ermöglicht die Rückgabe detaillierter Fehlermeldungen, z. B. Stack-Traces, an Benutzer. Dadurch werden möglicherweise vertrauliche Informationen oder zugrunde liegende Fehler wie Komponentenversionen offengelegt, die bekanntermaßen anfällig sind.
+**Szenario Nr. 3:** Die Konfiguration des Anwendungsservers ermöglicht die Rückgabe detaillierter Fehlermeldungen an Benutzer, z. B. Stack-Traces. Dadurch werden möglicherweise vertrauliche Informationen oder zugrunde liegende Fehler wie Komponentenversionen offengelegt, die bekanntermaßen anfällig sind.
 
 **Szenario Nr. 4:** Ein Cloud-Dienstanbieter (CSP) enthält Standardfreigaben, die aus dem Internet für andere Cloud-Nutzer erreichbar sind und ermöglicht dadurch Zugriff auf sensitive Daten in der Cloud.
 
@@ -69,10 +70,10 @@ Es sollten sichere Installationsprozesse implementiert werden, darunter:
 
 - {{ osib_link(link="osib.owasp.wstg.4-2.4.2", osib=osib) }} <!-- [OWASP-Testhandbuch: Konfigurationsmanagement](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/README) -->
 - {{ osib_link(link="osib.owasp.wstg.4-2.4.8", osib=osib) }} <!-- [OWASP-Testhandbuch: Testen auf Fehlercodes](https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/08-Testing_for_Error_Handling/01-Testing_For_Improper_Error_Handling) -->
-- {{ osib_link(link="osib.owasp.asvs.4-0.14", osib=osib) }} <!--- [Application Security Verification Standard V14-Konfiguration](https://github.com/OWASP/ASVS/blob/master/4.0/en/0x22-V14-Config.md) --->
-- {{ osib_link(link="osib.nist.csrc.sp.800-123", osib=osib) }} <!--- [NIST-Leitfaden zur allgemeinen Serverhärtung](https://csrc.nist.gov/publications/detail/sp/800-123/final) --->
-- {{ osib_link(link="osib.cis.benchmarks", osib=osib) }} <!--- [CIS Security Configuration Guides/Benchmarks](https://www.cisecurity.org/cis-benchmarks/) --->
-- {{ osib_link(link="osib.websecurify.aws s3 Bucket Discovery", doc="osib.websecurify", osib=osib) }} <!--- Amazon S3 Bucket Discovery und Enumeration](https://blog .websecurify.com/2017/10/aws-s3-bucket-discovery.html) --->
+- {{ osib_link(link="osib.owasp.asvs.4-0.14", osib=osib) }} <!-- [Application Security Verification Standard V14-Konfiguration](https://github.com/OWASP/ASVS/blob/master/4.0/en/0x22-V14-Config.md) -->
+- {{ osib_link(link="osib.nist.csrc.sp.800-123", osib=osib) }} <!-- [NIST-Leitfaden zur allgemeinen Serverhärtung](https://csrc.nist.gov/publications/detail/sp/800-123/final) -->
+- {{ osib_link(link="osib.cis.benchmarks", osib=osib) }} <!-- [CIS Security Configuration Guides/Benchmarks](https://www.cisecurity.org/cis-benchmarks/) -->
+- {{ osib_link(link="osib.websecurify.aws s3 Bucket Discovery", doc="osib.websecurify", osib=osib) }} <!-- Amazon S3 Bucket Discovery und Enumeration](https://blog .websecurify.com/2017/10/aws-s3-bucket-discovery.html) -->
 
 ## Liste der zugeordneten CWEs {{ osib_anchor(osib=osib~".mapped cwes", id=id~"-mapped_cwes", name=title~":List of Mapped CWEs", lang=lang, source=source~" #" ~id, parent=osib) }}
 
