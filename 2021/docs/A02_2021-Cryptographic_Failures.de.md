@@ -96,15 +96,15 @@ Erzwingen Sie die Verschlüsselung wenn möglich, z.B. durch Einführung von HTT
 
 ## Beispielhafte Angriffsszenarien {{ osib_anchor(osib=osib ~ ".example attack Scenarios", id=id ~ "-example_attack_scenarios", name=title ~ ": Beispielhafte Angriffsszenarien", lang=lang, source=source ~ "# " ~ id, parent=osib) }}
 
-**Szenario Nr. 1**: Eine Anwendung verschlüsselt Kreditkartendaten automatisch bei der Speicherung in einer Datenbank. Das bedeutet aber auch, dass durch SQL-Injection erlangte Kreditkartendaten in diesem Fall automatisch entschlüsselt werden.
+**Szenario Nr. 1:**: Eine Anwendung verschlüsselt Kreditkartendaten automatisch bei der Speicherung in einer Datenbank. Das bedeutet aber auch, dass durch SQL-Injection erlangte Kreditkartendaten in diesem Fall automatisch entschlüsselt werden.
 
-**Szenario Nr. 2**: Eine Webseite benutzt kein TLS,
+**Szenario Nr. 2:**: Eine Webseite benutzt kein TLS,
 erzwingt dies nicht auf allen Seiten oder lässt schwache Verschlüsselung zu.
 Der Angreifer liest die Kommunikation mit (z. B. in einem offenen WLAN), ersetzt HTTPS- durch HTTP-Verbindungen, hört diese ab und stiehlt das Sitzungscookie.
 Durch Wiedereinspielen dieses Cookies übernimmt der Angreifer die (authentifizierte) Sitzung des Nutzers und erlangt Zugriff auf dessen private Daten.
 Anstatt dessen kann der Angreifer auch die übertragenen Daten ändern, z. B. den Empfänger einer Überweisung.
 
-**Szenario Nr. 3**: Die Passwortdatenbank benutzt einfache Hashwerte oder Hashes ohne Salt zur Speicherung der Passwörter. Eine Schwachstelle in der Downloadfunktion erlaubt dem Angreifer den Zugriff auf die Passwortdatei. Zu Hashes ohne Salt kann über vorausberechnete Rainbow-Tabellen der Klartext gefunden werden. Hashes, die über einfache oder schnelle Funktionen berechnet wurden, können effizient mit Grafikkarten gebrochen werden.
+**Szenario Nr. 3:**: Die Passwortdatenbank benutzt einfache Hashwerte oder Hashes ohne Salt zur Speicherung der Passwörter. Eine Schwachstelle in der Downloadfunktion erlaubt dem Angreifer den Zugriff auf die Passwortdatei. Zu Hashes ohne Salt kann über vorausberechnete Rainbow-Tabellen der Klartext gefunden werden. Hashes, die über einfache oder schnelle Funktionen berechnet wurden, können effizient mit Grafikkarten gebrochen werden.
 
 ## Referenzen {{ osib_anchor(osib=osib ~ ".references", id=id ~ "-references", name=title ~ ": Referenzen", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
 
