@@ -17,7 +17,11 @@ lang:   "de"
 
 ## Übersicht {{ osib_anchor(osib=osib ~ ".overview", id=id ~ "-overview", name=title ~ ": Übersicht", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
 
-Sicherheitsprotokollierung und -überwachung stammen aus der Top-10-Community-Umfrage (Nr. 3) und liegen damit leicht über dem zehnten Platz in den OWASP Top 10 2017. Protokollierung und Überwachung können schwierig zu testen sein und erfordern oft Interviews oder die Frage, ob während eines Eindringens Angriffe erkannt wurden prüfen. Für diese Kategorie gibt es nicht viele CVE/CVSS-Daten, aber die Erkennung und Reaktion auf Verstöße ist von entscheidender Bedeutung. Dennoch kann es große Auswirkungen auf die Verantwortlichkeit, Sichtbarkeit, Alarmierung von Vorfällen und die Forensik haben. Diese Kategorie geht über *CWE-778 Unzureichende Protokollierung* hinaus und umfasst *CWE-117 Unsachgemäße Ausgabeneutralisierung für Protokolle*, *CWE-223 Weglassen sicherheitsrelevanter Informationen* und *CWE-532* *Einfügung vertraulicher Informationen in die Protokolldatei*.
+Sicherheitsprotokollierung und -überwachung stammen aus der Top-10-Community-Umfrage (Nr. 3) und liegen damit leicht über dem zehnten Platz in den OWASP Top 10 2017. Protokollierung und Überwachung können schwierig zu testen sein und erfordern oft Interviews oder die Frage, ob während eines Eindringens Angriffe erkannt wurden prüfen. Für diese Kategorie gibt es nicht viele CVE/CVSS-Daten, aber die Erkennung und Reaktion auf Verstöße ist von entscheidender Bedeutung. Dennoch kann es große Auswirkungen auf die Verantwortlichkeit, Sichtbarkeit, Alarmierung von Vorfällen und die Forensik haben. 
+Diese Kategorie geht über *CWE-778 Insufficient Logging* hinaus und umfasst 
+*CWE-117 Improper Output Neutralization for Logs*,
+*CWE-223 Omission of Security-relevant Information* und 
+*CWE-532* *Insertion of Sensitive Information into Log File*.
 
 ## Beschreibung {{ osib_anchor(osib=osib ~ ".description", id=id ~ "-description", name=title ~ ": Beschreibung", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
 

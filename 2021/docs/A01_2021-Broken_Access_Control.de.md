@@ -18,7 +18,11 @@ lang:   "de"
 ## Übersicht {{ osib_anchor(osib=osib ~ ".overview", id=id ~ "-overview", name=title ~ ": Übersicht", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
 
 94 % der Anwendungen wurden auf irgendeine Form fehlerhafter Zugriffskontrolle getestet.
-Vom fünften Platz aufgestiegen, weist die fehlerhafte Zugriffskontrolle mit einer durchschnittlichen Inzidenzrate von 3,81 % und mit über 318.000 die meisten Vorkommnisse im vorliegenden Datensatz auf. Bemerkenswerte Common Weakness Enumerations (CWEs) sind *CWE-200: Offenlegung sensibler Informationen gegenüber einem nicht autorisierten Akteur*, *CWE-201: Einfügen sensibler Informationen in gesendete Daten* und *CWE-352: Cross-Site Request Forgery* .
+Vom fünften Platz aufgestiegen, weist die fehlerhafte Zugriffskontrolle mit einer durchschnittlichen Inzidenzrate von 3,81 % und mit über 318.000 die meisten Vorkommnisse im vorliegenden Datensatz auf.
+Bemerkenswerte Common Weakness Enumerations (CWEs) sind 
+*CWE-200: Exposure of Sensitive Information to an Unauthorized Actor*,
+*CWE-201: Insertion of Sensitive Information Into Sent Data* und 
+*CWE-352: Cross-Site Request Forgery*.
 
 ## Beschreibung {{ osib_anchor(osib=osib ~ ".description", id=id ~ "-description", name=title ~ ": Beschreibung", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
 
