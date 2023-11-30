@@ -68,7 +68,7 @@ damit das Entwicklungsteam direkt die korrekte Lösung erhält.
 Das Team kann dann schnell ein Refactoring durchführen
 und die Komponente des Geebneten Weges umsetzen.
 
-## Schritt 5. Stellen Sie sicher dass der Geebnete Weg die OWASP Top 10 mitigiert
+## Schritt 5. Stellen Sie sicher, dass der Geebnete Weg die OWASP Top 10 mitigiert
 
 Jedes Element des Geebneten Weges sollte ein signifikantes Problem aus den OWASP Top 10 adressieren,
 z.B. automatisch Komponenten mit bekannten Schwachstellen erkennen oder beheben,
@@ -81,7 +81,7 @@ Sobald diese verbessert werden sollten Konsumenten über einen Kommunikationsweg
 das bevorzugt automatisch erfolgen, mindestens aber auf einem Dashboard hervorgehoben werden sollte.
 
 
-## Schritt 6. Bauen Sie ihr Programm zu einem gereiften AppSec-Programm aus
+## Schritt 6. Bauen Sie ihr Programm zu einem ausgereiften AppSec-Programm aus
 
 Sie dürfen nicht bei den OWASP Top 10 aufhören.
 Sie decken nur 10 Risikokategorien ab.
@@ -95,6 +95,7 @@ abhängig vom Risikoniveau der Anwendung.
 
 Alle guten Programme zur Anwendungssicherheit gehen über das Minimum hinaus.
 Alle Beteiligten müssen weiterarbeiten, um die Schwachstellen in den Anwendungen jemals in den Griff zu bekommen.
+
 -   **Konzeptuelle Integrität**. Ausgereifte AppSec-Programme müssen über ein Konzept sicherer Architektur verfügen,
 egal ob eine formale Cloud- oder Enterprise-Architektur oder Bedrohungsanalyse.
 

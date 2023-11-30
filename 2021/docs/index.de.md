@@ -46,7 +46,7 @@ Einige Kategorien haben sich gegenüber der vorherigen Ausgabe der OWASP Top Ten
 
 Frühere Datenerfassungsbemühungen konzentrierten sich auf eine vorgeschriebene Teilmenge von etwa 30 CWEs mit einem Feld, in dem nach zusätzlichen Erkenntnissen gefragt wurde. Wir haben gelernt, dass sich Unternehmen in erster Linie auf die 30 CWEs konzentrieren und nur selten weitere CWEs hinzufügen, die sie sehen. In dieser Iteration haben wir es geöffnet und nur nach Daten gefragt, ohne Einschränkung für CWEs. Wir fragten nach der Anzahl der getesteten Anwendungen für ein bestimmtes Jahr (ab 2017) und nach der Anzahl der Anwendungen, bei denen beim Testen mindestens eine Instanz eines CWE gefunden wurde. Mit diesem Format können wir verfolgen, wie weit die einzelnen CWEs in der Anwendungspopulation verbreitet sind. Wir ignorieren die Frequenz für unsere Zwecke; Während es in anderen Situationen notwendig sein kann, verschleiert es nur die tatsächliche Prävalenz in der Anwendungspopulation. Ob eine Anwendung vier Instanzen eines CWE oder 4.000 Instanzen hat, ist nicht Teil der Berechnung für die Top 10. Wir sind von etwa 30 CWEs auf fast 400 CWEs gestiegen, um sie im Datensatz zu analysieren. Wir planen, in Zukunft ergänzend zusätzliche Datenanalysen durchzuführen. Dieser deutliche Anstieg der Zahl der CWEs erfordert Änderungen in der Strukturierung der Kategorien.
 
-Wir haben mehrere Monate damit verbracht, CWEs zu gruppieren und zu kategorisieren, und hätten noch weitere Monate damit fortfahren können. Irgendwann mussten wir anhalten. Es gibt sowohl *Grundursache*- als auch *Symptomtypen von CWEs, wobei *Grundursache*-Typen wie „Kryptografischer Fehler“ und „Fehlkonfiguration“ im Gegensatz zu *Symptomtypen* wie „Sensitive Data Exposure“ und „Denial of Service“ stehen. Wir haben uns entschieden, uns wann immer möglich auf die *Grundursache* zu konzentrieren, da dies sinnvoller ist, um Hinweise zur Identifizierung und Behebung zu geben. Sich auf die *Grundursache* statt auf das *Symptom* zu konzentrieren, ist kein neues Konzept; Die Top Ten waren eine Mischung aus *Symptom* und *Grundursache*. CWEs sind auch eine Mischung aus *Symptom* und *Grundursache*; Wir gehen einfach bewusster damit um und fordern es heraus. In dieser Folge gibt es durchschnittlich 19,6 CWEs pro Kategorie, wobei die Untergrenzen bei 1 CWE für **[A10:2021-Server-Side Request Forgery](A10_2021-Server-Side_Request_Forgery_(SSRF).md)** bis 40 liegen CWEs in **[A04:2021-Insecure Design](A04_2021-Insecure_Design.md)**. Diese aktualisierte Kategoriestruktur bietet zusätzliche Schulungsvorteile, da sich Unternehmen auf CWEs konzentrieren können, die für eine Sprache/ein Framework sinnvoll sind.
+Wir haben mehrere Monate damit verbracht, CWEs zu gruppieren und zu kategorisieren, und hätten noch weitere Monate damit fortfahren können. Irgendwann mussten wir anhalten. Es gibt sowohl *Grundursache*- als auch *Symptomtypen von CWEs, wobei *Grundursache*-Typen wie „Kryptografischer Fehler“ und „Fehlkonfiguration“ im Gegensatz zu *Symptomtypen* wie „Sensitive Data Exposure“ und „Denial of Service“ stehen. Wir haben uns entschieden, uns wann immer möglich auf die *Grundursache* zu konzentrieren, da dies sinnvoller ist, um Hinweise zur Identifizierung und Behebung zu geben. Sich auf die *Grundursache* statt auf das *Symptom* zu konzentrieren, ist kein neues Konzept; Die Top Ten waren eine Mischung aus *Symptom* und *Grundursache*. CWEs sind auch eine Mischung aus *Symptom* und *Grundursache*; Wir gehen einfach bewusster damit um und fordern es heraus. In dieser Folge gibt es durchschnittlich 19,6 CWEs pro Kategorie, wobei die Untergrenzen bei 1 CWE für [**A10:2021-Server-Side Request Forgery**](A10_2021-Server-Side_Request_Forgery_(SSRF).md) bis 40 liegen CWEs in [**A04:2021-Unsicheres Anwendungsdesign**](A04_2021-Insecure_Design.md). Diese aktualisierte Kategoriestruktur bietet zusätzliche Schulungsvorteile, da sich Unternehmen auf CWEs konzentrieren können, die für eine Sprache/ein Framework sinnvoll sind.
 
 ## Wie die Daten zur Auswahl von Kategorien verwendet werden
 
@@ -93,11 +93,11 @@ Wir betrachten die acht Kategorien mit den höchsten Inzidenzraten für die Aufn
 Für jede der Top-10-Kategorien sind Datenfaktoren aufgeführt. Sie bedeuten Folgendes:
 
 - Zugeordnete CWEs: Die Anzahl der CWEs, die vom Top-10-Team einer Kategorie zugeordnet wurden.
-- Inzidenzrate: Die Inzidenzrate ist der Prozentsatz der Anwendungen, die für diesen CWE anfällig sind, aus der Bevölkerung, die von dieser Organisation in diesem Jahr getestet wurde.
-- Gewichteter Exploit: Der Exploit-Subscore aus CVSSv2- und CVSSv3-Scores, zugewiesen an CVEs, zugeordnet zu CWEs, normalisiert und auf einer 10-Punkte-Skala platziert.
-- Gewichteter Impact: Der Impact-Subscore aus den CVSSv2- und CVSSv3-Scores, die CVEs zugeordnet sind, CWEs zugeordnet, normalisiert und auf einer 10-Punkte-Skala platziert werden.
+- Häufigkeit: Die Inzidenzrate ist der Prozentsatz der Anwendungen, die für diesen CWE anfällig sind, aus der Bevölkerung, die von dieser Organisation in diesem Jahr getestet wurde.
+- Durchschn. Ausnutzbarkeit: Der Exploit-Subscore aus CVSSv2- und CVSSv3-Scores, zugewiesen an CVEs, zugeordnet zu CWEs, normalisiert und auf einer 10-Punkte-Skala platziert.
+- Durchschn. Auswirkungen: Der Impact-Subscore aus den CVSSv2- und CVSSv3-Scores, die CVEs zugeordnet sind, CWEs zugeordnet, normalisiert und auf einer 10-Punkte-Skala platziert werden.
 - (Test-)Abdeckung: Der Prozentsatz der Anwendungen, die von allen Organisationen für ein bestimmtes CWE getestet wurden.
-- Gesamtzahl der Vorkommen: Gesamtzahl der Anwendungen, bei denen die CWEs einer Kategorie zugeordnet wurden.
+- Gesamtanzahl: Gesamtzahl der Anwendungen, bei denen die CWEs einer Kategorie zugeordnet wurden.
 - CVEs insgesamt: Gesamtzahl der CVEs in der NVD-Datenbank, die den einer Kategorie zugeordneten CWEs zugeordnet wurden.
 
 ## Vielen Dank an unsere Datenlieferanten
@@ -106,14 +106,14 @@ Die folgenden Organisationen (zusammen mit einigen anonymen Spendern) haben freu
 
 - AppSec Labs
 - Cobalt.io
-- Kontrastsicherheit
+- Contrast Security
 - GitLab
 - HackerOne
-- HCL-Technologien
-- Mikrofokus
+- HCL Technologies
+- Micro Focus
 - PenTest-Tools
-- Leerzeichen
-- Quadratisch
+- Probely
+- Sqreen
 - Veracode
 - WhiteHat (NTT)
 
