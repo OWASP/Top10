@@ -18,9 +18,9 @@ lang:   "de"
 ## Übersicht {{ osib_anchor(osib=osib ~ ".overview", id=id ~ "-overview", name=title ~ ": Übersicht", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
 
 Eine neue Kategorie für 2021 konzentriert sich auf Annahmen im Zusammenhang mit Software-Updates, kritischen Daten und CI/CD-Pipelines ohne Überprüfung der Integrität. Eine der am höchsten gewichteten Auswirkungen aus den Daten des Common Vulnerability and Exposures/Common Vulnerability Scoring System (CVE/CVSS). Zu den bemerkenswerten Common Weakness Enumerations (CWEs) gehören:
-*CWE-829: Einbeziehung der Funktionalität aus der nicht vertrauenswürdigen Kontrollsphäre*,
-*CWE-494: Herunterladen von Code ohne Integritätsprüfung* und
-*CWE-502: Deserialisierung nicht vertrauenswürdiger Daten*.
+*CWE-829: Inclusion of Functionality from Untrusted Control Sphere*,
+*CWE-494: Download of Code Without Integrity Check* und
+*CWE-502: Deserialization of Untrusted Data*.
 
 ## Beschreibung {{ osib_anchor(osib=osib ~ ".description", id=id ~ "-description", name=title ~ ": Beschreibung", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
 
