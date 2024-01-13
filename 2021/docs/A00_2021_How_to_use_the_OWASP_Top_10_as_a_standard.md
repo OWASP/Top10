@@ -45,3 +45,5 @@ comprehensively detect, test, or protect against the OWASP Top 10 due to
 the nature of several of the OWASP Top 10 risks, with reference to
 A04:2021-Insecure Design. OWASP discourages any claims of full coverage
 of the OWASP Top 10, because it’s simply untrue.
+
+--8<-- "includes/abbreviations.md"

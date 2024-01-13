@@ -71,10 +71,11 @@ $RECYCLE.BIN/
 # IDE folders
 .idea/
 
-# mkdocs site (this is built using mkdocs gh-deploy
-2021/site/
-2021/site/0x00-notice/index.html
+# MkDocs generated website
+2021/site
 
 # Pipenv
 Pipfile
-2021/site/0x00-notice/index.html
+
+env
+venv

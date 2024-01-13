@@ -1,4 +1,4 @@
-# How to start an AppSec Program with the OWASP Top 10 
+# How to start an AppSec Program with the OWASP Top 10
 
 Previously, the OWASP Top 10 was never designed to be the basis for an
 AppSec program. However, it's essential to start somewhere for many
@@ -113,3 +113,5 @@ going if we're ever going to get on top of appsec vulnerabilities.
     limited impact, do something different. Just because we've done
     testing like desk checks since the 1970s doesn't mean it's a good
     idea. Measure, evaluate, and then build or improve.
+
+--8<-- "includes/abbreviations.md"

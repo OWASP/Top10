@@ -6,10 +6,57 @@ copyright: © Copyright 2021 - OWASP Top 10 team - This work is licensed under a
 docs_dir: docs
 theme:
   name: material
+  custom_dir: overrides
+  favicon: assets/OWASP-logo.svg
+  logo: assets/OWASP-logo.svg
+  font: false
   language: en
-  logo: assets/OWASP_Logo_Transp.png
   features:
     - navigation.sections
+    - navigation.tracking
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - search.share
+  palette:
+    - media: "(prefers-color-scheme: dark)"
+      scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+extra_css:
+  - stylesheets/extra.css
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/OWASP/Top10/
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/owasp
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/owasp/
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/user/owaspglobal
+
+markdown_extensions:
+  - abbr
+  - attr_list
+  - pymdownx.snippets
+  - admonition
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - footnotes
+  - toc:
+      permalink: ⚓︎
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
 
 nav:
   - Home: index.md
@@ -31,10 +78,9 @@ nav:
     - A10 Server Side Request Forgery (SSRF): 'A10_2021-Server-Side_Request_Forgery_(SSRF).md'
   - Next Steps: 'A11_2021-Next_Steps.md'
 
-markdown_extensions:
-  - attr_list
-
 plugins:
+  - search
+  - git-revision-date
   - i18n:
       default_language: en
       languages:
