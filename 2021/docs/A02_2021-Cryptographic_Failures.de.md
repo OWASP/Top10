@@ -18,13 +18,14 @@ lang:   "de"
 
 ## Übersicht {{ osib_anchor(osib=osib ~ ".overview", id=id ~ "-overview", name=title ~ ": Bezug / Kontext / Auswertung", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
 
-Dieses Thema ist vorgerückt um eine Position auf Platz 2 und war früher bekannt als *Verlust der Vertraulichkeit sensibler Daten*, bei dem es sich eher um ein allgemeines Symptom als um eine Grundursache handelt.
-Nun liegt der Schwerpunkt mehr auf Fehlern im Zusammenhang mit Kryptographie oder dass diese nicht zur Anwendung kommt, was häufig zur Offenlegung sensibler Daten führt.
+Dieses Thema ist um eine Position auf Platz 2 vorgerückt
+und war früher bekannt als *Verlust der Vertraulichkeit sensibler Daten*, bei dem es sich eher um ein allgemeines Symptom als um eine Grundursache handelt.
+Nun liegt der Schwerpunkt mehr auf Fehlern im Zusammenhang mit Kryptografie oder dass diese nicht zur Anwendung kommt, was häufig zur Offenlegung sensibler Daten führt.
 Bemerkenswerte Common Weakness Enumerations (CWEs) sind *CWE-259: Use of Hard-coded Password*, *CWE-327: Broken or Risky Crypto Algorithm* und *CWE-331 Insufficient Entropy*.
 
 ## Beschreibung {{ osib_anchor(osib=osib ~ ".description", id=id ~ "-description", name=title ~ ": Beschreibung", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
 
-Zunächst gilt es, den Schutzbedarf der Daten während der Übermittlung und der Speicherung zu ermitteln. Beispielsweise erfordern Passwörter, Kreditkartennummern, Gesundheitsakten, persönliche Informationen und Geschäftsgeheimnisse zusätzlichen Schutz, vor allem dann, wenn diese Daten unter Datenschutzgesetze, z. B. die Datenschutz-Grundverordnung (DSGVO) der EU, oder andere Vorschriften fallen, beispielsweise dem Payment Card Industry Data Security Standard (PCI DSS).
+Zunächst gilt es, den Schutzbedarf der Daten während der Übermittlung und der Speicherung zu ermitteln. Beispielsweise erfordern Passwörter, Kreditkartennummern, Gesundheitsakten, persönliche Informationen und Geschäftsgeheimnisse zusätzlichen Schutz, vor allem dann, wenn diese Daten unter Datenschutzgesetze, z. B. die Datenschutz-Grundverordnung (DSGVO) der EU, oder andere Vorschriften fallen, beispielsweise dem Payment Card Industry Data Security Standard (PCI-DSS).
 
 Folgendes ist zu klären:
 
@@ -46,18 +47,19 @@ Folgendes ist zu klären:
 
 - Werden Hash-Funktionen mit bekannten Schwächen wie MD5 oder SHA1 verwendet oder werden nicht-kryptografische Hash-Funktionen verwendet, wenn kryptografische Hash-Funktionen benötigt werden?
 
-– Werden veraltete kryptografische Padding Methoden verwendet, z.B. PKCS#1 v1.5?
+- Werden veraltete kryptografische Padding Methoden verwendet, z.B. PKCS#1 v1.5?
 
 - Sind kryptografische Fehlermeldungen oder Seitenkanäle ausnutzbar, beispielsweise in Form von Padding-Oracle-Angriffen?
 
-Siehe {{ osib_link(link="osib.owasp.asvs.4-0.6", prefix="ASVS ", doc="", osib=osib) }}, {{ osib_link(link= "osib.owasp.asvs.4-0.8", doc="", osib=osib) }}, {{ osib_link(link= "osib.owasp.asvs.4-0.9", doc="", osib=osib) }}<!-- - ASVS Crypto (V7), Datenschutz (V9) und SSL/TLS (V10)--->
+Siehe {{ osib_link(link="osib.owasp.asvs.4-0.6", prefix="ASVS ", doc="", osib=osib) }}, {{ osib_link(link= "osib.owasp.asvs.4-0.8", doc="", osib=osib) }}, {{ osib_link(link= "osib.owasp.asvs.4-0.9", doc="", osib=osib) }}<!-- ASVS Crypto (V7), Datenschutz (V9) und SSL/TLS (V10)-->
 
 ## Prävention und Gegenmaßnahmen {{ osib_anchor(osib=osib ~ ".how to prevent", id=id ~ "-how_to_prevent", name=title ~ ": Prävention und Gegenmaßnahmen", lang=lang, source=source ~ "#" ~ id, parent=osib) }}
 
 
 Gehen Sie als Minimum wie folgt vor und konsultieren Sie die Referenzen:
 
-- Klassifizieren Sie die Daten, die von einer Anwendung verarbeitet, gespeichert oder übermittelt werden, nach ihrem Schutzbedarf. Berücksichtigen Sie dabei auch Datenschutzgesetze, regulatorische und Geschäfts-Anforderungen.
+- Klassifizieren Sie die Daten, die von einer Anwendung verarbeitet, gespeichert oder übermittelt werden
+nach ihrem Schutzbedarf. Berücksichtigen Sie dabei auch Datenschutzgesetze, regulatorische und Geschäfts-Anforderungen.
 
 - Speichern Sie sensible Daten nicht unnötig. Löschen Sie sensible Daten auf sichere Weise sobald wie möglich oder verwenden Sie Techniken wie PCI-DSS-konformes Speichern von Ersatzwerten (Tokenisierung) oder gar gekürzten (trunkierten) Werten.
 Daten, die es nicht mehr gibt, können auch nicht gestohlen werden.
@@ -65,7 +67,8 @@ Daten, die es nicht mehr gibt, können auch nicht gestohlen werden.
 - Stellen Sie sicher, dass alle vertraulichen Daten bei Speicherung verschlüsselt werden.
 
 - Aktuelle, starke Algorithmen und Schlüssel 
-- Stellen Sie sicher, dass aktuelle, starke, standardisierte Algorithmen, Protokolle und Schlüssel, z.B. gemäß BSI TR-02102, verwendet werden. Etablieren Sie wirksames 
+- Stellen Sie sicher, dass aktuelle, starke, standardisierte Algorithmen, Protokolle und Schlüssel,
+z. B. gemäß BSI TR-02102, verwendet werden. Etablieren Sie wirksames 
 Schlüsselmanagement für kryptografische Schlüssel.
 
 - Verschlüsseln Sie alle Daten während der Übertragung mit sicheren Protokollen wie TLS. Priorisieren Sie dabei durch serverseitig Cipher-Suiten, die Forward Secrecy (FS) bieten, und sichere Parameter.
@@ -75,8 +78,7 @@ Erzwingen Sie die Verschlüsselung wenn möglich, z.B. durch Einführung von HTT
 
 - Wenden Sie die Sicherheitsmaßnahmen gemäß dem Schutzbedarf der Datenklassifizierung an.
 
-- Verwenden Sie keine älteren Protokolle wie FTP und SMTP für den Transport sensibler Daten.
-//?????????????????????
+- Verwenden Sie keine veralteten Protokolle wie FTP und SMTP für den Transport sensibler Daten.
 
 - Verwenden Sie spezielle Hash-Funktionen für das Hashen von Passwörtern, bei denen für jedes Passwort ein Salz-Wert (salted hash) zum Einsatz kommt und durch Parameterierung der Rechenaufwand adaptiv gesteuert werden kann (work-factor). Beispiele sind: Argon2, scrypt, bcrypt oder PBKDF2.
 
@@ -94,11 +96,15 @@ Erzwingen Sie die Verschlüsselung wenn möglich, z.B. durch Einführung von HTT
 
 ## Beispielhafte Angriffsszenarien {{ osib_anchor(osib=osib ~ ".example attack Scenarios", id=id ~ "-example_attack_scenarios", name=title ~ ": Beispielhafte Angriffsszenarien", lang=lang, source=source ~ "# " ~ id, parent=osib) }}
 
-**Szenario Nr. 1**: Eine Anwendung verschlüsselt Kreditkartendaten automatisch bei der Speicherung in einer Datenbank. Das bedeutet aber auch, dass durch SQL-Injection erlangte Kreditkartendaten in diesem Fall automatisch entschlüsselt werden.
+**Szenario Nr. 1:**: Eine Anwendung verschlüsselt Kreditkartendaten automatisch bei der Speicherung in einer Datenbank. Das bedeutet aber auch, dass durch SQL-Injection erlangte Kreditkartendaten in diesem Fall automatisch entschlüsselt werden.
 
-**Szenario Nr. 2**: Eine Webseite benutzt kein TLS, erzwingt dies nicht auf allen Seiten oder lässt schwache Verschlüsselung zu. Der Angreifer liest die Kommunikation mit (z.B. in einem offenen WLAN), ersetzt HTTPS- durch HTTP-Verbindungen, hört diese ab und stiehlt das Sitzungscookie. Durch Wiedereinspielen dieses Cookies übernimmt der Angreifer die (authentifizierte) Sitzung des Nutzers und erlangt Zugriff auf dessen private Daten. Anstatt dessen kann der Angreifer auch die übertragenen Daten ändern, z.B. den Empfänger einer Überweisung.
+**Szenario Nr. 2:**: Eine Webseite benutzt kein TLS,
+erzwingt dies nicht auf allen Seiten oder lässt schwache Verschlüsselung zu.
+Der Angreifer liest die Kommunikation mit (z. B. in einem offenen WLAN), ersetzt HTTPS- durch HTTP-Verbindungen, hört diese ab und stiehlt das Sitzungscookie.
+Durch Wiedereinspielen dieses Cookies übernimmt der Angreifer die (authentifizierte) Sitzung des Nutzers und erlangt Zugriff auf dessen private Daten.
+Anstatt dessen kann der Angreifer auch die übertragenen Daten ändern, z. B. den Empfänger einer Überweisung.
 
-**Szenario Nr. 3**: Die Passwortdatenbank benutzt einfache Hashwerte oder Hashes ohne Salt zur Speicherung der Passwörter. Eine Schwachstelle in der Downloadfunktion erlaubt dem Angreifer den Zugriff auf die Passwortdatei. Zu Hashes ohne Salt kann über vorausberechnete Rainbow-Tabellen der Klartext gefunden werden. Hashes, die über einfache oder schnelle Funktionen berechnet wurden, können effizient mit Grafikkarten gebrochen werden.
+**Szenario Nr. 3:**: Die Passwortdatenbank benutzt einfache Hashwerte oder Hashes ohne Salt zur Speicherung der Passwörter. Eine Schwachstelle in der Downloadfunktion erlaubt dem Angreifer den Zugriff auf die Passwortdatei. Zu Hashes ohne Salt kann über vorausberechnete Rainbow-Tabellen der Klartext gefunden werden. Hashes, die über einfache oder schnelle Funktionen berechnet wurden, können effizient mit Grafikkarten gebrochen werden.
 
 ## Referenzen {{ osib_anchor(osib=osib ~ ".references", id=id ~ "-references", name=title ~ ": Referenzen", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
 

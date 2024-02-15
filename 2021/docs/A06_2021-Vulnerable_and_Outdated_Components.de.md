@@ -17,7 +17,8 @@ lang:   "de"
 
 ## Übersicht {{ osib_anchor(osib=osib ~ ".overview", id=id ~ "-overview", name=title ~ ": Übersicht", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
 
-Es belegte Platz 2 in der Top-10-Community-Umfrage, verfügte aber auch über genügend Daten, um es datentechnisch in die Top 10 zu schaffen. Vulnerable Komponenten sind ein bekanntes Problem, das wir nur schwer testen und bewerten können. Sie stellen die einzige Kategorie dar, in der den enthaltenen CWEs keine Common Vulnerability and Exposures (CVEs) zugeordnet sind. Daher wird eine standardmäßige Exploit-/Auswirkungsgewichtung von 5,0 verwendet. Bemerkenswerte CWEs sind *CWE-1104: Verwendung nicht gewarteter Drittanbieterkomponenten* und die beiden CWEs aus den Top 10 2013 und 2017.
+Es belegte Platz 2 in der Top-10-Community-Umfrage, verfügte aber auch über genügend Daten, um es datentechnisch in die Top 10 zu schaffen. 
+Unsichere Komponenten sind ein bekanntes Problem, das wir nur schwer testen und bewerten können. Sie stellen die einzige Kategorie dar, in der den enthaltenen CWEs keine Common Vulnerability and Exposures (CVEs) zugeordnet sind. Daher wird eine standardmäßige Exploit-/Auswirkungsgewichtung von 5,0 verwendet. Bemerkenswerte CWEs sind *CWE-1104: Verwendung nicht gewarteter Drittanbieterkomponenten* und die beiden CWEs aus den Top 10 2013 und 2017.
 
 ## Beschreibung {{ osib_anchor(osib=osib ~ ".description", id=id ~ "-description", name=title ~ ": Beschreibung", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
 
@@ -31,9 +32,10 @@ Die Anwendung besitzt möglicherweise Schwachstellen, wenn folgendes zutrifft:
 
 - Die zugrundeliegende Plattform, das Framework und die Abhängigkeiten werden nicht risikobasiert und rechtzeitig repariert oder aktualisiert. Dies passiert in der Regel in Umgebungen in denen Patchen eine monatliche oder quartalsweise Tätigkeit und einer Änderungskontrolle unterliegt. Dies setzt die Organisation unnötigerweise über Tage oder Monate dem Risiko von Schwachstellen aus, für die schon Patches existieren.
 
-- Softwareentwickler keine Kompatibilitäts-Tests der aktualisierten oder gepatchten Bibliotheken durchführen.
+- Softwareentwickler führen keine Kompatibilitäts-Tests der aktualisierten oder gepatchten Bibliotheken durch.
 
-- Die Komponenten nicht sicher konfiguriert sind (siehe [A05:2021-Sicherheitsrelevante Fehlkonfiguration](A05_2021-Security_Misconfiguration.de.md)).
+- Die Komponenten sind nicht sicher konfiguriert (siehe [A05:2021-Sicherheitsrelevante Fehlkonfiguration](A05_2021-Security_Misconfiguration.de.md)).
+<!-- TODO OSIB Link -->
 
 ## Prävention und Gegenmaßnahmen {{ osib_anchor(osib=osib ~ ".how to prevent", id=id ~ "-how_to_prevent", name=title ~ ": How to Prevent", lang=lang, source=source ~ "#" ~ id, parent=osib) }}
 
@@ -53,9 +55,10 @@ Jede Organisation muss einen fortlaufenden Plan für die Überwachung, Triage un
 
 **Szenario Nr. 1:** Komponenten werden normalerweise mit denselben Berechtigungen wie die Anwendung selbst ausgeführt, sodass Fehler in einer Komponente schwerwiegende Auswirkungen haben können. Solche Fehler können zufällig (z. B. ein Programmierfehler) oder absichtlich (z. B. eine Backdoor in einer Komponente) sein. Einige Beispiele für entdeckte ausnutzbare Komponentenschwachstellen sind:
 
-– CVE-2017-5638, eine Remote Code Execution Schwachstelle in Struts 2, die den Angreifer ermächtigt beliebigen Code auf dem Server auszuführen, wurde für einige erhebliche Sicherheitsvorfälle verantwortlich gemacht.
+- CVE-2017-5638, eine Remote Code Execution Schwachstelle in Struts 2, die den Angreifer ermächtigt, beliebigen Code auf dem Server auszuführen, wurde für einige erhebliche Sicherheitsvorfälle verantwortlich gemacht.
 
-- Obwohl das Patchen von Geräten des Internet of Things (IoT) oft nur sehr schwierig oder unmöglich ist, kann dies sehr wichtig sein (z.B. biomedizinische Geräte).
+- Obwohl das Patchen von Geräten des Internet of Things (IoT) oft nur sehr schwierig oder unmöglich ist,
+kann dies sehr wichtig sein (z. B. für biomedizinische Geräte).
 
 Es existieren automatisierte Tools, die Angreifern helfen, nicht gepatchte oder falsch konfigurierte Systeme zu finden. Die Shodan IoT-Suchmaschine kann Ihnen beispielsweise dabei helfen, Geräte zu finden, die immer noch für die im April 2014 gepatchte Heartbleed-Sicherheitslücke verwundbar sind.
 

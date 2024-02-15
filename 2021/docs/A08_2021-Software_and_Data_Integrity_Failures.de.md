@@ -17,10 +17,11 @@ lang:   "de"
 
 ## Übersicht {{ osib_anchor(osib=osib ~ ".overview", id=id ~ "-overview", name=title ~ ": Übersicht", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
 
-Eine neue Kategorie für 2021 konzentriert sich auf Annahmen im Zusammenhang mit Software-Updates, kritischen Daten und CI/CD-Pipelines ohne Überprüfung der Integrität. Eine der am höchsten gewichteten Auswirkungen aus den Daten des Common Vulnerability and Exposures/Common Vulnerability Scoring System (CVE/CVSS). Zu den bemerkenswerten Common Weakness Enumerations (CWEs) gehören:
-*CWE-829: Einbeziehung der Funktionalität aus der nicht vertrauenswürdigen Kontrollsphäre*,
-*CWE-494: Herunterladen von Code ohne Integritätsprüfung* und
-*CWE-502: Deserialisierung nicht vertrauenswürdiger Daten*.
+Eine neue Kategorie für 2021 konzentriert sich auf Annahmen im Zusammenhang mit Software-Updates, kritischen Daten und CI/CD-Pipelines ohne Überprüfung der Integrität:
+Eine der am höchsten gewichteten Auswirkungen aus den Daten des Common Vulnerability and Exposures/Common Vulnerability Scoring System (CVE/CVSS). Zu den bemerkenswerten Common Weakness Enumerations (CWEs) gehören:
+*CWE-829: Inclusion of Functionality from Untrusted Control Sphere*,
+*CWE-494: Download of Code Without Integrity Check* und
+*CWE-502: Deserialization of Untrusted Data*.
 
 ## Beschreibung {{ osib_anchor(osib=osib ~ ".description", id=id ~ "-description", name=title ~ ": Beschreibung", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
 
@@ -30,34 +31,35 @@ Software- und Datenintegritätsfehler beziehen sich auf Code und Infrastruktur, 
 
 - Verwenden Sie digitale Signaturen oder ähnliche Mechanismen, um zu überprüfen, ob die Software oder Daten von der erwarteten source stammen und nicht verändert wurden.
 
-– Stellen Sie sicher, dass Bibliotheken und Abhängigkeiten wie npm oder Maven vertrauenswürdige Repositorys nutzen. Wenn Sie ein höheres Risikoprofil haben, sollten Sie erwägen, ein internes, nachweislich funktionierendes und überprüftes Repository zu hosten.
+- Stellen Sie sicher, dass Bibliotheken und Abhängigkeiten wie npm oder Maven vertrauenswürdige Repositorys nutzen. Wenn Sie ein höheres Risikoprofil haben, sollten Sie erwägen, ein internes, nachweislich funktionierendes und überprüftes Repository zu hosten.
 
-- Stellen Sie sicher, dass ein Software-Supply-Chain-Sicherheitstool wie OWASP Dependency Check oder OWASP CycloneDX verwendet wird, um zu überprüfen, ob Komponenten keine bekannten Schwachstellen enthalten
+- Stellen Sie sicher, dass ein Software-Supply-Chain-Sicherheitstool wie OWASP Dependency Check oder OWASP CycloneDX verwendet wird, um zu überprüfen, ob Komponenten keine bekannten Schwachstellen enthalten.
 
 - Stellen Sie sicher, dass es einen Überprüfungsprozess für Code- und Konfigurationsänderungen gibt, um das Risiko zu minimieren, dass schädlicher Code oder schädliche Konfigurationen in Ihre Software-Pipeline eingeführt werden.
 
-– Stellen Sie sicher, dass Ihre CI/CD-Pipeline über eine ordnungsgemäße Trennung, Konfiguration und Zugriffskontrolle verfügt, um die Integrität des Codes sicherzustellen, der die Build- und Bereitstellungsprozesse durchläuft.
+- Stellen Sie sicher, dass Ihre CI/CD-Pipeline über eine ordnungsgemäße Trennung, Konfiguration und Zugriffskontrolle verfügt, um die Integrität des Codes sicherzustellen, der die Build- und Bereitstellungsprozesse durchläuft.
 
-– Stellen Sie sicher, dass unsignierte oder unverschlüsselte serialisierte Daten nicht ohne irgendeine Form von Integritätsprüfung oder digitaler Signatur an nicht vertrauenswürdige Clients gesendet werden, um Manipulationen oder Wiedergabe der serialisierten Daten zu erkennen
+- Stellen Sie sicher, dass unsignierte oder unverschlüsselte serialisierte Daten nicht ohne irgendeine Form von Integritätsprüfung oder digitaler Signatur an nicht vertrauenswürdige Clients gesendet werden, um Manipulationen oder Wiedergabe der serialisierten Daten zu erkennen
 
 ## Beispielhafte Angriffsszenarien {{ osib_anchor(osib=osib ~ ".example attack Scenarios", id=id ~ "-example_attack_scenarios", name=title ~ ": Beispiel-Angriffsszenarien", lang=lang, source=source ~ "# " ~ id, parent=osib) }}
 
-**Szenario Nr. 1 Update ohne Signierung:** Viele Heimrouter, Set-Top-Boxen, Geräte-Firmware und andere überprüfen Updates nicht über signierte Firmware. Unsignierte Firmware ist ein wachsendes Ziel für Angreifer und wird voraussichtlich nur noch schlimmer werden. Dies ist ein großes Problem, da es oft keinen anderen Mechanismus zur Behebung gibt, als das Problem in einer zukünftigen Version zu beheben und darauf zu warten, dass frühere Versionen veraltet sind.
+**Szenario Nr. 1: Update ohne Signierung:** Viele Heimrouter, Set-Top-Boxen, Geräte-Firmware und Andere überprüfen Updates nicht über signierte Firmware. Unsignierte Firmware ist ein wachsendes Ziel für Angreifer und wird voraussichtlich nur noch schlimmer werden. Dies ist ein großes Problem, da es oft keinen anderen Mechanismus zur Behebung gibt, als das Problem in einer zukünftigen Version zu beheben und darauf zu warten, dass frühere Versionen veraltet sind.
 
-**Szenario Nr. 2 bösartiges SolarWinds-Update**: Es ist bekannt, dass Nationalstaaten Update-Mechanismen angreifen, wobei ein aktueller bemerkenswerter Angriff der SolarWinds-Orion-Angriff war. Das Unternehmen, das die Software entwickelt, verfügte über sichere Build- und Update-Integritätsprozesse. Diese konnten jedoch unterwandert werden, und das Unternehmen verteilte mehrere Monate lang ein äußerst gezieltes bösartiges Update an mehr als 18.000 Organisationen, von denen etwa 100 betroffen waren. Dies ist einer der weitreichendsten und bedeutsamsten Verstöße dieser Art in der Geschichte.
+**Szenario Nr. 2: Bösartiges SolarWinds-Update**: Es ist bekannt, dass Nationalstaaten Update-Mechanismen angreifen, wobei ein aktueller bemerkenswerter Angriff der SolarWinds-Orion-Angriff war. Das Unternehmen, das die Software entwickelt, verfügte über sichere Build- und Update-Integritätsprozesse. Diese konnten jedoch unterwandert werden, und das Unternehmen verteilte mehrere Monate lang ein äußerst gezieltes bösartiges Update an mehr als 18.000 Organisationen, von denen etwa 100 betroffen waren. Dies ist einer der weitreichendsten und bedeutsamsten Verstöße dieser Art in der Geschichte.
 
-**Szenario Nr. 3 Unsichere Deserialisierung:** Eine React-Anwendung ruft eine Reihe von Spring Boot-Mikrodiensten auf. Als funktionale Programmierer versuchten sie sicherzustellen, dass ihr Code unveränderlich ist. Die Lösung, die sie gefunden haben, besteht darin, den Benutzerstatus zu serialisieren und ihn bei jeder Anfrage hin und her zu übergeben. Ein Angreifer bemerkt die Java-Objektsignatur „rO0“ (in Base64) und nutzt das Java Serial Killer-Tool, um eine Remotecodeausführung auf dem Anwendungsserver zu erreichen.
+**Szenario Nr. 3: Unsichere Deserialisierung:** Eine React-Anwendung ruft eine Reihe von Spring-Boot-Mikrodiensten auf.
+Gemäß funktionaler Programmierung versuchen die Entwickler sicherzustellen, dass ihr Code unveränderlich ist. Die Lösung, die sie gefunden haben, besteht darin, den Benutzerstatus zu serialisieren und ihn bei jeder Anfrage hin und her zu übergeben. Ein Angreifer bemerkt die Java-Objektsignatur „rO0“ (in Base64) und nutzt das Java Serial Killer-Tool, um eine Remotecodeausführung auf dem Anwendungsserver zu erreichen.
 
 ## Referenzen {{ osib_anchor(osib=osib ~ ".references", id=id ~ "-references", name=title ~ ": References", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
 
 - {{ osib_link(link="osib.owasp.cheatsheetseries.0.software Supply Chain Security", osib=osib) }} <!-- \[OWASP Cheat Sheet: Software Supply Chain Security\](In Kürze erhältlich) -->
 - {{ osib_link(link="osib.owasp.cheatsheetseries.0.Secure Build and Deployment", osib=osib) }} <!--- \[OWASP Cheat Sheet: Secure Build and Deployment\](In Kürze verfügbar) -->
-- {{ osib_link(link="osib.owasp.cheatsheetseries.0.Infrastructure as Code Security", osib=osib) }} <!--- [OWASP Cheat Sheet: Infrastructure as Code](https://cheatsheetseries.owasp.org/cheatsheets/Infrastructure_as_Code_Security_Cheat_Sheet.html) --->
+- {{ osib_link(link="osib.owasp.cheatsheetseries.0.Infrastructure as Code Security", osib=osib) }} <!--- [OWASP Cheat Sheet: Infrastructure as Code](https://cheatsheetseries.owasp.org/cheatsheets/Infrastructure_as_Code_Security_Cheat_Sheet.html) -->
 - {{ osib_link(link="osib.owasp.cheatsheetseries.0.deserialization", osib=osib) }} <!-- [OWASP Cheat Sheet: Deserialisierung](https://www.owasp.org/index.php/Deserialization_Cheat_Sheet) -->
 - {{ osib_link(link="osib.safecode.publication.software Integrity Controls.pdf", osib=osib) }} <!--- [SAFECode Software Integrity Controls](https://safecode.org/publication/SAFECode_Software_Integrity_Controls0610.pdf) -->
-- {{ osib_link(link="osib.npr.news.SolarWinds Hack", osib=osib) }} <!--- [Ein „schlimmster Albtraum“-Cyberangriff: Die unerzählte Geschichte des SolarWinds-Hacks](<https:/ /www.npr.org/2021/04/16/985439655/a-worst-nightmare-cyberattack-the-untold-story-of-the-solarwinds-hack>) --->
-- {{ osib_link(link="osib.codecov.bash uploader compromise", doc="osib.codecov", osib=osib) }} <!--- [CodeCov Bash Uploader Compromise](https://about.codecov.io/security-update) --->
-- {{ osib_link(link="osib.julien vehent.securing devops", doc="osib.julien vehent", osib=osib) }} <!--- [DevOps sichern von Julien Vehent](https://www.manning.com/books/securing-devops) --->
+- {{ osib_link(link="osib.npr.news.SolarWinds Hack", osib=osib) }} <!--- [Ein „schlimmster Albtraum“-Cyberangriff: Die unerzählte Geschichte des SolarWinds-Hacks](<https:/ /www.npr.org/2021/04/16/985439655/a-worst-nightmare-cyberattack-the-untold-story-of-the-solarwinds-hack>) -->
+- {{ osib_link(link="osib.codecov.bash uploader compromise", doc="osib.codecov", osib=osib) }} <!--- [CodeCov Bash Uploader Compromise](https://about.codecov.io/security-update) -->
+- {{ osib_link(link="osib.julien vehent.securing devops", doc="osib.julien vehent", osib=osib) }} <!--- [DevOps sichern von Julien Vehent](https://www.manning.com/books/securing-devops) -->
 
 ## Liste der zugeordneten CWEs {{ osib_anchor(osib=osib~".mapped cwes", id=id~"-mapped_cwes", name=title~":List of Mapped CWEs", lang=lang, source=source~" #" ~id, parent=osib) }}
 
