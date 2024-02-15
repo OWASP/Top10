@@ -10,36 +10,36 @@ lang:   "de"
 
 # Über OWASP
 
-Das Open Web Application Security Project (OWASP) ist eine offene Community, die es Unternehmen ermöglicht, vertrauenswürdige Anwendungen und APIs zu entwickeln, zu kaufen und zu warten.
+Das Open Worldwide Application Security Project (OWASP) ist eine offene Community. OWASP möchte Organisationen in die Lage versetzen, sichere und vertrauenswürdige Anwendungen zu entwickeln, zu kaufen und zu betreiben.
 
-Bei OWASP finden Sie kostenlos und offen:
+Von OWASP kann man folgendes erwarten; stets frei verfügbar und jedermann zugänglich:
 
-- Tools und Standards für die Anwendungssicherheit
-- Spitzenforschung
-- Standard-Sicherheitskontrollen und Bibliotheken
-- Vollständige Bücher über Anwendungssicherheitstests, sichere Codeentwicklung und sichere Codeüberprüfung
-- Präsentationen und [Videos](https://www.youtube.com/user/OWASPGLOBAL)
-- [Spickzettel](https://cheatsheetseries.owasp.org/) zu vielen gängigen Themen
-- [Kapiteltreffen](https://owasp.org/chapters/)
-- [Veranstaltungen, Schulungen und Konferenzen](https://owasp.org/events/).
-- [Google Groups](TBA)
+- Werkzeuge und Standards für sichere Anwendungen.
+- Bücher zu den Themen Prüfungen, Entwicklung und Quellcodeanalyse im Bereich der Anwendungssicherheit.
+- Vorträge und [Videos](https://www.youtube.com/user/OWASPGLOBAL).
+- ["Cheat sheets"](https://owasp.org/www-project-cheat-sheets/) zu vielen sicherheitsrelevanten Themen.
+- Standard Security-Controls und Programm-Bibliotheken.
+- [Lokale "Chapter" auf der ganzen Welt](https://owasp.org/chapters/) und zusätzlich <b>[Stammtische](/www-chapter-germany/stammtische/)</b> in Deutschland.
+- Neueste Forschung.
+- Große und häufige [Konferenzen auf der ganzen Welt](https://owasp.org/events/).
+- [Mailinglisten](https://groups.google.com/a/owasp.org/forum/#!overview).
 
-Erfahren Sie mehr unter: [https://www.owasp.org](https://www.owasp.org).
+Alle Informationen auf [https://www.owasp.org](https://www.owasp.org) bzw. [https://www.owasp.de](https://www.owasp.de).
 
-Alle OWASP-Tools, Dokumente, Videos, Präsentationen und Kapitel sind kostenlos und stehen allen offen, die an der Verbesserung der Anwendungssicherheit interessiert sind.
+Alle OWASP Werkzeuge, Dokumente, Videos, Präsentationen und Chapter sind frei verfügbar und stehen jedem offen, der Anwendungssicherheit weiterentwickeln möchte.
 
-Wir plädieren dafür, Anwendungssicherheit als Menschen-, Prozess- und Technologieproblem zu betrachten, da die effektivsten Ansätze zur Anwendungssicherheit Verbesserungen in diesen Bereichen erfordern.
+Mangelnde Anwendungssicherheit begreifen wir als ein personen-, prozess- und technologie-bezogenes Problem, da die meisten wirksamen Ansätze für Anwendungssicherheit Verbesserungen in diesen Feldern erfordern.
 
-OWASP ist eine neue Art von Organisation. Da wir frei von kommerziellem Druck sind, können wir unvoreingenommene, praktische und kostengünstige Informationen zur Anwendungssicherheit bereitstellen.
+OWASP ist eine neue Art von Organisation. Wir unterliegen keinem kommerziellen Druck. Das erlaubt uns unvoreingenommene, praktikable und kosteneffiziente Informationen über Anwendungssicherheit bereitzustellen.
 
-OWASP ist mit keinem Technologieunternehmen verbunden, obwohl wir den bewussten Einsatz kommerzieller Sicherheitstechnologie unterstützen. OWASP produziert viele Arten von Materialien auf kollaborative, transparente und offene Weise.
+OWASP ist nicht von Dritten abhängig, wenngleich wir die sachkundige Verwendung freier und kommerzieller Technologien unterstützen. OWASP erstellt viele unterschiedliche Materialien auf Basis eines kollaborativen, transparenten und offenen Ansatzes.
 
-Die OWASP Foundation ist die gemeinnützige Organisation, die den langfristigen Erfolg des Projekts sicherstellt. Fast jeder, der mit OWASP verbunden ist, ist ein Freiwilliger, einschließlich des OWASP-Vorstands, Kapitelleitern, Projektleitern und Projektmitgliedern. Wir unterstützen innovative Sicherheitsforschung mit Fördermitteln und Infrastruktur.
+Die OWASP Foundation ist die gemeinnützige Organisation, die den langfristigen Erfolg des Projektes sicher stellt. Fast jeder bei OWASP ist ehrenamtlich tätig. Das schließt das Board, Chapter- und Projekt-Leiter, sowie Mitglieder ein. Wir unterstützen innovative Sicherheitsforschung mit Spenden, Förderungen und Infrastruktur.
 
-Komm, schließe dich uns an!
+[Machen Sie mit!](https://owasp.org/www-chapter-germany/)
 
-## Urheberrecht und Lizenz
+## Copyright und Lizenz
 
-![Lizenz](assets/license.png)
+![license](assets/license.png)
 
-Copyright © 2003-2023 The OWASP™ Foundation. Dieses Dokument wird unter der Creative Commons Attribution Share-Alike 4.0-Lizenz veröffentlicht. Bei jeglicher Wiederverwendung oder Verbreitung müssen Sie anderen die Lizenzbedingungen dieses Werks klarmachen.
+Copyright © 2003-2023 The OWASP™ Foundation. Dieses Dokument ist unter der Creative Commons Attribution Share-Alike 4.0 Lizenz veröffentlicht. Bei Weiterverwendung oder Weitergabe muss die Lizenz erhalten bleiben.
