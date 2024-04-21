@@ -19,7 +19,7 @@ Von OWASP kann man folgendes erwarten; stets frei verfügbar und jedermann zugä
 - Vorträge und [Videos](https://www.youtube.com/user/OWASPGLOBAL).
 - ["Cheat sheets"](https://owasp.org/www-project-cheat-sheets/) zu vielen sicherheitsrelevanten Themen.
 - Standard Security-Controls und Programm-Bibliotheken.
-- [Lokale "Chapter" auf der ganzen Welt](https://owasp.org/chapters/) und zusätzlich <b>[Stammtische](/www-chapter-germany/stammtische/)</b> in Deutschland.
+- [Lokale "Chapter" auf der ganzen Welt](https://owasp.org/chapters/) und zusätzlich **[Stammtische](/www-chapter-germany/stammtische/)** in Deutschland.
 - Neueste Forschung.
 - Große und häufige [Konferenzen auf der ganzen Welt](https://owasp.org/events/).
 - [Mailinglisten](https://groups.google.com/a/owasp.org/forum/#!overview).

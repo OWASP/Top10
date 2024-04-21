@@ -6,7 +6,7 @@ lang:   "de"
 ---
 {%- set parent = extra.osib.document ~ "." ~ extra.osib.version -%}
 {%- set osib = parent ~ ".3" -%}
-#A03:2021 – Injektion     ![icon](assets/TOP_10_Icons_Final_Injection.png){: style="height:80px;width:80px" align="right"}  {{ osib_anchor(osib=osib, id=id, name="Injection", lang=lang, source=source, parent=parent, merged_from=[extra.osib.document ~ ".2017.1", extra.osib.document ~ ".2017.7"] ) }}
+#A03:2021 – Injection     ![icon](assets/TOP_10_Icons_Final_Injection.png){: style="height:80px;width:80px" align="right"}  {{ osib_anchor(osib=osib, id=id, name="Injection", lang=lang, source=source, parent=parent, merged_from=[extra.osib.document ~ ".2017.1", extra.osib.document ~ ".2017.7"] ) }}
 
 ## Beurteilungskriterien {{ osib_anchor(osib=osib ~ ".factors", id=id ~ "-factors", name=title ~ ": Factors", lang=lang, source=source ~ "#" ~ id, parent=osib) }}
 

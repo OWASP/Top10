@@ -78,3 +78,10 @@ $RECYCLE.BIN/
 # Pipenv
 Pipfile
 2021/site/0x00-notice/index.html
+
+# Virtual environment
+./venv
+
+# vim revert files
+*.un~
+*~
