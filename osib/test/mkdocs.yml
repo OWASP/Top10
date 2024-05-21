@@ -1,0 +1,70 @@
+# Project information
+site_name: Top10-OSIB-Test:2021
+site_url: https://owasp.org/www-osib-top10/
+site_description: OWASP.ORG:Top10 (OSIB-Test) 
+# Repository
+repo_name: OWASP/OSIB
+repo_url: https://github.com/OWASP/OSIB-TEST/
+edit_uri: ""
+
+# Copyright
+copyright: © Copyright 2021 - OWASP Top 10 team - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.
+theme:
+  name: material
+  language: en
+  logo: assets/OWASP_Logo_Transp.png
+  features:
+    - navigation.sections
+
+nav:
+  - Index: 'index.md'
+  - Top 10:2021 List (OSIB-Test):
+    - A01 Broken Access Control: 'A01_2021-Broken_Access_Control.md'
+    - A02 Cryptographic Failures: 'A02_2021-Cryptographic_Failures.md'
+
+markdown_extensions:
+  - attr_list
+
+plugins:
+  - i18n:
+      default_language: en
+      languages:
+        en: en - English
+
+#Config
+docs_dir: docs
+google_analytics:
+  - !!python/object/apply:os.getenv ["WORKFLOW_GOOGLE_ANALYTICS_KEY", "none"]
+  - auto
+use_directory_urls: false
+plugins:
+  - search:
+    #        prebuild_index: true
+      lang:
+  - macros:                                                         # needs to be the last plugin to export the final osib-YAML file for all languages
+     module_name: 'osib_macro'
+     include_dir: 'include'
+     verbose: true                                                  # debug
+
+# Optionally you can define variables in the 'extra' section:
+extra:
+    osib:
+     document:     osib.owasp.osib.test         # e.g. osib.owasp.top10
+     version:      2021                         # e.g. 4-0, 2021-1-0
+     categories:   [document, awareness]        # list of all default categories
+     default_lang: en
+     yaml_file:    include/osib.yml
+     export_dir:   export
+     latest:       2                            # 2: add the latest version(s), if successor(s) exist, log an info
+     debug:        1                            # debug level (0-4)
+     cre:          osib.owasp.cre.1-0
+     successor_texts:
+       en:         successor
+       de:         Nachfolger
+     split_to_texts:
+       en:         split to
+       de:         Aufgeteilt in
+
+markdown_extensions:
+  - toc:
+      permalink: true

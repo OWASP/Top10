@@ -1,0 +1,7 @@
+setup.py
+mkdocs_macro_osib/__init__.py
+mkdocs_macro_osib/mkdocs_macro_osib.py
+mkdocs_macro_osib.egg-info/PKG-INFO
+mkdocs_macro_osib.egg-info/SOURCES.txt
+mkdocs_macro_osib.egg-info/dependency_links.txt
+mkdocs_macro_osib.egg-info/top_level.txt
