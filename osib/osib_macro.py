@@ -1,11 +1,13 @@
 # Filename: osib_macro.py
 #!##################################################################################################################################################
 #!#                                  MkDocs-Macro to use and extend the Open Security Information Base (OSIB)
-#!#                                                         Version: 2021-12-05
+#!#                                                         Version: 2023-06-10
 #!# ------------------------------------------------------------------------------------------------------------------------------------------------
 #!#                            THIS Software is in BETA state, please give us feed back via the github repository
-#!#                                                   https://github.com/OWASP/OSIB
-#!# ------------------------------------------------------------------------------------------------------------------------------------------------
+#!#                                   Project Page: https://owasp.org/www-project-open-security-information-base
+#!#                            Software Repository: https://github.com/OWASP/OSIB
+#!#
+#!##################################################################################################################################################$
 #!#
 #!# This MkDocs MACRO has been developed by the OWASP-Top 10 Project in 2021.
 #!# It provides a central management of links in MkDocs documents. This includes the versioning of links inside a project,
@@ -20,7 +22,7 @@
 #!# - osib_anchor:  Adds an OSIB anchor and an object to an osib YAML structure
 #!#         Input:  osib_anchor(osib=osib.<organization>.<project|standard>.<version(without dots '.')>.<internal structure>, create_organization=False
 #!#                             source_id=<id inside the source>, lang=<lang>, source=<url_i18n>, name=<name_i18n>,
-#!#                             parent=<osib-id>, predecessor=<osib-id>, splitted_from=<osib.id>, merged_from=merged_from=[<list of osib-ids>, ... ]
+#!#                             parent=<osib-id>, predecessor=<osib-id>, splitted_from=<osib.id>, merged_from=<osib-id>
 #!#                             cre=<osib-id>, aliases=[<list of aliases>, ...])
 #!#         Output: '<a id="<osib>"></a>' (HTTP-anchor), and updates in the OSIB YAML tree
 #!#
@@ -60,13 +62,13 @@
 #!#      yaml_file:    include/osib.yml
 #!#      export_dir:   export
 #!#      latest:       2                            # 2: add the latest version(s), if successor(s) exist, log an info
-#!#      debug:        2                            # debug level (0-4)
+#!#      debug:        0                            # debug level (0-4)
 #!#      cre:          osib.owasp.cre.1-0
 #!#      successor_texts:
 #!#        en:         successor
 #!#        de:         Nachfolger
 #!#      split_to_texts:
-#!#        en:         splitted to
+#!#        en:         split to
 #!#        de:         Aufgeteilt in
 #!#
 #!# ------------------------------------------------------------------------------------------------------------------------------------------------
@@ -85,7 +87,6 @@
 #!#
 #!##################################################################################################################################################
 
-# import .mkdocsMacroOsib
 from mkdocs_macro_osib import define_env, on_post_build
-# provides MkDocs macros 'osib_anchor' and 'osib_link'
+#provides MkDocs macros 'osib_anchor' and 'osib_link'
 
