@@ -17,10 +17,7 @@ lang:   "de"
 
 ## Übersicht {{ osib_anchor(osib=osib ~ ".overview", id=id ~ "-overview", name=title ~ ":Übersicht", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
 
-Diese Kategorie stammt aus der Top-10-Community-Umfrage (Nr. 1). Die Daten zeigen eine relativ niedrige Häufigkeit bei überdurchschnittlicher Abdeckung und überdurchschnittlichen Bewertungen der Ausnutzbarkeit und Auswirkungen.
-Um Aufmerksamkeit und Awareness zu erzeugen,
-handelt es sich bei neuen Einträgen in die Top 10 oft um einzelne oder kleine Gruppen von Common Weakness Enumerations (CWEs) handelt.
-Es besteht die Hoffnung, dass sie unter genauerer Betrachtung in einer zukünftigen Ausgabe in eine größere Kategorie zusammengefasst werden können.
+Diese Kategorie stammt aus der Top-10-Community-Umfrage (Nr. 1). Die Daten zeigen eine relativ niedrige Häufigkeit mit einer überdurchschnittlichen Testabdeckung und überdurchschnittlichen Missbrauchs- und Auswirkungspotentialen. Da es sich bei neuen Einträgen wahrscheinlich um einzelne oder kleine Gruppen von Common Weakness Enumerations (CWEs) handelt, die für Aufmerksamkeit und Bewusstsein sorgen, besteht die Hoffnung, dass sie in einer zukünftigen Ausgabe in eine größere Kategorie aufgenommen werden können.
 
 ## Beschreibung {{ osib_anchor(osib=osib ~ ".description", id=id ~ "-description", name=title ~ ":Beschreibung", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
 
@@ -38,45 +35,39 @@ Entwickler können SSRF verhindern, indem sie folgende Defense-in-Depth-Controls
 
 - Segmentieren Sie die Remote-Ressourcenzugriffsfunktionalität in separate Netzwerke, um die Auswirkungen von SSRF zu reduzieren.
 
-- Erzwingen Sie „deny-by-default“-Firewall-Regeln oder Netzwerkzugriffskontrollregeln, um den gesamten Intranetverkehr jenseits des Wesentlichen zu blockieren.
+- Setzen Sie standardmäßig blockierende Firewall-Richtlinien oder Netzwerkzugriffskontrollregeln ein, um den gesamten Intranet-Verkehr zu blockieren, der nicht unbedingt erforderlich ist.
 <br/> *Hinweise:*<br> 
-~ Etablieren Sie Ownership und einen Lebenszyklus für Firewall-Regeln passenend zu den Anwendungen.<br/ > 
-~ Protokollieren Sie alle zugelassenen *und* blockierten Netzwerkflüsse auf den Firewalls 
-(siehe [A09:2021 – Fehler beim Logging und Monitoring](A09_2021-Security_Logging_and_Monitoring_Failures.de.md)).
+~ Legen Sie eine Zuständigkeit und einen Lebenszyklus für Firewall-Regeln auf der Grundlage von Anwendungen fest.<br/>
+~ Protokollieren aller akzeptierten *und* blockierten Netzströme auf Firewalls (siehe [A09:2021 – Fehler beim Logging und Monitoring](A09_2021-Security_Logging_and_Monitoring_Failures.de.md)).
 
 ### **Auf der Anwendungsebene:**
 
-- Bereinigen und validieren Sie alle vom Client bereitgestellten Eingabedaten.
+* Bereinigung und Validierung aller vom Client gelieferten Eingabedaten
+* Erzwingen Sie das URL-Schema, den Port und das Ziel mit einer Positivliste
+* Senden Sie keine ungeprüften Antworten an Clients.
+* Deaktivieren Sie HTTP-Umleitungen.
+* Achten Sie auf die URL-Konsistenz, um Angriffe wie DNS-Rebinding und „time of check, time of use“ (TOCTOU) Race Conditions zu vermeiden
 
-- Erzwingen Sie das URL-Schema, den Port und das Ziel mit einer Positivliste.
 
-- Senden Sie keine Rohantworten an Clients.
-
-- Deaktivieren Sie HTTP-Redirects.
-
-- Achten Sie auf die Konsistenz von URLs, um Angriffe wie DNS-Rebinding und „Time of Check, Time of Use“ (TOCTOU)-Race-Conditions zu vermeiden.
-
-Versuchen Sie nicht, SSRF durch die Verwendung einer Negativliste oder eines regulären Ausdrucks zu mitigieren. 
-Angreifer verfügen über Payload-Listen, Werkzeuge und Fähigkeiten, um Negativlisten zu umgehen.
+Verhindern Sie SSRF nicht durch die Verwendung einer Negativliste oder eines regulären Ausdrucks. Angreifer verfügen über Payload-Listen, Tools und Fähigkeiten zum Umgehen von Negativlisten.
 
 ### **Zusätzliche zu berücksichtigende Maßnahmen:**
 
-- Bieten Sie keine anderen sicherheitsrelevanten Dienste auf Frontend-Systemen an (z. B. OpenID). 
-Kontrollieren Sie den lokalen Verkehr auf diesen Systemen (z. B. localhost).
+- Setzen Sie keine anderen sicherheitsrelevanten Dienste auf Frontsystemen ein (z. B. OpenID). Kontrollieren Sie den lokalen Verkehr auf diesen Systemen (z. B. localhost).
 
 - Für Frontends mit dedizierten und verwaltbaren Benutzergruppen nutzen Sie Netzwerkverschlüsselung (z. B. VPNs) auf unabhängigen Systemen um sehr hohen Schutzbedarf zu berücksichtigen.
 
 ## Beispielhafte Angriffsszenarien {{ osib_anchor(osib=osib ~ ".example attack Scenarios", id=id ~ "-example_attack_scenarios", name=title ~ ":Beispielhafte Angriffsszenarien", lang=lang, source=source ~ "# " ~ id, parent=osib) }}
 
-Angreifer können SSRF verwenden, um Systeme anzugreifen, die durch Webanwendungs-Firewalls (WAFs), Firewalls oder Netzwerk-ACLs geschützt sind, mithilfe von Szenarios wie:
+Angreifer können SSRF nutzen, um Systeme anzugreifen, die durch Web Application Firewalls, Firewalls oder Netzwerk-ACLs geschützt sind, und dabei Szenarien wie folgende verwenden:
 
 **Szenario Nr. 1:** Port-Scan interner Server – Wenn die Netzwerkarchitektur nicht segmentiert ist, können Angreifer interne Netzwerke abbilden und anhand der Verbindungsergebnisse oder der verstrichenen Zeit für die Verbindung oder Ablehnung von SSRF-Nutzlast-Verbindungen feststellen, ob Ports auf internen Servern offen oder geschlossen sind.
 
-**Szenario Nr. 2:** Offenlegung sensibler Daten – Angreifer können auf lokale Dateien oder interne Dienste zugreifen, um vertrauliche Informationen wie „file:///etc/passwd“ und „http://localhost:28017/“ zu erhalten.
+**Szenario Nr. 2:** Preisgabe sensibler Daten – Angreifer können auf lokale Dateien oder interne Dienste zugreifen, um vertrauliche Informationen wie „file:///etc/passwd“ und „http://localhost:28017/“ zu erhalten.
 
 **Szenario Nr. 3:** Zugriff auf Metadatenspeicher von Cloud-Diensten – Die meisten Cloud-Anbieter verfügen über Metadatenspeicher wie „http://169.254.169.254/“. Ein Angreifer kann die Metadaten lesen, um an vertrauliche Informationen zu gelangen.
 
-**Szenario Nr. 4:** Kompromittierung interner Dienste – Der Angreifer kann interne Dienste missbrauchen, um weitere Angriffe wie Remote Code Execution (RCE) oder Denial of Service (DoS) durchzuführen.
+**Szenario Nr. 4:** Kompromittierung interner Dienste – Der Angreifer kann interne Dienste missbrauchen, um weitere Angriffe wie beispielsweise Remote Code Execution (RCE) oder Denial of Service (DoS) durchzuführen.
 
 ## Referenzen {{ osib_anchor(osib=osib ~ ".references", id=id ~ "-references", name=title ~ ":Referenzen", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
 -   {{ osib_link(link="osib.owasp.cheatsheetseries.0.server side request forgery prevention", osib=osib) }} <!--- [OWASP - Server-Side Request Forgery Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html) --->
