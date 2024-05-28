@@ -44,7 +44,7 @@ There are currently four co-leaders for the OWASP Top 10. We meet every Friday a
 - A07 Identification and Authentication Failures => Daniel :white_check_mark::white_flag:
 - A08 Software and Data Integrity Failures => Tobias H.  :white_check_mark::white_flag:
 - A09 Security Logging and Monitoring Failures => Tobias H.  :white_check_mark::white_flag:
-- A10 Server Side Request Forgery (SSRF) => Daniel :white_check_mark::white_flag:
+- A10 Server Side Request Forgery (SSRF) => Daniel :white_check_mark::checkered_flag:
 - Next Steps => Daniel :white_check_mark::checkered_flag:
 
 ### Bedeutung Status-flags
