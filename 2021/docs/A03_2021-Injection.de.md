@@ -12,56 +12,58 @@ lang:   "de"
 
 | Zugeordnete CWEs | Maximale Häufigkeit | Durchschn. Häufigkeit | Durchschn. Ausnutzbarkeit (gewichtet) | Durchschn. Auswirkungen (gewichtet) | Maximale Abdeckung | Durchschnittliche Abdeckung | Gesamtanzahl | CVEs insgesamt |
 |:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
-| 33          | 19.09%             | 3.37%              | 7.25                 | 7.15                | 94.04%       | 47.90%       | 274,228           | 32,078     |
+| 33          | 19.09 %             | 3.37 %              | 7.25                 | 7.15                | 94.04 %       | 47.90 %       | 274,228           | 32,078     |
 
 ## Übersicht {{ osib_anchor(osib=osib ~ ".overview", id=id ~ "-overview", name=title ~ ": Übersicht", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
 
-Die Injection gleitet auf die dritte Position. 94 % der Anträge wurden auf irgendeine Form der Injection getestet, mit einer maximalen Inzidenzrate von 19 %, einer durchschnittlichen Inzidenzrate von 3 % und 274.000 Vorkommnissen. Zu den bemerkenswerten Common Weakness Enumerations (CWEs) gehören *CWE-79: Cross-Site Scripting*, *CWE-89: SQL Injection* und *CWE-73: External Control of File Name or Path*.
+Die Injection rutscht von der ersten auf die dritte Position ab. 94 % der Anwendungen wurden auf irgendeine Form der Injection getestet, mit einer maximalen Inzidenzrate von 19,09 %, einer durchschnittlichen Inzidenzrate von 3,37 % und über 274.000 Vorkommnissen. Zu den bemerkenswerten Common Weakness Enumerations (CWEs) zählen *CWE-79: Cross-Site Scripting*, *CWE-89: SQL Injection* und *CWE-73: External Control of File Name or Path*.
 
 ## Beschreibung {{ osib_anchor(osib=osib ~ ".description", id=id ~ "-description", name=title ~ ": Beschreibung", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
 
-Eine Anwendung ist anfällig für Angriffe, wenn:
+Eine Anwendung ist für diesen Angriff anfällig, wenn:
 
-- Vom Benutzer bereitgestellte Daten von der Anwendung nicht validiert, gefiltert oder bereinigt werden.
+- Daten, die vom Nutzer stammen, von der Anwendung nicht ausreichend validiert, gefiltert oder bereinigt werden.
 
-- Dynamische Abfragen oder nicht parametrisierte Aufrufe ohne kontextbewusstes Escapen direkt im Interpreter verwendet werden.
+- Dynamische Anfragen oder nicht-parametrisierte Aufrufe ohne ein dem Kontext entsprechendes Escaping direkt einem Interpreter übergeben werden.
 
-- Gefährliche Daten in ORM-Suchparametern (Object-Relational Mapping) verwendet werden, um zusätzliche, sensible Datensätze zu extrahieren.
+- Bösartige Daten innerhalb von ORM („Object-Relational Mapping“)-Suchparametern genutzt werden können, um vertrauliche Datensätze von Dritten zu extrahieren.
 
-- Feindliche Daten werden direkt verwendet oder verkettet. Das SQL-Abfrage oder der Befehl enthält die Struktur und schädliche Daten in dynamischen Abfragen, Befehlen oder gespeicherten Prozeduren.
+- Bösartige Daten direkt oder als Teil zusammengesetzter dynamischer Querys verwendet werden. Die SQL-Abfragen oder Befehle beinhalten die Struktur und die schädlichen Daten in den dynamischen Querys, Befehle oder Stored Procedures
 
-Zu den häufigeren Injections gehören SQL, NoSQL, OS-Befehle, Object Relational Mapping (ORM), LDAP und Expression Language (EL) oder Object Graph Navigation Library (OGNL). Das Konzept ist bei allen Interpreten identisch. Die Überprüfung des Quellcodes ist die beste Methode, um festzustellen, ob Anwendungen anfällig für Injections sind. Das automatisierte Testen aller Parameter, Header, URLs, Cookies, JSON-, SOAP- und XML-Dateneingaben wird dringend empfohlen. Unternehmen können statische (SAST), dynamische (DAST) und interaktive (IAST) Tools zum Testen der Anwendungssicherheit in die CI/CD-Pipeline integrieren, um eingeführte Injection-Fehler vor der Produktionsbereitstellung zu identifizieren.
+Zu den häufigeren Injection Arten gehören SQL, NoSQL, OS-Befehle, Object Relational Mapping (ORM), LDAP und Expression Language (EL) oder Object Graph Navigation Library (OGNL). Das Grundkonzept eines Injection-Angriffs ist für alle Interpreter gleich. Ein Quellcode Review ist die beste Methode, um Injection-Schwachstellen in Anwendungen zu finden. Ausführliches (ggf. automatisiertes) Testen aller Parameter und Variablen, Header-, URL-, Cookies-, JSON-, SOAP- und XML-Eingaben wird dringend empfohlen. Statische (SAST, Quellcode-Ebene), dynamische (DAST, laufende Anwendung) und interaktive (IAST, Mischform aus statisch und dynamisch) Test-Werkzeuge können von Organisationen für ihre CI/CD-Pipeline genutzt werden, um neue Schwachstellen noch vor einer möglichen Produktivnahme zu identifizieren.
 
 ## Prävention und Gegenmaßnahmen {{ osib_anchor(osib=osib ~ ".how to prevent", id=id ~ "-how_to_prevent", name=title ~ ": Prävention und Gegenmaßnahmen", lang=lang, source=source ~ "#" ~ id, parent=osib) }}
 
-Um die Injection zu verhindern, müssen Daten von Befehlen und Abfragen getrennt gehalten werden:
+Eine konsequente Trennung von Eingabedaten und Befehlen ist für die Vermeidung von Injection-Angriffen unerlässlich:
 
-– Die bevorzugte Option ist die Verwendung einer sicheren API, die die Verwendung des Interpreters vollständig vermeidet, eine parametrisierte Schnittstelle bereitstellt oder auf Object Relational Mapping Tools (ORMs) migriert.<br/> **Hinweis:** Auch bei parametrisierten gespeicherten Prozeduren kann immer noch SQL-Injection einführen, wenn PL/SQL oder T-SQL Abfragen und Daten verkettet oder feindliche Daten mit EXECUTE IMMEDIATE oder exec() ausführt.
+- Die bevbevorzugte Methode dafür ist die Verwendung einer sicheren API, die die direkte Interpreter-Nutzung vollständig vermeidet, bzw. die eine parametrisierte, typgebundene Schnittstelle anbietet oder die korrekte Verwendung eines ORM-Frameworks. <br/> **Anmerkung:** Stored Procedures können - auch parametrisiert - immer noch SQL-Injections ermöglichen, wenn PL/SQL oder T-SQL Anfragen und Eingabedaten konkateniert oder mit EXECUTE IMMEDIATE oder exec() ausgeführt werden.
 
-– Verwenden Sie eine positive serverseitige Eingabevalidierung. Dies ist kein vollständiger Schutz, da viele Anwendungen Sonderzeichen erfordern, beispielsweise Textbereiche oder APIs für mobile Anwendungen.
+- Für die serverseitige Eingabe-Validierung empfiehlt sich die Nutzung eines Positivlisten(“Whitelist”)-Ansatzes. Dies ist i. A. kein vollständiger Schutz, da viele Anwendungen Sonderzeichen z. B. in Textfelder oder APIs für mobile Anwendungen benötigen.
 
-- Für alle verbleibenden dynamischen Abfragen maskieren Sie Sonderzeichen mit der spezifischen Escape-Syntax für diesen Interpreter.<br/> **Hinweis:** SQL-Strukturen wie Tabellennamen, Spaltennamen usw. können nicht maskiert werden und daher benutzer- Die angegebenen Strukturnamen sind gefährlich. Dies ist ein häufiges Problem bei Software zum Verfassen von Berichten.
+- Für jede noch verbliebene dynamische Query müssen Sonderzeichen für den jeweiligen Interpreter mit der richtigen Escape-Syntax entschärft werden. <br/> **Anmerkung:** Ein Escaping von SQL-Bezeichnern, wie z. B. die Namen von Tabellen oder Spalten usw. ist nicht möglich.
+Falls Nutzer solche Bezeichner selbst eingeben können, so ist dies durchaus gefährlich. Dies ist eine übliche Schwachstelle bei Software, die Reports aus einer Datenbank erstellt.
 
-- Verwenden Sie LIMIT und andere SQL-Steuerelemente in Abfragen, um die Massenoffenlegung von Datensätzen im Falle einer SQL-Injection zu verhindern.
+- Querys sollten LIMIT oder andere SQL-Controls verwenden, um den möglichen Massen-Abfluss von Daten zu verhindern.
 
 ## Beispielhafte Angriffsszenarien {{ osib_anchor(osib=osib ~ ".example attack Scenarios", id=id ~ "-example_attack_scenarios", name=title ~ ": Beispiel-Angriffsszenarien", lang=lang, source=source ~ "# " ~ id, parent=osib) }}
 
-**Szenario Nr. 1:** Eine Anwendung verwendet nicht vertrauenswürdige Daten bei der Erstellung des folgenden anfälligen SQL-Aufrufs:
+**Szenario Nr. 1:** Eine Anwendung nutzt ungeprüfte Eingabedaten für den Zusammenbau der folgenden verwundbaren SQL-Abfrage:
 ```
 String query = "SELECT \* FROM Accounts WHERE custID='" + request.getParameter("id") + "'";
 ```
 
-**Szenario Nr. 2:** Ebenso kann das blinde Vertrauen einer Anwendung in Frameworks zu Abfragen führen, die immer noch anfällig sind (z. B. Hibernate Query Language (HQL)):
+**Szenario Nr. 2:** Auch das blinde Vertrauen in Frameworks kann zu Querys führen, die ganz analog zu obigem Beispiel verwundbar sind (z. B. Hibernate Query Language (HQL)):
 ```
 Abfrage HQLQuery = session.createQuery("FROM Accounts WHERE custID='" + request.getParameter("id") + "'");
 ```
 
-In beiden Fällen ändert der Angreifer den Parameterwert „id“ in seinem Browser, um Folgendes zu senden: „UNION SLEEP(10);--“. Zum Beispiel:
+In beiden Fällen kann ein Angreifer den ‘id’-Parameter in seinem Browser ändern und sendet: „UNION SLEEP(10);--“. Zum Beispiel:
 ```
 http://example.com/app/accountView?id=' UNION SELECT SLEEP(10);--
 ```
 
-Dadurch ändert sich die Bedeutung beider Abfragen, sodass alle Datensätze aus der Kontentabelle zurückgegeben werden. Gefährlichere Angriffe könnten Daten verändern oder löschen oder sogar gespeicherte Prozeduren aufrufen.
+Hierdurch wird die Logik der Anfrage verändert, so dass alle Datensätze der Tabelle „accounts“ ohne Einschränkung auf einen Kunden zurückgegeben werden.
+Gefährlichere Attacken wären z. B. das Ändern oder Löschen von Daten oder das Aufrufen von Stored Procedures.
 
 ## Referenzen {{ osib_anchor(osib=osib ~ ".references", id=id ~ "-references", name=title ~ ": References", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
 
