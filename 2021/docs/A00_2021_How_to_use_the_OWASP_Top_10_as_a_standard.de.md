@@ -9,7 +9,7 @@ Eine der Schwierigkeiten bei der Verwendung der OWASP Top 10 als Standard besteh
 Beispielsweise liegt [A04:2021 Unsicheres Anwendungsdesign](A04_2021-Insecure_Design.de.md) außerhalb des Rahmens der meisten Testverfahren.
 Ein weiteres Beispiel ist das Testen, ob eine wirksame Protokollierung und Überwachung implementiert und operativ ist, was nur durch Befragungen und Stichproben wirksamer Behandlungen von Incidents möglich ist.
 Ein Tool zur statischen CodeAnalyse kann nach fehlender Protokollierung suchen,
-es wird jedoch unmöglich sein, festzustellen, ob die Geschäftslogik oder die Zugriffskontrolle kritische Sicherheitsverstöße protokolliert. Penetrationstester*innen können möglicherweise nur in einer Testumgebung, die selten in der gleichen Weise wie die Produktion überwacht ist, feststellen dass sie eine Reaktion auf die Vorfälle ausgelöst haben.
+es wird jedoch unmöglich sein, festzustellen, ob die Geschäftslogik oder die Zugriffskontrolle kritische Sicherheitsverstöße protokolliert. Penetrationstester:innen können möglicherweise nur in einer Testumgebung, die selten in der gleichen Weise wie die Produktion überwacht ist, feststellen dass sie eine Reaktion auf die Vorfälle ausgelöst haben.
 <!-- TODO OSIB Link -->
 
 Hier sind unsere Empfehlungen, wann es sinnvoll ist, die OWASP Top 10 zu verwenden:
