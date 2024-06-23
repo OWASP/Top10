@@ -12,7 +12,7 @@ lang:   "de"
 
 Das Open Worldwide Application Security Project (OWASP) ist eine offene Community. OWASP möchte Organisationen in die Lage versetzen, sichere und vertrauenswürdige Anwendungen zu entwickeln, zu kaufen und zu betreiben.
 
-Von OWASP kann man folgendes erwarten; stets frei verfügbar und jedermann zugänglich:
+Von OWASP kann man folgendes erwarten; stets frei verfügbar und für jedermann zugänglich:
 
 - Werkzeuge und Standards für sichere Anwendungen.
 - Bücher zu den Themen Prüfungen, Entwicklung und Quellcodeanalyse im Bereich der Anwendungssicherheit.
