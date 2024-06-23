@@ -13,7 +13,7 @@ lang:   "de"
 
 | Zugeordnete CWEs | Maximale Häufigkeit | Durchschn. Häufigkeit | Durchschn. Ausnutzbarkeit (gewichtet) | Durchschn. Auswirkungen (gewichtet) | Maximale Abdeckung | Durchschnittliche Abdeckung | Gesamtanzahl | CVEs insgesamt |
 |:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
-| 3           | 27.96%             | 8.77%              | 51.78%       | 22.47%       | 5.00                 | 5.00                | 30,457            | 0          |
+| 3          | 27.96 %             | 8.77 %              | 5.00                 | 5.00                | 51.78 %       | 22.47 %       | 30,457           | 0        |
 
 ## Übersicht {{ osib_anchor(osib=osib ~ ".overview", id=id ~ "-overview", name=title ~ ": Übersicht", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
 
@@ -24,13 +24,13 @@ Unsichere Komponenten sind ein bekanntes Problem, das wir nur schwer testen und 
 
 Die Anwendung besitzt möglicherweise Schwachstellen, wenn folgendes zutrifft:
 
-- Keine Kenntnis über Versionen der in der Anwendung benutzten Komponenten (sowohl client- als auch serverseitig). Dies beinhaltet sowohl direkte als auch indirekte, verschachtelte Abhängigkeiten.
+- Fehlende Kenntnis über die Versionen aller verwendeten Komponenten der in der Anwendung (sowohl client- als auch serverseitig). Dies beinhaltet sowohl direkte als auch indirekte, verschachtelte Abhängigkeiten.
 
 - Die verwendete Software besitzt Schwachstellen, wird nicht mehr unterstützt oder ist veraltet. Dies beinhaltet das Betriebssystem, den Web-/Applikationsserver, das Datenbankmanagementsystem (DBMS), Anwendungen, APIs und alle verwendeten Komponenten, Laufzeitumgebungen sowie Bibliotheken.
 
-- Schwachstellenscans werden nicht regelmäßig durchgeführt und die sicherheitsrelevante Bulletins der benutzten Komponenten sind nicht abonniert.
+- Schwachstellenscans werden nicht regelmäßig durchgeführt und die sicherheitsrelevanten Bulletins der verwendeten Komponenten sind nicht abonniert.
 
-- Die zugrundeliegende Plattform, das Framework und die Abhängigkeiten werden nicht risikobasiert und rechtzeitig repariert oder aktualisiert. Dies passiert in der Regel in Umgebungen in denen Patchen eine monatliche oder quartalsweise Tätigkeit und einer Änderungskontrolle unterliegt. Dies setzt die Organisation unnötigerweise über Tage oder Monate dem Risiko von Schwachstellen aus, für die schon Patches existieren.
+- Die zugrundeliegende Plattform, die Frameworks und die Abhängigkeiten werden nicht risikobasiert und rechtzeitig repariert oder aktualisiert. Dies geschiet in der Regel in Umgebungen, in denen Patchen eine monatliche oder quartalsweise Tätigkeit ist und einer Änderungskontrolle unterliegt. Dies setzt die Organisation unnötigerweise über Tage oder Monate dem Risiko von Schwachstellen aus, für die schon Patches existieren.
 
 - Softwareentwickler führen keine Kompatibilitäts-Tests der aktualisierten oder gepatchten Bibliotheken durch.
 
@@ -43,9 +43,9 @@ Es sollte ein Patch-Management-Prozess vorhanden sein:
 
 - Entfernen Sie ungenutzte Abhängigkeiten, unnötige Funktionen, Komponenten, Dateien und Dokumentation.
 
-- Kontinuierliche Bestandsaufnahme der Versionen sowohl der clientseitigen als auch der serverseitigen Komponenten (z. B. Frameworks, Bibliotheken) und ihrer Abhängigkeiten mithilfe von Tools wie "versions", "OWASP Dependency Check", "retire.js" usw. Überwachen Sie kontinuierlich Quellen wie Common Vulnerability and Exposures (CVE)) und die National Vulnerability Database (NVD) für Schwachstellen in den Komponenten. Verwenden Sie Software-Tools zur Analyse der Softwarebestandteile, um den Prozess zu automatisieren. Abonnieren Sie E-Mail-Benachrichtigungen zu Sicherheitslücken im Zusammenhang mit den von Ihnen verwendeten Komponenten.
+- Kontinuierliche Bestandsaufnahme der Versionen sowohl der clientseitigen als auch der serverseitigen Komponenten (z. B. Frameworks, Bibliotheken) und ihrer Abhängigkeiten mithilfe von Tools wie "versions", "OWASP Dependency Check", "retire.js" usw. Überwachen Sie kontinuierlich Quellen wie Common Vulnerability and Exposures (CVE) und die National Vulnerability Database (NVD) für Schwachstellen in den Komponenten. Verwenden Sie Software-Tools zur Analyse der Softwarebestandteile, um den Prozess zu automatisieren. Abonnieren Sie E-Mail-Benachrichtigungen zu Sicherheitslücken im Zusammenhang mit den verwendeten Komponenten.
 
-- Beziehen Sie Komponenten nur von offiziellen Quellen über sichere Links. Bevorzugen Sie signierte Pakete, um die Wahrscheinlichkeit zu verringern, dass eine modifizierte, bösartige Komponente enthalten ist (siehe [A08:2021-Fehlerhafte Prüfung der Software- und Datenintegrität](A08_2021-Software_and_Data_Integrity_Failures.de.md))
+- Beziehen Sie Komponenten nur von offiziellen Quellen über sichere Links. Bevorzugen Sie signierte Pakete, um die Wahrscheinlichkeit zu verringern, dass eine modifizierte, bösartige Komponente enthalten ist (siehe [A08:2021-Fehlerhafte Prüfung der Software- und Datenintegrität](A08_2021-Software_and_Data_Integrity_Failures.de.md)).
 
 - Überwachen Sie Bibliotheken und Komponenten, die nicht gewartet werden oder keine Sicherheitspatches für ältere Versionen erstellen. Wenn das Patchen nicht möglich ist, erwägen Sie die Bereitstellung eines virtuellen Patches zur Überwachung, Erkennung oder zum Schutz vor dem entdeckten Problem.
 
@@ -57,7 +57,7 @@ Jede Organisation muss einen fortlaufenden Plan für die Überwachung, Triage un
 
 - CVE-2017-5638, eine Remote Code Execution Schwachstelle in Struts 2, die den Angreifer ermächtigt, beliebigen Code auf dem Server auszuführen, wurde für einige erhebliche Sicherheitsvorfälle verantwortlich gemacht.
 
-- Obwohl das Patchen von Geräten des Internet of Things (IoT) oft nur sehr schwierig oder unmöglich ist,
+- Obwohl das Patchen von Internet of Things (IoT) Geräten oft nur sehr schwierig oder unmöglich ist,
 kann dies sehr wichtig sein (z. B. für biomedizinische Geräte).
 
 Es existieren automatisierte Tools, die Angreifern helfen, nicht gepatchte oder falsch konfigurierte Systeme zu finden. Die Shodan IoT-Suchmaschine kann Ihnen beispielsweise dabei helfen, Geräte zu finden, die immer noch für die im April 2014 gepatchte Heartbleed-Sicherheitslücke verwundbar sind.

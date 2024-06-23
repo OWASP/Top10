@@ -25,11 +25,11 @@ So haben wir in dieser Version auch die Namen der Top 10 Risiken angepasst oder 
 - [A07:2021–Fehlerhafte Authentifizierung](A07_2021-Identification_and_Authentication_Failures.de.md) ex: A2:2017-Fehler in der Authentifizierung; Hier haben wir den neuen Teilaspekt 'Identification' bewusst nicht übernommen, da er im englischen Original im Risiko nicht weiter behandelt wird
 - [A09:2021–Unzureichendes Logging und Sicherheitsmonitoring](A09_2021-Security_Logging_and_Monitoring_Failures.de.md) ex: A10:2017-Unzureichendes Logging & Monitoring
 
-Wir möchten Sie als Geschäftsführer, Manager, Anwendungs-Verantwortlicher, Prüfer oder Entwickler für Webanwendungssicherheit sensibilisieren und Ihnen den Einstieg in diese Thematik erleichtern.<br>
+Wir möchten Sie als Geschäftsführer:innen, Manager:innen, Anwendungs-Verantwortliche, Prüfer:innen oder Entwickler:innen für Webanwendungssicherheit sensibilisieren und Ihnen den Einstieg in diese Thematik erleichtern.<br>
 
 Dieses Dokument hilft Ihnen, eine neue Perspektive auf Ihre Anwendungen zu erhalten, um Sicherheitsfehler zu vermeiden und Risiken minimieren zu können. Einige englische Fachbegriffe wurden dabei beibehalten, weil sie auch im deutschen gebräuchlich sind.<br>
 
-Wir wünschen Ihnen als Neueinsteiger oder Profi ein kurzweiliges Lesevergnügen und die (Bestätigung der) Erkenntnis, dass die Sicherheit ein kritischer Erfolgsfaktor für Webanwendungen ist.<br>
+Wir wünschen Ihnen als Neueinsteiger:in oder Profi ein kurzweiliges Lesevergnügen und die (Bestätigung der) Erkenntnis, dass die Sicherheit ein kritischer Erfolgsfaktor für Webanwendungen ist.<br>
 
 Die deutsche Version der OWASP Top 10:2021 finden Sie unter [https://owasp.org/Top10/de/](https://owasp.org/Top10/de/).
 <br>
@@ -44,16 +44,16 @@ Ihr deutschsprachiges Top 10-Team:<br>
 ### Stammtisch-Initiative des OWASP German Chapter
 In mehreren deutschen Städten gibt es [OWASP-Stammtische](https://owasp.org/www-chapter-germany/stammtische/), bei denen man sich in lockerer Runde trifft, um sich auszutauschen, nette Leute kennenzulernen oder ernsthafte Sicherheitsthemen zu diskutieren – meistens mit Vortrag.<br>
 
-Aktive Stammtische gibt es (Stand April 2024) in [Augsburg](/www-chapter-germany/stammtische/augsburg/), [Berlin](/www-chapter-germany/stammtische/berlin), [Dresden](/www-chapter-germany/stammtische/dresden/), [Frankfurt](/www-chapter-germany/stammtische/frankfurt/), [Hamburg](/www-chapter-germany/stammtische/hamburg/), [Hannover](/www-chapter-germany/stammtische/hannover/), [Heilbronn-Franken](/www-chapter-germany/stammtische/heilbronn_franken/), [Karlsruhe](/www-chapter-germany/stammtische/karlsruhe/), [Köln](/www-chapter-germany/stammtische/koeln/), [München](/www-chapter-germany/stammtische/muenchen/) und [Stuttgart](/www-chapter-germany/stammtische/stuttgart/).
+Aktive Stammtische gibt es (Stand Juni 2024) in [Augsburg](/www-chapter-germany/stammtische/augsburg/), [Berlin](/www-chapter-germany/stammtische/berlin), [Dresden](/www-chapter-germany/stammtische/dresden/), [Frankfurt](/www-chapter-germany/stammtische/frankfurt/), [Hamburg](/www-chapter-germany/stammtische/hamburg/), [Hannover](/www-chapter-germany/stammtische/hannover/), [Heilbronn-Franken](/www-chapter-germany/stammtische/heilbronn_franken/), [Karlsruhe](/www-chapter-germany/stammtische/karlsruhe/), [Köln](/www-chapter-germany/stammtische/koeln/), [München](/www-chapter-germany/stammtische/muenchen/) und [Stuttgart](/www-chapter-germany/stammtische/stuttgart/).
 
 ## Wie können Sie uns unterstützen
 
 Zum jetzigen Zeitpunkt bitten wir darum
 
 - Datenanalysten – bitte überprüfen Sie unsere Analyse
-- Webdesigner – wir müssen eine mobilfreundliche Version erstellen
-- Übersetzer – Bitte überprüfen Sie diese Version und das englische Original, um sicherzustellen, dass diese Version verständlich ist und den Sinn des Originals widerspiegelt
-- Projektleiter von ASVS, Testing Guide und Code Review Guide – bitte nutzen Sie unsere Daten und helfen Sie uns, unsere Dokumente und Standards miteinander zu verknüpfen
+- Webdesigner:innen – wir müssen eine mobilfreundliche Version erstellen
+- Übersetzer:innen – Bitte überprüfen Sie diese Version und das englische Original, um sicherzustellen, dass diese Version verständlich ist und den Sinn des Originals widerspiegelt
+- Projektleiter:innen von ASVS, Testing Guide und Code Review Guide – bitte nutzen Sie unsere Daten und helfen Sie uns, unsere Dokumente und Standards miteinander zu verknüpfen
 
 ## Senden Sie uns Ihre Vorschläge und Pull-Anfragen in Github
 
