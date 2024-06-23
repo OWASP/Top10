@@ -14,7 +14,7 @@ lang:   "de"
 
 | Zugeordnete CWEs | Maximale Häufigkeit | Durchschn. Häufigkeit | Durchschn. Ausnutzbarkeit (gewichtet) | Durchschn. Auswirkungen (gewichtet) | Maximale Abdeckung | Durchschnittliche Abdeckung | Gesamtanzahl | CVEs insgesamt |
 |:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
-| 29          | 46.44%             | 4.49%              |7.29                 | 6.81                |  79.33%       | 34.85%       | 233,788           | 3,075      |
+| 29          | 46.44 %             | 4.49 %              |7.29                 | 6.81                |  79.33 %       | 34.85 %       | 233,788           | 3,075      |
 
 ## Übersicht {{ osib_anchor(osib=osib ~ ".overview", id=id ~ "-overview", name=title ~ ": Bezug / Kontext / Auswertung", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
 
@@ -29,13 +29,13 @@ Zunächst gilt es, den Schutzbedarf der Daten während der Übermittlung und der
 
 Folgendes ist zu klären:
 
-- Werden Daten im Klartext übermittelt? Das betrifft Protokolle wie HTTP, SMTP, und FTP unter Umständen auch bei Verwendung von TLS-Upgrades wie STARTTLS. Das Internet ist hier besonders gefährlich. Überprüfen Sie auch internen Datenverkehr, z.B. zwischen Load Balancern, Webservern oder Back-End-Systemen.
+- Werden Daten im Klartext übermittelt? Das betrifft Protokolle wie HTTP, SMTP, und FTP unter Umständen auch bei Verwendung von TLS-Upgrades wie STARTTLS. Das Internet ist hier besonders gefährlich. Überprüfen Sie auch internen Datenverkehr, z. B. zwischen Load Balancern, Webservern oder Back-End-Systemen.
 
-- Werden alte oder schwache kryptografische Algorithmen oder Protokolle verwendet, z.B. per Default-Einstellung oder in älterem Code?
+- Werden alte oder schwache kryptografische Algorithmen oder Protokolle verwendet, z. B. per Default-Einstellung oder in älterem Code?
 
 - Werden vordefinierte kryptografische Schlüssel verwendet, schwache Schlüssel generiert oder Schlüssel wiederverwendet? Fehlt eine Schlüsselverwaltung oder Schlüsselrotation? Werden kryptografische Schlüssel in Quellcode-Repositorys eingecheckt?
 
-- Wird Verschlüsselung nicht verbindlich erzwungen, z.B. fehlen bei Web Anwendungen Vorgaben für den Browser in den entsprechenden HTTP-Headern?
+- Wird Verschlüsselung nicht verbindlich erzwungen, z. B. fehlen bei Web Anwendungen Vorgaben für den Browser in den entsprechenden HTTP-Headern?
 
 - Werden empfangene Serverzertifikate und die Zertifikatskette korrekt validiert?
 
@@ -47,7 +47,7 @@ Folgendes ist zu klären:
 
 - Werden Hash-Funktionen mit bekannten Schwächen wie MD5 oder SHA1 verwendet oder werden nicht-kryptografische Hash-Funktionen verwendet, wenn kryptografische Hash-Funktionen benötigt werden?
 
-- Werden veraltete kryptografische Padding Methoden verwendet, z.B. PKCS#1 v1.5?
+- Werden veraltete kryptografische Padding Methoden verwendet, z. B. PKCS#1 v1.5?
 
 - Sind kryptografische Fehlermeldungen oder Seitenkanäle ausnutzbar, beispielsweise in Form von Padding-Oracle-Angriffen?
 
@@ -72,7 +72,7 @@ z. B. gemäß BSI TR-02102, verwendet werden. Etablieren Sie wirksames
 Schlüsselmanagement für kryptografische Schlüssel.
 
 - Verschlüsseln Sie alle Daten während der Übertragung mit sicheren Protokollen wie TLS. Priorisieren Sie dabei durch serverseitig Cipher-Suiten, die Forward Secrecy (FS) bieten, und sichere Parameter.
-Erzwingen Sie die Verschlüsselung wenn möglich, z.B. durch Einführung von HTTP Strict Transport Security (HSTS).
+Erzwingen Sie die Verschlüsselung wenn möglich, z. B. durch Einführung von HTTP Strict Transport Security (HSTS).
 
 - Deaktivieren Sie das Caching für den Empfang vertraulicher Daten.
 

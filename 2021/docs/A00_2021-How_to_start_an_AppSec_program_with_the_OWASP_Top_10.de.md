@@ -71,7 +71,7 @@ und die Komponente des Geebneten Weges umsetzen.
 ## Schritt 5. Stellen Sie sicher, dass der Geebnete Weg die OWASP Top 10 mitigiert
 
 Jedes Element des Geebneten Weges sollte ein signifikantes Problem aus den OWASP Top 10 adressieren,
-z.B. automatisch Komponenten mit bekannten Schwachstellen erkennen oder beheben,
+z. B. automatisch Komponenten mit bekannten Schwachstellen erkennen oder beheben,
 ein IDE-Plugin für Statische Code-Analyse anbieten, um Injections zu erkennen,
 oder noch besser eine Bibliothek anbieten, die bewiesenermaßen sicher gegen Injections ist.
 Je mehr einsatzbereite Alternativen den Teams bereitgestellt werden desto besser.

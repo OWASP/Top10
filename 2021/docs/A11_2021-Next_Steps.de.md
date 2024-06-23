@@ -19,10 +19,10 @@ Für Unternehmen, die auf ein ausgereiftes Programm zur Anwendungssicherheit hin
 
 | Zugeordnete CWEs | Maximale Häufigkeit | Durchschn. Häufigkeit | Durchschn. Ausnutzbarkeit (gewichtet) | Durchschn. Auswirkungen (gewichtet) | Maximale Abdeckung | Durchschnittliche Abdeckung | Gesamtanzahl | CVEs insgesamt |
 |:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
-| 38           | 49.46%              | 2.22%               | 7.1                   | 6.7                  | 60.85%        | 23.42%        | 101736             | 7564        |
+| 38           | 49.46 %              | 2.22 %               | 7.1                   | 6.7                  | 60.85 %        | 23.42 %        | 101736             | 7564        |
 
-- **Beschreibung.** Zu den Problemen der Codequalität gehören bekannte Sicherheitsmängel oder -muster, die Wiederverwendung von Variablen für mehrere Zwecke, die Offenlegung vertraulicher Informationen in der Debugging-Ausgabe, Off-by-One-Fehler, TOCTOU-Race-Conditions (Time of Check/Time of Use), Konvertierungsfehler bei der Verwendung von vorzeichenlosen oder vorzeichenbehafteten Daten, die Verarbeitung nach dem Freigeben von Daten und vieles mehr. Das Besondere an diesem Abschnitt ist, dass sie in der Regel durch strenge Compiler-Flags, statische Code-Analyse-Tools und Linter-IDE-Plugins identifiziert werden können. Moderne Sprachen haben viele dieser Probleme durch ihr Design eliminiert, wie z.B. Rusts Konzept des Speicherbesitzes und der -ausleihe, Rusts Threading-Design und die strikte Typisierung und Grenzwertprüfung in Go.
--   **Prävention und Gegenmaßnahmen**. Aktivieren und verwenden Sie die statische Code- Analyse Ihres Editors und Ihrer Sprache. Erwägen Sie die Verwendung eines Tools zur statischen Codeanalyse. Überlegen Sie, ob es möglich ist, eine Sprache oder ein Framework zu verwenden oder dorthin zu migrieren, welches Fehlerklassen eliminiert, wie z.B. in Rust oder Go.
+- **Beschreibung.** Zu den Problemen der Codequalität gehören bekannte Sicherheitsmängel oder -muster, die Wiederverwendung von Variablen für mehrere Zwecke, die Offenlegung vertraulicher Informationen in der Debugging-Ausgabe, Off-by-One-Fehler, TOCTOU-Race-Conditions (Time of Check/Time of Use), Konvertierungsfehler bei der Verwendung von vorzeichenlosen oder vorzeichenbehafteten Daten, die Verarbeitung nach dem Freigeben von Daten und vieles mehr. Das Besondere an diesem Abschnitt ist, dass sie in der Regel durch strenge Compiler-Flags, statische Code-Analyse-Tools und Linter-IDE-Plugins identifiziert werden können. Moderne Sprachen haben viele dieser Probleme durch ihr Design eliminiert, wie z. B. Rusts Konzept des Speicherbesitzes und der -ausleihe, Rusts Threading-Design und die strikte Typisierung und Grenzwertprüfung in Go.
+-   **Prävention und Gegenmaßnahmen**. Aktivieren und verwenden Sie die statische Code- Analyse Ihres Editors und Ihrer Sprache. Erwägen Sie die Verwendung eines Tools zur statischen Codeanalyse. Überlegen Sie, ob es möglich ist, eine Sprache oder ein Framework zu verwenden oder dorthin zu migrieren, welches Fehlerklassen eliminiert, wie z. B. in Rust oder Go.
 
 - **Beispielhafte Angriffsszenarien**. Ein Angreifer könnte vertrauliche Informationen erhalten oder verändern, indem er eine Race Condition ausnutzt, die eine statisch freigegebene Variable in mehreren Threads verwendet.
 
@@ -35,7 +35,7 @@ Für Unternehmen, die auf ein ausgereiftes Programm zur Anwendungssicherheit hin
 
 | Zugeordnete CWEs | Maximale Häufigkeit | Durchschn. Häufigkeit | Durchschn. Ausnutzbarkeit (gewichtet) | Durchschn. Auswirkungen (gewichtet) | Maximale Abdeckung | Durchschnittliche Abdeckung | Gesamtanzahl | CVEs insgesamt |
 |:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
-| 8            | 17.54%              | 4.89%               | 8.3                   | 5.9                  | 79.58%        | 33.26%        | 66985              | 973         |
+| 8            | 17.54 %              | 4.89 %               | 8.3                   | 5.9                  | 79.58 %        | 33.26 %        | 66985              | 973         |
 
 -   **Beschreibung**. Mit den nötigen Ressourcen ist ein Denial-of-Service immer möglich.
 Design- und Programmierpraktiken haben jedoch einen erheblichen Einfluss auf das Ausmaß des Denial-of-Service.
@@ -53,7 +53,7 @@ Mit ausreichenden Ressourcen ist eine Denial of Service immer möglich. Allerdin
 
 | Zugeordnete CWEs | Maximale Häufigkeit | Durchschn. Häufigkeit | Durchschn. Ausnutzbarkeit (gewichtet) | Durchschn. Auswirkungen (gewichtet) | Maximale Abdeckung | Durchschnittliche Abdeckung | Gesamtanzahl | CVEs insgesamt |
 |:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
-| 14           | 7.03%               | 1.16%               | 6.7                   | 8.1                  | 56.06%        | 31.74%        | 26576              | 16184       |
+| 14           | 7.03 %               | 1.16 %               | 6.7                   | 8.1                  | 56.06 %        | 31.74 %        | 26576              | 16184       |
 
 -   **Beschreibung**. Webanwendungen werden in der Regel in Managed Memory-Sprachen geschrieben, wie zum Beispiel Java, .NET oder node.js (JavaScript oder TypeScript). Allerdings sind diese Sprachen in Systemsprachen geschrieben, die Probleme mit der Speicherverwaltung haben, z. B. Puffer- oder Heap-Überläufe, Use after free, Integer-Überläufe und mehr. Im Laufe der Jahre gab es viele Sandbox-„Ausbrüche“, die zeigen, dass nur weil die Webanwendungssprache nominell „ speicher- sicher“ ist, die Grundlagen es nicht sind.
 
