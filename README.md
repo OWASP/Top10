@@ -42,7 +42,7 @@ There are currently four co-leaders for the OWASP Top 10. We meet every Friday a
 - A06 Vulnerable and Outdated Components => Florian :white_check_mark: :checkered_flag: => Jasmin
 - A07 Identification and Authentication Failures => Daniel :white_check_mark: :white_flag: => Florian
 - A08 Software and Data Integrity Failures => Tobias H.  :white_check_mark: :white_flag: => Florian
-- A09 Security Logging and Monitoring Failures => Tobias H.  :white_check_mark: :white_flag: => Florian
+- A09 Security Logging and Monitoring Failures => Tobias H.  :white_check_mark: :checkered_flag: => Florian
 - A10 Server Side Request Forgery (SSRF) => Daniel :white_check_mark: :checkered_flag:
 - Next Steps => Daniel :white_check_mark: :checkered_flag:
 
