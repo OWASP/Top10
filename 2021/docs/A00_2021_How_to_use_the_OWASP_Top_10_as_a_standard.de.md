@@ -6,10 +6,10 @@ Wenn Sie die OWASP Top 10 als Coding- oder Teststandard verwenden möchten,
 sollten Sie wissen, dass es sich um das absolute Minimum und nur um einen Anfang handelt.
 
 Eine der Schwierigkeiten bei der Verwendung der OWASP Top 10 als Standard besteht darin, dass wir AppSec-Risiken dokumentieren und nicht unbedingt leicht testbare Probleme.
-Beispielsweise liegt [A04:2021 Unsicheres Anwendungsdesign](A04_2021-Insecure_Design.de.md) außerhalb des Rahmens der meisten Testformen.
+Beispielsweise liegt [A04:2021 Unsicheres Anwendungsdesign](A04_2021-Insecure_Design.de.md) außerhalb des Rahmens der meisten Testverfahren.
 Ein weiteres Beispiel ist das Testen, ob eine wirksame Protokollierung und Überwachung implementiert und operativ ist, was nur durch Befragungen und Stichproben wirksamer Behandlungen von Incidents möglich ist.
-Ein statisches Code-Analysetool kann nach fehlender Protokollierung suchen,
-es wird jedoch unmöglich sein, festzustellen, ob die Geschäftslogik oder die Zugriffskontrolle kritische Sicherheitsverstöße protokolliert. Penetrationstester können möglicherweise nur in einer Testumgebung feststellen, dass sie die Reaktion auf Vorfälle ausgelöst haben, die selten auf die gleiche Weise wie die Produktion überwacht wird.
+Ein Tool zur statischen CodeAnalyse kann nach fehlender Protokollierung suchen,
+es wird jedoch unmöglich sein, festzustellen, ob die Geschäftslogik oder die Zugriffskontrolle kritische Sicherheitsverstöße protokolliert. Penetrationstester:innen können möglicherweise nur in einer Testumgebung, die selten in der gleichen Weise wie die Produktion überwacht ist, feststellen dass sie eine Reaktion auf die Vorfälle ausgelöst haben.
 <!-- TODO OSIB Link -->
 
 Hier sind unsere Empfehlungen, wann es sinnvoll ist, die OWASP Top 10 zu verwenden:
@@ -30,7 +30,7 @@ Hier sind unsere Empfehlungen, wann es sinnvoll ist, die OWASP Top 10 zu verwend
 
 Wir empfehlen jedem, der einen Anwendungssicherheitsstandard übernehmen möchte,
 den [OWASP Application Security Verification Standard](https://owasp.org/www-project-application-security-verification-standard/) (ASVS) zu verwenden,
-da er entworfen wurde, überprüfbar und getestet zu sein und in allen Teilen eines sicheren Entwicklungslebenszyklus verwendet werden können.
+da er entworfen wurde, um überprüfbar und testbar zu sein und in allen Teilen eines sicheren Entwicklungslebenszyklus verwendet werden kann.
 
 Für Tool-Anbieter ist der ASVS die einzig akzeptable Wahl.
 Aufgrund der Beschaffenheit mehrerer Top-10-Risiken, insbesondere A04:2021 – Unsicheres Anwendungsdesign,

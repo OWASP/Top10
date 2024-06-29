@@ -31,15 +31,15 @@ There are currently four co-leaders for the OWASP Top 10. We meet every Friday a
 ## Status of review of German translation
 - Notice => Torsten + Vorwort der deutschen Version => Thomas und Torsten :white_check_mark: 🏳️ => Florian
 - Introduction = Home -> Torsten/Ralf  :hourglass_flowing_sand: -> TODO: AM ENDE
-- How to use the OWASP Top 10 as a standard => Tobias H.  :white_check_mark: 🏳️ => Jasmin
+- How to use the OWASP Top 10 as a standard => Tobias H.  :white_check_mark: :checkered_flag: => Jasmin
 - How to start an AppSec program with the OWASP Top 10 => Daniel G. :white_check_mark: 🏳️ => Florian
 - About OWASP => Torsten/Thomas :white_check_mark: :white_flag: => Jan
 - A01 Broken Access Control => Tobias H. :white_check_mark: :white_flag: => Thomas
 - A02 Cryptographic Failures => Jan :white_check_mark: :white_flag: => Thomas
 - A03 Injection => Jasmin (Injection 2017 + XSS 2017) :hourglass_flowing_sand:
 - A04 Insecure Design => Thomas/Torsten :hourglass_flowing_sand:
-- A05 Security Misconfiguration => Florian :white_check_mark: :white_flag: => Jasmin
-- A06 Vulnerable and Outdated Components => Florian :white_check_mark: :white_flag: => Jasmin
+- A05 Security Misconfiguration => Florian :white_check_mark: :checkered_flag: => Jasmin
+- A06 Vulnerable and Outdated Components => Florian :white_check_mark: :checkered_flag: => Jasmin
 - A07 Identification and Authentication Failures => Daniel :white_check_mark: :white_flag: => Florian
 - A08 Software and Data Integrity Failures => Tobias H.  :white_check_mark: :white_flag: => Florian
 - A09 Security Logging and Monitoring Failures => Tobias H.  :white_check_mark: :white_flag: => Florian

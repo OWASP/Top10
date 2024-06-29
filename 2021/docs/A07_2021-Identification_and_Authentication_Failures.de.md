@@ -13,7 +13,7 @@ lang:   "de"
 
 | Zugeordnete CWEs | Maximale Häufigkeit | Durchschn. Häufigkeit | Durchschn. Ausnutzbarkeit (gewichtet) | Durchschn. Auswirkungen (gewichtet) | Maximale Abdeckung | Durchschnittliche Abdeckung | Gesamtanzahl | CVEs insgesamt |
 |:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
-| 22          | 14.84%             | 2.55%              | 7.40                 | 6.50                | 79.51%       | 45.72%       | 132,195           | 3,897      |
+| 22          | 14.84 %             | 2.55 %              | 7.40                 | 6.50                | 79.51 %       | 45.72 %       | 132,195           | 3,897      |
 
 ## Übersicht {{ osib_anchor(osib=osib ~ ".overview", id=id ~ "-overview", name=title ~ ":Bezug / Kontext / Auswertung", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
 
