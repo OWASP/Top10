@@ -1,12 +1,12 @@
 ---
 source: "https://owasp.org/Top10/A07_2021-identification_and_Authentication_Failures/"
-title:  "A07:2021 – Fehler bei der Identifizierung und Authentifizierung"
+title:  "A07:2021 – Fehlerhafte Authentifizierung"
 id:     "A07:2021"
 lang:   "de"
 ---
 {%- set parent = extra.osib.document ~ "." ~ extra.osib.version -%}
 {%- set osib = parent ~ ".7" -%}
-#A07:2021 – Fehlerhafte Authentifizierung ![icon](assets/TOP_10_Icons_Final_Identification_and_Authentication_Failures.png){: style="height:80px;width:80px" align="right"} {{ osib_anchor(osib=osib, id=id , name="Fehler in der Identifikation und Authentifizierung", lang=lang, source=source, parent=parent, previous=extra.osib.document ~ ".2017.2") }}
+#A07:2021 – Fehlerhafte Authentifizierung ![icon](assets/TOP_10_Icons_Final_Identification_and_Authentication_Failures.png){: style="height:80px;width:80px" align="right"} {{ osib_anchor(osib=osib, id=id , name="Fehlerhafte Authentifizierung", lang=lang, source=source, parent=parent, previous=extra.osib.document ~ ".2017.2") }}
 
 
 ## Beurteilungskriterien {{ osib_anchor(osib=osib ~ ".factors", id=id ~ "-factors", name=title ~ ": Factors", lang=lang, source=source ~ "#" ~ id, parent=osib) }}
