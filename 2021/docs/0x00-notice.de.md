@@ -18,7 +18,7 @@ Das englische Original wurde am 24. September 2021 veröffentlicht
 
 „Ist es nicht sonderbar, dass eine wörtliche Übersetzung fast immer eine schlechte ist? Und doch lässt sich alles gut übersetzen. Man sieht hieraus, wie viel es sagen will, eine Sprache ganz verstehen; es heißt, das Volk ganz kennen, das sie spricht.“ (G.C. Lichtenberg, „Sudelbücher“, 1800-1806).<br>
 
-Die deutsche Version der OWASP Top 10 war genau das: eine Herausforderung, dem Ziel und dem Geist der Top 10 in deutscher Sprache gerecht zu werden. Hierbei wurden bei Bedarf auch kleinere Präzisierungen vorgenommen, die das Verständnis erleichtern. Wir verwenden daher bewusst nicht den Begriff „Übersetzung“, auch wenn es zu weiten Teilen genau das ist. Dinge ständig weiter zu treiben und kontinuierlich zu verbessern ist eben auch OWASP.<br>
+Die deutsche Version der OWASP Top 10 war genau das: eine Herausforderung, dem Ziel und dem Geist der Top 10 in deutscher Sprache gerecht zu werden. Hierbei wurden bei Bedarf auch kleinere Präzisierungen vorgenommen, die das Verständnis erleichtern. Wir verwenden daher bewusst nicht den Begriff „Übersetzung“, auch wenn es zu weiten Teilen genau das ist. Dinge ständig weiterzutreiben und kontinuierlich zu verbessern ist eben auch OWASP.<br>
 So haben wir in dieser Version auch die Namen der Top 10 Risiken angepasst oder Namens-Ergänzungen des Originals nur dann übernommen, wenn uns dies nach Abwägung sinnvoll erschien:
 
 - [A01:2021–Mangelhafte Zugriffskontrolle](A01_2021-Broken_Access_Control.de.md) ex: A5:2017-Fehler in der Zugriffskontrolle
@@ -37,9 +37,9 @@ Ihr deutschsprachiges Top 10-Team:<br>
 - Torsten Gigler<br>
 - Daniel Grahl<br>
 - Tobias Heide<br>
-- Florian Schmidt<br>
+- Florian Schmid<br>
 - Jan Wolff<br>
-<br>
+- Jasmin Mair<br>
 
 ### Stammtisch-Initiative des OWASP German Chapter
 In mehreren deutschen Städten gibt es [OWASP-Stammtische](https://owasp.org/www-chapter-germany/stammtische/), bei denen man sich in lockerer Runde trifft, um sich auszutauschen, nette Leute kennenzulernen oder ernsthafte Sicherheitsthemen zu diskutieren – meistens mit Vortrag.<br>
@@ -48,11 +48,11 @@ Aktive Stammtische gibt es (Stand Juni 2024) in [Augsburg](/www-chapter-germany/
 
 ## Wie können Sie uns unterstützen
 
-Zum jetzigen Zeitpunkt bitten wir darum
+Zum jetzigen Zeitpunkt bitten wir um
 
 - Datenanalysten – bitte überprüfen Sie unsere Analyse
 - Webdesigner:innen – wir müssen eine mobilfreundliche Version erstellen
-- Übersetzer:innen – Bitte überprüfen Sie diese Version und das englische Original, um sicherzustellen, dass diese Version verständlich ist und den Sinn des Originals widerspiegelt
+- Übersetzer:innen – Bitte überprüfen Sie diese Version und das englische Original, um sicherzustellen, dass diese Version verständlich ist und den Sinn des Originals widergibt
 - Projektleiter:innen von ASVS, Testing Guide und Code Review Guide – bitte nutzen Sie unsere Daten und helfen Sie uns, unsere Dokumente und Standards miteinander zu verknüpfen
 
 ## Senden Sie uns Ihre Vorschläge und Pull-Anfragen in Github
