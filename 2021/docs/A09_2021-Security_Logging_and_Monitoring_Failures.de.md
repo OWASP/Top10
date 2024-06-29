@@ -17,59 +17,54 @@ lang:   "de"
 
 ## Übersicht {{ osib_anchor(osib=osib ~ ".overview", id=id ~ "-overview", name=title ~ ": Übersicht", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
 
-Sicherheitsprotokollierung und -überwachung belegten in der Top-10-Community-Umfrage Platz 3 und stiegen somit etwas von der zehnten Position in der OWASP Top 10 2017. Die Protokollierung und Überwachung können schwierig zu testen sein, da sie oft Interviews oder die Frage nach der Erkennung von Angriffen während eines Penetrationstests erfordern. Es gibt nicht viele CVE/CVSS-Daten für diese Kategorie, aber das Erkennen von und Reagieren auf Eindringlinge spielt eine wichtige Rolle. Allerdings kann dies sehr hilfreich für die Verantwortlichkeit, die Transparenz, die Alarmierung bei Vorfällen und die Forensik sein. 
-Diese Kategorie geht über *CWE-778 Insufficient Logging* hinaus und umfasst 
-*CWE-117 Improper Output Neutralization for Logs*,
-*CWE-223 Omission of Security-relevant Information* und 
-*CWE-532* *Insertion of Sensitive Information into Log File*.
+Sicherheitsprotokollierung und -überwachung wurden in der Top-10-Community-Umfrage (Platz 3) genannt, was eine leichte Verbesserung gegenüber dem zehnten Platz in der OWASP Top 10 2017 bedeutet. Das Logging und Monitoring können schwierig zu testen sein, da sie oft Interviews oder die Frage nach der Erkennung von Angriffen während eines Penetrationstests beinhalten. Es gibt nicht viele CVE/CVSS-Daten für diese Kategorie, aber das Erkennen von und Reagieren auf Angriffe ist von entscheidender Bedeutung. Allerdings kann dies für die Nachweisbarkeit, die Nachvollziehbarkeit, die Alarmierung bei Vorfällen und Forensik von großer Bedeutung sein. Diese Kategorie erstreckt sich über CWE-778 "Unzureichende Protokollierung" hinaus und umfasst auch CWE-117 "Unzulässige Output-Neutralisierung für Protokolle", CWE-223 "Unterlassung sicherheitsrelevanter Informationen" und CWE-532 "Einfügen vertraulicher Informationen in Protokolldateien".
 
 ## Beschreibung {{ osib_anchor(osib=osib ~ ".description", id=id ~ "-description", name=title ~ ": Beschreibung", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
 
-Wieder in den OWASP Top 10 2021 soll diese Kategorie bei der Erkennung, Eskalation und Reaktion auf laufende Angriffe helfen. Ohne Protokollierung und
-Überwachung können Angriffe nicht erkannt werden. Unzureichende Protokollierung,
-Erkennung, Überwachung und aktive Reaktion treten permanent auf:
-- Prüfbare Ereignisse wie Anmeldungen, fehlgeschlagene Anmeldungen und Transaktionen mit hohem Wert werden nicht protokolliert.
+Mit Blick auf die OWASP Top 10 2021 soll diese Kategorie bei der Erkennung, Eskalation und Reaktion auf laufende Angriffe unterstützen. Ohne Protokollierung und Überwachung können Angriffe nicht erkannt werden. Unzureichende Protokollierung, Erkennung, Überwachung und aktive Reaktion sind jederzeit möglich:
 
-- Warnungen und Fehler erzeugen keine, unzureichende oder ungenaue Einträge im Logging
+- Nachvollziehbare Ereignisse, wie Anmeldungen, fehlgeschlagene Anmeldungen und wertvolle Transaktionen, werden nicht protokolliert.
 
-- Logs von Anwendungen und APIs werden nicht auf verdächtige Aktivitäten überwacht.
+- Warnungen und Fehler erzeugen keine, unangemessene oder unklare Log-Einträge.
 
- - Logs werden nur lokal gespeichert.
+- Die Logs von Anwendungen und APIs werden nicht auf verdächtige Aktivitäten überwacht.
 
-- Angemessene Schwellwerte für Alarme und Maßnahmen zur Eskalation sind nicht vorhanden oder nicht wirksam.
+- Protokolle werden nur lokal gespeichert.
 
-- Penetrationstests und Scans durch DAST-Tools (Dynamic Application Security Testing) (wie OWASP ZAP) lösen keine Warnmeldungen aus.
+- Geeignete Schwellenwerte für Warnmeldungen und Eskalationsprozesse für Gegenmaßnahmen sind nicht vorhanden oder nicht wirksam.
 
-- Die Anwendung kann Angriffe nicht erkennen, eskalieren oder Alarm schlagen, wenn sie tatsächlich oder beinahe unmittelbar erfolgen.
+- Penetrationstests und Scans durch DAST-Tools (Dynamic Application Security Testing) (wie OWASP ZAP) lösen keine Alarme aus.
 
-Sie sind anfällig für Informationslecks, wenn Sie Protokollierungs- und Alarm-Ereignisse für einen Benutzer oder einen Angreifer sichtbar machen (siehe [A01:2021-Broken Access Control](A01_2021-Broken_Access_Control.md)).
+- Die Anwendungen können Angriffe weder in Echtzeit noch nahezu in Echtzeit erkennen, eskalieren oder Alarm schlagen.
+
+Es besteht die Gefahr von Informationslecks, falls Sie die Logging- und Alerting Ereignisse für Benutzer oder Angreifer sichtbar gemacht werden (siehe [A01:2021-Broken Access Control](A01_2021-Broken_Access_Control.md)).
 
 ## Prävention und Gegenmaßnahmen {{ osib_anchor(osib=osib ~ ".how to prevent", id=id ~ "-how_to_prevent", name=title ~ ": How to Prevent", lang=lang, source=source ~ "#" ~ id, parent=osib) }}
 
 Je nach dem Risiko der Anwendung sollten Entwickler einige oder alle der folgenden Maßnahmen ergreifen:
 
-- Stellen Sie sicher, dass alle Anmelde-, Zugriffskontroll- und serverseitigen Eingabevalidierungen Fehler mit ausreichendem Benutzerkontext protokolliert werden können, um verdächtige oder böswillige Konten zu identifizieren und ausreichend lange eine spätere forensische Analyse zu ermöglichen.
+- Sicherstellen, dass alle Anmeldevorgänge, Zugriffskontrollen und Fehler bei der serverseitigen Eingabeüberprüfung mit ausreichendem Benutzerkontext erfasst werden, um verdächtige oder böswillige Nutzer zu identifizieren und ausreichend lange gespeichert werden, um eine spätere forensische Analyse zu ermöglichen.
 
-- Stellen Sie sicher, dass die Logs in einem Format erstellt werden, das von Log-Management Lösungen leicht verarbeitet werden können.
+- Stellen Sie sicher, dass die Protokolle in einem Format gespeichert werden, das von Protokollmanagement Lösungen leicht verarbeitet werden können.
 
-- Stellen Sie sicher, dass die Protokolldaten korrekt kodiert sind, um Injections oder Angriffe auf die Protokollierungs- oder Überwachungssysteme zu verhindern.
+- Es sollte sichergestellt werden, dass die Protokolldaten korrekt umgewandelt werden, sodass Injection-Angriffe oder Angriffe auf Logging- oder Überwachungssysteme verhindert werden.
+    
+- Es soll sichergestellt sein, dass hochwertige Transaktionen einen Prüfpfad mit Integritätskontrollen aufweisen um Manipulationen oder Löschungen zu verhindern, z. B. durch Datenbanktabellen, die nur erweitert werden können, oder ähnliches.
 
-- Stellen Sie sicher, dass hochwertige Transaktionen über einen Prüfpfad mit Integritätskontrollen verfügen , um Manipulationen oder Löschungen zu verhindern, wie z. B. "append-only Datenbanktabellen oder ähnliches.
+- DevSecOps-Teams sollten eine effektive Überwachung und Alarmierung einrichten, sodass verdächtige Aktivitäten schnell erkannt und darauf reagiert werden kann.
 
-- DevSecOps-Teams sollten eine effektive Überwachung und Alarmierung einrichten so dass verdächtige Aktivitäten schnell erkannt werden und darauf reagiert wird.
+- Erstellen oder übernehmen Sie einen Notfallplan für die Reaktion auf Vorfälle und für die Wiederherstellung, wie z. B. dem Leitfaden des National Institute of Standards and Technology (NIST) 800-61r2 oder neuer.
 
-- Erstellen oder übernehmen Sie einen Reaktions- und Wiederherstellungsplan für Zwischenfälle, z. B. National Institute of Standards and Technology (NIST) 800-61r2 oder neuer.
-
-Es gibt sowohl kommerzielle als auch Open-Source-Frameworks zum Schutz von Anwendungen wie das OWASP ModSecurity Core Rule Set, und Open-Source-Log Korrelations-Software, wie Elasticsearch, Logstash, Kibana (ELK)
-Stack, die benutzerdefinierte Dashboards und Warnmeldungen bereitstellen.
+Es gibt kommerzielle und Open-Source-Frameworks zum Schutz von Anwendungen wie das OWASP ModSecurity Core Rule Set, und Open-Source-Log
+correlation software, wie Elasticsearch, Logstash, Kibana (ELK) Stack, die benutzerdefinierte Dashboards und Warnmeldungen bereitstellen.
 
 ## Beispielhafte Angriffsszenarien {{ osib_anchor(osib=osib ~ ".example attack Scenarios", id=id ~ "-example_attack_scenarios", name=title ~ ": Beispiel-Angriffsszenarien", lang=lang, source=source ~ "# " ~ id, parent=osib) }}
 
-**Szenario Nr. 1:** Der Betreiber der Website eines Anbieters von Kinderkrankenversicherungen konnte das Eindringen in das System aufgrund mangelnder Überwachung und Protokollierung nicht erkennen. Eine externe Partei informierte den Krankenversicherungsanbieter, dass ein Angreifer auf Tausende sensibler Gesundheitsdaten von mehr als 3,5 Millionen Kindern zugegriffen und diese verändert hatte. Eine Überprüfung nach dem Vorfall ergab, dass die Entwickler der Website wesentliche Schwachstellen nicht behoben hatten. Da das System weder protokolliert noch überwacht wurde, könnte die Datenschutzverletzung bereits seit 2013, also seit mehr als sieben Jahren, im Gange sein.
+**Szenario 1:**  Der Betreiber der Website eines Anbieters von Kinderkrankenversicherungen konnte das Eindringen in das System aufgrund mangelnder Überwachung und Protokollierung nicht erkennen. Eine externe Partei informierte den Krankenversicherungsanbieter, dass ein Angreifer auf Tausende der mehr als 3,5 Millionen sensiblen Gesundheitsdaten der Kinder zugegriffen und diese verändert hatte. Eine Überprüfung nach dem Vorfall ergab, dass die Entwickler der Website wesentliche Schwachstellen nicht behoben hatten. Da es weder eine Protokollierung noch eine Überwachung des Systems gab, bestand die Datenlücke möglicherweise bereits seit 2013, also über einen Zeitraum von mehr als sieben Jahren.
 
-**Szenario #2:** Bei einer großen indischen Fluggesellschaft kam es zu einer unbefugten Zugriffsnahme auf personenbezogene Daten von Millionen von Fluggästen, die mehr als zehn Jahre lang gespeichert waren, darunter Pass- und Kreditkartendaten. Die Datenpanne trat bei einem externen Cloud-Hosting-Anbieter auf, der die Fluggesellschaft nach einiger Zeit über die Verletzung informierte.
+**Szenario #2:** Bei einer größeren indischen Fluggesellschaft kam es zu einer Datenpanne, die mehr als zehn Jahre lang personenbezogene Daten von Millionen von Fluggästen betraf, einschließlich Reisepass- und Kreditkartendaten. Die Datenpanne trat bei einem externen Cloud-Hosting-Anbieter auf, der die Fluggesellschaft nach einiger Zeit über die Lücke informierte.
 
-**Szenario #3:** Bei einer großen europäischen Fluggesellschaft kam es zu einem meldepflichtigen Verstoß gegen die DSGVO. Der Verstoß wurde Berichten zufolge durch Sicherheitsschwachstellen in Zahlungsanwendungen verursacht, die von Angreifern ausgenutzt wurden, die mehr als 400.000 Zahlungsdatensätze von Kunden abfingen. Die Fluggesellschaft wurde daraufhin von der Datenschutzbehörde mit einer Geldstrafe von 20 Millionen Pfund belegt.
+**Szenario #3:** Bei einer großen europäischen Fluggesellschaft kam es zu einem meldepflichtigen Verstoß gegen die DSGVO. Der Verstoß wurde Berichten zufolge durch Sicherheitsschwachstellen in Zahlungsanwendungen verschuldet, die von Angreifern ausgenutzt wurden, die mehr als 400.000 Zahlungsdatensätze von Kunden abfingen. Die Fluggesellschaft wurde daraufhin von der Datenschutzbehörde mit einer Geldstrafe von 20 Millionen Pfund belegt.
 
 ## Referenzen {{ osib_anchor(osib=osib ~ ".references", id=id ~ "-references", name=title ~ ": References", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
 
