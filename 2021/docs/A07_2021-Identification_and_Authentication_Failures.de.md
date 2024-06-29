@@ -1,6 +1,6 @@
 ---
 source: "https://owasp.org/Top10/A07_2021-identification_and_Authentication_Failures/"
-title:  "A07:2021 – Fehlerhafte Authentifizierung"
+title:  "A07:2021 – Fehler bei der Identifizierung und Authentifizierung"
 id:     "A07:2021"
 lang:   "de"
 ---
@@ -17,85 +17,58 @@ lang:   "de"
 
 ## Übersicht {{ osib_anchor(osib=osib ~ ".overview", id=id ~ "-overview", name=title ~ ":Bezug / Kontext / Auswertung", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
 
-Vormals als *Fehler in der Authentifizierung* geführt,
-ist diese Kategorie von der zweiten Position abgestiegen
-und umfasst nun auch Common Weakness Enumerations (CWEs) im Zusammenhang mit Identifikationsfehlern. 
-Herausragende CWEs sind 
+Diese Kategorie, die früher als *Broken Authentication* bekannt war, rutschte von der zweiten Position nach unten und umfasst nun Common Weakness Enumerations (CWEs) im Zusammenhang mit Identifikationsfehlern. Die bedeutendsten CWEs sind
 -   *{{ osib_link(link="osib.mitre.cwe.0.297", doc="", osib=osib) }}* <!-- *CWE-297: Improper Validation of Certificate with Host Mismatch*, -->
 -   *{{ osib_link(link="osib.mitre.cwe.0.287", doc="", osib=osib) }}* und <!-- *CWE-287: Improper Authentication* und -->
 -   *{{ osib_link(link="osib.mitre.cwe.0.384", doc="", osib=osib) }}* <!-- *CWE-384: Session Fixation*. -->
 
 ## Beschreibung {{ osib_anchor(osib=osib ~ ".description", id=id ~ "-description", name=title ~ ": Beschreibung", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
 
-Identifikation des Benutzers, Authentifizierung und Sitzungsverwaltung sind essenziell
-für den Schutz vor authentifizierungsbezogenen Angriffen.
-Die Anwendung verfügt wahrscheinlich über Schwachstellen in der Authentifizierung
-falls eines der Folgenden gegeben ist:
+Die Überprüfung der Identität des Benutzers, die Authentifizierung und die Sitzungsverwaltung sind entscheidend für den Schutz vor authentifizierungsbezogenen Angriffen. Schwachstellen bei der Authentifizierung können auftreten, falls die Anwendung:
 
-- Sie erlaubt automatisierte Angriffe wie Credential Stuffing, bei denen der Angreifer über eine Liste gültiger Benutzernamen und Passwörter verfügt.
+- automatisierte Angriffe wie Credential Stuffing zulässt, bei dem der Angreifer über eine Liste gültiger Benutzernamen und Passwörter verfügt.
 
-- Sie erlaubt Brute-Force- oder andere automatisierte Angriffe.
+- Brute-Force- oder andere automatisierte Angriffe ermöglicht.
 
-- Sie erlaubt standardmäßige, schwache oder bekannte Passwörter wie „Passwort1“ oder „admin/admin“.
+- Standard-, schwache oder gängige Passwörter zulässt, wie z. B. "Passwort1" oder "admin/admin".
 
-- Sie verwendet schwache oder ineffektive Verfahren zur Wiederherstellung von Anmeldeinformationen
-und Passwörtern, wie z. B. „wissensbasierte Antworten“, die nicht sicher gemacht werden können.
+- schwache oder ineffektive Verfahren zur Wiederherstellung von Anmeldeinformationen  und   Verfahren für vergessene Passwörtern, wie z. B. „wissensbasierte Antworten“, die nicht sicher gemacht werden können, 
+verwendet werden.
 
-- Sie verwendet Klartext-, verschlüsselte oder schwach gehashte Passwort-Datenspeicher (siehe [A02:2021-Kryptografische Fehler](A02_2021-Cryptographic_Failures.de.md)).
+-  Klartext-, verschlüsselte oder schwach gehashte Kennwortdatenspeicher (siehe
+    [A02:2021-Cryptographic Failures](A02_2021-Cryptographic_Failures.md)) verwendet.
 
-- Sie verwendet keine oder ineffektive Multi-Faktor-Authentifizierung.
+- Fehlende oder unwirksame Multi-Faktor-Authentifizierung.
 
-- Sie legt die Session ID in der URL offen.
- 
-- Sie verwendet die Session ID nach erfolgreicher Anmeldung weiter.
+- Die Session-ID wird in der URL angezeigt.
 
-- Session IDs werden nicht ordnungsgemäß invalidiert.
-Benutzersitzungen oder Authentifizierungstokens (hauptsächlich Single-Sign-On-Tokens)
-werden beim Abmelden oder nach Inaktivität nicht invalidiert.
+- Session-IDs nach erfolgreichem Login wieder verwendet werden.
+
+- Session-IDs werden nicht korrekt ungültig gemacht. Benutzersitzungen oder Authentifizierungs-Tokens (hauptsächlich Single Sign-On (SSO) Tokens) werden beim  Abmelden oder bei Inaktivität nicht ordnungsgemäß invalidiert.
 
 ## Prävention und Gegenmaßnahmen {{ osib_anchor(osib=osib ~ ".how to prevent", id=id ~ "-how_to_prevent", name=title ~ ": Prävention und Gegenmaßnahmen", lang=lang, source=source ~ "#" ~ id, parent=osib) }}
 
-- Implementieren Sie nach Möglichkeit eine Multi-Faktor-Authentifizierung, um automatisiertes Credential Stuffing,
-Brute Force und die Wiederverwendung gestohlener Zugangsdaten zu verhindern.
+- Wenn möglich, sollte eine Multi-Faktor-Authentifizierung implementiert werden, um automatisiertes Credential Stuffing, Brute Force-Angriffe und die Wiederverwendung gestohlener Zugangsdaten zu verhindern.
 
-- Liefern Sie die Anwendung nicht mit Standard-Zugängen aus, insbesondere nicht für Administratoren.
+- Liefern Sie die Anwendung nicht mit Standard Login-Daten aus, insbesondere nicht für Administrator-Benutzer.
 
-- Implementieren Sie Prüfungen auf schwache Passwörter,
-z. B. die Prüfung neuer oder geänderter Passwörter gegen eine Liste der 10.000 schlechtesten Passwörter.
+- Implementieren Sie Prüfungen auf schwache Passwörter, wie z. B. durch den Vergleich von neuen oder geänderten Passwörtern mit der Liste der 10.000 schlechtesten Passwörter.
 
-- Passen Sie die Richtlinien für Passwortlänge, -komplexität und -rotation an die Richtlinie 800-63b
-des National Institute of Standards and Technology (NIST) an 
-(Abschnitt 5.1.1 _Memorized Secrets or other modern, evidence-based password policies_).
+- Angleichung der Passwortlänge, -komplexität und -rotation an die Richtlinien des National Institute of Standards and Technology (NIST) 800-63b in Abschnitt 5.1.1 "Memorized Secrets" oder andere modernen, bewährten Passwortrichtlinien.
 
-- Stellen Sie sicher, dass die Registrierung, die Wiederherstellung von Zugangsdaten sowie API-Pfade
-gegen Angriffe per Kontenaufzählung geschützt sind, indem Sie für alle Ergebnisse dieselben Nachrichten verwenden.
+- Sicherstellen, dass die Registrierung, die Wiederherstellung von Zugangsdaten und die API-Pfade gegen Angriffe zur Ermittlung von Benutzerkonten gehärtet sind, indem für alle Resultate die gleiche Nachricht ausgegeben wird.
 
-- Begrenzen Sie oder verzögern Sie zunehmend fehlgeschlagene Anmeldeversuche,
-achten Sie jedoch darauf, kein Denial-of-Service-Szenario zu schaffen.
-Protokollieren Sie alle Fehler und benachrichtigen Sie Administratoren,
-wenn Credential Stuffing, Brute Force oder andere Angriffe erkannt werden.
+- Begrenzen oder bremsen Sie fehlgeschlagene Anmeldeversuche immer weiter aus, aber achten Sie darauf, dass hierbei kein Denial-of-Service-Szenario entsteht. Loggen Sie alle Fehlversuche und alarmieren Sie die Administratoren, wenn Credential Stuffing, Brute Force oder andere Angriffe erkannt werden.
 
-- Verwenden Sie serverseitige, sichere, integrierte Sitzungsverwaltung,
-die nach der Anmeldung eine neue zufällige Session ID mit hoher Entropie generiert. 
-Die Session ID sollte nicht in der URL enthalten sein,
-sicher gespeichert und nach Abmeldung, Untätigkeit sowie Ablauf von absoluten Timeouts invalidiert werden.
+- Verwenden Sie einen serverseitigen, sicheren, integrierten Sitzungsmanager, der für jede Sitzung eine neue zufällige Sitzungs-ID mit hoher Entropie erzeugt. Die Sitzungs-ID sollte nicht in der URL enthalten sein, sicher gespeichert werden und nach Abmeldung, Inaktivität und Absoluten Timeouts entwertet werden.
 
 ## Beispielhafte Angriffsszenarien {{ osib_anchor(osib=osib ~ ".example attack Scenarios", id=id ~ "-example_attack_scenarios", name=title ~ ": Beispiel-Angriffsszenarien", lang=lang, source=source ~ "# " ~ id, parent=osib) }}
 
-**Szenario Nr. 1:** Credential Stuffing, die Verwendung von Listen bekannter Passwörter, ist ein häufiger Angriff. Angenommen, eine Anwendung implementiert keinen automatisierten Bedrohungs- oder Credential-Stuffing-Schutz. In diesem Fall kann die Anwendung als Passwort-Orakel verwendet werden, um festzustellen, ob die Anmeldeinformationen gültig sind.
+**Szenario Nr. 1:** Credential Stuffing, die Verwendung von Listen mit bekannten Kennwörtern, ist ein gängiger Angriff. Angenommen, eine Anwendung verfügt keinen automatischen Schutz vor Bedrohungen oder Credential Stuffing. In diesem Fall kann die Anwendung als Passwort-Orakel verwendet werden, um festzustellen, ob die Anmeldeinformationen gültig sind.
 
-**Szenario Nr. 2:** Die meisten Angriffe auf die Authentifizierung erfolgen aufgrund der fortgesetzten Verwendung
-von Passwörtern als einzigem Faktor. 
-Früher als Best Practices betrachtet, ermutigen Anforderungen an die Passwortrotation und -komplexität Benutzer dazu,
-schwache Passwörter zu verwenden oder wiederzuverwenden.
-Organisationen wird empfohlen, diese Praktiken gemäß NIST 800-63 zu beenden und Multi-Faktor-Authentifizierung zu verwenden.
+**Szenario #2:** Die meisten Authentifizierungsangriffe erfolgen aufgrund der andauernden Verwendung von Kennwörtern als einzigem Zugangsmerkmal. Die früher als Best Practices geltenden Anforderungen an den Wechsel und die Komplexität von Passwörtern verleiten die Benutzer zur Verwendung und Wiederverwendung schwacher Passwörter. Organisationen wird empfohlen, diese Praktiken gemäß NIST 800-63 einzustellen und eine Mehrfaktor-Authentifizierung zu verwenden.
 
-**Szenario Nr. 3:** Sitzungs-Timeouts sind nicht richtig eingestellt. 
-Ein Benutzer verwendet einen öffentlichen Computer, um auf eine Anwendung zuzugreifen. 
-Anstatt auf „Abmelden“ zu klicken,
-schließt der Benutzer einfach den Browser-Tab und geht weg.
-Eine Stunde später verwendet ein Angreifer denselben Browser 
-und der Benutzer ist immer noch angemeldet.
+**Szenario #3:** Die Session-Timeouts von Anwendungen sind nicht korrekt gesetzt. Ein Benutzer verwendet einen öffentlichen Computer, um auf eine Anwendung zuzugreifen. Anstatt sich abzumelden, schließt der Benutzer einfach die Browser-Registerkarte und geht weg. Ein Angreifer verwendet denselben Browser eine Stunde später, und der Benutzer ist noch immer authentifiziert.
 
 ## Referenzen {{ osib_anchor(osib=osib ~ ".references", id=id ~ "-references", name=title ~ ": Referenzen", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
 
