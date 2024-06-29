@@ -1,94 +1,37 @@
-# Wie baue ich mit den Top 10 ein Programm zur Anwendungssicherheit auf?
+# Wie man ein Programm für Anwendungssicherheit mit den OWASP Top 10 aufbaut 
 
-Die OWASP Top 10 waren ursprünglich nie als Grundlage für ein Programm zur Anwendungssicherheit (AppSec) konzipiert. 
-Für viele Organisationen, die gerade erst mit Anwendungssicherheit beginnen, ist ein definierter Startpunkt jedoch elementar.
-Die OWASP Top 10 2021 stellen eine gute Baseline für Checklisten dar; sie alleine sind jedoch nicht hinreichend.
+Die OWASP Top 10 war nie als Grundlage für ein Programm zur Anwendungssicherheit (AppSec) gedacht. 
+Für viele Organisationen, die sich gerade am Anfang ihrer Reise in die Anwendungssicherheit befinden, ist es jedoch wichtig, irgendwo anzufangen.
+Die OWASP Top 10 2021 bilden einen guten Ausgangspunkt für Checklisten usw., sind aber an sich nicht ausreichend.
 
-## Schritt 1. Identifizieren Sie Gaps und Ziele ihres Programms zur Anwendungssicherheit
+## Schritt 1. Identifizieren Sie die Lücken und Ziele Ihres AppSec-Programms
 
-Viele Programme zur Anwendungssicherheit übernehmen sich häufig
-und versuchen in zu großen Schritten ihr Ziel zu erreichen.
-Solche Ansätze sind bereits zum Scheitern verurteilt.
-CISOs und Verantwortlichen der Anwendungssicherheit empfehlen wir,
-das [OWASP Software Assurance Maturity Model (SAMM)](https://owaspsamm.org) einzusetzen,
-um Schwächen und Verbesserungspotentiale über einen Zeitraum von 1-3 Jahren zu identifizieren.
-Der erste Schritt bedeutet, die Ist-Situation zu bewerten,
-*jene* Gaps in Bezug auf Governance, Entwurf, Implementierung, Qualitätssicherung und Betrieb zu identifizieren,
-die *umgehend* geschlossen werden müssen,
-und die Prioritäten in der Umsetzung oder Verbesserung der 15 OWASP SAMM Sicherheitsmaßnahmen zu setzen.
-OWASP SAMM kann dabei helfen, 
-die Sicherheitslage ihrer Anwendungen zu messen und diese zu verbessern.
+Viele Anwendungssicherheitsprogramme (AppSec) übernehmen sich häufig und versuchen in zu großen Schritten ihr Ziel zu erreichen. Diese Bemühungen sind zum Scheitern verurteilt. Wir empfehlen CISOs und AppSec-Führungskräften dringend, das [OWASP Software Assurance Maturity Model (SAMM)](https://owaspsamm.org) einzusetzen, um Schwachstellen und Verbesserungspotenziale über einen Zeitraum von 1-3 Jahren zu identifizieren. Der erste Schritt besteht darin, den aktuellen Stand der Dinge zu bewerten: *Jene* Schwächen in den Bereichen Governance, Design, Implementierung, Verifizierung und Betrieb zu identifizieren, die sofort behoben werden müssen, und jene, die noch warten können, und die Implementierung oder Verbesserung der 15 OWASP SAMM-Sicherheitspraktiken zu priorisieren. OWASP SAMM kann beim Aufbau und Messen von Verbesserungen bei Ihren Software Assurance-Bemühungen hilfreich sein.
 
-## Schritt 2. Ebnen Sie den Weg für einen Sicheren Entwicklungs-Lebenszyklus (SDLC)
+## Schritt 2. Ebnen Sie den Weg für einen sicheren Entwicklungs-Lebenszyklus (SDLC)
 
-Lange den "Einhörnern" vorbehalten, stellt das Konzept eines "Geebneten Weges" die einfachste Möglichkeit dar,
-einen größtmöglichen Effekt zu erzielen
-und ihre Ressourcen für Anwendungssicherheit mit der jährlich steigenden Entwicklungsgeschwindigkeit zu skalieren.
+Das Konzept des geebneten Weges, das traditionell den sogenannten "Einhörnern" vorbehalten war, ist der einfachste Weg, um die größte Wirkung zu erzielen und die AppSec-Ressourcen mit der Geschwindigkeit des Entwicklungsteams zu skalieren, die von Jahr zu Jahr zunimmt.
 
-Das Konzept des Geebneten Weges ist,
-dass der einfachste Weg gleichzeitig der sicherste Weg sein muss.
-Es verlangt eine Kultur der Partnerschaft zwischen Entwicklungs- und Security-Teams —
-idealerweise ist es ein und dasselbe Team.
-Der Geebnete Weg zielt darauf ab,
-kontinuierlich zu verbessern, zu messen sowie unsichere Optionen zu erkennen und zu ersetzen.
-Auf dem Geebneten Weg soll eine unternehmensweite Bibliothek mit einsatzbereiten sicheren Alternativen angeboten werden
-— sowie Werkzeuge, um Verbesserungspotentiale zu identifizieren.
+Das Konzept des geebneten Weges lautet: "Der einfachste Weg ist auch der sicherste Weg" und sollte eine Kultur tiefer Partnerschaften zwischen dem Entwicklungsteam und dem Sicherheitsteam beinhalten, vorzugsweise so, dass sie ein und dasselbe Team sind. Der geebnete Weg hat zum Ziel, unsichere Alternativen kontinuierlich zu verbessern, zu messen, zu erkennen und zu ersetzen, indem eine unternehmensweite Bibliothek von sicheren Ersatzlösungen zur Verfügung gestellt wird, mit Werkzeugen, die dabei helfen zu erkennen, wo Verbesserungen durch die Übernahme des geebneten Weges möglich sind. Auf diese Weise können vorhandene Entwicklungstools unsichere Builds aufzeigen und den Entwicklungsteams helfen, sich selbst von unsicheren Alternativen zu lösen.
 
-Der Geebnete Weg kann umfangreich scheinen,
-aber er sollte inkrementell über einen Zeitraum aufgebaut werden.
-Es gibt weitere Formen eines AppSec-Programms,
-insbesondere den Microsoft Agile Secure Development Lifecycle.
-Nicht jede Methodik für ein AppSec-Programm passt zu jedem Unternehmen.
+Der geebnete Weg mag anstrengend erscheinen, aber er sollte im Laufe der Zeit schrittweise aufgebaut werden. Es gibt noch andere Formen von Appsec-Programmen, insbesondere den Agile Secure Development Lifecycle von Microsoft. Nicht jede Appsec-Programm-Methodik passt zu jedem Unternehmen.
 
-## Schritt 3. Setzen Sie den Geebneten Weg gemeinsam mit Ihren Entwicklungs-Teams um
+## Stufe 3. Realisierung des geebneten Wegs mit Ihren Entwicklungsteams
 
-Der Geebnete Weg wird einvernehmlich und mit direkter Beteiligung
-der relevanten Entwicklungs- und Betriebsteams aufgebaut.
-Der Geebnete Weg sollte an den strategischen Zielen des Unternehmens ausgerichtet werden
-und soll dazu beitragen, schneller sicherere Anwendungen zu liefern.
-Den Geebneten Weg zu entwickeln sollte ein ganzheitliche Aufgabe sein,
-die das gesamte Unternehmen bzw. die gesamte Anwendungslandschaft umfasst
-— nicht als "Pro-Anwendung-Pflaster" wie früher.
+Der geebnete Weg wird mit dem Einverständnis und der direkten Beteiligung der zuständigen Entwicklungs- und Betriebsteams umgesetzt. Der Weg sollte strategisch auf das Unternehmen abgestimmt sein und dazu beitragen, sichere Anwendungen schneller bereitzustellen. Die Entwicklung des Weges sollte eine ganzheitliche Maßnahme sein, die das gesamte Unternehmens- oder Anwendungsökosystem abdeckt, und nicht nur ein einzelnes anwendungsbezogenes Notpflaster wie in vergangenen Zeiten.
 
-## Schritt 4. Migrieren Sie alle zukünftigen und bestehenden Anwendungen zum Geebneten Weg
+## Stufe 4. Migrieren Sie alle zukünftigen und bestehenden Anwendungen auf den geebneten Weg
 
-Fügen Sie ihrem Entwicklungsprozess Werkzeuge hinzu,
-die Abweichungen vom Geebneten Weg erkennen,
-und informieren Sie Entwicklungsteams,
-wie diese die Sicherheit ihrer Anwendungen durch Elemente des Geebneten Weges verbessern können.
-Sobald eine Komponente des Geebneten Weges umgesetzt wird,
-sollten Organisationen Continuous Integration einsetzen,
-um bestehenden und neu eingecheckten Code auf unerlaubte Alternativen zu untersuchen
-und Warnungen auszugeben oder den Build oder Check-in zurückzuweisen.
-Damit wird verhindert,
-dass sich unsichere Optionen über die Zeit im Code einschleichen,
-was sonst zu technischen Schulden und einer unsicheren Anwendung führt.
-Solche Warnungen sollten auf eine sichere Alternative verweisen,
-damit das Entwicklungsteam direkt die korrekte Lösung erhält.
-Das Team kann dann schnell ein Refactoring durchführen
-und die Komponente des Geebneten Weges umsetzen.
+Fügen Sie Tools zur Erkennung von geebneten Wegen hinzu, während Sie sie entwickeln, und stellen Sie den Entwicklungsteams Informationen zur Verfügung, damit sie die Sicherheit ihrer Anwendungen verbessern können, indem sie Elemente des geebneten Weges direkt übernehmen können. Sobald ein Aspekt des geebneten Weges übernommen wurde, sollten Unternehmen Prüfungen zur kontinuierlichen Integration implementieren, die bestehenden und Check-Ins von neuem Code auf verbotene Alternativen untersuchen und beim Build oder Check-In Warnungen ausgeben oder diese ablehnen. Auf diese Weise wird verhindert, dass sich im Laufe der Zeit unsichere Optionen in den Code einschleichen, wodurch technische Altlasten und eine fehlerhafte, unsichere Anwendung vermieden werden. Solche Warnhinweise sollten auf die sichere Alternative verweisen, damit das Entwicklungsteam sofort die richtige Antwort erhält. So kann das Entwicklungsteam sofort die Korrektur vornehmen und die Komponente für den geebneten Weg rasch übernehmen.
 
-## Schritt 5. Stellen Sie sicher, dass der Geebnete Weg die OWASP Top 10 mitigiert
+## Schritt 5. Nachprüfen, ob der geebnete Weg die in den OWASP Top 10 genannten Probleme behoben hat
 
-Jedes Element des Geebneten Weges sollte ein signifikantes Problem aus den OWASP Top 10 adressieren,
-z. B. automatisch Komponenten mit bekannten Schwachstellen erkennen oder beheben,
-ein IDE-Plugin für Statische Code-Analyse anbieten, um Injections zu erkennen,
-oder noch besser eine Bibliothek anbieten, die bewiesenermaßen sicher gegen Injections ist.
-Je mehr einsatzbereite Alternativen den Teams bereitgestellt werden desto besser.
-Eine essentielle Aufgabe des AppSec-Teams ist,
-dass die Sicherheit dieser Komponenten kontinuierlich evaluiert und verbessert wird.
-Sobald diese verbessert werden sollten Konsumenten über einen Kommunikationsweg auf ein Update hingewiesen werden,
-das bevorzugt automatisch erfolgen, mindestens aber auf einem Dashboard hervorgehoben werden sollte.
+Die Komponenten des geebneten Weges sollten sich mit einem wichtigen Aspekt der OWASP Top 10 befassen, z. B. mit der automatischen Erkennung oder Beseitigung von Sicherheitslücken in Komponenten, mit einem IDE-Plugin für die statische Codeanalyse zur Erkennung von Injections oder - noch besser - mit der Verwendung einer Bibliothek, die als sicher gegen Injections bekannt ist. Je mehr dieser sicheren Drop-in-Ersatzlösungen den Teams zur Verfügung gestellt werden, desto besser. Eine wichtige Aufgabe des Appsec-Teams ist es, dafür zu sorgen, dass die Sicherheit dieser Komponenten kontinuierlich bewertet und verbessert wird. Sobald die Sicherheit verbessert wurde, sollte eine Kommunikation mit den Nutzern der Komponente stattfinden, die darauf aufmerksam macht, dass ein Upgrade durchgeführt werden sollte, vorzugsweise automatisch, aber wenn nicht, sollte dies zumindest auf einem Dashboard oder ähnlichem deutlich gemacht werden.
 
 
-## Schritt 6. Bauen Sie ihr Programm zu einem ausgereiften AppSec-Programm aus
+## Stufe 6. Bauen Sie Ihr Programm zu einem ausgereiften AppSec-Programm aus
 
-Sie dürfen nicht bei den OWASP Top 10 aufhören.
-Sie decken nur 10 Risikokategorien ab.
-Wir legen allen Organsiation deutlich nahe,
-den Application Security Verification Standard zu übernehmen
-und zunehmend Komponenten des Geebneten Weges und Tests für Level 1, 2 und 3 hinzu zu nehmen,
-abhängig vom Risikoniveau der Anwendung.
+Sie dürfen nicht bei den OWASP Top 10 aufhören. Diese decken nur 10 Risikokategorien ab. Wir empfehlen Unternehmen dringend, den Application Security Verification Standard zu übernehmen und schrittweise Komponenten und Tests für die Stufen 1, 2 und 3 hinzuzufügen, je nach Risikoniveau der entwickelten Anwendungen.
 
 
 ## Weitere Schritte
@@ -111,11 +54,5 @@ und technische Schulden in Bestands-Code dadurch zu eliminieren,
 dass sie Bestandteil der Entwicklung sind und nicht daneben stehen.
 AppSec-Teams, die Entwicklungsteams als "die" und "wir" betrachten, sind zum Scheitern verurteilt.
 
--   **Kontinuierliche Verbesserung**.
-    Ausgereifte AppSec-Programme versuchen, sich permanent zu verbessern.
-Falls etwas nicht funktioniert, darf es nicht weiterverfolgt werden.
-Falls etwas klobig ist oder nicht skaliert, muss es verbessert werden.
-Falls etwas nicht von den Entwicklungsteams eingesetzt wird oder nur begrenzten Einfluss hat, sollte etwas Anderes getan werden.
-Nur weil wir seit den 1970ern Tests wie die Schreibtischkontrolle durchgeführt haben,
-heißt das nicht, dass es eine gute Idee ist.
-Messen und evaluieren Sie und bauen Sie dann auf oder verbessern Sie.
+- **Kontinuierliche Verbesserung**. 
+Ausgereifte AppSec-Programme versuchen, sich ständig zu verbessern. Wenn etwas nicht funktioniert, dann beenden Sie es. Wenn etwas klobig ist oder nicht skaliert , muss es verbessert werden. Falls etwas von den Entwicklungsteams nicht verwendet wird und keine oder nur geringe Auswirkungen hat, sollte etwas anderes gemacht werden. Nur weil wir seit den 1970er Jahren Tests wie Schreibtischchecks durchgeführt haben, heißt das nicht, dass es eine gute Idee ist. Messen und bewerten Sie, und entwickeln oder verbessern Sie dann.
