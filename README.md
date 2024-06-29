@@ -29,7 +29,7 @@ There are currently four co-leaders for the OWASP Top 10. We meet every Friday a
  
 
 ## Status of review of German translation
-- Notice => Torsten + Vorwort der deutschen Version => Thomas und Torsten :white_check_mark: 🏳️ => Florian
+- Notice => Torsten + Vorwort der deutschen Version => Thomas und Torsten :white_check_mark: :checkered_flag: => Florian
 - Introduction = Home -> Torsten/Ralf  :hourglass_flowing_sand: -> TODO: AM ENDE
 - How to use the OWASP Top 10 as a standard => Tobias H.  :white_check_mark: :checkered_flag: => Jasmin
 - How to start an AppSec program with the OWASP Top 10 => Daniel G. :white_check_mark: :checkered_flag: => Florian
