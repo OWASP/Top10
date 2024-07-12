@@ -1,6 +1,6 @@
 Folder to store documentation related to the data collection efforts.
 
-# OWASP Top 10 2024 Data Analysis Plan
+# OWASP Top 10 2025 Data Analysis Plan
 
 ## Goals
 To collect the most comprehensive dataset related to identified application vulnerabilities to-date to enable analysis for the Top 10 and other future research as well. This data should come from a variety of sources; security vendors and consultancies, bug bounties, along with company/organizational contributions. Data will be normalized to allow for level comparison between Human assisted Tooling and Tooling assisted Humans.
@@ -28,7 +28,7 @@ There are a few ways that data can be contributed:
 2.	Upload a CSV/Excel/JSON file to https://bit.ly/OWASPTop10Data
 
 ## Contribution Period
-We plan to accept contributions to the Top 10 2024 during Jan-June of 2024 for data dating from 2021 to current.
+We plan to accept contributions to the Top 10 2024 until Sept 30, 2024, for data dating from 2021 to current.
 
 ## Data Structure
 The following data elements are *required or optional:
@@ -37,7 +37,7 @@ Per DataSet:
 
 - Contributor Name (org or anon) 
 - Contributor Contact Email 
-- Time period (2023, 2022, 2021) 
+- Time period (2024, 2023, 2022, 2021) 
 - *Number of applications tested 
 - *CWEs w/ number of applications found in 
 - Type of testing (TaH, HaT, Tools) 
