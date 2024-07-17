@@ -36,7 +36,7 @@ There are currently four co-leaders for the OWASP Top 10. We meet every Friday a
 - About OWASP => Torsten/Thomas :white_check_mark: :white_flag: => Jan
 - A01 Broken Access Control => Tobias H. :white_check_mark: :white_flag: => Thomas
 - A02 Cryptographic Failures => Jan :white_check_mark: :white_flag: => Thomas
-- A03 Injection => Jasmin (Injection 2017 + XSS 2017) :hourglass_flowing_sand:
+- A03 Injection => Jasmin (Injection 2017 + XSS 2017) :white_check_mark: :white_flag: => Florian
 - A04 Insecure Design => Thomas/Torsten :hourglass_flowing_sand:
 - A05 Security Misconfiguration => Florian :white_check_mark: :checkered_flag: => Jasmin
 - A06 Vulnerable and Outdated Components => Florian :white_check_mark: :checkered_flag: => Jasmin
