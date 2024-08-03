@@ -25,11 +25,11 @@ So haben wir in dieser Version auch die Namen der Top 10 Risiken angepasst oder 
 - [A07:2021–Fehlerhafte Authentifizierung](A07_2021-Identification_and_Authentication_Failures.de.md) ex: A2:2017-Fehler in der Authentifizierung; Hier haben wir den neuen Teilaspekt 'Identification' bewusst nicht übernommen, da er im englischen Original im Risiko nicht weiter behandelt wird
 - [A09:2021–Unzureichendes Logging und Sicherheitsmonitoring](A09_2021-Security_Logging_and_Monitoring_Failures.de.md) ex: A10:2017-Unzureichendes Logging & Monitoring
 
-Wir möchten Sie als Geschäftsführer:innen, Manager:innen, Anwendungs-Verantwortliche, Prüfer:innen oder Entwickler:innen für Webanwendungssicherheit sensibilisieren und Ihnen den Einstieg in diese Thematik erleichtern.<br>
+Wir möchten alle, die in der Geschäftsführung, im Management, in der IT-Sicherheitsberatung, im Anwendungs-Management, in der Software-Entwicklung und in der Anwendungs-Prüfung arbeiten, für Webanwendungssicherheit sensibilisieren und Ihnen den Einstieg in diese Thematik erleichtern.<br>
 
 Dieses Dokument hilft Ihnen, eine neue Perspektive auf Ihre Anwendungen zu erhalten, um Sicherheitsfehler zu vermeiden und Risiken minimieren zu können. Einige englische Fachbegriffe wurden dabei beibehalten, weil sie auch im deutschen gebräuchlich sind.<br>
 
-Wir wünschen Ihnen als Neueinsteiger:in oder Profi ein kurzweiliges Lesevergnügen und die (Bestätigung der) Erkenntnis, dass die Sicherheit ein kritischer Erfolgsfaktor für Webanwendungen ist.<br>
+Wir wünschen Neueinsteigerinnen, Neueinsteigern und Profis ein kurzweiliges Lesevergnügen und die (Bestätigung der) Erkenntnis, dass die IT-Sicherheit ein kritischer Erfolgsfaktor für (Web-)Anwendungen ist.<br>
 
 Die deutsche Version der OWASP Top 10:2021 finden Sie unter [https://owasp.org/Top10/de/](https://owasp.org/Top10/de/).
 <br>
@@ -37,9 +37,10 @@ Ihr deutschsprachiges Top 10-Team:<br>
 - Torsten Gigler<br>
 - Daniel Grahl<br>
 - Tobias Heide<br>
+- Thomas Herzog<br>
+- Jasmin Mair<br>
 - Florian Schmid<br>
 - Jan Wolff<br>
-- Jasmin Mair<br>
 
 ### Stammtisch-Initiative des OWASP German Chapter
 In mehreren deutschen Städten gibt es [OWASP-Stammtische](https://owasp.org/www-chapter-germany/stammtische/), bei denen man sich in lockerer Runde trifft, um sich auszutauschen, nette Leute kennenzulernen oder ernsthafte Sicherheitsthemen zu diskutieren – meistens mit Vortrag.<br>
@@ -48,12 +49,12 @@ Aktive Stammtische gibt es (Stand Juni 2024) in [Augsburg](/www-chapter-germany/
 
 ## Wie können Sie uns unterstützen
 
-Zum jetzigen Zeitpunkt bitten wir um
+Zum jetzigen Zeitpunkt bitten wir um Unterstützung bei folgenden Themenbereiche:
 
-- Datenanalysten – bitte überprüfen Sie unsere Analyse
-- Webdesigner:innen – wir müssen eine mobilfreundliche Version erstellen
-- Übersetzer:innen – Bitte überprüfen Sie diese Version und das englische Original, um sicherzustellen, dass diese Version verständlich ist und den Sinn des Originals widergibt
-- Projektleiter:innen von ASVS, Testing Guide und Code Review Guide – bitte nutzen Sie unsere Daten und helfen Sie uns, unsere Dokumente und Standards miteinander zu verknüpfen
+- Datenanalye – bitte überprüfen Sie unsere Analyse
+<!--- - Webdesign – wir müssen eine mobilfreundliche Version erstellen  <!--- Besteht bereits --->
+- Übersetzung – Bitte überprüfen Sie diese Version und das englische Original, um sicherzustellen, dass diese Version verständlich ist und den Sinn des Originals widerspiegelt
+- Projektleitung von ASVS, Testing Guide und Code Review Guide – bitte nutzen Sie unsere Daten und helfen Sie uns, unsere Dokumente und Standards miteinander zu verknüpfen
 
 ## Senden Sie uns Ihre Vorschläge und Pull-Anfragen in Github
 
