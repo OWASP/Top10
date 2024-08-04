@@ -18,7 +18,7 @@ lang:   "de"
 ## Übersicht {{ osib_anchor(osib=osib ~ ".overview", id=id ~ "-overview", name=title ~ ": Übersicht", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
 
 Es belegte Platz 2 in der Top-10-Community-Umfrage, verfügte aber auch über genügend Daten, um es datentechnisch in die Top 10 zu schaffen. 
-Unsichere Komponenten sind ein bekanntes Problem, das wir nur schwer testen und bewerten können. Sie stellen die einzige Kategorie dar, in der den enthaltenen CWEs keine Common Vulnerability and Exposures (CVEs) zugeordnet sind. Daher wird eine standardmäßige Exploit-/Auswirkungsgewichtung von 5,0 verwendet. Bemerkenswerte CWEs sind *CWE-1104: Verwendung nicht gewarteter Drittanbieterkomponenten* und die beiden CWEs aus den Top 10 2013 und 2017.
+Unsichere Komponenten sind ein bekanntes Problem, das wir nur schwer testen und bewerten können. Sie stellen die einzige Kategorie dar, in der den enthaltenen CWEs keine Common Vulnerability and Exposures (CVEs) zugeordnet sind. Daher wird eine standardmäßige Exploit-/Auswirkungsgewichtung von 5,0 verwendet. Bemerkenswerte CWEs sind *CWE-1104: Use of Unmaintained Third-Party Components* und die beiden CWEs aus den Top 10 2013 und 2017.
 
 ## Beschreibung {{ osib_anchor(osib=osib ~ ".description", id=id ~ "-description", name=title ~ ": Beschreibung", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
 
@@ -55,12 +55,12 @@ Jede Organisation muss einen fortlaufenden Plan für die Überwachung, Triage un
 
 **Szenario Nr. 1:** Komponenten werden normalerweise mit denselben Berechtigungen wie die Anwendung selbst ausgeführt, sodass Fehler in einer Komponente schwerwiegende Auswirkungen haben können. Solche Fehler können zufällig (z. B. ein Programmierfehler) oder absichtlich (z. B. eine Backdoor in einer Komponente) sein. Einige Beispiele für entdeckte ausnutzbare Komponentenschwachstellen sind:
 
-- CVE-2017-5638, eine Remote Code Execution Schwachstelle in Struts 2, die den Angreifer ermächtigt, beliebigen Code auf dem Server auszuführen, wurde für einige erhebliche Sicherheitsvorfälle verantwortlich gemacht.
+- CVE-2017-5638, eine Remote Code Execution Schwachstelle in Struts 2, die Angreifende ermächtigt, beliebigen Code auf dem Server auszuführen, wurde für einige erhebliche Sicherheitsvorfälle verantwortlich gemacht.
 
 - Obwohl das Patchen von Internet of Things (IoT) Geräten oft nur sehr schwierig oder unmöglich ist,
 kann dies sehr wichtig sein (z. B. für biomedizinische Geräte).
 
-Es existieren automatisierte Tools, die Angreifern helfen, nicht gepatchte oder falsch konfigurierte Systeme zu finden. Die Shodan IoT-Suchmaschine kann Ihnen beispielsweise dabei helfen, Geräte zu finden, die immer noch für die im April 2014 gepatchte Heartbleed-Sicherheitslücke verwundbar sind.
+Es existieren automatisierte Tools, die Angreifenden helfen, nicht gepatchte oder falsch konfigurierte Systeme zu finden. Die Shodan IoT-Suchmaschine kann Ihnen beispielsweise dabei helfen, Geräte zu finden, die immer noch für die im April 2014 gepatchte Heartbleed-Sicherheitslücke verwundbar sind.
 
 ## Referenzen {{ osib_anchor(osib=osib ~ ".references", id=id ~ "-references", name=title ~ ": References", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
 - {{ osib_link(link="osib.owasp.asvs.4-0." ~ "1", osib=osib) }} <!-- [OWASP Application Security Verification Standard: V1 Architektur, Design und Bedrohungsmodellierung]( /www-project-application-security-verification-standard) -->
