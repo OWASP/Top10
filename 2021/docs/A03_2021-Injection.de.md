@@ -22,7 +22,7 @@ Die Injection rutscht von der ersten auf die dritte Position ab. 94 % der Anwend
 
 Eine Anwendung ist für diesen Angriff anfällig, wenn:
 
-- Daten, die vom Nutzer stammen, von der Anwendung nicht ausreichend validiert, gefiltert oder bereinigt werden.
+- Daten, die von Mitgliedern stammen, von der Anwendung nicht ausreichend validiert, gefiltert oder bereinigt werden.
 
 - Dynamische Anfragen oder nicht-parametrisierte Aufrufe ohne ein dem Kontext entsprechendes Escaping direkt einem Interpreter übergeben werden.
 
@@ -42,7 +42,7 @@ Eine konsequente Trennung von Daten, Suchanfragen und Befehlen ist für die Verm
 - Für die serverseitige Eingabe-Validierung empfiehlt sich die Nutzung eines Positivlisten(“Whitelist”)-Ansatzes. Dies ist i. A. kein vollständiger Schutz, da viele Anwendungen Sonderzeichen z. B. in Textfelder oder APIs für mobile Anwendungen benötigen.
 
 - Für jede noch verbliebene dynamische Query müssen Sonderzeichen für den jeweiligen Interpreter mit der richtigen Escape-Syntax entschärft werden. <br/> **Anmerkung:** Ein Escaping von SQL-Bezeichnern, wie z. B. die Namen von Tabellen oder Spalten usw. ist nicht möglich.
-Falls Nutzer solche Bezeichner selbst eingeben können, so ist dies durchaus gefährlich. Dies ist eine übliche Schwachstelle bei Software, die Reports aus einer Datenbank erstellt.
+Falls Mitglieder solche Bezeichner selbst eingeben können, so ist dies durchaus gefährlich. Dies ist eine übliche Schwachstelle bei Software, die Reports aus einer Datenbank erstellt.
 
 - SQL-Querys sollten LIMIT oder andere SQL-Controls verwenden, um den möglichen Massen-Abfluss von Daten zu verhindern.
 
@@ -58,7 +58,7 @@ String query = "SELECT \* FROM Accounts WHERE custID='" + request.getParameter("
 Abfrage HQLQuery = session.createQuery("FROM Accounts WHERE custID='" + request.getParameter("id") + "'");
 ```
 
-In beiden Fällen kann ein Angreifer den ‘id’-Parameter in seinem Browser ändern und sendet: „UNION SLEEP(10);--“. Zum Beispiel:
+In beiden Fällen können Angreifende den ‘id’-Parameter im Browser ändern und sendet: „UNION SLEEP(10);--“. Zum Beispiel:
 ```
 http://example.com/app/accountView?id=' UNION SELECT SLEEP(10);--
 ```
