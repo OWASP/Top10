@@ -19,40 +19,37 @@ lang:   "de"
 
 94 % der Anwendungen wurden auf irgendeine Form fehlerhafter Zugriffskontrolle getestet.
 Vom fünften Platz aufgestiegen, weist die fehlerhafte Zugriffskontrolle mit einer durchschnittlichen Inzidenzrate von 3,81 % und mit über 318.000 die meisten Vorkommnisse im vorliegenden Datensatz auf.
-Bemerkenswerte Common Weakness Enumerations (CWEs) sind 
-*CWE-200: Exposure of Sensitive Information to an Unauthorized Actor*,
-*CWE-201: Insertion of Sensitive Information Into Sent Data* und 
-*CWE-352: Cross-Site Request Forgery*.
+Bemerkenswerte Common Weakness Enumerations (CWEs) sind *CWE-200: Exposure of Sensitive Information to an Unauthorized Actor*, *CWE-201: Insertion of Sensitive Information Into Sent Data* und *CWE-352: Cross-Site Request Forgery*.
 
 ## Beschreibung {{ osib_anchor(osib=osib ~ ".description", id=id ~ "-description", name=title ~ ": Beschreibung", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
 
-Die Zugriffskontrolle erzwingt Richtlinien, sodass Benutzer nicht außerhalb ihrer vorgesehenen Berechtigungen handeln können. Fehler führen in der Regel zur unbefugten Offenlegung, Änderung oder Zerstörung aller Daten oder zur Ausführung einer Geschäftsfunktion außerhalb der Verfügungen des Benutzers. Zu den häufigsten Schwachstellen bei der Zugriffskontrolle gehören:
+Die Zugriffskontrolle erzwingt Richtlinien, sodass Nutzende nicht außerhalb ihrer vorgesehenen Berechtigungen handeln können. Fehler führen in der Regel zur unbefugten Offenlegung, Änderung oder Zerstörung aller Daten oder zur Ausführung einer Geschäftsfunktion außerhalb der Verfügungen der anwendenden Person. Zu den häufigsten Schwachstellen bei der Zugriffskontrolle gehören:
 
-- Verstoß gegen die Prinzipien der geringsten Rechte oder der standardmäßigen Verweigerung, bei dem der Zugriff nur für bestimmte Fähigkeiten, Rollen oder Benutzer gewährt werden sollte, aber für jedermann verfügbar ist
+- Verstoß gegen die Prinzipien der geringsten Rechte oder der standardmäßigen Verweigerung, bei dem der Zugriff nur für bestimmte Fähigkeiten, Rollen oder Nutzende gewährt werden sollte, aber für jedermann verfügbar ist.
 
-- Umgehen von Zugriffskontrollprüfungen durch Ändern der URL (Parametermanipulation oder erzwungenes Durchsuchen), des internen Anwendungsstatus oder der HTML-Seite oder durch Verwendung eines Angriffstools zur Änderung von API-Anfragen
+- Umgehen von Zugriffskontrollprüfungen durch Ändern der URL (Parametermanipulation oder erzwungenes Durchsuchen), des internen Anwendungsstatus oder der HTML-Seite oder durch Verwendung eines Angriffstools zur Änderung von API-Anfragen.
 
-- Ermöglichen, das Konto einer anderen Person anzuzeigen oder zu bearbeiten, indem dessen eindeutige Kennung angegeben wird (unsichere direkte Objektreferenzen)
+- Ermöglichen, das Konto einer anderen Person anzuzeigen oder zu bearbeiten, indem dessen eindeutige Kennung angegeben wird (unsichere direkte Objektreferenzen).
 
-- Zugriff auf die API mit fehlenden Zugriffskontrollen für POST, PUT und DELETE
+- Zugriff auf die API mit fehlenden Zugriffskontrollen für POST, PUT und DELETE.
 
-- Erhöhung der Privilegien. Als Benutzer fungieren, ohne angemeldet zu sein, oder als Administrator fungieren, wenn man als Benutzer angemeldet ist
+- Erhöhung der Privilegien. Als Mitglied fungieren, ohne angemeldet zu sein, oder als Administrator fungieren, wenn man als Standardmitglied angemeldet ist.
 
-- Metadatenmanipulation, wie z. B. das Wiedergeben oder Manipulieren eines JSON Web Token (JWT)-Zugriffskontrolltokens oder die Manipulation eines Cookies oder versteckten Felds, um Berechtigungen zu erhöhen oder die JWT-Ungültigmachung zu missbrauchen
+- Manipulation von Metadaten, wie z. B. das Abfangen oder Manipulieren eines JSON Web Token (JWT)-Zugriffskontrolltokens oder die Manipulation eines Cookies oder eines versteckten Felds, um Berechtigungen zu erhöhen oder die Ungültigerklärung von JWTs zu missbrauchen.
 
 - CORS-Fehlkonfiguration ermöglicht API-Zugriff von nicht autorisierten/nicht vertrauenswürdigen Quellen.
 
-- Erzwingen des Navigierens zu authentifizierten Seiten als nicht authentifizierter Benutzer oder zu privilegierten Seiten als Standardbenutzer
+- Erzwingen des Zugriffs auf authentifizierte Seiten als nicht authentifiziertes Mitglied oder zu privilegierten Seiten als Standardmitglied.
 
 ## Prävention und Gegenmaßnahmen {{ osib_anchor(osib=osib ~ ".how to prevent", id=id ~ "-how_to_prevent", name=title ~ ": How to Prevent", lang=lang, source=source ~ "#" ~ id, parent=osib) }}
 
-Die Zugriffskontrolle ist nur wirksam bei vertrauenswürdigem serverseitigem Code oder serverlosen APIs, bei denen der Angreifer die Zugriffskontrollprüfung oder Metadaten nicht ändern kann.
+Die Zugriffskontrolle ist nur wirksam bei vertrauenswürdigem serverseitigem Code oder serverlosen APIs, bei denen Angreifende die Zugriffskontrollprüfung oder Metadaten nicht ändern können.
 
 - Verweigern Sie standardmäßig den Zugriff, mit Ausnahme öffentlicher Ressourcen.
 
 - Implementieren Sie Zugriffskontrollmechanismen einmalig und verwenden Sie diese in der gesamten Anwendung wieder, einschließlich der Minimierung der Nutzung von Cross-Origin Resource Sharing (CORS).
 
-- Modellzugriffskontrollen sollten die Datensatzeigentümerschaft erzwingen, anstatt zu akzeptieren, dass der Benutzer Datensätze erstellen, lesen, aktualisieren oder löschen kann.
+- Modellzugriffskontrollen sollten die Datensatzeigentümerschaft erzwingen, anstatt zu akzeptieren, dass das Mitglied Datensätze erstellen, lesen, aktualisieren oder löschen kann.
 
 - Durch Domänenmodelle sollten eindeutige Geschäftslimitanforderungen für Anwendungen durchgesetzt werden.
 
@@ -62,7 +59,7 @@ Die Zugriffskontrolle ist nur wirksam bei vertrauenswürdigem serverseitigem Cod
 
 - Setzen Sie Ratenbegrenzung für API- und Controller-Zugriff, um den Schaden durch automatisierte Angriffstools zu minimieren.
 
-- Statusbehaftete Sitzungskennungen sollten nach dem Abmelden auf dem Server ungültig gemacht werden. Zustandslose JWT-Token sollten eher kurzlebig sein, damit das Zeitfenster für einen Angreifer minimiert wird. Für langlebigere JWTs wird dringend empfohlen, die OAuth-Standards zu befolgen, um den Zugriff zu widerrufen.
+- Statusbehaftete Sitzungskennungen sollten nach dem Abmelden auf dem Server ungültig gemacht werden. Zustandslose JWT-Token sollten eher kurzlebig sein, damit das Zeitfenster für Angreifende minimiert wird. Für langlebigere JWTs wird dringend empfohlen, die OAuth-Standards zu befolgen, um den Zugriff zu widerrufen.
 
 Entwickler und QA-Mitarbeiter sollten funktionale Zugriffskontrolleinheiten und Integrationstests durchführen.
 
@@ -75,19 +72,19 @@ pstmt.setString(1, request.getParameter("acct"));
 ResultSet results = pstmt.executeQuery( );
 ```
 
-Ein Angreifer ändert einfach den „acct“-Parameter des Browsers, um die gewünschte Kontonummer zu senden. Bei nicht korrekter Überprüfung kann der Angreifer auf das Konto eines beliebigen Benutzers zugreifen.
+Angreifende ändern einfach den „acct“-Parameter des Browsers, um die gewünschte Kontonummer zu senden. Bei nicht korrekter Überprüfung kann die angreifende Person auf das Konto eines beliebigen Mitglieds zugreifen.
 
 ```
 https://example.com/app/accountInfo?acct=notmyacct
 ```
 
-**Szenario Nr. 2:** Ein Angreifer erzwingt einfach die Suche nach Ziel-URLs. Für den Zugriff auf die Admin-Seite sind Admin-Rechte erforderlich.
+**Szenario Nr. 2:** Eine angreifende Person erzwingt einfach die Suche nach Ziel-URLs. Für den Zugriff auf die Admin-Seite sind Admin-Rechte erforderlich.
 
 ```
 https://example.com/app/getappInfo
 https://example.com/app/admin_getappInfo
 ```
-Wenn ein nicht authentifizierter Benutzer auf eine der Seiten zugreifen kann, liegt ein Fehler vor. Wenn ein Nicht-Administrator auf die Admin-Seite zugreifen kann, handelt es sich um einen Fehler.
+Wenn ein nicht authentifiziertes Mitglied auf eine der Seiten zugreifen kann, liegt ein Fehler vor. Wenn ein Nicht-Administrator auf die Admin-Seite zugreifen kann, handelt es sich um einen Fehler.
 
 ## Referenzen {{ osib_anchor(osib=osib ~ ".references", id=id ~ "-references", name=title ~ ": References", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
 

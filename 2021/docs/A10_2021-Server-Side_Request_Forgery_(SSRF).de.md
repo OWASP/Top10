@@ -21,9 +21,9 @@ Diese Kategorie stammt aus der Top-10-Community-Umfrage (Nr. 1). Die Daten zeige
 
 ## Beschreibung {{ osib_anchor(osib=osib ~ ".description", id=id ~ "-description", name=title ~ ":Beschreibung", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
 
-SSRF-Schwachstellen treten immer dann auf, wenn eine Webanwendung eine Remote-Ressource abruft, ohne die vom Benutzer angegebene URL zu überprüfen. Dadurch kann ein Angreifer die Anwendung dazu zwingen, eine manipulierte Anfrage an ein unerwartetes Ziel zu senden, selbst wenn sie durch eine Firewall, ein VPN oder eine andere Art von Netzwerkzugriffskontrollliste (ACL) geschützt ist.
+SSRF-Schwachstellen treten immer dann auf, wenn eine Webanwendung eine Remote-Ressource abruft, ohne die vom Mitglied angegebene URL zu überprüfen. Dadurch kann ein Angreifer die Anwendung dazu zwingen, eine manipulierte Anfrage an ein unerwartetes Ziel zu senden, selbst wenn sie durch eine Firewall, ein VPN oder eine andere Art von Netzwerkzugriffskontrollliste (ACL) geschützt ist.
 
-Da moderne Webanwendungen Endbenutzern komfortable Funktionen bieten, wird das Abrufen einer URL zu einem gängigen Szenario. 
+Da moderne Webanwendungen Nutzenden komfortable Funktionen bieten, wird das Abrufen einer URL zu einem gängigen Szenario. 
 Infolgedessen nimmt die Häufigkeit von SSRF zu. 
 Außerdem nimmt der Schweregrad von SSRF aufgrund von der Verbreitung von Cloud-Diensten und der Komplexität der Architekturen zu.
 
@@ -55,19 +55,19 @@ Verhindern Sie SSRF nicht durch die Verwendung einer Negativliste oder eines reg
 
 - Setzen Sie keine anderen sicherheitsrelevanten Dienste auf Frontsystemen ein (z. B. OpenID). Kontrollieren Sie den lokalen Verkehr auf diesen Systemen (z. B. localhost).
 
-- Für Frontends mit dedizierten und verwaltbaren Benutzergruppen nutzen Sie Netzwerkverschlüsselung (z. B. VPNs) auf unabhängigen Systemen um sehr hohen Schutzbedarf zu berücksichtigen.
+- Für Frontends mit dedizierten und verwaltbaren Gruppen für Anwendende nutzen Sie Netzwerkverschlüsselung (z. B. VPNs) auf unabhängigen Systemen um sehr hohen Schutzbedarf zu berücksichtigen.
 
 ## Beispielhafte Angriffsszenarien {{ osib_anchor(osib=osib ~ ".example attack Scenarios", id=id ~ "-example_attack_scenarios", name=title ~ ":Beispielhafte Angriffsszenarien", lang=lang, source=source ~ "# " ~ id, parent=osib) }}
 
-Angreifer können SSRF nutzen, um Systeme anzugreifen, die durch Web Application Firewalls, Firewalls oder Netzwerk-ACLs geschützt sind, und dabei Szenarien wie folgende verwenden:
+Angreifende können SSRF nutzen, um Systeme anzugreifen, die durch Web Application Firewalls, Firewalls oder Netzwerk-ACLs geschützt sind, und dabei Szenarien wie folgende verwenden:
 
-**Szenario Nr. 1:** Port-Scan interner Server – Wenn die Netzwerkarchitektur nicht segmentiert ist, können Angreifer interne Netzwerke abbilden und anhand der Verbindungsergebnisse oder der verstrichenen Zeit für die Verbindung oder Ablehnung von SSRF-Nutzlast-Verbindungen feststellen, ob Ports auf internen Servern offen oder geschlossen sind.
+**Szenario Nr. 1:** Port-Scan interner Server – Wenn die Netzwerkarchitektur nicht segmentiert ist, können Angreifende interne Netzwerke abbilden und anhand der Verbindungsergebnisse oder der verstrichenen Zeit für die Verbindung oder Ablehnung von SSRF-Nutzlast-Verbindungen feststellen, ob Ports auf internen Servern offen oder geschlossen sind.
 
-**Szenario Nr. 2:** Preisgabe sensibler Daten – Angreifer können auf lokale Dateien oder interne Dienste zugreifen, um vertrauliche Informationen wie „file:///etc/passwd“ und „http://localhost:28017/“ zu erhalten.
+**Szenario Nr. 2:** Preisgabe sensibler Daten – Angreifende können auf lokale Dateien oder interne Dienste zugreifen, um vertrauliche Informationen wie „file:///etc/passwd“ und „http://localhost:28017/“ zu erhalten.
 
-**Szenario Nr. 3:** Zugriff auf Metadatenspeicher von Cloud-Diensten – Die meisten Cloud-Anbieter verfügen über Metadatenspeicher wie „http://169.254.169.254/“. Ein Angreifer kann die Metadaten lesen, um an vertrauliche Informationen zu gelangen.
+**Szenario Nr. 3:** Zugriff auf Metadatenspeicher von Cloud-Diensten – Die meisten Cloud-Anbieter verfügen über Metadatenspeicher wie „http://169.254.169.254/“. Eine angreifende Person kann die Metadaten lesen, um an vertrauliche Informationen zu gelangen.
 
-**Szenario Nr. 4:** Kompromittierung interner Dienste – Der Angreifer kann interne Dienste missbrauchen, um weitere Angriffe wie beispielsweise Remote Code Execution (RCE) oder Denial of Service (DoS) durchzuführen.
+**Szenario Nr. 4:** Kompromittierung interner Dienste – Die angreifende Person kann interne Dienste missbrauchen, um weitere Angriffe wie beispielsweise Remote Code Execution (RCE) oder Denial of Service (DoS) durchzuführen.
 
 ## Referenzen {{ osib_anchor(osib=osib ~ ".references", id=id ~ "-references", name=title ~ ":Referenzen", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
 -   {{ osib_link(link="osib.owasp.cheatsheetseries.0.server side request forgery prevention", osib=osib) }} <!--- [OWASP - Server-Side Request Forgery Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html) --->

@@ -26,11 +26,11 @@ Die Anwendung besitzt möglicherweise Schwachstellen, wenn folgendes zutrifft:
 
 - Mangelhafte Sicherheitshärtung des Anwendungsstacks oder ungeeignet konfigurierte Berechtigungen auf Cloud-Diensten.
 
-- Nicht benötigte Features sind aktiviert oder installiert (z. B. unnötige Ports, Dienste, Seiten, Nutzer oder Rechte).
+- Nicht benötigte Features sind aktiviert oder installiert (z. B. unnötige Ports, Dienste, Seiten, Accounts oder Rechte).
 
 - Standardkonten und -passwörter sind aktiviert bzw. unverändert.
 
-- Die Fehlerbehandlung gibt Stack-Traces oder andere interne technische Fehlermeldungen an den Nutzer preis.
+- Die Fehlerbehandlung gibt Stack-Traces oder andere interne technische Fehlermeldungen an Anwendende preis.
 
 - Für aktualisierte Systeme sind die neuesten Sicherheitsfeatures deaktiviert oder nicht sicher konfiguriert.
 
@@ -60,13 +60,13 @@ Es sollten sichere Installationsprozesse implementiert werden, darunter:
 
 ## Beispielhafte Angriffsszenarien {{ osib_anchor(osib=osib ~ ".example attack Scenarios", id=id ~ "-example_attack_scenarios", name=title ~ ": Mögliche-Angriffsszenarien", lang=lang, source=source ~ "# " ~ id, parent=osib) }}
 
-**Szenario Nr. 1:** Der Anwendungsserver wird mit Beispielanwendungen geliefert, die nicht vom Produktionsserver entfernt wurden. Diese Beispielanwendungen weisen bekannte Sicherheitslücken auf, die Angreifer nutzen, um den Server zu gefährden. Angenommen, eine dieser Anwendungen ist die Admin-Konsole und die Standardkonten wurden nicht geändert. In diesem Fall meldet sich der Angreifer mit Standardkennwörtern an und übernimmt die Kontrolle.
+**Szenario Nr. 1:** Der Anwendungsserver wird mit Beispielanwendungen geliefert, die nicht vom Produktionsserver entfernt wurden. Diese Beispielanwendungen weisen bekannte Sicherheitslücken auf, die Angreifende nutzen, um den Server zu gefährden. Angenommen, eine dieser Anwendungen ist die Admin-Konsole und die Standardkonten wurden nicht geändert. In diesem Fall meldet sich die angreifende Person mit Standardkennwörtern an und übernimmt die Kontrolle.
 
-**Szenario Nr. 2:** Die Directory Listings wurden auf dem Server nicht deaktiviert. Ein Angreifer entdeckt, dass er Verzeichnisse einfach auflisten kann. Der Angreifer findet die kompilierten Java-Klassen und lädt sie herunter, dekompiliert sie und betreibt Reverse Engineering, um den Code anzuzeigen. Der Angreifer findet dann einen schwerwiegenden Fehler in der Zugriffskontrolle in der Anwendung.
+**Szenario Nr. 2:** Die Directory Listings wurden auf dem Server nicht deaktiviert. Angreifende entdecken, dass Verzeichnisse einfach aufgelistet werden können. Die angreifende Person findet die kompilierten Java-Klassen und lädt sie herunter, dekompiliert sie und betreibt Reverse Engineering, um den Code anzuzeigen. Dies ermöglicht das Findet eines schwerwiegenden Fehlers in der Zugriffskontrolle in der Anwendung.
 
-**Szenario Nr. 3:** Die Konfiguration des Anwendungsservers ermöglicht die Rückgabe detaillierter Fehlermeldungen an Benutzer, z. B. Stack-Traces. Dadurch werden möglicherweise vertrauliche Informationen oder zugrunde liegende Fehler wie Komponentenversionen offengelegt, die bekanntermaßen anfällig sind.
+**Szenario Nr. 3:** Die Konfiguration des Anwendungsservers ermöglicht die Rückgabe detaillierter Fehlermeldungen an Anwendende, z. B. Stack-Traces. Dadurch werden möglicherweise vertrauliche Informationen oder zugrunde liegende Fehler wie Komponentenversionen offengelegt, die bekanntermaßen anfällig sind.
 
-**Szenario Nr. 4:** Ein Cloud-Dienstanbieter (CSP) enthält Standardfreigaben, die aus dem Internet für andere Cloud-Nutzer erreichbar sind und ermöglicht dadurch Zugriff auf sensitive Daten in der Cloud.
+**Szenario Nr. 4:** Ein Cloud-Dienstanbieter (CSP) enthält Standardfreigaben, die aus dem Internet für andere Cloud-Nutzende erreichbar sind und ermöglicht dadurch Zugriff auf sensitive Daten in der Cloud.
 
 ## Referenzen {{ osib_anchor(osib=osib ~ ".references", id=id ~ "-references", name=title ~ ": References", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
 
