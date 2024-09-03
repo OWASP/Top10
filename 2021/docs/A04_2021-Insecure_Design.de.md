@@ -34,7 +34,7 @@ Sicheres Design ist sowohl eine Denkweise als auch eine Vorgehensweise, die kont
 
 ### Sicherer Entwicklungslebenszyklus
 
-Sichere Software erfordert einen sicheren Entwicklungslebenszyklus, dein Einsatz von sicheren Entwurfsmustern, eine bewährte Methodik, sichere Komponentenbibliotheken, geeignete Tools und Bedrohungsmodellierung. Wenden Sie sich zu Beginn eines Softwareprojekts während der gesamten Projektlaufzeit und Wartung Ihrer Software an Ihre Sicherheitsspezialisten. Erwägen Sie die Nutzung des [OWASP Software Assurance Maturity Model (SAMM)](https://owaspsamm.org), um Ihre Bemühungen zur sicheren Softwareentwicklung zu strukturieren.
+Sichere Software erfordert einen sicheren Entwicklungslebenszyklus, den Einsatz von sicheren Entwurfsmustern, eine bewährte Methodik, sichere Komponentenbibliotheken, geeignete Tools und Bedrohungsmodellierung. Wenden Sie sich zu Beginn eines Softwareprojekts während der gesamten Projektlaufzeit und Wartung Ihrer Software an Ihre Sicherheitsspezialisten. Erwägen Sie die Nutzung des [OWASP Software Assurance Maturity Model (SAMM)](https://owaspsamm.org), um Ihre Bemühungen zur sicheren Softwareentwicklung zu strukturieren.
 
 ## Prävention und Gegenmaßnahmen {{ osib_anchor(osib=osib ~ ".how to prevent", id=id ~ "-how_to_prevent", name=title ~ ": How to Prevent", lang=lang, source=source ~ "#" ~ id, parent=osib) }}
 
