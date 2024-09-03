@@ -28,7 +28,7 @@ There are a few ways that data can be contributed:
 2.	Upload a CSV/Excel/JSON file to https://bit.ly/OWASPTop10Data
 
 ## Contribution Period
-We plan to accept contributions to the Top 10 2024 until Sept 30, 2024, for data dating from 2021 to current.
+We plan to accept contributions to the Top 10 2024 until Dec 31, 2024, for data dating from 2021 to current.
 
 ## Data Structure
 The following data elements are *required or optional:
