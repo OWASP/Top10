@@ -21,48 +21,48 @@ Eine der neuen Kategorie für 2021 konzentriert sich auf Risiken im Zusammenhang
 
 ## Beschreibung {{ osib_anchor(osib=osib ~ ".description", id=id ~ "-description", name=title ~ ": Beschreibung", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
 
-Unsicheres Anwendungsdesign ist eine umfassende Kategorie, die verschiedene Schwachstellen umfasst und als „fehlendes oder ineffektives Design von Schutzmechanismen“ beschrieben wird.Unsicheres Anwendungsdesign ist nicht die Ursache für alle anderen Top-10-Risikokategorien. Es gibt einen klaren Unterschied zwischen unsicherem Design und unsicherer Implementierung. Designfehler und Implementierungsfehler unterscheiden sich aus gutem Grund, da sie unterschiedliche Ursachen und Mitigationen erfordern. Ein sicheres Design kann dennoch Implementierungsfehler enthalten, die zu ausnutzbaren Schwachstellen führen. Ein unsicheres Design lässt sich nicht durch eine perfekte Implementierung beheben, da die notwendigen Sicherheitskontrollen von vornherein nicht zur Abwehr bestimmter Angriffe vorgesehen waren. Ein Faktor, der zu einem unsicheren Design beiträgt, ist das Fehlen eines Geschäftsrisikoprofils, das der entwickelten Software oder dem System zugrunde liegt, was dazu führt, dass das erforderliche Maß an Sicherheitsdesign nicht bestimmt wird.
+Unsicheres Design ist eine umfassende Kategorie, die verschiedene Schwachstellen umfasst und als „fehlendes oder ineffektives Design von Schutzmechanismen“ beschrieben wird.Unsicheres Anwendungsdesign ist nicht die Ursache für alle anderen Top-10-Risikokategorien. Es gibt einen Unterschied zwischen unsicherem Design und unsicherer Implementierung. Designfehler und Implementierungsfehler unterscheiden sich aus gutem Grund, da sie unterschiedliche Ursachen und Mitigationen erfordern. Ein sicheres Design kann immer noch Implementierungsfehler enthalten, die zu ausnutzbaren Schwachstellen führen. Ein unsicheres Design lässt sich nicht durch eine perfekte Implementierung beheben, da die notwendigen Sicherheitskontrollen von vornherein nicht zur Abwehr bestimmter Angriffe vorgesehen waren. Ein Faktor, der zu einem unsicheren Design beiträgt, ist das Fehlen eines Geschäftsrisikoprofils, das der entwickelten Software oder dem System zugrunde liegt, was dazu führt, dass das erforderliche Maß an Sicherheitsdesign nicht bestimmt wird.
 
 ### Anforderungs- und Ressourcenmanagement
 
-Erfassen und verhandeln Sie die Anforderungen für eine Anwendung mit den Fachbereichen, einschließlich der Schutzanforderungen in Bezug auf Vertraulichkeit, Integrität, Verfügbarkeit und Authentizität aller Datenbestände sowie der erwarteten Geschäftslogik. Berücksichtigen Sie, wie exponiert Ihre Anwendung sein wird und ob Sie (zusätzlich zur Zugangskontrolle) eine Trennung der Mandanten erforderlich ist. Sammeln Sie die technischen Anforderungen, einschließlich funktionaler und nicht funktionaler Sicherheitsanforderungen. Planen und verhandeln Sie das Budget für alle Design-, Entwicklungs-, Test- und Betriebsaktivitäten, einschließlich der Sicherheitsmaßnahmen.
+Legen Sie zusammen mit den Geschäftseinheiten die fachlichen Anforderungen an die Anwendung fest, einschließlich des Schutzbedarfs hinsichtlich Vertraulichkeit, Integrität, Verfügbarkeit und Authentizität aller Datenbestände, sowie die vorgesehene Geschäftslogik. Berücksichtigen Sie, wie exponiert Ihre Anwendung sein wird und ob Sie (zusätzlich zur Zugangskontrolle) eine Mandantentrennung benötigt. Stellen Sie die technischen Anforderungen zusammen, einschließlich funktionaler und nicht funktionaler Sicherheitsanforderungen. Planen Sie das Budget für alle Design-, Entwicklungs-, Test- und Betriebsaktivitäten, unter Berücksichtigung der Sicherheit.
 
 
 ### Sicheres Design
 
-Sicheres Design ist sowohl eine Denkweise als auch eine Vorgehensweise, die kontinuierlich Bedrohungen analysiert und sicherstellt, dass der Code robust entwickelt und getestet wird, um gegen bekannte Angriffsmethoden gewappnet zu sein. Die Bedrohungsmodellierung sollte in *Backlog Refinement* Terminen oder vergleichbaren Aktivitäten integriert werden. Dabei sollten Änderungen im Datenfluss, in der Zugriffskontrolle und anderen Sicherheitsmaßnahmen überprüft werden. Identifizieren Sie während der Entwicklung der User Story die richtigen Prozess- und Fehlerzustände und stellen Sie sicher, dass alle verantwortlichen und betroffenen Parteien diese verstehen und ihnen zustimmen. Analysieren Sie Annahmen und Bedingungen für erwartete sowie fehlgeschlagene Prozesse, um sicherzustellen, dass diese weiterhin angemessen und die erwünschten sind. Bestimmen Sie, wie Annahmen überprüft und Bedingungen durchgesetzt werden können, die für das korrekte Verhalten notwendig sind. Dokumentieren Sie die Ergebnisse in der User Story. Nutzen Sie Fehler als Lernchance und schaffen Sie Anreize, um kontinuierliche Verbesserungen zu fördern. Sicheres Design ist kein Add-on oder Werkzeug, das einfach zu einer Software hinzugefügt werden kann.
+Sicheres Design ist sowohl eine Denkweise als auch eine Vorgehensweise, die kontinuierlich Bedrohungen analysiert und sicherstellt, dass der Code robust entwickelt und getestet wird, um bekannte Angriffsmethoden zu verhindern. Die Bedrohungsmodellierung sollte in *Backlog Refinement* Terminen oder vergleichbaren Aktivitäten integriert werden. Dabei sollten Änderungen im Datenfluss, in der Zugriffskontrolle und anderen Sicherheitsmaßnahmen überprüft werden. Identifizieren Sie während der Entwicklung der User Story die richtigen Ablauf- und Fehlerzustände und stellen Sie sicher, dass sie gut verstanden sind und die Verantwortlichen und sonstigen Beteiligten dazu übereinstimmen. Analysieren Sie Annahmen und Bedingungen für erwartete sowie fehlgeschlagene Prozesse, um sicherzustellen, dass diese weiterhin angemessen und die erwünschten sind. Bestimmen Sie, wie Annahmen überprüft und Bedingungen erzwingt werden können, die für das korrekte Verhalten erforderlich sind. Stellen Sie sicher, dass die Ergebnisse in der User Story dokumentiert sind. Lernen Sie aus Fehlern und bieten Sie positive Anreize, um kontinuierliche Verbesserungen voranzutreiben. Sicheres Design ist weder ein Add-on noch ein Tool, das Sie einer Software hinzufügen können.
 
 ### Sicherer Entwicklungslebenszyklus
 
-Sichere Software erfordert einen sicheren Entwicklungslebenszyklus, dies umfasst sichere Design Pattern, eine bewährte Methodik, sichere Komponenten, geeignete Tools und Bedrohungsmodellierung. Beziehen Sie Ihre Sicherheitsexperten von Beginn eines Softwareprojekts an mit ein bis hin zur gesamten Projektlaufzeit und der Wartung Ihrer Software. Nutzen Sie das [OWASP Software Assurance Maturity Model (SAMM)](https://owaspsamm.org), um Ihre Bestrebungen zur sicheren Softwareentwicklung zu strukturieren.
+Sichere Software erfordert einen sicheren Entwicklungslebenszyklus, den Einsatz von sicheren Entwurfsmustern, eine bewährte Methodik, sichere Komponentenbibliotheken, geeignete Tools und Bedrohungsmodellierung. Wenden Sie sich zu Beginn eines Softwareprojekts während der gesamten Projektlaufzeit und Wartung Ihrer Software an Ihre Sicherheitsspezialisten. Erwägen Sie die Nutzung des [OWASP Software Assurance Maturity Model (SAMM)](https://owaspsamm.org), um Ihre Bemühungen zur sicheren Softwareentwicklung zu strukturieren.
 
 ## Prävention und Gegenmaßnahmen {{ osib_anchor(osib=osib ~ ".how to prevent", id=id ~ "-how_to_prevent", name=title ~ ": How to Prevent", lang=lang, source=source ~ "#" ~ id, parent=osib) }}
 
-- Entwickeln und nutzen Sie einen sicheren Entwicklungslebenszyklus gemeinsam mit AppSec-Experten, um Sicherheits- und Datenschutzkontrollen zu bewerten und zu gestalten.
+- Entwickeln und nutzen Sie einen sicheren Entwicklungslebenszyklus mit Unterstützung durch AppSec-Experten bei der Bewertung und Gestaltung von Sicherheits- und Datenschutzkontrollen.
 
-- Erstellen und verwenden Sie eine Bibliotheken für sichere Design Pattern oder vorgefertigter Komponenten für zuverlässige Implementierungen.
+- Erstellen und verwenden Sie eine Bibliothek mit sicheren Entwurfsmustern und bewährten, erprobten Komponenten.
 
-- Verwenden Sie Bedrohungsmodellierung für kritische Bereiche wie Authentifizierung, Zugriffskontrolle, Geschäftslogik und kritische Abläufe.
+- Verwenden Sie Bedrohungsmodellierung für kritische Bereiche wie Authentifizierung, Zugriffskontrolle, Geschäftslogik und wichtige Abläufe.
 
-- Integrieren Sie Sicherheitsvorgaben und -kontrollen in die User Stories.
+- Integrieren Sie Sicherheitsvorgaben und -kontrollen in den User Stories.
 
 - Implementieren Sie Plausibilitätsprüfungen auf allen Ebenen Ihrer Anwendung, vom Frontend bis zum Backend.
 
-- Schreiben Sie Unit- und Integrationstests, um sicherzustellen, dass alle kritischen Abläufe gegen das Bedrohungsmodell resistent sind. Stellen Sie Anwendungs- *und* Missbrauchsszenarien für jede Ebene Ihrer Anwendung zusammen.
+- Schreiben Sie Unit- und Integrationstests, um zu validieren, dass alle kritischen Abläufe resistent gegen das Bedrohungsmodell sind. Stellen Sie Anwendungs- *und* Missbrauchsfälle für jede Ebene Ihrer Anwendung zusammen.
 
 - Trennen Sie die Ebenen basierend auf Gefährdungs- und Schutzbedarf auf System- und Netzwerkebene.
 
 - Stellen Sie sicher, dass die Trennung der Mandanten konsequent auf allen Ebenen erfolgt.
 
-- Begrenzen Sie den Ressourcenverbrauch pro Benutzer oder Dienst
+- Begrenzen Sie den Ressourcenverbrauch pro Mitglied oder Dienst
 
 ## Beispielhafte Angriffsszenarien {{ osib_anchor(osib=osib ~ ".example attack Scenarios", id=id ~ "-example_attack_scenarios", name=title ~ ": Beispiel-Angriffsszenarien", lang=lang, source=source ~ "# " ~ id, parent=osib) }}
 
-**Szenario Nr. 1:** Ein Workflow zur Wiederherstellung von Anmeldeinformationen kann „Fragen und Antworten“ enthalten, was jedoch gemäß NIST 800-63b, dem OWASP ASVS und den OWASP Top 10 nicht zulässig ist. Fragen und Antworten sind als Identitätsnachweis ungeeignet, da mehrere Personen die Antworten kennen können. Aus diesem Grund sind sie unzulässig. Solche Implementierungen sollten entfernt und durch ein sichereres Design ersetzt werden.
+**Szenario Nr. 1:** Ein Workflow zur Wiederherstellung von Anmeldeinformationen kann „Fragen und Antworten“ enthalten, was jedoch gemäß NIST 800-63b, dem OWASP ASVS und den OWASP Top 10 nicht zulässig ist. Fragen und Antworten können nicht als vertrauenswürdiger Identitätsnachweis  betrachtet werden. Mehr als eine Person kann die Antworten kennen, weshalb sie verboten sind. Dieser Code sollte entfernt und durch ein sichereres Design ersetzt werden.
 
-**Szenario Nr. 2:** Eine Kinokette bietet Gruppenbuchungsrabatte an und verlangt erst bei mehr als fünfzehn Besuchern eine Anzahlung. Angreifer könnten dieses System ausnutzen, indem sie versuchen, mit wenigen Anfragen sechshundert Sitzplätze in allen Kinos gleichzeitig zu reservieren, was zu erheblichen Einnahmeverlusten führen könnte.
+**Szenario Nr. 2:** Eine Kinokette bietet Gruppenbuchungsrabatte an und verlangt erst bei mehr als fünfzehn Besuchern eine Anzahlung. Angreifende könnten dieses System ausnutzen, indem sie versuchen, mit wenigen Anfragen sechshundert Sitzplätze in allen Kinos gleichzeitig zu reservieren, was zu erheblichen Einnahmeverlusten führen könnte.
 
-**Szenario Nr. 3:** Die E-Commerce-Website einer Einzelhandelskette ist nicht ausreichend gegen Bots geschützt, die von Händlern betrieben werden, um High-End-Grafikkarten zu erwerben und auf Auktionsseiten weiterzuverkaufen. Dies führt zu negativer Publicity für die Grafikkartenhersteller und die Betreiber der Einzelhandelskette und sorgt für anhaltende Frustration bei Enthusiasten, die diese Karten nicht erwerben können. in sorgfältig gestalteter Anti-Bot-Schutz sowie Automatismen, die z. B. Käufe ablehnen, die innerhalb weniger Sekunden nach Verfügbarkeit getätigt werden, können helfen, unechte Käufe zu identifizieren und solche Transaktionen zu verhindern.
+**Szenario Nr. 3:** Die E-Commerce-Website einer Einzelhandelskette ist nicht vor Bots geschützt, die von Scalpern betrieben werden, die High-End-Grafikkarten kaufen, um sie auf Auktionsplattformen weiterzuverkaufen. Dies sorgt für schreckliche Publicity bei den Grafikkartenherstellern und Besitzern von Einzelhandelsketten und sorgt für anhaltende Frustration bei Enthusiasten, die diese Karten nicht erwerben können. Sorgfältiges Anti-Bot-Design sowie Automatismen, die z. B. Käufe ablehnen, die innerhalb weniger Sekunden nach Verfügbarkeit getätigt werden, können helfen, unechte Käufe zu identifizieren und solche Transaktionen zu verhindern.
 
 ## Referenzen {{ osib_anchor(osib=osib ~ ".references", id=id ~ "-references", name=title ~ ": References", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
 
@@ -76,7 +76,7 @@ Sichere Software erfordert einen sicheren Entwicklungslebenszyklus, dies umfasst
 ## Liste der zugeordneten CWEs {{ osib_anchor(osib=osib~".mapped cwes", id=id~"-mapped_cwes", name=title~":List of Mapped CWEs", lang=lang, source=source~" #" ~id, parent=osib) }}
 
 - {{ osib_link(link="osib.mitre.cwe.0.73", doc="", osib=osib) }} <!-- [CWE-73: Externe Kontrolle von Dateinamen oder Pfad](https://cwe.mitre.org/data/definitions/73.html) -->
-- {{ osib_link(link="osib.mitre.cwe.0.183", doc="", osib=osib) }} <!-- [CWE-183: Zulässige Liste zulässiger Eingaben](https://cwe.mitre.org/data/definitions/183.html) -->
+- {{ osib_link(link="osib.mitre.cwe.0.183", doc="", osib=osib) }} <!-- [CWE-183: Zulässige Liste zulässiger Eingaben](httpss://cwe.mitre.org/data/definitions/183.html) -->
 - {{ osib_link(link="osib.mitre.cwe.0.209", doc="", osib=osib) }} <!-- [CWE-209: Generierung einer Fehlermeldung mit vertraulichen Informationen](https://cwe.mitre.org/data/definitions/209.html) -->
 - {{ osib_link(link="osib.mitre.cwe.0.213", doc="", osib=osib) }} <!-- [CWE-213: Offenlegung sensibler Informationen aufgrund inkompatibler Richtlinien](https://cwe.mitre.org/data/definitions/213.html) -->
 - {{ osib_link(link="osib.mitre.cwe.0.235", doc="", osib=osib) }} <!-- [CWE-235: Unsachgemäßer Umgang mit zusätzlichen Parametern](https://cwe.mitre.org/data/definitions/235.html) -->

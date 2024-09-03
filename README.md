@@ -37,7 +37,7 @@ There are currently four co-leaders for the OWASP Top 10. We meet every Friday a
 - A01 Broken Access Control => Tobias H. :white_check_mark: :checkered_flag:
 - A02 Cryptographic Failures => Jan :white_check_mark: :checkered_flag:
 - A03 Injection => Jasmin (Injection 2017 + XSS 2017) :white_check_mark: :checkered_flag:
-- A04 Insecure Design => Thomas/Torsten :white_check_mark: :white_flag:
+- A04 Insecure Design => Thomas/Torsten :white_check_mark: :checkered_flag:
 - A05 Security Misconfiguration => Florian :white_check_mark: :checkered_flag: 
 - A06 Vulnerable and Outdated Components => Florian :white_check_mark: :checkered_flag: 
 - A07 Identification and Authentication Failures => Daniel :white_check_mark: :checkered_flag:
