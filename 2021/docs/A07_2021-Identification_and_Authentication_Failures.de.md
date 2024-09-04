@@ -18,9 +18,12 @@ lang:   "de"
 ## Übersicht {{ osib_anchor(osib=osib ~ ".overview", id=id ~ "-overview", name=title ~ ":Bezug / Kontext / Auswertung", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
 
 Diese Kategorie, die früher als *Broken Authentication* bekannt war, rutschte von der zweiten Position nach unten und umfasst nun Common Weakness Enumerations (CWEs) im Zusammenhang mit Identifikationsfehlern. Die bedeutendsten CWEs sind
--   *{{ osib_link(link="osib.mitre.cwe.0.297", doc="", osib=osib) }}* <!-- *CWE-297: Improper Validation of Certificate with Host Mismatch*, -->
--   *{{ osib_link(link="osib.mitre.cwe.0.287", doc="", osib=osib) }}* und <!-- *CWE-287: Improper Authentication* und -->
--   *{{ osib_link(link="osib.mitre.cwe.0.384", doc="", osib=osib) }}* <!-- *CWE-384: Session Fixation*. -->
+
+- *{{ osib_link(link="osib.mitre.cwe.0.297", doc="", osib=osib) }}* <!-- *CWE-297: Improper Validation of Certificate with Host Mismatch*, -->
+
+- *{{ osib_link(link="osib.mitre.cwe.0.287", doc="", osib=osib) }}* und <!-- *CWE-287: Improper Authentication* und -->
+
+- *{{ osib_link(link="osib.mitre.cwe.0.384", doc="", osib=osib) }}* <!-- *CWE-384: Session Fixation*. -->
 
 ## Beschreibung {{ osib_anchor(osib=osib ~ ".description", id=id ~ "-description", name=title ~ ": Beschreibung", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
 
