@@ -37,6 +37,9 @@ markdown_extensions:
 plugins:
   - i18n:
       default_language: en
+      docs_structure: suffix
+      material_alternate: true
+      reconfigure_material: true
       languages:
         en: en - English
         ar: ar - العربية
@@ -247,21 +250,55 @@ plugins:
      verbose: false                                                  # debug
      on_error_fail: true
 extra:
-    osib:
-     document:     osib.owasp.top10
-     version:      2021-1-0
-#     document:     <osib-id>                    # e.g. osib.owasp.top10
-#     version:      <version-no, no dots '.'>    # e.g. 4-0, 2021-1-0
-     categories:   [document, awareness]        # list of all default categories
-     default_lang: en
-     yaml_file:    ../osib/include/osib.yml
-     export_dir:   ../osib/export
-     latest:       2                            # 2: add the latest version(s), if successor(s) exist, log an info
-     debug:        0                            # debug level (0-3); default is 2
-     cre:          osib.owasp.cre.1-0
-     successor_texts:
-       en:         successor
-       de:         Nachfolger
-     split_to_texts:
-       en:         split to
-       de:         Aufgeteilt in
+  alternate:                                                         # see https://squidfunk.github.io/mkdocs-material/setup/changing-the-language/#site-language-selector
+    - name: en - English
+      link: ./
+      lang: en
+    - name: ar - ﺎﻠﻋﺮﺒﻳﺓ
+      link: ./ar/
+      lang: ar
+    - name: de - Deutsch
+      link: ./de/
+      lang: de
+    - name: es - Español
+      link: ./es/
+      lang: es
+    - name: fr - Français
+      link: ./fr/
+      lang: fr
+    - name: id - Indonesian
+      link: ./id/
+      lang: id
+    - name: it - Italiano
+      link: ./it/
+      lang: it
+    - name: ja - 日本語
+      link: ./ja/
+      lang: ja
+    - name: pt_BR - Português (Brasil)
+      link: ./pt_BR/
+      lang: pt_BR
+    - name: zh_CN - 简体中文
+      link: ./zh_CN/
+      lang: zh_CN
+    - name: zh_TW - 繁體中文
+      link: ./zh_TW/
+      lang: zh_TW
+  osib:
+    document:     osib.owasp.top10
+    version:      2021-1-0
+#    document:     <osib-id>                    # e.g. osib.owasp.top10
+#    version:      <version-no, no dots '.'>    # e.g. 4-0, 2021-1-0
+    categories:   [document, awareness]        # list of all default categories
+    default_lang: en
+    yaml_file:    ../osib/include/osib.yml
+    export_dir:   ../osib/export
+    latest:       2                            # 2: add the latest version(s), if successor(s) exist, log an info
+    debug:        0                            # debug level (0-3); default is 2
+    cre:          osib.owasp.cre.1-0
+    successor_texts:
+      en:         successor
+      de:         Nachfolger
+    split_to_texts:
+      en:         split to
+      de:         Aufgeteilt in
