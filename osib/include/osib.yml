@@ -47384,9 +47384,8 @@ children:
                   categories: *id003
                   sources_i18n:
                     en:
-                      name: 'OWASP Cheat Sheet: Software Supply Chain Security (Coming
-                        Soon)'
-                      source: https://cheatsheetseries.owasp.org/Glossary.html#s
+                      name: Software Supply Chain Security
+                      source: https://cheatsheetseries.owasp.org/cheatsheets/Software_Supply_Chain_Security
                       status: active
                       reviewed: 20230610
                   links:
@@ -47401,8 +47400,12 @@ children:
                     reviewed: 20230610
                     change: new
                   status: active
-                  reviewed: 20230610
-                  change: new
+                  reviewed: 20240904
+                  change: update
+                  source_id: Software Supply Chain Security
+                aliases:
+                - software supply chain security
+                - software supply chain security cheat sheet
               secure build and deployment:
                 attributes:
                   categories: *id003
@@ -47426,6 +47429,55 @@ children:
                     change: new
                   status: active
                   reviewed: 20230610
+                  change: new
+              ci cd security cheat sheet:
+                aliases:
+                - ci cd security cheat sheet
+                - ci/cd security cheat sheet
+                - ci-cd security cheat sheet
+                - ci cd cheat sheet
+                - ci/cd cheat sheet
+                - ci-cd cheat sheet
+                attributes:
+                  source_id: CI CD Security Cheat Sheet
+                  categories: &id004
+                  - document
+                  - awareness
+                  sources_i18n:
+                    en:
+                      name: CI CD Security Cheat Sheet
+                      source: https://cheatsheetseries.owasp.org/cheatsheets/CI_CD_Security_Cheat_Sheet
+                      status: active
+                      reviewed: 20240904
+                  links:
+                  - link: osib.owasp.cheatsheetseries.0
+                    type: parent
+                    status: active
+                    reviewed: 20240904
+                    change: new
+                  status: active
+                  reviewed: 20240904
+                  change: new
+              secure cloud architecture:
+                aliases:
+                - secure cloud architecture cheat sheet
+                attributes:
+                  source_id: Secure Cloud Architecture Cheat Sheet
+                  categories: *id004
+                  sources_i18n:
+                    en:
+                      name: Secure Cloud Architecture Cheat Sheet
+                      source: https://cheatsheetseries.owasp.org/cheatsheets/Secure_Cloud_Architecture_Cheat_Sheet
+                      status: active
+                      reviewed: 20240904
+                  links:
+                  - link: osib.owasp.cheatsheetseries.0
+                    type: parent
+                    status: active
+                    reviewed: 20240904
+                    change: new
+                  status: active
+                  reviewed: 20240904
                   change: new
             attributes:
               links:
@@ -47478,6 +47530,11 @@ children:
                 type: child
                 status: automatically_generated
                 reviewed: 20230610
+                change: new
+              - link: osib.owasp.cheatsheetseries.0.ci cd security cheat sheet
+                type: child
+                status: automatically_generated
+                reviewed: 20240904
                 change: new
               - link: osib.owasp.cheatsheetseries.0.clickjacking defense
                 type: child
@@ -47745,6 +47802,11 @@ children:
                 type: child
                 status: automatically_generated
                 reviewed: 20230610
+                change: new
+              - link: osib.owasp.cheatsheetseries.0.secure cloud architecture
+                type: child
+                status: automatically_generated
+                reviewed: 20240904
                 change: new
               - link: osib.owasp.cheatsheetseries.0.secure product design
                 type: child
@@ -54255,7 +54317,7 @@ children:
           sources_i18n:
             en:
               name: OWASP Proactive Controls
-              source: https://owasp.org/www-project-proactive-controls/
+              source: https://github.com/OWASP/www-project-proactive-controls/blob/master/v3/en/
               status: active
               reviewed: 20230610
           links:
@@ -54279,7 +54341,7 @@ children:
                   sources_i18n:
                     en:
                       name: 'C1: Define Security Requirements'
-                      source: https://owasp.org/www-project-proactive-controls/v3/en/c1-security-requirements
+                      source: https://github.com/OWASP/www-project-proactive-controls/blob/master/v3/en/c1-security-requirements.md
                       status: active
                       reviewed: 20230610
                   links:
@@ -54300,7 +54362,7 @@ children:
                   sources_i18n:
                     en:
                       name: 'C2: Leverage Security Frameworks and Libraries'
-                      source: https://owasp.org/www-project-proactive-controls/v3/en/c2-leverage-security-frameworks-libraries
+                      source: https://github.com/OWASP/www-project-proactive-controls/blob/master/v3/en/c2-leverage-security-frameworks-libraries.md
                       status: active
                       reviewed: 20230610
                   links:
@@ -54321,7 +54383,7 @@ children:
                   sources_i18n:
                     en:
                       name: 'C3: Secure Database Access'
-                      source: https://owasp.org/www-project-proactive-controls/v3/en/c3-secure-database
+                      source: https://github.com/OWASP/www-project-proactive-controls/blob/master/v3/en/c3-secure-database.md
                       status: active
                       reviewed: 20230610
                   links:
@@ -54347,7 +54409,7 @@ children:
                   sources_i18n:
                     en:
                       name: Define Security Requirements
-                      source: https:///owasp.org/www-project-proactive-controls/v3/en/c3-secure-database
+                      source: https://github.com/OWASP/www-project-proactive-controls/blob/master/v3/en/c4-encode-escape-data.md
                       status: active
                       reviewed: 20230610
                   links:
@@ -54368,7 +54430,7 @@ children:
                   sources_i18n:
                     en:
                       name: '-C5: Validate All Inputs'
-                      source: https://owasp.org/www-project-proactive-controls/v3/en/c5-validate-inputs
+                      source: https://github.com/OWASP/www-project-proactive-controls/blob/master/v3/en/c5-validate-inputs.md
                       status: active
                       reviewed: 20230610
                   links:
@@ -54389,7 +54451,7 @@ children:
                   sources_i18n:
                     en:
                       name: 'C6: Implement Digital Identity'
-                      source: https://owasp.org/www-project-proactive-controls/v3/en/c6-digital-identity
+                      source: https://github.com/OWASP/www-project-proactive-controls/blob/master/v3/en/c6-digital-identity.md
                       status: active
                       reviewed: 20230610
                   links:
@@ -54415,7 +54477,7 @@ children:
                   sources_i18n:
                     en:
                       name: 'C7: Enforce Access Controls'
-                      source: https://owasp.org/www-project-proactive-controls/v3/en/c7-enforce-access-controls
+                      source: https://github.com/OWASP/www-project-proactive-controls/blob/master/v3/en/c7-enforce-access-controls.md
                       status: active
                       reviewed: 20230610
                   links:
@@ -54441,7 +54503,7 @@ children:
                   sources_i18n:
                     en:
                       name: 'C8: Protect Data Everywhere'
-                      source: https://owasp.org/www-project-proactive-controls/v3/en/c8-protect-data-everywhere
+                      source: https://github.com/OWASP/www-project-proactive-controls/blob/master/v3/en/c8-protect-data-everywhere.md
                       status: active
                       reviewed: 20230610
                   links:
@@ -54467,7 +54529,7 @@ children:
                   sources_i18n:
                     en:
                       name: 'C9: Implement Security Logging and Monitoring'
-                      source: https://owasp.org/www-project-proactive-controls/v3/en/c9-security-logging
+                      source: https://github.com/OWASP/www-project-proactive-controls/blob/master/v3/en/c9-security-logging.md
                       status: active
                       reviewed: 20230610
                   links:
@@ -54493,7 +54555,7 @@ children:
                   sources_i18n:
                     en:
                       name: 'C10: Handle All Errors and Exceptionsi'
-                      source: https://owasp.org/www-project-proactive-controls/v3/en/c10-errors-exceptions
+                      source: https://github.com/OWASP/www-project-proactive-controls/blob/master/v3/en/c10-errors-exceptions.md
                       status: active
                       reviewed: 20230610
                   links:
