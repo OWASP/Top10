@@ -61,7 +61,7 @@ Devem ser implementados processos de instalação segura, incluindo:
 - Uma plataforma mínima sem recursos, componentes, documentação e outros
     desnecessários. Remova ou não instale recursos e estruturas não utilizados.
 
-- - Uma tarefa para revisar e atualizar as configurações apropriadas para todas
+- Uma tarefa para revisar e atualizar as configurações apropriadas para todas
     as notas de segurança, atualizações e patches como parte do processo de
     gerenciamento de patch (consulte
     [A06: 2021-Componentes Vulneráveis e Desatualizados](A06_2021-Vulnerable_and_Outdated_Components.pt_BR.md)).
