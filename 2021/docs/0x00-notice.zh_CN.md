@@ -11,8 +11,8 @@
 
 ## 共享专家
 
-- Orange Tsai, [@orange_8361](https://twitter/orange_8361) A10-2021: 服务端请求伪造 的作者
-- Jim Manico [@manicode](https://twitter/manicode) 和 Jakub Maćkowski [@kubamackowski](https://twitter/kubamackowski)
+- Orange Tsai, [@orange_8361](https://twitter.com/orange_8361) A10-2021: 服务端请求伪造 的作者
+- Jim Manico [@manicode](https://twitter.com/manicode) 和 Jakub Maćkowski [@kubamackowski](https://twitter.com/kubamackowski)
 
 ## 你能如何帮助
 
