@@ -46,8 +46,11 @@ detection, monitoring, and active response occurs any time:
 -   The application cannot detect, escalate, or alert for active attacks
     in real-time or near real-time.
 
-You are vulnerable to information leakage by making logging and alerting
+-   You are vulnerable to information leakage by making logging and alerting
 events visible to a user or an attacker (see [A01:2021-Broken Access Control](A01_2021-Broken_Access_Control.md)).
+
+-   You are vulnerable to injections or
+    attacks on the logging or monitoring systems if log data is not correctly encoded.
 
 ## How to Prevent
 
