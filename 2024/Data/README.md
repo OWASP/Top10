@@ -3,7 +3,7 @@ Folder to store documentation related to the data collection efforts.
 # OWASP Top 10 2025 Data Analysis Plan
 
 ## Goals
-To collect the most comprehensive dataset related to identified application vulnerabilities to-date to enable analysis for the Top 10 and other future research as well. This data should come from a variety of sources; security vendors and consultancies, bug bounties, along with company/organizational contributions. Data will be normalized to allow for level comparison between Human assisted Tooling and Tooling assisted Humans.
+To collect the most comprehensive dataset related to identified application vulnerabilities to-date to enable analysis for the Top 10 and other future research as well. This data should come from a variety of sources; security vendors and consultancies, bug bounties, along with company/organizational contributions. Data will be normalized to allow for level comparison between Tooling Assisted Humans(TaH) where humans primarily perform security testing using tools and Human Assisted Tooling(HaT) where tools lead security testing with human oversight.
 
 ## Analysis Infrastructure 
 Plan to leverage the OWASP Azure Cloud Infrastructure to collect, analyze, and store the data contributed. 
