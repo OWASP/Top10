@@ -37,13 +37,13 @@ Mit Blick auf die OWASP Top 10 2021 soll diese Kategorie bei der Erkennung, Eska
 
 - Die Anwendungen können Angriffe weder in Echtzeit noch nahezu in Echtzeit erkennen, eskalieren oder Alarm schlagen.
 
-Es besteht die Gefahr von Informationslecks, falls Sie die Logging- und Alerting Ereignisse für Mitglieder oder Angreifende sichtbar gemacht werden (siehe [A01:2021-Broken Access Control](A01_2021-Broken_Access_Control.md)).
+Es besteht die Gefahr von Informationslecks, falls Sie die Logging- und Alerting Ereignisse für Nutzende oder Angreifende sichtbar gemacht werden (siehe [A01:2021-Broken Access Control](A01_2021-Broken_Access_Control.md)).
 
 ## Prävention und Gegenmaßnahmen {{ osib_anchor(osib=osib ~ ".how to prevent", id=id ~ "-how_to_prevent", name=title ~ ": How to Prevent", lang=lang, source=source ~ "#" ~ id, parent=osib) }}
 
 Je nach dem Risiko der Anwendung sollten Entwickler einige oder alle der folgenden Maßnahmen ergreifen:
 
-- Sicherstellen, dass alle Anmeldevorgänge, Zugriffskontrollen und Fehler bei der serverseitigen Eingabeüberprüfung mit ausreichendem Mitgliedskontext erfasst werden, um verdächtige oder böswillige Anwendende zu identifizieren und ausreichend lange gespeichert werden, um eine spätere forensische Analyse zu ermöglichen.
+- Sicherstellen, dass alle Anmeldevorgänge, Zugriffskontrollen und Fehler bei der serverseitigen Eingabeüberprüfung mit ausreichendem Sitzungskontext der Nutzenden erfasst werden, um verdächtige oder böswillige Anwendende zu identifizieren und ausreichend lange gespeichert werden, um eine spätere forensische Analyse zu ermöglichen.
 
 - Stellen Sie sicher, dass die Protokolle in einem Format gespeichert werden, das von Protokollmanagement Lösungen leicht verarbeitet werden können.
 

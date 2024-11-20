@@ -21,7 +21,7 @@ Diese Kategorie stammt aus der Top-10-Community-Umfrage (Nr. 1). Die Daten zeige
 
 ## Beschreibung {{ osib_anchor(osib=osib ~ ".description", id=id ~ "-description", name=title ~ ":Beschreibung", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
 
-SSRF-Schwachstellen treten immer dann auf, wenn eine Webanwendung eine Remote-Ressource abruft, ohne die vom Mitglied angegebene URL zu überprüfen. Dadurch kann ein Angreifer die Anwendung dazu zwingen, eine manipulierte Anfrage an ein unerwartetes Ziel zu senden, selbst wenn sie durch eine Firewall, ein VPN oder eine andere Art von Netzwerkzugriffskontrollliste (ACL) geschützt ist.
+SSRF-Schwachstellen treten immer dann auf, wenn eine Webanwendung eine Remote-Ressource abruft, ohne die, vom Nutzenden angegebene URL zu überprüfen. Dadurch kann ein Angreifender die Anwendung dazu zwingen, eine manipulierte Anfrage an ein unerwartetes Ziel zu senden, selbst wenn sie durch eine Firewall, ein VPN oder eine andere Art von Netzwerkzugriffskontrollliste (ACL) geschützt ist.
 
 Da moderne Webanwendungen Nutzenden komfortable Funktionen bieten, wird das Abrufen einer URL zu einem gängigen Szenario. 
 Infolgedessen nimmt die Häufigkeit von SSRF zu. 

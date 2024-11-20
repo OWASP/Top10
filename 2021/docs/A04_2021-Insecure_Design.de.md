@@ -54,7 +54,7 @@ Sichere Software erfordert einen sicheren Entwicklungslebenszyklus, den Einsatz 
 
 - Stellen Sie sicher, dass die Trennung der Mandanten konsequent auf allen Ebenen erfolgt.
 
-- Begrenzen Sie den Ressourcenverbrauch pro Mitglied oder Dienst
+- Begrenzen Sie den Ressourcenverbrauch pro Nutzerin/Nutzer oder Dienst
 
 ## Beispielhafte Angriffsszenarien {{ osib_anchor(osib=osib ~ ".example attack Scenarios", id=id ~ "-example_attack_scenarios", name=title ~ ": Beispiel-Angriffsszenarien", lang=lang, source=source ~ "# " ~ id, parent=osib) }}
 
