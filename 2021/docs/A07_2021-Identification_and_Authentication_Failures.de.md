@@ -27,7 +27,7 @@ Diese Kategorie, die früher als *Broken Authentication* bekannt war, rutschte v
 
 ## Beschreibung {{ osib_anchor(osib=osib ~ ".description", id=id ~ "-description", name=title ~ ": Beschreibung", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
 
-Die Überprüfung der Identität des Mitglieds, die Authentifizierung und die Sitzungsverwaltung sind entscheidend für den Schutz vor authentifizierungsbezogenen Angriffen. Schwachstellen bei der Authentifizierung können auftreten, falls die Anwendung:
+Die Überprüfung der Identität des Nutzenden, die Authentifizierung und die Sitzungsverwaltung sind entscheidend für den Schutz vor authentifizierungsbezogenen Angriffen. Schwachstellen bei der Authentifizierung können auftreten, falls die Anwendung:
 
 - automatisierte Angriffe wie Credential Stuffing zulässt, bei dem Angreifende über eine Liste gültiger Usernamen und Passwörter verfügen.
 
@@ -47,7 +47,7 @@ verwendet werden.
 
 - Session-IDs nach erfolgreichem Login wieder verwendet werden.
 
-- Session-IDs werden nicht korrekt ungültig gemacht. Mitgliedersitzungen (user sessions) oder Authentifizierungs-Tokens (hauptsächlich Single Sign-On (SSO) Tokens) werden beim  Abmelden oder bei Inaktivität nicht ordnungsgemäß invalidiert.
+- Session-IDs werden nicht korrekt ungültig gemacht. Sitzungen von Benutzenden (user sessions) oder Authentifizierungs-Tokens (hauptsächlich Single Sign-On (SSO) Tokens) werden beim Abmelden oder bei Inaktivität nicht ordnungsgemäß invalidiert.
 
 ## Prävention und Gegenmaßnahmen {{ osib_anchor(osib=osib ~ ".how to prevent", id=id ~ "-how_to_prevent", name=title ~ ": Prävention und Gegenmaßnahmen", lang=lang, source=source ~ "#" ~ id, parent=osib) }}
 
@@ -71,7 +71,7 @@ verwendet werden.
 
 **Szenario #2:** Die meisten Authentifizierungsangriffe erfolgen aufgrund der andauernden Verwendung von Kennwörtern als einzigem Zugangsmerkmal. Die früher als Best Practices geltenden Anforderungen an den Wechsel und die Komplexität von Passwörtern verleiten die Nutzende zur Verwendung und Wiederverwendung schwacher Passwörter. Organisationen wird empfohlen, diese Praktiken gemäß NIST 800-63 einzustellen und eine Mehrfaktor-Authentifizierung zu verwenden.
 
-**Szenario #3:** Die Session-Timeouts von Anwendungen sind nicht korrekt gesetzt. Ein Mitglied verwendet einen öffentlichen Computer, um auf eine Anwendung zuzugreifen. Anstatt sich abzumelden, schließt das Mitglied einfach die Browser-Registerkarte und geht weg. Angreifende verwenden denselben Browser eine Stunde später, und das Mitglied ist noch immer authentifiziert.
+**Szenario #3:** Die Session-Timeouts von Anwendungen sind nicht korrekt gesetzt. Eine Nutzerin/Nutzer verwendet einen öffentlichen Computer, um auf eine Anwendung zuzugreifen. Anstatt sich abzumelden, schließt die nutzende Person einfach die Browser-Registerkarte und geht weg. Angreifende verwenden denselben Browser eine Stunde später, und die Nutzerin/Nutzer ist noch immer authentifiziert.
 
 ## Referenzen {{ osib_anchor(osib=osib ~ ".references", id=id ~ "-references", name=title ~ ": Referenzen", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
 

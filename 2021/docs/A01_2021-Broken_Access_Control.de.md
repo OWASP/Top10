@@ -33,13 +33,13 @@ Die Zugriffskontrolle erzwingt Richtlinien, sodass Nutzende nicht außerhalb ihr
 
 - Zugriff auf die API mit fehlenden Zugriffskontrollen für POST, PUT und DELETE.
 
-- Erhöhung der Privilegien. Als Mitglied fungieren, ohne angemeldet zu sein, oder als Administrator fungieren, wenn man als Standardmitglied angemeldet ist.
+- Erhöhung der Privilegien. Als Nutzerin/Nutzer fungieren, ohne angemeldet zu sein oder als Administrator fungieren, wenn man als Standard-Nutzerin/Nutzer angemeldet ist.
 
 - Manipulation von Metadaten, wie z. B. das Abfangen oder Manipulieren eines JSON Web Token (JWT)-Zugriffskontrolltokens oder die Manipulation eines Cookies oder eines versteckten Felds, um Berechtigungen zu erhöhen oder die Ungültigerklärung von JWTs zu missbrauchen.
 
 - CORS-Fehlkonfiguration ermöglicht API-Zugriff von nicht autorisierten/nicht vertrauenswürdigen Quellen.
 
-- Erzwingen des Zugriffs auf authentifizierte Seiten als nicht authentifiziertes Mitglied oder zu privilegierten Seiten als Standardmitglied.
+- Erzwingen des Zugriffs auf authentifizierte Seiten als nicht authentifizierte Person oder zu privilegierten Seiten als Standard-Nutzerin/Nutzer.
 
 ## Prävention und Gegenmaßnahmen {{ osib_anchor(osib=osib ~ ".how to prevent", id=id ~ "-how_to_prevent", name=title ~ ": How to Prevent", lang=lang, source=source ~ "#" ~ id, parent=osib) }}
 
@@ -49,7 +49,7 @@ Die Zugriffskontrolle ist nur wirksam bei vertrauenswürdigem serverseitigem Cod
 
 - Implementieren Sie Zugriffskontrollmechanismen einmalig und verwenden Sie diese in der gesamten Anwendung wieder, einschließlich der Minimierung der Nutzung von Cross-Origin Resource Sharing (CORS).
 
-- Modellzugriffskontrollen sollten die Datensatzeigentümerschaft erzwingen, anstatt zu akzeptieren, dass das Mitglied Datensätze erstellen, lesen, aktualisieren oder löschen kann.
+- Modellzugriffskontrollen sollten die Datensatzeigentümerschaft erzwingen, anstatt zu akzeptieren, dass Nutzerinnen/Nutzer Datensätze erstellen, lesen, aktualisieren oder löschen können.
 
 - Durch Domänenmodelle sollten eindeutige Geschäftslimitanforderungen für Anwendungen durchgesetzt werden.
 
@@ -72,7 +72,7 @@ pstmt.setString(1, request.getParameter("acct"));
 ResultSet results = pstmt.executeQuery( );
 ```
 
-Angreifende ändern einfach den „acct“-Parameter des Browsers, um die gewünschte Kontonummer zu senden. Bei nicht korrekter Überprüfung kann die angreifende Person auf das Konto eines beliebigen Mitglieds zugreifen.
+Angreifende ändern einfach den „acct“-Parameter des Browsers, um die gewünschte Kontonummer zu senden. Bei nicht korrekter Überprüfung kann die angreifende Person auf das Konto einer beliebigen Nutzerin/Nutzers zugreifen.
 
 ```
 https://example.com/app/accountInfo?acct=notmyacct
@@ -84,7 +84,7 @@ https://example.com/app/accountInfo?acct=notmyacct
 https://example.com/app/getappInfo
 https://example.com/app/admin_getappInfo
 ```
-Wenn ein nicht authentifiziertes Mitglied auf eine der Seiten zugreifen kann, liegt ein Fehler vor. Wenn ein Nicht-Administrator auf die Admin-Seite zugreifen kann, handelt es sich um einen Fehler.
+Wenn eine nicht authentifizierte Benutzerin/Benutzer auf eine der Seiten zugreifen kann, liegt ein Fehler vor. Wenn ein Benutzerin/Benutzer ohne Administrationsrechte auf die Admin-Seite zugreifen kann, handelt es sich um einen Fehler.
 
 ## Referenzen {{ osib_anchor(osib=osib ~ ".references", id=id ~ "-references", name=title ~ ": References", lang=lang, source=source ~ "#" ~ id, parent= osib) }}
 

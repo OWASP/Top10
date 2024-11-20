@@ -22,15 +22,15 @@ Die Injection rutscht von der ersten auf die dritte Position ab. 94 % der Anwend
 
 Eine Anwendung ist für diesen Angriff anfällig, wenn:
 
-- Daten, die von Mitgliedern stammen, von der Anwendung nicht ausreichend validiert, gefiltert oder bereinigt werden.
+- Daten, die von Nutzenden stammen, von der Anwendung nicht ausreichend validiert, gefiltert oder bereinigt werden.
 
-- Dynamische Anfragen oder nicht-parametrisierte Aufrufe ohne ein dem Kontext entsprechendes Escaping direkt einem Interpreter übergeben werden.
+- Dynamische Anfragen oder nicht-parametrisierte Aufrufe ohne ein, dem Kontext entsprechendes Escaping direkt einem Interpreter übergeben werden.
 
 - Bösartige Daten innerhalb von ORM („Object-Relational Mapping“)-Suchparametern genutzt werden können, um vertrauliche Datensätze von Dritten zu extrahieren.
 
-- Bösartige Daten direkt oder als Teil zusammengesetzter dynamischer Querys verwendet werden. Die SQL-Abfragen oder Befehle beinhalten die Struktur und die schädlichen Daten in den dynamischen Querys, Befehlen oder Stored Procedures
+- Bösartige Daten direkt oder als Teil zusammengesetzter, dynamischer Querys verwendet werden. Die SQL-Abfragen oder Befehle beinhalten die Struktur und die schädlichen Daten in den dynamischen Querys, Befehlen oder Stored Procedures.
 
-Zu den häufigeren Injection Arten gehören SQL, NoSQL, OS-Befehle, Object Relational Mapping (ORM), LDAP und Expression Language (EL) oder Object Graph Navigation Library (OGNL). Das Grundkonzept eines Injection-Angriffs ist für alle Interpreter gleich. Ein Quellcode Review ist die beste Methode, um Injection-Schwachstellen in Anwendungen zu finden. Ausführliches (ggf. automatisiertes) Testen aller Parameter und Variablen, Header-, URL-, Cookies-, JSON-, SOAP- und XML-Eingaben wird dringend empfohlen. Statische (SAST, Quellcode-Ebene), dynamische (DAST, laufende Anwendung) und interaktive (IAST, Mischform aus statisch und dynamisch) Test-Werkzeuge können von Organisationen für ihre CI/CD-Pipeline genutzt werden, um neue Schwachstellen noch vor einer möglichen Auslieferung in Produktivsysteme zu identifizieren.
+Zu den häufigeren Injection Arten gehören SQL, NoSQL, OS-Befehle, Object Relational Mapping (ORM), LDAP und Expression Language (EL) oder Object Graph Navigation Library (OGNL). Das Grundkonzept eines Injection-Angriffs ist für alle Interpreter gleich. Ein Quellcode-Review ist die beste Methode, um Injection-Schwachstellen in Anwendungen zu finden. Ausführliches (ggf. automatisiertes) Testen aller Parameter und Variablen, Header-, URL-, Cookies-, JSON-, SOAP- und XML-Eingaben wird dringend empfohlen. Statische (SAST, Quellcode-Ebene), dynamische (DAST, laufende Anwendung) und interaktive (IAST, Mischform aus statisch und dynamisch) Test-Werkzeuge können von Organisationen für ihre CI/CD-Pipeline genutzt werden, um neue Schwachstellen noch vor einer möglichen Auslieferung in Produktivsysteme zu identifizieren.
 
 ## Prävention und Gegenmaßnahmen {{ osib_anchor(osib=osib ~ ".how to prevent", id=id ~ "-how_to_prevent", name=title ~ ": Prävention und Gegenmaßnahmen", lang=lang, source=source ~ "#" ~ id, parent=osib) }}
 
@@ -42,18 +42,18 @@ Eine konsequente Trennung von Daten, Suchanfragen und Befehlen ist für die Verm
 - Für die serverseitige Eingabe-Validierung empfiehlt sich die Nutzung eines Positivlisten(“Whitelist”)-Ansatzes. Dies ist i. A. kein vollständiger Schutz, da viele Anwendungen Sonderzeichen z. B. in Textfelder oder APIs für mobile Anwendungen benötigen.
 
 - Für jede noch verbliebene dynamische Query müssen Sonderzeichen für den jeweiligen Interpreter mit der richtigen Escape-Syntax entschärft werden. <br/> **Anmerkung:** Ein Escaping von SQL-Bezeichnern, wie z. B. die Namen von Tabellen oder Spalten usw. ist nicht möglich.
-Falls Mitglieder solche Bezeichner selbst eingeben können, so ist dies durchaus gefährlich. Dies ist eine übliche Schwachstelle bei Software, die Reports aus einer Datenbank erstellt.
+Falls Nutzende solche Bezeichner selbst eingeben können, so ist dies durchaus gefährlich. Dies ist eine übliche Schwachstelle bei Software, die Reports aus einer Datenbank erstellt.
 
 - SQL-Querys sollten LIMIT oder andere SQL-Controls verwenden, um den möglichen Massen-Abfluss von Daten zu verhindern.
 
 ## Beispielhafte Angriffsszenarien {{ osib_anchor(osib=osib ~ ".example attack Scenarios", id=id ~ "-example_attack_scenarios", name=title ~ ": Beispiel-Angriffsszenarien", lang=lang, source=source ~ "# " ~ id, parent=osib) }}
 
-**Szenario Nr. 1:** Eine Anwendung nutzt ungeprüfte Eingabedaten für den Zusammenbau der folgenden verwundbaren SQL-Abfrage:
+**Szenario Nr. 1:** Eine Anwendung nutzt ungeprüfte Eingabedaten für den Zusammenbau der folgenden **<u>verwundbaren</u>** SQL-Abfrage:
 ```
 String query = "SELECT \* FROM Accounts WHERE custID='" + request.getParameter("id") + "'";
 ```
 
-**Szenario Nr. 2:** Auch das blinde Vertrauen in Frameworks kann zu Querys führen, die ganz analog zu obigem Beispiel verwundbar sind (z. B. Hibernate Query Language (HQL)):
+**Szenario Nr. 2:** Auch das blinde Vertrauen in Frameworks kann zu Querys führen, die ganz analog zu obigem Beispiel **<u>verwundbar</u>** sind (z. B. Hibernate Query Language (HQL)):
 ```
 Abfrage HQLQuery = session.createQuery("FROM Accounts WHERE custID='" + request.getParameter("id") + "'");
 ```
