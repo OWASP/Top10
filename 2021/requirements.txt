@@ -1,0 +1,11 @@
+requests
+feedgen
+wheel
+mkdocs
+mkdocs-material
+pymdown-extensions
+Pygments
+mkdocs-static-i18n<=0.56,>=0.40
+mkdocs-macros-plugin
+dacite
+git+https://github.com/OWASP/OSIB.git#subdirectory=mkdocs_macro_osib_package
