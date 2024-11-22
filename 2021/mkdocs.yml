@@ -223,6 +223,11 @@ plugins:
           A09 Security Logging and Monitoring Failures: A09 安全记录及监控失效
           A10 Server Side Request Forgery (SSRF): A10 服务端请求伪造
           Next Steps: 下一步
+  - macros:     # needs to be the last plugin to export the final osib-YAML file for all languages
+     module_name: '../osib/osib_macro'
+     include_dir: '../osib/include'
+     verbose: false                                                  # debug
+     on_error_fail: true
 extra:
   alternate:                                                         # see https://squidfunk.github.io/mkdocs-material/setup/changing-the-language/#site-language-selector
     - name: en - English
@@ -255,3 +260,19 @@ extra:
     - name: zh_TW - 繁體中文
       link: ./zh_TW/
       lang: zh_TW
+  osib:
+    document:     osib.owasp.top10
+    version:      2021-1-0
+#    document:     <osib-id>                    # e.g. osib.owasp.top10
+#    version:      <version-no, no dots '.'>    # e.g. 4-0, 2021-1-0
+    categories:   [document, awareness]        # list of all default categories
+    default_lang: en
+    yaml_file:    ../osib/include/osib.yml
+    export_dir:   ../osib/export
+    latest:       2                            # 2: add the latest version(s), if successor(s) exist, log an info
+    debug:        0                            # debug level (0-3); default is 2
+    cre:          osib.owasp.cre.1-0
+    successor_texts:
+      en:         successor
+    split_to_texts:
+      en:         split to
