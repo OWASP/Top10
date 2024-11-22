@@ -37,6 +37,9 @@ markdown_extensions:
 plugins:
   - i18n:
       default_language: en
+      docs_structure: suffix
+      material_alternate: true
+      reconfigure_material: true
       languages:
         en: en - English
         ar: ar - العربية
@@ -48,7 +51,6 @@ plugins:
         pt_BR: pt_BR - Português (Brasil)
         zh_CN: zh_CN - 简体中文
         zh_TW: zh_TW - 繁體中文
-
       nav_translations:
         ar:
           Home: الصفحة الرئيسية
@@ -119,11 +121,11 @@ plugins:
           A02 Cryptographic Failures: A02 Kegagalan Kriptografi
           A03 Injection: A03 Injeksi
           A04 Insecure Design: A04 Insecure Design
-          A05 Security Misconfiguration: A05 Kesalahan Konfigurasi Keamanan 
+          A05 Security Misconfiguration: A05 Kesalahan Konfigurasi Keamanan
           A06 Vulnerable and Outdated Components: A06 Komponen yang Rentan dan Kedaluwarsa
           A07 Identification and Authentication Failures: A07 Kegagalan Identifikasi dan Otentikasi
           A08 Software and Data Integrity Failures: A08 Kegagalan Integritas Data dan Perangkat Lunak
-          A09 Security Logging and Monitoring Failures: A09 Kegagalan dalam Keamanan Logging dan Monitoring 
+          A09 Security Logging and Monitoring Failures: A09 Kegagalan dalam Keamanan Logging dan Monitoring
           A10 Server Side Request Forgery (SSRF): A10 Server-Side Request Forgery (SSRF)
           Next Steps: Langkah Selanjutnya
         it:
@@ -221,3 +223,35 @@ plugins:
           A09 Security Logging and Monitoring Failures: A09 安全记录及监控失效
           A10 Server Side Request Forgery (SSRF): A10 服务端请求伪造
           Next Steps: 下一步
+extra:
+  alternate:                                                         # see https://squidfunk.github.io/mkdocs-material/setup/changing-the-language/#site-language-selector
+    - name: en - English
+      link: ./
+      lang: en
+    - name: ar - ﺎﻠﻋﺮﺒﻳﺓ
+      link: ./ar/
+      lang: ar
+    - name: es - Español
+      link: ./es/
+      lang: es
+    - name: fr - Français
+      link: ./fr/
+      lang: fr
+    - name: id - Indonesian
+      link: ./id/
+      lang: id
+    - name: it - Italiano
+      link: ./it/
+      lang: it
+    - name: ja - 日本語
+      link: ./ja/
+      lang: ja
+    - name: pt_BR - Português (Brasil)
+      link: ./pt_BR/
+      lang: pt_BR
+    - name: zh_CN - 简体中文
+      link: ./zh_CN/
+      lang: zh_CN
+    - name: zh_TW - 繁體中文
+      link: ./zh_TW/
+      lang: zh_TW
