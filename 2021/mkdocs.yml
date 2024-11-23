@@ -43,6 +43,7 @@ plugins:
       languages:
         en: en - English
         ar: ar - العربية
+        de: de - Deutsch
         es: es - Español
         fr: fr - Français
         id: id - Indonesian
@@ -71,6 +72,25 @@ plugins:
           A09 Security Logging and Monitoring Failures: A09 فشل في تسجيل السجلات الأمنية والمراقبة
           A10 Server Side Request Forgery (SSRF): A10 تزوير الطلبات من جانب الخادم SSRF
           Next Steps: الخطوات المقبلة
+        de:
+          Home: Startseite
+          Notice: Anmerkung
+          Introduction: Einführung
+          How to use the OWASP Top 10 as a standard: Wie man die OWASP Top 10 als Standard verwendet
+          How to start an AppSec program with the OWASP Top 10: Wie man ein AppSec-Program mit den OWASP Top 10 beginnt
+          About OWASP: Über OWASP
+          Top 10:2021 List: Liste der Top 10:2021
+          A01 Broken Access Control: A01 - Mangelhafte Zugriffskontrolle
+          A02 Cryptographic Failures: A02 - Fehlerhafter Einsatz von Kryptographie
+          A03 Injection: A03 - Injection
+          A04 Insecure Design: A04 - Unsicheres Anwendungsdesign
+          A05 Security Misconfiguration: A05 - Sicherheitsrelevante Fehlkonfiguration
+          A06 Vulnerable and Outdated Components: A06 - Unsichere oder veraltete Komponenten
+          A07 Identification and Authentication Failures: A07 - Fehlerhafte Authentifizierung
+          A08 Software and Data Integrity Failures: A08 - Fehlerhafte Prüfung der Software- und Datenintegrität
+          A09 Security Logging and Monitoring Failures: A09 - Unzureichendes Logging und Sicherheitsmonitoring
+          A10 Server Side Request Forgery (SSRF): A10 - Server-Side Request Forgery (SSRF)
+          Next Steps: Nächste Schritte
         es:
           Home: Inicio
           Notice: Notas
@@ -236,6 +256,9 @@ extra:
     - name: ar - ﺎﻠﻋﺮﺒﻳﺓ
       link: ./ar/
       lang: ar
+    - name: de - Deutsch
+      link: ./de/
+      lang: de
     - name: es - Español
       link: ./es/
       lang: es
@@ -274,5 +297,7 @@ extra:
     cre:          osib.owasp.cre.1-0
     successor_texts:
       en:         successor
+      de:         Nachfolger
     split_to_texts:
       en:         split to
+      de:         Aufgeteilt in
