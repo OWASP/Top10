@@ -1,7 +1,7 @@
 # Introduzione alla OWASP Top 10 2021
 
 
-## Vi presentiamo la the OWASP Top 10 - 2021
+## Vi presentiamo la OWASP Top 10 - 2021
 
 ![OWASP Top 10 Logo](./assets/TOP_10_logo_Final_Logo_Colour.png){:class="img-responsive"}
 
