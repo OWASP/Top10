@@ -119,7 +119,7 @@ Do the following, at a minimum, and consult the references:
     get security.
 
 -   Avoid deprecated cryptographic functions and padding schemes, such as
-    MD5, SHA1, PKCS number 1 v1.5 .
+    MD5, SHA1, PKCS number 1 v1.5.
 
 -   Verify independently the effectiveness of configuration and
     settings.
