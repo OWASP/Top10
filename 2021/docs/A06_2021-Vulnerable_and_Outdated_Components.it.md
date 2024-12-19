@@ -2,7 +2,7 @@
 
 ## Fattori
 
-| CWEs corrispondenti | Tasso di incidenza Max | Tasso di incidenza Medio | Sfruttabilità pesata | Impatto Medio | Copertura Max | Copertura media | Occorrenze Totali | CVE Totali |
+| CWEs corrispondenti | Tasso di incidenza Max | Tasso di incidenza Medio | Copertura Max | Copertura Media | Sfruttabilità media pesata | Impatto medio pesato | Occorrenze Totali | CVE Totali |
 |:-------------:|:--------------------:|:--------------------:|:--------------:|:--------------:|:----------------------:|:---------------------:|:-------------------:|:------------:|
 | 3           | 27.96%             | 8.77%              | 51.78%       | 22.47%       | 5.00                 | 5.00                | 30,457            | 0          |
 
