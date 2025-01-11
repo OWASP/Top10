@@ -24,9 +24,6 @@ The application might be vulnerable if the application is:
 -   Unnecessary features are enabled or installed (e.g., unnecessary
     ports, services, pages, accounts, or privileges).
 
--   Default accounts and their passwords are still enabled and
-    unchanged.
-
 -   Error handling reveals stack traces or other overly informative
     error messages to users.
 
