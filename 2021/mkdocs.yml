@@ -13,6 +13,8 @@ theme:
 
 nav:
   - Home: index.md
+  - OWASP Top 10 2021 (English): en/index.md
+  - OWASP Top 10 2021 (Español): es/index.md
   - Notice: '0x00-notice.md'
   - Introduction: 'A00_2021_Introduction.md'
   - How to use the OWASP Top 10 as a standard: 'A00_2021_How_to_use_the_OWASP_Top_10_as_a_standard.md'
