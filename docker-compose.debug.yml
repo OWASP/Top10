@@ -1,0 +1,11 @@
+version: '3.4'
+
+services:
+  top10:
+    image: top10
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    command: ["sh", "-c", "pip install debugpy -t /tmp && python /tmp/debugpy --wait-for-client --listen 0.0.0.0:5678 osib/osib_macro.py "]
+    ports:
+      - 5678:5678

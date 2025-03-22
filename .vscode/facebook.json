@@ -1,0 +1,13 @@
+{
+   "root": "./2021/docs",
+   "plugins": [
+      "anchors"
+   ],
+   "structure": {
+      "readme": "Preface.md",
+      "summary": "0x00-toc.md"
+   },
+   "title": "OWASP Top 10 2021 (DRAFT)",
+   "language": "en",
+   "description": "Draft version of the Top 10 2021."
+}
