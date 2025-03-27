@@ -107,7 +107,7 @@ result by the privacy regulator.
 ## References
 
 -   [OWASP Proactive Controls: Implement Logging and
-    Monitoring](https://owasp.org/www-project-proactive-controls/v3/en/c9-security-logging.html)
+    Monitoring](https://top10proactive.owasp.org/archive/2018/c9-security-logging/)
 
 -   [OWASP Application Security Verification Standard: V7 Logging and
     Monitoring](https://owasp.org/www-project-application-security-verification-standard)
