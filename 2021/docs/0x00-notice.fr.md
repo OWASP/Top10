@@ -12,7 +12,7 @@ Publié le 24 septembre 2021
 ## Contributeurs
 
 - Orange Tsai [@orange_8361](https://twitter/orange_8361), Auteur de A10-2021: Falsification de requête côté serveur
-- Jim Manico [@manicode](https://twitter/manicode) et Jakub Maćkowski [@kubamackowski](https://twitter/kubamackowski) - Coordination avec le projet OWASP CheatSheets
+- Jim Manico [@manicode](https://twitter.com/manicode) et Jakub Maćkowski [@kubamackowski](https://twitter.com/kubamackowski) - Coordination avec le projet OWASP CheatSheets
 
 ## Comment pouvez-vous aider
 
