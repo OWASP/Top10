@@ -54,7 +54,7 @@ request.getParameter("id") + "'";
 
 在這兩個情境中，攻擊者在他們的瀏覽器修改了 "id" 參數值，送出 ‘ or ‘1’=’1，例如：
 
-http://example.com/app/accountView?id=' or '1'='1
+http://example.com/app/accountView?id=' UNION SELECT SLEEP(10);--
 
 這兩個查詢的含義將產生改變，而回應所有帳戶資料表中的紀錄，更危險的攻擊將可能修改或刪除資料，以及影響資料的儲存過程。
 

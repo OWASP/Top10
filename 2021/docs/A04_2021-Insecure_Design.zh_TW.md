@@ -38,7 +38,7 @@
 
 ## 參考文獻
 
--   \[OWASP Cheat Sheet: Secure Design Principles\] (TBD)
+-   [OWASP Cheat Sheet: Secure Design Principles](https://cheatsheetseries.owasp.org/cheatsheets/Secure_Product_Design_Cheat_Sheet.html)
 
 -   NIST – Guidelines on Minimum Standards for Developer Verification of
     > Software  

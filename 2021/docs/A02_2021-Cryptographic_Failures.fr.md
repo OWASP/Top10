@@ -43,9 +43,9 @@ On veillera au minimum à suivre les recommandations suivantes, mais il reste n�
 - Stocker les mots de passe en utilisant des fonctions de hachage avec salage et facteur de travail (facteur de délai), telles que Argon2, scrypt, bcrypt ou PBKDF2.
 - Les vecteurs d'initialisation doivent être choisis de façon appropriée au mode d'opération. Pour la plupart des modes, cela signifie utiliser un générateur de nombres pseudo-aléatoires cryptographiquement sécurisé (CSPRNG en anglais). Pour les modes requérant un nonce, alors le vecteur d'initialisation (VI) ne nécessite pas un CSPRNG. Dans tous les cas, un vecteur d'initialisation ne devrait pas être utilisé deux fois pour une clé fixe.
 - Utiliser toujours un chiffrement authentifié plutôt qu'un chiffrement simple
-- Les clés devraient toujours être générée de façon cryptographiquement aléatoire et stockées en mémoire sous la forme de tableau d'octets. Si un mot de passe est utilisée, alors il faut obligatoirement le transformer en clé via une fonction de dérivation de clé appropriée.
+- Les clés devraient toujours être générées de façon cryptographiquement aléatoire et stockées en mémoire sous la forme de tableau d'octets. Si un mot de passe est utilisée, alors il faut obligatoirement le transformer en clé via une fonction de dérivation de clé appropriée.
 - S'assurer qu'une génération cryptographiquement aléatoire est utilisée là où c'est approprié, et qu'elle n'a pas une graine aléatoire prévisible ou avec une faible entropie. La plupart des APIs modernes ne demandent pas au développeur de fournir une graine au CSPRNG pour être sécurisé.
-- Ne pas utiliser de fonctions cryptographiques et de méthodes de remplissage dépréciées telles que MD5, SHA1, PCKS 1 v1.5.
+- Ne pas utiliser de fonctions cryptographiques et de méthodes de remplissage dépréciées telles que MD5, SHA1, PKCS 1 v1.5.
 - Vérifier indépendamment l'efficacité de la configuration et des paramètres.
 
 ## Exemple de scénarios d'attaque

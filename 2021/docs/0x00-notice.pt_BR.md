@@ -15,8 +15,8 @@ Esta versão será lançada na celebração do 20º aniversário da OWASP.
 
 ## Contribuidores
 
-- Orange Tsai - [@orange_8361](https://twitter/orange_8361), Autor de A10-2021: Server Side Request Forgery
-- Jim Manico [@manicode](https://twitter/manicode) e Jakub Maćkowski [@kubamackowski](https://twitter/kubamackowski)  - OWASP CheatSheets Coordination
+- Orange Tsai - [@orange_8361](https://twitter.com/orange_8361), Autor de A10-2021: Server Side Request Forgery
+- Jim Manico [@manicode](https://twitter.com/manicode) e Jakub Maćkowski [@kubamackowski](https://twitter.com/kubamackowski)  - OWASP CheatSheets Coordination
 
 ## Como você pode ajudar
 

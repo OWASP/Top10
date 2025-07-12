@@ -12,7 +12,7 @@
 ## المساهمين
 
 - Orange Tsai [@orange_8361](https://twitter/orange_8361), Author of A10-2021: Server Side Request Forgery
-- Jim Manico [@manicode](https://twitter/manicode) and Jakub Maćkowski [@kubamackowski](https://twitter/kubamackowski) - OWASP CheatSheets Coordination
+- Jim Manico [@manicode](https://twitter.com/manicode) and Jakub Maćkowski [@kubamackowski](https://twitter.com/kubamackowski) - OWASP CheatSheets Coordination
 
 ## المترجمين
 

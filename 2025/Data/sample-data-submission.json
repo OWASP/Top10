@@ -1,0 +1,54 @@
+{
+    "contributions":{
+       "appData" :
+          {
+             "appsSubmitted":100
+          },      
+       "cwe":[
+          {
+             "id":20,
+             "occurances":53,
+             "timePeriod":2021,
+             "language":".NET",
+             "region":"North America",
+             "industry":"Retail",
+             "retest":"F",
+             "testingType":"TAH"
+          },
+          {
+             "id":20,
+             "occurances":10,
+             "timePeriod":2022,
+             "language":".NET",
+             "region":"North America",
+             "industry":"Technology",
+             "retest":"F",
+             "testingType":"TAH"
+          },
+          {
+             "id":20,
+             "occurances":30,
+             "timePeriod":2023,
+             "language":"PHP",
+             "region":"North America",
+             "industry":"Technology",
+             "retest":"F",
+             "testingType":"TAH"
+          },
+          {
+             "id":425,
+             "occurances":5,
+             "timePeriod":2021,
+             "language":".NET",
+             "region":"North America",
+             "industry":"Retail",
+             "retest":"F",
+             "testingType":"TAH"
+          }
+       ],
+       "contributor":{
+          "name":"First Last",
+          "email":"name@owasp.org"
+       }
+    }
+ }

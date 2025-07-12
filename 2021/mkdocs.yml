@@ -13,6 +13,8 @@ theme:
 
 nav:
   - Home: index.md
+  - OWASP Top 10 2021 (English): en/index.md
+  - OWASP Top 10 2021 (Español): es/index.md
   - Notice: '0x00-notice.md'
   - Introduction: 'A00_2021_Introduction.md'
   - How to use the OWASP Top 10 as a standard: 'A00_2021_How_to_use_the_OWASP_Top_10_as_a_standard.md'
@@ -37,18 +39,21 @@ markdown_extensions:
 plugins:
   - i18n:
       default_language: en
+      docs_structure: suffix
+      material_alternate: true
+      reconfigure_material: true
       languages:
         en: en - English
         ar: ar - العربية
+        de: de - Deutsch
         es: es - Español
         fr: fr - Français
         id: id - Indonesian
         it: it - Italiano
         ja: ja - 日本語
-#        pt_BR: pt_BR - Português (Brasil) # not finished yet
+        pt_BR: pt_BR - Português (Brasil)
         zh_CN: zh_CN - 简体中文
         zh_TW: zh_TW - 繁體中文
-
       nav_translations:
         ar:
           Home: الصفحة الرئيسية
@@ -69,6 +74,25 @@ plugins:
           A09 Security Logging and Monitoring Failures: A09 فشل في تسجيل السجلات الأمنية والمراقبة
           A10 Server Side Request Forgery (SSRF): A10 تزوير الطلبات من جانب الخادم SSRF
           Next Steps: الخطوات المقبلة
+        de:
+          Home: Startseite
+          Notice: Anmerkung
+          Introduction: Einführung
+          How to use the OWASP Top 10 as a standard: Wie man die OWASP Top 10 als Standard verwendet
+          How to start an AppSec program with the OWASP Top 10: Wie man ein AppSec-Program mit den OWASP Top 10 beginnt
+          About OWASP: Über OWASP
+          Top 10:2021 List: Liste der Top 10:2021
+          A01 Broken Access Control: A01 - Mangelhafte Zugriffskontrolle
+          A02 Cryptographic Failures: A02 - Fehlerhafter Einsatz von Kryptographie
+          A03 Injection: A03 - Injection
+          A04 Insecure Design: A04 - Unsicheres Anwendungsdesign
+          A05 Security Misconfiguration: A05 - Sicherheitsrelevante Fehlkonfiguration
+          A06 Vulnerable and Outdated Components: A06 - Unsichere oder veraltete Komponenten
+          A07 Identification and Authentication Failures: A07 - Fehlerhafte Authentifizierung
+          A08 Software and Data Integrity Failures: A08 - Fehlerhafte Prüfung der Software- und Datenintegrität
+          A09 Security Logging and Monitoring Failures: A09 - Unzureichendes Logging und Sicherheitsmonitoring
+          A10 Server Side Request Forgery (SSRF): A10 - Server-Side Request Forgery (SSRF)
+          Next Steps: Nächste Schritte
         es:
           Home: Inicio
           Notice: Notas
@@ -127,7 +151,7 @@ plugins:
           A10 Server Side Request Forgery (SSRF): A10 Server-Side Request Forgery (SSRF)
           Next Steps: Langkah Selanjutnya
         it:
-          Home: Casa
+          Home: Home
           Notice: Avvisi
           Introduction: Introduzione
           How to use the OWASP Top 10 as a standard: Come utilizzare la OWASP Top 10 come standard
@@ -144,7 +168,7 @@ plugins:
           A08 Software and Data Integrity Failures: A08 Software and Data Integrity Failures
           A09 Security Logging and Monitoring Failures: A09 Security Logging and Monitoring Failures
           A10 Server Side Request Forgery (SSRF): A10 Server Side Request Forgery (SSRF)
-          Next Steps: Passi seguenti
+          Next Steps: Prossimi passi
         ja:
           Home: ホーム
           Notice: 注意事項
@@ -164,21 +188,25 @@ plugins:
           A09 Security Logging and Monitoring Failures: A09 セキュリティログとモニタリングの失敗
           A10 Server Side Request Forgery (SSRF): A10 サーバーサイドリクエストフォージェリ (SSRF)
           Next Steps: Next Steps
-#        pt_BR:
-#          Home: Início
-#          Notice: Notas
-#          Introduction: Introdução
-#          How to use the OWASP Top 10 as a standard: Como usar o OWASP Top 10 como padrão
-#          How to start an AppSec program with the OWASP Top 10: Como iniciar um programa AppSec com o OWASP Top 10
-#          About OWASP: Sobre OWASP
-#          Top 10:2021 List: Lista top 10:2021
-#          A01 Broken Access Control: A01 Quebra de Controle de Acesso
-#          A02 Cryptographic Failures: A02 Falhas Criptográficas
-#          A03 Injection: A03 Injeção
-#          A04 Insecure Design: A04 Design Inseguro
-#          A05 Security Misconfiguration: A05 Configuração Incorreta de Segurança
-#          A06 Vulnerable and Outdated Components: A06 Componentes Vulneráveis e Desatualizados
-#          Next Steps: Próximos passos
+        pt_BR:
+          Home: Início
+          Notice: Notas
+          Introduction: Introdução
+          How to use the OWASP Top 10 as a standard: Como usar o OWASP Top 10 como padrão
+          How to start an AppSec program with the OWASP Top 10: Como iniciar um programa AppSec com o OWASP Top 10
+          About OWASP: Sobre OWASP
+          Top 10:2021 List: Lista top 10:2021
+          A01 Broken Access Control: A01 Quebra de Controle de Acesso
+          A02 Cryptographic Failures: A02 Falhas Criptográficas
+          A03 Injection: A03 Injeção
+          A04 Insecure Design: A04 Design Inseguro
+          A05 Security Misconfiguration: A05 Configuração Incorreta de Segurança
+          A06 Vulnerable and Outdated Components: A06 Componentes Vulneráveis e Desatualizados
+          A07 Identification and Authentication Failures: A07 Falhas de identificação e autenticação
+          A08 Software and Data Integrity Failures: A08 Falhas de Software e Integridade de Dados
+          A09 Security Logging and Monitoring Failures: A09 Falhas de registro e monitoramento de segurança
+          A10 Server Side Request Forgery (SSRF): A10 Falsificação de Solicitação do Lado do Servidor (SSRF)
+          Next Steps: Próximos passos
         zh_TW:
           Home: 首頁
           Notice: 注意事項
@@ -217,3 +245,61 @@ plugins:
           A09 Security Logging and Monitoring Failures: A09 安全记录及监控失效
           A10 Server Side Request Forgery (SSRF): A10 服务端请求伪造
           Next Steps: 下一步
+  - macros:     # needs to be the last plugin to export the final osib-YAML file for all languages
+     module_name: '../osib/osib_macro'
+     include_dir: '../osib/include'
+     verbose: false                                                  # debug
+     on_error_fail: true
+extra:
+  alternate:                                                         # see https://squidfunk.github.io/mkdocs-material/setup/changing-the-language/#site-language-selector
+    - name: en - English
+      link: ./
+      lang: en
+    - name: ar - ﺎﻠﻋﺮﺒﻳﺓ
+      link: ./ar/
+      lang: ar
+    - name: de - Deutsch
+      link: ./de/
+      lang: de
+    - name: es - Español
+      link: ./es/
+      lang: es
+    - name: fr - Français
+      link: ./fr/
+      lang: fr
+    - name: id - Indonesian
+      link: ./id/
+      lang: id
+    - name: it - Italiano
+      link: ./it/
+      lang: it
+    - name: ja - 日本語
+      link: ./ja/
+      lang: ja
+    - name: pt_BR - Português (Brasil)
+      link: ./pt_BR/
+      lang: pt_BR
+    - name: zh_CN - 简体中文
+      link: ./zh_CN/
+      lang: zh_CN
+    - name: zh_TW - 繁體中文
+      link: ./zh_TW/
+      lang: zh_TW
+  osib:
+    document:     osib.owasp.top10
+    version:      2021-1-0
+#    document:     <osib-id>                    # e.g. osib.owasp.top10
+#    version:      <version-no, no dots '.'>    # e.g. 4-0, 2021-1-0
+    categories:   [document, awareness]        # list of all default categories
+    default_lang: en
+    yaml_file:    ../osib/include/osib.yml
+    export_dir:   ../osib/export
+    latest:       2                            # 2: add the latest version(s), if successor(s) exist, log an info
+    debug:        0                            # debug level (0-3); default is 2
+    cre:          osib.owasp.cre.1-0
+    successor_texts:
+      en:         successor
+      de:         Nachfolger
+    split_to_texts:
+      en:         split to
+      de:         Aufgeteilt in

@@ -59,9 +59,9 @@ request.getParameter("id") + "'";
 > Query HQLQuery = session.createQuery("FROM accounts WHERE custID='" +
 > request.getParameter("id") + "'");
 
-في كلتا الحالتين السابقتين، المُخترق قام بتعديل قيمة متغيّر الـ id في المتصفح لإرسال ‘ or ‘1’=’1. مثلاً:
+في كلتا الحالتين السابقتين، المُخترق قام بتعديل قيمة متغيّر الـ id في المتصفح لإرسال ‘ UNION SELECT SLEEP(10);-- . مثلاً:
 
-http://example.com/app/accountView?id=' or '1'='1
+http://example.com/app/accountView?id=' UNION SELECT SLEEP(10);--
 
 وهذا ينتج تغيير في معنى الاستعلام للحصول على جميع السجلات من جدول الحسابات. وقد يستغلّها المُخترق بشكل آخر لتعديل أو حذف أو حتى استدعاء العمليات المخزّنة. 
 

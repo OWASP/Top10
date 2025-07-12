@@ -28,7 +28,7 @@ Qu'il s'agisse d'organisations travaillant à la mise en place d'un programme de
 - **Comment s'en prémunir**. Testez les performances du code en termes d'utilisation du processeur, des E/S et de la mémoire, ré-architecturez, optimisez ou mettez en cache les opérations coûteuses. Envisagez des contrôles d'accès pour les objets de grande taille afin de vous assurer que seules les personnes autorisées peuvent accéder aux fichiers ou objets volumineux ou les servir par un réseau de mise en cache en périphérie.
 - **Exemple de scénarios d'attaque**. Un attaquant peut déterminer qu'une opération prend 5 à 10 secondes pour se terminer. Lorsqu'il exécute quatre threads simultanés, le serveur semble ne plus répondre. L'attaquant utilise 1000 threads et met l'ensemble du système hors ligne.
 - **Références**
-    - [OWASP Cheet Sheet: Denial of Service](https://cheatsheetseries.owasp.org/cheatsheets/Denial_of_Service_Cheat_Sheet.html)
+    - [OWASP Cheat Sheet: Denial of Service](https://cheatsheetseries.owasp.org/cheatsheets/Denial_of_Service_Cheat_Sheet.html)
     - [OWASP Attacks: Denial of Service](https://owasp.org/www-community/attacks/Denial_of_Service)
 
 ## Erreurs de gestion de la mémoire

@@ -75,10 +75,10 @@ Query HQLQuery = session.createQuery("FROM accounts WHERE custID='" + request.ge
 ```
 
 Em ambos os casos, um atacante modifica o valor do parâmetro id no seu browser
-para enviar: `' or '1'='1`. Por exemplo:
+para enviar: `' UNION SELECT SLEEP(10);--`. Por exemplo:
 
 ```
-http://example.com/app/accountView?id=' or '1'='1
+http://example.com/app/accountView?id=' UNION SELECT SLEEP(10);--
 ```
 
 Isto altera o significado de ambas as consultas para que retornem todos os

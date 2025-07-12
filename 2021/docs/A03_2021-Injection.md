@@ -62,9 +62,6 @@ Preventing injection requires keeping data separate from commands and queries:
     cannot be escaped, and thus user-supplied structure names are
     dangerous. This is a common issue in report-writing software.
 
--   Use LIMIT and other SQL controls within queries to prevent mass
-    disclosure of records in case of SQL injection.
-
 ## Example Attack Scenarios
 
 **Scenario #1:** An application uses untrusted data in the construction
@@ -81,9 +78,9 @@ Language (HQL)):
 ```
 
 In both cases, the attacker modifies the ‘id’ parameter value in their
-browser to send: ‘ or ‘1’=’1. For example:
+browser to send: ' UNION SLEEP(10);--. For example:
 ```
- http://example.com/app/accountView?id=' or '1'='1
+ http://example.com/app/accountView?id=' UNION SELECT SLEEP(10);--
 ```
 
 This changes the meaning of both queries to return all the records from

@@ -41,7 +41,7 @@ Organisasi dapat menyertakan alat uji keamanan aplikasi statik (SAST), dinamis
 (DAST), dan interaktif (IAST) ke dalam CI/CD pipeline untuk mengidentifikasi
 cacat injeksi yang ditambahkan sebelum penggelaran produksi.
 
-## Bagaimana Mencegah
+## Bagaimana Cara Mencegah
 
 Pencegahan injeksi membutuhkan pemisahan data dari perintah dan kueri:
 

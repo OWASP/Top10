@@ -1,4 +1,4 @@
-OWASP Top 10 2021
+# OWASP Top 10 2021
 
 Final Release
 
@@ -10,6 +10,19 @@ Final Release
 ```bash
 make install-python-requirements
 ```
+### Prepare a local virtual environment to manage the versions of the required Python libraries for mkdocs
+
+```bash$
+# build and activate venv
+cd 2021
+python3 -m venv .
+source ./bin/activate
+# install all required library versions
+pip install -r requirements.txt
+# optionally verify if OWASP OSIB is in your pip list
+pip list | grep osib
+```
+This installs all requirenents including the (OSIB Macro)[https://github.com/OWASP/OSIB]
 
 ### Test it locally
 

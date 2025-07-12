@@ -44,7 +44,7 @@ Você provavelmente está vulnerável:
    bibliotecas atualizadas, atualizações ou com patches.
 
 - Se você não proteger as configurações dos componentes
-    (consulte [A05: 2021-Configuração Incorreta de Segurança](A05_2021-Security_Misconfiguration.md)).
+    (consulte [A05: 2021-Configuração Incorreta de Segurança](A05_2021-Security_Misconfiguration.pt_BR.md)).
 
 ## Como Prevenir
 
@@ -66,7 +66,7 @@ Deve haver um processo de gerenciamento de dependências para:
 - Obtenha componentes apenas de fontes oficiais por meio de links seguros.
     Prefira pacotes assinados para reduzir a chance de incluir um componente
     malicioso modificado (consulte
-    [A08: 2021-Software e Falhas de Integridade de Dados](A08_2021-Software_and_Data_Integrity_Failures.md)).
+    [A08: 2021-Software e Falhas de Integridade de Dados](A08_2021-Software_and_Data_Integrity_Failures.pt_BR.md)).
 
 - Monitore bibliotecas e componentes sem manutenção ou que não criem patches
     de segurança para versões anteriores. Se o patch não for possível,

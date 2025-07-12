@@ -34,9 +34,9 @@ Para prevenir inyecciones, se requiere separar los datos de los comandos y las c
 
 `Query HQLQuery = session.createQuery("FROM accounts WHERE custID='" + request.getParameter("id") + "'");`
 
-En ambos casos, al atacante modificar el parametro 'id' en su navegador para enviar:  ' or '1'='1. Por ejemplo:
+En ambos casos, al atacante modificar el parametro 'id' en su navegador para enviar:  ' UNION SELECT SLEEP(10);--. Por ejemplo:
 
-* `http://example.com/app/accountView?id=' or '1'='1`
+* `http://example.com/app/accountView?id=' UNION SELECT SLEEP(10);--`
 
 Esto cambia el significado de ambas consultas retornando todos los registro de la tabla "accounts". Ataques más peligrosos pueden modificar datos o incluso invocar procedimientos almacenados.
 

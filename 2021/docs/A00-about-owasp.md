@@ -12,8 +12,8 @@ At OWASP, you'll find free and open:
 - [Cheat sheets](https://cheatsheetseries.owasp.org/) on many common topics
 - [Chapters meetings](https://owasp.org/chapters/)
 - [Events, training, and conferences](https://owasp.org/events/).
-- [Google Groups](TBA)
-
+- [Google Groups](https://groups.google.com/g/owasp)    <!-- Updated the Google Groups link to point to the correct OWASP Google Groups page. This resolves the issue with the placeholder link (TBA) that was previously in place. -->
+<!-- Google Groups (Link to be updated once confirmed)-->    <!-- The Google Groups link is currently a placeholder. Please update with the correct URL once it is confirmed. -->
 Learn more at: [https://www.owasp.org](https://www.owasp.org).
 
 All OWASP tools, documents, videos, presentations, and chapters are free and open to anyone interested in improving application security.
@@ -32,4 +32,4 @@ Come join us!
 
 ![license](assets/license.png)
 
-Copyright © 2003-2022 The OWASP™ Foundation. This document is released under the Creative Commons Attribution Share-Alike 4.0 license. For any reuse or distribution, you must make it clear to others the license terms of this work.
+Copyright © 2003-2023 The OWASP™ Foundation. This document is released under the Creative Commons Attribution Share-Alike 4.0 license. For any reuse or distribution, you must make it clear to others the license terms of this work.

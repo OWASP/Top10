@@ -300,8 +300,8 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'">'+e+'<\/'+'a'+'>');
 <p><code>String query = &quot;SELECT * FROM accounts WHERE custID='&quot; + request.getParameter(&quot;id&quot;) + &quot;'&quot;;</code></p>
 <p><strong>Cenário #2</strong>: De forma similar, a confiança cega de uma aplicação em frameworks pode resultar em pesquisas que são igualmente vulneráveis, (ex.: Hibernate Query Language (HQL)):</p>
 <p><code>Query HQLQuery = session.createQuery(&quot;FROM accounts WHERE custID='&quot; + request.getParameter(&quot;id&quot;) + &quot;'&quot;);</code></p>
-<p>Em ambos os casos, um atacante modifica o valor do parâmetro 'id' no seu browser para enviar: ' or '1'='1. Por exemplo:</p>
-<p><code>http://example.com/app/accountView?id=' or '1'='1</code></p>
+<p>Em ambos os casos, um atacante modifica o valor do parâmetro 'id' no seu browser para enviar: ' UNION SELECT SLEEP(10);--. Por exemplo:</p>
+<p><code>http://example.com/app/accountView?id=' UNION SELECT SLEEP(10);--</code></p>
 <p>Isto altera o significado de ambas as pesquisas para que retornem todos os registros da tabela &quot;accounts&quot;. Ataques mais perigosos podem modificar dados ou até invocar stored procedures.</p>
 <h2 id="referencias">Referências</h2>
 <h3 id="owasp-1">OWASP</h3>

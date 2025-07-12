@@ -85,7 +85,7 @@
 
 ## 参考資料
 
--   [OWASP Cheat Sheet: Secure Design Principles](Coming Soon)
+-   [OWASP Cheat Sheet: Secure Design Principles](https://cheatsheetseries.owasp.org/cheatsheets/Secure_Product_Design_Cheat_Sheet.html)
 
 -   [OWASP SAMM: Design:Security Architecture](https://owaspsamm.org/model/design/security-architecture/)
 
@@ -260,7 +260,7 @@ rejected such transactions.
 
 ## References
 
--   [OWASP Cheat Sheet: Secure Design Principles](Coming Soon)
+-   [OWASP Cheat Sheet: Secure Design Principles](https://cheatsheetseries.owasp.org/cheatsheets/Secure_Product_Design_Cheat_Sheet.html)
 
 -   [OWASP SAMM: Design:Security Architecture](https://owaspsamm.org/model/design/security-architecture/)
 
