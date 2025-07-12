@@ -98,20 +98,20 @@ mecanismo de defesa automática contra [Cross-Site Request Forgery
 * [CWE-79: Improper neutralization of user supplied input][0xa715]
 * [PortSwigger: Client-side template injection][0xa716]
 
-[0xa71]: https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet
-[0xa72]: https://www.owasp.org/index.php/DOM_based_XSS_Prevention_Cheat_Sheet
+[0xa71]: https://wiki.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet
+[0xa72]: https://wiki.owasp.org/index.php/DOM_based_XSS_Prevention_Cheat_Sheet
 [0xa73]: https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP
 [0xa74]: https://developer.mozilla.org/pt-PT/docs/Glossary/CSRF
-[0xa75]: https://www.owasp.org/index.php/OWASP_Proactive_Controls#tab=OWASP_Proactive_Controls_2016
-[0xa76]: https://www.owasp.org/index.php/OWASP_Proactive_Controls#tab=OWASP_Proactive_Controls_2016
-[0xa77]: https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project
-[0xa78]: https://www.owasp.org/index.php/Testing_for_Reflected_Cross_site_scripting_(OTG-INPVAL-001)
-[0xa79]: https://www.owasp.org/index.php/Testing_for_Stored_Cross_site_scripting_(OTG-INPVAL-002)
-[0xa710]: https://www.owasp.org/index.php/Testing_for_DOM-based_Cross_site_scripting_(OTG-CLIENT-001)
-[0xa711]: https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet
-[0xa712]: https://www.owasp.org/index.php/DOM_based_XSS_Prevention_Cheat_Sheet
-[0xa713]: https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet
-[0xa714]: https://www.owasp.org/index.php/OWASP_Java_Encoder_Project
+[0xa75]: https://wiki.owasp.org/index.php/OWASP_Proactive_Controls#tab=OWASP_Proactive_Controls_2016
+[0xa76]: https://wiki.owasp.org/index.php/OWASP_Proactive_Controls#tab=OWASP_Proactive_Controls_2016
+[0xa77]: https://wiki.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project
+[0xa78]: https://wiki.owasp.org/index.php/Testing_for_Reflected_Cross_site_scripting_(OTG-INPVAL-001)
+[0xa79]: https://wiki.owasp.org/index.php/Testing_for_Stored_Cross_site_scripting_(OTG-INPVAL-002)
+[0xa710]: https://wiki.owasp.org/index.php/Testing_for_DOM-based_Cross_site_scripting_(OTG-CLIENT-001)
+[0xa711]: https://wiki.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet
+[0xa712]: https://wiki.owasp.org/index.php/DOM_based_XSS_Prevention_Cheat_Sheet
+[0xa713]: https://wiki.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet
+[0xa714]: https://wiki.owasp.org/index.php/OWASP_Java_Encoder_Project
 [0xa715]: https://cwe.mitre.org/data/definitions/79.html
 [0xa716]: https://portswigger.net/kb/issues/00200308_clientsidetemplateinjection
 

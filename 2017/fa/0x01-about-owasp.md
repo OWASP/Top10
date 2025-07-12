@@ -20,20 +20,20 @@
      ارائه‌ها و <a href="https://www.youtube.com/user/OWASPGLOBAL"> ویدیوها</a>.
   </li>
    <li>
-     <a href="https://www.owasp.org/index.php/OWASP_Cheat_Sheet_Series">جداول تقلب </a>
+     <a href="https://wiki.owasp.org/index.php/OWASP_Cheat_Sheet_Series">جداول تقلب </a>
      در موضوعات مختلف
   </li>
    <li>
     کنترل‌ها و کتابخانه‌های امنیتی استاندارد
   </li>
    <li>
-     <a href="https://www.owasp.org/index.php/OWASP_Chapter">گردهمایی محلی در تمام دنیا</a>    
+     <a href="https://wiki.owasp.org/index.php/OWASP_Chapter">گردهمایی محلی در تمام دنیا</a>    
   </li>
   <li>
     تحقیقات به روز
   </li>
   <li>
-    <a href="https://www.owasp.org/index.php/Category:OWASP_AppSec_Conference">کنفرانس‌های گسترده در تمام دنیا</a> 
+    <a href="https://wiki.owasp.org/index.php/Category:OWASP_AppSec_Conference">کنفرانس‌های گسترده در تمام دنیا</a> 
   </li>
   <li>
     <a href="https://lists.owasp.org/mailman/listinfo">ایمیل لیست‌ها</a> 

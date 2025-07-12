@@ -98,12 +98,12 @@ administração, existe igualmente uma falha.
 * [CWE-639: Authorization Bypass Through User-Controlled Key][0xa510]
 * [Portswigger: Exploiting CORS misconfiguration][0xa511]
 
-[0xa51]: https://www.owasp.org/index.php/Source_Code_Analysis_Tools
-[0xa52]: https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools
-[0xa53]: https://www.owasp.org/index.php/OWASP_Proactive_Controls#6:_Implement_Access_Controls
-[0xa54]: https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home
-[0xa55]: https://www.owasp.org/index.php/Testing_for_Authorization
-[0xa56]: https://www.owasp.org/index.php/Access_Control_Cheat_Sheet
+[0xa51]: https://wiki.owasp.org/index.php/Source_Code_Analysis_Tools
+[0xa52]: https://wiki.owasp.org/index.php/Category:Vulnerability_Scanning_Tools
+[0xa53]: https://wiki.owasp.org/index.php/OWASP_Proactive_Controls#6:_Implement_Access_Controls
+[0xa54]: https://wiki.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home
+[0xa55]: https://wiki.owasp.org/index.php/Testing_for_Authorization
+[0xa56]: https://wiki.owasp.org/index.php/Access_Control_Cheat_Sheet
 [0xa57]: https://cwe.mitre.org/data/definitions/22.html
 [0xa58]: https://cwe.mitre.org/data/definitions/284.html
 [0xa59]: https://cwe.mitre.org/data/definitions/285.html

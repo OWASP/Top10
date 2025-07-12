@@ -42,10 +42,10 @@ Il existe des outils automatiques qui aident les attaquants à trouver des syst�
 
 ### OWASP
 
-* [OWASP Standard de Vérification de Sécurité Applicative: V1 Architecture, conception et modélisation des menaces](https://www.owasp.org/index.php/ASVS_V1_Architecture)
-* [OWASP Contrôle des Dépendences (pour les bibliothèques Java et .NET)](https://www.owasp.org/index.php/OWASP_Dependency_Check)
-* [OWASP Guide de Test - Map Application Architecture (OTG-INFO-010)](https://www.owasp.org/index.php/Map_Application_Architecture_(OTG-INFO-010))
-* [OWASP Meilleures pratiques de Mises à Jour Virtuelles](https://www.owasp.org/index.php/Virtual_Patching_Best_Practices)
+* [OWASP Standard de Vérification de Sécurité Applicative: V1 Architecture, conception et modélisation des menaces](https://wiki.owasp.org/index.php/ASVS_V1_Architecture)
+* [OWASP Contrôle des Dépendences (pour les bibliothèques Java et .NET)](https://wiki.owasp.org/index.php/OWASP_Dependency_Check)
+* [OWASP Guide de Test - Map Application Architecture (OTG-INFO-010)](https://wiki.owasp.org/index.php/Map_Application_Architecture_(OTG-INFO-010))
+* [OWASP Meilleures pratiques de Mises à Jour Virtuelles](https://wiki.owasp.org/index.php/Virtual_Patching_Best_Practices)
 
 ### Externes
 

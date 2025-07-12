@@ -3,7 +3,7 @@
 | Facteurs de Menace/Vecteurs d'Attaque | Vulnérabilité    | Impacts  |
 | -- | -- | -- |
 | Accès Lvl : Exploitation 3 | Fréquence 2 : Détection 3 | Technique 3 : Métier |
-| Considérez que n’importe qui peut envoyer des données non fiables au système, y compris les utilisateurs externes, internes, et administrateurs. Presque toute source de données peut être un vecteur d’injection, y compris les variables d'environnement, les paramètres et les web services internes et externes. [Les failles d'injection](https://www.owasp.org/index.php/Injection_Flaws) surviennent lorsqu’une application envoie des données non fiable à un interpréteur.  | Les failles d’injection sont très fréquentes, surtout dans le code ancien. On les retrouve souvent dans les requêtes SQL, LDAP, XPath, noSQL, commandes OS, parseurs XML, arguments de programme, etc. Les failles d’Injection sont faciles à découvrir lors d’un audit de code, mais plus difficilement via des tests. Scanners et Fuzzers aident les attaquants à les trouver. | L’Injection peut résulter en une perte ou une corruption de données, une divulgation à des tiers non autorisés, une perte de droits, ou un refus d’accès. L’Injection peut parfois mener à une prise de contrôle totale du serveur. Considérez la valeur métier de la donnée impactée et la plateforme exécutant l’interpréteur. Toute donnée pourrait être volée, modifiée ou supprimée. Votre réputation pourrait-elle en pâtir?|
+| Considérez que n’importe qui peut envoyer des données non fiables au système, y compris les utilisateurs externes, internes, et administrateurs. Presque toute source de données peut être un vecteur d’injection, y compris les variables d'environnement, les paramètres et les web services internes et externes. [Les failles d'injection](https://wiki.owasp.org/index.php/Injection_Flaws) surviennent lorsqu’une application envoie des données non fiable à un interpréteur.  | Les failles d’injection sont très fréquentes, surtout dans le code ancien. On les retrouve souvent dans les requêtes SQL, LDAP, XPath, noSQL, commandes OS, parseurs XML, arguments de programme, etc. Les failles d’Injection sont faciles à découvrir lors d’un audit de code, mais plus difficilement via des tests. Scanners et Fuzzers aident les attaquants à les trouver. | L’Injection peut résulter en une perte ou une corruption de données, une divulgation à des tiers non autorisés, une perte de droits, ou un refus d’accès. L’Injection peut parfois mener à une prise de contrôle totale du serveur. Considérez la valeur métier de la donnée impactée et la plateforme exécutant l’interpréteur. Toute donnée pourrait être volée, modifiée ou supprimée. Votre réputation pourrait-elle en pâtir?|
 
 
 ## Suis-je vulnérable à l’Injection?
@@ -44,14 +44,14 @@ Ceci change le sens de chacune des requêtes pour récupérer tous les enregistr
 
 ### OWASP
 
-* [OWASP Proactive Controls: Parameterize Queries](https://www.owasp.org/index.php/OWASP_Proactive_Controls#2:_Parameterize_Queries)
-* [OWASP ASVS: V5 Input Validation and Encoding](https://www.owasp.org/index.php/ASVS_V5_Input_validation_and_output_encoding)
-* [OWASP Testing Guide: SQL Injection](https://www.owasp.org/index.php/Testing_for_SQL_Injection_(OTG-INPVAL-005)), [Command Injection](https://www.owasp.org/index.php/Testing_for_Command_Injection_(OTG-INPVAL-013)), [ORM injection](https://www.owasp.org/index.php/Testing_for_ORM_Injection_(OTG-INPVAL-007))
-* [OWASP Cheat Sheet: Injection Prevention](https://www.owasp.org/index.php/Injection_Prevention_Cheat_Sheet)
-* [OWASP Cheat Sheet: SQL Injection Prevention](https://www.owasp.org/index.php/SQL_Injection_Prevention_Cheat_Sheet)
-* [OWASP Cheat Sheet: Injection Prevention in Java](https://www.owasp.org/index.php/Injection_Prevention_Cheat_Sheet_in_Java)
-* [OWASP Cheat Sheet: Query Parameterization](https://www.owasp.org/index.php/Query_Parameterization_Cheat_Sheet)
-* [OWASP Automated Threats to Web Applications – OAT-014](https://www.owasp.org/index.php/OWASP_Automated_Threats_to_Web_Applications)
+* [OWASP Proactive Controls: Parameterize Queries](https://wiki.owasp.org/index.php/OWASP_Proactive_Controls#2:_Parameterize_Queries)
+* [OWASP ASVS: V5 Input Validation and Encoding](https://wiki.owasp.org/index.php/ASVS_V5_Input_validation_and_output_encoding)
+* [OWASP Testing Guide: SQL Injection](https://wiki.owasp.org/index.php/Testing_for_SQL_Injection_(OTG-INPVAL-005)), [Command Injection](https://wiki.owasp.org/index.php/Testing_for_Command_Injection_(OTG-INPVAL-013)), [ORM injection](https://wiki.owasp.org/index.php/Testing_for_ORM_Injection_(OTG-INPVAL-007))
+* [OWASP Cheat Sheet: Injection Prevention](https://wiki.owasp.org/index.php/Injection_Prevention_Cheat_Sheet)
+* [OWASP Cheat Sheet: SQL Injection Prevention](https://wiki.owasp.org/index.php/SQL_Injection_Prevention_Cheat_Sheet)
+* [OWASP Cheat Sheet: Injection Prevention in Java](https://wiki.owasp.org/index.php/Injection_Prevention_Cheat_Sheet_in_Java)
+* [OWASP Cheat Sheet: Query Parameterization](https://wiki.owasp.org/index.php/Query_Parameterization_Cheat_Sheet)
+* [OWASP Automated Threats to Web Applications – OAT-014](https://wiki.owasp.org/index.php/OWASP_Automated_Threats_to_Web_Applications)
 
 ### Externes
 

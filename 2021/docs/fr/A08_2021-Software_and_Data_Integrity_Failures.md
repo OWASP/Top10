@@ -40,7 +40,7 @@ Les défaillances de l'intégrité des logiciels et des données sont liées au 
 -    [OWASP Cheat Sheet: Infrastructure as Code](https://cheatsheetseries.owasp.org/cheatsheets/Infrastructure_as_Code_Security_Cheat_Sheet.html) 
  
 -   [OWASP Cheat Sheet: Deserialization](
-    <https://www.owasp.org/index.php/Deserialization_Cheat_Sheet>)
+    <https://wiki.owasp.org/index.php/Deserialization_Cheat_Sheet>)
 
 -   [SAFECode Software Integrity Controls](
     https://safecode.org/publication/SAFECode_Software_Integrity_Controls0610.pdf)

@@ -3,7 +3,7 @@
 | Agentes de Ameaça/Vetores de Ataque | Vulnerabilidades de Segurança           | Impactos               |
 | -- | -- | -- |
 | Nível de Acesso \| Explorabilidade 2 | Prevalência 2 \| Detectabilidade 2 | Técnico 3 \| Negócio |
-| A exploração do controle de acesso é uma habilidade básica dos atacantes. As ferramentas [SAST](https://www.owasp.org/index.php/Source_Code_Analysis_Tools) e [DAST](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools) podem detectar a ausência de controle de acesso, mas não pode verificar se é funcional quando está presente. O controle de acesso é detectável usando meios manuais, ou possivelmente por automação para a ausência de controles de acesso em certos frameworks.| As vulnerabilidades de controle de acesso são comuns devido à falta de detecção automatizada e à falta de testes funcionais efetivos pelos desenvolvedores de aplicação. A detecção de controle de acesso normalmente não é compatível com testes estáticos ou dinâmicos automatizados. | O impacto técnico são os atacantes que atuam como usuários ou administradores, usuários que usam funções privilegiadas, ou criam, acessam, atualizam ou excluem todos os registros. O impacto comercial depende das necessidades de proteção de sua aplicação e dados. |
+| A exploração do controle de acesso é uma habilidade básica dos atacantes. As ferramentas [SAST](https://wiki.owasp.org/index.php/Source_Code_Analysis_Tools) e [DAST](https://wiki.owasp.org/index.php/Category:Vulnerability_Scanning_Tools) podem detectar a ausência de controle de acesso, mas não pode verificar se é funcional quando está presente. O controle de acesso é detectável usando meios manuais, ou possivelmente por automação para a ausência de controles de acesso em certos frameworks.| As vulnerabilidades de controle de acesso são comuns devido à falta de detecção automatizada e à falta de testes funcionais efetivos pelos desenvolvedores de aplicação. A detecção de controle de acesso normalmente não é compatível com testes estáticos ou dinâmicos automatizados. | O impacto técnico são os atacantes que atuam como usuários ou administradores, usuários que usam funções privilegiadas, ou criam, acessam, atualizam ou excluem todos os registros. O impacto comercial depende das necessidades de proteção de sua aplicação e dados. |
 
 ## A Aplicação Está Vulnerável?
 
@@ -55,10 +55,10 @@ Se um usuário não autenticado puder acessar qualquer uma das páginas, é uma 
 
 ### OWASP
 
-* [OWASP Proactive Controls: Access Controls](https://www.owasp.org/index.php/OWASP_Proactive_Controls#6:_Implement_Access_Controls)
-* [OWASP Application Security Verification Standard: V4 Access Control](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
-* [OWASP Testing Guide: Authorization Testing](https://www.owasp.org/index.php/Testing_for_Authorization)
-* [OWASP Cheat Sheet: Access Control](https://www.owasp.org/index.php/Access_Control_Cheat_Sheet)
+* [OWASP Proactive Controls: Access Controls](https://wiki.owasp.org/index.php/OWASP_Proactive_Controls#6:_Implement_Access_Controls)
+* [OWASP Application Security Verification Standard: V4 Access Control](https://wiki.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
+* [OWASP Testing Guide: Authorization Testing](https://wiki.owasp.org/index.php/Testing_for_Authorization)
+* [OWASP Cheat Sheet: Access Control](https://wiki.owasp.org/index.php/Access_Control_Cheat_Sheet)
 
 ### Externas
 

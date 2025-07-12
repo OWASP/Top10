@@ -15,7 +15,7 @@ Yapılacak ilk şey transit ve durağan veri için koruma gereksinimlerinin beli
 * Şifreleme zorunlu tutuluyor mu? örn. herhangi bir tarayıcı güvenlik direktifi veya başlığı eksik mi?
 * Kullanıcı aracısı (örn. uygulama, mail istemcisi) alınan sunucu sertifikasının geçerli olup olmadığını doğruluyor mu?
 
-Bakınız ASVS [Şifreleme (V7)](https://www.owasp.org/index.php/ASVS_V7_Cryptography), [Veri Koruma (V9)](https://www.owasp.org/index.php/ASVS_V9_Data_Protection) ve [SSL/TLS (V10)](https://www.owasp.org/index.php/ASVS_V10_Communications).
+Bakınız ASVS [Şifreleme (V7)](https://wiki.owasp.org/index.php/ASVS_V7_Cryptography), [Veri Koruma (V9)](https://wiki.owasp.org/index.php/ASVS_V9_Data_Protection) ve [SSL/TLS (V10)](https://wiki.owasp.org/index.php/ASVS_V10_Communications).
 
 ## Nasıl Önlenir
 
@@ -41,13 +41,13 @@ En azından aşağıdakiler yapılmalı ve referanslara başvurulmalıdır:
 
 ## Kaynaklar
 
-* [OWASP Proaktif Kontroller: Verinin Korunması](https://www.owasp.org/index.php/OWASP_Proactive_Controls#7:_Protect_Data)
-* [OWASP Uygulama Güvenliği Doğrulama Standardı]((https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project)): [V7](https://www.owasp.org/index.php/ASVS_V7_Cryptography), [9](https://www.owasp.org/index.php/ASVS_V9_Data_Protection), [10](https://www.owasp.org/index.php/ASVS_V10_Communications)
-* [OWASP Kopya Kağıdı: Taşıma Katmanı Korumaları](https://www.owasp.org/index.php/Transport_Layer_Protection_Cheat_Sheet)
-* [OWASP Kopya Kağıdı: Kullanıcı Gizliliğinin Korunması](https://www.owasp.org/index.php/User_Privacy_Protection_Cheat_Sheet)
-* [OWASP Kopya Kağıdı: Parola](https://www.owasp.org/index.php/Password_Storage_Cheat_Sheet) ve [Kriptografik Saklama](https://www.owasp.org/index.php/Cryptographic_Storage_Cheat_Sheet)
-* [OWASP Güvenlik Başlıkları Projesi](https://www.owasp.org/index.php/OWASP_Secure_Headers_Project); [Kopya Kağıdı: HSTS](https://www.owasp.org/index.php/HTTP_Strict_Transport_Security_Cheat_Sheet)
-* [OWASP Test Rehberi: Zayıf kriptografi testleri](https://www.owasp.org/index.php/Testing_for_weak_Cryptography)
+* [OWASP Proaktif Kontroller: Verinin Korunması](https://wiki.owasp.org/index.php/OWASP_Proactive_Controls#7:_Protect_Data)
+* [OWASP Uygulama Güvenliği Doğrulama Standardı]((https://wiki.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project)): [V7](https://wiki.owasp.org/index.php/ASVS_V7_Cryptography), [9](https://wiki.owasp.org/index.php/ASVS_V9_Data_Protection), [10](https://wiki.owasp.org/index.php/ASVS_V10_Communications)
+* [OWASP Kopya Kağıdı: Taşıma Katmanı Korumaları](https://wiki.owasp.org/index.php/Transport_Layer_Protection_Cheat_Sheet)
+* [OWASP Kopya Kağıdı: Kullanıcı Gizliliğinin Korunması](https://wiki.owasp.org/index.php/User_Privacy_Protection_Cheat_Sheet)
+* [OWASP Kopya Kağıdı: Parola](https://wiki.owasp.org/index.php/Password_Storage_Cheat_Sheet) ve [Kriptografik Saklama](https://wiki.owasp.org/index.php/Cryptographic_Storage_Cheat_Sheet)
+* [OWASP Güvenlik Başlıkları Projesi](https://wiki.owasp.org/index.php/OWASP_Secure_Headers_Project); [Kopya Kağıdı: HSTS](https://wiki.owasp.org/index.php/HTTP_Strict_Transport_Security_Cheat_Sheet)
+* [OWASP Test Rehberi: Zayıf kriptografi testleri](https://wiki.owasp.org/index.php/Testing_for_weak_Cryptography)
 
 ### Dış Kaynaklar
 

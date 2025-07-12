@@ -10,7 +10,7 @@ A veces, estos caminos son triviales de encontrar y explotar, mientras que otras
 
 ## ¿Cuál es Mi Riesgo?
 
-El [OWASP Top 10](https://www.owasp.org/index.php/Top10) se enfoca en identificar los riesgos más críticos para un amplio espectro de organizaciones. Para cada uno de éstos riesgos, se proporciona información genérica sobre la probabilidad y el impacto técnico utilizando el siguiente esquema de evaluación, basado en la Metodología de Evaluación de Riesgos de OWASP.
+El [OWASP Top 10](https://wiki.owasp.org/index.php/Top10) se enfoca en identificar los riesgos más críticos para un amplio espectro de organizaciones. Para cada uno de éstos riesgos, se proporciona información genérica sobre la probabilidad y el impacto técnico utilizando el siguiente esquema de evaluación, basado en la Metodología de Evaluación de Riesgos de OWASP.
 
 | Agente de Amenaza | Explotabilidad | Prevalencia de Vulnerabilidad | Detección de Vulnerabilidad | Impacto Técnico | Impacto de Negocio |
 | -- | -- | -- | -- | -- | -- |
@@ -28,8 +28,8 @@ En la medida de lo posible, los nombres de los riesgos en el Top 10 están aline
 
 ### OWASP
 
-* [Metodología de evaluación de riesgos de OWASP](https://www.owasp.org/index.php/OWASP_Risk_Rating_Methodology)
-* [Artículo sobre modelado de amenaza/riesgo](https://www.owasp.org/index.php/Threat_Risk_Modeling)
+* [Metodología de evaluación de riesgos de OWASP](https://wiki.owasp.org/index.php/OWASP_Risk_Rating_Methodology)
+* [Artículo sobre modelado de amenaza/riesgo](https://wiki.owasp.org/index.php/Threat_Risk_Modeling)
 
 ### Externas
 

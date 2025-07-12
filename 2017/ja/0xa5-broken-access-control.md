@@ -3,7 +3,7 @@
 | 脅威エージェント/攻撃手法 | セキュリティ上の弱点  | 影響 |
 | -- | -- | -- |
 | アクセスレベル : 悪用のしやすさ 2 | 蔓延度 2 : 検出のしやすさ 2 | 技術面への影響 3 : ビジネス面への影響 |
-| アクセス制御の悪用は攻撃者の基本スキルです。 静的ソースコード解析ツール([SAST](https://www.owasp.org/index.php/Source_Code_Analysis_Tools))と動的アプリケーションテストツール([DAST](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools))はアクセス制御の不存在を検出できますが、それが存在する場合にアクセス制御が有効に機能していることを検証することはできません。アクセス制御は、手作業で、場合によっては特定のフレームワークにおけるアクセス制御の不存在の自動チェックによって発見することができます。 | アクセス制御上の欠陥は、一般に、自動検出が行われないことやアプリケーション開発者による効果的な機能テストが行われないことによって生じます。 アクセス制御の検出は、通常は自動化された静的または動的テストには適していません。 手動テストは、HTTPメソッド（GET対PUTなど）、コントローラ、オブジェクト直接参照などでの欠落している、もしくは機能していないアクセス制御を検出するための最良の方法です。 | 技術への影響は、攻撃者が一般ユーザ、管理者、または特権機能を持ったユーザとして振る舞ったり、すべてのレコードの作成、アクセス、更新、削除を行ってしまうことです。ビジネスへの影響は、アプリケーションとデータの保護の重要性に依存します。 |
+| アクセス制御の悪用は攻撃者の基本スキルです。 静的ソースコード解析ツール([SAST](https://wiki.owasp.org/index.php/Source_Code_Analysis_Tools))と動的アプリケーションテストツール([DAST](https://wiki.owasp.org/index.php/Category:Vulnerability_Scanning_Tools))はアクセス制御の不存在を検出できますが、それが存在する場合にアクセス制御が有効に機能していることを検証することはできません。アクセス制御は、手作業で、場合によっては特定のフレームワークにおけるアクセス制御の不存在の自動チェックによって発見することができます。 | アクセス制御上の欠陥は、一般に、自動検出が行われないことやアプリケーション開発者による効果的な機能テストが行われないことによって生じます。 アクセス制御の検出は、通常は自動化された静的または動的テストには適していません。 手動テストは、HTTPメソッド（GET対PUTなど）、コントローラ、オブジェクト直接参照などでの欠落している、もしくは機能していないアクセス制御を検出するための最良の方法です。 | 技術への影響は、攻撃者が一般ユーザ、管理者、または特権機能を持ったユーザとして振る舞ったり、すべてのレコードの作成、アクセス、更新、削除を行ってしまうことです。ビジネスへの影響は、アプリケーションとデータの保護の重要性に依存します。 |
 
 ## 脆弱性発見のポイント
 
@@ -57,10 +57,10 @@
 
 ### OWASP
 
-* [OWASP Proactive Controls: Access Controls](https://www.owasp.org/index.php/OWASP_Proactive_Controls#6:_Implement_Access_Controls)
-* [OWASP Application Security Verification Standard: V4 Access Control](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
-* [OWASP Testing Guide: Authorization Testing](https://www.owasp.org/index.php/Testing_for_Authorization)
-* [OWASP Cheat Sheet: Access Control](https://www.owasp.org/index.php/Access_Control_Cheat_Sheet)
+* [OWASP Proactive Controls: Access Controls](https://wiki.owasp.org/index.php/OWASP_Proactive_Controls#6:_Implement_Access_Controls)
+* [OWASP Application Security Verification Standard: V4 Access Control](https://wiki.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
+* [OWASP Testing Guide: Authorization Testing](https://wiki.owasp.org/index.php/Testing_for_Authorization)
+* [OWASP Cheat Sheet: Access Control](https://wiki.owasp.org/index.php/Access_Control_Cheat_Sheet)
 
 ### 外部資料
 

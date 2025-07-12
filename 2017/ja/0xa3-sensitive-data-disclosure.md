@@ -16,7 +16,7 @@
 * ユーザエージェント（ブラウザ）のセキュリティに関するディレクティブやヘッダーが欠落しているなど、暗号化が強制されていない箇所はないか。
 * アプリ、メールクライアントなどのユーザエージェントが受信したサーバ証明書が正当なものか検証していない箇所はないか。
 
-ASVS [Crypto (V7)](https://www.owasp.org/index.php/ASVS_V7_Cryptography)、[Data Protection (V9)](https://www.owasp.org/index.php/ASVS_V9_Data_Protection)、そして[SSL/TLS (V10)](https://www.owasp.org/index.php/ASVS_V10_Communications)を参照。
+ASVS [Crypto (V7)](https://wiki.owasp.org/index.php/ASVS_V7_Cryptography)、[Data Protection (V9)](https://wiki.owasp.org/index.php/ASVS_V9_Data_Protection)、そして[SSL/TLS (V10)](https://wiki.owasp.org/index.php/ASVS_V10_Communications)を参照。
 
 ## 防止方法
 
@@ -27,7 +27,7 @@ ASVS [Crypto (V7)](https://www.owasp.org/index.php/ASVS_V7_Cryptography)、[Data
 * 必要のない機微な情報を保存しない。できる限りすぐにそのような機微な情報を破棄するか、PCI DSSに準拠したトークナイゼーションまたはトランケーションを行う。データが残っていなければ盗まれない。
 * 保存時にすべての機微な情報を暗号化しているか確認する。
 * 最新の暗号強度の高い標準アルゴリズム、プロトコル、暗号鍵を実装しているか確認する。そして適切に暗号鍵を管理する。
-* 前方秘匿性(PFS)を有効にしたTLS、サーバサイドによる暗号スイートの優先度決定、セキュアパラメータなどのセキュアなプロトコルで、通信経路上のすべてのデータを暗号化する。HTTP Strict Transport Security ([HSTS](https://www.owasp.org/index.php/HTTP_Strict_Transport_Security_Cheat_Sheet))のようなディレクティブで暗号化を強制する。
+* 前方秘匿性(PFS)を有効にしたTLS、サーバサイドによる暗号スイートの優先度決定、セキュアパラメータなどのセキュアなプロトコルで、通信経路上のすべてのデータを暗号化する。HTTP Strict Transport Security ([HSTS](https://wiki.owasp.org/index.php/HTTP_Strict_Transport_Security_Cheat_Sheet))のようなディレクティブで暗号化を強制する。
 * パスワードを保存する際、[Argon2](https://www.cryptolux.org/index.php/Argon2)、[scrypt](https://wikipedia.org/wiki/Scrypt)、 [bcrypt](https://wikipedia.org/wiki/Bcrypt)、[PBKDF2](https://wikipedia.org/wiki/PBKDF2)のようなワークファクタ(遅延ファクタ)のある、強くかつ適応可能なレベルのソルト付きハッシュ関数を用いる。
 * 設定とその設定値がそれぞれ独立して効果があるか検証する。
 
@@ -43,13 +43,13 @@ ASVS [Crypto (V7)](https://www.owasp.org/index.php/ASVS_V7_Cryptography)、[Data
 
 ### OWASP
 
-* [OWASP Proactive Controls: Protect Data](https://www.owasp.org/index.php/OWASP_Proactive_Controls#7:_Protect_Data)
-* [OWASP Application Security Verification Standard]((https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project)): [V7](https://www.owasp.org/index.php/ASVS_V7_Cryptography), [9](https://www.owasp.org/index.php/ASVS_V9_Data_Protection), [10](https://www.owasp.org/index.php/ASVS_V10_Communications)
-* [OWASP Cheat Sheet: Transport Layer Protection](https://www.owasp.org/index.php/Transport_Layer_Protection_Cheat_Sheet)
-* [OWASP Cheat Sheet: User Privacy Protection](https://www.owasp.org/index.php/User_Privacy_Protection_Cheat_Sheet)
-* [OWASP Cheat Sheet: Password](https://www.owasp.org/index.php/Password_Storage_Cheat_Sheet)と[Cryptographic Storage](https://www.owasp.org/index.php/Cryptographic_Storage_Cheat_Sheet)
-* [OWASP Security Headers Project](https://www.owasp.org/index.php/OWASP_Secure_Headers_Project); [Cheat Sheet: HSTS](https://www.owasp.org/index.php/HTTP_Strict_Transport_Security_Cheat_Sheet)
-* [OWASP Testing Guide: Testing for weak cryptography](https://www.owasp.org/index.php/Testing_for_weak_Cryptography)
+* [OWASP Proactive Controls: Protect Data](https://wiki.owasp.org/index.php/OWASP_Proactive_Controls#7:_Protect_Data)
+* [OWASP Application Security Verification Standard]((https://wiki.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project)): [V7](https://wiki.owasp.org/index.php/ASVS_V7_Cryptography), [9](https://wiki.owasp.org/index.php/ASVS_V9_Data_Protection), [10](https://wiki.owasp.org/index.php/ASVS_V10_Communications)
+* [OWASP Cheat Sheet: Transport Layer Protection](https://wiki.owasp.org/index.php/Transport_Layer_Protection_Cheat_Sheet)
+* [OWASP Cheat Sheet: User Privacy Protection](https://wiki.owasp.org/index.php/User_Privacy_Protection_Cheat_Sheet)
+* [OWASP Cheat Sheet: Password](https://wiki.owasp.org/index.php/Password_Storage_Cheat_Sheet)と[Cryptographic Storage](https://wiki.owasp.org/index.php/Cryptographic_Storage_Cheat_Sheet)
+* [OWASP Security Headers Project](https://wiki.owasp.org/index.php/OWASP_Secure_Headers_Project); [Cheat Sheet: HSTS](https://wiki.owasp.org/index.php/HTTP_Strict_Transport_Security_Cheat_Sheet)
+* [OWASP Testing Guide: Testing for weak cryptography](https://wiki.owasp.org/index.php/Testing_for_weak_Cryptography)
 
 ### 外部資料
 

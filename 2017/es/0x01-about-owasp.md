@@ -9,11 +9,11 @@ En OWASP, encontrará gratuitas y abiertas:
 * Herramientas y estándares de seguridad en aplicaciones.
 * Libros completos de revisiones de seguridad en aplicaciones, desarrollo de código fuente seguro, y revisiones de seguridad en código fuente.
 * Presentaciones y [videos](https://www.youtube.com/user/OWASPGLOBAL).
-* [Hojas de ayuda](https://www.owasp.org/index.php/OWASP_Cheat_Sheet_Series) en varios tópicos comunes.
+* [Hojas de ayuda](https://wiki.owasp.org/index.php/OWASP_Cheat_Sheet_Series) en varios tópicos comunes.
 * Controles de seguridad estándar y bibliotecas.
-* [Capítulos locales en todo el mundo](https://www.owasp.org/index.php/OWASP_Chapter).
+* [Capítulos locales en todo el mundo](https://wiki.owasp.org/index.php/OWASP_Chapter).
 * Investigaciones de vanguardia.
-* Numerosas [conferencias alrededor del mundo](https://www.owasp.org/index.php/Category:OWASP_AppSec_Conference).
+* Numerosas [conferencias alrededor del mundo](https://wiki.owasp.org/index.php/Category:OWASP_AppSec_Conference).
 * [Listas de correo](https://lists.owasp.org/mailman/listinfo).
 
 Conozca más en: [https://www.owasp.org](https://www.owasp.org).

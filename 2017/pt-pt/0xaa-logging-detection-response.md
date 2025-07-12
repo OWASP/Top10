@@ -88,16 +88,16 @@ em consequência de transações fraudulentas.
 * [CWE-778: Insufficient Logging][0xaa13]
 
 [0xaa1]: https://owasp.blogspot.com/2017/08/owasp-top-10-2017-project-update.html
-[0xaa2]: https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools
-[0xaa3]: https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project
+[0xaa2]: https://wiki.owasp.org/index.php/Category:Vulnerability_Scanning_Tools
+[0xaa3]: https://wiki.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project
 [0xaa4]: ./0xa3-sensitive-data-disclosure.md
 [0xaa5]: https://csrc.nist.gov/publications/detail/sp/800-61/rev-2/final
-[0xaa6]: https://www.owasp.org/index.php/OWASP_AppSensor_Project
-[0xaa7]: https://www.owasp.org/index.php/Category:OWASP_ModSecurity_Core_Rule_Set_Project
-[0xaa8]: https://www.owasp.org/index.php/OWASP_Proactive_Controls#8:_Implement_Logging_and_Intrusion_Detection
-[0xaa9]: https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home
-[0xaa10]: https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home
-[0xaa11]: https://www.owasp.org/index.php/Logging_Cheat_Sheet
+[0xaa6]: https://wiki.owasp.org/index.php/OWASP_AppSensor_Project
+[0xaa7]: https://wiki.owasp.org/index.php/Category:OWASP_ModSecurity_Core_Rule_Set_Project
+[0xaa8]: https://wiki.owasp.org/index.php/OWASP_Proactive_Controls#8:_Implement_Logging_and_Intrusion_Detection
+[0xaa9]: https://wiki.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home
+[0xaa10]: https://wiki.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home
+[0xaa11]: https://wiki.owasp.org/index.php/Logging_Cheat_Sheet
 [0xaa12]: https://cwe.mitre.org/data/definitions/223.html
 [0xaa13]: https://cwe.mitre.org/data/definitions/778.html
 

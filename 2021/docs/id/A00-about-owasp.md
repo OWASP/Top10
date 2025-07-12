@@ -12,9 +12,9 @@ Di OWASP, anda akan menemukan kebebasan dan keterbukaan:
 - [Cheat sheets](https://cheatsheetseries.owasp.org/) untuk banyak topik umum.
 - [Pertemuan Chapter](https://owasp.org/chapters/).
 - [Kegiatan, pelatihan, dan konferensi](https://owasp.org/events/).
-- [Google Groups](TBA)
+- [Google Groups](https://groups.google.com/g/owasp)
 
-Pelajari lebih lanjut di: [https://www.owasp.org](https://www.owasp.org).
+Pelajari lebih lanjut di: [https://owasp.org](https://owasp.org).
 
 seluruh alat OWASP, dokumen, video, presentasi, dan bagian adalah kebebasan dan keterbukaan bagi semua orang yang tertarik dalam meningkatkan keamanan aplikasi
 

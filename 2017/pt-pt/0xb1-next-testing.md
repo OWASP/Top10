@@ -68,8 +68,8 @@ estimativa realista de quão difícil a vulnerabilidade é de descobrir e abusar
 quão mau seria. Finalmente, forneça resultados nas ferramentas que as equipas de
 desenvolvimento já estão usar, e não em ficheiros PDF.
 
-[0xb11]: https://www.owasp.org/index.php/ASVS
-[0xb12]: https://www.owasp.org/index.php/OWASP_Testing_Project
-[0xb13]: https://www.owasp.org/index.php/OWASP_Security_Knowledge_Framework
-[0xb14]: https://www.owasp.org/index.php/ASVS
+[0xb11]: https://wiki.owasp.org/index.php/ASVS
+[0xb12]: https://wiki.owasp.org/index.php/OWASP_Testing_Project
+[0xb13]: https://wiki.owasp.org/index.php/OWASP_Security_Knowledge_Framework
+[0xb14]: https://wiki.owasp.org/index.php/ASVS
 

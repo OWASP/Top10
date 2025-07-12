@@ -3,7 +3,7 @@
 | Threat agents/Attack vectors | Security Weakness  | Impacts |
 | -- | -- | -- |
 | Access Lvl : قابلیت بهره‌برداری: ۳ | شیوع: ۲ : قابل کشف بودن: ۲ | تکنیکی: ۳ : Business ? |
-| <div dir="rtl" align="right"> بهره جویی از کنترل دسترسی یک مهارت اصلی مهاجمان است. ابزارهای <a href="https://www.owasp.org/index.php/Source_Code_Analysis_Tools">SAST</a> و <a href="https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools">DAST</a> می‌توانند فقدان کنترل دسترسی را تشخیص دهند، اما در صورت وجود کنترل دسترسی نمی‌توانند عملکرد آن را تایید کنند. کنترل دسترسی با استفاده از ابزار دستی و یا احتمالا از طریق خودکارسازی برای عدم وجود کنترل دسترسی در فریمورک های خاص قابل شناسایی است.</div> | <div dir="rtl" align="right">ضعف های کنترل دسترسی عموما به علت عدم تشخیص خودکار و عدم تست عملکردی موثر توسط توسعه دهندگان نرم افزار رایج هستند.تشخیص کنترل دسترسی به طور معمول نمی‌تواند به آزمایش خودکار ایستا یا پویا متوسل شود. تست دستی بهترین روش برای شناسایی کنترل دسترسی ناکارا یا نبود کنترل دسترسی است، از جمله روش HTTP (GET vs PUT)، کنترل کننده، direct object references </div> | <div dir="rtl" align="right">تأثیر فنی این حمله بدین گونه است که مهاجمان به عنوان کاربران یا مدیران، یا کاربران با استفاده از توابع اصلی، و یا ایجاد، دسترسی، به روز رسانی و یا حذف هر رکورد عمل می‌کنند .تأثیر کسب و کار بستگی به نیازهای حفاظت از برنامه و داده ها دارد.</div> |
+| <div dir="rtl" align="right"> بهره جویی از کنترل دسترسی یک مهارت اصلی مهاجمان است. ابزارهای <a href="https://wiki.owasp.org/index.php/Source_Code_Analysis_Tools">SAST</a> و <a href="https://wiki.owasp.org/index.php/Category:Vulnerability_Scanning_Tools">DAST</a> می‌توانند فقدان کنترل دسترسی را تشخیص دهند، اما در صورت وجود کنترل دسترسی نمی‌توانند عملکرد آن را تایید کنند. کنترل دسترسی با استفاده از ابزار دستی و یا احتمالا از طریق خودکارسازی برای عدم وجود کنترل دسترسی در فریمورک های خاص قابل شناسایی است.</div> | <div dir="rtl" align="right">ضعف های کنترل دسترسی عموما به علت عدم تشخیص خودکار و عدم تست عملکردی موثر توسط توسعه دهندگان نرم افزار رایج هستند.تشخیص کنترل دسترسی به طور معمول نمی‌تواند به آزمایش خودکار ایستا یا پویا متوسل شود. تست دستی بهترین روش برای شناسایی کنترل دسترسی ناکارا یا نبود کنترل دسترسی است، از جمله روش HTTP (GET vs PUT)، کنترل کننده، direct object references </div> | <div dir="rtl" align="right">تأثیر فنی این حمله بدین گونه است که مهاجمان به عنوان کاربران یا مدیران، یا کاربران با استفاده از توابع اصلی، و یا ایجاد، دسترسی، به روز رسانی و یا حذف هر رکورد عمل می‌کنند .تأثیر کسب و کار بستگی به نیازهای حفاظت از برنامه و داده ها دارد.</div> |
 
 ## <div dir="rtl" align="right">آیا برنامه کاربردی آسیب پذیر است ؟</div>
 
@@ -84,10 +84,10 @@
 
 ### <div dir="rtl" align="right">OWASP</div> 
 
-* [OWASP Proactive Controls: Access Controls](https://www.owasp.org/index.php/OWASP_Proactive_Controls#6:_Implement_Access_Controls)
-* [OWASP Application Security Verification Standard: V4 Access Control](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
-* [OWASP Testing Guide: Authorization Testing](https://www.owasp.org/index.php/Testing_for_Authorization)
-* [OWASP Cheat Sheet: Access Control](https://www.owasp.org/index.php/Access_Control_Cheat_Sheet)
+* [OWASP Proactive Controls: Access Controls](https://wiki.owasp.org/index.php/OWASP_Proactive_Controls#6:_Implement_Access_Controls)
+* [OWASP Application Security Verification Standard: V4 Access Control](https://wiki.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
+* [OWASP Testing Guide: Authorization Testing](https://wiki.owasp.org/index.php/Testing_for_Authorization)
+* [OWASP Cheat Sheet: Access Control](https://wiki.owasp.org/index.php/Access_Control_Cheat_Sheet)
 
 ### <div dir="rtl" align="right">خارجی</div>
 

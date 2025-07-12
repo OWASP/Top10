@@ -12,9 +12,9 @@ OWASP では、無料で利用できるものが公開されています:
 - 数多くの共通トピックに関する [チートシート](https://cheatsheetseries.owasp.org/)
 - [チャプターミーティング](https://owasp.org/chapters/)
 - [イベント、トレーニング、カンファレンス](https://owasp.org/events/)。
-- [Googleグループ](TBA)
+- [Googleグループ](https://groups.google.com/g/owasp)
 
-詳細はこちらをご覧ください:[https://www.owasp.org](https://www.owasp.org).
+詳細はこちらをご覧ください:[https://owasp.org](https://owasp.org).
 
 すべてのOWASPのツール、ドキュメント、ビデオ、プレゼンテーション、そしてチャプターは自由でオープンなものであり、アプリケーションセキュリティを改善する人なら誰でも活用することができます。
 

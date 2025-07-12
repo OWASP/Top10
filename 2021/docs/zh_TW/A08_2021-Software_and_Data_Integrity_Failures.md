@@ -106,7 +106,7 @@ most significant breaches of this nature in history.
 ## 參考文獻
 
 -   \[OWASP Cheat Sheet: Deserialization\](
-    <https://www.owasp.org/index.php/Deserialization_Cheat_Sheet>)
+    <https://wiki.owasp.org/index.php/Deserialization_Cheat_Sheet>)
 
 -   \[OWASP Cheat Sheet: Software Supply Chain Security\]()
 

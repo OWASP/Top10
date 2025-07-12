@@ -91,9 +91,9 @@ administrador:
 * [OWASP AppSec Cali 2015: Marshalling Pickles][0xa89]
 
 [0xa81]: https://owasp.blogspot.com/2017/08/owasp-top-10-2017-project-update.html
-[0xa82]: https://www.owasp.org/index.php/Deserialization_Cheat_Sheet
-[0xa83]: https://www.owasp.org/index.php/OWASP_Proactive_Controls#4:_Validate_All_Inputs
-[0xa84]: https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home
+[0xa82]: https://wiki.owasp.org/index.php/Deserialization_Cheat_Sheet
+[0xa83]: https://wiki.owasp.org/index.php/OWASP_Proactive_Controls#4:_Validate_All_Inputs
+[0xa84]: https://wiki.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home
 [0xa85]: https://speakerdeck.com/pwntester/surviving-the-java-deserialization-apocalypse
 [0xa86]: https://speakerdeck.com/pwntester/friday-the-13th-json-attacks
 [0xa87]: https://cwe.mitre.org/data/definitions/502.html

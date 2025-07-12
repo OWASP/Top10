@@ -15,7 +15,7 @@ Lo primero es determinar las necesidades de protección de los datos en tránsit
 * ¿No se aplica el cifrado, por ejemplo, no se han configurado alguna de las directivas de seguridad o encabezados para el navegador?
 * ¿El Agente del usuario (aplicación o cliente de correo electrónico, por ejemplo), verifica que el certificado enviado por el servidor se válido?
 
-Véase también [criptografía en el almacenamiento (V7)](https://www.owasp.org/index.php/ASVS_V7_Cryptography), [protección de datos (V9)](https://www.owasp.org/index.php/ASVS_V9_Data_rotection) y [seguridad de la comunicaciones (V10)](https://www.owasp.org/index.php/ASVS_V10_Communications) del ASVS.
+Véase también [criptografía en el almacenamiento (V7)](https://wiki.owasp.org/index.php/ASVS_V7_Cryptography), [protección de datos (V9)](https://wiki.owasp.org/index.php/ASVS_V9_Data_rotection) y [seguridad de la comunicaciones (V10)](https://wiki.owasp.org/index.php/ASVS_V10_Communications) del ASVS.
 
 ## Cómo se previene
 
@@ -43,14 +43,14 @@ Realice como mínimo las siguientes recomendaciones y consulte las referencias:
 
 ### OWASP
 
-* [Controles Proactivos de OWASP: Protección de Datos](https://www.owasp.org/index.php/OWASP_Proactive_Controls#7:_Protect_Data)
-* [Estándar de Verificación de Seguridad en Aplicaciones de OWASP: V9, V10, V11](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project)
-* [Hoja de ayuda de OWASP: Protección de Capa Transporte](https://www.owasp.org/index.php/Transport_Layer_Protection_Cheat_Sheet)
-* [Hoja de ayuda de OWASP: Protección de Seguridad de Usuario](https://www.owasp.org/index.php/User_Privacy_Protection_Cheat_Sheet)
-* [Hoja de ayuda de OWASP: Almacenamiento de Contraseña](https://www.owasp.org/index.php/Password_Storage_Cheat_Sheet)
-* [Hoja de ayuda de OWASP: Almacenamiento Criptográfico](https://www.owasp.org/index.php/Cryptographic_Storage_Cheat_Sheet)
-* [Proyecto de Cabezales de Seguridad de OWASP](https://www.owasp.org/index.php/OWASP_Secure_Headers_Project)
-* [Guía de Pruebas de OWASP: Pruebas de Criptografía débil](https://www.owasp.org/index.php/Testing_for_weak_Cryptography)
+* [Controles Proactivos de OWASP: Protección de Datos](https://wiki.owasp.org/index.php/OWASP_Proactive_Controls#7:_Protect_Data)
+* [Estándar de Verificación de Seguridad en Aplicaciones de OWASP: V9, V10, V11](https://wiki.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project)
+* [Hoja de ayuda de OWASP: Protección de Capa Transporte](https://wiki.owasp.org/index.php/Transport_Layer_Protection_Cheat_Sheet)
+* [Hoja de ayuda de OWASP: Protección de Seguridad de Usuario](https://wiki.owasp.org/index.php/User_Privacy_Protection_Cheat_Sheet)
+* [Hoja de ayuda de OWASP: Almacenamiento de Contraseña](https://wiki.owasp.org/index.php/Password_Storage_Cheat_Sheet)
+* [Hoja de ayuda de OWASP: Almacenamiento Criptográfico](https://wiki.owasp.org/index.php/Cryptographic_Storage_Cheat_Sheet)
+* [Proyecto de Cabezales de Seguridad de OWASP](https://wiki.owasp.org/index.php/OWASP_Secure_Headers_Project)
+* [Guía de Pruebas de OWASP: Pruebas de Criptografía débil](https://wiki.owasp.org/index.php/Testing_for_weak_Cryptography)
 
 ### Externas
 

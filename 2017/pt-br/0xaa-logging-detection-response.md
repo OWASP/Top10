@@ -12,7 +12,7 @@ Insuficiência de logs, de detecção, de monitoração e de resposta ativa ocor
 * Eventos auditáveis, como logins, logins com falha e transações de alto valor não são registrados.
 * Os logs de aplicações e APIs não são monitorados para atividades suspeitas.
 * Os limiares de alerta e a escalação da resposta, conforme o risco dos dados detidos pela aplicação, não estão em vigor nem são efetivos.
-* Testes de penetração e varredura pelas ferramentas [DAST](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools) (como [OWASP ZAP](https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project)) não desencadeiam alertas.
+* Testes de penetração e varredura pelas ferramentas [DAST](https://wiki.owasp.org/index.php/Category:Vulnerability_Scanning_Tools) (como [OWASP ZAP](https://wiki.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project)) não desencadeiam alertas.
 
 Para as organizações maiores e de alto desempenho, a falta de respostas ativas, como atividades de alerta e resposta em tempo real como o bloqueio de ataques automatizados em aplicações Web e particularmente APIs, colocaria a organização em risco de um comprometimento estendido. A resposta não precisa necessariamente ser visível para o invasor, apenas que a aplicação e infra-estrutura associada, frameworks, camadas de serviço, etc. podem detectar e alertar humanos ou ferramentas para responder em tempo quase real.
 
@@ -26,7 +26,7 @@ De acordo com o risco dos dados armazenados ou processados pela aplicação:
 * Estabeleça monitorações e alertas eficazes, de modo que as atividades suspeitas sejam detectadas e respondidas em tempo hábil.
 * Estabeleça ou adote um plano de respostas e recuperação a incidentes, como [NIST 800-61 rev 2](https://csrc.nist.gov/publications/detail/sp/800-61/rev-2/final) ou posterior.
 
-Existem frameworks de proteção de aplicações comerciais e de código aberto, como [OWASP AppSensor](https://www.owasp.org/index.php/OWASP_AppSensor_Project), firewalls de aplicações Web, como [mod_security com o OWASP Core Rule Set](https://www.owasp.org/index.php/Category:OWASP_ModSecurity_Core_Rule_Set_Project) e software de correlação de logs com painéis personalizados e alertas.
+Existem frameworks de proteção de aplicações comerciais e de código aberto, como [OWASP AppSensor](https://wiki.owasp.org/index.php/OWASP_AppSensor_Project), firewalls de aplicações Web, como [mod_security com o OWASP Core Rule Set](https://wiki.owasp.org/index.php/Category:OWASP_ModSecurity_Core_Rule_Set_Project) e software de correlação de logs com painéis personalizados e alertas.
 
 ## Exemplos de Cenários de Ataque
 
@@ -40,10 +40,10 @@ Existem frameworks de proteção de aplicações comerciais e de código aberto,
 
 ### OWASP
 
-* [OWASP Proactive Controls: Implement Logging and Intrusion Detection](https://www.owasp.org/index.php/OWASP_Proactive_Controls#8:_Implement_Logging_and_Intrusion_Detection)
-* [OWASP Application Security Verification Standard: V8 Logging and Monitoring](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
-* [OWASP Testing Guide: Testing for Detailed Error Code](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
-* [OWASP Cheat Sheet: Logging](https://www.owasp.org/index.php/Logging_Cheat_Sheet)
+* [OWASP Proactive Controls: Implement Logging and Intrusion Detection](https://wiki.owasp.org/index.php/OWASP_Proactive_Controls#8:_Implement_Logging_and_Intrusion_Detection)
+* [OWASP Application Security Verification Standard: V8 Logging and Monitoring](https://wiki.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
+* [OWASP Testing Guide: Testing for Detailed Error Code](https://wiki.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
+* [OWASP Cheat Sheet: Logging](https://wiki.owasp.org/index.php/Logging_Cheat_Sheet)
 
 ### Externas
 

@@ -32,7 +32,7 @@ Des processus d'installation sécurisés doivent être mis en œuvre, avec notam
 
 * Une architecture d'application segmentée qui fournit une séparation efficace et sécurisée entre les composants ou les environnement hébergés, avec de la segmentation, de la mise en conteneurs ou l'utilisation de groupes de sécurité dans le Cloud (ACL).
 
-* L'envoi de directives de sécurité aux clients, par exemple [En-têtes de sécurité] (https://www.owasp.org/index.php/OWASP_Secure_Headers_Project).
+* L'envoi de directives de sécurité aux clients, par exemple [En-têtes de sécurité] (https://wiki.owasp.org/index.php/OWASP_Secure_Headers_Project).
 
 * Un processus automatisé pour vérifier l'efficacité des configurations et des réglages dans tous les environnements.
 
@@ -50,11 +50,11 @@ Des processus d'installation sécurisés doivent être mis en œuvre, avec notam
 
 ### OWASP
 
-* [OWASP Testing Guide: Configuration Management](https://www.owasp.org/index.php/Testing_for_configuration_management)
-* [OWASP Testing Guide: Testing for Error Codes](https://www.owasp.org/index.php/Testing_for_Error_Code_(OWASP-IG-006))
-* [OWASP Security Headers Project](https://www.owasp.org/index.php/OWASP_Secure_Headers_Project)
+* [OWASP Testing Guide: Configuration Management](https://wiki.owasp.org/index.php/Testing_for_configuration_management)
+* [OWASP Testing Guide: Testing for Error Codes](https://wiki.owasp.org/index.php/Testing_for_Error_Code_(OWASP-IG-006))
+* [OWASP Security Headers Project](https://wiki.owasp.org/index.php/OWASP_Secure_Headers_Project)
 
-Pour des exigences supplémentaires dans ce domaine, voir la Norme de vérification de la sécurité des applications : Application Security Verification Standard [V19 Configuration](https://www.owasp.org/index.php/ASVS_V19_Configuration).
+Pour des exigences supplémentaires dans ce domaine, voir la Norme de vérification de la sécurité des applications : Application Security Verification Standard [V19 Configuration](https://wiki.owasp.org/index.php/ASVS_V19_Configuration).
 
 ### Externes
 

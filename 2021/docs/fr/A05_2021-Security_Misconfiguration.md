@@ -33,7 +33,7 @@ Des processus d'installation sécurisés doivent être mis en œuvre, avec notam
 - une plate-forme minimale sans fonctionnalité, composant, documentation et échantillon inutile. Supprimer ou ne pas installer des fonctionnalités et frameworks inutilisés ;
 - une tâche pour revoir et mettre à jour les configurations appropriées à tous les avis de sécurité, toutes les mises à jour et tous les correctifs dans le cadre du processus de gestion des correctifs (voir [A06:2021-Composants vulnérables et obsolètes](A06_2021-Vulnerable_and_Outdated_Components.md)). En particulier, examiner les permissions de stockage dans le Cloud (ex. les permissions des buckets AWS S3) ;
 - une architecture d'application segmentée qui fournit une séparation efficace et sécurisée entre les composants ou les environnements hébergés, avec de la segmentation, de la mise en conteneurs ou l'utilisation de groupes de sécurité dans le Cloud (ACL) ;
-- l'envoi de directives de sécurité aux clients, par exemple [En-têtes de sécurité](https://www.owasp.org/index.php/OWASP_Secure_Headers_Project) ;
+- l'envoi de directives de sécurité aux clients, par exemple [En-têtes de sécurité](https://wiki.owasp.org/index.php/OWASP_Secure_Headers_Project) ;
 - un processus automatisé pour vérifier l'efficacité des configurations et des réglages dans tous les environnements.
 
 ## Exemple de scénarios d'attaque

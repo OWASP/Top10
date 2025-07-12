@@ -13,9 +13,9 @@
 - [Cheat sheets](https://cheatsheetseries.owasp.org/) حول العديد من الموضوعات الشائعة
 - [اجتماعات المجموعات](https://owasp.org/chapters/)
 - [الأحداث والتدريب والمؤتمرات](https://owasp.org/events/).
-- [ مجموعات قوقل ](TBA)
+- [ مجموعات قوقل ](https://groups.google.com/g/owasp)
 
-اعرف المزيد على: [https://www.owasp.org](https://www.owasp.org).
+اعرف المزيد على: [https://owasp.org](https://owasp.org).
 
 جميع أدوات أواسب والمستندات ومقاطع الفيديو والعروض التقديمية والفصول مجانية ومفتوحة لأي شخص مهتم بتحسين أمن التطبيقات.
 

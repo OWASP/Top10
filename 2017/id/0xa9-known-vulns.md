@@ -41,10 +41,10 @@ Ada alat otomatis untuk membantu penyerang menemukan sistem yang belum diperbaik
 
 ### OWASP
 
-* [OWASP Application Security Verification Standard: V1 Architecture, design and threat modelling](https://www.owasp.org/index.php/ASVS_V1_Architecture)
-* [OWASP Dependency Check (for Java and .NET libraries)](https://www.owasp.org/index.php/OWASP_Dependency_Check)
-* [OWASP Testing Guide - Map Application Architecture (OTG-INFO-010)](https://www.owasp.org/index.php/Map_Application_Architecture_(OTG-INFO-010))
-* [OWASP Virtual Patching Best Practices](https://www.owasp.org/index.php/Virtual_Patching_Best_Practices)
+* [OWASP Application Security Verification Standard: V1 Architecture, design and threat modelling](https://wiki.owasp.org/index.php/ASVS_V1_Architecture)
+* [OWASP Dependency Check (for Java and .NET libraries)](https://wiki.owasp.org/index.php/OWASP_Dependency_Check)
+* [OWASP Testing Guide - Map Application Architecture (OTG-INFO-010)](https://wiki.owasp.org/index.php/Map_Application_Architecture_(OTG-INFO-010))
+* [OWASP Virtual Patching Best Practices](https://wiki.owasp.org/index.php/Virtual_Patching_Best_Practices)
 
 ### External
 

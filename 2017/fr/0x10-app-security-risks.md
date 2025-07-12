@@ -11,7 +11,7 @@ Parfois ces chemins sont triviaux à trouver et à exploiter, et parfois ils son
 
 ## Quel est mon risque ?
 
-Le [Top 10 de l'OWASP](https://www.owasp.org/index.php/Top10) se concentre sur l'identification des risques les plus sérieux pour la sécurité des applications Web d'un large éventail d'organisations. Pour chacun de ces risques, nous fournissons des informations génériques sur la probabilité et l'impact technique à l'aide du système de notation simple suivant, qui est basé sur la méthodologie de notation des risques de l'OWASP.  
+Le [Top 10 de l'OWASP](https://wiki.owasp.org/index.php/Top10) se concentre sur l'identification des risques les plus sérieux pour la sécurité des applications Web d'un large éventail d'organisations. Pour chacun de ces risques, nous fournissons des informations génériques sur la probabilité et l'impact technique à l'aide du système de notation simple suivant, qui est basé sur la méthodologie de notation des risques de l'OWASP.  
 
 | Agents de menace | Exploitabilité | Prévalence de la faiblesse | Détectabilité de la faiblesse | Impacts techniques | Impacts commerciaux |
 | --- | --- | --- | --- | --- | --- |
@@ -29,8 +29,8 @@ Dans la mesure du possible, les noms des risques figurant dans le Top 10 sont al
 
 ### OWASP
 
-* [Méthodologie d'évaluation des risques de l'OWASP](https://www.owasp.org/index.php/OWASP_Risk_Rating_Methodology)
-* [Article sur la modélisation des menaces et des risques](https://www.owasp.org/index.php/Application_Threat_Modeling)
+* [Méthodologie d'évaluation des risques de l'OWASP](https://wiki.owasp.org/index.php/OWASP_Risk_Rating_Methodology)
+* [Article sur la modélisation des menaces et des risques](https://wiki.owasp.org/index.php/Application_Threat_Modeling)
 
 ### Externe
 

@@ -35,7 +35,7 @@
 ## 参考文献
 
 - \[OWASP Cheat Sheet: Deserialization\](
-  <https://www.owasp.org/index.php/Deserialization_Cheat_Sheet>)
+  <https://wiki.owasp.org/index.php/Deserialization_Cheat_Sheet>)
 
 - \[OWASP Cheat Sheet: Software Supply Chain Security\]()
 

@@ -28,7 +28,7 @@ Proses instalasi secara aman harus diimplementasikan, termasuk:
 - _Platform_ yang minimal tanpa fitur, komponen, dokumentasi, dan contoh yang tidak dibutuhkan. Hapus atau jangan _install_ fitur dan _framework_ yang tidak dibutuhkan.
 - Tugas untuk mengkaji ulang dan memperbarui pengaturan yang pantas kepada semua catatan keamanan, _update_, dan _patch_ sebagai bagian dari proses manajemen _patch_ (lihat **A9:2017-Using Components with Known Vulnerabilities**). Khususnya, review perizinan penyimpanan _cloud_ (contoh: S3 bucket permissions).
 - Arsitektur aplikasi yang terbagi-bagi dan menyediakan pemisahan yang efektif dan aman antara komponen atau _tenant_ menggunakan segmentasi, _containerization_, atau _cloud security groups_ (ACL).
-- Mengirimkan arahan keamanan kepada _client_, contoh: [Security Headers](https://www.owasp.org/index.php/OWASP_Secure_Headers_Project).
+- Mengirimkan arahan keamanan kepada _client_, contoh: [Security Headers](https://wiki.owasp.org/index.php/OWASP_Secure_Headers_Project).
 - Proses otomatis dalam memastikan efektivitas dari pengaturan dalam semua _environment_.
 
 ## Contoh Skenario Serangan
@@ -45,11 +45,11 @@ Proses instalasi secara aman harus diimplementasikan, termasuk:
 
 ### OWASP
 
-- [OWASP Testing Guide: Configuration Management](https://www.owasp.org/index.php/Testing_for_configuration_management)
-- [OWASP Testing Guide: Testing for Error Codes](<https://www.owasp.org/index.php/Testing_for_Error_Code_(OWASP-IG-006)>)
-- [OWASP Security Headers Project](https://www.owasp.org/index.php/OWASP_Secure_Headers_Project)
+- [OWASP Testing Guide: Configuration Management](https://wiki.owasp.org/index.php/Testing_for_configuration_management)
+- [OWASP Testing Guide: Testing for Error Codes](<https://wiki.owasp.org/index.php/Testing_for_Error_Code_(OWASP-IG-006)>)
+- [OWASP Security Headers Project](https://wiki.owasp.org/index.php/OWASP_Secure_Headers_Project)
 
-Untuk persyaratan tambahan bisa di lihat lebih detail pada (ASVS) Application Security Verification Standard [V19 Configuration](https://www.owasp.org/index.php/ASVS_V19_Configuration).
+Untuk persyaratan tambahan bisa di lihat lebih detail pada (ASVS) Application Security Verification Standard [V19 Configuration](https://wiki.owasp.org/index.php/ASVS_V19_Configuration).
 
 ### Eksternal
 

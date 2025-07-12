@@ -55,9 +55,9 @@ a:4:{i:0;i:1;i:1;s:5:"Alice";i:2;s:5:"admin";i:3;s:32:"b6a8b3bea87fe0e05022f8f3c
 
 ### OWASP
 
-* [Памятка OWASP: Десериализация](https://www.owasp.org/index.php/Deserialization_Cheat_Sheet)
-* [Проактивная защита OWASP: Обязательная проверка всех входных данных](https://www.owasp.org/index.php/OWASP_Proactive_Controls#4:_Validate_All_Inputs)
-* [Стандарт подтверждения безопасности приложений OWASP](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
+* [Памятка OWASP: Десериализация](https://wiki.owasp.org/index.php/Deserialization_Cheat_Sheet)
+* [Проактивная защита OWASP: Обязательная проверка всех входных данных](https://wiki.owasp.org/index.php/OWASP_Proactive_Controls#4:_Validate_All_Inputs)
+* [Стандарт подтверждения безопасности приложений OWASP](https://wiki.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
 * [OWASP AppSecEU 2016: Как пережить апокалипсис десериализации Java](https://speakerdeck.com/pwntester/surviving-the-java-deserialization-apocalypse)
 * [OWASP AppSecUSA 2017: Пятница, 13-е — Джейсон под ударом](https://speakerdeck.com/pwntester/friday-the-13th-json-attacks)
 

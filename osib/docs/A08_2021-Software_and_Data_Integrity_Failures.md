@@ -92,7 +92,7 @@ application server.
 -   {{ osib_link(link="osib.owasp.cheatsheetseries.0.software supply chain security", osib=osib) }} <!-- \[OWASP Cheat Sheet: Software Supply Chain Security\](Coming Soon) --> 
 -   {{ osib_link(link="osib.owasp.cheatsheetseries.0.Secure build and deployment", osib=osib) }} <!--- \[OWASP Cheat Sheet: Secure build and deployment\](Coming Soon) --->
 -   {{ osib_link(link="osib.owasp.cheatsheetseries.0.Infrastructure as Code Security", osib=osib) }} <!--- [OWASP Cheat Sheet: Infrastructure as Code](https://cheatsheetseries.owasp.org/cheatsheets/Infrastructure_as_Code_Security_Cheat_Sheet.html)  --->
--   {{ osib_link(link="osib.owasp.cheatsheetseries.0.deserialization", osib=osib) }} <!-- [OWASP Cheat Sheet: Deserialization]( <https://www.owasp.org/index.php/Deserialization_Cheat_Sheet>) --> 
+-   {{ osib_link(link="osib.owasp.cheatsheetseries.0.deserialization", osib=osib) }} <!-- [OWASP Cheat Sheet: Deserialization]( <https://wiki.owasp.org/index.php/Deserialization_Cheat_Sheet>) --> 
 -   {{ osib_link(link="osib.safecode.publication.software integrity controls.pdf", osib=osib) }} <!--- [SAFECode Software Integrity Controls]( https://safecode.org/publication/SAFECode_Software_Integrity_Controls0610.pdf)  -->
 -   {{ osib_link(link="osib.npr.news.SolarWinds Hack", osib=osib) }} <!--- [A 'Worst Nightmare' Cyberattack: The Untold Story Of The SolarWinds Hack](<https://www.npr.org/2021/04/16/985439655/a-worst-nightmare-cyberattack-the-untold-story-of-the-solarwinds-hack>) --->
 -   {{ osib_link(link="osib.codecov.bash uploader compromise", doc="osib.codecov", osib=osib) }} <!--- [CodeCov Bash Uploader Compromise](https://about.codecov.io/security-update)  --->

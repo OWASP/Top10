@@ -12,9 +12,9 @@ All'OWASP, troverete in modo libero e aperto:
 - [Cheat sheets](https://cheatsheetseries.owasp.org/) su molti argomenti di interesse comune
 - [Chapter meetings](https://owasp.org/chapters/)
 - [Eventi, corsi, e conferenze](https://owasp.org/events/).
-- [Google Groups](TBA)
+- [Google Groups](https://groups.google.com/g/owasp)
 
-Scopri di più su: [https://www.owasp.org](https://www.owasp.org).
+Scopri di più su: [https://owasp.org](https://owasp.org).
 
 Tutti gli strumenti, i documenti, i video, le presentazioni e i chapter di OWASP sono gratuiti e aperti a chiunque sia interessato a migliorare la sicurezza delle applicazioni.
 

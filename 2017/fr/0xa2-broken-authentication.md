@@ -12,7 +12,7 @@ La confirmation de l'identité, de l'authentification et de la session de l'util
 
 Il peut y avoir des faiblesses d'authentification si l'application :
 
-* Autorise les attaques automatisées telles que le [credential stuffing](https://www.owasp.org/index.php/Credential_stuffing), où l'attaquant dispose d'une liste de noms d'utilisateurs valides et mots de passe.
+* Autorise les attaques automatisées telles que le [credential stuffing](https://wiki.owasp.org/index.php/Credential_stuffing), où l'attaquant dispose d'une liste de noms d'utilisateurs valides et mots de passe.
 * Permet la force brute ou d'autres attaques automatisées
 * Autorise les mots de passe par défaut, faibles ou bien connus, tels que "Password1" ou "admin / admin".
 * Utilise des processus de récupération des informations d'identification faibles ou inefficaces et des processus de mot de passe oublié, tels que « "Questions secrètes" », qui ne peuvent être sécurisées.
@@ -35,7 +35,7 @@ NIST 800-63 B à la section 5.1.1 ou autre directives modernes
  
 ## Exemples de scenarios d'attaques
 
-**Scénario #1** : La réutilisation de mots de passe, l’utilisation de mots de passe connus, est une attaque classique. Si une application n’implémente une protection automatisée contre le [bourrage d'informations](https://www.owasp.org/index.php/Credential_stuffing), ou l'utilisation des [mots de passe connus](https://github.com/danielmiessler/SecLists).
+**Scénario #1** : La réutilisation de mots de passe, l’utilisation de mots de passe connus, est une attaque classique. Si une application n’implémente une protection automatisée contre le [bourrage d'informations](https://wiki.owasp.org/index.php/Credential_stuffing), ou l'utilisation des [mots de passe connus](https://github.com/danielmiessler/SecLists).
 
 **Scénario #2** : La plupart des attaques d’authentification se produisent en raison de l’utilisation de mots de passe comme facteur unique. Une fois considéré, les exigences de rotation et de complexité des mots de passe, sont considérées comme encourageant les utilisateurs à utiliser et réutiliser des mots de passe faibles. Il est maintenant recommandé d’arrèter ces pratiques NIST 800-63 et d’utiliser du multifacteur.
 
@@ -45,16 +45,16 @@ NIST 800-63 B à la section 5.1.1 ou autre directives modernes
 
 ### OWASP
 
-* [OWASP Proactive Controls: Implement Identity and Authentication Controls](https://www.owasp.org/index.php/OWASP_Proactive_Controls#5:_Implement_Identity_and_Authentication_Controls)
-* [OWASP Application Security Verification Standard: V2 Authentication](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
-* [OWASP Application Security Verification Standard: V3 Session Management](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
-* [OWASP Testing Guide: Identity](https://www.owasp.org/index.php/Testing_Identity_Management)
- and [Authentication](https://www.owasp.org/index.php/Testing_for_authentication)
-* [OWASP Cheat Sheet: Authentication](https://www.owasp.org/index.php/Authentication_Cheat_Sheet)
-* [OWASP Cheat Sheet: Credential Stuffing](https://www.owasp.org/index.php/Credential_Stuffing_Prevention_Cheat_Sheet)
-* [OWASP Cheat Sheet: Forgot Password](https://www.owasp.org/index.php/Forgot_Password_Cheat_Sheet)
-* [OWASP Cheat Sheet: Session Management](https://www.owasp.org/index.php/Session_Management_Cheat_Sheet)
-* [OWASP Automated Threats Handbook](https://www.owasp.org/index.php/OWASP_Automated_Threats_to_Web_Applications)
+* [OWASP Proactive Controls: Implement Identity and Authentication Controls](https://wiki.owasp.org/index.php/OWASP_Proactive_Controls#5:_Implement_Identity_and_Authentication_Controls)
+* [OWASP Application Security Verification Standard: V2 Authentication](https://wiki.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
+* [OWASP Application Security Verification Standard: V3 Session Management](https://wiki.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
+* [OWASP Testing Guide: Identity](https://wiki.owasp.org/index.php/Testing_Identity_Management)
+ and [Authentication](https://wiki.owasp.org/index.php/Testing_for_authentication)
+* [OWASP Cheat Sheet: Authentication](https://wiki.owasp.org/index.php/Authentication_Cheat_Sheet)
+* [OWASP Cheat Sheet: Credential Stuffing](https://wiki.owasp.org/index.php/Credential_Stuffing_Prevention_Cheat_Sheet)
+* [OWASP Cheat Sheet: Forgot Password](https://wiki.owasp.org/index.php/Forgot_Password_Cheat_Sheet)
+* [OWASP Cheat Sheet: Session Management](https://wiki.owasp.org/index.php/Session_Management_Cheat_Sheet)
+* [OWASP Automated Threats Handbook](https://wiki.owasp.org/index.php/OWASP_Automated_Threats_to_Web_Applications)
 
 ### Externes
 

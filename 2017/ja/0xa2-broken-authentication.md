@@ -11,7 +11,7 @@
 
 アプリケーションが下記の条件を満たす場合、認証の設計・実装に問題があるかもしれません:
 
-* 有効なユーザ名とパスワードのリストを持つ攻撃者による[アカウントリスト攻撃](https://www.owasp.org/index.php/Credential_stuffing)のような自動化された攻撃が成功する。
+* 有効なユーザ名とパスワードのリストを持つ攻撃者による[アカウントリスト攻撃](https://wiki.owasp.org/index.php/Credential_stuffing)のような自動化された攻撃が成功する。
 * 総当たり攻撃や、その他の自動化された攻撃が成功する。
 * "Password1"や"admin/admin"のような初期設定と同じパスワード、強度の弱いパスワード、よく使われるパスワードを登録できる。
 * 安全に実装できない"秘密の質問"のように、脆弱または効果的でないパスワード復旧手順やパスワードリマインダを実装している。
@@ -33,7 +33,7 @@
 
 ## 攻撃シナリオの例
 
-**シナリオ #1**: [アカウントリスト攻撃](https://www.owasp.org/index.php/Credential_stuffing)や[よく知られたパスワードのリスト](https://github.com/danielmiessler/SecLists)を用いた攻撃は、広く知られた攻撃手法です。アプリケーションに自動化された攻撃やアカウントリスト攻撃の対策が実装されていないなら、そのアプリケーションは「強力なパスワード検証ツール」として認証情報が有効かどうかを調べるのに悪用されかねません。
+**シナリオ #1**: [アカウントリスト攻撃](https://wiki.owasp.org/index.php/Credential_stuffing)や[よく知られたパスワードのリスト](https://github.com/danielmiessler/SecLists)を用いた攻撃は、広く知られた攻撃手法です。アプリケーションに自動化された攻撃やアカウントリスト攻撃の対策が実装されていないなら、そのアプリケーションは「強力なパスワード検証ツール」として認証情報が有効かどうかを調べるのに悪用されかねません。
 
 **シナリオ #2**: ほとんどの認証に関連する攻撃は、パスワードを唯一の認証要素として使い続けてきたために発生しています。かつてベストプラクティスとされてきたパスワードの定期変更や複雑性の要求は、ユーザーに弱いパスワードを繰り返し使うよう促すとの見方があります。そこで、あらゆる組織がNIST 800-63に従ってこのようなプラクティスをやめ、多要素認証を使うことが推奨されています。
 
@@ -43,15 +43,15 @@
 
 ### OWASP
 
-* [OWASP Proactive Controls: Implement Identity and Authentication Controls](https://www.owasp.org/index.php/OWASP_Proactive_Controls#5:_Implement_Identity_and_Authentication_Controls)
-* [OWASP ASVS: V2 Authentication](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home), [V3 Session Management](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
-* [OWASP Testing Guide: Identity](https://www.owasp.org/index.php/Testing_Identity_Management)
- と [Authentication](https://www.owasp.org/index.php/Testing_for_authentication)
-* [OWASP Cheat Sheet: Authentication](https://www.owasp.org/index.php/Authentication_Cheat_Sheet)
-* [OWASP Cheat Sheet: Credential Stuffing](https://www.owasp.org/index.php/Credential_Stuffing_Prevention_Cheat_Sheet)
-* [OWASP Cheat Sheet: Forgot Password](https://www.owasp.org/index.php/Forgot_Password_Cheat_Sheet)
-* [OWASP Cheat Sheet: Session Management](https://www.owasp.org/index.php/Session_Management_Cheat_Sheet)
-* [OWASP Automated Threats Handbook](https://www.owasp.org/index.php/OWASP_Automated_Threats_to_Web_Applications)
+* [OWASP Proactive Controls: Implement Identity and Authentication Controls](https://wiki.owasp.org/index.php/OWASP_Proactive_Controls#5:_Implement_Identity_and_Authentication_Controls)
+* [OWASP ASVS: V2 Authentication](https://wiki.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home), [V3 Session Management](https://wiki.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
+* [OWASP Testing Guide: Identity](https://wiki.owasp.org/index.php/Testing_Identity_Management)
+ と [Authentication](https://wiki.owasp.org/index.php/Testing_for_authentication)
+* [OWASP Cheat Sheet: Authentication](https://wiki.owasp.org/index.php/Authentication_Cheat_Sheet)
+* [OWASP Cheat Sheet: Credential Stuffing](https://wiki.owasp.org/index.php/Credential_Stuffing_Prevention_Cheat_Sheet)
+* [OWASP Cheat Sheet: Forgot Password](https://wiki.owasp.org/index.php/Forgot_Password_Cheat_Sheet)
+* [OWASP Cheat Sheet: Session Management](https://wiki.owasp.org/index.php/Session_Management_Cheat_Sheet)
+* [OWASP Automated Threats Handbook](https://wiki.owasp.org/index.php/OWASP_Automated_Threats_to_Web_Applications)
 
 ### 外部資料
 

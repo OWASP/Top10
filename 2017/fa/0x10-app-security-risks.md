@@ -14,8 +14,8 @@
 
 ## <div dir="rtl" align="right">ریسک من چیست؟</div>
 
-<p dir="rtl" align="right"><a href="https://www.owasp.org/index.php/Top10">OWASP Top 10</a>
-روی شناسایی جدی‌ترین ریسک‌ها برای مجموعه وسیعی از سازمان ها متمرکز است. برای هر یک از این ریسک‌ها، ما اطلاعات کلی درباره احتمال و تأثیر فنی را با استفاده از رهنمود ساده پیش رو ارزیابی می‌کنیم که بر اساس <a href="https://www.owasp.org/index.php/OWASP_Risk_Rating_Methodology">روش رتبه بندی ریسک OWASP</a> است.
+<p dir="rtl" align="right"><a href="https://wiki.owasp.org/index.php/Top10">OWASP Top 10</a>
+روی شناسایی جدی‌ترین ریسک‌ها برای مجموعه وسیعی از سازمان ها متمرکز است. برای هر یک از این ریسک‌ها، ما اطلاعات کلی درباره احتمال و تأثیر فنی را با استفاده از رهنمود ساده پیش رو ارزیابی می‌کنیم که بر اساس <a href="https://wiki.owasp.org/index.php/OWASP_Risk_Rating_Methodology">روش رتبه بندی ریسک OWASP</a> است.
 </p> 
 
 | عوامل تهدید | قابل بهره‌برداری بودن | شیوع ضعف | قابل تشخیص بودن ضعف | اثر تکنیکال | تاثیرات کسب و کار |
@@ -24,7 +24,7 @@
 |  برنامه -  | متوسط: ۲ | عمومی: ۲ | متوسط: ۲ | متعادل: ۲ | کسب و -  |
 |     کاربردی   | سخت: ۱ | نادر: ۱ | سخت: ۱ | جزئی: ۱ |     کار   |
 
-<p dir="rtl" align="right">در این ویرایش، سیستم رتبه بندی ریسک را به روز کرده‌ایم تا کار محاسبه احتمال و تأثیر هرگونه ریسک داده شده را تسهیل کنیم. برای اطلاعات بیشتر، لطفا <a href="https://www.owasp.org/index.php/OWASP_Risk_Rating_Methodology">یادداشتی در مورد ریسک‌ها‌</a> را ببینید.
+<p dir="rtl" align="right">در این ویرایش، سیستم رتبه بندی ریسک را به روز کرده‌ایم تا کار محاسبه احتمال و تأثیر هرگونه ریسک داده شده را تسهیل کنیم. برای اطلاعات بیشتر، لطفا <a href="https://wiki.owasp.org/index.php/OWASP_Risk_Rating_Methodology">یادداشتی در مورد ریسک‌ها‌</a> را ببینید.
 </p>
 
 <p dir="rtl" align="right">
@@ -39,8 +39,8 @@
 
 ### <div dir="rtl" align="right"></div>OWASP
 
-* [OWASP Risk Rating Methodology](https://www.owasp.org/index.php/OWASP_Risk_Rating_Methodology)
-* [Article on Threat/Risk Modeling](https://www.owasp.org/index.php/Threat_Risk_Modeling)
+* [OWASP Risk Rating Methodology](https://wiki.owasp.org/index.php/OWASP_Risk_Rating_Methodology)
+* [Article on Threat/Risk Modeling](https://wiki.owasp.org/index.php/Threat_Risk_Modeling)
 
 ### <div dir="rtl" align="right">خارجی</div> 
 

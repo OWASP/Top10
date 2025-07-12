@@ -4,7 +4,7 @@
 
 <p dir="rtl" align="right">امنیت برنامه دیگر اختیاری نیست. بین افزایش حملات و فشارهای نظارتی، سازمان ها باید پروسه های موثر و قابلیت های لازم را برای تأمین برنامه های کاربردی و API های خود ایجاد کنند. با توجه به مقدار قابل توجهی از کد در برنامه های کاربردی و API های متعدد در حال تولید، بسیاری از سازمان ها در حال تلاش برای رسیدگی به حجم زیادی از آسیب پذیری هستند.</p>
 
-<p dir="rtl" align="right">OWASP به سازمان ها توصیه می‌کند که یک برنامه امنیت برنامه کاربردی برای رسیدن به آگاهی و ارتقاء امنیتی در برنامه های کاربردی و API ها، برقرار کنند. رسیدن به امنیت برنامه کاربردی نیازمند این است که بسیاری از بخش های سازمان با هم به صورت منظم کار کنند،‌که شامل امنیت و ممیزی، توسعه نرم افزار، تجاری و مدیریت اجرایی می‌شود. امنیت باید قابل دیدن و اندازه‌گیری باشد، به طوری که هر بازیکنی بتواند روند امنیتی برنامه کاربردی سازمان را ببیند و درک کند. بر روی فعالیت‌ها و نتایجی تمرکز کنید که کمک می‌کنند امنیت کار را با نابودی یا کاهش ریسک، ارتقاء دهید. <a href="https://www.owasp.org/index.php/OWASP_SAMM_Project">OWASP SAMM</a> و <a href="https://www.owasp.org/index.php/Application_Security_Guide_For_CISOs">OWASP Application Security Guide for CISOs</a> منبع اکثر فعالیت‌های کلیدی در لیست هستند.</p>
+<p dir="rtl" align="right">OWASP به سازمان ها توصیه می‌کند که یک برنامه امنیت برنامه کاربردی برای رسیدن به آگاهی و ارتقاء امنیتی در برنامه های کاربردی و API ها، برقرار کنند. رسیدن به امنیت برنامه کاربردی نیازمند این است که بسیاری از بخش های سازمان با هم به صورت منظم کار کنند،‌که شامل امنیت و ممیزی، توسعه نرم افزار، تجاری و مدیریت اجرایی می‌شود. امنیت باید قابل دیدن و اندازه‌گیری باشد، به طوری که هر بازیکنی بتواند روند امنیتی برنامه کاربردی سازمان را ببیند و درک کند. بر روی فعالیت‌ها و نتایجی تمرکز کنید که کمک می‌کنند امنیت کار را با نابودی یا کاهش ریسک، ارتقاء دهید. <a href="https://wiki.owasp.org/index.php/OWASP_SAMM_Project">OWASP SAMM</a> و <a href="https://wiki.owasp.org/index.php/Application_Security_Guide_For_CISOs">OWASP Application Security Guide for CISOs</a> منبع اکثر فعالیت‌های کلیدی در لیست هستند.</p>
 
 ### <div dir="rtl" align="right">شروع</div>
 
@@ -13,13 +13,13 @@
     تمام برنامه ها و دارایی های مرتبط مربوطه را مستند کنید. سازمان های بزرگ باید در نظر داشته باشند که پایگاه مدیریت پیکربندی (CMDB) را برای این منظور در نظر بگیرند.
   </li>
   <li>
-    یک <a href="https://www.owasp.org/index.php/SAMM_-_Strategy_&_Metrics_-_1">روند امنیت برنامه کاربردی </a> ایجاد کنید و درایور را بردارید.
+    یک <a href="https://wiki.owasp.org/index.php/SAMM_-_Strategy_&_Metrics_-_1">روند امنیت برنامه کاربردی </a> ایجاد کنید و درایور را بردارید.
   </li>
   <li>
-    انجام یک <a href="https://www.owasp.org/index.php/SAMM_-_Strategy_&_Metrics_-_3">تجزیه و تحلیل شکاف قابلیت</a> مقایسه سازمان خود را به همسالان خود را برای تعریف کلیدی مناطق بهبودی و یک طرح اجرای.
+    انجام یک <a href="https://wiki.owasp.org/index.php/SAMM_-_Strategy_&_Metrics_-_3">تجزیه و تحلیل شکاف قابلیت</a> مقایسه سازمان خود را به همسالان خود را برای تعریف کلیدی مناطق بهبودی و یک طرح اجرای.
 </li>
   <li>
-    به دست آوردن <a href="https://www.owasp.org/index.php/SAMM_-_Education_&_Guidance_-_1">کمپین آگاهی امنیت برنامه کاربردی</a> برای کل سازمان فناوری اطلاعات.
+    به دست آوردن <a href="https://wiki.owasp.org/index.php/SAMM_-_Education_&_Guidance_-_1">کمپین آگاهی امنیت برنامه کاربردی</a> برای کل سازمان فناوری اطلاعات.
   </li>
 </ul>
 
@@ -27,10 +27,10 @@
 
 <ul dir="rtl" align="right">
   <li>
-    <a href="https://www.owasp.org/index.php/SAMM_-_Strategy_&_Metrics_-_2">نیازهای حفاظتی</a> <a href="https://www.owasp.org/index.php/SAMM_-_Strategy_&_Metrics_-_2">نمونه برنامه های کاربردی</a> را از منظر تجاری شناسایی کنید. این باید بخشی از قوانین حریم خصوصی و سایر مقررات مربوط به دارایی داده محافظت شده باشد.
+    <a href="https://wiki.owasp.org/index.php/SAMM_-_Strategy_&_Metrics_-_2">نیازهای حفاظتی</a> <a href="https://wiki.owasp.org/index.php/SAMM_-_Strategy_&_Metrics_-_2">نمونه برنامه های کاربردی</a> را از منظر تجاری شناسایی کنید. این باید بخشی از قوانین حریم خصوصی و سایر مقررات مربوط به دارایی داده محافظت شده باشد.
   </li>
   <li>
-    یک <a href="https://www.owasp.org/index.php/OWASP_Risk_Rating_Methodology">مدل رایج ریسک</a> را با یک مجموعه سازگاری از عوامل احتمال و تاثیر گذار بر تحمل پذیری سازمان برای ریسک ایجاد کنید.
+    یک <a href="https://wiki.owasp.org/index.php/OWASP_Risk_Rating_Methodology">مدل رایج ریسک</a> را با یک مجموعه سازگاری از عوامل احتمال و تاثیر گذار بر تحمل پذیری سازمان برای ریسک ایجاد کنید.
   </li>
   <li>
 بر اساس این، همه برنامه ها و API های خود را اندازه گیری و اولویت بندی کنید. نتایج را بهCMDB  اضافه کنید
@@ -44,13 +44,13 @@
 
 <ul dir="rtl" align="right">
   <li>
-    مجموعه ای از <a href="https://www.owasp.org/index.php/SAMM_-_Policy_&_Compliance_-_2">سیاست ها و استانداردها</a>ی متمرکز را ایجاد کنید که امنیت پایه برنامه را برای همه تیم های توسعه تطبیق دهد.
+    مجموعه ای از <a href="https://wiki.owasp.org/index.php/SAMM_-_Policy_&_Compliance_-_2">سیاست ها و استانداردها</a>ی متمرکز را ایجاد کنید که امنیت پایه برنامه را برای همه تیم های توسعه تطبیق دهد.
   </li>
   <li>
-    مجموعه ای از <a href="https://www.owasp.org/index.php/OWASP_Security_Knowledge_Framework">کنترل های امنیتی قابل استفاده مجدد</a> را که به این سیاست ها و استانداردها مجهز است تعریف کنید و مجموعه‌ای از دستورالعمل های طراحی و توسعه را در مورد استفاده از آنها تکمیل کنید. 
+    مجموعه ای از <a href="https://wiki.owasp.org/index.php/OWASP_Security_Knowledge_Framework">کنترل های امنیتی قابل استفاده مجدد</a> را که به این سیاست ها و استانداردها مجهز است تعریف کنید و مجموعه‌ای از دستورالعمل های طراحی و توسعه را در مورد استفاده از آنها تکمیل کنید. 
   </li>
   <li>
-    ایجاد یک <a href="https://www.owasp.org/index.php/SAMM_-_Education_&_Guidance_-_2">برنامه آموزش برنامه های امنیتی کاربردی</a> که مورد نیاز و هدف موضوعات و قوانین مختلف توسعه است.
+    ایجاد یک <a href="https://wiki.owasp.org/index.php/SAMM_-_Education_&_Guidance_-_2">برنامه آموزش برنامه های امنیتی کاربردی</a> که مورد نیاز و هدف موضوعات و قوانین مختلف توسعه است.
   </li>
 </ul>
 
@@ -58,13 +58,13 @@
 
 <ul dir="rtl" align="right">
   <li>
-    تعریف و ادغام <a href="https://www.owasp.org/index.php/SAMM_-_Construction">فعالیت های ایمن سازی</a> و <a href="https://www.owasp.org/index.php/SAMM_-_Verification">تأیید</a> را در فرایندهای توسعه و عملیاتی موجود.
+    تعریف و ادغام <a href="https://wiki.owasp.org/index.php/SAMM_-_Construction">فعالیت های ایمن سازی</a> و <a href="https://wiki.owasp.org/index.php/SAMM_-_Verification">تأیید</a> را در فرایندهای توسعه و عملیاتی موجود.
   </li>
   <li>
-    فعالیت ها شامل <a href="https://www.owasp.org/index.php/SAMM_-_Threat_Assessment_-_1">مدل سازی تهدید</a>، <a href="https://www.owasp.org/index.php/SAMM_-_Design_Review_-_1">طراحی ایمن و بازبینی طراحی</a>، برنامه نویسی امن و <a href="https://www.owasp.org/index.php/SAMM_-_Code_Review_-_1">بازبینی کد</a>، <a href="https://www.owasp.org/index.php/SAMM_-_Security_Testing_-_1">آزمایش نفوذ</a> و اصلاح .
+    فعالیت ها شامل <a href="https://wiki.owasp.org/index.php/SAMM_-_Threat_Assessment_-_1">مدل سازی تهدید</a>، <a href="https://wiki.owasp.org/index.php/SAMM_-_Design_Review_-_1">طراحی ایمن و بازبینی طراحی</a>، برنامه نویسی امن و <a href="https://wiki.owasp.org/index.php/SAMM_-_Code_Review_-_1">بازبینی کد</a>، <a href="https://wiki.owasp.org/index.php/SAMM_-_Security_Testing_-_1">آزمایش نفوذ</a> و اصلاح .
   </li>
   <li>
-    ارائه کارشناسان موضوعی و <a href="https://www.owasp.org/index.php/SAMM_-_Education_&_Guidance_-_3">حمایت از خدمات برای توسعه و تیم پروژه</a> برای موفقیت.
+    ارائه کارشناسان موضوعی و <a href="https://wiki.owasp.org/index.php/SAMM_-_Education_&_Guidance_-_3">حمایت از خدمات برای توسعه و تیم پروژه</a> برای موفقیت.
   </li>
 </ul>
 
