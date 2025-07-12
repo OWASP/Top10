@@ -62,9 +62,6 @@ Preventing injection requires keeping data separate from commands and queries:
     cannot be escaped, and thus user-supplied structure names are
     dangerous. This is a common issue in report-writing software.
 
--   Use LIMIT and other SQL controls within queries to prevent mass
-    disclosure of records in case of SQL injection.
-
 ## Example Attack Scenarios
 
 **Scenario #1:** An application uses untrusted data in the construction
