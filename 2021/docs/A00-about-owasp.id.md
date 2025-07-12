@@ -2,7 +2,7 @@
 
 Open Web Application Security Project (OWASP) adalah komunitas terbuka yang didedikasikan untuk memungkinkan organisasi mengembangkan, membeli, dan memelihara aplikasi yang dapat dipercaya.
 
-Di OWASP, anda akan menemukan kebebasan dan keterbukaan:
+Di OWASP, Anda akan menemukan kebebasan dan keterbukaan:
 
 - Alat dan standar dalam keamanan aplikasi.
 - Penelitian terkini.
@@ -16,7 +16,7 @@ Di OWASP, anda akan menemukan kebebasan dan keterbukaan:
 
 Pelajari lebih lanjut di: [https://www.owasp.org](https://www.owasp.org).
 
-seluruh alat OWASP, dokumen, video, presentasi, dan bagian adalah kebebasan dan keterbukaan bagi semua orang yang tertarik dalam meningkatkan keamanan aplikasi
+Seluruh alat, dokumen, video, presentasi, dan chapter OWASP adalah kebebasan dan keterbukaan bagi semua orang yang tertarik dalam meningkatkan keamanan aplikasi
 
 Kami menganjurkan mendekati keamanan aplikasi sebagai masalah orang, proses, dan teknologi, karena pendekatan yang paling efektif untuk keamanan aplikasi memerlukan peningkatan pada bidang-bidang ini.
 
@@ -28,8 +28,8 @@ Yayasan OWASP adalah entitas nonprofit yang memastikan kesuksesan jangka panjang
 
 Ayo bergabung dengan kami!
 
-## Copyright and License
+## Hak Cipta dan Lisensi
 
 ![license](assets/license.png)
 
-Copyright © 2003-2021 The OWASP&tm; Foundation. This document is released under the Creative Commons Attribution Share-Alike 4.0 license. For any reuse or distribution, you must make it clear to others the license terms of this work.
+Hak cipta © 2003-2021 The OWASP&tm; Foundation. Dokumen ini rilis di bawah lisensi Creative Commons Attribution Share-Alike 4.0. Untuk penggunaan ulang atau distribusi apa pun, Anda mesti membuat jelas ke pihak lain persyaratan lisensi dari karya ini.
