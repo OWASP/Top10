@@ -1,6 +1,6 @@
 # OWASPについて
 
-Open Web Application Security Project（OWASP）は、組織が信頼できるアプリケーションや API を開発、購入、維持できるよう支援することに専念する、オープンなコミュニティです。
+Open Worldwide Application Security Project（OWASP）は、組織が信頼できるアプリケーションや API を開発、購入、維持できるよう支援することに専念する、オープンなコミュニティです。
 
 OWASP では、無料で利用できるものが公開されています:
 
@@ -32,4 +32,4 @@ The OWASP Foundation(オワスプ・ファウンデーション)は、このプ�
 
 ![license](assets/license.png)
 
-Copyright © 2003-2021 The OWASP™ Foundation. This document is released under the Creative Commons Attribution Share-Alike 4.0 license. For any reuse or distribution, you must make it clear to others the license terms of this work.
+Copyright © 2003-2025 The OWASP&reg; Foundation. This document is released under the Creative Commons Attribution Share-Alike 4.0 license. For any reuse or distribution, you must make it clear to others the license terms of this work.

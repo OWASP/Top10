@@ -1,6 +1,6 @@
-# 关于 OWASP
+# About OWASP
 
-The Open Web Application Security Project (OWASP) is an open community dedicated to enabling organizations to develop, purchase, and maintain applications and APIs that can be trusted.
+The Open Worldwide Application Security Project (OWASP) is an open community dedicated to enabling organizations to develop, purchase, and maintain applications and APIs that can be trusted.
 
 At OWASP, you'll find free and open:
 
@@ -13,7 +13,6 @@ At OWASP, you'll find free and open:
 - [Chapters meetings](https://owasp.org/chapters/)
 - [Events, training, and conferences](https://owasp.org/events/).
 - [Google Groups](https://groups.google.com/g/owasp)
-
 Learn more at: [https://owasp.org](https://owasp.org).
 
 All OWASP tools, documents, videos, presentations, and chapters are free and open to anyone interested in improving application security.
@@ -32,4 +31,4 @@ Come join us!
 
 ![license](assets/license.png)
 
-Copyright © 2003-2021 The OWASP&tm; Foundation. This document is released under the Creative Commons Attribution Share-Alike 4.0 license. For any reuse or distribution, you must make it clear to others the license terms of this work.
+Copyright © 2003-2025 The OWASP&reg; Foundation, Inc. This document is released under the Creative Commons Attribution Share-Alike 4.0 license. For any reuse or distribution, you must make it clear to others the license terms of this work.

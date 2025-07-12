@@ -1,6 +1,6 @@
 # About OWASP
 
-Open Web Application Security Project (OWASP) adalah komunitas terbuka yang didedikasikan untuk memungkinkan organisasi mengembangkan, membeli, dan memelihara aplikasi yang dapat dipercaya.
+Open Worldwide Application Security Project (OWASP) adalah komunitas terbuka yang didedikasikan untuk memungkinkan organisasi mengembangkan, membeli, dan memelihara aplikasi yang dapat dipercaya.
 
 Di OWASP, anda akan menemukan kebebasan dan keterbukaan:
 
@@ -32,4 +32,4 @@ Ayo bergabung dengan kami!
 
 ![license](assets/license.png)
 
-Copyright © 2003-2021 The OWASP&tm; Foundation. This document is released under the Creative Commons Attribution Share-Alike 4.0 license. For any reuse or distribution, you must make it clear to others the license terms of this work.
+Copyright © 2003-2025 The OWASP&reg; Foundation. This document is released under the Creative Commons Attribution Share-Alike 4.0 license. For any reuse or distribution, you must make it clear to others the license terms of this work.

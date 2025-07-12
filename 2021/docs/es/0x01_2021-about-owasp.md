@@ -32,4 +32,4 @@ La fundación OWASP es una entidad sin fines de lucro para asegurar el éxito 
 
 ![license](assets/license.png)
 
-Copyright © 2003-2021 The OWASP™ Foundation. Este documento se publica bajo la licencia Creative Commons Attribution Share-Alike 4.0. Para cualquier reutilización o distribución, debe dejar en claro los términos de la licencia de este trabajo.
+Copyright © 2003-2025 The OWASP&reg; Foundation. Este documento se publica bajo la licencia Creative Commons Attribution Share-Alike 4.0. Para cualquier reutilización o distribución, debe dejar en claro los términos de la licencia de este trabajo.
