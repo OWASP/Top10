@@ -269,7 +269,7 @@ attacker can access any user's account.
  https://example.com/app/accountInfo?acct=notmyacct
 ```
 
-**Scenario #2:** An attacker simply forces browses to target URLs. Admin
+**Scenario #2:** An attacker simply force browses to target URLs. Admin
 rights are required for access to the admin page.
 
 ```
