@@ -29,7 +29,7 @@ Retornando à lista OWASP Top 10 de 2021, essa categoria ajuda a detectar, escal
 - A aplicação não pode detectar, escalonar ou alertar para ataques ativos em tempo real ou quase em tempo real.
 
 Você está vulnerável a vazamento de informações tornando eventos de registro e alerta visíveis para um usuário ou um atacante 
-(veja [A01:2021-Quebra de Controle de Acesso](A01_2021-Broken_Access_Control.pt_BR.md)).
+(veja [A01:2021-Quebra de Controle de Acesso](A01_2021-Broken_Access_Control.md)).
 
 ## Como Prevenir
 

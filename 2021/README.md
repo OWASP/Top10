@@ -22,7 +22,7 @@ pip install -r requirements.txt
 # optionally verify if OWASP OSIB is in your pip list
 pip list | grep osib
 ```
-This installs all requirenents including the (OSIB Macro)[https://github.com/OWASP/OSIB]
+This installs all requirements including the (OSIB Macro)[https://github.com/OWASP/OSIB]
 
 ### Test it locally
 

@@ -22,7 +22,7 @@ La confirmación de la identidad, la autenticación y la gestión de sesiones de
 
 -   Posee procesos débiles o no efectivos para las funcionalidades de olvido de contraseña o recuperación de credenciales, como "respuestas basadas en el conocimiento", las cuales no se pueden implementar de forma segura.
 
--   Almacena las contraseñas en texto claro, cifradas o utilizando funciones de hash débiles (consulte [A02: 2021-Fallas Criptográficas](A02_2021-Cryptographic_Failures.es.md)).
+-   Almacena las contraseñas en texto claro, cifradas o utilizando funciones de hash débiles (consulte [A02: 2021-Fallas Criptográficas](A02_2021-Cryptographic_Failures.md)).
 
 -   No posee una autenticación multi-factor o la implementada es ineficaz.
 

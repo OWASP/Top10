@@ -8,15 +8,15 @@ Esta versão será lançada na celebração do 20º aniversário da OWASP.
 
 ## Autores Principais
 
-- [Andrew van der Stock](mailto:vanderaj@owasp.org) (twitter: [@vanderaj](https://twitter.com/vanderaj))
-- [Brian Glas](mailto:brian.glas@owasp.org) (twitter: [@infosecdad](https://twitter.com/infosecdad))
-- [Neil Smithline](mailto:neil.smithline@owasp.org) (twitter: [@appsecneil](https://twitter.com/appsecneil))
-- [Torsten Gigler](mailto:torsten.gigler@owasp.org) (twitter: [@torsten_tweet](https://twitter.com/torsten_tweet))
+- [Andrew van der Stock](mailto:vanderaj@owasp.org) (twitter: [@vanderaj](https://x.com/vanderaj))
+- [Brian Glas](mailto:brian.glas@owasp.org) (twitter: [@infosecdad](https://x.com/infosecdad))
+- [Neil Smithline](mailto:neil.smithline@owasp.org) (twitter: [@appsecneil](https://x.com/appsecneil))
+- [Torsten Gigler](mailto:torsten.gigler@owasp.org) (twitter: [@torsten_tweet](https://x.com/torsten_tweet))
 
 ## Contribuidores
 
-- Orange Tsai - [@orange_8361](https://twitter.com/orange_8361), Autor de A10-2021: Server Side Request Forgery
-- Jim Manico [@manicode](https://twitter.com/manicode) e Jakub Maćkowski [@kubamackowski](https://twitter.com/kubamackowski)  - OWASP CheatSheets Coordination
+- Orange Tsai - [@orange_8361](https://x.com/orange_8361), Autor de A10-2021: Server Side Request Forgery
+- Jim Manico [@manicode](https://x.com/manicode) e Jakub Maćkowski [@kubamackowski](https://x.com/kubamackowski)  - OWASP CheatSheets Coordination
 
 ## Como você pode ajudar
 

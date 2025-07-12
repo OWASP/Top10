@@ -24,7 +24,7 @@ Usted probablemente sea vulnerable:
 
 -   Si los desarrolladores de software no testean la compatibilidad de las bibliotecas actualizadas, actualizadas o parcheadas.
 
--   Si no asegura las configuraciones de los componentes (consulte [A05:2021 – Configuración de Seguridad Incorrecta](A05_2021-Security_Misconfiguration.es.md)).
+-   Si no asegura las configuraciones de los componentes (consulte [A05:2021 – Configuración de Seguridad Incorrecta](A05_2021-Security_Misconfiguration.md)).
 
 ## Cómo se previene
 
@@ -35,7 +35,7 @@ Debe existir un proceso de administración de parches que:
 -   Realice un inventario continuo de las versiones de los componentes en el cliente y en el servidor (por ejemplo, frameworks, bibliotecas) y sus dependencias utilizando herramientas como: versions, OWASP Dependency Check, retire.js, etc. Supervise continuamente fuentes como Common Vulnerability and Exposures (CVE) y National Vulnerability Database (NVD) para detectar vulnerabilidades en los componentes. Utilice herramientas de análisis de composición de software para automatizar el proceso. Suscríbase para recibir alertas por correo electrónico sobre vulnerabilidades de seguridad relacionadas con los componentes que utiliza.
 
 -   Solo obtenga componentes de fuentes oficiales a través de enlaces seguros.
-    Prefiera los paquetes firmados para reducir la posibilidad de incluir un componente malicioso modificado (consulte [A08:2021 – Fallas en el Software y en la Integridad de los Datos](A08_2021-Software_and_Data_Integrity_Failures.es.md)).
+    Prefiera los paquetes firmados para reducir la posibilidad de incluir un componente malicioso modificado (consulte [A08:2021 – Fallas en el Software y en la Integridad de los Datos](A08_2021-Software_and_Data_Integrity_Failures.md)).
 
 -   Supervise las bibliotecas y los componentes que no sea mantenidos o no generen parches de seguridad para versiones anteriores. Si la aplicación de parches no es posible, considere implementar un parche virtual para monitorear, detectar o protegerse contra el problema descubierto.
 

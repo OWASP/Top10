@@ -5,15 +5,15 @@
 
 ## 專案領袖
 
-- [Andrew van der Stock](mailto:vanderaj@owasp.org) (twitter: [@vanderaj](https://twitter.com/vanderaj))
-- [Brian Glas](mailto:brian.glas@owasp.org) (twitter: [@infosecdad](https://twitter.com/infosecdad))
-- [Neil Smithline](mailto:neil.smithline@owasp.org) (twitter: [@appsecneil](https://twitter.com/appsecneil))
-- [Torsten Gigler](mailto:torsten.gigler@owasp.org) (twitter: [@torsten_tweet](https://twitter.com/torsten_tweet))
+- [Andrew van der Stock](mailto:vanderaj@owasp.org) (twitter: [@vanderaj](https://x.com/vanderaj))
+- [Brian Glas](mailto:brian.glas@owasp.org) (twitter: [@infosecdad](https://x.com/infosecdad))
+- [Neil Smithline](mailto:neil.smithline@owasp.org) (twitter: [@appsecneil](https://x.com/appsecneil))
+- [Torsten Gigler](mailto:torsten.gigler@owasp.org) (twitter: [@torsten_tweet](https://x.com/torsten_tweet))
 
 ## 貢獻專家
 
-- Orange Tsai, [@orange_8361](https://twitter.com/orange_8361) A10-2021: 伺服端請求偽造 的作者
-- Jim Manico [@manicode](https://twitter.com/manicode) 和 Jakub Maćkowski [@kubamackowski](https://twitter.com/kubamackowski)
+- Orange Tsai, [@orange_8361](https://x.com/orange_8361) A10-2021: 伺服端請求偽造 的作者
+- Jim Manico [@manicode](https://x.com/manicode) 和 Jakub Maćkowski [@kubamackowski](https://x.com/kubamackowski)
 
 ## 你能如何幫助
 

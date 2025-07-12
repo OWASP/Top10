@@ -27,7 +27,7 @@ Los desarrolladores pueden prevenir SSRF implementando algunos o todos los sigui
 -   Haga cumplir las políticas de firewall "denegar por defecto" o las reglas de control de acceso a la red para bloquear todo el tráfico de la intranet excepto el esencial.<br/> 
     *Consejos:*<br> 
     ~ Establezca la propiedad y un ciclo de vida para las reglas de firewall basadas en aplicaciones.<br/>
-    ~ Registre en logs todos los flujos de red aceptados y bloqueados en firewalls (consulte [A09: 2021-Fallas en el Registro y Monitoreo](A09_2021-Security_Logging_and_Monitoring_Failures.es.md)).
+    ~ Registre en logs todos los flujos de red aceptados y bloqueados en firewalls (consulte [A09: 2021-Fallas en el Registro y Monitoreo](A09_2021-Security_Logging_and_Monitoring_Failures.md)).
     
 ### **Desde la capa de aplicación:**
 

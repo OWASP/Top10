@@ -34,7 +34,7 @@ ataques. Pode haver pontos fracos de autenticação se o aplicativo:
      de modo seguro.
 
 - Usa armazenamento de dados e senhas em texto simples, criptografadas ou com hash fraco (consulte
-    [A02:2021-Falhas Criptográficas](A02_2021-Cryptographic_Failures.pt_BR.md)).
+    [A02:2021-Falhas Criptográficas](A02_2021-Cryptographic_Failures.md)).
 
 - Possui multifator de autenticação ausente ou ineficaz.
 
