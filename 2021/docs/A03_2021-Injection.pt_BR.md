@@ -29,15 +29,6 @@ Uma aplicação é vulnerável a ataques quando:
     relacional de objeto (ORM) para extrair registros confidenciais
     adicionais.
 
-- Os dados fornecidos pelo usuário não são validados, filtrados ou
-    higienizados pelo aplicativo.
-
-- Consultas dinâmicas ou chamadas não parametrizadas sem escape ciente
-    do contexto são usadas diretamente no interpretador.
-
-- Dados hostis são usados nos parâmetros de pesquisa de mapeamento
-    relacional de objeto (ORM) para extrair registros confidenciais adicionais.
-
 - Dados hostis são usados diretamente ou concatenados. O SQL ou comando
     contém a estrutura e os dados maliciosos em consultas dinâmicas, comandos
     ou procedimentos armazenados.
@@ -94,7 +85,7 @@ pode resultar em consultas que ainda são vulneráveis
 ```
 
 Em ambos os casos, o invasor modifica o valor do parâmetro ‘_id_’ em seu
-navegador para enviar: _‘ or ‘1’=’1_. Por exemplo:
+navegador para enviar: ' UNION SLEEP(10);--. Por exemplo:
 ```
  http://example.com/app/accountView?id=' UNION SELECT SLEEP(10);--
 ```
