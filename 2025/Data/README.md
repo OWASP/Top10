@@ -28,7 +28,7 @@ There are a few ways that data can be contributed:
 2.	Upload a CSV/Excel/JSON file to https://bit.ly/OWASPTop10Data
 
 ## Contribution Period
-We plan to accept contributions to the Top 10 2024 until Dec 31, 2024, for data dating from 2021 to current.
+We plan to accept contributions to the Top 10 2025 until July 31, 2025, for data dating from 2021 to 2024.
 
 ## Data Structure
 The following data elements are *required or optional:
@@ -50,5 +50,5 @@ If a contributor has two types of datasets, one from HaT and one from TaH source
 
 
 ## Process
-We will be using a similar process to the 2020 Top 10, we plan to perform a level of data normalization; however, we will keep a version of the raw data contributed for future analysis. We will analyze the CWE distribution of the datasets and potentially reclassify some CWEs to consolidate them into larger buckets. We will carefully document all normalization actions taken so it is clear what has been done.
+We will be using a similar process to the 2021 Top 10, we plan to perform a level of data normalization; however, we will keep a version of the raw data contributed for future analysis. We will analyze the CWE distribution of the datasets and potentially reclassify some CWEs to consolidate them into larger buckets. We will carefully document all normalization actions taken so it is clear what has been done.
 
