@@ -82,11 +82,7 @@ dilakukan beberapa detik setelah ketersediaan mungkin mengidentifikasikan
 
 ## Referensi
 
-<<<<<<< HEAD
--   [OWASP Cheat Sheet: Secure Design Principles](Segera Hadir)
-=======
 -   [OWASP Cheat Sheet: Secure Design Principles](https://cheatsheetseries.owasp.org/cheatsheets/Secure_Product_Design_Cheat_Sheet.html)
->>>>>>> e72380ebb9faf0563d02ecf1a024e0cf77c060d7
 
 -   [OWASP SAMM: Design:Security Architecture](https://owaspsamm.org/model/design/security-architecture/)
 
