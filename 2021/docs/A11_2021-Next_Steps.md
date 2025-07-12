@@ -8,7 +8,7 @@ prevalent and impactful.
 
 Organizations working towards a mature appsec program or security
 consultancies or tool vendors wishing to expand coverage for their
-offerings, the following four issues are well worth the effort to
+offerings, the following three issues are well worth the effort to
 identify and remediate.
 
 ## Code Quality issues
