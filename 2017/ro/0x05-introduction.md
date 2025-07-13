@@ -10,15 +10,15 @@ Un obiectiv principal al Top 10 al OWASP este de a educa dezvoltatorii, designer
 
 ## Roadmap pentru activități viitoare
 
-**Nu te opri la 10**. Există sute de probleme care ar putea afecta securitatea generală a unei aplicații web, așa cum este discutat în [Ghidul dezvoltatorului OWASP] (https://www.owasp.org/index.php/OWASP_Guide_Project) și în [OWASP Cheat Sheet Series] (https://www.owasp.org/index.php/Category:Cheatsheets). Acestea sunt lecturi esențiale pentru oricine dezvoltă aplicații web și API. Îndrumări privind găsirea eficientă a vulnerabilităților în aplicațiile web și API-urile sunt furnizate în [OWASP Testing Guide] (https://www.owasp.org/index.php/OWASP_Testing_Project). 
+**Nu te opri la 10**. Există sute de probleme care ar putea afecta securitatea generală a unei aplicații web, așa cum este discutat în [Ghidul dezvoltatorului OWASP] (https://wiki.owasp.org/index.php/OWASP_Guide_Project) și în [OWASP Cheat Sheet Series] (https://wiki.owasp.org/index.php/Category:Cheatsheets). Acestea sunt lecturi esențiale pentru oricine dezvoltă aplicații web și API. Îndrumări privind găsirea eficientă a vulnerabilităților în aplicațiile web și API-urile sunt furnizate în [OWASP Testing Guide] (https://wiki.owasp.org/index.php/OWASP_Testing_Project). 
 
 **Constant change**. The OWASP Top 10 will continue to change. Even without changing a single line of your application's code, you may become vulnerable as new flaws are discovered and attack methods are refined. Please review the advice at the end of the Top 10 in What's Next For Developers, Testers, Organizations and Application Managers for more information.
 
-**Think positive**. When you're ready to stop chasing vulnerabilities and focus on establishing strong application security controls, the [OWASP Proactive Controls](https://www.owasp.org/index.php/OWASP_Proactive_Controls) project provides a starting point to help developers build security into their applications and the [OWASP Application Security Verification Standard (ASVS)](https://www.owasp.org/index.php/ASVS) is a guide for organizations and application reviewers on what to verify.
+**Think positive**. When you're ready to stop chasing vulnerabilities and focus on establishing strong application security controls, the [OWASP Proactive Controls](https://wiki.owasp.org/index.php/OWASP_Proactive_Controls) project provides a starting point to help developers build security into their applications and the [OWASP Application Security Verification Standard (ASVS)](https://wiki.owasp.org/index.php/ASVS) is a guide for organizations and application reviewers on what to verify.
 
 **Use tools wisely**. Security vulnerabilities can be quite complex and deeply buried in code. In many cases, the most cost-effective approach for finding and eliminating these weaknesses is human experts armed with advanced tools. Relying on tools alone provides a false sense of security and is not recommended.
 
-**Push left, right, and everywhere**. Focus on making security an integral part of your culture throughout your development organization. Find out more in the [OWASP Software Assurance Maturity Model (SAMM)](https://www.owasp.org/index.php/OWASP_SAMM_Project).
+**Push left, right, and everywhere**. Focus on making security an integral part of your culture throughout your development organization. Find out more in the [OWASP Software Assurance Maturity Model (SAMM)](https://wiki.owasp.org/index.php/OWASP_SAMM_Project).
 
 ## Attribution
 

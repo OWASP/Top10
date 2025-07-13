@@ -6,7 +6,7 @@ Uma grande quantidade de feedback foi recebida durante a criação do OWASP Top 
 
 Embora o objetivo original do projeto OWASP Top 10 fosse simplesmente promover a conscientização entre desenvolvedores e gerentes, tornou-se o padrão de facto de segurança de aplicativos.
 
-Nesta versão, as questões e recomendações são escritas de forma concisa e testável para ajudar na adoção do OWASP Top 10 em programas de segurança de aplicações. Encorajamos organizações grandes e de alto desempenho a utilizar o [OWASP Application Security Verification Standard (ASVS)](https://www.owasp.org/index.php/ASVS) se for necessário um verdadeiro padrão, mas, para a maioria, o OWASP Top 10 é um ótimo começo na jornada de segurança de aplicações.
+Nesta versão, as questões e recomendações são escritas de forma concisa e testável para ajudar na adoção do OWASP Top 10 em programas de segurança de aplicações. Encorajamos organizações grandes e de alto desempenho a utilizar o [OWASP Application Security Verification Standard (ASVS)](https://wiki.owasp.org/index.php/ASVS) se for necessário um verdadeiro padrão, mas, para a maioria, o OWASP Top 10 é um ótimo começo na jornada de segurança de aplicações.
 
 Nós escrevemos uma série de sugestões de próximas etapas para diferentes usuários do OWASP Top 10, incluindo "O que fazer a seguir para desenvolvedores", "O que fazer a seguir para testadores de segurança", "O que fazer a seguir para organizações", que é adequado para CIOs e CISOs, e "O que fazer a seguir para gerentes de aplicações", que é adequado para gerentes de aplicações ou qualquer pessoa responsável pelo ciclo de vida de uma aplicação.
 
@@ -18,7 +18,7 @@ Esperamos que o OWASP Top 10 seja útil para os esforços de segurança para sua
 
 Você pode encontrar o projeto do Top 10 OWASP e suas traduções aqui:
 
-* [https://www.owasp.org/index.php/top10](https://www.owasp.org/index.php/top10)
+* [https://wiki.owasp.org/index.php/top10](https://wiki.owasp.org/index.php/top10)
 
 Por último, desejamos agradecer à liderança fundadora do projeto OWASP Top 10, Dave Wichers e Jeff Williams, por todos os seus esforços e por acreditarem em nós para conseguir finalizá-lo com a ajuda da comunidade. Obrigado!
 

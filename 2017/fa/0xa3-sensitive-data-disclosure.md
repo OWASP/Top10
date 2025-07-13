@@ -18,7 +18,7 @@
   <li>اگر عامل کاربر (مثلا برنامه کاربردی، سرویس پست الکترونیکی) گواهی سرور صحیحی را دریافت کند آیا آن را تأیید نمی‌کند؟</li>
 </ul>
 
-[Crypto (V7)](https://www.owasp.org/index.php/ASVS_V7_Cryptography), [Data Protection (V9)](https://www.owasp.org/index.php/ASVS_V9_Data_Protection) and [SSL/TLS (V10)](https://www.owasp.org/index.php/ASVS_V10_Communications) ASVS را ببینید.
+[Crypto (V7)](https://wiki.owasp.org/index.php/ASVS_V7_Cryptography), [Data Protection (V9)](https://wiki.owasp.org/index.php/ASVS_V9_Data_Protection) and [SSL/TLS (V10)](https://wiki.owasp.org/index.php/ASVS_V10_Communications) ASVS را ببینید.
 
 ## <div dir="rtl" align="right">نحوه پیشگیری از حمله:</div>
 
@@ -48,13 +48,13 @@
 
 ## <div dir="rtl" align="right">منابع</div>
 
-* [OWASP Proactive Controls: Protect Data](https://www.owasp.org/index.php/OWASP_Proactive_Controls#7:_Protect_Data)
-* [OWASP Application Security Verification Standard]((https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project)): [V7](https://www.owasp.org/index.php/ASVS_V7_Cryptography), [9](https://www.owasp.org/index.php/ASVS_V9_Data_Protection), [10](https://www.owasp.org/index.php/ASVS_V10_Communications)
-* [OWASP Cheat Sheet: Transport Layer Protection](https://www.owasp.org/index.php/Transport_Layer_Protection_Cheat_Sheet)
-* [OWASP Cheat Sheet: User Privacy Protection](https://www.owasp.org/index.php/User_Privacy_Protection_Cheat_Sheet)
-* [OWASP Cheat Sheet: Password](https://www.owasp.org/index.php/Password_Storage_Cheat_Sheet) and [Cryptographic Storage](https://www.owasp.org/index.php/Cryptographic_Storage_Cheat_Sheet)
-* [OWASP Security Headers Project](https://www.owasp.org/index.php/OWASP_Secure_Headers_Project); [Cheat Sheet: HSTS](https://www.owasp.org/index.php/HTTP_Strict_Transport_Security_Cheat_Sheet)
-* [OWASP Testing Guide: Testing for weak cryptography](https://www.owasp.org/index.php/Testing_for_weak_Cryptography)
+* [OWASP Proactive Controls: Protect Data](https://wiki.owasp.org/index.php/OWASP_Proactive_Controls#7:_Protect_Data)
+* [OWASP Application Security Verification Standard]((https://wiki.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project)): [V7](https://wiki.owasp.org/index.php/ASVS_V7_Cryptography), [9](https://wiki.owasp.org/index.php/ASVS_V9_Data_Protection), [10](https://wiki.owasp.org/index.php/ASVS_V10_Communications)
+* [OWASP Cheat Sheet: Transport Layer Protection](https://wiki.owasp.org/index.php/Transport_Layer_Protection_Cheat_Sheet)
+* [OWASP Cheat Sheet: User Privacy Protection](https://wiki.owasp.org/index.php/User_Privacy_Protection_Cheat_Sheet)
+* [OWASP Cheat Sheet: Password](https://wiki.owasp.org/index.php/Password_Storage_Cheat_Sheet) and [Cryptographic Storage](https://wiki.owasp.org/index.php/Cryptographic_Storage_Cheat_Sheet)
+* [OWASP Security Headers Project](https://wiki.owasp.org/index.php/OWASP_Secure_Headers_Project); [Cheat Sheet: HSTS](https://wiki.owasp.org/index.php/HTTP_Strict_Transport_Security_Cheat_Sheet)
+* [OWASP Testing Guide: Testing for weak cryptography](https://wiki.owasp.org/index.php/Testing_for_weak_Cryptography)
 
 ### <div dir="rtl" align="right">خارجی</div>
 

@@ -15,7 +15,7 @@ Déterminer d’abord quelles données doivent bénéficier d’une protection c
 * Les réponses transmises au navigateur incluent-elles les directives/en-têtes de sécurité adéquats ?
 * Est-ce que l'agent utilisateur (l'application ou le client mail, par exemple) vérifie que le certificat envoyé par le serveur est valide ?
 
-Pour une liste complète de contrôles, se référer à l’ASVS : [Crypto (V7)](https://www.owasp.org/index.php/ASVS_V7_Cryptography), [Data Protection (V9)](https://www.owasp.org/index.php/ASVS_V9_Data_Protection) et [SSL/TLS (V10)](https://www.owasp.org/index.php/ASVS_V10_Communications).
+Pour une liste complète de contrôles, se référer à l’ASVS : [Crypto (V7)](https://wiki.owasp.org/index.php/ASVS_V7_Cryptography), [Data Protection (V9)](https://wiki.owasp.org/index.php/ASVS_V9_Data_Protection) et [SSL/TLS (V10)](https://wiki.owasp.org/index.php/ASVS_V10_Communications).
 
 ## Comment s'en prémunir ?
 
@@ -41,13 +41,13 @@ On veillera au minimum à suivre les recommandations suivantes, mais il reste n�
 
 ## Références
 
-* [OWASP Proactive Controls: Protect Data](https://www.owasp.org/index.php/OWASP_Proactive_Controls#7:_Protect_Data)
-* [OWASP Application Security Verification Standard]((https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project)): [V7](https://www.owasp.org/index.php/ASVS_V7_Cryptography), [9](https://www.owasp.org/index.php/ASVS_V9_Data_Protection), [10](https://www.owasp.org/index.php/ASVS_V10_Communications)
-* [OWASP Cheat Sheet: Transport Layer Protection](https://www.owasp.org/index.php/Transport_Layer_Protection_Cheat_Sheet)
-* [OWASP Cheat Sheet: User Privacy Protection](https://www.owasp.org/index.php/User_Privacy_Protection_Cheat_Sheet)
-* [OWASP Cheat Sheet: Password](https://www.owasp.org/index.php/Password_Storage_Cheat_Sheet) and [Cryptographic Storage](https://www.owasp.org/index.php/Cryptographic_Storage_Cheat_Sheet)
-* [OWASP Security Headers Project](https://www.owasp.org/index.php/OWASP_Secure_Headers_Project); [Cheat Sheet: HSTS](https://www.owasp.org/index.php/HTTP_Strict_Transport_Security_Cheat_Sheet)
-* [OWASP Testing Guide: Testing for weak cryptography](https://www.owasp.org/index.php/Testing_for_weak_Cryptography)
+* [OWASP Proactive Controls: Protect Data](https://wiki.owasp.org/index.php/OWASP_Proactive_Controls#7:_Protect_Data)
+* [OWASP Application Security Verification Standard]((https://wiki.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project)): [V7](https://wiki.owasp.org/index.php/ASVS_V7_Cryptography), [9](https://wiki.owasp.org/index.php/ASVS_V9_Data_Protection), [10](https://wiki.owasp.org/index.php/ASVS_V10_Communications)
+* [OWASP Cheat Sheet: Transport Layer Protection](https://wiki.owasp.org/index.php/Transport_Layer_Protection_Cheat_Sheet)
+* [OWASP Cheat Sheet: User Privacy Protection](https://wiki.owasp.org/index.php/User_Privacy_Protection_Cheat_Sheet)
+* [OWASP Cheat Sheet: Password](https://wiki.owasp.org/index.php/Password_Storage_Cheat_Sheet) and [Cryptographic Storage](https://wiki.owasp.org/index.php/Cryptographic_Storage_Cheat_Sheet)
+* [OWASP Security Headers Project](https://wiki.owasp.org/index.php/OWASP_Secure_Headers_Project); [Cheat Sheet: HSTS](https://wiki.owasp.org/index.php/HTTP_Strict_Transport_Security_Cheat_Sheet)
+* [OWASP Testing Guide: Testing for weak cryptography](https://wiki.owasp.org/index.php/Testing_for_weak_Cryptography)
 
 ### Externes
 

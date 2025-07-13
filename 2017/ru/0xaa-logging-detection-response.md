@@ -14,7 +14,7 @@
 * журналы приложений и API не проверяются на предмет подозрительной активности;
 * журналы хранятся только локально;
 * пороговые значения предупреждений и схемы реагирования на инциденты отсутствуют или являются неэффективными;
-* тестирование на проникновение и сканирование инструментами [DAST](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools) (например, [OWASP ZAP](https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project)) не выдают предупреждений;
+* тестирование на проникновение и сканирование инструментами [DAST](https://wiki.owasp.org/index.php/Category:Vulnerability_Scanning_Tools) (например, [OWASP ZAP](https://wiki.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project)) не выдают предупреждений;
 * приложение не может определять, реагировать или предупреждать об атаках в реальном или почти реальном времени.
 
 В системе имеется утечка данных, если журналы регистрации и предупреждения доступны пользователям или атакующим (см. **A3:2017-Разглашение конфиденциальных данных**).
@@ -29,7 +29,7 @@
 * использовать эффективные системы мониторинга и предупреждения для своевременного обнаружения подозрительных действий и реагирования на них;
 * разработать или утвердить руководство по реагированию на инциденты и устранению их последствий, такое как [NIST 800-61 rev 2](https://csrc.nist.gov/publications/detail/sp/800-61/rev-2/final).
 
-Существуют коммерческие и бесплатные системы защиты приложений (например, [OWASP AppSensor](https://www.owasp.org/index.php/OWASP_AppSensor_Project)), межсетевые экраны веб-приложений (например, [ModSecurity с набором основных правил OWASP ModSecurity](https://www.owasp.org/index.php/Category:OWASP_ModSecurity_Core_Rule_Set_Project)), а также программы корреляции журналов с настраиваемыми панелями и предупреждениями.
+Существуют коммерческие и бесплатные системы защиты приложений (например, [OWASP AppSensor](https://wiki.owasp.org/index.php/OWASP_AppSensor_Project)), межсетевые экраны веб-приложений (например, [ModSecurity с набором основных правил OWASP ModSecurity](https://wiki.owasp.org/index.php/Category:OWASP_ModSecurity_Core_Rule_Set_Project)), а также программы корреляции журналов с настраиваемыми панелями и предупреждениями.
 
 ## Примеры сценариев атак
 
@@ -43,10 +43,10 @@
 
 ### OWASP
 
-* [Проактивная защита OWASP: Реализация журналирования и обнаружения вторжений](https://www.owasp.org/index.php/OWASP_Proactive_Controls#8:_Implement_Logging_and_Intrusion_Detection)
-* [Стандарт подтверждения безопасности приложений OWASP: V8 Журналирование и мониторинг](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
-* [Руководство OWASP по тестированию: Подробные коды ошибок](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
-* [Памятка OWASP: Журналирование](https://www.owasp.org/index.php/Logging_Cheat_Sheet)
+* [Проактивная защита OWASP: Реализация журналирования и обнаружения вторжений](https://wiki.owasp.org/index.php/OWASP_Proactive_Controls#8:_Implement_Logging_and_Intrusion_Detection)
+* [Стандарт подтверждения безопасности приложений OWASP: V8 Журналирование и мониторинг](https://wiki.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
+* [Руководство OWASP по тестированию: Подробные коды ошибок](https://wiki.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
+* [Памятка OWASP: Журналирование](https://wiki.owasp.org/index.php/Logging_Cheat_Sheet)
 
 ### Сторонние
 

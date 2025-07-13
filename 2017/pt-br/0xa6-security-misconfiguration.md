@@ -26,7 +26,7 @@ Processos de instalação segura devem ser implementados, incluindo:
 * Uma plataforma mínima sem recursos, componentes, documentação e amostras desnecessários. Remova ou não instale recursos e frameworks não utilizados.
 * Uma tarefa para revisar e atualizar as configurações apropriadas para todas as notas de segurança, atualizações e patches como parte do processo de gerenciamento de patches (veja **A9:2017-Utilização de Componentes com Vulnerabilidades Conhecidas**).
 * Uma arquitetura de aplicações segmentados que forneça separação efetiva e segura entre componentes ou inquilinos, com segmentação, conteinerização ou grupos de segurança de nuvem (ACLs).
-* Enviar diretivas de segurança para agentes clientes, por exemplo [Cabeçalhos de segurança](https://www.owasp.org/index.php/OWASP_Secure_Headers_Project).
+* Enviar diretivas de segurança para agentes clientes, por exemplo [Cabeçalhos de segurança](https://wiki.owasp.org/index.php/OWASP_Secure_Headers_Project).
 * Um processo automatizado para verificar a eficácia das configurações e configurações em todos os ambientes
 
 ## Exemplo de Cenários de Ataque
@@ -43,11 +43,11 @@ Processos de instalação segura devem ser implementados, incluindo:
 
 ### OWASP
 
-* [OWASP Testing Guide: Configuration Management](https://www.owasp.org/index.php/Testing_for_configuration_management)
-* [OWASP Testing Guide: Testing for Error Codes](https://www.owasp.org/index.php/Testing_for_Error_Code_(OWASP-IG-006))
-* [OWASP Security Headers Project](https://www.owasp.org/index.php/OWASP_Secure_Headers_Project)
+* [OWASP Testing Guide: Configuration Management](https://wiki.owasp.org/index.php/Testing_for_configuration_management)
+* [OWASP Testing Guide: Testing for Error Codes](https://wiki.owasp.org/index.php/Testing_for_Error_Code_(OWASP-IG-006))
+* [OWASP Security Headers Project](https://wiki.owasp.org/index.php/OWASP_Secure_Headers_Project)
 
-For additional requirements in this area, see the [ASVS requirements areas for Security Configuration (V11 and V19)](https://www.owasp.org/index.php/ASVS).
+For additional requirements in this area, see the [ASVS requirements areas for Security Configuration (V11 and V19)](https://wiki.owasp.org/index.php/ASVS).
 
 ### Externas
 

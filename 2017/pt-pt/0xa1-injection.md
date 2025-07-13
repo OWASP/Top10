@@ -107,19 +107,19 @@ até invocar procedimentos armazenados.
 * [CWE-917: Expression Language Injection][0xa117]
 * [PortSwigger: Server-side template injection][0xa118]
 
-[0xa11]: https://www.owasp.org/index.php/Injection_Flaws
-[0xa12]: https://www.owasp.org/index.php/Source_Code_Analysis_Tools
-[0xa13]: https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools
-[0xa14]: https://www.owasp.org/index.php/OWASP_Proactive_Controls#2:_Parameterize_Queries
-[0xa15]: https://www.owasp.org/index.php/ASVS_V5_Input_validation_and_output_encoding
-[0xa16]: https://www.owasp.org/index.php/Testing_for_SQL_Injection_(OTG-INPVAL-005)
-[0xa17]: https://www.owasp.org/index.php/Testing_for_Command_Injection_(OTG-INPVAL-013)
-[0xa18]: https://www.owasp.org/index.php/Testing_for_ORM_Injection_(OTG-INPVAL-007)
-[0xa19]: https://www.owasp.org/index.php/Injection_Prevention_Cheat_Sheet
-[0xa110]: https://www.owasp.org/index.php/SQL_Injection_Prevention_Cheat_Sheet
-[0xa111]: https://www.owasp.org/index.php/Injection_Prevention_Cheat_Sheet_in_Java
-[0xa112]: https://www.owasp.org/index.php/Query_Parameterization_Cheat_Sheet
-[0xa113]: https://www.owasp.org/index.php/OWASP_Automated_Threats_to_Web_Applications
+[0xa11]: https://wiki.owasp.org/index.php/Injection_Flaws
+[0xa12]: https://wiki.owasp.org/index.php/Source_Code_Analysis_Tools
+[0xa13]: https://wiki.owasp.org/index.php/Category:Vulnerability_Scanning_Tools
+[0xa14]: https://wiki.owasp.org/index.php/OWASP_Proactive_Controls#2:_Parameterize_Queries
+[0xa15]: https://wiki.owasp.org/index.php/ASVS_V5_Input_validation_and_output_encoding
+[0xa16]: https://wiki.owasp.org/index.php/Testing_for_SQL_Injection_(OTG-INPVAL-005)
+[0xa17]: https://wiki.owasp.org/index.php/Testing_for_Command_Injection_(OTG-INPVAL-013)
+[0xa18]: https://wiki.owasp.org/index.php/Testing_for_ORM_Injection_(OTG-INPVAL-007)
+[0xa19]: https://wiki.owasp.org/index.php/Injection_Prevention_Cheat_Sheet
+[0xa110]: https://wiki.owasp.org/index.php/SQL_Injection_Prevention_Cheat_Sheet
+[0xa111]: https://wiki.owasp.org/index.php/Injection_Prevention_Cheat_Sheet_in_Java
+[0xa112]: https://wiki.owasp.org/index.php/Query_Parameterization_Cheat_Sheet
+[0xa113]: https://wiki.owasp.org/index.php/OWASP_Automated_Threats_to_Web_Applications
 [0xa114]: https://cwe.mitre.org/data/definitions/77.html
 [0xa115]: https://cwe.mitre.org/data/definitions/89.html
 [0xa116]: https://cwe.mitre.org/data/definitions/564.html

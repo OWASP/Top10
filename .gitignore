@@ -71,8 +71,22 @@ $RECYCLE.BIN/
 # IDE folders
 .idea/
 
-# MkDocs generated website
-2021/site
+# Python Cache files
+__pycache__/
+*.py[cod]
+
+# Python virtual environments
+venv/
+.env
+.env.*
+
+generated/
+bin/
+lib/
+
+# mkdocs site (this is built using mkdocs gh-deploy
+2021/site/
+2021/site/0x00-notice/index.html
 
 # Pipenv
 Pipfile

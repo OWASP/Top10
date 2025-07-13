@@ -65,12 +65,12 @@ nomenclatura consensual e reduzir possível confusão.
 * [Microsoft Threat Modelling Tool][0x1013]
 
 [0x101]: images/0x10-risk-1.png
-[0x102]: https://www.owasp.org/index.php/Top10
-[0x103]: https://www.owasp.org/index.php/OWASP_Risk_Rating_Methodology
+[0x102]: https://wiki.owasp.org/index.php/Top10
+[0x103]: https://wiki.owasp.org/index.php/OWASP_Risk_Rating_Methodology
 [0x104]: ./0xc0-note-about-risks.md
 [0x105]: https://cwe.mitre.org/
-[0x106]: https://www.owasp.org/index.php/OWASP_Risk_Rating_Methodology
-[0x107]: https://www.owasp.org/index.php/Threat_Risk_Modeling
+[0x106]: https://wiki.owasp.org/index.php/OWASP_Risk_Rating_Methodology
+[0x107]: https://wiki.owasp.org/index.php/Threat_Risk_Modeling
 [0x108]: https://www.iso.org/iso-31000-risk-management.html
 [0x109]: https://www.iso.org/isoiec-27001-information-security.html
 [0x1010]: https://www.nist.gov/cyberframework

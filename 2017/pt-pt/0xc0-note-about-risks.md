@@ -48,7 +48,7 @@ de Segurança Incorretas][0xc02].
 
 ![Risk Calculation for A6:2017-Security Misconfiguration][0xc03]
 
-[0xc01]: https://www.owasp.org/index.php/OWASP_Risk_Rating_Methodology
+[0xc01]: https://wiki.owasp.org/index.php/OWASP_Risk_Rating_Methodology
 [0xc02]: ./0xa6-security-misconfiguration.md
 [0xc03]: images/0xc0-risk-explanation.png
 

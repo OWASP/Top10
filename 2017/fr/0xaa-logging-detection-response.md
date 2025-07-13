@@ -13,7 +13,7 @@ L'insuffisance de journalisation, de détection, de supervision et de réaction 
 * Les journaux des applications et des API ne sont pas contrôlés pour détecter les actions suspectes.
 * Les journaux ne sont stockés que localement.
 * Aucun processus de seuil d’alerte convenable ni de remontées d'information pour y répondre n'ont été définis, ou ils sont inadéquats, ou inefficaces.
-* Les tests d'intrusion et de balayage avec des outils [DAST](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools) (tels que [OWASP ZAP](https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project)) ne génèrent pas d'alertes.
+* Les tests d'intrusion et de balayage avec des outils [DAST](https://wiki.owasp.org/index.php/Category:Vulnerability_Scanning_Tools) (tels que [OWASP ZAP](https://wiki.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project)) ne génèrent pas d'alertes.
 * L’application est incapable de détecter, de générer des remontées d'information et des alertes en temps réel, ou assimilé, en cas d’attaque active.
 
 Vous êtes vulnérable à une fuite d’information si les enregistrements de journalisation et d’alertes sont accessibles à vos utilisateurs ou attaquants (voir A3:2017-Exposition de Données Sensibles).
@@ -27,7 +27,7 @@ Conformément aux risques évalués sur les données stockées ou gérées par l
 * Mettre en place une supervision et une gestion d'alertes efficaces pour détecter et réagir aux actions suspectes en temps opportun.
 * Définir ou adopter un plan de réaction et de reprise sur incident, comme celui du [NIST 800-61 rev 2](https://csrc.nist.gov/publications/detail/sp/800-61/rev-2/final) ou ultérieur.
 
-On trouve des logiciels, commerciaux ou open source, de protection d'applications tel que [OWASP AppSensor](https://www.owasp.org/index.php/OWASP_AppSensor_Project), de pare-feux d'application web (WAF) tel que [ModSecurity with the OWASP ModSecurity Core Rule Set](https://www.owasp.org/index.php/Category:OWASP_ModSecurity_Core_Rule_Set_Project) et de logiciels de corrélation de journaux avec des tableaux de bord et d'alertes configurables. 
+On trouve des logiciels, commerciaux ou open source, de protection d'applications tel que [OWASP AppSensor](https://wiki.owasp.org/index.php/OWASP_AppSensor_Project), de pare-feux d'application web (WAF) tel que [ModSecurity with the OWASP ModSecurity Core Rule Set](https://wiki.owasp.org/index.php/Category:OWASP_ModSecurity_Core_Rule_Set_Project) et de logiciels de corrélation de journaux avec des tableaux de bord et d'alertes configurables. 
 
 ## Exemples de Scénarios d'Attaque
 
@@ -40,10 +40,10 @@ On trouve des logiciels, commerciaux ou open source, de protection d'application
 ## Références
 
 ### OWASP
-* [OWASP Proactive Controls: Implement Logging and Intrusion Detection](https://www.owasp.org/index.php/OWASP_Proactive_Controls#8:_Implement_Logging_and_Intrusion_Detection)
-* [OWASP Application Security Verification Standard: V8 Logging and Monitoring](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
-* [OWASP Testing Guide: Testing for Detailed Error Code](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
-* [OWASP Cheat Sheet: Logging](https://www.owasp.org/index.php/Logging_Cheat_Sheet)
+* [OWASP Proactive Controls: Implement Logging and Intrusion Detection](https://wiki.owasp.org/index.php/OWASP_Proactive_Controls#8:_Implement_Logging_and_Intrusion_Detection)
+* [OWASP Application Security Verification Standard: V8 Logging and Monitoring](https://wiki.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
+* [OWASP Testing Guide: Testing for Detailed Error Code](https://wiki.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
+* [OWASP Cheat Sheet: Logging](https://wiki.owasp.org/index.php/Logging_Cheat_Sheet)
 
 ### Externes
 * [CWE-223: Omission of Security-relevant Information](https://cwe.mitre.org/data/definitions/223.html)

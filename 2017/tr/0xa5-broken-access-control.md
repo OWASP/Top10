@@ -3,7 +3,7 @@
 | Tehdit Etkenleri/Saldırı vektörleri | Güvenlik zafiyeti  | Etkiler |
 | -- | -- | -- |
 | Erişim Düzeyi : İstismar Edilebilirlik 2 | Yaygınlık 2 : Tespit Edilebilirlik 2 | Teknik 3 : İş |
-| Erişim kontrolü istismarı saldırganların temel bir yeteneğidir. [SAST](https://www.owasp.org/index.php/Source_Code_Analysis_Tools) ve [DAST](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools) araçları erişim kontrolünün olmadığını tespit edebilir ancak olduğu durumlarda fonksiyonel olup olmadığını doğrulayamamaktadır. Erişim kontrolü manuel yöntemlerle veya belirli çerçevelerde erişim kontrolleri bulunmadığı için otomasyon aracılığıyla tespit edilebilmektedir. | Erişim kontrolü açıklıkları otomatize tespitin eksikliği ve uygulama geliştiricileri tarafından etkin bir fonksiyonel test yapılmamasından dolayı yaygındır. Erişim kontrolü tespiti genellikle otomatize statik veya dinamik test ile yapılamamaktadır. HTTP metotları (GET, PUT vb.), doğrudan nesne başvuruları vb. dahil eksik veya yetersiz erişim kontrollerini tespit etmenin en iyi yolu manuel testlerdir. | Teknik etki saldırganların kullanıcılar veya yöneticiler gibi davranması veya kullanıcıların yetki gerektiren fonksiyonları kullanması veya kayıt oluşturulması, kayıtlara erişilmesi, kayıtların güncellenmesi veya silinmesidir. |
+| Erişim kontrolü istismarı saldırganların temel bir yeteneğidir. [SAST](https://wiki.owasp.org/index.php/Source_Code_Analysis_Tools) ve [DAST](https://wiki.owasp.org/index.php/Category:Vulnerability_Scanning_Tools) araçları erişim kontrolünün olmadığını tespit edebilir ancak olduğu durumlarda fonksiyonel olup olmadığını doğrulayamamaktadır. Erişim kontrolü manuel yöntemlerle veya belirli çerçevelerde erişim kontrolleri bulunmadığı için otomasyon aracılığıyla tespit edilebilmektedir. | Erişim kontrolü açıklıkları otomatize tespitin eksikliği ve uygulama geliştiricileri tarafından etkin bir fonksiyonel test yapılmamasından dolayı yaygındır. Erişim kontrolü tespiti genellikle otomatize statik veya dinamik test ile yapılamamaktadır. HTTP metotları (GET, PUT vb.), doğrudan nesne başvuruları vb. dahil eksik veya yetersiz erişim kontrollerini tespit etmenin en iyi yolu manuel testlerdir. | Teknik etki saldırganların kullanıcılar veya yöneticiler gibi davranması veya kullanıcıların yetki gerektiren fonksiyonları kullanması veya kayıt oluşturulması, kayıtlara erişilmesi, kayıtların güncellenmesi veya silinmesidir. |
 
 ## Uygulamam Açıklık İçeriyor Mu?
 
@@ -56,10 +56,10 @@ Eğer kimliği doğrulanmamış bir kullanıcı iki sayfadan herhangi birine eri
 
 ### OWASP
 
-* [OWASP Proaktif Kontroller: Erişim Kontrolleri](https://www.owasp.org/index.php/OWASP_Proactive_Controls#6:_Implement_Access_Controls)
-* [OWASP Uygulama Güveliği Doğrulama Standardı: V4 Erişim Kontrolü](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
-* [OWASP Test Rehberi: Yetkilendirme Testleri](https://www.owasp.org/index.php/Testing_for_Authorization)
-* [OWASP Kopya Kağıdı: Erişim Kontrolü](https://www.owasp.org/index.php/Access_Control_Cheat_Sheet)
+* [OWASP Proaktif Kontroller: Erişim Kontrolleri](https://wiki.owasp.org/index.php/OWASP_Proactive_Controls#6:_Implement_Access_Controls)
+* [OWASP Uygulama Güveliği Doğrulama Standardı: V4 Erişim Kontrolü](https://wiki.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
+* [OWASP Test Rehberi: Yetkilendirme Testleri](https://wiki.owasp.org/index.php/Testing_for_Authorization)
+* [OWASP Kopya Kağıdı: Erişim Kontrolü](https://wiki.owasp.org/index.php/Access_Control_Cheat_Sheet)
 
 ### Dış Kaynaklar
 

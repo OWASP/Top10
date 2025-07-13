@@ -15,7 +15,7 @@ Uygulamalar, insanların düzenli olarak oluşturduğu ve sürdürdüğü en kar
 * Güvenlik programınız, örn. SDLC, en iyi kullanım örnekleri ile ilgili kılavuzlar ve tüm gereksinimler iç ve dış geliştiriciler ile görüşülmelidir.
 * Planlama ve tasarım fazı dahil tüm teknik gereksinimlerin yerine getirilip getirilmediği takip edilmelidir.
 * Tasarım, güvenlik ve hizmet seviyesi anlaşmaları (SLA) dahil tüm teknik gereksinimler görüşülmelidir.
-* [OWASP Güvenli Yazılım Sözleşmesi Eki](https://www.owasp.org/index.php/OWASP_Secure_Software_Contract_Annex) gibi şablonlar ve kontrol listeleri benimsenmelidir. **Not**:Bu ek ABD sözleşme hukukuna göredir, bu yüzden örnek eki kullanmadan önce lütfen yetkin kişilerden yasal tavsiye alınız.
+* [OWASP Güvenli Yazılım Sözleşmesi Eki](https://wiki.owasp.org/index.php/OWASP_Secure_Software_Contract_Annex) gibi şablonlar ve kontrol listeleri benimsenmelidir. **Not**:Bu ek ABD sözleşme hukukuna göredir, bu yüzden örnek eki kullanmadan önce lütfen yetkin kişilerden yasal tavsiye alınız.
 
 ## Planlama ve Tasarım
 

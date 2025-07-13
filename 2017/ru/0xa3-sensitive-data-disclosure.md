@@ -16,7 +16,7 @@
 * Используется ли шифрование, например присутствуют ли директивы безопасности пользовательских агентов (браузеров) и заголовки?
 * Проверяет ли пользовательский агент (напр., приложение или почтовый клиент) действительность полученных сертификатов?
 
-См. Стандарт подтверждения безопасности приложений: [Криптография (V7)](https://www.owasp.org/index.php/ASVS_V7_Cryptography), [Защита данных (V9)](https://www.owasp.org/index.php/ASVS_V9_Data_Protection) и [SSL/TLS (V10)](https://www.owasp.org/index.php/ASVS_V10_Communications).
+См. Стандарт подтверждения безопасности приложений: [Криптография (V7)](https://wiki.owasp.org/index.php/ASVS_V7_Cryptography), [Защита данных (V9)](https://wiki.owasp.org/index.php/ASVS_V9_Data_Protection) и [SSL/TLS (V10)](https://wiki.owasp.org/index.php/ASVS_V10_Communications).
 
 ## Как предотвратить?
 
@@ -44,13 +44,13 @@
 
 ### OWASP
 
-* [Проактивная защита OWASP: Защита данных](https://www.owasp.org/index.php/OWASP_Proactive_Controls#7:_Protect_Data)
-* [Стандарт подтверждения безопасности приложений OWASP]((https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project)): [V7](https://www.owasp.org/index.php/ASVS_V7_Cryptography), [9](https://www.owasp.org/index.php/ASVS_V9_Data_Protection), [10](https://www.owasp.org/index.php/ASVS_V10_Communications)
-* [Памятка OWASP: Защита транспортного уровня](https://www.owasp.org/index.php/Transport_Layer_Protection_Cheat_Sheet)
-* [Памятка OWASP: Защита конфиденциальности пользователей](https://www.owasp.org/index.php/User_Privacy_Protection_Cheat_Sheet)
-* [Памятка OWASP: Хранение паролей](https://www.owasp.org/index.php/Password_Storage_Cheat_Sheet) и [хранение в зашифрованном виде](https://www.owasp.org/index.php/Cryptographic_Storage_Cheat_Sheet)
-* [Проект OWASP: Безопасные заголовки](https://www.owasp.org/index.php/OWASP_Secure_Headers_Project); [Памятка по HSTS](https://www.owasp.org/index.php/HTTP_Strict_Transport_Security_Cheat_Sheet)
-* [Руководство OWASP по тестированию: Проверка надежности шифрования](https://www.owasp.org/index.php/Testing_for_weak_Cryptography)
+* [Проактивная защита OWASP: Защита данных](https://wiki.owasp.org/index.php/OWASP_Proactive_Controls#7:_Protect_Data)
+* [Стандарт подтверждения безопасности приложений OWASP]((https://wiki.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project)): [V7](https://wiki.owasp.org/index.php/ASVS_V7_Cryptography), [9](https://wiki.owasp.org/index.php/ASVS_V9_Data_Protection), [10](https://wiki.owasp.org/index.php/ASVS_V10_Communications)
+* [Памятка OWASP: Защита транспортного уровня](https://wiki.owasp.org/index.php/Transport_Layer_Protection_Cheat_Sheet)
+* [Памятка OWASP: Защита конфиденциальности пользователей](https://wiki.owasp.org/index.php/User_Privacy_Protection_Cheat_Sheet)
+* [Памятка OWASP: Хранение паролей](https://wiki.owasp.org/index.php/Password_Storage_Cheat_Sheet) и [хранение в зашифрованном виде](https://wiki.owasp.org/index.php/Cryptographic_Storage_Cheat_Sheet)
+* [Проект OWASP: Безопасные заголовки](https://wiki.owasp.org/index.php/OWASP_Secure_Headers_Project); [Памятка по HSTS](https://wiki.owasp.org/index.php/HTTP_Strict_Transport_Security_Cheat_Sheet)
+* [Руководство OWASP по тестированию: Проверка надежности шифрования](https://wiki.owasp.org/index.php/Testing_for_weak_Cryptography)
 
 ### Сторонние
 

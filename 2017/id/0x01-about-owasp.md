@@ -9,11 +9,11 @@ Di OWASP anda akan menemukan secara bebas dan terbuka mengenai:
 * Tool dan standar keamanan aplikasi.
 * Buku tentang uji keamanan aplikasi, pengembangan kode aman, dan review kode keamanan.
 * Presentasi dan [video](https://www.youtube.com/user/OWASPGLOBAL).
-* [Cheat sheets](https://www.owasp.org/index.php/OWASP_Cheat_Sheet_Series) untuk banyak topik umum.
+* [Cheat sheets](https://wiki.owasp.org/index.php/OWASP_Cheat_Sheet_Series) untuk banyak topik umum.
 * Kendali standar keamanan dan Pustaka Standart.
-* [Cabang Lokal Di Seluruh Dunia](https://www.owasp.org/index.php/OWASP_Chapter).
+* [Cabang Lokal Di Seluruh Dunia](https://wiki.owasp.org/index.php/OWASP_Chapter).
 * Riset Terkini.
-* Konferensi OWASP di Seluruh Dunia (https://www.owasp.org/index.php/Category:OWASP_AppSec_Conference).
+* Konferensi OWASP di Seluruh Dunia (https://wiki.owasp.org/index.php/Category:OWASP_AppSec_Conference).
 * [Mailing lists](https://lists.owasp.org/mailman/listinfo).
 
 Dan Masih banyak lagi di: [https://www.owasp.org](https://www.owasp.org).

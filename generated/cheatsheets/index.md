@@ -20,7 +20,7 @@ Project leaders:
 
 Authors (2021)
 
-- [Orange Tsai](https://twitter.com/orange_8361)
+- [Orange Tsai](https://x.com/orange_8361)
 
 Project links:
 

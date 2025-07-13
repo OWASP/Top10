@@ -10,7 +10,7 @@ Sometimes these paths are trivial to find and exploit, and sometimes they are ex
 
 ## What's My Risk
 
-The [OWASP Top 10](https://www.owasp.org/index.php/Top10) focuses on identifying the most serious web application security risks for a broad array of organizations. For each of these risks, we provide generic information about likelihood and technical impact using the following simple ratings scheme, which is based on the OWASP Risk Rating Methodology.  
+The [OWASP Top 10](https://wiki.owasp.org/index.php/Top10) focuses on identifying the most serious web application security risks for a broad array of organizations. For each of these risks, we provide generic information about likelihood and technical impact using the following simple ratings scheme, which is based on the OWASP Risk Rating Methodology.  
 
 | Threat Agents | Exploitability | Weakness Prevalence | Weakness Detectability | Technical Impacts | Business Impacts |
 | -- | -- | -- | -- | -- | -- |
@@ -28,8 +28,8 @@ Where possible, the names of the risks in the Top 10 are aligned with [Common We
 
 ### OWASP
 
-* [OWASP Risk Rating Methodology](https://www.owasp.org/index.php/OWASP_Risk_Rating_Methodology)
-* [Article on Threat/Risk Modeling](https://www.owasp.org/index.php/Threat_Risk_Modeling)
+* [OWASP Risk Rating Methodology](https://wiki.owasp.org/index.php/OWASP_Risk_Rating_Methodology)
+* [Article on Threat/Risk Modeling](https://wiki.owasp.org/index.php/Threat_Risk_Modeling)
 
 ### External
 

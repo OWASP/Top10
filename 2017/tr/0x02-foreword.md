@@ -6,7 +6,7 @@ OWASP İlk 10 -2017 hazırlanırken, benzer diğer OWASP çalışmalarına kıya
 
 OWASP İlk 10 çalışmasının asıl amacı geliştiriciler ve yöneticiler arasında farkındalık oluşturmak olsa da, bir uygulama güvenliği standardı haline gelmiştir.
 
-Bu sürümde, uygulama güvenliği programlarında OWASP İlk 10’un benimsenmesine yardımcı olmak için sorunlar ve çözüm önerileri kısa ve test edilebilir bir şekilde yazılmıştır. Gerçek bir standart gerekiyorsa, büyük kuruluşlara  [OWASP Uygulama Güvenliği Doğrulama Standardı'nı (ASVS)](https://www.owasp.org/index.php/ASVS) kullanmalarını öneriyoruz, ancak çoğu kurum için OWASP İlk 10 uygulama güvenliği alanında önemli bir başlangıç olacaktır.
+Bu sürümde, uygulama güvenliği programlarında OWASP İlk 10’un benimsenmesine yardımcı olmak için sorunlar ve çözüm önerileri kısa ve test edilebilir bir şekilde yazılmıştır. Gerçek bir standart gerekiyorsa, büyük kuruluşlara  [OWASP Uygulama Güvenliği Doğrulama Standardı'nı (ASVS)](https://wiki.owasp.org/index.php/ASVS) kullanmalarını öneriyoruz, ancak çoğu kurum için OWASP İlk 10 uygulama güvenliği alanında önemli bir başlangıç olacaktır.
 
 "Geliştiriciler için Bir Sonraki Adım", "Güvenlik Testi Ekipleri için Bir Sonraki Adım", CIO ve CISO’lar için uygun olan "Kurumlar için Bir Sonraki Adım" ve uygulama yöneticileri veya uygulama yaşam döngüsünden sorumlu olan kişiler için uygun olan "Uygulama Yöneticileri için Bir Sonraki Adım" kısımları dahil OWASP İlk 10’un farklı kullanıcıları için bir takım tavsiye edilen sonraki adım bölümleri yazılmıştır.
 
@@ -18,7 +18,7 @@ OWASP İlk 10 çalışmasının uygulama güvenliği için yapacağınız çalı
 
 OWASP İlk 10 projesine ve çevirilerine aşağıdaki link üzerinden erişebilirsiniz:
 
-* [https://www.owasp.org/index.php/top10](https://www.owasp.org/index.php/top10)
+* [https://wiki.owasp.org/index.php/top10](https://wiki.owasp.org/index.php/top10)
 
 Son olarak, OWASP İlk 10 projesinin kurucu liderleri olan Dave Wichers ve Jeff Williams’a tüm topluluğun yardımıyla bu projeyi bitirme konusunda bize olan inançları ve tüm çabaları için teşekkür etmek istiyoruz. Teşekkürler! 
 

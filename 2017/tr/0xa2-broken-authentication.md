@@ -11,7 +11,7 @@ Kullanıcının kimliğinin onaylanması, kimlik doğrulama ve oturum yönetimi 
 
 Uygulama aşağıdaki durumlarda kimlik doğrulama açıklıkları içeriyor olabilir:
 
-*  Saldırganın geçerli kullanıcı adı ve parola listesine sahip olduğu [sözlük saldırıları](https://www.owasp.org/index.php/Credential_stuffing) gibi otomatize saldırılara izin veriyorsa.
+*  Saldırganın geçerli kullanıcı adı ve parola listesine sahip olduğu [sözlük saldırıları](https://wiki.owasp.org/index.php/Credential_stuffing) gibi otomatize saldırılara izin veriyorsa.
 * Kaba kuvvet veya diğer otomatize saldırılara izin veriyorsa.
 * "Password1" veya "admin/admin" gibi varsayılan, zayıf veya herkesçe bilinen parolalara izin veriyorsa.
 * Güvenli olması mümkün olmayan "güvenlik soruları" gibi zayıf veya etkisiz hesap kurtarma ve unutulan parola süreçleri kullanıyorsa. 
@@ -33,7 +33,7 @@ Uygulama aşağıdaki durumlarda kimlik doğrulama açıklıkları içeriyor ola
 
 ## Örnek Saldırı Senaryoları
 
-**Senaryo #1**: [Sözlük saldırıları](https://www.owasp.org/index.php/Credential_stuffing) ve [bilinen parola listelerinin](https://github.com/danielmiessler/SecLists) kullanımı yaygın saldırılardır. Eğer bir uygulama otomatize tehdit veya sözlük saldırısı koruması içermiyorsa, uygulama geçerli giriş bilgilerinin toplanması için kullanılabilir.
+**Senaryo #1**: [Sözlük saldırıları](https://wiki.owasp.org/index.php/Credential_stuffing) ve [bilinen parola listelerinin](https://github.com/danielmiessler/SecLists) kullanımı yaygın saldırılardır. Eğer bir uygulama otomatize tehdit veya sözlük saldırısı koruması içermiyorsa, uygulama geçerli giriş bilgilerinin toplanması için kullanılabilir.
 
 **Senaryo #2**: Pek çok kimlik doğrulama saldırısı sadece parolaların sürekli kullanımından kaynaklanmaktadır. En iyi uygulama örnekleri düşünüldüğünde, parola değiştirme ve karmaşıklık gereksinimleri, kullanıcıların zayıf parolaları kullanmaları ve bunları tekrar tekrar kullanmaları konusunda teşvik edici olarak görülmektedir. Kurumların NIST 800-63 uyarınca bu uygulamaları durdurması ve çok katmanlı kimlik doğrulama kullanması tavsiye edilmektedir.
 
@@ -43,16 +43,16 @@ Uygulama aşağıdaki durumlarda kimlik doğrulama açıklıkları içeriyor ola
 
 ### OWASP
 
-* [OWASP Proaktif Kontroller: Kimlik ve Kimlik Doğrulama Kontrollerinin Uygulanması](https://www.owasp.org/index.php/OWASP_Proactive_Controls#5:_Implement_Identity_and_Authentication_Controls)
-* [OWASP Uygulama Güvenliği Doğrulama Standardı: V2 Kimlik Doğrulama](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
-* [OWASP Uygulama Güvenliği Doğrulama Standardı: V3 Oturum Yönetimi](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
-* [OWASP Test Rehberi: Kimlik](https://www.owasp.org/index.php/Testing_Identity_Management)
- ve [Kimlik Doğrulama](https://www.owasp.org/index.php/Testing_for_authentication)
-* [OWASP Kopya Kağıdı: Kimlik Doğrulama](https://www.owasp.org/index.php/Authentication_Cheat_Sheet)
-* [OWASP Kopya Kağıdı: Sözlük Saldırıları](https://www.owasp.org/index.php/Credential_Stuffing_Prevention_Cheat_Sheet)
-* [OWASP Kopya Kağıdı: Unutulmuş Parola](https://www.owasp.org/index.php/Forgot_Password_Cheat_Sheet)
-* [OWASP Kopya Kağıdı: Oturum Yönetimi](https://www.owasp.org/index.php/Session_Management_Cheat_Sheet)
-* [OWASP Otomatize Tehditler El Kitabı](https://www.owasp.org/index.php/OWASP_Automated_Threats_to_Web_Applications)
+* [OWASP Proaktif Kontroller: Kimlik ve Kimlik Doğrulama Kontrollerinin Uygulanması](https://wiki.owasp.org/index.php/OWASP_Proactive_Controls#5:_Implement_Identity_and_Authentication_Controls)
+* [OWASP Uygulama Güvenliği Doğrulama Standardı: V2 Kimlik Doğrulama](https://wiki.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
+* [OWASP Uygulama Güvenliği Doğrulama Standardı: V3 Oturum Yönetimi](https://wiki.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
+* [OWASP Test Rehberi: Kimlik](https://wiki.owasp.org/index.php/Testing_Identity_Management)
+ ve [Kimlik Doğrulama](https://wiki.owasp.org/index.php/Testing_for_authentication)
+* [OWASP Kopya Kağıdı: Kimlik Doğrulama](https://wiki.owasp.org/index.php/Authentication_Cheat_Sheet)
+* [OWASP Kopya Kağıdı: Sözlük Saldırıları](https://wiki.owasp.org/index.php/Credential_Stuffing_Prevention_Cheat_Sheet)
+* [OWASP Kopya Kağıdı: Unutulmuş Parola](https://wiki.owasp.org/index.php/Forgot_Password_Cheat_Sheet)
+* [OWASP Kopya Kağıdı: Oturum Yönetimi](https://wiki.owasp.org/index.php/Session_Management_Cheat_Sheet)
+* [OWASP Otomatize Tehditler El Kitabı](https://wiki.owasp.org/index.php/OWASP_Automated_Threats_to_Web_Applications)
 
 ### Dış Kaynaklar
 

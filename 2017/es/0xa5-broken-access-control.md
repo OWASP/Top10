@@ -3,7 +3,7 @@
 | Agentes de amenaza/Vectores de ataque | Debilidades de seguridad         |      Impactos       |
 | -- | -- | -- |
 | Nivel de acceso : Explotabilidad 2    | Prevalencia 2 : Detectabilidad 2 | Técnico 3 : Negocio |
-|La explotación del Control de Acceso es una habilidad central de los atacantes. Las herramientas [SAST](https://www.owasp.org/index.php/Source_Code_Analysis_Tools) y [DAST](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools) pueden detectar la ausencia de control de acceso, pero no verificar si es correcto en el caso de estar presente. El control de acceso es detectable utilizando medios manuales, o posiblemente a través de la automatización por la ausencia de controles de acceso en ciertos frameworks.|Las debilidades del control de acceso son comunes debido a la falta de detección automática y a la falta de pruebas funcionales efectivas por parte de los desarrolladores de aplicaciones. La detección de fallas en el control de acceso no suele ser cubierto por pruebas automatizadas, tanto estáticas o dinámicas. | El impacto técnico son los atacantes anónimos actuando como usuarios o administradores, los usuarios que utilizan funciones privilegiadas o crean, acceden, actualizan o eliminan cualquier registro. El impacto al negocio depende de la protección necesaria por la aplicación o sus datos. | 
+|La explotación del Control de Acceso es una habilidad central de los atacantes. Las herramientas [SAST](https://wiki.owasp.org/index.php/Source_Code_Analysis_Tools) y [DAST](https://wiki.owasp.org/index.php/Category:Vulnerability_Scanning_Tools) pueden detectar la ausencia de control de acceso, pero no verificar si es correcto en el caso de estar presente. El control de acceso es detectable utilizando medios manuales, o posiblemente a través de la automatización por la ausencia de controles de acceso en ciertos frameworks.|Las debilidades del control de acceso son comunes debido a la falta de detección automática y a la falta de pruebas funcionales efectivas por parte de los desarrolladores de aplicaciones. La detección de fallas en el control de acceso no suele ser cubierto por pruebas automatizadas, tanto estáticas o dinámicas. | El impacto técnico son los atacantes anónimos actuando como usuarios o administradores, los usuarios que utilizan funciones privilegiadas o crean, acceden, actualizan o eliminan cualquier registro. El impacto al negocio depende de la protección necesaria por la aplicación o sus datos. | 
 
 ## ¿La aplicación es vulnerable?
 
@@ -56,10 +56,10 @@ Si un usuario no autenticado puede acceder a cualquiera de las páginas, es un e
 
 ### OWASP
 
-* [Controles Proactivos de OWASP: Control de Acceso](https://www.owasp.org/index.php/OWASP_Proactive_Controls#6:_Implement_Access_Controls)
-* [Estándar de Verificación de Seguridad en Aplicaciones de OWASP: V4 Control de Acceso](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
-* [Guía de Pruebas de OWASP: Control de Acceso](https://www.owasp.org/index.php/Testing_for_Authorization)
-* [Hojas de ayuda de OWASP: Control de Acceso](https://www.owasp.org/index.php/Access_Control_Cheat_Sheet)
+* [Controles Proactivos de OWASP: Control de Acceso](https://wiki.owasp.org/index.php/OWASP_Proactive_Controls#6:_Implement_Access_Controls)
+* [Estándar de Verificación de Seguridad en Aplicaciones de OWASP: V4 Control de Acceso](https://wiki.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home)
+* [Guía de Pruebas de OWASP: Control de Acceso](https://wiki.owasp.org/index.php/Testing_for_Authorization)
+* [Hojas de ayuda de OWASP: Control de Acceso](https://wiki.owasp.org/index.php/Access_Control_Cheat_Sheet)
 
 ### Externas
 

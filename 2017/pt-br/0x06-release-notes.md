@@ -13,7 +13,7 @@ Código legado que nunca deveria se comunicar diretamente com a Internet agora e
 
 ## Novos problemas, suportados por dados
 
-* **A4:2017-XML External Entities (XXE)** é uma nova categoria primariamente suportado por dados gerados por ferramentas de análise de segurança de código fonte (source code analysis security testing tools [SAST](https://www.owasp.org/index.php/Source_Code_Analysis_Tools)).
+* **A4:2017-XML External Entities (XXE)** é uma nova categoria primariamente suportado por dados gerados por ferramentas de análise de segurança de código fonte (source code analysis security testing tools [SAST](https://wiki.owasp.org/index.php/Source_Code_Analysis_Tools)).
 
 ## Novos problemas, suportados pela comunidade
 

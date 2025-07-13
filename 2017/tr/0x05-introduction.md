@@ -10,15 +10,15 @@ OWASP İlk 10'un temel amacı, en yaygın ve en önemli web uygulama güvenlik z
 
 ## Gelecek faaliyetler için yol haritası
 
-**10 ile sınırlı kalmayın**. [OWASP Geliştiri Rehberi](https://www.owasp.org/index.php/OWASP_Guide_Project) ve [OWASP Kopya Kağıtları'nda](https://www.owasp.org/index.php/Category:Cheatsheets) bahsedildiği gibi, bir web uygulamasının güvenliğini etkileyebilecek yüzlerce sorun bulunmaktadır. Bu dokümanlar web uygulaması ve API geliştiren herkes için önemli bir kaynaktır. Web uygulamalarında ve API'lerde açıklıkların bulunmasına ilişkin rehber [OWASP Test Rehberi](https://www.owasp.org/index.php/OWASP_Testing_Project) projesinde sağlanmıştır.
+**10 ile sınırlı kalmayın**. [OWASP Geliştiri Rehberi](https://wiki.owasp.org/index.php/OWASP_Guide_Project) ve [OWASP Kopya Kağıtları'nda](https://wiki.owasp.org/index.php/Category:Cheatsheets) bahsedildiği gibi, bir web uygulamasının güvenliğini etkileyebilecek yüzlerce sorun bulunmaktadır. Bu dokümanlar web uygulaması ve API geliştiren herkes için önemli bir kaynaktır. Web uygulamalarında ve API'lerde açıklıkların bulunmasına ilişkin rehber [OWASP Test Rehberi](https://wiki.owasp.org/index.php/OWASP_Testing_Project) projesinde sağlanmıştır.
 
 **Sürekli değişim**. OWASP İlk 10 sıralaması değişmeye devam edecektir. Uygulamanızda tek bir satır kod değiştirmeseniz bile, yeni açıklıklar bulunduğu ve saldırı yöntemleri yenilendiği için açıklıklara karşı korumasız kalabilirsiniz. Lütfen daha fazla bilgi için İlk 10 projesinin sonunda yer alan Geliştiriciler, Güvenlik Testi Ekipleri, Kurumlar ve Uygulama Yöneticileri için Bir Sonraki Adım bölümlerini gözden geçiriniz.
 
-**Olumlu düşünme**. Açıklıkların peşinden koşmayı bırakmaya ve daha güçlü uygulama güvenliği kontrolleri oluşturmaya hazır olduğunuzda, [OWASP Proaktif Kontroller](https://www.owasp.org/index.php/OWASP_Proactive_Controls) projesi geliştiricilerin güvenli uygulama geliştirme konusunda bir başlangıç noktası olmakta ve [OWASP Uygulama Güvenliği Doğrulama Standardı (ASVS)](https://www.owasp.org/index.php/ASVS) ise kurumlar ve uygulama testi ekipleri için kontrol edecekleri maddeleri içeren bir rehber olmaktadır.
+**Olumlu düşünme**. Açıklıkların peşinden koşmayı bırakmaya ve daha güçlü uygulama güvenliği kontrolleri oluşturmaya hazır olduğunuzda, [OWASP Proaktif Kontroller](https://wiki.owasp.org/index.php/OWASP_Proactive_Controls) projesi geliştiricilerin güvenli uygulama geliştirme konusunda bir başlangıç noktası olmakta ve [OWASP Uygulama Güvenliği Doğrulama Standardı (ASVS)](https://wiki.owasp.org/index.php/ASVS) ise kurumlar ve uygulama testi ekipleri için kontrol edecekleri maddeleri içeren bir rehber olmaktadır.
 
 **Araçları akıllıca kullanma**. Güvenlik açıklıkları son derece karmaşık olabilmekte ve kod içerisinde derinlerde bulunabilmektedir. Çoğu durumda, bu açıklıkları bulmak ve ortadan kaldırmak için en etkili yaklaşım gelişmiş araçları kullanan uzmanlardır. Sadece araçlara bağlı kalmak güvenliği yanlış anlamaktır ve tavsiye edilmemektedir.
 
-**Her yöne yaygınlaştırma**. Kurumunuzda güvenliği kurum kültürünün tamamlayıcı bir parçası yapmaya odaklanın. [OWASP Yazılım Garanti Olgunluk Modeli (SAMM)](https://www.owasp.org/index.php/OWASP_SAMM_Project) üzerinden daha fazla bilgi edinebilirsiniz.
+**Her yöne yaygınlaştırma**. Kurumunuzda güvenliği kurum kültürünün tamamlayıcı bir parçası yapmaya odaklanın. [OWASP Yazılım Garanti Olgunluk Modeli (SAMM)](https://wiki.owasp.org/index.php/OWASP_SAMM_Project) üzerinden daha fazla bilgi edinebilirsiniz.
 
 ## Teşekkürler
 

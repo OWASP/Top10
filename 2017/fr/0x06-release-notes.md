@@ -12,7 +12,7 @@ Au cours des dernières années, les technologies de base et les architectures d
 
 ## Nouvel élément, concernant les données
 
-* **A4:2017-Entités Externes XML (XXE)** est une nouvelle catégorie soutenue essentiellement par des outils d'analyse sécurité de code source tels que ceux référencés dans ([SAST](https://www.owasp.org/index.php/Source_Code_Analysis_Tools)).
+* **A4:2017-Entités Externes XML (XXE)** est une nouvelle catégorie soutenue essentiellement par des outils d'analyse sécurité de code source tels que ceux référencés dans ([SAST](https://wiki.owasp.org/index.php/Source_Code_Analysis_Tools)).
 
 ## Nouveaux éléments, relevés par la communauté
 
@@ -24,7 +24,7 @@ Nous avons interrogé la communauté pour avoir leur retour prospectif sur deux 
 ## Elements fusionnés ou supprimés, mais non oubliés
 
 * **A4–Références directes non sécurisées à un objet** et **A7–Manque de contrôle d’accès au niveau fonctionnel** ont été fusionnés dans **A5:2017-Ruptures de Contrôles d'Accès**.
-* **A8–Falsification de requête intersites (CSRF)**, a été supprimé car beaucoup d'environnements logiciel intègrent des [défenses CSRF](https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)), et que cela n'a été retrouvé que dans 5% des applications.
+* **A8–Falsification de requête intersites (CSRF)**, a été supprimé car beaucoup d'environnements logiciel intègrent des [défenses CSRF](https://wiki.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)), et que cela n'a été retrouvé que dans 5% des applications.
 * **A10–Redirection et Renvois non validés**, a été supprimé, bien que cela ait été retrouvé dans 8% des applications, car cela est globalement supplanté par XXE.
 
 ![0x06-release-notes-1](images/0x06-release-notes-1-fr.png)
