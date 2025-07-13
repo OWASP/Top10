@@ -4,32 +4,20 @@ Final Release
 
 ## Building a local copy
 
-Make sure Python 3 is installed. Optionally create a virtual environment.
+Make sure Python 3 is installed. Create a virtual environment.
 
-```sh
-# Install dependencies
-make install-python-requirements
-```
-### Prepare a local virtual environment to manage the versions of the required Python libraries for mkdocs
-
-```bash$
+```bash
 # build and activate venv
 cd 2021
 python3 -m venv .
 source ./bin/activate
-# install all required library versions
 pip install -r requirements.txt
-# optionally verify if OWASP OSIB is in your pip list
-pip list | grep osib
 ```
 
-You might need to use ```--break-system-packages``` with pip if it gives you an error.
-
-This installs all requirements including the (OSIB Macro)[https://github.com/OWASP/OSIB]
 
 ```sh
 # Build HTML
-make generate-site
+mkdocs build
 # Browse /2021/site
 ```
 
