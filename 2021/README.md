@@ -4,18 +4,16 @@ Final Release
 
 ## Building a local copy
 
-Make sure Python 3 is installed. Create a virtual environment.
+Make sure Python 3 is installed.
 
 ```bash
-# build and activate venv
-cd 2021
-python3 -m venv .
-source ./bin/activate
+# Build and activate virtual environment
+python3 -m venv ./venv
+source .venv/bin/activate
+
+# Install dependencies
 pip install -r requirements.txt
-```
 
-
-```sh
 # Build HTML
 mkdocs build
 # Browse /2021/site
@@ -33,7 +31,9 @@ Once you are happy, check in your changes as a branch / PR and let someone on th
 
 ### Deploy to gh-pages
 
-This only works if you have commit privileges on master and Git is correctly setup in your environment.
+When the `master` branch is pushed, a Github Action will take care of everything and publish the website as a Github Page.
+
+Alternatively `mkdocs` can be used to publish the website. This only works if you have commit privileges on master and Git is correctly setup in your environment.
 
 ```sh
 cd 2021

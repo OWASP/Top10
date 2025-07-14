@@ -54,7 +54,7 @@ events visible to a user or an attacker (see [A01:2021-Broken Access Control](A0
 
 ## How to Prevent
 
-Developers should implement some or all the following controls, 
+Developers should implement some or all the following controls,
 depending on the risk of the application:
 
 -   Ensure all login, access control, and server-side input validation
@@ -114,6 +114,9 @@ result by the privacy regulator.
 
 -   [OWASP Application Security Verification Standard: V7 Logging and
     Monitoring](https://owasp.org/www-project-application-security-verification-standard)
+
+-   [OWASP Testing Guide: Testing for Detailed Error
+    Code](https://owasp.org/www-project-web-security-testing-guide/v41/4-Web_Application_Security_Testing/08-Testing_for_Error_Handling/01-Testing_for_Error_Code)
 
 -   [OWASP Cheat Sheet:
     Application Logging Vocabulary](https://cheatsheetseries.owasp.org/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html)
