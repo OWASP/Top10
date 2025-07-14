@@ -6,6 +6,9 @@ on:
       - 'main'
 jobs:
   build-and-deploy:
+    permissions:
+      pages: write
+      id-token: write
     runs-on: ubuntu-latest
     steps:
       - uses: actions/setup-python@v5
