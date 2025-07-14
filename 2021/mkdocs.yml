@@ -38,6 +38,9 @@ theme:
 extra_css:
   - stylesheets/extra.css
 
+extra_javascript:
+  - scripts/extra.js
+
 markdown_extensions:
   - abbr
   - attr_list
