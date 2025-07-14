@@ -1,4 +1,4 @@
-name: Build and Deploy
+name: Build and Deploy 2021
 on:
   push:
     branches:
@@ -15,6 +15,7 @@ jobs:
         uses: actions/checkout@v4
       - name: Install and Build
         run: |
+          cd 2012
           make install-python-requirements
           make generate-site
       - name: Deploy
