@@ -27,6 +27,6 @@ jobs:
       - name: Upload static files as artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: site/
+          path: 2021/site/
       - name: Deploy
         uses: actions/deploy-pages@v4
