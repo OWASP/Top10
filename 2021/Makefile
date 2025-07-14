@@ -11,10 +11,10 @@ install-python-requirements-test:  # Install Python 3 required libraries
 	python -m pip install -r requirements-test.txt
 
 generate-site:  # Builds ./2021
-	(cd 2021 && mkdocs build)
+	mkdocs build
 
 serve:  # Build and hot-reloads ./2021
-	(cd 2021 && mkdocs serve)
+	mkdocs serve
 
 check-links:  # Checks for dead links
-	python -m linkcheckmd -r 2021
+	python -m linkcheckmd
