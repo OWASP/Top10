@@ -77,9 +77,7 @@ plugins:
   - search
   - git-revision-date
   - i18n:
-      default_language: en
       docs_structure: folder
-      material_alternate: true
       reconfigure_material: true
       reconfigure_search: true
       languages:
