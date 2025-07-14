@@ -20,16 +20,20 @@ theme:
     - search.share
     # - navigation.instant @ Unsupported by the i18n engine
   palette:
-    - media: "(prefers-color-scheme: dark)"
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
       scheme: default
       toggle:
-        icon: material/weather-night
+        icon: material/brightness-7
         name: Switch to dark mode
-    - media: "(prefers-color-scheme: light)"
+    - media: "(prefers-color-scheme: dark)"
       scheme: slate
       toggle:
-        icon: material/weather-sunny
-        name: Switch to light mode
+        icon: material/brightness-4
+        name: Switch to system preference
 
 extra_css:
   - stylesheets/extra.css
