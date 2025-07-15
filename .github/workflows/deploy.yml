@@ -1,0 +1,32 @@
+name: Build and Deploy 2021
+on:
+  push:
+    branches:
+      - 'master'
+      - 'main'
+jobs:
+  build-and-deploy:
+    permissions:
+      pages: write
+      id-token: write
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install and Build
+        run: |
+          cd 2021
+          make install-python-requirements
+          make generate-site
+      - name: Upload static files as artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: 2021/site/
+      - name: Deploy
+        uses: actions/deploy-pages@v4

@@ -19,7 +19,7 @@ Insufficient Logging* to include *CWE-117 Improper Output Neutralization
 for Logs*, *CWE-223 Omission of Security-relevant Information*, and
 *CWE-532* *Insertion of Sensitive Information into Log File*.
 
-## Description 
+## Description
 
 Returning to the OWASP Top 10 2021, this category is to help detect,
 escalate, and respond to active breaches. Without logging and
@@ -54,7 +54,7 @@ events visible to a user or an attacker (see [A01:2021-Broken Access Control](A0
 
 ## How to Prevent
 
-Developers should implement some or all the following controls, 
+Developers should implement some or all the following controls,
 depending on the risk of the application:
 
 -   Ensure all login, access control, and server-side input validation

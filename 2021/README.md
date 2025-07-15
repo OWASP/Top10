@@ -4,45 +4,38 @@ Final Release
 
 ## Building a local copy
 
-- Install Python 3 for your platform
-- From the main folder, ...
+Make sure Python 3 is installed.
 
 ```bash
-make install-python-requirements
-```
-### Prepare a local virtual environment to manage the versions of the required Python libraries for mkdocs
+# Build and activate virtual environment
+python3 -m venv ./venv
+source .venv/bin/activate
 
-```bash$
-# build and activate venv
-cd 2021
-python3 -m venv .
-source ./bin/activate
-# install all required library versions
+# Install dependencies
 pip install -r requirements.txt
-# optionally verify if OWASP OSIB is in your pip list
-pip list | grep osib
+
+# Build HTML
+mkdocs build
+# Browse /2021/site
 ```
-
-You might need to use ```--break-system-packages``` with pip if it gives you an error.
-
-This installs all requirements including the (OSIB Macro)[https://github.com/OWASP/OSIB]
 
 ### Test it locally
 
-You should test your changes locally:
+Alternatively you can spin up a hot-reloading server:
 
-```bash
-cd 2021
-mkdocs serve
+```sh
+make serve
 ```
 
 Once you are happy, check in your changes as a branch / PR and let someone on the main team know. We'll review your changes, and merge and redeploy.
 
-### Redeploy to gh-pages
+### Deploy to gh-pages
 
-This only works if you have commit privileges on master and Git is correctly setup in your environment.
+When the `master` branch is pushed, a Github Action will take care of everything and publish the website as a Github Page.
 
-```bash
+Alternatively `mkdocs` can be used to publish the website. This only works if you have commit privileges on master and Git is correctly setup in your environment.
+
+```sh
 cd 2021
 mkdocs gh-deploy
 ```

@@ -32,3 +32,5 @@ Come join us!
 ![license](assets/license.png)
 
 Copyright © 2003-2025 The OWASP&reg; Foundation, Inc. This document is released under the Creative Commons Attribution Share-Alike 4.0 license. For any reuse or distribution, you must make it clear to others the license terms of this work.
+
+--8<-- "includes/abbreviations.md"

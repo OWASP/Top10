@@ -90,4 +90,6 @@ lib/
 
 # Pipenv
 Pipfile
-2021/site/0x00-notice/index.html
+
+env
+venv

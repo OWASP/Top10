@@ -116,3 +116,5 @@ The OWASP Top 10 2021 team gratefully acknowledge the financial support of Secur
 [![Secure Code Warrior](assets/securecodewarrior.png){ width="256" }](https://securecodewarrior.com)    
 
 [![Just Eats](assets/JustEat.png){ width="256" }](https://www.just-eat.co.uk/)
+
+--8<-- "includes/abbreviations.md"
