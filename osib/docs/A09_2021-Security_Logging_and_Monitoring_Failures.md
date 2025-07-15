@@ -115,7 +115,7 @@ result by the privacy regulator.
 
 ## References {{ osib_anchor(osib=osib ~ ".references", id=id ~ "-references", name=title ~ ": References", lang=lang, source=source ~ "#" ~ id, parent=osib) }}
 
--   {{ osib_link(link="osib.owasp.opc.3." ~ "9", osib=osib) }} <!-- [OWASP Proactive Controls: Implement Logging and Monitoring](https://owasp.org/www-project-proactive-controls/v3/en/c9-security-logging.html) --> 
+-   {{ osib_link(link="osib.owasp.opc.3." ~ "9", osib=osib) }} <!-- [OWASP Proactive Controls: Implement Logging and Monitoring](https://top10proactive.owasp.org/archive/2024/the-top-10/c9-security-logging-and-monitoring/) --> 
 -   {{ osib_link(link="osib.owasp.asvs.4-0." ~ "7", osib=osib) }} <!-- [OWASP Application Security Verification Standard: V7 Logging and Monitoring](https://owasp.org/www-project-application-security-verification-standard) --> 
 -   {{ osib_link(link="osib.owasp.wstg.4-2.4.8.1", osib=osib) }} <!--- was: [OWASP Testing Guide: Testing for Detailed Error Code](https://owasp.org/www-project-web-security-testing-guide/v41/4-Web_Application_Security_Testing/08-Testing_for_Error_Handling/01-Testing_for_Error_Code) --->
 -   {{ osib_link(link="osib.owasp.cheatsheetseries.0." ~ "Logging Vocabulary", osib=osib) }} <!-- [OWASP Cheat Sheet: Application Logging Vocabulary](https://cheatsheetseries.owasp.org/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html) --> 

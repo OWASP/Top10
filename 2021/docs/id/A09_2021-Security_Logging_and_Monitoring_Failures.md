@@ -104,7 +104,7 @@ sehingga menghasilkan pengatur privacy.
 ## Referensi
 
 -   [OWASP kontrol proaktif OWASP Proactive Controls: Mengimplementasi 
-    Pencatatan dan Pemonitoran](https://owasp.org/www-project-proactive-controls/v3/en/c9-security-logging.html)
+    Pencatatan dan Pemonitoran](https://top10proactive.owasp.org/archive/2024/the-top-10/c9-security-logging-and-monitoring/)
 
 -   [OWASP standart verifikasi keamanan: Pencatatan V8 dan 
     Pemonitoran](https://owasp.org/www-project-application-security-verification-standard)
