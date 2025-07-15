@@ -79,7 +79,7 @@ OWASP AppSensor、OWASP ModSecurity Core Rule Setを使用したModSecurityな�
 ## 参考資料
 
 -   [OWASP Proactive Controls: Implement Logging and
-    Monitoring](https://owasp.org/www-project-proactive-controls/v3/en/c9-security-logging.html)
+    Monitoring](https://top10proactive.owasp.org/archive/2024/the-top-10/c9-security-logging-and-monitoring/)
 
 -   [OWASP Application Security Verification Standard: V8 Logging and
     Monitoring](https://owasp.org/www-project-application-security-verification-standard)
@@ -223,7 +223,7 @@ result by the privacy regulator.
 ## References
 
 -   [OWASP Proactive Controls: Implement Logging and
-    Monitoring](https://owasp.org/www-project-proactive-controls/v3/en/c9-security-logging.html)
+    Monitoring](https://top10proactive.owasp.org/archive/2024/the-top-10/c9-security-logging-and-monitoring/)
 
 -   [OWASP Application Security Verification Standard: V8 Logging and
     Monitoring](https://owasp.org/www-project-application-security-verification-standard)

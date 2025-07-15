@@ -59,7 +59,7 @@ Existem estruturas de proteção de aplicativos comerciais e de código aberto, 
 
 ## Referências
 
-- [OWASP Proactive Controls: Implement Logging and Monitoring](https://owasp.org/www-project-proactive-controls/v3/en/c9-security-logging.html)
+- [OWASP Proactive Controls: Implement Logging and Monitoring](https://top10proactive.owasp.org/archive/2024/the-top-10/c9-security-logging-and-monitoring/)
 
 - [OWASP Application Security Verification Standard: V7 Logging and Monitoring](https://owasp.org/www-project-application-security-verification-standard)
 
