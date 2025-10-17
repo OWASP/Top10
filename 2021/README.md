@@ -25,7 +25,7 @@ pip list | grep osib
 
 You might need to use ```--break-system-packages``` with pip if it gives you an error.
 
-This installs all requirements including the (OSIB Macro)[https://github.com/OWASP/OSIB]
+This installs all requirements including the [OSIB Macro](https://github.com/OWASP/OSIB)
 
 ### Test it locally
 
