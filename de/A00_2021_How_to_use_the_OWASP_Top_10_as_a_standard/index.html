@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#how-to-use-the-owasp-top-10-as-a-standard" class="md-skip">
+        <a href="#wie-man-die-owasp-top-10-als-standard-verwendet" class="md-skip">
           Zum Inhalt
         </a>
       
@@ -170,6 +170,12 @@
           <li class="md-select__item">
             <a href="../../pt-BR/A00_2021_How_to_use_the_OWASP_Top_10_as_a_standard/" hreflang="pt-BR" class="md-select__link">
               pt-BR - Português (Brasil)
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../tr/A00_2021_How_to_use_the_OWASP_Top_10_as_a_standard/" hreflang="tr" class="md-select__link">
+              tr - Türkçe
             </a>
           </li>
         
@@ -774,29 +780,23 @@
   
 
 
-<h1 id="how-to-use-the-owasp-top-10-as-a-standard">How to use the OWASP Top 10 as a standard</h1>
-<p>The OWASP Top 10 is primarily an awareness document. However, this has
-not stopped organizations from using it as a de facto industry AppSec
-standard since its inception in 2003. If you want to use the OWASP Top
-10 as a coding or testing standard, know that it is the bare minimum and
-just a starting point.</p>
-<p>One of the difficulties of using the OWASP Top 10 as a standard is that
-we document AppSec risks, and not necessarily easily testable issues.
-For example, A04:2021-Insecure Design is beyond the scope of most forms
-of testing. Another example is testing whether in-place, in-use, and effective
-logging and monitoring are implemented, which can only be done with interviews and requesting a
-sampling of effective incident responses. A static code analysis tool
-can look for the absence of logging, but it might be impossible to
-determine if business logic or access control is logging critical
-security breaches. Penetration testers may only be able to determine
-that they have invoked incident response in a test environment, which
-is rarely monitored in the same way as production.</p>
-<p>Here are our recommendations for when it is appropriate to use the OWASP
-Top 10:</p>
+<h1 id="wie-man-die-owasp-top-10-als-standard-verwendet">Wie man die OWASP Top 10 als Standard verwendet</h1>
+<p>Die OWASP Top 10 sind in erster Linie ein Sensibilisierungsdokument.
+Dies hat Unternehmen jedoch nicht davon abgehalten, sie seit ihrer Einführung im Jahr 2003 als De-facto-Standard für Anwendungssicherheit (AppSec) zu verwenden.
+Wenn Sie die OWASP Top 10 als Coding- oder Teststandard verwenden möchten, 
+sollten Sie wissen, dass es sich um das absolute Minimum und nur um einen Anfang handelt.</p>
+<p>Eine der Schwierigkeiten bei der Verwendung der OWASP Top 10 als Standard besteht darin, dass wir AppSec-Risiken dokumentieren und nicht unbedingt leicht testbare Probleme.
+Beispielsweise liegt <a href="A04_2021-Insecure_Design.de.md">A04:2021 Unsicheres Anwendungsdesign</a> außerhalb des Rahmens der meisten Testverfahren.
+Ein weiteres Beispiel ist das Testen, ob eine wirksame Protokollierung und Überwachung implementiert und operativ ist, was nur durch Befragungen und Stichproben wirksamer Behandlungen von Incidents möglich ist.
+Ein Tool zur statischen CodeAnalyse kann nach fehlender Protokollierung suchen,
+es wird jedoch unmöglich sein, festzustellen, ob die Geschäftslogik oder die Zugriffskontrolle kritische Sicherheitsverstöße protokolliert. Penetrationstests werden möglicherweise nur in einer Testumgebung stattfinden, die selten in der gleichen Weise wie die Produktion überwacht ist, dabei ist es schwierig feststellen ob eine Reaktion auf die Vorfälle ausgelöst wurde.</p>
+<!-- TODO OSIB Link -->
+
+<p>Hier sind unsere Empfehlungen, wann es sinnvoll ist, die OWASP Top 10 zu verwenden:</p>
 <table>
 <thead>
 <tr>
-<th>Use Case</th>
+<th>Anwendungsfall</th>
 <th style="text-align: center;">OWASP Top 10 2021</th>
 <th style="text-align: center;">OWASP Application Security Verification Standard</th>
 </tr>
@@ -804,70 +804,68 @@ Top 10:</p>
 <tbody>
 <tr>
 <td>Awareness</td>
-<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">ja</td>
 <td style="text-align: center;"></td>
 </tr>
 <tr>
-<td>Training</td>
-<td style="text-align: center;">Entry level</td>
-<td style="text-align: center;">Comprehensive</td>
+<td>Ausbildung</td>
+<td style="text-align: center;">Einstiegsniveau</td>
+<td style="text-align: center;">umfassend</td>
 </tr>
 <tr>
-<td>Design and architecture</td>
-<td style="text-align: center;">Occasionally</td>
-<td style="text-align: center;">Yes</td>
+<td>Design und Architektur</td>
+<td style="text-align: center;">gelegentlich</td>
+<td style="text-align: center;">ja</td>
 </tr>
 <tr>
-<td>Coding standard</td>
-<td style="text-align: center;">Bare minimum</td>
-<td style="text-align: center;">Yes</td>
+<td>Codierungsstandard</td>
+<td style="text-align: center;">als Mindestanforderung</td>
+<td style="text-align: center;">ja</td>
 </tr>
 <tr>
-<td>Secure Code review</td>
-<td style="text-align: center;">Bare minimum</td>
-<td style="text-align: center;">Yes</td>
+<td>Security Code Review</td>
+<td style="text-align: center;">als  Mindestanforderung</td>
+<td style="text-align: center;">ja</td>
 </tr>
 <tr>
-<td>Peer review checklist</td>
-<td style="text-align: center;">Bare minimum</td>
-<td style="text-align: center;">Yes</td>
+<td>Checkliste für Peer-Reviews</td>
+<td style="text-align: center;">als Mindestanforderung</td>
+<td style="text-align: center;">ja</td>
 </tr>
 <tr>
-<td>Unit testing</td>
-<td style="text-align: center;">Occasionally</td>
-<td style="text-align: center;">Yes</td>
+<td>Unit-Tests</td>
+<td style="text-align: center;">gelegentlich</td>
+<td style="text-align: center;">ja</td>
 </tr>
 <tr>
-<td>Integration testing</td>
-<td style="text-align: center;">Occasionally</td>
-<td style="text-align: center;">Yes</td>
+<td>Integrationstests</td>
+<td style="text-align: center;">gelegentlich</td>
+<td style="text-align: center;">ja</td>
 </tr>
 <tr>
-<td>Penetration testing</td>
-<td style="text-align: center;">Bare minimum</td>
-<td style="text-align: center;">Yes</td>
+<td>Penetrationstests</td>
+<td style="text-align: center;">als Mindestanforderung</td>
+<td style="text-align: center;">ja</td>
 </tr>
 <tr>
-<td>Tool support</td>
-<td style="text-align: center;">Bare minimum</td>
-<td style="text-align: center;">Yes</td>
+<td>Werkzeugunterstützung</td>
+<td style="text-align: center;">als Mindestanforderung</td>
+<td style="text-align: center;">ja</td>
 </tr>
 <tr>
-<td>Secure Supply Chain</td>
-<td style="text-align: center;">Occasionally</td>
-<td style="text-align: center;">Yes</td>
+<td>Sichere Lieferkette</td>
+<td style="text-align: center;">gelegentlich</td>
+<td style="text-align: center;">ja</td>
 </tr>
 </tbody>
 </table>
-<p>We would encourage anyone wanting to adopt an application security
-standard to use the <a href="https://owasp.org/www-project-application-security-verification-standard/">OWASP Application Security Verification Standard</a>
-(ASVS), as it’s designed to be verifiable and tested, and can be used in
-all parts of a secure development lifecycle.</p>
-<p>The ASVS is the only acceptable choice for tool vendors. Tools cannot
-comprehensively detect, test, or protect against the OWASP Top 10 due to
-the nature of several of the OWASP Top 10 risks, with reference to
-A04:2021-Insecure Design. OWASP discourages any claims of full coverage
-of the OWASP Top 10, because it’s simply untrue.</p>
+<p>Wir empfehlen jedem, der einen Anwendungssicherheitsstandard übernehmen möchte,
+den <a href="https://owasp.org/www-project-application-security-verification-standard/">OWASP Application Security Verification Standard</a> (ASVS) zu verwenden,
+da er entworfen wurde, um überprüfbar und testbar zu sein und in allen Teilen eines sicheren Entwicklungslebenszyklus verwendet werden kann.</p>
+<p>Für Tool-Anbieter ist der ASVS die einzig akzeptable Wahl.
+Aufgrund der Beschaffenheit mehrerer Top-10-Risiken, insbesondere A04:2021 – Unsicheres Anwendungsdesign,
+können Tools die OWASP Top 10 nicht umfassend erkennen, testen oder davor schützen.
+OWASP rät davon ab, eine vollständige Abdeckung der OWASP Top 10 zu behaupten, da dies schlichtweg unwahr ist.</p>
 
 
 
