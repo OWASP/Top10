@@ -6,7 +6,7 @@ lang:    "en"
 ---
 {%- set parent = extra.osib.document ~ "." ~ extra.osib.version -%}
 {%- set osib   = parent ~ ".1" -%}
-#A01:2021 – Broken Access Control     ![icon](assets/TOP_10_Icons_Final_Broken_Access_Control.png){: style="height:80px;width:80px" align="right"} {{ osib_anchor(osib=osib, id=id, name="Broken Access Control", lang=lang, source=source, parent=parent, predecessor=extra.osib.document ~ ".2017.5" ) }}
+# A01:2021 – Broken Access Control     ![icon](assets/TOP_10_Icons_Final_Broken_Access_Control.png){: style="height:80px;width:80px" align="right"} {{ osib_anchor(osib=osib, id=id, name="Broken Access Control", lang=lang, source=source, parent=parent, predecessor=extra.osib.document ~ ".2017.5" ) }}
 
 
 ## Factors {{ osib_anchor(osib=osib ~ ".factors", id=id ~ "-factors", name=title ~ ": Factors", lang=lang, source=source ~ "#" ~ id, parent=osib) }}
