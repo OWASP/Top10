@@ -48,6 +48,9 @@ plugins:
           default: true
           name: en - English
           build: true
+        - locale: tr
+          name: tr - Türkçe
+          build: true
         - locale: ar
           name: ar - العربية
           build: true
@@ -79,6 +82,27 @@ plugins:
           name: zh-TW - 繁體中文
           build: true
       nav_translations:
+
+        tr:
+          Home: Ana Sayfa
+          Notice: Bildirim
+          Introduction: Giriş
+          How to use the OWASP Top 10 as a standard: OWASP Top 10'u bir standart olarak nasıl kullanabilirsiniz
+          How to start an AppSec program with the OWASP Top 10: OWASP Top 10 ile bir Uygulama Güvenliği programına nasıl başlanır
+          About OWASP: OWASP Hakkında
+          Top 10:2021 List: 2021 OWASP İlk 10 Listesi
+          A01 Broken Access Control: A01 Kırık Erişim Kontrolleri
+          A02 Cryptographic Failures: A02 Kriptografik Hatalar
+          A03 Injection: A03 Enjeksiyon
+          A04 Insecure Design: A04 Güvensiz Tasarım
+          A05 Security Misconfiguration: A05 Güvenlik Yapılandırma Hataları
+          A06 Vulnerable and Outdated Components: A06 Güvenlik Açığı Bulunan ve Güncel Olmayan Bileşenler
+          A07 Identification and Authentication Failures: A07 Kimlik Doğrulama Hataları
+          A08 Software and Data Integrity Failures: A08 Yazılım ve Veri Bütünlüğü Hataları
+          A09 Security Logging and Monitoring Failures: A09 Güvenlik Kayıt ve İzleme Hataları
+          A10 Server Side Request Forgery (SSRF): A10 Sunucu Taraflı İstek Sahteciliği (SSRF)
+          Next Steps: Sonraki Adımlar
+
         ar:
           Home: الصفحة الرئيسية
           Notice: ملاحظات
@@ -279,6 +303,9 @@ extra:
     - name: en - English
       link: ./en/
       lang: en
+    - name: tr - Türkçe
+      link: ./tr/
+      lang: tr
     - name: ar - ﺎﻠﻋﺮﺒﻳﺓ
       link: ./ar/
       lang: ar
