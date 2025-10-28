@@ -90,5 +90,5 @@ lib/
 # Pipenv
 Pipfile
 
-# Venv files
-venv
+# osib library
+osib
