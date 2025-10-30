@@ -15,16 +15,16 @@ theme:
 
 nav:
   - Home: 'index.md'
-  - How to use the OWASP Top 10 as a standard: 'A00_2025_How_to_use_the_OWASP_Top_10_as_a_standard.md'
-  - How to start an AppSec program with the OWASP Top 10: 'A00_2025-How_to_start_an_AppSec_program_with_the_OWASP_Top_10.md'
-  - About OWASP: '0x01_2025-about-owasp.md'
+  - About OWASP: '0x01_2025-About_OWASP.md'
+  - What are Application Security Risks?: '0x02_2025-What_are_Application_Security_Risks.md'
+  - Establishing a Modern Application Security Program: '0x03_2025-Establishing_a_Modern_Application_Security_Program.md'
   - Top 10:2025 List:
     - A01 Broken Access Control: 'A01_2025-Broken_Access_Control.md'
-    - A04 Cryptographic Failures: 'A04_2025-Cryptographic_Failures.md'
-    - A03 Injection: 'A03_2025-Injection.md'
-    - A06 Insecure Design: 'A06_2025-Insecure_Design.md'
     - A02 Security Misconfiguration: 'A02_2025-Security_Misconfiguration.md'
-    - A03 Software Supply Chain Failures: 'A02_2025-Software_Supply_Chain_Failures.md'
+    - A03 Software Supply Chain Failures: 'A03_2025-Software_Supply_Chain_Failures.md'
+    - A04 Cryptographic Failures: 'A04_2025-Cryptographic_Failures.md'
+    - A05 Injection: 'A05_2025-Injection.md'
+    - A06 Insecure Design: 'A06_2025-Insecure_Design.md'
     - A07 Authentication Failures: 'A07_2025-Authentication_Failures.md'
     - A08 Software or Data Integrity Failures: 'A08_2025-Software_or_Data_Integrity_Failures.md'
     - A09 Logging and Alerting Failures: 'A09_2025-Logging_and_Alerting_Failures.md'
