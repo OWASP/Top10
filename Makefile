@@ -2,6 +2,8 @@
 .SILENT: 
 
 year := 2025
+port := 8000
+
 DEBUG := echo DEBUG:
 DEBUG := 
 
@@ -30,7 +32,7 @@ generate:  # Use custom-script to generate the website
 	($(DEBUG) $(activate) && $(DEBUG) cd $(year) && $(DEBUG) mkdocs build)
 
 serve:  # Start's a Python http.server on port 8000 serving the content of ./generated/site
-	($(DEBUG) $(activate) && $(DEBUG) cd $(year) && $(DEBUG) mkdocs serve )
+	($(DEBUG) $(activate) && $(DEBUG) cd $(year) && $(DEBUG) mkdocs serve -a localhost:$(port))
 
 all: install-python-requirements generate serve  # Install requirements, generate the site, then serve it
 
