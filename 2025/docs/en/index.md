@@ -1,50 +1,4 @@
-<p style="color: red; font-weight: bold">>>>>>  gd2md-html alert:  ERRORs: 0; WARNINGs: 0; ALERTS: 1.</p>
-<ul style="color: red; font-weight: bold"><li>See top comment block for details on ERRORs and WARNINGs. <li>In the converted Markdown or HTML, search for inline alerts that start with >>>>>  gd2md-html alert:  for specific instances that need correction.</ul>
-
-<p style="color: red; font-weight: bold">Links to alert messages:</p><a href="#gdcalert1">alert1</a>
-
-<p style="color: red; font-weight: bold">>>>>> PLEASE check and correct alert issues and delete this message and the inline alerts.<hr></p>
-
-
-
 # Introduction
-
-
-<table>
-  <tr>
-   <td><strong>Task</strong>
-   </td>
-   <td><strong>Person</strong>
-   </td>
-   <td><strong>Date Completed</strong>
-   </td>
-  </tr>
-  <tr>
-   <td><strong>Written by</strong>
-   </td>
-   <td>Brian
-   </td>
-   <td>2025-10-25
-   </td>
-  </tr>
-  <tr>
-   <td><strong>Reviewed by</strong>
-   </td>
-   <td>Neil Smithline, (Torsten)
-   </td>
-   <td>2025-10-26, 2025-10-28
-   </td>
-  </tr>
-  <tr>
-   <td><strong>Last Update Made</strong>
-   </td>
-   <td>Brian
-   </td>
-   <td>2025-10-27
-   </td>
-  </tr>
-</table>
-
 
 Welcome to the 8th installment of the OWASP Top Ten! 
 
@@ -72,13 +26,8 @@ A huge thank you to everyone who contributed data and perspectives in the survey
 There are two new categories and one consolidation in the Top Ten for 2025. We’ve worked to maintain our focus on the root cause over the symptoms as much as possible. With the complexity of software engineering and software security, it’s basically impossible to create ten categories without some level of overlap.
 
 
-
-<p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image1.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image1.png "image_tooltip")
-
-
+## FOOBAR
+![Mapping](assets/mappings.png)
 
 
 * **A01:2025 - Broken Access Control** maintains its position at #1 as the most serious application security risk; the contributed data indicates that on average, 3.73% of applications tested had one or more of the 40 Common Weakness Enumerations (CWEs) in this category. As indicated by the dashed line in the above figure, Server-Side Request Forgery (SSRF) has been rolled into this category.
