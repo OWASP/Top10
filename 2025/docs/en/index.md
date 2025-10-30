@@ -25,10 +25,7 @@ A huge thank you to everyone who contributed data and perspectives in the survey
 
 There are two new categories and one consolidation in the Top Ten for 2025. We’ve worked to maintain our focus on the root cause over the symptoms as much as possible. With the complexity of software engineering and software security, it’s basically impossible to create ten categories without some level of overlap.
 
-
-## FOOBAR
 ![Mapping](assets/mappings.png)
-
 
 * **A01:2025 - Broken Access Control** maintains its position at #1 as the most serious application security risk; the contributed data indicates that on average, 3.73% of applications tested had one or more of the 40 Common Weakness Enumerations (CWEs) in this category. As indicated by the dashed line in the above figure, Server-Side Request Forgery (SSRF) has been rolled into this category.
 * **A02:2025 - Security Misconfiguration** moved up from #5 in 2021 to #2 in 2025. Misconfigurations are more prevalent in the data for this cycle. 3.00% of the applications tested had one or more of the 16 CWEs in this category. This is not surprising, as software engineering is continuing to increase the amount of an application’s behavior that is based on configurations.
