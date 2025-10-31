@@ -1,4 +1,4 @@
-.PHONY: help
+.PHONY: help all genserve
 .SILENT: 
 
 year := 2025
@@ -37,3 +37,6 @@ serve:  # Start's a Python http.server on port 8000 serving the content of ./gen
 all: install-python-requirements generate serve  # Install requirements, generate the site, then serve it
 
 genserve: generate serve  # Generate the site, then serve it
+
+t10-2021: year:=2021
+t10-2021: all    # Make 2021 site

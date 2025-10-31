@@ -1,6 +1,6 @@
 # What are Application Security Risks?
 
-![Calculation diagram](assets/algorithm-diagram.png)
+![Calculation diagram](../assets/algorithm-diagram.png)
 
 <table>
   <tr>
