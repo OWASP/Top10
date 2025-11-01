@@ -58,6 +58,8 @@ Moving up from #5 in the previous edition, 100% of the applications tested were 
 
 ## Description. 
 
+Security misconfiguration is when a system, application, or cloud service is set up incorrectly from a security perspective, creating vulnerabilities.
+
 The application might be vulnerable if:
 
 
