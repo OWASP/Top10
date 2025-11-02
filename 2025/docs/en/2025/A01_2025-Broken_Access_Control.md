@@ -1,5 +1,5 @@
 
-#  A01:2025 Broken Access Control
+#  A01:2025 Broken Access Control ![icon](../../assets/TOP_10_Icons_Final_Broken_Access_Control.png){: style="height:80px;width:80px" align="right"}
 
 
 
@@ -62,7 +62,7 @@ Access control enforces policy such that users cannot act outside of their inten
 
 
 
-* Violation of the principle of least privilege, commonly known asdeny by default, where access should only be granted for particular capabilities, roles, or users, but is available to anyone.
+* Violation of the principle of least privilege, commonly known as deny by default, where access should only be granted for particular capabilities, roles, or users, but is available to anyone.
 * Bypassing access control checks by modifying the URL (parameter tampering or force browsing), internal application state, or the HTML page, or by using an attack tool that modifies API requests.
 * Permitting viewing or editing someone else's account by providing its unique identifier (insecure direct object references)
 * An accessible API with missing access controls for POST, PUT, and DELETE.
@@ -110,7 +110,7 @@ https://example.com/app/accountInfo?acct=notmyacct
 ```
 
 
-**Scenario #2:** An attacker simply force browses to target URLs. Admin rights are required for access to the admin page.
+**Scenario #2:** An attacker simply forces browsers to target URLs. Admin rights are required for access to the admin page.
 
 
 ```
@@ -129,16 +129,12 @@ $ curl https://example.com/app/admin_getappInfo
 ```
 
 
-From the command line.
+from the command line.
 
 
 ## References.
 
-[TBD]
-
-
-
-* [OWASP Proactive Controls: Enforce Access Controls](https://owasp.org/www-project-proactive-controls/v3/en/c7-enforce-access-controls)
+* [OWASP Proactive Controls: C1: Implement Access Control](https://top10proactive.owasp.org/archive/2024/the-top-10/c1-accesscontrol/)
 * [OWASP Application Security Verification Standard: V8 Authorization](https://github.com/OWASP/ASVS/blob/master/5.0/en/0x17-V8-Authorization.md)
 * [OWASP Testing Guide: Authorization Testing](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/05-Authorization_Testing/README)
 * [OWASP Cheat Sheet: Authorization](https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html)
