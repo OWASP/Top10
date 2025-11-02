@@ -56,9 +56,9 @@ Injection falls two spots from #3 to #5 in the ranking, maintaining its position
 
 ## Description. 
 
+Injection vulnerability is a system flaw that allows an attacker to insert malicious code or commands (such as SQL or shell code) into a program’s input fields, tricking the system into executing the code or commands as if it were part of the system. This can lead to truly dire consequences. 
+
 An application is vulnerable to attack when:
-
-
 
 * User-supplied data is not validated, filtered, or sanitized by the application.
 * Dynamic queries or non-parameterized calls without context-aware escaping are used directly in the interpreter.

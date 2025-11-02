@@ -1,5 +1,6 @@
 
-# A04:2025 Cryptographic Failures 
+# A04:2025 Cryptographic Failures ![icon](../../assets/TOP_10_Icons_Final_Crypto_Failures.png){: style="height:80px;width:80px" align="right"}
+
 
 
 ## Background. 
@@ -77,7 +78,7 @@ Beyond securing the transport layer, it is important to determine what data need
 * Are cryptographic error messages or side channel information exploitable, for example in the form of padding oracle attacks?
 * Can the cryptographic algorithm be downgraded or bypassed?
 
-See ASVS Crypto (V7), Data Protection (V9), and SSL/TLS (V10)
+See references ASVS: Cryptography (V11), Secure Communication (V12) and Data Protection (V14).
 
 
 ## How to prevent. 
@@ -96,14 +97,14 @@ Do the following, at a minimum, and consult the references:
 * Disable caching for responses that contain sensitive data. This includes caching in your CDN, web server, and any application caching (eg: Redis).
 * Apply required security controls as per the data classification.
 * Do not use unencrypted protocols such as FTP and SMTP.
-* Store passwords using strong adaptive and salted hashing functions with a work factor (delay factor), such as Argon2, scrypt, bcrypt (legacy systems) or PBKDF2-HMAC-SHA-256.PBKDF2.  For legacy systems using bcrypt, get more advice at OWASP Cheat Sheet: Password Storage
+* Store passwords using strong adaptive and salted hashing functions with a work factor (delay factor), such as Argon2, scrypt, bcrypt (legacy systems) or PBKDF2-HMAC-SHA-256. For legacy systems using bcrypt, get more advice at [OWASP Cheat Sheet: Password Storage](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html)
 * Initialization vectors must be chosen appropriate for the mode of operation. This could mean using a CSPRNG (cryptographically secure pseudo random number generator). For modes that require a nonce, the initialization vector (IV) does not need a CSPRNG. In all cases, the IV should never be used twice for a fixed key.
 * Always use authenticated encryption instead of just encryption.
 * Keys should be generated cryptographically randomly and stored in memory as byte arrays. If a password is used, then it must be converted to a key via an appropriate password base key derivation function.
 * Ensure that cryptographic randomness is used where appropriate and that it has not been seeded in a predictable way or with low entropy. Most modern APIs do not require the developer to seed the CSPRNG to be secure.
 * Avoid deprecated cryptographic functions, block building methods and padding schemes, such as MD5, SHA1, Cipher Block Chaining Mode (CBC), PKCS number 1 v1.5.
 * Ensure settings and configurations meet security requirements by having them reviewed by security specialists, tools designed for this purpose, or both.
-* consider to prepare for post quantum cryptography (PQC), see references (ENISA, NIST)
+* Consider to prepare for post quantum cryptography (PQC), see references (ENISA, NIST)
 
 
 ## Example attack scenarios. 
@@ -117,8 +118,8 @@ Do the following, at a minimum, and consult the references:
 
 
 
-* [OWASP Proactive Controls: Protect Data Everywhere](https://owasp.org/www-project-proactive-controls/v3/en/c8-protect-data-everywhere)
-* [OWASP Application Security Verification Standard (V7, 9, 10)](https://owasp.org/www-project-application-security-verification-standard)
+* [OWASP Proactive Controls: C2: Use Cryptography to Protect Data ](https://top10proactive.owasp.org/archive/2024/the-top-10/c2-crypto/)
+* [OWASP Application Security Verification Standard (ASVS): ](https://owasp.org/www-project-application-security-verification-standard) [V11,](https://github.com/OWASP/ASVS/blob/v5.0.0/5.0/en/0x20-V11-Cryptography.md) [12, ](https://github.com/OWASP/ASVS/blob/v5.0.0/5.0/en/0x21-V12-Secure-Communication.md) [14](https://github.com/OWASP/ASVS/blob/v5.0.0/5.0/en/0x23-V14-Data-Protection.md)
 * [OWASP Cheat Sheet: Transport Layer Protection](https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Protection_Cheat_Sheet.html)
 * [OWASP Cheat Sheet: User Privacy Protection](https://cheatsheetseries.owasp.org/cheatsheets/User_Privacy_Protection_Cheat_Sheet.html)
 * [OWASP Cheat Sheet: Password Storage](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html)

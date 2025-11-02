@@ -10,22 +10,23 @@ At OWASP, you'll find free and open:
 - Complete books on application security testing, secure code development, and secure code review
 - Presentations and [videos](https://www.youtube.com/user/OWASPGLOBAL)
 - [Cheat sheets](https://cheatsheetseries.owasp.org/) on many common topics
-- [Chapters meetings](https://owasp.org/chapters/)
+- [Chapters meetings](https://owasp.org/chapters/) held worldwide and online
 - [Events, training, and conferences](https://owasp.org/events/).
 - [Google Groups](https://groups.google.com/g/owasp)
+
 Learn more at: [https://owasp.org](https://owasp.org).
 
 All OWASP tools, documents, videos, presentations, and chapters are free and open to anyone interested in improving application security.
 
-We advocate approaching application security as a people, process, and technology problem, because the most effective approaches to application security require improvements in these areas.
+We advocate approaching application security as a people, process, and technology problem, because the most effective approaches to application security require improvements in all these areas.
 
-OWASP is a new kind of organization. Our freedom from commercial pressures allows us to provide unbiased, practical, and cost-effective information about application security.
+OWASP is a different kind of organization. Our freedom from commercial pressures allows us to provide unbiased, practical, and cost-effective information about application security.
 
 OWASP is not affiliated with any technology company, although we support the informed use of commercial security technology. OWASP produces many types of materials in a collaborative, transparent, and open way.
 
 The OWASP Foundation is the non-profit entity that ensures the project's long-term success. Almost everyone associated with OWASP is a volunteer, including the OWASP board, chapter leaders, project leaders, and project members. We support innovative security research with grants and infrastructure.
 
-Come join us!
+Join us!
 
 ## Copyright and License
 
