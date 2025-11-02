@@ -64,7 +64,7 @@ This is a renaming of 2021’s Denial of Service. That was renamed as it describ
 
 This category represents a systemic weakness in how applications respond to stress, failures, and edge cases that it is unable to recover from failure. When an application does not gracefully handle, withstand, or recover from unexpected conditions, resource constraints, and other adverse events it can easily result in availability issues (most commonly), but also data corruption, sensitive data disclosure, cascading failures, and/or bypasses of security controls.
 
-Furthermore [X2:2025 Memory Management Errors](2025/X1_2025-Next_Steps#X2:2025 Memory Management Failures) can also lead to failure of the application or even the entire system. 
+Furthermore [X2:2025 Memory Management Errors](#X2:2025 Memory Management Failures) can also lead to failure of the application or even the entire system. 
 
 ### How to prevent 
 
@@ -101,18 +101,59 @@ In order to prevent this type of vulnerability you must design for failure and r
 
 * [Denial of Service - OWASP Cheat Sheet Series](https://cheatsheetseries.owasp.org/cheatsheets/Denial_of_Service_Cheat_Sheet.html) \
 * [OWASP MASVS‑RESILIENCE](https://mas.owasp.org/MASVS/11-MASVS-RESILIENCE/)
-* [Awesome Fuzzing](https://github.com/secfigo/Awesome-Fuzzing) - an excellent resource on all things fuzzing
 * [ASP.NET Core Best Practices (Microsoft)](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/best-practices?view=aspnetcore-9.0)
 * [Resilience in Microservices: Bulkhead vs Circuit Breaker (Parser)](https://medium.com/@parserdigital/resilience-in-microservices-bulkhead-vs-circuit-breaker-54364c1f9d53)
 * [Bulkhead Pattern (Geeks for Geeks)](https://www.geeksforgeeks.org/system-design/bulkhead-pattern/)
 * [NIST Cybersecurity Framework (CSF)](https://www.nist.gov/cyberframework)
 * [Avoid Blocking Calls: Go Async in Java (Divlane)](https://www.devlane.com/blog/avoid-blocking-calls-go-async-in-java)
 
+## List of Mapped CWEs
+* [CWE-73  External Control of File Name or Path](https://cwe.mitre.org/data/definitions/73.html)
+* [CWE-183 Permissive List of Allowed Inputs](https://cwe.mitre.org/data/definitions/183.html)
+* [CWE-256 Plaintext Storage of a Password](https://cwe.mitre.org/data/definitions/256.html)
+* [CWE-266 Incorrect Privilege Assignment](https://cwe.mitre.org/data/definitions/266.html)
+* [CWE-269 Improper Privilege Management](https://cwe.mitre.org/data/definitions/269.html)
+* [CWE-286 Incorrect User Management](https://cwe.mitre.org/data/definitions/286.html)
+* [CWE-311 Missing Encryption of Sensitive Data](https://cwe.mitre.org/data/definitions/311.html)
+* [CWE-312 Cleartext Storage of Sensitive Information](https://cwe.mitre.org/data/definitions/312.html)
+* [CWE-313 Cleartext Storage in a File or on Disk](https://cwe.mitre.org/data/definitions/313.html)
+* [CWE-316 Cleartext Storage of Sensitive Information in Memory](https://cwe.mitre.org/data/definitions/316.html)
+* [CWE-362 Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')](https://cwe.mitre.org/data/definitions/362.html)
+* [CWE-382 J2EE Bad Practices: Use of System.exit()](https://cwe.mitre.org/data/definitions/382.html)
+* [CWE-419 Unprotected Primary Channel](https://cwe.mitre.org/data/definitions/419.html)
+* [CWE-434 Unrestricted Upload of File with Dangerous Type](https://cwe.mitre.org/data/definitions/434.html)
+* [CWE-436 Interpretation Conflict](https://cwe.mitre.org/data/definitions/436.html)
+* [CWE-444 Inconsistent Interpretation of HTTP Requests ('HTTP Request/Response Smuggling')](https://cwe.mitre.org/data/definitions/444.html)
+* [CWE-451 User Interface (UI) Misrepresentation of Critical Information](https://cwe.mitre.org/data/definitions/451.html)
+* [CWE-454 External Initialization of Trusted Variables or Data Stores](https://cwe.mitre.org/data/definitions/454.html)
+* [CWE-472 External Control of Assumed-Immutable Web Parameter](https://cwe.mitre.org/data/definitions/472.html)
+* [CWE-501 Trust Boundary Violation](https://cwe.mitre.org/data/definitions/501.html)
+* [CWE-522 Insufficiently Protected Credentials](https://cwe.mitre.org/data/definitions/522.html)
+* [CWE-525 Use of Web Browser Cache Containing Sensitive Information](https://cwe.mitre.org/data/definitions/20.html)
+* [CWE-539 Use of Persistent Cookies Containing Sensitive Information](https://cwe.mitre.org/data/definitions/525.html)
+* [CWE-598 Use of GET Request Method With Sensitive Query Strings](https://cwe.mitre.org/data/definitions/598.html)
+* [CWE-602 Client-Side Enforcement of Server-Side Security](https://cwe.mitre.org/data/definitions/602.html)
+* [CWE-628 Function Call with Incorrectly Specified Arguments](https://cwe.mitre.org/data/definitions/628.html)
+* [CWE-642 External Control of Critical State Data](https://cwe.mitre.org/data/definitions/642.html)
+* [CWE-646 Reliance on File Name or Extension of Externally-Supplied File](https://cwe.mitre.org/data/definitions/646.html)
+* [CWE-653 Improper Isolation or Compartmentalization](https://cwe.mitre.org/data/definitions/653.html)
+* [CWE-656 Reliance on Security Through Obscurity](https://cwe.mitre.org/data/definitions/656.html)
+* [CWE-657 Violation of Secure Design Principles](https://cwe.mitre.org/data/definitions/657.html)
+* [CWE-676 Use of Potentially Dangerous Function](https://cwe.mitre.org/data/definitions/676.html)
+* [CWE-693 Protection Mechanism Failure](https://cwe.mitre.org/data/definitions/693.html)
+* [CWE-799 Improper Control of Interaction Frequency](https://cwe.mitre.org/data/definitions/799.html)
+* [CWE-807 Reliance on Untrusted Inputs in a Security Decision](https://cwe.mitre.org/data/definitions/807.html)
+* [CWE-841 Improper Enforcement of Behavioral Workflow](https://cwe.mitre.org/data/definitions/841.html)
+* [CWE-1021 Improper Restriction of Rendered UI Layers or Frames](https://cwe.mitre.org/data/definitions/1021.html)
+* [CWE-1022 Use of Web Link to Untrusted Target with window.opener Access](https://cwe.mitre.org/data/definitions/1022.html)
+* [CWE-1125 Excessive Attack Surface](https://cwe.mitre.org/data/definitions/1125.html)
+
+
 ## X02:2025 Memory Management Failures
 
 ### Background. 
 
-Web applications tend to be written in managed memory languages, such as Java, .NET, or node.js (JavaScript or TypeScript). However, these languages are written in systems languages that have memory management issues, such as buffer or heap overflows, use after free, integer overflows, and more. There have been many sandbox escapes over the years that prove that just because the web application language is nominally memory “safe,” the foundations are not. This category scored the lowest on the community survey and low in the data despite having the third most related CVEs. We believe this is due to the predominance of web applications over more traditional desktop applications, and explains why it is treated differently than in the MITRE Top 25.
+Languagess like Java, C#, JavaScript/TypeScript (node.js), Go, and "safe" Rust are memory safe. Memory management problems tend to happen in non-memory safe languages such as C and C++. This category scored the lowest on the community survey and low in the data despite having the third most related CVEs. We believe this is due to the predominance of web applications over more traditional desktop applications. Memory management vulnerabilities frequently have the highest CVSS scores. 
 
 
 ### Score table.
@@ -165,69 +206,80 @@ Web applications tend to be written in managed memory languages, such as Java, .
 
 ### Description. 
 
-When an application is forced to manage memory itself, it is very easy to make mistakes. Memory safe languages are being used more often, but there are still many legacy systems in production worldwide, new low-level systems that require the use of non-memory safe languages, and web applications that interact with mainframes, IoT devices, firmware, and other systems that may be forced to manage their own memory.
-
- 
+When an application is forced to manage memory itself, it is very easy to make mistakes. Memory safe languages are being used more often, but there are still many legacy systems in production worldwide, new low-level systems that require the use of non-memory safe languages, and web applications that interact with mainframes, IoT devices, firmware, and other systems that may be forced to manage their own memory. Representative CWEs are *CWE-120	Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')* and *CWE-121	Stack-based Buffer Overflow*.
 
 Memory management failures can happen when:
 
+* You do not allocate enough memory for a variable
+* You do not validate input, causing an overflow of the heap, the stack, a buffer
+* You store a data value that is larger than the type of the variable can hold 
+* You attempt to use unallocated memory or address spaces
+* You create off-by-one errors (counting from 1 instead of zero)
+*  You try to access an object after its been freed
+* You use uninitialized variables
+* You leak memory or otherwise use up all available memory in error until our application fails
 
-
-* We do not allocate enough memory for a variable
-*  We overflow the heap, stack, buffer or a string, integer, floats or arrays by putting more into them than they can accommodate (variable types have limits) or more than has been allocated (heap, stack, buffers)
-* We attempt to use unallocated memory or address spaces
-* We create off-by-one errors (counting from 1 instead of zero)
-*  We try to access an object after we’ve freed it (deleted it’s address in memory)
-* We use uninitialized variables
-* We leak memory or otherwise use up all available memory in error until our application fails
-
-Memory management failures can lead to failure of the application or even the entire system, see also [‘XL01:2025 Lack of Application Resilience’](?tab=t.q1uzy1q9mmu)
+Memory management failures can lead to failure of the application or even the entire system, see also [X01:2025 Lack of Application Resilience](#X01:2025 Lack of Application Resilience)
 
 
 ### How to prevent. 
 
-The best way to prevent memory management failures is to use a memory-safe language. Examples include Rust, Java, Go, C#, Python, Swift, Kotlin, JavaScript, etc. If creating net-new applications, try hard to convince your organization that it is worth the learning curve to switch to a memory-safe language. If performing a full refactor, push for a rewrite in a memory-safe language if possible or reasonable.
+The best way to prevent memory management failures is to use a memory-safe language. Examples include Rust, Java, Go, C#, Python, Swift, Kotlin, JavaScript, etc. When creating new applications, try hard to convince your organization that it is worth the learning curve to switch to a memory-safe language. If performing a full refactor, push for a rewrite in a memory-safe language when it is possible and feasible.
 
 If you are unable to use a memory-safe language, perform the following:
 
-
-
-* Enable the following server features: address space layout randomization (ASLR), Data Execution Protection (DEP), and Structured Exception Handling Overwrite Protection (SEHOP)
+* Enable the following server features that make memory management errors harder to exploit: address space layout randomization (ASLR), Data Execution Protection (DEP), and Structured Exception Handling Overwrite Protection (SEHOP)
 * Monitor your application for memory leaks
 * Validate all input to your system very carefully, and reject all input that does not meet expectations
 * Study the language you are using and make a list of unsafe and more-safe functions, then share that list with your entire team. If possible, add it to your secure coding guideline or standard. For example, in C, prefer strncpy() over strcpy() and strncat() over strcat().
 * If your language or framework offers memory safety libraries, use them. For example: Safestringlib or SafeStr
-* Use managed buffers and strings rather than raw arrays and pointers if possible
+* Use managed buffers and strings rather than raw arrays and pointers whenever possible
 * Take secure coding training that focuses on memory issues and/or your language of choice. Inform your trainer that you are concerned about memory management failures
-* Perform code review and/or static analysis
+* Perform code reviews and/or static analyses
 * Use compiler tools that help with memory management such as StackShield, StackGuard, and Libsafe
 * Perform fuzzing on every input to your system
 * If you have a penetration test performed, inform your tester that you are concerned about memory management failures and that you would like them to pay special attention to this while testing
 *  Fix all compiler errors *and* warnings. Do not ignore warnings because your program compiles.
 * Ensure your underlying infrastructure is regularly patched, scanned, and hardened
 * Monitor your underlying infrastructure specifically for potential memory vulnerabilities and other failures
-
-         Consider using canaries to protect your address stack from overflow attacks
-
-
+* Consider using [canaries](https://en.wikipedia.org/wiki/Buffer_overflow_protection#Canaries) to protect your address stack from overflow attacks
 
 ### Example attack scenarios. 
 
-**Scenario #1:** Buffer overflows are the most famous memory vulnerability, a situation where an attacker submits more information into a field than it can accept, such that it overflows the buffer created for the underlying variable. In a successful attack, the overflow characters overwrite the stack pointer, giving the program new instructions, which are malicious. The overflow characters include shellcode, which contains the attack.
+**Scenario #1:** Buffer overflows are the most famous memory vulnerability, a situation where an attacker submits more information into a field than it can accept, such that it overflows the buffer created for the underlying variable. In a successful attack, the overflow characters overwrite the stack pointer, allowing the attacker to insert malicious instructions into your program.
 
-**Scenario #2:** Use-After-Free (UAF) is another attack scenario that happens often enough that it’s a semi-common browser bug bounty submission. Imagine a web browser processing JavaScript that manipulates DOM elements. The attacker crafts a JavaScript payload that creates an object (such as a DOM element) and obtains references to it. Through careful manipulation, they trigger the browser to free the object's memory while keeping a dangling pointer to it. Before the browser realizes the memory has been freed, the attacker allocates a new object of the *same* size to occupy that *same* memory space. When the browser tries to use the original pointer, it now points to attacker-controlled data. If this pointer was for a virtual function table, the attacker can redirect code execution to their payload. 
+**Scenario #2:** Use-After-Free (UAF) happens often enough that it’s a semi-common browser bug bounty submission. Imagine a web browser processing JavaScript that manipulates DOM elements. The attacker crafts a JavaScript payload that creates an object (such as a DOM element) and obtains references to it. Through careful manipulation, they trigger the browser to free the object's memory while keeping a dangling pointer to it. Before the browser realizes the memory has been freed, the attacker allocates a new object that occupies the *same* memory space. When the browser tries to use the original pointer, it now points to attacker-controlled data. If this pointer was for a virtual function table, the attacker can redirect code execution to their payload. 
 
 **Scenario #3:** A network service that accepts user input, doesn’t properly validate or sanitize it, then passes it directly to the logging function. The input from the user is passed to the logging function as syslog(user_input) instead of syslog("%s", user_input), which doesn’t specify the format. The attacker sends malicious payloads containing format specifiers such as %x to read stack memory (sensitive data disclosure) or %n to write to memory addresses. By chaining together multiple format specifiers they could map out the stack, locate important addresses, and then overwrite them. This would be a Format string vulnerability (uncontrolled string format). 
 
-Note: modern browsers use many levels of defenses to defend against such attacks, including ASLR, DEP/NX, RELRO and PIE. These are not simple attacks to carry out.
-
+Note: modern browsers use many levels of defenses to defend against such attacks, including [browser sandboxing](https://www.geeksforgeeks.org/ethical-hacking/what-is-browser-sandboxing/#types-of-browser-sandboxing) ASLR, DEP/NX, RELRO, and PIE. A memory management failure attack on a browser is not a simple attack to carry out.
 
 ### References.
 
-OWASP: Memory leak, Doubly freeing memory, & Buffer Overflow community pages
+* OWASP: Memory leak, Doubly freeing memory, & Buffer Overflow community pages
+* Alice and Bob Learn Secure Coding
+* [Awesome Fuzzing](https://github.com/secfigo/Awesome-Fuzzing) - an excellent resource on all things fuzzing
+* Project Zero Blog
+* Microsoft MSRC Blog
 
-Alice and Bob Learn Secure Coding
-
-Project Zero Blog
-
-Microsoft MSRC Blog
+## List of Mapped CWEs
+* [CWE-14	Compiler Removal of Code to Clear Buffers](https://cwe.mitre.org/data/definitions/14.html)
+* [CWE-119	Improper Restriction of Operations within the Bounds of a Memory Buffer](https://cwe.mitre.org/data/definitions/119.html)
+* [CWE-120	Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')](https://cwe.mitre.org/data/definitions/120.html)
+* [CWE-121	Stack-based Buffer Overflow](https://cwe.mitre.org/data/definitions/121.html)
+* [CWE-122	Heap-based Buffer Overflow](https://cwe.mitre.org/data/definitions/122.html)
+* [CWE-124	Buffer Underwrite ('Buffer Underflow')](https://cwe.mitre.org/data/definitions/124.html)
+* [CWE-125	Out-of-bounds Read](https://cwe.mitre.org/data/definitions/125.html)
+* [CWE-126	Buffer Over-read](https://cwe.mitre.org/data/definitions/126.html)
+* [CWE-190	Integer Overflow or Wraparound](https://cwe.mitre.org/data/definitions/190.html)
+* [191	Integer Underflow (Wrap or Wraparound)](https://cwe.mitre.org/data/definitions/191.html)
+* [CWE-196	Unsigned to Signed Conversion Error](https://cwe.mitre.org/data/definitions/196.html)
+* [CWE-367	Time-of-check Time-of-use (TOCTOU) Race Condition](https://cwe.mitre.org/data/definitions/367.html)
+* [CWE-415	Double Free](https://cwe.mitre.org/data/definitions/415.html)
+* [CWE-416	Use After Free](https://cwe.mitre.org/data/definitions/416.html)
+* [CWE-457	Use of Uninitialized Variable](https://cwe.mitre.org/data/definitions/457.html)
+* [CWE-459	Incomplete Cleanup](https://cwe.mitre.org/data/definitions/459.html)
+* [CWE-467	Use of sizeof() on a Pointer Type](https://cwe.mitre.org/data/definitions/467.html)
+* [CWE-787	Out-of-bounds Write](https://cwe.mitre.org/data/definitions/787.html)
+* [CWE-788	Access of Memory Location After End of Buffer](https://cwe.mitre.org/data/definitions/788.html)
+* [CWE-824	Access of Uninitialized Pointer](https://cwe.mitre.org/data/definitions/824.html)
