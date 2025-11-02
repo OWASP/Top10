@@ -5,7 +5,7 @@ By design, the OWASP Top 10 is innately limited to the ten most significant risk
 The following two issues are well worth the effort to identify and remediate, organizations working towards a mature appsec program, security consultancies, or tool vendors wishing to expand coverage for their offerings.
 
 
-## X1:2025 Lack of Application Resilience
+## X01:2025 Lack of Application Resilience
 
 ### Background. 
 
@@ -92,28 +92,23 @@ In order to prevent this type of vulnerability you must design for failure and r
 
 **Scenario #1:** Attackers intentionally consume application resources to trigger failures within the system, resulting in denial of service. This could be memory exhaustion, filling up disk space, CPU saturation, or opening endless connections.
 
-**Scenario #2: **Input fuzzing that leads to crafted responses that break application business logic.
+**Scenario #2:** Input fuzzing that leads to crafted responses that break application business logic.
 
 **Scenario #3:** Attackers focus on the application’s dependencies, taking down APIs or other external services, and the application is unable to continue.
 
 
 ### References.
 
-[Denial of Service - OWASP Cheat Sheet Series](https://cheatsheetseries.owasp.org/cheatsheets/Denial_of_Service_Cheat_Sheet.html) \
-OWASP MASVS‑RESILIENCE
+* [Denial of Service - OWASP Cheat Sheet Series](https://cheatsheetseries.owasp.org/cheatsheets/Denial_of_Service_Cheat_Sheet.html) \
+* [OWASP MASVS‑RESILIENCE](https://mas.owasp.org/MASVS/11-MASVS-RESILIENCE/)
+* [Awesome Fuzzing](https://github.com/secfigo/Awesome-Fuzzing) - an excellent resource on all things fuzzing
+* [ASP.NET Core Best Practices (Microsoft)](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/best-practices?view=aspnetcore-9.0)
+* [Resilience in Microservices: Bulkhead vs Circuit Breaker (Parser)](https://medium.com/@parserdigital/resilience-in-microservices-bulkhead-vs-circuit-breaker-54364c1f9d53)
+* [Bulkhead Pattern (Geeks for Geeks)](https://www.geeksforgeeks.org/system-design/bulkhead-pattern/)
+* [NIST Cybersecurity Framework (CSF)](https://www.nist.gov/cyberframework)
+* [Avoid Blocking Calls: Go Async in Java (Divlane)](https://www.devlane.com/blog/avoid-blocking-calls-go-async-in-java)
 
-ASP.NET Core Best Practices (Microsoft)
-
-Resilience in Microservices: Bulkhead vs Circuit Breaker (Parser)
-
-Bulkhead Pattern (Geeks for Geeks)
-
-NIST Cybersecurity Framework (CSF)
-
-Avoid Blocking Calls: Go Async in Java (Diviane)
-
-## X2:2025 Memory Management Failures
-
+## X02:2025 Memory Management Failures
 
 ### Background. 
 
