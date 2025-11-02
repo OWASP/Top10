@@ -1,9 +1,9 @@
-# A06:2025 Insecure Design
+# A06:2025 Insecure Design ![icon](../../assets/TOP_10_Icons_Final_Insecure_Design.png){: style="height:80px;width:80px" align="right"}
 
 
 ## Background. 
 
-Insecure Design slides two spots from #4 to #6 in the ranking as A02:2025-Security Misconfiguration and A03:2025-Software Supply Chain Failures leapfrog it. This category was introduced in 2021, and we have seen noticeable improvements in the industry related to threat modeling and a greater emphasis on secure design. This category focuses on risks related to design and architectural flaws, with a call for more use of threat modeling, secure design patterns, and reference architectures. This includes flaws in the business logic of an application, e.g. the lack of defining unwanted or unexpected state changes inside an application.  As a community, we need to move beyond "shift-left" in the coding space, to pre-code activities such as requirements writing and application design, that are critical for the principles of Secure by Design (e.g. see Establish a Modern AppSec Program TJ: Requirements and Design phases). Notable Common Weakness Enumerations (CWEs) include *CWE-256: Unprotected Storage of Credentials, CWE-269 Improper Privilege Management, CWE-434 Unrestricted Upload of File with Dangerous Type, CWE-501: Trust Boundary Violation, and CWE-522: Insufficiently Protected Credentials.*
+Insecure Design slides two spots from #4 to #6 in the ranking as **[A02:2025-Security Misconfiguration](A02_2025-Security_Misconfiguration.md)** and **[A03:2025-Software Supply Chain Failures](A03_2025-Software_Supply_Chain_Failures.md)** leapfrog it. This category was introduced in 2021, and we have seen noticeable improvements in the industry related to threat modeling and a greater emphasis on secure design. This category focuses on risks related to design and architectural flaws, with a call for more use of threat modeling, secure design patterns, and reference architectures. This includes flaws in the business logic of an application, e.g. the lack of defining unwanted or unexpected state changes inside an application.  As a community, we need to move beyond "shift-left" in the coding space, to pre-code activities such as requirements writing and application design, that are critical for the principles of Secure by Design (e.g. see **[Establish a Modern AppSec Program: Planning and Design Phase](0x03_2025-Establishing_a_Modern_Application_Security_Program.md)**). Notable Common Weakness Enumerations (CWEs) include *CWE-256: Unprotected Storage of Credentials, CWE-269 Improper Privilege Management, CWE-434 Unrestricted Upload of File with Dangerous Type, CWE-501: Trust Boundary Violation, and CWE-522: Insufficiently Protected Credentials.*
 
 
 ## Score table.
@@ -60,8 +60,6 @@ Insecure design is a broad category representing different weaknesses, expressed
 
 Three key parts of having a secure design are:
 
-
-
 * Gathering Requirements and Resource Management
 * Creating a Secure Design
 * Having a Secure Development Lifecycle
@@ -100,7 +98,7 @@ Secure software requires a secure development lifecycle, a secure design pattern
 
 **Scenario #1:** A credential recovery workflow might include “questions and answers,” which is prohibited by NIST 800-63b, the OWASP ASVS, and the OWASP Top 10. Questions and answers cannot be trusted as evidence of identity, as more than one person can know the answers. Such functionality should be removed and replaced with a more secure design.
 
-**Scenario #2:** A cinema chain allows group booking discounts and has a maximum of fifteen attendees before requiring a deposit. Attackers could threat model this flow and test if they could book six hundred seats and all cinemas at once in a few requests, causing a massive loss of income.
+**Scenario #2:** A cinema chain allows group booking discounts and has a maximum of fifteen attendees before requiring a deposit. Attackers could threat model this flow and test if they can find an attack vector in the business logic of the application, e.g. booking six hundred seats and all cinemas at once in a few requests, causing a massive loss of income.
 
 **Scenario #3:** A retail chain’s e-commerce website does not have protection against bots run by scalpers buying high-end video cards to resell on auction websites. This creates terrible publicity for the video card makers and retail chain owners, and enduring bad blood with enthusiasts who cannot obtain these cards at any price. Careful anti-bot design and domain logic rules, such as purchases made within a few seconds of availability, might identify inauthentic purchases and reject such transactions.
 
@@ -110,8 +108,8 @@ Secure software requires a secure development lifecycle, a secure design pattern
 
 
 * [OWASP Cheat Sheet: Secure Design Principles](https://cheatsheetseries.owasp.org/cheatsheets/Secure_Product_Design_Cheat_Sheet.html)
-* [OWASP SAMM: Design:Security Architecture](https://owaspsamm.org/model/design/security-architecture/)
-* [OWASP SAMM: Design:Threat Assessment](https://owaspsamm.org/model/design/threat-assessment/)
+* [OWASP SAMM: Design | Secure Architecture](https://owaspsamm.org/model/design/secure-architecture/)
+* [OWASP SAMM: Design | Threat Assessment](https://owaspsamm.org/model/design/threat-assessment/)
 * [NIST – Guidelines on Minimum Standards for Developer Verification of Software](https://www.nist.gov/publications/guidelines-minimum-standards-developer-verification-software)
 * [The Threat Modeling Manifesto](https://threatmodelingmanifesto.org/)
 * [Awesome Threat Modeling](https://github.com/hysnsec/awesome-threat-modelling)
