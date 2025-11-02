@@ -38,5 +38,8 @@ all: install-python-requirements generate serve  # Install requirements, generat
 
 genserve: generate serve  # Generate the site, then serve it
 
+publish: generate # Publish the generated site to GitHub Pages
+	($(DEBUG) $(activate) && $(DEBUG) cd $(year) && $(DEBUG) mkdocs gh-deploy --force)
+
 t10-2021: year:=2021
 t10-2021: all    # Make 2021 site
