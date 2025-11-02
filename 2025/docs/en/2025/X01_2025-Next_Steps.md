@@ -256,11 +256,11 @@ Note: modern browsers use many levels of defenses to defend against such attacks
 
 ### References.
 
-* OWASP: Memory leak, Doubly freeing memory, & Buffer Overflow community pages
-* Alice and Bob Learn Secure Coding
+* [OWASP: Memory leak, Doubly freeing memory, & Buffer Overflow community pages](https://owasp.org/www-community/vulnerabilities/Doubly_freeing_memory)
+* [Alice and Bob Learn Secure Coding](https://onlinelibrary.wiley.com/doi/book/10.1002/9781394277179)
 * [Awesome Fuzzing](https://github.com/secfigo/Awesome-Fuzzing) - an excellent resource on all things fuzzing
-* Project Zero Blog
-* Microsoft MSRC Blog
+* [Project Zero Blog](https://googleprojectzero.blogspot.com)
+* [Microsoft MSRC Blog](https://www.microsoft.com/en-us/msrc/blog)
 
 ## List of Mapped CWEs
 * [CWE-14	Compiler Removal of Code to Clear Buffers](https://cwe.mitre.org/data/definitions/14.html)
