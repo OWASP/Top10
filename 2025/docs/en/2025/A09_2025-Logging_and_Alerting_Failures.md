@@ -67,7 +67,7 @@ Without logging and monitoring, attacks and breaches cannot be detected, and wit
 * Appropriate alerting thresholds and response escalation processes are not in place or effective. Alerts are not received or reviewed within a reasonable amount of time.
 * Penetration testing and scans by dynamic application security testing (DAST) tools (such as Burp or ZAP) do not trigger alerts.
 * The application cannot detect, escalate, or alert for active attacks in real-time or near real-time.
-* You are vulnerable to sensitive information leakage by making logging and alerting events visible to a user or an attacker (see [A01:2025-Broken Access Control](A01_2021-Broken_Access_Control.md)), or by logging sensitive information that should not be logged (such as PII or PHI).
+* You are vulnerable to sensitive information leakage by making logging and alerting events visible to a user or an attacker (see [A01:2025-Broken Access Control](A01_2025-Broken_Access_Control.md)), or by logging sensitive information that should not be logged (such as PII or PHI).
 * You are vulnerable to injections or attacks on the logging or monitoring systems if log data is not correctly encoded.
 * The application is missing or mishandling errors and other exceptional conditions, such that the system is unaware there was an error, and is therefore unable to log there was a problem.
 * Adequate ‘use cases’ for issuing alerts are missing or outdated to recognize a special situation.
