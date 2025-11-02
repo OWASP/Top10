@@ -1,4 +1,4 @@
-# A03:2025 Software Supply Chain Failures 
+# A03:2025 Software Supply Chain Failures ![icon](../../assets/TOP_10_Icons_Final_Vulnerable_Outdated_Components.png){: style="height:80px;width:80px" align="right"}
 
 
 ## Background. 
