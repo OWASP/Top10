@@ -1,7 +1,7 @@
 site_name: OWASP Top 10:2025
 site_description: OWASP Top 10:2025
 repo_name: OWASP/Top10
-repo_url: https://github.com/OWASP/Top10
+repo_url: https://Neil-Smithline.github.io/2025-Top10-SECRET/
 copyright: © Copyright 2021-2025 - OWASP Top 10 Team - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.
 docs_dir: docs
 theme:
@@ -29,7 +29,7 @@ nav:
     - A08 Software or Data Integrity Failures: '2025/A08_2025-Software_or_Data_Integrity_Failures.md'
     - A09 Logging and Alerting Failures: '2025/A09_2025-Logging_and_Alerting_Failures.md'
     - A10 Mishandling of Exceptional Conditions: '2025/A10_2025-Mishandling_of_Exceptional_Conditions.md'
-  - Next Steps: '2025/A11_2025-Next_Steps.md'
+  - Next Steps: '2025/X1_2025-Next_Steps.md'
 
 markdown_extensions:
   - attr_list
