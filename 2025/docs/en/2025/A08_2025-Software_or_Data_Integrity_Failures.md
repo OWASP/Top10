@@ -2,7 +2,7 @@
 
 ## Background. 
 
-Software or Data Integrity Failures continues at #8 in the list. This category is focused on the failure to maintain trust boundaries and verify the integrity of software, code, and data artifacts at a lower level than Software Supply Chain Failures. This category focuses on making assumptions related to software updates and critical data, without verifying integrity. Notable Common Weakness Enumerations (CWEs) include *CWE-829: Inclusion of Functionality from Untrusted Control Sphere*, *CWE-915: Improperly Controlled Modification of Dynamically-Determined Object Attributes*, and *CWE-502: Deserialization of Untrusted Data*.
+Software or Data Integrity Failures continues at #8, with a slight, clarifying name change from "Software *and* Data Integrity Failures". This category is focused on the failure to maintain trust boundaries and verify the integrity of software, code, and data artifacts at a lower level than Software Supply Chain Failures. This category focuses on making assumptions related to software updates and critical data, without verifying integrity. Notable Common Weakness Enumerations (CWEs) include *CWE-829: Inclusion of Functionality from Untrusted Control Sphere*, *CWE-915: Improperly Controlled Modification of Dynamically-Determined Object Attributes*, and *CWE-502: Deserialization of Untrusted Data*.
 
 
 ## Score table.
@@ -73,7 +73,7 @@ Software and data integrity failures relate to code and infrastructure that does
 
 **Scenario #1 Inclusion of Web Functionality from an Untrusted Source:** A company uses an external service provider to provide support functionality. For convenience, it has a DNS mapping for `myCompany.SupportProvider.com` to `support.myCompany.com`. This means that all cookies, including authentication cookies, set on the `myCompany.com` domain will now be sent to the support provider. Anyone with access to the support provider’s infrastructure can steal the cookies of all of your users that have visited `support.myCompany.com` and perform a session hijacking attack.
 
-**Scenario #1 Update without signing:** Many home routers, set-top boxes, device firmware, and others do not verify updates via signed firmware. Unsigned firmware is a growing target for attackers and is expected to only get worse. This is a major concern as many times there is no mechanism to remediate other than to fix in a future version and wait for previous versions to age out.
+**Scenario #2 Update without signing:** Many home routers, set-top boxes, device firmware, and others do not verify updates via signed firmware. Unsigned firmware is a growing target for attackers and is expected to only get worse. This is a major concern as many times there is no mechanism to remediate other than to fix in a future version and wait for previous versions to age out.
 
 Scenario #2 A developer has trouble finding the updated version of a package they are looking for, so they download it not from the regular, trusted package manager, but from a website online. The package is not signed, and thus there is no opportunity to ensure integrity. The package includes malicious code. 
 
@@ -96,30 +96,30 @@ Scenario #2 A developer has trouble finding the updated version of a package the
 
 ## List of Mapped CWEs
 
-[CWE-345 Insufficient Verification of Data Authenticity](https://cwe.mitre.org/data/definitions/345.html)
+* [CWE-345 Insufficient Verification of Data Authenticity](https://cwe.mitre.org/data/definitions/345.html)
 
-[CWE-353 Missing Support for Integrity Check](https://cwe.mitre.org/data/definitions/353.html)
+* [CWE-353 Missing Support for Integrity Check](https://cwe.mitre.org/data/definitions/353.html)
 
-[CWE-426 Untrusted Search Path](https://cwe.mitre.org/data/definitions/426.html)
+* [CWE-426 Untrusted Search Path](https://cwe.mitre.org/data/definitions/426.html)
 
-[CWE-427 Uncontrolled Search Path Element](https://cwe.mitre.org/data/definitions/427.html)
+* [CWE-427 Uncontrolled Search Path Element](https://cwe.mitre.org/data/definitions/427.html)
 
-[CWE-494 Download of Code Without Integrity Check](https://cwe.mitre.org/data/definitions/494.html)
+* [CWE-494 Download of Code Without Integrity Check](https://cwe.mitre.org/data/definitions/494.html)
 
-[CWE-502 Deserialization of Untrusted Data](https://cwe.mitre.org/data/definitions/502.html)
+* [CWE-502 Deserialization of Untrusted Data](https://cwe.mitre.org/data/definitions/502.html)
 
-[CWE-506 Embedded Malicious Code](https://cwe.mitre.org/data/definitions/506.html)
+* [CWE-506 Embedded Malicious Code](https://cwe.mitre.org/data/definitions/506.html)
 
-[CWE-509 Replicating Malicious Code (Virus or Worm)](https://cwe.mitre.org/data/definitions/509.html)
+* [CWE-509 Replicating Malicious Code (Virus or Worm)](https://cwe.mitre.org/data/definitions/509.html)
 
-[CWE-565 Reliance on Cookies without Validation and Integrity Checking](https://cwe.mitre.org/data/definitions/565.html)
+* [CWE-565 Reliance on Cookies without Validation and Integrity Checking](https://cwe.mitre.org/data/definitions/565.html)
 
-[CWE-784 Reliance on Cookies without Validation and Integrity Checking in a Security Decision](https://cwe.mitre.org/data/definitions/784.html)
+* [CWE-784 Reliance on Cookies without Validation and Integrity Checking in a Security Decision](https://cwe.mitre.org/data/definitions/784.html)
 
-[CWE-829 Inclusion of Functionality from Untrusted Control Sphere](https://cwe.mitre.org/data/definitions/829.html)
+* [CWE-829 Inclusion of Functionality from Untrusted Control Sphere](https://cwe.mitre.org/data/definitions/829.html)
 
-[CWE-830 Inclusion of Web Functionality from an Untrusted Source](https://cwe.mitre.org/data/definitions/830.html)
+* [CWE-830 Inclusion of Web Functionality from an Untrusted Source](https://cwe.mitre.org/data/definitions/830.html)
 
-[CWE-915 Improperly Controlled Modification of Dynamically-Determined Object Attributes](https://cwe.mitre.org/data/definitions/915.html)
+* [CWE-915 Improperly Controlled Modification of Dynamically-Determined Object Attributes](https://cwe.mitre.org/data/definitions/915.html)
 
-[CWE-926 Improper Export of Android Application Components](https://cwe.mitre.org/data/definitions/926.html)
+* [CWE-926 Improper Export of Android Application Components](https://cwe.mitre.org/data/definitions/926.html)

@@ -257,7 +257,7 @@ Note: modern browsers use many levels of defenses to defend against such attacks
 ### References.
 
 * [OWASP: Memory leak, Doubly freeing memory, & Buffer Overflow community pages](https://owasp.org/www-community/vulnerabilities/Doubly_freeing_memory)
-* [Awesome Fuzzing](https://github.com/secfigo/Awesome-Fuzzing) - an excellent resource on all things fuzzing
+* [Awesome Fuzzing: a list of fuzzing resources](https://github.com/secfigo/Awesome-Fuzzing) 
 * [Project Zero Blog](https://googleprojectzero.blogspot.com)
 * [Microsoft MSRC Blog](https://www.microsoft.com/en-us/msrc/blog)
 
