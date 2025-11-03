@@ -99,13 +99,13 @@ In order to prevent this type of vulnerability you must design for failure and r
 
 ### References.
 
-* [Denial of Service - OWASP Cheat Sheet Series](https://cheatsheetseries.owasp.org/cheatsheets/Denial_of_Service_Cheat_Sheet.html) \
+* [OWASP Cheat Sheet: Denial of Service](https://cheatsheetseries.owasp.org/cheatsheets/Denial_of_Service_Cheat_Sheet.html)
 * [OWASP MASVS‑RESILIENCE](https://mas.owasp.org/MASVS/11-MASVS-RESILIENCE/)
 * [ASP.NET Core Best Practices (Microsoft)](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/best-practices?view=aspnetcore-9.0)
 * [Resilience in Microservices: Bulkhead vs Circuit Breaker (Parser)](https://medium.com/@parserdigital/resilience-in-microservices-bulkhead-vs-circuit-breaker-54364c1f9d53)
 * [Bulkhead Pattern (Geeks for Geeks)](https://www.geeksforgeeks.org/system-design/bulkhead-pattern/)
 * [NIST Cybersecurity Framework (CSF)](https://www.nist.gov/cyberframework)
-* [Avoid Blocking Calls: Go Async in Java (Divlane)](https://www.devlane.com/blog/avoid-blocking-calls-go-async-in-java)
+* [Avoid Blocking Calls: Go Async in Java (Devlane)](https://www.devlane.com/blog/avoid-blocking-calls-go-async-in-java)
 
 ## List of Mapped CWEs
 * [CWE-73  External Control of File Name or Path](https://cwe.mitre.org/data/definitions/73.html)
@@ -206,7 +206,7 @@ Languagess like Java, C#, JavaScript/TypeScript (node.js), Go, and "safe" Rust a
 
 ### Description. 
 
-When an application is forced to manage memory itself, it is very easy to make mistakes. Memory safe languages are being used more often, but there are still many legacy systems in production worldwide, new low-level systems that require the use of non-memory safe languages, and web applications that interact with mainframes, IoT devices, firmware, and other systems that may be forced to manage their own memory. Representative CWEs are *CWE-120	Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')* and *CWE-121	Stack-based Buffer Overflow*.
+When an application is forced to manage memory itself, it is very easy to make mistakes. Memory safe languages are being used more often, but there are still many legacy systems in production worldwide, new low-level systems that require the use of non-memory safe languages, and web applications that interact with mainframes, IoT devices, firmware, and other systems that may be forced to manage their own memory. Representative CWEs are *CWE-120 Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')* and *CWE-121 Stack-based Buffer Overflow*.
 
 Memory management failures can happen when:
 
@@ -256,29 +256,29 @@ Note: modern browsers use many levels of defenses to defend against such attacks
 
 ### References.
 
-* [OWASP: Memory leak, Doubly freeing memory, & Buffer Overflow community pages](https://owasp.org/www-community/vulnerabilities/Doubly_freeing_memory)
+* [OWASP community pages: Memory leak,](https://owasp.org/www-community/vulnerabilities/Memory_leak) [Doubly freeing memory,](https://owasp.org/www-community/vulnerabilities/Doubly_freeing_memory) [& Buffer Overflow](https://owasp.org/www-community/vulnerabilities/Buffer_Overflow)
 * [Awesome Fuzzing: a list of fuzzing resources](https://github.com/secfigo/Awesome-Fuzzing) 
 * [Project Zero Blog](https://googleprojectzero.blogspot.com)
 * [Microsoft MSRC Blog](https://www.microsoft.com/en-us/msrc/blog)
 
 ## List of Mapped CWEs
-* [CWE-14	Compiler Removal of Code to Clear Buffers](https://cwe.mitre.org/data/definitions/14.html)
-* [CWE-119	Improper Restriction of Operations within the Bounds of a Memory Buffer](https://cwe.mitre.org/data/definitions/119.html)
-* [CWE-120	Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')](https://cwe.mitre.org/data/definitions/120.html)
-* [CWE-121	Stack-based Buffer Overflow](https://cwe.mitre.org/data/definitions/121.html)
-* [CWE-122	Heap-based Buffer Overflow](https://cwe.mitre.org/data/definitions/122.html)
-* [CWE-124	Buffer Underwrite ('Buffer Underflow')](https://cwe.mitre.org/data/definitions/124.html)
-* [CWE-125	Out-of-bounds Read](https://cwe.mitre.org/data/definitions/125.html)
-* [CWE-126	Buffer Over-read](https://cwe.mitre.org/data/definitions/126.html)
-* [CWE-190	Integer Overflow or Wraparound](https://cwe.mitre.org/data/definitions/190.html)
-* [191	Integer Underflow (Wrap or Wraparound)](https://cwe.mitre.org/data/definitions/191.html)
-* [CWE-196	Unsigned to Signed Conversion Error](https://cwe.mitre.org/data/definitions/196.html)
-* [CWE-367	Time-of-check Time-of-use (TOCTOU) Race Condition](https://cwe.mitre.org/data/definitions/367.html)
-* [CWE-415	Double Free](https://cwe.mitre.org/data/definitions/415.html)
-* [CWE-416	Use After Free](https://cwe.mitre.org/data/definitions/416.html)
-* [CWE-457	Use of Uninitialized Variable](https://cwe.mitre.org/data/definitions/457.html)
-* [CWE-459	Incomplete Cleanup](https://cwe.mitre.org/data/definitions/459.html)
-* [CWE-467	Use of sizeof() on a Pointer Type](https://cwe.mitre.org/data/definitions/467.html)
-* [CWE-787	Out-of-bounds Write](https://cwe.mitre.org/data/definitions/787.html)
-* [CWE-788	Access of Memory Location After End of Buffer](https://cwe.mitre.org/data/definitions/788.html)
-* [CWE-824	Access of Uninitialized Pointer](https://cwe.mitre.org/data/definitions/824.html)
+* [CWE-14 Compiler Removal of Code to Clear Buffers](https://cwe.mitre.org/data/definitions/14.html)
+* [CWE-119 Improper Restriction of Operations within the Bounds of a Memory Buffer](https://cwe.mitre.org/data/definitions/119.html)
+* [CWE-120 Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')](https://cwe.mitre.org/data/definitions/120.html)
+* [CWE-121 Stack-based Buffer Overflow](https://cwe.mitre.org/data/definitions/121.html)
+* [CWE-122 Heap-based Buffer Overflow](https://cwe.mitre.org/data/definitions/122.html)
+* [CWE-124 Buffer Underwrite ('Buffer Underflow')](https://cwe.mitre.org/data/definitions/124.html)
+* [CWE-125 Out-of-bounds Read](https://cwe.mitre.org/data/definitions/125.html)
+* [CWE-126 Buffer Over-read](https://cwe.mitre.org/data/definitions/126.html)
+* [CWE-190 Integer Overflow or Wraparound](https://cwe.mitre.org/data/definitions/190.html)
+* [191 Integer Underflow (Wrap or Wraparound)](https://cwe.mitre.org/data/definitions/191.html)
+* [CWE-196 Unsigned to Signed Conversion Error](https://cwe.mitre.org/data/definitions/196.html)
+* [CWE-367 Time-of-check Time-of-use (TOCTOU) Race Condition](https://cwe.mitre.org/data/definitions/367.html)
+* [CWE-415 Double Free](https://cwe.mitre.org/data/definitions/415.html)
+* [CWE-416 Use After Free](https://cwe.mitre.org/data/definitions/416.html)
+* [CWE-457 Use of Uninitialized Variable](https://cwe.mitre.org/data/definitions/457.html)
+* [CWE-459 Incomplete Cleanup](https://cwe.mitre.org/data/definitions/459.html)
+* [CWE-467 Use of sizeof() on a Pointer Type](https://cwe.mitre.org/data/definitions/467.html)
+* [CWE-787 Out-of-bounds Write](https://cwe.mitre.org/data/definitions/787.html)
+* [CWE-788 Access of Memory Location After End of Buffer](https://cwe.mitre.org/data/definitions/788.html)
+* [CWE-824 Access of Uninitialized Pointer](https://cwe.mitre.org/data/definitions/824.html)
