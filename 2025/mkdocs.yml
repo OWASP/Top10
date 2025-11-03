@@ -1,9 +1,11 @@
-site_name: OWASP Top 10:2025
-site_description: OWASP Top 10:2025
+site_name: DRAFT OWASP Top 10:2025
+site_description: DRAFT OWASP Top 10:2025
 repo_name: OWASP/Top10
-repo_url: https://Neil-Smithline.github.io/2025-Top10-SECRET/
+repo_url: https://Neil-Smithline.github.io/2025-Top10-DRAFT/
 copyright: © Copyright 2021-2025 - OWASP Top 10 Team - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.
 docs_dir: docs
+extra_css:
+  - assets/css/DRAFT-stylesheet.css
 theme:
   name: material
   language: en
