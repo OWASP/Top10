@@ -1,5 +1,7 @@
 # Introduction
 
+![OWASP Logo](assets/TOP_10_logo_Final_Logo_Colour.png)
+
 Welcome to the 8th installment of the OWASP Top Ten! 
 
 A huge thank you to everyone who contributed data and perspectives in the survey. Without you, this installment would not have been possible. **THANK YOU!**
@@ -94,26 +96,32 @@ The following organizations (along with several anonymous donors) kindly donated
 * Wallarm
 
 ## Lead Authors
+* Andrew van der Stock - X: [@vanderaj](https://x.com/vanderaj)
+* Brian Glas - X:[@infosecdad]-(https://x.com/infosecdad)
+* Neil Smithline - X: [@appsecneil](https://x.com/appsecneil)
+* Tanya Janca - X: [@shehackspurple](https://x.com/shehackspurple)
+* Torsten Gigler - email: [torsten.gigler@owasp.org](mailto:torsten.gigler@owasp.org), Mastodon: [@torsten_gigler@infosec.exchange](https://infosec.exchange/@torsten_gigler)
 
-
-
-* Andrew van der Stock (vanderaj@owasp.org)
-* Brian Glas (brian.glas@owasp.org)
-* Neil Smithline (neil.smithline@owasp.org)
-* Tanya Janca (tanya.janca@owasp.org)
-* Torsten Gigler (Torsten.Gigler@owasp.org)
 
 
 ## Release Candidate
 
 
-This release candidate was originally released on 6th November 2025..
+This release candidate was originally released on 6th November 2025.
 
 
 ## Log issues and pull requests
 
 Please log any corrections or issues:
 
+### Project links:
+#### DRAFT site:
+* [DRAFT Homepage]()
+* [DRAFT GitHub repository](https://github.com/Neil-Smithline/2025-Top10-DRAFT)
 
 
-* [https://github.com/OWASP/Top10/issues](https://github.com/OWASP/Top10/issues)
+#### Main site:
+* [Main Homepage](https://owasp.org/www-project-top-ten/)
+* [Main GitHub repository](https://github.com/OWASP/Top10)
+
+
