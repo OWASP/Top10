@@ -64,11 +64,11 @@ This is a renaming of 2021’s Denial of Service. That was renamed as it describ
 
 This category represents a systemic weakness in how applications respond to stress, failures, and edge cases that it is unable to recover from failure. When an application does not gracefully handle, withstand, or recover from unexpected conditions, resource constraints, and other adverse events it can easily result in availability issues (most commonly), but also data corruption, sensitive data disclosure, cascading failures, and/or bypasses of security controls.
 
-Furthermore [X2:2025 Memory Management Errors](#X2:2025 Memory Management Failures) can also lead to failure of the application or even the entire system. 
+Furthermore [X02:2025 Memory Management Failures](#x022025-memory-management-failures) can also lead to failure of the application or even the entire system.
 
 ### How to prevent 
 
-In order to prevent this type of vulnerability you must design for failure and recovery of your systems. 
+In order to prevent this type of vulnerability you must design for failure and recovery of your systems.
 
 * Add limits, quotas, and failover functionality, paying special attention to the most resource consuming operations
 * Identify resource intensive pages and plan ahead: Reduce attack surface especially not exposing unneeded ‘gadgets’ and functions that require a lot of resources (e.g. CPU, memory) to unknown or untrusted users
@@ -215,11 +215,11 @@ Memory management failures can happen when:
 * You store a data value that is larger than the type of the variable can hold 
 * You attempt to use unallocated memory or address spaces
 * You create off-by-one errors (counting from 1 instead of zero)
-*  You try to access an object after its been freed
+* You try to access an object after its been freed
 * You use uninitialized variables
 * You leak memory or otherwise use up all available memory in error until our application fails
 
-Memory management failures can lead to failure of the application or even the entire system, see also [X01:2025 Lack of Application Resilience](#X01:2025 Lack of Application Resilience)
+Memory management failures can lead to failure of the application or even the entire system, see also [X01:2025 Lack of Application Resilience](#x012025-lack-of-application-resilience)
 
 
 ### How to prevent. 
@@ -228,21 +228,21 @@ The best way to prevent memory management failures is to use a memory-safe langu
 
 If you are unable to use a memory-safe language, perform the following:
 
-* Enable the following server features that make memory management errors harder to exploit: address space layout randomization (ASLR), Data Execution Protection (DEP), and Structured Exception Handling Overwrite Protection (SEHOP)
-* Monitor your application for memory leaks
-* Validate all input to your system very carefully, and reject all input that does not meet expectations
+* Enable the following server features that make memory management errors harder to exploit: address space layout randomization (ASLR), Data Execution Protection (DEP), and Structured Exception Handling Overwrite Protection (SEHOP).
+* Monitor your application for memory leaks.
+* Validate all input to your system very carefully, and reject all input that does not meet expectations.
 * Study the language you are using and make a list of unsafe and more-safe functions, then share that list with your entire team. If possible, add it to your secure coding guideline or standard. For example, in C, prefer strncpy() over strcpy() and strncat() over strcat().
-* If your language or framework offers memory safety libraries, use them. For example: Safestringlib or SafeStr
-* Use managed buffers and strings rather than raw arrays and pointers whenever possible
-* Take secure coding training that focuses on memory issues and/or your language of choice. Inform your trainer that you are concerned about memory management failures
-* Perform code reviews and/or static analyses
-* Use compiler tools that help with memory management such as StackShield, StackGuard, and Libsafe
-* Perform fuzzing on every input to your system
-* If you have a penetration test performed, inform your tester that you are concerned about memory management failures and that you would like them to pay special attention to this while testing
+* If your language or framework offers memory safety libraries, use them. For example: Safestringlib or SafeStr.
+* Use managed buffers and strings rather than raw arrays and pointers whenever possible.
+* Take secure coding training that focuses on memory issues and/or your language of choice. Inform your trainer that you are concerned about memory management failures.
+* Perform code reviews and/or static analyses.
+* Use compiler tools that help with memory management such as StackShield, StackGuard, and Libsafe.
+* Perform fuzzing on every input to your system.
+* If you have a penetration test performed, inform your tester that you are concerned about memory management failures and that you would like them to pay special attention to this while testing.
 *  Fix all compiler errors *and* warnings. Do not ignore warnings because your program compiles.
-* Ensure your underlying infrastructure is regularly patched, scanned, and hardened
-* Monitor your underlying infrastructure specifically for potential memory vulnerabilities and other failures
-* Consider using [canaries](https://en.wikipedia.org/wiki/Buffer_overflow_protection#Canaries) to protect your address stack from overflow attacks
+* Ensure your underlying infrastructure is regularly patched, scanned, and hardened.
+* Monitor your underlying infrastructure specifically for potential memory vulnerabilities and other failures.
+* Consider using [canaries](https://en.wikipedia.org/wiki/Buffer_overflow_protection#Canaries) to protect your address stack from overflow attacks.
 
 ### Example attack scenarios. 
 
