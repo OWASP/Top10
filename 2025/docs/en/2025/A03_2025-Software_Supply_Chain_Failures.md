@@ -137,29 +137,26 @@ Every organization must ensure an ongoing plan for monitoring, triaging, and app
 
 There are automated tools to help attackers find unpatched or misconfigured systems. For example, the [Shodan IoT](https://www.shodan.io) search engine can help you find devices that still suffer from Heartbleed vulnerability patched in April 2014.
 
-
 ## References
 
-
-
-* OWASP Application Security Verification Standard: V15 Secure Coding and Architecture
-* OWASP Cheat Sheet Series: Dependency Graph SBOM
-* OWASP Cheat Sheet Series: Vulnerable Dependency Management
-* OWASP Dependency-Track
-* OWASP CycloneDX
-* OWASP Application Security Verification Standard: V1 Architecture, design and threat modelling
-* OWASP Dependency Check (for Java and .NET libraries)
+* [OWASP Application Security Verification Standard: V15 Secure Coding and Architecture](https://owasp.org/www-project-application-security-verification-standard/)
+* [OWASP Cheat Sheet Series: Dependency Graph SBOM](https://cheatsheetseries.owasp.org/cheatsheets/Dependency_Graph_SBOM_Cheat_Sheet.html)
+* [OWASP Cheat Sheet Series: Vulnerable Dependency Management](https://cheatsheetseries.owasp.org/cheatsheets/Vulnerable_Dependency_Management_Cheat_Sheet.html)
+* [OWASP Dependency-Track](https://owasp.org/www-project-dependency-track/)
+* [OWASP CycloneDX](https://owasp.org/www-project-cyclonedx/)
+* [OWASP Application Security Verification Standard: V1 Architecture, design and threat modelling](https://owasp-aasvs.readthedocs.io/en/latest/v1.html)
+* [OWASP Dependency Check (for Java and .NET libraries)](https://owasp.org/www-project-dependency-check/)
 * OWASP Testing Guide - Map Application Architecture (OTG-INFO-010)
-* OWASP Virtual Patching Best Practices
-* The Unfortunate Reality of Insecure Libraries
-* MITRE Common Vulnerabilities and Exposures (CVE) search
-* National Vulnerability Database (NVD)
-* Retire.js for detecting known vulnerable JavaScript libraries
-* GitHub Advisory Database
+* [OWASP Virtual Patching Best Practices](https://owasp.org/www-community/Virtual_Patching_Best_Practices)
+* [The Unfortunate Reality of Insecure Libraries](https://www.scribd.com/document/105692739/JeffWilliamsPreso-Sm)
+* [MITRE Common Vulnerabilities and Exposures (CVE) search](https://www.cve.org)
+* [National Vulnerability Database (NVD)](https://nvd.nist.gov)
+* [Retire.js for detecting known vulnerable JavaScript libraries](https://retirejs.github.io/retire.js/)
+* [GitHub Advisory Database](https://github.com/advisories)
 * Ruby Libraries Security Advisory Database and Tools
-* SAFECode Software Integrity Controls [PDF]
-* Glassworm supply chain attack
-* PhantomRaven supply chain attack campaign
+* [SAFECode Software Integrity Controls (PDF)](https://safecode.org/publication/SAFECode_Software_Integrity_Controls0610.pdf)
+* [Glassworm supply chain attack](https://thehackernews.com/2025/10/self-spreading-glassworm-infects-vs.html)
+* [PhantomRaven supply chain attack campaign](https://thehackernews.com/2025/10/phantomraven-malware-found-in-126-npm.html)
 
 
 ## List of Mapped CWEs
