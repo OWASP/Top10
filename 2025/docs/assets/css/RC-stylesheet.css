@@ -1,10 +1,10 @@
 article.md-content__inner.md-typeset:before {
-    content: "DRAFT";
+    content: "RELEASE CANDIDATE";
     -webkit-transform: rotate(331deg);
     -moz-transform: rotate(331deg);
     -o-transform: rotate(331deg);
     transform: rotate(331deg);
-    font-size: 20em;
+    font-size: 10em;
     color: rgba(255, 5, 5, 0.17);
     position: absolute;
 }

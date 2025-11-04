@@ -11,16 +11,16 @@ A huge thank you to everyone who contributed data and perspectives in the survey
 
 
 
-* **A01:2025 - Broken Access Control**
-* **A02:2025 - Security Misconfiguration**
-* **A03:2025 - Software Supply Chain Failures**
-* **A04:2025 - Cryptographic Failures**
-* **A05:2025 - Injection**
-* **A06:2025 - Insecure Design**
-* **A07:2025 - Authentication Failures**
-* **A08:2025 - Software or Data Integrity Failures**
-* **A09:2025 - Logging & Alerting Failures**
-* **A10:2025 - Mishandling of Exceptional Conditions**
+* [A01:2025 - Broken Access Control](2025/A01_2025-Broken_Access_Control.md)
+* [A02:2025 - Security Misconfiguration](2025/A02_2025-Security_Misconfiguration.md)
+* [A03:2025 - Software Supply Chain Failures](2025/A03_2025-Software_Supply_Chain_Failures.md)
+* [A04:2025 - Cryptographic Failures](2025/A04_2025-Cryptographic_Failures.md)
+* [A05:2025 - Injection](2025/A05_2025-Injection.md)
+* [A06:2025 - Insecure Design](2025/A06_2025-Insecure_Design.md)
+* [A07:2025 - Authentication Failures](2025/A07_2025-Authentication_Failures.md)
+* [A08:2025 - Software or Data Integrity Failures](2025/A08_2025-Software_or_Data_Integrity_Failures.md)
+* [A09:2025 - Logging & Alerting Failures](2025/A09_2025-Logging_and_Alerting_Failures.md)
+* [A10:2025 - Mishandling of Exceptional Conditions](2025/A10_2025-Mishandling_of_Exceptional_Conditions.md)
 
 
 ## What's changed in the Top 10 for 2025
@@ -115,13 +115,7 @@ This release candidate was originally released on 6th November 2025.
 Please log any corrections or issues:
 
 ### Project links:
-#### DRAFT site:
-* [DRAFT Homepage]()
-* [DRAFT GitHub repository](https://github.com/Neil-Smithline/2025-Top10-DRAFT)
-
-
-#### Main site:
-* [Main Homepage](https://owasp.org/www-project-top-ten/)
-* [Main GitHub repository](https://github.com/OWASP/Top10)
+* [Homepage](https://owasp.org/www-project-top-ten/)
+* [GitHub repository](https://github.com/OWASP/Top10)
 
 
