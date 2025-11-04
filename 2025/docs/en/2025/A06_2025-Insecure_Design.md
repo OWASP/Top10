@@ -117,80 +117,80 @@ Secure software requires a secure development lifecycle, a secure design pattern
 
 ## List of Mapped CWEs
 
-[CWE-73 External Control of File Name or Path](https://cwe.mitre.org/data/definitions/73.html)
+* [CWE-73 External Control of File Name or Path](https://cwe.mitre.org/data/definitions/73.html)
 
-[CWE-183 Permissive List of Allowed Inputs](https://cwe.mitre.org/data/definitions/183.html)
+* [CWE-183 Permissive List of Allowed Inputs](https://cwe.mitre.org/data/definitions/183.html)
 
-[CWE-256 Unprotected Storage of Credentials](https://cwe.mitre.org/data/definitions/256.html)
+* [CWE-256 Unprotected Storage of Credentials](https://cwe.mitre.org/data/definitions/256.html)
 
-[CWE-266 Incorrect Privilege Assignment](https://cwe.mitre.org/data/definitions/266.html)
+* [CWE-266 Incorrect Privilege Assignment](https://cwe.mitre.org/data/definitions/266.html)
 
-[CWE-269 Improper Privilege Management](https://cwe.mitre.org/data/definitions/269.html)
+* [CWE-269 Improper Privilege Management](https://cwe.mitre.org/data/definitions/269.html)
 
-[CWE-286 Incorrect User Management](https://cwe.mitre.org/data/definitions/286.html)
+* [CWE-286 Incorrect User Management](https://cwe.mitre.org/data/definitions/286.html)
 
-[CWE-311 Missing Encryption of Sensitive Data](https://cwe.mitre.org/data/definitions/311.html)
+* [CWE-311 Missing Encryption of Sensitive Data](https://cwe.mitre.org/data/definitions/311.html)
 
-[CWE-312 Cleartext Storage of Sensitive Information](https://cwe.mitre.org/data/definitions/312.html)
+* [CWE-312 Cleartext Storage of Sensitive Information](https://cwe.mitre.org/data/definitions/312.html)
 
-[CWE-313 Cleartext Storage in a File or on Disk](https://cwe.mitre.org/data/definitions/313.html)
+* [CWE-313 Cleartext Storage in a File or on Disk](https://cwe.mitre.org/data/definitions/313.html)
 
-[CWE-316 Cleartext Storage of Sensitive Information in Memory](https://cwe.mitre.org/data/definitions/316.html)
+* [CWE-316 Cleartext Storage of Sensitive Information in Memory](https://cwe.mitre.org/data/definitions/316.html)
 
-[CWE-362 Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')](https://cwe.mitre.org/data/definitions/362.html)
+* [CWE-362 Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')](https://cwe.mitre.org/data/definitions/362.html)
 
-[CWE-382 J2EE Bad Practices: Use of System.exit()](https://cwe.mitre.org/data/definitions/382.html)
+* [CWE-382 J2EE Bad Practices: Use of System.exit()](https://cwe.mitre.org/data/definitions/382.html)
 
-[CWE-419 Unprotected Primary Channel](https://cwe.mitre.org/data/definitions/419.html)
+* [CWE-419 Unprotected Primary Channel](https://cwe.mitre.org/data/definitions/419.html)
 
-[CWE-434 Unrestricted Upload of File with Dangerous Type](https://cwe.mitre.org/data/definitions/434.html)
+* [CWE-434 Unrestricted Upload of File with Dangerous Type](https://cwe.mitre.org/data/definitions/434.html)
 
-[CWE-436 Interpretation Conflict](https://cwe.mitre.org/data/definitions/436.html)
+* [CWE-436 Interpretation Conflict](https://cwe.mitre.org/data/definitions/436.html)
 
-[CWE-444 Inconsistent Interpretation of HTTP Requests ('HTTP Request Smuggling')](https://cwe.mitre.org/data/definitions/444.html)
+* [CWE-444 Inconsistent Interpretation of HTTP Requests ('HTTP Request Smuggling')](https://cwe.mitre.org/data/definitions/444.html)
 
-[CWE-451 User Interface (UI) Misrepresentation of Critical Information](https://cwe.mitre.org/data/definitions/451.html)
+* [CWE-451 User Interface (UI) Misrepresentation of Critical Information](https://cwe.mitre.org/data/definitions/451.html)
 
-[CWE-454 External Initialization of Trusted Variables or Data Stores](https://cwe.mitre.org/data/definitions/454.html)
+* [CWE-454 External Initialization of Trusted Variables or Data Stores](https://cwe.mitre.org/data/definitions/454.html)
 
-[CWE-472 External Control of Assumed-Immutable Web Parameter](https://cwe.mitre.org/data/definitions/472.html)
+* [CWE-472 External Control of Assumed-Immutable Web Parameter](https://cwe.mitre.org/data/definitions/472.html)
 
-[CWE-501 Trust Boundary Violation](https://cwe.mitre.org/data/definitions/501.html)
+* [CWE-501 Trust Boundary Violation](https://cwe.mitre.org/data/definitions/501.html)
 
-[CWE-522 Insufficiently Protected Credentials](https://cwe.mitre.org/data/definitions/522.html)
+* [CWE-522 Insufficiently Protected Credentials](https://cwe.mitre.org/data/definitions/522.html)
 
-[CWE-525 Use of Web Browser Cache Containing Sensitive Information](https://cwe.mitre.org/data/definitions/525.html)
+* [CWE-525 Use of Web Browser Cache Containing Sensitive Information](https://cwe.mitre.org/data/definitions/525.html)
 
-[CWE-539 Use of Persistent Cookies Containing Sensitive Information](https://cwe.mitre.org/data/definitions/539.html)
+* [CWE-539 Use of Persistent Cookies Containing Sensitive Information](https://cwe.mitre.org/data/definitions/539.html)
 
-[CWE-598 Use of GET Request Method With Sensitive Query Strings](https://cwe.mitre.org/data/definitions/598.html)
+* [CWE-598 Use of GET Request Method With Sensitive Query Strings](https://cwe.mitre.org/data/definitions/598.html)
 
-[CWE-602 Client-Side Enforcement of Server-Side Security](https://cwe.mitre.org/data/definitions/602.html)
+* [CWE-602 Client-Side Enforcement of Server-Side Security](https://cwe.mitre.org/data/definitions/602.html)
 
-[CWE-628 Function Call with Incorrectly Specified Arguments](https://cwe.mitre.org/data/definitions/628.html)
+* [CWE-628 Function Call with Incorrectly Specified Arguments](https://cwe.mitre.org/data/definitions/628.html)
 
-[CWE-642 External Control of Critical State Data](https://cwe.mitre.org/data/definitions/642.html)
+* [CWE-642 External Control of Critical State Data](https://cwe.mitre.org/data/definitions/642.html)
 
-[CWE-646 Reliance on File Name or Extension of Externally-Supplied File](https://cwe.mitre.org/data/definitions/646.html)
+* [CWE-646 Reliance on File Name or Extension of Externally-Supplied File](https://cwe.mitre.org/data/definitions/646.html)
 
-[CWE-653 Insufficient Compartmentalization](https://cwe.mitre.org/data/definitions/653.html)
+* [CWE-653 Insufficient Compartmentalization](https://cwe.mitre.org/data/definitions/653.html)
 
-[CWE-656 Reliance on Security Through Obscurity](https://cwe.mitre.org/data/definitions/656.html)
+* [CWE-656 Reliance on Security Through Obscurity](https://cwe.mitre.org/data/definitions/656.html)
 
-[CWE-657 Violation of Secure Design Principles](https://cwe.mitre.org/data/definitions/657.html)
+* [CWE-657 Violation of Secure Design Principles](https://cwe.mitre.org/data/definitions/657.html)
 
-[CWE-676 Use of Potentially Dangerous Function](https://cwe.mitre.org/data/definitions/676.html)
+* [CWE-676 Use of Potentially Dangerous Function](https://cwe.mitre.org/data/definitions/676.html)
 
-[CWE-693 Protection Mechanism Failure](https://cwe.mitre.org/data/definitions/693.html)
+* [CWE-693 Protection Mechanism Failure](https://cwe.mitre.org/data/definitions/693.html)
 
-[CWE-799 Improper Control of Interaction Frequency](https://cwe.mitre.org/data/definitions/799.html)
+* [CWE-799 Improper Control of Interaction Frequency](https://cwe.mitre.org/data/definitions/799.html)
 
-[CWE-807 Reliance on Untrusted Inputs in a Security Decision](https://cwe.mitre.org/data/definitions/807.html)
+* [CWE-807 Reliance on Untrusted Inputs in a Security Decision](https://cwe.mitre.org/data/definitions/807.html)
 
-[CWE-841 Improper Enforcement of Behavioral Workflow](https://cwe.mitre.org/data/definitions/841.html)
+* [CWE-841 Improper Enforcement of Behavioral Workflow](https://cwe.mitre.org/data/definitions/841.html)
 
-[CWE-1021 Improper Restriction of Rendered UI Layers or Frames](https://cwe.mitre.org/data/definitions/1021.html)
+* [CWE-1021 Improper Restriction of Rendered UI Layers or Frames](https://cwe.mitre.org/data/definitions/1021.html)
 
-[CWE-1022 Use of Web Link to Untrusted Target with window.opener Access](https://cwe.mitre.org/data/definitions/1022.html)
+* [CWE-1022 Use of Web Link to Untrusted Target with window.opener Access](https://cwe.mitre.org/data/definitions/1022.html)
 
-[CWE-1125 Excessive Attack Surface](https://cwe.mitre.org/data/definitions/1125.html)
+* [CWE-1125 Excessive Attack Surface](https://cwe.mitre.org/data/definitions/1125.html)
