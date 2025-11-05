@@ -2,7 +2,7 @@
 
 # Introduction
 
-![OWASP Logo](../assets/TOP_10_logo_Final_Logo_Colour.png)
+![OWASP Logo](../../assets/TOP_10_logo_Final_Logo_Colour.png)
 
 Welcome to the 8th installment of the OWASP Top Ten! 
 
@@ -13,34 +13,34 @@ A huge thank you to everyone who contributed data and perspectives in the survey
 
 
 
-* [A01:2025 - Broken Access Control](2025/A01_2025-Broken_Access_Control.md)
-* [A02:2025 - Security Misconfiguration](2025/A02_2025-Security_Misconfiguration.md)
-* [A03:2025 - Software Supply Chain Failures](2025/A03_2025-Software_Supply_Chain_Failures.md)
-* [A04:2025 - Cryptographic Failures](2025/A04_2025-Cryptographic_Failures.md)
-* [A05:2025 - Injection](2025/A05_2025-Injection.md)
-* [A06:2025 - Insecure Design](2025/A06_2025-Insecure_Design.md)
-* [A07:2025 - Authentication Failures](2025/A07_2025-Authentication_Failures.md)
-* [A08:2025 - Software or Data Integrity Failures](2025/A08_2025-Software_or_Data_Integrity_Failures.md)
-* [A09:2025 - Logging & Alerting Failures](2025/A09_2025-Logging_and_Alerting_Failures.md)
-* [A10:2025 - Mishandling of Exceptional Conditions](2025/A10_2025-Mishandling_of_Exceptional_Conditions.md)
+* [A01:2025 - Broken Access Control](A01_2025-Broken_Access_Control.md)
+* [A02:2025 - Security Misconfiguration](A02_2025-Security_Misconfiguration.md)
+* [A03:2025 - Software Supply Chain Failures](A03_2025-Software_Supply_Chain_Failures.md)
+* [A04:2025 - Cryptographic Failures](A04_2025-Cryptographic_Failures.md)
+* [A05:2025 - Injection](A05_2025-Injection.md)
+* [A06:2025 - Insecure Design](A06_2025-Insecure_Design.md)
+* [A07:2025 - Authentication Failures](A07_2025-Authentication_Failures.md)
+* [A08:2025 - Software or Data Integrity Failures](A08_2025-Software_or_Data_Integrity_Failures.md)
+* [A09:2025 - Logging & Alerting Failures](A09_2025-Logging_and_Alerting_Failures.md)
+* [A10:2025 - Mishandling of Exceptional Conditions](A10_2025-Mishandling_of_Exceptional_Conditions.md)
 
 
 ## What's changed in the Top 10 for 2025
 
 There are two new categories and one consolidation in the Top Ten for 2025. We’ve worked to maintain our focus on the root cause over the symptoms as much as possible. With the complexity of software engineering and software security, it’s basically impossible to create ten categories without some level of overlap.
 
-![Mapping](../assets/mappings.png)
+![Mapping](../../assets/2025-mappings.png)
 
-* **[A01:2025 - Broken Access Control](2025/A01_2025-Broken_Access_Control.md)** maintains its position at #1 as the most serious application security risk; the contributed data indicates that on average, 3.73% of applications tested had one or more of the 40 Common Weakness Enumerations (CWEs) in this category. As indicated by the dashed line in the above figure, Server-Side Request Forgery (SSRF) has been rolled into this category.
-* **[A02:2025 - Security Misconfiguration](2025/A02_2025-Security_Misconfiguration.md)** moved up from #5 in 2021 to #2 in 2025. Misconfigurations are more prevalent in the data for this cycle. 3.00% of the applications tested had one or more of the 16 CWEs in this category. This is not surprising, as software engineering is continuing to increase the amount of an application’s behavior that is based on configurations.
-* **[A03:2025 - Software Supply Chain Failures](2025/A03_2025-Software_Supply_Chain_Failures.md)** is an expansion of [A06:2021-Vulnerable and Outdated Components](https://owasp.org/Top10/A06_2021-Vulnerable_and_Outdated_Components/) to include a broader scope of compromises occurring within or across the entire ecosystem of software dependencies, build systems, and distribution infrastructure. This category was overwhelmingly voted a top concern in the community survey. This category has 5 CWEs and a limited presence in the collected data, but we believe this is due to challenges in testing and hope that testing catches up in this area. This category has the fewest occurrences in the data, but also the highest average exploit and impact scores from CVEs.
-* **[A04:2025 - Cryptographic Failures](2025/A04_2025-Cryptographic_Failures.md)** falls two spots from #2 to #4 in the ranking. The contributed data indicates that, on average, 3.80% of applications have one or more of the 32 CWEs in this category. This category often leads to sensitive data exposure or system compromise.
-* **[A05:2025 - Injection](2025/A05_2025-Injection.md)** falls two spots from #3 to #5 in the ranking, maintaining its position relative to Cryptographic Failures and Insecure Design. Injection is one of the most tested categories, with the greatest number of CVEs associated with the 38 CWEs in this category. Injection includes a range of issues from Cross-site Scripting (high frequency/low impact) to SQL Injection (low frequency/high impact) vulnerabilities.
-* **[A06:2025 - Insecure Design](2025/A06_2025-Insecure_Design.md)** slides two spots from #4 to #6 in the ranking as Security Misconfiguration and Software Supply Chain Failures leapfrog it. This category was introduced in 2021, and we have seen noticeable improvements in the industry related to threat modeling and a greater emphasis on secure design.
-* **[A07:2025 - Authentication Failures](2025/A07_2025-Authentication_Failures.md)** maintains its position at #7 with a slight name change (prevously it was “[Identification and Authentication Failures](https://owasp.org/Top10/A07_2021-Identification_and_Authentication_Failures/)") to more accurately reflect the 36 CWEs in this category. This category remains important, but the increased use of standardized frameworks for authentication appears to be having beneficial effects on the occurrences of authentication failures.
-* **[A08:2025 - Software or Data Integrity Failures](2025/A08_2025-Software_or_Data_Integrity_Failures.md)** continues at #8 in the list. This category is focused on the failure to maintain trust boundaries and verify the integrity of software, code, and data artifacts at a lower level than Software Supply Chain Failures. 
-* **[A09:2025 - Logging & Alerting Failures](2025/A09_2025-Logging_and_Alerting_Failures.md)** retains its position at #9. This category has a slight name change (previously [Security Logging and Monitoring Failures](https://owasp.org/Top10/A09_2021-Security_Logging_and_Monitoring_Failures/)”) to emphasize the importance of the alerting functionality needed to induce appropriate action on relevant logging events. Great logging with no alerting is of minimal value in identifying security incidents. This category will always be underrepresented in the data, and was again voted into a position in the list from the community survey participants.
-* **[A10:2025 - Mishandling of Exceptional Conditions](2025/A10_2025-Mishandling_of_Exceptional_Conditions.md)** is a new category for 2025. This category contains 24 CWEs focusing on improper error handling, logical errors, failing open, and other related scenarios stemming from abnormal conditions that systems may encounter.
+* **[A01:2025 - Broken Access Control](A01_2025-Broken_Access_Control.md)** maintains its position at #1 as the most serious application security risk; the contributed data indicates that on average, 3.73% of applications tested had one or more of the 40 Common Weakness Enumerations (CWEs) in this category. As indicated by the dashed line in the above figure, Server-Side Request Forgery (SSRF) has been rolled into this category.
+* **[A02:2025 - Security Misconfiguration](A02_2025-Security_Misconfiguration.md)** moved up from #5 in 2021 to #2 in 2025. Misconfigurations are more prevalent in the data for this cycle. 3.00% of the applications tested had one or more of the 16 CWEs in this category. This is not surprising, as software engineering is continuing to increase the amount of an application’s behavior that is based on configurations.
+* **[A03:2025 - Software Supply Chain Failures](A03_2025-Software_Supply_Chain_Failures.md)** is an expansion of [A06:2021-Vulnerable and Outdated Components](https://owasp.org/Top10/A06_2021-Vulnerable_and_Outdated_Components/) to include a broader scope of compromises occurring within or across the entire ecosystem of software dependencies, build systems, and distribution infrastructure. This category was overwhelmingly voted a top concern in the community survey. This category has 5 CWEs and a limited presence in the collected data, but we believe this is due to challenges in testing and hope that testing catches up in this area. This category has the fewest occurrences in the data, but also the highest average exploit and impact scores from CVEs.
+* **[A04:2025 - Cryptographic Failures](A04_2025-Cryptographic_Failures.md)** falls two spots from #2 to #4 in the ranking. The contributed data indicates that, on average, 3.80% of applications have one or more of the 32 CWEs in this category. This category often leads to sensitive data exposure or system compromise.
+* **[A05:2025 - Injection](A05_2025-Injection.md)** falls two spots from #3 to #5 in the ranking, maintaining its position relative to Cryptographic Failures and Insecure Design. Injection is one of the most tested categories, with the greatest number of CVEs associated with the 38 CWEs in this category. Injection includes a range of issues from Cross-site Scripting (high frequency/low impact) to SQL Injection (low frequency/high impact) vulnerabilities.
+* **[A06:2025 - Insecure Design](A06_2025-Insecure_Design.md)** slides two spots from #4 to #6 in the ranking as Security Misconfiguration and Software Supply Chain Failures leapfrog it. This category was introduced in 2021, and we have seen noticeable improvements in the industry related to threat modeling and a greater emphasis on secure design.
+* **[A07:2025 - Authentication Failures](A07_2025-Authentication_Failures.md)** maintains its position at #7 with a slight name change (prevously it was “[Identification and Authentication Failures](https://owasp.org/Top10/A07_2021-Identification_and_Authentication_Failures/)") to more accurately reflect the 36 CWEs in this category. This category remains important, but the increased use of standardized frameworks for authentication appears to be having beneficial effects on the occurrences of authentication failures.
+* **[A08:2025 - Software or Data Integrity Failures](A08_2025-Software_or_Data_Integrity_Failures.md)** continues at #8 in the list. This category is focused on the failure to maintain trust boundaries and verify the integrity of software, code, and data artifacts at a lower level than Software Supply Chain Failures. 
+* **[A09:2025 - Logging & Alerting Failures](A09_2025-Logging_and_Alerting_Failures.md)** retains its position at #9. This category has a slight name change (previously [Security Logging and Monitoring Failures](https://owasp.org/Top10/A09_2021-Security_Logging_and_Monitoring_Failures/)”) to emphasize the importance of the alerting functionality needed to induce appropriate action on relevant logging events. Great logging with no alerting is of minimal value in identifying security incidents. This category will always be underrepresented in the data, and was again voted into a position in the list from the community survey participants.
+* **[A10:2025 - Mishandling of Exceptional Conditions](A10_2025-Mishandling_of_Exceptional_Conditions.md)** is a new category for 2025. This category contains 24 CWEs focusing on improper error handling, logical errors, failing open, and other related scenarios stemming from abnormal conditions that systems may encounter.
 
 
 ## Methodology
