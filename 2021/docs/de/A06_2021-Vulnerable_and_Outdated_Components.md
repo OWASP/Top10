@@ -34,7 +34,7 @@ Die Anwendung besitzt möglicherweise Schwachstellen, wenn folgendes zutrifft:
 
 - Softwareentwickler führen keine Kompatibilitäts-Tests der aktualisierten oder gepatchten Bibliotheken durch.
 
-- Die Komponenten sind nicht sicher konfiguriert (siehe [A05:2021-Sicherheitsrelevante Fehlkonfiguration](A05_2021-Security_Misconfiguration.de.md)).
+- Die Komponenten sind nicht sicher konfiguriert (siehe [A05:2021-Sicherheitsrelevante Fehlkonfiguration](A05_2021-Security_Misconfiguration.md)).
 <!-- TODO OSIB Link -->
 
 ## Prävention und Gegenmaßnahmen {{ osib_anchor(osib=osib ~ ".how to prevent", id=id ~ "-how_to_prevent", name=title ~ ": How to Prevent", lang=lang, source=source ~ "#" ~ id, parent=osib) }}
@@ -45,7 +45,7 @@ Es sollte ein Patch-Management-Prozess vorhanden sein:
 
 - Kontinuierliche Bestandsaufnahme der Versionen sowohl der clientseitigen als auch der serverseitigen Komponenten (z. B. Frameworks, Bibliotheken) und ihrer Abhängigkeiten mithilfe von Tools wie "versions", "OWASP Dependency Check", "retire.js" usw. Überwachen Sie kontinuierlich Quellen wie Common Vulnerability and Exposures (CVE) und die National Vulnerability Database (NVD) für Schwachstellen in den Komponenten. Verwenden Sie Software-Tools zur Analyse der Softwarebestandteile, um den Prozess zu automatisieren. Abonnieren Sie E-Mail-Benachrichtigungen zu Sicherheitslücken im Zusammenhang mit den verwendeten Komponenten.
 
-- Beziehen Sie Komponenten nur von offiziellen Quellen über sichere Links. Bevorzugen Sie signierte Pakete, um die Wahrscheinlichkeit zu verringern, dass eine modifizierte, bösartige Komponente enthalten ist (siehe [A08:2021-Fehlerhafte Prüfung der Software- und Datenintegrität](A08_2021-Software_and_Data_Integrity_Failures.de.md)).
+- Beziehen Sie Komponenten nur von offiziellen Quellen über sichere Links. Bevorzugen Sie signierte Pakete, um die Wahrscheinlichkeit zu verringern, dass eine modifizierte, bösartige Komponente enthalten ist (siehe [A08:2021-Fehlerhafte Prüfung der Software- und Datenintegrität](A08_2021-Software_and_Data_Integrity_Failures.md)).
 
 - Überwachen Sie Bibliotheken und Komponenten, die nicht gewartet werden oder keine Sicherheitspatches für ältere Versionen erstellen. Wenn das Patchen nicht möglich ist, erwägen Sie die Bereitstellung eines virtuellen Patches zur Überwachung, Erkennung oder zum Schutz vor dem entdeckten Problem.
 

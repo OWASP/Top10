@@ -19,7 +19,7 @@ Ein großes Dankeschön an alle, die mit ihrer Zeit und Daten für diese Ausgabe
 
 ## Was sich in den Top 10 für 2021 geändert hat
 
-Es gibt drei neue Kategorien, vier Kategorien mit Änderungen im Namen und teilweise auch im Umfang (im englischen Original, siehe auch [Vorwort der deutschen Version](../0x00-notice/#vorwort-der-deutschen-version)) und eine gewisse Konsolidierung in den Top 10 für 2021. Wir haben bei Bedarf Namen geändert, um uns auf die jeweilige <b>Grundursache statt auf Symptome</b> zu konzentrieren.
+Es gibt drei neue Kategorien, vier Kategorien mit Änderungen im Namen und teilweise auch im Umfang (im englischen Original, siehe auch [Vorwort der deutschen Version](../0x00_2021-notice/#vorwort-der-deutschen-version)) und eine gewisse Konsolidierung in den Top 10 für 2021. Wir haben bei Bedarf Namen geändert, um uns auf die jeweilige <b>Grundursache statt auf Symptome</b> zu konzentrieren.
 
 ![Zuordnung](assets/mapping.png)
 

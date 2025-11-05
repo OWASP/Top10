@@ -6,7 +6,7 @@ Wenn Sie die OWASP Top 10 als Coding- oder Teststandard verwenden möchten,
 sollten Sie wissen, dass es sich um das absolute Minimum und nur um einen Anfang handelt.
 
 Eine der Schwierigkeiten bei der Verwendung der OWASP Top 10 als Standard besteht darin, dass wir AppSec-Risiken dokumentieren und nicht unbedingt leicht testbare Probleme.
-Beispielsweise liegt [A04:2021 Unsicheres Anwendungsdesign](A04_2021-Insecure_Design.de.md) außerhalb des Rahmens der meisten Testverfahren.
+Beispielsweise liegt [A04:2021 Unsicheres Anwendungsdesign](A04_2021-Insecure_Design.md) außerhalb des Rahmens der meisten Testverfahren.
 Ein weiteres Beispiel ist das Testen, ob eine wirksame Protokollierung und Überwachung implementiert und operativ ist, was nur durch Befragungen und Stichproben wirksamer Behandlungen von Incidents möglich ist.
 Ein Tool zur statischen CodeAnalyse kann nach fehlender Protokollierung suchen,
 es wird jedoch unmöglich sein, festzustellen, ob die Geschäftslogik oder die Zugriffskontrolle kritische Sicherheitsverstöße protokolliert. Penetrationstests werden möglicherweise nur in einer Testumgebung stattfinden, die selten in der gleichen Weise wie die Produktion überwacht ist, dabei ist es schwierig feststellen ob eine Reaktion auf die Vorfälle ausgelöst wurde.
