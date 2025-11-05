@@ -75,7 +75,6 @@ We have grouped the CWEs to … vulnerability groups by expert knowledge.
 
 We have linked the CWEs to CVEs and used the max/average CVSS scores (?) …
 
- \
 We have normalized the CVSSv2 and CVSSv3 scores by …
 
 We have calculated the average exploitability and impact by weighting the normalized CVSS Scores by the prevalence of the CWEs and the coverage of tests by the CWE (?) ….
