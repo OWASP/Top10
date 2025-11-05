@@ -38,7 +38,7 @@ Die Anwendung besitzt möglicherweise Schwachstellen, wenn folgendes zutrifft:
 
 - Der Server sendet keine Sicherheits-Header oder -Direktiven, bzw. diese sind nicht sicher konfiguriert.
 
-- Die Software ist veraltet oder verwundbar (siehe [A06:2021-Unsichere oder veraltete Komponenten](A06_2021-Vulnerable_and_Outdated_Components.de.md)).
+- Die Software ist veraltet oder verwundbar (siehe [A06:2021-Unsichere oder veraltete Komponenten](A06_2021-Vulnerable_and_Outdated_Components.md)).
 
 Ohne einen abgestimmten und reproduzierbaren Prozess zur sicheren Konfiguration sind Systeme einem höheren Risiko ausgesetzt!
 
@@ -50,7 +50,7 @@ Es sollten sichere Installationsprozesse implementiert werden, darunter:
 
 - Eine minimale Plattform ohne unnötige Funktionen, Komponenten, Dokumentation und Beispiele: Entfernen Sie Funktionen und Frameworks die Sie nicht verwenden oder installieren Sie diese erst gar nicht.
 
-- Überprüfen und Aktualisieren der Konfigurationen, die für alle Sicherheitshinweise, Updates und Patches im Rahmen des Patch-Verwaltungsprozesses geeignet sind (siehe [A06:2021-Unsichere oder veraltete Komponenten](A06_2021-Vulnerable_and_Outdated_Components.de.md)). Überprüfen Sie die Cloud-Speicherberechtigungen (z. B. S3-Bucket-Berechtigungen).
+- Überprüfen und Aktualisieren der Konfigurationen, die für alle Sicherheitshinweise, Updates und Patches im Rahmen des Patch-Verwaltungsprozesses geeignet sind (siehe [A06:2021-Unsichere oder veraltete Komponenten](A06_2021-Vulnerable_and_Outdated_Components.md)). Überprüfen Sie die Cloud-Speicherberechtigungen (z. B. S3-Bucket-Berechtigungen).
 
 - Eine segmentierte Anwendungsarchitektur sorgt durch Segmentierung, Containerisierung oder Cloud-Sicherheitsgruppen (ACLs) für eine effektive und sichere Trennung zwischen Komponenten oder Mandanten.
 

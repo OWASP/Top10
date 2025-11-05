@@ -38,7 +38,7 @@ Entwickler können SSRF verhindern, indem sie folgende Defense-in-Depth-Controls
 - Setzen Sie standardmäßig blockierende Firewall-Richtlinien oder Netzwerkzugriffskontrollregeln ein, um den gesamten Intranet-Verkehr zu blockieren, der nicht unbedingt erforderlich ist.
 <br/> *Hinweise:*<br> 
 ~ Legen Sie eine Zuständigkeit und einen Lebenszyklus für Firewall-Regeln auf der Grundlage von Anwendungen fest.<br/>
-~ Protokollieren aller akzeptierten *und* blockierten Netzströme auf Firewalls (siehe [A09:2021 – Fehler beim Logging und Monitoring](A09_2021-Security_Logging_and_Monitoring_Failures.de.md)).
+~ Protokollieren aller akzeptierten *und* blockierten Netzströme auf Firewalls (siehe [A09:2021 – Fehler beim Logging und Monitoring](A09_2021-Security_Logging_and_Monitoring_Failures.md)).
 
 ### **Auf der Anwendungsebene:**
 
