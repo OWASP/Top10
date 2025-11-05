@@ -1,3 +1,4 @@
+/* Styles written here are applied to all URLs have `/2025/` in them */
 article.md-content__inner.md-typeset:before {
     content: "RELEASE CANDIDATE";
     -webkit-transform: rotate(331deg);

@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="../../assets/css/RC-stylesheet.css" />
+
 # Next Steps
 
 By design, the OWASP Top 10 is innately limited to the ten most significant risks. Every OWASP Top 10 has “on the cusp” risks considered at length for inclusion, but in the end, didn't make the cut. The other risks were more prevalent and impactful.

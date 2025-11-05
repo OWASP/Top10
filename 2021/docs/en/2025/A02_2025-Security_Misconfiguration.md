@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="../../assets/css/RC-stylesheet.css" />
+
 # A02:2025 Security Misconfiguration ![icon](../../assets/TOP_10_Icons_Final_Security_Misconfiguration.png){: style="height:80px;width:80px" align="right"}
 
 

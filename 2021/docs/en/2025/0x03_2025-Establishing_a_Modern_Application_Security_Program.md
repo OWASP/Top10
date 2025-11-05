@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="../../assets/css/RC-stylesheet.css" />
+
 # Establishing a Modern Application Security Program
 
 The OWASP Top Ten lists are awareness documents, meant to bring awareness to the most critical risks of whichever topic they cover. They are not meant to be a complete list, only a starting place. In previous versions of this list we have prescribed starting an application security program as the best way to avoid these risks, and more. In this section we will cover how to start and build a modern application security program.
