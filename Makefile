@@ -1,7 +1,7 @@
 .PHONY: help all genserve
 .SILENT: 
 
-year := 2025
+year := 2021
 port := 8000
 
 DEBUG := echo DEBUG:
@@ -41,5 +41,3 @@ genserve: generate serve  # Generate the site, then serve it
 publish: generate # Publish the generated site to GitHub Pages
 	($(DEBUG) $(activate) && $(DEBUG) cd $(year) && $(DEBUG) mkdocs gh-deploy --force)
 
-t10-2021: year:=2021
-t10-2021: all    # Make 2021 site

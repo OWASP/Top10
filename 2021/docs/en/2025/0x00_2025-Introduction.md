@@ -1,6 +1,6 @@
 # Introduction
 
-![OWASP Logo](assets/TOP_10_logo_Final_Logo_Colour.png)
+![OWASP Logo](../assets/TOP_10_logo_Final_Logo_Colour.png)
 
 Welcome to the 8th installment of the OWASP Top Ten! 
 
