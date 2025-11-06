@@ -223,10 +223,10 @@ plugins:
             A09 Security Logging and Monitoring Failures: A09 セキュリティログとモニタリングの失敗
             A10 Server Side Request Forgery (SSRF): A10 サーバーサイドリクエストフォージェリ (SSRF)
             Next Steps: Next Steps
-#        - locale: pt_BR
-#          name: pt_BR - Português (Brasil)
-        - locale: pt
-          name: pt - Português (Brasil)
+        - locale: pt-BR
+          name: pt-BR - Português (Brasil)
+#        - locale: pt
+#          name: pt - Português (Brasil)
           build: true
           nav_translations:
             Home: Início
@@ -346,12 +346,12 @@ extra:
     - name: ja - 日本語
       link: /ja/
       lang: ja
-#    - name: pt_BR - Português (Brasil)
-#      link: /pt_BR/
-#      lang: pt_BR
-    - name: pt - Português (Brasil)
-      link: /pt/
-      lang: pt
+    - name: pt-BR - Português (Brasil)
+      link: /pt-BR/
+      lang: pt-BR
+#    - name: pt - Português (Brasil)
+#      link: /pt/
+#      lang: pt
     - name: tr - Türkçe
       link: /tr/
       lang: tr
