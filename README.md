@@ -2,6 +2,9 @@
 
 Official OWASP Top 10 Document Repository
 
+## OWASP Top 10 2025 - Coming Soon!
+The team is currently working on finalizing the official OWASP Top 10 webpage its transitioning between the 2021 to 2025 version of the OWASP Top 10! 
+
 ## OWASP Top 10 2021 - RELEASED
 
 Please log any [feedback, comments, or log issues](https://github.com/OWASP/Top10/issues) here.
