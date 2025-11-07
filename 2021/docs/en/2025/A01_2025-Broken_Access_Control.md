@@ -86,7 +86,7 @@ Access control is only effective when implemented in trusted server-side code or
 * Disable web server directory listing and ensure file metadata (e.g., .git) and backup files are not present within web roots.
 * Log access control failures, alert admins when appropriate (e.g., repeated failures).
 * Implement rate limits on API and controller access to minimize the harm from automated attack tooling.
-* Stateful session identifiers should be invalidated on the server after logout. Stateless JWT tokens should be short-lived to minimize the window of opportunity for an attacker. For longer-lived JWTs, consider using refresh tokens and following OAuth standards to revoke access..
+* Stateful session identifiers should be invalidated on the server after logout. Stateless JWT tokens should be short-lived to minimize the window of opportunity for an attacker. For longer-lived JWTs, consider using refresh tokens and following OAuth standards to revoke access.
 * Use well-established toolkits or patterns that provide simple, declarative access controls.
 
 Developers and QA staff should include functional access control in their unit and integration tests.
