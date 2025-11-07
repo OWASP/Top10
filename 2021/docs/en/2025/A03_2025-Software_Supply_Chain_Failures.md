@@ -72,7 +72,7 @@ You are likely vulnerable if:
 * you do not fix or upgrade the underlying platform, frameworks, and dependencies in a risk-based, timely fashion. This commonly happens in environments when patching is a monthly or quarterly task under change control, leaving organizations open to days or months of unnecessary exposure before fixing vulnerabilities.
 * software developers do not test the compatibility of updated, upgraded, or patched libraries.
 * you do not secure the configurations of every part of your system (see [A02:2025-Security Misconfiguration](https://owasp.org/Top10/A05_2021-Security_Misconfiguration/)).
-* you have a complex CI/CD pipeline that uses many components but has weaker security than the rest of your application.
+* your CI/CD pipeline has weaker security than the systems it builds and deploys, especially if it is complex
 
 
 ## How to prevent. 
