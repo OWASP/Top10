@@ -1,0 +1,134 @@
+site_name: OWASP Top 10 - 2025
+site_description: OWASP Top 10 2025 Release
+site_author: OWASP Foundation
+repo_url: https://github.com/OWASP/Top10
+repo_name: OWASP/Top10
+edit_uri: edit/master/2025/docs/
+site_url: https://owasp.org/Top10
+docs_dir: docs
+site_dir: site
+strict: true
+
+# Version info
+extra:
+  version:
+    provider: mike
+    default: latest
+
+nav:
+  - Home: index.md
+  - About OWASP: about-owasp.md
+  - Methodology: methodology.md
+  - Risk Factors: risk-factors.md
+  - Top 10 Categories:
+    - A01 - AI and ML Vulnerabilities: A01-ai-ml-vulnerabilities.md
+    - A02 - Supply Chain Compromises: A02-supply-chain-compromises.md
+    - A03 - API Security Failures: A03-api-security-failures.md
+    - A04 - Cloud Misconfigurations: A04-cloud-misconfigurations.md
+    - A05 - Authentication Failures: A05-authentication-failures.md
+    - A06 - Insecure Design: A06-insecure-design.md
+    - A07 - Data Protection Failures: A07-data-protection-failures.md
+    - A08 - Software Component Vulnerabilities: A08-software-component-vulnerabilities.md
+    - A09 - Security Observability Failures: A09-security-observability-failures.md
+    - A10 - Zero Trust Violations: A10-zero-trust-violations.md
+  - For Developers: for-developers.md
+  - For Testers: for-testers.md
+  - For Organizations: for-organizations.md
+  - Data Analysis: data-analysis.md
+  - Contributing: contributing.md
+
+theme:
+  name: material
+  custom_dir: overrides
+  font:
+    text: Roboto
+    code: Roboto Mono
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: red
+      accent: red
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: red
+      accent: red
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.tracking
+    - navigation.indexes
+    - search.highlight
+    - search.share
+    - search.suggest
+    - content.code.copy
+    - content.action.edit
+    - content.action.view
+    - toc.follow
+    - announce.dismiss
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - footnotes
+  - attr_list
+  - def_list
+  - tables
+  - meta
+  - md_in_html
+
+plugins:
+  - search
+  - git-revision-date-localized
+  - minify:
+      minify_html: true
+      minify_js: true
+      minify_css: true
+  - i18n:
+      default_language: en
+      languages:
+        en: English
+        es: Español
+        fr: Français
+        de: Deutsch
+        ja: 日本語
+        zh: 中文
+        pt: Português
+  - social:
+      cards_color:
+        fill: "#e8413e"
+        text: "#ffffff"
+  - analytics:
+      provider: google
+      property: !ENV GOOGLE_ANALYTICS_KEY
+  - feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/emoticon-happy-outline
+          name: This page was helpful
+          data: 1
+          note: Thanks for your feedback!
+        - icon: material/emoticon-sad-outline
+          name: This page could be improved
+          data: 0
+          note: Thanks for your feedback! Help us improve this page by using our feedback form.
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/OWASP/Top10
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/owasp
+    - icon: fontawesome/solid/globe
+      link: https://owasp.org
+
+copyright: Copyright &copy; 2025 OWASP Foundation
