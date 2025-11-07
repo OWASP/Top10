@@ -93,15 +93,15 @@ There should be a patch management process in place to:
 
 
 There should be a change management process or tracking system in place to track changes to:
-* Your CI/CD settings (all build tools and pipeline)
-* Your code repository
+* CI/CD settings (all build tools and pipelines)
+* Code repositories
 * Sandbox areas
 * Developer IDEs
-* Your SBOM tooling, and created artifacts
-* Your logging systems and logs
+* SBOM tooling, and created artifacts
+* Logging systems and logs
 * Third party integrations, such as SaaS
-* Artifact repository 
-* Container registry
+* Artifact repositories
+* Container registries
 
 
 Harden the following systems, which includes enabling MFA and locking down IAM:
