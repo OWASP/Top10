@@ -126,7 +126,7 @@ Every organization must ensure an ongoing plan for monitoring, triaging, and app
 
 
 
-* The 2025 Bybit theft of $1.5 billion caused by a supply chain attack in wallet software that only executed when the target wallet was being used. https://thehackernews.com/2025/02/bybit-hack-traced-to-safewallet-supply.html
+* The 2025 Bybit theft of $1.5 billion was caused by [a supply chain attack in wallet software](https://www.sygnia.co/blog/sygnia-investigation-bybit-hack/) that only executed when the target wallet was being used. 
 
 **Scenario #3:** The GlassWorm supply chain attack in 2025 against the VS Code marketplace has malicious actors implement invisible, self-replicating code into a legitimate extension in the VS Marketplace, as well as several extensions in the OpenVSX Marketplace, which auto-updated onto developer machines. The worm immediately harvested local secrets from the developer machines, attempted to establish command and control, as well as emptied developer’s crypto wallets if possible. This supply chain attack was extremely advanced, fast-spreading, and damaging, and by targeting developer machines it demonstrated developers themselves are now prime targets for supply chain attacks.
 
