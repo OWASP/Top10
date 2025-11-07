@@ -1,7 +1,9 @@
 # Welcome Page
 ![OWASP Top 10 Logo](./assets/TOP_10_logo_Final_Logo_Colour-SMALL.png)
 
-# This Website is Under Construction
+# Please pardon our appearance 
+During the release of the OWASP 2025 RC1, this website is a bit messy.
+
 This site is currently hosting:
 
 - The 2021 *final* version of the OWASP Top 10. 
