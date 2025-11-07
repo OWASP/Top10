@@ -109,7 +109,7 @@ Harden the following systems, which includes enabling MFA and locking down IAM:
 * Developer workstations (regular patching, MFA, monitoring, and more)
 * Your build server & CI/CD (separation of duties, access control, signed builds, environment-scoped secrets, tamper-evident logs, more)
 * Your artifacts (ensure integrity via providence, signing, and time stamping, promote artifacts rather than rebuilding for each environment, ensure builds are immutable)
-* Infrastructure as code is managed like all code, including use of PRs and version control
+* Infrastructure as code (managed like all code, including use of PRs and version control)
 
 Every organization must ensure an ongoing plan for monitoring, triaging, and applying updates or configuration changes for the lifetime of the application or portfolio.
 
