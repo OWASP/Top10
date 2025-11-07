@@ -72,7 +72,7 @@ You are likely vulnerable if:
 * you do not fix or upgrade the underlying platform, frameworks, and dependencies in a risk-based, timely fashion. This commonly happens in environments when patching is a monthly or quarterly task under change control, leaving organizations open to days or months of unnecessary exposure before fixing vulnerabilities.
 * software developers do not test the compatibility of updated, upgraded, or patched libraries.
 * you do not secure the configurations of every part of your system (see [A02:2025-Security Misconfiguration](https://owasp.org/Top10/A05_2021-Security_Misconfiguration/)).
-* your CI/CD pipeline has weaker security than the systems it builds and deploys, especially if it is complex
+* your CI/CD pipeline has weaker security than the systems it builds and deploys, especially if it is complex.
 
 
 ## How to prevent. 
@@ -81,16 +81,15 @@ There should be a patch management process in place to:
 
 
 
-* Know your Software Bill of Materials (SBOM) of your entire software and manage the SBOM-dictionary centrally.
-* Track not just your own dependencies, but their (transitive) dependencies, and so on.
-* Remove unused dependencies, unnecessary features, components, files, and documentation. Attack surface reduction.
+* Centrally generate and manage the Software Bill of Materials (SBOM) of your entire software.
+* Track not just your direct dependencies, but their (transitive) dependencies, and so on.
+* Reduce attack surface by removing unused dependencies, unnecessary features, components, files, and documentation.
 * Continuously inventory the versions of both client-side and server-side components (e.g., frameworks, libraries) and their dependencies using tools like versions, OWASP Dependency Check, retire.js, etc.
-* Continuously monitor sources like Common Vulnerability and Exposures (CVE) and National Vulnerability Database (NVD) for vulnerabilities in the components you use. Use software composition analysis, software supply chain, or security-focused SBOM tools to automate the process. Subscribe to email alerts for security vulnerabilities related to components you use.
+* Continuously monitor sources like Common Vulnerability and Exposures (CVE), National Vulnerability Database (NVD), and [Open Source Vulnerabilities (OSV)](https://osv.dev/) for vulnerabilities in the components you use. Use software composition analysis, software supply chain, or security-focused SBOM tools to automate the process. Subscribe to alerts for security vulnerabilities related to components you use.
 * Only obtain components from official (trusted) sources over secure links. Prefer signed packages to reduce the chance of including a modified, malicious component (see [A08:2025-Software and Data Integrity Failures](https://owasp.org/Top10/A08_2021-Software_and_Data_Integrity_Failures/)).
-* Deliberately choosing which version of a dependency you use and upgrading only when there is need.
-* Monitor for libraries and components that are unmaintained or do not create security patches for older versions. If patching is not possible, consider deploying a virtual patch to monitor, detect, or protect against the discovered issue.
+* Deliberately choose which version of a dependency you use and upgrade only when there is need.
+* Monitor for libraries and components that are unmaintained or do not create security patches for older versions. If patching is not possible, consider migrating to an alternative. If that is not possible, consider deploying a virtual patch to monitor, detect, or protect against the discovered issue.
 * Update your CI/CD, IDE, and any other developer tooling regularly
-* Treat components in your CI/CD pipeline as part of this process; harden them, monitor them, and document changes accordingly
 
 
 There should be a change management process or tracking system in place to track changes to:
