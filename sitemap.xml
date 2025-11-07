@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
         <loc>None./</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="None"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/"/>
@@ -19,7 +19,7 @@
     </url>
     <url>
         <loc>None0x00_2021-introduction/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="None0x00_2021-introduction/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/0x00_2021-introduction/"/>
@@ -36,7 +36,7 @@
     </url>
     <url>
         <loc>None0x00_2021-notice/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="None0x00_2021-notice/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/0x00_2021-notice/"/>
@@ -53,7 +53,7 @@
     </url>
     <url>
         <loc>None0x01_2021-about-owasp/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="None0x01_2021-about-owasp/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/0x01_2021-about-owasp/"/>
@@ -70,7 +70,7 @@
     </url>
     <url>
         <loc>NoneA00_2021-How_to_start_an_AppSec_program_with_the_OWASP_Top_10/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="NoneA00_2021-How_to_start_an_AppSec_program_with_the_OWASP_Top_10/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A00_2021-How_to_start_an_AppSec_program_with_the_OWASP_Top_10/"/>
@@ -87,7 +87,7 @@
     </url>
     <url>
         <loc>NoneA00_2021_How_to_use_the_OWASP_Top_10_as_a_standard/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="NoneA00_2021_How_to_use_the_OWASP_Top_10_as_a_standard/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A00_2021_How_to_use_the_OWASP_Top_10_as_a_standard/"/>
@@ -104,7 +104,7 @@
     </url>
     <url>
         <loc>NoneA00_2021_Introduction/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="NoneA00_2021_Introduction/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A00_2021_Introduction/"/>
@@ -121,7 +121,7 @@
     </url>
     <url>
         <loc>NoneA01_2021-Broken_Access_Control/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="NoneA01_2021-Broken_Access_Control/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A01_2021-Broken_Access_Control/"/>
@@ -138,7 +138,7 @@
     </url>
     <url>
         <loc>NoneA02_2021-Cryptographic_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="NoneA02_2021-Cryptographic_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A02_2021-Cryptographic_Failures/"/>
@@ -155,7 +155,7 @@
     </url>
     <url>
         <loc>NoneA03_2021-Injection/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="NoneA03_2021-Injection/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A03_2021-Injection/"/>
@@ -172,7 +172,7 @@
     </url>
     <url>
         <loc>NoneA04_2021-Insecure_Design/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="NoneA04_2021-Insecure_Design/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A04_2021-Insecure_Design/"/>
@@ -189,7 +189,7 @@
     </url>
     <url>
         <loc>NoneA05_2021-Security_Misconfiguration/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="NoneA05_2021-Security_Misconfiguration/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A05_2021-Security_Misconfiguration/"/>
@@ -206,7 +206,7 @@
     </url>
     <url>
         <loc>NoneA06_2021-Vulnerable_and_Outdated_Components/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="NoneA06_2021-Vulnerable_and_Outdated_Components/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A06_2021-Vulnerable_and_Outdated_Components/"/>
@@ -223,7 +223,7 @@
     </url>
     <url>
         <loc>NoneA07_2021-Identification_and_Authentication_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="NoneA07_2021-Identification_and_Authentication_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A07_2021-Identification_and_Authentication_Failures/"/>
@@ -240,7 +240,7 @@
     </url>
     <url>
         <loc>NoneA08_2021-Software_and_Data_Integrity_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="NoneA08_2021-Software_and_Data_Integrity_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A08_2021-Software_and_Data_Integrity_Failures/"/>
@@ -257,7 +257,7 @@
     </url>
     <url>
         <loc>NoneA09_2021-Security_Logging_and_Monitoring_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="NoneA09_2021-Security_Logging_and_Monitoring_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A09_2021-Security_Logging_and_Monitoring_Failures/"/>
@@ -274,7 +274,7 @@
     </url>
     <url>
         <loc>NoneA10_2021-Server-Side_Request_Forgery_%28SSRF%29/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="NoneA10_2021-Server-Side_Request_Forgery_%28SSRF%29/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A10_2021-Server-Side_Request_Forgery_%28SSRF%29/"/>
@@ -291,7 +291,7 @@
     </url>
     <url>
         <loc>NoneA11_2021-Next_Steps/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="NoneA11_2021-Next_Steps/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A11_2021-Next_Steps/"/>
@@ -308,7 +308,7 @@
     </url>
     <url>
         <loc>None2025/0x00_2025-Introduction/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="None2025/0x00_2025-Introduction/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/0x00_2025-Introduction/"/>
@@ -325,7 +325,7 @@
     </url>
     <url>
         <loc>None2025/0x01_2025-About_OWASP/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="None2025/0x01_2025-About_OWASP/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/0x01_2025-About_OWASP/"/>
@@ -342,7 +342,7 @@
     </url>
     <url>
         <loc>None2025/0x02_2025-What_are_Application_Security_Risks/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="None2025/0x02_2025-What_are_Application_Security_Risks/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/0x02_2025-What_are_Application_Security_Risks/"/>
@@ -359,7 +359,7 @@
     </url>
     <url>
         <loc>None2025/0x03_2025-Establishing_a_Modern_Application_Security_Program/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="None2025/0x03_2025-Establishing_a_Modern_Application_Security_Program/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/0x03_2025-Establishing_a_Modern_Application_Security_Program/"/>
@@ -376,7 +376,7 @@
     </url>
     <url>
         <loc>None2025/A01_2025-Broken_Access_Control/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="None2025/A01_2025-Broken_Access_Control/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A01_2025-Broken_Access_Control/"/>
@@ -393,7 +393,7 @@
     </url>
     <url>
         <loc>None2025/A02_2025-Security_Misconfiguration/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="None2025/A02_2025-Security_Misconfiguration/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A02_2025-Security_Misconfiguration/"/>
@@ -410,7 +410,7 @@
     </url>
     <url>
         <loc>None2025/A03_2025-Software_Supply_Chain_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="None2025/A03_2025-Software_Supply_Chain_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A03_2025-Software_Supply_Chain_Failures/"/>
@@ -427,7 +427,7 @@
     </url>
     <url>
         <loc>None2025/A04_2025-Cryptographic_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="None2025/A04_2025-Cryptographic_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A04_2025-Cryptographic_Failures/"/>
@@ -444,7 +444,7 @@
     </url>
     <url>
         <loc>None2025/A05_2025-Injection/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="None2025/A05_2025-Injection/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A05_2025-Injection/"/>
@@ -461,7 +461,7 @@
     </url>
     <url>
         <loc>None2025/A06_2025-Insecure_Design/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="None2025/A06_2025-Insecure_Design/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A06_2025-Insecure_Design/"/>
@@ -478,7 +478,7 @@
     </url>
     <url>
         <loc>None2025/A07_2025-Authentication_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="None2025/A07_2025-Authentication_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A07_2025-Authentication_Failures/"/>
@@ -495,7 +495,7 @@
     </url>
     <url>
         <loc>None2025/A08_2025-Software_or_Data_Integrity_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="None2025/A08_2025-Software_or_Data_Integrity_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A08_2025-Software_or_Data_Integrity_Failures/"/>
@@ -512,7 +512,7 @@
     </url>
     <url>
         <loc>None2025/A09_2025-Logging_and_Alerting_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="None2025/A09_2025-Logging_and_Alerting_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A09_2025-Logging_and_Alerting_Failures/"/>
@@ -529,7 +529,7 @@
     </url>
     <url>
         <loc>None2025/A10_2025-Mishandling_of_Exceptional_Conditions/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="None2025/A10_2025-Mishandling_of_Exceptional_Conditions/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A10_2025-Mishandling_of_Exceptional_Conditions/"/>
@@ -546,7 +546,7 @@
     </url>
     <url>
         <loc>None2025/X01_2025-Next_Steps/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="None2025/X01_2025-Next_Steps/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/X01_2025-Next_Steps/"/>
@@ -563,7 +563,7 @@
     </url>
     <url>
         <loc>Nonear/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/"/>
         <xhtml:link rel="alternate" hreflang="de" href="Nonede/"/>
@@ -580,7 +580,7 @@
     </url>
     <url>
         <loc>Nonear/0x00_2021-notice/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/0x00_2021-notice/"/>
         <xhtml:link rel="alternate" hreflang="de" href="Nonede/0x00_2021-notice/"/>
@@ -597,7 +597,7 @@
     </url>
     <url>
         <loc>Nonear/0x01_2021-about-owasp/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/0x01_2021-about-owasp/"/>
         <xhtml:link rel="alternate" hreflang="de" href="Nonede/0x01_2021-about-owasp/"/>
@@ -614,7 +614,7 @@
     </url>
     <url>
         <loc>Nonear/A00_2021-How_to_start_an_AppSec_program_with_the_OWASP_Top_10/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A00_2021-How_to_start_an_AppSec_program_with_the_OWASP_Top_10/"/>
         <xhtml:link rel="alternate" hreflang="de" href="Nonede/A00_2021-How_to_start_an_AppSec_program_with_the_OWASP_Top_10/"/>
@@ -631,19 +631,19 @@
     </url>
     <url>
         <loc>Nonear/A00_2021-How_to_use_the_OWASP_Top_10_as_a_standard/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A00_2021-How_to_use_the_OWASP_Top_10_as_a_standard/"/>
     </url>
     <url>
         <loc>Nonear/A00_2021-Introduction/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A00_2021-Introduction/"/>
     </url>
     <url>
         <loc>Nonear/A01_2021-Broken_Access_Control/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A01_2021-Broken_Access_Control/"/>
         <xhtml:link rel="alternate" hreflang="de" href="Nonede/A01_2021-Broken_Access_Control/"/>
@@ -660,7 +660,7 @@
     </url>
     <url>
         <loc>Nonear/A02_2021-Cryptographic_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A02_2021-Cryptographic_Failures/"/>
         <xhtml:link rel="alternate" hreflang="de" href="Nonede/A02_2021-Cryptographic_Failures/"/>
@@ -677,7 +677,7 @@
     </url>
     <url>
         <loc>Nonear/A03_2021-Injection/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A03_2021-Injection/"/>
         <xhtml:link rel="alternate" hreflang="de" href="Nonede/A03_2021-Injection/"/>
@@ -694,7 +694,7 @@
     </url>
     <url>
         <loc>Nonear/A04_2021-Insecure_Design/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A04_2021-Insecure_Design/"/>
         <xhtml:link rel="alternate" hreflang="de" href="Nonede/A04_2021-Insecure_Design/"/>
@@ -711,7 +711,7 @@
     </url>
     <url>
         <loc>Nonear/A05_2021-Security_Misconfiguration/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A05_2021-Security_Misconfiguration/"/>
         <xhtml:link rel="alternate" hreflang="de" href="Nonede/A05_2021-Security_Misconfiguration/"/>
@@ -728,7 +728,7 @@
     </url>
     <url>
         <loc>Nonear/A06_2021-Vulnerable_and_Outdated_Components/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A06_2021-Vulnerable_and_Outdated_Components/"/>
         <xhtml:link rel="alternate" hreflang="de" href="Nonede/A06_2021-Vulnerable_and_Outdated_Components/"/>
@@ -745,7 +745,7 @@
     </url>
     <url>
         <loc>Nonear/A07_2021-Identification_and_Authentication_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A07_2021-Identification_and_Authentication_Failures/"/>
         <xhtml:link rel="alternate" hreflang="de" href="Nonede/A07_2021-Identification_and_Authentication_Failures/"/>
@@ -762,7 +762,7 @@
     </url>
     <url>
         <loc>Nonear/A08_2021-Software_and_Data_Integrity_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A08_2021-Software_and_Data_Integrity_Failures/"/>
         <xhtml:link rel="alternate" hreflang="de" href="Nonede/A08_2021-Software_and_Data_Integrity_Failures/"/>
@@ -779,7 +779,7 @@
     </url>
     <url>
         <loc>Nonear/A09_2021-Security_Logging_and_Monitoring_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A09_2021-Security_Logging_and_Monitoring_Failures/"/>
         <xhtml:link rel="alternate" hreflang="de" href="Nonede/A09_2021-Security_Logging_and_Monitoring_Failures/"/>
@@ -796,7 +796,7 @@
     </url>
     <url>
         <loc>Nonear/A10_2021-Server-Side_Request_Forgery_%28SSRF%29/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A10_2021-Server-Side_Request_Forgery_%28SSRF%29/"/>
         <xhtml:link rel="alternate" hreflang="de" href="Nonede/A10_2021-Server-Side_Request_Forgery_%28SSRF%29/"/>
@@ -813,7 +813,7 @@
     </url>
     <url>
         <loc>Nonear/A11_2021-Next_Steps/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A11_2021-Next_Steps/"/>
         <xhtml:link rel="alternate" hreflang="de" href="Nonede/A11_2021-Next_Steps/"/>
@@ -830,13 +830,13 @@
     </url>
     <url>
         <loc>Nonear/assets/readme/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/assets/readme/"/>
     </url>
     <url>
         <loc>Nonear/0x00_2021-introduction/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/0x00_2021-introduction/"/>
         <xhtml:link rel="alternate" hreflang="de" href="Nonede/0x00_2021-introduction/"/>
@@ -853,7 +853,7 @@
     </url>
     <url>
         <loc>Nonear/A00_2021_How_to_use_the_OWASP_Top_10_as_a_standard/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A00_2021_How_to_use_the_OWASP_Top_10_as_a_standard/"/>
         <xhtml:link rel="alternate" hreflang="de" href="Nonede/A00_2021_How_to_use_the_OWASP_Top_10_as_a_standard/"/>
@@ -870,7 +870,7 @@
     </url>
     <url>
         <loc>Nonear/A00_2021_Introduction/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A00_2021_Introduction/"/>
         <xhtml:link rel="alternate" hreflang="de" href="Nonede/A00_2021_Introduction/"/>
@@ -887,7 +887,7 @@
     </url>
     <url>
         <loc>Nonear/2025/0x00_2025-Introduction/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/0x00_2025-Introduction/"/>
         <xhtml:link rel="alternate" hreflang="de" href="Nonede/2025/0x00_2025-Introduction/"/>
@@ -904,7 +904,7 @@
     </url>
     <url>
         <loc>Nonear/2025/0x01_2025-About_OWASP/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/0x01_2025-About_OWASP/"/>
         <xhtml:link rel="alternate" hreflang="de" href="Nonede/2025/0x01_2025-About_OWASP/"/>
@@ -921,7 +921,7 @@
     </url>
     <url>
         <loc>Nonear/2025/0x02_2025-What_are_Application_Security_Risks/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/0x02_2025-What_are_Application_Security_Risks/"/>
         <xhtml:link rel="alternate" hreflang="de" href="Nonede/2025/0x02_2025-What_are_Application_Security_Risks/"/>
@@ -938,7 +938,7 @@
     </url>
     <url>
         <loc>Nonear/2025/0x03_2025-Establishing_a_Modern_Application_Security_Program/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/0x03_2025-Establishing_a_Modern_Application_Security_Program/"/>
         <xhtml:link rel="alternate" hreflang="de" href="Nonede/2025/0x03_2025-Establishing_a_Modern_Application_Security_Program/"/>
@@ -955,7 +955,7 @@
     </url>
     <url>
         <loc>Nonear/2025/A01_2025-Broken_Access_Control/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A01_2025-Broken_Access_Control/"/>
         <xhtml:link rel="alternate" hreflang="de" href="Nonede/2025/A01_2025-Broken_Access_Control/"/>
@@ -972,7 +972,7 @@
     </url>
     <url>
         <loc>Nonear/2025/A02_2025-Security_Misconfiguration/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A02_2025-Security_Misconfiguration/"/>
         <xhtml:link rel="alternate" hreflang="de" href="Nonede/2025/A02_2025-Security_Misconfiguration/"/>
@@ -989,7 +989,7 @@
     </url>
     <url>
         <loc>Nonear/2025/A03_2025-Software_Supply_Chain_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A03_2025-Software_Supply_Chain_Failures/"/>
         <xhtml:link rel="alternate" hreflang="de" href="Nonede/2025/A03_2025-Software_Supply_Chain_Failures/"/>
@@ -1006,7 +1006,7 @@
     </url>
     <url>
         <loc>Nonear/2025/A04_2025-Cryptographic_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A04_2025-Cryptographic_Failures/"/>
         <xhtml:link rel="alternate" hreflang="de" href="Nonede/2025/A04_2025-Cryptographic_Failures/"/>
@@ -1023,7 +1023,7 @@
     </url>
     <url>
         <loc>Nonear/2025/A05_2025-Injection/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A05_2025-Injection/"/>
         <xhtml:link rel="alternate" hreflang="de" href="Nonede/2025/A05_2025-Injection/"/>
@@ -1040,7 +1040,7 @@
     </url>
     <url>
         <loc>Nonear/2025/A06_2025-Insecure_Design/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A06_2025-Insecure_Design/"/>
         <xhtml:link rel="alternate" hreflang="de" href="Nonede/2025/A06_2025-Insecure_Design/"/>
@@ -1057,7 +1057,7 @@
     </url>
     <url>
         <loc>Nonear/2025/A07_2025-Authentication_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A07_2025-Authentication_Failures/"/>
         <xhtml:link rel="alternate" hreflang="de" href="Nonede/2025/A07_2025-Authentication_Failures/"/>
@@ -1074,7 +1074,7 @@
     </url>
     <url>
         <loc>Nonear/2025/A08_2025-Software_or_Data_Integrity_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A08_2025-Software_or_Data_Integrity_Failures/"/>
         <xhtml:link rel="alternate" hreflang="de" href="Nonede/2025/A08_2025-Software_or_Data_Integrity_Failures/"/>
@@ -1091,7 +1091,7 @@
     </url>
     <url>
         <loc>Nonear/2025/A09_2025-Logging_and_Alerting_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A09_2025-Logging_and_Alerting_Failures/"/>
         <xhtml:link rel="alternate" hreflang="de" href="Nonede/2025/A09_2025-Logging_and_Alerting_Failures/"/>
@@ -1108,7 +1108,7 @@
     </url>
     <url>
         <loc>Nonear/2025/A10_2025-Mishandling_of_Exceptional_Conditions/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A10_2025-Mishandling_of_Exceptional_Conditions/"/>
         <xhtml:link rel="alternate" hreflang="de" href="Nonede/2025/A10_2025-Mishandling_of_Exceptional_Conditions/"/>
@@ -1125,7 +1125,7 @@
     </url>
     <url>
         <loc>Nonear/2025/X01_2025-Next_Steps/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/X01_2025-Next_Steps/"/>
         <xhtml:link rel="alternate" hreflang="de" href="Nonede/2025/X01_2025-Next_Steps/"/>
@@ -1142,7 +1142,7 @@
     </url>
     <url>
         <loc>Nonede/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="de" href="Nonede/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/"/>
@@ -1159,7 +1159,7 @@
     </url>
     <url>
         <loc>Nonede/0x00_2021-notice/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="de" href="Nonede/0x00_2021-notice/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/0x00_2021-notice/"/>
@@ -1176,7 +1176,7 @@
     </url>
     <url>
         <loc>Nonede/0x01_2021-about-owasp/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="de" href="Nonede/0x01_2021-about-owasp/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/0x01_2021-about-owasp/"/>
@@ -1193,7 +1193,7 @@
     </url>
     <url>
         <loc>Nonede/A00_2021-How_to_start_an_AppSec_program_with_the_OWASP_Top_10/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="de" href="Nonede/A00_2021-How_to_start_an_AppSec_program_with_the_OWASP_Top_10/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A00_2021-How_to_start_an_AppSec_program_with_the_OWASP_Top_10/"/>
@@ -1210,7 +1210,7 @@
     </url>
     <url>
         <loc>Nonede/A00_2021_How_to_use_the_OWASP_Top_10_as_a_standard/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="de" href="Nonede/A00_2021_How_to_use_the_OWASP_Top_10_as_a_standard/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A00_2021_How_to_use_the_OWASP_Top_10_as_a_standard/"/>
@@ -1227,7 +1227,7 @@
     </url>
     <url>
         <loc>Nonede/A00_2021_Introduction/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="de" href="Nonede/A00_2021_Introduction/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A00_2021_Introduction/"/>
@@ -1244,7 +1244,7 @@
     </url>
     <url>
         <loc>Nonede/A01_2021-Broken_Access_Control/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="de" href="Nonede/A01_2021-Broken_Access_Control/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A01_2021-Broken_Access_Control/"/>
@@ -1261,7 +1261,7 @@
     </url>
     <url>
         <loc>Nonede/A02_2021-Cryptographic_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="de" href="Nonede/A02_2021-Cryptographic_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A02_2021-Cryptographic_Failures/"/>
@@ -1278,7 +1278,7 @@
     </url>
     <url>
         <loc>Nonede/A03_2021-Injection/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="de" href="Nonede/A03_2021-Injection/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A03_2021-Injection/"/>
@@ -1295,7 +1295,7 @@
     </url>
     <url>
         <loc>Nonede/A04_2021-Insecure_Design/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="de" href="Nonede/A04_2021-Insecure_Design/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A04_2021-Insecure_Design/"/>
@@ -1312,7 +1312,7 @@
     </url>
     <url>
         <loc>Nonede/A05_2021-Security_Misconfiguration/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="de" href="Nonede/A05_2021-Security_Misconfiguration/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A05_2021-Security_Misconfiguration/"/>
@@ -1329,7 +1329,7 @@
     </url>
     <url>
         <loc>Nonede/A06_2021-Vulnerable_and_Outdated_Components/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="de" href="Nonede/A06_2021-Vulnerable_and_Outdated_Components/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A06_2021-Vulnerable_and_Outdated_Components/"/>
@@ -1346,7 +1346,7 @@
     </url>
     <url>
         <loc>Nonede/A07_2021-Identification_and_Authentication_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="de" href="Nonede/A07_2021-Identification_and_Authentication_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A07_2021-Identification_and_Authentication_Failures/"/>
@@ -1363,7 +1363,7 @@
     </url>
     <url>
         <loc>Nonede/A08_2021-Software_and_Data_Integrity_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="de" href="Nonede/A08_2021-Software_and_Data_Integrity_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A08_2021-Software_and_Data_Integrity_Failures/"/>
@@ -1380,7 +1380,7 @@
     </url>
     <url>
         <loc>Nonede/A09_2021-Security_Logging_and_Monitoring_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="de" href="Nonede/A09_2021-Security_Logging_and_Monitoring_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A09_2021-Security_Logging_and_Monitoring_Failures/"/>
@@ -1397,7 +1397,7 @@
     </url>
     <url>
         <loc>Nonede/A10_2021-Server-Side_Request_Forgery_%28SSRF%29/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="de" href="Nonede/A10_2021-Server-Side_Request_Forgery_%28SSRF%29/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A10_2021-Server-Side_Request_Forgery_%28SSRF%29/"/>
@@ -1414,7 +1414,7 @@
     </url>
     <url>
         <loc>Nonede/A11_2021-Next_Steps/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="de" href="Nonede/A11_2021-Next_Steps/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A11_2021-Next_Steps/"/>
@@ -1431,7 +1431,7 @@
     </url>
     <url>
         <loc>Nonede/0x00_2021-introduction/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="de" href="Nonede/0x00_2021-introduction/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/0x00_2021-introduction/"/>
@@ -1448,7 +1448,7 @@
     </url>
     <url>
         <loc>Nonede/2025/0x00_2025-Introduction/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="de" href="Nonede/2025/0x00_2025-Introduction/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/0x00_2025-Introduction/"/>
@@ -1465,7 +1465,7 @@
     </url>
     <url>
         <loc>Nonede/2025/0x01_2025-About_OWASP/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="de" href="Nonede/2025/0x01_2025-About_OWASP/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/0x01_2025-About_OWASP/"/>
@@ -1482,7 +1482,7 @@
     </url>
     <url>
         <loc>Nonede/2025/0x02_2025-What_are_Application_Security_Risks/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="de" href="Nonede/2025/0x02_2025-What_are_Application_Security_Risks/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/0x02_2025-What_are_Application_Security_Risks/"/>
@@ -1499,7 +1499,7 @@
     </url>
     <url>
         <loc>Nonede/2025/0x03_2025-Establishing_a_Modern_Application_Security_Program/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="de" href="Nonede/2025/0x03_2025-Establishing_a_Modern_Application_Security_Program/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/0x03_2025-Establishing_a_Modern_Application_Security_Program/"/>
@@ -1516,7 +1516,7 @@
     </url>
     <url>
         <loc>Nonede/2025/A01_2025-Broken_Access_Control/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="de" href="Nonede/2025/A01_2025-Broken_Access_Control/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A01_2025-Broken_Access_Control/"/>
@@ -1533,7 +1533,7 @@
     </url>
     <url>
         <loc>Nonede/2025/A02_2025-Security_Misconfiguration/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="de" href="Nonede/2025/A02_2025-Security_Misconfiguration/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A02_2025-Security_Misconfiguration/"/>
@@ -1550,7 +1550,7 @@
     </url>
     <url>
         <loc>Nonede/2025/A03_2025-Software_Supply_Chain_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="de" href="Nonede/2025/A03_2025-Software_Supply_Chain_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A03_2025-Software_Supply_Chain_Failures/"/>
@@ -1567,7 +1567,7 @@
     </url>
     <url>
         <loc>Nonede/2025/A04_2025-Cryptographic_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="de" href="Nonede/2025/A04_2025-Cryptographic_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A04_2025-Cryptographic_Failures/"/>
@@ -1584,7 +1584,7 @@
     </url>
     <url>
         <loc>Nonede/2025/A05_2025-Injection/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="de" href="Nonede/2025/A05_2025-Injection/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A05_2025-Injection/"/>
@@ -1601,7 +1601,7 @@
     </url>
     <url>
         <loc>Nonede/2025/A06_2025-Insecure_Design/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="de" href="Nonede/2025/A06_2025-Insecure_Design/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A06_2025-Insecure_Design/"/>
@@ -1618,7 +1618,7 @@
     </url>
     <url>
         <loc>Nonede/2025/A07_2025-Authentication_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="de" href="Nonede/2025/A07_2025-Authentication_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A07_2025-Authentication_Failures/"/>
@@ -1635,7 +1635,7 @@
     </url>
     <url>
         <loc>Nonede/2025/A08_2025-Software_or_Data_Integrity_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="de" href="Nonede/2025/A08_2025-Software_or_Data_Integrity_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A08_2025-Software_or_Data_Integrity_Failures/"/>
@@ -1652,7 +1652,7 @@
     </url>
     <url>
         <loc>Nonede/2025/A09_2025-Logging_and_Alerting_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="de" href="Nonede/2025/A09_2025-Logging_and_Alerting_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A09_2025-Logging_and_Alerting_Failures/"/>
@@ -1669,7 +1669,7 @@
     </url>
     <url>
         <loc>Nonede/2025/A10_2025-Mishandling_of_Exceptional_Conditions/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="de" href="Nonede/2025/A10_2025-Mishandling_of_Exceptional_Conditions/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A10_2025-Mishandling_of_Exceptional_Conditions/"/>
@@ -1686,7 +1686,7 @@
     </url>
     <url>
         <loc>Nonede/2025/X01_2025-Next_Steps/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="de" href="Nonede/2025/X01_2025-Next_Steps/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/X01_2025-Next_Steps/"/>
@@ -1703,7 +1703,7 @@
     </url>
     <url>
         <loc>Nonees/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="Nonees/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/"/>
@@ -1720,7 +1720,7 @@
     </url>
     <url>
         <loc>Nonees/0x00_2021-introduction/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="Nonees/0x00_2021-introduction/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/0x00_2021-introduction/"/>
@@ -1737,7 +1737,7 @@
     </url>
     <url>
         <loc>Nonees/0x00_2021-notice/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="Nonees/0x00_2021-notice/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/0x00_2021-notice/"/>
@@ -1754,7 +1754,7 @@
     </url>
     <url>
         <loc>Nonees/0x01_2021-about-owasp/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="Nonees/0x01_2021-about-owasp/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/0x01_2021-about-owasp/"/>
@@ -1771,7 +1771,7 @@
     </url>
     <url>
         <loc>Nonees/A00_2021-How_to_start_an_AppSec_program_with_the_OWASP_Top_10/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="Nonees/A00_2021-How_to_start_an_AppSec_program_with_the_OWASP_Top_10/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A00_2021-How_to_start_an_AppSec_program_with_the_OWASP_Top_10/"/>
@@ -1788,7 +1788,7 @@
     </url>
     <url>
         <loc>Nonees/A00_2021_How_to_use_the_OWASP_Top_10_as_a_standard/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="Nonees/A00_2021_How_to_use_the_OWASP_Top_10_as_a_standard/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A00_2021_How_to_use_the_OWASP_Top_10_as_a_standard/"/>
@@ -1805,7 +1805,7 @@
     </url>
     <url>
         <loc>Nonees/A00_2021_Introduction/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="Nonees/A00_2021_Introduction/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A00_2021_Introduction/"/>
@@ -1822,7 +1822,7 @@
     </url>
     <url>
         <loc>Nonees/A01_2021-Broken_Access_Control/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="Nonees/A01_2021-Broken_Access_Control/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A01_2021-Broken_Access_Control/"/>
@@ -1839,7 +1839,7 @@
     </url>
     <url>
         <loc>Nonees/A02_2021-Cryptographic_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="Nonees/A02_2021-Cryptographic_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A02_2021-Cryptographic_Failures/"/>
@@ -1856,7 +1856,7 @@
     </url>
     <url>
         <loc>Nonees/A03_2021-Injection/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="Nonees/A03_2021-Injection/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A03_2021-Injection/"/>
@@ -1873,7 +1873,7 @@
     </url>
     <url>
         <loc>Nonees/A04_2021-Insecure_Design/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="Nonees/A04_2021-Insecure_Design/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A04_2021-Insecure_Design/"/>
@@ -1890,7 +1890,7 @@
     </url>
     <url>
         <loc>Nonees/A05_2021-Security_Misconfiguration/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="Nonees/A05_2021-Security_Misconfiguration/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A05_2021-Security_Misconfiguration/"/>
@@ -1907,7 +1907,7 @@
     </url>
     <url>
         <loc>Nonees/A06_2021-Vulnerable_and_Outdated_Components/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="Nonees/A06_2021-Vulnerable_and_Outdated_Components/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A06_2021-Vulnerable_and_Outdated_Components/"/>
@@ -1924,7 +1924,7 @@
     </url>
     <url>
         <loc>Nonees/A07_2021-Identification_and_Authentication_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="Nonees/A07_2021-Identification_and_Authentication_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A07_2021-Identification_and_Authentication_Failures/"/>
@@ -1941,7 +1941,7 @@
     </url>
     <url>
         <loc>Nonees/A08_2021-Software_and_Data_Integrity_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="Nonees/A08_2021-Software_and_Data_Integrity_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A08_2021-Software_and_Data_Integrity_Failures/"/>
@@ -1958,7 +1958,7 @@
     </url>
     <url>
         <loc>Nonees/A09_2021-Security_Logging_and_Monitoring_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="Nonees/A09_2021-Security_Logging_and_Monitoring_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A09_2021-Security_Logging_and_Monitoring_Failures/"/>
@@ -1975,7 +1975,7 @@
     </url>
     <url>
         <loc>Nonees/A10_2021-Server-Side_Request_Forgery_%28SSRF%29/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="Nonees/A10_2021-Server-Side_Request_Forgery_%28SSRF%29/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A10_2021-Server-Side_Request_Forgery_%28SSRF%29/"/>
@@ -1992,7 +1992,7 @@
     </url>
     <url>
         <loc>Nonees/A11_2021-Next_Steps/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="Nonees/A11_2021-Next_Steps/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A11_2021-Next_Steps/"/>
@@ -2009,7 +2009,7 @@
     </url>
     <url>
         <loc>Nonees/2025/0x00_2025-Introduction/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="Nonees/2025/0x00_2025-Introduction/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/0x00_2025-Introduction/"/>
@@ -2026,7 +2026,7 @@
     </url>
     <url>
         <loc>Nonees/2025/0x01_2025-About_OWASP/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="Nonees/2025/0x01_2025-About_OWASP/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/0x01_2025-About_OWASP/"/>
@@ -2043,7 +2043,7 @@
     </url>
     <url>
         <loc>Nonees/2025/0x02_2025-What_are_Application_Security_Risks/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="Nonees/2025/0x02_2025-What_are_Application_Security_Risks/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/0x02_2025-What_are_Application_Security_Risks/"/>
@@ -2060,7 +2060,7 @@
     </url>
     <url>
         <loc>Nonees/2025/0x03_2025-Establishing_a_Modern_Application_Security_Program/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="Nonees/2025/0x03_2025-Establishing_a_Modern_Application_Security_Program/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/0x03_2025-Establishing_a_Modern_Application_Security_Program/"/>
@@ -2077,7 +2077,7 @@
     </url>
     <url>
         <loc>Nonees/2025/A01_2025-Broken_Access_Control/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="Nonees/2025/A01_2025-Broken_Access_Control/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A01_2025-Broken_Access_Control/"/>
@@ -2094,7 +2094,7 @@
     </url>
     <url>
         <loc>Nonees/2025/A02_2025-Security_Misconfiguration/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="Nonees/2025/A02_2025-Security_Misconfiguration/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A02_2025-Security_Misconfiguration/"/>
@@ -2111,7 +2111,7 @@
     </url>
     <url>
         <loc>Nonees/2025/A03_2025-Software_Supply_Chain_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="Nonees/2025/A03_2025-Software_Supply_Chain_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A03_2025-Software_Supply_Chain_Failures/"/>
@@ -2128,7 +2128,7 @@
     </url>
     <url>
         <loc>Nonees/2025/A04_2025-Cryptographic_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="Nonees/2025/A04_2025-Cryptographic_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A04_2025-Cryptographic_Failures/"/>
@@ -2145,7 +2145,7 @@
     </url>
     <url>
         <loc>Nonees/2025/A05_2025-Injection/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="Nonees/2025/A05_2025-Injection/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A05_2025-Injection/"/>
@@ -2162,7 +2162,7 @@
     </url>
     <url>
         <loc>Nonees/2025/A06_2025-Insecure_Design/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="Nonees/2025/A06_2025-Insecure_Design/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A06_2025-Insecure_Design/"/>
@@ -2179,7 +2179,7 @@
     </url>
     <url>
         <loc>Nonees/2025/A07_2025-Authentication_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="Nonees/2025/A07_2025-Authentication_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A07_2025-Authentication_Failures/"/>
@@ -2196,7 +2196,7 @@
     </url>
     <url>
         <loc>Nonees/2025/A08_2025-Software_or_Data_Integrity_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="Nonees/2025/A08_2025-Software_or_Data_Integrity_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A08_2025-Software_or_Data_Integrity_Failures/"/>
@@ -2213,7 +2213,7 @@
     </url>
     <url>
         <loc>Nonees/2025/A09_2025-Logging_and_Alerting_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="Nonees/2025/A09_2025-Logging_and_Alerting_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A09_2025-Logging_and_Alerting_Failures/"/>
@@ -2230,7 +2230,7 @@
     </url>
     <url>
         <loc>Nonees/2025/A10_2025-Mishandling_of_Exceptional_Conditions/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="Nonees/2025/A10_2025-Mishandling_of_Exceptional_Conditions/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A10_2025-Mishandling_of_Exceptional_Conditions/"/>
@@ -2247,7 +2247,7 @@
     </url>
     <url>
         <loc>Nonees/2025/X01_2025-Next_Steps/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="Nonees/2025/X01_2025-Next_Steps/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/X01_2025-Next_Steps/"/>
@@ -2264,13 +2264,13 @@
     </url>
     <url>
         <loc>Nonees/assets/0x00-notice.es/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="Nonees/assets/0x00-notice.es/"/>
     </url>
     <url>
         <loc>Nonefr/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="fr" href="Nonefr/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/"/>
@@ -2287,7 +2287,7 @@
     </url>
     <url>
         <loc>Nonefr/0x00_2021-introduction/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="fr" href="Nonefr/0x00_2021-introduction/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/0x00_2021-introduction/"/>
@@ -2304,7 +2304,7 @@
     </url>
     <url>
         <loc>Nonefr/0x00_2021-notice/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="fr" href="Nonefr/0x00_2021-notice/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/0x00_2021-notice/"/>
@@ -2321,7 +2321,7 @@
     </url>
     <url>
         <loc>Nonefr/0x01_2021-about-owasp/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="fr" href="Nonefr/0x01_2021-about-owasp/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/0x01_2021-about-owasp/"/>
@@ -2338,7 +2338,7 @@
     </url>
     <url>
         <loc>Nonefr/A00_2021-How_to_start_an_AppSec_program_with_the_OWASP_Top_10/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="fr" href="Nonefr/A00_2021-How_to_start_an_AppSec_program_with_the_OWASP_Top_10/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A00_2021-How_to_start_an_AppSec_program_with_the_OWASP_Top_10/"/>
@@ -2355,7 +2355,7 @@
     </url>
     <url>
         <loc>Nonefr/A00_2021_How_to_use_the_OWASP_Top_10_as_a_standard/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="fr" href="Nonefr/A00_2021_How_to_use_the_OWASP_Top_10_as_a_standard/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A00_2021_How_to_use_the_OWASP_Top_10_as_a_standard/"/>
@@ -2372,7 +2372,7 @@
     </url>
     <url>
         <loc>Nonefr/A00_2021_Introduction/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="fr" href="Nonefr/A00_2021_Introduction/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A00_2021_Introduction/"/>
@@ -2389,7 +2389,7 @@
     </url>
     <url>
         <loc>Nonefr/A01_2021-Broken_Access_Control/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="fr" href="Nonefr/A01_2021-Broken_Access_Control/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A01_2021-Broken_Access_Control/"/>
@@ -2406,7 +2406,7 @@
     </url>
     <url>
         <loc>Nonefr/A02_2021-Cryptographic_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="fr" href="Nonefr/A02_2021-Cryptographic_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A02_2021-Cryptographic_Failures/"/>
@@ -2423,7 +2423,7 @@
     </url>
     <url>
         <loc>Nonefr/A03_2021-Injection/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="fr" href="Nonefr/A03_2021-Injection/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A03_2021-Injection/"/>
@@ -2440,7 +2440,7 @@
     </url>
     <url>
         <loc>Nonefr/A04_2021-Insecure_Design/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="fr" href="Nonefr/A04_2021-Insecure_Design/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A04_2021-Insecure_Design/"/>
@@ -2457,7 +2457,7 @@
     </url>
     <url>
         <loc>Nonefr/A05_2021-Security_Misconfiguration/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="fr" href="Nonefr/A05_2021-Security_Misconfiguration/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A05_2021-Security_Misconfiguration/"/>
@@ -2474,7 +2474,7 @@
     </url>
     <url>
         <loc>Nonefr/A06_2021-Vulnerable_and_Outdated_Components/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="fr" href="Nonefr/A06_2021-Vulnerable_and_Outdated_Components/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A06_2021-Vulnerable_and_Outdated_Components/"/>
@@ -2491,7 +2491,7 @@
     </url>
     <url>
         <loc>Nonefr/A07_2021-Identification_and_Authentication_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="fr" href="Nonefr/A07_2021-Identification_and_Authentication_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A07_2021-Identification_and_Authentication_Failures/"/>
@@ -2508,7 +2508,7 @@
     </url>
     <url>
         <loc>Nonefr/A08_2021-Software_and_Data_Integrity_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="fr" href="Nonefr/A08_2021-Software_and_Data_Integrity_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A08_2021-Software_and_Data_Integrity_Failures/"/>
@@ -2525,7 +2525,7 @@
     </url>
     <url>
         <loc>Nonefr/A09_2021-Security_Logging_and_Monitoring_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="fr" href="Nonefr/A09_2021-Security_Logging_and_Monitoring_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A09_2021-Security_Logging_and_Monitoring_Failures/"/>
@@ -2542,7 +2542,7 @@
     </url>
     <url>
         <loc>Nonefr/A10_2021-Server-Side_Request_Forgery_%28SSRF%29/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="fr" href="Nonefr/A10_2021-Server-Side_Request_Forgery_%28SSRF%29/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A10_2021-Server-Side_Request_Forgery_%28SSRF%29/"/>
@@ -2559,7 +2559,7 @@
     </url>
     <url>
         <loc>Nonefr/A11_2021-Next_Steps/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="fr" href="Nonefr/A11_2021-Next_Steps/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A11_2021-Next_Steps/"/>
@@ -2576,7 +2576,7 @@
     </url>
     <url>
         <loc>Nonefr/2025/0x00_2025-Introduction/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="fr" href="Nonefr/2025/0x00_2025-Introduction/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/0x00_2025-Introduction/"/>
@@ -2593,7 +2593,7 @@
     </url>
     <url>
         <loc>Nonefr/2025/0x01_2025-About_OWASP/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="fr" href="Nonefr/2025/0x01_2025-About_OWASP/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/0x01_2025-About_OWASP/"/>
@@ -2610,7 +2610,7 @@
     </url>
     <url>
         <loc>Nonefr/2025/0x02_2025-What_are_Application_Security_Risks/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="fr" href="Nonefr/2025/0x02_2025-What_are_Application_Security_Risks/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/0x02_2025-What_are_Application_Security_Risks/"/>
@@ -2627,7 +2627,7 @@
     </url>
     <url>
         <loc>Nonefr/2025/0x03_2025-Establishing_a_Modern_Application_Security_Program/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="fr" href="Nonefr/2025/0x03_2025-Establishing_a_Modern_Application_Security_Program/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/0x03_2025-Establishing_a_Modern_Application_Security_Program/"/>
@@ -2644,7 +2644,7 @@
     </url>
     <url>
         <loc>Nonefr/2025/A01_2025-Broken_Access_Control/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="fr" href="Nonefr/2025/A01_2025-Broken_Access_Control/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A01_2025-Broken_Access_Control/"/>
@@ -2661,7 +2661,7 @@
     </url>
     <url>
         <loc>Nonefr/2025/A02_2025-Security_Misconfiguration/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="fr" href="Nonefr/2025/A02_2025-Security_Misconfiguration/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A02_2025-Security_Misconfiguration/"/>
@@ -2678,7 +2678,7 @@
     </url>
     <url>
         <loc>Nonefr/2025/A03_2025-Software_Supply_Chain_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="fr" href="Nonefr/2025/A03_2025-Software_Supply_Chain_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A03_2025-Software_Supply_Chain_Failures/"/>
@@ -2695,7 +2695,7 @@
     </url>
     <url>
         <loc>Nonefr/2025/A04_2025-Cryptographic_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="fr" href="Nonefr/2025/A04_2025-Cryptographic_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A04_2025-Cryptographic_Failures/"/>
@@ -2712,7 +2712,7 @@
     </url>
     <url>
         <loc>Nonefr/2025/A05_2025-Injection/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="fr" href="Nonefr/2025/A05_2025-Injection/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A05_2025-Injection/"/>
@@ -2729,7 +2729,7 @@
     </url>
     <url>
         <loc>Nonefr/2025/A06_2025-Insecure_Design/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="fr" href="Nonefr/2025/A06_2025-Insecure_Design/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A06_2025-Insecure_Design/"/>
@@ -2746,7 +2746,7 @@
     </url>
     <url>
         <loc>Nonefr/2025/A07_2025-Authentication_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="fr" href="Nonefr/2025/A07_2025-Authentication_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A07_2025-Authentication_Failures/"/>
@@ -2763,7 +2763,7 @@
     </url>
     <url>
         <loc>Nonefr/2025/A08_2025-Software_or_Data_Integrity_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="fr" href="Nonefr/2025/A08_2025-Software_or_Data_Integrity_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A08_2025-Software_or_Data_Integrity_Failures/"/>
@@ -2780,7 +2780,7 @@
     </url>
     <url>
         <loc>Nonefr/2025/A09_2025-Logging_and_Alerting_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="fr" href="Nonefr/2025/A09_2025-Logging_and_Alerting_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A09_2025-Logging_and_Alerting_Failures/"/>
@@ -2797,7 +2797,7 @@
     </url>
     <url>
         <loc>Nonefr/2025/A10_2025-Mishandling_of_Exceptional_Conditions/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="fr" href="Nonefr/2025/A10_2025-Mishandling_of_Exceptional_Conditions/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A10_2025-Mishandling_of_Exceptional_Conditions/"/>
@@ -2814,7 +2814,7 @@
     </url>
     <url>
         <loc>Nonefr/2025/X01_2025-Next_Steps/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="fr" href="Nonefr/2025/X01_2025-Next_Steps/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/X01_2025-Next_Steps/"/>
@@ -2831,7 +2831,7 @@
     </url>
     <url>
         <loc>Noneid/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="id" href="Noneid/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/"/>
@@ -2848,7 +2848,7 @@
     </url>
     <url>
         <loc>Noneid/0x00_2021-introduction/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="id" href="Noneid/0x00_2021-introduction/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/0x00_2021-introduction/"/>
@@ -2865,7 +2865,7 @@
     </url>
     <url>
         <loc>Noneid/0x00_2021-notice/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="id" href="Noneid/0x00_2021-notice/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/0x00_2021-notice/"/>
@@ -2882,7 +2882,7 @@
     </url>
     <url>
         <loc>Noneid/0x01_2021-about-owasp/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="id" href="Noneid/0x01_2021-about-owasp/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/0x01_2021-about-owasp/"/>
@@ -2899,7 +2899,7 @@
     </url>
     <url>
         <loc>Noneid/A00_2021-How_to_start_an_AppSec_program_with_the_OWASP_Top_10/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="id" href="Noneid/A00_2021-How_to_start_an_AppSec_program_with_the_OWASP_Top_10/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A00_2021-How_to_start_an_AppSec_program_with_the_OWASP_Top_10/"/>
@@ -2916,7 +2916,7 @@
     </url>
     <url>
         <loc>Noneid/A00_2021_How_to_use_the_OWASP_Top_10_as_a_standard/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="id" href="Noneid/A00_2021_How_to_use_the_OWASP_Top_10_as_a_standard/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A00_2021_How_to_use_the_OWASP_Top_10_as_a_standard/"/>
@@ -2933,7 +2933,7 @@
     </url>
     <url>
         <loc>Noneid/A00_2021_Introduction/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="id" href="Noneid/A00_2021_Introduction/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A00_2021_Introduction/"/>
@@ -2950,7 +2950,7 @@
     </url>
     <url>
         <loc>Noneid/A01_2021-Broken_Access_Control/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="id" href="Noneid/A01_2021-Broken_Access_Control/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A01_2021-Broken_Access_Control/"/>
@@ -2967,7 +2967,7 @@
     </url>
     <url>
         <loc>Noneid/A02_2021-Cryptographic_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="id" href="Noneid/A02_2021-Cryptographic_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A02_2021-Cryptographic_Failures/"/>
@@ -2984,7 +2984,7 @@
     </url>
     <url>
         <loc>Noneid/A03_2021-Injection/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="id" href="Noneid/A03_2021-Injection/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A03_2021-Injection/"/>
@@ -3001,7 +3001,7 @@
     </url>
     <url>
         <loc>Noneid/A04_2021-Insecure_Design/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="id" href="Noneid/A04_2021-Insecure_Design/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A04_2021-Insecure_Design/"/>
@@ -3018,7 +3018,7 @@
     </url>
     <url>
         <loc>Noneid/A05_2021-Security_Misconfiguration/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="id" href="Noneid/A05_2021-Security_Misconfiguration/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A05_2021-Security_Misconfiguration/"/>
@@ -3035,7 +3035,7 @@
     </url>
     <url>
         <loc>Noneid/A06_2021-Vulnerable_and_Outdated_Components/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="id" href="Noneid/A06_2021-Vulnerable_and_Outdated_Components/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A06_2021-Vulnerable_and_Outdated_Components/"/>
@@ -3052,7 +3052,7 @@
     </url>
     <url>
         <loc>Noneid/A07_2021-Identification_and_Authentication_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="id" href="Noneid/A07_2021-Identification_and_Authentication_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A07_2021-Identification_and_Authentication_Failures/"/>
@@ -3069,7 +3069,7 @@
     </url>
     <url>
         <loc>Noneid/A08_2021-Software_and_Data_Integrity_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="id" href="Noneid/A08_2021-Software_and_Data_Integrity_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A08_2021-Software_and_Data_Integrity_Failures/"/>
@@ -3086,7 +3086,7 @@
     </url>
     <url>
         <loc>Noneid/A09_2021-Security_Logging_and_Monitoring_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="id" href="Noneid/A09_2021-Security_Logging_and_Monitoring_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A09_2021-Security_Logging_and_Monitoring_Failures/"/>
@@ -3103,7 +3103,7 @@
     </url>
     <url>
         <loc>Noneid/A10_2021-Server-Side_Request_Forgery_%28SSRF%29/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="id" href="Noneid/A10_2021-Server-Side_Request_Forgery_%28SSRF%29/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A10_2021-Server-Side_Request_Forgery_%28SSRF%29/"/>
@@ -3120,7 +3120,7 @@
     </url>
     <url>
         <loc>Noneid/A11_2021-Next_Steps/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="id" href="Noneid/A11_2021-Next_Steps/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A11_2021-Next_Steps/"/>
@@ -3137,7 +3137,7 @@
     </url>
     <url>
         <loc>Noneid/2025/0x00_2025-Introduction/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="id" href="Noneid/2025/0x00_2025-Introduction/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/0x00_2025-Introduction/"/>
@@ -3154,7 +3154,7 @@
     </url>
     <url>
         <loc>Noneid/2025/0x01_2025-About_OWASP/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="id" href="Noneid/2025/0x01_2025-About_OWASP/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/0x01_2025-About_OWASP/"/>
@@ -3171,7 +3171,7 @@
     </url>
     <url>
         <loc>Noneid/2025/0x02_2025-What_are_Application_Security_Risks/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="id" href="Noneid/2025/0x02_2025-What_are_Application_Security_Risks/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/0x02_2025-What_are_Application_Security_Risks/"/>
@@ -3188,7 +3188,7 @@
     </url>
     <url>
         <loc>Noneid/2025/0x03_2025-Establishing_a_Modern_Application_Security_Program/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="id" href="Noneid/2025/0x03_2025-Establishing_a_Modern_Application_Security_Program/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/0x03_2025-Establishing_a_Modern_Application_Security_Program/"/>
@@ -3205,7 +3205,7 @@
     </url>
     <url>
         <loc>Noneid/2025/A01_2025-Broken_Access_Control/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="id" href="Noneid/2025/A01_2025-Broken_Access_Control/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A01_2025-Broken_Access_Control/"/>
@@ -3222,7 +3222,7 @@
     </url>
     <url>
         <loc>Noneid/2025/A02_2025-Security_Misconfiguration/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="id" href="Noneid/2025/A02_2025-Security_Misconfiguration/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A02_2025-Security_Misconfiguration/"/>
@@ -3239,7 +3239,7 @@
     </url>
     <url>
         <loc>Noneid/2025/A03_2025-Software_Supply_Chain_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="id" href="Noneid/2025/A03_2025-Software_Supply_Chain_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A03_2025-Software_Supply_Chain_Failures/"/>
@@ -3256,7 +3256,7 @@
     </url>
     <url>
         <loc>Noneid/2025/A04_2025-Cryptographic_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="id" href="Noneid/2025/A04_2025-Cryptographic_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A04_2025-Cryptographic_Failures/"/>
@@ -3273,7 +3273,7 @@
     </url>
     <url>
         <loc>Noneid/2025/A05_2025-Injection/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="id" href="Noneid/2025/A05_2025-Injection/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A05_2025-Injection/"/>
@@ -3290,7 +3290,7 @@
     </url>
     <url>
         <loc>Noneid/2025/A06_2025-Insecure_Design/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="id" href="Noneid/2025/A06_2025-Insecure_Design/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A06_2025-Insecure_Design/"/>
@@ -3307,7 +3307,7 @@
     </url>
     <url>
         <loc>Noneid/2025/A07_2025-Authentication_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="id" href="Noneid/2025/A07_2025-Authentication_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A07_2025-Authentication_Failures/"/>
@@ -3324,7 +3324,7 @@
     </url>
     <url>
         <loc>Noneid/2025/A08_2025-Software_or_Data_Integrity_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="id" href="Noneid/2025/A08_2025-Software_or_Data_Integrity_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A08_2025-Software_or_Data_Integrity_Failures/"/>
@@ -3341,7 +3341,7 @@
     </url>
     <url>
         <loc>Noneid/2025/A09_2025-Logging_and_Alerting_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="id" href="Noneid/2025/A09_2025-Logging_and_Alerting_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A09_2025-Logging_and_Alerting_Failures/"/>
@@ -3358,7 +3358,7 @@
     </url>
     <url>
         <loc>Noneid/2025/A10_2025-Mishandling_of_Exceptional_Conditions/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="id" href="Noneid/2025/A10_2025-Mishandling_of_Exceptional_Conditions/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A10_2025-Mishandling_of_Exceptional_Conditions/"/>
@@ -3375,7 +3375,7 @@
     </url>
     <url>
         <loc>Noneid/2025/X01_2025-Next_Steps/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="id" href="Noneid/2025/X01_2025-Next_Steps/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/X01_2025-Next_Steps/"/>
@@ -3392,7 +3392,7 @@
     </url>
     <url>
         <loc>Noneit/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="it" href="Noneit/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/"/>
@@ -3409,7 +3409,7 @@
     </url>
     <url>
         <loc>Noneit/0x00_2021-introduction/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="it" href="Noneit/0x00_2021-introduction/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/0x00_2021-introduction/"/>
@@ -3426,7 +3426,7 @@
     </url>
     <url>
         <loc>Noneit/0x00_2021-notice/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="it" href="Noneit/0x00_2021-notice/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/0x00_2021-notice/"/>
@@ -3443,7 +3443,7 @@
     </url>
     <url>
         <loc>Noneit/0x01_2021-about-owasp/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="it" href="Noneit/0x01_2021-about-owasp/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/0x01_2021-about-owasp/"/>
@@ -3460,7 +3460,7 @@
     </url>
     <url>
         <loc>Noneit/A00_2021-How_to_start_an_AppSec_program_with_the_OWASP_Top_10/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="it" href="Noneit/A00_2021-How_to_start_an_AppSec_program_with_the_OWASP_Top_10/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A00_2021-How_to_start_an_AppSec_program_with_the_OWASP_Top_10/"/>
@@ -3477,7 +3477,7 @@
     </url>
     <url>
         <loc>Noneit/A00_2021_How_to_use_the_OWASP_Top_10_as_a_standard/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="it" href="Noneit/A00_2021_How_to_use_the_OWASP_Top_10_as_a_standard/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A00_2021_How_to_use_the_OWASP_Top_10_as_a_standard/"/>
@@ -3494,7 +3494,7 @@
     </url>
     <url>
         <loc>Noneit/A00_2021_Introduction/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="it" href="Noneit/A00_2021_Introduction/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A00_2021_Introduction/"/>
@@ -3511,7 +3511,7 @@
     </url>
     <url>
         <loc>Noneit/A01_2021-Broken_Access_Control/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="it" href="Noneit/A01_2021-Broken_Access_Control/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A01_2021-Broken_Access_Control/"/>
@@ -3528,7 +3528,7 @@
     </url>
     <url>
         <loc>Noneit/A02_2021-Cryptographic_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="it" href="Noneit/A02_2021-Cryptographic_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A02_2021-Cryptographic_Failures/"/>
@@ -3545,7 +3545,7 @@
     </url>
     <url>
         <loc>Noneit/A03_2021-Injection/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="it" href="Noneit/A03_2021-Injection/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A03_2021-Injection/"/>
@@ -3562,7 +3562,7 @@
     </url>
     <url>
         <loc>Noneit/A04_2021-Insecure_Design/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="it" href="Noneit/A04_2021-Insecure_Design/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A04_2021-Insecure_Design/"/>
@@ -3579,7 +3579,7 @@
     </url>
     <url>
         <loc>Noneit/A05_2021-Security_Misconfiguration/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="it" href="Noneit/A05_2021-Security_Misconfiguration/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A05_2021-Security_Misconfiguration/"/>
@@ -3596,7 +3596,7 @@
     </url>
     <url>
         <loc>Noneit/A06_2021-Vulnerable_and_Outdated_Components/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="it" href="Noneit/A06_2021-Vulnerable_and_Outdated_Components/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A06_2021-Vulnerable_and_Outdated_Components/"/>
@@ -3613,7 +3613,7 @@
     </url>
     <url>
         <loc>Noneit/A07_2021-Identification_and_Authentication_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="it" href="Noneit/A07_2021-Identification_and_Authentication_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A07_2021-Identification_and_Authentication_Failures/"/>
@@ -3630,7 +3630,7 @@
     </url>
     <url>
         <loc>Noneit/A08_2021-Software_and_Data_Integrity_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="it" href="Noneit/A08_2021-Software_and_Data_Integrity_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A08_2021-Software_and_Data_Integrity_Failures/"/>
@@ -3647,7 +3647,7 @@
     </url>
     <url>
         <loc>Noneit/A09_2021-Security_Logging_and_Monitoring_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="it" href="Noneit/A09_2021-Security_Logging_and_Monitoring_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A09_2021-Security_Logging_and_Monitoring_Failures/"/>
@@ -3664,7 +3664,7 @@
     </url>
     <url>
         <loc>Noneit/A10_2021-Server-Side_Request_Forgery_%28SSRF%29/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="it" href="Noneit/A10_2021-Server-Side_Request_Forgery_%28SSRF%29/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A10_2021-Server-Side_Request_Forgery_%28SSRF%29/"/>
@@ -3681,7 +3681,7 @@
     </url>
     <url>
         <loc>Noneit/A11_2021-Next_Steps/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="it" href="Noneit/A11_2021-Next_Steps/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A11_2021-Next_Steps/"/>
@@ -3698,7 +3698,7 @@
     </url>
     <url>
         <loc>Noneit/2025/0x00_2025-Introduction/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="it" href="Noneit/2025/0x00_2025-Introduction/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/0x00_2025-Introduction/"/>
@@ -3715,7 +3715,7 @@
     </url>
     <url>
         <loc>Noneit/2025/0x01_2025-About_OWASP/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="it" href="Noneit/2025/0x01_2025-About_OWASP/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/0x01_2025-About_OWASP/"/>
@@ -3732,7 +3732,7 @@
     </url>
     <url>
         <loc>Noneit/2025/0x02_2025-What_are_Application_Security_Risks/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="it" href="Noneit/2025/0x02_2025-What_are_Application_Security_Risks/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/0x02_2025-What_are_Application_Security_Risks/"/>
@@ -3749,7 +3749,7 @@
     </url>
     <url>
         <loc>Noneit/2025/0x03_2025-Establishing_a_Modern_Application_Security_Program/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="it" href="Noneit/2025/0x03_2025-Establishing_a_Modern_Application_Security_Program/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/0x03_2025-Establishing_a_Modern_Application_Security_Program/"/>
@@ -3766,7 +3766,7 @@
     </url>
     <url>
         <loc>Noneit/2025/A01_2025-Broken_Access_Control/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="it" href="Noneit/2025/A01_2025-Broken_Access_Control/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A01_2025-Broken_Access_Control/"/>
@@ -3783,7 +3783,7 @@
     </url>
     <url>
         <loc>Noneit/2025/A02_2025-Security_Misconfiguration/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="it" href="Noneit/2025/A02_2025-Security_Misconfiguration/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A02_2025-Security_Misconfiguration/"/>
@@ -3800,7 +3800,7 @@
     </url>
     <url>
         <loc>Noneit/2025/A03_2025-Software_Supply_Chain_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="it" href="Noneit/2025/A03_2025-Software_Supply_Chain_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A03_2025-Software_Supply_Chain_Failures/"/>
@@ -3817,7 +3817,7 @@
     </url>
     <url>
         <loc>Noneit/2025/A04_2025-Cryptographic_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="it" href="Noneit/2025/A04_2025-Cryptographic_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A04_2025-Cryptographic_Failures/"/>
@@ -3834,7 +3834,7 @@
     </url>
     <url>
         <loc>Noneit/2025/A05_2025-Injection/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="it" href="Noneit/2025/A05_2025-Injection/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A05_2025-Injection/"/>
@@ -3851,7 +3851,7 @@
     </url>
     <url>
         <loc>Noneit/2025/A06_2025-Insecure_Design/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="it" href="Noneit/2025/A06_2025-Insecure_Design/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A06_2025-Insecure_Design/"/>
@@ -3868,7 +3868,7 @@
     </url>
     <url>
         <loc>Noneit/2025/A07_2025-Authentication_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="it" href="Noneit/2025/A07_2025-Authentication_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A07_2025-Authentication_Failures/"/>
@@ -3885,7 +3885,7 @@
     </url>
     <url>
         <loc>Noneit/2025/A08_2025-Software_or_Data_Integrity_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="it" href="Noneit/2025/A08_2025-Software_or_Data_Integrity_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A08_2025-Software_or_Data_Integrity_Failures/"/>
@@ -3902,7 +3902,7 @@
     </url>
     <url>
         <loc>Noneit/2025/A09_2025-Logging_and_Alerting_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="it" href="Noneit/2025/A09_2025-Logging_and_Alerting_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A09_2025-Logging_and_Alerting_Failures/"/>
@@ -3919,7 +3919,7 @@
     </url>
     <url>
         <loc>Noneit/2025/A10_2025-Mishandling_of_Exceptional_Conditions/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="it" href="Noneit/2025/A10_2025-Mishandling_of_Exceptional_Conditions/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A10_2025-Mishandling_of_Exceptional_Conditions/"/>
@@ -3936,7 +3936,7 @@
     </url>
     <url>
         <loc>Noneit/2025/X01_2025-Next_Steps/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="it" href="Noneit/2025/X01_2025-Next_Steps/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/X01_2025-Next_Steps/"/>
@@ -3953,7 +3953,7 @@
     </url>
     <url>
         <loc>Noneja/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ja" href="Noneja/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/"/>
@@ -3970,7 +3970,7 @@
     </url>
     <url>
         <loc>Noneja/0x00_2021-introduction/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ja" href="Noneja/0x00_2021-introduction/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/0x00_2021-introduction/"/>
@@ -3987,7 +3987,7 @@
     </url>
     <url>
         <loc>Noneja/0x00_2021-notice/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ja" href="Noneja/0x00_2021-notice/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/0x00_2021-notice/"/>
@@ -4004,7 +4004,7 @@
     </url>
     <url>
         <loc>Noneja/0x01_2021-about-owasp/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ja" href="Noneja/0x01_2021-about-owasp/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/0x01_2021-about-owasp/"/>
@@ -4021,7 +4021,7 @@
     </url>
     <url>
         <loc>Noneja/A00_2021-How_to_start_an_AppSec_program_with_the_OWASP_Top_10/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ja" href="Noneja/A00_2021-How_to_start_an_AppSec_program_with_the_OWASP_Top_10/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A00_2021-How_to_start_an_AppSec_program_with_the_OWASP_Top_10/"/>
@@ -4038,7 +4038,7 @@
     </url>
     <url>
         <loc>Noneja/A00_2021_How_to_use_the_OWASP_Top_10_as_a_standard/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ja" href="Noneja/A00_2021_How_to_use_the_OWASP_Top_10_as_a_standard/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A00_2021_How_to_use_the_OWASP_Top_10_as_a_standard/"/>
@@ -4055,7 +4055,7 @@
     </url>
     <url>
         <loc>Noneja/A00_2021_Introduction/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ja" href="Noneja/A00_2021_Introduction/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A00_2021_Introduction/"/>
@@ -4072,7 +4072,7 @@
     </url>
     <url>
         <loc>Noneja/A01_2021-Broken_Access_Control/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ja" href="Noneja/A01_2021-Broken_Access_Control/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A01_2021-Broken_Access_Control/"/>
@@ -4089,7 +4089,7 @@
     </url>
     <url>
         <loc>Noneja/A02_2021-Cryptographic_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ja" href="Noneja/A02_2021-Cryptographic_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A02_2021-Cryptographic_Failures/"/>
@@ -4106,7 +4106,7 @@
     </url>
     <url>
         <loc>Noneja/A03_2021-Injection/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ja" href="Noneja/A03_2021-Injection/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A03_2021-Injection/"/>
@@ -4123,7 +4123,7 @@
     </url>
     <url>
         <loc>Noneja/A04_2021-Insecure_Design/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ja" href="Noneja/A04_2021-Insecure_Design/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A04_2021-Insecure_Design/"/>
@@ -4140,7 +4140,7 @@
     </url>
     <url>
         <loc>Noneja/A05_2021-Security_Misconfiguration/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ja" href="Noneja/A05_2021-Security_Misconfiguration/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A05_2021-Security_Misconfiguration/"/>
@@ -4157,7 +4157,7 @@
     </url>
     <url>
         <loc>Noneja/A06_2021-Vulnerable_and_Outdated_Components/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ja" href="Noneja/A06_2021-Vulnerable_and_Outdated_Components/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A06_2021-Vulnerable_and_Outdated_Components/"/>
@@ -4174,7 +4174,7 @@
     </url>
     <url>
         <loc>Noneja/A07_2021-Identification_and_Authentication_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ja" href="Noneja/A07_2021-Identification_and_Authentication_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A07_2021-Identification_and_Authentication_Failures/"/>
@@ -4191,7 +4191,7 @@
     </url>
     <url>
         <loc>Noneja/A08_2021-Software_and_Data_Integrity_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ja" href="Noneja/A08_2021-Software_and_Data_Integrity_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A08_2021-Software_and_Data_Integrity_Failures/"/>
@@ -4208,7 +4208,7 @@
     </url>
     <url>
         <loc>Noneja/A09_2021-Security_Logging_and_Monitoring_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ja" href="Noneja/A09_2021-Security_Logging_and_Monitoring_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A09_2021-Security_Logging_and_Monitoring_Failures/"/>
@@ -4225,7 +4225,7 @@
     </url>
     <url>
         <loc>Noneja/A10_2021-Server-Side_Request_Forgery_%28SSRF%29/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ja" href="Noneja/A10_2021-Server-Side_Request_Forgery_%28SSRF%29/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A10_2021-Server-Side_Request_Forgery_%28SSRF%29/"/>
@@ -4242,7 +4242,7 @@
     </url>
     <url>
         <loc>Noneja/A11_2021-Next_Steps/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ja" href="Noneja/A11_2021-Next_Steps/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A11_2021-Next_Steps/"/>
@@ -4259,7 +4259,7 @@
     </url>
     <url>
         <loc>Noneja/2025/0x00_2025-Introduction/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ja" href="Noneja/2025/0x00_2025-Introduction/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/0x00_2025-Introduction/"/>
@@ -4276,7 +4276,7 @@
     </url>
     <url>
         <loc>Noneja/2025/0x01_2025-About_OWASP/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ja" href="Noneja/2025/0x01_2025-About_OWASP/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/0x01_2025-About_OWASP/"/>
@@ -4293,7 +4293,7 @@
     </url>
     <url>
         <loc>Noneja/2025/0x02_2025-What_are_Application_Security_Risks/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ja" href="Noneja/2025/0x02_2025-What_are_Application_Security_Risks/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/0x02_2025-What_are_Application_Security_Risks/"/>
@@ -4310,7 +4310,7 @@
     </url>
     <url>
         <loc>Noneja/2025/0x03_2025-Establishing_a_Modern_Application_Security_Program/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ja" href="Noneja/2025/0x03_2025-Establishing_a_Modern_Application_Security_Program/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/0x03_2025-Establishing_a_Modern_Application_Security_Program/"/>
@@ -4327,7 +4327,7 @@
     </url>
     <url>
         <loc>Noneja/2025/A01_2025-Broken_Access_Control/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ja" href="Noneja/2025/A01_2025-Broken_Access_Control/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A01_2025-Broken_Access_Control/"/>
@@ -4344,7 +4344,7 @@
     </url>
     <url>
         <loc>Noneja/2025/A02_2025-Security_Misconfiguration/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ja" href="Noneja/2025/A02_2025-Security_Misconfiguration/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A02_2025-Security_Misconfiguration/"/>
@@ -4361,7 +4361,7 @@
     </url>
     <url>
         <loc>Noneja/2025/A03_2025-Software_Supply_Chain_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ja" href="Noneja/2025/A03_2025-Software_Supply_Chain_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A03_2025-Software_Supply_Chain_Failures/"/>
@@ -4378,7 +4378,7 @@
     </url>
     <url>
         <loc>Noneja/2025/A04_2025-Cryptographic_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ja" href="Noneja/2025/A04_2025-Cryptographic_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A04_2025-Cryptographic_Failures/"/>
@@ -4395,7 +4395,7 @@
     </url>
     <url>
         <loc>Noneja/2025/A05_2025-Injection/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ja" href="Noneja/2025/A05_2025-Injection/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A05_2025-Injection/"/>
@@ -4412,7 +4412,7 @@
     </url>
     <url>
         <loc>Noneja/2025/A06_2025-Insecure_Design/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ja" href="Noneja/2025/A06_2025-Insecure_Design/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A06_2025-Insecure_Design/"/>
@@ -4429,7 +4429,7 @@
     </url>
     <url>
         <loc>Noneja/2025/A07_2025-Authentication_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ja" href="Noneja/2025/A07_2025-Authentication_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A07_2025-Authentication_Failures/"/>
@@ -4446,7 +4446,7 @@
     </url>
     <url>
         <loc>Noneja/2025/A08_2025-Software_or_Data_Integrity_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ja" href="Noneja/2025/A08_2025-Software_or_Data_Integrity_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A08_2025-Software_or_Data_Integrity_Failures/"/>
@@ -4463,7 +4463,7 @@
     </url>
     <url>
         <loc>Noneja/2025/A09_2025-Logging_and_Alerting_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ja" href="Noneja/2025/A09_2025-Logging_and_Alerting_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A09_2025-Logging_and_Alerting_Failures/"/>
@@ -4480,7 +4480,7 @@
     </url>
     <url>
         <loc>Noneja/2025/A10_2025-Mishandling_of_Exceptional_Conditions/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ja" href="Noneja/2025/A10_2025-Mishandling_of_Exceptional_Conditions/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A10_2025-Mishandling_of_Exceptional_Conditions/"/>
@@ -4497,7 +4497,7 @@
     </url>
     <url>
         <loc>Noneja/2025/X01_2025-Next_Steps/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ja" href="Noneja/2025/X01_2025-Next_Steps/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/X01_2025-Next_Steps/"/>
@@ -4514,7 +4514,7 @@
     </url>
     <url>
         <loc>Nonept-BR/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="Nonept-BR/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/"/>
@@ -4531,7 +4531,7 @@
     </url>
     <url>
         <loc>Nonept-BR/0x00_2021-introduction/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="Nonept-BR/0x00_2021-introduction/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/0x00_2021-introduction/"/>
@@ -4548,7 +4548,7 @@
     </url>
     <url>
         <loc>Nonept-BR/0x00_2021-notice/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="Nonept-BR/0x00_2021-notice/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/0x00_2021-notice/"/>
@@ -4565,7 +4565,7 @@
     </url>
     <url>
         <loc>Nonept-BR/0x01_2021-about-owasp/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="Nonept-BR/0x01_2021-about-owasp/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/0x01_2021-about-owasp/"/>
@@ -4582,7 +4582,7 @@
     </url>
     <url>
         <loc>Nonept-BR/A00_2021-How_to_start_an_AppSec_program_with_the_OWASP_Top_10/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="Nonept-BR/A00_2021-How_to_start_an_AppSec_program_with_the_OWASP_Top_10/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A00_2021-How_to_start_an_AppSec_program_with_the_OWASP_Top_10/"/>
@@ -4599,7 +4599,7 @@
     </url>
     <url>
         <loc>Nonept-BR/A00_2021_How_to_use_the_OWASP_Top_10_as_a_standard/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="Nonept-BR/A00_2021_How_to_use_the_OWASP_Top_10_as_a_standard/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A00_2021_How_to_use_the_OWASP_Top_10_as_a_standard/"/>
@@ -4616,7 +4616,7 @@
     </url>
     <url>
         <loc>Nonept-BR/A00_2021_Introduction/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="Nonept-BR/A00_2021_Introduction/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A00_2021_Introduction/"/>
@@ -4633,7 +4633,7 @@
     </url>
     <url>
         <loc>Nonept-BR/A01_2021-Broken_Access_Control/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="Nonept-BR/A01_2021-Broken_Access_Control/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A01_2021-Broken_Access_Control/"/>
@@ -4650,7 +4650,7 @@
     </url>
     <url>
         <loc>Nonept-BR/A02_2021-Cryptographic_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="Nonept-BR/A02_2021-Cryptographic_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A02_2021-Cryptographic_Failures/"/>
@@ -4667,7 +4667,7 @@
     </url>
     <url>
         <loc>Nonept-BR/A03_2021-Injection/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="Nonept-BR/A03_2021-Injection/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A03_2021-Injection/"/>
@@ -4684,7 +4684,7 @@
     </url>
     <url>
         <loc>Nonept-BR/A04_2021-Insecure_Design/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="Nonept-BR/A04_2021-Insecure_Design/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A04_2021-Insecure_Design/"/>
@@ -4701,7 +4701,7 @@
     </url>
     <url>
         <loc>Nonept-BR/A05_2021-Security_Misconfiguration/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="Nonept-BR/A05_2021-Security_Misconfiguration/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A05_2021-Security_Misconfiguration/"/>
@@ -4718,7 +4718,7 @@
     </url>
     <url>
         <loc>Nonept-BR/A06_2021-Vulnerable_and_Outdated_Components/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="Nonept-BR/A06_2021-Vulnerable_and_Outdated_Components/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A06_2021-Vulnerable_and_Outdated_Components/"/>
@@ -4735,7 +4735,7 @@
     </url>
     <url>
         <loc>Nonept-BR/A07_2021-Identification_and_Authentication_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="Nonept-BR/A07_2021-Identification_and_Authentication_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A07_2021-Identification_and_Authentication_Failures/"/>
@@ -4752,7 +4752,7 @@
     </url>
     <url>
         <loc>Nonept-BR/A08_2021-Software_and_Data_Integrity_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="Nonept-BR/A08_2021-Software_and_Data_Integrity_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A08_2021-Software_and_Data_Integrity_Failures/"/>
@@ -4769,7 +4769,7 @@
     </url>
     <url>
         <loc>Nonept-BR/A09_2021-Security_Logging_and_Monitoring_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="Nonept-BR/A09_2021-Security_Logging_and_Monitoring_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A09_2021-Security_Logging_and_Monitoring_Failures/"/>
@@ -4786,7 +4786,7 @@
     </url>
     <url>
         <loc>Nonept-BR/A10_2021-Server-Side_Request_Forgery_%28SSRF%29/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="Nonept-BR/A10_2021-Server-Side_Request_Forgery_%28SSRF%29/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A10_2021-Server-Side_Request_Forgery_%28SSRF%29/"/>
@@ -4803,7 +4803,7 @@
     </url>
     <url>
         <loc>Nonept-BR/A11_2021-Next_Steps/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="Nonept-BR/A11_2021-Next_Steps/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A11_2021-Next_Steps/"/>
@@ -4820,7 +4820,7 @@
     </url>
     <url>
         <loc>Nonept-BR/2025/0x00_2025-Introduction/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="Nonept-BR/2025/0x00_2025-Introduction/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/0x00_2025-Introduction/"/>
@@ -4837,7 +4837,7 @@
     </url>
     <url>
         <loc>Nonept-BR/2025/0x01_2025-About_OWASP/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="Nonept-BR/2025/0x01_2025-About_OWASP/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/0x01_2025-About_OWASP/"/>
@@ -4854,7 +4854,7 @@
     </url>
     <url>
         <loc>Nonept-BR/2025/0x02_2025-What_are_Application_Security_Risks/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="Nonept-BR/2025/0x02_2025-What_are_Application_Security_Risks/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/0x02_2025-What_are_Application_Security_Risks/"/>
@@ -4871,7 +4871,7 @@
     </url>
     <url>
         <loc>Nonept-BR/2025/0x03_2025-Establishing_a_Modern_Application_Security_Program/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="Nonept-BR/2025/0x03_2025-Establishing_a_Modern_Application_Security_Program/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/0x03_2025-Establishing_a_Modern_Application_Security_Program/"/>
@@ -4888,7 +4888,7 @@
     </url>
     <url>
         <loc>Nonept-BR/2025/A01_2025-Broken_Access_Control/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="Nonept-BR/2025/A01_2025-Broken_Access_Control/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A01_2025-Broken_Access_Control/"/>
@@ -4905,7 +4905,7 @@
     </url>
     <url>
         <loc>Nonept-BR/2025/A02_2025-Security_Misconfiguration/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="Nonept-BR/2025/A02_2025-Security_Misconfiguration/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A02_2025-Security_Misconfiguration/"/>
@@ -4922,7 +4922,7 @@
     </url>
     <url>
         <loc>Nonept-BR/2025/A03_2025-Software_Supply_Chain_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="Nonept-BR/2025/A03_2025-Software_Supply_Chain_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A03_2025-Software_Supply_Chain_Failures/"/>
@@ -4939,7 +4939,7 @@
     </url>
     <url>
         <loc>Nonept-BR/2025/A04_2025-Cryptographic_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="Nonept-BR/2025/A04_2025-Cryptographic_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A04_2025-Cryptographic_Failures/"/>
@@ -4956,7 +4956,7 @@
     </url>
     <url>
         <loc>Nonept-BR/2025/A05_2025-Injection/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="Nonept-BR/2025/A05_2025-Injection/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A05_2025-Injection/"/>
@@ -4973,7 +4973,7 @@
     </url>
     <url>
         <loc>Nonept-BR/2025/A06_2025-Insecure_Design/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="Nonept-BR/2025/A06_2025-Insecure_Design/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A06_2025-Insecure_Design/"/>
@@ -4990,7 +4990,7 @@
     </url>
     <url>
         <loc>Nonept-BR/2025/A07_2025-Authentication_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="Nonept-BR/2025/A07_2025-Authentication_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A07_2025-Authentication_Failures/"/>
@@ -5007,7 +5007,7 @@
     </url>
     <url>
         <loc>Nonept-BR/2025/A08_2025-Software_or_Data_Integrity_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="Nonept-BR/2025/A08_2025-Software_or_Data_Integrity_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A08_2025-Software_or_Data_Integrity_Failures/"/>
@@ -5024,7 +5024,7 @@
     </url>
     <url>
         <loc>Nonept-BR/2025/A09_2025-Logging_and_Alerting_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="Nonept-BR/2025/A09_2025-Logging_and_Alerting_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A09_2025-Logging_and_Alerting_Failures/"/>
@@ -5041,7 +5041,7 @@
     </url>
     <url>
         <loc>Nonept-BR/2025/A10_2025-Mishandling_of_Exceptional_Conditions/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="Nonept-BR/2025/A10_2025-Mishandling_of_Exceptional_Conditions/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A10_2025-Mishandling_of_Exceptional_Conditions/"/>
@@ -5058,7 +5058,7 @@
     </url>
     <url>
         <loc>Nonept-BR/2025/X01_2025-Next_Steps/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="Nonept-BR/2025/X01_2025-Next_Steps/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/X01_2025-Next_Steps/"/>
@@ -5075,7 +5075,7 @@
     </url>
     <url>
         <loc>Nonetr/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/"/>
@@ -5092,7 +5092,7 @@
     </url>
     <url>
         <loc>Nonetr/0x00_2021-introduction/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/0x00_2021-introduction/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/0x00_2021-introduction/"/>
@@ -5109,7 +5109,7 @@
     </url>
     <url>
         <loc>Nonetr/0x00_2021-notice/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/0x00_2021-notice/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/0x00_2021-notice/"/>
@@ -5126,7 +5126,7 @@
     </url>
     <url>
         <loc>Nonetr/0x01_2021-about-owasp/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/0x01_2021-about-owasp/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/0x01_2021-about-owasp/"/>
@@ -5143,7 +5143,7 @@
     </url>
     <url>
         <loc>Nonetr/A00_2021-How_to_start_an_AppSec_program_with_the_OWASP_Top_10/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/A00_2021-How_to_start_an_AppSec_program_with_the_OWASP_Top_10/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A00_2021-How_to_start_an_AppSec_program_with_the_OWASP_Top_10/"/>
@@ -5160,7 +5160,7 @@
     </url>
     <url>
         <loc>Nonetr/A00_2021_How_to_use_the_OWASP_Top_10_as_a_standard/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/A00_2021_How_to_use_the_OWASP_Top_10_as_a_standard/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A00_2021_How_to_use_the_OWASP_Top_10_as_a_standard/"/>
@@ -5177,7 +5177,7 @@
     </url>
     <url>
         <loc>Nonetr/A00_2021_Introduction/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/A00_2021_Introduction/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A00_2021_Introduction/"/>
@@ -5194,7 +5194,7 @@
     </url>
     <url>
         <loc>Nonetr/A01_2021-Broken_Access_Control/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/A01_2021-Broken_Access_Control/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A01_2021-Broken_Access_Control/"/>
@@ -5211,7 +5211,7 @@
     </url>
     <url>
         <loc>Nonetr/A02_2021-Cryptographic_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/A02_2021-Cryptographic_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A02_2021-Cryptographic_Failures/"/>
@@ -5228,7 +5228,7 @@
     </url>
     <url>
         <loc>Nonetr/A03_2021-Injection/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/A03_2021-Injection/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A03_2021-Injection/"/>
@@ -5245,7 +5245,7 @@
     </url>
     <url>
         <loc>Nonetr/A04_2021-Insecure_Design/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/A04_2021-Insecure_Design/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A04_2021-Insecure_Design/"/>
@@ -5262,7 +5262,7 @@
     </url>
     <url>
         <loc>Nonetr/A05_2021-Security_Misconfiguration/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/A05_2021-Security_Misconfiguration/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A05_2021-Security_Misconfiguration/"/>
@@ -5279,7 +5279,7 @@
     </url>
     <url>
         <loc>Nonetr/A06_2021-Vulnerable_and_Outdated_Components/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/A06_2021-Vulnerable_and_Outdated_Components/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A06_2021-Vulnerable_and_Outdated_Components/"/>
@@ -5296,7 +5296,7 @@
     </url>
     <url>
         <loc>Nonetr/A07_2021-Identification_and_Authentication_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/A07_2021-Identification_and_Authentication_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A07_2021-Identification_and_Authentication_Failures/"/>
@@ -5313,7 +5313,7 @@
     </url>
     <url>
         <loc>Nonetr/A08_2021-Software_and_Data_Integrity_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/A08_2021-Software_and_Data_Integrity_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A08_2021-Software_and_Data_Integrity_Failures/"/>
@@ -5330,7 +5330,7 @@
     </url>
     <url>
         <loc>Nonetr/A09_2021-Security_Logging_and_Monitoring_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/A09_2021-Security_Logging_and_Monitoring_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A09_2021-Security_Logging_and_Monitoring_Failures/"/>
@@ -5347,7 +5347,7 @@
     </url>
     <url>
         <loc>Nonetr/A10_2021-Server-Side_Request_Forgery_%28SSRF%29/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/A10_2021-Server-Side_Request_Forgery_%28SSRF%29/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A10_2021-Server-Side_Request_Forgery_%28SSRF%29/"/>
@@ -5364,7 +5364,7 @@
     </url>
     <url>
         <loc>Nonetr/A11_2021-Next_Steps/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/A11_2021-Next_Steps/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A11_2021-Next_Steps/"/>
@@ -5381,7 +5381,7 @@
     </url>
     <url>
         <loc>Nonetr/2025/0x00_2025-Introduction/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/2025/0x00_2025-Introduction/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/0x00_2025-Introduction/"/>
@@ -5398,7 +5398,7 @@
     </url>
     <url>
         <loc>Nonetr/2025/0x01_2025-About_OWASP/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/2025/0x01_2025-About_OWASP/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/0x01_2025-About_OWASP/"/>
@@ -5415,7 +5415,7 @@
     </url>
     <url>
         <loc>Nonetr/2025/0x02_2025-What_are_Application_Security_Risks/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/2025/0x02_2025-What_are_Application_Security_Risks/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/0x02_2025-What_are_Application_Security_Risks/"/>
@@ -5432,7 +5432,7 @@
     </url>
     <url>
         <loc>Nonetr/2025/0x03_2025-Establishing_a_Modern_Application_Security_Program/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/2025/0x03_2025-Establishing_a_Modern_Application_Security_Program/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/0x03_2025-Establishing_a_Modern_Application_Security_Program/"/>
@@ -5449,7 +5449,7 @@
     </url>
     <url>
         <loc>Nonetr/2025/A01_2025-Broken_Access_Control/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/2025/A01_2025-Broken_Access_Control/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A01_2025-Broken_Access_Control/"/>
@@ -5466,7 +5466,7 @@
     </url>
     <url>
         <loc>Nonetr/2025/A02_2025-Security_Misconfiguration/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/2025/A02_2025-Security_Misconfiguration/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A02_2025-Security_Misconfiguration/"/>
@@ -5483,7 +5483,7 @@
     </url>
     <url>
         <loc>Nonetr/2025/A03_2025-Software_Supply_Chain_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/2025/A03_2025-Software_Supply_Chain_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A03_2025-Software_Supply_Chain_Failures/"/>
@@ -5500,7 +5500,7 @@
     </url>
     <url>
         <loc>Nonetr/2025/A04_2025-Cryptographic_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/2025/A04_2025-Cryptographic_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A04_2025-Cryptographic_Failures/"/>
@@ -5517,7 +5517,7 @@
     </url>
     <url>
         <loc>Nonetr/2025/A05_2025-Injection/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/2025/A05_2025-Injection/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A05_2025-Injection/"/>
@@ -5534,7 +5534,7 @@
     </url>
     <url>
         <loc>Nonetr/2025/A06_2025-Insecure_Design/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/2025/A06_2025-Insecure_Design/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A06_2025-Insecure_Design/"/>
@@ -5551,7 +5551,7 @@
     </url>
     <url>
         <loc>Nonetr/2025/A07_2025-Authentication_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/2025/A07_2025-Authentication_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A07_2025-Authentication_Failures/"/>
@@ -5568,7 +5568,7 @@
     </url>
     <url>
         <loc>Nonetr/2025/A08_2025-Software_or_Data_Integrity_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/2025/A08_2025-Software_or_Data_Integrity_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A08_2025-Software_or_Data_Integrity_Failures/"/>
@@ -5585,7 +5585,7 @@
     </url>
     <url>
         <loc>Nonetr/2025/A09_2025-Logging_and_Alerting_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/2025/A09_2025-Logging_and_Alerting_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A09_2025-Logging_and_Alerting_Failures/"/>
@@ -5602,7 +5602,7 @@
     </url>
     <url>
         <loc>Nonetr/2025/A10_2025-Mishandling_of_Exceptional_Conditions/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/2025/A10_2025-Mishandling_of_Exceptional_Conditions/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A10_2025-Mishandling_of_Exceptional_Conditions/"/>
@@ -5619,7 +5619,7 @@
     </url>
     <url>
         <loc>Nonetr/2025/X01_2025-Next_Steps/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/2025/X01_2025-Next_Steps/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/X01_2025-Next_Steps/"/>
@@ -5636,7 +5636,7 @@
     </url>
     <url>
         <loc>Nonezh-Hant/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-Hant" href="Nonezh-Hant/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/"/>
@@ -5653,7 +5653,7 @@
     </url>
     <url>
         <loc>Nonezh-Hant/0x00_2021-introduction/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-Hant" href="Nonezh-Hant/0x00_2021-introduction/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/0x00_2021-introduction/"/>
@@ -5670,7 +5670,7 @@
     </url>
     <url>
         <loc>Nonezh-Hant/0x00_2021-notice/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-Hant" href="Nonezh-Hant/0x00_2021-notice/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/0x00_2021-notice/"/>
@@ -5687,7 +5687,7 @@
     </url>
     <url>
         <loc>Nonezh-Hant/0x01_2021-about-owasp/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-Hant" href="Nonezh-Hant/0x01_2021-about-owasp/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/0x01_2021-about-owasp/"/>
@@ -5704,7 +5704,7 @@
     </url>
     <url>
         <loc>Nonezh-Hant/A00_2021-How_to_start_an_AppSec_program_with_the_OWASP_Top_10/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-Hant" href="Nonezh-Hant/A00_2021-How_to_start_an_AppSec_program_with_the_OWASP_Top_10/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A00_2021-How_to_start_an_AppSec_program_with_the_OWASP_Top_10/"/>
@@ -5721,7 +5721,7 @@
     </url>
     <url>
         <loc>Nonezh-Hant/A00_2021_How_to_use_the_OWASP_Top_10_as_a_standard/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-Hant" href="Nonezh-Hant/A00_2021_How_to_use_the_OWASP_Top_10_as_a_standard/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A00_2021_How_to_use_the_OWASP_Top_10_as_a_standard/"/>
@@ -5738,7 +5738,7 @@
     </url>
     <url>
         <loc>Nonezh-Hant/A00_2021_Introduction/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-Hant" href="Nonezh-Hant/A00_2021_Introduction/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A00_2021_Introduction/"/>
@@ -5755,7 +5755,7 @@
     </url>
     <url>
         <loc>Nonezh-Hant/A01_2021-Broken_Access_Control/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-Hant" href="Nonezh-Hant/A01_2021-Broken_Access_Control/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A01_2021-Broken_Access_Control/"/>
@@ -5772,7 +5772,7 @@
     </url>
     <url>
         <loc>Nonezh-Hant/A02_2021-Cryptographic_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-Hant" href="Nonezh-Hant/A02_2021-Cryptographic_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A02_2021-Cryptographic_Failures/"/>
@@ -5789,7 +5789,7 @@
     </url>
     <url>
         <loc>Nonezh-Hant/A03_2021-Injection/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-Hant" href="Nonezh-Hant/A03_2021-Injection/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A03_2021-Injection/"/>
@@ -5806,7 +5806,7 @@
     </url>
     <url>
         <loc>Nonezh-Hant/A04_2021-Insecure_Design/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-Hant" href="Nonezh-Hant/A04_2021-Insecure_Design/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A04_2021-Insecure_Design/"/>
@@ -5823,7 +5823,7 @@
     </url>
     <url>
         <loc>Nonezh-Hant/A05_2021-Security_Misconfiguration/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-Hant" href="Nonezh-Hant/A05_2021-Security_Misconfiguration/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A05_2021-Security_Misconfiguration/"/>
@@ -5840,7 +5840,7 @@
     </url>
     <url>
         <loc>Nonezh-Hant/A06_2021-Vulnerable_and_Outdated_Components/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-Hant" href="Nonezh-Hant/A06_2021-Vulnerable_and_Outdated_Components/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A06_2021-Vulnerable_and_Outdated_Components/"/>
@@ -5857,7 +5857,7 @@
     </url>
     <url>
         <loc>Nonezh-Hant/A07_2021-Identification_and_Authentication_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-Hant" href="Nonezh-Hant/A07_2021-Identification_and_Authentication_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A07_2021-Identification_and_Authentication_Failures/"/>
@@ -5874,7 +5874,7 @@
     </url>
     <url>
         <loc>Nonezh-Hant/A08_2021-Software_and_Data_Integrity_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-Hant" href="Nonezh-Hant/A08_2021-Software_and_Data_Integrity_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A08_2021-Software_and_Data_Integrity_Failures/"/>
@@ -5891,7 +5891,7 @@
     </url>
     <url>
         <loc>Nonezh-Hant/A09_2021-Security_Logging_and_Monitoring_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-Hant" href="Nonezh-Hant/A09_2021-Security_Logging_and_Monitoring_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A09_2021-Security_Logging_and_Monitoring_Failures/"/>
@@ -5908,7 +5908,7 @@
     </url>
     <url>
         <loc>Nonezh-Hant/A10_2021-Server-Side_Request_Forgery_%28SSRF%29/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-Hant" href="Nonezh-Hant/A10_2021-Server-Side_Request_Forgery_%28SSRF%29/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A10_2021-Server-Side_Request_Forgery_%28SSRF%29/"/>
@@ -5925,7 +5925,7 @@
     </url>
     <url>
         <loc>Nonezh-Hant/A11_2021-Next_Steps/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-Hant" href="Nonezh-Hant/A11_2021-Next_Steps/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A11_2021-Next_Steps/"/>
@@ -5942,7 +5942,7 @@
     </url>
     <url>
         <loc>Nonezh-Hant/2025/0x00_2025-Introduction/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-Hant" href="Nonezh-Hant/2025/0x00_2025-Introduction/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/0x00_2025-Introduction/"/>
@@ -5959,7 +5959,7 @@
     </url>
     <url>
         <loc>Nonezh-Hant/2025/0x01_2025-About_OWASP/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-Hant" href="Nonezh-Hant/2025/0x01_2025-About_OWASP/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/0x01_2025-About_OWASP/"/>
@@ -5976,7 +5976,7 @@
     </url>
     <url>
         <loc>Nonezh-Hant/2025/0x02_2025-What_are_Application_Security_Risks/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-Hant" href="Nonezh-Hant/2025/0x02_2025-What_are_Application_Security_Risks/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/0x02_2025-What_are_Application_Security_Risks/"/>
@@ -5993,7 +5993,7 @@
     </url>
     <url>
         <loc>Nonezh-Hant/2025/0x03_2025-Establishing_a_Modern_Application_Security_Program/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-Hant" href="Nonezh-Hant/2025/0x03_2025-Establishing_a_Modern_Application_Security_Program/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/0x03_2025-Establishing_a_Modern_Application_Security_Program/"/>
@@ -6010,7 +6010,7 @@
     </url>
     <url>
         <loc>Nonezh-Hant/2025/A01_2025-Broken_Access_Control/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-Hant" href="Nonezh-Hant/2025/A01_2025-Broken_Access_Control/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A01_2025-Broken_Access_Control/"/>
@@ -6027,7 +6027,7 @@
     </url>
     <url>
         <loc>Nonezh-Hant/2025/A02_2025-Security_Misconfiguration/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-Hant" href="Nonezh-Hant/2025/A02_2025-Security_Misconfiguration/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A02_2025-Security_Misconfiguration/"/>
@@ -6044,7 +6044,7 @@
     </url>
     <url>
         <loc>Nonezh-Hant/2025/A03_2025-Software_Supply_Chain_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-Hant" href="Nonezh-Hant/2025/A03_2025-Software_Supply_Chain_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A03_2025-Software_Supply_Chain_Failures/"/>
@@ -6061,7 +6061,7 @@
     </url>
     <url>
         <loc>Nonezh-Hant/2025/A04_2025-Cryptographic_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-Hant" href="Nonezh-Hant/2025/A04_2025-Cryptographic_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A04_2025-Cryptographic_Failures/"/>
@@ -6078,7 +6078,7 @@
     </url>
     <url>
         <loc>Nonezh-Hant/2025/A05_2025-Injection/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-Hant" href="Nonezh-Hant/2025/A05_2025-Injection/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A05_2025-Injection/"/>
@@ -6095,7 +6095,7 @@
     </url>
     <url>
         <loc>Nonezh-Hant/2025/A06_2025-Insecure_Design/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-Hant" href="Nonezh-Hant/2025/A06_2025-Insecure_Design/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A06_2025-Insecure_Design/"/>
@@ -6112,7 +6112,7 @@
     </url>
     <url>
         <loc>Nonezh-Hant/2025/A07_2025-Authentication_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-Hant" href="Nonezh-Hant/2025/A07_2025-Authentication_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A07_2025-Authentication_Failures/"/>
@@ -6129,7 +6129,7 @@
     </url>
     <url>
         <loc>Nonezh-Hant/2025/A08_2025-Software_or_Data_Integrity_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-Hant" href="Nonezh-Hant/2025/A08_2025-Software_or_Data_Integrity_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A08_2025-Software_or_Data_Integrity_Failures/"/>
@@ -6146,7 +6146,7 @@
     </url>
     <url>
         <loc>Nonezh-Hant/2025/A09_2025-Logging_and_Alerting_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-Hant" href="Nonezh-Hant/2025/A09_2025-Logging_and_Alerting_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A09_2025-Logging_and_Alerting_Failures/"/>
@@ -6163,7 +6163,7 @@
     </url>
     <url>
         <loc>Nonezh-Hant/2025/A10_2025-Mishandling_of_Exceptional_Conditions/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-Hant" href="Nonezh-Hant/2025/A10_2025-Mishandling_of_Exceptional_Conditions/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A10_2025-Mishandling_of_Exceptional_Conditions/"/>
@@ -6180,7 +6180,7 @@
     </url>
     <url>
         <loc>Nonezh-Hant/2025/X01_2025-Next_Steps/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-Hant" href="Nonezh-Hant/2025/X01_2025-Next_Steps/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/X01_2025-Next_Steps/"/>
@@ -6197,7 +6197,7 @@
     </url>
     <url>
         <loc>Nonezh-TW/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="Nonezh-TW/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/"/>
@@ -6214,7 +6214,7 @@
     </url>
     <url>
         <loc>Nonezh-TW/0x00_2021-introduction/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="Nonezh-TW/0x00_2021-introduction/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/0x00_2021-introduction/"/>
@@ -6231,7 +6231,7 @@
     </url>
     <url>
         <loc>Nonezh-TW/0x00_2021-notice/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="Nonezh-TW/0x00_2021-notice/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/0x00_2021-notice/"/>
@@ -6248,7 +6248,7 @@
     </url>
     <url>
         <loc>Nonezh-TW/0x01_2021-about-owasp/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="Nonezh-TW/0x01_2021-about-owasp/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/0x01_2021-about-owasp/"/>
@@ -6265,7 +6265,7 @@
     </url>
     <url>
         <loc>Nonezh-TW/A00_2021-How_to_start_an_AppSec_program_with_the_OWASP_Top_10/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="Nonezh-TW/A00_2021-How_to_start_an_AppSec_program_with_the_OWASP_Top_10/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A00_2021-How_to_start_an_AppSec_program_with_the_OWASP_Top_10/"/>
@@ -6282,7 +6282,7 @@
     </url>
     <url>
         <loc>Nonezh-TW/A00_2021_How_to_use_the_OWASP_Top_10_as_a_standard/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="Nonezh-TW/A00_2021_How_to_use_the_OWASP_Top_10_as_a_standard/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A00_2021_How_to_use_the_OWASP_Top_10_as_a_standard/"/>
@@ -6299,7 +6299,7 @@
     </url>
     <url>
         <loc>Nonezh-TW/A00_2021_Introduction/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="Nonezh-TW/A00_2021_Introduction/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A00_2021_Introduction/"/>
@@ -6316,7 +6316,7 @@
     </url>
     <url>
         <loc>Nonezh-TW/A01_2021-Broken_Access_Control/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="Nonezh-TW/A01_2021-Broken_Access_Control/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A01_2021-Broken_Access_Control/"/>
@@ -6333,7 +6333,7 @@
     </url>
     <url>
         <loc>Nonezh-TW/A02_2021-Cryptographic_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="Nonezh-TW/A02_2021-Cryptographic_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A02_2021-Cryptographic_Failures/"/>
@@ -6350,7 +6350,7 @@
     </url>
     <url>
         <loc>Nonezh-TW/A03_2021-Injection/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="Nonezh-TW/A03_2021-Injection/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A03_2021-Injection/"/>
@@ -6367,7 +6367,7 @@
     </url>
     <url>
         <loc>Nonezh-TW/A04_2021-Insecure_Design/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="Nonezh-TW/A04_2021-Insecure_Design/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A04_2021-Insecure_Design/"/>
@@ -6384,7 +6384,7 @@
     </url>
     <url>
         <loc>Nonezh-TW/A05_2021-Security_Misconfiguration/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="Nonezh-TW/A05_2021-Security_Misconfiguration/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A05_2021-Security_Misconfiguration/"/>
@@ -6401,7 +6401,7 @@
     </url>
     <url>
         <loc>Nonezh-TW/A06_2021-Vulnerable_and_Outdated_Components/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="Nonezh-TW/A06_2021-Vulnerable_and_Outdated_Components/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A06_2021-Vulnerable_and_Outdated_Components/"/>
@@ -6418,7 +6418,7 @@
     </url>
     <url>
         <loc>Nonezh-TW/A07_2021-Identification_and_Authentication_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="Nonezh-TW/A07_2021-Identification_and_Authentication_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A07_2021-Identification_and_Authentication_Failures/"/>
@@ -6435,7 +6435,7 @@
     </url>
     <url>
         <loc>Nonezh-TW/A08_2021-Software_and_Data_Integrity_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="Nonezh-TW/A08_2021-Software_and_Data_Integrity_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A08_2021-Software_and_Data_Integrity_Failures/"/>
@@ -6452,7 +6452,7 @@
     </url>
     <url>
         <loc>Nonezh-TW/A09_2021-Security_Logging_and_Monitoring_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="Nonezh-TW/A09_2021-Security_Logging_and_Monitoring_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A09_2021-Security_Logging_and_Monitoring_Failures/"/>
@@ -6469,7 +6469,7 @@
     </url>
     <url>
         <loc>Nonezh-TW/A10_2021-Server-Side_Request_Forgery_%28SSRF%29/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="Nonezh-TW/A10_2021-Server-Side_Request_Forgery_%28SSRF%29/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A10_2021-Server-Side_Request_Forgery_%28SSRF%29/"/>
@@ -6486,7 +6486,7 @@
     </url>
     <url>
         <loc>Nonezh-TW/A11_2021-Next_Steps/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="Nonezh-TW/A11_2021-Next_Steps/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/A11_2021-Next_Steps/"/>
@@ -6503,7 +6503,7 @@
     </url>
     <url>
         <loc>Nonezh-TW/2025/0x00_2025-Introduction/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="Nonezh-TW/2025/0x00_2025-Introduction/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/0x00_2025-Introduction/"/>
@@ -6520,7 +6520,7 @@
     </url>
     <url>
         <loc>Nonezh-TW/2025/0x01_2025-About_OWASP/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="Nonezh-TW/2025/0x01_2025-About_OWASP/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/0x01_2025-About_OWASP/"/>
@@ -6537,7 +6537,7 @@
     </url>
     <url>
         <loc>Nonezh-TW/2025/0x02_2025-What_are_Application_Security_Risks/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="Nonezh-TW/2025/0x02_2025-What_are_Application_Security_Risks/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/0x02_2025-What_are_Application_Security_Risks/"/>
@@ -6554,7 +6554,7 @@
     </url>
     <url>
         <loc>Nonezh-TW/2025/0x03_2025-Establishing_a_Modern_Application_Security_Program/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="Nonezh-TW/2025/0x03_2025-Establishing_a_Modern_Application_Security_Program/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/0x03_2025-Establishing_a_Modern_Application_Security_Program/"/>
@@ -6571,7 +6571,7 @@
     </url>
     <url>
         <loc>Nonezh-TW/2025/A01_2025-Broken_Access_Control/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="Nonezh-TW/2025/A01_2025-Broken_Access_Control/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A01_2025-Broken_Access_Control/"/>
@@ -6588,7 +6588,7 @@
     </url>
     <url>
         <loc>Nonezh-TW/2025/A02_2025-Security_Misconfiguration/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="Nonezh-TW/2025/A02_2025-Security_Misconfiguration/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A02_2025-Security_Misconfiguration/"/>
@@ -6605,7 +6605,7 @@
     </url>
     <url>
         <loc>Nonezh-TW/2025/A03_2025-Software_Supply_Chain_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="Nonezh-TW/2025/A03_2025-Software_Supply_Chain_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A03_2025-Software_Supply_Chain_Failures/"/>
@@ -6622,7 +6622,7 @@
     </url>
     <url>
         <loc>Nonezh-TW/2025/A04_2025-Cryptographic_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="Nonezh-TW/2025/A04_2025-Cryptographic_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A04_2025-Cryptographic_Failures/"/>
@@ -6639,7 +6639,7 @@
     </url>
     <url>
         <loc>Nonezh-TW/2025/A05_2025-Injection/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="Nonezh-TW/2025/A05_2025-Injection/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A05_2025-Injection/"/>
@@ -6656,7 +6656,7 @@
     </url>
     <url>
         <loc>Nonezh-TW/2025/A06_2025-Insecure_Design/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="Nonezh-TW/2025/A06_2025-Insecure_Design/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A06_2025-Insecure_Design/"/>
@@ -6673,7 +6673,7 @@
     </url>
     <url>
         <loc>Nonezh-TW/2025/A07_2025-Authentication_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="Nonezh-TW/2025/A07_2025-Authentication_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A07_2025-Authentication_Failures/"/>
@@ -6690,7 +6690,7 @@
     </url>
     <url>
         <loc>Nonezh-TW/2025/A08_2025-Software_or_Data_Integrity_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="Nonezh-TW/2025/A08_2025-Software_or_Data_Integrity_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A08_2025-Software_or_Data_Integrity_Failures/"/>
@@ -6707,7 +6707,7 @@
     </url>
     <url>
         <loc>Nonezh-TW/2025/A09_2025-Logging_and_Alerting_Failures/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="Nonezh-TW/2025/A09_2025-Logging_and_Alerting_Failures/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A09_2025-Logging_and_Alerting_Failures/"/>
@@ -6724,7 +6724,7 @@
     </url>
     <url>
         <loc>Nonezh-TW/2025/A10_2025-Mishandling_of_Exceptional_Conditions/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="Nonezh-TW/2025/A10_2025-Mishandling_of_Exceptional_Conditions/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/A10_2025-Mishandling_of_Exceptional_Conditions/"/>
@@ -6741,7 +6741,7 @@
     </url>
     <url>
         <loc>Nonezh-TW/2025/X01_2025-Next_Steps/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="Nonezh-TW/2025/X01_2025-Next_Steps/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="Nonear/2025/X01_2025-Next_Steps/"/>
