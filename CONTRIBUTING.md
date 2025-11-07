@@ -13,3 +13,13 @@ You are more than welcome to fork the OWASP Top 10, but please abide by the Crea
 ## Pull requests
 
 We welcome pull requests for fixes, but again, it might be a while before we accept any changes to the final version of the OWASP Top 10.
+
+## Building
+Run `make help` to see the make targets.
+
+The first time you probably want to run `make all` which will install any dependencies, 
+generate the site, and then serve it on a local server for testing. 
+
+Once you have your dependencies straight, you can speed things up by using `make genserve`.
+
+Visit the site at: http://127.0.0.1:8000/

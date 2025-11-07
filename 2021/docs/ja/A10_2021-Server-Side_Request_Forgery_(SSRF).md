@@ -51,11 +51,9 @@ SSRFの欠陥は、Webアプリケーション上からリモートのリソー�
 
 ### **検討すべき追加の対策:**
 
--   Don't deploy other security relevant services on front systems (e.g. OpenID).
-    Control local traffic on these systems (e.g. localhost)
+-   フロントシステムには、他のセキュリティ関連サービス（例：OpenID）をデプロイ（配備）しないでください。また、これらのシステム上のローカルトラフィック（例：localhost）も制御してください。
 
--   For frontends with dedicated and manageable user groups use network encryption (e.g. VPNs)
-    on independant systems to consider very high protection needs
+-   ユーザーグループが限定的かつ管理可能であるフロントエンドで、特に高いレベルの保護が求められる場合は、独立したシステム上でネットワーク暗号化（例：VPN）を使用してください。
 
 ## 攻撃シナリオの例
 
