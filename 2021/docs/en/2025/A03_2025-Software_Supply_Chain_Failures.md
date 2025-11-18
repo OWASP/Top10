@@ -62,17 +62,17 @@ Software supply chain failures are breakdowns or other compromises in the proces
 
 You are likely vulnerable if:
 
-* If you do not carefully track the versions of all components that you use (both client-side and server-side). This includes components you directly use as well as nested (transitive) dependencies.
-* If the software is vulnerable, unsupported, or out of date. This includes the OS, web/application server, database management system (DBMS), applications, APIs and all components, runtime environments, and libraries.
-* If you do not scan for vulnerabilities regularly and subscribe to security bulletins related to the components you use.
-* If you do not have a change management process or tracking of changes within your supply chain, including tracking IDEs, IDE extensions and updates, changes to your organization’s code repository, sandboxes, image and library repositories, the way artifacts are created and stored, etc. Every part of your supply chain should be documented, especially changes.
-* If you have not hardened every part of your supply chain, with a special focus on access control and the application of least privilege. 
-* If your supply chain systems do not have any separation of duty. No single person should be able to write code and  promote it all the way to production without oversight from another human being.
-* If developers, DevOps, or infrastructure professionals are allowed to download and use components from untrusted sources, for use in production.
-* If you do not fix or upgrade the underlying platform, frameworks, and dependencies in a risk-based, timely fashion. This commonly happens in environments when patching is a monthly or quarterly task under change control, leaving organizations open to days or months of unnecessary exposure before fixing vulnerabilities.
-* If software developers do not test the compatibility of updated, upgraded, or patched libraries.
-* If you do not secure the configurations of every part of your system (see [A02:2025-Security Misconfiguration](https://owasp.org/Top10/A05_2021-Security_Misconfiguration/)).
-* If you have a complex CI/CD pipeline that uses many components but has weaker security than the rest of your application.
+* you do not carefully track the versions of all components that you use (both client-side and server-side). This includes components you directly use as well as nested (transitive) dependencies.
+* the software is vulnerable, unsupported, or out of date. This includes the OS, web/application server, database management system (DBMS), applications, APIs and all components, runtime environments, and libraries.
+* you do not scan for vulnerabilities regularly and subscribe to security bulletins related to the components you use.
+* you do not have a change management process or tracking of changes within your supply chain, including tracking IDEs, IDE extensions and updates, changes to your organization’s code repository, sandboxes, image and library repositories, the way artifacts are created and stored, etc. Every part of your supply chain should be documented, especially changes.
+* you have not hardened every part of your supply chain, with a special focus on access control and the application of least privilege. 
+* your supply chain systems do not have any separation of duty. No single person should be able to write code and  promote it all the way to production without oversight from another human being.
+* developers, DevOps, or infrastructure professionals are allowed to download and use components from untrusted sources, for use in production.
+* you do not fix or upgrade the underlying platform, frameworks, and dependencies in a risk-based, timely fashion. This commonly happens in environments when patching is a monthly or quarterly task under change control, leaving organizations open to days or months of unnecessary exposure before fixing vulnerabilities.
+* software developers do not test the compatibility of updated, upgraded, or patched libraries.
+* you do not secure the configurations of every part of your system (see [A02:2025-Security Misconfiguration](https://owasp.org/Top10/A05_2021-Security_Misconfiguration/)).
+* your CI/CD pipeline has weaker security than the systems it builds and deploys, especially if it is complex.
 
 
 ## How to prevent. 
@@ -81,28 +81,27 @@ There should be a patch management process in place to:
 
 
 
-* Know your Software Bill of Materials (SBOM) of your entire software and manage the SBOM-dictionary centrally.
-* Track not just your own dependencies, but their (transitive) dependencies, and so on.
-* Remove unused dependencies, unnecessary features, components, files, and documentation. Attack surface reduction.
+* Centrally generate and manage the Software Bill of Materials (SBOM) of your entire software.
+* Track not just your direct dependencies, but their (transitive) dependencies, and so on.
+* Reduce attack surface by removing unused dependencies, unnecessary features, components, files, and documentation.
 * Continuously inventory the versions of both client-side and server-side components (e.g., frameworks, libraries) and their dependencies using tools like versions, OWASP Dependency Check, retire.js, etc.
-* Continuously monitor sources like Common Vulnerability and Exposures (CVE) and National Vulnerability Database (NVD) for vulnerabilities in the components you use. Use software composition analysis, software supply chain, or security-focused SBOM tools to automate the process. Subscribe to email alerts for security vulnerabilities related to components you use.
+* Continuously monitor sources like Common Vulnerability and Exposures (CVE), National Vulnerability Database (NVD), and [Open Source Vulnerabilities (OSV)](https://osv.dev/) for vulnerabilities in the components you use. Use software composition analysis, software supply chain, or security-focused SBOM tools to automate the process. Subscribe to alerts for security vulnerabilities related to components you use.
 * Only obtain components from official (trusted) sources over secure links. Prefer signed packages to reduce the chance of including a modified, malicious component (see [A08:2025-Software and Data Integrity Failures](https://owasp.org/Top10/A08_2021-Software_and_Data_Integrity_Failures/)).
-* Deliberately choosing which version of a dependency you use and upgrading only when there is need.
-* Monitor for libraries and components that are unmaintained or do not create security patches for older versions. If patching is not possible, consider deploying a virtual patch to monitor, detect, or protect against the discovered issue.
+* Deliberately choose which version of a dependency you use and upgrade only when there is need.
+* Monitor for libraries and components that are unmaintained or do not create security patches for older versions. If patching is not possible, consider migrating to an alternative. If that is not possible, consider deploying a virtual patch to monitor, detect, or protect against the discovered issue.
 * Update your CI/CD, IDE, and any other developer tooling regularly
-* Treat components in your CI/CD pipeline as part of this process; harden them, monitor them, and document changes accordingly
 
 
 There should be a change management process or tracking system in place to track changes to:
-* Your CI/CD settings (all build tools and pipeline)
-* Your code repository
+* CI/CD settings (all build tools and pipelines)
+* Code repositories
 * Sandbox areas
 * Developer IDEs
-* Your SBOM tooling, and created artifacts
-* Your logging systems and logs
+* SBOM tooling, and created artifacts
+* Logging systems and logs
 * Third party integrations, such as SaaS
-* Artifact repository 
-* Container registry
+* Artifact repositories
+* Container registries
 
 
 Harden the following systems, which includes enabling MFA and locking down IAM:
@@ -110,7 +109,7 @@ Harden the following systems, which includes enabling MFA and locking down IAM:
 * Developer workstations (regular patching, MFA, monitoring, and more)
 * Your build server & CI/CD (separation of duties, access control, signed builds, environment-scoped secrets, tamper-evident logs, more)
 * Your artifacts (ensure integrity via providence, signing, and time stamping, promote artifacts rather than rebuilding for each environment, ensure builds are immutable)
-* Infrastructure as code is managed like all code, including use of PRs and version control
+* Infrastructure as code (managed like all code, including use of PRs and version control)
 
 Every organization must ensure an ongoing plan for monitoring, triaging, and applying updates or configuration changes for the lifetime of the application or portfolio.
 
@@ -127,17 +126,15 @@ Every organization must ensure an ongoing plan for monitoring, triaging, and app
 
 
 
-* The 2025 Bybit theft of $1.5 billion caused by a supply chain attack in wallet software that only executed when the target wallet was being used. https://thehackernews.com/2025/02/bybit-hack-traced-to-safewallet-supply.html
+* The 2025 Bybit theft of $1.5 billion was caused by [a supply chain attack in wallet software](https://www.sygnia.co/blog/sygnia-investigation-bybit-hack/) that only executed when the target wallet was being used. 
 
-**Scenario #3:** The GlassWorm supply chain attack in 2025 against the VS Code marketplace has malicious actors implement invisible, self-replicating code into a legitimate extension in the VS Marketplace, as well as several extensions in the OpenVSX Marketplace, which auto-updated onto developer machines. The worm immediately harvested local secrets from the developer machines, attempted to establish command and control, as well as emptied developer’s crypto wallets if possible. This supply chain attack was extremely advanced, fast-spreading, and damaging, and by targeting developer machines it demonstrated developers themselves are now prime targets for supply chain attacks.
+**Scenario #3:** The [`Shai-Hulud` supply chain attack](https://www.cisa.gov/news-events/alerts/2025/09/23/widespread-supply-chain-compromise-impacting-npm-ecosystem) in 2025 was the first successful self-propagating npm worm. Attacks seeded malicious versions of popular packages, which used a post-install script to harvest and exfiltrate sensitive data to public GitHub repositories. The malware would also detect npm tokens in the victim environment, and automatically use them to push malicious versions of any accessible package. The worm reached over 500 package versions before being disrupted by npm.  This supply chain attack was advanced, fast-spreading, and damaging, and by targeting developer machines it demonstrated developers themselves are now prime targets for supply chain attacks.
 
 **Scenario #4:** Components typically run with the same privileges as the application itself, so flaws in any component can result in serious impact. Such flaws can be accidental (e.g., coding error) or intentional (e.g., a backdoor in a component). Some example exploitable component vulnerabilities discovered are:
 
-
 * CVE-2017-5638, a Struts 2 remote code execution vulnerability that enables the execution of arbitrary code on the server, has been blamed for significant breaches.
-* While the internet of things (IoT) is frequently difficult or impossible to patch, the importance of patching them can be great (e.g., biomedical devices).
+* CVE-2021-44228 ("Log4Shell"), an Apache Log4j remote code execution zero-day vulnerability, has been blamed for ransomware, cryptomining, and other attack campaigns.
 
-There are automated tools to help attackers find unpatched or misconfigured systems. For example, the [Shodan IoT](https://www.shodan.io) search engine can help you find devices that still suffer from Heartbleed vulnerability patched in April 2014.
 
 ## References
 
