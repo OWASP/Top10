@@ -67,7 +67,7 @@ Access control enforces policy such that users cannot act outside of their inten
 * Bypassing access control checks by modifying the URL (parameter tampering or force browsing), internal application state, or the HTML page, or by using an attack tool that modifies API requests.
 * Permitting viewing or editing someone else's account by providing its unique identifier (insecure direct object references)
 * An accessible API with missing access controls for POST, PUT, and DELETE.
-* Elevation of privilege. Acting as a user without being logged in or acting as an admin when logged in as a user.
+* Elevation of privilege. Acting as a user without being logged in or or gaining privileges beyond those expected of the logged in user (e.g. admin access). 
 * Metadata manipulation, such as replaying or tampering with a JSON Web Token (JWT) access control token, a cookie or hidden field manipulated to elevate privileges, or abusing JWT invalidation.
 * CORS misconfiguration allows API access from unauthorized or untrusted origins.
 * Force browsing (guessing URLs) to authenticated pages as an unauthenticated user or to privileged pages as a standard user.
@@ -86,7 +86,7 @@ Access control is only effective when implemented in trusted server-side code or
 * Disable web server directory listing and ensure file metadata (e.g., .git) and backup files are not present within web roots.
 * Log access control failures, alert admins when appropriate (e.g., repeated failures).
 * Implement rate limits on API and controller access to minimize the harm from automated attack tooling.
-* Stateful session identifiers should be invalidated on the server after logout. Stateless JWT tokens should be short-lived to minimize the window of opportunity for an attacker. For longer-lived JWTs, it's highly recommended to follow the OAuth standards to revoke access.
+* Stateful session identifiers should be invalidated on the server after logout. Stateless JWT tokens should be short-lived to minimize the window of opportunity for an attacker. For longer-lived JWTs, consider using refresh tokens and following OAuth standards to revoke access.
 * Use well-established toolkits or patterns that provide simple, declarative access controls.
 
 Developers and QA staff should include functional access control in their unit and integration tests.
