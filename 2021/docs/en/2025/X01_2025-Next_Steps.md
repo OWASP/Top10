@@ -109,7 +109,7 @@ In order to prevent this type of vulnerability you must design for failure and r
 * [NIST Cybersecurity Framework (CSF)](https://www.nist.gov/cyberframework)
 * [Avoid Blocking Calls: Go Async in Java (Devlane)](https://www.devlane.com/blog/avoid-blocking-calls-go-async-in-java)
 
-## List of Mapped CWEs
+### List of Mapped CWEs
 * [CWE-73  External Control of File Name or Path](https://cwe.mitre.org/data/definitions/73.html)
 * [CWE-183 Permissive List of Allowed Inputs](https://cwe.mitre.org/data/definitions/183.html)
 * [CWE-256 Plaintext Storage of a Password](https://cwe.mitre.org/data/definitions/256.html)
@@ -263,7 +263,7 @@ Note: modern browsers use many levels of defenses to defend against such attacks
 * [Project Zero Blog](https://googleprojectzero.blogspot.com)
 * [Microsoft MSRC Blog](https://www.microsoft.com/en-us/msrc/blog)
 
-## List of Mapped CWEs
+### List of Mapped CWEs
 * [CWE-14 Compiler Removal of Code to Clear Buffers](https://cwe.mitre.org/data/definitions/14.html)
 * [CWE-119 Improper Restriction of Operations within the Bounds of a Memory Buffer](https://cwe.mitre.org/data/definitions/119.html)
 * [CWE-120 Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')](https://cwe.mitre.org/data/definitions/120.html)
