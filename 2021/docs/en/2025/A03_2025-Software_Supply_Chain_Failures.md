@@ -84,7 +84,7 @@ There should be a patch management process in place to:
 * Know your Software Bill of Materials (SBOM) of your entire software and manage the SBOM-dictionary centrally.
 * Track not just your own dependencies, but their (transitive) dependencies, and so on.
 * Remove unused dependencies, unnecessary features, components, files, and documentation. Attack surface reduction.
-* Continuously inventory the versions of both client-side and server-side components (e.g., frameworks, libraries) and their dependencies using tools like versions, OWASP Dependency Check, retire.js, etc.
+* Continuously inventory the versions of both client-side and server-side components (e.g., frameworks, libraries) and their dependencies using tools like versions, OWASP Dependency Track, etc.
 * Continuously monitor sources like Common Vulnerability and Exposures (CVE) and National Vulnerability Database (NVD) for vulnerabilities in the components you use. Use software composition analysis, software supply chain, or security-focused SBOM tools to automate the process. Subscribe to email alerts for security vulnerabilities related to components you use.
 * Only obtain components from official (trusted) sources over secure links. Prefer signed packages to reduce the chance of including a modified, malicious component (see [A08:2025-Software and Data Integrity Failures](https://owasp.org/Top10/A08_2021-Software_and_Data_Integrity_Failures/)).
 * Deliberately choosing which version of a dependency you use and upgrading only when there is need.
