@@ -90,6 +90,7 @@ Secure installation processes should be implemented, including:
 * An automated process to verify the effectiveness of the configurations and settings in all environments.
 * Proactively add a central configuration to intercept excessive error messages as a backup.
 * If these varifications are not automated, they should be manually verified annually at a minimum.
+* Use identity federation, short-lived credentials, or role-based access mechanisms provided by the underlying platform instead of embedding static keys or secrets in code, configuration files, or pipelines.
  
 
 ## Example attack scenarios. 
