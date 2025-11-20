@@ -97,15 +97,15 @@ Do the following, at a minimum, and consult the references:
 * Encrypt all data in transit with protocols TLS 1.2 and TLS 1.3 only, with forward secrecy (FS) ciphers, support quantum key change algorithms. Enforce encryption using HTTP Strict Transport Security (HSTS).
 * Disable caching for responses that contain sensitive data. This includes caching in your CDN, web server, and any application caching (eg: Redis).
 * Apply required security controls as per the data classification.
-* Do not use unencrypted protocols such as FTP and avoid using SMTP for tranmitting confidental data.
-* Store passwords using strong adaptive and salted hashing functions with a work factor (delay factor), such as Argon2, yescrypt, scrypt, bcrypt (legacy systems) or PBKDF2-HMAC-SHA-512. For legacy systems using bcrypt, get more advice at [OWASP Cheat Sheet: Password Storage](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html)
+* Do not use unencrypted protocols such as FTP and avoid using SMTP for transmitting confidential data.
+* Store passwords using strong adaptive and salted hashing functions with a work factor (delay factor), such as Argon2, yescrypt, scrypt or PBKDF2-HMAC-SHA-512. For legacy systems using bcrypt, get more advice at [OWASP Cheat Sheet: Password Storage](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html)
 * Initialization vectors must be chosen appropriate for the mode of operation. This could mean using a CSPRNG (cryptographically secure pseudo random number generator). For modes that require a nonce, the initialization vector (IV) does not need a CSPRNG. In all cases, the IV should never be used twice for a fixed key.
 * Always use authenticated encryption instead of just encryption.
 * Keys should be generated cryptographically randomly and stored in memory as byte arrays. If a password is used, then it must be converted to a key via an appropriate password base key derivation function.
 * Ensure that cryptographic randomness is used where appropriate and that it has not been seeded in a predictable way or with low entropy. Most modern APIs do not require the developer to seed the CSPRNG to be secure.
 * Avoid deprecated cryptographic functions, block building methods and padding schemes, such as MD5, SHA1, Cipher Block Chaining Mode (CBC), PKCS number 1 v1.5.
 * Ensure settings and configurations meet security requirements by having them reviewed by security specialists, tools designed for this purpose, or both.
-* You need to prepare now for post quantum cryptography (PQC), see reference (ENISA), so that high risk systems are no later than the end of 2030. 
+* You need to prepare now for post quantum cryptography (PQC), see reference (ENISA) so that high risk systems are safe no later than the end of 2030. 
 
 
 ## Example attack scenarios. 
