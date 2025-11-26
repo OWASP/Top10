@@ -146,6 +146,7 @@ There are automated tools to help attackers find unpatched or misconfigured syst
 * [OWASP Cheat Sheet Series: Vulnerable Dependency Management](https://cheatsheetseries.owasp.org/cheatsheets/Vulnerable_Dependency_Management_Cheat_Sheet.html)
 * [OWASP Dependency-Track](https://owasp.org/www-project-dependency-track/)
 * [OWASP CycloneDX](https://owasp.org/www-project-cyclonedx/)
+* [SPDX (ISO/IEC 5962:2021)](https://spdx.dev/) – Software Bill of Materials (SBOM) standard maintained by the Linux Foundation
 * [OWASP Application Security Verification Standard: V1 Architecture, design and threat modelling](https://owasp-aasvs.readthedocs.io/en/latest/v1.html)
 * [OWASP Dependency Check (for Java and .NET libraries)](https://owasp.org/www-project-dependency-check/)
 * OWASP Testing Guide - Map Application Architecture (OTG-INFO-010)
