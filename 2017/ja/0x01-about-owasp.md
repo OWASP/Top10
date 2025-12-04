@@ -2,7 +2,7 @@
 
 ## OWASPについて
 
-The Open Web Application Security Project (OWASP/日本語: オワスプ) は、オープンなコミュニティであり、組織がアプリケーションやAPIを開発、調達、メンテナンスするにあたりそれらが信頼できるようになることに専念しています。
+The Open Worldwide Application Security Project (OWASP/日本語: オワスプ) は、オープンなコミュニティであり、組織がアプリケーションやAPIを開発、調達、メンテナンスするにあたりそれらが信頼できるようになることに専念しています。
 
 OWASPには、自由でオープンなものがあります:
 
