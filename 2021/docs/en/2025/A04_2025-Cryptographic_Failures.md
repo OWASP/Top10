@@ -6,7 +6,7 @@
 
 ## Background. 
 
-Moving down two positions to #4, this weakness focuses on failures related to the lack of cryptography, insufficiently strong cryptography, leaking of cryptographic keys, and related errors. Three of the most common Common Weakness Enumerations (CWEs) in this risk involved the use of a weak pseudo-random number generator: *CWE-327 Use of a Broken or Risky Cryptographic Algorithm, CWE-331: Insufficient Entropy*, *CWE-1241: Use of Predictable Algorithm in Random Number Generator*, and *CWE-338 Use of Cryptographically Weak Pseudo-Random Number Generator (PRNG)*.
+Moving down two positions to #4, this weakness focuses on failures related to the lack of cryptography, insufficiently strong cryptography, leaking of cryptographic keys, and related errors. Four of the most common Common Weakness Enumerations (CWEs) in this risk involved the use of a weak pseudo-random number generator: *CWE-327 Use of a Broken or Risky Cryptographic Algorithm, CWE-331: Insufficient Entropy*, *CWE-1241: Use of Predictable Algorithm in Random Number Generator*, and *CWE-338 Use of Cryptographically Weak Pseudo-Random Number Generator (PRNG)*.
 
 
 
