@@ -122,6 +122,8 @@ OWASP MASVS‑RESILIENCE
 
 * [General error handling rules (Google for Developers)](https://developers.google.com/tech-writing/error-messages/error-handling)
 
+* [Example of real-world mishandling of an exceptional condition](https://www.firstreference.com/blog/human-error-and-internal-control-failures-cause-us62m-fine/) 
+
 ## List of Mapped CWEs
 * [CWE-209	Generation of Error Message Containing Sensitive Information](https://cwe.mitre.org/data/definitions/209.html)
 * [CWE-215	Insertion of Sensitive Information Into Debugging Code](https://cwe.mitre.org/data/definitions/215.html)
