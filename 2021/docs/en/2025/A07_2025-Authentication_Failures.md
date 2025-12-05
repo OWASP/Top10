@@ -70,7 +70,7 @@ When an attacker is able to trick a system into recognizing an invalid or incorr
 
 * Allows use of weak or ineffective credential recovery and forgot-password processes, such as "knowledge-based answers," which cannot be made safe.
 
-* Uses plain text, encrypted, or weakly hashed passwords data stores (see[ A02:2021-Cryptographic Failures](https://owasp.org/Top10/A02_2021-Cryptographic_Failures/)).
+* Uses plain text, encrypted, or weakly hashed passwords data stores (see[ A04:2025-Cryptographic Failures](https://owasp.org/Top10/2025/A04_2025-Cryptographic_Failures/)).
 
 * Has missing or ineffective multi-factor authentication.
 
