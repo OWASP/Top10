@@ -165,7 +165,7 @@ There are automated tools to help attackers find unpatched or misconfigured syst
 
 ## List of Mapped CWEs
 
-* [CWE-447 Use of Obsolete Function](https://cwe.mitre.org/data/definitions/447.html)
+* [CWE-477 Use of Obsolete Function](https://cwe.mitre.org/data/definitions/477.html)
 
 * [CWE-1035 2017 Top 10 A9: Using Components with Known Vulnerabilities](https://cwe.mitre.org/data/definitions/1035.html)
 
