@@ -122,6 +122,8 @@ There are commercial and open-source application protection products such as the
 
 -   [Data Integrity: Detecting and Responding to Ransomware and Other Destructive Events](https://csrc.nist.gov/publications/detail/sp/1800-26/final)
 
+-   [Real world example of such failures in Snowflake Breach](https://www.huntress.com/threat-library/data-breach/snowflake-data-breach)
+
 
 ## List of Mapped CWEs
 
