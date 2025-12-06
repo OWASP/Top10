@@ -2,7 +2,7 @@
 
 ## OWASP Hakkında
 
-Open Web Application Security Project (OWASP), kendisini kurumların güvenilebilir uygulamalar ve API’ler geliştirmesini, satın almasını ve sürdürmesini sağlamaya adamış açık bir topluluktur. 
+Open Worldwide Application Security Project (OWASP), kendisini kurumların güvenilebilir uygulamalar ve API’ler geliştirmesini, satın almasını ve sürdürmesini sağlamaya adamış açık bir topluluktur. 
 
 OWASP ile, aşağıdakileri açık ve ücretsiz bir şekilde temin edebilirsiniz:
 

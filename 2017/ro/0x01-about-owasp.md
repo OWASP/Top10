@@ -2,7 +2,7 @@
 
 ## Despre OWASP
 
-Proiectul Open Web Application Security Project (OWASP) este o comunitate deschisă dedicată pentru a permite organizațiilor să dezvolte, să cumpere și să întrețină aplicații și API-uri care pot fi de încredere.
+Proiectul Open Worldwide Application Security Project (OWASP) este o comunitate deschisă dedicată pentru a permite organizațiilor să dezvolte, să cumpere și să întrețină aplicații și API-uri care pot fi de încredere.
 
 La OWASP, veți găsi gratuit și liber:
 

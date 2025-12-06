@@ -2,7 +2,7 @@
 
 ## A propos de l'OWASP
 
-L'Open Web Application Security Project (OWASP) est une communauté dont la tâche est de permettre aux organisations de développer, acheter et maintenir des applications et des APIs dignes de confiance. 
+L'Open Worldwide Application Security Project (OWASP) est une communauté dont la tâche est de permettre aux organisations de développer, acheter et maintenir des applications et des APIs dignes de confiance. 
 
 Avec l'OWASP, vous trouverez de façon gratuite et libre :
 
