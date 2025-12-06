@@ -79,6 +79,8 @@ check or metadata.
     opportunity for an attacker is minimized. For longer lived JWTs it's highly recommended to
     follow the OAuth standards to revoke access.
 
+-   Enable Row-Level Security (RLS) at the database layer by applying policies for every data operation — including SELECT, INSERT, UPDATE, and DELETE. it helps you to ensure users can only access or modify data they are authorized to. RLS should align tightly with your application’s business logic and user roles, and must be tested to prevent policy misconfiguration or privilege escalation.
+
 Developers and QA staff should include functional access control unit
 and integration tests.
 
