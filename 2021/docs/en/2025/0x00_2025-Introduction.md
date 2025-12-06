@@ -92,7 +92,7 @@ The following organizations (along with several anonymous donors) kindly donated
 * CryptoNet Labs
 * Intuitor SoftTech Services
 * Orca Security
-* Probley
+* Probely
 * Semgrep
 * Sonar
 * usd AG
