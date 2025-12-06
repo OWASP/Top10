@@ -63,7 +63,7 @@ Software supply chain failures are breakdowns or other compromises in the proces
 You are likely vulnerable if:
 
 * If you do not carefully track the versions of all components that you use (both client-side and server-side). This includes components you directly use as well as nested (transitive) dependencies.
-* If the software is vulnerable, unsupported, or out of date. This includes the OS, web/application server, database management system (DBMS), applications, APIs and all components, runtime environments, and libraries.
+* If the software or one of its components is vulnerable, or unsupported/outdated. This includes the OS, web/application server, database management system (DBMS), applications, APIs and all components, runtime environments, and libraries.
 * If you do not scan for vulnerabilities regularly and subscribe to security bulletins related to the components you use.
 * If you do not have a change management process or tracking of changes within your supply chain, including tracking IDEs, IDE extensions and updates, changes to your organization’s code repository, sandboxes, image and library repositories, the way artifacts are created and stored, etc. Every part of your supply chain should be documented, especially changes.
 * If you have not hardened every part of your supply chain, with a special focus on access control and the application of least privilege. 
