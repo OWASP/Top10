@@ -1,6 +1,6 @@
-<link rel="stylesheet" href="../../assets/css/RC-stylesheet.css" />
+<link rel="stylesheet" href="../assets/css/RC-stylesheet.css" />
 
-# A07:2025 Authentication Failures ![icon](../../assets/TOP_10_Icons_Final_Identification_and_Authentication_Failures.png){: style="height:80px;width:80px" align="right"}
+# A07:2025 Authentication Failures ![icon](../assets/TOP_10_Icons_Final_Identification_and_Authentication_Failures.png){: style="height:80px;width:80px" align="right"}
 
 
 ## Background. 

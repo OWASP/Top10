@@ -1,11 +1,8 @@
 .PHONY: help all genserve
-.SILENT: 
-
-year := 2021
-port := 8000
+.SILENT:
 
 DEBUG := echo DEBUG:
-DEBUG := 
+DEBUG :=
 
 # Calculate current directory - see https://stackoverflow.com/a/18137056/721263
 mkfile_path := $(abspath $(lastword $(MAKEFILE_LIST)))
@@ -17,7 +14,7 @@ venvdir := $(current_dir)/venv
 activate := . $(venvdir)/bin/activate
 
 help:
-	@grep -E '^[a-zA-Z_-]+:.*?# .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?# "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
+	@grep -E '^[a-zA-Z0-9_-]+:.*?# .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?# "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
 install-python-requirements:  # Install Python 3 required libraries
 	if [ \! -f bin/activate ]; then \
@@ -28,16 +25,45 @@ install-python-requirements:  # Install Python 3 required libraries
 	fi 
 	($(DEBUG) $(activate) && $(DEBUG) python3 -m pip install -r requirements.txt && $(DEBUG) python3 -m pip install --upgrade pip)
 
-generate:  # Use custom-script to generate the website
-	($(DEBUG) $(activate) && $(DEBUG) cd $(year) && $(DEBUG) mkdocs build)
+build-2021:  # Build 2021 site only
+	($(activate) && cd 2021 && mkdocs build --site-dir ../build/2021)
 
-serve:  # Start's a Python http.server on port 8000 serving the content of ./generated/site
-	($(DEBUG) $(activate) && $(DEBUG) cd $(year) && $(DEBUG) mkdocs serve -a localhost:$(port))
+build-2025:  # Build 2025 site only
+	($(activate) && cd 2025 && mkdocs build --site-dir ../build/2025)
 
-all: install-python-requirements generate serve  # Install requirements, generate the site, then serve it
+build-all:  # Build both sites with redirects
+	./scripts/build-all.sh
 
-genserve: generate serve  # Generate the site, then serve it
+build: build-all  # Alias for build-all
 
-publish: generate # Publish the generated site to GitHub Pages
-	($(DEBUG) $(activate) && $(DEBUG) cd $(year) && $(DEBUG) mkdocs gh-deploy --force)
+clean-2021:  # Clean 2021 build output
+	rm -rf build/2021
+
+clean-2025:  # Clean 2025 build output
+	rm -rf build/2025
+
+clean-all:  # Clean all build output
+	rm -rf build/
+
+clean: clean-all  # Alias for clean-all
+
+serve-2021:  # Serve 2021 site
+	($(activate) && cd 2021 && mkdocs serve -a localhost:8000)
+
+serve-2025:  # Serve 2025 site
+	($(activate) && cd 2025 && mkdocs serve -a localhost:8001)
+
+serve: build-all  # Serve both 2021 and 2025 sites from build directory
+	@echo "Starting server on http://localhost:8000"
+	@echo "  - 2021 site: http://localhost:8000/2021/"
+	@echo "  - 2025 site: http://localhost:8000/2025/"
+	@echo ""
+	(cd build && python3 -m http.server 8000)
+
+generate: build-2021  # Maintain backward compatibility (keep existing)
+
+all: install-python-requirements build-all  # Install requirements and build both sites
+
+publish: build-all  # Deploy both sites to GitHub Pages
+	($(activate) && cd build && git init && git add -A && git commit -m "Deploy both 2021 and 2025 sites" && git push -f git@github.com:OWASP/Top10.git main:gh-pages)
 
