@@ -1,5 +1,6 @@
-site_name: OWASP Top 10:2025 RC1
-site_description: OWASP Top 10:2025 RC1
+site_name: OWASP Top 10:2021
+site_description: OWASP Top 10:2021
+site_url: https://owasp.org/Top10/2021/
 repo_name: OWASP/Top10
 repo_url: https://github.com/OWASP/Top10
 copyright: © Copyright 2021-2025 - OWASP Top 10 Team - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.
@@ -15,42 +16,23 @@ theme:
 
 nav:
   - Welcome Page: index.md
-  - Current Release:
-    - OWASP Top 10:2021 (Current Release):
-      - Introduction: 'A00_2021_Introduction.md'
-      - Notice: '0x00_2021-notice.md'
-      - How to use the OWASP Top 10 as a standard: 'A00_2021_How_to_use_the_OWASP_Top_10_as_a_standard.md'
-      - How to start an AppSec program with the OWASP Top 10: 'A00_2021-How_to_start_an_AppSec_program_with_the_OWASP_Top_10.md'
-      - About OWASP: '0x01_2021-about-owasp.md'
-      - A01 Broken Access Control: 'A01_2021-Broken_Access_Control.md'
-      - A02 Cryptographic Failures: 'A02_2021-Cryptographic_Failures.md'
-      - A03 Injection: 'A03_2021-Injection.md'
-      - A04 Insecure Design: 'A04_2021-Insecure_Design.md'
-      - A05 Security Misconfiguration: 'A05_2021-Security_Misconfiguration.md'
-      - A06 Vulnerable and Outdated Components: 'A06_2021-Vulnerable_and_Outdated_Components.md'
-      - A07 Identification and Authentication Failures: 'A07_2021-Identification_and_Authentication_Failures.md'
-      - A08 Software and Data Integrity Failures: 'A08_2021-Software_and_Data_Integrity_Failures.md'
-      - A09 Security Logging and Monitoring Failures: 'A09_2021-Security_Logging_and_Monitoring_Failures.md'
-      - A10 Server Side Request Forgery (SSRF): 'A10_2021-Server-Side_Request_Forgery_(SSRF).md'
-      - Next Steps: 'A11_2021-Next_Steps.md'
-  - Release Candidate:
-    - OWASP Top 10:2025 (Release Candidate):
-      - Introduction: '2025/0x00_2025-Introduction.md'
-      - About OWASP: '2025/0x01_2025-About_OWASP.md'
-      - What are Application Security Risks?: '2025/0x02_2025-What_are_Application_Security_Risks.md'
-      - Establishing a Modern Application Security Program: '2025/0x03_2025-Establishing_a_Modern_Application_Security_Program.md'
-      - Top 10:2025 List:
-        - A01 Broken Access Control: '2025/A01_2025-Broken_Access_Control.md'
-        - A02 Security Misconfiguration: '2025/A02_2025-Security_Misconfiguration.md'
-        - A03 Software Supply Chain Failures: '2025/A03_2025-Software_Supply_Chain_Failures.md'
-        - A04 Cryptographic Failures: '2025/A04_2025-Cryptographic_Failures.md'
-        - A05 Injection: '2025/A05_2025-Injection.md'
-        - A06 Insecure Design: '2025/A06_2025-Insecure_Design.md'
-        - A07 Authentication Failures: '2025/A07_2025-Authentication_Failures.md'
-        - A08 Software or Data Integrity Failures: '2025/A08_2025-Software_or_Data_Integrity_Failures.md'
-        - A09 Logging and Alerting Failures: '2025/A09_2025-Logging_and_Alerting_Failures.md'
-        - A10 Mishandling of Exceptional Conditions: '2025/A10_2025-Mishandling_of_Exceptional_Conditions.md'
-      - Next Steps: '2025/X01_2025-Next_Steps.md'
+  - Introduction: 'A00_2021_Introduction.md'
+  - Notice: '0x00_2021-notice.md'
+  - How to use the OWASP Top 10 as a standard: 'A00_2021_How_to_use_the_OWASP_Top_10_as_a_standard.md'
+  - How to start an AppSec program with the OWASP Top 10: 'A00_2021-How_to_start_an_AppSec_program_with_the_OWASP_Top_10.md'
+  - About OWASP: '0x01_2021-about-owasp.md'
+  - Top 10:2021 List:
+    - A01 Broken Access Control: 'A01_2021-Broken_Access_Control.md'
+    - A02 Cryptographic Failures: 'A02_2021-Cryptographic_Failures.md'
+    - A03 Injection: 'A03_2021-Injection.md'
+    - A04 Insecure Design: 'A04_2021-Insecure_Design.md'
+    - A05 Security Misconfiguration: 'A05_2021-Security_Misconfiguration.md'
+    - A06 Vulnerable and Outdated Components: 'A06_2021-Vulnerable_and_Outdated_Components.md'
+    - A07 Identification and Authentication Failures: 'A07_2021-Identification_and_Authentication_Failures.md'
+    - A08 Software and Data Integrity Failures: 'A08_2021-Software_and_Data_Integrity_Failures.md'
+    - A09 Security Logging and Monitoring Failures: 'A09_2021-Security_Logging_and_Monitoring_Failures.md'
+    - A10 Server Side Request Forgery (SSRF): 'A10_2021-Server-Side_Request_Forgery_(SSRF).md'
+  - Next Steps: 'A11_2021-Next_Steps.md'
 
 
 markdown_extensions:
@@ -321,49 +303,7 @@ plugins:
      verbose: false                                                  # debug
      on_error_fail: true
 extra:
-  alternate:                                                         # see https://squidfunk.github.io/mkdocs-material/setup/changing-the-language/#site-language-selector
-    - name: en - English
-      link: /en/
-      lang: en
-    - name: ar - ﺎﻠﻋﺮﺒﻳﺓ
-      link: /ar/
-      lang: ar
-    - name: de - Deutsch
-      link: /de/
-      lang: de
-    - name: es - Español
-      link: /es/
-      lang: es
-    - name: fr - Français
-      link: /fr/
-      lang: fr
-    - name: id - Indonesian
-      link: /id/
-      lang: id
-    - name: it - Italiano
-      link: /it/
-      lang: it
-    - name: ja - 日本語
-      link: /ja/
-      lang: ja
-    - name: pt-BR - Português (Brasil)
-      link: /pt-BR/
-      lang: pt-BR
-#    - name: pt - Português (Brasil)
-#      link: /pt/
-#      lang: pt
-    - name: tr - Türkçe
-      link: /tr/
-      lang: tr
-    - name: zh_Hant - 简体中文
-      link: /zh_Hant/
-      lang: zh_Hant
-#    - name: zh_TW - 繁體中文
-#      link: /zh_TW/
-#      lang: zh_TW
-    - name: zh-TW - 繁體中文
-      link: /zh-TW/
-      lang: zh-TW
+  # Removed extra.alternate - the i18n plugin with material_alternate: true handles this automatically
   osib:
     document:     osib.owasp.top10
     version:      2021-1-0

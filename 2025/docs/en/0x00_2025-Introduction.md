@@ -1,8 +1,8 @@
-<link rel="stylesheet" href="../../assets/css/RC-stylesheet.css" />
+<link rel="stylesheet" href="../assets/css/RC-stylesheet.css" />
 
-![OWASP Logo](../../assets/TOP_10_logo_Final_Logo_Colour.png)
+![OWASP Logo](../assets/TOP_10_logo_Final_Logo_Colour.png)
 
-# &ndash; The Ten Most Critical Web Application Security Risks &ndash;
+# The Ten Most Critical Web Application Security Risks
 
 # Introduction
 
@@ -31,7 +31,7 @@ A huge thank you to everyone who contributed data and perspectives in the survey
 
 There are two new categories and one consolidation in the Top Ten for 2025. We’ve worked to maintain our focus on the root cause over the symptoms as much as possible. With the complexity of software engineering and software security, it’s basically impossible to create ten categories without some level of overlap.
 
-![Mapping](../../assets/2025-mappings.png)
+![Mapping](../assets/2025-mappings.png)
 
 * **[A01:2025 - Broken Access Control](A01_2025-Broken_Access_Control.md)** maintains its position at #1 as the most serious application security risk; the contributed data indicates that on average, 3.73% of applications tested had one or more of the 40 Common Weakness Enumerations (CWEs) in this category. As indicated by the dashed line in the above figure, Server-Side Request Forgery (SSRF) has been rolled into this category.
 * **[A02:2025 - Security Misconfiguration](A02_2025-Security_Misconfiguration.md)** moved up from #5 in 2021 to #2 in 2025. Misconfigurations are more prevalent in the data for this cycle. 3.00% of the applications tested had one or more of the 16 CWEs in this category. This is not surprising, as software engineering is continuing to increase the amount of an application’s behavior that is based on configurations.

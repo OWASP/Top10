@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="../../assets/css/RC-stylesheet.css" />
+<link rel="stylesheet" href="../assets/css/RC-stylesheet.css" />
 
 # A10:2025 Mishandling of Exceptional Conditions
 
