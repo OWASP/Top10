@@ -81,6 +81,8 @@ Secure design is a culture and methodology that constantly evaluates threats and
 
 Secure software requires a secure development lifecycle, a secure design pattern, a paved road methodology, a secure component library, appropriate tooling, threat modeling, and incident post-mortems that are used to improve the process. Reach out to your security specialists at the beginning of a software project, throughout the project, and for ongoing software maintenance. Consider leveraging the [OWASP Software Assurance Maturity Model (SAMM)](https://owaspsamm.org/) to help structure your secure software development efforts.
 
+Often self-responsibility of developers is underappreciated. Foster a culture of awareness, responsibility and proactive risk mitigation. Regular exchanges about security (e.g. during threat modeling sessions) can generate a mindset for including security in all important design decisions.  
+
 
 ## How to prevent. 
 
@@ -89,6 +91,7 @@ Secure software requires a secure development lifecycle, a secure design pattern
 * Establish and use a secure development lifecycle with AppSec professionals to help evaluate and design security and privacy-related controls
 * Establish and use a library of secure design patterns or paved-road components
 * Use threat modeling for critical parts of the application such as authentication, access control, business logic, and key flows
+* User threat modeling as an educational tool to generate a security mindset
 * Integrate security language and controls into user stories
 * Integrate plausibility checks at each tier of your application (from frontend to backend)
 * Write unit and integration tests to validate that all critical flows are resistant to the threat model. Compile use-cases *and* misuse-cases for each tier of your application.
