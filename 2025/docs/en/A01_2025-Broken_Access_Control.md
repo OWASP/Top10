@@ -59,11 +59,17 @@ Maintaining its position at #1 in the Top Ten, 100% of the applications were tes
 
 ## Description. 
 
-Access control enforces policy such that users cannot act outside of their intended permissions. Failures typically lead to unauthorized information disclosure, modification or destruction of all data, or performing a business function outside the user's limits. Common access control vulnerabilities include:
+Access control enforces policy such that users cannot act outside of their intended permissions. Failures typically lead to unauthorized information disclosure, modification or destruction of all data, or performing a business function outside the user's limits. 
+
+Access control flaws can originate from both, insecure design or insecure implementation.
+
+Common access control vulnerabilities include:
 
 
 
 * Violation of the principle of least privilege, commonly known as deny by default, where access should only be granted for particular capabilities, roles, or users, but is available to anyone.
+* Overly complicated permission logic complicating correct configuration by the users.
+* Overlooked edge cases such as circular or conflicting permissions.
 * Bypassing access control checks by modifying the URL (parameter tampering or force browsing), internal application state, or the HTML page, or by using an attack tool that modifies API requests.
 * Permitting viewing or editing someone else's account by providing its unique identifier (insecure direct object references)
 * An accessible API with missing access controls for POST, PUT, and DELETE.
@@ -88,6 +94,7 @@ Access control is only effective when implemented in trusted server-side code or
 * Implement rate limits on API and controller access to minimize the harm from automated attack tooling.
 * Stateful session identifiers should be invalidated on the server after logout. Stateless JWT tokens should be short-lived to minimize the window of opportunity for an attacker. For longer-lived JWTs, it's highly recommended to follow the OAuth standards to revoke access.
 * Use well-established toolkits or patterns that provide simple, declarative access controls.
+* Threat model the access control modeling and its logic, particularly for edge cases.
 
 Developers and QA staff should include functional access control in their unit and integration tests.
 
