@@ -94,6 +94,7 @@ There should be a patch management process in place to:
 
 
 There should be a change management process or tracking system in place to track changes to:
+
 * Your CI/CD settings (all build tools and pipeline)
 * Your code repository
 * Sandbox areas
@@ -106,6 +107,7 @@ There should be a change management process or tracking system in place to track
 
 
 Harden the following systems, which includes enabling MFA and locking down IAM:
+
 * Your code repository (which includes not checking in secrets, protecting branches, backups)
 * Developer workstations (regular patching, MFA, monitoring, and more)
 * Your build server & CI/CD (separation of duties, access control, signed builds, environment-scoped secrets, tamper-evident logs, more)
