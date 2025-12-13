@@ -29,7 +29,7 @@ Start with the [Introduction](0x00_2025-Introduction.md) to learn about what's n
 6. [A06:2025 - Insecure Design](A06_2025-Insecure_Design.md)
 7. [A07:2025 - Authentication Failures](A07_2025-Authentication_Failures.md)
 8. [A08:2025 - Software or Data Integrity Failures](A08_2025-Software_or_Data_Integrity_Failures.md)
-9. [A09:2025 - Logging and Alerting Failures](A09_2025-Logging_and_Alerting_Failures.md)
+9. [A09:2025 - Security Logging and Alerting Failures](A09_2025-Security_Logging_and_Alerting_Failures.md)
 10. [A10:2025 - Mishandling of Exceptional Conditions](A10_2025-Mishandling_of_Exceptional_Conditions.md)
 
 ---
