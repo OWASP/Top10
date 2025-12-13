@@ -1,0 +1,1346 @@
+
+<!doctype html>
+<html lang="de" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="OWASP Top 10:2021">
+      
+      
+      
+        <link rel="canonical" href="https://owasp.org/Top10/2021/de/A02_2021-Cryptographic_Failures/">
+      
+      
+        <link rel="prev" href="../A01_2021-Broken_Access_Control/">
+      
+      
+        <link rel="next" href="../A03_2021-Injection/">
+      
+      
+        
+          <link rel="alternate" href="../../A02_2021-Cryptographic_Failures/" hreflang="en">
+        
+          <link rel="alternate" href="../../ar/A02_2021-Cryptographic_Failures/" hreflang="ar">
+        
+          <link rel="alternate" href="./" hreflang="de">
+        
+          <link rel="alternate" href="../../es/A02_2021-Cryptographic_Failures/" hreflang="es">
+        
+          <link rel="alternate" href="../../fr/A02_2021-Cryptographic_Failures/" hreflang="fr">
+        
+          <link rel="alternate" href="../../id/A02_2021-Cryptographic_Failures/" hreflang="id">
+        
+          <link rel="alternate" href="../../it/A02_2021-Cryptographic_Failures/" hreflang="it">
+        
+          <link rel="alternate" href="../../ja/A02_2021-Cryptographic_Failures/" hreflang="ja">
+        
+          <link rel="alternate" href="../../pt-BR/A02_2021-Cryptographic_Failures/" hreflang="pt-BR">
+        
+          <link rel="alternate" href="../../tr/A02_2021-Cryptographic_Failures/" hreflang="tr">
+        
+          <link rel="alternate" href="../../zh-Hant/A02_2021-Cryptographic_Failures/" hreflang="zh-Hant">
+        
+          <link rel="alternate" href="../../zh-TW/A02_2021-Cryptographic_Failures/" hreflang="zh-TW">
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>A02:2021 – Fehlerhafter Einsatz von Kryptographie - OWASP Top 10:2021</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#a022021-fehlerhafter-einsatz-von-kryptographie" class="md-skip">
+          Zum Inhalt
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Kopfzeile">
+    <a href="../" title="OWASP Top 10:2021" class="md-header__button md-logo" aria-label="OWASP Top 10:2021" data-md-component="logo">
+      
+  <img src="../../assets/OWASP_Logo_Transp.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OWASP Top 10:2021
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              A02:2021 – Fehlerhafter Einsatz von Kryptographie
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Sprache wechseln">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../A02_2021-Cryptographic_Failures/" hreflang="en" class="md-select__link">
+              en - English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../ar/A02_2021-Cryptographic_Failures/" hreflang="ar" class="md-select__link">
+              ar - العربية
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="de" class="md-select__link">
+              de - Deutsch
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../es/A02_2021-Cryptographic_Failures/" hreflang="es" class="md-select__link">
+              es - Español
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../fr/A02_2021-Cryptographic_Failures/" hreflang="fr" class="md-select__link">
+              fr - Français
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../id/A02_2021-Cryptographic_Failures/" hreflang="id" class="md-select__link">
+              id - Indonesian
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../it/A02_2021-Cryptographic_Failures/" hreflang="it" class="md-select__link">
+              it - Italiano
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../ja/A02_2021-Cryptographic_Failures/" hreflang="ja" class="md-select__link">
+              ja - 日本語
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../pt-BR/A02_2021-Cryptographic_Failures/" hreflang="pt-BR" class="md-select__link">
+              pt-BR - Português (Brasil)
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../tr/A02_2021-Cryptographic_Failures/" hreflang="tr" class="md-select__link">
+              tr - Türkçe
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../zh-Hant/A02_2021-Cryptographic_Failures/" hreflang="zh-Hant" class="md-select__link">
+              zh-Hant - 简体中文
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../zh-TW/A02_2021-Cryptographic_Failures/" hreflang="zh-TW" class="md-select__link">
+              zh-TW - 繁體中文
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Suche" placeholder="Suche" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Suche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Zurücksetzen" aria-label="Zurücksetzen" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Suche wird initialisiert
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/OWASP/Top10" title="Zum Repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    OWASP/Top10
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../" title="OWASP Top 10:2021" class="md-nav__button md-logo" aria-label="OWASP Top 10:2021" data-md-component="logo">
+      
+  <img src="../../assets/OWASP_Logo_Transp.png" alt="logo">
+
+    </a>
+    OWASP Top 10:2021
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/OWASP/Top10" title="Zum Repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    OWASP/Top10
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Welcome Page
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A00_2021_Introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Einführung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x00_2021-notice/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Anmerkung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A00_2021_How_to_use_the_OWASP_Top_10_as_a_standard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Wie man die OWASP Top 10 als Standard verwendet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A00_2021-How_to_start_an_AppSec_program_with_the_OWASP_Top_10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Wie man ein AppSec-Program mit den OWASP Top 10 beginnt
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x01_2021-about-owasp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Über OWASP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Liste der Top 10:2021
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Liste der Top 10:2021
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A01_2021-Broken_Access_Control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A01 - Mangelhafte Zugriffskontrolle
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A02 - Fehlerhafter Einsatz von Kryptographie
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A02 - Fehlerhafter Einsatz von Kryptographie
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#beurteilungskriterien" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Beurteilungskriterien
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ubersicht" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Übersicht
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beschreibung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Beschreibung
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pravention-und-gegenmanahmen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prävention und Gegenmaßnahmen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beispielhafte-angriffsszenarien" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Beispielhafte Angriffsszenarien
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referenzen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Referenzen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#liste-der-zugeordneten-cwes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Liste der zugeordneten CWEs
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A03_2021-Injection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A03 - Injection
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A04_2021-Insecure_Design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A04 - Unsicheres Anwendungsdesign
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A05_2021-Security_Misconfiguration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A05 - Sicherheitsrelevante Fehlkonfiguration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A06_2021-Vulnerable_and_Outdated_Components/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A06 - Unsichere oder veraltete Komponenten
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A07_2021-Identification_and_Authentication_Failures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A07 - Fehlerhafte Authentifizierung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A08_2021-Software_and_Data_Integrity_Failures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A08 - Fehlerhafte Prüfung der Software- und Datenintegrität
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A09_2021-Security_Logging_and_Monitoring_Failures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A09 - Unzureichendes Logging und Sicherheitsmonitoring
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A10_2021-Server-Side_Request_Forgery_%28SSRF%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A10 - Server-Side Request Forgery (SSRF)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A11_2021-Next_Steps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nächste Schritte
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#beurteilungskriterien" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Beurteilungskriterien
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ubersicht" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Übersicht
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beschreibung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Beschreibung
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pravention-und-gegenmanahmen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prävention und Gegenmaßnahmen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beispielhafte-angriffsszenarien" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Beispielhafte Angriffsszenarien
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referenzen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Referenzen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#liste-der-zugeordneten-cwes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Liste der zugeordneten CWEs
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="a022021-fehlerhafter-einsatz-von-kryptographie">A02:2021 – Fehlerhafter Einsatz von Kryptographie <img align="right" alt="icon" src="../../assets/TOP_10_Icons_Final_Crypto_Failures.png" style="height:80px;width:80px" /></h1>
+<p><a id="osib.owasp.top10.2021-1-0.2"></a></p>
+<h2 id="beurteilungskriterien">Beurteilungskriterien <a id="osib.owasp.top10.2021-1-0.2.factors"></a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Zugeordnete CWEs</th>
+<th style="text-align: center;">Maximale Häufigkeit</th>
+<th style="text-align: center;">Durchschn. Häufigkeit</th>
+<th style="text-align: center;">Durchschn. Ausnutzbarkeit (gewichtet)</th>
+<th style="text-align: center;">Durchschn. Auswirkungen (gewichtet)</th>
+<th style="text-align: center;">Maximale Abdeckung</th>
+<th style="text-align: center;">Durchschnittliche Abdeckung</th>
+<th style="text-align: center;">Gesamtanzahl</th>
+<th style="text-align: center;">CVEs insgesamt</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">29</td>
+<td style="text-align: center;">46.44 %</td>
+<td style="text-align: center;">4.49 %</td>
+<td style="text-align: center;">7.29</td>
+<td style="text-align: center;">6.81</td>
+<td style="text-align: center;">79.33 %</td>
+<td style="text-align: center;">34.85 %</td>
+<td style="text-align: center;">233,788</td>
+<td style="text-align: center;">3,075</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ubersicht">Übersicht <a id="osib.owasp.top10.2021-1-0.2.overview"></a></h2>
+<p>Dieses Thema ist um eine Position auf Platz 2 vorgerückt und war früher bekannt als <em>Verlust der Vertraulichkeit sensibler Daten</em>, bei dem es sich eher um ein allgemeines Symptom als um eine Grundursache handelt. Nun liegt der Schwerpunkt mehr auf Fehlern im Zusammenhang mit Kryptografie oder dass diese nicht zur Anwendung kommt, was häufig zur Offenlegung sensibler Daten führt. Bemerkenswerte Common Weakness Enumerations (CWEs) sind <em>CWE-259: Use of Hard-coded Password</em>, <em>CWE-327: Broken or Risky Crypto Algorithm</em> und <em>CWE-331 Insufficient Entropy</em>.</p>
+<h2 id="beschreibung">Beschreibung <a id="osib.owasp.top10.2021-1-0.2.description"></a></h2>
+<p>Zunächst gilt es, den Schutzbedarf der Daten während der Übermittlung und der Speicherung zu ermitteln. Beispielsweise erfordern Passwörter, Kreditkartennummern, Gesundheitsakten, persönliche Informationen und Geschäftsgeheimnisse zusätzlichen Schutz, vor allem dann, wenn diese Daten unter Datenschutzgesetze, z. B. die Datenschutz-Grundverordnung (DSGVO) der EU, oder andere Vorschriften fallen, beispielsweise dem Payment Card Industry Data Security Standard (PCI-DSS).</p>
+<p>Folgendes ist zu klären:</p>
+<ul>
+<li>
+<p>Werden Daten im Klartext übermittelt? Das betrifft Protokolle wie HTTP, SMTP, und FTP unter Umständen auch bei Verwendung von TLS-Upgrades wie STARTTLS. Das Internet ist hier besonders gefährlich. Überprüfen Sie auch internen Datenverkehr, z. B. zwischen Load Balancer, Webservern oder Back-End-Systemen.</p>
+</li>
+<li>
+<p>Werden alte oder schwache kryptografische Algorithmen oder Protokolle verwendet, z. B. per Default-Einstellung oder in älterem Code?</p>
+</li>
+<li>
+<p>Werden vordefinierte kryptografische Schlüssel verwendet, schwache Schlüssel generiert oder Schlüssel wiederverwendet? Fehlt eine Schlüsselverwaltung oder Schlüsselrotation? Werden kryptografische Schlüssel in Quellcode-Repositories eingecheckt?</p>
+</li>
+<li>
+<p>Wird Verschlüsselung nicht verbindlich erzwungen, z. B. fehlen bei Web Anwendungen Vorgaben für den Browser in den entsprechenden HTTP-Headern?</p>
+</li>
+<li>
+<p>Werden empfangene Serverzertifikate und die Zertifikatskette korrekt validiert?</p>
+</li>
+<li>
+<p>Werden Initialisierungsvektoren ignoriert, wiederverwendet oder nicht ausreichend sicher für den kryptografischen Betriebsmodus generiert? Ist ein unsicherer Betriebsmodus wie ECB im Einsatz? Wird ein Betriebsmodus verwendet, der nur verschlüsselt, obwohl ein AEAD Betriebsmodus angebracht wäre, der auch die Integrität schützt?</p>
+</li>
+<li>
+<p>Werden Passwörter direkt als kryptografische Schlüssel verwendet ohne eine Schlüsselableitung mittels Key Derivation Function?</p>
+</li>
+<li>
+<p>Werden Zufallszahlen für kryptografische Zwecke genutzt, die nicht auf kryptografische Anforderungen ausgelegt sind? Selbst wenn die richtige Funktion genutzt wird, muss diese eventuell vom Entwickler korrekt initialisiert werden. Wurde eine integrierte starke Initialisierung eventuell durch einen Entwickler mit einem schwachen Wert überschrieben, dem es an ausreichender Entropie und Nichtvorhersehbarkeit mangelt?</p>
+</li>
+<li>
+<p>Werden Hash-Funktionen mit bekannten Schwächen wie MD5 oder SHA1 verwendet oder werden nicht-kryptografische Hash-Funktionen verwendet, wenn kryptografische Hash-Funktionen benötigt werden?</p>
+</li>
+<li>
+<p>Werden veraltete kryptografische Padding Methoden verwendet, z. B. PKCS#1 v1.5?</p>
+</li>
+<li>
+<p>Sind kryptografische Fehlermeldungen oder Seitenkanäle ausnutzbar, beispielsweise in Form von Padding-Oracle-Angriffen?</p>
+</li>
+</ul>
+<p>Siehe <a href="https://github.com/OWASP/ASVS/blob/master/4.0/en/0x14-V6-Cryptography.md#4-0-6">ASVS V6 Stored Cryptography</a>, <a href="https://github.com/OWASP/ASVS/blob/master/4.0/en/0x16-V8-Data-Protection.md#4-0-8">V8 Data Protection</a>, <a href="https://github.com/OWASP/ASVS/blob/master/4.0/en/0x17-V9-Communications.md#4-0-9">V9 Communication</a><!-- ASVS Crypto (V7), Datenschutz (V9) und SSL/TLS (V10)--></p>
+<h2 id="pravention-und-gegenmanahmen">Prävention und Gegenmaßnahmen <a id="osib.owasp.top10.2021-1-0.2.how to prevent"></a></h2>
+<p>Gehen Sie als Minimum wie folgt vor und konsultieren Sie die Referenzen:</p>
+<ul>
+<li>
+<p>Klassifizieren Sie die Daten, die von einer Anwendung verarbeitet, gespeichert oder übermittelt werden
+nach ihrem Schutzbedarf. Berücksichtigen Sie dabei auch Datenschutzgesetze, regulatorische und Geschäfts-Anforderungen.</p>
+</li>
+<li>
+<p>Speichern Sie sensible Daten nicht unnötig. Löschen Sie sensible Daten auf sichere Weise sobald wie möglich oder verwenden Sie Techniken wie PCI-DSS-konformes Speichern von Ersatzwerten (tokenization) oder gar gekürzten (truncation) Werten.
+Daten, die es nicht mehr gibt, können auch nicht gestohlen werden.</p>
+</li>
+<li>
+<p>Stellen Sie sicher, dass alle vertraulichen Daten bei Speicherung verschlüsselt werden.</p>
+</li>
+<li>
+<p>Stellen Sie sicher, dass aktuelle, starke, standardisierte Algorithmen, Protokolle und Schlüssel, z. B. gemäß BSI TR-02102, verwendet werden. Etablieren Sie wirksames 
+Schlüsselmanagement für kryptografische Schlüssel.</p>
+</li>
+<li>
+<p>Verschlüsseln Sie alle Daten während der Übertragung mit sicheren Protokollen wie TLS. Priorisieren Sie dabei durch serverseitig Cipher-Suiten, die Forward Secrecy (FS) bieten, und sichere Parameter.
+Erzwingen Sie die Verschlüsselung wenn möglich, z. B. durch Einführung von HTTP Strict Transport Security (HSTS).</p>
+</li>
+<li>
+<p>Deaktivieren Sie das Caching für den Empfang vertraulicher Daten.</p>
+</li>
+<li>
+<p>Wenden Sie die Sicherheitsmaßnahmen gemäß dem Schutzbedarf der Datenklassifizierung an.</p>
+</li>
+<li>
+<p>Verwenden Sie keine veralteten Protokolle wie FTP und SMTP für den Transport sensibler Daten.</p>
+</li>
+<li>
+<p>Verwenden Sie spezielle Hash-Funktionen für das Hashen von Passwörtern, bei denen für jedes Passwort ein Salt-Wert (salted hash) zum Einsatz kommt und durch Parametrisierung der Rechenaufwand adaptiv gesteuert werden kann (work-factor). Beispiele sind: Argon2, scrypt, bcrypt oder PBKDF2.</p>
+</li>
+<li>
+<p>Initialisierungsvektoren müssen passend zum kryptografischen Betriebsmodus gewählt werden. In vielen Fällen bedeutet dies, dass ein CSPRNG (kryptografisch sicherer Pseudozufallszahlengenerator) für die Generierung des Initialisierungsvektors verwendet wird. Für Modi, die eine Nonce erfordern, benötigt der Initialisierungsvektor nicht notwendigerweise einen CSPRNG. In allen Fällen darf der gleiche Initialisierungsvektor niemals zweimal für den gleichen Schlüssel verwendet werden.</p>
+</li>
+<li>
+<p>Verwenden Sie immer eine authentifizierte Verschlüsselung statt nur einer Verschlüsselung.</p>
+</li>
+<li>
+<p>Schlüssel sollten kryptografisch zufällig generiert und als Byte-Arrays im Speicher gehalten werden. Wenn ein Passwort zur Verschlüsselung verwendet werden soll, muss über eine Funktion zur Schlüsselableitung ein Schlüssel generiert werden.</p>
+</li>
+<li>
+<p>Stellen Sie sicher, dass an den notwendigen Stellen kryptografisch sichere, unvorhersagbare Zufallszahlen verwendet werden, und dass der Pseudozufallszahlengenerator nicht auf vorhersehbare Weise oder nur mit geringer Entropie initialisiert wurde. Bei den meisten modernen APIs muss der Entwickler die Initialisierung des Pseudozufallszahlengenerators (CSPRNG) nicht manuell durchführen.</p>
+</li>
+<li>
+<p>Vermeiden Sie veraltete kryptografische Funktionen und Padding-Verfahren wie MD5, SHA1, PKCS Nummer 1 v1.5.</p>
+</li>
+<li>
+<p>Lassen Sie die Wirksamkeit der Einstellungen unabhängig überprüfen.</p>
+</li>
+</ul>
+<h2 id="beispielhafte-angriffsszenarien">Beispielhafte Angriffsszenarien <a id="osib.owasp.top10.2021-1-0.2.example attack scenarios"></a></h2>
+<p><strong>Szenario Nr. 1:</strong>: Eine Anwendung verschlüsselt Kreditkartendaten automatisch bei der Speicherung in einer Datenbank. Das bedeutet aber auch, dass durch SQL-Injection erlangte Kreditkartendaten in diesem Fall automatisch entschlüsselt werden.</p>
+<p><strong>Szenario Nr. 2:</strong>: Eine Webseite benutzt kein TLS,
+erzwingt dies nicht auf allen Seiten oder lässt schwache Verschlüsselung zu.
+Die angreifende Person liest die Kommunikation mit (z. B. in einem offenen WLAN), ersetzt HTTPS- durch HTTP-Verbindungen, hört diese ab und stiehlt das Sitzungscookie.
+Durch Wiedereinspielen dieses Cookies übernimmt die angreifende Person die (authentifizierte) Sitzung des Nutzers und erlangt Zugriff auf dessen private Daten.
+Anstatt dessen kann die angreifende Person auch die übertragenen Daten ändern, z. B. den Empfänger einer Überweisung.</p>
+<p><strong>Szenario Nr. 3:</strong>: Die Passwortdatenbank benutzt einfache Hashwerte oder Hashes ohne Salt zur Speicherung der Passwörter. Eine Schwachstelle in der Downloadfunktion erlaubt Angreifenden den Zugriff auf die Passwortdatei. Zu Hashes ohne Salt kann über vorausberechnete Rainbow-Tabellen der Klartext gefunden werden. Hashes, die über einfache oder schnelle Funktionen berechnet wurden, können effizient mit Grafikkarten gebrochen werden.</p>
+<h2 id="referenzen">Referenzen <a id="osib.owasp.top10.2021-1-0.2.references"></a></h2>
+<ul>
+<li><a href="https://github.com/OWASP/www-project-proactive-controls/blob/master/v3/en/c8-protect-data-everywhere.md">OWASP Proactive Controls: C8: Protect Data Everywhere</a> <!-- <a href="https://owasp.org/ www-project-proactive-controls/v3/en/c8-protect-data-everywhere">OWASP Proactive Controls: Protect Data Everywhere</a> --></li>
+<li><a href="https://github.com/OWASP/ASVS/blob/master/4.0/en/0x14-V6-Cryptography.md#4-0-6">OWASP Application Security Verification Standard (ASVS): V6 Stored Cryptography</a>, <a href="https://github.com/OWASP/ASVS/blob/master/4.0/en/0x16-V8-Data-Protection.md#4-0-8">V8 Data Protection</a>, <a href="https://github.com/OWASP/ASVS/blob/master/4.0/en/0x17-V9-Communications.md#4-0-9">V9 Communication</a> <!--- <a href="https://owasp.org/www-project-application-security-verification-standard">OWASP Application Security Verification Standard (V7, 9 , 10)</a> --></li>
+<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Protection_Cheat_Sheet">OWASP Cheat Sheet Series: Transport Layer Protection Cheat Sheet</a> <!-- <a href="https://cheatsheetseries. owasp.org/cheatsheets/Transport_Layer_Protection_Cheat_Sheet.html">OWASP Cheat Sheet: Transport Layer Protection</a> --></li>
+<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/User_Privacy_Protection_Cheat_Sheet">OWASP Cheat Sheet Series: User Privacy Protection Cheat Sheet</a> <!-- <a href="https://cheatsheetseries. owasp.org/cheatsheets/User_Privacy_Protection_Cheat_Sheet.html">OWASP Cheat Sheet: User Privacy Protection</a> --></li>
+<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet">OWASP Cheat Sheet Series: Password Storage Cheat Sheet</a> <!-- <a href="https://cheatsheetseries.owasp. org/cheatsheets/Password_Storage_Cheat_Sheet.html">OWASP-Spickzettel: Passwortspeicherung</a> --></li>
+<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/Cryptographic_Storage_Cheat_Sheet">OWASP Cheat Sheet Series: Cryptographic Storage Cheat Sheet</a> <!-- <a href="https://cheatsheetseries.owasp. org/cheatsheets/Cryptographic_Storage_Cheat_Sheet.html">OWASP Cheat Sheet: Cryptographic Storage</a> --></li>
+<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet">OWASP Cheat Sheet Series: HTTP Strict Transport Security Cheat Sheet</a> <!-- <a href="https://cheatsheetseries.owasp.org/ cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html">OWASP Cheat Sheet: HSTS</a> --></li>
+<li><a href="https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/09-Testing_for_Weak_Cryptography/index">OWASP Web Security Testing Guide: Testing for Weak Cryptography</a> <!-- <a href="https://owasp.org/ www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/09-Testing_for_Weak_Cryptography/README">OWASP-Testleitfaden: Testen auf schwache Kryptographie</a> --></li>
+</ul>
+<h2 id="liste-der-zugeordneten-cwes">Liste der zugeordneten CWEs <a id="osib.owasp.top10.2021-1-0.2.mapped cwes"></a></h2>
+<ul>
+<li><a href="https://cwe.mitre.org/data/definitions/261.html">CWE-261: Weak Encoding for Password</a> <!-- <a href="https://cwe.mitre .org/data/definitions/261.html">CWE-261: Schwache Codierung für Passwort</a> --></li>
+<li><a href="https://cwe.mitre.org/data/definitions/296.html">CWE-296: Improper Following of a Certificate's Chain of Trust</a> <!-- <a href="https:/ /cwe.mitre.org/data/definitions/296.html">CWE-296: Unsachgemäßes Befolgen der Vertrauenskette eines Zertifikats</a> --></li>
+<li><a href="https://cwe.mitre.org/data/definitions/310.html">CWE-310: Cryptographic Issues (CWE CATEGORY)</a> <!-- <a href="https://cwe.mitre.org /data/definitions/310.html">CWE-310: Kryptografische Probleme</a> --></li>
+<li><a href="https://cwe.mitre.org/data/definitions/319.html">CWE-319: Cleartext Transmission of Sensitive Information</a> <!-- <a href="https://cwe. mitre.org/data/definitions/319.html">CWE-319: Klartextübertragung sensibler Informationen</a> --></li>
+<li><a href="https://cwe.mitre.org/data/definitions/321.html">CWE-321: Use of Hard-coded Cryptographic Key</a> <!-- <a href="https:// cwe.mitre.org/data/definitions/321.html">CWE-321: Verwendung eines hartcodierten kryptografischen Schlüssels</a> --></li>
+<li><a href="https://cwe.mitre.org/data/definitions/322.html">CWE-322: Key Exchange without Entity Authentication</a> <!-- <a href="https://cwe. mitre.org/data/definitions/322.html">CWE-322: Schlüsselaustausch ohne Entitätsauthentifizierung</a> --></li>
+<li><a href="https://cwe.mitre.org/data/definitions/323.html">CWE-323: Reusing a Nonce, Key Pair in Encryption</a> <!-- <a href="https:/ /cwe.mitre.org/data/definitions/323.html">CWE-323: Wiederverwendung eines Nonce-Schlüsselpaars in der Verschlüsselung</a> --></li>
+<li><a href="https://cwe.mitre.org/data/definitions/324.html">CWE-324: Use of a Key Past its Expiration Date</a> <!-- <a href="https:/ /cwe.mitre.org/data/definitions/324.html">CWE-324: Verwendung eines Schlüssels nach seinem Ablaufdatum</a> --></li>
+<li><a href="https://cwe.mitre.org/data/definitions/325.html">CWE-325: Missing Cryptographic Step</a> <!-- <a href="https://cwe.mitre .org/data/definitions/325.html">CWE-325: Erforderlicher kryptografischer Schritt fehlt</a> --></li>
+<li><a href="https://cwe.mitre.org/data/definitions/326.html">CWE-326: Inadequate Encryption Strength</a> <!-- <a href="https://cwe.mitre. org/data/definitions/326.html">CWE-326: Unzureichende Verschlüsselungsstärke</a> --></li>
+<li><a href="https://cwe.mitre.org/data/definitions/327.html">CWE-327: Use of a Broken or Risky Cryptographic Algorithm</a> <!-- <a href="https:/ /cwe.mitre.org/data/definitions/327.html">CWE-327: Verwendung eines defekten oder riskanten kryptografischen Algorithmus</a> --></li>
+<li><a href="https://cwe.mitre.org/data/definitions/328.html">CWE-328: Use of Weak Hash</a> <!-- <a href="https://cwe. mitre.org/data/definitions/328.html">CWE-328: Reversible One-Way Hash</a> --></li>
+<li><a href="https://cwe.mitre.org/data/definitions/329.html">CWE-329: Generation of Predictable IV with CBC Mode</a> <!-- <a href="https:/ /cwe.mitre.org/data/definitions/329.html">CWE-329: Keine zufällige IV mit CBC-Modus verwenden</a> --></li>
+<li><a href="https://cwe.mitre.org/data/definitions/330.html">CWE-330: Use of Insufficiently Random Values</a> <!-- <a href="https://cwe. mitre.org/data/definitions/330.html">CWE-330: Verwendung unzureichend zufälliger Werte</a> --></li>
+<li><a href="https://cwe.mitre.org/data/definitions/331.html">CWE-331: Insufficient Entropy</a> <!-- <a href="https://cwe.mitre.org /data/definitions/331.html">CWE-331: Unzureichende Entropie</a> --></li>
+<li><a href="https://cwe.mitre.org/data/definitions/335.html">CWE-335: Incorrect Usage of Seeds in Pseudo-Random Number Generator (PRNG)</a> <!-- <a href="https://cwe.mitre.org/data/definitions/335.html">CWE-335: Falsche Verwendung von Seeds im Pseudozufallszahlengenerator (PRNG) </a> --></li>
+<li><a href="https://cwe.mitre.org/data/definitions/336.html">CWE-336: Same Seed in Pseudo-Random Number Generator (PRNG)</a> <!-- <a href="https://cwe.mitre.org/data/definitions/336.html">CWE-336: Gleicher Startwert im Pseudozufallszahlengenerator (PRNG)</a> --></li>
+<li><a href="https://cwe.mitre.org/data/definitions/337.html">CWE-337: Predictable Seed in Pseudo-Random Number Generator (PRNG)</a> <!-- <a href="https://cwe.mitre.org/data/definitions/337.html">CWE-337: Vorhersagbarer Startwert im Pseudozufallszahlengenerator (PRNG)</a> --></li>
+<li><a href="https://cwe.mitre.org/data/definitions/338.html">CWE-338: Use of Cryptographically Weak Pseudo-Random Number Generator (PRNG)</a> <!-- [CWE-338: Verwendung des kryptographisch schwachen Pseudozufallszahlengenerators (PRNG)] (https://cwe.mitre.org/data/definitions/338.html) --></li>
+<li><a href="https://cwe.mitre.org/data/definitions/340.html">CWE-340: Generation of Predictable Numbers or Identifiers</a> <!-- <a href="https://cwe .mitre.org/data/definitions/340.html">CWE-340: Erzeugung vorhersagbarer Zahlen oder Bezeichner</a> --></li>
+<li><a href="https://cwe.mitre.org/data/definitions/347.html">CWE-347: Improper Verification of Cryptographic Signature</a> <!-- <a href="https://cwe. mitre.org/data/definitions/347.html">CWE-347: Unsachgemäße Überprüfung der kryptografischen Signatur</a> --></li>
+<li><a href="https://cwe.mitre.org/data/definitions/523.html">CWE-523: Unprotected Transport of Credentials</a> <!-- <a href="https://cwe.mitre .org/data/definitions/523.html">CWE-523: Ungeschützter Transport von Anmeldeinformationen</a> --></li>
+<li><a href="https://cwe.mitre.org/data/definitions/720.html">CWE-720: OWASP Top Ten 2007 Category A9 - Insecure Communications (CWE CATEGORY)</a> <!-- <a href="https: //cwe.mitre.org/data/definitions/720.html">CWE-720: OWASP Top Ten 2007 Kategorie A9 – Unsichere Kommunikation</a> --></li>
+<li><a href="https://cwe.mitre.org/data/definitions/757.html">CWE-757: Selection of Less-Secure Algorithm During Negotiation ('Algorithm Downgrade')</a> <!-- <a href="https://cwe.mitre.org/data/definitions/757.html">CWE-757: Auswahl weniger sicherer Algorithmen während der Aushandlung('Algorithmus-Downgrade' )</a> --></li>
+<li><a href="https://cwe.mitre.org/data/definitions/759.html">CWE-759: Use of a One-Way Hash without a Salt</a> <!-- <a href="https ://cwe.mitre.org/data/definitions/759.html">CWE-759: Verwendung eines Einweg-Hash ohne Salt</a> --></li>
+<li><a href="https://cwe.mitre.org/data/definitions/760.html">CWE-760: Use of a One-Way Hash with a Predictable Salt</a> <!-- <a href="https://cwe.mitre.org/data/definitions/760.html">CWE-760: Verwendung eines Einweg-Hash mit einem vorhersehbaren Salt</a> --></li>
+<li><a href="https://cwe.mitre.org/data/definitions/780.html">CWE-780: Use of RSA Algorithm without OAEP</a> <!-- <a href="https://cwe .mitre.org/data/definitions/780.html">CWE-780: Verwendung des RSA-Algorithmus ohne OAEP</a> --></li>
+<li><a href="https://cwe.mitre.org/data/definitions/818.html">CWE-818: OWASP Top Ten 2010 Category A9 - Insufficient Transport Layer Protection (CWE CATEGORY)</a> <!-- <a href="https://cwe.mitre .org/data/definitions/818.html">CWE-818: Unzureichender Transportschichtschutz</a> --></li>
+<li><a href="https://cwe.mitre.org/data/definitions/916.html">CWE-916: Use of Password Hash With Insufficient Computational Effort</a> <!-- <a href="https:/ /cwe.mitre.org/data/definitions/916.html">CWE-916: Verwendung von Passwort-Hash mit unzureichendem Rechenaufwand</a> --></li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © Copyright 2021-2025 - OWASP Top 10 Team - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.instant", "search.suggest"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "In Zwischenablage kopiert", "clipboard.copy": "In Zwischenablage kopieren", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.placeholder": "Suchbegriff eingeben", "search.result.term.missing": "Es fehlt", "select.version": "Version ausw\u00e4hlen"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+    
+  </body>
+</html>
