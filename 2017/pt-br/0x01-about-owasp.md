@@ -2,7 +2,7 @@
 
 ## Sobre a OWASP
 
-*Open Web Application Security Project* (OWASP) é uma comunidade aberta, dedicada a capacitar as organizações a desenvolver, adquirir e manter aplicações e APIs confiáveis. 
+*Open Worldwide Application Security Project* (OWASP) é uma comunidade aberta, dedicada a capacitar as organizações a desenvolver, adquirir e manter aplicações e APIs confiáveis. 
 
 Em OWASP se pode encontrar, grátis e de forma aberta...
 
