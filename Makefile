@@ -65,5 +65,5 @@ generate: build-2021  # Maintain backward compatibility (keep existing)
 all: install-python-requirements build-all  # Install requirements and build both sites
 
 publish: build-all  # Deploy both sites to GitHub Pages
-	($(activate) && cd build && git init && git add -A && git commit -m "Deploy both 2021 and 2025 sites" && git push -f git@github.com:OWASP/Top10.git master:gh-pages)
+	($(activate) && cd build && git init -b main && git add -A && git commit -m "Deploy both 2021 and 2025 sites" && git push -f git@github.com:OWASP/Top10.git main:gh-pages)
 
