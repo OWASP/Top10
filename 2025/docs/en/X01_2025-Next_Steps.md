@@ -273,7 +273,7 @@ Note: modern browsers use many levels of defenses to defend against such attacks
 * [CWE-125 Out-of-bounds Read](https://cwe.mitre.org/data/definitions/125.html)
 * [CWE-126 Buffer Over-read](https://cwe.mitre.org/data/definitions/126.html)
 * [CWE-190 Integer Overflow or Wraparound](https://cwe.mitre.org/data/definitions/190.html)
-* [191 Integer Underflow (Wrap or Wraparound)](https://cwe.mitre.org/data/definitions/191.html)
+* [CWE-191 Integer Underflow (Wrap or Wraparound)](https://cwe.mitre.org/data/definitions/191.html)
 * [CWE-196 Unsigned to Signed Conversion Error](https://cwe.mitre.org/data/definitions/196.html)
 * [CWE-367 Time-of-check Time-of-use (TOCTOU) Race Condition](https://cwe.mitre.org/data/definitions/367.html)
 * [CWE-415 Double Free](https://cwe.mitre.org/data/definitions/415.html)
