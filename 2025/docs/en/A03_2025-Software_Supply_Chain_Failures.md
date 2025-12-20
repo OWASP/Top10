@@ -89,8 +89,8 @@ There should be a patch management process in place to:
 * Only obtain components from official (trusted) sources over secure links. Prefer signed packages to reduce the chance of including a modified, malicious component (see [A08:2025-Software and Data Integrity Failures](https://owasp.org/Top10/2025/A08_2025-Software_or_Data_Integrity_Failures/)).
 * Deliberately choosing which version of a dependency you use and upgrading only when there is need.
 * Monitor for libraries and components that are unmaintained or do not create security patches for older versions. If patching is not possible, consider deploying a virtual patch to monitor, detect, or protect against the discovered issue.
-* Update your CI/CD, IDE, and any other developer tooling regularly
-* Treat components in your CI/CD pipeline as part of this process; harden them, monitor them, and document changes accordingly
+* Update your CI/CD, IDE, and any other developer tooling regularly.
+* Treat components in your CI/CD pipeline as part of this process; harden them, monitor them, and document changes accordingly.
 
 
 There should be a change management process or tracking system in place to track changes to:
