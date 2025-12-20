@@ -89,7 +89,7 @@ Secure installation processes should be implemented, including:
 * Sending security directives to clients, e.g., Security Headers.
 * An automated process to verify the effectiveness of the configurations and settings in all environments.
 * Proactively add a central configuration to intercept excessive error messages as a backup.
-* If these varifications are not automated, they should be manually verified annually at a minimum.
+* If these verifications are not automated, they should be manually verified annually at a minimum.
  
 
 ## Example attack scenarios. 
