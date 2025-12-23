@@ -1,11 +1,25 @@
 /* Styles written here are applied to all URLs have `/2025/` in them */
 article.md-content__inner.md-typeset:before {
     content: "RELEASE CANDIDATE";
-    -webkit-transform: rotate(331deg);
-    -moz-transform: rotate(331deg);
-    -o-transform: rotate(331deg);
+        position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     transform: rotate(331deg);
     font-size: 10em;
     color: rgba(255, 5, 5, 0.17);
-    position: absolute;
+
+    pointer-events: none;
+    overflow: hidden;
+    max-width: 100%;
+}
+/* Mobile safeguard
+   Hide watermark on small screens to prevent layout breakage */
+
+@media (max-width: 768px) {
+    article.md-content__inner.md-typeset::before {
+        display: none;
+    }
 }
