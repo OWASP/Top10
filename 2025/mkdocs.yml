@@ -5,8 +5,6 @@ repo_name: OWASP/Top10
 repo_url: https://github.com/OWASP/Top10
 copyright: © Copyright 2021-2025 - OWASP Top 10 Team - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.
 docs_dir: docs
-extra_css:
-  - assets/css/RC-stylesheet.css
 theme:
   name: material
   language: en
