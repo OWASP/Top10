@@ -90,6 +90,7 @@ There should be a patch management process in place to:
 * Deliberately choose which version of a dependency you use and upgrade only when there is need.
 * Monitor for libraries and components that are unmaintained or do not create security patches for older versions. If patching is not possible, consider migrating to an alternative. If that is not possible, consider deploying a virtual patch to monitor, detect, or protect against the discovered issue.
 * Update your CI/CD, IDE, and any other developer tooling regularly
+* Avoid deploying updates to all systems simultaneously. Use staged rollouts or canary deployments to limit exposure in case a trusted vendor is compromised.
 
 
 There should be a change management process or tracking system in place to track changes to:
