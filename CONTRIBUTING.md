@@ -122,6 +122,10 @@ When it's time to create a new version (e.g., 2028):
 
 5. **Update redirects** when the new version becomes official
 
+6. **Update www-project-top-ten project**  when the new version becomes official ([repo](https://github.com/OWASP/www-project-top-ten))
+
+7. **Update scripts/index-redirect.html** to point to the new version
+
 ### For Translators
 
 Translations are added post-release as they become available.
