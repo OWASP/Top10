@@ -284,3 +284,43 @@ Note: modern browsers use many levels of defenses to defend against such attacks
 * [CWE-787 Out-of-bounds Write](https://cwe.mitre.org/data/definitions/787.html)
 * [CWE-788 Access of Memory Location After End of Buffer](https://cwe.mitre.org/data/definitions/788.html)
 * [CWE-824 Access of Uninitialized Pointer](https://cwe.mitre.org/data/definitions/824.html)
+
+
+
+## X03:2025 Inappropriate Trust in AI Generated Code ('Vibe Coding')
+
+### Background.
+
+Currently the entire world is talking about and using AI, and this includes software developers. Although there are currently no CVEs or CWEs related to AI generated code, it is well known and documented that AI generated code often contains more vulnerabilities than code written by human beings.
+
+
+### Description.
+
+We are seeing software development practices change to include not only code written with the assistance of AI, but code written and committed almost entirely without human oversight (often referred to as vibe coding). Just as it was never a good idea to copy code snippets from blogs or websites without thinking twice, the problem is exacerbated in this case. Good, secure code snippets were and are rare and might be statistically neglected by AI due to system constraints.
+
+
+### How to prevent.
+We urge all people who write code to consider the following when using AI:
+
+* You should be able to read and fully understand all code you submit, even if it is written by an AI or copied from an online forum. You are responsible for all code that you commit.
+* You should review all AI-assisted code thoroughly for vulnerabilities, ideally with your own eyes and also with security tooling made for this purpose (such as static analysis). Consider using classic code review techniques as described in [OWASP Cheat Sheet Series: Secure Code Review](https://cheatsheetseries.owasp.org/cheatsheets/Secure_Code_Review_Cheat_Sheet.html).
+* Ideally, write your own code, let the AI suggest improvements, check the AI's code, and let the AI make corrections until you are satisfied with the result.
+* Consider using a Retrieval Augmented Generation (RAG) server with your own collected  and reviewed secure code samples and documentation, such as your organization’s security coding guideline, standard, or policy, and have the RAG server enforce any policies or standards.
+* Consider purchasing tooling that implements guardrails for privacy and security for use with your AI(s) of choice.
+* Consider purchasing a private AI, ideally with a contract agreement (including a privacy agreement) that the AI is not to be trained on your organization’s data, queries, code or any other sensitive information.
+* Consider implementing an Model Context Protocol (MCP) server in-between your IDE and AI, then set it up to enforce the use of your security tooling of choice.
+* Implement policies and processes as part of your SDLC to inform developers (and all employees) of how they should and should not use AI within your organization.
+* Create a list of good and effective prompts, that take IT security best practices into account. Ideally they should also consider your internal secure coding guidelines. Developers can use this prompts as a starting point for their programs.
+* AI is likely to become part of each phase of your system development life cycle, both how to use it effectively and safely. Use it wisely.
+* Actually it is **<u>not</u>** recommended to use vibe coding for complex functions, business critical programs, or programs that are used for a long time.
+* Implement technical checks and safeguards against the use of Shadow AI.
+* Train your developers on your policies, as well as safe AI usage and best practices for using AI in software development.
+
+
+### References.
+
+* [OWASP Cheat Sheet: Secure Code Review](https://cheatsheetseries.owasp.org/cheatsheets/Secure_Code_Review_Cheat_Sheet.html)
+
+
+### List of Mapped CWEs
+-none-
