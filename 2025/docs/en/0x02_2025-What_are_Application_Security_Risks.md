@@ -62,7 +62,7 @@ Weighed by coverage</strong>
 </table>
 
 
-In our Risk Rating we have taken into account the universal parameters of expoitability, average likelihood of missing security controls for a weakness and its technical impacts. 
+In our Risk Rating we have taken into account the universal parameters of exploitability, average likelihood of missing security controls for a weakness and its technical impacts. 
 
 Each organization is unique, and so are the threat actors for that organization, their goals, and the impact of any breach. If a public interest organization uses a content management system (CMS) for public information and a health system uses that same exact CMS for sensitive health records, the threat actors and business impacts can be very different for the same software. It is critical to understand the risk to your organization based on the exposure of the application, the applicable threat agents by situation picture (for targeted and undirected attacks by business and location) and the individual business impacts. 
 

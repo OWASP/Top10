@@ -89,7 +89,7 @@ If you are starting a program from scratch, or you find OWASP SAMM or DSOMM ‘t
 
 *  Negotiate all technical requirements, including design, security, and service level agreements (SLA).
 
-*  Adopt templates and checklists, such as [OWASP Secure Software Contract Annex(1)](https://owasp.org/www-community/OWASP_Secure_Software_Contract_Annex).<br>** 1: Note** *that the annex is for US contract law, so please consult qualified legal advice before using the sample annex.*
+*  Adopt templates and checklists, such as [OWASP Secure Software Contract Annex](https://owasp.org/www-community/OWASP_Secure_Software_Contract_Annex).<br>**Note:** *The annex is for US contract law, so please consult qualified legal advice before using the sample annex.*
 
 
 ### Planning and Design Phase:
