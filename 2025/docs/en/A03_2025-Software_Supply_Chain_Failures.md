@@ -68,7 +68,7 @@ You are likely vulnerable if:
 * you do not have a change management process or tracking of changes within your supply chain, including tracking IDEs, IDE extensions and updates, changes to your organization's code repository, sandboxes, image and library repositories, the way artifacts are created and stored, etc. Every part of your supply chain should be documented, especially changes.
 * you have not hardened every part of your supply chain, with a special focus on access control and the application of least privilege.
 * your supply chain systems do not have any separation of duty. No single person should be able to write code and  promote it all the way to production without oversight from another human being.
-* developers, DevOps, or infrastructure professionals are allowed to download and use components from untrusted sources, for use in production.
+* components from untrusted sources, across any part of the tech stack, are used in or can impact on production environments.
 * you do not fix or upgrade the underlying platform, frameworks, and dependencies in a risk-based, timely fashion. This commonly happens in environments when patching is a monthly or quarterly task under change control, leaving organizations open to days or months of unnecessary exposure before fixing vulnerabilities.
 * software developers do not test the compatibility of updated, upgraded, or patched libraries.
 * you do not secure the configurations of every part of your system (see [A02:2025-Security Misconfiguration](https://owasp.org/Top10/2025/A02_2025-Security_Misconfiguration/)).
