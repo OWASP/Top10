@@ -33,15 +33,15 @@ This was top-ranked in the Top 10 community survey with exactly 50% respondents 
    </td>
   </tr>
   <tr>
-   <td>5
+   <td>6
    </td>
-   <td>8.81%
+   <td>9.56%
    </td>
-   <td>5.19%
+   <td>5.72%
    </td>
    <td>65.42%
    </td>
-   <td>28.93%
+   <td>27.47%
    </td>
    <td>8.17
    </td>
@@ -169,5 +169,7 @@ Every organization must ensure an ongoing plan for monitoring, triaging, and app
 * [CWE-1104 Use of Unmaintained Third Party Components](https://cwe.mitre.org/data/definitions/1104.html)
 
 * [CWE-1329 Reliance on Component That is Not Updateable](https://cwe.mitre.org/data/definitions/1329.html)
+
+* [CWE-1357 Reliance on Insufficiently Trustworthy Component](https://cwe.mitre.org/data/definitions/1357.html)
 
 * [CWE-1395 Dependency on Vulnerable Third-Party Component](https://cwe.mitre.org/data/definitions/1395.html)
