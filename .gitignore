@@ -87,6 +87,9 @@ lib/
 # mkdocs site (this is built using mkdocs gh-deploy
 */site/
 
+# mkdocs build output (contains nested git repo for gh-pages deployment)
+build/
+
 # Pipenv
 Pipfile
 
