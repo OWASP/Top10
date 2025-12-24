@@ -1,5 +1,3 @@
-<link rel="stylesheet" href="../assets/css/RC-stylesheet.css" />
-
 # A08:2025 Software or Data Integrity Failures ![icon](../assets/TOP_10_Icons_Final_Software_and_Data_Integrity_Failures.png){: style="height:80px;width:80px" align="right"}
 
 ## Background. 

@@ -1,5 +1,3 @@
-<link rel="stylesheet" href="../assets/css/RC-stylesheet.css" />
-
 # A09:2025 Security Logging & Alerting Failures ![icon](../assets/TOP_10_Icons_Final_Security_Logging_and_Monitoring_Failures.png){: style="height:80px;width:80px" align="right"}
 
 

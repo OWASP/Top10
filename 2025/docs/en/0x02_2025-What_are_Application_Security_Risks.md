@@ -1,5 +1,3 @@
-<link rel="stylesheet" href="../assets/css/RC-stylesheet.css" />
-
 # What are Application Security Risks?
 Attackers can potentially use many different paths through your application to do harm to your business or organization. Each of these ways poses a potential risk that needs to be investigated.
 

@@ -1,5 +1,3 @@
-<link rel="stylesheet" href="../assets/css/RC-stylesheet.css" />
-
 ![OWASP Logo](../assets/TOP_10_logo_Final_Logo_Colour.png)
 
 # The Ten Most Critical Web Application Security Risks

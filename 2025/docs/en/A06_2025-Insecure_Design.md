@@ -1,5 +1,3 @@
-<link rel="stylesheet" href="../assets/css/RC-stylesheet.css" />
-
 # A06:2025 Insecure Design ![icon](../assets/TOP_10_Icons_Final_Insecure_Design.png){: style="height:80px;width:80px" align="right"}
 
 
