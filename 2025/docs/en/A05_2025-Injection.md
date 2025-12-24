@@ -86,28 +86,38 @@ When it is not possible to separate the data from commands, you can reduce threa
 
 **Warning** these techniques involve parsing and escaping complex strings, making them error-prone and not robust in the face of minor changes to the underlying system. 
 
-## Example attack scenarios. 
+## Example attack scenarios.
 
 **Scenario #1:** An application uses untrusted data in the construction of the following vulnerable SQL call:
 
 ```
-String query = "SELECT \* FROM accounts WHERE custID='" + request.getParameter("id") + "'";
+String query = "SELECT * FROM accounts WHERE custID='" + request.getParameter("id") + "'";
 ```
 
+An attacker modifies the 'id' parameter value in their browser to send: `' OR '1'='1`. For example:
 
-**Scenario #2:** Similarly, an application’s blind trust in frameworks may result in queries that are still vulnerable, (e.g., Hibernate Query Language (HQL)):
+```
+http://example.com/app/accountView?id=' OR '1'='1
+```
+
+This changes the meaning of the query to return all records from the accounts table. More dangerous attacks could modify or delete data or even invoke stored procedures.
+
+**Scenario #2:** An application's blind trust in frameworks may result in queries that are still vulnerable. For example, Hibernate Query Language (HQL):
 
 ```
 Query HQLQuery = session.createQuery("FROM accounts WHERE custID='" + request.getParameter("id") + "'");
 ```
 
-In both cases, the attacker modifies the ‘id’ parameter value in their browser to send: ' UNION SLEEP(10);--. For example:
+An attacker supplies: `' OR custID IS NOT NULL OR custID='`. This bypasses the filter and returns all accounts. While HQL has fewer dangerous functions than raw SQL, it still allows unauthorized data access when user input is concatenated into queries.
+
+**Scenario #3:** An application passes user input directly to an OS command:
 
 ```
-http://example.com/app/accountView?id=' UNION SELECT SLEEP(10);--
+String cmd = "nslookup " + request.getParameter("domain");
+Runtime.getRuntime().exec(cmd);
 ```
 
-This changes the meaning of both queries to return all the records from the accounts table. More dangerous attacks could modify or delete data or even invoke stored procedures.
+An attacker supplies `example.com; cat /etc/passwd` to execute arbitrary commands on the server.
 
 ## References.
 
