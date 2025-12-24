@@ -104,14 +104,6 @@ The following organizations (along with several anonymous donors) kindly donated
 * Tanya Janca - X: [@shehackspurple](https://x.com/shehackspurple)
 * Torsten Gigler - Mastodon: [@torsten_gigler@infosec.exchange](https://infosec.exchange/@torsten_gigler)
 
-
-
-## Release Candidate
-
-
-This release candidate was originally released on 6th November 2025.
-
-
 ## Log issues and pull requests
 
 Please log any corrections or issues:
