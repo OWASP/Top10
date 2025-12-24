@@ -1,4 +1,4 @@
-# OWASP Top 10:2025 Release Candidate
+# OWASP Top 10:2025
 
 Welcome to the OWASP Top 10:2025 Release.
 
@@ -6,7 +6,7 @@ The OWASP Top 10 is a standard awareness document for developers and web applica
 
 ## About This Release
 
-This is the **2025** of the OWASP Top 10. This version includes updates based on the latest data and security trends.
+This is the **2025** version of the OWASP Top 10. This version includes updates based on the latest data and security trends.
 
 ## Main Project Page
 The [main project page](https://github.com/OWASP/www-project-top-ten) has information about older versions and metadata about this project.
