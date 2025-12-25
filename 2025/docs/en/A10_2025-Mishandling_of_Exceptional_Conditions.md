@@ -1,4 +1,5 @@
-# A10:2025 Mishandling of Exceptional Conditions
+# A10:2025 Mishandling of Exceptional Conditions ![icon](../assets/TOP_10_Icons_Final_Mishandling_of_Exceptional_Conditions.png){: style="height:80px;width:80px" align="right"}
+
 
 ## Background. 
 
