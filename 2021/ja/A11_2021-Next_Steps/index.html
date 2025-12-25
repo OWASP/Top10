@@ -1,0 +1,1439 @@
+
+<!doctype html>
+<html lang="ja" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="OWASP Top 10:2021">
+      
+      
+      
+        <link rel="canonical" href="https://owasp.org/Top10/2021/ja/A11_2021-Next_Steps/">
+      
+      
+        <link rel="prev" href="../A10_2021-Server-Side_Request_Forgery_%28SSRF%29/">
+      
+      
+      
+        
+          <link rel="alternate" href="../../A11_2021-Next_Steps/" hreflang="en">
+        
+          <link rel="alternate" href="../../ar/A11_2021-Next_Steps/" hreflang="ar">
+        
+          <link rel="alternate" href="../../de/A11_2021-Next_Steps/" hreflang="de">
+        
+          <link rel="alternate" href="../../es/A11_2021-Next_Steps/" hreflang="es">
+        
+          <link rel="alternate" href="../../fr/A11_2021-Next_Steps/" hreflang="fr">
+        
+          <link rel="alternate" href="../../id/A11_2021-Next_Steps/" hreflang="id">
+        
+          <link rel="alternate" href="../../it/A11_2021-Next_Steps/" hreflang="it">
+        
+          <link rel="alternate" href="./" hreflang="ja">
+        
+          <link rel="alternate" href="../../pt-BR/A11_2021-Next_Steps/" hreflang="pt-BR">
+        
+          <link rel="alternate" href="../../tr/A11_2021-Next_Steps/" hreflang="tr">
+        
+          <link rel="alternate" href="../../zh-Hant/A11_2021-Next_Steps/" hreflang="zh-Hant">
+        
+          <link rel="alternate" href="../../zh-TW/A11_2021-Next_Steps/" hreflang="zh-TW">
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Next Steps - OWASP Top 10:2021</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#a112021-next-steps" class="md-skip">
+          コンテンツにスキップ
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="ヘッダー">
+    <a href="../" title="OWASP Top 10:2021" class="md-header__button md-logo" aria-label="OWASP Top 10:2021" data-md-component="logo">
+      
+  <img src="../../assets/OWASP_Logo_Transp.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OWASP Top 10:2021
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Next Steps
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="言語切り替え">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../A11_2021-Next_Steps/" hreflang="en" class="md-select__link">
+              en - English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../ar/A11_2021-Next_Steps/" hreflang="ar" class="md-select__link">
+              ar - العربية
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../de/A11_2021-Next_Steps/" hreflang="de" class="md-select__link">
+              de - Deutsch
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../es/A11_2021-Next_Steps/" hreflang="es" class="md-select__link">
+              es - Español
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../fr/A11_2021-Next_Steps/" hreflang="fr" class="md-select__link">
+              fr - Français
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../id/A11_2021-Next_Steps/" hreflang="id" class="md-select__link">
+              id - Indonesian
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../it/A11_2021-Next_Steps/" hreflang="it" class="md-select__link">
+              it - Italiano
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="ja" class="md-select__link">
+              ja - 日本語
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../pt-BR/A11_2021-Next_Steps/" hreflang="pt-BR" class="md-select__link">
+              pt-BR - Português (Brasil)
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../tr/A11_2021-Next_Steps/" hreflang="tr" class="md-select__link">
+              tr - Türkçe
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../zh-Hant/A11_2021-Next_Steps/" hreflang="zh-Hant" class="md-select__link">
+              zh-Hant - 简体中文
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../zh-TW/A11_2021-Next_Steps/" hreflang="zh-TW" class="md-select__link">
+              zh-TW - 繁體中文
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="検索" placeholder="検索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="検索">
+        
+        <button type="reset" class="md-search__icon md-icon" title="クリア" aria-label="クリア" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            検索を初期化
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/OWASP/Top10" title="リポジトリへ" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    OWASP/Top10
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="ナビゲーション" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../" title="OWASP Top 10:2021" class="md-nav__button md-logo" aria-label="OWASP Top 10:2021" data-md-component="logo">
+      
+  <img src="../../assets/OWASP_Logo_Transp.png" alt="logo">
+
+    </a>
+    OWASP Top 10:2021
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/OWASP/Top10" title="リポジトリへ" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    OWASP/Top10
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Welcome Page
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A00_2021_Introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    導入
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x00_2021-notice/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    注意事項
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A00_2021_How_to_use_the_OWASP_Top_10_as_a_standard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OWASP Top 10 をスタンダードとして使うには
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A00_2021-How_to_start_an_AppSec_program_with_the_OWASP_Top_10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OWASP Top 10 を使ってアプリケーションセキュリティプログラムを始めるには
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x01_2021-about-owasp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OWASPについて
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Top 10:2021 一覧
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Top 10:2021 一覧
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A01_2021-Broken_Access_Control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A01 アクセス制御の不備
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A02_2021-Cryptographic_Failures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A02 暗号化の失敗
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A03_2021-Injection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A03 インジェクション
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A04_2021-Insecure_Design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A04 安全が確認されない不安な設計
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A05_2021-Security_Misconfiguration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A05 セキュリティの設定ミス
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A06_2021-Vulnerable_and_Outdated_Components/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A06 脆弱で古くなったコンポーネント
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A07_2021-Identification_and_Authentication_Failures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A07 識別と認証の失敗
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A08_2021-Software_and_Data_Integrity_Failures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A08 ソフトウェアとデータの整合性の不具合
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A09_2021-Security_Logging_and_Monitoring_Failures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A09 セキュリティログとモニタリングの失敗
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A10_2021-Server-Side_Request_Forgery_%28SSRF%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A10 サーバーサイドリクエストフォージェリ (SSRF)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Next Steps
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Next Steps
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ソースコードの品質にかかわる問題
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        サービス拒否攻撃(DoS)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        メモリ管理エラー
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ソースコードの品質にかかわる問題
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        サービス拒否攻撃(DoS)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        メモリ管理エラー
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="a112021-next-steps">A11:2021 – Next Steps</h1>
+<p>OWASPトップ10は、建て付け上、最も重要な10のリスクに限定されています。OWASPトップ10に掲載するかどうか、長時間の検討を要した「ぎりぎり境界線」のリスクで、最終的には掲載されなかったものがあります。
+データをさまざまな方法で解釈したのですが、それでも他のリスクの方がより大きな影響があったからです。アプリケーションセキュリティプログラムを成熟させるべく取り組んでいる企業や、適用範囲を広げたいと考えているセキュリティコンサルタント会社あるいは製品ツールベンダーは、以下の4つの問題については、識別したり修正したりする努力を傾ける価値があります。</p>
+<h2 id="_1">ソースコードの品質にかかわる問題</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">対応する CWE 数</th>
+<th style="text-align: center;">最大発生率</th>
+<th style="text-align: center;">平均発生率</th>
+<th style="text-align: center;">加重平均（攻撃の難易度）</th>
+<th style="text-align: center;">加重平均（攻撃による影響）</th>
+<th style="text-align: center;">最大網羅率</th>
+<th style="text-align: center;">平均網羅率</th>
+<th style="text-align: center;">総発生数</th>
+<th style="text-align: center;">CVE 合計件数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">38</td>
+<td style="text-align: center;">49.46%</td>
+<td style="text-align: center;">2.22%</td>
+<td style="text-align: center;">7.1</td>
+<td style="text-align: center;">6.7</td>
+<td style="text-align: center;">60.85%</td>
+<td style="text-align: center;">23.42%</td>
+<td style="text-align: center;">101736</td>
+<td style="text-align: center;">7564</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p><strong>概要</strong> コード品質の問題には、既知のセキュリティ上の欠陥やパターン、変数の多目的再利用、デバッグ出力での機密情報の露出、一つ違いのエラー、TOCTOU（time of check/time of use）レースコンディション(競合状態)、符号なしまたは符号ありの変換エラー、free後の領域の使用などがあります。このセクションの特徴は、通常、厳しいコンパイラフラグ、静的コード解析ツール、Linter IDEプラグインなどで特定できることです。  モダンな開発現代の言語は、設計上、たとえばRustのメモリ所有権と借用の概念、Rustのスレッド設計、Goの厳格な型付けと境界チェックのように、これらの問題の多くを排除しています。</p>
+</li>
+<li>
+<p><strong>防御手段</strong> 利用しているエディタや言語の静的コード解析オプションを有効にして使用する。静的コード解析ツールの使用を検討する。RustやGoなど、バグクラスを排除した言語やフレームワークの使用や移行が可能かどうかを検討する。</p>
+</li>
+<li>
+<p><strong>攻撃シナリオ例</strong> 攻撃者は、複数のスレッド間で静的に共有された変数を使用するレースコンディションを悪用して、機密情報を取得または更新する可能性があります。</p>
+</li>
+<li>
+<p><strong>参考文献</strong></p>
+<ul>
+<li>
+<p><a href="https://owasp.org/www-pdf-archive/OWASP_Code_Review_Guide_v2.pdf">OWASP Code Review Guide</a></p>
+</li>
+<li>
+<p><a href="https://google.github.io/eng-practices/review/">Google Code Review Guide</a></p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="dos">サービス拒否攻撃(DoS)</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">対応する CWE 数</th>
+<th style="text-align: center;">最大発生率</th>
+<th style="text-align: center;">平均発生率</th>
+<th style="text-align: center;">加重平均（攻撃の難易度）</th>
+<th style="text-align: center;">加重平均（攻撃による影響）</th>
+<th style="text-align: center;">最大網羅率</th>
+<th style="text-align: center;">平均網羅率</th>
+<th style="text-align: center;">総発生数</th>
+<th style="text-align: center;">CVE 合計件数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">17.54%</td>
+<td style="text-align: center;">4.89%</td>
+<td style="text-align: center;">8.3</td>
+<td style="text-align: center;">5.9</td>
+<td style="text-align: center;">79.58%</td>
+<td style="text-align: center;">33.26%</td>
+<td style="text-align: center;">66985</td>
+<td style="text-align: center;">973</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p><strong>概要</strong> 十分なリソースがあれば、サービス拒否は常に可能です。しかし、設計やコーディングの手法は、サービス拒否攻撃の被害の大きさに影響します。例えば、リンクひとつあれば誰でも大容量のファイルにアクセスしたり、あらゆるページで計算量の多いトランザクションを発生させることができます。こういうケースでは、このサービス拒否の挙動は、少ない労力でも成立します。</p>
+</li>
+<li>
+<p><strong>どのように防ぐか</strong> コードのパフォーマンステストを、CPU、I/O、メモリ使用量について実施し、再設計、最適化、またはコストの高い操作についてキャッシュを行う。巨大なファイルやオブジェクトに対してはアクセス制御し、許可された個人のみがアクセスするよう制御したり、エッジキャッシングネットワークによるサービスを検討する。</p>
+</li>
+<li>
+<p><strong>攻撃シナリオ例</strong> 攻撃者は、ある操作が完了するのに5～10秒かかると判断したとします。4つのスレッドを同時に実行するとサーバーが応答しなくなるように見えると、攻撃者は1000個のスレッドを使用し、システム全体をオフラインにします。</p>
+</li>
+<li>
+<p><strong>参考文献</strong></p>
+<ul>
+<li>
+<p><a href="https://cheatsheetseries.owasp.org/cheatsheets/Denial_of_Service_Cheat_Sheet.html">OWASP Cheat Sheet: Denial of Service</a></p>
+</li>
+<li>
+<p><a href="https://owasp.org/www-community/attacks/Denial_of_Service">OWASP Attacks: Denial of Service</a></p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="_2">メモリ管理エラー</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">対応する CWE 数</th>
+<th style="text-align: center;">最大発生率</th>
+<th style="text-align: center;">平均発生率</th>
+<th style="text-align: center;">加重平均（攻撃の難易度）</th>
+<th style="text-align: center;">加重平均（攻撃による影響）</th>
+<th style="text-align: center;">最大網羅率</th>
+<th style="text-align: center;">平均網羅率</th>
+<th style="text-align: center;">総発生数</th>
+<th style="text-align: center;">CVE 合計件数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">7.03%</td>
+<td style="text-align: center;">1.16%</td>
+<td style="text-align: center;">6.7</td>
+<td style="text-align: center;">8.1</td>
+<td style="text-align: center;">56.06%</td>
+<td style="text-align: center;">31.74%</td>
+<td style="text-align: center;">26576</td>
+<td style="text-align: center;">16184</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p><strong>概要</strong> Webアプリケーションは、Java、.NET、node.js（JavaScriptまたはTypeScript）などのメモリ管理のできる言語で書かれることが多いです。しかし、これらの言語は、バッファやヒープのオーバーフロー、free後メモリーの利用、整数オーバーフローなど、メモリ管理の問題を抱えるシステム言語で書かれています。ウェブアプリケーション言語が名目上「メモリセーフ」だとしても、実際の基盤はそうではないことがあります。そのような証拠を示すサンドボックス環境からの脱出は、枚挙にいとまがありません。</p>
+</li>
+<li>
+<p><strong>防御手</strong> 最近のAPIの多くは、RustやGoなどのメモリセーフな言語で書かれています。Rustの場合、メモリセーフは言語の重要な機能です。既存のコードに対しては、厳密なコンパイラフラグ、強力な型付け、静的コード解析、ファズテストなどを使用するなら、メモリリーク、メモリ、配列のオーバーランなどを特定することができるでしょう。</p>
+</li>
+<li>
+<p><strong>攻撃シナリオ例</strong> バッファオーバーフローやヒープオーバーフローは、長年にわたり攻撃者の主要な方法となってきました。攻撃者はデータをプログラムに送り、プログラムはそれをスタックバッファ(サイズが足りていないにもかかわらず)に格納しようとします。その結果として、コールスタック上の情報(関数のリターンポインタを含む)が上書きされます。攻撃者の送ったデータにより、関数のリターンポインタが上書きされ、関数がリターンポインタを返したとき、攻撃者のデータに含まれる悪意のあるコードへ制御が移されます。</p>
+</li>
+<li>
+<p><strong>参考文献</strong></p>
+<ul>
+<li>
+<p><a href="https://owasp.org/www-community/vulnerabilities/Buffer_Overflow">OWASP Vulnerabilities: Buffer Overflow</a></p>
+</li>
+<li>
+<p><a href="https://owasp.org/www-community/attacks/Buffer_overflow_attack">OWASP Attacks: Buffer Overflow</a></p>
+</li>
+<li>
+<p><a href="https://www.sciencedirect.com/topics/computer-science/integer-overflow">Science Direct: Integer Overflow</a></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="a112021-next-steps_1">A11:2021 – Next Steps</h1>
+<p>By design, the OWASP Top 10 is innately limited to the ten most
+significant risks. Every OWASP Top 10 has “on the cusp” risks considered
+at length for inclusion, but in the end, they didn’t make it. No matter
+how we tried to interpret or twist the data, the other risks were more
+prevalent and impactful.</p>
+<p>Organizations working towards a mature appsec program or security
+consultancies or tool vendors wishing to expand coverage for their
+offerings, the following four issues are well worth the effort to
+identify and remediate.</p>
+<h2 id="code-quality-issues">Code Quality issues</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">CWEs Mapped </th>
+<th style="text-align: center;">Max Incidence Rate </th>
+<th style="text-align: center;">Avg Incidence Rate </th>
+<th style="text-align: center;">Avg Weighted Exploit </th>
+<th style="text-align: center;">Avg Weighted Impact </th>
+<th style="text-align: center;">Max Coverage </th>
+<th style="text-align: center;">Avg Coverage </th>
+<th style="text-align: center;">Total Occurrences </th>
+<th style="text-align: center;">Total CVEs </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">38</td>
+<td style="text-align: center;">49.46%</td>
+<td style="text-align: center;">2.22%</td>
+<td style="text-align: center;">7.1</td>
+<td style="text-align: center;">6.7</td>
+<td style="text-align: center;">60.85%</td>
+<td style="text-align: center;">23.42%</td>
+<td style="text-align: center;">101736</td>
+<td style="text-align: center;">7564</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p><strong>Description.</strong> Code quality issues include known security defects
+    or patterns, reusing variables for multiple purposes, exposure of
+    sensitive information in debugging output, off-by-one errors, time
+    of check/time of use (TOCTOU) race conditions, unsigned or signed
+    conversion errors, use after free, and more. The hallmark of this
+    section is that they can usually be identified with stringent
+    compiler flags, static code analysis tools, and linter IDE plugins.
+    Modern languages by design eliminated many of these issues, such as
+    Rust’s memory ownership and borrowing concept, Rust’s threading
+    design, and Go’s strict typing and bounds checking.</p>
+</li>
+<li>
+<p><strong>How to prevent</strong>. Enable and use your editor and language’s static
+    code analysis options. Consider using a static code analysis tool.
+    Consider if it might be possible to use or migrate to a language or
+    framework that eliminates bug classes, such as Rust or Go.</p>
+</li>
+<li>
+<p><strong>Example attack scenarios</strong>. An attacker might obtain or update
+    sensitive information by exploiting a race condition using a
+    statically shared variable across multiple threads.</p>
+</li>
+<li>
+<p><strong>References</strong></p>
+<ul>
+<li>
+<p><a href="https://owasp.org/www-pdf-archive/OWASP_Code_Review_Guide_v2.pdf">OWASP Code Review Guide</a></p>
+</li>
+<li>
+<p><a href="https://google.github.io/eng-practices/review/">Google Code Review Guide</a></p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="denial-of-service">Denial of Service</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">CWEs Mapped </th>
+<th style="text-align: center;">Max Incidence Rate </th>
+<th style="text-align: center;">Avg Incidence Rate </th>
+<th style="text-align: center;">Avg Weighted Exploit </th>
+<th style="text-align: center;">Avg Weighted Impact </th>
+<th style="text-align: center;">Max Coverage </th>
+<th style="text-align: center;">Avg Coverage </th>
+<th style="text-align: center;">Total Occurrences </th>
+<th style="text-align: center;">Total CVEs </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">17.54%</td>
+<td style="text-align: center;">4.89%</td>
+<td style="text-align: center;">8.3</td>
+<td style="text-align: center;">5.9</td>
+<td style="text-align: center;">79.58%</td>
+<td style="text-align: center;">33.26%</td>
+<td style="text-align: center;">66985</td>
+<td style="text-align: center;">973</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p><strong>Description</strong>. Denial of service is always possible given
+    sufficient resources. However, design and coding practices have a
+    significant bearing on the magnitude of the denial of service.
+    Suppose anyone with the link can access a large file, or a
+    computationally expensive transaction occurs on every page. In that
+    case, denial of service requires less effort to conduct.</p>
+</li>
+<li>
+<p><strong>How to prevent</strong>. Performance test code for CPU, I/O, and memory
+    usage, re-architect, optimize, or cache expensive operations.
+    Consider access controls for larger objects to ensure that only
+    authorized individuals can access huge files or objects or serve
+    them by an edge caching network. </p>
+</li>
+<li>
+<p><strong>Example attack scenarios</strong>. An attacker might determine that an
+    operation takes 5-10 seconds to complete. When running four
+    concurrent threads, the server seems to stop responding. The
+    attacker uses 1000 threads and takes the entire system offline.</p>
+</li>
+<li>
+<p><strong>References</strong></p>
+<ul>
+<li>
+<p><a href="https://cheatsheetseries.owasp.org/cheatsheets/Denial_of_Service_Cheat_Sheet.html">OWASP Cheat Sheet: Denial of Service</a></p>
+</li>
+<li>
+<p><a href="https://owasp.org/www-community/attacks/Denial_of_Service">OWASP Attacks: Denial of Service</a></p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="memory-management-errors">Memory Management Errors</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">CWEs Mapped </th>
+<th style="text-align: center;">Max Incidence Rate </th>
+<th style="text-align: center;">Avg Incidence Rate </th>
+<th style="text-align: center;">Avg Weighted Exploit </th>
+<th style="text-align: center;">Avg Weighted Impact </th>
+<th style="text-align: center;">Max Coverage </th>
+<th style="text-align: center;">Avg Coverage </th>
+<th style="text-align: center;">Total Occurrences </th>
+<th style="text-align: center;">Total CVEs </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">7.03%</td>
+<td style="text-align: center;">1.16%</td>
+<td style="text-align: center;">6.7</td>
+<td style="text-align: center;">8.1</td>
+<td style="text-align: center;">56.06%</td>
+<td style="text-align: center;">31.74%</td>
+<td style="text-align: center;">26576</td>
+<td style="text-align: center;">16184</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p><strong>Description</strong>. Web applications tend to be written in managed
+    memory languages, such as Java, .NET, or node.js (JavaScript or
+    TypeScript). However, these languages are written in systems
+    languages that have memory management issues, such as buffer or heap
+    overflows, use after free, integer overflows, and more. There have
+    been many sandbox escapes over the years that prove that just
+    because the web application language is nominally memory “safe,” the
+    foundations are not.</p>
+</li>
+<li>
+<p><strong>How to prevent</strong>. Many modern APIs are now written in memory-safe
+    languages such as Rust or Go. In the case of Rust, memory safety is
+    a crucial feature of the language. For existing code, the use of
+    strict compiler flags, strong typing, static code analysis, and fuzz
+    testing can be beneficial in identifying memory leaks, memory, and
+    array overruns, and more.</p>
+</li>
+<li>
+<p><strong>Example attack scenarios</strong>. Buffer and heap overflows have been a
+    mainstay of attackers over the years. The attacker sends data to a program, which it stores in an undersized stack buffer. The result is that information on the call stack is overwritten, including the function’s return pointer. The data sets the value of the return pointer so that when the function returns, it transfers control to malicious code contained in the attacker’s data.</p>
+</li>
+<li>
+<p><strong>References</strong></p>
+<ul>
+<li>
+<p><a href="https://owasp.org/www-community/vulnerabilities/Buffer_Overflow">OWASP Vulnerabilities: Buffer Overflow</a></p>
+</li>
+<li>
+<p><a href="https://owasp.org/www-community/attacks/Buffer_overflow_attack">OWASP Attacks: Buffer Overflow</a></p>
+</li>
+<li>
+<p><a href="https://www.sciencedirect.com/topics/computer-science/integer-overflow">Science Direct: Integer Overflow</a></p>
+</li>
+</ul>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © Copyright 2021-2025 - OWASP Top 10 Team - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.instant", "search.suggest"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version": "\u30d0\u30fc\u30b8\u30e7\u30f3\u5207\u308a\u66ff\u3048"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+    
+  </body>
+</html>

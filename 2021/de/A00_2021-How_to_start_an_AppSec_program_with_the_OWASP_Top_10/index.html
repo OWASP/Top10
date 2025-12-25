@@ -1,0 +1,1210 @@
+
+<!doctype html>
+<html lang="de" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="OWASP Top 10:2021">
+      
+      
+      
+        <link rel="canonical" href="https://owasp.org/Top10/2021/de/A00_2021-How_to_start_an_AppSec_program_with_the_OWASP_Top_10/">
+      
+      
+        <link rel="prev" href="../A00_2021_How_to_use_the_OWASP_Top_10_as_a_standard/">
+      
+      
+        <link rel="next" href="../0x01_2021-about-owasp/">
+      
+      
+        
+          <link rel="alternate" href="../../A00_2021-How_to_start_an_AppSec_program_with_the_OWASP_Top_10/" hreflang="en">
+        
+          <link rel="alternate" href="../../ar/A00_2021-How_to_start_an_AppSec_program_with_the_OWASP_Top_10/" hreflang="ar">
+        
+          <link rel="alternate" href="./" hreflang="de">
+        
+          <link rel="alternate" href="../../es/A00_2021-How_to_start_an_AppSec_program_with_the_OWASP_Top_10/" hreflang="es">
+        
+          <link rel="alternate" href="../../fr/A00_2021-How_to_start_an_AppSec_program_with_the_OWASP_Top_10/" hreflang="fr">
+        
+          <link rel="alternate" href="../../id/A00_2021-How_to_start_an_AppSec_program_with_the_OWASP_Top_10/" hreflang="id">
+        
+          <link rel="alternate" href="../../it/A00_2021-How_to_start_an_AppSec_program_with_the_OWASP_Top_10/" hreflang="it">
+        
+          <link rel="alternate" href="../../ja/A00_2021-How_to_start_an_AppSec_program_with_the_OWASP_Top_10/" hreflang="ja">
+        
+          <link rel="alternate" href="../../pt-BR/A00_2021-How_to_start_an_AppSec_program_with_the_OWASP_Top_10/" hreflang="pt-BR">
+        
+          <link rel="alternate" href="../../tr/A00_2021-How_to_start_an_AppSec_program_with_the_OWASP_Top_10/" hreflang="tr">
+        
+          <link rel="alternate" href="../../zh-Hant/A00_2021-How_to_start_an_AppSec_program_with_the_OWASP_Top_10/" hreflang="zh-Hant">
+        
+          <link rel="alternate" href="../../zh-TW/A00_2021-How_to_start_an_AppSec_program_with_the_OWASP_Top_10/" hreflang="zh-TW">
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Wie man ein AppSec-Program mit den OWASP Top 10 beginnt - OWASP Top 10:2021</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#wie-man-ein-programm-fur-anwendungssicherheit-mit-den-owasp-top-10-aufbaut" class="md-skip">
+          Zum Inhalt
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Kopfzeile">
+    <a href="../" title="OWASP Top 10:2021" class="md-header__button md-logo" aria-label="OWASP Top 10:2021" data-md-component="logo">
+      
+  <img src="../../assets/OWASP_Logo_Transp.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OWASP Top 10:2021
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Wie man ein AppSec-Program mit den OWASP Top 10 beginnt
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Sprache wechseln">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../A00_2021-How_to_start_an_AppSec_program_with_the_OWASP_Top_10/" hreflang="en" class="md-select__link">
+              en - English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../ar/A00_2021-How_to_start_an_AppSec_program_with_the_OWASP_Top_10/" hreflang="ar" class="md-select__link">
+              ar - العربية
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="de" class="md-select__link">
+              de - Deutsch
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../es/A00_2021-How_to_start_an_AppSec_program_with_the_OWASP_Top_10/" hreflang="es" class="md-select__link">
+              es - Español
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../fr/A00_2021-How_to_start_an_AppSec_program_with_the_OWASP_Top_10/" hreflang="fr" class="md-select__link">
+              fr - Français
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../id/A00_2021-How_to_start_an_AppSec_program_with_the_OWASP_Top_10/" hreflang="id" class="md-select__link">
+              id - Indonesian
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../it/A00_2021-How_to_start_an_AppSec_program_with_the_OWASP_Top_10/" hreflang="it" class="md-select__link">
+              it - Italiano
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../ja/A00_2021-How_to_start_an_AppSec_program_with_the_OWASP_Top_10/" hreflang="ja" class="md-select__link">
+              ja - 日本語
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../pt-BR/A00_2021-How_to_start_an_AppSec_program_with_the_OWASP_Top_10/" hreflang="pt-BR" class="md-select__link">
+              pt-BR - Português (Brasil)
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../tr/A00_2021-How_to_start_an_AppSec_program_with_the_OWASP_Top_10/" hreflang="tr" class="md-select__link">
+              tr - Türkçe
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../zh-Hant/A00_2021-How_to_start_an_AppSec_program_with_the_OWASP_Top_10/" hreflang="zh-Hant" class="md-select__link">
+              zh-Hant - 简体中文
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../zh-TW/A00_2021-How_to_start_an_AppSec_program_with_the_OWASP_Top_10/" hreflang="zh-TW" class="md-select__link">
+              zh-TW - 繁體中文
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Suche" placeholder="Suche" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Suche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Zurücksetzen" aria-label="Zurücksetzen" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Suche wird initialisiert
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/OWASP/Top10" title="Zum Repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    OWASP/Top10
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../" title="OWASP Top 10:2021" class="md-nav__button md-logo" aria-label="OWASP Top 10:2021" data-md-component="logo">
+      
+  <img src="../../assets/OWASP_Logo_Transp.png" alt="logo">
+
+    </a>
+    OWASP Top 10:2021
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/OWASP/Top10" title="Zum Repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    OWASP/Top10
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Welcome Page
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A00_2021_Introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Einführung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x00_2021-notice/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Anmerkung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A00_2021_How_to_use_the_OWASP_Top_10_as_a_standard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Wie man die OWASP Top 10 als Standard verwendet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Wie man ein AppSec-Program mit den OWASP Top 10 beginnt
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Wie man ein AppSec-Program mit den OWASP Top 10 beginnt
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#schritt-1-identifizieren-sie-die-lucken-und-ziele-ihres-appsec-programms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schritt 1. Identifizieren Sie die Lücken und Ziele Ihres AppSec-Programms
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schritt-2-ebnen-sie-den-weg-fur-einen-sicheren-entwicklungs-lebenszyklus-sdlc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schritt 2. Ebnen Sie den Weg für einen sicheren Entwicklungs-Lebenszyklus (SDLC)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stufe-3-realisierung-des-geebneten-wegs-mit-ihren-entwicklungsteams" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stufe 3. Realisierung des geebneten Wegs mit Ihren Entwicklungsteams
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stufe-4-migrieren-sie-alle-zukunftigen-und-bestehenden-anwendungen-auf-den-geebneten-weg" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stufe 4. Migrieren Sie alle zukünftigen und bestehenden Anwendungen auf den geebneten Weg
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schritt-5-nachprufen-ob-der-geebnete-weg-die-in-den-owasp-top-10-genannten-probleme-behoben-hat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schritt 5. Nachprüfen, ob der geebnete Weg die in den OWASP Top 10 genannten Probleme behoben hat
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stufe-6-bauen-sie-ihr-programm-zu-einem-ausgereiften-appsec-programm-aus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stufe 6. Bauen Sie Ihr Programm zu einem ausgereiften AppSec-Programm aus
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#weitere-schritte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Weitere Schritte
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x01_2021-about-owasp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Über OWASP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Liste der Top 10:2021
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Liste der Top 10:2021
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A01_2021-Broken_Access_Control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A01 - Mangelhafte Zugriffskontrolle
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A02_2021-Cryptographic_Failures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A02 - Fehlerhafter Einsatz von Kryptographie
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A03_2021-Injection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A03 - Injection
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A04_2021-Insecure_Design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A04 - Unsicheres Anwendungsdesign
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A05_2021-Security_Misconfiguration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A05 - Sicherheitsrelevante Fehlkonfiguration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A06_2021-Vulnerable_and_Outdated_Components/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A06 - Unsichere oder veraltete Komponenten
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A07_2021-Identification_and_Authentication_Failures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A07 - Fehlerhafte Authentifizierung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A08_2021-Software_and_Data_Integrity_Failures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A08 - Fehlerhafte Prüfung der Software- und Datenintegrität
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A09_2021-Security_Logging_and_Monitoring_Failures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A09 - Unzureichendes Logging und Sicherheitsmonitoring
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A10_2021-Server-Side_Request_Forgery_%28SSRF%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A10 - Server-Side Request Forgery (SSRF)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A11_2021-Next_Steps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nächste Schritte
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#schritt-1-identifizieren-sie-die-lucken-und-ziele-ihres-appsec-programms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schritt 1. Identifizieren Sie die Lücken und Ziele Ihres AppSec-Programms
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schritt-2-ebnen-sie-den-weg-fur-einen-sicheren-entwicklungs-lebenszyklus-sdlc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schritt 2. Ebnen Sie den Weg für einen sicheren Entwicklungs-Lebenszyklus (SDLC)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stufe-3-realisierung-des-geebneten-wegs-mit-ihren-entwicklungsteams" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stufe 3. Realisierung des geebneten Wegs mit Ihren Entwicklungsteams
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stufe-4-migrieren-sie-alle-zukunftigen-und-bestehenden-anwendungen-auf-den-geebneten-weg" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stufe 4. Migrieren Sie alle zukünftigen und bestehenden Anwendungen auf den geebneten Weg
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schritt-5-nachprufen-ob-der-geebnete-weg-die-in-den-owasp-top-10-genannten-probleme-behoben-hat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schritt 5. Nachprüfen, ob der geebnete Weg die in den OWASP Top 10 genannten Probleme behoben hat
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stufe-6-bauen-sie-ihr-programm-zu-einem-ausgereiften-appsec-programm-aus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stufe 6. Bauen Sie Ihr Programm zu einem ausgereiften AppSec-Programm aus
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#weitere-schritte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Weitere Schritte
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="wie-man-ein-programm-fur-anwendungssicherheit-mit-den-owasp-top-10-aufbaut">Wie man ein Programm für Anwendungssicherheit mit den OWASP Top 10 aufbaut</h1>
+<p>Die OWASP Top 10 war nie als Grundlage für ein Programm zur Anwendungssicherheit (AppSec) gedacht. 
+Für viele Organisationen, die sich gerade am Anfang ihrer Reise in die Anwendungssicherheit befinden, ist es jedoch wichtig, irgendwo anzufangen.
+Die OWASP Top 10 2021 bilden einen guten Ausgangspunkt für Checklisten usw., sind aber an sich nicht ausreichend.</p>
+<h2 id="schritt-1-identifizieren-sie-die-lucken-und-ziele-ihres-appsec-programms">Schritt 1. Identifizieren Sie die Lücken und Ziele Ihres AppSec-Programms</h2>
+<p>Viele Anwendungssicherheitsprogramme (AppSec) übernehmen sich häufig und versuchen in zu großen Schritten ihr Ziel zu erreichen. Diese Bemühungen sind zum Scheitern verurteilt. Wir empfehlen CISOs und AppSec-Führungskräften dringend, das <a href="https://owaspsamm.org">OWASP Software Assurance Maturity Model (SAMM)</a> einzusetzen, um Schwachstellen und Verbesserungspotenziale über einen Zeitraum von 1-3 Jahren zu identifizieren. Der erste Schritt besteht darin, den aktuellen Stand der Dinge zu bewerten: <em>Jene</em> Schwächen in den Bereichen Governance, Design, Implementierung, Verifizierung und Betrieb zu identifizieren, die sofort behoben werden müssen, und jene, die noch warten können, und die Implementierung oder Verbesserung der 15 OWASP SAMM-Sicherheitspraktiken zu priorisieren. OWASP SAMM kann beim Aufbau und Messen von Verbesserungen bei Ihren Software Assurance-Bemühungen hilfreich sein.</p>
+<h2 id="schritt-2-ebnen-sie-den-weg-fur-einen-sicheren-entwicklungs-lebenszyklus-sdlc">Schritt 2. Ebnen Sie den Weg für einen sicheren Entwicklungs-Lebenszyklus (SDLC)</h2>
+<p>Das Konzept des geebneten Weges, das traditionell den sogenannten "Einhörnern" vorbehalten war, ist der einfachste Weg, um die größte Wirkung zu erzielen und die AppSec-Ressourcen mit der Geschwindigkeit des Entwicklungsteams zu skalieren, die von Jahr zu Jahr zunimmt.</p>
+<p>Das Konzept des geebneten Weges lautet: "Der einfachste Weg ist auch der sicherste Weg" und sollte eine Kultur tiefer Partnerschaften zwischen dem Entwicklungsteam und dem Sicherheitsteam beinhalten, vorzugsweise so, dass sie ein und dasselbe Team sind. Der geebnete Weg hat zum Ziel, unsichere Alternativen kontinuierlich zu verbessern, zu messen, zu erkennen und zu ersetzen, indem eine unternehmensweite Bibliothek von sicheren Ersatzlösungen zur Verfügung gestellt wird, mit Werkzeugen, die dabei helfen zu erkennen, wo Verbesserungen durch die Übernahme des geebneten Weges möglich sind. Auf diese Weise können vorhandene Entwicklungstools unsichere Builds aufzeigen und den Entwicklungsteams helfen, sich selbst von unsicheren Alternativen zu lösen.</p>
+<p>Der geebnete Weg mag anstrengend erscheinen, aber er sollte im Laufe der Zeit schrittweise aufgebaut werden. Es gibt noch andere Formen von Appsec-Programmen, insbesondere den Agile Secure Development Lifecycle von Microsoft. Nicht jede Appsec-Programm-Methodik passt zu jedem Unternehmen.</p>
+<h2 id="stufe-3-realisierung-des-geebneten-wegs-mit-ihren-entwicklungsteams">Stufe 3. Realisierung des geebneten Wegs mit Ihren Entwicklungsteams</h2>
+<p>Der geebnete Weg wird mit dem Einverständnis und der direkten Beteiligung der zuständigen Entwicklungs- und Betriebsteams umgesetzt. Der Weg sollte strategisch auf das Unternehmen abgestimmt sein und dazu beitragen, sichere Anwendungen schneller bereitzustellen. Die Entwicklung des Weges sollte eine ganzheitliche Maßnahme sein, die das gesamte Unternehmens- oder Anwendungsökosystem abdeckt, und nicht nur ein einzelnes anwendungsbezogenes Notpflaster wie in vergangenen Zeiten.</p>
+<h2 id="stufe-4-migrieren-sie-alle-zukunftigen-und-bestehenden-anwendungen-auf-den-geebneten-weg">Stufe 4. Migrieren Sie alle zukünftigen und bestehenden Anwendungen auf den geebneten Weg</h2>
+<p>Fügen Sie Tools zur Erkennung von geebneten Wegen hinzu, während Sie sie entwickeln, und stellen Sie den Entwicklungsteams Informationen zur Verfügung, damit sie die Sicherheit ihrer Anwendungen verbessern können, indem sie Elemente des geebneten Weges direkt übernehmen können. Sobald ein Aspekt des geebneten Weges übernommen wurde, sollten Unternehmen Prüfungen zur kontinuierlichen Integration implementieren, die bestehenden und Check-Ins von neuem Code auf verbotene Alternativen untersuchen und beim Build oder Check-In Warnungen ausgeben oder diese ablehnen. Auf diese Weise wird verhindert, dass sich im Laufe der Zeit unsichere Optionen in den Code einschleichen, wodurch technische Altlasten und eine fehlerhafte, unsichere Anwendung vermieden werden. Solche Warnhinweise sollten auf die sichere Alternative verweisen, damit das Entwicklungsteam sofort die richtige Antwort erhält. So kann das Entwicklungsteam sofort die Korrektur vornehmen und die Komponente für den geebneten Weg rasch übernehmen.</p>
+<h2 id="schritt-5-nachprufen-ob-der-geebnete-weg-die-in-den-owasp-top-10-genannten-probleme-behoben-hat">Schritt 5. Nachprüfen, ob der geebnete Weg die in den OWASP Top 10 genannten Probleme behoben hat</h2>
+<p>Die Komponenten des geebneten Weges sollten sich mit einem wichtigen Aspekt der OWASP Top 10 befassen, z. B. mit der automatischen Erkennung oder Beseitigung von Sicherheitslücken in Komponenten, mit einem IDE-Plugin für die statische Codeanalyse zur Erkennung von Injections oder - noch besser - mit der Verwendung einer Bibliothek, die als sicher gegen Injections bekannt ist. Je mehr dieser sicheren Drop-in-Ersatzlösungen den Teams zur Verfügung gestellt werden, desto besser. Eine wichtige Aufgabe des Appsec-Teams ist es, dafür zu sorgen, dass die Sicherheit dieser Komponenten kontinuierlich bewertet und verbessert wird. Sobald die Sicherheit verbessert wurde, sollte eine Kommunikation mit den Nutzende der Komponente stattfinden, die darauf aufmerksam macht, dass ein Upgrade durchgeführt werden sollte, vorzugsweise automatisch, aber wenn nicht, sollte dies zumindest auf einem Dashboard oder ähnlichem deutlich gemacht werden.</p>
+<h2 id="stufe-6-bauen-sie-ihr-programm-zu-einem-ausgereiften-appsec-programm-aus">Stufe 6. Bauen Sie Ihr Programm zu einem ausgereiften AppSec-Programm aus</h2>
+<p>Sie dürfen nicht bei den OWASP Top 10 aufhören. Diese decken nur 10 Risikokategorien ab. Wir empfehlen Unternehmen dringend, den Application Security Verification Standard zu übernehmen und schrittweise Komponenten und Tests für die Stufen 1, 2 und 3 hinzuzufügen, je nach Risikoniveau der entwickelten Anwendungen.</p>
+<h2 id="weitere-schritte">Weitere Schritte</h2>
+<p>Alle guten Programme zur Anwendungssicherheit gehen über das Minimum hinaus.
+Alle Beteiligten müssen weiterarbeiten, um die Schwachstellen in den Anwendungen jemals in den Griff zu bekommen.</p>
+<ul>
+<li>
+<p><strong>Konzeptuelle Integrität</strong>. Ausgereifte AppSec-Programme müssen über ein Konzept sicherer Architektur verfügen,
+egal ob eine formale Cloud- oder Enterprise-Architektur oder Bedrohungsanalyse.</p>
+</li>
+<li>
+<p><strong>Automatisierung und Skalierung</strong>.
+    Ausgereifte AppSec-Programme versuchen möglichst viele Liefergegenstände zu automatisieren:
+Skripte um komplexe Penetrationstest-Schritte zu emulieren,
+Statische Codeanalyse direkt den Entwicklungsteams bereitstellen,
+Unterstützung für Entwicklungsteams um sicherheitsspezifische Unit- und Integrationstests zu verfassen, etc.</p>
+</li>
+<li>
+<p><strong>Kultur</strong>.
+    Ausgereifte AppSec-Programme versuchen, unsicheres Design auszuschließen
+und technische Schulden in Bestands-Code dadurch zu eliminieren,
+dass sie Bestandteil der Entwicklung sind und nicht daneben stehen.
+AppSec-Teams, die Entwicklungsteams als "die" und "wir" betrachten, sind zum Scheitern verurteilt.</p>
+</li>
+<li>
+<p><strong>Kontinuierliche Verbesserung</strong>. 
+Ausgereifte AppSec-Programme versuchen, sich ständig zu verbessern. Wenn etwas nicht funktioniert, dann beenden Sie es. Wenn etwas klobig ist oder nicht skaliert , muss es verbessert werden. Falls etwas von den Entwicklungsteams nicht verwendet wird und keine oder nur geringe Auswirkungen hat, sollte etwas anderes gemacht werden. Nur weil wir seit den 1970er Jahren Tests wie Schreibtischchecks durchgeführt haben, heißt das nicht, dass es eine gute Idee ist. Messen und bewerten Sie, und entwickeln oder verbessern Sie dann.</p>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © Copyright 2021-2025 - OWASP Top 10 Team - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.instant", "search.suggest"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "In Zwischenablage kopiert", "clipboard.copy": "In Zwischenablage kopieren", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.placeholder": "Suchbegriff eingeben", "search.result.term.missing": "Es fehlt", "select.version": "Version ausw\u00e4hlen"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+    
+  </body>
+</html>

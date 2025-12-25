@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+        <loc>https://owasp.org/Top10/2025/</loc>
+        <lastmod>2025-12-25</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://owasp.org/Top10/2025/"/>
+    </url>
+    <url>
+        <loc>https://owasp.org/Top10/2025/</loc>
+        <lastmod>2025-12-25</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://owasp.org/Top10/2025/"/>
+    </url>
+    <url>
+        <loc>https://owasp.org/Top10/2025/0x00_2025-Introduction/</loc>
+        <lastmod>2025-12-25</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://owasp.org/Top10/2025/0x00_2025-Introduction/"/>
+    </url>
+    <url>
+        <loc>https://owasp.org/Top10/2025/0x01_2025-About_OWASP/</loc>
+        <lastmod>2025-12-25</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://owasp.org/Top10/2025/0x01_2025-About_OWASP/"/>
+    </url>
+    <url>
+        <loc>https://owasp.org/Top10/2025/0x02_2025-What_are_Application_Security_Risks/</loc>
+        <lastmod>2025-12-25</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://owasp.org/Top10/2025/0x02_2025-What_are_Application_Security_Risks/"/>
+    </url>
+    <url>
+        <loc>https://owasp.org/Top10/2025/0x03_2025-Establishing_a_Modern_Application_Security_Program/</loc>
+        <lastmod>2025-12-25</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://owasp.org/Top10/2025/0x03_2025-Establishing_a_Modern_Application_Security_Program/"/>
+    </url>
+    <url>
+        <loc>https://owasp.org/Top10/2025/A01_2025-Broken_Access_Control/</loc>
+        <lastmod>2025-12-25</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://owasp.org/Top10/2025/A01_2025-Broken_Access_Control/"/>
+    </url>
+    <url>
+        <loc>https://owasp.org/Top10/2025/A02_2025-Security_Misconfiguration/</loc>
+        <lastmod>2025-12-25</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://owasp.org/Top10/2025/A02_2025-Security_Misconfiguration/"/>
+    </url>
+    <url>
+        <loc>https://owasp.org/Top10/2025/A03_2025-Software_Supply_Chain_Failures/</loc>
+        <lastmod>2025-12-25</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://owasp.org/Top10/2025/A03_2025-Software_Supply_Chain_Failures/"/>
+    </url>
+    <url>
+        <loc>https://owasp.org/Top10/2025/A04_2025-Cryptographic_Failures/</loc>
+        <lastmod>2025-12-25</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://owasp.org/Top10/2025/A04_2025-Cryptographic_Failures/"/>
+    </url>
+    <url>
+        <loc>https://owasp.org/Top10/2025/A05_2025-Injection/</loc>
+        <lastmod>2025-12-25</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://owasp.org/Top10/2025/A05_2025-Injection/"/>
+    </url>
+    <url>
+        <loc>https://owasp.org/Top10/2025/A06_2025-Insecure_Design/</loc>
+        <lastmod>2025-12-25</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://owasp.org/Top10/2025/A06_2025-Insecure_Design/"/>
+    </url>
+    <url>
+        <loc>https://owasp.org/Top10/2025/A07_2025-Authentication_Failures/</loc>
+        <lastmod>2025-12-25</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://owasp.org/Top10/2025/A07_2025-Authentication_Failures/"/>
+    </url>
+    <url>
+        <loc>https://owasp.org/Top10/2025/A08_2025-Software_or_Data_Integrity_Failures/</loc>
+        <lastmod>2025-12-25</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://owasp.org/Top10/2025/A08_2025-Software_or_Data_Integrity_Failures/"/>
+    </url>
+    <url>
+        <loc>https://owasp.org/Top10/2025/A09_2025-Security_Logging_and_Alerting_Failures/</loc>
+        <lastmod>2025-12-25</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://owasp.org/Top10/2025/A09_2025-Security_Logging_and_Alerting_Failures/"/>
+    </url>
+    <url>
+        <loc>https://owasp.org/Top10/2025/A10_2025-Mishandling_of_Exceptional_Conditions/</loc>
+        <lastmod>2025-12-25</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://owasp.org/Top10/2025/A10_2025-Mishandling_of_Exceptional_Conditions/"/>
+    </url>
+    <url>
+        <loc>https://owasp.org/Top10/2025/X01_2025-Next_Steps/</loc>
+        <lastmod>2025-12-25</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://owasp.org/Top10/2025/X01_2025-Next_Steps/"/>
+    </url>
+</urlset>

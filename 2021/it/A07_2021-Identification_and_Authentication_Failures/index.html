@@ -1,0 +1,1354 @@
+
+<!doctype html>
+<html lang="it" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="OWASP Top 10:2021">
+      
+      
+      
+        <link rel="canonical" href="https://owasp.org/Top10/2021/it/A07_2021-Identification_and_Authentication_Failures/">
+      
+      
+        <link rel="prev" href="../A06_2021-Vulnerable_and_Outdated_Components/">
+      
+      
+        <link rel="next" href="../A08_2021-Software_and_Data_Integrity_Failures/">
+      
+      
+        
+          <link rel="alternate" href="../../A07_2021-Identification_and_Authentication_Failures/" hreflang="en">
+        
+          <link rel="alternate" href="../../ar/A07_2021-Identification_and_Authentication_Failures/" hreflang="ar">
+        
+          <link rel="alternate" href="../../de/A07_2021-Identification_and_Authentication_Failures/" hreflang="de">
+        
+          <link rel="alternate" href="../../es/A07_2021-Identification_and_Authentication_Failures/" hreflang="es">
+        
+          <link rel="alternate" href="../../fr/A07_2021-Identification_and_Authentication_Failures/" hreflang="fr">
+        
+          <link rel="alternate" href="../../id/A07_2021-Identification_and_Authentication_Failures/" hreflang="id">
+        
+          <link rel="alternate" href="./" hreflang="it">
+        
+          <link rel="alternate" href="../../ja/A07_2021-Identification_and_Authentication_Failures/" hreflang="ja">
+        
+          <link rel="alternate" href="../../pt-BR/A07_2021-Identification_and_Authentication_Failures/" hreflang="pt-BR">
+        
+          <link rel="alternate" href="../../tr/A07_2021-Identification_and_Authentication_Failures/" hreflang="tr">
+        
+          <link rel="alternate" href="../../zh-Hant/A07_2021-Identification_and_Authentication_Failures/" hreflang="zh-Hant">
+        
+          <link rel="alternate" href="../../zh-TW/A07_2021-Identification_and_Authentication_Failures/" hreflang="zh-TW">
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>A07 Identification and Authentication Failures - OWASP Top 10:2021</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#a072021-identification-and-authentication-failures" class="md-skip">
+          Vai al contenuto
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Intestazione">
+    <a href="../" title="OWASP Top 10:2021" class="md-header__button md-logo" aria-label="OWASP Top 10:2021" data-md-component="logo">
+      
+  <img src="../../assets/OWASP_Logo_Transp.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OWASP Top 10:2021
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              A07 Identification and Authentication Failures
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Seleziona la lingua">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../A07_2021-Identification_and_Authentication_Failures/" hreflang="en" class="md-select__link">
+              en - English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../ar/A07_2021-Identification_and_Authentication_Failures/" hreflang="ar" class="md-select__link">
+              ar - العربية
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../de/A07_2021-Identification_and_Authentication_Failures/" hreflang="de" class="md-select__link">
+              de - Deutsch
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../es/A07_2021-Identification_and_Authentication_Failures/" hreflang="es" class="md-select__link">
+              es - Español
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../fr/A07_2021-Identification_and_Authentication_Failures/" hreflang="fr" class="md-select__link">
+              fr - Français
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../id/A07_2021-Identification_and_Authentication_Failures/" hreflang="id" class="md-select__link">
+              id - Indonesian
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="it" class="md-select__link">
+              it - Italiano
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../ja/A07_2021-Identification_and_Authentication_Failures/" hreflang="ja" class="md-select__link">
+              ja - 日本語
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../pt-BR/A07_2021-Identification_and_Authentication_Failures/" hreflang="pt-BR" class="md-select__link">
+              pt-BR - Português (Brasil)
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../tr/A07_2021-Identification_and_Authentication_Failures/" hreflang="tr" class="md-select__link">
+              tr - Türkçe
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../zh-Hant/A07_2021-Identification_and_Authentication_Failures/" hreflang="zh-Hant" class="md-select__link">
+              zh-Hant - 简体中文
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../zh-TW/A07_2021-Identification_and_Authentication_Failures/" hreflang="zh-TW" class="md-select__link">
+              zh-TW - 繁體中文
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Cerca" placeholder="Cerca" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Cerca">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Cancella" aria-label="Cancella" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inizializza la ricerca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/OWASP/Top10" title="Apri repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    OWASP/Top10
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigazione" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../" title="OWASP Top 10:2021" class="md-nav__button md-logo" aria-label="OWASP Top 10:2021" data-md-component="logo">
+      
+  <img src="../../assets/OWASP_Logo_Transp.png" alt="logo">
+
+    </a>
+    OWASP Top 10:2021
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/OWASP/Top10" title="Apri repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    OWASP/Top10
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Welcome Page
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A00_2021_Introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduzione
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x00_2021-notice/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Avvisi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A00_2021_How_to_use_the_OWASP_Top_10_as_a_standard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Come utilizzare la OWASP Top 10 come standard
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A00_2021-How_to_start_an_AppSec_program_with_the_OWASP_Top_10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Come avviare un programma di AppSec con la OWASP Top 10
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x01_2021-about-owasp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A proposito di OWASP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lista top 10:2021
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Lista top 10:2021
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A01_2021-Broken_Access_Control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A01 Broken Access Control
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A02_2021-Cryptographic_Failures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A02 Cryptographic Failures
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A03_2021-Injection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A03 Injection
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A04_2021-Insecure_Design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A04 Insecure Design
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A05_2021-Security_Misconfiguration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A05 Security Misconfiguration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A06_2021-Vulnerable_and_Outdated_Components/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A06 Vulnerable and Outdated Components
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A07 Identification and Authentication Failures
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A07 Identification and Authentication Failures
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Indice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Indice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#fattori" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fattori
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#panoramica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Panoramica
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#descrizione" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Descrizione
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#come-prevenire" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Come prevenire
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#esempi-di-scenari-dattacco" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Esempi di scenari d'attacco
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#riferimenti" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Riferimenti
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lista-dei-cwe-correlati" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lista dei CWE correlati
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A08_2021-Software_and_Data_Integrity_Failures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A08 Software and Data Integrity Failures
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A09_2021-Security_Logging_and_Monitoring_Failures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A09 Security Logging and Monitoring Failures
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A10_2021-Server-Side_Request_Forgery_%28SSRF%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A10 Server Side Request Forgery (SSRF)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A11_2021-Next_Steps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prossimi passi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Indice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Indice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#fattori" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fattori
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#panoramica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Panoramica
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#descrizione" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Descrizione
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#come-prevenire" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Come prevenire
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#esempi-di-scenari-dattacco" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Esempi di scenari d'attacco
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#riferimenti" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Riferimenti
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lista-dei-cwe-correlati" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lista dei CWE correlati
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="a072021-identification-and-authentication-failures">A07:2021 – Identification and Authentication Failures    <img align="right" alt="icon" src="../../assets/TOP_10_Icons_Final_Identification_and_Authentication_Failures.png" style="height:80px;width:80px" /></h1>
+<h2 id="fattori">Fattori</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">CWEs corrispondenti</th>
+<th style="text-align: center;">Tasso di incidenza Max</th>
+<th style="text-align: center;">Tasso di incidenza Medio</th>
+<th style="text-align: center;">Sfruttabilità pesata</th>
+<th style="text-align: center;">Impatto Medio</th>
+<th style="text-align: center;">Copertura Max</th>
+<th style="text-align: center;">Copertura media</th>
+<th style="text-align: center;">Occorrenze Totali</th>
+<th style="text-align: center;">CVE Totali</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">22</td>
+<td style="text-align: center;">14.84%</td>
+<td style="text-align: center;">2.55%</td>
+<td style="text-align: center;">7.40</td>
+<td style="text-align: center;">6.50</td>
+<td style="text-align: center;">79.51%</td>
+<td style="text-align: center;">45.72%</td>
+<td style="text-align: center;">132,195</td>
+<td style="text-align: center;">3,897</td>
+</tr>
+</tbody>
+</table>
+<h2 id="panoramica">Panoramica</h2>
+<p>Precedentemente sotto il nome di <em>Broken Authentication</em>, questa categoria scende dalla
+seconda posizione e ora include le Common Weakness 
+Enumerations (CWEs) relative ai fallimenti dei meccanismi di autorizzazione. 
+Le CWEs incluse sono <em>CWE-297: Improper Validation of
+Certificate with Host Mismatch</em>, <em>CWE-287: Improper Authentication</em>, e
+<em>CWE-384: Session Fixation</em>.</p>
+<h2 id="descrizione">Descrizione</h2>
+<p>La verifica dell'identità dell'utente, l'autenticazione e la gestione della sessione
+sono fondamentali per proteggersi dagli attacchi legati all'autenticazione. 
+Ci possono essere debolezze sui meccanismi di autenticazione se l'applicazione:</p>
+<ul>
+<li>
+<p>Permette attacchi automatici come il credential stuffing, dove l'attaccante
+    ha una lista di coppie nome utente e password validi.</p>
+</li>
+<li>
+<p>Permette attacchi di brute force o altri attacchi automatizzati.</p>
+</li>
+<li>
+<p>Permette password di default, deboli o ben note, come "Password1"
+    o "admin/admin".</p>
+</li>
+<li>
+<p>Utilizza un recupero delle credenziali e delle password dimenticate debole o inefficace
+    come le "risposte basate sulla conoscenza", che non possono essere rese
+    sicure.</p>
+</li>
+<li>
+<p>Memorizza le password in chiaro, in modo cifrato o con funzioni di hash deboli (vedi
+    <strong>A02:2021-Cryptographic Failures</strong>).</p>
+</li>
+<li>
+<p>Non ha un sistema di autenticazione a più fattori o è inefficace.</p>
+</li>
+<li>
+<p>Espone l'identificatore di sessione del URL.</p>
+</li>
+<li>
+<p>Riutilizza l'identificatore di sessione dopo un login avvenuto con successo.</p>
+</li>
+<li>
+<p>Non invalida correttamente l'identificatore di sessione. La sessione dell'utente o i token di autenticazione
+    (principalmente token di single sign-on (SSO)) non vengono invalidati in modo opportuno durante il logout o dopo un periodo di inattività</p>
+</li>
+</ul>
+<h2 id="come-prevenire">Come prevenire</h2>
+<ul>
+<li>
+<p>Dove possibile, implementare l'autenticazione a più fattori per prevenire
+    attacchi di credential stuffing, brute force e riutilizzo delle credenziali rubate.</p>
+</li>
+<li>
+<p>Non mettere in produzione sistemi con credenziali di default, in particolare per gli utenti admin.</p>
+</li>
+<li>
+<p>Implementare controlli sulla debolezza delle password, come verificare le password nuove o modificate 
+con la lista delle 10,000 password peggiori.</p>
+</li>
+<li>
+<p>Allineare i requisiti di lunghezza delle password, complessità e politiche di rotazione con le linee guida della sezione 5.1.1 del documento  800-63b pubblicato dal National Institute of Standards and Technology (NIST)
+   riguardante la memorizzazione dei secret o altre policy relative alle password moderne e basate sui fatti .</p>
+</li>
+<li>
+<p>Assicurarsi che la registrazione, il recupero delle credenziali e le API siano
+    robusti contro gli attacchi di enumerazione degli account utilizzando gli stessi
+    messaggi generici per tutti i risultati.</p>
+</li>
+<li>
+<p>Limitare o ritardare sempre più i tentativi di login falliti, ma fare attenzione a non creare uno scenario di denial of service. Loggare tutti i tentativi falliti e avvertire gli amministratori quando vengono rilevati attacchi di credential stuffing, brute force o
+    altri.</p>
+</li>
+<li>
+<p>Usare un gestore di sessione integrato lato server, che sia sicuro, che generi un
+    nuovo ID di sessione casuale con alta entropia dopo il login. L'identificatore di sessione
+    non dovrebbe essere nell'URL, deve essere memorizzato in modo sicuro e invalidato dopo il
+    logout, un periodo di inattività e avere timeout assoluto.</p>
+</li>
+</ul>
+<h2 id="esempi-di-scenari-dattacco">Esempi di scenari d'attacco</h2>
+<p><strong>Scenario #1:</strong> Il credential stuffing, l'uso di liste di password conosciute, 
+è un attacco comune. Supponiamo che un'applicazione non implementi
+la protezione automatica contro le minacce o il credential stuffing. In questo caso, 
+l'applicazione può essere usata come un oracolo di password per determinare se le
+credenziali sono valide.</p>
+<p><strong>Scenario #2:</strong> La maggior parte degli attacchi relativi all'autenticazione si verifica a causa del continuo
+uso delle password come singolo fattore. Le best practice,
+la rotazione delle password e i requisiti di complessità incoraggiano gli utenti a usare
+e riutilizzare password deboli. Si raccomanda alle organizzazioni di interrompere queste
+pratiche secondo NIST 800-63 e utilizzare l'autenticazione a più fattori.</p>
+<p><strong>Scenario #3:</strong> I timeout della sessione dell'applicazione non sono gestiti correttamente. Un
+utente usa un computer pubblico per accedere a un'applicazione. Invece di
+selezionare "logout", l'utente chiude semplicemente la scheda del browser e se ne va
+via. Un attaccante usa lo stesso browser un'ora dopo, e l'utente risulta
+ancora autenticato.</p>
+<h2 id="riferimenti">Riferimenti</h2>
+<ul>
+<li>
+<p><a href="https://owasp.org/www-project-proactive-controls/v3/en/c6-digital-identity">OWASP Proactive Controls: Implement Digital
+    Identity</a></p>
+</li>
+<li>
+<p><a href="https://owasp.org/www-project-application-security-verification-standard">OWASP Application Security Verification Standard: V2
+    authentication</a></p>
+</li>
+<li>
+<p><a href="https://owasp.org/www-project-application-security-verification-standard">OWASP Application Security Verification Standard: V3 Session
+    Management</a></p>
+</li>
+<li>
+<p><a href="https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/03-Identity_Management_Testing/README">OWASP Testing Guide: Identity</a>, <a href="https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/04-Authentication_Testing/README">Authentication</a></p>
+</li>
+<li>
+<p><a href="https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html">OWASP Cheat Sheet:
+    Authentication</a></p>
+</li>
+<li>
+<p><a href="https://cheatsheetseries.owasp.org/cheatsheets/Credential_Stuffing_Prevention_Cheat_Sheet.html">OWASP Cheat Sheet: Credential Stuffing</a></p>
+</li>
+<li>
+<p><a href="https://cheatsheetseries.owasp.org/cheatsheets/Forgot_Password_Cheat_Sheet.html">OWASP Cheat Sheet: Forgot
+    Password</a></p>
+</li>
+<li>
+<p><a href="https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html">OWASP Cheat Sheet: Session Management</a></p>
+</li>
+<li>
+<p><a href="https://owasp.org/www-project-automated-threats-to-web-applications/">OWASP Automated Threats
+    Handbook</a></p>
+</li>
+<li>
+<p>NIST 800-63b: 5.1.1 Memorized Secrets</p>
+</li>
+</ul>
+<h2 id="lista-dei-cwe-correlati">Lista dei CWE correlati</h2>
+<p><a href="https://cwe.mitre.org/data/definitions/255.html">CWE-255 Credentials Management Errors</a></p>
+<p><a href="https://cwe.mitre.org/data/definitions/259.html">CWE-259 Use of Hard-coded Password</a></p>
+<p><a href="https://cwe.mitre.org/data/definitions/287.html">CWE-287 Improper Authentication</a></p>
+<p><a href="https://cwe.mitre.org/data/definitions/288.html">CWE-288 Authentication Bypass Using an Alternate Path or Channel</a></p>
+<p><a href="https://cwe.mitre.org/data/definitions/290.html">CWE-290 Authentication Bypass by Spoofing</a></p>
+<p><a href="https://cwe.mitre.org/data/definitions/294.html">CWE-294 Authentication Bypass by Capture-replay</a></p>
+<p><a href="https://cwe.mitre.org/data/definitions/295.html">CWE-295 Improper Certificate Validation</a></p>
+<p><a href="https://cwe.mitre.org/data/definitions/297.html">CWE-297 Improper Validation of Certificate with Host Mismatch</a></p>
+<p><a href="https://cwe.mitre.org/data/definitions/300.html">CWE-300 Channel Accessible by Non-Endpoint</a></p>
+<p><a href="https://cwe.mitre.org/data/definitions/302.html">CWE-302 Authentication Bypass by Assumed-Immutable Data</a></p>
+<p><a href="https://cwe.mitre.org/data/definitions/304.html">CWE-304 Missing Critical Step in Authentication</a></p>
+<p><a href="https://cwe.mitre.org/data/definitions/306.html">CWE-306 Missing Authentication for Critical Function</a></p>
+<p><a href="https://cwe.mitre.org/data/definitions/307.html">CWE-307 Improper Restriction of Excessive Authentication Attempts</a></p>
+<p><a href="https://cwe.mitre.org/data/definitions/346.html">CWE-346 Origin Validation Error</a></p>
+<p><a href="https://cwe.mitre.org/data/definitions/384.html">CWE-384 Session Fixation</a></p>
+<p><a href="https://cwe.mitre.org/data/definitions/521.html">CWE-521 Weak Password Requirements</a></p>
+<p><a href="https://cwe.mitre.org/data/definitions/613.html">CWE-613 Insufficient Session Expiration</a></p>
+<p><a href="https://cwe.mitre.org/data/definitions/620.html">CWE-620 Unverified Password Change</a></p>
+<p><a href="https://cwe.mitre.org/data/definitions/640.html">CWE-640 Weak Password Recovery Mechanism for Forgotten Password</a></p>
+<p><a href="https://cwe.mitre.org/data/definitions/798.html">CWE-798 Use of Hard-coded Credentials</a></p>
+<p><a href="https://cwe.mitre.org/data/definitions/940.html">CWE-940 Improper Verification of Source of a Communication Channel</a></p>
+<p><a href="https://cwe.mitre.org/data/definitions/1216.html">CWE-1216 Lockout Mechanism Errors</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © Copyright 2021-2025 - OWASP Top 10 Team - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.instant", "search.suggest"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copiato", "clipboard.copy": "Copia", "search.result.more.one": "1 altro in questa pagina", "search.result.more.other": "# altri in questa pagina", "search.result.none": "Nessun documento trovato", "search.result.one": "1 documento trovato", "search.result.other": "# documenti trovati", "search.result.placeholder": "Scrivi per iniziare a cercare", "search.result.term.missing": "Non presente", "select.version": "Seleziona la versione"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+    
+  </body>
+</html>

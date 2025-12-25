@@ -1,0 +1,41 @@
+body {
+  position: relative;
+}
+
+body::before {
+  content: "RELEASE\A CANDIDATE";
+  white-space: pre-line;
+
+  position: absolute;
+  top: calc(var(--md-header-height, 3.5rem) + 3.65rem);
+  left: 50%;
+  transform: translateX(-50%) rotate(331deg);
+  transform-origin: center;
+
+  font-size: clamp(5em, 10vw, 15em);
+  font-weight: 900;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  line-height: 1.50;
+
+  color: rgba(255, 5, 5, 0.17);
+  pointer-events: none;
+  user-select: none;
+  z-index: 2;
+}
+
+@media screen and (min-width: 960px) {
+  body::before {
+    font-weight: 400;
+    top: calc(var(--md-header-height, 3.5rem) + 4.9rem);
+    left: 64%;
+    letter-spacing: .05em;
+
+  }
+}
+
+@media print {
+  body::before {
+    display: none !important;
+  }
+}

@@ -1,0 +1,1331 @@
+
+<!doctype html>
+<html lang="tr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="OWASP Top 10:2021">
+      
+      
+      
+        <link rel="canonical" href="https://owasp.org/Top10/2021/tr/A00_2021_Introduction/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../0x00_2021-notice/">
+      
+      
+        
+          <link rel="alternate" href="../../A00_2021_Introduction/" hreflang="en">
+        
+          <link rel="alternate" href="../../ar/A00_2021_Introduction/" hreflang="ar">
+        
+          <link rel="alternate" href="../../de/A00_2021_Introduction/" hreflang="de">
+        
+          <link rel="alternate" href="../../es/A00_2021_Introduction/" hreflang="es">
+        
+          <link rel="alternate" href="../../fr/A00_2021_Introduction/" hreflang="fr">
+        
+          <link rel="alternate" href="../../id/A00_2021_Introduction/" hreflang="id">
+        
+          <link rel="alternate" href="../../it/A00_2021_Introduction/" hreflang="it">
+        
+          <link rel="alternate" href="../../ja/A00_2021_Introduction/" hreflang="ja">
+        
+          <link rel="alternate" href="../../pt-BR/A00_2021_Introduction/" hreflang="pt-BR">
+        
+          <link rel="alternate" href="./" hreflang="tr">
+        
+          <link rel="alternate" href="../../zh-Hant/A00_2021_Introduction/" hreflang="zh-Hant">
+        
+          <link rel="alternate" href="../../zh-TW/A00_2021_Introduction/" hreflang="zh-TW">
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Giriş - OWASP Top 10:2021</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#giris" class="md-skip">
+          Ana içeriğe geç
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Başlık">
+    <a href="../" title="OWASP Top 10:2021" class="md-header__button md-logo" aria-label="OWASP Top 10:2021" data-md-component="logo">
+      
+  <img src="../../assets/OWASP_Logo_Transp.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OWASP Top 10:2021
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Giriş
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Dil seç">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../A00_2021_Introduction/" hreflang="en" class="md-select__link">
+              en - English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../ar/A00_2021_Introduction/" hreflang="ar" class="md-select__link">
+              ar - العربية
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../de/A00_2021_Introduction/" hreflang="de" class="md-select__link">
+              de - Deutsch
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../es/A00_2021_Introduction/" hreflang="es" class="md-select__link">
+              es - Español
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../fr/A00_2021_Introduction/" hreflang="fr" class="md-select__link">
+              fr - Français
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../id/A00_2021_Introduction/" hreflang="id" class="md-select__link">
+              id - Indonesian
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../it/A00_2021_Introduction/" hreflang="it" class="md-select__link">
+              it - Italiano
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../ja/A00_2021_Introduction/" hreflang="ja" class="md-select__link">
+              ja - 日本語
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../pt-BR/A00_2021_Introduction/" hreflang="pt-BR" class="md-select__link">
+              pt-BR - Português (Brasil)
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="tr" class="md-select__link">
+              tr - Türkçe
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../zh-Hant/A00_2021_Introduction/" hreflang="zh-Hant" class="md-select__link">
+              zh-Hant - 简体中文
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../zh-TW/A00_2021_Introduction/" hreflang="zh-TW" class="md-select__link">
+              zh-TW - 繁體中文
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Ara" placeholder="Ara" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Ara">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Temizle" aria-label="Temizle" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Arama başlatılıyor
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/OWASP/Top10" title="Depoya git" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    OWASP/Top10
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigasyon" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../" title="OWASP Top 10:2021" class="md-nav__button md-logo" aria-label="OWASP Top 10:2021" data-md-component="logo">
+      
+  <img src="../../assets/OWASP_Logo_Transp.png" alt="logo">
+
+    </a>
+    OWASP Top 10:2021
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/OWASP/Top10" title="Depoya git" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    OWASP/Top10
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Welcome Page
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Giriş
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Giriş
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="İçindekiler">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      İçindekiler
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#owasp-top-10-2021e-hos-geldiniz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OWASP Top 10 - 2021’e Hoş Geldiniz
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2021-top-10da-neler-degisti" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2021 Top 10’da neler değişti
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metodoloji" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Metodoloji
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kategoriler-nasl-yaplandrld" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kategoriler nasıl yapılandırıldı
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kategorilerin-secimi-icin-veriler-nasl-kullanld" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kategorilerin seçimi için veriler nasıl kullanıldı
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#neden-saf-istatistiksel-veri-degil" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Neden saf istatistiksel veri değil?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#neden-frekans-yerine-insidans-oran" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Neden frekans yerine insidans oranı?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#veri-toplama-ve-analiz-sureciniz-nedir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Veri toplama ve analiz süreciniz nedir?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#veri-faktorleri" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Veri Faktörleri
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#veri-katkclarmza-tesekkurler" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Veri katkıcılarımıza teşekkürler
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sponsorlarmza-tesekkurler" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sponsorlarımıza teşekkürler
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x00_2021-notice/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bildirim
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A00_2021_How_to_use_the_OWASP_Top_10_as_a_standard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OWASP Top 10'u bir standart olarak nasıl kullanabilirsiniz
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A00_2021-How_to_start_an_AppSec_program_with_the_OWASP_Top_10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OWASP Top 10 ile bir Uygulama Güvenliği programına nasıl başlanır
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x01_2021-about-owasp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OWASP Hakkında
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2021 OWASP İlk 10 Listesi
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    2021 OWASP İlk 10 Listesi
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A01_2021-Broken_Access_Control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A01 Kırık Erişim Kontrolleri
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A02_2021-Cryptographic_Failures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A02 Kriptografik Hatalar
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A03_2021-Injection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A03 Enjeksiyon
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A04_2021-Insecure_Design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A04 Güvensiz Tasarım
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A05_2021-Security_Misconfiguration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A05 Güvenlik Yapılandırma Hataları
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A06_2021-Vulnerable_and_Outdated_Components/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A06 Güvenlik Açığı Bulunan ve Güncel Olmayan Bileşenler
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A07_2021-Identification_and_Authentication_Failures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A07 Kimlik Doğrulama Hataları
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A08_2021-Software_and_Data_Integrity_Failures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A08 Yazılım ve Veri Bütünlüğü Hataları
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A09_2021-Security_Logging_and_Monitoring_Failures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A09 Güvenlik Kayıt ve İzleme Hataları
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A10_2021-Server-Side_Request_Forgery_%28SSRF%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A10 Sunucu Taraflı İstek Sahteciliği (SSRF)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A11_2021-Next_Steps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sonraki Adımlar
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="İçindekiler">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      İçindekiler
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#owasp-top-10-2021e-hos-geldiniz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OWASP Top 10 - 2021’e Hoş Geldiniz
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2021-top-10da-neler-degisti" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2021 Top 10’da neler değişti
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metodoloji" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Metodoloji
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kategoriler-nasl-yaplandrld" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kategoriler nasıl yapılandırıldı
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kategorilerin-secimi-icin-veriler-nasl-kullanld" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kategorilerin seçimi için veriler nasıl kullanıldı
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#neden-saf-istatistiksel-veri-degil" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Neden saf istatistiksel veri değil?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#neden-frekans-yerine-insidans-oran" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Neden frekans yerine insidans oranı?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#veri-toplama-ve-analiz-sureciniz-nedir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Veri toplama ve analiz süreciniz nedir?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#veri-faktorleri" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Veri Faktörleri
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#veri-katkclarmza-tesekkurler" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Veri katkıcılarımıza teşekkürler
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sponsorlarmza-tesekkurler" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sponsorlarımıza teşekkürler
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="giris">Giriş</h1>
+<h2 id="owasp-top-10-2021e-hos-geldiniz">OWASP Top 10 - 2021’e Hoş Geldiniz</h2>
+<p><img _:class="img-responsive" alt="OWASP Top 10 Logo" src="../../assets/TOP_10_logo_Final_Logo_Colour.png" /></p>
+<p>OWASP Top 10’un en güncel sürümüne hoş geldiniz! OWASP Top 10 2021 tamamen yenilendi; yeni bir grafik tasarım ve ana sayfamızdan indirebileceğiniz ya da çıktısını alabileceğiniz tek sayfalık bir infografik ile geliyor.</p>
+<p>Bu sürüme zamanını ve verisini katan herkese kocaman teşekkürler. Siz olmadan bu sürüm mümkün olmazdı. <strong>TEŞEKKÜRLER!</strong></p>
+<h2 id="2021-top-10da-neler-degisti">2021 Top 10’da neler değişti</h2>
+<p>Bu sürümde üç yeni kategori, isimlendirme ve kapsam değişiklikleri olan dört kategori ve bazı konsolidasyonlar var. Gerekli olduğunda isimleri, semptom yerine kök nedene odaklanacak şekilde değiştirdik.</p>
+<p><img alt="Mapping" src="../../assets/mapping.png" /></p>
+<ul>
+<li><strong><a href="../A01_2021-Broken_Access_Control/">A01:2021-Broken Access Control</a></strong> beşinci sıradan, en ciddi web uygulaması güvenlik riski kategorisine yükseliyor; katkı sağlanan veriler ortalama olarak test edilen uygulamaların %3,81’inde bu risk kategorisindeki Common Weakness Enumeration (CWE)lerden bir ya da daha fazlasının bulunduğunu ve bu risk kategorisinde 318 binden fazla CWE olayı olduğunu gösteriyor. Broken Access Control ile eşlenen 34 CWE, diğer tüm kategorilerden daha fazla sayıda uygulamada görülmüş durumda.</li>
+<li><strong><a href="../A02_2021-Cryptographic_Failures/">A02:2021-Cryptographic Failures</a></strong> bir sıra yükselerek #2’ye çıkıyor; önceki adı <strong>A3:2017-Sensitive Data Exposure</strong> idi; bu daha çok bir semptomdu, kök neden değil. Yenilenen ad, daha önce de örtük olarak olduğu gibi kriptografiyle ilgili başarısızlıklara odaklanıyor. Bu kategori sıklıkla hassas veri ifşasına veya sistemin ele geçirilmesine yol açar.</li>
+<li><strong><a href="../A03_2021-Injection/">A03:2021-Injection</a></strong> üçüncü sıraya geriliyor. Uygulamaların %94’ünde bir tür injection için test yapıldı; maksimum insidans oranı %19, ortalama insidans oranı %3,37 ve bu kategoriye eşlenen 33 CWE, uygulamalarda 274 bin olay ile ikinci en yüksek görünüme sahip. Cross-site Scripting bu sürümde artık bu kategorinin bir parçası.</li>
+<li><strong><a href="../A04_2021-Insecure_Design/">A04:2021-Insecure Design</a></strong> 2021 için yeni bir kategori; tasarım kusurlarıyla ilişkili risklere odaklanır. Endüstri olarak gerçekten “sola kaymak” istiyorsak daha fazla threat modeling, güvenli tasarım pattern’leri ve prensipleri ile referans mimarilere ihtiyaç var. Güvensiz bir tasarım, ne kadar kusursuz uygulanırsa uygulansın düzeltilemez; tanım gereği, belirli saldırılara karşı gerekli güvenlik kontrolleri hiç oluşturulmamıştır.</li>
+<li><strong><a href="../A05_2021-Security_Misconfiguration/">A05:2021-Security Misconfiguration</a></strong> önceki sürümde #6’dan yükseliyor; uygulamaların %90’ı bir tür yanlış yapılandırma için test edildi, ortalama insidans oranı %4,5 ve bu risk kategorisine eşlenen 208 binden fazla CWE olayı var. Yüksek derecede konfigüre edilebilir yazılımlara geçiş arttıkça bu kategorinin yükselmesi şaşırtıcı değil. Önceki <strong>A4:2017-XML External Entities (XXE)</strong> kategorisi artık bu risk kategorisinin bir parçası.</li>
+<li><strong><a href="../A06_2021-Vulnerable_and_Outdated_Components/">A06:2021-Vulnerable and Outdated Components</a></strong> önceki adı Using Components with Known Vulnerabilities idi ve Top 10 community survey’de #2 oldu; ayrıca veri analizine göre de Top 10’a girecek kadar veri vardı. Bu kategori 2017’deki #9’dan yükseliyor ve test etmekte ve riski değerlendirmekte zorlandığımız bilinen bir konu. Dahil edilen CWE’lere eşlenen herhangi bir CVE’nin bulunmadığı tek kategori; bu nedenle skorlamaya varsayılan exploit ve impact ağırlıkları 5.0 olarak dahil edildi.</li>
+<li><strong><a href="../A07_2021-Identification_and_Authentication_Failures/">A07:2021-Identification and Authentication Failures</a></strong> önceki Broken Authentication kategorisidir; ikinci sıradan geriliyor ve artık kimlik tespitiyle (identification) daha ilişkili CWE’leri de içeriyor. Bu kategori hâlâ Top 10’un ayrılmaz bir parçası, ancak standart framework’lerin artan kullanılabilirliği yardımcı oluyor gibi görünüyor.</li>
+<li><strong><a href="../A08_2021-Software_and_Data_Integrity_Failures/">A08:2021-Software and Data Integrity Failures</a></strong> 2021 için yeni bir kategoridir; doğrulama yapılmadan software update’ler, kritik data ve CI/CD pipeline’larıyla ilgili varsayımlara odaklanır. Bu kategoriye eşlenen 10 CWE’den CVE/CVSS verilerinde en yüksek ağırlıklı impact’lerden bazıları geliyor. <strong>A8:2017-Insecure Deserialization</strong> artık bu daha geniş kategorinin bir parçası.</li>
+<li><strong><a href="../A09_2021-Security_Logging_and_Monitoring_Failures/">A09:2021-Security Logging and Monitoring Failures</a></strong> önceki <strong>A10:2017-Insufficient Logging &amp; Monitoring</strong> kategorisidir; Top 10 community survey (#3) ile eklendi ve önceki #10’dan yükseliyor. Bu kategori daha fazla failure türünü içerecek şekilde genişletildi, test edilmesi zorlu ve CVE/CVSS verilerinde iyi temsil edilmiyor. Ancak bu kategorideki başarısızlıklar doğrudan görünürlüğü, incident alerting’i ve adli analizleri etkileyebilir.</li>
+<li><strong><a href="../A10_2021-Server-Side_Request_Forgery_%28SSRF%29/">A10:2021-Server-Side Request Forgery</a></strong> Top 10 community survey (#1) ile eklendi. Veriler, ortalamanın üzerinde test kapsamıyla birlikte nispeten düşük bir insidans oranı ve Exploit ile Impact potansiyeli için ortalamanın üzerinde puanlar gösteriyor. Bu kategori, güvenlik topluluğu üyelerinin bunun önemli olduğunu söylediği, ancak şu an için verilerde tam yansımayan bir senaryoyu temsil ediyor.</li>
+</ul>
+<h2 id="metodoloji">Metodoloji</h2>
+<p>Bu sürüm her zamankinden daha veri odaklı, ancak körü körüne veri odaklı değil. On kategorinin sekizini katkı verilerinden, ikisini de yüksek seviyede Top 10 community survey’den seçtik. Bunu temel bir nedenle yapıyoruz: katkı verilerine bakmak geçmişe bakmaktır. AppSec araştırmacılarının yeni zafiyetler ve onları test etmenin yeni yollarını bulması zaman alır. Bu testlerin araçlara ve süreçlere entegre edilmesi de zaman alır. Bir zayıflığı ölçekli şekilde güvenilir biçimde test edebildiğimiz zamana kadar yıllar geçmiş olabilir. Bu bakışı dengelemek için, application security ve development uzmanlarına, verilerin henüz göstermeyebileceği ama sahada gördükleri temel zayıflıkların neler olduğunu sormak üzere bir community survey kullanıyoruz.</p>
+<p>Top 10’u olgunlaştırmaya devam etmek için benimsediğimiz birkaç kritik değişiklik var.</p>
+<h2 id="kategoriler-nasl-yaplandrld">Kategoriler nasıl yapılandırıldı</h2>
+<p>OWASP Top Ten’in önceki sürümüne göre bazı kategoriler değişti. İşte değişikliklerin yüksek seviyeli özeti.</p>
+<p>Önceki veri toplama çabaları, yaklaşık 30 CWE’nin belirlenmiş bir alt kümesine odaklanıyordu ve ek bulgular için bir alan vardı. Organizasyonların çoğunlukla yalnızca bu 30 CWE’ye odaklandığını ve gördükleri ek CWE’leri nadiren eklediklerini öğrendik. Bu sürümde konuyu serbest bıraktık ve herhangi bir kısıtlama olmaksızın yalnızca veri istedik. 2017’den başlayarak belirli bir yıl için test edilen uygulama sayısını ve testlerde en az bir CWE örneği bulunan uygulama sayısını istedik. Bu format, her bir CWE’nin uygulama popülasyonu içinde ne kadar yaygın olduğunu izlememizi sağlıyor. Bizim amaçlarımız için frekansı görmezden geliyoruz; başka durumlarda önemli olabilse de uygulama popülasyonundaki gerçek yaygınlığı gizliyor. Bir uygulamada bir CWE’nin dört örneği ya da 4.000 örneği olması Top 10 hesaplamasına dahil değil. Yaklaşık 30 CWE’den veri setinde analiz etmek üzere neredeyse 400 CWE’ye geçtik. Gelecekte ek veri analizi yapmayı planlıyoruz. CWE sayısındaki bu önemli artış, kategorilerin nasıl yapılandırıldığına ilişkin değişiklikleri gerektiriyor.</p>
+<p>CWE’leri gruplamak ve kategorize etmek için birkaç ay harcadık ve birkaç ay daha devam edebilirdik. Bir noktada durmak zorundaydık. CWE’lerin hem <em>kök neden</em> hem de <em>semptom</em> tipleri vardır; <em>kök neden</em> tiplerine “Cryptographic Failure” ve “Misconfiguration” örnek verilebilirken, <em>semptom</em> tiplerine “Sensitive Data Exposure” ve “Denial of Service” örnek verilebilir. Mümkün olduğunda <em>kök neden</em>e odaklanmaya karar verdik; çünkü tanımlama ve iyileştirme rehberi sağlamak açısından daha mantıklı. <em>Kök neden</em>e semptomdan daha fazla odaklanmak yeni bir konsept değil; Top Ten zaten <em>semptom</em> ve <em>kök neden</em> karışımıydı. CWE’ler de bir karışımdır; biz sadece bunu daha kasıtlı hale getiriyor ve vurguluyoruz. Bu sürümde kategori başına ortalama 19,6 CWE var; alt sınırlar <strong>A10:2021-Server-Side Request Forgery (SSRF)</strong> için 1 CWE ve <strong>A04:2021-Insecure Design</strong> için 40 CWE. Bu güncellenmiş kategori yapısı, şirketlerin dillerine/framework’lerine uygun CWE’lere odaklanabilmesi açısından ek eğitim faydaları sunuyor.</p>
+<h2 id="kategorilerin-secimi-icin-veriler-nasl-kullanld">Kategorilerin seçimi için veriler nasıl kullanıldı</h2>
+<p>2017’de kategorileri olasılığı belirlemek için insidans oranına göre seçtik, ardından onlarca yıllık deneyime dayanan ekip tartışmalarıyla <em>Exploitability</em>, <em>Detectability</em> (aynı zamanda <em>likelihood</em>) ve <em>Technical Impact</em> temelinde sıraladık. 2021 için mümkünse <em>Exploitability</em> ve <em>(Technical) Impact</em> için veri kullanmak istiyoruz.</p>
+<p>OWASP Dependency Check’i indirdik ve CVE’lere eşlenen CWE’lere göre gruplanmış CVSS Exploit ve Impact skorlarını çıkardık. Oldukça fazla araştırma ve çaba gerektirdi; tüm CVE’lerin CVSSv2 skorları var, ancak CVSSv2’deki kusurların CVSSv3 ile ele alınması gerekiyordu. Belirli bir noktadan sonra tüm CVE’lere ayrıca bir CVSSv3 skoru da atandı. Ek olarak, puan aralıkları ve formüller CVSSv2 ile CVSSv3 arasında güncellendi.</p>
+<p>CVSSv2’de hem <em>Exploit</em> hem <em>(Technical) Impact</em> 10,0’a kadar çıkabiliyordu, ancak formül <em>Exploit</em> için %60’a, <em>Impact</em> için %40’a düşürüyordu. CVSSv3’te teorik maksimum <em>Exploit</em> için 6,0 ve <em>Impact</em> için 4,0 ile sınırlandırıldı. Ağırlıklar dikkate alındığında, CVSSv3’te Impact skoru ortalama olarak neredeyse bir buçuk puan yukarı kaydı ve exploitability ortalama olarak neredeyse yarım puan aşağı kaydı.</p>
+<p>National Vulnerability Database (NVD) verilerinde CWE’ye eşlenen bir CVE’nin 125 bin kaydı var ve bir CVE’ye eşlenen 241 benzersiz CWE bulunuyor. 62 bin CWE eşlemesi bir CVSSv3 skoruna sahip; bu, veri seti popülasyonunun yaklaşık yarısıdır.</p>
+<p>Top Ten 2021 için ortalama <em>exploit</em> ve <em>impact</em> skorlarını şu şekilde hesapladık. Tüm CVSS skorlarına sahip CVE’leri CWE’ye göre grupladık ve hem <em>exploit</em> hem <em>impact</em> skorlarını, popülasyonun CVSSv3 sahibi yüzdesine + kalan CVSSv2 popülasyonuna göre ağırlıklandırarak genel bir ortalama elde ettik. Bu ortalamaları, risk denkleminin diğer yarısı için <em>Exploit</em> ve <em>(Technical) Impact</em> puanlaması olarak kullanmak üzere veri setindeki CWE’lere eşledik.</p>
+<h2 id="neden-saf-istatistiksel-veri-degil">Neden saf istatistiksel veri değil?</h2>
+<p>Verilerdeki sonuçlar, esasen otomatik olarak test edebildiklerimizle sınırlıdır. Deneyimli bir AppSec profesyoneli ile konuşursanız, verilerde henüz bulunmayan ama buldukları şeylerden ve gördükleri trendlerden bahsederler. Belirli zafiyet türleri için test metodolojilerinin geliştirilmesi zaman alır ve bu testlerin otomatikleştirilip çok sayıda uygulamaya karşı çalıştırılması daha da zaman alır. Bulduğumuz her şey geçmişe bakmaktadır ve verilerde olmayan son yılın trendlerini kaçırıyor olabilir.</p>
+<p>Bu nedenle veriler eksik olduğu için on kategoriden yalnızca sekizini verilerden seçiyoruz. Diğer iki kategori Top 10 community survey’den geliyor. Bu, sahada çalışan uygulayıcıların, verilerde olmayabilecek (ve belki de hiç veriye yansımayacak) en yüksek riskleri oylamasına olanak tanır.</p>
+<h2 id="neden-frekans-yerine-insidans-oran">Neden frekans yerine insidans oranı?</h2>
+<p>Üç birincil veri kaynağı vardır: Human-assisted Tooling (HaT), Tool-assisted Human (TaH) ve ham Tooling.</p>
+<p>Tooling ve HaT, yüksek frekanslı bulgu üreticileridir. Araçlar belirli zafiyetleri arar, yorulmadan bu zafiyetin her örneğini bulmaya çalışır ve bazı zafiyet türleri için yüksek bulgu sayıları üretir. Cross-Site Scripting’e bakın; genellikle iki çeşittir: daha küçük, izole bir hata ya da sistemik bir sorun. Sistemik olduğunda tek bir uygulama için bulgu sayıları binlere ulaşabilir. Bu yüksek frekans, raporlardaki ya da verilerdeki diğer çoğu zafiyeti bastırır.</p>
+<p>Öte yandan TaH, daha geniş bir zafiyet türü yelpazesi bulur ancak zaman kısıtları nedeniyle çok daha düşük frekanstadır. İnsanlar bir uygulamayı test edip Cross-Site Scripting gibi bir şey gördüğünde genellikle üç dört örnek bulur ve durur. Sistemik bir bulgu olup olmadığını belirleyebilir ve uygulama genelinde düzeltme önerisi ile yazabilirler. Her örneği bulmaya gerek (ve zaman) yoktur.</p>
+<p>Bu iki farklı veri setini frekansa göre birleştirmeye çalıştığımızı varsayalım; Tooling ve HaT verileri daha doğru (ama geniş) TaH verilerini boğar ve bunun önemli bir kısmı, Cross-Site Scripting gibi şeylerin çoğu listede çok yüksek sıralarda olmasının nedenidir; genellikle etkisi düşük ile orta arasında olmasına rağmen. Bunun nedeni salt bulgu hacmidir. (Cross-Site Scripting’i test etmek de nispeten kolaydır, bu nedenle onun için daha fazla test vardır.)</p>
+<p>2017’de, verilere taze bir bakış atmak ve Tooling ile HaT verilerini TaH verileriyle temiz şekilde birleştirmek için insidans oranını kullanmaya başladık. İnsidans oranı, uygulama popülasyonunun yüzde kaçında bir zafiyet türünün en az bir örneğinin bulunduğunu sorar. Tekil mi yoksa sistemik mi olduğuna aldırmayız. Bizim amaçlarımız için bu ilgisizdir; sadece en az bir örnek bulunan uygulama sayısını bilmeye ihtiyacımız var; bu da, yüksek frekanslı sonuçlarla verileri boğmadan, farklı test türleri arasında bulguların daha net bir görünümünü sağlar. Bu, bir saldırganın bir kategoriyi başarıyla istismar etmek için yalnızca bir örneğe ihtiyaç duyduğu gerçeğiyle ilişkili risk temelli bir bakışa karşılık gelir.</p>
+<h2 id="veri-toplama-ve-analiz-sureciniz-nedir">Veri toplama ve analiz süreciniz nedir?</h2>
+<p>Veri toplama sürecini 2017’de Open Security Summit’te resmileştirdik. OWASP Top 10 liderleri ve topluluk, şeffaf bir veri toplama süreci oluşturmak için iki gün harcadı. 2021 sürümü, bu metodolojiyi ikinci kez kullandığımız sürümdür.</p>
+<p>Sosyal medya kanalları üzerinden (hem proje hem OWASP) veri çağrısı yayınlıyoruz. OWASP Proje sayfasında aradığımız veri öğelerini ve yapılarını ve bunların nasıl gönderileceğini listeliyoruz. GitHub projesinde şablon görevi gören örnek dosyalarımız var. CWE’lere yapı ve eşlemeyi anlamak için gerektiğinde organizasyonlarla birlikte çalışıyoruz.</p>
+<p>Verileri, işi gereği test vendor’ı olan organizasyonlardan, bug bounty vendor’larından ve iç test verilerini katkılayan organizasyonlardan alıyoruz. Veriyi aldıktan sonra bir araya yüklüyor ve CWE’lerin risk kategorilerine nasıl eşlendiğine dair temel bir analiz çalıştırıyoruz. Bazı CWE’ler arasında örtüşme var ve diğerleri birbirine çok yakındır (örn. kriptografik zafiyetler). Gönderilen ham verilerle ilgili alınan her karar, verileri nasıl normalize ettiğimizi açık ve şeffaf olmak için belgelenir ve yayımlanır.</p>
+<p>Top 10’a dahil edilmek üzere en yüksek insidans oranına sahip sekiz kategoriye bakıyoruz. Ayrıca Top 10 community survey sonuçlarına bakıyor ve hangilerinin verilerde zaten mevcut olabileceğini görüyoruz. Verilerde henüz yer almayan en çok oyu alan iki kategori, Top 10’daki diğer iki yer için seçilir. Tüm on kategori seçildikten sonra, Top 10 2021’i risk bazlı bir sıraya koymaya yardımcı olmak için genelleştirilmiş exploitability ve impact faktörlerini uyguladık.</p>
+<h2 id="veri-faktorleri">Veri Faktörleri</h2>
+<p>Top 10’daki her kategori için listelenen veri faktörleri ve anlamları şunlardır:</p>
+<ul>
+<li>CWEs Mapped: Top 10 ekibi tarafından bir kategoriye eşlenen CWE sayısı.</li>
+<li>Incidence Rate: Belirli bir yıl için, o organizasyon tarafından test edilen popülasyondaki uygulamaların, ilgili CWE’ye karşı zafiyetli olan yüzdesi.</li>
+<li>(Testing) Coverage: Belirli bir CWE için tüm organizasyonlar tarafından test edilen uygulamaların yüzdesi.</li>
+<li>Weighted Exploit: CWE’lere eşlenen CVE’lerden gelen CVSSv2 ve CVSSv3 Exploit alt-skoru, normalize edilerek 10 puanlık ölçeğe yerleştirilmiş hali.</li>
+<li>Weighted Impact: CWE’lere eşlenen CVE’lerden gelen CVSSv2 ve CVSSv3 Impact alt-skoru, normalize edilerek 10 puanlık ölçeğe yerleştirilmiş hali.</li>
+<li>Total Occurrences: Bir kategoriye eşlenen CWE’lerin bulunduğu uygulamaların toplam sayısı.</li>
+<li>Total CVEs: Bir kategoriye eşlenen CWE’lere NVD veritabanında eşlenen toplam CVE sayısı.</li>
+</ul>
+<h2 id="veri-katkclarmza-tesekkurler">Veri katkıcılarımıza teşekkürler</h2>
+<p>Aşağıdaki organizasyonlar (ve bazı anonim bağışçılar), bu sürümü en büyük ve en kapsamlı uygulama güvenliği veri seti hâline getiren 500.000’den fazla uygulamaya ait verileri cömertçe bağışladı. Siz olmadan bu mümkün olmazdı.</p>
+<ul>
+<li>AppSec Labs</li>
+<li>Cobalt.io</li>
+<li>Contrast Security</li>
+<li>GitLab</li>
+<li>HackerOne</li>
+<li>HCL Technologies</li>
+<li>Micro Focus</li>
+<li>PenTest-Tools</li>
+<li>Probely</li>
+<li>Sqreen</li>
+<li>Veracode</li>
+<li>WhiteHat (NTT)</li>
+</ul>
+<h2 id="sponsorlarmza-tesekkurler">Sponsorlarımıza teşekkürler</h2>
+<p>OWASP Top 10 2021 ekibi, Secure Code Warrior ve Just Eat’in finansal desteğini minnetle kabul eder.</p>
+<p><a href="https://securecodewarrior.com"><img alt="Secure Code Warrior" src="../../assets/securecodewarrior.png" width="256" /></a></p>
+<p><a href="https://www.just-eat.co.uk/"><img alt="Just Eats" src="../../assets/JustEat.png" width="256" /></a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © Copyright 2021-2025 - OWASP Top 10 Team - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.instant", "search.suggest"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Kopyaland\u0131", "clipboard.copy": "Kopyala", "search.result.more.one": "Bu sayfada 1 tane daha", "search.result.more.other": "Bu sayfada # tane daha", "search.result.none": "E\u015fle\u015fen dok\u00fcman bulunamad\u0131", "search.result.one": "1 dok\u00fcman bulundu", "search.result.other": "# dok\u00fcman bulundu", "search.result.placeholder": "Aramaya ba\u015flamak i\u00e7in yaz\u0131n", "search.result.term.missing": "Eksik", "select.version": "Versiyon se\u00e7"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1329 @@
+
+<!doctype html>
+<html lang="it" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="OWASP Top 10:2021">
+      
+      
+      
+        <link rel="canonical" href="https://owasp.org/Top10/2021/it/">
+      
+      
+      
+        <link rel="next" href="A00_2021_Introduction/">
+      
+      
+        
+          <link rel="alternate" href="/Top10/2021/" hreflang="en">
+        
+          <link rel="alternate" href="/Top10/2021/ar/" hreflang="ar">
+        
+          <link rel="alternate" href="/Top10/2021/de/" hreflang="de">
+        
+          <link rel="alternate" href="/Top10/2021/es/" hreflang="es">
+        
+          <link rel="alternate" href="/Top10/2021/fr/" hreflang="fr">
+        
+          <link rel="alternate" href="/Top10/2021/id/" hreflang="id">
+        
+          <link rel="alternate" href="/Top10/2021/it/" hreflang="it">
+        
+          <link rel="alternate" href="/Top10/2021/ja/" hreflang="ja">
+        
+          <link rel="alternate" href="/Top10/2021/pt-BR/" hreflang="pt-BR">
+        
+          <link rel="alternate" href="/Top10/2021/tr/" hreflang="tr">
+        
+          <link rel="alternate" href="/Top10/2021/zh-Hant/" hreflang="zh-Hant">
+        
+          <link rel="alternate" href="/Top10/2021/zh-TW/" hreflang="zh-TW">
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Welcome Page - OWASP Top 10:2021</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.618322db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#introduzione-alla-owasp-top-10-2021" class="md-skip">
+          Vai al contenuto
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Intestazione">
+    <a href="./" title="OWASP Top 10:2021" class="md-header__button md-logo" aria-label="OWASP Top 10:2021" data-md-component="logo">
+      
+  <img src="../assets/OWASP_Logo_Transp.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OWASP Top 10:2021
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Welcome Page
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Seleziona la lingua">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="/Top10/2021/" hreflang="en" class="md-select__link">
+              en - English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="/Top10/2021/ar/" hreflang="ar" class="md-select__link">
+              ar - العربية
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="/Top10/2021/de/" hreflang="de" class="md-select__link">
+              de - Deutsch
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="/Top10/2021/es/" hreflang="es" class="md-select__link">
+              es - Español
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="/Top10/2021/fr/" hreflang="fr" class="md-select__link">
+              fr - Français
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="/Top10/2021/id/" hreflang="id" class="md-select__link">
+              id - Indonesian
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="/Top10/2021/it/" hreflang="it" class="md-select__link">
+              it - Italiano
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="/Top10/2021/ja/" hreflang="ja" class="md-select__link">
+              ja - 日本語
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="/Top10/2021/pt-BR/" hreflang="pt-BR" class="md-select__link">
+              pt-BR - Português (Brasil)
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="/Top10/2021/tr/" hreflang="tr" class="md-select__link">
+              tr - Türkçe
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="/Top10/2021/zh-Hant/" hreflang="zh-Hant" class="md-select__link">
+              zh-Hant - 简体中文
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="/Top10/2021/zh-TW/" hreflang="zh-TW" class="md-select__link">
+              zh-TW - 繁體中文
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Cerca" placeholder="Cerca" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Cerca">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Cancella" aria-label="Cancella" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inizializza la ricerca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/OWASP/Top10" title="Apri repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    OWASP/Top10
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigazione" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="./" title="OWASP Top 10:2021" class="md-nav__button md-logo" aria-label="OWASP Top 10:2021" data-md-component="logo">
+      
+  <img src="../assets/OWASP_Logo_Transp.png" alt="logo">
+
+    </a>
+    OWASP Top 10:2021
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/OWASP/Top10" title="Apri repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    OWASP/Top10
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Welcome Page
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Welcome Page
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Indice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Indice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#vi-presentiamo-la-owasp-top-10-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vi presentiamo la OWASP Top 10 - 2021
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cosa-e-cambiato-nella-top-10-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cosa è cambiato nella Top 10 2021
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metodologia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Metodologia
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#come-sono-strutturate-le-categorie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Come sono strutturate le categorie
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#come-vengono-usati-i-dati-per-selezionare-le-categorie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Come vengono usati i dati per selezionare le categorie
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#perche-non-utilizzare-dati-puramente-statistici" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Perchè non utilizzare dati puramente statistici?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#perche-tasso-di-incidenza-anziche-frequenza" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Perchè tasso di incidenza anzichè frequenza?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quale-e-il-processo-di-raccolta-e-analisi-dei-dati" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quale è il processo di raccolta e analisi dei dati?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etichette-dei-dati" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Etichette dei dati
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ringraziamo-chi-ha-contribuito-con-i-dati" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ringraziamo chi ha contribuito con i dati
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grazie-ai-nostri-sponsor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Grazie ai nostri sponsor
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="A00_2021_Introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduzione
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="0x00_2021-notice/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Avvisi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="A00_2021_How_to_use_the_OWASP_Top_10_as_a_standard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Come utilizzare la OWASP Top 10 come standard
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="A00_2021-How_to_start_an_AppSec_program_with_the_OWASP_Top_10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Come avviare un programma di AppSec con la OWASP Top 10
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="0x01_2021-about-owasp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A proposito di OWASP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lista top 10:2021
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Lista top 10:2021
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="A01_2021-Broken_Access_Control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A01 Broken Access Control
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="A02_2021-Cryptographic_Failures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A02 Cryptographic Failures
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="A03_2021-Injection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A03 Injection
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="A04_2021-Insecure_Design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A04 Insecure Design
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="A05_2021-Security_Misconfiguration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A05 Security Misconfiguration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="A06_2021-Vulnerable_and_Outdated_Components/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A06 Vulnerable and Outdated Components
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="A07_2021-Identification_and_Authentication_Failures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A07 Identification and Authentication Failures
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="A08_2021-Software_and_Data_Integrity_Failures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A08 Software and Data Integrity Failures
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="A09_2021-Security_Logging_and_Monitoring_Failures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A09 Security Logging and Monitoring Failures
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="A10_2021-Server-Side_Request_Forgery_%28SSRF%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A10 Server Side Request Forgery (SSRF)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="A11_2021-Next_Steps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prossimi passi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Indice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Indice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#vi-presentiamo-la-owasp-top-10-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vi presentiamo la OWASP Top 10 - 2021
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cosa-e-cambiato-nella-top-10-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cosa è cambiato nella Top 10 2021
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metodologia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Metodologia
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#come-sono-strutturate-le-categorie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Come sono strutturate le categorie
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#come-vengono-usati-i-dati-per-selezionare-le-categorie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Come vengono usati i dati per selezionare le categorie
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#perche-non-utilizzare-dati-puramente-statistici" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Perchè non utilizzare dati puramente statistici?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#perche-tasso-di-incidenza-anziche-frequenza" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Perchè tasso di incidenza anzichè frequenza?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quale-e-il-processo-di-raccolta-e-analisi-dei-dati" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quale è il processo di raccolta e analisi dei dati?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etichette-dei-dati" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Etichette dei dati
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ringraziamo-chi-ha-contribuito-con-i-dati" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ringraziamo chi ha contribuito con i dati
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grazie-ai-nostri-sponsor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Grazie ai nostri sponsor
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="introduzione-alla-owasp-top-10-2021">Introduzione alla OWASP Top 10 2021</h1>
+<h2 id="vi-presentiamo-la-owasp-top-10-2021">Vi presentiamo la OWASP Top 10 - 2021</h2>
+<p><img alt="OWASP Top 10 Logo" class="img-responsive" src="../assets/TOP_10_logo_Final_Logo_Colour.png" /></p>
+<p>Ecco a voi l'ultima versione della OWASP Top 10! La OWASP Top 10 2021 è tutta nuova, con un nuovo design grafico e un'infografica di una pagina che potete stampare o scaricare dalla nostra home page.</p>
+<p>Un enorme grazie a tutti coloro che hanno contribuito con il loro tempo e i loro dati per questa versione. Senza di voi, tutto questo non sarebbe stato possibile. <strong>GRAZIE!</strong></p>
+<h2 id="cosa-e-cambiato-nella-top-10-2021">Cosa è cambiato nella Top 10 2021</h2>
+<p>Ci sono tre nuove categorie, quattro categorie con cambiamenti nella denominazione e nello scopo, e alcuni consolidamenti nella Top 10 per il 2021. Quando necessario abbiamo cambiato i nomi per concentrarci più sulla causa principale anzichè sui sintomi.</p>
+<p><img alt="Mapping" src="../assets/mapping.png" /></p>
+<ul>
+<li><strong><a href="A01_2021-Broken_Access_Control/">A01:2021-Broken Access Control</a></strong> sale dalla quinta posizione alla categoria con il più grave rischio per la sicurezza delle applicazioni web; i dati analizzati indicano che in media, il 3,81% delle applicazioni testate aveva una o più Common Weakness Enumerations (CWEs) con più di 318k occorrenze di CWEs in questa categoria di rischio. Le 34 CWE che corrispondevano a Broken Access Control avevano più occorrenze di qualsiasi altra categoria.</li>
+<li><strong><a href="A02_2021-Cryptographic_Failures/">A02:2021-Cryptographic Failures</a></strong> si sposta di una posizione alla #2, precedentemente nota come <strong>A3:2017-Sensitive Data Exposure</strong>, che era un sintomo generico piuttosto che la causa principale. Il nome rinnovato si concentra sulle problematiche relative alla crittografia come è stato prima, ma implicitamente. Questa categoria porta spesso all'esposizione di dati sensibili o alla compromissione del sistema.</li>
+<li><strong><a href="A03_2021-Injection/">A03:2021-Injection</a></strong> scivola in terza posizione. Il 94% delle applicazioni è stato testato per qualche forma di injection con un tasso di incidenza massimo del 19%, un tasso di incidenza medio del 3,37%, e le 33 CWE che corrispondevano a questa categoria hanno il secondo maggior numero di occorrenze nelle applicazioni, con 274k. In questa edizione il Cross-site Scripting fa parte di questa categoria.</li>
+<li><strong><a href="A04_2021-Insecure_Design/">A04:2021-Insecure Design</a></strong> è una nuova categoria per il 2021, con un focus sui rischi relativi ai difetti di progettazione. Se vogliamo veramente "spostarci a sinistra" come industria, abbiamo bisogno di più threat modeling, secure design patterns e architetture di riferimento. Un design insicuro non può essere corretto con un'implementazione perfetta, poiché per definizione i controlli di sicurezza necessari non sono mai stati creati per difendersi da attacchi specifici.</li>
+<li><strong><a href="A05_2021-Security_Misconfiguration/">A05:2021-Security Misconfiguration</a></strong> sale dal numero 6 dell'edizione precedente; il 90% delle applicazioni è stato testato per qualche forma di misconfigurazione, con un tasso di incidenza medio del 4,5% e oltre 208k casi di CWE corrispondenti a questa categoria di rischio. Con una tendenza al software altamente configurabile, non è sorprendente vedere questa categoria salire. La precedente categoria per <strong>A4:2017-XML External Entities (XXE)</strong> è ora parte di questa categoria di rischio.</li>
+<li><strong><a href="A06_2021-Vulnerable_and_Outdated_Components/">A06:2021-Vulnerable and Outdated Components</a></strong> era precedentemente intitolata "Using Components with Known Vulnerabilities" ed è #2 nel sondaggio della comunità Top 10, ma aveva anche abbastanza numeri per far parte della Top 10 grazie ai dati raccolti e analizzati. Questa categoria sale dalla #9 del 2017 ed è un problema noto per cui facciamo fatica a testare e a valutarne il rischio. È l'unica categoria a non avere alcun Common Vulnerability and Exposures (CVE) corrispondente alle CWE incluse, quindi nel punteggio è stato inserito un peso predefinito per sfruttabilità e impatto di 5.0.</li>
+<li><strong><a href="A07_2021-Identification_and_Authentication_Failures/">A07:2021-Identification and Authentication Failures</a></strong> era precedentemente nota come "Broken Authentication" e sta scivolando giù dalla seconda posizione, e ora include CWEs che sono più legate a problematiche di identificazione. Questa categoria è ancora parte integrante della Top 10, ma la maggiore diffusione di framework standard sembra aiutare.</li>
+<li><strong><a href="A08_2021-Software_and_Data_Integrity_Failures/">A08:2021-Software and Data Integrity Failures</a></strong> è una nuova categoria per il 2021, che si concentra sul fare ipotesi relative agli aggiornamenti del software, ai dati critici e alle pipeline CI/CD senza verificare l'integrità. Uno dei più alti impatti ponderati dai dati di Common Vulnerability and Exposures/Common Vulnerability Scoring System (CVE/CVSS) è stato messo in corrispondenza alle 10 CWE di questa categoria. <strong>A8:2017-Insecure Deserialization</strong> fa ora parte di questa categoria più ampia.</li>
+<li><strong><a href="A09_2021-Security_Logging_and_Monitoring_Failures/">A09:2021-Security Logging and Monitoring Failures</a></strong> era precedentemente <strong>A10:2017-Insufficient Logging &amp; Monitoring</strong> e viene aggiunto dal sondaggio della comunità Top 10 (#3), passando dalla precedente #10. Questa categoria è stata ampliata per includere più tipi di problematiche, è difficile da testare e non è ben rappresentata nei dati CVE/CVSS. Tuttavia, le problematiche in questa categoria possono avere un impatto diretto sulla visibilità, sull'alerting degli incidenti e sulle attività forensi.</li>
+<li><strong><a href="A10_2021-Server-Side_Request_Forgery_%28SSRF%29/">A10:2021-Server-Side Request Forgery</a></strong> viene aggiunto dal sondaggio della comunità Top 10 (#1). I dati mostrano un tasso di incidenza relativamente basso con una copertura di test superiore alla media, insieme a valutazioni superiori alla media per il potenziale di sfruttabilità e di impatto. Questa categoria rappresenta lo scenario in cui i membri della nostra comunità ci stanno comunicando che è importante, anche se in questo momento non è evidente dai dati.</li>
+</ul>
+<h2 id="metodologia">Metodologia</h2>
+<p>Questa versione della Top 10 è più data-driven che mai, ma non ciecamente data-driven. Abbiamo selezionato otto delle dieci categorie dai dati forniti e due categorie dal sondaggio della comunità Top 10. Questo lo facciamo per una ragione fondamentale, guardare i dati forniti è guardare nel passato. I ricercatori nel campo dell'AppSec impiegano tempo per trovare nuove vulnerabilità e nuovi modi per testarle. Ci vuole tempo per integrare questi test negli strumenti e nei processi. Nel momento in cui possiamo testare in modo affidabile una debolezza su larga scala, probabilmente sono passati anni. Per bilanciare questo punto di vista, usiamo un sondaggio comunitario per chiedere agli esperti di sicurezza e sviluppatori di applicazioni in prima linea quali sono le debolezze essenziali che i dati potrebbero non mostrare ancora.</p>
+<p>Ci sono alcuni cambiamenti importanti che abbiamo adottato per continuare a migliorare la Top 10.</p>
+<h2 id="come-sono-strutturate-le-categorie">Come sono strutturate le categorie</h2>
+<p>Alcune categorie sono cambiate dalla precedente versione della Top Ten di OWASP. Ecco un riassunto ad alto livello dei cambiamenti relativi alle categorie.</p>
+<p>I precedenti sforzi di raccolta dati erano focalizzati su un sottoinsieme prescritto di circa 30 CWE con un campo aperto che ne richiedeva altri. Abbiamo imparato che le organizzazioni si concentravano principalmente solo su quelle 30 CWE e raramente aggiungevano ulteriori CWE che avevano incontrato. In questa iterazione abbiamo chiesto solo dati, senza restrizioni sulle CWE. Abbiamo chiesto il numero di applicazioni testate per un dato anno (a partire dal 2017), e il numero di applicazioni con almeno un'istanza di una CWE trovata nei test. Questo formato ci permette di tracciare quanto sia prevalente ogni CWE all'interno della popolazione delle applicazioni. Per i nostri scopi ignoriamo la frequenza; mentre può essere necessaria per altre situazioni, nasconde solo la reale prevalenza nella popolazione delle applicazioni. Che un'applicazione abbia quattro istanze di una CWE o 4.000 istanze, questo valore non influisce nel calcolo per la Top 10. Siamo passati da circa 30 CWE a quasi 400 CWE da analizzare. In futuro abbiamo in programma di fare ulteriori analisi dei dati come integrazione. Questo aumento significativo del numero di CWE richiede cambiamenti nel modo in cui le categorie sono strutturate.</p>
+<p>Abbiamo trascorso diversi mesi a raggruppare e categorizzare le CWE e avremmo potuto continuare per mesi. Ad un certo punto ci siamo dovuti fermare. Ci sono entrambi i tipi di CWE <em>causa principale</em> e <em>sintomo</em>, dove i tipi <em>causa principale</em> sono come "Cryptographic Failures" e "Misconfiguration" in contrasto con i tipi <em>sintomo</em> come "Sensitive Data Exposure" e "Denial of Service". Abbiamo deciso di concentrarci sulla <em>causa principale</em> ogni volta che è possibile, in quanto è più logico per fornire una guida all'identificazione e al rimedio. Concentrarsi sulla <em>causa principale</em> piuttosto che sul <em>sintomo</em> non è un concetto nuovo; la Top Ten è stata un mix di <em>sintomo</em> e <em>causa principale</em>. Anche le CWE sono un mix di <em>sintomo</em> e <em>causa principale</em>; siamo semplicemente più consapevoli di questo e lo diciamo ad alta voce. C'è una media di 19.6 CWE per categoria in questa versione, con i limiti inferiori a 1 CWE per <strong>A10:2021-Server-Side Request Forgery (SSRF)</strong> a 40 CWE in <strong>A04:2021-Insecure Design</strong>. Questa struttura aggiornata delle categorie offre ulteriori benefici per la formazione in quanto le aziende possono concentrarsi sulle CWE che hanno senso per un linguaggio/framework.</p>
+<h2 id="come-vengono-usati-i-dati-per-selezionare-le-categorie">Come vengono usati i dati per selezionare le categorie</h2>
+<p>Nel 2017, abbiamo selezionato le categorie in base al tasso di incidenza per determinare la probabilità, poi le abbiamo classificate in base alla discussione con il team sulla base di decenni di esperienza per <em>Exploitability</em>, <em>Detectability</em> (anche <em>likelihood</em>), e <em>Technical Impact</em>. Per il 2021, vogliamo usare i dati per <em>Exploitability</em> e <em>(Technical) Impact</em> se possibile.</p>
+<p>Abbiamo scaricato OWASP Dependency Check ed estratto i punteggi CVSS relativi a Exploit e Impact raggruppati per CWE correlati. Ci sono voluti un bel po' di ricerche e sforzi, poiché tutti i CVE hanno punteggi CVSSv2, ma ci sono problematiche in CVSSv2 che CVSSv3 dovrebbe risolvere. Dopo un certo periodo di tempo, a tutti i CVE viene assegnato anche un punteggio CVSSv3. Inoltre, gli intervalli di punteggio e le formule sono stati aggiornati tra CVSSv2 e CVSSv3.</p>
+<p>Nel CVSSv2, sia <em>Exploit</em> che <em>(Technical) Impact</em> potevano essere fino a 10.0, ma la formula li riduceva al 60% per <em>Exploit</em> e al 40% per <em>Impact</em>. Nel CVSSv3, il massimo teorico era limitato a 6.0 per <em>Exploit</em> e 4.0 per <em>Impact</em>. Con la ponderazione considerata, il punteggio di Impact si è spostato più in alto, quasi un punto e mezzo in media in CVSSv3, e l'exploitability si è spostato quasi mezzo punto più in basso in media.</p>
+<p>Ci sono 125k record di una CVE corrispondente a una CWE nei dati del National Vulnerability Database (NVD) estratti da OWASP Dependency Check, e ci sono 241 CWE uniche corrispondenti a un CVE. 62k corrispondenze di CWE hanno un punteggio CVSSv3, che è circa la metà della popolazione nel set di dati.</p>
+<p>Per la Top Ten 2021, abbiamo calcolato i punteggi medi di <em>Exploit</em> e <em>Impact</em> nel modo seguente. Abbiamo raggruppato tutte le CVE con punteggi CVSS per CWE e ponderato entrambi i punteggi di <em>Exploit</em> e <em>Impact</em> per la percentuale della popolazione che aveva CVSSv3 più la restante popolazione di punteggi CVSSv2 per ottenere una media complessiva. Abbiamo messo in corrispondenza queste medie alle CWE nel dataset da usare come punteggio di <em>Exploit</em> e <em>(Technical) Impact</em> per l'altra metà dell'equazione del rischio.</p>
+<h2 id="perche-non-utilizzare-dati-puramente-statistici">Perchè non utilizzare dati puramente statistici?</h2>
+<p>I risultati nei dati sono principalmente limitati a ciò che possiamo testare in modo automatico. Parlate con un professionista esperto di AppSec e vi racconterà delle vulnerabilità che trova e delle tendenze che vede che non sono ancora visibili nei dati. Ci vuole tempo perché le persone sviluppino metodologie di test per certi tipi di vulnerabilità e poi ancora più tempo perché quei test siano automatizzati ed eseguiti su una vasta popolazione di applicazioni. Tutto ciò che troviamo sta guardando indietro nel passato e potrebbe mancare delle tendenze dell'ultimo anno, che non sono presenti nei dati.</p>
+<p>Pertanto, prendiamo solo otto delle dieci categorie dai dati perché sono incompleti. Le altre due categorie provengono dal sondaggio della comunità Top 10. Questo permette ai professionisti in prima linea di votare per ciò che identificano come i rischi più alti che potrebbero non essere ancora visibili nei dati (e potrebbero non essere mai espressi nei dati).</p>
+<h2 id="perche-tasso-di-incidenza-anziche-frequenza">Perchè tasso di incidenza anzichè frequenza?</h2>
+<p>Ci sono tre fonti primarie di dati. Le identifichiamo come Human-assisted Tooling (HaT), Tool-assisted Human (TaH), e Tooling grezzo.</p>
+<p>Tooling e HaT generano una grande quantità di dati. Gli strumenti cercheranno vulnerabilità specifiche e tenteranno instancabilmente di trovare ogni istanza di quella vulnerabilità e genereranno un numero elevato di risultati per alcuni tipi di vulnerabilità. Guardate il Cross-Site Scripting, che è tipicamente di due tipi: o è un errore piccolo e isolato o un problema sistemico. Quando si tratta di un problema sistemico, il conteggio può essere di migliaia per una singola applicazione. Questa alta frequenza copre la maggior parte delle altre vulnerabilità trovate nei report o nei dati.</p>
+<p>TaH, d'altra parte, troverà una gamma più ampia di tipi di vulnerabilità, ma con una frequenza molto più bassa a causa dei vincoli temporali. Quando gli esseri umani testano un'applicazione e identificano problematiche come il Cross-Site Scripting, in genere trovano tre o quattro istanze e si fermano. Possono determinare una scoperta sistemica e scrivere nel report consigli per la correzione della problematica sull'intera applicazione. Non c'è bisogno (o tempo) di trovare ogni istanza.</p>
+<p>Supponiamo di prendere questi due insiemi di dati distinti e cercare di unirli ina base alla frequenza. In questo caso, i dati di Tooling e HaT sommergeranno i più accurati (ma ampi) dati TaH ed è una buona parte del motivo per cui qualcosa come Cross-Site Scripting è stato così altamente classificato in molte liste quando l'impatto è generalmente basso o moderato. È a causa dell'enorme volume di risultati. (Il Cross-Site Scripting è anche ragionevolmente facile da testare, quindi ci sono molti più test anche per questo).</p>
+<p>Nel 2017, abbiamo introdotto l'uso del tasso di incidenza per dare un nuovo sguardo ai dati e fondere in modo pulito i dati di Tooling e HaT con i dati TaH. Il tasso di incidenza chiede quale percentuale della popolazione di applicazioni ha avuto almeno un'istanza di un tipo di vulnerabilità. Non ci interessa se era una tantum o sistemica. Questo è irrilevante per i nostri scopi; abbiamo solo bisogno di sapere quante applicazioni ne avevano almeno un'istanza, il che aiuta a fornire una visione più chiara dei risultati senza rischiare di inquinare i dati con risultati relativi a problematiche ad alta frequenza. Questo corrisponde a una visione legata al rischio, poiché un attaccante ha bisogno di una sola istanza di una determinata vulnerabilità per attaccare con successo un'applicazione.</p>
+<h2 id="quale-e-il-processo-di-raccolta-e-analisi-dei-dati">Quale è il processo di raccolta e analisi dei dati?</h2>
+<p>Abbiamo formalizzato il processo di raccolta dati OWASP Top 10 all'Open Security Summit del 2017. I leader di OWASP Top 10 e la comunità hanno trascorso due giorni a formalizzare un processo di raccolta dati trasparente. Per l'edizione 2021 è la seconda volta che abbiamo usato questa metodologia.</p>
+<p>Richiediamo i dati attraverso i canali dei social media a nostra disposizione, sia del progetto che di OWASP. Sulla pagina del progetto OWASP, elenchiamo quali variabili e quale struttura stiamo cercando nei dati e come inviarli. Nela pagina GitHub, abbiamo file di esempio che servono come modelli. Lavoriamo con le organizzazioni, se necessario, per aiutarle a capire la struttura e la correlazione delle relative CWE.</p>
+<p>Otteniamo dati da organizzazioni che sono aziende che svolgono test di sicurezza, piattaforme di bug bounty e organizzazioni che contribuiscono con dati di test interni. Una volta che abbiamo i dati, li carichiamo insieme ed eseguiamo un'analisi fondamentale, ovvero la corrispondenza delle CWE alle categorie di rischio. C'è una sovrapposizione tra alcune CWE, e altre sono strettamente correlati (es. vulnerabilità crittografiche). Qualsiasi decisione relativa ai dati grezzi presentati è documentata e pubblicata per essere aperti e trasparenti sul processo di normalizzazione dei dati.</p>
+<p>Guardiamo le otto categorie con i più alti tassi di incidenza per l'inclusione nella Top 10. Guardiamo anche i risultati del sondaggio della comunità Top 10 per vedere quali possono essere già presenti nei dati. I primi due voti che non sono già presenti nei dati saranno selezionati per gli altri due posti nella Top 10. Una volta che tutti e dieci sono stati selezionati, abbiamo applicato fattori generici per la sfruttabilità e l'impatto; per produrre una Top 10 2021 in un ordine basato sul rischio.</p>
+<h2 id="etichette-dei-dati">Etichette dei dati</h2>
+<p>Ci sono alcune etichette che sono elencati per ciascuna delle 10 categorie principali, ecco cosa significano:</p>
+<ul>
+<li>CWEs corrispondenti: Il numero di CWE corrispondenti a una categoria dal team Top 10.</li>
+<li>Tasso di incidenza:  Il tasso di incidenza è la percentuale di applicazioni vulnerabili a quel CWE dalla popolazione testata da quella org per quell'anno.</li>
+<li>Copertura (di test): La percentuale di applicazioni testate da tutte le organizzazioni per un dato CWE.</li>
+<li>Sfruttabilità pesata: Il sub-score Exploit dai punteggi CVSSv2 e CVSSv3 assegnati ai CVE corrispondenti ai CWE, normalizzati e posizionati su una scala di 10 punti.</li>
+<li>Impatto pesato: Il sub-score di impatto dai punteggi CVSSv2 e CVSSv3 assegnati ai CVE corrispondenti ai CWE, normalizzato e posizionato su una scala di 10 punti.</li>
+<li>Occorrenze totali: Numero totale di applicazioni trovate che hanno i CWE corrispondenti ad una categoria.</li>
+<li>CVE totali: Numero totale di CVE nel DB NVD che sono stati messi in corrispondenza ai CWE relativi a una categoria.</li>
+</ul>
+<h2 id="ringraziamo-chi-ha-contribuito-con-i-dati">Ringraziamo chi ha contribuito con i dati</h2>
+<p>Le seguenti organizzazioni (insieme ad alcuni donatori anonimi) hanno gentilmente donato i dati per oltre 500.000 applicazioni per rendere questo il più grande e completo set di dati sulla sicurezza delle applicazioni. Senza di voi, questo non sarebbe possibile.</p>
+<ul>
+<li>AppSec Labs</li>
+<li>Cobalt.io</li>
+<li>Contrast Security</li>
+<li>GitLab</li>
+<li>HackerOne</li>
+<li>HCL Technologies</li>
+<li>Micro Focus</li>
+<li>PenTest-Tools</li>
+<li>Probely</li>
+<li>Sqreen</li>
+<li>Veracode</li>
+<li>WhiteHat (NTT)</li>
+</ul>
+<h2 id="grazie-ai-nostri-sponsor">Grazie ai nostri sponsor</h2>
+<p>Il team OWASP Top 10 2021 ringrazia il supporto finanziario di Secure Code Warrior e Just Eat.</p>
+<p><a href="https://securecodewarrior.com"><img alt="Secure Code Warrior" src="../assets/securecodewarrior.png" width="256" /></a>    </p>
+<p><a href="https://www.just-eat.co.uk/"><img alt="Just Eats" src="../assets/JustEat.png" width="256" /></a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © Copyright 2021-2025 - OWASP Top 10 Team - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.instant", "search.suggest"], "search": "../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copiato", "clipboard.copy": "Copia", "search.result.more.one": "1 altro in questa pagina", "search.result.more.other": "# altri in questa pagina", "search.result.none": "Nessun documento trovato", "search.result.one": "1 documento trovato", "search.result.other": "# documenti trovati", "search.result.placeholder": "Scrivi per iniziare a cercare", "search.result.term.missing": "Non presente", "select.version": "Seleziona la versione"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+    
+  </body>
+</html>
