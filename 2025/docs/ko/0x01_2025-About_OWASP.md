@@ -1,35 +1,35 @@
-# About OWASP
+# OWASP 소개
 
-The Open Worldwide Application Security Project (OWASP) is an open community dedicated to enabling organizations to develop, purchase, and maintain applications and APIs that can be trusted.
+오픈 월드와이드 애플리케이션 보안 프로젝트(Open Worldwide Application Security Project, OWASP, 오와스프)는 각 조직이 신뢰할 수 있는 애플리케이션과 API를 개발, 도입, 유지할 수 있도록 지원하는 오픈 커뮤니티이다.
 
-At OWASP, you'll find free and open:
+OWASP에서는 아래와 같은 무료로 공개된 자료를 제공하고 있다.
 
-- Application security tools and standards
-- Cutting edge research
-- Standard security controls and libraries
-- Complete books on application security testing, secure code development, and secure code review
-- Presentations and [videos](https://www.youtube.com/user/OWASPGLOBAL)
-- [Cheat sheets](https://cheatsheetseries.owasp.org/) on many common topics
-- [Chapters meetings](https://owasp.org/chapters/) held worldwide and online
-- [Events, training, and conferences](https://owasp.org/events/).
+- 애플리케이션 보안 도구 및 표준
+- 선도적인 연구
+- 표준 보안통제 항목 및 라이브러리
+- 애플리케이션 보안 테스팅, 보안 코드 개발, 보안 코드 리뷰에 관한 서적적
+- 프레젠테이션 및 [동영상](https://www.youtube.com/user/OWASPGLOBAL)
+- 다양한 주제의 보안 [치트 시트](https://cheatsheetseries.owasp.org/)
+- 전 세계 및 온라인에서 개최되는 [챕터 모임](https://owasp.org/chapters/)
+- [이벤트, 교육 및 컨퍼런스](https://owasp.org/events/)
 - [Google Groups](https://groups.google.com/g/owasp)
 
-Learn more at: [https://owasp.org](https://owasp.org).
+자세한 내용은 [https://owasp.org](https://owasp.org)에서 확인할 수 있다.
 
-All OWASP tools, documents, videos, presentations, and chapters are free and open to anyone interested in improving application security.
+OWASP의 모든 도구, 문서, 동영상, 프레젠테이션을 애플리케이션 보안 개선에 관심이 있는 누구나 자유롭게 이용하고 공유할 수 있도록 공개하고 있다. 각 지역 챕터의 생성 및 참여도 자유롭게 가능하다.
 
-We advocate approaching application security as a people, process, and technology problem, because the most effective approaches to application security require improvements in all these areas.
+OWASP는 애플리케이션 보안을 사람, 프로세스, 기술의 문제로 접근해야 한다고 믿는다. 이러한 모든 영역에서 개선이 애플리케이션 보안에 대한 가장 효과적인 접근 방식이기 때문이다.
 
-OWASP is a different kind of organization. Our freedom from commercial pressures allows us to provide unbiased, practical, and cost-effective information about application security.
+OWASP는 조금 다른 성격의 조직이다. 상업적 이해관계에서 벗어나 있기 때문에, 애플리케이션 보안에 관해 편향되지 않고 실질적이며 비용적으로 효율적인 정보를 제공하고 있다.
 
-OWASP is not affiliated with any technology company, although we support the informed use of commercial security technology. OWASP produces many types of materials in a collaborative, transparent, and open way.
+OWASP는 특정 기술 기업과 제휴하지 않지만, 상용 보안 기술의 올바른 활용을 지지한다. OWASP는 여러 자료를, 협력을 통해 투명하며 개방적인 방식으로 제작한다.
 
-The OWASP Foundation is the non-profit entity that ensures the project's long-term success. Almost everyone associated with OWASP is a volunteer, including the OWASP board, chapter leaders, project leaders, and project members. We support innovative security research with grants and infrastructure.
+OWASP 재단은 프로젝트의 지속적인 발전을 뒷받침하는 비영리 단체입니다. OWASP에는 이사회부터 지부 리더, 프로젝트 구성원까지 대부분이 자원봉사자로 참여하고 있으며, 기존의 틀을 깨는 보안 연구를 후원하고 필요한 인프라를 제공한다.
 
-Join us!
+저희와 함께해주세요!
 
-## Copyright and License
+## 저작권 및 라이선스
 
 ![License](../assets/license.png)
 
-Copyright © 2003-2025 The OWASP&reg; Foundation, Inc. This document is released under the Creative Commons Attribution Share-Alike 4.0 license. For any reuse or distribution, you must make it clear to others the license terms of this work.
+Copyright © 2003-2025 The OWASP&reg; Foundation, Inc. 이 문서는 Creative Commons Attribution-ShareAlike 4.0 라이선스에 따라 배포된다. 이 자료를 재사용하거나 배포할 경우, 반드시 해당 저작물의 라이선스 조건을 명확히 밝혀야 한다.
