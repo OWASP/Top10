@@ -8,6 +8,7 @@ docs_dir: docs
 theme:
   name: material
   language: en
+  favicon: assets/favicon.png
   logo: assets/OWASP_Logo_Transp.png
   features:
     - navigation.sections
