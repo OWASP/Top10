@@ -1,3 +1,10 @@
+---
+title: "A06:2025 Insecure Design - OWASP Top 10"
+description: "When security requirements and threat models are missing, applications ship with flawed workflows and missing controls that attackers can exploit."
+og_type: "article"
+og_image: "assets/OG-images/A06-OG.png"
+---
+
 # A06:2025 Insecure Design ![icon](../assets/TOP_10_Icons_Final_Insecure_Design.png){: style="height:80px;width:80px" align="right"}
 
 

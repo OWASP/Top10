@@ -1,3 +1,8 @@
+---
+title: "Introduction to the OWASP Top 10:2025"
+description: "Introduction to the OWASP Top 10:2025 - Learn what's changed, the methodology behind the rankings, and how to use this document to improve your security posture."
+---
+
 ![OWASP Logo](../assets/TOP_10_logo_Final_Logo_Colour.png)
 
 # The Ten Most Critical Web Application Security Risks

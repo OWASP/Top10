@@ -1,3 +1,10 @@
+---
+title: "A05:2025 Injection - OWASP Top 10"
+description: "When untrusted input is executed by an interpreter, attackers can run commands or queries. When this occurs, they can read, change, or destroy data."
+og_type: "article"
+og_image: "assets/OG-images/A05-OG.png"
+---
+
 # A05:2025 Injection ![icon](../assets/TOP_10_Icons_Final_Injection.png){: style="height:80px;width:80px" align="right"}
 
 ## Background. 

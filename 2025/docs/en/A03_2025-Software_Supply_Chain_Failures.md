@@ -1,3 +1,10 @@
+---
+title: "A03:2025 Software Supply Chain Failures - OWASP Top 10"
+description: "When dependencies or build pipelines are compromised, attackers can ship malicious updates. When this happens, trusted software becomes an entry point"
+og_type: "article"
+og_image: "assets/OG-images/A03-OG.png"
+---
+
 # A03:2025 Software Supply Chain Failures ![icon](../assets/TOP_10_Icons_Final_Vulnerable_Outdated_Components.png){: style="height:80px;width:80px" align="right"}
 
 

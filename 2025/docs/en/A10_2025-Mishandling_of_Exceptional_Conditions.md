@@ -1,3 +1,10 @@
+---
+title: "A10:2025 Mishandling of Exceptional Conditions - OWASP Top 10"
+description: "When software fails to prevent, detect, or respond to abnormal states, causing crashes, data leaks, or fail-open flaws"
+og_type: "article"
+og_image: "assets/OG-images/A10-OG.png"
+---
+
 # A10:2025 Mishandling of Exceptional Conditions ![icon](../assets/TOP_10_Icons_Final_Mishandling_of_Exceptional_Conditions.png){: style="height:80px;width:80px" align="right"}
 
 
