@@ -1,6 +1,6 @@
 # OWASP 소개
 
-오픈 월드와이드 애플리케이션 보안 프로젝트(Open Worldwide Application Security Project, OWASP, 오와스프)는 각 조직이 신뢰할 수 있는 애플리케이션과 API를 개발, 도입, 유지할 수 있도록 지원하는 오픈 커뮤니티이다.
+오픈 월드와이드 애플리케이션 보안 프로젝트(Open Worldwide Application Security Project, OWASP)는 각 조직이 신뢰할 수 있는 애플리케이션과 API를 개발, 도입, 유지할 수 있도록 지원하는 오픈 커뮤니티이다.
 
 OWASP에서는 아래와 같은 무료로 공개된 자료를 제공하고 있다.
 
