@@ -1,113 +1,109 @@
-# What are Application Security Risks?
-Attackers can potentially use many different paths through your application to do harm to your business or organization. Each of these ways poses a potential risk that needs to be investigated.
+# 애플리케이션 보안 위험이란 무엇인가?
+공격자는 애플리케이션을 통해 다양한 경로로 비즈니스 또는 조직에 피해를 입힐 수 있다. 이러한 경로들은 조사가 필요한 잠재적 위험을 야기한다.
 
 ![Calculation diagram](../assets/2025-algorithm-diagram.png)
 
 <table>
   <tr>
    <td>
-    <strong>Threat Agents</strong>
+    <strong>위협 행위자</strong>
    </td>
    <td>
-    <strong>Attack \
-Vectors</strong>
+    <strong>공격 \
+벡터</strong>
    </td>
    <td>
-    <strong>Exploitability</strong>
+    <strong>악용 가능성</strong>
    </td>
    <td>
-    <strong>Likelihood of Missing Security</strong>
+    <strong>보안 미비 가능성</strong>
 <p style="text-align: center">
 
-    <strong>Controls</strong>
+    <strong>통제</strong>
    </td>
    <td>
-    <strong>Technical</strong>
+    <strong>기술적</strong>
 <p style="text-align: center">
 
-    <strong>Impacts</strong>
+    <strong>영향</strong>
    </td>
    <td>
-    <strong>Business</strong>
+    <strong>비즈니스</strong>
 <p style="text-align: center">
 
-    <strong>Impacts</strong>
+    <strong>영향</strong>
    </td>
   </tr>
   <tr>
    <td>
-    <strong>By environment, \
-dynamic by situation picture</strong>
+    <strong>환경에 따라, 상황에 따라 동적으로 변화</strong>
    </td>
    <td>
-    <strong>By Application  exposure (by environment</strong>
+    <strong>애플리케이션 노출 수준에 따라(환경 기준)</strong>
    </td>
    <td>
-    <strong>Avg Weighted Exploit</strong>
+    <strong>평균 가중 악용</strong>
    </td>
    <td>
-    <strong>Missing Controls \
-by average Incidence rate \
-Weighed by coverage</strong>
+    <strong>통제 미비를 평균 발생률로 산정하고 적용 범위로 가중</strong>
    </td>
    <td>
-    <strong>Avg Weighted Impact</strong>
+    <strong>평균 가중 영향</strong>
    </td>
    <td>
-    <strong>By Business</strong>
+    <strong>비즈니스 기준</strong>
    </td>
   </tr>
 </table>
 
+본 위험 등급(Risk Rating)에서는 악용 가능성, 취약점에서 보안 통제가 미비할 평균 가능성, 그리고 기술적 영향을 보편적 파라미터로 고려하였다.
 
-In our Risk Rating we have taken into account the universal parameters of exploitability, average likelihood of missing security controls for a weakness and its technical impacts. 
-
-Each organization is unique, and so are the threat actors for that organization, their goals, and the impact of any breach. If a public interest organization uses a content management system (CMS) for public information and a health system uses that same exact CMS for sensitive health records, the threat actors and business impacts can be very different for the same software. It is critical to understand the risk to your organization based on the exposure of the application, the applicable threat agents by situation picture (for targeted and undirected attacks by business and location) and the individual business impacts. 
+조직은 각기 고유하며, 해당 조직을 대상으로 하는 위협 행위자, 그들의 목표, 그리고 침해 발생 시 영향도 또한 고유하다. 공익 단체가 대외 정보 제공을 위해 콘텐츠 관리 시스템(CMS)을 사용하는 경우와, 보건의료 체계가 동일한 CMS를 민감한 건강 기록에 사용하는 경우를 비교하면, 같은 소프트웨어라 하더라도 위협 행위자와 비즈니스 영향은 크게 달라질 수 있다. 애플리케이션의 노출 수준, 상황별 위협 행위자(비즈니스 및 지역에 따른 표적 공격과 비표적 공격), 그리고 개별 비즈니스 영향을 바탕으로 조직의 위험을 이해하는 것이 중요하다.
 
 
-## How the data is used for selecting categories and ranking them
+## 범주를 선택하고 순위를 매기기 위해 데이터가 사용되는 방식
 
-In 2017, we selected categories by incidence rate to determine likelihood, then ranked them by team discussion based on decades of experience for Exploitability, Detectability (also likelihood), and Technical Impact. For 2021, we used data for Exploitability and (Technical) Impact from the CVSSv2 and CVSSv3 scores in the National Vulnerability Database (NVD). For 2025, we continued the same methodology that we created in 2021.
+2017년에는 발생률(incidence rate)을 기준으로 가능성(likelihood)을 산정하여 범주를 선정한 뒤, 수십 년의 경험을 바탕으로 한 팀 논의를 통해 악용 가능성(Exploitability), 탐지 가능성(Detectability, 가능성에 포함), 기술적 영향(Technical Impact)을 기준으로 순위를 매겼다. 2021년에는 미국 국가 취약점 데이터베이스(National Vulnerability Database, NVD)의 CVSSv2 및 CVSSv3 점수에서 악용 가능성과 (기술적) 영향을 나타내는 데이터를 활용하였다. 2025년에는 2021년에 수립한 동일한 방법론을 계속 적용하였다.
 
-We downloaded OWASP Dependency Check and extracted the CVSS Exploit, and Impact scores grouped by related CWEs. It took a fair bit of research and effort as all the CVEs have CVSSv2 scores, but there are flaws in CVSSv2 that CVSSv3 should address. After a certain point in time, all CVEs are assigned a CVSSv3 score as well. Additionally, the scoring ranges and formulas were updated between CVSSv2 and CVSSv3. 
+우리는 OWASP Dependency-Check를 다운로드하여 관련 CWE별로 그룹화된 CVSS 악용(Exploit) 점수와 영향(Impact) 점수를 추출하였다. 모든 CVE에는 CVSSv2 점수가 존재하지만, CVSSv2에는 결함이 있으며 CVSSv3는 이를 보완해야 하므로 상당한 조사와 노력이 필요했다. 또한 일정 시점 이후에는 모든 CVE에 CVSSv3 점수도 함께 부여된다. 더불어 CVSSv2와 CVSSv3 사이에는 점수 범위와 산정 공식이 업데이트되었다.
 
-In CVSSv2, both Exploit and (Technical) Impact could be up to 10.0, but the formula would knock them down to 60% for Exploit and 40% for Impact. In CVSSv3, the theoretical max was limited to 6.0 for Exploit and 4.0 for Impact. With the weighting considered, the Impact scoring shifted higher, almost a point and a half on average in CVSSv3, and exploitability moved nearly half a point lower on average when we conducted analysis for the 2021 Top Ten.
+CVSSv2에서는 악용(Exploit)과 (기술적) 영향(Impact) 모두 최대 10.0까지 가능했으나, 산정 공식에 의해 악용은 60%, 영향은 40%로 낮춰졌다. CVSSv3에서는 이론상 최대값이 악용 6.0, 영향 4.0으로 제한되었다. 이러한 가중치를 고려하면, CVSSv3에서 영향 점수는 더 높아져 평균적으로 거의 1.5점 상승했고, 2021 Top Ten 분석을 수행했을 때 악용 가능성은 평균적으로 거의 0.5점 하락한 것으로 나타났다.
 
-There are approximately 175k records (up from 125k in 2021) of CVEs mapped to CWEs in the National Vulnerability Database (NVD), extracted from OWASP Dependency Check. Additionally, there are 643 unique CWEs mapped to CVEs (up from 241 in 2021). Within the nearly 220k CVEs that were extracted, 160k had CVSS v2 scores, 156k had CVSS v3 scores, and 6k had CVSS v4 scores. Many CVEs have multiple scores, which is why they total more than 220k.
+OWASP Dependency-Check에서 추출한 결과, 미국 국가 취약점 데이터베이스(National Vulnerability Database, NVD)에는 CWE에 매핑된 CVE 레코드가 약 17만 5천 건(2021년의 12만 5천 건에서 증가) 존재한다. 또한 CVE에 매핑된 고유 CWE는 643개(2021년의 241개에서 증가)이다. 추출된 약 22만 건의 CVE 중 16만 건에는 CVSS v2 점수가, 15만 6천 건에는 CVSS v3 점수가, 6천 건에는 CVSS v4 점수가 있었다. 다수의 CVE가 여러 버전의 점수를 동시에 보유하므로, 점수 건수 합계는 22만 건을 초과한다.
 
-For the Top Ten 2025, we calculated average exploit and impact scores in the following manner. We grouped all the CVEs with CVSS scores by CWE and weighted both exploit and impact scores by the percentage of the population that had CVSSv3, as well as the remaining population with CVSSv2 scores, to get an overall average. We mapped these averages to the CWEs in the dataset to use as Exploit and (Technical) Impact scoring for the other half of the risk equation.
+Top 10 2025에서는 다음과 같은 방식으로 악용과 영향의 평균 점수를 산정하였다. CVSS 점수가 있는 모든 CVE를 CWE별로 그룹화한 뒤, 악용 점수와 영향 점수 모두에 대해 CVSSv3 점수를 보유한 비율과 나머지 CVSSv2 점수 보유 비율을 가중치로 적용하여 전체 평균을 산출하였다. 이렇게 산출한 평균을 데이터셋의 CWE에 매핑하여, 위험 방정식의 나머지 절반에 해당하는 악용(Exploit) 및 (기술적) 영향(Technical Impact) 점수로 사용하였다.
 
-Why not use CVSS v4.0, you may ask? That’s because the scoring algorithm was fundamentally changed, and it no longer easily provides the *Exploit* or *Impact* scores as CVSSv2 and CVSSv3 do. We will attempt to figure out a way to use CVSS v4.0 scoring for future versions of the Top Ten, but we were unable to determine a timely way to do so for the 2025 edition.
+왜 CVSS v4.0을 사용하지 않았을까? 이는 점수 산정 알고리즘이 근본적으로 변경되어, CVSSv2와 CVSSv3처럼 *악용(Exploit)* 또는 *영향(Impact)* 점수를 쉽게 도출할 수 없기 때문이다. 향후 Top Ten 버전에서는 CVSS v4.0 점수를 활용할 수 있는 방법을 모색할 예정이지만, 2025년판에서는 이를 적시에 반영할 방안을 도출하지 못했다.
 
-For the incidence rate, we calculated the percentage of applications vulnerable to each CWE from the population tested by an org for a period of time. As a reminder, we are not using frequency (or how many times an issue appears in an application), we are interested in what percentage of the population of applications were found to have each CWE. 
+발생률(incidence rate)은 일정 기간 동안 조직이 테스트한 애플리케이션 모집단에서, 각 CWE에 취약한 애플리케이션의 비율로 산정하였다. 다시 말해, 우리는 빈도(frequency), 즉 한 애플리케이션에서 문제가 몇 번 발견되는지는 사용하지 않는다. 관심 대상은 애플리케이션 모집단 중 각 CWE가 발견된 애플리케이션의 비율이다.
 
-For coverage we look at the percentage of applications tested by all organizations for a given CWE. The higher the calculated coverage, the stronger the assurance that the incidence rate is accurate as the sample size is more representative of the population.
+적용 범위(coverage)는 특정 CWE에 대해 모든 조직이 테스트한 애플리케이션의 비율로 산정한다. 적용 범위가 높을수록 표본 크기가 모집단을 더 잘 대표하므로, 산정된 발생률이 정확하다는 보증 수준이 더 강해진다.
 
-The formula that we used for this iteration is similar to 2021, with some weighting changes:
-(Max Incidence Rate % * 1000) + (Max Coverage % * 100) + (Avg Exploit * 10) + (Avg Impact * 20) + (Sum Occurrences / 10000) = Risk Score
+이번 판에서 사용한 공식은 2021년과 유사하되, 일부 가중치가 변경되었다:
+(최대 발생률 % * 1000) + (최대 적용 범위 % * 100) + (평균 악용 * 10) + (평균 영향 * 20) + (발생 건수 합 / 10000) = 위험 점수
 
-The calculated scores ranged from 621.60 for the category of Broken Access Control to 271.08 for Memory Management Errors.
+산정된 점수는 접근 통제 실패(Broken Access Control) 범주에서 621.60으로 가장 높았고, 메모리 관리 오류(Memory Management Errors) 범주에서 271.08로 가장 낮았다.
 
-This is not a perfect system, but it is valuable for ranking risk categories.
+이는 완벽한 체계는 아니지만, 위험 범주의 순위를 매기는 데 유용하다.
 
-One additional challenge that is growing is the definition of an "application". As the industry shifts to different architectures that consist of micro-services and other implementations that are smaller than a traditional application, calculations are more difficult. For instance, if an organization is testing code repositories, what does it consider an application? Similar to the growth of CVSSv4, the next edition of the Top Ten may need to adjust the analysis and scoring to account for a constantly changing industry.
+추가로 커지고 있는 과제 중 하나는 “애플리케이션”의 정의이다. 업계가 마이크로서비스와 같이 전통적인 애플리케이션보다 더 작은 구성요소로 이루어진 아키텍처로 전환함에 따라, 산정이 더 어려워지고 있다. 예를 들어 조직이 코드 리포지토리를 테스트하는 경우, 무엇을 애플리케이션으로 간주해야 하는가? CVSSv4의 확산과 마찬가지로, Top Ten의 다음 판에서는 끊임없이 변화하는 산업 환경을 반영하기 위해 분석과 점수 산정을 조정해야 할 수 있다.
 
-## Data Factors
+## 데이터 요인
 
-There are data factors that are listed for each of the Top Ten Categories, here is what they mean:
+Top 10 각 범주에는 다음과 같은 데이터 요인이 제시되며, 의미는 다음과 같다:
 
-**CWEs Mapped:** The number of CWEs mapped to a category by the Top Ten team.
+**매핑된 CWE(CWEs Mapped):** Top Ten 팀이 해당 범주에 매핑한 CWE의 개수.
 
-**Incidence Rate:** Incidence rate is the percentage of applications vulnerable to that CWE from the population tested by that org for that year.
+**발생률(Incidence Rate):** 발생률은 해당 연도에 그 조직이 테스트한 모집단에서, 해당 CWE에 취약한 애플리케이션의 비율이다.
 
-**Weighted Exploit:** The Exploit sub-score from CVSSv2 and CVSSv3 scores assigned to CVEs mapped to CWEs, normalized, and placed on a 10pt scale.
+**가중 악용(Weighted Exploit):** CWE에 매핑된 CVE에 부여된 CVSSv2 및 CVSSv3 점수의 악용(Exploit) 하위 점수를 정규화하여 10점 척도에 맞춘 값이다.
 
-**Weighted Impact:** The Impact sub-score from CVSSv2 and CVSSv3 scores assigned to CVEs mapped to CWEs, normalized, and placed on a 10pt scale.
+**가중 영향(Weighted Impact):** CWE에 매핑된 CVE에 부여된 CVSSv2 및 CVSSv3 점수의 영향(Impact) 하위 점수를 정규화하여 10점 척도에 맞춘 값이다.
 
-**(Testing) Coverage:** The percentage of applications tested by all organizations for a given CWE.
+**(테스트) 적용 범위((Testing) Coverage):** 특정 CWE에 대해 모든 조직이 테스트한 애플리케이션의 비율이다.
 
-**Total Occurrences:** Total number of applications found to have the CWEs mapped to a category.
+**총 발생 건수(Total Occurrences):** 범주에 매핑된 CWE가 발견된 애플리케이션의 총 개수.
 
-**Total CVEs:** Total number of CVEs in the NVD DB that were mapped to the CWEs mapped to a category.
+**총 CVE(Total CVEs):** 해당 범주에 매핑된 CWE에 매핑된 NVD DB 내 CVE의 총 개수.
 
-**Formula:** (Max Incidence Rate % * 1000) + (Max Coverage % * 100) + (Avg Exploit * 10) + (Avg Impact * 20) + (Sum Occurrences / 10000) = Risk Score
+**공식(Formula):** (최대 발생률 % * 1000) + (최대 적용 범위 % * 100) + (평균 악용 * 10) + (평균 영향 * 20) + (발생 건수 합 / 10000) = 위험 점수
