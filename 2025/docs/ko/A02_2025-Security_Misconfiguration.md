@@ -110,7 +110,7 @@
 * [Amazon S3 Bucket Discovery and Enumeration](https://blog.websecurify.com/2017/10/aws-s3-bucket-discovery.html)
 * ScienceDirect: Security Misconfiguration
 
-## 매핑된 보안 약점(CWE).
+## 해당되는 보안 약점(CWE).
 
 * [CWE-5 J2EE Misconfiguration: Data Transmission Without Encryption](https://cwe.mitre.org/data/definitions/5.html)
 
