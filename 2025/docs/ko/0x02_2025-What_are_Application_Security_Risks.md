@@ -1,7 +1,7 @@
 # 애플리케이션 보안 위험이란 무엇인가?
 공격자는 애플리케이션을 통해 다양한 경로로 비즈니스 또는 조직에 피해를 입힐 수 있다. 각 경로는 잠재적 위험을 수반하며, 이를 조사해야 한다.
 
-![Calculation diagram](../ko/assets/2025-algorithm-diagram.png)
+![Calculation diagram](../ko/assets/2025-algorithm-diagram-ko.png)
 
 <table>
   <tr>
