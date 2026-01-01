@@ -18,7 +18,7 @@ OWASP Top 10은 개발자와 웹 애플리케이션 보안을 위한 인식 제�
 ## 목차
 
 - [소개](0x00_2025-Introduction.md)
-- [OWASP란?](0x01_2025-About_OWASP.md)
+- [OWASP 소개](0x01_2025-About_OWASP.md)
 - [애플리케이션 보안 위험이란 무엇인가?](0x02_2025-What_are_Application_Security_Risks.md)
 - [현대적 애플리케이션 보안 체계를 수립하는 법](0x03_2025-Establishing_a_Modern_Application_Security_Program.md)
 
