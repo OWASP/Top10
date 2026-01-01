@@ -4,7 +4,7 @@ OWASP Top 10 항목들은 보안 인식을 제고하기 위한 문서로, 각 �
 
  
 
-이미 애플리케이션 보안 체계를 운영 중이라면, [OWASP SAMM(Software Assurance Maturity Model)](https://owasp.org/www-project-samm/) 또는 DSOMM(DevSecOps Maturity Model) 같은 성숙도 모델을 활용하여 현재 수준에 대한 성숙도 평가를 수행하는 것을 고려하라. 해당 모델들은 포괄적이며 세부 항목까지 망라하고 있어, 체계를 고도화하는 과정에서 어디에 집중해야 하는지 파악하는 데 활용할 수 있다. OWASP SAMM 및 DSOMM의 모든 항목을 수행해야만 보안을 제대로 하고 있다고 볼 수 있는 것은 아니며, 이는 방향을 제시하고 다양한 선택지를 제공하기 위한 것이다. 따라서 이는 현실적으로 달성하기 어려운 기준을 제시하거나 과도한 비용이 드는 체계를 수립하는 게 목적이 아니라, 개선을 위한 다양한 아이디어를 제공하기 위해 폭넓게 구성되어 있다.
+이미 애플리케이션 보안 체계를 운영 중이라면, [OWASP 소프트웨어 보증 성숙도 모델(Software Assurance Maturity Model, SAMM)](https://owasp.org/www-project-samm/) 또는 DSOMM(DevSecOps Maturity Model) 같은 성숙도 모델을 활용하여 현재 수준에 대한 성숙도 평가를 수행하는 것을 고려하라. 해당 모델들은 포괄적이며 세부 항목까지 망라하고 있어, 체계를 고도화하는 과정에서 어디에 집중해야 하는지 파악하는 데 활용할 수 있다. OWASP SAMM 및 DSOMM의 모든 항목을 수행해야만 보안을 제대로 하고 있다고 볼 수 있는 것은 아니며, 이는 방향을 제시하고 다양한 선택지를 제공하기 위한 것이다. 따라서 이는 현실적으로 달성하기 어려운 기준을 제시하거나 과도한 비용이 드는 체계를 수립하는 게 목적이 아니라, 개선을 위한 다양한 아이디어를 제공하기 위해 폭넓게 구성되어 있다.
 
 
 
@@ -52,7 +52,7 @@ OWASP Top 10 항목들은 보안 인식을 제고하기 위한 문서로, 각 �
 
 * 개발 조직의 보안 역량 강화를 위해 보안 챔피언(Security Champion) 제도 또는 개발자 대상 보안 교육 프로그램(보안 인식 프로그램이라고 부르기도 함)을 도입하는 방안을 검토한다. 이를 통해 개발자에게 필요한 지식을 교육할 수 있다. 이를 통해 개발자가 최신 보안 지식을 지속적으로 습득하고, 업무를 수행할 때 안전해질 수 있도록 지원하며, 보안 문화를 더욱 긍정적으로 만든다. 이는, 보안팀과의 신뢰를 향상하고 더 만족스러운 협업 관계를 형성할 수 있다. 관련 가이드는 [OWASP 보안 챔피언 가이드](https://securitychampions.owasp.org/)를 참고하며, 해당 가이드는 단계적으로 보강되고 있다.
 
-* OWASP 교육 프로젝트는 개발자에게 웹 애플리케이션 보안을 교육하는 데 필요한 교육 자료를 제공한다. 취약점에 대한 실습 중심 학습을 위해 [OWASP Juice Shop Project](https://owasp.org/www-project-juice-shop/) 또는 [OWASP WebGoat](https://owasp.org/www-project-webgoat/)를 활용한다. 최신 동향을 유지하기 위해 [OWASP AppSec 컨퍼런스](https://owasp.org/events/), [OWASP 컨퍼런스 트레이닝](https://owasp.org/events/), 또는 지역 [OWASP Chapter](https://owasp.org/chapters/) 모임에 참여한다.
+* OWASP 교육 프로젝트는 개발자에게 웹 애플리케이션 보안을 교육하는 데 필요한 교육 자료를 제공한다. 취약점에 대한 실습 중심 학습을 위해 [OWASP Juice Shop 프로젝트](https://owasp.org/www-project-juice-shop/) 또는 [OWASP WebGoat](https://owasp.org/www-project-webgoat/)를 활용한다. 최신 동향을 유지하기 위해 [OWASP AppSec 컨퍼런스](https://owasp.org/events/), [OWASP 컨퍼런스 트레이닝](https://owasp.org/events/), 또는 지역 [OWASP Chapter](https://owasp.org/chapters/) 모임에 참여한다.
 
 
 ### 5. 지표 가시성 확보
@@ -62,244 +62,241 @@ OWASP Top 10 항목들은 보안 인식을 제고하기 위한 문서로, 각 �
 * 구현 및 검증 활동에서 축적된 데이터를 분석하여, 근본 원인(root cause)과 취약점 패턴을 식별하고, 전사 차원의 전략 및 시스템적 개선을 추진한다. 실수로부터 학습하고, 개선을 촉진하기 위해 긍정적 인센티브를 제공한다.
 
 
-## Establish & Use Repeatable Security Processes and Standard Security Controls
+## 반복 가능한 보안 프로세스 및 표준 보안 통제 수립 및 적용
 
-### Requirements and Resource Management Phase:
+### 요구사항 및 리소스 관리 단계
 
-* Collect and negotiate the business requirements for an application with the business, including the protection requirements with regard to confidentiality, authenticity, integrity and availability of all data assets, and the expected business logic.
+* 비즈니스 부서와 함께 애플리케이션의 비즈니스 요구사항을 수집하고 조율한다. 이 요구사항은 모든 데이터 자산에 대한 기밀성, 인증성, 무결성, 가용성 관점의 보호 요구사항과, 기대되는 비즈니스 로직이 포함된다.
 
-* Compile the technical requirements including functional and nonfunctional security requirements. OWASP recommends you use the [OWASP Application Security Verification Standard (ASVS)(https://owasp.org/www-project-application-security-verification-standard/) as a guide for setting the security requirements for your application(s).
+* 기능/비기능적 보안 요구사항을 포함하여 기술 요구사항을 취합한다. OWASP는 애플리케이션의 보안 요구사항을 설정하기 위한 가이드로 [OWASP 애플리케이션 보안 검증 표준(Application Security Verification Standard, ASVS)](https://owasp.org/www-project-application-security-verification-standard/)를 활용을 권고한다.
 
-* Plan and negotiate the budget that covers all aspects of design, build, testing and operation, including security activities.
+* 보안 활동을 포함하여 설계, 구축, 테스트, 운영의 모든 측면을 포괄하는 예산을 계획하고 조율한다.
 
-* Add security activities to your project schedule.
+* 프로젝트 일정에 보안 활동을 명시적으로 편성한다.
 
-* Introduce yourself as the security representative at the project kick off, so they know who to talk to.
+* 프로젝트 킥오프에서 보안 담당을 지정하여, 관련자가 누구와 소통해야 하는지 알 수 있도록 한다.
 
+### 제안요청서(RFP) 및 합의 단계
 
-### Request for Proposals (RFP) and Contracting:
-
+* 내외부 개발자와 요구사항을 사전에 합의하며, 조직의 보안 체계(예: SDLC 적용, 보안 모범사례 준수)에 부합하는 가이드라인과 및 보안 요구사항을 포함한다.
 * Negotiate the requirements with internal or external developers, including guidelines and security requirements with respect to your security program, e.g. SDLC, best practices.
 
-*  Rate the fulfillment of all technical requirements, including a planning and design phase.
+* 기획 및 설계 단계를 포함하여, 모든 기술 요구사항의 충족 여부를 평가한다.
 
-*  Negotiate all technical requirements, including design, security, and service level agreements (SLA).
+* 설계, 보안, 서비스 수준 계약(service level agreements, SLA)을 포함하여 모든 기술 요구사항을 협의한다.
 
-*  Adopt templates and checklists, such as [OWASP Secure Software Contract Annex](https://owasp.org/www-community/OWASP_Secure_Software_Contract_Annex).<br>**Note:** *The annex is for US contract law, so please consult qualified legal advice before using the sample annex.*
-
-
-### Planning and Design Phase:
-
-*  Negotiate planning and design with the developers and internal shareholders, e.g. security specialists.
-
-* Define the security architecture, controls, countermeasures and design reviews appropriate to the protection needs and the expected threat level. This should be supported by security specialists.
-
-* Rather than retrofitting security into your applications and APIs, it is far more cost effective to design the security in from the start. OWASP recommends the [OWASP Cheat Sheets](https://cheatsheetseries.owasp.org/index.html) and the [OWASP Proactive Controls](https://top10proactive.owasp.org/) as a good starting point for guidance on how to design security included from the beginning.
-
-*  Perform threat modelling, see [OWASP Cheat Sheet: Threat Modeling](https://cheatsheetseries.owasp.org/cheatsheets/Threat_Modeling_Cheat_Sheet.html).
-
-*  Teach your software architects secure design concepts and patterns and ask them to add them to their designs where possible.
-
-*  Examine data flows with your developers.
-
-*  Add security user stories alongside all of your other user stories.
+* [OWASP 보안 소프트웨어 계약 부록](https://owasp.org/www-community/OWASP_Secure_Software_Contract_Annex)와 같은 템플릿 및 체크리스트를 적용한다.
+<br>**참고:** *해당 문서는 미국 계약법을 전제로 하므로, 해당 문서를 사용하기 전에 자격을 갖춘자에 의해 법률 자문을 구한다.*
 
 
-### Secure Development Lifecycle:
+### 기획 및 설계 단계
+
+* 개발자 및 내부 이해관계자(예: 보안 전문가)와 기획 및 설계를 협의한다.
+
+* 보호 요구사항과 예상 위협 수준에 적합한 보안 아키텍처, 통제, 대책 및 설계 검토를 정의한다. 이는 보안 전문가의 지원을 받아야 한다.
+
+* 애플리케이션 및 API가 개발된 이후에 보안을 추가하는 것보다, 시작 단계부터 보안을 설계에 포함하는 것이 비용 효율성이 훨씬 높다. 보안을 초기부터 내재화하는 출발점으로 [OWASP 치트 시트](https://cheatsheetseries.owasp.org/index.html) 및 [OWASP 사전 예방 통제](https://top10proactive.owasp.org/) 사용을 권고한다.
+
+* 위협 모델링(threat modelling)을 수행한다. 자세한 사항은 [OWASP 치트 시트: 위협 모델링](https://cheatsheetseries.owasp.org/cheatsheets/Threat_Modeling_Cheat_Sheet.html)을 참고한다.
+
+* 소프트웨어 아키텍트에게 안전한 설계 개념과 패턴을 교육하고, 가능할 경우 설계에 이를 반영하도록 요청한다.
+
+* 개발자와 함께 데이터 흐름(data flow)을 검토한다.
+
+* 기존 사용자 스토리(user story)에 보안 사용자 스토리를 추가한다.
 
 
-* To improve the process your organization follows when building applications and APIs, OWASP recommends the [OWASP Software Assurance Maturity Model (SAMM)](https://owasp.org/www-project-samm/). This model helps organizations formulate and implement a strategy for software security that is tailored to the specific risks facing their organization.
+### 안전한 개발 생명주기(Secure Development Lifecycle)
 
-*  Provide secure coding training to your software developers, and any other training you think will help them create more robust and secure applications.
+* 조직이 애플리케이션 및 API를 구축할 때 따르는 프로세스를 개선하기 위해, [OWASP 소프트웨어 보증 성숙도 모델(SAMM)](https://owasp.org/www-project-samm/)을 권장한다. 이 모델은 조직이 직면한 특정 위험에 맞춘 소프트웨어 보안 전략을 수립하고 구현하는 데 도움이 됩니다.
 
-*  Code review, see [OWASP Cheat Sheet: Secure Code Review](https://cheatsheetseries.owasp.org/cheatsheets/Secure_Code_Review_Cheat_Sheet.html).
+* 소프트웨어 개발자에게 시큐어 코딩 교육을 제공하고, 보다 견고하고 안전한 애플리케이션을 만들도록 지원하는 데 도움이 된다고 판단되는 기타 교육도 제공한다.
 
-*  Give your developers security tools, then teach them how to use them, especially static analysis, software composition analysis, secret, and [Infrastructure-as-Code (IaC)](https://cheatsheetseries.owasp.org/cheatsheets/Infrastructure_as_Code_Security_Cheat_Sheet.html) scanners.
+* 코드 리뷰를 수행한다. [OWASP 치트 시트: 시큐어 코드 리뷰](https://cheatsheetseries.owasp.org/cheatsheets/Secure_Code_Review_Cheat_Sheet.html)을 참고한다.
 
-*  Create guardrails for your developers, if possible (technical safeguards to steer them towards more secure choices).
+* 개발자에게 보안 도구를 제공하고 사용 방법을 교육한다. 특히 정적 분석(static analysis), 소프트웨어 구성 분석(software composition analysis, SCA), 시크릿 및 [코드형 인프라(Infrastructure-as-Code, IaC)](https://cheatsheetseries.owasp.org/cheatsheets/Infrastructure_as_Code_Security_Cheat_Sheet.html) 스캐너 도구를 포함한다.
 
-*   Building strong and usable security controls is difficult. Offer secure defaults whenever possible, and create ‘paved roads’ (making the easiest way also the most secure way to do something, the obvious preferred way) whenever possible. The [OWASP Cheat Sheets](https://cheatsheetseries.owasp.org/index.html) are a good starting point for developers, and many modern frameworks now come with standard and effective security controls for authorization, validation, CSRF prevention, etc.
+* 개발자가 보안상 안전한 선택을 기본으로 하도록, 가드레일을 적용한다.
 
-*  Give your developers security-related IDE plugins and encourage them to use them.
+* 강력하면서도 사용 가능한 보안 통제를 구축하는 것은 어렵다. 가능한 경우 안전한 기본값을 제공하고, 가능한 경우 '포장된 도로(가장 쉽고 선호되는 방법이 동시에 가장 안전한 방법이 되도록 하는 것)'를 만든다. [OWASP 치트 시트](https://cheatsheetseries.owasp.org/index.html)는 개발자에게 좋은 출발점이며, 많은 현대적 프레임워크는 인가(authorization), 검증(validation), 교차 사이트 요청 위조(CSRF) 방지 등과 관련한 표준적이고 효과적인 보안 통제를 제공한다.
 
-*  Provide them a secret management tool, licenses, and documentation on how to use it.
+* 개발자에게 보안 관련 IDE 플러그인을 제공하고 사용을 권장한다.
 
-*  Provide them a private AI to use, ideally set up with a RAG server full of useful security documentation, prompts your team has written for better outcomes, and an MCP server that calls the security tooling of choice for your org. Teach them how to use AI safely, because they are going to do it whether you like it or not.
+* 시크릿 관리 도구, 라이선스, 그리고 사용 방법에 대한 문서를 제공한다.
+
+* 개발자가 사용할 수 있는 프라이빗 AI를 제공한다. 이상적으로는 유용한 보안 문서로 채워진 RAG 서버, 더 나은 결과를 위해 팀이 작성한 프롬프트, 그리고 조직에서 선택한 보안 도구를 호출하는 MCP 서버로 구성되도록 설정한다. 또한 개발자에게 AI를 안전하게 사용하는 방법을 교육한다. 개발자는 보안팀의 선호도와 무관하게 AI를 사용할 것이기 때문이다.
+
+### 지속적 애플리케이션 보안 테스트 체계 구축
+
+* 애플리케이션의 기술적 기능과 IT 아키텍처와의 연동되는 부분을 테스트하고, 비즈니스 테스트와 문제가 없도록 조율한다.
+
+* 기술 및 비즈니스 관점에서 "정상" 및 "어뷰징" 테스트 케이스를 생성한다.
+
+* 내부 프로세스, 보호 요구 사항 및 애플리케이션의 예상 위협 수준에 따라 보안 테스트를 관리합니다.
+
+* 개발팀이 사용할 보안 테스트 도구(퍼저, 동적 애플리케이션 보안 테스트 등)와 안전한 테스트 환경, 사용 교육을 제공한다. 또는 개발팀을 대신해 테스트를 수행하거나 테스터를 투입한다.
+
+* 높은 수준의 보증(assurance)이 필요한 경우, 공식 침투 테스트와 함께 스트레스 테스트 및 성능 테스트를 고려한다.
+
+* 개발자와 협업하여 버그 리포트에서 어떤 내용을 수정해야 하는지 가이드하고, 그들의 관리자와 협의해 수정 시간을 일정에 확보할 수 있도록 한다.
 
 
-### Establish Continuous Application Security Testing:
+### 배포
 
-*  Test the technical functions and integration with the IT architecture and coordinate business tests.
+* 애플리케이션을 운영환경에 배포하고, 필요요 시 기존 시스템에서 신규 시스템으로 마이그레이션을 수행한다.
 
-* Create “use” and “abuse” test cases from technical and business perspectives.
-
-* Manage security tests according to internal processes, the protection needs, and the assumed threat level by the application.
-
-* Provide security testing tools (fuzzers, DAST, etc.), a safe place to test, and training on how to use them, OR do the testing for them OR hire a tester
-
-*  If you require a high level of assurance, consider a formal penetration test, as well as stress testing and performance testing.
-
-*  Work with your developers to help them decide what they need to fix from the bug reports, and ensure their managers give them time to do it.
-
-
-### Rollout:
-
-* Put the application in operation and migrate from previously used applications if needed.
-
-* Finalize all documentation, including the change management database (CMDB) and security architecture.
+* 구성 관리 데이터베이스와 보안 아키텍처를 포함한 모든 문서를 최종 확정한다.
 
 
 ### 운영 및 변경 관리
 
-*  Operations must include guidelines for the security management of the application (e.g. patch management).
+* 운영시 애플리케이션의 보안 관리를 위한 가이드라인(예: 패치 관리)이 포함되어야 한다.
 
-*  Raise the security awareness of users and manage conflicts about usability vs. security.
+* 사용자의 보안 인식을 제고하고, 사용성과 보안성 간의 문제를 관리한다.
 
-*  Plan and manage changes, e.g. migrate to new versions of the application or other components like OS, middleware, and libraries.
+* 변경(changes)을 계획하고 관리한다. 예를 들어 애플리케이션의 신규 버전 또는 OS, 미들웨어, 라이브러리와 같은 기타 구성요소로의 버전 업데이트를 포함한다.
 
-*  Ensure all apps are in your inventory, with all important details documented. Update all documentation, including in the CMDB and the security architecture, controls, and countermeasures, including any runbooks or project documentation.
+* 모든 애플리케이션이 인벤토리에 등록되어 있으며, 모든 중요 세부사항이 문서화되어 있음을 보장한다. 구성 관리 데이터베이스 및 보안 아키텍처, 통제항목, 대응방안, 런북(runbook) 또는 프로젝트 문서 포함을 포함한 모든 문서를 최신 상태로 유지한다.
 
-*  Perform logging, monitoring, and alerting for all apps. Add it if it’s missing.
+* 모든 애플리케이션에 대해 로깅, 모니터링, 알림(alert)를 수행한다. 누락된 경우 추가한다.
 
-*  Create processes for effective and efficient updating and patching.
+* 효과적이고 효율적인 업데이트 및 패치를 위한 프로세스를 수립한다.
 
-*  Create regular scanning schedules (hopefully dynamic, static, secrets, IaC, and software composition analysis).
+* 정기 스캐닝 일정(가능하면 동적, 정적, 시크릿, IaC, 소프트웨어 구성 분석)을 수립한다.
 
-*  SLAs for fixing security bugs.
+* 보안 버그 수정에 대한 SLA를 수립한다.
 
-*  Provide a way for employees (and ideally also your customers) to report bugs.
+* 임직원(가능하면 고객도 포함)이 버그를 신고할 수 있는 방법을 제공한다.
 
-*  Establish a trained incident response team that understands what software attacks look like, observability tooling.
+* 소프트웨어 공격과 옵저버빌리티(observability) 도구를 이해하는, 훈련된 침해사고 대응팀을 구성한다.
 
-*  Run blocking or shielding tools to stop automated attacks.
+* 자동화 공격을 차단하기 위한 차단 또는 방어하는 도구를 운영한다.
 
-*  Annual (or more often) hardening of configurations.
+* 설정에 대한 연 1회(또는 그 이상) 하드닝을 수행한다.
 
-*  At least annual penetration testing (depending upon the level assurance required for your app).
+* 애플리케이션에 요구되는 보증 수준에 따라, 최소 연 1회 침투 테스트를 수행한다.
 
-*  Establish processes and tooling for hardening and protecting your software supply chain.
+* 소프트웨어 공급망을 하드닝하고 보호하기 위한 프로세스 및 도구를 수립한다.
 
-*  Establish and update business continuity and disaster recovery planning that includes your most important applications and the tools you use to maintain them.
+* 비즈니스 연속성 계획(BCP) 및 재해복구(DR) 계획을 수립하고 정기적으로 갱신한다. 해당 계획에는 핵심 애플리케이션과 이를 유지관리하는 데 사용하는 도구를 포함해야 한다.
+
+### 시스템 폐기
+
+* 필요한 데이터는 아카이빙해야 한다. 그 외 모든 데이터는 완전 삭제해야 한다.
+
+* 미사용 계정(account), 역할(role), 권한(permission) 삭제를 포함하여 애플리케이션을 안전하게 폐기 처리한다.
+
+* 구성 관리 데이터베이스 애플리케이션 상태를 폐기 변경한다.
 
 
-### Retiring Systems:
+## OWASP Top 10의 표준 활용 가이드
 
-* Any required data should be archived. All other data should be securely wiped.
+OWASP Top 10은 주로 인식 제고 문서이다. 그러나 이는 2003년 처음 발표된 이후로 조직들이 이를 사실상(de facto) 업계 애플리케이션 보안 표준으로 사용해 온 상황을 막지 못했다. OWASP Top 10을 코딩 또는 테스트 표준으로 사용하려는 경우, 이것이 최소 수준의 베이스라인이며 단지 출발점에 불과하다는 점을 인지해야 한다.
 
-* Securely retire the application, including deleting unused accounts and roles and permissions.
+OWASP Top 10을 표준으로 쓰기 어려운 이유는, 각 항목이 애플리케이션 보안 위험을 문서화 한 것이며, 쉽게 테스트 가능한 위험을 다루는 것은 아니라는 점이다. 예를 들어 [A06:2025 - 안전하지 않은 설계](A06_2025-Insecure_Design.md)은 대부분의 테스트하기 어렵다. 또 다른 예로, 로깅 및 모니터링이 실제로, 사용 중이며 효과적으로 구현되었는지 여부를 테스트하는 것은 인터뷰와 사고 대응 사례 샘플링하는 방식으로만 가능하다. 정적 코드 분석 도구는 로깅 부재를 탐지할 수 있으나, 비즈니스 로직 또는 접근 통제가 위험한 보안 사고를 로깅하는지 여부를 판단하는 것은 불가능할 수 있다. 침투 테스트 역시 테스트 환경에서의 탐지/대응 확인에 그칠 수 있으며, 테스트 환경은 운영 환경과 동일한 수준이 아닌 않는 경우가 많다.
 
-* Set your application’s state to retired in the CMDB.
-
-
-## Using the OWASP Top 10 as a standard
-
-The OWASP Top 10 is primarily an awareness document. However, this has not stopped organizations from using it as a de facto industry AppSec standard since its inception in 2003. If you want to use the OWASP Top 10 as a coding or testing standard, know that it is the bare minimum and just a starting point.
-
-One of the difficulties of using the OWASP Top 10 as a standard is that we document AppSec risks, and not necessarily easily testable issues. For example, [A06:2025-Insecure Design](A06_2025-Insecure_Design.md) is beyond the scope of most forms of testing. Another example is testing whether in-place, in-use, and effective logging and monitoring are implemented, which can only be done with interviews and requesting a sampling of effective incident responses. A static code analysis tool can look for the absence of logging, but it might be impossible to determine if business logic or access control is logging critical security breaches. Penetration testers may only be able to determine that they have invoked incident response in a test environment, which is rarely monitored in the same way as production.
-
-Here are our recommendations for when it is appropriate to use the OWASP Top 10:
+아래는 OWASP Top 10을 표준으로 활용하기에 적절한 상황에 대한 권고사항이다:
 
 
 <table>
   <tr>
-   <td><strong>Use Case</strong>
+   <td><strong>사용 사례</strong>
    </td>
    <td><strong>OWASP Top 10 2025</strong>
    </td>
-   <td><strong>OWASP Application Security Verification Standard</strong>
+   <td><strong>OWASP 애플리케이션 보안 검증 표준</strong>
    </td>
   </tr>
   <tr>
-   <td>Awareness
+   <td>인식 제고
    </td>
-   <td>Yes
+   <td>예
    </td>
    <td>
    </td>
   </tr>
   <tr>
-   <td>Training
+   <td>교육
    </td>
-   <td>Entry level
+   <td>입문 수준
    </td>
-   <td>Comprehensive
-   </td>
-  </tr>
-  <tr>
-   <td>Design and architecture
-   </td>
-   <td>Occasionally
-   </td>
-   <td>Yes
+   <td>포괄적인
    </td>
   </tr>
   <tr>
-   <td>Coding standard
+   <td>설계와 아키텍처
    </td>
-   <td>Bare minimum
+   <td>드물게
    </td>
-   <td>Yes
-   </td>
-  </tr>
-  <tr>
-   <td>Secure Code review
-   </td>
-   <td>Bare minimum
-   </td>
-   <td>Yes
+   <td>예
    </td>
   </tr>
   <tr>
-   <td>Peer review checklist
+   <td>코딩 표준
    </td>
-   <td>Bare minimum
+   <td>기본적인
    </td>
-   <td>Yes
-   </td>
-  </tr>
-  <tr>
-   <td>Unit testing
-   </td>
-   <td>Occasionally
-   </td>
-   <td>Yes
+   <td>예
    </td>
   </tr>
   <tr>
-   <td>Integration testing
+   <td>보안 코드 리뷰
    </td>
-   <td>Occasionally
+   <td>기본적인
    </td>
-   <td>Yes
+   <td>예
    </td>
   </tr>
   <tr>
-   <td>Penetration testing
+   <td>피어 리뷰(peer review) 체크리스트
    </td>
-   <td>Bare minimum
+   <td>기본적인
    </td>
-   <td>Yes
+   <td>예
+   </td>
+  </tr>
+  <tr>
+   <td>유닛 테스트
+   </td>
+   <td>드물게
+   </td>
+   <td>예
+   </td>
+  </tr>
+  <tr>
+   <td>통합 테스트
+   </td>
+   <td>드물게
+   </td>
+   <td>예
+   </td>
+  </tr>
+  <tr>
+   <td>침투 테스트
+   </td>
+   <td>기본적인
+   </td>
+   <td>예
    </td>
   </tr>
   <tr>
    <td>Tool support
    </td>
-   <td>Bare minimum
+   <td>기본적인
    </td>
-   <td>Yes
+   <td>예
    </td>
   </tr>
   <tr>
-   <td>Secure Supply Chain
+   <td>안전한 공급망
    </td>
-   <td>Occasionally
+   <td>드물게
    </td>
-   <td>Yes
+   <td>예
    </td>
   </tr>
 </table>
 
+애플리케이션 보안 표준을 채택하려는 경우, 요구사항을 검증(테스트) 가능 하게 정의하도록 설계되었고 보안 안전한 안전한 개발 주기(SDL) 전 단계에 적용 가능한 [OWASP 애플리케이션 보안 검증 표준(ASVS)]((https://owasp.org/www-project-application-security-verification-standard/))를 기준으로 활용하는 것을 권고한다.
 
-We would encourage anyone wanting to adopt an application security standard to use the [OWASP Application Security Verification Standard](https://owasp.org/www-project-application-security-verification-standard/) (ASVS), as it’s designed to be verifiable and tested, and can be used in all parts of a secure development lifecycle.
-
-The ASVS is the only acceptable choice for tool vendors. Tools cannot comprehensively detect, test, or protect against the OWASP Top 10 due to the nature of several of the OWASP Top 10 risks, with reference to [A06:2025-Insecure Design](A06_2025-Insecure_Design.md). OWASP discourages any claims of full coverage of the OWASP Top 10, because it’s simply untrue.
+특히 보안 도구 벤더 관점에서는 ASVS를 기준으로 삼는 것이 유일한 선택지이다. OWASP Top 10은 위험 중심으로 구성되어 있기에, [A06:2025 - Insecure Design](A06_2025-Insecure_Design.md) 사례와 마찬가지로 자동화 도구만으로 모든 Top 10 항목을 포괄적으로 탐지, 테스트, 방어하기 어렵다. 따라서, OWASP는 Top 10을 전부 보장한다는 주장을 지양하도록 안내한다.
