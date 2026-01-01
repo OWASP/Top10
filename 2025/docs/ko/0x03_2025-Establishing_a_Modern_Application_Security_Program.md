@@ -1,67 +1,66 @@
-# Establishing a Modern Application Security Program
+# 현대적 애플리케이션 보안 체계 수립
 
-The OWASP Top Ten lists are awareness documents, meant to bring awareness to the most critical risks of whichever topic they cover. They are not meant to be a complete list, only a starting place. In previous versions of this list we have prescribed starting an application security program as the best way to avoid these risks, and more. In this section we will cover how to start and build a modern application security program.
-
- 
-
-If you already have an application security program, consider performing a maturity assessment on it using [OWASP SAMM (Software Assurance Maturity Model)](https://owasp.org/www-project-samm/) or DSOMM (DevSecOps Maturity Model) . These maturity models are comprehensive and exhaustive and can be used to help you figure out where you should best focus your efforts for expanding and maturing your program. Please note: you do not need to do everything in OWASP SAMM or DSOMM to be doing a good job, they are meant to guide you and offer many options. They are not meant to offer unattainable standards or describe unaffordable programs. They are expansive in order to offer you many ideas and options.
+OWASP Top 10 항목들은 보안 인식을 제고하기 위한 문서로, 각 항목에서 다루는 중요한 위험의 인식을 높이기 위함이다. 이는 모든 위험을 망라한 목록이 아니라, 대응을 시작하기 위한 출발점으로 활용하도록 구성되어 있다. 따라서, 이전 버전에서부터 각 항목에 해당하는 위험을 예방하고 더 나아가 전반적인 보안 수준을 높이기 위한 최선의 방법으로 애플리케이션 보안 체계를 시작하는 것을 권고해왔다. 이 페이지에서는 현대적 애플리케이션 보안 체계를 수립을을 어떻게 시작하고 구축하는지 다룰 것이다.
 
  
 
-If you are starting a program from scratch, or you find OWASP SAMM or DSOMM ‘too much’ for your team right now, please review the following advice.
+이미 애플리케이션 보안 체계를 운영 중이라면, [OWASP SAMM (Software Assurance Maturity Model)](https://owasp.org/www-project-samm/) 또는 DSOMM(DevSecOps Maturity Model) 같은 성숙도 모델을 활용하여 현재 수준에 대한 성숙도 평가를 수행하는 것을 고려하라. 해당 모델들은 포괄적이며 세부 항목까지 망라하고 있어, 체계를 고도화하는 과정에서 어디에 집중해야 하는지 파악하는 데 활용할 수 있다. OWASP SAMM 또는 DSOMM의 모든 항목을 수행해야만 제대로 하고 있다고 볼 수 있는 것은 아니며, 이는 방향을 제시하고 다양한 선택지를 제공하기 위한 것이다. 따라서 이는 현실적으로 달성하기 어려운 기준을 제시하거나 과도한 비용이 드는 체계를 수립하는 게 목적이 아니라, 개선을 위한 다양한 아이디어를 제공하기 위해 폭넓게 구성되어 있다.
+
+ 
+
+애플리케이션 보안 체계를 처음 구축하는 단계이거나, 현재 팀의 상황에서 OWASP SAMM/DSOMM가 과도하다고 느껴진다면, 아래 조언을 참고하라.
 
 
-### 1. Establish a Risk Based Portfolio Approach:
+### 1. 위험 기반 포트폴리오 관리 체계 수립
 
-* Identify the protection needs of your application portfolio from a business perspective. This should be driven in part by privacy laws and other regulations relevant to the data asset being protected.
+* 비즈니스 관점에서 애플리케이션 포트폴리오의 보안 요구사항을 식별한다. 이때 해당 데이터에 적용되는 개인정보보호 법령 및 관련 규제 요구사항을 기준으로 요구사항을 도출한다.
 
-* Establish a [common risk rating model](https://owasp.org/www-community/OWASP_Risk_Rating_Methodology) with a consistent set of likelihood and impact factors reflective of your organization’s tolerance for risk.
+* 조직의 위험 수용 수준에 맞춰, 가능성과 영향도 기준을 표준화한 [통합 위험 평가 모델](https://owasp.org/www-community/OWASP_Risk_Rating_Methodology)을 수립한다.
 
+* 위의 정의된 모델에 따라 전체 애플리케이션 및 API의 위험을 평가하고 우선순위를 결정한 뒤, 결과를 구성 관리 데이터베이스(Configuration Management Database, CMDB)에 등록한다.
 
-* Accordingly measure and prioritize all your applications and APIs. Add the results to your [Configuration Management Database (CMDB)](https://de.wikipedia.org/wiki/Configuration_Management_Database).
-
-* Establish assurance guidelines to properly define coverage and level of rigor required.
-
-
-### 2. Enable with a Strong Foundation:
-
-* Establish a set of focused policies and standards that provide an application security baseline for all development teams to adhere to.
-
-* Define a common set of reusable security controls that complement these policies and standards and provide design and development guidance on their use.
-
-* Establish an application security training curriculum that is required and targeted to different development roles and topics.
+* 적용 범위와 요구되는 엄격도 수준을 정의하기 위한 가이드라인을 수립한다.
 
 
-### 3. Integrate Security into Existing Processes:
+### 2. 탄탄한 기반을 통한 실행 체계 확보
 
-* Define and integrate secure implementation and verification activities into existing development and operational processes.
+* 모든 개발 조직이 준수할 애플리케이션 보안 최소 기준을 맞추기 위한 정책 및 표준을 수립한다.
 
-* Activities include threat modeling, secure design and design review, secure coding and code review, penetration testing, and remediation.
+* 수립한 정책 및 표준을 따를 수 있도록 재사용 가능한 공통 보안 통제를 정의하고 설계 및 개발 지침을 함께 제공한다.
 
-* Provide subject matter experts and support services for development and project teams to be successful.
-
-* Review your current system development life cycle and all software security activities, tooling, policies, and processes, then document them.
-
-* For new software, add one or more security activities to each phase of the system development life cycle (SDLC). Below we offer many suggestions of what you can do below. Ensure you perform these new activities on every new project or software initiative, this way you will know each new piece of software will be delivered at an acceptable security posture for your organizations.
-
-* Select your activities to ensure your final product meets an acceptable level of risk for your organization.
-
-* For existing software (sometimes called legacy) you will want to have a formal maintenance plan, please look below for ideas of how to maintain secure applications in the section called 'Operations and Change Management'.
+* 개발자의 역할과 주제에 맞춘 애플리케이션 보안 교육 체계를 마련한다.
 
 
-### 4. Application Security Education:
+### 3. 기존 프로세스에 보안 내재화
 
-* Consider starting a security champion program, or general security education program for your developers (sometimes called an advocacy or security awareness program), to teach them everything you wish they would know. This will keep them up to date, help them know how to do their work securely, and make the security culture where you work more positive. It often also improves trust between the teams and makes for a happier working relationship. OWASP supports you in this with the [OWASP Security Champions Guide](https://securitychampions.owasp.org/), which is being expanded step by step.
+* 기존 개발 및 운영 프로세스에 안전한 구현 및 검증 활동을 정의하고 내재화한다.
 
-* The OWASP Education Project provides training materials to help educate developers on web application security. For hands-on learning about vulnerabilities, try the [OWASP Juice Shop Project](https://owasp.org/www-project-juice-shop/), or [OWASP WebGoat](https://owasp.org/www-project-webgoat/). To stay current, come to an [OWASP AppSec Conference](https://owasp.org/events/), [OWASP Conference Training](https://owasp.org/events/), or local [OWASP Chapter](https://owasp.org/chapters/) meetings.
+* 검증 활동에는 위협 모델링, 안전한 설계 및 설계 검토, 시큐어 코딩 및 코드 리뷰, 침투 테스트, 그리고 취약점 조치가 포함된다.
+
+* 개발 및 프로젝트 팀이 각 활동을 성공적으로 수행할 수 있도록 주제별 분야 전문가(subject matter expert)와 지원 서비스를 제공한다.
+ 
+* 현행 시스템 개발 수명 주기(system development life cycle, SDLC)와 모든 소프트웨어 보안 활동, 도구, 정책, 프로세스를 검토한 후 이를 문서화한다.
+
+* 신규 소프트웨어의 경우, 시스템 개발 생명주기의 각 단계에 하나 이상의 보안 활동을 추가한다. 아래에서는 수행 가능한 다양한 제안을 제공한다. 이러한 신규 활동을 모든 신규 프로젝트 또는 소프트웨어 이니셔티브에 대해 수행하도록 보장한다. 이를 통해 각 신규 소프트웨어가 조직에 허용 가능한 보안 상태(security posture)로 제공(납품)됨을 알 수 있다.
+* 새로운 소프트웨어 개발 시에는 시스템 개발 생명주기의 각 단계에 하나 이상의 보안 활동을 추가한다. 아래에서 수행 가능한 다양한 활동을 제시한다. 제시된 활동을 수행하여 모든 새로운 프로젝트 또는 소프트웨어에 조직의 요구 사항에 부합하는 보안 수준이 제공되도록 한다.
+
+* 최종 산출물이 조직의 수용 가능한 위험 수준을 만족하도록 활동을 선정한다.
+
+* 기존(때로는 레거시라고 함)의 소프트웨어의 경우 유지관리 계획을 수립한다. 안전한 애플리케이션을 유지하는 방법은 아래의 운영 및 변경 관리 섹션을 참고한다.
 
 
-### 5. Provide Management Visibility:
+### 4. 애플리케이션 보안 교육
 
-* Manage with metrics. Drive improvement and funding decisions based on the metrics and analysis data captured. Metrics include adherence to security practices and activities, vulnerabilities introduced, vulnerabilities mitigated, application coverage, defect density by type and instance counts, etc.
+* 개발 조직의 보안 역량 강화를 위해 보안 챔피언(Security Champion) 제도 또는 개발자 대상 보안 교육 프로그램(보안 인식 프로그램이라고 부르기도 함)을 도입하는 방안을 검토한다. 이를 통해 개발자에게 필요한 지식을 교육할 수 있다. 이를 통해 개발자가 최신 보안 지식을 지속적으로 습득하고, 안전한 방식으로 업무를 수행할 수 있도록 지원하며, 조직 내 보안 문화를 보다 긍정적으로 만든다. 또한 보안팀과의 신뢰를 향상시키고 더 만족스러운 협업 관계를 형성할 수 있다. 관련 가이드는 [OWASP 보안 챔피언 가이드](https://securitychampions.owasp.org/)를 참고하며, 해당 가이드는 단계적으로 보강되고 있다.
 
-* Analyze data from the implementation and verification activities to look for root cause and vulnerability patterns to drive strategic and systemic improvements across the enterprise. Learn from mistakes and offer positive incentives to promote improvements.
+* OWASP 교육 프로젝트는 개발자에게 웹 애플리케이션 보안을 교육하는 데 필요한 교육 자료를 제공한다. 취약점에 대한 실습 중심 학습을 위해 [OWASP Juice Shop Project](https://owasp.org/www-project-juice-shop/) 또는 [OWASP WebGoat](https://owasp.org/www-project-webgoat/)를 활용한다. 최신 동향을 유지하기 위해 [OWASP AppSec 컨퍼런스](https://owasp.org/events/), [OWASP 컨퍼런스 트레이닝](https://owasp.org/events/), 또는 지역 [OWASP Chapter](https://owasp.org/chapters/) 모임에 참여한다.
 
+
+### 5. 지표 가시성 확보
+
+* 지표를 기반으로 관리하라. 수집된 지표 및 분석 데이터를 기반으로 개선 활동과 예산 의사결정을 추진한다. 지표로는 보안 활동 준수, 신규 취약점 유입, 취약점 조치, 테스트된 애플리케이션 범위, 결함 유형별 밀도 및 발생 건수 등이 있다.
+
+* 구현 및 검증 활동에서 축적된 데이터를 분석하여, 근본 원인(root cause)과 취약점 패턴을 식별하고, 전사 차원의 전략 및 시스템적 개선을 추진한다. 실수로부터 학습하고, 개선을 촉진하기 위해 긍정적 인센티브를 제공한다.
 
 
 ## Establish & Use Repeatable Security Processes and Standard Security Controls
@@ -151,7 +150,7 @@ If you are starting a program from scratch, or you find OWASP SAMM or DSOMM ‘t
 * Finalize all documentation, including the change management database (CMDB) and security architecture.
 
 
-### Operations and Change Management:
+### 운영 및 변경 관리
 
 *  Operations must include guidelines for the security management of the application (e.g. patch management).
 
