@@ -31,8 +31,8 @@ OWASP Top 10의 8번째 버전에 오신 것을 환영합니다!
 ![Mapping](../assets/2025-mappings.png)
 # OWASP Top 10 2025
 
-**[A01:2025 - Broken Access Control](A01_2025-Broken_Access_Control.md)**은 가장 심각한 애플리케이션 보안 위험으로 1위를 유지하였다. 제공된 데이터에 따르면 테스트된 애플리케이션의 평균 3.73%가 이 카테고리에 해당하는 40개 CWE(Common Weakness Enumeration) 중 하나 이상을 가지고 있었다. 위 그림의 점선으로 표시된 바와 같이, Server-Side Request Forgery(SSRF)가 이 카테고리에 통합되었다. 
-**[A02:2025 - Security Misconfiguration](A02_2025-Security_Misconfiguration.md)**은 2021년 5위에서 2025년 2위로 상승하였다. 이번 주기에 제공된 데이터에서는 설정 오류가 더 많이 발견되었으며, 테스트된 애플리케이션 중 3.00%가 이 카테고리에 해당하는 16개 CWE 중 하나 이상을 포함하고 있었다. 이는 소프트웨어 엔지니어링에서 애플리케이션의 동작이 설정에 기반하는 비중이 지속적으로 증가하고 있는 현황을 반영하는 결과이다.
+* **[A01:2025 - Broken Access Control](A01_2025-Broken_Access_Control.md)**은 가장 심각한 애플리케이션 보안 위험으로 1위를 유지하였다. 제공된 데이터에 따르면 테스트된 애플리케이션의 평균 3.73%가 이 카테고리에 해당하는 40개 CWE(Common Weakness Enumeration) 중 하나 이상을 가지고 있었다. 위 그림의 점선으로 표시된 바와 같이, Server-Side Request Forgery(SSRF)가 이 카테고리에 통합되었다. 
+* **[A02:2025 - Security Misconfiguration](A02_2025-Security_Misconfiguration.md)**은 2021년 5위에서 2025년 2위로 상승하였다. 이번 주기에 제공된 데이터에서는 설정 오류가 더 많이 발견되었으며, 테스트된 애플리케이션 중 3.00%가 이 카테고리에 해당하는 16개 CWE 중 하나 이상을 포함하고 있었다. 이는 소프트웨어 엔지니어링에서 애플리케이션의 동작이 설정에 기반하는 비중이 지속적으로 증가하고 있는 현황을 반영하는 결과이다.
 * **[A03:2025 - Software_Supply_Chain_Failures](A03_2025-Software_Supply_Chain_Failures.md)**기존의 [A06:2021-취약하고 오래된 구성 요소](https://owasp.org/Top10/A06_2021-Vulnerable_and_Outdated_Components/)의 범위를 확장하여, 소프트웨어 의존성, 빌드 시스템, 배포 인프라 전반에서 발생하는 광범위한 공급망 침해 사례를 포함한다. 본 카테고리는 커뮤니티 설문조사에서 가장 우려되는 항목으로 압도적인 지지를 받았다. 이 카테고리에는 총 5개의 CWE가 포함되어 있으며, 수집된 데이터에서는 상대적으로 낮게 나타났으나, 이는 테스트상의 어려움에 기인한 것으로 판단된다. 향후 이 영역에 대한 테스트가 보완될 것으로 기대된다. 해당 카테고리는 데이터상 발생 빈도는 가장 낮았으나, CVE 기준으로는 평균적인 악용 가능성과 영향 점수가 가장 높은 것으로 확인되었다.
 * **[A04:2025 - Cryptographic_Failures](A04_2025-Cryptographic_Failures.md)**는 2위에서 4위로 두 단계 하락하였다. 제공된 데이터에 따르면, 평균적으로 전체 애플리케이션의 3.80%가 이 카테고에 속하는 32개의 CWE 중 하나 이상을 포함하고 있는 것으로 나타났다. Cryptographic Failures가 발생하면 민감한 데이터의 노출이나 시스템 침해로 빈번하게 이어진다.
 * **[A05:2025 - Injection](A05_2025-Injection.md)**은 3위에서 5위로 하락하였으나, Cryptographic Failures와 Insecure Design 등 인접한 항목들과의 순위에는 변동은 없었다. 이 카테고리는 테스트가 가장 활발히 수행된 카테고리 중 하나로, 38개 CWE에 대응되는 CVE가 가장 많이 제보되었다. Injection은 발생 빈도는 높지만 영향이 비교적 적은 Cross-site Scripting(높은 빈도/낮은 영향)부터, 발생 빈도는 낮으나 피해 규모가 큰 SQL 인젝션(낮은 빈도/높은 영향)까지 폭넓은 유형을 포함한다.
@@ -40,7 +40,7 @@ OWASP Top 10의 8번째 버전에 오신 것을 환영합니다!
 * **[A07:2025 - Authentication_Failures](A07_2025-Authentication_Failures.md)**는 7위를 유지하였으며, 해당 카테고리에 속하는 36개의 CWE를 보다 정확히 반영하기 위해 명칭("[신원 확인 및 인증 실패](https://owasp.org/Top10/A07_-Identificatio_and_Authentication_Failures/)")이 일부 변경되었다. 이 카테고리는 여전히 중요한 항목이지만, 인증을 위한 표준화된 프레임워크의 활용이 증가하면서 Authentication Failure 사례의 발생 빈도 감소에 긍정적인 영향을 미친 것으로 보인다
 * **[A08:2025 - Software_or_Data_Integrity_Failures](A08_2025-Software_or_Data_Integrity_Failures.md)**는 이번에도 8위를 차지하였다. 이 카테고리는 Software Supply Chain Failures보다 상대적으로 더 로우 레벨(Lower level)에서 소프트웨어, 코드, 데이터 등의 무결성을 검증하고 트러스트 바운더리(Trust Boundary) 유지하는 과정에서 발생하는 실패에 초점을 두고 있다.
 * **[A09:2025 - Security Logging & Alerting Failures](A09_2025-Security_Logging_and_Alerting_Failures.md)**는 9위를 유지하였다. 이 카테고리는 로깅 이벤트에 대한 적절한 대응을 유도하는 Alerting 기능의 중요성을 강조하기 위해 명칭이 변경되었다(기존 [보안 로깅 및 모니터링 실패](https://owasp.org/Top10/A09_2021-Security_Logging_and_Monitoring)). 로그에서 발생한 이벤트에 대해 적절한 대응을 위한 알림(Alert) 기능의 중요성을 강조하기 위한 것이다. 알림 체계가 결여된 로깅은 보안 사고를 식별하는 데 실질적인 효과를 기대하기 어렵다. 이 카테고리는 특성상 데이터에 과소반영되는 경향이 있으며, 이번에도 커뮤니티 설문을 통해 순위가 결정되었다.
-**[A10:2025 - Mishandling of Exceptional Conditions](A10_2025-Mishandling_of_Exceptional_Conditions.md)**는 2025년에 새롭게 도입된 카테고리이다. 이 카테고리는 시스템이 비정상적인 상태에 직면했을 때 발생할 수 있는 부적절한 오류 처리, 논리적 오류, 페일 오픈(Fail Open) 등 비정상적인 상태에서 비롯되는 24개 CWE를 포함하고 있다.
+* **[A10:2025 - Mishandling of Exceptional Conditions](A10_2025-Mishandling_of_Exceptional_Conditions.md)**는 2025년에 새롭게 도입된 카테고리이다. 이 카테고리는 시스템이 비정상적인 상태에 직면했을 때 발생할 수 있는 부적절한 오류 처리, 논리적 오류, 페일 오픈(Fail Open) 등 비정상적인 상태에서 비롯되는 24개 CWE를 포함하고 있다.
 
 ## 방법론
 
@@ -79,7 +79,6 @@ CVSS v4.0을 사용하지 않은 이유가 궁금할 수 있다. 이는 점수 �
 
 ## 데이터 제공자들께 드리는 감사의 글
 
-****
 다음 조직들은 익명 기부자 다수와 함께 280만 건 이상의 애플리케이션 데이터를 제공하여 역대 가장 방대하고 포괄적인 애플리케이션 보안 데이터 세트 구축에 기여하였다. 이들의 도움 없이는 불가능한 작업이었다.
 
 * Accenture (Prague)
