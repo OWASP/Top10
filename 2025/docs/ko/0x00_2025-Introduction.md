@@ -59,7 +59,7 @@ MITRE가 선정한 가장 위험한 소프트웨어 취약점 25개와 유사하
 
 ## 카테고리 선정을 위한 데이터 사용법
 
-2021년 버전과 마찬가지로 *악용가능성(Exploitability)* 및 *기술적 영향도((Technical) Impact)*에 대해 CVE 데이터를 활용하였다. OWASP Dependency Check를 다운로드하여 CVSS Exploit 및 Impact 점수를 추출하고, CVE에 연결된 관련 CWE별로 그룹화하였다. 모든 CVE에 CVSSv2 점수가 포함되어 있으나 CVSSv2에는 CVSSv3에서 해결된 결함이 있어 상당한 연구와 노력이 필요하였다. 특정 시점 이후의 모든 CVE에는 CVSSv3 점수도 함께 부여된다. 또한 CVSSv2와 CVSSv3 사이에 점수 범위와 산정 공식이 변경되었다.
+2021년 버전과 마찬가지로 *악용 가능성(Exploitability)* 및 *기술적 영향도((Technical) Impact)*에 대해 CVE 데이터를 활용하였다. OWASP Dependency Check를 다운로드하여 CVSS Exploit 및 Impact 점수를 추출하고, CVE에 연결된 관련 CWE별로 그룹화하였다. 모든 CVE에 CVSSv2 점수가 포함되어 있으나 CVSSv2에는 CVSSv3에서 해결된 결함이 있어 상당한 연구와 노력이 필요하였다. 특정 시점 이후의 모든 CVE에는 CVSSv3 점수도 함께 부여된다. 또한 CVSSv2와 CVSSv3 사이에 점수 범위와 산정 공식이 변경되었다.
 
 CVSSv2에서는 Exploit과 (Technical) Impact 모두 최대 10.0까지 가능하였으나, 공식에 따라 Exploit은 60%, Impact는 40%로 조정되었다. CVSSv3에서는 이론상 최댓값이 Exploit 6.0, Impact 4.0으로 제한되었다. 가중치를 고려한 결과, Impact 점수는 CVSSv3에서 평균적으로 약 1.5점 상승하였고, Exploitability는 평균적으로 약 0.5점 하락하였다.
 
