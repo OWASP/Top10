@@ -42,34 +42,27 @@ Chaque organisation doit s'assurer d'avoir un projet continu de surveillance, de
 Il existe des outils automatiques qui aident les attaquants à trouver des systèmes mal configurés ou non mis à jour. Par exemple, le moteur de recherche IoT de Shodan peut vous aider à trouver des objets qui sont encore vulnérables à la faille Heartbleed corrigée en avril 2014.
 
 ## Références
+OWASP Application Security Verification Standard: V1 Architecture, design and threat modelling
 
--   OWASP Application Security Verification Standard: V1 Architecture,
-    design and threat modelling
+OWASP Dependency Check (for Java and .NET libraries)
 
--   OWASP Dependency Check (for Java and .NET libraries)
+OWASP Testing Guide - Map Application Architecture (OTG-INFO-010)
 
--   OWASP Testing Guide - Map Application Architecture (OTG-INFO-010)
+OWASP Virtual Patching Best Practices
 
--   OWASP Virtual Patching Best Practices
+The Unfortunate Reality of Insecure Libraries
 
--   The Unfortunate Reality of Insecure Libraries
+MITRE Common Vulnerabilities and Exposures (CVE) search
 
--   MITRE Common Vulnerabilities and Exposures (CVE) search
+National Vulnerability Database (NVD)
 
--   National Vulnerability Database (NVD)
+Retire.js for detecting known vulnerable JavaScript libraries
 
--   Retire.js for detecting known vulnerable JavaScript libraries
+GitHub Advisory Database
 
--   Node Libraries Security Advisories
+Node Libraries Security Advisories
 
--   [Ruby Libraries Security Advisory Database and Tools]()
+Ruby Libraries Security Advisory Database and Tools
 
--   https://safecode.org/publication/SAFECode_Software_Integrity_Controls0610.pdf
-
-## Liste des CWEs associées
-
-CWE-937 OWASP Top 10 2013: Using Components with Known Vulnerabilities
-
-CWE-1035 2017 Top 10 A9: Using Components with Known Vulnerabilities
-
-CWE-1104 Use of Unmaintained Third Party Components
+SAFECode Software Integrity Controls [PDF]  
+https://safecode.org/publication/SAFECode_Software_Integrity_Controls0610.pdf
