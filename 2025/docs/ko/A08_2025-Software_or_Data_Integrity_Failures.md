@@ -1,8 +1,8 @@
-# A08:2025 소프트웨어 또는 데이터 무결성 실패(오류?) ![icon](../assets/TOP_10_Icons_Final_Software_and_Data_Integrity_Failures.png){: style="height:80px;width:80px" align="right"}
+# A08:2025 소프트웨어 또는 데이터 무결성 실패 ![icon](../assets/TOP_10_Icons_Final_Software_and_Data_Integrity_Failures.png){: style="height:80px;width:80px" align="right"}
 
 ## 배경.
 
-소프트웨어 또는 데이터 무결성 실패는 8위를 유지했으며, "소프트웨어 및 데이터 무결성 오류"에서 약간의 명확화를 위해 명칭이 소폭 변경되었다. 이 범주는 소프트웨어 공급망 실패(Software Supply Chain Failures)보다 더 하위 수준에서, 신뢰 경계를 유지하지 못하고 소프트웨어, 코드, 데이터 아티팩트의 무결성을 검증하지 못하는 문제에 초점을 둔다. 즉, 무결성을 확인하지 않은 채 소프트웨어 업데이트와 중요 데이터에 대해 가정하는 행위를 다룬다. 대표적인 공통 취약점 열거(목록?)(Common Weakness Enumeration, CWE)로는 CWE-829: 신뢰할 수 없는 통제 영역에서 기능 포함(Inclusion of Functionality from Untrusted Control Sphere), CWE-915: 동적-결정 객체 속성의 부적절하게 통제된 수정(Improperly Controlled Modification of Dynamically-Determined Object Attributes), CWE-502: 신뢰할 수 없는 데이터의 역직렬화(Deserialization of Untrusted Data)가 있다.
+소프트웨어 또는 데이터 무결성 실패는 8위를 유지했으며, "소프트웨어 및 데이터 무결성 실패"에서 약간의 명확화를 위해 명칭이 소폭 변경되었다. 해당 카테고리는 소프트웨어 공급망 실패(Software Supply Chain Failures)보다 더 하위 수준에서, 신뢰 경계를 유지하지 못하고 소프트웨어, 코드, 데이터 아티팩트의 무결성을 검증하지 못하는 문제에 초점을 둔다. 즉, 무결성을 확인하지 않은 채 소프트웨어 업데이트와 중요 데이터에 대해 가정하는 행위를 다룬다. 대표적인 CWE로는 CWE-829: 신뢰할 수 없는 통제 영역에서 기능 포함(Inclusion of Functionality from Untrusted Control Sphere), CWE-915: 동적-결정 객체 속성의 부적절하게 통제된 수정(Improperly Controlled Modification of Dynamically-Determined Object Attributes), CWE-502: 신뢰할 수 없는 데이터의 역직렬화(Deserialization of Untrusted Data)가 있다.
 
 
 ## 점수 표.
