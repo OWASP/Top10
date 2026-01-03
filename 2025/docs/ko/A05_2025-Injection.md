@@ -131,7 +131,7 @@ Runtime.getRuntime().exec(cmd);
 
 
 
-## 해당되는 CWE.
+## 해당되는 CWE 목록.
 
 * [CWE-20 Improper Input Validation](https://cwe.mitre.org/data/definitions/20.html)
 
