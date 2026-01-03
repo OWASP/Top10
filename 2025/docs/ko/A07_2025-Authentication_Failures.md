@@ -1,33 +1,33 @@
-# A07:2025 Authentication Failures ![icon](../assets/TOP_10_Icons_Final_Identification_and_Authentication_Failures.png){: style="height:80px;width:80px" align="right"}
+# A07:2025 인증 실패 ![icon](../assets/TOP_10_Icons_Final_Identification_and_Authentication_Failures.png){: style="height:80px;width:80px" align="right"}
 
 
-## Background. 
+## 배경. 
 
-Authentication Failures maintains its position at #7 with a slight name change to more accurately reflect the 36 CWEs in this category. Despite benefits from standardized frameworks, this category has kept its #7 rank from 2021. Notable CWEs included are *CWE-259 Use of Hard-coded Password*, *CWE-297: Improper Validation of Certificate with Host Mismatch*, *CWE-287: Improper Authentication*, *CWE-384: Session Fixation*, and *CWE-798 Use of Hard-coded Credentials*.
+인증 실패는 동일하게 7위를 유지하고 있으며, 해당 카테고리에 해당되는 36개의 CWE를 보다 정확하게 반영하기 위해 명칭을 약간 변경했다. 표준화된 프레임워크로부터의 이점에도 불구하고, 이 카테고리는 2021년부터 7위를 유지해 왔다. 대표적인 CWE로는 *CWE-259 하드코딩된 비밀번호 사용*, *CWE-297: 호스트 불일치 상황에서의 인증서 검증 미흡*, *CWE-287: 부적절한 인증*, *CWE-384: 세션 고정(Session Fixation)*, 그리고 *CWE-798 하드코딩된 자격 증명 사용*이 포함된다.
 
 
-## Score table.
+## 점수표.
 
 
 <table>
   <tr>
-   <td>CWEs Mapped 
+   <td>해당되는 CWE 개수
    </td>
-   <td>Max Incidence Rate
+   <td>최대 취약점 발생률
    </td>
-   <td>Avg Incidence Rate
+   <td>평균 취약점 발생률
    </td>
-   <td>Max Coverage
+   <td>최대 테스트 커버리지
    </td>
-   <td>Avg Coverage
+   <td>평균 테스트 커버리지
    </td>
-   <td>Avg Weighted Exploit
+   <td>평균 가중 악용도
    </td>
-   <td>Avg Weighted Impact
+   <td>평균 가중 영향도
    </td>
-   <td>Total Occurrences
+   <td>총 발생 건수
    </td>
-   <td>Total CVEs
+   <td>총 CVE 건수
    </td>
   </tr>
   <tr>
@@ -54,77 +54,76 @@ Authentication Failures maintains its position at #7 with a slight name change t
 
 
 
-## Description. 
+## 설명. 
 
-When an attacker is able to trick a system into recognizing an invalid or incorrect user as legitimate, this vulnerability is present. There may be authentication weaknesses if the application:
+공격자가 시스템을 속여 유효하지 않거나 잘못된 사용자 정보를 정상 사용자로 인증되도록 만들 수 있는 경우, 해당 취약점이 존재한다고 판단한다. 특히 애플리케이션이 아래와 같은 행위를 실질적으로 방어하지 못하면 인증 관련 약점이 있을 수 있다.
 
-* Permits automated attacks such as credential stuffing, where the attacker has a breached list of valid usernames and passwords. More recently this type of attack has been expanded to include hybrid password attacks credential stuffing (also known as password spray attacks), where the attacker uses variations or increments of spilled credentials to gain access, for instance trying Password1!, Password2!, Password3! and so on.
+* 공격자가 유효한 사용자명과 비밀번호의 유출 목록을 보유한 상태에서 수행하는 크리덴셜 스터핑(credential stuffing)과 같은 자동화 공격을 방어하지 못하는 경우. 최근에는 이러한 유형의 공격이 하이브리드 비밀번호 공격(일명 비밀번호 스프레이 공격)까지로 확장되었는데, 이는 공격자가 유출된 자격 증명의 변형 또는 숫자를 더하는 방법을 사용하여 접근 권한을 획득하는 방식이다. 예를 들어 획득된 비밀번호가 Password1!인 경우 Password2!, Password3! 등을 순차적으로 시도하는 것이다.
 
-* Permits brute force or other automated, scripted attacks that are not quickly blocked.
+* 무차별 대입(brute force) 또는 기타 자동화된 스크립트 기반 공격을 방어하지 못하는 경우 혹은 이러한 공격이 신속하게 차단되지 않는 경우.
 
-* Permits default, weak, or well-known passwords, such as "Password1" or "admin" username with an "admin" password.
+* 기본 비밀번호, 취약한 비밀번호 또는 널리 알려진 비밀번호를 허용하는 경우. 예를 들어 "Password1"와 같은 비밀번호나 "admin" 사용자명과 "admin" 비밀번호와 같은 조합이 있다.
 
-* Allows users to create new accounts with already known-breached credentials.
+* 이미 유출된 아이디 및 비밀번호로 사용자가 새 계정을 생성할 수 있느 경우.
 
-* Allows use of weak or ineffective credential recovery and forgot-password processes, such as "knowledge-based answers," which cannot be made safe.
+* 안전하지 않은 "질문-답변 방식 비밀번호 찾기"과 같은 취약하거나 비효율적인 자격 증명 복구 및 비밀번호 찾기 프로세스를 사용하는 경우.
 
-* Uses plain text, encrypted, or weakly hashed passwords data stores (see[ A04:2025-Cryptographic Failures](https://owasp.org/Top10/2025/A04_2025-Cryptographic_Failures/)).
+* 평문, 암호화된, 또는 약한 해시(hash)로 해시된 비밀번호를 사용하는 경우. [A04:2025-Cryptographic Failures](https://owasp.org/Top10/2025/A04_2025-Cryptographic_Failures/) 참고.
 
-* Has missing or ineffective multi-factor authentication.
+* 다중 인증(MFA)이 이 누락되어 있거나 효과적이지 않은 경우.
 
-* Allows use of weak or ineffective fallbacks if multi-factor authentication is not available. 
+* 다중 인증을 사용할 수 없을 때 적용되는 대체 수단(fallback)이 취약하거나 효과적이지 않은 경우.
 
-* Exposes session identifier in the URL, a hidden field, or another insecure location that is accessible to the client.
+* 세션 식별자가 URL, 히든 필드, 또는 클라이언트가 접근 가능한 기타 안전하지 않은 위치에 노출되는 경우.
 
-* Reuses the same session identifier after successful login.
+* 로그인 성공 후에도 동일한 세션 식별자를 재사용하는 경우.
 
-* Does not correctly invalidate user sessions or authentication tokens (mainly single sign-on (SSO) tokens) during logout or a period of inactivity.
+* 로그아웃 또는 비활성 기간 동안 사용자 세션 또는 인증 토큰(싱글 사인온[SSO] 토큰)을 올바르게 무효화하지 않는 경우.
 
-* Does not correctly assert the scope and intended audience of the provided credentials.
+* 제공된 자격 증명의 범위(scope) 및 의도된 대상(audience)을 올바르게 검증하지 않는 경우.
 
-## How to prevent. 
+## 대응 방안. 
 
-* Where possible, implement and enforce use of multi-factor authentication to prevent automated credential stuffing, brute force, and stolen credential reuse attacks.
+* 가능하다면 MFA를 도입하고 강제 적용하여 자동화된 크리덴셜 스터핑, 무차별 대입 공격 및 탈취된 자격 증명의 재사용 공격을 차단한다.
 
-* Where possible, encourage and enable the use of password managers, to help users make better choices.
+* 가능하다면 사용자가 더 나은 선택을 할 수 있도록 비밀번호 관리자의 사용을 장려하고 활성화한다.
 
-* Do not ship or deploy with any default credentials, particularly for admin users.
+* 배포 시점에 기본 계정 및 기본 비밀번호가 남아있지 않도록 하며, 특히 관리자 계정은 더 신경쓴다.
 
-* Implement weak password checks, such as testing new or changed passwords against the top 10,000 worst passwords list.
+* 신규 및 변경 비밀번호에 대해 최악의 비밀번호 Top 10,000에 기반하여 해당 비밀번호를 설정하지 못하도록 적용한다.
 
-* During new account creation and password changes validate against lists of known breached credentials (eg: using [haveibeenpwned.com](https://haveibeenpwned.com)).
+* 신규 계정 생성 및 비밀번호 변경 시, 알려진 유출 자격 증명 목록에 있는지 검증한다. (예: [haveibeenpwned.com](https://haveibeenpwned.com) 사용.)
 
-* Align password length, complexity, and rotation policies with [National Institute of Standards and Technology (NIST) 800-63b's guidelines in section 5.1.1](https://pages.nist.gov/800-63-3/sp800-63b.html#:~:text=5.1.1%20Memorized%20Secrets) for Memorized Secrets or other modern, evidence-based password policies.
+* 비밀번호 정책(길이, 복잡도, 주기적 변경)은 [NIST 800-63B 섹션 5.1.1](https://pages.nist.gov/800-63-3/sp800-63b.html#:~:text=5.1.1%20Memorized%20Secrets) 등 현대적 근거 기반 가이드에 맞춰 수립한다.
 
-* Do not force human beings to rotate passwords unless you suspect breach. If you suspect breach, force password resets immediately. 
+* 유출이 의심되지 않는 한, 사람에게 비밀번호를 주기적으로 변경하도록 강제하지 않는다. 유출이 의심되는 경우, 즉시 비밀번호 재설정을 강제한다.
 
-* Ensure registration, credential recovery, and API pathways are hardened against account enumeration attacks by using the same messages for all outcomes (“Invalid username or password.”).
+* 계정 열거 공격에 계정 존재 여부가 드러나지 않도록 회원가입, 비밀번호 복구, API 응답 메시지를 결과와 무관하게 동일(예: "올바르지 않은 유저명 혹은 패스워드")하게 유지한다.
 
-* Limit or increasingly delay failed login attempts but be careful not to create a denial of service scenario. Log all failures and alert administrators when credential stuffing, brute force, or other attacks are detected or suspected.
+* 로그인 실패에 대해 횟수 제한 또는 점진적인 지연을 적용하되, 과도한 통제로 DoS(denial of service)가 유발되지 않도록 설계한다. 또한 실패 이벤트를 로깅하고 크리덴셜 스터핑이나 무차별 대입 공격 징후 탐지 시 관리자에게 알림을 발송한다.
 
-* Use a server-side, secure, built-in session manager that generates a new random session ID with high entropy after login. Session identifiers should not be in the URL, be securely stored in a secure cookie, and invalidated after logout, idle, and absolute timeouts. 
+* 세션은 높은 엔트로피를 가진 새로운 무작위 세션 ID를 생성하는 서버 측의 안전한 내장 세션 관리자를 사용한다. 세션 식별자는 URL에 포함되지 않아야 하며, 쿠키에 안전하게 저장되고, 로그아웃, 유휴 시간이 지나거나 및 최대 세션 시간 이후 무효가 되어야 한다.
 
-* Ideally, use a premade, well-trusted system to handle authentication, identity, and session management. Transfer this risk whenever possible by buying and utilizing a hardened and well tested system.
+* 가능하면 인증, 아이덴티티, 세션 관리를 자체 구현하기보다 사전 제작된, 신뢰할 수 있는 시스템을 사용한다. 가능하다면 검증되고 충분히 테스트 된 도구를 구매/활용해 구현 위험을 줄인다.
 
-* Verify the intended use of provided credentials, e.g. for JWTs validate `aud`, `iss` claims and scopes
+* 제공된 자격 증명의 어디에 무엇을 위해 사용되는지 검증한다. 예를 들어 JWT의 경우 `aud`와 `iss` 클레임(claim) 및 스코프(scope)를 검증한다.
 
+## 공격 시나리오 예시. 
 
-## Example attack scenarios. 
+**시나리오 1:** 크리덴셜 스터핑은 유출된 계정-비밀번호 조합을 자동으로 대입하는 대표적인 공격이다. 최근에는 사람들의 습관을 악용해 비밀번호의 숫자를 증가 및 감소시켜 가며 공격하는 사례가 확인되고 있다. 예를 들어, 예를 들어 'Winter2025'를 'Winter2026'으로 바꾸거나, 'ILoveMyDog6'를 'ILoveMyDog7' 또는 'ILoveMyDog5'로 바꾸는 식이다. 이러한 공격을 하이브리드 크리덴셜 스터핑 공격 또는 패스워드 스프레이 공격이라고 하며, 기존의 크리덴셜 스터핑보다 더 효과적일 수 있다. 애플리케이션이 자동화된 위협(무차별 대입, 스크립트, 봇) 또는 크리덴셜 스터핑에 대한 방어를 구현하지 않으면, 해당 애플리케이션은 자격 증명이 유효한지 여부를 판별하는 패스워드 오라클로 악용되어 비인가 접근을 획득하는 데 사용될 수 있다.
 
-**Scenario #1:** Credential stuffing, the use of lists of known username and password combinations, is now a very common attack. More recently attackers have been found to ‘increment’ or otherwise adjust passwords, based on common human behavior. For instance, changing ‘Winter2025’ to ‘Winter2026’, or ‘ILoveMyDog6’ to ‘ILoveMyDog7’ or ‘ILoveMyDog5’. This adjusting of password attempts is called a hybrid credential stuffing attack or a password spray attack, and they can be even more effective than the traditional version. If an application does not implement defences against automated threats (brute force, scripts, or bots) or credential stuffing, the application can be used as a password oracle to determine if the credentials are valid and gain unauthorized access.
+**시나리오 2:** 인증 공격의 상당수는 비밀번호만으로 인증을 구성하는 구조에서 발생한다. 과거에 권장되던 주기적 비밀번호 변경 및 과도한 복잡도 정책은 오히려 비밀번호 재사용을 늘리고 기억하기 쉬운 취약 패턴을 만들 수 있다. 따라서 NIST 800-63의 권고에 맞춰 불필요한 정책을 지양하고, 중요 시스템에는 다중 인증(MFA)을 기본으로 강제 적용하는 것이 바람직하다.es per NIST 800-63 and to enforce use of multi-factor authentication on all important systems.
 
-**Scenario #2:** Most successful authentication attacks occur due to the continued use of passwords as the sole authentication factor. Once considered best practices, password rotation and complexity requirements encourage users to both reuse passwords and use weak passwords. Organizations are recommended to stop these practices per NIST 800-63 and to enforce use of multi-factor authentication on all important systems.
+**시나리오 3:** 애플리케이션의 세션 타임아웃이 올바르게 구현되지 않았다. 사용자가 공용 컴퓨터에서 애플리케이션에 접근한 뒤 "로그아웃" 버튼 대신에 대신 브라우저 탭을 닫고 자리를 떠난다. 또 다른 예로, 로그아웃으로 SSO(Single Sign on) 세션을 종료할 수 없는 경우가 있다. 즉, SSO로 메일, 문서 시스템, 채팅 시스템에 로그인되지만, 로그아웃은 사용하는 시스템만 로그아웃된다. 성공적으로 로그아웃했다고 생각한 브라우저를 사용하되 일부 애플리케이션에서 사용자가 여전히 인증된 상태라면, 피해자 계정에 접근할 수 있다. 이 상태에서 공격자가 같은 브라우저를 사용하면, 다른 애플리케이션에는 세션이 남아 있어 피해자 계정에 접근이 가능해진다. 동일한 문제는 민감한 애플리케이션이 적절히 종료되지 않은 상태에서 동료가 잠금 해제된 컴퓨터에 (일시적으로) 접근할 수 있는 사무실/기업 환경에서도 발생할 수 있다.
 
-**Scenario #3:** Application session timeouts aren't implemented correctly. A user uses a public computer to access an application and instead of selecting "logout," the user simply closes the browser tab and walks away. Another Example for this is, if a Single Sign on (SSO) session can not be closed by a Single Logout (SLO). That is, a single login logs you into, for example, your mail reader, your document system, and your chat system. But logging out happens only to the current system. If an attacker uses the same browser after the victim thinks they have successfully logged out, but with the user still authenticated to some of the applications, then can access the victim's account. The same issue can happen in offices and enterprises when a sensitive application has not been properly exited and a colleague has (temporary) access to the unlocked computer.
-
-## References.
+## 참조.
 
 * [OWASP Authentication Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html)
 
 * [OWASP Secure Coding Practices](https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/stable-en/01-introduction/05-introduction)
 
 
-## List of Mapped CWEs
+## 해당되는 CWE 목록.
 
 * [CWE-258 Empty Password in Configuration File](https://cwe.mitre.org/data/definitions/258.html)
 
