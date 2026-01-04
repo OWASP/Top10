@@ -12,16 +12,16 @@ OWASP Top 10의 8번째 버전에 오신 것을 환영합니다!
 
 
 
-* [A01:2025 - Broken_Access_Control](A01_2025-Broken_Access_Control.md)
-* [A02:2025 - Security_Misconfiguration](A02_2025-Security_Misconfiguration.md)
-* [A03:2025 - Software_Supply_Chain_Failures](A03_2025-Software_Supply_Chain_Failures.md)
-* [A04:2025 - Cryptographic_Failures](A04_2025-Cryptographic_Failures.md)
-* [A05:2025 - Injection](A05_2025-Injection.md)
-* [A06:2025 - Insecure_Design](A06_2025-Insecure_Design.md)
-* [A07:2025 - Authentication_Failures](A07_2025-Authentication_Failures.md)
-* [A08:2025 - Software_or_Data_Integrity_Failures](A08_2025-Software_or_Data_Integrity_Failures.md)
-* [A09:2025 - Security_Logging_and_Alerting_Failures](A09_2025-Security_Logging_and_Alerting_Failures.md)
-* [A10:2025 - Mishandling_of_Exceptional_Conditions](A10_2025-Mishandling_of_Exceptional_Conditions.md)
+* [A01:2025 - 충분한 접근 제어](A01_2025-Broken_Access_Control.md)
+* [A02:2025 - 보안 설정 오류](A02_2025-Security_Misconfiguration.md)
+* [A03:2025 - 소프트웨어 공급망 실패](A03_2025-Software_Supply_Chain_Failures.md)
+* [A04:2025 - 암호 체계 실패](A04_2025-Cryptographic_Failures.md)
+* [A05:2025 - 인젝션](A05_2025-Injection.md)
+* [A06:2025 - 안전하지 않은 설계](A06_2025-Insecure_Design.md)
+* [A07:2025 - 인증 실패](A07_2025-Authentication_Failures.md)
+* [A08:2025 - 소프트웨어 또는 데이터 무결성 실패](A08_2025-Software_or_Data_Integrity_Failures.md)
+* [A09:2025 - 보안 로깅 및 알림 실패](A09_2025-Security_Logging_and_Alerting_Failures.md)
+* [A10:2025 - 부적절한 예외 처리](A10_2025-Mishandling_of_Exceptional_Conditions.md)
 
 
 ## 2025년 Top 10의 변화
@@ -30,16 +30,16 @@ OWASP Top 10의 8번째 버전에 오신 것을 환영합니다!
 
 ![Mapping](../assets/2025-mappings.png)
 
-* **[A01:2025 - Broken Access Control](A01_2025-Broken_Access_Control.md)**은 가장 심각한 애플리케이션 보안 위험으로 1위를 유지하였다. 제공된 데이터에 따르면 테스트된 애플리케이션의 평균 3.73%가 이 카테고리에 해당하는 40개 CWE(Common Weakness Enumeration) 중 하나 이상을 가지고 있었다. 위 그림의 점선으로 표시된 바와 같이, Server-Side Request Forgery(SSRF)가 이 카테고리에 통합되었다. 
-* **[A02:2025 - Security Misconfiguration](A02_2025-Security_Misconfiguration.md)**은 2021년 5위에서 2025년 2위로 상승하였다. 이번 주기에 제공된 데이터에서는 설정 오류가 더 많이 발견되었으며, 테스트된 애플리케이션 중 3.00%가 이 카테고리에 해당하는 16개 CWE 중 하나 이상을 포함하고 있었다. 이는 소프트웨어 엔지니어링에서 애플리케이션의 동작이 설정에 기반하는 비중이 지속적으로 증가하고 있는 현황을 반영하는 결과이다.
-* **[A03:2025 - Software_Supply_Chain_Failures](A03_2025-Software_Supply_Chain_Failures.md)**기존의 [A06:2021-취약하고 오래된 구성 요소](https://owasp.org/Top10/A06_2021-Vulnerable_and_Outdated_Components/)의 범위를 확장하여, 소프트웨어 의존성, 빌드 시스템, 배포 인프라 전반에서 발생하는 광범위한 공급망 침해 사례를 포함한다. 본 카테고리는 커뮤니티 설문조사에서 가장 우려되는 항목으로 압도적인 지지를 받았다. 이 카테고리에는 총 5개의 CWE가 포함되어 있으며, 수집된 데이터에서는 상대적으로 낮게 나타났으나, 이는 테스트상의 어려움에 기인한 것으로 판단된다. 향후 이 영역에 대한 테스트가 보완될 것으로 기대된다. 해당 카테고리는 데이터상 발생 빈도는 가장 낮았으나, CVE 기준으로는 평균적인 악용 가능성과 영향 점수가 가장 높은 것으로 확인되었다.
-* **[A04:2025 - Cryptographic_Failures](A04_2025-Cryptographic_Failures.md)**는 2위에서 4위로 두 단계 하락하였다. 제공된 데이터에 따르면, 평균적으로 전체 애플리케이션의 3.80%가 이 카테고에 속하는 32개의 CWE 중 하나 이상을 포함하고 있는 것으로 나타났다. Cryptographic Failures가 발생하면 민감한 데이터의 노출이나 시스템 침해로 빈번하게 이어진다.
-* **[A05:2025 - Injection](A05_2025-Injection.md)**은 3위에서 5위로 하락하였으나, Cryptographic Failures와 Insecure Design 등 인접한 항목들과의 순위에는 변동은 없었다. 이 카테고리는 테스트가 가장 활발히 수행된 카테고리 중 하나로, 38개 CWE에 대응되는 CVE가 가장 많이 제보되었다. Injection은 발생 빈도는 높지만 영향이 비교적 적은 Cross-site Scripting(높은 빈도/낮은 영향)부터, 발생 빈도는 낮으나 피해 규모가 큰 SQL 인젝션(낮은 빈도/높은 영향)까지 폭넓은 유형을 포함한다.
-* **[A06:2025 - Insecure_Design](A06_2025-Insecure_Design.md)**은 Security Misconfiguration과 Software Supply Chain Failures에 밀려 4위에서 6위로 두 단계 하락했다. 이 카테고리는 2021년에 도입되었으며, 이후 업계에서 위협 모델링과 안전한 설계에 대한 인식이 높아지면서 눈에 띄는 개선이 확인되었다.
-* **[A07:2025 - Authentication_Failures](A07_2025-Authentication_Failures.md)**는 7위를 유지하였으며, 해당 카테고리에 속하는 36개의 CWE를 보다 정확히 반영하기 위해 명칭("[신원 확인 및 인증 실패](https://owasp.org/Top10/A07_-Identificatio_and_Authentication_Failures/)")이 일부 변경되었다. 이 카테고리는 여전히 중요한 항목이지만, 인증을 위한 표준화된 프레임워크의 활용이 증가하면서 Authentication Failure 사례의 발생 빈도 감소에 긍정적인 영향을 미친 것으로 보인다
-* **[A08:2025 - Software_or_Data_Integrity_Failures](A08_2025-Software_or_Data_Integrity_Failures.md)**는 이번에도 8위를 차지하였다. 이 카테고리는 Software Supply Chain Failures보다 상대적으로 더 로우 레벨(Lower level)에서 소프트웨어, 코드, 데이터 등의 무결성을 검증하고 트러스트 바운더리(Trust Boundary) 유지하는 과정에서 발생하는 실패에 초점을 두고 있다.
-* **[A09:2025 - Security Logging & Alerting Failures](A09_2025-Security_Logging_and_Alerting_Failures.md)**는 9위를 유지하였다. 이 카테고리는 로깅 이벤트에 대한 적절한 대응을 유도하는 Alerting 기능의 중요성을 강조하기 위해 명칭이 변경되었다(기존 [보안 로깅 및 모니터링 실패](https://owasp.org/Top10/A09_2021-Security_Logging_and_Monitoring)). 로그에서 발생한 이벤트에 대해 적절한 대응을 위한 알림(Alert) 기능의 중요성을 강조하기 위한 것이다. 알림 체계가 결여된 로깅은 보안 사고를 식별하는 데 실질적인 효과를 기대하기 어렵다. 이 카테고리는 특성상 데이터에 과소반영되는 경향이 있으며, 이번에도 커뮤니티 설문을 통해 순위가 결정되었다.
-* **[A10:2025 - Mishandling of Exceptional Conditions](A10_2025-Mishandling_of_Exceptional_Conditions.md)**는 2025년에 새롭게 도입된 카테고리이다. 이 카테고리는 시스템이 비정상적인 상태에 직면했을 때 발생할 수 있는 부적절한 오류 처리, 논리적 오류, 페일 오픈(Fail Open) 등 비정상적인 상태에서 비롯되는 24개 CWE를 포함하고 있다.
+* **[A01:2025 - 충분한 접근 제어](A01_2025-Broken_Access_Control.md)**은 가장 심각한 애플리케이션 보안 위험으로 1위를 유지하였다. 제공된 데이터에 따르면 테스트된 애플리케이션의 평균 3.73%가 이 카테고리에 해당하는 40개 CWE(Common Weakness Enumeration) 중 하나 이상을 가지고 있었다. 위 그림의 점선으로 표시된 바와 같이, Server-Side Request Forgery(SSRF)가 이 카테고리에 통합되었다. 
+* **[A02:2025 - 보안 설정 오류](A02_2025-Security_Misconfiguration.md)**은 2021년 5위에서 2025년 2위로 상승하였다. 이번 주기에 제공된 데이터에서는 설정 오류가 더 많이 발견되었으며, 테스트된 애플리케이션 중 3.00%가 이 카테고리에 해당하는 16개 CWE 중 하나 이상을 포함하고 있었다. 이는 소프트웨어 엔지니어링에서 애플리케이션의 동작이 설정에 기반하는 비중이 지속적으로 증가하고 있는 현황을 반영하는 결과이다.
+* **[A03:2025 - 소프트웨어 공급망 실패](A03_2025-Software_Supply_Chain_Failures.md)**기존의 [A06:2021-취약하고 오래된 구성 요소](https://owasp.org/Top10/A06_2021-Vulnerable_and_Outdated_Components/)의 범위를 확장하여, 소프트웨어 의존성, 빌드 시스템, 배포 인프라 전반에서 발생하는 광범위한 공급망 침해 사례를 포함한다. 본 카테고리는 커뮤니티 설문조사에서 가장 우려되는 항목으로 압도적인 지지를 받았다. 이 카테고리에는 총 5개의 CWE가 포함되어 있으며, 수집된 데이터에서는 상대적으로 낮게 나타났으나, 이는 테스트상의 어려움에 기인한 것으로 판단된다. 향후 이 영역에 대한 테스트가 보완될 것으로 기대된다. 해당 카테고리는 데이터상 발생 빈도는 가장 낮았으나, CVE 기준으로는 평균적인 악용 가능성과 영향 점수가 가장 높은 것으로 확인되었다.
+* **[A04:2025 - 암호 체계 실패](A04_2025-Cryptographic_Failures.md)**는 2위에서 4위로 두 단계 하락하였다. 제공된 데이터에 따르면, 평균적으로 전체 애플리케이션의 3.80%가 이 카테고에 속하는 32개의 CWE 중 하나 이상을 포함하고 있는 것으로 나타났다. Cryptographic Failures가 발생하면 민감한 데이터의 노출이나 시스템 침해로 빈번하게 이어진다.
+* **[A05:2025 - 인젝션](A05_2025-Injection.md)**은 3위에서 5위로 하락하였으나, Cryptographic Failures와 Insecure Design 등 인접한 항목들과의 순위에는 변동은 없었다. 이 카테고리는 테스트가 가장 활발히 수행된 카테고리 중 하나로, 38개 CWE에 대응되는 CVE가 가장 많이 제보되었다. Injection은 발생 빈도는 높지만 영향이 비교적 적은 Cross-site Scripting(높은 빈도/낮은 영향)부터, 발생 빈도는 낮으나 피해 규모가 큰 SQL 인젝션(낮은 빈도/높은 영향)까지 폭넓은 유형을 포함한다.
+* **[A06:2025 - 안전하지 않은 설계](A06_2025-Insecure_Design.md)**은 Security Misconfiguration과 Software Supply Chain Failures에 밀려 4위에서 6위로 두 단계 하락했다. 이 카테고리는 2021년에 도입되었으며, 이후 업계에서 위협 모델링과 안전한 설계에 대한 인식이 높아지면서 눈에 띄는 개선이 확인되었다.
+* **[A07:2025 - 인증 실패](A07_2025-Authentication_Failures.md)**는 7위를 유지하였으며, 해당 카테고리에 속하는 36개의 CWE를 보다 정확히 반영하기 위해 명칭("[신원 확인 및 인증 실패](https://owasp.org/Top10/A07_-Identificatio_and_Authentication_Failures/)")이 일부 변경되었다. 이 카테고리는 여전히 중요한 항목이지만, 인증을 위한 표준화된 프레임워크의 활용이 증가하면서 Authentication Failure 사례의 발생 빈도 감소에 긍정적인 영향을 미친 것으로 보인다
+* **[A08:2025 - 소프트웨어 또는 데이터 무결성 실패](A08_2025-Software_or_Data_Integrity_Failures.md)**는 이번에도 8위를 차지하였다. 이 카테고리는 Software Supply Chain Failures보다 상대적으로 더 로우 레벨(Lower level)에서 소프트웨어, 코드, 데이터 등의 무결성을 검증하고 트러스트 바운더리(Trust Boundary) 유지하는 과정에서 발생하는 실패에 초점을 두고 있다.
+* **[A09:2025 - 보안 로깅 및 알림 실패](A09_2025-Security_Logging_and_Alerting_Failures.md)**는 9위를 유지하였다. 이 카테고리는 로깅 이벤트에 대한 적절한 대응을 유도하는 Alerting 기능의 중요성을 강조하기 위해 명칭이 변경되었다(기존 [보안 로깅 및 모니터링 실패](https://owasp.org/Top10/A09_2021-Security_Logging_and_Monitoring)). 로그에서 발생한 이벤트에 대해 적절한 대응을 위한 알림(Alert) 기능의 중요성을 강조하기 위한 것이다. 알림 체계가 결여된 로깅은 보안 사고를 식별하는 데 실질적인 효과를 기대하기 어렵다. 이 카테고리는 특성상 데이터에 과소반영되는 경향이 있으며, 이번에도 커뮤니티 설문을 통해 순위가 결정되었다.
+* **[A10:2025 - 부적절한 예외 처리](A10_2025-Mishandling_of_Exceptional_Conditions.md)**는 2025년에 새롭게 도입된 카테고리이다. 이 카테고리는 시스템이 비정상적인 상태에 직면했을 때 발생할 수 있는 부적절한 오류 처리, 논리적 오류, 페일 오픈(Fail Open) 등 비정상적인 상태에서 비롯되는 24개 CWE를 포함하고 있다.
 
 ## 방법론
 
@@ -51,9 +51,9 @@ OWASP Top 10의 8번째 버전에 오신 것을 환영합니다!
 
 이번 2025년 버전에서는 2021년 버전과 마찬가지로 CWE 범위를 제한하지 않고 자료를 수집하였다. 2021년부터 매년 테스트 된 애플리케이션 수와 테스트 결과 하나 이상의 CWE가 발견된 애플리케이션 수를 기준으로 집계하였다. 이러한 방식은 각 CWE의 전체 애플리케이션에 얼마나 널리 분포하는지 파악할 수 있게 한다. 이번 버전에서도 CWE의 발생 빈도를 분석에서 제외한다. 빈도 정보는 다른 상황에서는 유의미할 수 있으나, 전체 애플리케이션에 퍼져있는 정도를 왜곡할 수 있기 때문이다. 따라서, 한 애플리케이션에서 CWE가 4건 발견되든 4,000건 발견되든 순위 산정에 영향을 주지 않는다. 이는 수동으로 테스트하는 사람은 반복 취약점을 한 번만 기록하는 반면, 자동화 도구는 모든 취약점을 개별 취약점으로 기록하기 때문이다. 분석 대상 CWE 수는 2017년 약 30개, 2021년 약 400개에서 이번 버전에 589개로 크게 확대되었다. 향후 추가 분석을 통해 보완할 계획이며, 이러한 데이터 규모 증가는 카테고리 구조의 변경이 불가피하였다.
 
-CWE를 그룹화하고 분류하는 작업에 수개월이 소요되었으며, 추가로 몇 개월을 더 투입할 수도 있었으나 적절한 시점에서 마무리하였다. CWE에는 근본 원인(Root Cause) 유형과 증상(Symptom) 유형이 있다. 근본 원인의 유형에는 "Cryptographic Failure", "Misconfiguration" 등이 있고, 증상 유형에는 "Sensitive Data Exposure", "Denial of Service" 등이 있다. 식별 및 개선 지침을 제공하는 데 있어 근분 원인에 초점을 맞추는 것이 더 논리적이므로 가능한 한 이를 우선시하였다. 증상보다 근본 원인에 집중하는 것은 새로운 개념이 아니며, 기존 Top 10도 증상과 근본 원인이 혼재되어 있었다. CWE 역시도 마찬가지로 혼재되어 있으며, 이번에는 이를 보다 명확하게 구분하고자 하였다. 이번 버전에서 카테고리당 평균 CWE 수는 25개이며, 최소 5개(A03:2025-Software Supply Chain Failures, A09:2025-Security Logging and Alerting Failures)에서 최대 40개(A01:2025-Broken Access Control)까지 분포한다. 카테고리당 CWE 수는 40개를 상한으로 설정하였다. 이러한 카테고리 구조 개편을 통해 기업들이 사용하는 언어나 프레임워크에 적합한 CWE에 집중할 수 있어 교육 효과가 향상될 것으로 기대된다.
+CWE를 그룹화하고 분류하는 작업에 수개월이 소요되었으며, 추가로 몇 개월을 더 투입할 수도 있었으나 적절한 시점에서 마무리하였다. CWE에는 근본 원인(Root Cause) 유형과 증상(Symptom) 유형이 있다. 근본 원인의 유형에는 "암호 체계 실패", "설정 오류" 등이 있고, 증상 유형에는 "민감한 정보 노출", "서비스 거부" 등이 있다. 식별 및 개선 지침을 제공하는 데 있어 근분 원인에 초점을 맞추는 것이 더 논리적이므로 가능한 한 이를 우선시하였다. 증상보다 근본 원인에 집중하는 것은 새로운 개념이 아니며, 기존 Top 10도 증상과 근본 원인이 혼재되어 있었다. CWE 역시도 마찬가지로 혼재되어 있으며, 이번에는 이를 보다 명확하게 구분하고자 하였다. 이번 버전에서 카테고리당 평균 CWE 수는 25개이며, 최소 5개(A03:2025-소프트웨어 공급망 실패, A09:2025-보안 로깅 및 알림 실패)에서 최대 40개(A01:2025-충분한 접근 제어)까지 분포한다. 카테고리당 CWE 수는 40개를 상한으로 설정하였다. 이러한 카테고리 구조 개편을 통해 기업들이 사용하는 언어나 프레임워크에 적합한 CWE에 집중할 수 있어 교육 효과가 향상될 것으로 기대된다.
 
-MITRE가 선정한 가장 위험한 소프트웨어 취약점 25개와 유사하게 단순히 10개의 CWE 목록으로 전환하는 것이 어떻겠냐는 질문을 받은 바 있다. 카테고리 내에 여러 CWE를 포함하는 데는 두 가지 주된 이유가 있다.모든 프로그래밍 언어 및 프레임워크에 따라 해당 CWE가 존재하지 않을 수 있다. Top 10의 일부가 적용되지 않는 경우 도구, 교육/인식 개선 프로그램 측면에서 공백이 생길 수 있다. 둘째, 일반적인 취약점에 대해 여러 CWE가 존재한다. 예를 들어, 일반적인 Injection, Command Injection, Cross-site Scripting, Hardcoded Passwords, Lack of Validation, Buffer Overflows, Cleartext Storage of Sensitive Information 등에 대해 각각 여러 CWE가 있다. 조직이나 테스터에 따라 서로 다른 CWE를 사용할 수 있다. 여러 CWE를 포함하는 카테고리를 사용함으로써 공통된 카테고리명 하에 발생할 수 있는 다양한 유형의 취약점에 대한 기준선과 인식을 높일 수 있다. 이번 Top 10 2025에는 10개 카테고리 내에 248개의 CWE가 포함되어 있다. 본 문서 발행 시점 기준으로 [MITRE에서 다운로드 가능한 사전](https://cwe.mitre.org)에는 총 968개의 CWE가 등록되어 있다.
+MITRE가 선정한 가장 위험한 소프트웨어 취약점 25개와 유사하게 단순히 10개의 CWE 목록으로 전환하는 것이 어떻겠냐는 질문을 받은 바 있다. 카테고리 내에 여러 CWE를 포함하는 데는 두 가지 주된 이유가 있다.모든 프로그래밍 언어 및 프레임워크에 따라 해당 CWE가 존재하지 않을 수 있다. Top 10의 일부가 적용되지 않는 경우 도구, 교육/인식 개선 프로그램 측면에서 공백이 생길 수 있다. 둘째, 일반적인 취약점에 대해 여러 CWE가 존재한다. 예를 들어, 일반적인 인젝션, 커멘드 인젝션, 크로스 사이트 스크립팅, 하드코딩된 패스워드, 검증 부재, 버퍼 오버플로우, 민감 정보의 평문 저장 등에 대해 각각 여러 CWE가 있다. 조직이나 테스터에 따라 서로 다른 CWE를 사용할 수 있다. 여러 CWE를 포함하는 카테고리를 사용함으로써 공통된 카테고리명 하에 발생할 수 있는 다양한 유형의 취약점에 대한 기준선과 인식을 높일 수 있다. 이번 Top 10 2025에는 10개 카테고리 내에 248개의 CWE가 포함되어 있다. 본 문서 발행 시점 기준으로 [MITRE에서 다운로드 가능한 사전](https://cwe.mitre.org)에는 총 968개의 CWE가 등록되어 있다.
 
 
 ## 카테고리 선정을 위한 데이터 사용법

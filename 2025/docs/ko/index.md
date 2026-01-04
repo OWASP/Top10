@@ -24,16 +24,17 @@ OWASP Top 10은 개발자와 웹 애플리케이션 보안을 위한 인식 제�
 
 ### Top 10:2025 목록
 
-1. [A01:2025 - 불충분한 접근 제어](A01_2025-Broken_Access_Control.md)
-2. [A02:2025 - Security Misconfiguration](A02_2025-Security_Misconfiguration.md)
-3. [A03:2025 - Software Supply Chain Failures](A03_2025-Software_Supply_Chain_Failures.md)
-4. [A04:2025 - Cryptographic Failures](A04_2025-Cryptographic_Failures.md)
-5. [A05:2025 - Injection](A05_2025-Injection.md)
-6. [A06:2025 - Insecure Design](A06_2025-Insecure_Design.md)
-7. [A07:2025 - Authentication Failures](A07_2025-Authentication_Failures.md)
-8. [A08:2025 - Software or Data Integrity Failures](A08_2025-Software_or_Data_Integrity_Failures.md)
-9. [A09:2025 - Security Logging and Alerting Failures](A09_2025-Security_Logging_and_Alerting_Failures.md)
-10. [A10:2025 - Mishandling of Exceptional Conditions](A10_2025-Mishandling_of_Exceptional_Conditions.md)
+1. [A01:2025 - 충분한 접근 제어](A01_2025-Broken_Access_Control.md)
+2. [A02:2025 - 보안 설정 오류](A02_2025-Security_Misconfiguration.md)
+3. [A03:2025 - 소프트웨어 공급망 실패](A03_2025-Software_Supply_Chain_Failures.md)
+4. [A04:2025 - 암호 체계 실패](A04_2025-Cryptographic_Failures.md)
+5. [A05:2025 - 인젝션](A05_2025-Injection.md)
+6. [A06:2025 - 안전하지 않은 설계](A06_2025-Insecure_Design.md)
+7. [A07:2025 - 인증 실패](A07_2025-Authentication_Failures.md)
+8. [A08:2025 - 소프트웨어 또는 데이터 무결성 실패](A08_2025-Software_or_Data_Integrity_Failures.md)
+9. [A09:2025 - 보안 로깅 및 알림 실패](A09_2025-Security_Logging_and_Alerting_Failures.md)
+10. [A10:2025 - 부적절한 예외 처리](A10_2025-Mishandling_of_Exceptional_Conditions.md)
+
 
 ---
 
