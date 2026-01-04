@@ -81,21 +81,15 @@
 
 가능하다면 조직 전체가 동일한 방식으로 예외 상황을 처리하는 것이 좋다. 이렇게 하면 이 중요한 보안 통제에 대한 코드 리뷰와 감사가 더 쉬워진다.
 
- 
+## 공격 시나리오 예시. 
 
-If possible, your entire organization should handle exceptional conditions in the same way, as it makes it easier to review and audit code for errors in this important security control.
+**시나리오 1:** 애플리케이션이 파일 업로드 시 예외를 캐치하되 리소스를 해제하지 않으면, 예외가 발생할 때마다 리소스가 잠긴 채로 남는다. 이로 인해 리소스가 고갈되어 서비스 거부(DoS)로 이어질 수 있다.
 
+**시나리오 2:** 데이터베이스 오류가 사용자에게 그대로 노출되면 민감한 시스템 정보가 유출된다. 공격자는 이를 악용해 의도적으로 오류를 유발하고, 수집한 정보를 기반으로 더 정교한 SQL 인젝션 공격을 구성할 수 있다.
 
-## Example attack scenarios. 
+**시나리오 3:** 공격자가 네트워크 중단을 일으켜 다단계 금융 트랜잭션을 방해할 수 있다. 예를 들어 트랜잭션이 "출금 → 입금 → 로깅" 순서로 처리될 때, 중간에 오류가 발생해도 시스템이 전체를 롤백(안전한 실패)하지 않으면 문제가 생긴다. 공격자는 이를 악용해 사용자 계좌에서 돈만 빠져나가게 하거나, 레이스 컨디션을 이용해 대상 계좌로 여러 번 송금할 수 있다.
 
-**Scenario #1:** Resource exhaustion via mishandling of exceptional conditions (Denial of Service) could be caused if the application catches exceptions when files are uploaded, but doesn’t properly release resources after. Each new exception leaves resources locked or otherwise unavailable, until all resources are used up.
-
-**Scenario #2:** Sensitive data exposure via improper handling or database errors that reveals the full system error to the user. The attacker continues to force errors in order to use the sensitive system information to create a better SQL injection attack. The sensitive data in the user error messages are reconnaissance.
-
-**Scenario #3:** State corruption in financial transactions could be caused by an attacker interrupting a multi-step transaction via network disruptions. Imagine the transaction order was: debit user account, credit destination account, log transaction. If the system doesn’t properly roll back the entire transaction (fail closed) when there is an error part way through, the attacker could potentially drain the user’s account, or possibly a race condition that allows the attacker to send money to the destination multiple times.
-
-
-## References.
+## 참조.
 
 OWASP MASVS‑RESILIENCE
 
