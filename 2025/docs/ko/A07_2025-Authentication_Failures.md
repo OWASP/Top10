@@ -68,7 +68,7 @@
 
 * 안전하지 않은 "질문-답변 방식 비밀번호 찾기"과 같은 취약하거나 비효율적인 자격 증명 복구 및 비밀번호 찾기 프로세스를 사용하는 경우.
 
-* 평문, 암호화된, 또는 약한 해시(hash)로 해시된 비밀번호를 사용하는 경우. [A04:2025-Cryptographic Failures](https://owasp.org/Top10/2025/A04_2025-Cryptographic_Failures/) 참고.
+* 평문, 암호화된, 또는 약한 해시(hash)로 해시된 비밀번호를 사용하는 경우. [A04:2025-암호 체계 실패](https://owasp.org/Top10/2025/A04_2025-Cryptographic_Failures/) 참고.
 
 * 다중 인증(MFA)이 누락되어 있거나 효과적이지 않은 경우.
 
