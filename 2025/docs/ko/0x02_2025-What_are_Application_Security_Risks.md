@@ -9,35 +9,26 @@
     <strong>위협 행위자</strong>
    </td>
    <td>
-    <strong>공격 \
-벡터</strong>
+     <strong>공격 벡터</strong>
+    </p>
    </td>
    <td>
     <strong>악용 가능성</strong>
    </td>
    <td>
-    <strong>보안 미비 가능성</strong>
-<p style="text-align: center">
-
-    <strong>통제</strong>
+     <strong>보안 통제 미비 가능성</strong>
+    </p>
    </td>
    <td>
-    <strong>기술적</strong>
-<p style="text-align: center">
-
-    <strong>영향</strong>
+     <strong>기술적 영향</strong>
    </td>
    <td>
-    <strong>비즈니스</strong>
-<p style="text-align: center">
-
-    <strong>영향</strong>
+     <strong>비즈니스 영향</strong>
    </td>
   </tr>
   <tr>
    <td>
-    <strong>환경에 따라, \
-상황에 따라 동적으로 변화</strong>
+    <strong>환경에 따라, 상황에 따라 동적으로 변화</strong>
    </td>
    <td>
     <strong>애플리케이션 노출 수준에 따라(환경 기준)</strong>
@@ -46,9 +37,7 @@
     <strong>평균 가중 악용</strong>
    </td>
    <td>
-    <strong>통제 누락을 \
-평균 발생률로 산정하고 \
-커버리지로 가중</strong>
+    <strong>통제 누락을 평균 발생률로 산정하고 커버리지로 가중</strong>
    </td>
    <td>
     <strong>평균 가중 영향</strong>
