@@ -91,7 +91,7 @@
 
 ## 참조.
 
-OWASP MASVS‑RESILIENCE
+- [OWASP MASVS‑RESILIENCE](https://mas.owasp.org/MASVS/11-MASVS-RESILIENCE/)
 
 - [OWASP Cheat Sheet: Logging](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html)
 
