@@ -80,42 +80,42 @@
 
 ## 참조.
 
-* [OWASP 치트 시트: 소프트웨어 공급망 보안](https://cheatsheetseries.owasp.org/cheatsheets/Software_Supply_Chain_Security_Cheat_Sheet.html)
-* [OWASP 치트 시트: 코드형 인프라(Infrastructure as Code)](https://cheatsheetseries.owasp.org/cheatsheets/Infrastructure_as_Code_Security_Cheat_Sheet.html)
-* [OWASP 치트 시트: 역직렬화(Deserialization)](https://wiki.owasp.org/index.php/Deserialization_Cheat_Sheet)
-* [SAFECode 소프트웨어 무결성 통제(Software Integrity Controls)](https://safecode.org/publication/SAFECode_Software_Integrity_Controls0610.pdf)
-* [‘최악의 악몽’ 사이버 공격: SolarWinds 해킹의 알려지지 않은 이야기](https://www.npr.org/2021/04/16/985439655/a-worst-nightmare-cyberattack-the-untold-story-of-the-solarwinds-hack)
-* [CodeCov Bash Uploader 침해 사고](https://about.codecov.io/security-update)
-* [Julien Vehent의 『Securing DevOps』](https://www.manning.com/books/securing-devops)
-* [Tenendo: 불안전한 역직렬화(Insecure Deserialization)](https://tenendo.com/insecure-deserialization/)
+* [OWASP Cheat Sheet: Software Supply Chain Security](https://cheatsheetseries.owasp.org/cheatsheets/Software_Supply_Chain_Security_Cheat_Sheet.html)
+* [OWASP Cheat Sheet: Infrastructure as Code](https://cheatsheetseries.owasp.org/cheatsheets/Infrastructure_as_Code_Security_Cheat_Sheet.html)
+* [OWASP Cheat Sheet: Deserialization](https://wiki.owasp.org/index.php/Deserialization_Cheat_Sheet)
+* [SAFECode Software Integrity Controls](https://safecode.org/publication/SAFECode_Software_Integrity_Controls0610.pdf)
+* [A 'Worst Nightmare' Cyberattack: The Untold Story Of The SolarWinds Hack](https://www.npr.org/2021/04/16/985439655/a-worst-nightmare-cyberattack-the-untold-story-of-the-solarwinds-hack)
+* [CodeCov Bash Uploader Compromise](https://about.codecov.io/security-update)
+* [Securing DevOps by Julien Vehent](https://www.manning.com/books/securing-devops)
+* [Insecure Deserialization by Tenendo](https://tenendo.com/insecure-deserialization/)
 
 
 ## 매핑된 CWE 목록
 
-* [CWE-345 데이터 진정성에 대한 불충분한 검증(Insufficient Verification of Data Authenticity)](https://cwe.mitre.org/data/definitions/345.html)
+* [CWE-345 Insufficient Verification of Data Authenticity](https://cwe.mitre.org/data/definitions/345.html)
 
-* [CWE-353 무결성 검사 지원 누락(Missing Support for Integrity Check)](https://cwe.mitre.org/data/definitions/353.html)
+* [CWE-353 Missing Support for Integrity Check](https://cwe.mitre.org/data/definitions/353.html)
 
-* [CWE-426 신뢰할 수 없는 검색 경로(Untrusted Search Path)](https://cwe.mitre.org/data/definitions/426.html)
+* [CWE-426 Untrusted Search Path](https://cwe.mitre.org/data/definitions/426.html)
 
-* [CWE-427 통제되지 않은 검색 경로 요소(Uncontrolled Search Path Element)](https://cwe.mitre.org/data/definitions/427.html)
+* [CWE-427 Uncontrolled Search Path Element](https://cwe.mitre.org/data/definitions/427.html)
 
-* [CWE-494 무결성 검사 없이 코드 다운로드(Download of Code Without Integrity Check)](https://cwe.mitre.org/data/definitions/494.html)
+* [CWE-494 Download of Code Without Integrity Check](https://cwe.mitre.org/data/definitions/494.html)
 
-* [CWE-502 신뢰할 수 없는 데이터의 역직렬화(Deserialization of Untrusted Data)](https://cwe.mitre.org/data/definitions/502.html)
+* [CWE-502 Deserialization of Untrusted Data](https://cwe.mitre.org/data/definitions/502.html)
 
-* [CWE-506 악성 코드 내장(Embedded Malicious Code)](https://cwe.mitre.org/data/definitions/506.html)
+* [CWE-506 Embedded Malicious Code](https://cwe.mitre.org/data/definitions/506.html)
 
-* [CWE-509 악성 코드 복제(바이러스 또는 웜)(Replicating Malicious Code (Virus or Worm))](https://cwe.mitre.org/data/definitions/509.html)
+* [CWE-509 Replicating Malicious Code (Virus or Worm)](https://cwe.mitre.org/data/definitions/509.html)
 
-* [CWE-565 검증 및 무결성 검사 없이 쿠키에 의존(Reliance on Cookies without Validation and Integrity Checking)](https://cwe.mitre.org/data/definitions/565.html)
+* [CWE-565 Reliance on Cookies without Validation and Integrity Checking](https://cwe.mitre.org/data/definitions/565.html)
 
-* [CWE-784 보안 의사결정에서 검증 및 무결성 검사 없이 쿠키에 의존(Reliance on Cookies without Validation and Integrity Checking in a Security Decision)](https://cwe.mitre.org/data/definitions/784.html)
+* [CWE-784 Reliance on Cookies without Validation and Integrity Checking in a Security Decision](https://cwe.mitre.org/data/definitions/784.html)
 
-* [CWE-829 신뢰할 수 없는 통제 영역(Control Sphere)에서 기능 포함(Inclusion of Functionality from Untrusted Control Sphere)](https://cwe.mitre.org/data/definitions/829.html)
+* [CWE-829 Inclusion of Functionality from Untrusted Control Sphere](https://cwe.mitre.org/data/definitions/829.html)
 
-* [CWE-830 신뢰할 수 없는 출처로부터의 웹 기능 포함(Inclusion of Web Functionality from an Untrusted Source)](https://cwe.mitre.org/data/definitions/830.html)
+* [CWE-830 Inclusion of Web Functionality from an Untrusted Source](https://cwe.mitre.org/data/definitions/830.html)
 
-* [CWE-915 동적으로 결정되는 객체 속성의 부적절하게 통제된 수정(Improperly Controlled Modification of Dynamically-Determined Object Attributes)](https://cwe.mitre.org/data/definitions/915.html)
+* [CWE-915 Improperly Controlled Modification of Dynamically-Determined Object Attributes](https://cwe.mitre.org/data/definitions/915.html)
 
-* [CWE-926 Android 애플리케이션 컴포넌트의 부적절한 내보내기(Improper Export of Android Application Components)](https://cwe.mitre.org/data/definitions/926.html)
+* [CWE-926 Improper Export of Android Application Components](https://cwe.mitre.org/data/definitions/926.html)
