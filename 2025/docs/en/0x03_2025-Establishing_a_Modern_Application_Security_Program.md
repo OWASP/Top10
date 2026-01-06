@@ -4,7 +4,7 @@ The OWASP Top Ten lists are awareness documents, meant to bring awareness to the
 
  
 
-If you already have an application security program, consider performing a maturity assessment on it using [OWASP SAMM (Software Assurance Maturity Model)](https://owasp.org/www-project-samm/) or DSOMM (DevSecOps Maturity Model) . These maturity models are comprehensive and exhaustive and can be used to help you figure out where you should best focus your efforts for expanding and maturing your program. Please note: you do not need to do everything in OWASP SAMM or DSOMM to be doing a good job, they are meant to guide you and offer many options. They are not meant to offer unattainable standards or describe unaffordable programs. They are expansive in order to offer you many ideas and options.
+If you already have an application security program, consider performing a maturity assessment on it using [OWASP SAMM (Software Assurance Maturity Model)](https://owasp.org/www-project-samm/) or DSOMM (DevSecOps Maturity Model). These maturity models are comprehensive and exhaustive and can be used to help you figure out where you should best focus your efforts for expanding and maturing your program. Please note: you do not need to do everything in OWASP SAMM or DSOMM to be doing a good job, they are meant to guide you and offer many options. They are not meant to offer unattainable standards or describe unaffordable programs. They are expansive in order to offer you many ideas and options.
 
  
 
