@@ -2,7 +2,7 @@
 
 By design, the OWASP Top 10 is innately limited to the ten most significant risks. Every OWASP Top 10 has “on the cusp” risks considered at length for inclusion, but in the end, didn't make the cut. The other risks were more prevalent and impactful.
 
-The following two issues are well worth the effort to identify and remediate, organizations working towards a mature appsec program, security consultancies, or tool vendors wishing to expand coverage for their offerings.
+The following three issues are well worth the effort to identify and remediate, organizations working towards a mature appsec program, security consultancies, or tool vendors wishing to expand coverage for their offerings.
 
 
 ## X01:2025 Lack of Application Resilience
