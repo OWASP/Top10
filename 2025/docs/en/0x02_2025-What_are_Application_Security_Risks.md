@@ -40,7 +40,7 @@ Vectors</strong>
 dynamic by situation picture</strong>
    </td>
    <td>
-    <strong>By Application  exposure (by environment</strong>
+    <strong>By Application  exposure (by environment)</strong>
    </td>
    <td>
     <strong>Avg Weighted Exploit</strong>
