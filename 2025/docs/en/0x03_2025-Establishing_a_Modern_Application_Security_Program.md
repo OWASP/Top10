@@ -70,7 +70,7 @@ If you are starting a program from scratch, or you find OWASP SAMM or DSOMM ‘t
 
 * Collect and negotiate the business requirements for an application with the business, including the protection requirements with regard to confidentiality, authenticity, integrity and availability of all data assets, and the expected business logic.
 
-* Compile the technical requirements including functional and nonfunctional security requirements. OWASP recommends you use the [OWASP Application Security Verification Standard (ASVS)(https://owasp.org/www-project-application-security-verification-standard/) as a guide for setting the security requirements for your application(s).
+* Compile the technical requirements including functional and nonfunctional security requirements. OWASP recommends you use the [OWASP Application Security Verification Standard (ASVS)](https://owasp.org/www-project-application-security-verification-standard/) as a guide for setting the security requirements for your application(s).
 
 * Plan and negotiate the budget that covers all aspects of design, build, testing and operation, including security activities.
 
