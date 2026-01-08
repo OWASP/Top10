@@ -9,7 +9,7 @@ Security Logging & Alerting Failures retains its position at #9. This category h
 ## Score table.
 
 
-<table>
+<table >
   <tr>
    <td>CWEs Mapped 
    </td>

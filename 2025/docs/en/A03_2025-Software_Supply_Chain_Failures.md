@@ -9,7 +9,7 @@ This was top-ranked in the Top 10 community survey with exactly 50% respondents 
 ## Score table.
 
 
-<table>
+<table class="table-base">
   <tr>
    <td>CWEs Mapped
    </td>
