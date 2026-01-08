@@ -24,3 +24,10 @@
   background-color: var(--md-typeset-table-color--light);
   box-shadow: 0 .05rem 0 var(--md-default-bg-color) inset;
 }
+
+@media (max-width: 800px) {
+  .table-risk td,
+  .table-risk th {
+    min-width: 150px;
+  }
+}

@@ -3,7 +3,7 @@ Attackers can potentially use many different paths through your application to d
 
 ![Calculation diagram](../assets/2025-algorithm-diagram.png)
 
-<table>
+<table class="table-base table-risk">
   <tr>
    <td>
     <strong>Threat Agents</strong>
