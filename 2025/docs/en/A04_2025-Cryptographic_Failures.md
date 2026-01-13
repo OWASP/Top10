@@ -67,8 +67,8 @@ Beyond securing the transport layer, it is important to determine what data need
 * Are any old or weak cryptographic algorithms or protocols used either by default or in older code?
 * Are default crypto keys in use, are weak crypto keys generated, are keys re-used, or is proper key management and rotation missing? 
 * Are crypto keys checked into source code repositories?
-* Is encryption not enforced, e.g., are any HTTP headers (browser) security directives or headers missing?
-* Can the received server certificate and the trust chain properly validated from the client?
+* Is encryption not enforced, e.g., are any HTTP headers (browser) or security directives missing?
+* Can the received server certificate and the trust chain be properly validated from the client?
 * Are initialization vectors ignored, reused, or not generated sufficiently secure for the cryptographic mode of operation? Is an insecure mode of operation such as ECB in use? Is encryption used when authenticated encryption is more appropriate?
 * Are passwords being used as cryptographic keys in the absence of a password based key derivation function?
 * Is randomness used that was not designed to meet cryptographic requirements? Even if the correct function is chosen, does it need to be seeded by the developer, and if not, has the developer over-written the strong seeding functionality built into it with a seed that lacks sufficient entropy/unpredictability?
@@ -95,7 +95,7 @@ Do the following, at a minimum, and consult the references:
 * Do not use unencrypted protocols such as FTP, and STARTTLS. Avoid using SMTP for transmitting confidential data.
 * Disable caching for responses that contain sensitive data. This includes caching in your CDN, web server, and any application caching (eg: Redis).
 * Store passwords using strong adaptive and salted hashing functions with a work factor (delay factor), such as Argon2, yescrypt, scrypt or PBKDF2-HMAC-SHA-512. For legacy systems using bcrypt, get more advice at [OWASP Cheat Sheet: Password Storage](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html)
-* Keys should be generated cryptographically randomly and stored in memory as byte arrays. If a password is used, then it must be converted to a key via an appropriate password base key derivation function.
+* Keys should be generated cryptographically randomly. If a password is used, then it must be converted to a key via an appropriate password base key derivation function.
 * Initialization vectors must be chosen appropriate for the mode of operation. This could mean using a CSPRNG (cryptographically secure pseudo random number generator). For modes that require a nonce, the initialization vector (IV) does not need a CSPRNG. In all cases, the IV should never be used twice for a fixed key.
 * Ensure that cryptographic randomness is used where appropriate and that it has not been seeded in a predictable way or with low entropy. Most modern APIs do not require the developer to seed the CSPRNG to be secure.
 * Avoid deprecated cryptographic functions, block building methods and padding schemes, such as MD5, SHA1, Cipher Block Chaining Mode (CBC), PKCS \#1 v1.5.
