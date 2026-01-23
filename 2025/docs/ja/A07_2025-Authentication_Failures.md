@@ -1,4 +1,4 @@
-# A07:2025 認証の失敗 (Authentication Failures) ![icon](../assets/TOP_10_Icons_Final_Identification_and_Authentication_Failures.png){: style="height:80px;width:80px" align="right"}
+# A07:2025 認証の不備 (Authentication Failures) ![icon](../assets/TOP_10_Icons_Final_Identification_and_Authentication_Failures.png){: style="height:80px;width:80px" align="right"}
 
 ## 背景 (Background)
 
