@@ -12,12 +12,12 @@
 
 * [A01:2025 - アクセス制御の不備 (Broken Access Control)](A01_2025-Broken_Access_Control.md)
 * [A02:2025 - セキュリティ設定の不備 (Security Misconfiguration)](A02_2025-Security_Misconfiguration.md)
-* [A03:2025 - ソフトウェアサプライチェーンの失敗 (Software Supply Chain Failures)](A03_2025-Software_Supply_Chain_Failures.md)
-* [A04:2025 - 暗号化の失敗 (Cryptographic Failures)](A04_2025-Cryptographic_Failures.md)
+* [A03:2025 - ソフトウェアサプライチェーンの不備 (Software Supply Chain Failures)](A03_2025-Software_Supply_Chain_Failures.md)
+* [A04:2025 - 暗号化の不備 (Cryptographic Failures)](A04_2025-Cryptographic_Failures.md)
 * [A05:2025 - インジェクション (Injection)](A05_2025-Injection.md)
 * [A06:2025 - 安全性を欠いた設計 (Insecure Design)](A06_2025-Insecure_Design.md)
-* [A07:2025 - 認証の失敗 (Authentication Failures)](A07_2025-Authentication_Failures.md)
-* [A08:2025 - ソフトウェアまたはデータの完全性の失敗 (Software or Data Integrity Failures)](A08_2025-Software_or_Data_Integrity_Failures.md)
+* [A07:2025 - 認証の不備 (Authentication Failures)](A07_2025-Authentication_Failures.md)
+* [A08:2025 - ソフトウェアまたはデータの完全性の不備 (Software or Data Integrity Failures)](A08_2025-Software_or_Data_Integrity_Failures.md)
 * [A09:2025 - セキュリティログとアラートの不備 (Security Logging and Alerting Failures)](A09_2025-Security_Logging_and_Alerting_Failures.md)
 * [A10:2025 - 例外的な状況への不適切な対応 (Mishandling of Exceptional Conditions)](A10_2025-Mishandling_of_Exceptional_Conditions.md)
 
@@ -30,12 +30,12 @@
 
 * **[A01:2025 - アクセス制御の不備](A01_2025-Broken_Access_Control.md)** は、最も深刻なリスクとして引き続き第1位となりました。テストされたアプリケーションの平均3.73%に、本カテゴリの40のCWE（共通弱点一覧 (Common Weakness Enumerations)）が1つ以上含まれています。上図の破線が示す通り、サーバーサイドリクエストフォージェリ (SSRF: Server-Side Request Forgery) は本カテゴリに統合されました。
 * **[A02:2025 - セキュリティ設定の不備](A02_2025-Security_Misconfiguration.md)** は、2021年の第5位から第2位へと上昇しました。今回のデータでは設定の不備がより顕著に見られ、アプリケーションの3.00%に本カテゴリの16のCWEが含まれています。ソフトウェアエンジニアリングにおいて、アプリケーションの挙動が設定に依存する割合が増え続けている現状を反映しています。
-* **[A03:2025 - ソフトウェアサプライチェーンの失敗](A03_2025-Software_Supply_Chain_Failures.md)** は、2021年版の「脆弱で古くなったコンポーネント」を拡張したものです。依存関係、ビルドシステム、配布インフラの全体にわたる侵害を対象としています。本カテゴリはコミュニティ調査で圧倒的な票を集めました。現状、収集データ上の出現頻度は限定的ですが、CVEにおける平均的な悪用可能性 (exploit) と影響 (impact) のスコアが最も高くなっています。
-* **[A04:2025 - 暗号化の失敗](A04_2025-Cryptographic_Failures.md)** は、第2位から第4位へ後退しました。平均3.80%のアプリケーションに、本カテゴリの32のCWEが含まれています。本不備は、機密情報の露出 (sensitive data exposure) やシステムの侵害 (system compromise) を招く恐れがあります。
+* **[A03:2025 - ソフトウェアサプライチェーンの不備](A03_2025-Software_Supply_Chain_Failures.md)** は、2021年版の「脆弱で古くなったコンポーネント」を拡張したものです。依存関係、ビルドシステム、配布インフラの全体にわたる侵害を対象としています。本カテゴリはコミュニティ調査で圧倒的な票を集めました。現状、収集データ上の出現頻度は限定的ですが、CVEにおける平均的な悪用可能性 (exploit) と影響 (impact) のスコアが最も高くなっています。
+* **[A04:2025 - 暗号化の不備](A04_2025-Cryptographic_Failures.md)** は、第2位から第4位へ後退しました。平均3.80%のアプリケーションに、本カテゴリの32のCWEが含まれています。本不備は、機密情報の露出 (sensitive data exposure) やシステムの侵害 (system compromise) を招く恐れがあります。
 * **[A05:2025 - インジェクション](A05_2025-Injection.md)** は、第3位から第5位へ順位を下げました。最も多くテストされているカテゴリの一つであり、38のCWEに関連するCVE数が最大です。インジェクションには、クロスサイトスクリプティング (XSS)（高頻度・低影響）からSQLインジェクション（低頻度・高影響）まで、幅広い脆弱性が含まれます。
 * **[A06:2025 - 安全性を欠いた設計](A06_2025-Insecure_Design.md)** は、第4位から第6位へ順位を下げました。2021年の導入以来、脅威モデリング (threat modeling) の普及など、安全な設計への意識向上と業界の進展が見られます。
-* **[A07:2025 - 認証の失敗](A07_2025-Authentication_Failures.md)** は、第7位を維持しました。実態を反映するため、名称を微修正しています。依然として重要な領域ですが、標準的な認証フレームワークの活用により、不備の発生が抑制され始めています。
-* **[A08:2025 - ソフトウェアまたはデータの完全性の失敗](A08_2025-Software_or_Data_Integrity_Failures.md)** は、引き続き第8位です。信頼境界の維持や、コード・データの完全性検証の失敗に焦点を当てています。
+* **[A07:2025 - 認証の不備](A07_2025-Authentication_Failures.md)** は、第7位を維持しました。実態を反映するため、名称を微修正しています。依然として重要な領域ですが、標準的な認証フレームワークの活用により、不備の発生が抑制され始めています。
+* **[A08:2025 - ソフトウェアまたはデータの完全性の不備](A08_2025-Software_or_Data_Integrity_Failures.md)** は、引き続き第8位です。信頼境界の維持や、コード・データの完全性検証の失敗に焦点を当てています。
 * **[A09:2025 - セキュリティログとアラートの不備](A09_2025-Security_Logging_and_Alerting_Failures.md)** は、第9位を維持しました。適切なアクションを促す「アラート機能」を強調するため、名称を変更しています。アラートを伴わないログ出力には、インシデント特定においてほとんど価値がありません。
 * **[A10:2025 - 例外的な状況への不適切な対応](A10_2025-Mishandling_of_Exceptional_Conditions.md)** は、2025年版の新カテゴリです。エラー処理の不備やロジックエラー、フェイルオープンなど、異常状態に起因する24のCWEを含みます。
 
