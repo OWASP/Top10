@@ -1,4 +1,4 @@
-# A04:2025 暗号化の失敗 (Cryptographic Failures) ![icon](../assets/TOP_10_Icons_Final_Crypto_Failures.png){: style="height:80px;width:80px" align="right"}
+# A04:2025 暗号化の不備 (Cryptographic Failures) ![icon](../assets/TOP_10_Icons_Final_Crypto_Failures.png){: style="height:80px;width:80px" align="right"}
 
 ## 背景 (Background)
 
