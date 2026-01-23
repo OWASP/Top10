@@ -1,4 +1,4 @@
-# A08:2025 ソフトウェアまたはデータの完全性の失敗 (Software or Data Integrity Failures) ![icon](../assets/TOP_10_Icons_Final_Software_and_Data_Integrity_Failures.png){: style="height:80px;width:80px" align="right"}
+# A08:2025 ソフトウェアまたはデータの完全性の不備 (Software or Data Integrity Failures) ![icon](../assets/TOP_10_Icons_Final_Software_and_Data_Integrity_Failures.png){: style="height:80px;width:80px" align="right"}
 
 ## 背景 (Background)
 
