@@ -2,7 +2,7 @@
 
 ## 背景 (Background)
 
-このカテゴリには圧倒的な関心が集まっており、コミュニティ調査における回答者のちょうど半数が、第1位に選んだものです。2013年版に「既知の脆弱性を持つコンポーネントの利用」として初登場して以来、その対象範囲は拡大し、現在では既知の脆弱性だけでなく、サプライチェーン全域の失敗 (Software Supply Chain Failures) を含むようになっています。範囲が広がった一方で、特定の CWE (共通弱点一覧) と CVE (共通脆弱性識別子) の紐付けが難しく、依然として識別の難しさが課題となっています。しかし、収集データによれば、本カテゴリの平均出現率 (Incidence Rate) は 5.19% と全カテゴリの中で最高を記録しています。主要な CWE には、廃止された機能の利用 (CWE-477)、保守されていないサードパーティ製コンポーネントの利用 (CWE-1104)、および脆弱なサードパーティ製コンポーネントへの依存 (CWE-1395) などが含まれます。
+このカテゴリには圧倒的な関心が集まっており、コミュニティ調査における回答者のちょうど半数が、第1位に選んだものです。2013年版に「既知の脆弱性を持つコンポーネントの利用」として初登場して以来、その対象範囲は拡大し、現在では既知の脆弱性だけでなく、サプライチェーン全域の失敗 (Software Supply Chain Failures) を含むようになっています。範囲が広がった一方で、特定の CWE (共通弱点一覧) と CVE (共通脆弱性識別子) の紐付けが難しく、依然として識別の難しさが課題となっています。しかし、収集データによれば、本カテゴリの平均出現率 (Incidence Rate) は 5.19% と全カテゴリの中で最高を記録しています。主要な CWE には、廃止された機能の利用 (CWE-477)、保守されていないサードパーティ製コンポーネントの利用 (CWE-1104)、更新不可能なコンポーネントへの依存 (CWE-1329)、および脆弱なサードパーティ製コンポーネントへの依存 (CWE-1395) が含まれます。
 
 ## スコアテーブル (Score Table)
 
@@ -47,7 +47,7 @@
 * プラットフォームやフレームワークのアップデートをリスクに基づいて迅速に行っていない。パッチ適用を月次や四半期ごとのルーチンに固定していると、脆弱性の発覚から修正までの間に、組織が不必要なリスクに晒されることになります。
 * 開発者が、パッチ適用後のライブラリの互換性テストを実施していない。
 * システムのあらゆる箇所の設定を安全に構成していない（[A02:2025-セキュリティ設定の不備](https://owasp.org/Top10/2025/A02_2025-Security_Misconfiguration/) 参照）。
-* CI/CD パイプラインのセキュリティが、ビルド対象のシステムよりも脆弱である。
+* CI/CD パイプラインのセキュリティが、ビルド対象のシステムよりも脆弱である（特にパイプラインが複雑な場合）。
 
 ## 防止方法 (How to Prevent)
 
@@ -60,7 +60,20 @@
 * **継続的な監視：** CVE や NVD、[Open Source Vulnerabilities (OSV)](https://osv.dev/) を監視し、使用コンポーネントの脆弱性情報を自動的に取得してください。
 * **信頼できるソースの利用：** コンポーネントは公式の信頼できるソースから、安全な通信経路を介してのみ入手してください。改ざんのリスクを減らすため、署名済みパッケージの利用を推奨します。
 * **戦略的なアップデート：** 依存関係のバージョンは慎重に選択し、必要が生じた際にのみアップグレードしてください。保守されていないライブラリを監視し、パッチ適用が不可能な場合は代替コンポーネントへの移行や、バーチャルパッチ (Virtual Patch) の導入を検討してください。
+* **開発ツールの更新：** CI/CD、IDE、その他の開発者向けツールを定期的に更新してください。
 * **段階的なデプロイ：** 全システムへの同時アップデートを避け、段階的リリース (Staged Rollout) やカナリアデプロイ (Canary Deployment) を活用して、ベンダー侵害時の被害を最小化してください。
+
+また、以下の変更を追跡するための変更管理プロセスまたは追跡システムを確立してください。
+
+* CI/CD の設定（すべてのビルドツールとパイプライン）
+* コードリポジトリ
+* サンドボックス環境
+* 開発者の IDE
+* SBOM ツールおよび生成された成果物
+* ログシステムとログ
+* SaaS などのサードパーティ統合
+* 成果物リポジトリ
+* コンテナレジストリ
 
 また、以下のシステムにおいて要塞化 (Hardening) を実施し、多要素認証 (MFA) の導入とアクセス管理 (IAM) を厳格化してください。
 
@@ -75,13 +88,13 @@
 
 **シナリオ #1：信頼できるベンダーの侵害**
 ベンダーがマルウェアに侵害され、アップデートを通じて利用者のシステムも侵害されるケースです。
-* **SolarWinds 侵害事件 (2019 年)：** 約 18,000 の組織に影響を与えたサプライチェーン攻撃の代表例です。
+* **SolarWinds 侵害事件 (2019 年)：** 約 18,000 の組織に影響を与えたサプライチェーン攻撃の代表例です。[詳細記事](https://www.npr.org/2021/04/16/985439655/a-worst-nightmare-cyberattack-the-untold-story-of-the-solarwinds-hack)
 
 **シナリオ #2：特定条件でのみ発動する悪意ある挙動**
-* **Bybit 資産奪取事件 (2025 年)：** ウォレットソフトウェアへのサプライチェーン攻撃により、15 億ドルが盗まれました。この攻撃は、標的のウォレットが使用されている特定の条件下でのみ実行されるよう設計されていました。
+* **Bybit 資産奪取事件 (2025 年)：** [ウォレットソフトウェアへのサプライチェーン攻撃](https://www.sygnia.co/blog/sygnia-investigation-bybit-hack/)により、15 億ドルが盗まれました。この攻撃は、標的のウォレットが使用されている特定の条件下でのみ実行されるよう設計されていました。
 
 **シナリオ #3：自己拡散型ワーム**
-* **`Shai-Hulud` 攻撃 (2025 年)：** npm エコシステムに影響を与えた、初の自己拡散型 npm ワームです。悪意のあるパッケージを起点に、インストール後スクリプト (Post-install Script) を介して機密データを窃取しました。このワームは環境内の npm トークンを検知し、アクセス可能な他のパッケージにも自身を自動的にプッシュして拡散しました。
+* **[`Shai-Hulud` サプライチェーン攻撃](https://www.cisa.gov/news-events/alerts/2025/09/23/widespread-supply-chain-compromise-impacting-npm-ecosystem) (2025 年)：** npm エコシステムに影響を与えた、初の自己拡散型 npm ワームです。悪意のあるパッケージを起点に、インストール後スクリプト (Post-install Script) を介して機密データを窃取し、公開 GitHub リポジトリに流出させました。このワームは環境内の npm トークンを検知し、アクセス可能な他のパッケージにも自身を自動的にプッシュして拡散しました。npm によって阻止されるまでに 500 以上のパッケージバージョンに到達しました。このサプライチェーン攻撃は高度で拡散が速く、開発者のマシンを標的とすることで、開発者自身がサプライチェーン攻撃の主要な標的となっていることを示しました。
 
 **シナリオ #4：コンポーネントの脆弱性の悪用**
 * **Struts 2 (CVE-2017-5638)：** 任意コード実行 (RCE) を可能にする脆弱性で、多くの情報漏洩の原因となりました。
@@ -89,15 +102,30 @@
 
 ## 関連資料 (References)
 
-* [OWASP ASVS: V15 安全なコーディングとアーキテクチャ](https://owasp.org/www-project-application-security-verification-standard/)
-* [OWASP Cheat Sheet: 依存関係グラフと SBOM](https://cheatsheetseries.owasp.org/cheatsheets/Dependency_Graph_SBOM_Cheat_Sheet.html)
+* [OWASP Application Security Verification Standard: V15 Secure Coding and Architecture](https://owasp.org/www-project-application-security-verification-standard/)
+* [OWASP Cheat Sheet Series: Dependency Graph SBOM](https://cheatsheetseries.owasp.org/cheatsheets/Dependency_Graph_SBOM_Cheat_Sheet.html)
+* [OWASP Cheat Sheet Series: Vulnerable Dependency Management](https://cheatsheetseries.owasp.org/cheatsheets/Vulnerable_Dependency_Management_Cheat_Sheet.html)
 * [OWASP Dependency-Track](https://owasp.org/www-project-dependency-track/)
 * [OWASP CycloneDX](https://owasp.org/www-project-cyclonedx/)
+* [OWASP Application Security Verification Standard: V1 Architecture, design and threat modelling](https://owasp-aasvs.readthedocs.io/en/latest/v1.html)
+* [OWASP Dependency Check (for Java and .NET libraries)](https://owasp.org/www-project-dependency-check/)
+* OWASP Testing Guide - Map Application Architecture (OTG-INFO-010)
+* [OWASP Virtual Patching Best Practices](https://owasp.org/www-community/Virtual_Patching_Best_Practices)
+* [The Unfortunate Reality of Insecure Libraries](https://www.scribd.com/document/105692739/JeffWilliamsPreso-Sm)
+* [MITRE Common Vulnerabilities and Exposures (CVE) search](https://www.cve.org)
+* [National Vulnerability Database (NVD)](https://nvd.nist.gov)
+* [Retire.js for detecting known vulnerable JavaScript libraries](https://retirejs.github.io/retire.js/)
+* [GitHub Advisory Database](https://github.com/advisories)
+* Ruby Libraries Security Advisory Database and Tools
+* [SAFECode Software Integrity Controls (PDF)](https://safecode.org/publication/SAFECode_Software_Integrity_Controls0610.pdf)
 * [Open Source Vulnerabilities (OSV)](https://osv.dev/)
+* [Glassworm supply chain attack](https://thehackernews.com/2025/10/self-spreading-glassworm-infects-vs.html)
+* [PhantomRaven supply chain attack campaign](https://thehackernews.com/2025/10/phantomraven-malware-found-in-126-npm.html)
 
 ## 紐付けられた CWE 一覧 (List of Mapped CWEs)
 
 * [CWE-447 Use of Obsolete Function](https://cwe.mitre.org/data/definitions/447.html)
+* [CWE-1035 2017 Top 10 A9: Using Components with Known Vulnerabilities](https://cwe.mitre.org/data/definitions/1035.html)
 * [CWE-1104 Use of Unmaintained Third Party Components](https://cwe.mitre.org/data/definitions/1104.html)
 * [CWE-1329 Reliance on Component That is Not Updateable](https://cwe.mitre.org/data/definitions/1329.html)
 * [CWE-1357 Reliance on Insufficiently Trustworthy Component](https://cwe.mitre.org/data/definitions/1357.html)

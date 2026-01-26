@@ -2,7 +2,7 @@
 
 ## 背景 (Background)
 
-「ソフトウェアまたはデータの完全性の失敗」は、前回に引き続き第8位となりました。名称は、範囲をより明確にするために「ソフトウェア *および* データの完全性の失敗」から微修正されています。このカテゴリは、信頼境界 (Trust Boundary) の維持に失敗し、ソフトウェア、コード、およびデータ資産の完全性検証を怠るリスクに焦点を当てています。これは「A03: ソフトウェアサプライチェーンの失敗」よりも低レイヤーな検証不備を対象としています。主要な CWE (共通弱点一覧) には、信頼できない制御球からの機能の取り込み (CWE-829)、動的に決定されるオブジェクト属性の不適切な修正 (CWE-915)、および信頼できないデータのデシリアライゼーション (CWE-502) が含まれます。
+「ソフトウェアまたはデータの完全性の失敗」は、前回に引き続き第8位となりました。名称は、範囲をより明確にするために「ソフトウェア *および* データの完全性の失敗」から微修正されています。このカテゴリは、信頼境界 (Trust Boundary) の維持に失敗し、ソフトウェア、コード、およびデータ資産の完全性検証を怠るリスクに焦点を当てています。これは「A03: ソフトウェアサプライチェーンの不備」よりも低レイヤーな検証不備を対象としています。主要な CWE (共通弱点一覧) には、信頼できない制御球からの機能の取り込み (CWE-829)、動的に決定されるオブジェクト属性の不適切な修正 (CWE-915)、および信頼できないデータのデシリアライゼーション (CWE-502) が含まれます。
 
 ## スコアテーブル (Score Table)
 
@@ -33,16 +33,7 @@
 
 ## 説明 (Description)
 
-本リスクは、コードやインフラにおいて、無効または信頼できないデータやコードを「妥当で信頼できるもの」として扱ってしまう不備に関連しています。
-
-「出所不明なソフトウェアを検証なしに受け入れるのは、中身を確認せずに封筒を開封し、そこに書かれた指示に従ってしまうようなものです。たとえその指示が家を壊すものであっても、疑わずに実行してしまえば手遅れになります。」
-
-以下のようなケースが脆弱性の典型例です。
-
-* **信頼できないソースの利用：** 信頼できないリポジトリや CDN (コンテンツデリバリネットワーク) 上のプラグイン、ライブラリ、モジュールに依存している。
-* **不セキュアな CI/CD パイプライン：** ソフトウェアの完全性チェックを伴わないパイプラインは、不正アクセスや悪意あるコードの混入、システム侵害を招く恐れがあります。
-* **署名なき自動アップデート：** 多くのアプリケーションが備える自動更新機能において、ダウンロードされた更新ファイルの完全性を十分に検証せずに適用している。
-* **不セキュアなデシリアライゼーション：** 攻撃者が内容を閲覧・改ざんできる構造（シリアライズされたオブジェクトやデータ）を、検証なしに復元して利用している。
+ソフトウェアおよびデータの完全性の不備は、無効または信頼できないコードやデータを、信頼できる妥当なものとして扱ってしまうコードやインフラに関連しています。たとえば、信頼できないソース、リポジトリ、CDN (コンテンツデリバリネットワーク) からのプラグイン、ライブラリ、モジュールに依存しているアプリケーションがこれに該当します。ソフトウェアの完全性チェックを提供・消費しない安全でない CI/CD パイプラインは、不正アクセス、悪意あるコード、またはシステム侵害の可能性をもたらします。また、信頼できない場所からコードや成果物を取得し、使用前に検証しない（署名の確認などを行わない）CI/CD も同様です。さらに、多くのアプリケーションは自動更新機能を備えていますが、十分な完全性検証なしに更新がダウンロードされ、以前は信頼されていたアプリケーションに適用されます。攻撃者は独自の更新をアップロードして配布し、すべてのインストール先で実行させる可能性があります。もう一つの例は、オブジェクトやデータが攻撃者が閲覧・改ざんできる構造にエンコードまたはシリアライズされている場合で、安全でないデシリアライゼーションに対して脆弱になります。
 
 ## 防止方法 (How to Prevent)
 
@@ -63,22 +54,34 @@
 **シナリオ #3：信頼できないソースからのパッケージ利用**
 開発者が公式のパッケージマネージャーではなく、Web サイトから直接署名のないパッケージをダウンロードして利用した。そのパッケージには悪意のあるコードが含まれており、完全性を検証する術がなかったために侵害が発生した。
 
-**シナリオ #4：不セキュアなデシリアライゼーション**
+**シナリオ #4：安全でないデシリアライゼーション**
 React アプリケーションが Spring Boot マイクロサービスと通信する際、状態をシリアライズしてリクエストごとに受け渡していた。攻撃者が Java オブジェクトの署名（Base64 形式の "rO0"）に気づき、デシリアライゼーション・スキャナーを用いてアプリケーションサーバー上でリモートコード実行 (RCE) を達成した。
 
 ## 関連資料 (References)
 
-* [OWASP Cheat Sheet: ソフトウェアサプライチェーンのセキュリティ](https://cheatsheetseries.owasp.org/cheatsheets/Software_Supply_Chain_Security_Cheat_Sheet.html)
-* [OWASP Cheat Sheet: デシリアライゼーション](https://cheatsheetseries.owasp.org/cheatsheets/Deserialization_Cheat_Sheet.html)
-* [SAFECode: ソフトウェアの完全性制御 (PDF)](https://safecode.org/publication/SAFECode_Software_Integrity_Controls0610.pdf)
-* [SolarWinds 侵害事件の深層 (NPR 記事)](https://www.npr.org/2021/04/16/985439655/a-worst-nightmare-cyberattack-the-untold-story-of-the-solarwinds-hack)
+* [OWASP Cheat Sheet: Software Supply Chain Security](https://cheatsheetseries.owasp.org/cheatsheets/Software_Supply_Chain_Security_Cheat_Sheet.html)
+* [OWASP Cheat Sheet: Infrastructure as Code](https://cheatsheetseries.owasp.org/cheatsheets/Infrastructure_as_Code_Security_Cheat_Sheet.html)
+* [OWASP Cheat Sheet: Deserialization](https://wiki.owasp.org/index.php/Deserialization_Cheat_Sheet)
+* [SAFECode Software Integrity Controls](https://safecode.org/publication/SAFECode_Software_Integrity_Controls0610.pdf)
+* [A 'Worst Nightmare' Cyberattack: The Untold Story Of The SolarWinds Hack](https://www.npr.org/2021/04/16/985439655/a-worst-nightmare-cyberattack-the-untold-story-of-the-solarwinds-hack)
+* [CodeCov Bash Uploader Compromise](https://about.codecov.io/security-update)
+* [Securing DevOps by Julien Vehent](https://www.manning.com/books/securing-devops)
+* [Insecure Deserialization by Tenendo](https://tenendo.com/insecure-deserialization/)
 
 ## 紐付けられた CWE 一覧 (List of Mapped CWEs)
 
 * [CWE-345 Insufficient Verification of Data Authenticity](https://cwe.mitre.org/data/definitions/345.html)
 * [CWE-353 Missing Support for Integrity Check](https://cwe.mitre.org/data/definitions/353.html)
+* [CWE-426 Untrusted Search Path](https://cwe.mitre.org/data/definitions/426.html)
+* [CWE-427 Uncontrolled Search Path Element](https://cwe.mitre.org/data/definitions/427.html)
 * [CWE-494 Download of Code Without Integrity Check](https://cwe.mitre.org/data/definitions/494.html)
 * [CWE-502 Deserialization of Untrusted Data](https://cwe.mitre.org/data/definitions/502.html)
+* [CWE-506 Embedded Malicious Code](https://cwe.mitre.org/data/definitions/506.html)
+* [CWE-509 Replicating Malicious Code (Virus or Worm)](https://cwe.mitre.org/data/definitions/509.html)
+* [CWE-565 Reliance on Cookies without Validation and Integrity Checking](https://cwe.mitre.org/data/definitions/565.html)
+* [CWE-784 Reliance on Cookies without Validation and Integrity Checking in a Security Decision](https://cwe.mitre.org/data/definitions/784.html)
 * [CWE-829 Inclusion of Functionality from Untrusted Control Sphere](https://cwe.mitre.org/data/definitions/829.html)
+* [CWE-830 Inclusion of Web Functionality from an Untrusted Source](https://cwe.mitre.org/data/definitions/830.html)
 * [CWE-915 Improperly Controlled Modification of Dynamically-Determined Object Attributes](https://cwe.mitre.org/data/definitions/915.html)
+* [CWE-926 Improper Export of Android Application Components](https://cwe.mitre.org/data/definitions/926.html)
 

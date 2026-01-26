@@ -85,6 +85,11 @@
 
 - [OWASP Proactive Controls: C9 ロギングと監視の実装](https://top10proactive.owasp.org/archive/2024/the-top-10/c9-security-logging-and-monitoring/)
 - [OWASP Application Security Verification Standard: V16 セキュリティロギングとエラー処理](https://github.com/OWASP/ASVS/blob/v5.0.0/5.0/en/0x25-V16-Security-Logging-and-Error-Handling.md)
+- [OWASP Cheat Sheet: Application Logging Vocabulary](https://cheatsheetseries.owasp.org/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html)
+- [OWASP Cheat Sheet: Logging](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html)
+- [Data Integrity: Recovering from Ransomware and Other Destructive Events](https://csrc.nist.gov/publications/detail/sp/1800-11/final)
+- [Data Integrity: Identifying and Protecting Assets Against Ransomware and Other Destructive Events](https://csrc.nist.gov/publications/detail/sp/1800-25/final)
+- [Data Integrity: Detecting and Responding to Ransomware and Other Destructive Events](https://csrc.nist.gov/publications/detail/sp/1800-26/final)
 - [NIST SP 800-61r2: インシデント対応ガイド](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf)
 - [Snowflake 侵害事件における実例](https://www.huntress.com/threat-library/data-breach/snowflake-data-breach)
 

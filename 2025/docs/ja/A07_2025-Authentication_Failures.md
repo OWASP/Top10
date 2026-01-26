@@ -38,12 +38,13 @@
 以下の項目に当てはまる場合、アプリケーションに認証上の不備が存在する可能性があります。
 
 * **自動化攻撃の許容：** クレデンシャルスタッフィング (Credential Stuffing) や、流出した資格情報のバリエーションを試すパスワードスプレー攻撃 (Password Spray Attacks) を許容している。
-* **脆弱なパスワードの許可：** デフォルト設定、脆弱な、あるいは広く知られたパスワードの使用を許可している。
+* **ブルートフォース攻撃への脆弱性：** ブルートフォースやその他の自動化・スクリプト化された攻撃を迅速にブロックしていない。
+* **脆弱なパスワードの許可：** デフォルト設定、脆弱な、あるいは広く知られたパスワード（「Password1」や admin/admin など）の使用を許可している。
 * **漏洩済み情報の利用：** 既に侵害が確認されている資格情報を用いて新規アカウントを作成できてしまう。
 * **不適切なリカバリプロセス：** 「秘密の質問」のような、安全性を確保できない知識ベースの回答に依存したパスワード復旧プロセスを採用している。
 * **不十分なデータ保護：** パスワードをプレーンテキスト、あるいは脆弱なハッシュ形式で保存している（[A04:2025 暗号化の失敗](A04_2025-Cryptographic_Failures.md) 参照）。
 * **MFA の欠如：** 多要素認証 (MFA) が実装されていない、あるいはそのフォールバック手段が脆弱である。
-* **セッション管理の不備：** URL や不セキュアな場所へセッション ID を露出させている、あるいはログイン後にセッション ID を再利用している。
+* **セッション管理の不備：** URL や安全でない場所へセッション ID を露出させている、あるいはログイン後にセッション ID を再利用している。
 * **不完全なログアウト：** ログアウト時や一定時間の無活動後に、セッションや認証トークン（特に SSO トークン）が正しく無効化されない。
 * **検証の不足：** 提供された資格情報の適用範囲 (Scope) や意図された対象 (Audience) を正しく検証していない。
 
@@ -53,8 +54,9 @@
 * **パスワードマネージャーの推奨：** ユーザーがより安全なパスワードを選択できるよう、パスワードマネージャーの利用を促してください。
 * **デフォルト設定の排除：** 管理ユーザーを含め、初期設定の資格情報が残った状態でデプロイしないでください。
 * **漏洩済み情報のチェック：** パスワード設定・変更時に、ワーストパスワードリストや漏洩済み情報（[haveibeenpwned.com](https://haveibeenpwned.com) 等の活用）との照合を実施してください。
-* **最新ガイドラインへの準拠：** パスワードの長さ、複雑さ、およびローテーションポリシーは、[NIST 800-63b (セクション 5.1.1)](https://pages.nist.gov/800-63-3/sp800-63b.html) などの証拠に基づいた最新のガイドラインに準拠してください。
-* **メッセージの共通化：** アカウント列挙攻撃を防ぐため、ログインや復旧時のメッセージは、成否にかかわらず共通のもの（例：「ユーザー名またはパスワードが無効です」）を使用してください。
+* **最新ガイドラインへの準拠：** パスワードの長さ、複雑さ、およびローテーションポリシーは、[NIST 800-63b (セクション 5.1.1)](https://pages.nist.gov/800-63-3/sp800-63b.html#:~:text=5.1.1%20Memorized%20Secrets) などの証拠に基づいた最新のガイドラインに準拠してください。
+* **パスワードローテーションの強制禁止：** 侵害の疑いがない限り、ユーザーにパスワードの定期変更を強制しないでください。侵害の疑いがある場合は、直ちにパスワードリセットを強制してください。
+* **メッセージの共通化：** アカウント列挙攻撃を防ぐため、登録、資格情報の復旧、API パスウェイにおいて、成否にかかわらず共通のメッセージ（例：「ユーザー名またはパスワードが無効です」）を使用してください。
 * **ログイン試行の制限：** ログイン失敗時の試行を制限、あるいは遅延させてください。ただし、DoS 攻撃に繋がらないよう慎重に設計する必要があります。
 * **セキュアなセッション管理：** ログイン後に高いエントロピーを持つ新しいランダムなセッション ID を生成し、URL ではなくセキュアな Cookie に保存してください。ログアウトやタイムアウト時には必ずサーバー側で無効化してください。
 * **信頼できるシステムの利用：** 実績があり十分にテストされた認証・アイデンティティ管理システムを導入することで、リスクを転嫁することを検討してください。
@@ -63,9 +65,12 @@
 ## 攻撃シナリオの例 (Example Attack Scenarios)
 
 **シナリオ #1：ハイブリッド型クレデンシャルスタッフィング**
-攻撃者は漏洩済みの資格情報リストに対し、「Winter2025」を「Winter2026」に変えるなどの人間特有の規則性を突いてパスワードを微調整し、攻撃を試みます。自動化された脅威への防御策がない場合、アプリケーションはパスワードの妥当性を確認するための踏み台（パスワードオラクル）として悪用されてしまいます。
+攻撃者は漏洩済みの資格情報リストに対し、「Winter2025」を「Winter2026」に変えるなど、人間特有の規則性を突いてパスワードを微調整し、攻撃を試みます。自動化された脅威（ブルートフォース、スクリプト、ボット）やクレデンシャルスタッフィングへの防御策がない場合、アプリケーションはパスワードの妥当性を確認するための踏み台（パスワードオラクル）として悪用され、不正アクセスを許してしまいます。
 
-**シナリオ #2：SSO ログアウトの不備**
+**シナリオ #2：パスワードローテーションと複雑さの要件**
+認証攻撃の多くは、パスワードを唯一の認証要素として使い続けていることに起因します。かつてベストプラクティスとされたパスワードのローテーションや複雑さの要件は、ユーザーにパスワードの使い回しや脆弱なパスワードの使用を促す結果となっています。NIST 800-63 に従い、これらの慣行を廃止し、すべての重要なシステムで多要素認証を強制することが推奨されます。
+
+**シナリオ #3：SSO ログアウトの不備**
 シングルログアウト (SLO) が実装されていない場合、複数のシステムに SSO でログインした後、一つのシステムでログアウトしても、他のシステムへの認証が残ったままになることがあります。共有端末などでブラウザを閉じずに席を離れた場合、攻撃者が残存したセッションを通じて被害者のアカウントへアクセスできてしまいます。
 
 ## 関連資料 (References)
@@ -76,10 +81,41 @@
 
 ## 紐付けられた CWE 一覧 (List of Mapped CWEs)
 
+* [CWE-258 Empty Password in Configuration File](https://cwe.mitre.org/data/definitions/258.html)
 * [CWE-259 Use of Hard-coded Password](https://cwe.mitre.org/data/definitions/259.html)
 * [CWE-287 Improper Authentication](https://cwe.mitre.org/data/definitions/287.html)
+* [CWE-288 Authentication Bypass Using an Alternate Path or Channel](https://cwe.mitre.org/data/definitions/288.html)
+* [CWE-289 Authentication Bypass by Alternate Name](https://cwe.mitre.org/data/definitions/289.html)
+* [CWE-290 Authentication Bypass by Spoofing](https://cwe.mitre.org/data/definitions/290.html)
+* [CWE-291 Reliance on IP Address for Authentication](https://cwe.mitre.org/data/definitions/291.html)
+* [CWE-293 Using Referer Field for Authentication](https://cwe.mitre.org/data/definitions/293.html)
+* [CWE-294 Authentication Bypass by Capture-replay](https://cwe.mitre.org/data/definitions/294.html)
+* [CWE-295 Improper Certificate Validation](https://cwe.mitre.org/data/definitions/295.html)
+* [CWE-297 Improper Validation of Certificate with Host Mismatch](https://cwe.mitre.org/data/definitions/297.html)
+* [CWE-298 Improper Validation of Certificate with Host Mismatch](https://cwe.mitre.org/data/definitions/298.html)
+* [CWE-299 Improper Validation of Certificate with Host Mismatch](https://cwe.mitre.org/data/definitions/299.html)
+* [CWE-300 Channel Accessible by Non-Endpoint](https://cwe.mitre.org/data/definitions/300.html)
+* [CWE-302 Authentication Bypass by Assumed-Immutable Data](https://cwe.mitre.org/data/definitions/302.html)
+* [CWE-303 Incorrect Implementation of Authentication Algorithm](https://cwe.mitre.org/data/definitions/303.html)
+* [CWE-304 Missing Critical Step in Authentication](https://cwe.mitre.org/data/definitions/304.html)
+* [CWE-305 Authentication Bypass by Primary Weakness](https://cwe.mitre.org/data/definitions/305.html)
+* [CWE-306 Missing Authentication for Critical Function](https://cwe.mitre.org/data/definitions/306.html)
+* [CWE-307 Improper Restriction of Excessive Authentication Attempts](https://cwe.mitre.org/data/definitions/307.html)
+* [CWE-308 Use of Single-factor Authentication](https://cwe.mitre.org/data/definitions/308.html)
+* [CWE-309 Use of Password System for Primary Authentication](https://cwe.mitre.org/data/definitions/309.html)
+* [CWE-346 Origin Validation Error](https://cwe.mitre.org/data/definitions/346.html)
+* [CWE-350 Reliance on Reverse DNS Resolution for a Security-Critical Action](https://cwe.mitre.org/data/definitions/350.html)
 * [CWE-384 Session Fixation](https://cwe.mitre.org/data/definitions/384.html)
+* [CWE-521 Weak Password Requirements](https://cwe.mitre.org/data/definitions/521.html)
 * [CWE-613 Insufficient Session Expiration](https://cwe.mitre.org/data/definitions/613.html)
+* [CWE-620 Unverified Password Change](https://cwe.mitre.org/data/definitions/620.html)
+* [CWE-640 Weak Password Recovery Mechanism for Forgotten Password](https://cwe.mitre.org/data/definitions/640.html)
 * [CWE-798 Use of Hard-coded Credentials](https://cwe.mitre.org/data/definitions/798.html)
+* [CWE-940 Improper Verification of Source of a Communication Channel](https://cwe.mitre.org/data/definitions/940.html)
+* [CWE-941 Incorrectly Specified Destination in a Communication Channel](https://cwe.mitre.org/data/definitions/941.html)
+* [CWE-1390 Weak Authentication](https://cwe.mitre.org/data/definitions/1390.html)
+* [CWE-1391 Use of Weak Credentials](https://cwe.mitre.org/data/definitions/1391.html)
+* [CWE-1392 Use of Default Credentials](https://cwe.mitre.org/data/definitions/1392.html)
+* [CWE-1393 Use of Default Password](https://cwe.mitre.org/data/definitions/1393.html)
 
 

@@ -37,7 +37,7 @@
 
 * **最小権限の原則 (Principle of Least Privilege) への違反：** 特定の機能やロールに対してのみアクセスを許可すべきところ、デフォルトですべてのユーザーにアクセスを許可している状態。
 * **アクセス制御チェックの回避：** URL（パラメータの改ざんや強制ブラウズ）、アプリケーションの内部状態、HTML ページの改ざん、あるいは攻撃ツールによる API リクエストの変更を通じたチェックの回避。
-* **IDOR (不セキュアな直接オブジェクト参照) ：** 一意の識別子を書き換えることで、他人のアカウントを表示・編集できる状態。
+* **IDOR (安全でない直接オブジェクト参照) ：** 一意の識別子を書き換えることで、他人のアカウントを表示・編集できる状態。
 * **API の制御不備：** POST、PUT、DELETE に対するアクセス制御が欠如した API。
 * **権限の昇格 (Elevation of Privilege) ：** ログインせずにユーザーとして行動することや、一般ユーザーが管理者権限を取得するなど、想定外の権限を得ること。
 * **メタデータの操作：** JSON Web Token (JWT) や Cookie、隠しフィールドなどの改ざん、あるいは JWT の無効化処理の悪用による権限昇格。
@@ -73,16 +73,14 @@ ResultSet results = pstmt.executeQuery( );
 攻撃者はブラウザの `acct` パラメータを書き換えるだけで、任意の口座番号を送信できます。適切に検証されていない場合、攻撃者は他人のアカウントにアクセスできてしまいます。
 
 ```
-[https://example.com/app/accountInfo?acct=notmyacct](https://example.com/app/accountInfo?acct=notmyacct)
-
+https://example.com/app/accountInfo?acct=notmyacct
 ```
 
 **シナリオ #2：** 攻撃者が管理ページなどの特定の URL に対して強制ブラウズを試みる。管理ページへのアクセスには管理者権限が必要です。
 
 ```
-[https://example.com/app/getappInfo](https://example.com/app/getappInfo)
-[https://example.com/app/admin_getappInfo](https://example.com/app/admin_getappInfo)
-
+https://example.com/app/getappInfo
+https://example.com/app/admin_getappInfo
 ```
 
 未認証のユーザーがどちらのページにもアクセスできる場合や、一般ユーザーが管理ページにアクセスできる場合は、不備があると言えます。
@@ -90,8 +88,7 @@ ResultSet results = pstmt.executeQuery( );
 **シナリオ #3：** アプリケーションがアクセス制御をフロントエンドのみで実装している。ブラウザ上の JavaScript により `https://example.com/app/admin_getappInfo` へのアクセスがブロックされていても、攻撃者はコマンドラインから直接リクエストを実行できます。
 
 ```bash
-$ curl [https://example.com/app/admin_getappInfo](https://example.com/app/admin_getappInfo)
-
+$ curl https://example.com/app/admin_getappInfo
 ```
 
 ## 関連資料 (References)

@@ -237,15 +237,26 @@ Java、C#、JavaScript/TypeScript (node.js)、Go、および「安全な」Rust 
 
 
 ### 紐付けられた CWE 一覧 (List of Mapped CWEs)
+* [CWE-14 Compiler Removal of Code to Clear Buffers](https://cwe.mitre.org/data/definitions/14.html)
 * [CWE-119 Improper Restriction of Operations within the Bounds of a Memory Buffer](https://cwe.mitre.org/data/definitions/119.html)
 * [CWE-120 Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')](https://cwe.mitre.org/data/definitions/120.html)
 * [CWE-121 Stack-based Buffer Overflow](https://cwe.mitre.org/data/definitions/121.html)
 * [CWE-122 Heap-based Buffer Overflow](https://cwe.mitre.org/data/definitions/122.html)
+* [CWE-124 Buffer Underwrite ('Buffer Underflow')](https://cwe.mitre.org/data/definitions/124.html)
 * [CWE-125 Out-of-bounds Read](https://cwe.mitre.org/data/definitions/125.html)
+* [CWE-126 Buffer Over-read](https://cwe.mitre.org/data/definitions/126.html)
 * [CWE-190 Integer Overflow or Wraparound](https://cwe.mitre.org/data/definitions/190.html)
+* [CWE-191 Integer Underflow (Wrap or Wraparound)](https://cwe.mitre.org/data/definitions/191.html)
+* [CWE-196 Unsigned to Signed Conversion Error](https://cwe.mitre.org/data/definitions/196.html)
+* [CWE-367 Time-of-check Time-of-use (TOCTOU) Race Condition](https://cwe.mitre.org/data/definitions/367.html)
 * [CWE-415 Double Free](https://cwe.mitre.org/data/definitions/415.html)
 * [CWE-416 Use After Free](https://cwe.mitre.org/data/definitions/416.html)
+* [CWE-457 Use of Uninitialized Variable](https://cwe.mitre.org/data/definitions/457.html)
+* [CWE-459 Incomplete Cleanup](https://cwe.mitre.org/data/definitions/459.html)
+* [CWE-467 Use of sizeof() on a Pointer Type](https://cwe.mitre.org/data/definitions/467.html)
 * [CWE-787 Out-of-bounds Write](https://cwe.mitre.org/data/definitions/787.html)
+* [CWE-788 Access of Memory Location After End of Buffer](https://cwe.mitre.org/data/definitions/788.html)
+* [CWE-824 Access of Uninitialized Pointer](https://cwe.mitre.org/data/definitions/824.html)
 
 
 ## X03:2025 AI 生成コードへの不適切な信頼 (Inappropriate Trust in AI Generated Code) (「バイブ・コーディング (Vibe Coding)」)
