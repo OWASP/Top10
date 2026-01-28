@@ -109,16 +109,9 @@
 
 
 ### 紐付けられた CWE 一覧 (List of Mapped CWEs)
-* [CWE-73 External Control of File Name or Path](https://cwe.mitre.org/data/definitions/73.html)
-* [CWE-183 Permissive List of Allowed Inputs](https://cwe.mitre.org/data/definitions/183.html)
-* [CWE-362 Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')](https://cwe.mitre.org/data/definitions/362.html)
 * [CWE-400 Uncontrolled Resource Consumption](https://cwe.mitre.org/data/definitions/400.html)
 * [CWE-409 Improper Handling of Highly Compressed Data (Data Amplification)](https://cwe.mitre.org/data/definitions/409.html)
-* [CWE-434 Unrestricted Upload of File with Dangerous Type](https://cwe.mitre.org/data/definitions/434.html)
-* [CWE-444 Inconsistent Interpretation of HTTP Requests ('HTTP Request/Response Smuggling')](https://cwe.mitre.org/data/definitions/444.html)
 * [CWE-674 Uncontrolled Recursion](https://cwe.mitre.org/data/definitions/674.html)
-* [CWE-693 Protection Mechanism Failure](https://cwe.mitre.org/data/definitions/693.html)
-* [CWE-799 Improper Control of Interaction Frequency](https://cwe.mitre.org/data/definitions/799.html)
 * [CWE-835 Loop with Unreachable Exit Condition ('Infinite Loop')](https://cwe.mitre.org/data/definitions/835.html)
 
 
