@@ -2,13 +2,13 @@
 
 
 
-## Pozadí. 
+## Pozadí
 
 Tato slabina, která se v žebříčku posunula o dvě pozice níže na 4. místo, se zaměřuje na selhání související s nepoužitím kryptografie, použitím nedostatečně silné kryptografie, únikem kryptografických klíčů a dalšími souvisejícími chybami. Tři z nejčastějších CWE (Common Weakness Enumerations) v rámci tohoto rizika souvisely s použitím slabého pseudonáhodného generátoru čísel: *CWE-327 Use of a Broken or Risky Cryptographic Algorithm, CWE-331: Insufficient Entropy*, *CWE-1241: Use of Predictable Algorithm in Random Number Generator*, a *CWE-338 Use of Cryptographically Weak Pseudo-Random Number Generator (PRNG)*.
 
 
 
-## Tabulka skóre.
+## Tabulka skóre
 
 
 <table>
@@ -35,49 +35,49 @@ Tato slabina, která se v žebříčku posunula o dvě pozice níže na 4. míst
   <tr>
    <td>32
    </td>
-   <td>13.77%
+   <td>13,77 %
    </td>
-   <td>3.80%
+   <td>3,80 %
    </td>
-   <td>100.00%
+   <td>100,00 %
    </td>
-   <td>47.74%
+   <td>47,74 %
    </td>
-   <td>7.23
+   <td>7,23
    </td>
-   <td>3.90
+   <td>3,90
    </td>
-   <td>1,665,348
+   <td>1 665 348
    </td>
-   <td>2,185
+   <td>2 185
    </td>
   </tr>
 </table>
 
 
 
-## Popis. 
+## Popis
 
 Obecně řečeno by všechna přenášená data měla být šifrována na [transportní vrstvě](https://en.wikipedia.org/wiki/Transport_layer) (vrstva 4 [modelu OSI](https://en.wikipedia.org/wiki/OSI_model)). Dřívější překážky, jako je výkon CPU a správa soukromých klíčů a certifikátů, jsou dnes řešeny jednak procesory s instrukcemi určenými k urychlení šifrování (např. [podpora AES](https://en.wikipedia.org/wiki/AES_instruction_set)) jednak zjednodušenou správou soukromých klíčů a certifikátů prostřednictvím služeb, jako je [LetsEncrypt.org](https://LetsEncrypt.org), přičemž hlavní poskytovatelé cloudových služeb nabízejí pro své konkrétní platformy ještě těsněji integrované služby správy certifikátů. 
 
 Kromě zabezpečení transportní vrstvy je důležité určit, která data vyžadují šifrování v klidu a která data vyžadují dodatečné šifrování při přenosu (na [aplikační vrstvě](https://en.wikipedia.org/wiki/Application_layer), 7. vrstvě modelu OSI). Například hesla, čísla kreditních karet, zdravotní záznamy, osobní údaje a obchodní tajemství vyžadují zvláštní ochranu, zejména pokud se na tato data vztahují právní předpisy na ochranu soukromí, např. obecné nařízení EU o ochraně osobních údajů (GDPR), nebo standardy jako PCI Data Security Standard (PCI DSS). Pro všechna taková data (je třeba posoudit následující skutečnosti):
 
-* Nejsou používány nějaké staré nebo slabé kryptografické algoritmy či protokoly, a to buď implicitně, nebo ve starším kódu?
-* Nejsou používány výchozí kryptografické klíče? Nejsou generovány slabé kryptografické klíče? Nejsou klíče znovu používány? Nebo nechybí správná správa a rotace klíčů?
-* Nejsou kryptografické klíče zahrnovány do repozitářů zdrojového kódu (např. commitováním)?
-* Je šifrování vynucováno? Např. nechybí nějaké bezpečnostní direktivy nebo hlavičky HTTP (prohlížeče)?
-* Jsou přijaté serverové certifikáty a řetězec důvěry správně ověřovány?
-* Nejsou inicializační vektory ignorovány či znovu použity a jsou generovány dostatečně bezpečně pro použitý režim činnosti kryptografického algoritmu? Není používán nezabezpečený režim činnosti kryptografického algoritmu (např. ECB)? Není používáno šifrování (neautentizované) v případech, kdy je vhodnější autentizované šifrování?
-* Nejsou používána hesla přímo jako kryptografické klíče bez použití funkce pro odvození klíče z hesla (KDF)?
-* Není používána náhodnost, která nesplňuje kryptografické požadavky? I když je použita správná kryptografická funkce, nevyžaduje seedování ze strany vývojáře? Nebyl vestavěný mechanismus bezpečného seedování přepsán seedem s nedostatečnou entropií/nepředvídatelností?
-* Nejsou používány zastaralé hashovací funkce, jako MD5 nebo SHA-1? Nejsou v případech, kdy je vyžadována kryptografická hash funkce, používány nekryptografické hash funkce?
-* Nelze kryptografické chybové zprávy nebo informace z vedlejších kanálů zneužít, např. formou útoků typu padding oracle?
+* Nejsou používány zastaralé nebo slabé kryptografické algoritmy či protokoly, a to buď ve výchozím nastavení, nebo ve starším kódu?
+* Nejsou používány výchozí kryptografické klíče, nejsou generovány slabé kryptografické klíče, nejsou klíče znovu používány a nechybí řádná správa a rotace klíčů?
+* Nejsou kryptografické klíče commitovány do repozitářů zdrojového kódu?
+* Je šifrování vynucováno (tj. nechybí některé bezpečnostní direktivy nebo hlavičky HTTP (prohlížeče))?
+* Je přijatý serverový certifikát a řetězec důvěry správně ověřován?
+* Nejsou inicializační vektory ignorovány, znovu používány nebo generovány nedostatečně bezpečně pro použitý režim činnosti kryptografického algoritmu? Není používán nezabezpečený režim činnosti, jako je ECB? Není používáno neautentizované šifrování v případech, kdy je vhodnější autentizované šifrování?
+* Nejsou hesla používána jako kryptografické klíče bez použití funkce pro odvození klíče z hesla (KDF)?
+* Není používána náhodnost, která nebyla navržena tak, aby splňovala kryptografické požadavky? Pokud je zvolena správná funkce, nevyžaduje seedování ze strany vývojáře, a pokud ano, nebyl mechanismus silného seedování přepsán seedem s nedostatečnou entropií/nepředvídatelností?
+* Nejsou používány zastaralé hashovací funkce, jako MD5 nebo SHA1, nebo nejsou používány nekryptografické hashovací funkce v případech, kdy jsou vyžadovány kryptografické hashovací funkce?
+* Nejsou kryptografické chybové zprávy nebo informace z vedlejších kanálů zneužitelné, např. formou útoků typu padding oracle?
 * Nelze kryptografický algoritmus downgradovat nebo obejít?
 
-Viz reference ASVS: Kryptografie (V11), Bezpečná komunikace (V12) a Ochrana dat (V14).
+Viz reference ASVS: Cryptography (V11), Secure Communication (V12) a Data Protection (V14).
 
 
-## Jak tomu zabránit. 
+## Jak tomu zabránit
 
 Proveďte alespoň následující kroky a prostudujte odkazy:
 
@@ -87,7 +87,7 @@ Proveďte alespoň následující kroky a prostudujte odkazy:
 * Neukládejte citlivá data zbytečně. Zahoďte je co nejdříve nebo použijte tokenizaci v souladu s PCI DSS, nebo i trunkaci. Data, která nejsou uchovávána, nemohou být ukradena.
 * Ujistěte se, že jsou všechna citlivá data v klidovém stavu šifrována.
 * Zajistěte, aby byly používány aktuální a silné standardní algoritmy, protokoly a klíče; používejte správnou správu klíčů.
-* Šifrujte všechna data při přenosu pouze pomocí protokolů ≥ TLS 1.2, se šiframi s forward secrecy (FS), ukončete podporu šifer cipher block chaining (CBC), podporujte algoritmy změny kvantových klíčů. Pro HTTPS vynucujte šifrování pomocí HTTP Strict Transport Security (HSTS). Vše prověřujte pomocí nástroje.
+* Šifrujte všechna data při přenosu pouze pomocí protokolů ≥ TLS 1.2, se šiframi s forward secrecy (FS), ukončete podporu šifer cipher block chaining (CBC), podporujte algoritmy pro kvantovou výměnu klíčů. Pro HTTPS vynucujte šifrování pomocí HTTP Strict Transport Security (HSTS). Vše prověřujte pomocí nástroje.
 * Zakažte ukládání do mezipaměti pro odpovědi, které obsahují citlivá data. To zahrnuje ukládání do mezipaměti ve vašem CDN, webovém serveru a jakékoli aplikační mezipaměti (např. Redis).
 * Použijte požadované bezpečnostní kontroly podle klasifikace dat.
 * Nepoužívejte nešifrované protokoly, jako jsou FTP a STARTTLS. Vyhněte se používání SMTP pro přenos důvěrných dat.
@@ -101,14 +101,14 @@ Proveďte alespoň následující kroky a prostudujte odkazy:
 * Potřebujete se již nyní připravit na post-kvantovou kryptografii (PQC), viz odkaz (ENISA), aby systémy s vysokým rizikem byly bezpečné nejpozději do konce roku 2030.
 
 
-## Příklady scénářů útoků. 
+## Příklady scénářů útoků 
 
-**Scenario #1**: Webová aplikace nepoužívá nebo nevynucuje TLS pro všechny stránky, případně podporuje slabé šifrování. Útočník monitoruje síťový provoz (například v nezabezpečené bezdrátové síti), provede downgrade spojení z HTTPS na HTTP, zachytí požadavky a ukradne session cookie uživatele. Útočník tuto cookie následně přehraje (replay) a unese (autentizovanou) relaci uživatele, čímž získá přístup k soukromým datům uživatele nebo je může měnit. Namísto výše uvedeného může také měnit veškerá přenášená data, například příjemce peněžního převodu.
+**Scénář #1**: Webová aplikace nepoužívá nebo nevynucuje TLS pro všechny stránky, případně podporuje slabé šifrování. Útočník monitoruje síťový provoz (například v nezabezpečené bezdrátové síti), provede downgrade spojení z HTTPS na HTTP, zachytí požadavky a ukradne session cookie uživatele. Útočník tuto cookie následně přehraje (replay) a unese (autentizovanou) relaci uživatele, čímž získá přístup k soukromým datům uživatele nebo je může měnit. Namísto výše uvedeného může také měnit veškerá přenášená data, například příjemce peněžního převodu.
 
-**Scenario #2**: Databáze hesel používá k ukládání hesel všech uživatelů nesolené nebo jednoduché hashovací funkce. Chyba v nahrávání souborů umožní útočníkovi získat databázi hesel. Všechny nesolené hashe mohou být odhaleny pomocí rainbow tabulky s předpočítanými hashi. Hashe generované jednoduchými nebo rychlými hashovacími funkcemi mohou být prolomeny pomocí GPU, i když byly solené.
+**Scénář #2**: Databáze hesel používá k ukládání hesel všech uživatelů nesolené nebo jednoduché hashovací funkce. Chyba v nahrávání souborů umožní útočníkovi získat databázi hesel. Všechny nesolené hashe mohou být odhaleny pomocí rainbow tabulky s předpočítanými hashi. Hashe generované jednoduchými nebo rychlými hashovacími funkcemi mohou být prolomeny pomocí GPU, i když byly solené.
 
 
-## Reference.
+## Reference
 
 
 
