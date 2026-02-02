@@ -7,12 +7,12 @@ Následující dva problémy rozhodně stojí za pozornost a nápravu, zejména 
 
 ## X01:2025 Nedostatečná odolnost aplikací (Lack of Application Resilience)
 
-### Pozadí. 
+### Pozadí
 
-Jedná se o přejmenování kategorie „Odmítnutí služby (Denial of Service)“ z roku 2021. Byla přejmenována, protože popisovala spíše symptom než kořenovou příčinu. Tato kategorie se zaměřuje na CWE, které popisují slabiny související s problémy odolnosti. Hodnocení této kategorie bylo velmi blízké hodnocení kategorie A10:2025 Nesprávné zpracování výjimečných stavů (Mishandling of Exceptional Conditions). Mezi relevantní CWE patří: *CWE-400 Uncontrolled Resource Consumption, CWE-409 Improper Handling of Highly Compressed Data (Data Amplification), CWE-674 Uncontrolled Recursion*, a *CWE-835 Loop with Unreachable Exit Condition ('Infinite Loop').*
+Jedná se o přejmenování kategorie „Odmítnutí služby (Denial of Service)“ z roku 2021. Byla přejmenována, protože popisovala spíše symptom než kořenovou příčinu. Tato kategorie se zaměřuje na CWE, které popisují slabiny související s problémy odolnosti. Skóre této kategorie bylo velmi blízké skóre kategorie A10:2025 Nesprávné zpracování výjimečných stavů (Mishandling of Exceptional Conditions). Mezi relevantní CWE patří: *CWE-400 Uncontrolled Resource Consumption, CWE-409 Improper Handling of Highly Compressed Data (Data Amplification), CWE-674 Uncontrolled Recursion*, a *CWE-835 Loop with Unreachable Exit Condition ('Infinite Loop').*
 
 
-### Tabulka skóre.
+### Tabulka skóre
 
 
 <table>
@@ -39,34 +39,34 @@ Jedná se o přejmenování kategorie „Odmítnutí služby (Denial of Service)
   <tr>
    <td>16
    </td>
-   <td>20.05%
+   <td>20,05 %
    </td>
-   <td>4.55%
+   <td>4,55 %
    </td>
-   <td>86.01%
+   <td>86,01 %
    </td>
-   <td>41.47%
+   <td>41,47 %
    </td>
-   <td>7.92
+   <td>7,92
    </td>
-   <td>3.49
+   <td>3,49
    </td>
-   <td>865,066
+   <td>865 066
    </td>
-   <td>4,423
+   <td>4 423
    </td>
   </tr>
 </table>
 
 
 
-### Popis. 
+### Popis 
 
 Tato kategorie představuje systémovou slabinu v tom, jak aplikace reagují na zátěž, selhání a hraniční případy, ze kterých se nedokážou zotavit. Pokud aplikace nedokáže elegantně zvládnout, ustát nebo se zotavit z neočekávaných stavů, omezení zdrojů a dalších nepříznivých událostí, může to snadno vést k problémům s dostupností (nejčastěji), ale také k poškození dat, úniku citlivých dat, kaskádovým selháním a/nebo obejití bezpečnostních kontrol.
 
 Kromě toho mohou [X02:2025 Selhání správy paměti (Memory Management Failures)](#x022025-memory-management-failures) vést k selhání aplikace nebo dokonce celého systému.
 
-### Jak tomu zabránit. 
+### Jak tomu zabránit 
 
 Aby bylo možné tomuto typu zranitelnosti předejít, musíte své systémy navrhovat s ohledem na selhání a obnovu.
 
@@ -78,7 +78,7 @@ Aby bylo možné tomuto typu zranitelnosti předejít, musíte své systémy nav
 * Vyhněte se blokujícím synchronním voláním ve vláknech obsluhy požadavků (používejte asynchronní/neblokující přístup, nastavte time-outy, limity souběžnosti apod.)
 * Pečlivě otestujte funkcionalitu zpracování chyb
 * Implementujte resilience patterns (vzorce odolnosti), jako jsou circuit breakers (pojistky), bulkheads (oddělení/kompartmenty; izolace částí systému), retry logika (logika opakování / opakované pokusy) a graceful degradation (řízený přechod do omezeného režimu)
-* Provádějte performance a load testing; pokud to odpovídá vašemu risk apetitu, přidejte chaos engineering (chaos engineering – testování odolnosti řízeným vyvoláváním poruch)
+* Provádějte performance a load testing; pokud to odpovídá vašemu risk apetitu, přidejte chaos engineering (testování odolnosti řízeným vyvoláváním poruch)
 * Implementujte a navrhujte architekturu pro redundanci tam, kde je to rozumné a cenově dostupné
 * Implementujte monitoring, observability a alerting
 * Filtrujte neplatné zdrojové adresy (source addresses) v souladu s RFC 2267
@@ -88,7 +88,7 @@ Aby bylo možné tomuto typu zranitelnosti předejít, musíte své systémy nav
 * Omezte ukládání informací vázaných na relaci
 
 
-### Příklady scénářů útoků. 
+### Příklady scénářů útoků 
 
 **Scénář #1:** Útočníci záměrně spotřebovávají zdroje aplikace, aby vyvolali selhání v systému, což vede k odmítnutí služby. Může jít o vyčerpání paměti, zaplnění diskového prostoru, saturaci CPU nebo navazování nekonečného množství připojení.
 
@@ -151,12 +151,12 @@ Aby bylo možné tomuto typu zranitelnosti předejít, musíte své systémy nav
 
 ## X02:2025 Selhání správy paměti (Memory Management Failures)
 
-### Pozadí. 
+### Pozadí 
 
 Jazyky jako Java, C#, JavaScript/TypeScript (node.js), Go a „bezpečný“ Rust jsou paměťově bezpečné. Problémy se správou paměti se obvykle vyskytují v jazycích, které nejsou paměťově bezpečné, jako jsou C a C++. Tato kategorie získala v komunitním průzkumu nejnižší hodnocení a v datech také nízké, přestože má třetí nejvyšší počet souvisejících CVE. Domníváme se, že je to způsobeno převahou webových aplikací nad tradičnějšími desktopovými aplikacemi. Zranitelnosti správy paměti mají často nejvyšší skóre CVSS. 
 
 
-### Tabulka skóre.
+### Tabulka skóre
 
 
 <table>
@@ -183,28 +183,28 @@ Jazyky jako Java, C#, JavaScript/TypeScript (node.js), Go a „bezpečný“ Rus
   <tr>
    <td>24
    </td>
-   <td>2.96%
+   <td>2,96 %
    </td>
-   <td>1.13%
+   <td>1,13 %
    </td>
-   <td>55.62%
+   <td>55,62 %
    </td>
-   <td>28.45%
+   <td>28,45 %
    </td>
-   <td>6.75
+   <td>6,75
    </td>
-   <td>4.82
+   <td>4,82
    </td>
-   <td>220,414
+   <td>220 414
    </td>
-   <td>30,978
+   <td>30 978
    </td>
   </tr>
 </table>
 
 
 
-### Popis. 
+### Popis 
 
 Když je aplikace nucena spravovat paměť sama, je velmi snadné dělat chyby. Paměťově bezpečné jazyky se používají stále častěji, ale po celém světě je stále mnoho legacy systémů v produkci, nové nízkoúrovňové systémy, které vyžadují použití jazyků bez paměťové bezpečnosti, a webové aplikace, které komunikují s mainframe systémy, zařízeními IoT, firmwarem a dalšími systémy, které mohou být nuceny spravovat vlastní paměť. Mezi reprezentativní CWE patří *CWE-120 Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')* a *CWE-121 Stack-based Buffer Overflow*.
 
@@ -222,7 +222,7 @@ K selhání správy paměti může dojít, když:
 Selhání správy paměti může vést k selhání aplikace nebo dokonce celého systému, viz také [X01:2025 – Nedostatečná odolnost aplikací (Lack of Application Resilience)](#x012025-lack-of-application-resilience)
 
 
-### Jak tomu zabránit. 
+### Jak tomu zabránit 
 
 Nejlepší způsob, jak zabránit selháním správy paměti, je používat paměťově bezpečný jazyk. Mezi příklady patří Rust, Java, Go, C#, Python, Swift, Kotlin, JavaScript atd. Při vytváření nových aplikací se snažte svou organizaci přesvědčit, že vyplatí se překonat křivku učení a přejít na paměťově bezpečný jazyk. Pokud provádíte kompletní refaktoring, prosazujte přepsání (rewrite) do paměťově bezpečného jazyka, pokud je to možné a proveditelné.
 
@@ -245,7 +245,7 @@ Pokud nemůžete použít paměťově bezpečný jazyk, proveďte následující
 * Zvažte použití [kanárků (canaries)](https://en.wikipedia.org/wiki/Buffer_overflow_protection#Canaries) k ochraně zásobníku před útoky přetečením.
 
 
-### Příklady scénářů útoků. 
+### Příklady scénářů útoků 
 
 **Scénář #1:** Přetečení vyrovnávací paměti (buffer overflow) je nejznámější paměťová zranitelnost – situace, kdy útočník odešle do pole více informací, než kolik může přijmout, takže dojde k přetečení bufferu vytvořeného pro příslušnou proměnnou. Při úspěšném útoku znaky přetečení přepíší hodnoty na zásobníku (např. ukazatel zásobníku / návratovou adresu), což útočníkovi umožní vložit do programu škodlivé instrukce.
 
@@ -255,7 +255,7 @@ Pokud nemůžete použít paměťově bezpečný jazyk, proveďte následující
 
 Poznámka: moderní prohlížeče používají k obraně proti takovým útokům více vrstev ochrany, včetně [sandboxingu prohlížeče](https://www.geeksforgeeks.org/ethical-hacking/what-is-browser-sandboxing/#types-of-browser-sandboxing) ASLR, DEP/NX, RELRO a PIE. Útok na prohlížeč založený na selhání správy paměti není jednoduché provést.
 
-### Reference.
+### Reference
 
 * [OWASP community pages: Memory leak,](https://owasp.org/www-community/vulnerabilities/Memory_leak) [Doubly freeing memory,](https://owasp.org/www-community/vulnerabilities/Doubly_freeing_memory) [& Buffer Overflow](https://owasp.org/www-community/vulnerabilities/Buffer_Overflow)
 * [Awesome Fuzzing: a list of fuzzing resources](https://github.com/secfigo/Awesome-Fuzzing) 
@@ -286,19 +286,19 @@ Poznámka: moderní prohlížeče používají k obraně proti takovým útokům
 
 
 
-## X03:2025 Nevhodná důvěra v AI generovaný kód („Vibe Coding“) (Inappropriate Trust in AI Generated Code („Vibe Coding“))
+## X03:2025 Nevhodná důvěra v kód generovaný AI (Inappropriate Trust in AI Generated Code („Vibe Coding“))
 
-### Pozadí.
+### Pozadí
 
 V současnosti celý svět mluví o umělé inteligenci a používá ji – a to platí i pro vývojáře softwaru. Přestože v tuto chvíli neexistují žádné CVE ani CWE přímo vztahující se ke kódu generovanému umělou inteligencí, je dobře známo a zdokumentováno, že takový kód často obsahuje více zranitelností než kód napsaný člověkem.
 
 
-### Popis.
+### Popis
 
 Pozorujeme, jak se postupy vývoje softwaru mění: už nejde jen o kód psaný s asistencí umělé inteligence, ale i o kód, který je napsán a commitnutý do repozitáře téměř úplně bez lidského dohledu (často se pro to používá označení ‚vibe coding‘). Stejně jako nikdy nebylo dobré bez rozmyslu kopírovat úryvky kódu z blogů nebo webů, tady je ten problém ještě výraznější. Kvalitní a bezpečné ukázky kódu byly a jsou vzácné a kvůli systémovým omezením mohou být při generování AI statisticky podreprezentované.
 
 
-### Jak tomu zabránit.
+### Jak tomu zabránit
 Všem, kdo píší kód, důrazně doporučujeme při používání AI zvážit následující:
 
 * Měli byste být schopni přečíst a plně porozumět veškerému kódu, který odevzdáváte, i když jej napsala AI nebo byl zkopírován z online fóra. Nesete odpovědnost za veškerý kód, který commitnete do repozitáře.
@@ -317,7 +317,7 @@ Všem, kdo píší kód, důrazně doporučujeme při používání AI zvážit 
 
 
 
-### Reference.
+### Reference
 
 * [OWASP Cheat Sheet: Secure Code Review](https://cheatsheetseries.owasp.org/cheatsheets/Secure_Code_Review_Cheat_Sheet.html)
 
