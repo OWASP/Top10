@@ -1,14 +1,14 @@
 # A10:2025 Nesprávné zpracování výjimečných stavů (Mishandling of Exceptional Conditions) ![icon](../assets/TOP_10_Icons_Final_Mishandling_of_Exceptional_Conditions.png){: style="height:80px;width:80px" align="right"}
 
 
-## Pozadí. 
+## Pozadí
 
 Nesprávné zpracování výjimečných stavů je nová kategorie pro rok 2025. Tato kategorie obsahuje 24 CWE a zaměřuje se na nesprávné zpracování chyb (error handling), logické chyby, failing open (tj. pokračování i po chybě) a další související scénáře vyplývající z abnormálních stavů, se kterými se systémy mohou setkat. Tato kategorie obsahuje některé CWE, které byly dříve spojovány se špatnou kvalitou kódu. To bylo pro nás příliš obecné; podle našeho názoru poskytuje tato konkrétnější kategorie lepší vodítko.
 
 Mezi významné CWE zahrnuté v této kategorii patří: *CWE-209 Generation of Error Message Containing Sensitive Information, CWE-234 Failure to Handle Missing Parameter, CWE-274 Improper Handling of Insufficient Privileges, CWE-476 NULL Pointer Dereference,* a *CWE-636 Not Failing Securely ('Failing Open')*.
 
 
-## Tabulka skóre.
+## Tabulka skóre
 
 
 <table>
@@ -35,30 +35,30 @@ Mezi významné CWE zahrnuté v této kategorii patří: *CWE-209 Generation of 
   <tr>
    <td>24
    </td>
-   <td>20.67%
+   <td>20,67 %
    </td>
-   <td>2.95%
+   <td>2,95 %
    </td>
-   <td>100.00%
+   <td>100,00 %
    </td>
-   <td>37.95%
+   <td>37,95 %
    </td>
-   <td>7.11
+   <td>7,11
    </td>
-   <td>3.81
+   <td>3,81
    </td>
-   <td>769,581
+   <td>769 581
    </td>
-   <td>3,416
+   <td>3 416
    </td>
   </tr>
 </table>
 
 
 
-## Popis. 
+## Popis
 
-K nesprávnému zpracování výjimečných stavů v softwaru dochází, když programy nedokážou zabránit tomu, aby nastaly neobvyklé a nepředvídatelné situace, nedokážou je detekovat a reagovat na ně, což vede k selháním, neočekávanému chování a někdy i ke zranitelnostem. Může se jednat o jednu nebo více z následujících tří chyb: aplikace nezabrání vzniku neobvyklé situace, nedokáže identifikovat situaci v okamžiku, kdy k ní dochází, a/nebo na ni reaguje špatně nebo vůbec.
+K nesprávnému zpracování výjimečných stavů v softwaru dochází, když programy nedokážou zabránit tomu, aby nastaly neobvyklé a nepředvídatelné situace, nedokážou je detekovat a reagovat na ně, což vede k selháním, neočekávanému chování a někdy i ke zranitelnostem. Může se jednat o jednu nebo více z následujících tří nedostatků: aplikace nezabrání vzniku neobvyklé situace, nedokáže identifikovat situaci v okamžiku, kdy k ní dochází, a/nebo na ni reaguje špatně nebo vůbec.
 
  
 
@@ -66,29 +66,29 @@ Výjimečné stavy mohou být způsobeny chybějící, špatnou nebo neúplnou v
 
  
 
-Při nesprávném zacházení s výjimečnými stavy může dojít k mnoha různým bezpečnostním zranitelnostem, jako jsou logické chyby, přetečení, souběhy (race conditiony; též „závodní stavy“), podvodné transakce nebo problémy s pamětí, stavem, zdroji, načasováním, ověřováním a autorizací. Tyto typy zranitelností mohou negativně ovlivnit důvěrnost, dostupnost a/nebo integritu systému nebo jeho dat. Útočníci manipulují s chybným zpracováním chyb aplikace, aby tyto zranitelnosti využili. 
+Když výjimečné stavy zpracujeme nesprávně, může dojít k mnoha různým bezpečnostním zranitelnostem, jako jsou logické chyby, přetečení, souběhy (race conditiony; též „závodní stavy“), podvodné transakce nebo problémy s pamětí, stavem, zdroji, načasováním, ověřováním a autorizací. Tyto typy zranitelností mohou negativně ovlivnit důvěrnost, dostupnost a/nebo integritu systému nebo jeho dat. Útočníci manipulují s chybným zpracováním chyb aplikace, aby tyto zranitelnosti využili. 
 
 
-## Jak tomu zabránit. 
+## Jak tomu zabránit
 
 Abychom mohli výjimečný stav správně zpracovat, musíme na takové situace plánovat (očekávat nejhorší). Musíme „zachytit“ každou možnou systémovou chybu přímo v místě, kde k ní dochází, a poté ji zpracovat (tj. udělat něco smysluplného k vyřešení problému a zajistit, že se z něj zotavíme). Součástí zpracování by mělo být vyvolání chyby (aby byl uživatel informován srozumitelným způsobem), logování události a také vyvolání upozornění (alertu), pokud to považujeme za oprávněné. Měli bychom mít také globální handler výjimek (globální obsluhu/zpracování výjimek) pro případ, že nám něco unikne. V ideálním případě bychom měli mít také nástroje nebo funkcionalitu pro monitoring a/nebo observability, které sledují opakované chyby nebo vzorce naznačující probíhající útok a které mohou vyvolat nějakou reakci, obranu nebo blokování. To nám může pomoci blokovat a reagovat na skripty a boty, které se zaměřují na slabiny našeho zpracování chyb.
 
  
 
-Zachytávání a zpracování výjimečných stavů zajišťuje, že základní infrastruktura našich programů není ponechána, aby se vypořádávala s nepředvídatelnými situacemi. Pokud jste uprostřed jakékoli transakce, je mimořádně důležité, abyste rollbackovali každou její část a začali znovu (také známé jako fail closed). Pokus o zotavení transakce uprostřed jejího průběhu je často místem, kde vznikají nevratné chyby.
+Zachytávání a zpracování výjimečných stavů zajišťuje, že základní infrastruktura našich programů není ponechána, aby se vypořádávala s nepředvídatelnými situacemi. Pokud jste uprostřed jakékoli transakce, je mimořádně důležité, abyste provedli rollback každé její části a začali znovu (také známé jako fail closed). Pokus o zotavení transakce uprostřed jejího průběhu je často místem, kde vznikají nevratné chyby.
 
  
 
 Kdykoli je to možné, přidejte rate limiting, kvóty zdrojů, throttling (omezení) a další limity, abyste výjimečným stavům předcházeli už na začátku. V informačních technologiích by nic nemělo být bez limitu, protože to vede k nízké odolnosti aplikací, odmítnutí služby, úspěšným brute force útokům a mimořádně vysokým účtům za cloud. Zvažte, zda by identické opakované chyby nad určitou míru neměly být vypisovány pouze jako statistiky ukazující, jak často nastaly a v jakém časovém rámci. Tyto informace by měly být připojeny k původní zprávě tak, aby nenarušovaly automatizované logování a monitorování, viz [A09:2025 Selhání bezpečnostního logování a upozorňování (Security Logging & Alerting Failures)](A09_2025-Security_Logging_and_Alerting_Failures.md).
 
-Kromě toho bychom chtěli zahrnout přísnou validaci vstupů (se sanitizací (očištěním) nebo escapováním potenciálně nebezpečných znaků, které musíme akceptovat), centralizované zpracování chyb, logování, monitorování a upozorňování a globální handler výjimek (globální obsluha/zpracování výjimek). Jedna aplikace by neměla mít více funkcí pro zpracování výjimečných stavů; mělo by se to provádět na jednom místě, pokaždé stejným způsobem. Měli bychom také vytvořit bezpečnostní požadavky projektu pro všechna doporučení v této části, provést threat modelling (modelování hrozeb) a/nebo aktivity secure design review (bezpečnostní posouzení návrhu) ve fázi návrhu projektů, provést code review (revizi kódu) nebo statickou analýzu a také provést zátěžové, výkonnostní a penetrační testování finálního systému.
+Kromě toho bychom chtěli zahrnout přísnou validaci vstupů (se sanitizací (očištěním) nebo escapováním potenciálně nebezpečných znaků, které musíme akceptovat), centralizované zpracování chyb, logování, monitorování a upozorňování a globální obsluhu výjimek (global exception handler). Jedna aplikace by neměla mít více funkcí pro zpracování výjimečných stavů; mělo by se to provádět na jednom místě, pokaždé stejným způsobem. Měli bychom také vytvořit bezpečnostní požadavky projektu pro všechna doporučení v této části, provést threat modelling (modelování hrozeb) a/nebo aktivity secure design review (bezpečnostní posouzení návrhu) ve fázi návrhu projektů, provést code review (revizi kódu) nebo statickou analýzu a také provést zátěžové, výkonnostní a penetrační testování finálního systému.
 
  
 
 Pokud je to možné, měla by celá vaše organizace zpracovávat výjimečné stavy stejným způsobem, protože to usnadňuje kontrolu a audit kódu z hlediska chyb v této důležité bezpečnostní kontrole.
 
 
-## Příklady scénářů útoků. 
+## Příklady scénářů útoků 
 
 **Scénář #1:** K vyčerpání zdrojů v důsledku nesprávného zpracování výjimečných stavů (Denial of Service) může dojít, pokud aplikace při nahrávání souborů zachytává výjimky, ale poté řádně neuvolňuje zdroje. Každá nová výjimka zanechává zdroje uzamčené nebo jinak nedostupné, dokud nejsou všechny zdroje vyčerpány.
 
@@ -97,7 +97,7 @@ Pokud je to možné, měla by celá vaše organizace zpracovávat výjimečné s
 **Scénář #3:** Poškození stavu finančních transakcí může být způsobeno útočníkem, který přeruší vícekrokovou transakci narušením síťového spojení. Představte si, že sled kroků transakce je: odepsat z účtu uživatele, připsat na účet příjemce, zaznamenat transakci. Pokud systém při chybě uprostřed transakce správně nevrátí zpět (rollback) celou transakci (fail closed), útočník by mohl potenciálně vyprázdnit účet uživatele, nebo může dojít k souběhu (race condition), který útočníkovi umožní odeslat peníze příjemci vícekrát.
 
 
-## Reference.
+## Reference
 
 OWASP MASVS‑RESILIENCE
 
