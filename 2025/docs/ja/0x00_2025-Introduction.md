@@ -1,6 +1,6 @@
 ![OWASP Logo](../assets/TOP_10_logo_Final_Logo_Colour.png)
 
-# ウェブアプリケーションにおける10の重大なセキュリティリスク (The Ten Most Critical Web Application Security Risks)
+# 最も重大なウェブアプリケーションリスク　トップ10 (The Ten Most Critical Web Application Security Risks)
 
 # イントロダクション (Introduction)
 
