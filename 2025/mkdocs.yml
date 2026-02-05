@@ -39,9 +39,9 @@ markdown_extensions:
 plugins:
   - search
   - i18n:
-      default_language: en
+      ## default_language: en
       docs_structure: folder
-      material_alternate: true
+      ## material_alternate: true
       reconfigure_material: true
       fallback_to_default: true
       languages:
@@ -79,11 +79,11 @@ plugins:
 extra:
   alternate:                                                         # see https://squidfunk.github.io/mkdocs-material/setup/changing-the-language/#site-language-selector
     - name: en - English
-      link: ./en/
+      link: /Top10/2025/en/
       lang: en
     - name: cs - Česky
-      link: ./cs/
-      lang: cs    
+      link: /Top10/2025/cs/
+      lang: cs  material_alternate  
 #    - name: de - Deutsch
 #      link: ./de/
 #      lang: de
