@@ -63,7 +63,7 @@ Without logging and monitoring, attacks and breaches cannot be detected, and wit
 * Warnings and errors generate no, inadequate, or unclear log messages.
 * The integrity of logs is not properly protected from tampering.
 * Logs of applications and APIs are not monitored for suspicious activity.
-* Logs are only stored locally, and not properly backedup.
+* Logs are only stored locally, and not properly backed up.
 * Appropriate alerting thresholds and response escalation processes are not in place or effective. Alerts are not received or reviewed within a reasonable amount of time.
 * Penetration testing and scans by dynamic application security testing (DAST) tools (such as Burp or ZAP) do not trigger alerts.
 * The application cannot detect, escalate, or alert for active attacks in real-time or near real-time.
