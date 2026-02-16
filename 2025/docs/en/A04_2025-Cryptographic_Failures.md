@@ -58,7 +58,7 @@ Moving down two positions to #4, this weakness focuses on failures related to th
 
 ## Description. 
 
-Generally speaking, all data in transit should be fully encrypted at the [application layer](https://en.wikipedia.org/wiki/Application_layer) ([OSI layer](https://en.wikipedia.org/wiki/OSI_model) 4). Certificate management for publicly exposed services is being simplified by services like [LetsEncrypt.org](https://LetsEncrypt.org). Major cloud vendors provide even more tightly integrated certificate management services for their specific platforms. 
+Generally speaking, all data in transit should be fully encrypted at the [application layer](https://en.wikipedia.org/wiki/Application_layer) ([OSI layer](https://en.wikipedia.org/wiki/OSI_model) 7). Certificate management for publicly exposed services is being simplified by services like [LetsEncrypt.org](https://LetsEncrypt.org). Major cloud vendors provide even more tightly integrated certificate management services for their specific platforms. 
 
 Beyond securing the transport layer, it is important to determine what data needs encryption at rest as well as what data needs extra encryption in transit (at the [application layer](https://en.wikipedia.org/wiki/Application_layer), OSI layer 7). For example, passwords, credit card numbers, health records, personal information, and business secrets require extra protection, especially if that data falls under privacy laws, e.g., EU's General Data Protection Regulation (GDPR), or regulations such as PCI Data Security Standard (PCI DSS). For all such data:
 
