@@ -48,28 +48,6 @@ plugins:
           default: true
           name: en - English
           build: true
-      nav_translations:
-
-        SAMPLE:
-          Home: Startseite
-          Notice: Anmerkung
-          Introduction: Einführung
-          How to use the OWASP Top 10 as a standard: Wie man die OWASP Top 10 als Standard verwendet
-          How to start an AppSec program with the OWASP Top 10: Wie man ein AppSec-Program mit den OWASP Top 10 beginnt
-          About OWASP: Über OWASP
-          Top 10:2025 List: Liste der Top 10:2025
-          A01 Broken Access Control: A01 - Mangelhafte Zugriffskontrolle
-          A02 Cryptographic Failures: A02 - Fehlerhafter Einsatz von Kryptographie
-          A03 Injection: A03 - Injection
-          A04 Insecure Design: A04 - Unsicheres Anwendungsdesign
-          A05 Security Misconfiguration: A05 - Sicherheitsrelevante Fehlkonfiguration
-          A06 Vulnerable and Outdated Components: A06 - Unsichere oder veraltete Komponenten
-          A07 Identification and Authentication Failures: A07 - Fehlerhafte Authentifizierung
-          A08 Software and Data Integrity Failures: A08 - Fehlerhafte Prüfung der Software- und Datenintegrität
-          A09 Security Logging and Monitoring Failures: A09 - Unzureichendes Logging und Sicherheitsmonitoring
-          A10 Server Side Request Forgery (SSRF): A10 - Server-Side Request Forgery (SSRF)
-          Next Steps: Nächste Schritte
-        
         - locale: it
           name: it - Italiano
           build: true
@@ -91,6 +69,27 @@ plugins:
             A09 Security Logging and Alerting Failures: A09 Security Logging and Alerting Failures
             A10 Mishandling of Exceptional Conditions: A10 Mishandling of Exceptional Conditions
             Next Steps: Prossimi Passi
+      nav_translations:
+
+        SAMPLE:
+          Home: Startseite
+          Notice: Anmerkung
+          Introduction: Einführung
+          How to use the OWASP Top 10 as a standard: Wie man die OWASP Top 10 als Standard verwendet
+          How to start an AppSec program with the OWASP Top 10: Wie man ein AppSec-Program mit den OWASP Top 10 beginnt
+          About OWASP: Über OWASP
+          Top 10:2025 List: Liste der Top 10:2025
+          A01 Broken Access Control: A01 - Mangelhafte Zugriffskontrolle
+          A02 Cryptographic Failures: A02 - Fehlerhafter Einsatz von Kryptographie
+          A03 Injection: A03 - Injection
+          A04 Insecure Design: A04 - Unsicheres Anwendungsdesign
+          A05 Security Misconfiguration: A05 - Sicherheitsrelevante Fehlkonfiguration
+          A06 Vulnerable and Outdated Components: A06 - Unsichere oder veraltete Komponenten
+          A07 Identification and Authentication Failures: A07 - Fehlerhafte Authentifizierung
+          A08 Software and Data Integrity Failures: A08 - Fehlerhafte Prüfung der Software- und Datenintegrität
+          A09 Security Logging and Monitoring Failures: A09 - Unzureichendes Logging und Sicherheitsmonitoring
+          A10 Server Side Request Forgery (SSRF): A10 - Server-Side Request Forgery (SSRF)
+          Next Steps: Nächste Schritte
 
   - macros:     # needs to be the last plugin to export the final osib-YAML file for all languages
       module_name: '../osib/osib_macro'
@@ -105,9 +104,9 @@ extra:
 #    - name: de - Deutsch
 #      link: ./de/
 #      lang: de
-     - name: it - Italiano
-       link: ./it/
-       lang: it
+    - name: it - Italiano
+      link: ./it/
+      lang: it
   osib:
     document:     osib.owasp.top10
     version:      2025-0-1
