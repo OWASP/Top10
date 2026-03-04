@@ -157,7 +157,7 @@ from the command line.
 
 * [CWE-200 Exposure of Sensitive Information to an Unauthorized Actor](https://cwe.mitre.org/data/definitions/200.html)
 
-* [CWE-201 Insertion of Sensitive Information Into Sent Data](https://cwe.mitre.org/data/definitions/201.html)
+* [CWE-201 Exposure of Sensitive Information Through Sent Data](https://cwe.mitre.org/data/definitions/201.html)
 
 * [CWE-219 Storage of File with Sensitive Data Under Web Root](https://cwe.mitre.org/data/definitions/219.html)
 
