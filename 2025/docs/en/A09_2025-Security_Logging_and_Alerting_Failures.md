@@ -127,7 +127,7 @@ There are commercial and open-source application protection products such as the
 
 * [CWE-117 Improper Output Neutralization for Logs](https://cwe.mitre.org/data/definitions/117.html)
 
-* [CWE-221 Information Loss of Omission](https://cwe.mitre.org/data/definitions/221.html)
+* [CWE-221 Information Loss or Omission](https://cwe.mitre.org/data/definitions/221.html)
 
 * [CWE-223 Omission of Security-relevant Information](https://cwe.mitre.org/data/definitions/223.html)
 
