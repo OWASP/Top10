@@ -11,7 +11,7 @@ theme:
   logo: assets/OWASP_Logo_Transp.png
   features:
     - navigation.sections
-    - navigation.instant
+    # - navigation.instant
     - search.suggest
 
 nav:
@@ -39,36 +39,38 @@ markdown_extensions:
 plugins:
   - search
   - i18n:
-      default_language: en
+      # default_language: en
       docs_structure: folder
-      material_alternate: true
+      # material_alternate: true
       reconfigure_material: true
+      fallback_to_default: true
       languages:
         - locale: en
           default: true
           name: en - English
           build: true
-      nav_translations:
-
-        SAMPLE:
-          Home: Startseite
-          Notice: Anmerkung
-          Introduction: Einführung
-          How to use the OWASP Top 10 as a standard: Wie man die OWASP Top 10 als Standard verwendet
-          How to start an AppSec program with the OWASP Top 10: Wie man ein AppSec-Program mit den OWASP Top 10 beginnt
-          About OWASP: Über OWASP
-          Top 10:2025 List: Liste der Top 10:2025
-          A01 Broken Access Control: A01 - Mangelhafte Zugriffskontrolle
-          A02 Cryptographic Failures: A02 - Fehlerhafter Einsatz von Kryptographie
-          A03 Injection: A03 - Injection
-          A04 Insecure Design: A04 - Unsicheres Anwendungsdesign
-          A05 Security Misconfiguration: A05 - Sicherheitsrelevante Fehlkonfiguration
-          A06 Vulnerable and Outdated Components: A06 - Unsichere oder veraltete Komponenten
-          A07 Identification and Authentication Failures: A07 - Fehlerhafte Authentifizierung
-          A08 Software and Data Integrity Failures: A08 - Fehlerhafte Prüfung der Software- und Datenintegrität
-          A09 Security Logging and Monitoring Failures: A09 - Unzureichendes Logging und Sicherheitsmonitoring
-          A10 Server Side Request Forgery (SSRF): A10 - Server-Side Request Forgery (SSRF)
-          Next Steps: Nächste Schritte
+        - locale: cs
+          name: cs - Česky
+          build: true
+          nav_translations:
+            Home: Domů
+            Introduction: Úvod
+            About OWASP: O OWASP
+            What are Application Security Risks?: Co jsou bezpečnostní rizika aplikací?
+            Establishing a Modern Application Security Program: Zavedení moderního programu bezpečnosti aplikací
+            Top 10:2025 List: Seznam Top 10:2025
+            A01 Broken Access Control: A01 Narušené řízení přístupu
+            A02 Security Misconfiguration: A02 Chybná bezpečnostní konfigurace
+            A03 Software Supply Chain Failures: A03 Selhání dodavatelského řetězce softwaru
+            A04 Cryptographic Failures: A04 Kryptografická selhání
+            A05 Injection: A05 Injekce
+            A06 Insecure Design: A06 Nezabezpečený návrh
+            A07 Authentication Failures: A07 Selhání autentizace
+            A08 Software or Data Integrity Failures: A08 Selhání integrity softwaru nebo dat
+            A09 Security Logging and Alerting Failures: A09 Selhání bezpečnostního logování a upozorňování
+            A10 Mishandling of Exceptional Conditions: A10 Nesprávné zpracování výjimečných stavů
+            Next Steps: Další kroky
+            
   - macros:     # needs to be the last plugin to export the final osib-YAML file for all languages
       module_name: '../osib/osib_macro'
       include_dir: '../osib/include'
@@ -77,8 +79,11 @@ plugins:
 extra:
   alternate:                                                         # see https://squidfunk.github.io/mkdocs-material/setup/changing-the-language/#site-language-selector
     - name: en - English
-      link: ./en/
+      link: /Top10/2025/
       lang: en
+    - name: cs - Česky
+      link: /Top10/2025/cs/
+      lang: cs  material_alternate  
 #    - name: de - Deutsch
 #      link: ./de/
 #      lang: de
