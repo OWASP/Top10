@@ -48,6 +48,28 @@ plugins:
           default: true
           name: en - English
           build: true
+        - locale: fr
+          default: false
+          name: fr - Français
+          build: true
+          nav_translations:
+            Home: Page d'accueil
+            Introduction: Introduction
+            About OWASP: À propos de l'OWASP
+            What are Application Security Risks?: Quels sont les risques liés à la sécurité des applications ?
+            Establishing a Modern Application Security Program: Miette en place un programme moderne de sécurité des applications
+            Top 10:2025 List: Top 10:2025
+            A01 Broken Access Control: A01 - Contrôles d'accès défaillants
+            A02 Security Misconfiguration: A02 - Mauvaise configuration de sécurité
+            A03 Software Supply Chain Failures: A03 - Défaillances de la nomenclature logicielle
+            A04 Cryptographic Failures: A04 - Défaillances cryptographiques
+            A05 Injection: A05 - Injection
+            A06 Insecure Design: A06 - Conception non sécurisée
+            A07 Authentication Failures: A07 - Défaillances de l'authentification
+            A08 Software or Data Integrity Failures: A08 - Manque d'intégrité des données ou du logiciel
+            A09 Security Logging and Alerting Failures: A09 - Carence des systèmes de contrôle et d'alerte
+            A10 Mishandling of Exceptional Conditions: A10 - Mauvaise gestion des exceptions
+            Next Steps: Étapes suivantes
       nav_translations:
 
         SAMPLE:
@@ -79,9 +101,9 @@ extra:
     - name: en - English
       link: ./en/
       lang: en
-#    - name: de - Deutsch
-#      link: ./de/
-#      lang: de
+    - name: fr - Français
+      link: ./fr/
+      lang: fr
   osib:
     document:     osib.owasp.top10
     version:      2025-0-1
