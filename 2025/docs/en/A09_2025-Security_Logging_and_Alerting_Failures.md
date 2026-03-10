@@ -1,3 +1,9 @@
+---
+title: "A09:2025 Security Logging and Alerting Failures - OWASP Top 10"
+description: "When events are not logged or monitored and alerts fail, attacks go unseen and incident response suffers"
+og_image: "assets/OG-images/A09-OG.png"
+---
+
 # A09:2025 Security Logging & Alerting Failures ![icon](../assets/TOP_10_Icons_Final_Security_Logging_and_Monitoring_Failures.png){: style="height:80px;width:80px" align="right"}
 
 

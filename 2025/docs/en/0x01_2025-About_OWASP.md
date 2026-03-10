@@ -1,3 +1,8 @@
+---
+title: "About OWASP - The Open Worldwide Application Security Project"
+description: "Learn about the OWASP Foundation, an open community dedicated to enabling organizations to develop, purchase, and maintain secure applications and APIs."
+---
+
 # About OWASP
 
 The Open Worldwide Application Security Project (OWASP) is an open community dedicated to enabling organizations to develop, purchase, and maintain applications and APIs that can be trusted.

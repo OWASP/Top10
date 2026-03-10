@@ -9,6 +9,7 @@ theme:
   name: material
   language: en
   logo: assets/OWASP_Logo_Transp.png
+  custom_dir: overrides
   features:
     - navigation.sections
     - navigation.instant
@@ -35,6 +36,7 @@ nav:
 
 markdown_extensions:
   - attr_list
+  - meta
 
 plugins:
   - search
