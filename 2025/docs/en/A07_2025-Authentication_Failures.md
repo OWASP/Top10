@@ -148,9 +148,9 @@ When an attacker is able to trick a system into recognizing an invalid or incorr
 
 * [CWE-297 Improper Validation of Certificate with Host Mismatch](https://cwe.mitre.org/data/definitions/297.html)
 
-* [CWE-298 Improper Validation of Certificate with Host Mismatch](https://cwe.mitre.org/data/definitions/298.html)
+* [CWE-298 Improper Validation of Certificate Expiration](https://cwe.mitre.org/data/definitions/298.html)
 
-* [CWE-299 Improper Validation of Certificate with Host Mismatch](https://cwe.mitre.org/data/definitions/299.html)
+* [CWE-299 Improper Check for Certificate Revocation](https://cwe.mitre.org/data/definitions/299.html)
 
 * [CWE-300 Channel Accessible by Non-Endpoint](https://cwe.mitre.org/data/definitions/300.html)
 
