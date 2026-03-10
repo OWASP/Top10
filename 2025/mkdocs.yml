@@ -48,6 +48,27 @@ plugins:
           default: true
           name: en - English
           build: true
+        - locale: it
+          name: it - Italiano
+          build: true
+          nav_translations:
+            Home: Home
+            Introduction: Introduzione
+            About OWASP: Informazioni su OWASP
+            What are Application Security Risks?: Cosa sono i Rischi di Sicurezza delle Applicazioni?
+            Establishing a Modern Application Security Program: Sviluppare un Moderno Programma di Sicurezza Applicativa
+            Top 10:2025 List: Lista Top 10:2025
+            A01 Broken Access Control: A01 Broken Access Control
+            A02 Security Misconfiguration: A02 Security Misconfiguration
+            A03 Software Supply Chain Failures: A03 Software Supply Chain Failures
+            A04 Cryptographic Failures: A04 Cryptographic Failures
+            A05 Injection: A05 Injection
+            A06 Insecure Design: A06 Insecure Design
+            A07 Authentication Failures: A07 Authentication Failures
+            A08 Software or Data Integrity Failures: A08 Software or Data Integrity Failures
+            A09 Security Logging and Alerting Failures: A09 Security Logging and Alerting Failures
+            A10 Mishandling of Exceptional Conditions: A10 Mishandling of Exceptional Conditions
+            Next Steps: Prossimi Passi
       nav_translations:
 
         SAMPLE:
@@ -69,6 +90,7 @@ plugins:
           A09 Security Logging and Monitoring Failures: A09 - Unzureichendes Logging und Sicherheitsmonitoring
           A10 Server Side Request Forgery (SSRF): A10 - Server-Side Request Forgery (SSRF)
           Next Steps: Nächste Schritte
+
   - macros:     # needs to be the last plugin to export the final osib-YAML file for all languages
       module_name: '../osib/osib_macro'
       include_dir: '../osib/include'
@@ -82,6 +104,9 @@ extra:
 #    - name: de - Deutsch
 #      link: ./de/
 #      lang: de
+    - name: it - Italiano
+      link: ./it/
+      lang: it
   osib:
     document:     osib.owasp.top10
     version:      2025-0-1
