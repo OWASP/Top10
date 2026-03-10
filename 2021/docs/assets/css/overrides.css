@@ -1,0 +1,29 @@
+/* Prevent header layout overflow that breaks right page margin */
+@media screen and (max-width: 959.99px) {
+
+  /* Contain header layout within the viewport */
+  .md-header,
+  .md-header__inner,
+  nav.md-header__inner.md-grid {
+    max-width: 100% !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    overflow-x: clip !important;
+  }
+
+  /* Allow header children to shrink below their content width when needed */
+  nav.md-header__inner.md-grid>* {
+    min-width: 0 !important;
+  }
+
+  /* Truncate long header title text to avoid widening the page */
+  .md-header__title,
+  .md-header__title .md-header__topic,
+  .md-header__title .md-header__ellipsis {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+  }
+}
