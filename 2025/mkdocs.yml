@@ -48,6 +48,27 @@ plugins:
           default: true
           name: en - English
           build: true
+        - locale: ko
+          name: ko - 한국어
+          build: true
+          nav_translations:
+            Home: 홈
+            Introduction: 소개
+            About OWASP: OWASP 소개
+            What are Application Security Risks?: 애플리케이션 보안 위험이란 무엇인가?
+            Establishing a Modern Application Security Program: 현대적 애플리케이션 보안 체계를 수립하는 법
+            Top 10:2025 List: OWASP Top 10:2025 목록
+            A01 Broken Access Control: A01 불충분한 접근 제어
+            A02 Security Misconfiguration: A02 보안 설정 오류
+            A03 Software Supply Chain Failures: A03 소프트웨어 공급망 실패
+            A04 Cryptographic Failures: A04 암호 실패
+            A05 Injection: A05 인젝션
+            A06 Insecure Design: A06 안전하지 않은 설계
+            A07 Authentication Failures: A07 인증 실패
+            A08 Software or Data Integrity Failures: A08 소프트웨어 또는 데이터 무결성 실패
+            A09 Security Logging and Alerting Failures: A09 보안 로깅 및 알림 실패
+            A10 Mishandling of Exceptional Conditions: A10 부적절한 예외 처리
+            Next Steps: 다음 단계
       nav_translations:
 
         SAMPLE:
@@ -77,8 +98,11 @@ plugins:
 extra:
   alternate:                                                         # see https://squidfunk.github.io/mkdocs-material/setup/changing-the-language/#site-language-selector
     - name: en - English
-      link: ./en/
+      link: ./
       lang: en
+    - name: ko - 한국어
+      link: ./ko/
+      lang: ko
 #    - name: de - Deutsch
 #      link: ./de/
 #      lang: de
