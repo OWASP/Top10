@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="../assets/css/RC-stylesheet.css" />
+
 # What are Application Security Risks?
 Attackers can potentially use many different paths through your application to do harm to your business or organization. Each of these ways poses a potential risk that needs to be investigated.
 
@@ -9,46 +11,34 @@ Attackers can potentially use many different paths through your application to d
     <strong>Threat Agents</strong>
    </td>
    <td>
-    <strong>Attack \
-Vectors</strong>
+  <strong>Attack Vectors</strong>
    </td>
    <td>
     <strong>Exploitability</strong>
    </td>
    <td>
-    <strong>Likelihood of Missing Security</strong>
-<p style="text-align: center">
-
-    <strong>Controls</strong>
+   <strong>Likelihood of Missing Security Controls</strong>
    </td>
    <td>
-    <strong>Technical</strong>
-<p style="text-align: center">
-
-    <strong>Impacts</strong>
+  <strong>Technical Impacts</strong>
    </td>
    <td>
-    <strong>Business</strong>
-<p style="text-align: center">
-
-    <strong>Impacts</strong>
+  <strong>Business Impacts</strong>
    </td>
   </tr>
   <tr>
    <td>
-    <strong>By environment, \
-dynamic by situation picture</strong>
+  <strong>By environment, dynamic by situation picture</strong>
+
    </td>
    <td>
-    <strong>By Application  exposure (by environment</strong>
+   <strong>By Application exposure (by environment)</strong>
    </td>
    <td>
     <strong>Avg Weighted Exploit</strong>
    </td>
    <td>
-    <strong>Missing Controls \
-by average Incidence rate \
-Weighed by coverage</strong>
+  <strong>Missing Controls by average incidence rate weighted by coverage</strong>
    </td>
    <td>
     <strong>Avg Weighted Impact</strong>
@@ -60,7 +50,8 @@ Weighed by coverage</strong>
 </table>
 
 
-In our Risk Rating we have taken into account the universal parameters of exploitability, average likelihood of missing security controls for a weakness and its technical impacts. 
+In our Risk Rating, we have taken into account the universal parameters of exploitability
+, average likelihood of missing security controls for a weakness and its technical impacts. 
 
 Each organization is unique, and so are the threat actors for that organization, their goals, and the impact of any breach. If a public interest organization uses a content management system (CMS) for public information and a health system uses that same exact CMS for sensitive health records, the threat actors and business impacts can be very different for the same software. It is critical to understand the risk to your organization based on the exposure of the application, the applicable threat agents by situation picture (for targeted and undirected attacks by business and location) and the individual business impacts. 
 
