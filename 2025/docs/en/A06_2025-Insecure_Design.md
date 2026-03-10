@@ -89,7 +89,7 @@ Often self-responsibility of developers is underappreciated. Foster a culture of
 * Establish and use a secure development lifecycle with AppSec professionals to help evaluate and design security and privacy-related controls
 * Establish and use a library of secure design patterns or paved-road components
 * Use threat modeling for critical parts of the application such as authentication, access control, business logic, and key flows
-* User threat modeling as an educational tool to generate a security mindset
+* Use threat modeling as an educational tool to generate a security mindset
 * Integrate security language and controls into user stories
 * Integrate plausibility checks at each tier of your application (from frontend to backend)
 * Write unit and integration tests to validate that all critical flows are resistant to the threat model. Compile use-cases *and* misuse-cases for each tier of your application.
