@@ -68,7 +68,7 @@ Exceptional conditions can be caused by missing, poor, or incomplete input valid
 
 Many different security vulnerabilities can happen when we mishandle exceptional conditions,
 
-such as logic bugs, overflows, race conditions, fraudulent transactions, or issues with memory, state, resource, timing, authentication, and authorization. These types of vulnerabilities can negatively affect the confidentiality, availability, and/or integrity of a system or it’s data. Attackers manipulate an application's flawed error handling to strike this vulnerability. 
+such as logic bugs, overflows, race conditions, fraudulent transactions, or issues with memory, state, resource, timing, authentication, and authorization. These types of vulnerabilities can negatively affect the confidentiality, availability, and/or integrity of a system or its data. Attackers manipulate an application's flawed error handling to strike this vulnerability. 
 
 
 ## How to prevent. 
