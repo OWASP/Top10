@@ -13,6 +13,15 @@ theme:
     - navigation.sections
     - navigation.instant
     - search.suggest
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
 
 nav:
   - Home: 'en/index.md'
