@@ -3,52 +3,39 @@ Attackers can potentially use many different paths through your application to d
 
 ![Calculation diagram](../assets/2025-algorithm-diagram.png)
 
-<table>
+<table class="table-base table-risk">
   <tr>
    <td>
     <strong>Threat Agents</strong>
    </td>
    <td>
-    <strong>Attack \
-Vectors</strong>
+    <strong>Attack Vectors</strong>
    </td>
    <td>
     <strong>Exploitability</strong>
    </td>
    <td>
-    <strong>Likelihood of Missing Security</strong>
-<p style="text-align: center">
-
-    <strong>Controls</strong>
+    <strong>Likelihood of Missing Security Controls</strong>
    </td>
    <td>
-    <strong>Technical</strong>
-<p style="text-align: center">
-
-    <strong>Impacts</strong>
+    <strong>Technical Impacts</strong>
    </td>
    <td>
-    <strong>Business</strong>
-<p style="text-align: center">
-
-    <strong>Impacts</strong>
+    <strong>Business Impacts</strong>
    </td>
   </tr>
   <tr>
    <td>
-    <strong>By environment, \
-dynamic by situation picture</strong>
+    <strong>By environment, dynamic by situation picture</strong>
    </td>
    <td>
-    <strong>By Application  exposure (by environment</strong>
+    <strong>By Application  exposure (by environment)</strong>
    </td>
    <td>
     <strong>Avg Weighted Exploit</strong>
    </td>
    <td>
-    <strong>Missing Controls \
-by average Incidence rate \
-Weighed by coverage</strong>
+    <strong>Missing Controls by average Incidence rate Weighted by coverage</strong>
    </td>
    <td>
     <strong>Avg Weighted Impact</strong>

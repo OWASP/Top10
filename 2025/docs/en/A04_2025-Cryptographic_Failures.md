@@ -11,7 +11,7 @@ Moving down two positions to #4, this weakness focuses on failures related to th
 ## Score table.
 
 
-<table>
+<table class="table-base">
   <tr>
    <td>CWEs Mapped 
    </td>

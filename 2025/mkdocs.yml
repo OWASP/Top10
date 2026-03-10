@@ -74,6 +74,10 @@ plugins:
       include_dir: '../osib/include'
       verbose: false                                                  # debug
       on_error_fail: true
+
+extra_css:
+  - stylesheets/extra.css
+
 extra:
   alternate:                                                         # see https://squidfunk.github.io/mkdocs-material/setup/changing-the-language/#site-language-selector
     - name: en - English
