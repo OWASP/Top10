@@ -1,4 +1,4 @@
-# A05:2025 Injekce ![icon](../assets/TOP_10_Icons_Final_Injection.png){: style="height:80px;width:80px" align="right"}
+# A05:2025 Injekce (Injection) ![icon](../assets/TOP_10_Icons_Final_Injection.png){: style="height:80px;width:80px" align="right"}
 
 ## Pozadí
 
