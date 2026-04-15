@@ -1,4 +1,4 @@
-# A06:2025 Nezabezpečený návrh ![icon](../assets/TOP_10_Icons_Final_Insecure_Design.png){: style="height:80px;width:80px" align="right"}
+# A06:2025 Nezabezpečený návrh (Insecure Design) ![icon](../assets/TOP_10_Icons_Final_Insecure_Design.png){: style="height:80px;width:80px" align="right"}
 
 
 ## Pozadí
