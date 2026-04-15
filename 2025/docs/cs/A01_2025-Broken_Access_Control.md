@@ -1,4 +1,4 @@
-#  A01:2025 Narušené řízení přístupu (Broken Access Control) ![icon](../assets/TOP_10_Icons_Final_Broken_Access_Control.png){: style="height:80px;width:80px" align="right"}
+#  A01:2025 Nedostatky v řízení přístupu (Broken Access Control) ![icon](../assets/TOP_10_Icons_Final_Broken_Access_Control.png){: style="height:80px;width:80px" align="right"}
 
 
 
