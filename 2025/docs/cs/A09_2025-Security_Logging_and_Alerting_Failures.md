@@ -94,12 +94,11 @@ Existují komerční i open-source produkty pro ochranu aplikací, jako je OWASP
 
 ## Příklady scénářů útoků
 
-**Scénář #1:** Provozovatel webových stránek poskytovatele dětského zdravotního pojištění/plánu nedokázal odhalit narušení bezpečnosti kvůli nedostatku monitorování a logování. Externí subjekt informoval poskytovatele zdravotního plánu, že útočník získal přístup k tisícům citlivých zdravotních záznamů více než 3,5 milionu dětí a upravil je. Postincidentní přezkum zjistil, že vývojáři webových stránek neřešili významné zranitelnosti. Jelikož systém nebyl logován ani monitorován, mohl únik dat probíhat již od roku 2013, tedy po dobu více než sedmi let.
+**Scénář č. 1:** Provozovatel webu poskytovatele dětského zdravotního pojištění nedokázal kvůli nedostatečnému monitorování a logování odhalit narušení bezpečnosti. Externí subjekt informoval poskytovatele zdravotního pojištění, že útočník získal přístup k tisícům citlivých zdravotních záznamů více než 3,5 milionu dětí a upravil je. Následné přezkoumání po incidentu ukázalo, že vývojáři webu neodstranili významné zranitelnosti. Protože systém nebyl logován ani monitorován, mohl únik dat probíhat již od roku 2013, tedy déle než sedm let.
 
-**Scénář #2:** Velká indická letecká společnost zaznamenala únik dat zahrnující osobní údaje milionů cestujících za více než deset let, včetně údajů z pasů a kreditních karet. K úniku dat došlo u externího poskytovatele cloudového hostingu, který leteckou společnost o úniku po určité době informoval.
+**Scénář č. 2:** U velké indické letecké společnosti došlo k úniku dat, který zahrnoval osobní údaje milionů cestujících za období delší než deset let, včetně údajů z pasů a platebních karet. K úniku došlo u externího poskytovatele cloudového hostingu, který leteckou společnost o narušení informoval až s odstupem času.
 
-**Scénář #3:** Velká evropská letecká společnost utrpěla narušení zabezpečení, které podléhalo oznámení podle GDPR. Narušení bylo údajně způsobeno bezpečnostními zranitelnostmi v platební aplikaci, které útočníci zneužili a získali tak více než 400 000 záznamů o platbách zákazníků. Regulátor ochrany osobních údajů letecké společnosti v důsledku toho uložil pokutu ve výši 20 milionů liber.
-
+**Scénář č. 3:** Velká evropská letecká společnost utrpěla narušení zabezpečení podléhající oznamovací povinnosti podle GDPR. To bylo podle dostupných informací způsobeno bezpečnostními zranitelnostmi v platební aplikaci, které útočníci zneužili a získali tak více než 400 000 záznamů o platbách zákazníků. V důsledku toho uložil regulátor pro ochranu osobních údajů letecké společnosti pokutu ve výši 20 milionů liber.
 
 ## Reference
 
