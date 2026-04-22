@@ -74,9 +74,6 @@ Folgendes ist zu klären:
 * Werden Zufallszahlen für kryptografische Zwecke genutzt, die nicht auf kryptografische Anforderungen ausgelegt sind? Selbst wenn die richtige Funktion genutzt wird, muss diese eventuell vom Entwickler korrekt initialisiert werden. Wurde eine integrierte starke Initialisierung eventuell durch einen Entwickler mit einem schwachen Wert überschrieben, dem es an ausreichender Entropie und Nichtvorhersehbarkeit mangelt?
 * Werden Hash-Funktionen mit bekannten Schwächen wie MD5 oder SHA1 verwendet oder werden nicht-kryptografische Hash-Funktionen verwendet, wenn kryptografische Hash-Funktionen benötigt werden?
 * Sind kryptografische Fehlermeldungen oder Seitenkanäle ausnutzbar, beispielsweise in Form von Padding-Oracle-Angriffen?
-* 
-
-* Are cryptographic error messages or side channel information exploitable, for example in the form of padding oracle attacks?
 * Kann der eingesetzte kryptografische Algorithmus abgeschwächt oder umgangen werden?
 
 Siehe ASVS: Cryptography (V11), Secure Communication (V12) and Data Protection (V14).
@@ -110,7 +107,7 @@ Daten, die es nicht mehr gibt, können auch nicht gestohlen werden.
 
 
 
-## Example attack scenarios. 
+## Beispielhafte Angriffsszenarien. 
 
 **Scenario #1**: Eine Webseite benutzt kein TLS, erzwingt dies nicht auf allen Seiten oder lässt schwache Verschlüsselung zu. Die angreifende Person liest die Kommunikation mit (z. B. in einem offenen WLAN), ersetzt HTTPS- durch HTTP-Verbindungen, hört diese ab und stiehlt das Sitzungscookie. Durch Wiedereinspielen dieses Cookies übernimmt die angreifende Person die (authentifizierte) Sitzung des Nutzers und erlangt Zugriff auf dessen private Daten. Anstatt dessen kann die angreifende Person auch die übertragenen Daten ändern, z. B. den Empfänger einer Überweisung.
 
