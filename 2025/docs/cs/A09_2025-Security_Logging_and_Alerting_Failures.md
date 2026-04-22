@@ -3,8 +3,7 @@
 
 ## Pozadí
 
-Selhání bezpečnostního logování a upozorňování si udržuje svou pozici na 9. místě. Název této kategorie byl mírně změněn, aby zdůraznil funkci upozorňování (alerting) potřebnou k vyvolání reakce na relevantní logovací události. Tato kategorie bude v datech vždy nedostatečně zastoupena a již potřetí ji účastníci komunitního průzkumu zvolili do seznamu Top 10.. Tato kategorie je mimořádně obtížná k testování a má minimální zastoupení v datech CVE/CVSS (pouze 723 záznamů CVE), ale může mít velký dopad na viditelnost, upozorňování na incidenty a forenzní analýzu. Tato kategorie zahrnuje problémy se *správným zpracováním enkódování výstupu do logovacích souborů (CWE-117), vkládáním citlivých dat do logovacích souborů (CWE-532) a nedostatečným logováním (CWE-778).*
-
+Název této kategorie byl mírně upraven, aby více zdůraznil funkci upozorňování (alerting), která je nezbytná k vyvolání reakce na relevantní události zaznamenané v logovacích záznamech. V datech bude tato oblast vždy spíše podreprezentovaná a již potřetí byla do žebříčku Top 10 zařazena na základě hlasování účastníků komunitního průzkumu. Její testování je mimořádně obtížné a v datech CVE/CVSS je zastoupena jen minimálně (pouze 723 záznamy CVE), přesto však může mít zásadní dopad na viditelnost bezpečnostních událostí, upozorňování na incidenty i forenzní analýzu. Zahrnuje problémy s *nesprávným zpracováním kódování výstupu při zápisu do logovacích souborů (CWE-117), s vkládáním citlivých dat do logovacích souborů (CWE-532) a s nedostatečným logováním (CWE-778).*
 
 ## Tabulka skóre
 
