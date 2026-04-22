@@ -55,21 +55,21 @@ Název této kategorie byl mírně upraven, aby více zdůraznil funkci upozorň
 
 ## Popis 
 
-Bez logování a monitorování nelze útoky a narušení zabezpečení odhalit a bez upozorňování je velmi obtížné během bezpečnostního incidentu rychle a efektivně reagovat. Nedostatečné logování, nepřetržité monitorování, detekce a upozorňování, které má iniciovat aktivní reakce, selhává vždy, když:
+Bez logování a monitorování nelze útoky a narušení zabezpečení odhalit a bez upozorňování je během bezpečnostního incidentu velmi obtížné reagovat rychle a účinně. K nedostatkům v logování, průběžném monitorování, detekci a upozorňování, které mají vést k zahájení aktivní reakce, dochází vždy, když:
 
-* Auditovatelné události, jako jsou přihlášení, neúspěšná přihlášení a transakce s vysokou hodnotou, nejsou logovány nebo jsou logovány nekonzistentně (například se logují pouze úspěšná přihlášení, ale ne neúspěšné pokusy).
-* Varování a chyby negenerují žádné, nedostatečné nebo nejasné zprávy v logu.  
+* Auditovatelné události, jako jsou přihlášení, neúspěšná přihlášení a transakce s vysokou hodnotou, nejsou logovány vůbec nebo jsou logovány nekonzistentně (například se logují pouze úspěšná přihlášení, nikoli neúspěšné pokusy).
+* Varování a chyby negenerují žádné, dostatečné nebo srozumitelné logovací záznamy.
 * Integrita logů není řádně chráněna před manipulací.
-* Logy aplikací a API nejsou monitorovány z hlediska podezřelé aktivity.
+* Logy aplikací a rozhraní API nejsou monitorovány z hlediska podezřelé aktivity.
 * Logy jsou ukládány pouze lokálně a nejsou řádně zálohovány.
-* Nejsou zavedeny nebo nejsou účinné vhodné prahové hodnoty pro upozorňování a procesy eskalace reakce. Upozornění nejsou přijímána nebo vyhodnocována v přiměřené lhůtě.
-* Penetrační testování a skeny nástroji pro dynamické testování bezpečnosti aplikací (DAST) (například Burp nebo ZAP) nespouštějí upozornění.
-* Aplikace nedokáže detekovat, eskalovat nebo upozornit na aktivní útoky v reálném čase nebo téměř v reálném čase.
-* Jste zranitelní vůči úniku citlivých informací tím, že události logování a upozorňování jsou viditelné pro uživatele nebo útočníka (viz [A01:2025 Nedostatečné řízení přístupu (Broken Access Control)](A01_2025-Broken_Access_Control.md)), nebo tím, že logujete citlivé informace, které by neměly být logovány (například PII nebo PHI).
-* Jste zranitelní vůči injektování nebo útokům na systémy logování nebo monitorování, pokud nejsou data logů správně enkódována.
-* Aplikace opomíjí nebo nesprávně zpracovává chyby a jiné výjimečné stavy tak, že systém neví, že došlo k chybě, a proto není schopen logovat, že nastal problém.
-* Adekvátní „use cases“ pro vydávání upozorňování chybí nebo jsou zastaralé, a proto nerozpoznají zvláštní situaci.
-* Příliš mnoho falešně pozitivních upozornění znemožňuje odlišit důležitá upozornění od nedůležitých, což vede k tomu, že jsou rozpoznány příliš pozdě, nebo vůbec (fyzické přetížení týmu SOC).
+* Vhodné prahové hodnoty pro upozorňování a procesy eskalace reakce nejsou zavedeny nebo nejsou účinné. Upozornění nejsou přijímána ani vyhodnocována v přiměřené době.
+* Penetrační testování a skeny prováděné nástroji pro dynamické testování bezpečnosti aplikací (DAST), jako jsou Burp nebo ZAP, nespouštějí upozornění.
+* Aplikace nedokáže aktivní útoky detekovat, eskalovat ani na ně upozornit v reálném čase nebo téměř v reálném čase.
+* Jste zranitelní vůči úniku citlivých informací tím, že události logování a upozorňování zpřístupníte uživateli nebo útočníkovi (viz [A01:2025 Nedostatečné řízení přístupu (Broken Access Control)](A01_2025-Broken_Access_Control.md)), nebo tím, že logujete citlivé informace, které by logovány být neměly (například PII nebo PHI).
+* Pokud nejsou data v logu správně zakódována, jste zranitelní vůči injektážím nebo útokům na systémy logování či monitorování.
+* Aplikace opomíjí chyby a jiné výjimečné stavy nebo je zpracovává nesprávně, takže systém neví, že k chybě došlo, a není proto schopen zaznamenat, že nastal problém.
+* Odpovídající „use cases“ pro vyvolání upozornění chybějí nebo jsou zastaralé, a proto nelze rozpoznat zvláštní situaci.
+* Příliš velké množství falešně pozitivních upozornění znemožňuje odlišit důležitá upozornění od nedůležitých, v důsledku čehož jsou rozpoznána příliš pozdě, nebo vůbec ne (fyzické přetížení týmu SOC).
 * Zjištěná upozornění nelze správně zpracovat, protože playbook pro daný use case je neúplný, zastaralý nebo chybí.
 
 
