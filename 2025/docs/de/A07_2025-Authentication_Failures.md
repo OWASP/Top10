@@ -1,33 +1,33 @@
-# A07:2025 Authentication Failures ![icon](../assets/TOP_10_Icons_Final_Identification_and_Authentication_Failures.png){: style="height:80px;width:80px" align="right"}
+# A07:2025 – Fehlerhafte Authentifizierung ![icon](../assets/TOP_10_Icons_Final_Identification_and_Authentication_Failures.png){: style="height:80px;width:80px" align="right"}
 
 
-## Background. 
+## Hintergrund.
 
-Authentication Failures maintains its position at #7 with a slight name change to more accurately reflect the 36 CWEs in this category. Despite benefits from standardized frameworks, this category has kept its #7 rank from 2021. Notable CWEs included are *CWE-259 Use of Hard-coded Password*, *CWE-297: Improper Validation of Certificate with Host Mismatch*, *CWE-287: Improper Authentication*, *CWE-384: Session Fixation*, and *CWE-798 Use of Hard-coded Credentials*.
+Fehlerhafte Authentifizierung behält mit einer leichten Namensänderung seinen Rang #7 bei, um die 36 CWEs dieser Kategorie präziser widerzuspiegeln. Trotz der Vorteile standardisierter Frameworks hat diese Kategorie ihren Rang #7 aus 2021 gehalten. Zu den relevanten CWEs zählen *CWE-259: Use of Hard-coded Password*, *CWE-297: Improper Validation of Certificate with Host Mismatch*, *CWE-287: Improper Authentication*, *CWE-384: Session Fixation* sowie *CWE-798: Use of Hard-coded Credentials*.
 
 
-## Score table.
+## Beurteilungskriterien.
 
 
 <table>
   <tr>
-   <td>CWEs Mapped 
+   <td>Zugeordnete CWEs
    </td>
-   <td>Max Incidence Rate
+   <td>Max. Häufigkeit
    </td>
-   <td>Avg Incidence Rate
+   <td>Durchschn. Häufigkeit
    </td>
-   <td>Max Coverage
+   <td>Max. Abdeckung
    </td>
-   <td>Avg Coverage
+   <td>Durchschn. Abdeckung
    </td>
-   <td>Avg Weighted Exploit
+   <td>Durchschn. gewichtete Ausnutzbarkeit
    </td>
-   <td>Avg Weighted Impact
+   <td>Durchschn. gewichtete Auswirkung
    </td>
-   <td>Total Occurrences
+   <td>Gesamtanzahl
    </td>
-   <td>Total CVEs
+   <td>Summe CVEs
    </td>
   </tr>
   <tr>
@@ -54,77 +54,77 @@ Authentication Failures maintains its position at #7 with a slight name change t
 
 
 
-## Description. 
+## Beschreibung.
 
-When an attacker is able to trick a system into recognizing an invalid or incorrect user as legitimate, this vulnerability is present. There may be authentication weaknesses if the application:
+Wenn ein Angreifer ein System dazu bringen kann, einen ungültigen oder nicht autorisierten Nutzer als legitim anzuerkennen, liegt diese Schwachstelle vor. Schwachstellen bei der Authentifizierung können auftreten, falls die Anwendung:
 
-* Permits automated attacks such as credential stuffing, where the attacker has a breached list of valid usernames and passwords. More recently this type of attack has been expanded to include hybrid password attacks credential stuffing (also known as password spray attacks), where the attacker uses variations or increments of spilled credentials to gain access, for instance trying Password1!, Password2!, Password3! and so on.
+* automatisierte Angriffe wie Credential Stuffing ermöglicht, bei denen Angreifende über eine Liste bekannter Benutzernamen und Passwörter verfügen. Jüngst wurde diese Angriffsmethode um hybride Passwort-Angriffe erweitert (auch als Password-Spray-Angriffe bekannt), bei denen Angreifende Variationen kompromittierter Zugangsdaten verwenden, z. B. Password1!, Password2!, Password3! usw.
 
-* Permits brute force or other automated, scripted attacks that are not quickly blocked.
+* Brute-Force- oder andere automatisierte, skriptbasierte Angriffe ermöglicht, die nicht schnell genug unterbunden werden.
 
-* Permits default, weak, or well-known passwords, such as "Password1" or "admin" username with an "admin" password.
+* Standard-, schwache oder gängige Passwörter zulässt, wie z. B. „Password1" oder „admin/admin".
 
-* Allows users to create new accounts with already known-breached credentials.
+* die Erstellung neuer Konten mit bereits als kompromittiert bekannten Zugangsdaten zulässt.
 
-* Allows use of weak or ineffective credential recovery and forgot-password processes, such as "knowledge-based answers," which cannot be made safe.
+* schwache oder ineffektive Verfahren zur Wiederherstellung von Anmeldeinformationen und Verfahren für vergessene Passwörter, wie z. B. „wissensbasierte Antworten", die nicht sicher gestaltet werden können.
 
-* Uses plain text, encrypted, or weakly hashed passwords data stores (see[ A04:2025-Cryptographic Failures](https://owasp.org/Top10/2025/A04_2025-Cryptographic_Failures/)).
+* Klartext-, verschlüsselte oder schwach gehashte Kennwortdatenspeicher (siehe [A04:2025 – Fehlerhafter Einsatz von Kryptographie](https://owasp.org/Top10/2025/A04_2025-Cryptographic_Failures/)) verwendet.
 
-* Has missing or ineffective multi-factor authentication.
+* fehlende oder unwirksame Multi-Faktor-Authentifizierung aufweist.
 
-* Allows use of weak or ineffective fallbacks if multi-factor authentication is not available. 
+* schwache oder ineffektive Ausweichmechanismen zulässt, falls keine Multi-Faktor-Authentifizierung verfügbar ist.
 
-* Exposes session identifier in the URL, a hidden field, or another insecure location that is accessible to the client.
+* die Session-ID in der URL, einem versteckten Feld oder einer anderen unsicheren, für den Client zugänglichen Stelle offenlegt.
 
-* Reuses the same session identifier after successful login.
+* dieselbe Session-ID nach erfolgreichem Login wiederverwendet.
 
-* Does not correctly invalidate user sessions or authentication tokens (mainly single sign-on (SSO) tokens) during logout or a period of inactivity.
+* Benutzersitzungen oder Authentifizierungs-Tokens (hauptsächlich SSO-Tokens) beim Abmelden oder bei Inaktivität nicht korrekt invalidiert.
 
-* Does not correctly assert the scope and intended audience of the provided credentials.
+* den Scope und die vorgesehene Audience der bereitgestellten Zugangsdaten nicht korrekt prüft.
 
-## How to prevent. 
+## Prävention und Gegenmaßnahmen.
 
-* Where possible, implement and enforce use of multi-factor authentication to prevent automated credential stuffing, brute force, and stolen credential reuse attacks.
+* Wenn möglich, sollte eine Multi-Faktor-Authentifizierung implementiert und deren Nutzung durchgesetzt werden, um automatisiertes Credential Stuffing, Brute-Force-Angriffe und die Wiederverwendung gestohlener Zugangsdaten zu verhindern.
 
-* Where possible, encourage and enable the use of password managers, to help users make better choices.
+* Wenn möglich, die Nutzung von Passwort-Managern fördern und ermöglichen, um Nutzenden bessere Entscheidungen bei der Passwortwahl zu erleichtern.
 
-* Do not ship or deploy with any default credentials, particularly for admin users.
+* Liefern Sie die Anwendung nicht mit Standard Login-Daten aus, insbesondere nicht für Administrator-Konten.
 
-* Implement weak password checks, such as testing new or changed passwords against the top 10,000 worst passwords list.
+* Implementieren Sie Prüfungen auf schwache Passwörter, wie z. B. durch den Vergleich von neuen oder geänderten Passwörtern mit der Liste der 10.000 schlechtesten Passwörter.
 
-* During new account creation and password changes validate against lists of known breached credentials (eg: using [haveibeenpwned.com](https://haveibeenpwned.com)).
+* Bei der Erstellung neuer Konten und Passwortänderungen Zugangsdaten gegen Listen bekannter kompromittierter Passwörter prüfen (z. B. mit [haveibeenpwned.com](https://haveibeenpwned.com)).
 
-* Align password length, complexity, and rotation policies with [National Institute of Standards and Technology (NIST) 800-63b's guidelines in section 5.1.1](https://pages.nist.gov/800-63-3/sp800-63b.html#:~:text=5.1.1%20Memorized%20Secrets) for Memorized Secrets or other modern, evidence-based password policies.
+* Angleichung der Passwortlänge, -komplexität und -rotation an die Richtlinien des National Institute of Standards and Technology (NIST) 800-63b in [Abschnitt 5.1.1 „Memorized Secrets"](https://pages.nist.gov/800-63-3/sp800-63b.html#:~:text=5.1.1%20Memorized%20Secrets) oder andere modernen, bewährten Passwortrichtlinien.
 
-* Do not force human beings to rotate passwords unless you suspect breach. If you suspect breach, force password resets immediately. 
+* Passwortrotation nicht erzwingen, es sei denn, es besteht ein Verdacht auf eine Kompromittierung. Bei Verdacht sofortige Passwort-Resets durchsetzen.
 
-* Ensure registration, credential recovery, and API pathways are hardened against account enumeration attacks by using the same messages for all outcomes (“Invalid username or password.”).
+* Sicherstellen, dass die Registrierung, die Wiederherstellung von Zugangsdaten und die API-Pfade gegen Angriffe zur Ermittlung von Konten gehärtet sind, indem für alle Resultate die gleiche Nachricht ausgegeben wird („Ungültiger Benutzername oder Passwort.”).
 
-* Limit or increasingly delay failed login attempts but be careful not to create a denial of service scenario. Log all failures and alert administrators when credential stuffing, brute force, or other attacks are detected or suspected.
+* Begrenzen oder bremsen Sie fehlgeschlagene Anmeldeversuche immer weiter aus, aber achten Sie darauf, dass hierbei kein Denial-of-Service-Szenario entsteht. Loggen Sie alle Fehlversuche und alarmieren Sie die Administratoren, wenn Credential Stuffing, Brute Force oder andere Angriffe erkannt oder vermutet werden.
 
-* Use a server-side, secure, built-in session manager that generates a new random session ID with high entropy after login. Session identifiers should not be in the URL, be securely stored in a secure cookie, and invalidated after logout, idle, and absolute timeouts. 
+* Verwenden Sie einen serverseitigen, sicheren, integrierten Sitzungsmanager, der für jede Sitzung eine neue zufällige Sitzungs-ID mit hoher Entropie erzeugt. Die Sitzungs-ID sollte nicht in der URL enthalten sein, sicher in einem sicheren Cookie gespeichert und nach Abmeldung, Inaktivität und absoluten Timeouts invalidiert werden.
 
-* Ideally, use a premade, well-trusted system to handle authentication, identity, and session management. Transfer this risk whenever possible by buying and utilizing a hardened and well tested system.
+* Idealerweise ein bewährtes, vertrauenswürdiges System für Authentifizierung, Identitätsverwaltung und Session-Management verwenden. Dieses Risiko wann immer möglich durch den Einsatz eines gehärteten und gut getesteten Systems auslagern.
 
-* Verify the intended use of provided credentials, e.g. for JWTs validate `aud`, `iss` claims and scopes
+* Die vorgesehene Verwendung bereitgestellter Zugangsdaten prüfen, z. B. bei JWTs die `aud`- und `iss`-Claims sowie Scopes validieren.
 
 
-## Example attack scenarios. 
+## Beispielhafte Angriffsszenarien.
 
-**Scenario #1:** Credential stuffing, the use of lists of known username and password combinations, is now a very common attack. More recently attackers have been found to ‘increment’ or otherwise adjust passwords, based on common human behavior. For instance, changing ‘Winter2025’ to ‘Winter2026’, or ‘ILoveMyDog6’ to ‘ILoveMyDog7’ or ‘ILoveMyDog5’. This adjusting of password attempts is called a hybrid credential stuffing attack or a password spray attack, and they can be even more effective than the traditional version. If an application does not implement defences against automated threats (brute force, scripts, or bots) or credential stuffing, the application can be used as a password oracle to determine if the credentials are valid and gain unauthorized access.
+**Szenario Nr. 1:** Credential Stuffing, die Verwendung von Listen bekannter Benutzernamen- und Passwortkombinationen, ist heute ein sehr verbreiteter Angriff. Jüngst wurde beobachtet, dass Angreifende Passwörter basierend auf typischem menschlichem Verhalten „inkrementieren" oder abwandeln, z. B. von „Winter2025" zu „Winter2026" oder von „ILoveMyDog6" zu „ILoveMyDog7". Diese Methode wird als hybrider Credential-Stuffing-Angriff oder Password-Spray-Angriff bezeichnet und kann noch effektiver sein als die klassische Variante. Verfügt eine Anwendung über keine Abwehrmechanismen gegen automatisierte Angriffe oder Credential Stuffing, kann sie als Passwort-Orakel genutzt werden, um gültige Zugangsdaten zu ermitteln und unbefugten Zugriff zu erlangen.
 
-**Scenario #2:** Most successful authentication attacks occur due to the continued use of passwords as the sole authentication factor. Once considered best practices, password rotation and complexity requirements encourage users to both reuse passwords and use weak passwords. Organizations are recommended to stop these practices per NIST 800-63 and to enforce use of multi-factor authentication on all important systems.
+**Szenario Nr. 2:** Die meisten erfolgreichen Authentifizierungsangriffe erfolgen aufgrund der andauernden Verwendung von Passwörtern als einzigem Authentifizierungsfaktor. Die früher als Best Practices geltenden Anforderungen an Passwortwechsel und -komplexität verleiten Nutzende sowohl zur Wiederverwendung als auch zur Wahl schwacher Passwörter. Organisationen wird empfohlen, diese Praktiken gemäß NIST 800-63 einzustellen und die Nutzung von Multi-Faktor-Authentifizierung auf allen wichtigen Systemen durchzusetzen.
 
-**Scenario #3:** Application session timeouts aren't implemented correctly. A user uses a public computer to access an application and instead of selecting "logout," the user simply closes the browser tab and walks away. Another Example for this is, if a Single Sign on (SSO) session can not be closed by a Single Logout (SLO). That is, a single login logs you into, for example, your mail reader, your document system, and your chat system. But logging out happens only to the current system. If an attacker uses the same browser after the victim thinks they have successfully logged out, but with the user still authenticated to some of the applications, then can access the victim's account. The same issue can happen in offices and enterprises when a sensitive application has not been properly exited and a colleague has (temporary) access to the unlocked computer.
+**Szenario Nr. 3:** Die Session-Timeouts von Anwendungen sind nicht korrekt implementiert. Eine Nutzerin/Nutzer verwendet einen öffentlichen Computer und schließt die Browser-Registerkarte, anstatt sich abzumelden. Ein weiteres Beispiel: Eine SSO-Sitzung kann nicht per Single Logout (SLO) geschlossen werden – ein einzelner Login gewährt Zugang zu mehreren Systemen (z. B. E-Mail, Dokumente, Chat), aber der Logout erfolgt nur im aktuellen System. Greift ein Angreifer danach auf denselben Browser zu, hat er Zugriff auf alle noch aktiven Sitzungen. Dasselbe Problem kann in Büros auftreten, wenn eine sensible Anwendung nicht ordnungsgemäß beendet wurde und Kolleginnen oder Kollegen vorübergehend Zugriff auf den entsperrten Computer haben.
 
-## References.
+## Referenzen.
 
 * [OWASP Authentication Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html)
 
 * [OWASP Secure Coding Practices](https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/stable-en/01-introduction/05-introduction)
 
 
-## List of Mapped CWEs
+## Liste der zugeordneten CWEs
 
 * [CWE-258 Empty Password in Configuration File](https://cwe.mitre.org/data/definitions/258.html)
 
