@@ -75,22 +75,21 @@ Bez logování a monitorování nelze útoky a narušení zabezpečení odhalit 
 
 ## Jak tomu zabránit
 
-Vývojáři by měli v závislosti na riziku aplikace implementovat některé nebo všechny z následujících kontrol:
+Vývojáři by měli v závislosti na rizikovosti aplikace implementovat některá nebo všechna následující opatření:
 
-* Zajistěte, aby všechna selhání přihlášení, selhání kontroly přístupu a selhání validace vstupů na straně serveru mohla být logována s dostatečným uživatelským kontextem pro identifikaci podezřelých nebo škodlivých účtů a aby byla uchovávána dostatečně dlouho pro účely opožděné forenzní analýzy.
-* Zajistěte, aby byla logována každá část vaší aplikace, která obsahuje bezpečnostní kontrolu, bez ohledu na to, zda uspěje nebo selže.
+* Zajistěte, aby všechna selhání přihlášení, kontroly přístupu a validace vstupů na straně serveru mohla být logována s dostatečným uživatelským kontextem umožňujícím identifikaci podezřelých nebo škodlivých účtů a aby byla uchovávána po dostatečně dlouhou dobu pro účely následné forenzní analýzy.
+* Zajistěte, aby byla logována každá část aplikace obsahující bezpečnostní kontrolu, a to bez ohledu na to, zda tato kontrola uspěje, nebo selže.
 * Zajistěte, aby byly logy generovány ve formátu, který mohou řešení pro správu logů snadno zpracovat.
-* Zajistěte, aby data logů byla správně enkódována, aby se zabránilo injektování nebo útokům na logovací nebo monitorovací systémy.
-* Zajistěte, aby všechny transakce měly auditní stopu s kontrolami integrity, které zabrání manipulaci nebo smazání, například append-only databázové tabulky nebo podobný mechanismus.
-* Zajistěte, aby všechny transakce, které vyvolají chybu, byly rollbackovány a spuštěny znovu. Vždy fail closed (tj. bezpečně selžte; nepokračujte).
-* Pokud se vaše aplikace nebo její uživatelé chovají podezřele, vyvolejte upozornění. Vytvořte pro vývojáře k tomuto tématu pokyny, aby s tím mohli v kódu počítat, nebo pro to zakupte systém.
-* Týmy DevSecOps a bezpečnostní týmy by měly zavést účinné scénáře monitorování a upozorňování (use cases) včetně playbooků, aby tým Security Operations Center (SOC) podezřelé aktivity rychle detekoval a reagoval na ně.
-* Přidejte do aplikace „honeytokeny“ jako pasti pro útočníky, např. do databáze nebo dat, jako skutečnou a/nebo technickou identitu uživatele. Jelikož se v běžném provozu nepoužívají, jakýkoli přístup generuje logovací data, na která lze vyvolat upozornění s téměř nulovým počtem falešných pozitiv (false positives).
-* Analýza chování a podpora umělou inteligencí mohou být volitelně doplňkovou technikou, která podporuje nízkou míru falešně pozitivních upozornění.
-* Vytvořte nebo přijměte plán reakce na incidenty a obnovy, například National Institute of Standards and Technology (NIST) 800-61r2 nebo novější. Naučte své softwarové vývojáře, jak vypadají útoky na aplikace a bezpečnostní incidenty, aby je mohli hlásit.
+* Zajistěte, aby byla data logů správně kódována, aby se zabránilo injektážím nebo útokům na systémy logování či monitorování.
+* Zajistěte, aby všechny transakce měly auditní stopu s kontrolami integrity, které zabrání manipulaci nebo smazání, například v podobě append-only databázových tabulek nebo podobného mechanismu.
+* Zajistěte, aby všechny transakce, které vyvolají chybu, byly vráceny zpět a znovu spuštěny. Vždy bezpečně selhávejte (fail closed).
+* Pokud se aplikace nebo její uživatelé chovají podezřele, vyvolejte upozornění. Připravte pro vývojáře pokyny k této oblasti, aby s ní mohli při vývoji počítat, nebo pro tento účel pořiďte vhodný systém.
+* Týmy DevSecOps a bezpečnostní týmy by měly zavést účinné scénáře monitorování a upozorňování (use cases) včetně playbooků, aby tým Security Operations Center (SOC) dokázal podezřelé aktivity rychle detekovat a reagovat na ně.
+* Přidejte do aplikace „honeytokeny“ jako pasti na útočníky, například do databáze nebo dat, a to jako skutečnou a/nebo technickou identitu uživatele. Jelikož se při běžném provozu nepoužívají, jakýkoli přístup k nim generuje logovací data, která lze využít k vyvolání upozornění s téměř nulovým počtem falešně pozitivních případů.
+* Analýza chování a podpora umělou inteligencí mohou volitelně sloužit jako doplňková technika podporující nízkou míru falešně pozitivních upozornění.
+* Vytvořte nebo převezměte plán reakce na incidenty a obnovy, například podle National Institute of Standards and Technology (NIST) 800-61r2 nebo novější verze. Naučte své vývojáře softwaru, jak vypadají útoky na aplikace a bezpečnostní incidenty, aby je dokázali hlásit.
 
-
-Existují komerční a open-source produkty pro ochranu aplikací, jako je OWASP ModSecurity Core Rule Set, a open-source software pro korelaci logů, jako je stack Elasticsearch, Logstash, Kibana (ELK), které nabízejí vlastní dashboardy a upozorňování a mohou vám pomoci tyto problémy řešit. Existují také komerční nástroje observability, které vám mohou pomoci na útoky reagovat nebo je blokovat téměř v reálném čase.
+Existují komerční i open-source produkty pro ochranu aplikací, jako je OWASP ModSecurity Core Rule Set, a open-source nástroje pro korelaci logů, jako je stack Elasticsearch, Logstash, Kibana (ELK), které nabízejí vlastní dashboardy a upozorňování a mohou vám pomoci při řešení těchto problémů. Existují také komerční nástroje pro observability, které vám mohou pomoci reagovat na útoky nebo je blokovat téměř v reálném čase.
 
 
 ## Příklady scénářů útoků
