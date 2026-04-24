@@ -17,19 +17,19 @@ Attackers can potentially use many different paths through your application to d
     <strong>By environment, dynamic by situation picture</strong>
    </td>
    <td>
-    <strong>By Application exposure (by environment)</strong>
+    <strong>By application exposure (by environment)</strong>
    </td>
    <td>
-    <strong>Avg Weighted Exploitability</strong>
+    <strong>Avg weighted exploitability</strong>
    </td>
    <td>
-    <strong>Missing Controls by average Incidence rate Weighted by coverage</strong>
+    <strong>Missing controls by average incidence rate weighted by coverage</strong>
    </td>
    <td>
-    <strong>Avg Weighted Impact</strong>
+    <strong>Avg weighted impact</strong>
    </td>
    <td>
-    <strong>By Business</strong>
+    <strong>By business</strong>
    </td>
   </tr>
 </table>
