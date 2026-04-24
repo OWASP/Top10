@@ -20,13 +20,13 @@ Attackers can potentially use many different paths through your application to d
     <strong>By application exposure (by environment)</strong>
    </td>
    <td>
-    <strong>Avg weighted exploitability</strong>
+    <strong>Average weighted exploitability</strong>
    </td>
    <td>
     <strong>Missing controls by average incidence rate weighted by coverage</strong>
    </td>
    <td>
-    <strong>Avg weighted impact</strong>
+    <strong>Average weighted impact</strong>
    </td>
    <td>
     <strong>By business</strong>
