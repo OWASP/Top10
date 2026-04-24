@@ -5,50 +5,25 @@ Attackers can potentially use many different paths through your application to d
 
 <table>
   <tr>
-   <td>
-    <strong>Threat Agents</strong>
-   </td>
-   <td>
-    <strong>Attack \
-Vectors</strong>
-   </td>
-   <td>
-    <strong>Exploitability</strong>
-   </td>
-   <td>
-    <strong>Likelihood of Missing Security</strong>
-<p style="text-align: center">
-
-    <strong>Controls</strong>
-   </td>
-   <td>
-    <strong>Technical</strong>
-<p style="text-align: center">
-
-    <strong>Impacts</strong>
-   </td>
-   <td>
-    <strong>Business</strong>
-<p style="text-align: center">
-
-    <strong>Impacts</strong>
-   </td>
+   <th>Threat Agents</th>
+   <th>Attack Vectors</th>
+   <th>Exploitability</th>
+   <th>Likelihood of Missing Security Controls</th>
+   <th>Technical Impacts</th>
+   <th>Business Impacts</th>
   </tr>
   <tr>
    <td>
-    <strong>By environment, \
-dynamic by situation picture</strong>
+    <strong>By environment, dynamic by situation picture</strong>
    </td>
    <td>
-    <strong>By Application  exposure (by environment)</strong>
+    <strong>By Application exposure (by environment)</strong>
    </td>
    <td>
-    <strong>Avg Weighted Exploit</strong>
+    <strong>Avg Weighted Exploitability</strong>
    </td>
    <td>
-    <strong>Missing Controls \
-by average Incidence rate \
-Weighed by coverage</strong>
+    <strong>Missing Controls by average Incidence rate Weighted by coverage</strong>
    </td>
    <td>
     <strong>Avg Weighted Impact</strong>
