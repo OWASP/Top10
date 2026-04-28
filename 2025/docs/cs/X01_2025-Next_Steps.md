@@ -1,16 +1,15 @@
 # Další kroky
 
-OWASP Top 10 je ze své podstaty omezen na deset nejvýznamnějších rizik. V každém OWASP Top 10 jsou podrobně zvažována i rizika, která byla „na hraně“ zařazení, ale nakonec se do seznamu nedostala. Ostatní rizika byla rozšířenější a měla větší dopad.
+OWASP Top 10 je ze své podstaty omezen na deset nejvýznamnějších rizik. V každém vydání OWASP Top 10 jsou podrobně zvažována i rizika, která byla „na hraně“ zařazení, ale nakonec se do výběru nedostala. Ostatní rizika však byla rozšířenější a měla větší dopad.
 
-Následující dva problémy rozhodně stojí za pozornost a nápravu, zejména pro organizace, které směřují k vyspělému programu zabezpečení aplikací, bezpečnostní konzultanty a dodavatele nástrojů, kteří chtějí rozšířit nabídku o další oblasti.
+Následující dva problémy rozhodně stojí za to identifikovat a odstranit, zejména pro organizace usilující o vyspělý program bezpečnosti aplikací, bezpečnostní konzultanty a dodavatele nástrojů, kteří chtějí rozšířit pokrytí svých řešení.
 
 
 ## X01:2025 Nedostatečná odolnost aplikací (Lack of Application Resilience)
 
 ### Pozadí
 
-Jedná se o přejmenování kategorie „Odmítnutí služby (Denial of Service)“ z roku 2021. Byla přejmenována, protože popisovala spíše symptom než kořenovou příčinu. Tato kategorie se zaměřuje na CWE, které popisují slabiny související s problémy odolnosti. Skóre této kategorie bylo velmi blízké skóre kategorie A10:2025 Nesprávné zpracování výjimečných stavů (Mishandling of Exceptional Conditions). Mezi relevantní CWE patří: *CWE-400 Uncontrolled Resource Consumption, CWE-409 Improper Handling of Highly Compressed Data (Data Amplification), CWE-674 Uncontrolled Recursion*, a *CWE-835 Loop with Unreachable Exit Condition ('Infinite Loop').*
-
+Jde o přejmenování kategorie „Odmítnutí služby“ (Denial of Service) z roku 2021. Byla přejmenována, protože popisovala spíše důsledek než kořenovou příčinu. Tato kategorie se zaměřuje na CWE, která popisují slabiny související s problémy v oblasti odolnosti. Hodnocení této kategorie bylo velmi blízké kategorii A10:2025 Nesprávné zpracování výjimečných stavů (Mishandling of Exceptional Conditions). Mezi relevantní CWE patří: *CWE-400 Uncontrolled Resource Consumption, CWE-409 Improper Handling of Highly Compressed Data (Data Amplification), CWE-674 Uncontrolled Recursion* a *CWE-835 Loop with Unreachable Exit Condition („Infinite Loop“)*.
 
 ### Tabulka skóre
 
@@ -62,37 +61,37 @@ Jedná se o přejmenování kategorie „Odmítnutí služby (Denial of Service)
 
 ### Popis 
 
-Tato kategorie představuje systémovou slabinu v tom, jak aplikace reagují na zátěž, selhání a hraniční případy, ze kterých se nedokážou zotavit. Pokud aplikace nedokáže elegantně zvládnout, ustát nebo se zotavit z neočekávaných stavů, omezení zdrojů a dalších nepříznivých událostí, může to snadno vést k problémům s dostupností (nejčastěji), ale také k poškození dat, úniku citlivých dat, kaskádovým selháním a/nebo obejití bezpečnostních kontrol.
+Tato kategorie představuje systémovou slabinu v tom, jak aplikace reagují na zátěž, selhání a hraniční případy, z nichž se nedokážou zotavit. Pokud aplikace nedokáže neočekávané stavy, omezení zdrojů a další nepříznivé události řádně zvládnout, ustát je nebo se z nich zotavit, může to snadno vést k problémům s dostupností (nejčastěji), ale také k poškození dat, úniku citlivých informací, kaskádovým selháním nebo obejití bezpečnostních kontrol.
 
-Kromě toho mohou [X02:2025 Selhání správy paměti (Memory Management Failures)](#x022025-memory-management-failures) vést k selhání aplikace nebo dokonce celého systému.
+Kromě toho mohou X02:2025 Selhání správy paměti [X02:2025 Selhání správy paměti (Memory Management Failures)](#x022025-memory-management-failures) vést také k selhání aplikace nebo dokonce celého systému.
 
 ### Jak tomu zabránit 
 
-Aby bylo možné tomuto typu zranitelnosti předejít, musíte své systémy navrhovat s ohledem na selhání a obnovu.
+Abyste tomuto typu zranitelnosti předešli, musíte své systémy navrhovat s ohledem na selhání a obnovu.
 
-* Přidejte limity, kvóty a funkce pro převzetí služeb při selhání (failover) a věnujte zvláštní pozornost operacím, které spotřebovávají nejvíce zdrojů
-* Identifikujte stránky náročné na zdroje a plánujte dopředu: snižte plochu útoku, zejména nezpřístupňujte neznámým nebo nedůvěryhodným uživatelům nepotřebné „gadgety“ a funkce, které vyžadují mnoho zdrojů (např. CPU, paměť)
-* Provádějte přísnou validaci vstupů pomocí seznamů povolených hodnot (allow-listů) a omezení velikosti a poté důkladně testujte
-* Omezte velikost odpovědí a nikdy neposílejte klientovi nezpracované odpovědi (zpracovávejte je na straně serveru)
-* Ve výchozím stavu bezpečně/uzavřeně (fail closed, nikdy „open“), deny by default (implicitně zamítnout) a při chybě rollbackovat
-* Vyhněte se blokujícím synchronním voláním ve vláknech obsluhy požadavků (používejte asynchronní/neblokující přístup, nastavte time-outy, limity souběžnosti apod.)
-* Pečlivě otestujte funkcionalitu zpracování chyb
-* Implementujte resilience patterns (vzorce odolnosti), jako jsou circuit breakers (pojistky), bulkheads (oddělení/kompartmenty; izolace částí systému), retry logika (logika opakování / opakované pokusy) a graceful degradation (řízený přechod do omezeného režimu)
-* Provádějte performance a load testing; pokud to odpovídá vašemu risk apetitu, přidejte chaos engineering (testování odolnosti řízeným vyvoláváním poruch)
-* Implementujte a navrhujte architekturu pro redundanci tam, kde je to rozumné a cenově dostupné
-* Implementujte monitoring, observability a alerting
-* Filtrujte neplatné zdrojové adresy (source addresses) v souladu s RFC 2267
-* Blokujte známé botnety podle fingerprintů, IP adres nebo dynamicky podle chování
-* Proof-of-Work: iniciujte na straně útočníka operace náročné na zdroje, které nemají velký dopad na běžné uživatele, ale dopadají na boty snažící se odesílat obrovské množství požadavků. Proof-of-Work ztěžujte, pokud roste celkové zatížení systému, zejména u systémů, které jsou méně důvěryhodné nebo se jeví jako boti
-* Omezte dobu trvání relace na straně serveru na základě nečinnosti a konečného časového limitu
-* Omezte ukládání informací vázaných na relaci
+* Přidejte limity, kvóty a funkce pro převzetí služeb při selhání (failover) a věnujte zvláštní pozornost operacím s nejvyšší spotřebou zdrojů.
+* Identifikujte stránky náročné na zdroje a plánujte dopředu: zmenšujte plochu útoku, zejména tím, že nebudete neznámým nebo nedůvěryhodným uživatelům zpřístupňovat nepotřebné „gadgety“ a funkce vyžadující velké množství zdrojů (např. CPU, paměť).
+* Provádějte přísnou validaci vstupů pomocí allow-listů a omezení velikosti a poté důkladně testujte.
+* Omezte velikost odpovědí a nikdy klientovi neposílejte nezpracované odpovědi (zpracovávejte je na straně serveru).
+* Ve výchozím stavu používejte bezpečný uzavřený režim (nikdy otevřený< fail closed, nikdy „open“), uplatňujte princip implicitního zamítnutí a při chybě proveďte rollback.
+* Vyhněte se blokujícím synchronním voláním ve vláknech obsluhy požadavků (používejte asynchronní nebo neblokující přístup, nastavujte časové limity, omezujte souběžnost apod.).
+* Pečlivě testujte funkcionalitu zpracování chyb.
+* Implementujte resilience patterns (vzorce odolnosti), jako jsou circuit breakers (pojistky), bulkheads (oddělení/kompartmenty; izolace částí systému), retry logika (logika opakování / opakované pokusy) a graceful degradation (řízený přechod do omezeného režimu).
+* Provádějte testování výkonu a zátěže (performance a load testing); pokud tomu odpovídá vaše tolerance k riziku (risk apetit), přidejte i chaos engineering (testování odolnosti řízeným vyvoláváním poruch).
+* Tam, kde je to rozumné a cenově přijatelné, navrhujte a implementujte architekturu s redundancí.
+* Implementujte monitoring, observability a alerting.
+* Filtrujte neplatné zdrojové adresy v souladu s RFC 2267.
+* Blokujte známé botnety podle fingerprintů, IP adres nebo dynamicky podle chování.
+* Proof-of-Work: iniciujte na straně útočníka operace náročné na zdroje, které nemají velký dopad na běžné uživatele, ale mají dopad na boty snažící se odesílat obrovské množství požadavků. Pokud celkové zatížení systému roste, zvyšujte obtížnost Proof-of-Work, zejména u méně důvěryhodných subjektů nebo těch, které se jeví jako boti.
+* Omezte dobu trvání relace na straně serveru podle nečinnosti a konečného časového limitu.
+* Omezte ukládání informací vázaných na relaci.
 
 
 ### Příklady scénářů útoků 
 
-**Scénář #1:** Útočníci záměrně spotřebovávají zdroje aplikace, aby vyvolali selhání v systému, což vede k odmítnutí služby. Může jít o vyčerpání paměti, zaplnění diskového prostoru, saturaci CPU nebo navazování nekonečného množství připojení.
+**Scénář #1:** Útočníci záměrně spotřebovávají zdroje aplikace, aby vyvolali selhání systému, což vede k odmítnutí služby. Může jít o vyčerpání paměti, zaplnění diskového prostoru, saturaci CPU nebo navazování nekonečného množství připojení.
 
-**Scénář #2:** Fuzzing vstupů, který vede k zkonstruovaným odpovědím narušujícím obchodní logiku aplikace.
+**Scénář #2:** Fuzzing vstupů vede ke zkonstruovaným odpovědím, které narušují aplikační byznysovou logiku.
 
 **Scénář #3:** Útočníci se zaměřují na závislosti aplikace, vyřadí z provozu API nebo jiné externí služby a aplikace není schopna pokračovat.
 
@@ -153,7 +152,7 @@ Aby bylo možné tomuto typu zranitelnosti předejít, musíte své systémy nav
 
 ### Pozadí 
 
-Jazyky jako Java, C#, JavaScript/TypeScript (node.js), Go a „bezpečný“ Rust jsou paměťově bezpečné. Problémy se správou paměti se obvykle vyskytují v jazycích, které nejsou paměťově bezpečné, jako jsou C a C++. Tato kategorie získala v komunitním průzkumu nejnižší hodnocení a v datech také nízké, přestože má třetí nejvyšší počet souvisejících CVE. Domníváme se, že je to způsobeno převahou webových aplikací nad tradičnějšími desktopovými aplikacemi. Zranitelnosti správy paměti mají často nejvyšší skóre CVSS. 
+Jazyky jako Java, C#, JavaScript/TypeScript (node.js), Go a „bezpečný“ Rust jsou paměťově bezpečné. Problémy se správou paměti se naopak obvykle objevují v jazycích, které paměťově bezpečné nejsou, například v C a C++. Tato kategorie získala v komunitním průzkumu nejnižší hodnocení a nízké zastoupení měla i v datech, přestože vykazuje třetí nejvyšší počet souvisejících CVE. Domníváme se, že je to dáno převahou webových aplikací nad tradičnějšími desktopovými aplikacemi. Zranitelnosti související se správou paměti často dosahují nejvyšších skóre CVSS. 
 
 
 ### Tabulka skóre
@@ -206,54 +205,53 @@ Jazyky jako Java, C#, JavaScript/TypeScript (node.js), Go a „bezpečný“ Rus
 
 ### Popis 
 
-Když je aplikace nucena spravovat paměť sama, je velmi snadné dělat chyby. Paměťově bezpečné jazyky se používají stále častěji, ale po celém světě je stále mnoho legacy systémů v produkci, nové nízkoúrovňové systémy, které vyžadují použití jazyků bez paměťové bezpečnosti, a webové aplikace, které komunikují s mainframe systémy, zařízeními IoT, firmwarem a dalšími systémy, které mohou být nuceny spravovat vlastní paměť. Mezi reprezentativní CWE patří *CWE-120 Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')* a *CWE-121 Stack-based Buffer Overflow*.
+Když je aplikace nucena spravovat paměť sama, je velmi snadné udělat chybu. Paměťově bezpečné jazyky se používají stále častěji, ale po celém světě je stále v provozu mnoho legacy systémů, vznikají nové nízkoúrovňové systémy vyžadující použití jazyků, které nejsou paměťově bezpečné, a existují i webové aplikace, které komunikují s mainframy, zařízeními IoT, firmwarem a dalšími systémy, jež mohou být nuceny spravovat vlastní paměť. Mezi reprezentativní CWE patří *CWE-120 Buffer Copy without Checking Size of Input („Classic Buffer Overflow“)* a *CWE-121 Stack-based Buffer Overflow*.
 
 K selhání správy paměti může dojít, když:
 
-* Nepřidělíte proměnné dostatek paměti.
+* Proměnné nepřidělíte dostatek paměti.
 * Nevalidujete vstup, což způsobí přetečení haldy, zásobníku nebo bufferu.
 * Uložíte datovou hodnotu, která je větší, než dokáže pojmout datový typ proměnné.
-* Pokusíte se použít nepřidělenou paměť nebo adresní prostor.
-* Vytvoříte chyby typu off-by-one (počítání od 1 místo od nuly).
+* Pokusíte se použít nepřidělenou paměť nebo nepřidělený adresní prostor.
+* Vytvoříte chybu typu off-by-one (počítání od 1 místo od nuly).
 * Pokusíte se přistoupit k objektu poté, co byl uvolněn.
 * Použijete neinicializované proměnné.
-* Způsobíte únik paměti nebo jinak chybně vyčerpáte veškerou dostupnou paměť, dokud aplikace neselže.
+* Způsobíte únik paměti nebo jinak chybně vyčerpáte veškerou dostupnou paměť, až aplikace selže.
 
-Selhání správy paměti může vést k selhání aplikace nebo dokonce celého systému, viz také [X01:2025 – Nedostatečná odolnost aplikací (Lack of Application Resilience)](#x012025-lack-of-application-resilience)
+Selhání správy paměti může vést k selhání aplikace nebo dokonce celého systému, viz také [X01:2025 – Nedostatečná odolnost aplikací (Lack of Application Resilience)](#x012025-lack-of-application-resilience).
 
 
 ### Jak tomu zabránit 
 
-Nejlepší způsob, jak zabránit selháním správy paměti, je používat paměťově bezpečný jazyk. Mezi příklady patří Rust, Java, Go, C#, Python, Swift, Kotlin, JavaScript atd. Při vytváření nových aplikací se snažte svou organizaci přesvědčit, že vyplatí se překonat křivku učení a přejít na paměťově bezpečný jazyk. Pokud provádíte kompletní refaktoring, prosazujte přepsání (rewrite) do paměťově bezpečného jazyka, pokud je to možné a proveditelné.
+Nejlepším způsobem, jak předcházet selháním správy paměti, je používat paměťově bezpečný jazyk. Příklady zahrnují Rust, Javu, Go, C#, Python, Swift, Kotlin, JavaScript atd. Při vytváření nových aplikací se snažte svou organizaci přesvědčit, že stojí za to překonat křivku učení a přejít na paměťově bezpečný jazyk. Pokud provádíte kompletní refaktoring, prosazujte přepsání do paměťově bezpečného jazyka, kdykoli je to možné a proveditelné.
 
-Pokud nemůžete použít paměťově bezpečný jazyk, proveďte následující kroky:
+Pokud nemůžete použít paměťově bezpečný jazyk, proveďte následující:
 
-* Zapněte následující funkce systému/serveru, které ztěžují zneužití chyb správy paměti: náhodné rozložení adresového prostoru (ASLR), Ochrana před spuštěním dat (DEP) a ochrana před přepsáním strukturovaných výjimek (SEHOP).
+* Povolte následující serverové funkce, které ztěžují zneužití chyb správy paměti: address space layout randomization (ASLR), Data Execution Protection (DEP) a Structured Exception Handling Overwrite Protection (SEHOP).
 * Monitorujte aplikaci z hlediska úniků paměti.
-* Velmi pečlivě validujte všechny vstupy do systému a odmítněte všechny vstupy, které neodpovídají očekávání.
-* Prostudujte jazyk, který používáte, a vytvořte seznam nebezpečných a bezpečnějších funkcí; poté jej sdílejte s celým týmem. Pokud je to možné, přidejte jej do vašich pokynů nebo standardu pro bezpečné kódování. Například v jazyce C upřednostňujte strncpy() před strcpy() a strncat() před strcat().
+* Velmi pečlivě validujte všechny vstupy do systému a odmítejte všechny vstupy, které neodpovídají očekáváním.
+* Prostudujte jazyk, který používáte, a sestavte seznam nebezpečných a bezpečnějších funkcí; poté jej sdílejte s celým týmem. Pokud je to možné, zařaďte jej do svých směrnic nebo standardu pro bezpečné kódování. Například v jazyce C upřednostňujte strncpy() před strcpy() a strncat() před strcat().
 * Pokud váš jazyk nebo framework nabízí knihovny pro paměťovou bezpečnost, používejte je. Například safestringlib nebo SafeStr.
-* Kdykoli je to možné, používejte spravované buffery a řetězce namísto „holých“ polí a ukazatelů.
-* Absolvujte školení bezpečného kódování zaměřené na problémy paměti a/nebo na vámi používaný jazyk. Informujte školitele, že řešíte selhání správy paměti.
-* Provádějte revize kódu a/nebo statickou analýzu.
-* Používejte nástroje a ochrany na úrovni kompilace/runtime, které ztěžují zneužití chyb správy paměti, např. StackShield, StackGuard a Libsafe.
-* Provádějte fuzzing na každém vstupu do vašeho systému.
-* Pokud provádíte penetrační test, informujte testera, že vás znepokojují selhání správy paměti a že chcete, aby jim při testování věnoval zvláštní pozornost.
-* Opravte všechny chyby a varování kompilátoru. Neignorujte varování jen proto, že program projde kompilací. 
-* Zajistěte, aby byla podkladová infrastruktura pravidelně záplatována, skenována a hardenována (zpevňována).
-* Monitorujte podkladovou infrastrukturu zejména z hlediska potenciálních paměťových zranitelností a dalších selhání.
-* Zvažte použití [kanárků (canaries)](https://en.wikipedia.org/wiki/Buffer_overflow_protection#Canaries) k ochraně zásobníku před útoky přetečením.
-
+* Kdykoli je to možné, používejte spravované buffery a řetězce namísto holých polí a ukazatelů.
+* Absolvujte školení bezpečného kódování zaměřené na problémy spojené s pamětí a/nebo na vámi používaný jazyk. Informujte školitele, že vás znepokojují selhání správy paměti.
+* Provádějte revize kódu a/nebo statické analýzy.
+* Používejte nástroje kompilátoru, které pomáhají se správou paměti, jako jsou StackShield, StackGuard a Libsafe.
+* Provádějte fuzzing všech vstupů do systému.
+* Pokud podstupujete penetrační test, informujte testera, že vás znepokojují selhání správy paměti a že chcete, aby jim při testování věnoval zvláštní pozornost.
+* Opravte všechny chyby a varování kompilátoru. Neignorujte varování jen proto, že se program zkompiluje.
+* Zajistěte, aby byla vaše podkladová infrastruktura pravidelně záplatována, skenována a hardenována.
+* Monitorujte podkladovou infrastrukturu zejména z hlediska potenciálních zranitelností souvisejících s pamětí a dalších selhání.
+* Zvažte použití [kanárků (canaries)](https://en.wikipedia.org/wiki/Buffer_overflow_protection#Canaries) k ochraně zásobníku adres před útoky přetečením.
 
 ### Příklady scénářů útoků 
 
-**Scénář #1:** Přetečení vyrovnávací paměti (buffer overflow) je nejznámější paměťová zranitelnost – situace, kdy útočník odešle do pole více informací, než kolik může přijmout, takže dojde k přetečení bufferu vytvořeného pro příslušnou proměnnou. Při úspěšném útoku znaky přetečení přepíší hodnoty na zásobníku (např. ukazatel zásobníku / návratovou adresu), což útočníkovi umožní vložit do programu škodlivé instrukce.
+**Scénář #1:** Přetečení vyrovnávací paměti (buffer overflow) je nejznámější paměťovou zranitelností. Jde o situaci, kdy útočník odešle do pole více informací, než kolik může přijmout, takže dojde k přetečení bufferu vytvořeného pro příslušnou proměnnou. Při úspěšném útoku znaky přetečení přepíší ukazatel zásobníku, což útočníkovi umožní vložit do programu škodlivé instrukce.
 
-**Scénář #2:** Use-After-Free (UAF) se vyskytuje natolik často, že jde o polo-běžný typ hlášení v bug bounty programech pro webové prohlížeče. Představte si webový prohlížeč zpracovávající JavaScript, který manipuluje s prvky DOM. Útočník zkonstruuje JavaScriptový payload, který vytvoří objekt (například prvek DOM) a získá na něj reference. Pečlivou manipulací vyvolá stav, kdy prohlížeč uvolní paměť objektu, ale zároveň zůstane dangling pointer (visící ukazatel) na tuto paměť. Než si prohlížeč „uvědomí“ (tj. než správně ošetří), že paměť už byla uvolněna, útočník alokuje nový objekt, který obsadí tentýž paměťový prostor. Když se pak prohlížeč pokusí použít původní ukazatel, ukazuje už na data ovládaná útočníkem. Pokud šlo o ukazatel na virtuální tabulku funkcí (vtable), může útočník přesměrovat provádění kódu na svůj payload. 
+**Scénář #2:** Use-After-Free (UAF) se vyskytuje natolik často, že jde o poměrně běžný typ hlášení v bug bounty programech zaměřených na webové prohlížeče. Představte si webový prohlížeč zpracovávající JavaScript, který manipuluje s prvky DOM. Útočník připraví JavaScriptový payload, který vytvoří objekt (například prvek DOM) a získá na něj reference. Pečlivou manipulací přiměje prohlížeč k uvolnění paměti objektu, přičemž na něj zůstane dangling pointer (visící ukazatel). Dříve než prohlížeč rozpozná, že paměť byla uvolněna, útočník alokuje nový objekt, který obsadí stejný paměťový prostor. Když se pak prohlížeč pokusí použít původní ukazatel, ukazuje tento ukazatel na data ovládaná útočníkem. Pokud šlo o ukazatel na virtuální tabulku funkcí, může útočník přesměrovat běh kódu na svůj payload. 
 
-**Scénář #3:** Síťová služba přijímá vstup od uživatele, neprovádí jeho řádnou validaci ani sanitizaci a poté jej předá přímo logovací funkci. Uživatelský vstup je předán logovací funkci jako syslog(user_input) namísto syslog("%s", user_input), tedy bez explicitně zadaného formátu. Útočník odešle škodlivé payloady obsahující specifikátory formátu, například %x pro čtení paměti zásobníku (únik citlivých dat) nebo %n pro zápis do paměťových adres. Řetězením více formátovacích specifikátorů může zmapovat zásobník, najít důležité adresy a následně je přepsat. Jedná se o zranitelnost formátovacího řetězce (format string vulnerability; externě řízený/nekontrolovaný formátovací řetězec). 
+**Scénář #3:** Síťová služba přijímá vstup od uživatele, neprovádí jeho řádnou validaci ani sanitizaci a poté jej předá přímo logovací funkci. Uživatelský vstup je logovací funkci předán jako syslog(user_input) namísto syslog("%s", user_input), tedy bez explicitního určení formátu. Útočník odešle škodlivé payloady obsahující specifikátory formátu, například %x pro čtení paměti zásobníku (únik citlivých dat) nebo %n pro zápis do paměťových adres. Řetězením více formátovacích specifikátorů může zmapovat zásobník, najít důležité adresy a následně je přepsat. Jedná se o zranitelnost typu format string (nekontrolovaný formát řetězce). 
 
-Poznámka: moderní prohlížeče používají k obraně proti takovým útokům více vrstev ochrany, včetně [sandboxingu prohlížeče](https://www.geeksforgeeks.org/ethical-hacking/what-is-browser-sandboxing/#types-of-browser-sandboxing) ASLR, DEP/NX, RELRO a PIE. Útok na prohlížeč založený na selhání správy paměti není jednoduché provést.
+Poznámka: Moderní prohlížeče používají k obraně proti takovým útokům více vrstev ochrany, včetně [sandboxingu prohlížeče](https://www.geeksforgeeks.org/ethical-hacking/what-is-browser-sandboxing/#types-of-browser-sandboxing), ASLR, DEP/NX, RELRO a PIE. Útok na prohlížeč využívající selhání správy paměti není snadné provést.
 
 ### Reference
 
@@ -286,35 +284,34 @@ Poznámka: moderní prohlížeče používají k obraně proti takovým útokům
 
 
 
-## X03:2025 Nevhodná důvěra v kód generovaný AI (Inappropriate Trust in AI Generated Code („Vibe Coding“))
+## X03:2025 Nepřiměřená důvěra v kód generovaný AI (Inappropriate Trust in AI Generated Code („Vibe Coding“))
 
 ### Pozadí
 
-V současnosti celý svět mluví o umělé inteligenci a používá ji – a to platí i pro vývojáře softwaru. Přestože v tuto chvíli neexistují žádné CVE ani CWE přímo vztahující se ke kódu generovanému umělou inteligencí, je dobře známo a zdokumentováno, že takový kód často obsahuje více zranitelností než kód napsaný člověkem.
-
+V současnosti celý svět mluví o AI a používá ji, což se týká i vývojářů softwaru. Ačkoli v současnosti neexistují žádné CVE ani CWE vztahující se ke kódu generovanému AI, je dobře známo a zdokumentováno, že takový kód často obsahuje více zranitelností než kód napsaný člověkem.
 
 ### Popis
 
-Pozorujeme, jak se postupy vývoje softwaru mění: už nejde jen o kód psaný s asistencí umělé inteligence, ale i o kód, který je napsán a commitnutý do repozitáře téměř úplně bez lidského dohledu (často se pro to používá označení ‚vibe coding‘). Stejně jako nikdy nebylo dobré bez rozmyslu kopírovat úryvky kódu z blogů nebo webů, tady je ten problém ještě výraznější. Kvalitní a bezpečné ukázky kódu byly a jsou vzácné a kvůli systémovým omezením mohou být při generování AI statisticky podreprezentované.
+Pozorujeme, že se postupy vývoje softwaru mění: nejde už jen o kód psaný s pomocí AI, ale i o kód napsaný a commitnutý téměř bez lidského dohledu (často označovaný jako „vibe coding“). Stejně jako nikdy nebylo dobré bez rozmyslu kopírovat úryvky kódu z blogů nebo webových stránek, je v tomto případě problém ještě výraznější. Dobré a bezpečné ukázky kódu byly a jsou vzácné a kvůli systémovým omezením je AI nemusí při generování kódu dostatečně zohledňovat.
 
 
 ### Jak tomu zabránit
-Všem, kdo píší kód, důrazně doporučujeme při používání AI zvážit následující:
 
-* Měli byste být schopni přečíst a plně porozumět veškerému kódu, který odevzdáváte, i když jej napsala AI nebo byl zkopírován z online fóra. Nesete odpovědnost za veškerý kód, který commitnete do repozitáře.
-* Veškerý kód vzniklý s pomocí AI byste měli důkladně prověřit na zranitelnosti, ideálně vlastníma očima a zároveň i pomocí bezpečnostních nástrojů určených k tomuto účelu (např. statické analýzy). Zvažte použití klasických technik code review, jak jsou popsány v [OWASP Cheat Sheet Series: Secure Code Review](https://cheatsheetseries.owasp.org/cheatsheets/Secure_Code_Review_Cheat_Sheet.html).
-* Ideálně pište vlastní kód, nechte AI navrhnout vylepšení, zkontrolujte výstup AI a nechte AI provést opravy, dokud nebudete s výsledkem spokojeni.
-* Zvažte použití serveru pro Retrieval-Augmented Generation (RAG) s vašimi vlastními shromážděnými a zrevidovanými vzorky bezpečného kódu a dokumentací (např. interními bezpečnostními doporučeními pro kódování, standardy nebo politikami vaší organizace) a nechte RAG server vynucovat příslušné politiky či standardy.
-* Zvažte pořízení nástrojů, které pro práci s vámi zvolenými AI modely/nástroji zavádějí guardrails (ochranná opatření) pro soukromí a bezpečnost.
-* Zvažte pořízení privátního AI řešení, ideálně se smluvním ujednáním (včetně dohody o ochraně soukromí / zpracování dat), že model nebude trénován na datech, dotazech, kódu ani jiných citlivých informacích vaší organizace.
-* Zvažte nasazení serveru Model Context Protocol (MCP) mezi vaše IDE a AI a nastavte jej tak, aby vynucoval používání vámi zvolených bezpečnostních nástrojů.
-* Zaveďte zásady a procesy jako součást SDLC, aby vývojáři (a všichni zaměstnanci) věděli, jak AI v rámci organizace používat a jak ji nepoužívat.
-* Vytvořte seznam kvalitních a efektivních promptů, které zohledňují osvědčené postupy IT bezpečnosti; ideálně i vaše interní pravidla pro bezpečné kódování. Vývojáři je mohou použít jako výchozí bod pro svou práci.
-* AI se pravděpodobně stane součástí každé fáze životního cyklu vývoje systému – jak z hlediska efektivního, tak bezpečného využití. Používejte ji uvážlivě.
-* V praxi se **<u>ne</u>**doporučuje používat „vibe coding“ pro složité funkce, business-kritické aplikace nebo software, který má být dlouhodobě udržovaný.
-* Zaveďte technické kontroly a pojistky proti používání Shadow AI (neautorizovaných AI nástrojů).
-* Proškolte vývojáře v interních zásadách, bezpečném používání AI a osvědčených postupech pro využití AI při vývoji softwaru.
+Všem, kdo píší kód, důrazně doporučujeme, aby při používání AI zvážili následující:
 
+* Měli byste být schopni přečíst si a plně porozumět veškerému kódu, který odevzdáváte, i když jej napsala AI nebo byl zkopírován z online fóra. Nesete odpovědnost za veškerý kód, který commitnete.
+* Veškerý kód vytvořený s pomocí AI byste měli důkladně prověřit z hlediska zranitelností, ideálně jak vlastním posouzením, tak i pomocí bezpečnostních nástrojů určených k tomuto účelu (například statické analýzy). Zvažte použití klasických technik code review, jak jsou popsány v [OWASP Cheat Sheet Series: Secure Code Review](https://cheatsheetseries.owasp.org/cheatsheets/Secure_Code_Review_Cheat_Sheet.html).
+* Ideálně pište vlastní kód, nechte AI navrhnout vylepšení, zkontrolujte kód vygenerovaný AI a nechte AI provést opravy, dokud nebudete s výsledkem spokojeni.
+* Zvažte použití serveru pro Retrieval Augmented Generation (RAG) s vlastními shromážděnými a prověřenými vzorky bezpečného kódu a dokumentací, například s interními směrnicemi, standardy nebo politikami vaší organizace pro bezpečné kódování, a nechte RAG server vynucovat příslušné politiky nebo standardy.
+* Zvažte pořízení nástrojů, které při práci s vámi zvolenými AI zavádějí ochranná opatření (guardrails) pro soukromí a bezpečnost.
+* Zvažte pořízení privátní AI, ideálně se smluvním ujednáním (včetně ujednání o ochraně soukromí), že AI nebude trénována na datech, dotazech, kódu ani jiných citlivých informacích vaší organizace.
+* Zvažte zavedení serveru Model Context Protocol (MCP) mezi vaše IDE a AI a nastavte jej tak, aby vynucoval používání vámi zvolených bezpečnostních nástrojů.
+* Zaveďte zásady a procesy jako součást svého SDLC, aby vývojáře (a všechny zaměstnance) informovaly o tom, jak mají a nemají AI ve vaší organizaci používat.
+* Vytvořte seznam dobrých a účinných promptů, které zohledňují osvědčené postupy IT bezpečnosti. V ideálním případě by měly zohledňovat i vaše interní směrnice pro bezpečné kódování. Vývojáři mohou tyto prompty použít jako výchozí bod pro své programy.
+* AI se pravděpodobně stane součástí každé fáze životního cyklu vývoje vašich systémů, a to jak z hlediska jejího efektivního, tak bezpečného využití. Používejte ji uvážlivě.
+* V současnosti se **nedoporučuje** používat vibe coding pro složité funkce, kritické byznysové aplikace nebo programy používané dlouhodobě.
+* Zaveďte technické kontroly a ochranná opatření proti používání Shadow AI.
+* Proškolte své vývojáře v oblasti vašich zásad, bezpečného používání AI a osvědčených postupů pro využití AI při vývoji softwaru.
 
 
 ### Reference
@@ -323,4 +320,5 @@ Všem, kdo píší kód, důrazně doporučujeme při používání AI zvážit 
 
 
 ### Seznam mapovaných CWE
--žádný-
+
+Žádný.
