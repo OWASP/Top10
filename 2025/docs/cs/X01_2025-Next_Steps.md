@@ -2,7 +2,7 @@
 
 OWASP Top 10 je ze své podstaty omezen na deset nejvýznamnějších rizik. V každém vydání OWASP Top 10 jsou podrobně zvažována i rizika, která byla „na hraně“ zařazení, ale nakonec se do výběru nedostala. Ostatní rizika však byla rozšířenější a měla větší dopad.
 
-Následující dva problémy rozhodně stojí za to identifikovat a odstranit, zejména pro organizace usilující o vyspělý program bezpečnosti aplikací, bezpečnostní konzultanty a dodavatele nástrojů, kteří chtějí rozšířit pokrytí svých řešení.
+Následující problémy rozhodně stojí za to identifikovat a odstranit, zejména pro organizace usilující o vyspělý program bezpečnosti aplikací, bezpečnostní konzultanty a dodavatele nástrojů, kteří chtějí rozšířit pokrytí svých řešení.
 
 
 ## X01:2025 Nedostatečná odolnost aplikací (Lack of Application Resilience)
