@@ -1,6 +1,6 @@
 # Další kroky
 
-OWASP Top 10 je ze své podstaty omezen na deset nejvýznamnějších rizik. V každém vydání OWASP Top 10 jsou podrobně zvažována i rizika, která byla „na hraně“ zařazení, ale nakonec se do výběru nedostala. Ostatní rizika však byla rozšířenější a měla větší dopad.
+OWASP Top 10 je záměrně omezen na deset nejvýznamnějších rizik. V každém vydání OWASP Top 10 jsou důkladně zvažována také rizika, která byla „na hraně“ zařazení, ale nakonec se do finálního výběru nedostala. Nakonec dostala přednost rizika, která byla rozšířenější a měla větší dopad.
 
 Následující problémy rozhodně stojí za to identifikovat a odstranit, zejména pro organizace usilující o vyspělý program bezpečnosti aplikací, bezpečnostní konzultanty a dodavatele nástrojů, kteří chtějí rozšířit pokrytí svých řešení.
 
