@@ -3,7 +3,7 @@
 
 ## Pozadí
 
-Tato položka se umístila na prvním místě v komunitním průzkumu Top 10, přičemž ji přesně 50 % respondentů zařadilo na 1. místo. Od svého prvního výskytu v Top 10 v roce 2013 pod názvem „A9 – Používání komponent se známými zranitelnostmi“ se rozsah tohoto rizika rozšířil a nyní zahrnuje veškerá selhání dodavatelského řetězce, nikoli pouze ta související se známými zranitelnostmi. Navzdory tomuto rozšíření zůstávají selhání dodavatelského řetězce obtížně identifikovatelná – pouze 11 položek Common Vulnerabilities and Exposures (CVE) má přiřazené související CWE. Při testování a reportování v komunitně poskytnutých datech však tato kategorie vykazuje nejvyšší průměrnou míru výskytu, a to 5,19 %. Mezi relevantní CWE patří *CWE-477: Use of Obsolete Function*, *CWE-1104: Use of Unmaintained Third Party Components*, *CWE-1329: Reliance on Component That is Not Updateable* a *CWE-1395: Dependency on Vulnerable Third-Party Component*.
+Tato položka byla nejvýše hodnocena v komunitním průzkumu Top 10, přičemž přesně 50 % respondentů ji zařadilo na 1. místo. Od svého prvního výskytu v Top 10 v roce 2013 jako „A9 – Používání komponent se známými zranitelnostmi“ se rozsah tohoto rizika rozšířil tak, aby zahrnoval veškerá selhání dodavatelského řetězce, nikoli pouze ta, která zahrnují známé zranitelnosti. Navzdory tomuto rozšířenému rozsahu zůstávají selhání dodavatelského řetězce výzvou z hlediska identifikace, přičemž pouze 11 položek Common Vulnerabilities and Exposures (CVE) má související CWE. Při testování a hlášení v poskytnutých datech však tato kategorie vykazuje nejvyšší průměrnou míru výskytu, a to 5,19 %. Relevantní CWE jsou *CWE-477: Use of Obsolete Function, CWE-1104: Use of Unmaintained Third Party Components, CWE-1329: Reliance on Component That is Not Updateable a CWE-1395: Dependency on Vulnerable Third-Party Component*.
 
 ## Tabulka skóre
 
@@ -55,79 +55,77 @@ Tato položka se umístila na prvním místě v komunitním průzkumu Top 10, p�
 
 ## Popis
 
-Selhání softwarového dodavatelského řetězce jsou selhání nebo jiné kompromitace v procesu sestavování, distribuce nebo aktualizace softwaru. Často jsou způsobeny zranitelnostmi nebo škodlivými změnami v kódu třetích stran, nástrojích nebo dalších závislostech, na nichž systém závisí.
+Selhání dodavatelského řetězce softwaru jsou selhání nebo jiné kompromitace v procesu sestavování, distribuce nebo aktualizace softwaru. Často jsou způsobena zranitelnostmi nebo škodlivými změnami v kódu třetích stran, nástrojích nebo jiných závislostech, na nichž systém závisí.
 
 Pravděpodobně jste zranitelní, pokud:
 
-* nesledujete systematicky verze všech používaných komponent, a to jak na straně klienta, tak na straně serveru. To zahrnuje jak přímo používané komponenty, tak i vnořené (tranzitivní) závislosti.
-* používaný software je zranitelný, nepodporovaný nebo zastaralý, včetně operačního systému, webového nebo aplikačního serveru, systému správy databází (DBMS), aplikací, API, běhových prostředí a knihoven.
-* neprovádíte pravidelné skenování zranitelností ani neodebíráte bezpečnostní bulletiny vztahující se k používaným komponentám.
-* nemáte zaveden proces řízení změn ani systematickou evidenci změn v rámci dodavatelského řetězce, včetně sledování vývojových prostředí (IDE), jejich rozšíření a aktualizací, změn v repozitářích zdrojového kódu organizace, sandboxů, repozitářů obrazů a knihoven, způsobu vytváření a ukládání artefaktů apod. Každá část dodavatelského řetězce by měla být dokumentována, zejména prováděné změny.
-* nebyly hardenovány všechny části vašeho dodavatelského řetězce, se zvláštním důrazem na kontrolu přístupu a uplatňování principu nejmenších oprávnění.
-* v systémech dodavatelského řetězce není uplatněno oddělení rolí. Žádná jednotlivá osoba by neměla mít možnost napsat kód a bez kontroly jinou osobou jej nasadit až do produkčního prostředí.
-* komponenty z nedůvěryhodných zdrojů jsou používány v produkčních prostředích nebo na ně mohou mít vliv, a to napříč jakoukoli částí technologického stacku.
-* neopravujete ani neaktualizujete základní platformu, frameworky a závislosti včas a na základě rizik. K tomu obvykle dochází v prostředích, kde jsou opravy prováděny jednou za měsíc nebo za čtvrtletí v rámci řízení změn, což vystavuje organizace zbytečnému riziku po dobu několika dnů nebo měsíců, než jsou zranitelnosti opraveny.
-* vývojáři netestují kompatibilitu aktualizovaných, upgradovaných nebo záplatovaných knihoven.
-* nezabezpečujete konfigurace všech částí svého systému (viz [A02:2025 - Chybná bezpečnostní konfigurace (Security Misconfiguration)](https://owasp.org/Top10/2025/A02_2025-Security_Misconfiguration/)).
+* nesledujete pečlivě verze všech komponent, které používáte (na straně klienta i na straně serveru). To zahrnuje komponenty, které používáte přímo, i vnořené (tranzitivní) závislosti.
+* software je zranitelný, nepodporovaný nebo zastaralý. To zahrnuje operační systém, webový/aplikační server, systém správy databází (DBMS), aplikace, API a všechny komponenty, běhová prostředí a knihovny.
+* neprovádíte pravidelně skenování zranitelností a neodebíráte bezpečnostní bulletiny vztahující se ke komponentám, které používáte.
+* nemáte proces řízení změn nebo sledování změn v rámci svého dodavatelského řetězce, včetně sledování IDE, rozšíření IDE a aktualizací, změn v repozitáři kódu vaší organizace, sandboxů, repozitářů obrazů a knihoven, způsobu, jakým jsou artefakty vytvářeny a ukládány, atd. Každá část vašeho dodavatelského řetězce by měla být dokumentována, zejména změny.
+* nemáte hardenovanou každou část svého dodavatelského řetězce, se zvláštním zaměřením na řízení přístupu a uplatňování nejmenších oprávnění.
+* vaše systémy dodavatelského řetězce nemají žádné oddělení rolí. Žádná jednotlivá osoba by neměla být schopna napsat kód a povýšit jej až do produkce bez dohledu jiné lidské osoby.
+* komponenty z nedůvěryhodných zdrojů, napříč jakoukoli částí technologického stacku, jsou používány v produkčních prostředích nebo mohou mít na produkční prostředí dopad.
+* neopravujete nebo neupgradujete základní platformu, frameworky a závislosti včasným způsobem založeným na riziku. K tomu běžně dochází v prostředích, kde je záplatování měsíčním nebo čtvrtletním úkolem v rámci řízení změn, což ponechává organizace vystavené dnům nebo měsícům zbytečné expozice před opravou zranitelností.
+* vývojáři softwaru netestují kompatibilitu aktualizovaných, upgradovaných nebo záplatovaných knihoven.
+* nezabezpečujete konfigurace každé části svého systému (viz [A02:2025 - Chybná bezpečnostní konfigurace (Security Misconfiguration)](https://owasp.org/Top10/2025/A02_2025-Security_Misconfiguration/)).
 * vaše CI/CD pipeline má slabší zabezpečení než systémy, které sestavuje a nasazuje, zejména pokud je složitá.
 
 
 ## Jak tomu zabránit
 
-Měl by být zaveden proces správy záplat, jehož cílem je:
+Měl by být zaveden proces správy záplat za účelem:
 
-* Centrálně vytvářet a spravovat Software Bill of Materials (SBOM) pro celý software.
-* Sledovat nejen přímé závislosti, ale i jejich vnořené (tranzitivní) závislosti.
+* Centrálně generovat a spravovat Software Bill of Materials (SBOM) celého vašeho softwaru.
+* Sledovat nejen vaše přímé závislosti, ale také jejich (tranzitivní) závislosti, a tak dále.
 * Snižovat útočnou plochu odstraňováním nepoužívaných závislostí, zbytečných funkcí, komponent, souborů a dokumentace.
-* Průběžně evidovat verze komponent na straně klienta i serveru (např. frameworky, knihovny) a jejich závislosti s využitím nástrojů jako OWASP Dependency Track, OWASP Dependency Check, retire.js apod.
-* Průběžně sledovat zdroje, jako jsou Common Vulnerabilities and Exposures (CVE), National Vulnerability Database (NVD) a [Open Source Vulnerabilities (OSV)](https://osv.dev/), z hlediska zranitelností v používaných komponentách. K automatizaci procesu využívat nástroje pro analýzu softwarové skladby, softwarového dodavatelského řetězce nebo bezpečnostně zaměřené nástroje SBOM. Odebírat upozornění na bezpečnostní zranitelnosti související s používanými komponentami.
-* Získávat komponenty výhradně z oficiálních (důvěryhodných) zdrojů prostřednictvím zabezpečených spojení. Upřednostňovat podepsané balíčky ke snížení pravděpodobnosti zahrnutí pozměněné nebo škodlivé komponenty (viz [A08:2025-Software and Data Integrity Failures](https://owasp.org/Top10/2025/A08_2025-Software_or_Data_Integrity_Failures/)).
-* Pečlivě volit, kterou verzi závislosti používat, a aktualizovat pouze tehdy, když je to nutné.
-* Sledovat knihovny a komponenty, které nejsou udržované nebo neposkytují bezpečnostní opravy pro starší verze. Pokud není možné provést záplatu, zvážit migraci na alternativu. Pokud ani to není možné, zvážit nasazení virtuální záplaty k monitorování, detekci nebo ochraně před zjištěným problémem.
-* Pravidelně aktualizovat své CI/CD nástroje, IDE a další vývojářské nástroje.
-* Vyhnout se nasazování aktualizací na všechny systémy současně. Používat postupné zavádění nebo kanárkové nasazení, abyste omezili riziko v případě narušení důvěryhodného dodavatele.
+* Průběžně inventarizovat verze komponent na straně klienta i na straně serveru (např. frameworků, knihoven) a jejich závislostí pomocí nástrojů, jako jsou OWASP Dependency Track, OWASP Dependency Check, retire.js atd.
+* Průběžně monitorovat zdroje, jako jsou Common Vulnerabilities and Exposures (CVE), National Vulnerability Database (NVD) a [Open Source Vulnerabilities (OSV)](https://osv.dev/), z hlediska zranitelností v komponentách, které používáte. K automatizaci procesu používat analýzu složení softwaru, nástroje pro dodavatelský řetězec softwaru nebo bezpečnostně zaměřené nástroje SBOM. Odebírat upozornění na bezpečnostní zranitelnosti související s komponentami, které používáte.
+* Získávat komponenty pouze z oficiálních (důvěryhodných) zdrojů přes zabezpečené odkazy. Upřednostňovat podepsané balíčky, aby se snížila pravděpodobnost zahrnutí pozměněné, škodlivé komponenty (viz [A08:2025-Software and Data Integrity Failures](https://owasp.org/Top10/2025/A08_2025-Software_or_Data_Integrity_Failures/)).
+* Záměrně volit, kterou verzi závislosti používáte, a upgradovat pouze tehdy, když je to potřeba.
+* Monitorovat knihovny a komponenty, které nejsou udržované nebo nevytvářejí bezpečnostní záplaty pro starší verze. Pokud záplatování není možné, zvážit migraci na alternativu. Pokud to není možné, zvážit nasazení virtuální záplaty za účelem monitorování, detekce nebo ochrany proti zjištěnému problému.
+* Pravidelně aktualizovat vaše CI/CD, IDE a jakékoli další vývojářské nástroje.
+* Vyhnout se nasazování aktualizací na všechny systémy současně. Používat postupná zavádění nebo kanárková nasazení k omezení expozice v případě kompromitace důvěryhodného dodavatele.
 
+Měl by být zaveden proces řízení změn nebo systém sledování za účelem sledování změn v:
 
-Měl by být zaveden proces řízení změn nebo systém sledování změn pro sledování změn v:
-
-* Nastavení CI/CD (všechny build nástroje a pipeline)
+* Nastaveních CI/CD (všechny nástroje pro sestavení a pipeline)
 * Repozitářích kódu
 * Sandboxových oblastech
 * Vývojářských IDE
-* Nástrojích SBOM a vytvářených artefaktech
-* Logovacích systémech a logech
+* Nástrojích SBOM a vytvořených artefaktech
+* Logovacích systémech a logách
 * Integracích třetích stran, například SaaS
 * Repozitářích artefaktů
 * Registrech kontejnerů
 
+Zodolnit (hardenovat) následující systémy, což zahrnuje povolení MFA a uzamčení IAM:
 
-Zabezpečit (hardenovat) následující systémy, včetně povolení MFA a uzamčení IAM:
-
-* Repozitáře zdrojového kódu (včetně neukládání tajných údajů, ochrany větví a zálohování)
+* Váš repozitář kódu (což zahrnuje neukládání tajných údajů do repozitáře, ochranu větví, zálohy)
 * Vývojářské pracovní stanice (pravidelné záplatování, MFA, monitorování a další)
-* Build server a CI/CD (oddělení rolí, řízení přístupu, podepsané buildy, tajné údaje vázané na prostředí, logy odolné proti manipulaci a další)
-* Artefakty (zajištění integrity prostřednictvím provenance, podepisování a časového razítkování, propagace artefaktů namísto opakovaného sestavování pro každé prostředí, zajištění neměnnosti buildů)
-* Infrastruktura jako kód (spravovaná stejně jako veškerý kód, včetně používání pull requestů a správy verzí)
+* Váš server pro sestavení a CI/CD (oddělení povinností, řízení přístupu, podepsaná sestavení, tajné údaje s rozsahem na prostředí, logy umožňující zjistit manipulaci, další)
+* Vaše artefakty (zajištění integrity prostřednictvím provenience, podepisování a časového razítkování, povyšování artefaktů namísto opětovného sestavování pro každé prostředí, zajištění neměnnosti sestavení)
+* Infrastrukturu jako kód (spravovanou stejně jako veškerý kód, včetně používání PR a správy verzí)
 
-Každá organizace musí zajistit průběžný plán monitorování, triáže a aplikace aktualizací nebo změn konfigurace po celou dobu životnosti aplikace nebo aplikačního portfolia.
+Každá organizace musí zajistit průběžný plán monitorování, triáže a aplikování aktualizací nebo změn konfigurace po dobu životnosti aplikace nebo portfolia.
 
 
 ## Příklady scénářů útoků
 
-**Scénář #1:** Důvěryhodný dodavatel je kompromitován malwarem, což vede ke kompromitaci vašich počítačových systémů při aktualizaci. Nejznámějším příkladem je pravděpodobně:
+**Scénář #1:** Důvěryhodný dodavatel je kompromitován malwarem, což vede ke kompromitaci vašich počítačových systémů při upgradu. Nejznámějším příkladem je pravděpodobně:
 
-* Kompromitace SolarWinds v roce 2019, která vedla ke kompromitaci přibližně 18 000 organizací. [https://www.npr.org/2021/04/16/985439655/a-worst-nightmare-cyberattack-the-untold-story-of-the-solarwinds-hack](https://www.npr.org/2021/04/16/985439655/a-worst-nightmare-cyberattack-the-untold-story-of-the-solarwinds-hack)
+* Kompromitace SolarWinds v roce 2019, která vedla ke kompromitaci přibližně 18 000 organizací.  [https://www.npr.org/2021/04/16/985439655/a-worst-nightmare-cyberattack-the-untold-story-of-the-solarwinds-hack](https://www.npr.org/2021/04/16/985439655/a-worst-nightmare-cyberattack-the-untold-story-of-the-solarwinds-hack)
 
-**Scénář #2:** Důvěryhodný dodavatel je kompromitován tak, že se chová škodlivě pouze za specifické podmínky.
+**Scénář #2:** Důvěryhodný dodavatel je kompromitován tak, že se chová škodlivě pouze za určité podmínky.
 
-* Krádež 1,5 miliardy USD z platformy Bybit v roce 2025 byla způsobena útokem na [dodavatelský řetězec v softwaru peněženky](https://www.sygnia.co/blog/sygnia-investigation-bybit-hack/), který se spustil pouze při používání cílové peněženky.
+* Krádež 1,5 miliardy USD z platformy Bybit v roce 2025 byla způsobena útokem na [dodavatelský řetězec v softwaru peněženky](https://www.sygnia.co/blog/sygnia-investigation-bybit-hack/), který se spustil pouze tehdy, když byla používána cílová peněženka.
 
-**Scénář #3:** [Útok na dodavatelský řetězec Shai-Hulud](https://www.cisa.gov/news-events/alerts/2025/09/23/widespread-supply-chain-compromise-impacting-npm-ecosystem) v roce 2025 byl prvním úspěšným samopropagujícím se npm červem. Útoky zasévaly škodlivé verze populárních balíčků, které pomocí post-install skriptu shromažďovaly a exfiltrovaly citlivá data do veřejných repozitářů GitHub. Malware rovněž detekoval npm tokeny v prostředí oběti a automaticky je využíval k nahrávání škodlivých verzí všech dostupných balíčků. Červ se rozšířil do více než 500 verzí balíčků, než byl narušen ze strany npm. Tento útok na dodavatelský řetězec byl pokročilý, rychle se šířil a byl škodlivý a tím, že cílil na vývojářské stroje, ukázal, že vývojáři sami jsou nyní hlavním cílem útoků na dodavatelský řetězec.
+**Scénář #3:** [Útok na dodavatelský řetězec Shai-Hulud](https://www.cisa.gov/news-events/alerts/2025/09/23/widespread-supply-chain-compromise-impacting-npm-ecosystem) v roce 2025 byl prvním úspěšným samostatně se šířícím červem npm. Útoky vložily škodlivé verze populárních balíčků, které pomocí post-install skriptu shromažďovaly a exfiltrovaly citlivá data do veřejných repozitářů GitHub. Malware také detekoval tokeny npm v prostředí oběti a automaticky je používal k nahrání škodlivých verzí jakéhokoli dostupného balíčku. Červ dosáhl více než 500 verzí balíčků, než byl zastaven službou npm. Tento útok na dodavatelský řetězec byl pokročilý, rychle se šířící a způsobující škody a zaměřením na vývojářské stroje prokázal, že samotní vývojáři jsou nyní prvořadými cíli útoků na dodavatelský řetězec.
 
-**Scénář #4:** Komponenty obvykle běží se stejnými oprávněními jako samotná aplikace, a proto mohou chyby v jakékoli komponentě mít závažný dopad. Tyto chyby mohou být neúmyslné (např. programátorská chyba) nebo úmyslné (např. zadní vrátka v komponentě). Mezi některé příklady zneužitelných zranitelností komponent patří:
+**Scénář #4:** Komponenty obvykle běží se stejnými oprávněními jako samotná aplikace, takže nedostatky v jakékoli komponentě mohou vést k závažnému dopadu. Takové nedostatky mohou být neúmyslné (např. chyba v kódu) nebo úmyslné (např. zadní vrátka v komponentě). Některé příklady objevených zneužitelných zranitelností komponent jsou:
 
-* CVE-2017-5638 – zranitelnost vzdáleného spuštění kódu v Apache Struts 2, která umožňuje spuštění libovolného kódu na serveru a byla dávána do souvislosti s významnými narušeními bezpečnosti.
-* CVE-2021-44228 („Log4Shell“) – zero-day zranitelnost vzdáleného spuštění kódu v Apache Log4j, která byla dávána do souvislosti s ransomwarem, kryptominingem a dalšími útočnými kampaněmi.
+* CVE-2017-5638, zranitelnost vzdáleného spuštění kódu ve Struts 2, která umožňuje spuštění libovolného kódu na serveru, byla označována za příčinu významných narušení.
+* CVE-2021-44228 („Log4Shell“), zero-day zranitelnost vzdáleného spuštění kódu v Apache Log4j, byla dávána za vinu ransomwaru, kryptominingu a dalším útočným kampaním.
 
 
 ## Reference
