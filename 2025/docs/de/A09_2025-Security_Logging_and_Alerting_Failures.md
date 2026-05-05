@@ -1,33 +1,33 @@
-# A09:2025 Security Logging & Alerting Failures ![icon](../assets/TOP_10_Icons_Final_Security_Logging_and_Monitoring_Failures.png){: style="height:80px;width:80px" align="right"}
+# A09:2025 Unzureichendes Sicherheitslogging und Alarmierung ![icon](../assets/TOP_10_Icons_Final_Security_Logging_and_Monitoring_Failures.png){: style="height:80px;width:80px" align="right"}
 
 
-## Background. 
+## Hintergrund. 
 
-Security Logging & Alerting Failures retains its position at #9. This category has a slight name change to emphasize the alerting function needed to induce action on relevant logging events. This category will always be underrepresented in the data, and for the third time voted into a position in the list from the community survey participants. This category is incredibly difficult to test for, and has minimal representation in the CVE/CVSS data (only 723 CVEs); but can be very impactful for visibility and incident alerting and forensics. This category includes issues with *properly handling output encoding to log files (CWE-117), inserting sensitive data into log files (CWE-532), and insufficient logging (CWE-778).*
+„Unzureichendes Sicherheitslogging und Alarmierung“ behält seinen Platz auf Rang 9. Der Name dieser Kategorie wurde leicht geändert, um die Alarmierungsfunktion hervorzuheben, die erforderlich ist, um bei relevanten Protokollereignissen Maßnahmen auszulösen. Diese Kategorie wird in den Daten stets unterrepräsentiert sein und wurde von den Teilnehmern der Community-Umfrage bereits zum dritten Mal auf einen Platz in der Liste gewählt. Diese Kategorie ist unglaublich schwer zu testen und in den CVE/CVSS-Daten nur minimal vertreten (nur 723 CVEs); sie kann jedoch erhebliche Auswirkungen auf die Transparenz, die Benachrichtigung bei Vorfällen und die Forensik haben. Diese Kategorie umfasst Probleme mit *properly handling output encoding to log files (CWE-117), inserting sensitive data into log files (CWE-532), und insufficient logging (CWE-778).*
 
 
-## Score table.
+## Punktetabelle.
 
 
 <table>
   <tr>
-   <td>CWEs Mapped 
+   <td>Zugeordnete CWEs 
    </td>
-   <td>Max Incidence Rate
+   <td>Max. Häufigkeit
    </td>
-   <td>Avg Incidence Rate
+   <td>Durchschn. Häufigkeit
    </td>
-   <td>Max Coverage
+   <td>Max. Abdeckung
    </td>
-   <td>Avg Coverage
+   <td>Durchschn. Abdeckung
    </td>
-   <td>Avg Weighted Exploit
+   <td>Durchschn. gewichtete Ausnutzbarkeit
    </td>
-   <td>Avg Weighted Impact
+   <td>Durchschn. gewichtete Auswirkung
    </td>
-   <td>Total Occurrences
+   <td>Gesamtanzahl 
    </td>
-   <td>Total CVEs
+   <td>Summe CVEs
    </td>
   </tr>
   <tr>
@@ -56,55 +56,54 @@ Security Logging & Alerting Failures retains its position at #9. This category h
 
 ## Description. 
 
-Without logging and monitoring, attacks and breaches cannot be detected, and without alerting it is very difficult to respond quickly and effectively during a security incident. Insufficient logging, continuous monitoring, detection, and alerting to initiate active responses occurs any time:
+Ohne Protokollierung und Überwachung lassen sich Angriffe und Sicherheitsverletzungen nicht erkennen, und ohne Warnmeldungen ist es sehr schwierig, bei einem Sicherheitsvorfall schnell und effektiv zu reagieren. Eine unzureichende Protokollierung, kontinuierliche Überwachung, Erkennung und Warnmeldung zur Einleitung aktiver Maßnahmen kommt immer dann vor, wenn:
 
 
-* Auditable events, such as logins, failed logins, and high-value transactions, are not logged or logged inconsistently (for instance, only logging successful logins, but not failed attempts).
-* Warnings and errors generate no, inadequate, or unclear log messages.
-* The integrity of logs is not properly protected from tampering.
-* Logs of applications and APIs are not monitored for suspicious activity.
-* Logs are only stored locally, and not properly backedup.
-* Appropriate alerting thresholds and response escalation processes are not in place or effective. Alerts are not received or reviewed within a reasonable amount of time.
-* Penetration testing and scans by dynamic application security testing (DAST) tools (such as Burp or ZAP) do not trigger alerts.
-* The application cannot detect, escalate, or alert for active attacks in real-time or near real-time.
-* You are vulnerable to sensitive information leakage by making logging and alerting events visible to a user or an attacker (see [A01:2025-Broken Access Control](A01_2025-Broken_Access_Control.md)), or by logging sensitive information that should not be logged (such as PII or PHI).
-* You are vulnerable to injections or attacks on the logging or monitoring systems if log data is not correctly encoded.
-* The application is missing or mishandling errors and other exceptional conditions, such that the system is unaware there was an error, and is therefore unable to log there was a problem.
-* Adequate ‘use cases’ for issuing alerts are missing or outdated to recognize a special situation.
-* Too many false positive alerts make it impossible to distinguish important alerts from unimportant ones, resulting in them being recognized too late or not at all (physical overload of the SOC team).
-* Detected alerts cannot be processed correctly because the playbook for the use case is incomplete, out of date, or missing.
+* Nachvollziehbare Ereignisse, wie Anmeldungen, fehlgeschlagene Anmeldungen und wertvolle Transaktionen, werden nicht protokolliert (zum Beispiel nur erfolgreiche Anmeldungen protokollieren, nicht aber fehlgeschlagene Versuche).
+* Warnungen und Fehler erzeugen keine, unangemessene oder unklare Log-Einträge.
+* Die Integrität der Protokolle ist nicht ausreichend vor Manipulationen geschützt.
+* Die Logs von Anwendungen und APIs werden nicht auf verdächtige Aktivitäten überwacht.
+* Protokolle werden nur lokal gespeichert und nicht angemessen gesichert.
+* Geeignete Schwellenwerte für Warnmeldungen und Eskalationsprozesse für Gegenmaßnahmen sind nicht vorhanden oder nicht wirksam. Benachrichtigungen werden nicht innerhalb einer angemessenen Frist empfangen oder geprüft.
+* Penetrationstests und Scans durch DAST-Tools (Dynamic Application Security Testing) (wie Burp oder ZAP) lösen keine Alarme aus.
+* Die Anwendung kann Angriffe weder in Echtzeit noch nahezu in Echtzeit erkennen, eskalieren oder Alarm schlagen.
+* Sie sind anfällig für den Verlust sensibler Informationen, wenn Sie Protokollierungs- und Warnereignisse für einen Benutzer oder einen Angreifer sichtbar machen (siehe [A01:2025-Broken Access Control](A01_2025-Broken_Access_Control.md)) oder wenn Sie sensible Informationen protokollieren, die nicht protokolliert werden sollten (wie z. B. personenbezogene Daten oder geschützte Gesundheitsdaten).
+* Sie sind anfällig für Injection oder Angriffe auf die Protokollierungs- oder Überwachungssysteme, wenn Protokolldaten nicht encoded sind.
+* Der Anwendung fehlen Fehler und andere Ausnahmebedingungen oder sie behandelt diese falsch, sodass das System nicht erkennt, dass ein Fehler aufgetreten ist, und daher nicht protokollieren kann, dass ein Problem vorlag.
+* Es fehlen angemessene „Anwendungsfälle“ für die Ausgabe von Warnmeldungen oder diese sind veraltet, um eine besondere Situation zu erkennen.
+* Zu viele Fehlalarme machen es unmöglich, wichtige Warnmeldungen von unwichtigen zu unterscheiden, was dazu führt, dass sie zu spät oder gar nicht erkannt werden (physische Überlastung des SOC-Teams).
+* Erkannte Warnmeldungen können nicht korrekt verarbeitet werden, da das Handbuch für den Anwendungsfall unvollständig, veraltet oder nicht vorhanden ist.
+
+## Prävention und Gegenmaßnahmen.
+
+Je nach dem Risiko der Anwendung sollten Entwickler einige oder alle der folgenden Maßnahmen ergreifen:
+
+* Sicherstellen, dass alle Anmeldevorgänge, Zugriffskontrollen und Fehler bei der serverseitigen Eingabeüberprüfung mit ausreichendem Sitzungskontext der Nutzenden erfasst werden, um verdächtige oder böswillige Anwendende zu identifizieren und ausreichend lange gespeichert werden, um eine spätere forensische Analyse zu ermöglichen.
+* Stellen Sie sicher, dass jeder Teil Ihrer App, der eine Sicherheitsprüfung enthält, protokolliert wird, unabhängig davon, ob diese erfolgreich ist oder fehlschlägt.
+* Stellen Sie sicher, dass die Protokolle in einem Format gespeichert werden, das von Protokollmanagement Lösungen leicht verarbeitet werden kann.
+* Es sollte sichergestellt werden, dass die Protokolldaten korrekt encoded werden, sodass Injection-Angriffe oder Angriffe auf Logging- oder Überwachungssysteme verhindert werden.
+* Es soll sichergestellt sein, dass alle Transaktionen einen Prüfpfad mit Integritätskontrollen aufweisen um Manipulationen oder Löschungen zu verhindern, z. B. durch Datenbanktabellen, die nur erweitert werden können, oder ähnliches.
+* Stelle sicher, dass alle Transaktionen, bei denen ein Fehler auftritt, zurückgesetzt und neu gestartet werden. Wähle stets die „Fail-Closed“-Strategie.
+* Wenn sich Ihre Anwendung oder deren Nutzer verdächtig verhalten, geben Sie eine Warnmeldung aus. Erstellen Sie zu diesem Thema Leitlinien für Ihre Entwickler, damit diese entsprechende Maßnahmen in den Code integrieren können, oder erwerben Sie ein System, das diese Aufgabe übernimmt.
+* DevSecOps-Teams sollten eine effektive Überwachung und Alarmierung einrichten, sodass verdächtige Aktivitäten vom Security Operations Center (SOC)-Team schnell erkannt und darauf reagiert werden kann.
+* Fügen Sie „Honeytokens“ als Fallen für Angreifer in Ihre Anwendung ein, z. B. in die Datenbank, in Daten oder als echte und/oder technische Benutzeridentität. Da diese im normalen Geschäftsbetrieb nicht verwendet werden, erzeugt jeder Zugriff Protokolldaten, die nahezu ohne Fehlalarme gemeldet werden können.
+* Verhaltensanalysen und KI-Unterstützung könnten optional als zusätzliche Technik eingesetzt werden, um die Fehlalarmquote bei Warnmeldungen zu senken.
+* Erstellen oder übernehmen Sie einen Notfallplan für die Reaktion auf Vorfälle und für die Wiederherstellung, wie z. B. dem Leitfaden des National Institute of Standards and Technology (NIST) 800-61r2 oder neuer. Bringen Sie Ihren Softwareentwicklern bei, wie Angriffe auf Anwendungen und Vorfälle aussehen, damit sie diese melden können.
+
+Es gibt kommerzielle und Open-Source-Frameworks zum Schutz von Anwendungen wie das OWASP ModSecurity Core Rule Set, und Open-Source-Log correlation software, wie Elasticsearch, Logstash, Kibana (ELK) Stack, die individuelle Dashboards und Warnmeldungen bereitstellen. Es gibt auch kommerzielle Observability-Tools, mit denen Sie nahezu in Echtzeit auf Angriffe reagieren oder diese abwehren können.
 
 
-## How to prevent.
 
-Developers should implement some or all the following controls, depending on the risk of the application:
+## Beispielhafte Angriffsszenarien. 
 
+**Szenario 1:**  Der Betreiber der Website eines Anbieters von Kinderkrankenversicherungen konnte das Eindringen in das System aufgrund mangelnder Überwachung und Protokollierung nicht erkennen. Eine externe Partei informierte den Krankenversicherungsanbieter, dass Angreifende auf Tausende der mehr als 3,5 Millionen sensiblen Gesundheitsdaten der Kinder zugegriffen und diese verändert haben. Eine Überprüfung nach dem Vorfall ergab, dass die Entwickler der Website wesentliche Schwachstellen nicht behoben hatten. Da es weder eine Protokollierung noch eine Überwachung des Systems gab, bestand die Datenlücke möglicherweise bereits seit 2013, also über einen Zeitraum von mehr als sieben Jahren.
 
-* Ensure all login, access control, and server-side input validation failures can be logged with sufficient user context to identify suspicious or malicious accounts and held for enough time to allow delayed forensic analysis.
-* Ensure that every part of your app that contains a security control is logged, whether it succeeds or fails.
-* Ensure that logs are generated in a format that log management solutions can easily consume.
-* Ensure log data is encoded correctly to prevent injections or attacks on the logging or monitoring systems.
-* Ensure all transactions have an audit trail with integrity controls to prevent tampering or deletion, such as append-only database tables or similar.
-* Ensure all transactions that throw an error are rolled back and started over. Always fail closed.
-* If your application or its users behave suspiciously, issue an alert. Create guidance for your developers on this topic so they can code against this or buy a system for this.
-* DevSecOps and security teams should establish effective monitoring and alerting use cases including playbooks such that suspicious activities are detected and responded to quickly by the Security Operations Center (SOC) team.
-* Add ‘honeytokens’ as traps for attackers into your application e.g. into the database, data, as real and/or technical user identity. As they are not used in normal business, any access generates logging data that can be alerted with nearly no false positives.
-* Behavior analysis and AI support could be optionally an additional technique to support low rates of false positives for alerts.
-* Establish or adopt an incident response and recovery plan, such as National Institute of Standards and Technology (NIST) 800-61r2 or later. Teach your software developers what application attacks and incidents look like, so they can report them.
+**Szenario #2:** Bei einer größeren indischen Fluggesellschaft kam es zu einer Datenpanne, die mehr als zehn Jahre lang personenbezogene Daten von Millionen von Fluggästen betraf, einschließlich Reisepass- und Kreditkartendaten. Die Datenpanne trat bei einem externen Cloud-Hosting-Anbieter auf, der die Fluggesellschaft nach einiger Zeit über die Lücke informierte.
 
-There are commercial and open-source application protection products such as the OWASP ModSecurity Core Rule Set, and open-source log correlation software, such as the Elasticsearch, Logstash, Kibana (ELK) stack, that feature custom dashboards and alerting that may help you combat these issues. There are also commercial observability tools that can help you respond to or block attacks in close to real-time.
+**Szenario #3:** Bei einer großen europäischen Fluggesellschaft kam es zu einem meldepflichtigen Verstoß gegen die DSGVO. Der Verstoß wurde Berichten zufolge durch Sicherheitsschwachstellen in Zahlungsanwendungen verschuldet, die von Angreifenden ausgenutzt wurden, die mehr als 400.000 Zahlungsdatensätze von Kunden abfingen. Die Fluggesellschaft wurde daraufhin von der Datenschutzbehörde mit einer Geldstrafe von 20 Millionen Pfund belegt.
 
 
-## Example attack scenarios.
-
-**Scenario #1:** A children's health plan provider's website operator couldn't detect a breach due to a lack of monitoring and logging. An external party informed the health plan provider that an attacker had accessed and modified thousands of sensitive health records of more than 3.5 million children. A post-incident review found that the website developers had not addressed significant vulnerabilities. As there was no logging or monitoring of the system, the data breach could have been in progress since 2013, a period of more than seven years.
-
-**Scenario #2:** A major Indian airline had a data breach involving more than ten years' worth of personal data of millions of passengers, including passport and credit card data. The data breach occurred at a third-party cloud hosting provider, who notified the airline of the breach after some time.
-
-**Scenario #3:** A major European airline suffered a GDPR reportable breach. The breach was reportedly caused by payment application security vulnerabilities exploited by attackers, who harvested more than 400,000 customer payment records. The airline was fined 20 million pounds as a result by the privacy regulator.
-
-
-## References.
+## Referenzen.
 
 -   [OWASP Proactive Controls: C9: Implement Logging and Monitoring](https://top10proactive.owasp.org/archive/2024/the-top-10/c9-security-logging-and-monitoring/)
 
@@ -123,7 +122,7 @@ There are commercial and open-source application protection products such as the
 -   [Real world example of such failures in Snowflake Breach](https://www.huntress.com/threat-library/data-breach/snowflake-data-breach)
 
 
-## List of Mapped CWEs
+## Liste der zugeordneten CWEs
 
 * [CWE-117 Improper Output Neutralization for Logs](https://cwe.mitre.org/data/definitions/117.html)
 
