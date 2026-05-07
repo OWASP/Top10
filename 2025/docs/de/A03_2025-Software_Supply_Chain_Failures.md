@@ -1,33 +1,33 @@
 # A03:2025 Software Supply Chain Failures ![icon](../assets/TOP_10_Icons_Final_Vulnerable_Outdated_Components.png){: style="height:80px;width:80px" align="right"}
 
 
-## Background.
+## Hintergrund.
 
-This was top-ranked in the Top 10 community survey with exactly 50% respondents ranking it #1. Since initially appearing in the 2013 Top 10 as "A9 – Using Components with Known Vulnerabilities", the risk has grown in scope to include all supply chain failures, not just ones involving known vulnerabilities. Despite this increased scope, supply chain failures continue to be a challenge to identify with only 11 Common Vulnerability and Exposures (CVEs) having the related CWEs. However, when tested and reported in the contributed data, this category has the highest average incidence rate at 5.19%. The relevant CWEs are *CWE-477: Use of Obsolete Function, CWE-1104: Use of Unmaintained Third Party Components*, CWE-1329: *Reliance on Component That is Not Updateable*, and *CWE-1395: Dependency on Vulnerable Third-Party Component*.
+Diese Kategorie belegte den ersten Platz in der Community-Umfrage zum Top 10, wobei genau 50 % der Teilnehmenden sie auf Rang 1 setzten. Seit ihrem ersten Erscheinen im Top 10 von 2013 als „A9 – Using Components with Known Vulnerabilities" hat sich der Risikobereich ausgeweitet und umfasst nun alle Lieferkettenfehler, nicht nur solche mit bekannten Schwachstellen. Trotz dieses erweiterten Umfangs sind Lieferkettenfehler mit nur 11 Common Vulnerability and Exposures (CVEs), die die zugehörigen CWEs aufweisen, nach wie vor schwer zu identifizieren. Werden sie jedoch getestet und in den beigetragenen Daten gemeldet, weist diese Kategorie mit 5,19 % die höchste durchschnittliche Vorfallsrate aller Kategorien auf. Die relevanten CWEs sind *CWE-477: Use of Obsolete Function, CWE-1104: Use of Unmaintained Third Party Components*, CWE-1329: *Reliance on Component That is Not Updateable*, und *CWE-1395: Dependency on Vulnerable Third-Party Component*.
 
 
-## Score table.
+## Punktetabelle.
 
 
 <table>
   <tr>
-   <td>CWEs Mapped
+   <td>Zugeordnete CWEs
    </td>
-   <td>Max Incidence Rate
+   <td>Max. Häufigkeit
    </td>
-   <td>Avg Incidence Rate
+   <td>Durchschn. Häufigkeit
    </td>
-   <td>Max Coverage
+   <td>Max. Abdeckung
    </td>
-   <td>Avg Coverage
+   <td>Durchschn. Abdeckung
    </td>
-   <td>Avg Weighted Exploit
+   <td>Durchschn. gewichtete Ausnutzbarkeit
    </td>
-   <td>Avg Weighted Impact
+   <td>Durchschn. gewichtete Auswirkung
    </td>
-   <td>Total Occurrences
+   <td>Gesamtanzahl
    </td>
-   <td>Total CVEs
+   <td>Summe CVEs
    </td>
   </tr>
   <tr>
@@ -54,90 +54,90 @@ This was top-ranked in the Top 10 community survey with exactly 50% respondents 
 
 
 
-## Description.
+## Beschreibung.
 
-Software supply chain failures are breakdowns or other compromises in the process of building, distributing, or updating software. They are often caused by vulnerabilities or malicious changes in third-party code, tools, or other dependencies that the system relies on.
+Fehler in der Software-Lieferkette sind Störungen oder sonstige Kompromittierungen im Prozess der Erstellung, Verteilung oder Aktualisierung von Software. Sie werden häufig durch Schwachstellen oder böswillige Änderungen in Code, Werkzeugen oder anderen Abhängigkeiten von Drittanbietern verursacht, auf die das System angewiesen ist.
 
-You are likely vulnerable if:
+Sie sind wahrscheinlich verwundbar, wenn:
 
-* you do not carefully track the versions of all components that you use (both client-side and server-side). This includes components you directly use as well as nested (transitive) dependencies.
-* the software is vulnerable, unsupported, or out of date. This includes the OS, web/application server, database management system (DBMS), applications, APIs and all components, runtime environments, and libraries.
-* you do not scan for vulnerabilities regularly and subscribe to security bulletins related to the components you use.
-* you do not have a change management process or tracking of changes within your supply chain, including tracking IDEs, IDE extensions and updates, changes to your organization's code repository, sandboxes, image and library repositories, the way artifacts are created and stored, etc. Every part of your supply chain should be documented, especially changes.
-* you have not hardened every part of your supply chain, with a special focus on access control and the application of least privilege.
-* your supply chain systems do not have any separation of duty. No single person should be able to write code and  promote it all the way to production without oversight from another human being.
-* components from untrusted sources, across any part of the tech stack, are used in or can impact on production environments.
-* you do not fix or upgrade the underlying platform, frameworks, and dependencies in a risk-based, timely fashion. This commonly happens in environments when patching is a monthly or quarterly task under change control, leaving organizations open to days or months of unnecessary exposure before fixing vulnerabilities.
-* software developers do not test the compatibility of updated, upgraded, or patched libraries.
-* you do not secure the configurations of every part of your system (see [A02:2025-Security Misconfiguration](https://owasp.org/Top10/2025/A02_2025-Security_Misconfiguration/)).
-* your CI/CD pipeline has weaker security than the systems it builds and deploys, especially if it is complex.
-
-
-## How to prevent.
-
-There should be a patch management process in place to:
+* Sie die Versionen aller verwendeten Komponenten (sowohl client- als auch serverseitig) nicht sorgfältig verfolgen. Dies umfasst sowohl direkt verwendete Komponenten als auch verschachtelte (transitive) Abhängigkeiten.
+* Die Software verwundbar, nicht mehr unterstützt oder veraltet ist. Dies betrifft das Betriebssystem, Web-/Anwendungsserver, Datenbankmanagementsysteme (DBMS), Anwendungen, APIs und alle Komponenten, Laufzeitumgebungen und Bibliotheken.
+* Sie keine regelmäßigen Schwachstellen-Scans durchführen und keine Sicherheitsbulletins zu den von Ihnen verwendeten Komponenten abonniert haben.
+* Sie keinen Änderungsmanagementprozess oder keine Nachverfolgung von Änderungen in Ihrer Lieferkette haben, einschließlich der Nachverfolgung von IDEs, IDE-Erweiterungen und -Updates, Änderungen am Code-Repository Ihrer Organisation, Sandboxen, Image- und Bibliotheks-Repositories sowie der Art und Weise, wie Artefakte erstellt und gespeichert werden usw. Jeder Teil Ihrer Lieferkette sollte dokumentiert werden, insbesondere Änderungen.
+* Sie nicht jeden Teil Ihrer Lieferkette abgesichert haben, mit besonderem Fokus auf Zugangskontrolle und die Anwendung des Prinzips der minimalen Rechtevergabe.
+* Ihre Lieferkettensysteme keine Aufgabentrennung aufweisen. Keine einzelne Person sollte in der Lage sein, Code zu schreiben und ihn bis in die Produktion zu befördern, ohne die Aufsicht eines anderen Menschen.
+* Komponenten aus nicht vertrauenswürdigen Quellen, über jeden Teil des Tech-Stacks hinweg, in Produktionsumgebungen verwendet werden oder diese beeinflussen können.
+* Sie die zugrunde liegende Plattform, Frameworks und Abhängigkeiten nicht risikobasiert und zeitnah aktualisieren oder upgraden. Dies tritt häufig in Umgebungen auf, in denen das Patchen eine monatliche oder vierteljährliche Aufgabe unter Änderungskontrolle ist, wodurch Organisationen tagelangen oder monatelangen unnötigen Risiken ausgesetzt sind, bevor Schwachstellen behoben werden.
+* Softwareentwickler die Kompatibilität aktualisierter, upgegradeter oder gepatchter Bibliotheken nicht testen.
+* Sie die Konfigurationen jedes Teils Ihres Systems nicht absichern (siehe [A02:2025-Security Misconfiguration](https://owasp.org/Top10/2025/A02_2025-Security_Misconfiguration/)).
+* Ihre CI/CD-Pipeline eine schwächere Sicherheit aufweist als die Systeme, die sie erstellt und bereitstellt, insbesondere wenn sie komplex ist.
 
 
+## Prävention und Gegenmaßnahmen.
 
-* Centrally generate and manage the Software Bill of Materials (SBOM) of your entire software.
-* Track not just your direct dependencies, but their (transitive) dependencies, and so on.
-* Reduce attack surface by removing unused dependencies, unnecessary features, components, files, and documentation.
-* Continuously inventory the versions of both client-side and server-side components (e.g., frameworks, libraries) and their dependencies using tools like OWASP Dependency Track, OWASP Dependency Check, retire.js, etc.
-* Continuously monitor sources like Common Vulnerability and Exposures (CVE), National Vulnerability Database (NVD), and [Open Source Vulnerabilities (OSV)](https://osv.dev/) for vulnerabilities in the components you use. Use software composition analysis, software supply chain, or security-focused SBOM tools to automate the process. Subscribe to alerts for security vulnerabilities related to components you use.
-* Only obtain components from official (trusted) sources over secure links. Prefer signed packages to reduce the chance of including a modified, malicious component (see [A08:2025-Software and Data Integrity Failures](https://owasp.org/Top10/2025/A08_2025-Software_or_Data_Integrity_Failures/)).
-* Deliberately choose which version of a dependency you use and upgrade only when there is need.
-* Monitor for libraries and components that are unmaintained or do not create security patches for older versions. If patching is not possible, consider migrating to an alternative. If that is not possible, consider deploying a virtual patch to monitor, detect, or protect against the discovered issue.
-* Update your CI/CD, IDE, and any other developer tooling regularly
-* Avoid deploying updates to all systems simultaneously. Use staged rollouts or canary deployments to limit exposure in case a trusted vendor is compromised.
-
-
-There should be a change management process or tracking system in place to track changes to:
-
-* CI/CD settings (all build tools and pipelines)
-* Code repositories
-* Sandbox areas
-* Developer IDEs
-* SBOM tooling, and created artifacts
-* Logging systems and logs
-* Third party integrations, such as SaaS
-* Artifact repositories
-* Container registries
-
-
-Harden the following systems, which includes enabling MFA and locking down IAM:
-
-* Your code repository (which includes not checking in secrets, protecting branches, backups)
-* Developer workstations (regular patching, MFA, monitoring, and more)
-* Your build server & CI/CD (separation of duties, access control, signed builds, environment-scoped secrets, tamper-evident logs, more)
-* Your artifacts (ensure integrity via provenance, signing, and time stamping, promote artifacts rather than rebuilding for each environment, ensure builds are immutable)
-* Infrastructure as code (managed like all code, including use of PRs and version control)
-
-Every organization must ensure an ongoing plan for monitoring, triaging, and applying updates or configuration changes for the lifetime of the application or portfolio.
-
-
-## Example attack scenarios.
-
-**Scenario #1:** A trusted vendor is compromised with malware, leading to your computer systems being compromised when you upgrade. The most famous example of this is probably:
+Es sollte ein Patch-Management-Prozess vorhanden sein, der:
 
 
 
-* The 2019 SolarWinds compromise that led to ~18,000 organizations being compromised. [https://www.npr.org/2021/04/16/985439655/a-worst-nightmare-cyberattack-the-untold-story-of-the-solarwinds-hack](https://www.npr.org/2021/04/16/985439655/a-worst-nightmare-cyberattack-the-untold-story-of-the-solarwinds-hack)
-
-**Scenario #2:** A trusted vendor is compromised such that it behaves maliciously only under a specific condition.
-
-
-
-* The 2025 Bybit theft of $1.5 billion was caused by [a supply chain attack in wallet software](https://www.sygnia.co/blog/sygnia-investigation-bybit-hack/) that only executed when the target wallet was being used.
-
-**Scenario #3:** The [`Shai-Hulud` supply chain attack](https://www.cisa.gov/news-events/alerts/2025/09/23/widespread-supply-chain-compromise-impacting-npm-ecosystem) in 2025 was the first successful self-propagating npm worm. Attacks seeded malicious versions of popular packages, which used a post-install script to harvest and exfiltrate sensitive data to public GitHub repositories. The malware would also detect npm tokens in the victim environment, and automatically use them to push malicious versions of any accessible package. The worm reached over 500 package versions before being disrupted by npm.  This supply chain attack was advanced, fast-spreading, and damaging, and by targeting developer machines it demonstrated developers themselves are now prime targets for supply chain attacks.
-
-**Scenario #4:** Components typically run with the same privileges as the application itself, so flaws in any component can result in serious impact. Such flaws can be accidental (e.g., coding error) or intentional (e.g., a backdoor in a component). Some example exploitable component vulnerabilities discovered are:
-
-* CVE-2017-5638, a Struts 2 remote code execution vulnerability that enables the execution of arbitrary code on the server, has been blamed for significant breaches.
-* CVE-2021-44228 ("Log4Shell"), an Apache Log4j remote code execution zero-day vulnerability, has been blamed for ransomware, cryptomining, and other attack campaigns.
+* Zentral das Software Bill of Materials (SBOM) Ihrer gesamten Software erstellt und verwaltet.
+* Nicht nur Ihre direkten Abhängigkeiten, sondern auch deren (transitive) Abhängigkeiten usw. nachverfolgt.
+* Die Angriffsfläche durch Entfernen ungenutzter Abhängigkeiten, unnötiger Funktionen, Komponenten, Dateien und Dokumentation reduziert.
+* Die Versionen sowohl client- als auch serverseitiger Komponenten (z. B. Frameworks, Bibliotheken) und deren Abhängigkeiten kontinuierlich mit Tools wie OWASP Dependency Track, OWASP Dependency Check, retire.js usw. inventarisiert.
+* Quellen wie Common Vulnerability and Exposures (CVE), National Vulnerability Database (NVD) und [Open Source Vulnerabilities (OSV)](https://osv.dev/) kontinuierlich auf Schwachstellen in den von Ihnen verwendeten Komponenten überwacht. Nutzen Sie Software-Kompositionsanalyse, Software-Supply-Chain- oder sicherheitsorientierte SBOM-Tools, um den Prozess zu automatisieren. Abonnieren Sie Warnungen zu Sicherheitsschwachstellen in den von Ihnen verwendeten Komponenten.
+* Komponenten ausschließlich von offiziellen (vertrauenswürdigen) Quellen über sichere Verbindungen bezieht. Bevorzugen Sie signierte Pakete, um die Wahrscheinlichkeit zu verringern, eine modifizierte, bösartige Komponente einzubinden (siehe [A08:2025-Software and Data Integrity Failures](https://owasp.org/Top10/2025/A08_2025-Software_or_Data_Integrity_Failures/)).
+* Bewusst wählt, welche Version einer Abhängigkeit verwendet wird, und nur bei Bedarf aktualisiert.
+* Bibliotheken und Komponenten überwacht, die nicht mehr gewartet werden oder keine Sicherheits-Patches für ältere Versionen bereitstellen. Falls kein Patchen möglich ist, sollten Sie eine Migration zu einer Alternative in Betracht ziehen. Falls auch das nicht möglich ist, ziehen Sie den Einsatz eines virtuellen Patches in Betracht, um das entdeckte Problem zu überwachen, zu erkennen oder dagegen zu schützen.
+* Ihre CI/CD-, IDE- und anderen Entwickler-Tools regelmäßig aktualisiert.
+* Vermeidet, Updates gleichzeitig auf alle Systeme auszurollen. Nutzen Sie gestaffelte Rollouts oder Canary-Deployments, um das Risiko zu begrenzen, falls ein vertrauenswürdiger Anbieter kompromittiert wird.
 
 
-## References
+Es sollte ein Änderungsmanagementprozess oder ein Tracking-System vorhanden sein, um Änderungen an folgenden Bereichen zu verfolgen:
+
+* CI/CD-Einstellungen (alle Build-Tools und Pipelines)
+* Code-Repositories
+* Sandbox-Bereiche
+* Entwickler-IDEs
+* SBOM-Tooling und erstellte Artefakte
+* Protokollierungssysteme und Protokolle
+* Drittanbieter-Integrationen, z. B. SaaS
+* Artefakt-Repositories
+* Container-Registries
+
+
+Folgende Systeme sollten abgesichert werden, einschließlich der Aktivierung von MFA und der Einschränkung von IAM:
+
+* Ihr Code-Repository (dazu gehört das Nicht-Einchecken von Secrets, der Schutz von Branches und Backups)
+* Entwickler-Workstations (regelmäßiges Patchen, MFA, Monitoring und mehr)
+* Ihr Build-Server & CI/CD (Aufgabentrennung, Zugangskontrolle, signierte Builds, umgebungsspezifische Secrets, manipulationssichere Protokolle und mehr)
+* Ihre Artefakte (Integrität durch Herkunftsnachweis, Signierung und Zeitstempel sicherstellen, Artefakte befördern statt für jede Umgebung neu zu bauen, sicherstellen, dass Builds unveränderlich sind)
+* Infrastructure as Code (wie jeder Code verwaltet, einschließlich der Verwendung von PRs und Versionskontrolle)
+
+Jede Organisation muss einen fortlaufenden Plan zur Überwachung, Priorisierung und Anwendung von Updates oder Konfigurationsänderungen für die gesamte Lebensdauer der Anwendung oder des Portfolios sicherstellen.
+
+
+## Beispielhafte Angriffsszenarien.
+
+**Szenario Nr. 1:** Ein vertrauenswürdiger Anbieter wird mit Malware kompromittiert, was dazu führt, dass Ihre Computersysteme beim Upgrade kompromittiert werden. Das bekannteste Beispiel hierfür ist wahrscheinlich:
+
+
+
+* Die SolarWinds-Kompromittierung von 2019, die zur Kompromittierung von ~18.000 Organisationen führte. [https://www.npr.org/2021/04/16/985439655/a-worst-nightmare-cyberattack-the-untold-story-of-the-solarwinds-hack](https://www.npr.org/2021/04/16/985439655/a-worst-nightmare-cyberattack-the-untold-story-of-the-solarwinds-hack)
+
+**Szenario Nr. 2:** Ein vertrauenswürdiger Anbieter wird so kompromittiert, dass er sich nur unter einer bestimmten Bedingung böswillig verhält.
+
+
+
+* Der Bybit-Diebstahl von 1,5 Milliarden US-Dollar im Jahr 2025 wurde durch [einen Supply-Chain-Angriff auf Wallet-Software](https://www.sygnia.co/blog/sygnia-investigation-bybit-hack/) verursacht, der nur ausgeführt wurde, wenn die Ziel-Wallet verwendet wurde.
+
+**Szenario Nr. 3:** Der [`Shai-Hulud`-Supply-Chain-Angriff](https://www.cisa.gov/news-events/alerts/2025/09/23/widespread-supply-chain-compromise-impacting-npm-ecosystem) im Jahr 2025 war der erste erfolgreiche sich selbst verbreitende npm-Wurm. Angreifer platzierten bösartige Versionen populärer Pakete, die ein Post-Install-Skript verwendeten, um sensible Daten zu sammeln und in öffentliche GitHub-Repositories zu exfiltrieren. Die Malware erkannte auch npm-Token in der Opferumgebung und nutzte diese automatisch, um bösartige Versionen aller zugänglichen Pakete zu veröffentlichen. Der Wurm erreichte über 500 Paketversionen, bevor er von npm gestoppt wurde. Dieser Supply-Chain-Angriff war fortschrittlich, schnell ausbreitend und schädlich, und indem er auf Entwicklermaschinen abzielte, zeigte er, dass Entwickler selbst nun zu den Hauptzielen von Supply-Chain-Angriffen geworden sind.
+
+**Szenario Nr. 4:** Komponenten laufen typischerweise mit denselben Berechtigungen wie die Anwendung selbst, sodass Fehler in einer beliebigen Komponente erhebliche Auswirkungen haben können. Solche Fehler können versehentlich (z. B. Codefehler) oder absichtlich (z. B. eine Hintertür in einer Komponente) sein. Einige Beispiele für entdeckte ausnutzbare Komponentenschwachstellen sind:
+
+* CVE-2017-5638, eine Struts-2-Schwachstelle zur Remote-Code-Ausführung, die die Ausführung beliebigen Codes auf dem Server ermöglicht, wurde für erhebliche Datenschutzverletzungen verantwortlich gemacht.
+* CVE-2021-44228 („Log4Shell"), eine Apache-Log4j-Zero-Day-Schwachstelle zur Remote-Code-Ausführung, wurde für Ransomware-, Kryptomining- und andere Angriffskampagnen verantwortlich gemacht.
+
+
+## Referenzen.
 
 * [OWASP Application Security Verification Standard: V15 Secure Coding and Architecture](https://owasp.org/www-project-application-security-verification-standard/)
 * [OWASP Cheat Sheet Series: Dependency Graph SBOM](https://cheatsheetseries.owasp.org/cheatsheets/Dependency_Graph_SBOM_Cheat_Sheet.html)
@@ -159,7 +159,7 @@ Every organization must ensure an ongoing plan for monitoring, triaging, and app
 * [PhantomRaven supply chain attack campaign](https://thehackernews.com/2025/10/phantomraven-malware-found-in-126-npm.html)
 
 
-## List of Mapped CWEs
+## Liste der zugeordneten CWEs
 
 * [CWE-447 Use of Obsolete Function](https://cwe.mitre.org/data/definitions/447.html)
 
