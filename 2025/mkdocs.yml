@@ -15,23 +15,23 @@ theme:
     - search.suggest
 
 nav:
-  - Home: 'en/index.md'
-  - Introduction: 'en/0x00_2025-Introduction.md'
-  - About OWASP: 'en/0x01_2025-About_OWASP.md'
-  - What are Application Security Risks?: 'en/0x02_2025-What_are_Application_Security_Risks.md'
-  - Establishing a Modern Application Security Program: 'en/0x03_2025-Establishing_a_Modern_Application_Security_Program.md'
+  - Home: "en/index.md"
+  - Introduction: "en/0x00_2025-Introduction.md"
+  - About OWASP: "en/0x01_2025-About_OWASP.md"
+  - What are Application Security Risks?: "en/0x02_2025-What_are_Application_Security_Risks.md"
+  - Establishing a Modern Application Security Program: "en/0x03_2025-Establishing_a_Modern_Application_Security_Program.md"
   - Top 10:2025 List:
-    - A01 Broken Access Control: 'en/A01_2025-Broken_Access_Control.md'
-    - A02 Security Misconfiguration: 'en/A02_2025-Security_Misconfiguration.md'
-    - A03 Software Supply Chain Failures: 'en/A03_2025-Software_Supply_Chain_Failures.md'
-    - A04 Cryptographic Failures: 'en/A04_2025-Cryptographic_Failures.md'
-    - A05 Injection: 'en/A05_2025-Injection.md'
-    - A06 Insecure Design: 'en/A06_2025-Insecure_Design.md'
-    - A07 Authentication Failures: 'en/A07_2025-Authentication_Failures.md'
-    - A08 Software or Data Integrity Failures: 'en/A08_2025-Software_or_Data_Integrity_Failures.md'
-    - A09 Security Logging and Alerting Failures: 'en/A09_2025-Security_Logging_and_Alerting_Failures.md'
-    - A10 Mishandling of Exceptional Conditions: 'en/A10_2025-Mishandling_of_Exceptional_Conditions.md'
-  - Next Steps: 'en/X01_2025-Next_Steps.md'
+      - A01 Broken Access Control: "en/A01_2025-Broken_Access_Control.md"
+      - A02 Security Misconfiguration: "en/A02_2025-Security_Misconfiguration.md"
+      - A03 Software Supply Chain Failures: "en/A03_2025-Software_Supply_Chain_Failures.md"
+      - A04 Cryptographic Failures: "en/A04_2025-Cryptographic_Failures.md"
+      - A05 Injection: "en/A05_2025-Injection.md"
+      - A06 Insecure Design: "en/A06_2025-Insecure_Design.md"
+      - A07 Authentication Failures: "en/A07_2025-Authentication_Failures.md"
+      - A08 Software or Data Integrity Failures: "en/A08_2025-Software_or_Data_Integrity_Failures.md"
+      - A09 Security Logging and Alerting Failures: "en/A09_2025-Security_Logging_and_Alerting_Failures.md"
+      - A10 Mishandling of Exceptional Conditions: "en/A10_2025-Mishandling_of_Exceptional_Conditions.md"
+  - Next Steps: "en/X01_2025-Next_Steps.md"
 
 markdown_extensions:
   - attr_list
@@ -48,55 +48,55 @@ plugins:
           default: true
           name: en - English
           build: true
+        - locale: pt-BR
+          name: pt-BR - Português (Brasil)
+          build: true
       nav_translations:
-
-        SAMPLE:
-          Home: Startseite
-          Notice: Anmerkung
-          Introduction: Einführung
-          How to use the OWASP Top 10 as a standard: Wie man die OWASP Top 10 als Standard verwendet
-          How to start an AppSec program with the OWASP Top 10: Wie man ein AppSec-Program mit den OWASP Top 10 beginnt
-          About OWASP: Über OWASP
-          Top 10:2025 List: Liste der Top 10:2025
-          A01 Broken Access Control: A01 - Mangelhafte Zugriffskontrolle
-          A02 Cryptographic Failures: A02 - Fehlerhafter Einsatz von Kryptographie
-          A03 Injection: A03 - Injection
-          A04 Insecure Design: A04 - Unsicheres Anwendungsdesign
-          A05 Security Misconfiguration: A05 - Sicherheitsrelevante Fehlkonfiguration
-          A06 Vulnerable and Outdated Components: A06 - Unsichere oder veraltete Komponenten
-          A07 Identification and Authentication Failures: A07 - Fehlerhafte Authentifizierung
-          A08 Software and Data Integrity Failures: A08 - Fehlerhafte Prüfung der Software- und Datenintegrität
-          A09 Security Logging and Monitoring Failures: A09 - Unzureichendes Logging und Sicherheitsmonitoring
-          A10 Server Side Request Forgery (SSRF): A10 - Server-Side Request Forgery (SSRF)
-          Next Steps: Nächste Schritte
-  - macros:     # needs to be the last plugin to export the final osib-YAML file for all languages
-      module_name: '../osib/osib_macro'
-      include_dir: '../osib/include'
-      verbose: false                                                  # debug
+        Home: Início
+        Introduction: Apresentação
+        About OWASP: Sobre a OWASP
+        What are Application Security Risks?: O que são Riscos de Segurança de Aplicações?
+        Establishing a Modern Application Security Program: Estabelecendo um Programa de Segurança de Aplicações Moderno
+        Top 10:2025 List: Lista Top10:2025
+        A01 Broken Access Control: A01 Controle de Acesso Quebrado
+        A02 Security Misconfiguration: A02 Configurações Incorretas de Segurança
+        A03 Software Supply Chain Failures: A03 Falhas de Cadeia de Suprimentos de Software
+        A04 Cryptographic Failures: A04 Falhas Criptográficas
+        A05 Injection: A05 Injeção
+        A06 Insecure Design: A06 Design Inseguro
+        A07 Authentication Failures: A07 Falhas de Autenticação
+        A08 Software or Data Integrity Failures: A08 Falhas de Integridade de Software ou Dados
+        A09 Security Logging and Alerting Failures: A09 Falhas de Log e Alerta de Segurança.
+        A10 Mishandling of Exceptional Conditions: A10 Manuseio Incorreto de Condições de Exceção
+        Next Steps: Próximos Passos
+  - macros: # needs to be the last plugin to export the final osib-YAML file for all languages
+      module_name: "../osib/osib_macro"
+      include_dir: "../osib/include"
+      verbose: false # debug
       on_error_fail: true
 extra:
-  alternate:                                                         # see https://squidfunk.github.io/mkdocs-material/setup/changing-the-language/#site-language-selector
+  alternate: # see https://squidfunk.github.io/mkdocs-material/setup/changing-the-language/#site-language-selector
     - name: en - English
       link: ./en/
       lang: en
-#    - name: de - Deutsch
-#      link: ./de/
-#      lang: de
+    - name: pt-BR - Português (Brasil)
+      link: ./pt-BR/
+      lang: pt-BR
   osib:
-    document:     osib.owasp.top10
-    version:      2025-0-1
-#    document:     <osib-id>                    # e.g. osib.owasp.top10
-#    version:      <version-no, no dots '.'>    # e.g. 4-0, 2025-1-0
-    categories:   [document, awareness]        # list of all default categories
+    document: osib.owasp.top10
+    version: 2025-0-1
+    #    document:     <osib-id>                    # e.g. osib.owasp.top10
+    #    version:      <version-no, no dots '.'>    # e.g. 4-0, 2025-1-0
+    categories: [document, awareness] # list of all default categories
     default_lang: en
-    yaml_file:    ../osib/include/osib.yml
-    export_dir:   ../osib/export
-    latest:       2                            # 2: add the latest version(s), if successor(s) exist, log an info
-    debug:        0                            # debug level (0-3); default is 2
-    cre:          osib.owasp.cre.1-0
+    yaml_file: ../osib/include/osib.yml
+    export_dir: ../osib/export
+    latest: 2 # 2: add the latest version(s), if successor(s) exist, log an info
+    debug: 0 # debug level (0-3); default is 2
+    cre: osib.owasp.cre.1-0
     successor_texts:
-      en:         successor
-      de:         Nachfolger
+      en: successor
+      pt-BR: sucessor
     split_to_texts:
-      en:         split to
-      de:         Aufgeteilt in
+      en: split to
+      pt-BR: dividir em
