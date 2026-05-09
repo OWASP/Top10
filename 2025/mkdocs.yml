@@ -51,24 +51,24 @@ plugins:
         - locale: pt-BR
           name: pt-BR - Português (Brasil)
           build: true
-      nav_translations:
-        Home: Início
-        Introduction: Apresentação
-        About OWASP: Sobre a OWASP
-        What are Application Security Risks?: O que são Riscos de Segurança de Aplicações?
-        Establishing a Modern Application Security Program: Estabelecendo um Programa de Segurança de Aplicações Moderno
-        Top 10:2025 List: Lista Top10:2025
-        A01 Broken Access Control: A01 Controle de Acesso Quebrado
-        A02 Security Misconfiguration: A02 Configurações Incorretas de Segurança
-        A03 Software Supply Chain Failures: A03 Falhas de Cadeia de Suprimentos de Software
-        A04 Cryptographic Failures: A04 Falhas Criptográficas
-        A05 Injection: A05 Injeção
-        A06 Insecure Design: A06 Design Inseguro
-        A07 Authentication Failures: A07 Falhas de Autenticação
-        A08 Software or Data Integrity Failures: A08 Falhas de Integridade de Software ou Dados
-        A09 Security Logging and Alerting Failures: A09 Falhas de Log e Alerta de Segurança.
-        A10 Mishandling of Exceptional Conditions: A10 Manuseio Incorreto de Condições de Exceção
-        Next Steps: Próximos Passos
+          nav_translations:
+            Home: Início
+            Introduction: Apresentação
+            About OWASP: Sobre a OWASP
+            What are Application Security Risks?: O que são Riscos de Segurança de Aplicações?
+            Establishing a Modern Application Security Program: Estabelecendo um Programa de Segurança de Aplicações Moderno
+            Top 10:2025 List: Lista Top10:2025
+            A01 Broken Access Control: A01 Controle de Acesso Quebrado
+            A02 Security Misconfiguration: A02 Configurações Incorretas de Segurança
+            A03 Software Supply Chain Failures: A03 Falhas de Cadeia de Suprimentos de Software
+            A04 Cryptographic Failures: A04 Falhas Criptográficas
+            A05 Injection: A05 Injeção
+            A06 Insecure Design: A06 Design Inseguro
+            A07 Authentication Failures: A07 Falhas de Autenticação
+            A08 Software or Data Integrity Failures: A08 Falhas de Integridade de Software ou Dados
+            A09 Security Logging and Alerting Failures: A09 Falhas de Log e Alerta de Segurança.
+            A10 Mishandling of Exceptional Conditions: A10 Manuseio Incorreto de Condições de Exceção
+            Next Steps: Próximos Passos
   - macros: # needs to be the last plugin to export the final osib-YAML file for all languages
       module_name: "../osib/osib_macro"
       include_dir: "../osib/include"
@@ -95,8 +95,8 @@ extra:
     debug: 0 # debug level (0-3); default is 2
     cre: osib.owasp.cre.1-0
     successor_texts:
-      en: successor
-      pt-BR: sucessor
+      - [en, successor]
+      - [pt-BR, sucessor]
     split_to_texts:
-      en: split to
-      pt-BR: dividir em
+      - [en, "split to"]
+      - [pt-BR, "dividir em"]
