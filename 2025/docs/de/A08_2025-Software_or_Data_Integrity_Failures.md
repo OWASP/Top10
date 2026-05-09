@@ -1,32 +1,32 @@
 # A08:2025 Software or Data Integrity Failures ![icon](../assets/TOP_10_Icons_Final_Software_and_Data_Integrity_Failures.png){: style="height:80px;width:80px" align="right"}
 
-## Background. 
+## Hintergrund. 
 
-Software or Data Integrity Failures continues at #8, with a slight, clarifying name change from "Software *and* Data Integrity Failures". This category is focused on the failure to maintain trust boundaries and verify the integrity of software, code, and data artifacts at a lower level than Software Supply Chain Failures. This category focuses on making assumptions related to software updates and critical data, without verifying integrity. Notable Common Weakness Enumerations (CWEs) include *CWE-829: Inclusion of Functionality from Untrusted Control Sphere*, *CWE-915: Improperly Controlled Modification of Dynamically-Determined Object Attributes*, and *CWE-502: Deserialization of Untrusted Data*.
+Software or Data Integrity Failures verbleibt auf Platz #8, mit einer leichten, klarstellenden Namensänderung von „Software *und* Data Integrity Failures". Diese Kategorie konzentriert sich auf das Versäumnis, Vertrauensgrenzen einzuhalten und die Integrität von Software, Code und Datenartefakten auf einer niedrigeren Ebene als Software Supply Chain Failures zu überprüfen. Der Schwerpunkt liegt auf Annahmen in Bezug auf Software-Updates und kritische Daten, ohne die Integrität zu überprüfen. Zu den erwähnenswerten Common Weakness Enumerations (CWEs) gehören *CWE-829: Inclusion of Functionality from Untrusted Control Sphere*, *CWE-915: Improperly Controlled Modification of Dynamically-Determined Object Attributes* und *CWE-502: Deserialization of Untrusted Data*.
 
 
-## Score table.
+## Punktetabelle.
 
 
 <table>
   <tr>
-   <td>CWEs Mapped 
+   <td>Zugeordnete CWEs 
    </td>
-   <td>Max Incidence Rate
+   <td>Max. Häufigkeit
    </td>
-   <td>Avg Incidence Rate
+   <td>Durchschn. Häufigkeit
    </td>
-   <td>Max Coverage
+   <td>Max. Abdeckung
    </td>
-   <td>Avg Coverage
+   <td>Durchschn. Abdeckung
    </td>
-   <td>Avg Weighted Exploit
+   <td>Durchschn. gewichtete Ausnutzbarkeit
    </td>
-   <td>Avg Weighted Impact
+   <td>Durchschn. gewichtete Auswirkung
    </td>
-   <td>Total Occurrences
+   <td>Gesamtanzahl
    </td>
-   <td>Total CVEs
+   <td>Summe CVEs
    </td>
   </tr>
   <tr>
@@ -53,33 +53,34 @@ Software or Data Integrity Failures continues at #8, with a slight, clarifying n
 
 
 
-## Description. 
+## Beschreibung. 
 
-Software and data integrity failures relate to code and infrastructure that does not protect against invalid or untrusted code or data being treated as trusted and valid. An example of this is where an application relies upon plugins, libraries, or modules from untrusted sources, repositories, and content delivery networks (CDNs). An insecure CI/CD pipeline without consuming and providing software integrity checks can introduce the potential for unauthorized access, insecure or malicious code, or system compromise. Another example of this is a CI/CD that pulls code or artifacts from untrusted places and/or doesn’t verify them before use (by checking the signature or similar mechanism). Lastly, many applications now include auto-update functionality, where updates are downloaded without sufficient integrity verification and applied to the previously trusted application. Attackers could potentially upload their own updates to be distributed and run on all installations. Another example is where objects or data are encoded or serialized into a structure that an attacker can see and modify is vulnerable to insecure deserialization.
-
-
-## How to prevent. 
+Software- und Datenintegritätsfehler beziehen sich auf Code und Infrastruktur, die keinen Schutz dagegen bieten, dass ungültiger oder nicht vertrauenswürdiger Code oder Daten als vertrauenswürdig und gültig behandelt werden. Ein Beispiel hierfür ist, wenn eine Anwendung auf Plugins, Bibliotheken oder Module aus nicht vertrauenswürdigen Quellen, Repositories und Content Delivery Networks (CDNs) angewiesen ist. Eine unsichere CI/CD-Pipeline kann das Potenzial für unbefugten Zugriff, bösartigen Code oder Systemkompromittierung bieten. Ein weiteres Beispiel ist eine CI/CD-Pipeline, die Code oder Artefakte aus nicht vertrauenswürdigen Quellen bezieht und/oder diese vor der Verwendung nicht überprüft (z. B. durch Prüfung der Signatur oder eines ähnlichen Mechanismus).
+Schließlich enthalten viele Anwendungen heute eine automatische Update-Funktion, bei der Updates ohne ausreichende Integritätsprüfung heruntergeladen und auf die zuvor vertrauenswürdige Anwendung angewendet werden. Angreifende könnten ihre eigenen Updates hochladen, die dann auf alle Installationen verbreitet und ausgeführt werden. Ein weiteres Beispiel besteht darin, dass Objekte oder Daten in eine Struktur kodiert oder serialisiert werden, die Angreifende sehen und ändern können, und die durch eine unsichere Deserialisierung verwundbar sind.
 
 
-
-* Use digital signatures or similar mechanisms to verify the software or data is from the expected source and has not been altered.
-* Ensure libraries and dependencies, such as npm or Maven, are only consuming trusted repositories. If you have a higher risk profile, consider hosting an internal known-good repository that's vetted.
-* Ensure that there is a review process for code and configuration changes to minimize the chance that malicious code or configuration could be introduced into your software pipeline.
-* Ensure that your CI/CD pipeline has proper segregation, configuration, and access control to ensure the integrity of the code flowing through the build and deploy processes.
-* Ensure that unsigned or unencrypted serialized data is not received from untrusted clients and subsequently used without some form of integrity check or digital signature to detect tampering or replay of the serialized data.
+## Prävention und Gegenmaßnahmen. 
 
 
-## Example attack scenarios. 
 
-**Scenario #1 Inclusion of Web Functionality from an Untrusted Source:** A company uses an external service provider to provide support functionality. For convenience, it has a DNS mapping for `myCompany.SupportProvider.com` to `support.myCompany.com`. This means that all cookies, including authentication cookies, set on the `myCompany.com` domain will now be sent to the support provider. Anyone with access to the support provider’s infrastructure can steal the cookies of all of your users that have visited `support.myCompany.com` and perform a session hijacking attack.
+* Verwenden Sie digitale Signaturen oder ähnliche Mechanismen, um sicherzustellen, dass die Software oder Daten aus der erwarteten Quelle stammen und nicht verändert wurden.
+* Stellen Sie sicher, dass Bibliotheken und Abhängigkeiten, wie z. B. npm oder Maven, ausschließlich vertrauenswürdige Repositories nutzen. Wenn Sie ein höheres Risikoprofil haben, sollten Sie in Erwägung ziehen, ein internes Repository zu hosten, das als vertrauenswürdig gilt und überprüft wurde.
+* Stellen Sie sicher, dass es einen Überprüfungsprozess für Code- und Konfigurationsänderungen gibt, um das Risiko zu minimieren, dass bösartiger Code oder bösartige Konfigurationen in Ihre Software-Pipeline eingeschleust werden
+* Stelle Sie sicher, dass Ihre CI/CD-Pipeline über eine angemessene Trennung, Konfiguration und Zugriffskontrolle verfügt, um die Integrität des Codes zu gewährleisten, der den Build- und Bereitstellungsprozess durchläuft.
+* Stellen Sie sicher, dass unsignierte oder unverschlüsselte serialisierte Daten nicht von nicht vertrauenswürdigen Clients empfangen und anschließend ohne eine Form der Integritätsprüfung oder digitalen Signatur verwendet werden, um Manipulation oder ein erneutes Einspielen der serialisierten Daten zu erkennen.
 
-**Scenario #2 Update without signing:** Many home routers, set-top boxes, device firmware, and others do not verify updates via signed firmware. Unsigned firmware is a growing target for attackers and is expected to only get worse. This is a major concern as many times there is no mechanism to remediate other than to fix in a future version and wait for previous versions to age out.
 
-**Scenario #3 Use of Package from an Untrusted Source:** A developer has trouble finding the updated version of a package they are looking for, so they download it not from the regular, trusted package manager, but from a website online. The package is not signed, and thus there is no opportunity to ensure integrity. The package includes malicious code.
+## Beispielhafte Angriffsszenarien. 
 
-**Scenario #4 Insecure Deserialization:** A React application calls a set of Spring Boot microservices. Being functional programmers, they tried to ensure that their code is immutable. The solution they came up with is serializing the user state and passing it back and forth with each request. An attacker notices the "rO0" Java object signature (in base64) and uses the [Java Deserialization Scanner](https://github.com/federicodotta/Java-Deserialization-Scanner) to gain remote code execution on the application server.
+**Szenario Nr. 1 – Einbindung von Web-Funktionalität aus einer nicht vertrauenswürdigen Quelle:** Ein Unternehmen nutzt einen externen Dienstleister für Support-Funktionalität. Der Bequemlichkeit halber wurde ein DNS-Mapping von `myCompany.SupportProvider.com` auf `support.myCompany.com` eingerichtet. Das bedeutet, dass alle Cookies – einschließlich Authentifizierungs-Cookies –, die für die Domain `myCompany.com` gesetzt wurden, nun an den Support-Anbieter gesendet werden. Jede Person mit Zugang zur Infrastruktur des Support-Anbieters kann die Cookies aller Nutzenden stehlen, die `support.myCompany.com` besucht haben, und einen Session-Hijacking-Angriff durchführen.
 
-## References.
+**Szenario Nr. 2 – Update ohne Signierung:** Viele Heimrouter, Set-Top-Boxen, Geräte-Firmware und andere Systeme überprüfen Updates nicht anhand signierter Firmware. Unsignierte Firmware wird zunehmend zum Angriffsziel und es ist davon auszugehen, dass sich dies weiter verschlechtern wird. Dies ist besonders problematisch, da es häufig keinen Mechanismus zur Behebung gibt, außer einen Fix in einer zukünftigen Version bereitzustellen und zu warten, bis ältere Versionen nicht mehr verwendet werden.
+
+**Szenario Nr. 3 – Verwendung eines Pakets aus einer nicht vertrauenswürdigen Quelle:** Eine Entwicklerin bzw. ein Entwickler hat Schwierigkeiten, die aktualisierte Version eines benötigten Pakets zu finden, und lädt es daher nicht vom regulären, vertrauenswürdigen Paketmanager herunter, sondern von einer Website im Internet. Das Paket ist nicht signiert, sodass keine Möglichkeit besteht, die Integrität sicherzustellen. Das Paket enthält bösartigen Code.
+
+**Szenario Nr. 4 – Unsichere Deserialisierung:** Eine React-Anwendung ruft eine Reihe von Spring-Boot-Microservices auf. Als funktionale Programmierende haben sie versucht, ihren Code unveränderlich zu gestalten. Die gewählte Lösung besteht darin, den Nutzerzustand zu serialisieren und mit jeder Anfrage hin- und herzuschicken. Eine angreifende Person erkennt die Java-Objektsignatur „rO0" (in Base64) und nutzt den [Java Deserialization Scanner](https://github.com/federicodotta/Java-Deserialization-Scanner), um Remote Code Execution auf dem Anwendungsserver zu erlangen.
+
+## Referenzen.
 
 * [OWASP Cheat Sheet: Software Supply Chain Security](https://cheatsheetseries.owasp.org/cheatsheets/Software_Supply_Chain_Security_Cheat_Sheet.html)
 * [OWASP Cheat Sheet: Infrastructure as Code](https://cheatsheetseries.owasp.org/cheatsheets/Infrastructure_as_Code_Security_Cheat_Sheet.html)
@@ -91,7 +92,7 @@ Software and data integrity failures relate to code and infrastructure that does
 * [Insecure Deserialization by Tenendo](https://tenendo.com/insecure-deserialization/)
 
 
-## List of Mapped CWEs
+## Liste der zugeordneten CWEs
 
 * [CWE-345 Insufficient Verification of Data Authenticity](https://cwe.mitre.org/data/definitions/345.html)
 
