@@ -136,6 +136,30 @@ Every organization must ensure an ongoing plan for monitoring, triaging, and app
 * CVE-2017-5638, a Struts 2 remote code execution vulnerability that enables the execution of arbitrary code on the server, has been blamed for significant breaches.
 * CVE-2021-44228 ("Log4Shell"), an Apache Log4j remote code execution zero-day vulnerability, has been blamed for ransomware, cryptomining, and other attack campaigns.
 
+## C++ Dependency Validation Example
+Verify dependency integrity to prevent supply‑chain attacks in C++.
+
+```cpp
+#include <iostream>
+#include <string>
+
+bool verify_dependency_hash(const std::string& lib_hash, const std::string& trusted_hash) {
+    return lib_hash == trusted_hash;
+}
+
+int main() {
+    std::string lib_hash = "verified_hash_123";
+    std::string trusted_hash = "verified_hash_123";
+    if (verify_dependency_hash(lib_hash, trusted_hash)) {
+        std::cout << "Dependency integrity verified" << std::endl;
+    } else {
+        std::cout << "Untrusted dependency blocked" << std::endl;
+    }
+    return 0;
+}
+```
+Security Notes:
+- Validate dependency checksums, use trusted sources for third-party libraries.
 
 ## References
 
