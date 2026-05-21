@@ -156,7 +156,7 @@ int main() {
 }
 ```
 Security Notes:
-Always validate permissions on the server-side, never trust client-side checks.
+- Always validate permissions on the server-side, never trust client-side checks.
 
 ## References.
 
