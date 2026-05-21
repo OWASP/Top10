@@ -105,6 +105,35 @@ Often self-responsibility of developers is underappreciated. Foster a culture of
 
 **Scenario #3:** A retail chain’s e-commerce website does not have protection against bots run by scalpers buying high-end video cards to resell on auction websites. This creates terrible publicity for the video card makers and retail chain owners, and enduring bad blood with enthusiasts who cannot obtain these cards at any price. Careful anti-bot design and domain logic rules, such as purchases made within a few seconds of availability, might identify inauthentic purchases and reject such transactions.
 
+## C++ Secure Design Example
+Defensive programming design to prevent insecure design flaws.
+
+```cpp
+#include <iostream>
+#include <stdexcept>
+
+class SecureUser {
+private:
+    std::string user_id;
+public:
+    SecureUser(std::string id) {
+        if (id.empty()) throw std::invalid_argument("Invalid user ID");
+        user_id = id;
+    }
+};
+
+int main() {
+    try {
+        SecureUser u("");
+    } catch (...) {
+        std::cout << "Defensive design blocked invalid input" << std::endl;
+    }
+    return 0;
+}
+```
+Security Notes:
+- Build validation into core logic.
+- Fail fast on invalid inputs.
 
 ## References.
 
