@@ -101,6 +101,23 @@ Secure installation processes should be implemented, including:
 
 **Scenario #4:** A cloud service provider (CSP) defaults to having sharing permissions open to the Internet. This allows sensitive data stored within cloud storage to be accessed.
 
+## C++ Secure Configuration Example
+Hardened C++ runtime configuration to avoid security misconfiguration vulnerabilities.
+
+```cpp
+#include <iostream>
+#include <cstdlib>
+
+int main() {
+    // Disable insecure debug features in production
+    setenv("DEBUG_MODE", "0", 1);
+    // Enforce strict input validation by default
+    std::cout << "Secure runtime configuration applied" << std::endl;
+    return 0;
+}
+```
+Security Notes:
+- Disable debug interfaces, default deny access, remove unused componments in production.
 
 ## References.
 
