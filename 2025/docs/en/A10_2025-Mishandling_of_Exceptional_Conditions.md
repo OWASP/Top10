@@ -100,6 +100,41 @@ If possible, your entire organization should handle exceptional conditions in th
 
 **Scenario #3:** State corruption in financial transactions could be caused by an attacker interrupting a multi-step transaction via network disruptions. Imagine the transaction order was: debit user account, credit destination account, log transaction. If the system doesn’t properly roll back the entire transaction (fail closed) when there is an error part way through, the attacker could potentially drain the user’s account, or possibly a race condition that allows the attacker to send money to the destination multiple times.
 
+## C++ Secure Exception Handling Example
+Prevent program crash and information leakage by handling null‑pointer and division‑by‑zero exceptions in C++.
+
+```cpp
+#include <stdexcept>
+#include <iostream>
+
+// Safe division to avoid division‑by‑zero crash
+int safe_divide(int a, int b) {
+    if (b == 0) {
+        throw std::domain_error("Division by zero is prohibited");
+    }
+    return a / b;
+}
+
+// Safe pointer access to avoid null‑pointer dereference
+int safe_access(int* ptr) {
+    if (ptr == nullptr) {
+        throw std::invalid_argument("Null pointer access blocked");
+    }
+    return *ptr;
+}
+
+int main() {
+    try {
+        safe_divide(10, 0);
+    } catch (const std::exception& e) {
+        std::cerr << "Security exception caught: " << e.what() << std::endl;
+    }
+    return 0;
+}
+```
+OWASP Security Notes
+- Catch all critical exceptions to avoid program crash and sensitive info leakage.
+- Validate inputs before execution to prevent undefined behavior.
 
 ## References.
 
