@@ -117,6 +117,26 @@ When an attacker is able to trick a system into recognizing an invalid or incorr
 
 **Scenario #3:** Application session timeouts aren't implemented correctly. A user uses a public computer to access an application and instead of selecting "logout," the user simply closes the browser tab and walks away. Another Example for this is, if a Single Sign on (SSO) session can not be closed by a Single Logout (SLO). That is, a single login logs you into, for example, your mail reader, your document system, and your chat system. But logging out happens only to the current system. If an attacker uses the same browser after the victim thinks they have successfully logged out, but with the user still authenticated to some of the applications, then can access the victim's account. The same issue can happen in offices and enterprises when a sensitive application has not been properly exited and a colleague has (temporary) access to the unlocked computer.
 
+## C++ Secure Password Validation Example
+Strong password validation to prevent authentication bypass.
+
+```cpp
+#include <iostream>
+#include <string>
+
+bool is_secure_password(const std::string& pwd) {
+    return pwd.size() >= 12 && std::any_of(pwd.begin(), pwd.end(), ::isdigit);
+}
+
+int main() {
+    std::string pwd = "weak123";
+    std::cout << (is_secure_password(pwd) ? "Secure" : "Insecure password blocked") << std::endl;
+    return 0;
+}
+```
+Security Notes:
+- Enforce strong password policies, rate-limit login attempts.
+
 ## References.
 
 * [OWASP Authentication Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html)
