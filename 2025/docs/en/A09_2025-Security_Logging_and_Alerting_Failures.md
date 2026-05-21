@@ -103,6 +103,27 @@ There are commercial and open-source application protection products such as the
 
 **Scenario #3:** A major European airline suffered a GDPR reportable breach. The breach was reportedly caused by payment application security vulnerabilities exploited by attackers, who harvested more than 400,000 customer payment records. The airline was fined 20 million pounds as a result by the privacy regulator.
 
+## C++ Secure Logging Example
+Safe logging implementation to avoid sensitive data leakage.
+
+```cpp
+#include <iostream>
+#include <string>
+
+void secure_log(const std::string& msg) {
+    // Mask sensitive data
+    std::string safe_msg = msg.substr(0, 20);
+    std::cerr << "[SECURE LOG] " << safe_msg << std::endl;
+}
+
+int main() {
+    secure_log("User login event, masked sensitive info");
+    return 0;
+}
+```
+Security Notes:
+- Never log passwords/tokens.
+- Log security events for auditing.
 
 ## References.
 
