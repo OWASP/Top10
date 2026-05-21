@@ -130,6 +130,33 @@ $ curl https://example.com/app/admin_getappInfo
 
 from the command line.
 
+## C++ Access Control Validation Example
+Secure server‑side permission check to prevent broken access control vulnerabilities, complying with OWASP Top 10 2025 standards.
+
+```cpp
+#include <iostream>
+#include <string>
+
+bool check_permission(const std::string& user_role, const std::string& target_resource) {
+    // Strict server‑side access control validation
+    if (user_role == "admin") return true;
+    if (user_role == "user" && target_resource == "self_data") return true;
+    return false;
+}
+
+int main() {
+    std::string role = "user";
+    std::string resource = "admin_data";
+    if (check_permission(role, resource)) {
+        std::cout << "Access granted" << std::endl;
+    } else {
+        std::cout << "Access denied: Broken access control prevented" << std::endl;
+    }
+    return 0;
+}
+```
+Security Notes:
+Always validate permissions on the server-side, never trust client-side checks.
 
 ## References.
 
