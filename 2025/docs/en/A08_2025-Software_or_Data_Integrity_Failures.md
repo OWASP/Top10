@@ -79,6 +79,27 @@ Software and data integrity failures relate to code and infrastructure that does
 
 **Scenario #4 Insecure Deserialization:** A React application calls a set of Spring Boot microservices. Being functional programmers, they tried to ensure that their code is immutable. The solution they came up with is serializing the user state and passing it back and forth with each request. An attacker notices the "rO0" Java object signature (in base64) and uses the [Java Deserialization Scanner](https://github.com/federicodotta/Java-Deserialization-Scanner) to gain remote code execution on the application server.
 
+## C++ Data Integrity Check Example
+Check data hash to prevent tampering and integrity failures.
+
+```cpp
+#include <iostream>
+#include <string>
+#include <functional>
+
+size_t get_hash(const std::string& data) { return std::hash<std::string>{}(data); }
+
+int main() {
+    std::string data = "sensitive_data";
+    size_t original_hash = get_hash(data);
+    std::string tampered = "tampered_data";
+    if (get_hash(tampered) != original_hash) std::cout << "Data tampering detected" << std::endl;
+    return 0;
+}
+```
+Security Notes:
+- Use cryptographic hashes to verify data integrity.
+
 ## References.
 
 * [OWASP Cheat Sheet: Software Supply Chain Security](https://cheatsheetseries.owasp.org/cheatsheets/Software_Supply_Chain_Security_Cheat_Sheet.html)
