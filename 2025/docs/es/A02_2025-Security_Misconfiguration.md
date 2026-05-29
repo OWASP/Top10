@@ -1,4 +1,4 @@
-# A02:2025 Configuración de Seguridad Incorrecta (Security Misconfiguration) ![icon](../assets/TOP_10_Icons_Final_Security_Misconfiguration.png){: style="height:80px;width:80px" align="right"}
+﻿# A02:2025 Configuración de Seguridad Incorrecta (Security Misconfiguration) ![icon](../assets/TOP_10_Icons_Final_Security_Misconfiguration.png){: style="height:80px;width:80px" align="right"}
 
 
 ## Antecedentes
@@ -82,7 +82,7 @@ Deben implementarse procesos de instalación seguros, que incluyan:
 
 * Un proceso de bastionado (hardening) repetible que permita el despliegue rápido y sencillo de otro entorno que esté bloqueado adecuadamente. Los entornos de desarrollo, QA y producción deben estar configurados de forma idéntica, con credenciales diferentes en cada uno. Este proceso debe estar automatizado para minimizar el esfuerzo requerido para configurar un nuevo entorno seguro.
 * Una plataforma mínima sin funciones, componentes, documentación o ejemplos innecesarios. Elimine o no instale funciones y frameworks que no utilice.
-* Una tarea para revisar y actualizar las configuraciones de acuerdo con todas las notas de seguridad, actualizaciones y parches como parte del proceso de gestión de parches (consulte [A03 Fallas en la Cadena de Suministro de Software](A03_2025-Fallas_en_la_Cadena_de_Suministro_de_Software.md)(Software Supply Chain Failures)). Revise los permisos de almacenamiento en la nube (por ejemplo, los permisos de los cubos S3).
+* Una tarea para revisar y actualizar las configuraciones de acuerdo con todas las notas de seguridad, actualizaciones y parches como parte del proceso de gestión de parches (consulte [A03 Fallas en la Cadena de Suministro de Software](A03_2025-Software_Supply_Chain_Failures.md)(Software Supply Chain Failures)). Revise los permisos de almacenamiento en la nube (por ejemplo, los permisos de los cubos S3).
 * Una arquitectura de aplicación segmentada que proporcione una separación efectiva y segura entre componentes o inquilinos (tenants), con segmentación, contenedorización o grupos de seguridad en la nube (ACLs).
 * Envío de directivas de seguridad a los clientes, por ejemplo, Cabeceras de Seguridad (Security Headers).
 * Un proceso automatizado para verificar la eficacia de las configuraciones y ajustes en todos los entornos.

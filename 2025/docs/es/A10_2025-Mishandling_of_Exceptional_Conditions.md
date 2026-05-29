@@ -1,4 +1,4 @@
-# A10:2025 Manejo Inadecuado de Condiciones Excepcionales ![icon](../assets/TOP_10_Icons_Final_Mishandling_of_Exceptional_Conditions.png){: style="height:80px;width:80px" align="right"}
+﻿# A10:2025 Manejo Inadecuado de Condiciones Excepcionales ![icon](../assets/TOP_10_Icons_Final_Mishandling_of_Exceptional_Conditions.png){: style="height:80px;width:80px" align="right"}
 
 
 ## Antecedentes
@@ -81,7 +81,7 @@ Capturar y manejar las condiciones excepcionales garantiza que la infraestructur
 
 Siempre que sea posible, añada limitación de tasa (rate limiting), cuotas de recursos, regulación (throttling) y otros límites para prevenir las condiciones excepcionales en primer lugar. Nada en la tecnología de la información debería ser ilimitado, ya que esto conduce a una falta de resiliencia de la aplicación, denegación de servicio, ataques exitosos de fuerza bruta y facturas extraordinarias en la nube.
 
-Considere si errores idénticos repetidos, por encima de una cierta tasa, deberían mostrarse únicamente como estadísticas que indiquen con qué frecuencia han ocurrido y en qué intervalo de tiempo. Esta información debería añadirse al mensaje original para no interferir con el registro y monitoreo automatizados, consulte [A09:2025-Fallas en el Registro, Alerta y Monitoreo de Seguridad](A09_2025-Fallas_en_el_Registro_y_Monitoreo.md).
+Considere si errores idénticos repetidos, por encima de una cierta tasa, deberían mostrarse únicamente como estadísticas que indiquen con qué frecuencia han ocurrido y en qué intervalo de tiempo. Esta información debería añadirse al mensaje original para no interferir con el registro y monitoreo automatizados, consulte [A09:2025-Fallas en el Registro, Alerta y Monitoreo de Seguridad](A09_2025-Security_Logging_and_Alerting_Failures.md).
 
 Además de esto, querríamos incluir una validación de entradas estricta (con saneamiento o escape para los caracteres potencialmente peligrosos que debamos aceptar), un manejo de errores, registro, monitoreo y alertas *centralizados*, y un manejador de excepciones global. Una aplicación no debería tener múltiples funciones para manejar condiciones excepcionales; debería realizarse en un solo lugar, de la misma manera cada vez. También deberíamos crear requisitos de seguridad del proyecto para todos los consejos de esta sección, realizar actividades de modelado de amenazas y/o revisión de diseño seguro en la fase de diseño de nuestros proyectos, realizar revisiones de código o análisis estático, así como ejecutar pruebas de estrés, rendimiento y penetración del sistema final.
 

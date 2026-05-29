@@ -1,4 +1,4 @@
-# A09:2025 Fallas en el Registro, Alerta y Monitoreo de Seguridad ![icon](../assets/TOP_10_Icons_Final_Security_Logging_and_Monitoring_Failures.png){: style="height:80px;width:80px" align="right"}
+﻿# A09:2025 Fallas en el Registro, Alerta y Monitoreo de Seguridad ![icon](../assets/TOP_10_Icons_Final_Security_Logging_and_Monitoring_Failures.png){: style="height:80px;width:80px" align="right"}
 
 
 ## Antecedentes
@@ -67,7 +67,7 @@ Sin registro (logging) y monitoreo (monitoring), los ataques y las brechas de se
 * No existen o no son efectivos los umbrales de alerta y los procesos de escalado de respuesta adecuados. Las alertas no se reciben o no se revisan en un tiempo razonable.
 * Las pruebas de penetración (pentesting) y los escaneos mediante herramientas de pruebas de seguridad de aplicaciones dinámicas (DAST) (como Burp Suite o ZAP) no activan alertas.
 * La aplicación no puede detectar, escalar o alertar sobre ataques activos en tiempo real o casi en tiempo real.
-* Se es vulnerable a la filtración de información sensible al hacer visibles los eventos de registro y alerta para un usuario o un atacante (ver [A01:2025-Pérdida de Control de Acceso](A01_2025-Perdida_de_Control_de_Acceso.md)), o al registrar información sensible que no debería registrarse (como PII o PHI).
+* Se es vulnerable a la filtración de información sensible al hacer visibles los eventos de registro y alerta para un usuario o un atacante (ver [A01:2025-Pérdida de Control de Acceso](A01_2025-Broken_Access_Control.md)), o al registrar información sensible que no debería registrarse (como PII o PHI).
 * Se es vulnerable a inyecciones o ataques a los sistemas de registro o monitoreo si los datos de los registros no están correctamente codificados.
 * La aplicación carece de errores u otras condiciones excepcionales, o los gestiona de forma inadecuada, de modo que el sistema no es consciente de que se ha producido un error y, por tanto, no puede registrar que ha habido un problema.
 * Faltan "casos de uso" adecuados para la emisión de alertas o estos están desactualizados para reconocer una situación especial.
