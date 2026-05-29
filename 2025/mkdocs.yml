@@ -14,6 +14,7 @@ theme:
     - navigation.instant
     - search.suggest
 
+
 nav:
   - Home: 'en/index.md'
   - Introduction: 'en/0x00_2025-Introduction.md'
@@ -33,8 +34,10 @@ nav:
     - A10 Mishandling of Exceptional Conditions: 'en/A10_2025-Mishandling_of_Exceptional_Conditions.md'
   - Next Steps: 'en/X01_2025-Next_Steps.md'
 
+
 markdown_extensions:
   - attr_list
+
 
 plugins:
   - search
@@ -48,7 +51,29 @@ plugins:
           default: true
           name: en - English
           build: true
+        - locale: es
+          name: es - Español
+          build: true
+          nav_translations:
+            Home: Inicio
+            Introduction: Introducción
+            About OWASP: Acerca de OWASP
+            What are Application Security Risks?: ¿Qué son los Riesgos de Seguridad en Aplicaciones?
+            Establishing a Modern Application Security Program: Estableciendo un Programa Moderno de Seguridad en Aplicaciones
+            Top 10:2025 List: Lista Top 10:2025
+            A01 Broken Access Control: A01 Control de Acceso Roto
+            A02 Security Misconfiguration: A02 Configuración de Seguridad Incorrecta
+            A03 Software Supply Chain Failures: A03 Fallos en la Cadena de Suministro de Software
+            A04 Cryptographic Failures: A04 Fallos Criptográficos
+            A05 Injection: A05 Inyección
+            A06 Insecure Design: A06 Diseño Inseguro
+            A07 Authentication Failures: A07 Fallos de Autenticación
+            A08 Software or Data Integrity Failures: A08 Fallos de Integridad de Software o Datos
+            A09 Security Logging and Alerting Failures: A09 Fallos en el Registro y Alertas de Seguridad
+            A10 Mishandling of Exceptional Conditions: A10 Manejo Incorrecto de Condiciones Excepcionales
+            Next Steps: Próximos Pasos
       nav_translations:
+
 
         SAMPLE:
           Home: Startseite
@@ -69,30 +94,31 @@ plugins:
           A09 Security Logging and Monitoring Failures: A09 - Unzureichendes Logging und Sicherheitsmonitoring
           A10 Server Side Request Forgery (SSRF): A10 - Server-Side Request Forgery (SSRF)
           Next Steps: Nächste Schritte
-  - macros:     # needs to be the last plugin to export the final osib-YAML file for all languages
+  - macros:
       module_name: '../osib/osib_macro'
       include_dir: '../osib/include'
-      verbose: false                                                  # debug
+      verbose: false
       on_error_fail: true
 extra:
-  alternate:                                                         # see https://squidfunk.github.io/mkdocs-material/setup/changing-the-language/#site-language-selector
+  alternate:
     - name: en - English
       link: ./en/
       lang: en
+    - name: es - Español
+      link: ./es/
+      lang: es
 #    - name: de - Deutsch
 #      link: ./de/
 #      lang: de
   osib:
     document:     osib.owasp.top10
     version:      2025-0-1
-#    document:     <osib-id>                    # e.g. osib.owasp.top10
-#    version:      <version-no, no dots '.'>    # e.g. 4-0, 2025-1-0
-    categories:   [document, awareness]        # list of all default categories
+    categories:   [document, awareness]
     default_lang: en
     yaml_file:    ../osib/include/osib.yml
     export_dir:   ../osib/export
-    latest:       2                            # 2: add the latest version(s), if successor(s) exist, log an info
-    debug:        0                            # debug level (0-3); default is 2
+    latest:       2
+    debug:        0
     cre:          osib.owasp.cre.1-0
     successor_texts:
       en:         successor
