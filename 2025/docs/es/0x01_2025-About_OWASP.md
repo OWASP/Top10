@@ -9,7 +9,7 @@ En OWASP, encontrará recursos gratuitos y abiertos:
 - Controles de seguridad y bibliotecas estándar.
 - Libros completos sobre pruebas de seguridad de aplicaciones, desarrollo de código seguro y revisión de código seguro.
 - Presentaciones y [vídeos](https://www.youtube.com/user/OWASPGLOBAL).
-- [Guías de referencia rápida](https://cheatsheetseries.owasp.org/) (*Cheat sheets*) sobre muchos temas comunes.
+- [Guías de referencia rápida](https://cheatsheetseries.owasp.org/) sobre varios temas comunes.
 - [Reuniones de capítulos](https://owasp.org/chapters/) celebradas en todo el mundo y en línea.
 - [Eventos, formación y conferencias](https://owasp.org/events/).
 - [Google Groups](https://groups.google.com/g/owasp).
