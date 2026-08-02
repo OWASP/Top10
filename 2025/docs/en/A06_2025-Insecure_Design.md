@@ -72,7 +72,7 @@ Collect and negotiate the business requirements for an application with the busi
 
 ### Secure Design
 
-Secure design is a culture and methodology that constantly evaluates threats and ensures that code is robustly designed and tested to prevent known attack methods. Threat modeling should be integrated into refinement sessions (or similar activities); look for changes in data flows and access control or other security controls. In the user story development, determine the correct flow and failure states, ensure they are well understood and agreed upon by the responsible and impacted parties. Analyze assumptions and conditions for expected and failure flows to ensure they remain accurate and desirable. Determine how to validate the assumptions and enforce conditions needed for proper behaviors. Ensure the results are documented in the user story. Learn from mistakes and offer positive incentives to promote improvements. Secure design is neither an add-on nor a tool that you can add to software.
+Secure design is a culture and methodology that constantly evaluates threats and ensures that code is robustly designed and tested to prevent known attack methods. Threat modeling should be integrated into refinement sessions (or similar activities); look for changes in data flows and access control or other security controls. In the  story development, determine the correct flow and failure states, ensure they are well understood and agreed upon by the responsible and impacted parties. Analyze assumptions and conditions for expected and failure flows to ensure they remain accurate and desirable. Determine how to validate the assumptions and enforce conditions needed for proper behaviors. Ensure the results are documented in the  story. Learn from mistakes and offer positive incentives to promote improvements. Secure design is neither an add-on nor a tool that you can add to software.
 
 
 ### Secure Development Lifecycle
@@ -89,7 +89,7 @@ Often self-responsibility of developers is underappreciated. Foster a culture of
 * Establish and use a secure development lifecycle with AppSec professionals to help evaluate and design security and privacy-related controls
 * Establish and use a library of secure design patterns or paved-road components
 * Use threat modeling for critical parts of the application such as authentication, access control, business logic, and key flows
-* User threat modeling as an educational tool to generate a security mindset
+* Use threat modeling as an educational tool to generate a security mindset
 * Integrate security language and controls into user stories
 * Integrate plausibility checks at each tier of your application (from frontend to backend)
 * Write unit and integration tests to validate that all critical flows are resistant to the threat model. Compile use-cases *and* misuse-cases for each tier of your application.

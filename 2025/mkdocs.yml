@@ -69,6 +69,9 @@ plugins:
             A09 Security Logging and Alerting Failures: A09 Security Logging and Alerting Failures
             A10 Mishandling of Exceptional Conditions: A10 Mishandling of Exceptional Conditions
             Next Steps: Prossimi Passi
+        - locale: ja
+          name: ja - 日本語 (Japanese)
+          build: true
       nav_translations:
 
         SAMPLE:
@@ -107,6 +110,9 @@ extra:
     - name: it - Italiano
       link: ./it/
       lang: it
+    - name: ja - 日本語 (Japanese)
+      link: ./ja/
+      lang: ja
   osib:
     document:     osib.owasp.top10
     version:      2025-0-1
