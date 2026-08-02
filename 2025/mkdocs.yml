@@ -48,6 +48,27 @@ plugins:
           default: true
           name: en - English
           build: true
+        - locale: zh-Hant
+          name: zh-Hant - 简体中文
+          build: true
+          nav_translations:
+            Home: 主页
+            Introduction: 引言
+            About OWASP: 关于 OWASP
+            What are Application Security Risks?: 什么是应用安全风险？
+            Establishing a Modern Application Security Program: 建立现代应用安全计划
+            Top 10:2025 List: Top 10:2025 列表
+            A01 Broken Access Control: A01 失效的访问控制
+            A02 Security Misconfiguration: A02 安全配置错误
+            A03 Software Supply Chain Failures: A03 软件供应链失效
+            A04 Cryptographic Failures: A04 加密机制失效
+            A05 Injection: A05 注入
+            A06 Insecure Design: A06 不安全设计
+            A07 Authentication Failures: A07 认证失效
+            A08 Software or Data Integrity Failures: A08 软件或数据完整性失效
+            A09 Security Logging and Alerting Failures: A09 安全日志记录和告警失效
+            A10 Mishandling of Exceptional Conditions: A10 异常条件处理不当
+            Next Steps: 下一步
         - locale: it
           name: it - Italiano
           build: true
@@ -104,6 +125,9 @@ extra:
     - name: en - English
       link: ./en/
       lang: en
+    - name: zh-Hant - 简体中文
+      link: ./zh-Hant/
+      lang: zh-Hant
 #    - name: de - Deutsch
 #      link: ./de/
 #      lang: de
