@@ -140,6 +140,27 @@ plugins:
             A09 Security Logging and Alerting Failures: A09 安全日志记录和告警失效
             A10 Mishandling of Exceptional Conditions: A10 异常条件处理不当
             Next Steps: 下一步
+        - locale: pt-BR
+          name: pt-BR - Português (Brasil)
+          build: true
+          nav_translations:
+            Home: Início
+            Introduction: Introdução
+            About OWASP: Sobre a OWASP
+            What are Application Security Risks?: O que são Riscos de Segurança de Aplicações?
+            Establishing a Modern Application Security Program: Estabelecendo um Programa Moderno de Segurança de Aplicações
+            Top 10:2025 List: Lista do Top 10:2025
+            A01 Broken Access Control: A01 Controle de Acesso Quebrado
+            A02 Security Misconfiguration: A02 Configuração Insegura
+            A03 Software Supply Chain Failures: A03 Falhas na Cadeia de Suprimentos de Software
+            A04 Cryptographic Failures: A04 Falhas Criptográficas
+            A05 Injection: A05 Injeção
+            A06 Insecure Design: A06 Design Inseguro
+            A07 Authentication Failures: A07 Falhas de Autenticação
+            A08 Software or Data Integrity Failures: A08 Falhas de Integridade de Software ou de Dados
+            A09 Security Logging and Alerting Failures: A09 Falhas de Registro e Monitoramento de Segurança
+            A10 Mishandling of Exceptional Conditions: A10 Tratamento Incorreto de Condições Excepcionais
+            Next Steps: Próximos Passos
       nav_translations:
 
 
@@ -194,6 +215,9 @@ extra:
     - name: zh-Hant - 简体中文
       link: ./zh-Hant/
       lang: zh-Hant
+    - name: pt-BR - (Português Brasil)
+      link: ./pt-BR/
+      lang: pt-BR
   osib:
     document:     osib.owasp.top10
     version:      2025-0-1
