@@ -171,7 +171,7 @@ plugins:
 extra:
   alternate:
     - name: en - English
-      link: /Top10/2025/
+      link: ./en/
       lang: en
     - name: cs - Česky
       link: ./cs/
