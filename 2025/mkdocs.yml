@@ -11,9 +11,8 @@ theme:
   logo: assets/OWASP_Logo_Transp.png
   features:
     - navigation.sections
-    - navigation.instant
+    # - navigation.instant
     - search.suggest
-
 
 nav:
   - Home: 'en/index.md'
@@ -34,7 +33,6 @@ nav:
     - A10 Mishandling of Exceptional Conditions: 'en/A10_2025-Mishandling_of_Exceptional_Conditions.md'
   - Next Steps: 'en/X01_2025-Next_Steps.md'
 
-
 markdown_extensions:
   - attr_list
 
@@ -42,15 +40,37 @@ markdown_extensions:
 plugins:
   - search
   - i18n:
-      default_language: en
+      # default_language: en
       docs_structure: folder
-      material_alternate: true
+      # material_alternate: true
       reconfigure_material: true
+      fallback_to_default: true
       languages:
         - locale: en
           default: true
           name: en - English
           build: true
+        - locale: cs
+          name: cs - Česky
+          build: true
+          nav_translations:
+            Home: Domů
+            Introduction: Úvod
+            About OWASP: O OWASP
+            What are Application Security Risks?: Co jsou bezpečnostní rizika aplikací?
+            Establishing a Modern Application Security Program: Zavedení moderního programu bezpečnosti aplikací
+            Top 10:2025 List: Seznam Top 10:2025
+            A01 Broken Access Control: A01 Narušené řízení přístupu
+            A02 Security Misconfiguration: A02 Chybná bezpečnostní konfigurace
+            A03 Software Supply Chain Failures: A03 Selhání dodavatelského řetězce softwaru
+            A04 Cryptographic Failures: A04 Kryptografická selhání
+            A05 Injection: A05 Injekce
+            A06 Insecure Design: A06 Nezabezpečený návrh
+            A07 Authentication Failures: A07 Selhání autentizace
+            A08 Software or Data Integrity Failures: A08 Selhání integrity softwaru nebo dat
+            A09 Security Logging and Alerting Failures: A09 Selhání bezpečnostního logování a upozorňování
+            A10 Mishandling of Exceptional Conditions: A10 Nesprávné zpracování výjimečných stavů
+            Next Steps: Další kroky          
         - locale: es
           name: es - Español
           build: true
@@ -151,8 +171,11 @@ plugins:
 extra:
   alternate:
     - name: en - English
-      link: ./en/
+      link: /Top10/2025/
       lang: en
+    - name: cs - Česky
+      link: ./cs/
+      lang: cs  material_alternate  
     - name: es - Español
       link: ./es/
       lang: es
