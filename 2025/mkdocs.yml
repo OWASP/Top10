@@ -96,6 +96,9 @@ plugins:
         - locale: ja
           name: ja - 日本語 (Japanese)
           build: true
+        - locale: fa
+          name: fa - فارسی (Persian/Fārsi)
+          build: true
         - locale: zh-Hant
           name: zh-Hant - 简体中文
           build: true
@@ -162,6 +165,9 @@ extra:
     - name: ja - 日本語 (Japanese)
       link: ./ja/
       lang: ja
+    - name: fa - فارسی (Persian/Fārsi)
+      link: ./fa/
+      lang: fa
     - name: zh-Hant - 简体中文
       link: ./zh-Hant/
       lang: zh-Hant
