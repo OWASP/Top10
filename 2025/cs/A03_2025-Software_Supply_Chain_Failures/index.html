@@ -1,0 +1,1271 @@
+
+<!doctype html>
+<html lang="cs" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="OWASP Top 10:2025">
+      
+      
+      
+        <link rel="canonical" href="https://owasp.org/Top10/2025/cs/A03_2025-Software_Supply_Chain_Failures/">
+      
+      
+        <link rel="prev" href="../A02_2025-Security_Misconfiguration/">
+      
+      
+        <link rel="next" href="../A04_2025-Cryptographic_Failures/">
+      
+      
+        
+          <link rel="alternate" href="../../A03_2025-Software_Supply_Chain_Failures/" hreflang="en">
+        
+          <link rel="alternate" href="../" hreflang="cs  material_alternate">
+        
+          <link rel="alternate" href="../../es/A03_2025-Software_Supply_Chain_Failures/" hreflang="es">
+        
+          <link rel="alternate" href="../../it/A03_2025-Software_Supply_Chain_Failures/" hreflang="it">
+        
+          <link rel="alternate" href="../../ja/A03_2025-Software_Supply_Chain_Failures/" hreflang="ja">
+        
+          <link rel="alternate" href="../../ko/A03_2025-Software_Supply_Chain_Failures/" hreflang="ko">
+        
+          <link rel="alternate" href="../../fa/A03_2025-Software_Supply_Chain_Failures/" hreflang="fa">
+        
+          <link rel="alternate" href="../../pt-BR/A03_2025-Software_Supply_Chain_Failures/" hreflang="pt-BR">
+        
+          <link rel="alternate" href="../../zh-Hant/A03_2025-Software_Supply_Chain_Failures/" hreflang="zh-Hant">
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>A03 Selhání dodavatelského řetězce softwaru - OWASP Top 10:2025</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#a032025-selhani-dodavatelskeho-retezce-softwaru-software-supply-chain-failures" class="md-skip">
+          Přeskočit obsah
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Záhlaví">
+    <a href="../" title="OWASP Top 10:2025" class="md-header__button md-logo" aria-label="OWASP Top 10:2025" data-md-component="logo">
+      
+  <img src="../../assets/OWASP_Logo_Transp.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OWASP Top 10:2025
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              A03 Selhání dodavatelského řetězce softwaru
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Zvolte jazyk">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../A03_2025-Software_Supply_Chain_Failures/" hreflang="en" class="md-select__link">
+              en - English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../" hreflang="cs  material_alternate" class="md-select__link">
+              cs - Česky
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../es/A03_2025-Software_Supply_Chain_Failures/" hreflang="es" class="md-select__link">
+              es - Español
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../it/A03_2025-Software_Supply_Chain_Failures/" hreflang="it" class="md-select__link">
+              it - Italiano
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../ja/A03_2025-Software_Supply_Chain_Failures/" hreflang="ja" class="md-select__link">
+              ja - 日本語 (Japanese)
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../ko/A03_2025-Software_Supply_Chain_Failures/" hreflang="ko" class="md-select__link">
+              ko - 한국어 (Korean)
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../fa/A03_2025-Software_Supply_Chain_Failures/" hreflang="fa" class="md-select__link">
+              fa - فارسی (Persian/Fārsi)
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../pt-BR/A03_2025-Software_Supply_Chain_Failures/" hreflang="pt-BR" class="md-select__link">
+              pt-BR - (Português Brasil)
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../zh-Hant/A03_2025-Software_Supply_Chain_Failures/" hreflang="zh-Hant" class="md-select__link">
+              zh-Hant - 简体中文
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Hledat" placeholder="Hledat" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Vyhledávání">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Vyčistit" aria-label="Vyčistit" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializace vyhledávání
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/OWASP/Top10" title="Přejít do repozitáře" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    OWASP/Top10
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigace" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../" title="OWASP Top 10:2025" class="md-nav__button md-logo" aria-label="OWASP Top 10:2025" data-md-component="logo">
+      
+  <img src="../../assets/OWASP_Logo_Transp.png" alt="logo">
+
+    </a>
+    OWASP Top 10:2025
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/OWASP/Top10" title="Přejít do repozitáře" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    OWASP/Top10
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Domů
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x00_2025-Introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Úvod
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x01_2025-About_OWASP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    O OWASP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x02_2025-What_are_Application_Security_Risks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Co jsou bezpečnostní rizika aplikací?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x03_2025-Establishing_a_Modern_Application_Security_Program/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Zavedení moderního programu bezpečnosti aplikací
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Seznam Top 10:2025
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Seznam Top 10:2025
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A01_2025-Broken_Access_Control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A01 Narušené řízení přístupu
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A02_2025-Security_Misconfiguration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A02 Chybná bezpečnostní konfigurace
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A03 Selhání dodavatelského řetězce softwaru
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A03 Selhání dodavatelského řetězce softwaru
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Obsah">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Obsah
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pozadi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pozadí
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tabulka-skore" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tabulka skóre
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#popis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Popis
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jak-tomu-zabranit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Jak tomu zabránit
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#priklady-scenaru-utoku" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Příklady scénářů útoků
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reference
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#seznam-mapovanych-cwe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Seznam mapovaných CWE
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A04_2025-Cryptographic_Failures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A04 Kryptografická selhání
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A05_2025-Injection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A05 Injekce
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A06_2025-Insecure_Design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A06 Nezabezpečený návrh
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A07_2025-Authentication_Failures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A07 Selhání autentizace
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A08_2025-Software_or_Data_Integrity_Failures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A08 Selhání integrity softwaru nebo dat
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A09_2025-Security_Logging_and_Alerting_Failures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A09 Selhání bezpečnostního logování a upozorňování
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A10_2025-Mishandling_of_Exceptional_Conditions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A10 Nesprávné zpracování výjimečných stavů
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../X01_2025-Next_Steps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Další kroky
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Obsah">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Obsah
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pozadi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pozadí
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tabulka-skore" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tabulka skóre
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#popis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Popis
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jak-tomu-zabranit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Jak tomu zabránit
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#priklady-scenaru-utoku" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Příklady scénářů útoků
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reference
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#seznam-mapovanych-cwe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Seznam mapovaných CWE
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="a032025-selhani-dodavatelskeho-retezce-softwaru-software-supply-chain-failures">A03:2025 Selhání dodavatelského řetězce softwaru (Software Supply Chain Failures) <img align="right" alt="icon" src="../../assets/TOP_10_Icons_Final_Vulnerable_Outdated_Components.png" style="height:80px;width:80px" /></h1>
+<h2 id="pozadi">Pozadí</h2>
+<p>Tato položka byla nejvýše hodnocena v komunitním průzkumu Top 10, přičemž přesně 50 % respondentů ji zařadilo na 1. místo. Od svého prvního výskytu v Top 10 v roce 2013 jako „A9 – Používání komponent se známými zranitelnostmi“ se rozsah tohoto rizika rozšířil tak, aby zahrnoval veškerá selhání dodavatelského řetězce, nikoli pouze ta, která zahrnují známé zranitelnosti. Navzdory tomuto rozšířenému rozsahu zůstávají selhání dodavatelského řetězce výzvou z hlediska identifikace, přičemž pouze 11 položek Common Vulnerabilities and Exposures (CVE) má související CWE. Při testování a hlášení v poskytnutých datech však tato kategorie vykazuje nejvyšší průměrnou míru výskytu, a to 5,19 %. Relevantní CWE jsou <em>CWE-477: Use of Obsolete Function, CWE-1104: Use of Unmaintained Third Party Components, CWE-1329: Reliance on Component That is Not Updateable a CWE-1395: Dependency on Vulnerable Third-Party Component</em>.</p>
+<h2 id="tabulka-skore">Tabulka skóre</h2>
+<table>
+  <tr>
+   <td>Počet mapovaných CWE 
+   </td>
+   <td>Max míra výskytu
+   </td>
+   <td>Průměrná míra výskytu
+   </td>
+   <td>Max pokrytí
+   </td>
+   <td>Průměrné pokrytí
+   </td>
+   <td>Průměrná vážená zneužitelnost
+   </td>
+   <td>Průměrný vážený dopad
+   </td>
+   <td>Celkový počet výskytů
+   </td>
+   <td>Celkový počet CVE
+   </td>
+  </tr>
+  <tr>
+   <td>6
+   </td>
+   <td>9,56 %
+   </td>
+   <td>5,72 %
+   </td>
+   <td>65,42 %
+   </td>
+   <td>27,47 %
+   </td>
+   <td>8,17
+   </td>
+   <td>5,23
+   </td>
+   <td>215 248
+   </td>
+   <td>11
+   </td>
+  </tr>
+</table>
+
+<h2 id="popis">Popis</h2>
+<p>Selhání dodavatelského řetězce softwaru jsou selhání nebo jiné kompromitace v procesu sestavování, distribuce nebo aktualizace softwaru. Často jsou způsobena zranitelnostmi nebo škodlivými změnami v kódu třetích stran, nástrojích nebo jiných závislostech, na nichž systém závisí.</p>
+<p>Pravděpodobně jste zranitelní, pokud:</p>
+<ul>
+<li>nesledujete pečlivě verze všech komponent, které používáte (na straně klienta i na straně serveru). To zahrnuje komponenty, které používáte přímo, i vnořené (tranzitivní) závislosti.</li>
+<li>software je zranitelný, nepodporovaný nebo zastaralý. To zahrnuje operační systém, webový/aplikační server, systém správy databází (DBMS), aplikace, API a všechny komponenty, běhová prostředí a knihovny.</li>
+<li>neprovádíte pravidelně skenování zranitelností a neodebíráte bezpečnostní bulletiny vztahující se ke komponentám, které používáte.</li>
+<li>nemáte proces řízení změn nebo sledování změn v rámci svého dodavatelského řetězce, včetně sledování IDE, rozšíření IDE a aktualizací, změn v repozitáři kódu vaší organizace, sandboxů, repozitářů obrazů a knihoven, způsobu, jakým jsou artefakty vytvářeny a ukládány, atd. Každá část vašeho dodavatelského řetězce by měla být dokumentována, zejména změny.</li>
+<li>nemáte hardenovanou každou část svého dodavatelského řetězce, se zvláštním zaměřením na řízení přístupu a uplatňování nejmenších oprávnění.</li>
+<li>vaše systémy dodavatelského řetězce nemají žádné oddělení rolí. Žádná jednotlivá osoba by neměla být schopna napsat kód a povýšit jej až do produkce bez dohledu jiné lidské osoby.</li>
+<li>komponenty z nedůvěryhodných zdrojů, napříč jakoukoli částí technologického stacku, jsou používány v produkčních prostředích nebo mohou mít na produkční prostředí dopad.</li>
+<li>neopravujete nebo neupgradujete základní platformu, frameworky a závislosti včasným způsobem založeným na riziku. K tomu běžně dochází v prostředích, kde je záplatování měsíčním nebo čtvrtletním úkolem v rámci řízení změn, což ponechává organizace vystavené dnům nebo měsícům zbytečné expozice před opravou zranitelností.</li>
+<li>vývojáři softwaru netestují kompatibilitu aktualizovaných, upgradovaných nebo záplatovaných knihoven.</li>
+<li>nezabezpečujete konfigurace každé části svého systému (viz <a href="https://owasp.org/Top10/2025/A02_2025-Security_Misconfiguration/">A02:2025 - Chybná bezpečnostní konfigurace (Security Misconfiguration)</a>).</li>
+<li>vaše CI/CD pipeline má slabší zabezpečení než systémy, které sestavuje a nasazuje, zejména pokud je složitá.</li>
+</ul>
+<h2 id="jak-tomu-zabranit">Jak tomu zabránit</h2>
+<p>Měl by být zaveden proces správy záplat za účelem:</p>
+<ul>
+<li>Centrálně generovat a spravovat Software Bill of Materials (SBOM) celého vašeho softwaru.</li>
+<li>Sledovat nejen vaše přímé závislosti, ale také jejich (tranzitivní) závislosti, a tak dále.</li>
+<li>Snižovat útočnou plochu odstraňováním nepoužívaných závislostí, zbytečných funkcí, komponent, souborů a dokumentace.</li>
+<li>Průběžně inventarizovat verze komponent na straně klienta i na straně serveru (např. frameworků, knihoven) a jejich závislostí pomocí nástrojů, jako jsou OWASP Dependency Track, OWASP Dependency Check, retire.js atd.</li>
+<li>Průběžně monitorovat zdroje, jako jsou Common Vulnerabilities and Exposures (CVE), National Vulnerability Database (NVD) a <a href="https://osv.dev/">Open Source Vulnerabilities (OSV)</a>, z hlediska zranitelností v komponentách, které používáte. K automatizaci procesu používat analýzu složení softwaru, nástroje pro dodavatelský řetězec softwaru nebo bezpečnostně zaměřené nástroje SBOM. Odebírat upozornění na bezpečnostní zranitelnosti související s komponentami, které používáte.</li>
+<li>Získávat komponenty pouze z oficiálních (důvěryhodných) zdrojů přes zabezpečené odkazy. Upřednostňovat podepsané balíčky, aby se snížila pravděpodobnost zahrnutí pozměněné, škodlivé komponenty (viz <a href="https://owasp.org/Top10/2025/A08_2025-Software_or_Data_Integrity_Failures/">A08:2025-Software and Data Integrity Failures</a>).</li>
+<li>Záměrně volit, kterou verzi závislosti používáte, a upgradovat pouze tehdy, když je to potřeba.</li>
+<li>Monitorovat knihovny a komponenty, které nejsou udržované nebo nevytvářejí bezpečnostní záplaty pro starší verze. Pokud záplatování není možné, zvážit migraci na alternativu. Pokud to není možné, zvážit nasazení virtuální záplaty za účelem monitorování, detekce nebo ochrany proti zjištěnému problému.</li>
+<li>Pravidelně aktualizovat vaše CI/CD, IDE a jakékoli další vývojářské nástroje.</li>
+<li>Vyhnout se nasazování aktualizací na všechny systémy současně. Používat postupná zavádění nebo kanárková nasazení k omezení expozice v případě kompromitace důvěryhodného dodavatele.</li>
+</ul>
+<p>Měl by být zaveden proces řízení změn nebo systém sledování za účelem sledování změn v:</p>
+<ul>
+<li>Nastaveních CI/CD (všechny nástroje pro sestavení a pipeline)</li>
+<li>Repozitářích kódu</li>
+<li>Sandboxových oblastech</li>
+<li>Vývojářských IDE</li>
+<li>Nástrojích SBOM a vytvořených artefaktech</li>
+<li>Logovacích systémech a logách</li>
+<li>Integracích třetích stran, například SaaS</li>
+<li>Repozitářích artefaktů</li>
+<li>Registrech kontejnerů</li>
+</ul>
+<p>Zodolnit (hardenovat) následující systémy, což zahrnuje povolení MFA a uzamčení IAM:</p>
+<ul>
+<li>Váš repozitář kódu (což zahrnuje neukládání tajných údajů do repozitáře, ochranu větví, zálohy)</li>
+<li>Vývojářské pracovní stanice (pravidelné záplatování, MFA, monitorování a další)</li>
+<li>Váš server pro sestavení a CI/CD (oddělení povinností, řízení přístupu, podepsaná sestavení, tajné údaje s rozsahem na prostředí, logy umožňující zjistit manipulaci, další)</li>
+<li>Vaše artefakty (zajištění integrity prostřednictvím provenience, podepisování a časového razítkování, povyšování artefaktů namísto opětovného sestavování pro každé prostředí, zajištění neměnnosti sestavení)</li>
+<li>Infrastrukturu jako kód (spravovanou stejně jako veškerý kód, včetně používání PR a správy verzí)</li>
+</ul>
+<p>Každá organizace musí zajistit průběžný plán monitorování, triáže a aplikování aktualizací nebo změn konfigurace po dobu životnosti aplikace nebo portfolia.</p>
+<h2 id="priklady-scenaru-utoku">Příklady scénářů útoků</h2>
+<p><strong>Scénář #1:</strong> Důvěryhodný dodavatel je kompromitován malwarem, což vede ke kompromitaci vašich počítačových systémů při upgradu. Nejznámějším příkladem je pravděpodobně:</p>
+<ul>
+<li>Kompromitace SolarWinds v roce 2019, která vedla ke kompromitaci přibližně 18 000 organizací.  <a href="https://www.npr.org/2021/04/16/985439655/a-worst-nightmare-cyberattack-the-untold-story-of-the-solarwinds-hack">https://www.npr.org/2021/04/16/985439655/a-worst-nightmare-cyberattack-the-untold-story-of-the-solarwinds-hack</a></li>
+</ul>
+<p><strong>Scénář #2:</strong> Důvěryhodný dodavatel je kompromitován tak, že se chová škodlivě pouze za určité podmínky.</p>
+<ul>
+<li>Krádež 1,5 miliardy USD z platformy Bybit v roce 2025 byla způsobena útokem na <a href="https://www.sygnia.co/blog/sygnia-investigation-bybit-hack/">dodavatelský řetězec v softwaru peněženky</a>, který se spustil pouze tehdy, když byla používána cílová peněženka.</li>
+</ul>
+<p><strong>Scénář #3:</strong> <a href="https://www.cisa.gov/news-events/alerts/2025/09/23/widespread-supply-chain-compromise-impacting-npm-ecosystem">Útok na dodavatelský řetězec Shai-Hulud</a> v roce 2025 byl prvním úspěšným samostatně se šířícím červem npm. Útoky vložily škodlivé verze populárních balíčků, které pomocí post-install skriptu shromažďovaly a exfiltrovaly citlivá data do veřejných repozitářů GitHub. Malware také detekoval tokeny npm v prostředí oběti a automaticky je používal k nahrání škodlivých verzí jakéhokoli dostupného balíčku. Červ dosáhl více než 500 verzí balíčků, než byl zastaven službou npm. Tento útok na dodavatelský řetězec byl pokročilý, rychle se šířící a způsobující škody a zaměřením na vývojářské stroje prokázal, že samotní vývojáři jsou nyní prvořadými cíli útoků na dodavatelský řetězec.</p>
+<p><strong>Scénář #4:</strong> Komponenty obvykle běží se stejnými oprávněními jako samotná aplikace, takže nedostatky v jakékoli komponentě mohou vést k závažnému dopadu. Takové nedostatky mohou být neúmyslné (např. chyba v kódu) nebo úmyslné (např. zadní vrátka v komponentě). Některé příklady objevených zneužitelných zranitelností komponent jsou:</p>
+<ul>
+<li>CVE-2017-5638, zranitelnost vzdáleného spuštění kódu ve Struts 2, která umožňuje spuštění libovolného kódu na serveru, byla označována za příčinu významných narušení.</li>
+<li>CVE-2021-44228 („Log4Shell“), zero-day zranitelnost vzdáleného spuštění kódu v Apache Log4j, byla dávána za vinu ransomwaru, kryptominingu a dalším útočným kampaním.</li>
+</ul>
+<h2 id="reference">Reference</h2>
+<ul>
+<li><a href="https://owasp.org/www-project-application-security-verification-standard/">OWASP Application Security Verification Standard: V15 Secure Coding and Architecture</a></li>
+<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/Dependency_Graph_SBOM_Cheat_Sheet.html">OWASP Cheat Sheet Series: Dependency Graph SBOM</a></li>
+<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/Vulnerable_Dependency_Management_Cheat_Sheet.html">OWASP Cheat Sheet Series: Vulnerable Dependency Management</a></li>
+<li><a href="https://owasp.org/www-project-dependency-track/">OWASP Dependency-Track</a></li>
+<li><a href="https://owasp.org/www-project-cyclonedx/">OWASP CycloneDX</a></li>
+<li><a href="https://owasp-aasvs.readthedocs.io/en/latest/v1.html">OWASP Application Security Verification Standard: V1 Architecture, design and threat modelling</a></li>
+<li><a href="https://owasp.org/www-project-dependency-check/">OWASP Dependency Check (for Java and .NET libraries)</a></li>
+<li>OWASP Testing Guide - Map Application Architecture (OTG-INFO-010)</li>
+<li><a href="https://owasp.org/www-community/Virtual_Patching_Best_Practices">OWASP Virtual Patching Best Practices</a></li>
+<li><a href="https://www.scribd.com/document/105692739/JeffWilliamsPreso-Sm">The Unfortunate Reality of Insecure Libraries</a></li>
+<li><a href="https://www.cve.org">MITRE Common Vulnerabilities and Exposures (CVE) search</a></li>
+<li><a href="https://nvd.nist.gov">National Vulnerability Database (NVD)</a></li>
+<li><a href="https://retirejs.github.io/retire.js/">Retire.js for detecting known vulnerable JavaScript libraries</a></li>
+<li><a href="https://github.com/advisories">GitHub Advisory Database</a></li>
+<li>Ruby Libraries Security Advisory Database and Tools</li>
+<li><a href="https://safecode.org/publication/SAFECode_Software_Integrity_Controls0610.pdf">SAFECode Software Integrity Controls (PDF)</a></li>
+<li><a href="https://thehackernews.com/2025/10/self-spreading-glassworm-infects-vs.html">Glassworm supply chain attack</a></li>
+<li><a href="https://thehackernews.com/2025/10/phantomraven-malware-found-in-126-npm.html">PhantomRaven supply chain attack campaign</a></li>
+</ul>
+<h2 id="seznam-mapovanych-cwe">Seznam mapovaných CWE</h2>
+<ul>
+<li>
+<p><a href="https://cwe.mitre.org/data/definitions/447.html">CWE-447 Use of Obsolete Function</a></p>
+</li>
+<li>
+<p><a href="https://cwe.mitre.org/data/definitions/1035.html">CWE-1035 2017 Top 10 A9: Using Components with Known Vulnerabilities</a></p>
+</li>
+<li>
+<p><a href="https://cwe.mitre.org/data/definitions/1104.html">CWE-1104 Use of Unmaintained Third Party Components</a></p>
+</li>
+<li>
+<p><a href="https://cwe.mitre.org/data/definitions/1329.html">CWE-1329 Reliance on Component That is Not Updateable</a></p>
+</li>
+<li>
+<p><a href="https://cwe.mitre.org/data/definitions/1357.html">CWE-1357 Reliance on Insufficiently Trustworthy Component</a></p>
+</li>
+<li>
+<p><a href="https://cwe.mitre.org/data/definitions/1395.html">CWE-1395 Dependency on Vulnerable Third-Party Component</a></p>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © Copyright 2021-2025 - OWASP Top 10 Team - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "search.suggest"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Zkop\u00edrov\u00e1no do schr\u00e1nky", "clipboard.copy": "Kop\u00edrovat do schr\u00e1nky", "search.result.more.one": "1 dal\u0161\u00ed na t\u00e9to str\u00e1nce", "search.result.more.other": "# v\u00edce na t\u00e9to str\u00e1nce", "search.result.none": "Nenalezeny \u017e\u00e1dn\u00e9 dokumenty", "search.result.one": "Nalezen\u00fd dokument: 1", "search.result.other": "Nalezen\u00e9 dokumenty: #", "search.result.placeholder": "Pi\u0161te co se m\u00e1 vyhledat", "search.result.term.missing": "Chyb\u011bj\u00edc\u00ed", "select.version": "Vyberte verzi"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+    
+  </body>
+</html>

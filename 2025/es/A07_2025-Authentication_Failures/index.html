@@ -1,0 +1,1366 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="OWASP Top 10:2025">
+      
+      
+      
+        <link rel="canonical" href="https://owasp.org/Top10/2025/es/A07_2025-Authentication_Failures/">
+      
+      
+        <link rel="prev" href="../A06_2025-Insecure_Design/">
+      
+      
+        <link rel="next" href="../A08_2025-Software_or_Data_Integrity_Failures/">
+      
+      
+        
+          <link rel="alternate" href="../../A07_2025-Authentication_Failures/" hreflang="en">
+        
+          <link rel="alternate" href="../../cs/" hreflang="cs  material_alternate">
+        
+          <link rel="alternate" href="./" hreflang="es">
+        
+          <link rel="alternate" href="../../it/A07_2025-Authentication_Failures/" hreflang="it">
+        
+          <link rel="alternate" href="../../ja/A07_2025-Authentication_Failures/" hreflang="ja">
+        
+          <link rel="alternate" href="../../ko/A07_2025-Authentication_Failures/" hreflang="ko">
+        
+          <link rel="alternate" href="../../fa/A07_2025-Authentication_Failures/" hreflang="fa">
+        
+          <link rel="alternate" href="../../pt-BR/A07_2025-Authentication_Failures/" hreflang="pt-BR">
+        
+          <link rel="alternate" href="../../zh-Hant/A07_2025-Authentication_Failures/" hreflang="zh-Hant">
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>A07 Fallos de Autenticación - OWASP Top 10:2025</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#a072025-fallas-de-autenticacion" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../" title="OWASP Top 10:2025" class="md-header__button md-logo" aria-label="OWASP Top 10:2025" data-md-component="logo">
+      
+  <img src="../../assets/OWASP_Logo_Transp.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OWASP Top 10:2025
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              A07 Fallos de Autenticación
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Seleccionar idioma">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../A07_2025-Authentication_Failures/" hreflang="en" class="md-select__link">
+              en - English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../cs/" hreflang="cs  material_alternate" class="md-select__link">
+              cs - Česky
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="es" class="md-select__link">
+              es - Español
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../it/A07_2025-Authentication_Failures/" hreflang="it" class="md-select__link">
+              it - Italiano
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../ja/A07_2025-Authentication_Failures/" hreflang="ja" class="md-select__link">
+              ja - 日本語 (Japanese)
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../ko/A07_2025-Authentication_Failures/" hreflang="ko" class="md-select__link">
+              ko - 한국어 (Korean)
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../fa/A07_2025-Authentication_Failures/" hreflang="fa" class="md-select__link">
+              fa - فارسی (Persian/Fārsi)
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../pt-BR/A07_2025-Authentication_Failures/" hreflang="pt-BR" class="md-select__link">
+              pt-BR - (Português Brasil)
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../zh-Hant/A07_2025-Authentication_Failures/" hreflang="zh-Hant" class="md-select__link">
+              zh-Hant - 简体中文
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/OWASP/Top10" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    OWASP/Top10
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../" title="OWASP Top 10:2025" class="md-nav__button md-logo" aria-label="OWASP Top 10:2025" data-md-component="logo">
+      
+  <img src="../../assets/OWASP_Logo_Transp.png" alt="logo">
+
+    </a>
+    OWASP Top 10:2025
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/OWASP/Top10" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    OWASP/Top10
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x00_2025-Introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x01_2025-About_OWASP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Acerca de OWASP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x02_2025-What_are_Application_Security_Risks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ¿Qué son los Riesgos de Seguridad en Aplicaciones?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x03_2025-Establishing_a_Modern_Application_Security_Program/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Estableciendo un Programa Moderno de Seguridad en Aplicaciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lista Top 10:2025
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Lista Top 10:2025
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A01_2025-Broken_Access_Control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A01 Control de Acceso Roto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A02_2025-Security_Misconfiguration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A02 Configuración de Seguridad Incorrecta
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A03_2025-Software_Supply_Chain_Failures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A03 Fallos en la Cadena de Suministro de Software
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A04_2025-Cryptographic_Failures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A04 Fallos Criptográficos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A05_2025-Injection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A05 Inyección
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A06_2025-Insecure_Design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A06 Diseño Inseguro
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A07 Fallos de Autenticación
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A07 Fallos de Autenticación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#antecedentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Antecedentes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tabla-de-puntuacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tabla de puntuación
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#descripcion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Descripción
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#como-prevenir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cómo prevenir
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplos-de-escenarios-de-ataque" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplos de escenarios de ataque
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Referencias
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lista-de-cwes-mapeadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lista de CWEs Mapeadas
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A08_2025-Software_or_Data_Integrity_Failures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A08 Fallos de Integridad de Software o Datos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A09_2025-Security_Logging_and_Alerting_Failures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A09 Fallos en el Registro y Alertas de Seguridad
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A10_2025-Mishandling_of_Exceptional_Conditions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A10 Manejo Incorrecto de Condiciones Excepcionales
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../X01_2025-Next_Steps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Próximos Pasos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#antecedentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Antecedentes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tabla-de-puntuacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tabla de puntuación
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#descripcion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Descripción
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#como-prevenir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cómo prevenir
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplos-de-escenarios-de-ataque" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplos de escenarios de ataque
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Referencias
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lista-de-cwes-mapeadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lista de CWEs Mapeadas
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="a072025-fallas-de-autenticacion">A07:2025 Fallas de Autenticación <img align="right" alt="icon" src="../../assets/TOP_10_Icons_Final_Identification_and_Authentication_Failures.png" style="height:80px;width:80px" /></h1>
+<h2 id="antecedentes">Antecedentes</h2>
+<p>Las fallas de Autenticación mantienen su posición en el puesto #7 con un ligero cambio de nombre para reflejar con mayor precisión las 36 CWEs de esta categoría. A pesar de los beneficios de los marcos de trabajo estandarizados, esta categoría ha mantenido su rango #7 desde 2021. Las CWEs notables incluidas son <em>CWE-259: Uso de contraseñas codificadas, CWE-297: Validación incorrecta de certificado con discrepancia de host, CWE-287: Autenticación incorrecta, CWE-384: Fijación de sesión y CWE-798: Uso de credenciales codificadas</em>.</p>
+<h2 id="tabla-de-puntuacion">Tabla de puntuación</h2>
+<table>
+  <tr>
+   <td>CWEs Mapeadas
+   </td>
+   <td>Tasa Máxima de Incidencia
+   </td>
+   <td>Tasa Promedio de Incidencia
+   </td>
+   <td>Cobertura Máxima
+   </td>
+   <td>Cobertura Promedio
+   </td>
+   <td>Promedio Ponderado de Explotación
+   </td>
+   <td>Promedio Ponderado de Impacto
+   </td>
+   <td>Ocurrencias Totales
+   </td>
+   <td>CVEs Totales
+   </td>
+  </tr>
+  <tr>
+   <td>36
+   </td>
+   <td>15.80%
+   </td>
+   <td>2.92%
+   </td>
+   <td>100.00%
+   </td>
+   <td>37.14%
+   </td>
+   <td>7.69
+   </td>
+   <td>4.44
+   </td>
+   <td>1,120,673
+   </td>
+   <td>7,147
+   </td>
+  </tr>
+</table>
+
+<h2 id="descripcion">Descripción</h2>
+<p>Esta vulnerabilidad está presente cuando un atacante es capaz de engañar a un sistema para que reconozca como legítimo a un usuario inválido o incorrecto. Puede haber debilidades de autenticación si la aplicación:</p>
+<ul>
+<li>
+<p>Permite ataques automatizados como el relleno de credenciales (credential stuffing), donde el atacante dispone de una lista filtrada de nombres de usuario y contraseñas válidos. Recientemente, este tipo de ataque se ha ampliado para incluir ataques de contraseñas híbridos (también conocidos como ataques de aspersión de contraseñas o password spray), en los que el atacante utiliza variaciones o incrementos de credenciales comprometidas para obtener acceso; por ejemplo, probando Password1!, Password2!, Password3!, y así sucesivamente.</p>
+</li>
+<li>
+<p>Permite ataques de fuerza bruta u otros ataques automatizados y programados (scripts) que no se bloquean rápidamente.</p>
+</li>
+<li>
+<p>Permite contraseñas predeterminadas, débiles o muy conocidas, como "Password1" o un nombre de usuario "admin" con una contraseña "admin".</p>
+</li>
+<li>
+<p>Permite a los usuarios crear nuevas cuentas con credenciales que ya se sabe que han sido vulneradas.</p>
+</li>
+<li>
+<p>Permite el uso de procesos de recuperación de credenciales y de olvido de contraseña débiles o ineficaces, como las "preguntas de seguridad basadas en el conocimiento", que no pueden hacerse seguras.</p>
+</li>
+<li>
+<p>Utiliza almacenes de datos de contraseñas en texto claro, cifrados o con hash débil (ver <a href="https://owasp.org/Top10/2025/A04_2025-Cryptographic_Failures/">A04:2025-Fallas Criptográficas</a>).</p>
+</li>
+<li>
+<p>Carece de autenticación de múltiples factores (MFA) o esta es ineficaz.</p>
+</li>
+<li>
+<p>Permite el uso de alternativas (fallbacks) débiles o ineficaces si la autenticación de múltiples factores no está disponible.</p>
+</li>
+<li>
+<p>Expone el identificador de sesión en la URL, en un campo oculto o en otra ubicación insegura accesible para el cliente.</p>
+</li>
+<li>
+<p>Reutiliza el mismo identificador de sesión después de un inicio de sesión exitoso.</p>
+</li>
+<li>
+<p>No invalida correctamente las sesiones de usuario o los tokens de autenticación (principalmente los tokens de inicio de sesión único (SSO)) durante el cierre de sesión o tras un periodo de inactividad.</p>
+</li>
+<li>
+<p>No valida correctamente el alcance (scope) y la audiencia prevista de las credenciales proporcionadas.</p>
+</li>
+</ul>
+<h2 id="como-prevenir">Cómo prevenir</h2>
+<ul>
+<li>
+<p>Siempre que sea posible, implementar y aplicar el uso de la autenticación de múltiples factores (MFA) para evitar ataques automatizados de relleno de credenciales, fuerza bruta y reutilización de credenciales robadas.</p>
+</li>
+<li>
+<p>Siempre que sea posible, fomentar y habilitar el uso de gestores de contraseñas para ayudar a los usuarios a tomar mejores decisiones.</p>
+</li>
+<li>
+<p>No distribuir ni desplegar aplicaciones con credenciales predeterminadas, especialmente para los usuarios administradores.</p>
+</li>
+<li>
+<p>Implementar comprobaciones de contraseñas débiles, como probar las contraseñas nuevas o modificadas contra la lista de las 10,000 peores contraseñas.</p>
+</li>
+<li>
+<p>Durante la creación de nuevas cuentas y los cambios de contraseña, validar contra listas de credenciales que se sabe han sido vulneradas (por ejemplo: utilizando <a href="https://haveibeenpwned.com">haveibeenpwned.com</a>).</p>
+</li>
+<li>
+<p>Alinear la longitud, la complejidad y las políticas de rotación de las contraseñas con las <a href="https://pages.nist.gov/800-63-3/sp800-63b.html#:~:text=5.1.1%20Memorized%20Secrets">directrices del Instituto Nacional de Estándares y Tecnología (NIST) 800-63b en la sección 5.1.1</a> para Secretos Memorizados u otras políticas de contraseñas modernas y basadas en evidencias.</p>
+</li>
+<li>
+<p>No obligar a los seres humanos a rotar las contraseñas a menos que se sospeche de una vulneración. Si se sospecha de una vulneración, forzar el restablecimiento de las contraseñas de inmediato.</p>
+</li>
+<li>
+<p>Asegurarse de que las rutas de registro, recuperación de credenciales y API estén protegidas contra ataques de enumeración de cuentas utilizando los mismos mensajes para todos los resultados ("Nombre de usuario o contraseña inválidos").</p>
+</li>
+<li>
+<p>Limitar o retrasar de forma incremental los intentos fallidos de inicio de sesión, pero teniendo cuidado de no crear un escenario de denegación de servicio. Registrar todas las fallas y alertar a los administradores cuando se detecten o sospechen ataques de relleno de credenciales, fuerza bruta u otros.</p>
+</li>
+<li>
+<p>Utilizar un gestor de sesiones integrado, seguro y del lado del servidor que genere un nuevo ID de sesión aleatorio con alta entropía después del inicio de sesión. Los identificadores de sesión no deben estar en la URL, deben almacenarse de forma segura en una cookie segura e invalidarse tras el cierre de sesión, por inactividad y tras tiempos de espera absolutos.</p>
+</li>
+<li>
+<p>Idealmente, utilizar un sistema ya establecido y de confianza para gestionar la autenticación, la identidad y la gestión de sesiones. Transferir este riesgo siempre que sea posible adquiriendo y utilizando un sistema robusto y bien probado.</p>
+</li>
+<li>
+<p>Verificar el uso previsto de las credenciales proporcionadas; por ejemplo, para los JWT, validar las afirmaciones (<em>claims</em>) <code>aud</code>, <code>iss</code> y los alcances (scopes).</p>
+</li>
+</ul>
+<h2 id="ejemplos-de-escenarios-de-ataque">Ejemplos de escenarios de ataque</h2>
+<p><strong>Escenario #1:</strong> El relleno de credenciales (credential stuffing), es decir, el uso de listas de combinaciones conocidas de nombre de usuario y contraseña, es actualmente un ataque muy común. Recientemente, se ha descubierto que los atacantes "incrementan" o ajustan de otro modo las contraseñas, basándose en el comportamiento humano común. Por ejemplo, cambiando 'Invierno2025' por 'Invierno2026', o 'AmoAMiPerro6' por 'AmoAMiPerro7' o 'AmoAMiPerro5'. Este ajuste de los intentos de contraseña se denomina ataque de relleno de credenciales híbrido o ataque de aspersión de contraseñas (password spray), y pueden ser incluso más eficaces que la versión tradicional. Si una aplicación no implementa defensas contra amenazas automatizadas (fuerza bruta, scripts o bots) o relleno de credenciales, la aplicación puede utilizarse como un "oráculo de contraseñas" para determinar si las credenciales son válidas y obtener acceso no autorizado.</p>
+<p><strong>Escenario #2:</strong> La mayoría de los ataques de autenticación con éxito se producen debido al uso continuado de las contraseñas como único factor de autenticación. Lo que antes se consideraba una buena práctica, como los requisitos de rotación y complejidad de las contraseñas, incita a los usuarios tanto a reutilizar contraseñas como a usar contraseñas débiles. Se recomienda a las organizaciones que dejen de aplicar estas prácticas, según la norma NIST 800-63, y que impongan el uso de la autenticación de múltiples factores en todos los sistemas importantes.</p>
+<p><strong>Escenario #3:</strong> Los tiempos de espera de las sesiones de la aplicación no se han implementado correctamente. Un usuario utiliza un ordenador público para acceder a una aplicación y, en lugar de seleccionar "cerrar sesión", simplemente cierra la pestaña del navegador y se marcha. Otro ejemplo de esto es si una sesión de inicio de sesión único (SSO) no puede cerrarse mediante un cierre de sesión único (SLO). Es decir, un único inicio de sesión le permite acceder, por ejemplo, a su lector de correo, a su sistema de documentos y a su sistema de chat. Pero el cierre de sesión solo se produce en el sistema actual. Si un atacante utiliza el mismo navegador después de que la víctima crea que ha cerrado la sesión con éxito, pero con el usuario todavía autenticado en algunas de las aplicaciones, podrá acceder a la cuenta de la víctima. El mismo problema puede ocurrir en oficinas y empresas cuando no se ha salido correctamente de una aplicación sensible y un colega tiene acceso (temporal) al ordenador desbloqueado.</p>
+<h2 id="referencias">Referencias</h2>
+<ul>
+<li>
+<p><a href="https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html">OWASP Authentication Cheat Sheet</a></p>
+</li>
+<li>
+<p><a href="https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/stable-en/01-introduction/05-introduction">OWASP Secure Coding Practices</a></p>
+</li>
+</ul>
+<h2 id="lista-de-cwes-mapeadas">Lista de CWEs Mapeadas</h2>
+<ul>
+<li>
+<p><a href="https://cwe.mitre.org/data/definitions/258.html">CWE-258 Contraseña Vacía en Archivo de Configuración (Empty Password in Configuration File)</a></p>
+</li>
+<li>
+<p><a href="https://cwe.mitre.org/data/definitions/259.html">CWE-259 Uso de Contraseña Codificada de Forma Rígida (Use of Hard-coded Password)</a></p>
+</li>
+<li>
+<p><a href="https://cwe.mitre.org/data/definitions/287.html">CWE-287 Autenticación Incorrecta (Improper Authentication)</a></p>
+</li>
+<li>
+<p><a href="https://cwe.mitre.org/data/definitions/288.html">CWE-288 Elusión de Autenticación Mediante una Ruta o Canal Alternativo (Authentication Bypass Using an Alternate Path or Channel)</a></p>
+</li>
+<li>
+<p><a href="https://cwe.mitre.org/data/definitions/289.html">CWE-289 Elusión de Autenticación por Nombre Alternativo (Authentication Bypass by Alternate Name)</a></p>
+</li>
+<li>
+<p><a href="https://cwe.mitre.org/data/definitions/290.html">CWE-290 Elusión de Autenticación por Suplantación de Identidad (Authentication Bypass by Spoofing)</a></p>
+</li>
+<li>
+<p><a href="https://cwe.mitre.org/data/definitions/291.html">CWE-291 Dependencia de la Dirección IP para la Autenticación (Reliance on IP Address for Authentication)</a></p>
+</li>
+<li>
+<p><a href="https://cwe.mitre.org/data/definitions/293.html">CWE-293 Uso del Campo Referer para la Autenticación (Using Referer Field for Authentication)</a></p>
+</li>
+<li>
+<p><a href="https://cwe.mitre.org/data/definitions/294.html">CWE-294 Elusión de Autenticación por Captura y Repetición (Authentication Bypass by Capture-replay)</a></p>
+</li>
+<li>
+<p><a href="https://cwe.mitre.org/data/definitions/295.html">CWE-295 Validación Inadecuada del Certificado (Improper Certificate Validation)</a></p>
+</li>
+<li>
+<p><a href="https://cwe.mitre.org/data/definitions/297.html">CWE-297 Validación Inadecuada del Certificado con Discrepancia de Host (Improper Validation of Certificate with Host Mismatch)</a></p>
+</li>
+<li>
+<p><a href="https://cwe.mitre.org/data/definitions/298.html">CWE-298 Validación Inadecuada de la Caducidad del Certificado (Improper Validation of Certificate Expiration)</a></p>
+</li>
+<li>
+<p><a href="https://cwe.mitre.org/data/definitions/299.html">CWE-299 Validación Inadecuada de la Revocación del Certificado (Improper Check for Certificate Revocation)</a></p>
+</li>
+<li>
+<p><a href="https://cwe.mitre.org/data/definitions/300.html">CWE-300 Canal Accesible por un No-Punto Final (Channel Accessible by Non-Endpoint)</a></p>
+</li>
+<li>
+<p><a href="https://cwe.mitre.org/data/definitions/302.html">CWE-302 Elusión de Autenticación por Datos Supuestamente Inmutables (Authentication Bypass by Assumed-Immutable Data)</a></p>
+</li>
+<li>
+<p><a href="https://cwe.mitre.org/data/definitions/303.html">CWE-303 Implementación Incorrecta del Algoritmo de Autenticación (Incorrect Implementation of Authentication Algorithm)</a></p>
+</li>
+<li>
+<p><a href="https://cwe.mitre.org/data/definitions/304.html">CWE-304 Falta de un Paso Crítico en la Autenticación (Missing Critical Step in Authentication)</a></p>
+</li>
+<li>
+<p><a href="https://cwe.mitre.org/data/definitions/305.html">CWE-305 Elusión de Autenticación por Debilidad Primaria (Authentication Bypass by Primary Weakness)</a></p>
+</li>
+<li>
+<p><a href="https://cwe.mitre.org/data/definitions/306.html">CWE-306 Falta de Autenticación para una Función Crítica (Missing Authentication for Critical Function)</a></p>
+</li>
+<li>
+<p><a href="https://cwe.mitre.org/data/definitions/307.html">CWE-307 Restricción Inadecuada de Intentos Excesivos de Autenticación (Improper Restriction of Excessive Authentication Attempts)</a></p>
+</li>
+<li>
+<p><a href="https://cwe.mitre.org/data/definitions/308.html">CWE-308 Uso de Autenticación de Factor Único (Use of Single-factor Authentication)</a></p>
+</li>
+<li>
+<p><a href="https://cwe.mitre.org/data/definitions/309.html">CWE-309 Uso del Sistema de Contraseñas para la Autenticación Primaria (Use of Password System for Primary Authentication)</a></p>
+</li>
+<li>
+<p><a href="https://cwe.mitre.org/data/definitions/346.html">CWE-346 Error de Validación de Origen (Origin Validation Error)</a></p>
+</li>
+<li>
+<p><a href="https://cwe.mitre.org/data/definitions/350.html">CWE-350 Dependencia de la Resolución DNS Inversa para una Acción Crítica de Seguridad (Reliance on Reverse DNS Resolution for a Security-Critical Action)</a></p>
+</li>
+<li>
+<p><a href="https://cwe.mitre.org/data/definitions/384.html">CWE-384 Fijación de Sesión (Session Fixation)</a></p>
+</li>
+<li>
+<p><a href="https://cwe.mitre.org/data/definitions/521.html">CWE-521 Requisitos de Contraseña Débiles (Weak Password Requirements)</a></p>
+</li>
+<li>
+<p><a href="https://cwe.mitre.org/data/definitions/613.html">CWE-613 Expiración de Sesión Insuficiente (Insufficient Session Expiration)</a></p>
+</li>
+<li>
+<p><a href="https://cwe.mitre.org/data/definitions/620.html">CWE-620 Cambio de Contraseña no Verificado (Unverified Password Change)</a></p>
+</li>
+<li>
+<p><a href="https://cwe.mitre.org/data/definitions/640.html">CWE-640 Mecanismo de Recuperación de Contraseña Débil (Weak Password Recovery Mechanism for Forgotten Password)</a></p>
+</li>
+<li>
+<p><a href="https://cwe.mitre.org/data/definitions/798.html">CWE-798 Uso de Credenciales Codificadas de Forma Rígida (Use of Hard-coded Credentials)</a></p>
+</li>
+<li>
+<p><a href="https://cwe.mitre.org/data/definitions/940.html">CWE-940 Verificación Inadecuada del Origen de un Canal de Comunicación (Improper Verification of Source of a Communication Channel)</a></p>
+</li>
+<li>
+<p><a href="https://cwe.mitre.org/data/definitions/941.html">CWE-941 Destino Especificado Incorrectamente en un Canal de Comunicación (Incorrectly Specified Destination in a Communication Channel)</a></p>
+</li>
+<li>
+<p><a href="https://cwe.mitre.org/data/definitions/1390.html">CWE-1390 Autenticación Débil (Weak Authentication)</a></p>
+</li>
+<li>
+<p><a href="https://cwe.mitre.org/data/definitions/1391.html">CWE-1391 Uso de Credenciales Débiles (Use of Weak Credentials)</a></p>
+</li>
+<li>
+<p><a href="https://cwe.mitre.org/data/definitions/1392.html">CWE-1392 Uso de Credenciales por Defecto (Use of Default Credentials)</a></p>
+</li>
+<li>
+<p><a href="https://cwe.mitre.org/data/definitions/1393.html">CWE-1393 Uso de Contraseña por Defecto (Use of Default Password)</a></p>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © Copyright 2021-2025 - OWASP Top 10 Team - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "search.suggest"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+    
+  </body>
+</html>

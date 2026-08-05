@@ -1,0 +1,1236 @@
+
+<!doctype html>
+<html lang="ja" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="OWASP Top 10:2025">
+      
+      
+      
+        <link rel="canonical" href="https://owasp.org/Top10/2025/ja/A04_2025-Cryptographic_Failures/">
+      
+      
+        <link rel="prev" href="../A03_2025-Software_Supply_Chain_Failures/">
+      
+      
+        <link rel="next" href="../A05_2025-Injection/">
+      
+      
+        
+          <link rel="alternate" href="../../A04_2025-Cryptographic_Failures/" hreflang="en">
+        
+          <link rel="alternate" href="../../cs/" hreflang="cs  material_alternate">
+        
+          <link rel="alternate" href="../../es/A04_2025-Cryptographic_Failures/" hreflang="es">
+        
+          <link rel="alternate" href="../../it/A04_2025-Cryptographic_Failures/" hreflang="it">
+        
+          <link rel="alternate" href="./" hreflang="ja">
+        
+          <link rel="alternate" href="../../ko/A04_2025-Cryptographic_Failures/" hreflang="ko">
+        
+          <link rel="alternate" href="../../fa/A04_2025-Cryptographic_Failures/" hreflang="fa">
+        
+          <link rel="alternate" href="../../pt-BR/A04_2025-Cryptographic_Failures/" hreflang="pt-BR">
+        
+          <link rel="alternate" href="../../zh-Hant/A04_2025-Cryptographic_Failures/" hreflang="zh-Hant">
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>A04 Cryptographic Failures - OWASP Top 10:2025</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#a042025-cryptographic-failures" class="md-skip">
+          コンテンツにスキップ
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="ヘッダー">
+    <a href="../" title="OWASP Top 10:2025" class="md-header__button md-logo" aria-label="OWASP Top 10:2025" data-md-component="logo">
+      
+  <img src="../../assets/OWASP_Logo_Transp.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OWASP Top 10:2025
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              A04 Cryptographic Failures
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="言語切り替え">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../A04_2025-Cryptographic_Failures/" hreflang="en" class="md-select__link">
+              en - English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../cs/" hreflang="cs  material_alternate" class="md-select__link">
+              cs - Česky
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../es/A04_2025-Cryptographic_Failures/" hreflang="es" class="md-select__link">
+              es - Español
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../it/A04_2025-Cryptographic_Failures/" hreflang="it" class="md-select__link">
+              it - Italiano
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="ja" class="md-select__link">
+              ja - 日本語 (Japanese)
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../ko/A04_2025-Cryptographic_Failures/" hreflang="ko" class="md-select__link">
+              ko - 한국어 (Korean)
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../fa/A04_2025-Cryptographic_Failures/" hreflang="fa" class="md-select__link">
+              fa - فارسی (Persian/Fārsi)
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../pt-BR/A04_2025-Cryptographic_Failures/" hreflang="pt-BR" class="md-select__link">
+              pt-BR - (Português Brasil)
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../zh-Hant/A04_2025-Cryptographic_Failures/" hreflang="zh-Hant" class="md-select__link">
+              zh-Hant - 简体中文
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="検索" placeholder="検索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="検索">
+        
+        <button type="reset" class="md-search__icon md-icon" title="クリア" aria-label="クリア" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            検索を初期化
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/OWASP/Top10" title="リポジトリへ" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    OWASP/Top10
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="ナビゲーション" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../" title="OWASP Top 10:2025" class="md-nav__button md-logo" aria-label="OWASP Top 10:2025" data-md-component="logo">
+      
+  <img src="../../assets/OWASP_Logo_Transp.png" alt="logo">
+
+    </a>
+    OWASP Top 10:2025
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/OWASP/Top10" title="リポジトリへ" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    OWASP/Top10
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x00_2025-Introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x01_2025-About_OWASP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About OWASP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x02_2025-What_are_Application_Security_Risks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    What are Application Security Risks?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x03_2025-Establishing_a_Modern_Application_Security_Program/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Establishing a Modern Application Security Program
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Top 10:2025 List
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Top 10:2025 List
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A01_2025-Broken_Access_Control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A01 Broken Access Control
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A02_2025-Security_Misconfiguration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A02 Security Misconfiguration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A03_2025-Software_Supply_Chain_Failures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A03 Software Supply Chain Failures
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A04 Cryptographic Failures
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A04 Cryptographic Failures
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#background" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        背景 (Background)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#score-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        スコアテーブル (Score Table)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        説明 (Description)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-prevent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        防止方法 (How to Prevent)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-attack-scenarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        攻撃シナリオの例 (Example Attack Scenarios)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        関連資料 (References)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cwe-list-of-mapped-cwes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        紐付けられた CWE 一覧 (List of Mapped CWEs)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A05_2025-Injection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A05 Injection
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A06_2025-Insecure_Design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A06 Insecure Design
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A07_2025-Authentication_Failures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A07 Authentication Failures
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A08_2025-Software_or_Data_Integrity_Failures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A08 Software or Data Integrity Failures
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A09_2025-Security_Logging_and_Alerting_Failures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A09 Security Logging and Alerting Failures
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A10_2025-Mishandling_of_Exceptional_Conditions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A10 Mishandling of Exceptional Conditions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../X01_2025-Next_Steps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Next Steps
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#background" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        背景 (Background)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#score-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        スコアテーブル (Score Table)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        説明 (Description)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-prevent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        防止方法 (How to Prevent)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-attack-scenarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        攻撃シナリオの例 (Example Attack Scenarios)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        関連資料 (References)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cwe-list-of-mapped-cwes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        紐付けられた CWE 一覧 (List of Mapped CWEs)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="a042025-cryptographic-failures">A04:2025 暗号化の不備 (Cryptographic Failures) <img align="right" alt="icon" src="../../assets/TOP_10_Icons_Final_Crypto_Failures.png" style="height:80px;width:80px" /></h1>
+<h2 id="background">背景 (Background)</h2>
+<p>本カテゴリは、前回から順位を2つ下げて第4位となりました。暗号化の欠如や強度の不足、暗号鍵の漏洩、およびそれらに関連するエラーに焦点を当てています。本リスクにおける主要な CWE (共通弱点一覧) のうち 3 つは、脆弱な擬似乱数生成器 (PRNG: Pseudo-Random Number Generator) の利用に関連するものです。具体的には、壊れた、あるいはリスクのある暗号アルゴリズムの利用 (CWE-327)、不十分なエントロピー (CWE-331)、乱数生成器における予測可能なアルゴリズムの利用 (CWE-1241)、および暗号学的に脆弱な擬似乱数生成器の利用 (CWE-338) が挙げられます。</p>
+<h2 id="score-table">スコアテーブル (Score Table)</h2>
+<table>
+  <tr>
+   <td>紐付けられた CWE 数</td>
+   <td>最大出現率</td>
+   <td>平均出現率</td>
+   <td>最大網羅率</td>
+   <td>平均網羅率</td>
+   <td>平均加重悪用スコア</td>
+   <td>平均加重影響スコア</td>
+   <td>出現総数</td>
+   <td>CVE 総数</td>
+  </tr>
+  <tr>
+   <td>32</td>
+   <td>13.77%</td>
+   <td>3.80%</td>
+   <td>100.00%</td>
+   <td>47.74%</td>
+   <td>7.23</td>
+   <td>3.90</td>
+   <td>1,665,348</td>
+   <td>2,185</td>
+  </tr>
+</table>
+
+<h2 id="description">説明 (Description)</h2>
+<p>原則として、伝送中のすべてのデータはトランスポート層 (OSI 第4層) で暗号化されるべきです。かつて課題であった CPU 負荷や証明書管理は、モダンな CPU が備える暗号化加速命令 (AES 命令セット等) や、LetsEncrypt.org のような自動化サービス、クラウドベンダーによる統合管理機能によって解決されています。</p>
+<p>トランスポート層の保護に加え、保存済みのデータ (Data at Rest) や、アプリケーション層 (OSI 第7層) での追加保護が必要なデータを特定することが重要です。特にパスワード、クレジットカード番号、健康記録、個人情報、および営業秘密は、GDPR (EU 一般データ保護規則) や PCI DSS (クレジットカード業界のデータセキュリティ基準) 等の法的・規制要件に基づき、厳重な保護が求められます。</p>
+<p>以下の項目を点検してください。</p>
+<ul>
+<li>デフォルト設定や古いコードにおいて、強度の低い暗号アルゴリズムやプロトコルを使用していないか。</li>
+<li>デフォルトの暗号鍵を使用していないか。鍵の強度は十分か。鍵を使い回していないか。適切な鍵管理やローテーションが行われているか。</li>
+<li>暗号鍵がソースコードリポジトリにコミットされていないか。</li>
+<li>暗号化が強制されているか。ブラウザのセキュリティヘッダー (HSTS 等) やディレクティブが欠落していないか。</li>
+<li>サーバー証明書およびトラストチェーン (信頼の連鎖) が適切に検証されているか。</li>
+<li>初期化ベクトル (IV) を無視、再利用していないか。暗号モードに適した方法で生成されているか。ECB (電子符号表モード) のような安全でないモードを使用していないか。認証付き暗号がより適切な場面で、単なる暗号化を使用していないか。</li>
+<li>パスワードを暗号鍵として使用する際、適切な鍵導出関数 (KDF) を介しているか。</li>
+<li>乱数生成器が暗号学的要件を満たしているか。シード値に十分なエントロピーや予測不能性が備わっているか。</li>
+<li>MD5 や SHA1 などの廃止されたハッシュ関数、あるいは非暗号学的ハッシュ関数を誤用していないか。</li>
+<li>暗号エラーメッセージやサイドチャネル情報 (パディング・オラクル攻撃等) が悪用される恐れはないか。</li>
+<li>暗号アルゴリズムのダウングレードや回避が可能になっていないか。</li>
+</ul>
+<p>参照: ASVS 暗号化 (V11)、安全な通信 (V12)、データ保護 (V14)</p>
+<h2 id="how-to-prevent">防止方法 (How to Prevent)</h2>
+<p>最低限、以下の対策を実施し、関連資料も参照してください。</p>
+<ul>
+<li><strong>データの分類とラベリング：</strong> アプリケーションが処理・保存・伝送するデータを分類し、ラベル付けしてください。プライバシー法、規制要件、またはビジネス上のニーズに基づき、どのデータが機密 (Sensitive) であるかを特定します。</li>
+<li><strong>HSM での鍵保存：</strong> 最も重要な鍵は、ハードウェアまたはクラウドベースの HSM (ハードウェア・セキュリティ・モジュール) に保存してください。</li>
+<li><strong>信頼できる暗号実装の使用：</strong> 可能な限り、十分に信頼されている暗号アルゴリズムの実装を使用してください。</li>
+<li><strong>不要な機密データの破棄：</strong> 機密データを不必要に保存しないでください。不要になったデータは速やかに破棄するか、PCI DSS 準拠のトークン化や切り詰め (Truncation) を実施してください。保存されていないデータは盗まれることもありません。</li>
+<li><strong>保存データの暗号化：</strong> すべての機密データは保存時 (Data at Rest) に暗号化してください。</li>
+<li><strong>最新かつ強力なアルゴリズムの使用：</strong> 最新かつ強力な標準アルゴリズム、プロトコル、鍵を使用し、適切な鍵管理を行ってください。</li>
+<li><strong>伝送データの暗号化：</strong> すべての伝送データは TLS 1.2 以上のプロトコルのみで暗号化してください。前方秘匿性 (FS: Forward Secrecy) を備えた暗号スイートを使用し、CBC (暗号ブロック連鎖) モードのサポートは停止してください。量子鍵交換アルゴリズムもサポートしてください。HTTPS 通信には HTTP Strict Transport Security (HSTS) を強制し、ツールですべてを検証してください。</li>
+<li><strong>キャッシュの無効化：</strong> 機密データを含むレスポンスについては、CDN、Web サーバー、およびアプリ側のキャッシュ (Redis 等) を無効化してください。</li>
+<li><strong>データ分類に応じた制御の適用：</strong> データ分類に応じて、必要なセキュリティ制御を適用してください。</li>
+<li><strong>非暗号化プロトコルの禁止：</strong> FTP や STARTTLS などの非暗号化プロトコルを使用しないでください。機密データの送信に SMTP を使用することも避けてください。</li>
+<li><strong>パスワードの安全な保存：</strong> パスワードには Argon2、yescrypt、scrypt、または PBKDF2-HMAC-SHA-512 のような、ソルト付きでワークファクター（遅延ファクター）を持つ適応型ハッシュ関数を使用してください。bcrypt を使用しているレガシーシステムについては、<a href="https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html">OWASP Cheat Sheet: Password Storage</a> で詳細なアドバイスを確認してください。</li>
+<li><strong>適切な IV の選択：</strong> 初期化ベクトル (IV) は暗号モードに適した方法で選択してください。ノンスを必要とするモードでは、IV に CSPRNG (暗号論的擬似乱数生成器) は不要です。いずれの場合も、固定鍵に対して同じ IV を二度使用しないでください。</li>
+<li><strong>認証付き暗号の採用：</strong> 単なる暗号化ではなく、常に認証付き暗号 (Authenticated Encryption) を使用してください。</li>
+<li><strong>暗号鍵の生成と保存：</strong> 鍵は暗号論的にランダムに生成し、メモリ上ではバイト配列として保存してください。パスワードを使用する場合は、適切なパスワードベースの鍵導出関数 (KDF) を介して鍵に変換する必要があります。</li>
+<li><strong>暗号乱数の適切な使用：</strong> 暗号乱数が適切に使用され、予測可能な方法や低エントロピーでシードされていないことを確認してください。ほとんどの最新 API では、開発者が CSPRNG をシードする必要はありません。</li>
+<li><strong>非推奨の暗号関数の回避：</strong> MD5、SHA1、CBC モード、PKCS #1 v1.5 などの非推奨の暗号関数、ブロック構築方式、パディングスキームを使用しないでください。</li>
+<li><strong>設定のセキュリティレビュー：</strong> 設定と構成がセキュリティ要件を満たしていることを、セキュリティ専門家やツール、またはその両方によってレビューしてください。</li>
+<li><strong>耐量子計算機暗号 (PQC) への備え：</strong> 2030年末までにリスクの高いシステムを保護できるよう、今から PQC (Post-Quantum Cryptography) への移行準備を進めてください。関連資料 (ENISA) を参照してください。</li>
+</ul>
+<h2 id="example-attack-scenarios">攻撃シナリオの例 (Example Attack Scenarios)</h2>
+<p><strong>シナリオ #1：</strong> あるサイトが全ページで TLS を強制していない、あるいは強度の低い暗号を許可している。攻撃者は、保護されていないワイヤレスネットワーク等でトラフィックを監視し、HTTPS から HTTP への接続ダウングレードを実行する。これにより、セッション Cookie を奪取して認証済みセッションを乗っ取り、ユーザーの個人データへのアクセスや改ざん（振込先の変更等）を行う。</p>
+<p><strong>シナリオ #2：</strong> パスワードデータベースが、ソルトなしの単純なハッシュ形式で保存されていた。ファイルアップロードの脆弱性を突いてデータベースが奪取された結果、レインボーテーブル (事前計算済みハッシュの一覧) を用いてすべてのパスワードが露呈した。たとえソルトが付与されていても、単純で高速なハッシュ関数は GPU によるクラッキングの標的となる。</p>
+<h2 id="references">関連資料 (References)</h2>
+<ul>
+<li><a href="https://top10proactive.owasp.org/archive/2024/the-top-10/c2-crypto/">OWASP Proactive Controls: C2: Use Cryptography to Protect Data</a></li>
+<li><a href="https://owasp.org/www-project-application-security-verification-standard">OWASP Application Security Verification Standard (ASVS):</a> <a href="https://github.com/OWASP/ASVS/blob/v5.0.0/5.0/en/0x20-V11-Cryptography.md">V11,</a> <a href="https://github.com/OWASP/ASVS/blob/v5.0.0/5.0/en/0x21-V12-Secure-Communication.md">12,</a> <a href="https://github.com/OWASP/ASVS/blob/v5.0.0/5.0/en/0x23-V14-Data-Protection.md">14</a></li>
+<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Protection_Cheat_Sheet.html">OWASP Cheat Sheet: Transport Layer Protection</a></li>
+<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/User_Privacy_Protection_Cheat_Sheet.html">OWASP Cheat Sheet: User Privacy Protection</a></li>
+<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html">OWASP Cheat Sheet: Password Storage</a></li>
+<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/Cryptographic_Storage_Cheat_Sheet.html">OWASP Cheat Sheet: Cryptographic Storage</a></li>
+<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html">OWASP Cheat Sheet: HSTS</a></li>
+<li><a href="https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/09-Testing_for_Weak_Cryptography/README">OWASP Testing Guide: Testing for weak cryptography</a></li>
+<li><a href="https://digital-strategy.ec.europa.eu/en/library/coordinated-implementation-roadmap-transition-post-quantum-cryptography">ENISA: A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography</a></li>
+<li><a href="https://www.nist.gov/news-events/news/2024/08/nist-releases-first-3-finalized-post-quantum-encryption-standards">NIST Releases First 3 Finalized Post-Quantum Encryption Standards</a></li>
+</ul>
+<h2 id="cwe-list-of-mapped-cwes">紐付けられた CWE 一覧 (List of Mapped CWEs)</h2>
+<ul>
+<li><a href="https://cwe.mitre.org/data/definitions/261.html">CWE-261 Weak Encoding for Password</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/296.html">CWE-296 Improper Following of a Certificate's Chain of Trust</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/319.html">CWE-319 Cleartext Transmission of Sensitive Information</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/320.html">CWE-320 Key Management Errors (Prohibited)</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/321.html">CWE-321 Use of Hard-coded Cryptographic Key</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/322.html">CWE-322 Key Exchange without Entity Authentication</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/323.html">CWE-323 Reusing a Nonce, Key Pair in Encryption</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/324.html">CWE-324 Use of a Key Past its Expiration Date</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/325.html">CWE-325 Missing Required Cryptographic Step</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/326.html">CWE-326 Inadequate Encryption Strength</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/327.html">CWE-327 Use of a Broken or Risky Cryptographic Algorithm</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/328.html">CWE-328 Reversible One-Way Hash</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/329.html">CWE-329 Not Using a Random IV with CBC Mode</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/330.html">CWE-330 Use of Insufficiently Random Values</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/331.html">CWE-331 Insufficient Entropy</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/332.html">CWE-332 Insufficient Entropy in PRNG</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/334.html">CWE-334 Small Space of Random Values</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/335.html">CWE-335 Incorrect Usage of Seeds in Pseudo-Random Number Generator(PRNG)</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/336.html">CWE-336 Same Seed in Pseudo-Random Number Generator (PRNG)</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/337.html">CWE-337 Predictable Seed in Pseudo-Random Number Generator (PRNG)</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/338.html">CWE-338 Use of Cryptographically Weak Pseudo-Random Number Generator(PRNG)</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/340.html">CWE-340 Generation of Predictable Numbers or Identifiers</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/342.html">CWE-342 Predictable Exact Value from Previous Values</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/347.html">CWE-347 Improper Verification of Cryptographic Signature</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/523.html">CWE-523 Unprotected Transport of Credentials</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/757.html">CWE-757 Selection of Less-Secure Algorithm During Negotiation('Algorithm Downgrade')</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/759.html">CWE-759 Use of a One-Way Hash without a Salt</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/760.html">CWE-760 Use of a One-Way Hash with a Predictable Salt</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/780.html">CWE-780 Use of RSA Algorithm without OAEP</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/916.html">CWE-916 Use of Password Hash With Insufficient Computational Effort</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/1240.html">CWE-1240 Use of a Cryptographic Primitive with a Risky Implementation</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/1241.html">CWE-1241 Use of Predictable Algorithm in Random Number Generator</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © Copyright 2021-2025 - OWASP Top 10 Team - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "search.suggest"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version": "\u30d0\u30fc\u30b8\u30e7\u30f3\u5207\u308a\u66ff\u3048"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1658 @@
+
+<!doctype html>
+<html lang="zh-Hant" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="OWASP Top 10:2025">
+      
+      
+      
+        <link rel="canonical" href="https://owasp.org/Top10/2025/zh-Hant/0x03_2025-Establishing_a_Modern_Application_Security_Program/">
+      
+      
+        <link rel="prev" href="../0x02_2025-What_are_Application_Security_Risks/">
+      
+      
+        <link rel="next" href="../A01_2025-Broken_Access_Control/">
+      
+      
+        
+          <link rel="alternate" href="../../0x03_2025-Establishing_a_Modern_Application_Security_Program/" hreflang="en">
+        
+          <link rel="alternate" href="../../cs/" hreflang="cs  material_alternate">
+        
+          <link rel="alternate" href="../../es/0x03_2025-Establishing_a_Modern_Application_Security_Program/" hreflang="es">
+        
+          <link rel="alternate" href="../../it/0x03_2025-Establishing_a_Modern_Application_Security_Program/" hreflang="it">
+        
+          <link rel="alternate" href="../../ja/0x03_2025-Establishing_a_Modern_Application_Security_Program/" hreflang="ja">
+        
+          <link rel="alternate" href="../../ko/0x03_2025-Establishing_a_Modern_Application_Security_Program/" hreflang="ko">
+        
+          <link rel="alternate" href="../../fa/0x03_2025-Establishing_a_Modern_Application_Security_Program/" hreflang="fa">
+        
+          <link rel="alternate" href="../../pt-BR/0x03_2025-Establishing_a_Modern_Application_Security_Program/" hreflang="pt-BR">
+        
+          <link rel="alternate" href="./" hreflang="zh-Hant">
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>建立现代应用安全计划 - OWASP Top 10:2025</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳轉至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="頁首">
+    <a href="../" title="OWASP Top 10:2025" class="md-header__button md-logo" aria-label="OWASP Top 10:2025" data-md-component="logo">
+      
+  <img src="../../assets/OWASP_Logo_Transp.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OWASP Top 10:2025
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              建立现代应用安全计划
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="選擇語言">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../0x03_2025-Establishing_a_Modern_Application_Security_Program/" hreflang="en" class="md-select__link">
+              en - English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../cs/" hreflang="cs  material_alternate" class="md-select__link">
+              cs - Česky
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../es/0x03_2025-Establishing_a_Modern_Application_Security_Program/" hreflang="es" class="md-select__link">
+              es - Español
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../it/0x03_2025-Establishing_a_Modern_Application_Security_Program/" hreflang="it" class="md-select__link">
+              it - Italiano
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../ja/0x03_2025-Establishing_a_Modern_Application_Security_Program/" hreflang="ja" class="md-select__link">
+              ja - 日本語 (Japanese)
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../ko/0x03_2025-Establishing_a_Modern_Application_Security_Program/" hreflang="ko" class="md-select__link">
+              ko - 한국어 (Korean)
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../fa/0x03_2025-Establishing_a_Modern_Application_Security_Program/" hreflang="fa" class="md-select__link">
+              fa - فارسی (Persian/Fārsi)
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../pt-BR/0x03_2025-Establishing_a_Modern_Application_Security_Program/" hreflang="pt-BR" class="md-select__link">
+              pt-BR - (Português Brasil)
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="zh-Hant" class="md-select__link">
+              zh-Hant - 简体中文
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜尋" placeholder="搜尋" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="搜尋">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空" aria-label="清空" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜尋引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/OWASP/Top10" title="前往倉庫" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    OWASP/Top10
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="導航" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../" title="OWASP Top 10:2025" class="md-nav__button md-logo" aria-label="OWASP Top 10:2025" data-md-component="logo">
+      
+  <img src="../../assets/OWASP_Logo_Transp.png" alt="logo">
+
+    </a>
+    OWASP Top 10:2025
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/OWASP/Top10" title="前往倉庫" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    OWASP/Top10
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    主页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x00_2025-Introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    引言
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x01_2025-About_OWASP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    关于 OWASP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x02_2025-What_are_Application_Security_Risks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    什么是应用安全风险？
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    建立现代应用安全计划
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    建立现代应用安全计划
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目錄">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目錄
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 建立基于风险的资产组合方法：
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 用坚实基础赋能：
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 将安全集成到现有流程中：
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 应用安全教育：
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 提供管理层可见性：
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        建立并使用可重复的安全流程和标准安全控制
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="建立并使用可重复的安全流程和标准安全控制">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        需求和资源管理阶段：
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rfp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        提案请求（RFP）和合同：
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        规划和设计阶段：
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        安全开发生命周期：
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        建立持续应用安全测试：
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        发布：
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        运维和变更管理：
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        退役系统：
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#owasp-top-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        将 OWASP Top 10 作为标准使用
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Top 10:2025 列表
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Top 10:2025 列表
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A01_2025-Broken_Access_Control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A01 失效的访问控制
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A02_2025-Security_Misconfiguration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A02 安全配置错误
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A03_2025-Software_Supply_Chain_Failures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A03 软件供应链失效
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A04_2025-Cryptographic_Failures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A04 加密机制失效
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A05_2025-Injection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A05 注入
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A06_2025-Insecure_Design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A06 不安全设计
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A07_2025-Authentication_Failures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A07 认证失效
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A08_2025-Software_or_Data_Integrity_Failures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A08 软件或数据完整性失效
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A09_2025-Security_Logging_and_Alerting_Failures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A09 安全日志记录和告警失效
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A10_2025-Mishandling_of_Exceptional_Conditions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A10 异常条件处理不当
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../X01_2025-Next_Steps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    下一步
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目錄">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目錄
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 建立基于风险的资产组合方法：
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 用坚实基础赋能：
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 将安全集成到现有流程中：
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 应用安全教育：
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 提供管理层可见性：
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        建立并使用可重复的安全流程和标准安全控制
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="建立并使用可重复的安全流程和标准安全控制">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        需求和资源管理阶段：
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rfp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        提案请求（RFP）和合同：
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        规划和设计阶段：
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        安全开发生命周期：
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        建立持续应用安全测试：
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        发布：
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        运维和变更管理：
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        退役系统：
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#owasp-top-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        将 OWASP Top 10 作为标准使用
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="_1">建立现代应用安全计划</h1>
+<p>OWASP Top Ten 系列是安全意识文档，目的是让读者关注其覆盖主题中最关键的风险。它们不是完整清单，只是起点。在本清单的早期版本中，我们建议从建立应用安全计划开始，以避免这些风险以及更多问题。本节将说明如何启动并建设现代应用安全计划。</p>
+<p>如果你已经有应用安全计划，可以考虑使用 <a href="https://owasp.org/www-project-samm/">OWASP SAMM（Software Assurance Maturity Model）</a>或 DSOMM（DevSecOps Maturity Model）对其进行成熟度评估。这些成熟度模型全面而细致，可帮助你判断扩展和成熟计划时应把精力放在哪里。请注意：做好应用安全并不需要完成 OWASP SAMM 或 DSOMM 中的所有事项；它们的作用是提供指导和许多选项。它们不是用来提出不可达成的标准，也不是用来描述无法负担的计划。它们覆盖范围很广，是为了给你提供更多思路和选择。</p>
+<p>如果你正从零开始建立计划，或者觉得 OWASP SAMM 或 DSOMM 对当前团队来说“过重”，请参考以下建议。</p>
+<h3 id="1">1. 建立基于风险的资产组合方法：</h3>
+<ul>
+<li>
+<p>从业务角度识别应用资产组合的保护需求。这应部分由隐私法律以及与受保护数据资产相关的其他法规驱动。</p>
+</li>
+<li>
+<p>建立一个<a href="https://owasp.org/www-community/OWASP_Risk_Rating_Methodology">通用风险评级模型</a>，使用一致的可能性和影响因素，并反映组织的风险容忍度。</p>
+</li>
+<li>
+<p>按此方式衡量并优先排序所有应用和 API。将结果加入<a href="https://de.wikipedia.org/wiki/Configuration_Management_Database">配置管理数据库（CMDB）</a>。</p>
+</li>
+<li>
+<p>建立保障指南，明确所需覆盖范围和严谨程度。</p>
+</li>
+</ul>
+<h3 id="2">2. 用坚实基础赋能：</h3>
+<ul>
+<li>
+<p>建立一组聚焦的策略和标准，为所有开发团队提供应遵循的应用安全基线。</p>
+</li>
+<li>
+<p>定义一组可复用的通用安全控制，与这些策略和标准相互补充，并为其使用提供设计和开发指导。</p>
+</li>
+<li>
+<p>建立应用安全培训课程体系，要求不同开发角色按主题完成有针对性的培训。</p>
+</li>
+</ul>
+<h3 id="3">3. 将安全集成到现有流程中：</h3>
+<ul>
+<li>
+<p>定义安全实现和验证活动，并将其集成到现有开发和运维流程中。</p>
+</li>
+<li>
+<p>活动包括威胁建模、安全设计和设计审查、安全编码和代码审查、渗透测试以及修复。</p>
+</li>
+<li>
+<p>为开发和项目团队提供主题专家和支持服务，帮助他们成功完成工作。</p>
+</li>
+<li>
+<p>审查当前系统开发生命周期以及所有软件安全活动、工具、策略和流程，并记录下来。</p>
+</li>
+<li>
+<p>对新软件，在系统开发生命周期（SDLC）的每个阶段加入一个或多个安全活动。下面我们提供许多可选建议。确保每个新项目或软件计划都执行这些新活动，这样你才能知道每个新软件都能以组织可接受的安全状态交付。</p>
+</li>
+<li>
+<p>选择活动时，应确保最终产品达到组织可接受的风险水平。</p>
+</li>
+<li>
+<p>对现有软件（有时称为遗留系统），你需要正式的维护计划。可以参考下方“运维和变更管理”部分中有关如何维护安全应用的建议。</p>
+</li>
+</ul>
+<h3 id="4">4. 应用安全教育：</h3>
+<ul>
+<li>
+<p>考虑为开发人员建立安全冠军计划，或更通用的安全教育计划（有时称为倡导计划或安全意识计划），教给他们你希望他们掌握的内容。这会帮助他们保持知识更新，知道如何安全地完成工作，并让工作中的安全文化更加积极。它通常也会增进团队之间的信任，让协作关系更顺畅。OWASP 通过 <a href="https://securitychampions.owasp.org/">OWASP Security Champions Guide</a> 支持你，该指南正在逐步扩展。</p>
+</li>
+<li>
+<p>OWASP Education Project 提供培训材料，帮助开发人员学习 Web 应用安全。若想动手学习漏洞，可以尝试 <a href="https://owasp.org/www-project-juice-shop/">OWASP Juice Shop Project</a> 或 <a href="https://owasp.org/www-project-webgoat/">OWASP WebGoat</a>。若想保持更新，可以参加 <a href="https://owasp.org/events/">OWASP AppSec Conference</a>、<a href="https://owasp.org/events/">OWASP Conference Training</a>，或本地 <a href="https://owasp.org/chapters/">OWASP Chapter</a> 会议。</p>
+</li>
+</ul>
+<h3 id="5">5. 提供管理层可见性：</h3>
+<ul>
+<li>
+<p>用指标管理。基于收集到的指标和分析数据推动改进和资金决策。指标包括安全实践和活动的遵循情况、引入的漏洞、缓解的漏洞、应用覆盖率、按类型划分的缺陷密度和实例数量等。</p>
+</li>
+<li>
+<p>分析实现和验证活动中的数据，寻找根因和漏洞模式，从而推动整个企业范围内的战略性、系统性改进。从错误中学习，并提供正向激励来促进改进。</p>
+</li>
+</ul>
+<h2 id="_2">建立并使用可重复的安全流程和标准安全控制</h2>
+<h3 id="_3">需求和资源管理阶段：</h3>
+<ul>
+<li>
+<p>与业务方收集并协商应用的业务需求，包括所有数据资产在机密性、真实性、完整性和可用性方面的保护需求，以及预期业务逻辑。</p>
+</li>
+<li>
+<p>汇总技术需求，包括功能性和非功能性安全需求。OWASP 建议使用 <a href="https://owasp.org/www-project-application-security-verification-standard/">OWASP Application Security Verification Standard (ASVS)</a> 作为设定应用安全需求的指南。</p>
+</li>
+<li>
+<p>规划并协商预算，覆盖设计、构建、测试和运维的各个方面，包括安全活动。</p>
+</li>
+<li>
+<p>将安全活动加入项目计划。</p>
+</li>
+<li>
+<p>在项目启动会上以安全代表身份介绍自己，让团队知道应找谁沟通。</p>
+</li>
+</ul>
+<h3 id="rfp">提案请求（RFP）和合同：</h3>
+<ul>
+<li>
+<p>与内部或外部开发人员协商需求，包括与你的安全计划相关的指南和安全要求，例如 SDLC、最佳实践。</p>
+</li>
+<li>
+<p>评估所有技术需求的满足情况，包括规划和设计阶段。</p>
+</li>
+<li>
+<p>协商所有技术需求，包括设计、安全和服务级别协议（SLA）。</p>
+</li>
+<li>
+<p>采用模板和清单，例如 <a href="https://owasp.org/www-community/OWASP_Secure_Software_Contract_Annex">OWASP Secure Software Contract Annex</a>。<br><strong>注意：</strong> <em>该附件面向美国合同法，因此在使用示例附件前请咨询合格的法律意见。</em></p>
+</li>
+</ul>
+<h3 id="_4">规划和设计阶段：</h3>
+<ul>
+<li>
+<p>与开发人员和内部利益相关方（例如安全专家）协商规划和设计。</p>
+</li>
+<li>
+<p>根据保护需求和预期威胁级别定义安全架构、控制、对策和设计审查。这应由安全专家支持。</p>
+</li>
+<li>
+<p>与其在应用和 API 中事后补安全，不如从一开始就把安全设计进去，成本也低得多。OWASP 建议将 <a href="https://cheatsheetseries.owasp.org/index.html">OWASP Cheat Sheets</a> 和 <a href="https://top10proactive.owasp.org/">OWASP Proactive Controls</a> 作为设计阶段纳入安全的起点。</p>
+</li>
+<li>
+<p>执行威胁建模，参见 <a href="https://cheatsheetseries.owasp.org/cheatsheets/Threat_Modeling_Cheat_Sheet.html">OWASP Cheat Sheet: Threat Modeling</a>。</p>
+</li>
+<li>
+<p>教会软件架构师安全设计概念和模式，并要求他们尽可能加入设计。</p>
+</li>
+<li>
+<p>与开发人员一起检查数据流。</p>
+</li>
+<li>
+<p>在所有其他用户故事旁加入安全用户故事。</p>
+</li>
+</ul>
+<h3 id="_5">安全开发生命周期：</h3>
+<ul>
+<li>
+<p>为改进组织构建应用和 API 时遵循的流程，OWASP 建议使用 <a href="https://owasp.org/www-project-samm/">OWASP Software Assurance Maturity Model (SAMM)</a>。该模型帮助组织制定并实施适合自身风险的软件安全策略。</p>
+</li>
+<li>
+<p>为软件开发人员提供安全编码培训，也提供任何你认为有助于他们构建更稳健、更安全应用的培训。</p>
+</li>
+<li>
+<p>进行代码审查，参见 <a href="https://cheatsheetseries.owasp.org/cheatsheets/Secure_Code_Review_Cheat_Sheet.html">OWASP Cheat Sheet: Secure Code Review</a>。</p>
+</li>
+<li>
+<p>给开发人员提供安全工具，并教他们使用，尤其是静态分析、软件组成分析、机密扫描和<a href="https://cheatsheetseries.owasp.org/cheatsheets/Infrastructure_as_Code_Security_Cheat_Sheet.html">基础设施即代码（IaC）</a>扫描器。</p>
+</li>
+<li>
+<p>在可行时为开发人员建立护栏（技术性保护措施，引导他们做出更安全的选择）。</p>
+</li>
+<li>
+<p>构建强大且可用的安全控制并不容易。尽可能提供安全默认值，并在可行时建立“铺好的路”（让最简单的做法也是最安全、最显然应优先选择的做法）。<a href="https://cheatsheetseries.owasp.org/index.html">OWASP Cheat Sheets</a> 是开发人员的良好起点，许多现代框架也已经内置用于授权、验证、CSRF 防护等标准且有效的安全控制。</p>
+</li>
+<li>
+<p>给开发人员提供与安全相关的 IDE 插件，并鼓励他们使用。</p>
+</li>
+<li>
+<p>为他们提供密钥管理工具、许可证和使用文档。</p>
+</li>
+<li>
+<p>为他们提供私有 AI，理想情况下配有 RAG 服务器，包含有用的安全文档、团队编写的高质量提示词，以及能够调用组织所选安全工具的 MCP 服务器。教他们安全使用 AI，因为无论你是否愿意，他们都会使用。</p>
+</li>
+</ul>
+<h3 id="_6">建立持续应用安全测试：</h3>
+<ul>
+<li>
+<p>测试技术功能以及与 IT 架构的集成，并协调业务测试。</p>
+</li>
+<li>
+<p>从技术和业务角度创建“使用”和“滥用”测试用例。</p>
+</li>
+<li>
+<p>根据内部流程、保护需求和应用的假定威胁级别管理安全测试。</p>
+</li>
+<li>
+<p>提供安全测试工具（模糊测试器、DAST 等）、安全测试环境和工具使用培训；或者替他们做测试；或者雇用测试人员。</p>
+</li>
+<li>
+<p>如果需要高保障级别，考虑正式渗透测试，以及压力测试和性能测试。</p>
+</li>
+<li>
+<p>与开发人员合作，帮助他们判断缺陷报告中哪些问题需要修复，并确保他们的经理给他们修复时间。</p>
+</li>
+</ul>
+<h3 id="_7">发布：</h3>
+<ul>
+<li>
+<p>将应用投入运行，并在需要时从旧应用迁移。</p>
+</li>
+<li>
+<p>完成所有文档，包括变更管理数据库（CMDB）和安全架构。</p>
+</li>
+</ul>
+<h3 id="_8">运维和变更管理：</h3>
+<ul>
+<li>
+<p>运维必须包括应用安全管理指南，例如补丁管理。</p>
+</li>
+<li>
+<p>提升用户安全意识，并管理可用性与安全性之间的冲突。</p>
+</li>
+<li>
+<p>规划并管理变更，例如迁移到应用新版本，或迁移到 OS、中间件、库等其他组件的新版本。</p>
+</li>
+<li>
+<p>确保所有应用都纳入清单，并记录所有重要细节。更新所有文档，包括 CMDB、安全架构、控制、对策，以及任何运行手册或项目文档。</p>
+</li>
+<li>
+<p>对所有应用执行日志记录、监控和告警。如果缺失，就补上。</p>
+</li>
+<li>
+<p>创建有效且高效的更新和补丁流程。</p>
+</li>
+<li>
+<p>创建定期扫描计划（理想情况下包括动态、静态、密钥、IaC 和软件组成分析）。</p>
+</li>
+<li>
+<p>为修复安全缺陷设定 SLA。</p>
+</li>
+<li>
+<p>提供员工（理想情况下也包括客户）报告缺陷的渠道。</p>
+</li>
+<li>
+<p>建立训练有素的事件响应团队，使其了解软件攻击的表现以及可观测性工具。</p>
+</li>
+<li>
+<p>运行阻断或防护工具来拦截自动化攻击。</p>
+</li>
+<li>
+<p>每年（或更频繁）加固配置。</p>
+</li>
+<li>
+<p>至少每年进行一次渗透测试（取决于应用所需保障级别）。</p>
+</li>
+<li>
+<p>建立流程和工具来加固并保护软件供应链。</p>
+</li>
+<li>
+<p>建立并更新业务连续性和灾难恢复规划，其中包括最重要的应用以及维护这些应用所使用的工具。</p>
+</li>
+</ul>
+<h3 id="_9">退役系统：</h3>
+<ul>
+<li>
+<p>应归档所有必须保留的数据。所有其他数据应安全擦除。</p>
+</li>
+<li>
+<p>安全退役应用，包括删除未使用的账户、角色和权限。</p>
+</li>
+<li>
+<p>在 CMDB 中将应用状态设置为已退役。</p>
+</li>
+</ul>
+<h2 id="owasp-top-10">将 OWASP Top 10 作为标准使用</h2>
+<p>OWASP Top 10 主要是一份安全意识文档。不过，自 2003 年创立以来，许多组织仍将其用作事实上的行业 AppSec 标准。如果你想将 OWASP Top 10 用作编码或测试标准，请明确它只是最低要求和起点。</p>
+<p>使用 OWASP Top 10 作为标准的一个难点在于，我们记录的是 AppSec 风险，而不一定是容易测试的问题。例如，<a href="../A06_2025-Insecure_Design/">A06:2025-不安全设计</a> 超出了大多数测试形式的范围。另一个例子是测试是否实现了就地、在用且有效的日志记录和监控，这只能通过访谈以及抽样请求有效事件响应来完成。静态代码分析工具可以查找缺少日志记录的情况，但可能无法判断业务逻辑或访问控制是否记录了重大安全事件。渗透测试人员也许只能确认他们在测试环境中触发了事件响应，而测试环境很少像生产环境一样被监控。</p>
+<p>以下是我们关于何时适合使用 OWASP Top 10 的建议：</p>
+<table>
+  <tr>
+   <td><strong>使用场景</strong>
+   </td>
+   <td><strong>OWASP Top 10 2025</strong>
+   </td>
+   <td><strong>OWASP Application Security Verification Standard</strong>
+   </td>
+  </tr>
+  <tr>
+   <td>安全意识
+   </td>
+   <td>是
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>培训
+   </td>
+   <td>入门级
+   </td>
+   <td>全面
+   </td>
+  </tr>
+  <tr>
+   <td>设计和架构
+   </td>
+   <td>偶尔适用
+   </td>
+   <td>是
+   </td>
+  </tr>
+  <tr>
+   <td>编码标准
+   </td>
+   <td>最低要求
+   </td>
+   <td>是
+   </td>
+  </tr>
+  <tr>
+   <td>安全代码审查
+   </td>
+   <td>最低要求
+   </td>
+   <td>是
+   </td>
+  </tr>
+  <tr>
+   <td>同行审查清单
+   </td>
+   <td>最低要求
+   </td>
+   <td>是
+   </td>
+  </tr>
+  <tr>
+   <td>单元测试
+   </td>
+   <td>偶尔适用
+   </td>
+   <td>是
+   </td>
+  </tr>
+  <tr>
+   <td>集成测试
+   </td>
+   <td>偶尔适用
+   </td>
+   <td>是
+   </td>
+  </tr>
+  <tr>
+   <td>渗透测试
+   </td>
+   <td>最低要求
+   </td>
+   <td>是
+   </td>
+  </tr>
+  <tr>
+   <td>工具支持
+   </td>
+   <td>最低要求
+   </td>
+   <td>是
+   </td>
+  </tr>
+  <tr>
+   <td>安全供应链
+   </td>
+   <td>偶尔适用
+   </td>
+   <td>是
+   </td>
+  </tr>
+</table>
+
+<p>我们鼓励任何想采用应用安全标准的人使用 <a href="https://owasp.org/www-project-application-security-verification-standard/">OWASP Application Security Verification Standard</a>（ASVS），因为它设计为可验证、可测试，并可用于安全开发生命周期的各个部分。</p>
+<p>ASVS 是工具厂商唯一可接受的选择。由于 OWASP Top 10 中多个风险的性质，工具无法全面检测、测试或防护 OWASP Top 10，尤其参见 <a href="../A06_2025-Insecure_Design/">A06:2025-不安全设计</a>。OWASP 不鼓励任何声称完整覆盖 OWASP Top 10 的说法，因为这根本不真实。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © Copyright 2021-2025 - OWASP Top 10 Team - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "search.suggest"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u62f7\u8c9d", "clipboard.copy": "\u62f7\u8c9d", "search.result.more.one": "\u6b64\u9801\u5c1a\u6709 1 \u500b\u7b26\u5408\u7684\u9805\u76ee", "search.result.more.other": "\u6b64\u9801\u5c1a\u6709 # \u500b\u7b26\u5408\u7684\u9805\u76ee", "search.result.none": "\u6c92\u6709\u627e\u5230\u7b26\u5408\u689d\u4ef6\u7684\u7d50\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u689d\u4ef6\u7684\u7d50\u679c", "search.result.other": "\u627e\u5230 # \u500b\u7b26\u5408\u689d\u4ef6\u7684\u7d50\u679c", "search.result.placeholder": "\u9375\u5165\u4ee5\u958b\u59cb\u6aa2\u7d22", "search.result.term.missing": "\u7f3a\u5931", "select.version": "\u9078\u64c7\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+    
+  </body>
+</html>

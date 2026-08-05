@@ -1,0 +1,996 @@
+
+<!doctype html>
+<html lang="ja" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="OWASP Top 10:2025">
+      
+      
+      
+        <link rel="canonical" href="https://owasp.org/Top10/2025/ja/0x00_2025-Introduction/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../0x01_2025-About_OWASP/">
+      
+      
+        
+          <link rel="alternate" href="../../0x00_2025-Introduction/" hreflang="en">
+        
+          <link rel="alternate" href="../../cs/" hreflang="cs  material_alternate">
+        
+          <link rel="alternate" href="../../es/0x00_2025-Introduction/" hreflang="es">
+        
+          <link rel="alternate" href="../../it/0x00_2025-Introduction/" hreflang="it">
+        
+          <link rel="alternate" href="./" hreflang="ja">
+        
+          <link rel="alternate" href="../../ko/0x00_2025-Introduction/" hreflang="ko">
+        
+          <link rel="alternate" href="../../fa/0x00_2025-Introduction/" hreflang="fa">
+        
+          <link rel="alternate" href="../../pt-BR/0x00_2025-Introduction/" hreflang="pt-BR">
+        
+          <link rel="alternate" href="../../zh-Hant/0x00_2025-Introduction/" hreflang="zh-Hant">
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Introduction - OWASP Top 10:2025</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#10-the-ten-most-critical-web-application-security-risks" class="md-skip">
+          コンテンツにスキップ
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="ヘッダー">
+    <a href="../" title="OWASP Top 10:2025" class="md-header__button md-logo" aria-label="OWASP Top 10:2025" data-md-component="logo">
+      
+  <img src="../../assets/OWASP_Logo_Transp.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OWASP Top 10:2025
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Introduction
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="言語切り替え">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../0x00_2025-Introduction/" hreflang="en" class="md-select__link">
+              en - English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../cs/" hreflang="cs  material_alternate" class="md-select__link">
+              cs - Česky
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../es/0x00_2025-Introduction/" hreflang="es" class="md-select__link">
+              es - Español
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../it/0x00_2025-Introduction/" hreflang="it" class="md-select__link">
+              it - Italiano
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="ja" class="md-select__link">
+              ja - 日本語 (Japanese)
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../ko/0x00_2025-Introduction/" hreflang="ko" class="md-select__link">
+              ko - 한국어 (Korean)
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../fa/0x00_2025-Introduction/" hreflang="fa" class="md-select__link">
+              fa - فارسی (Persian/Fārsi)
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../pt-BR/0x00_2025-Introduction/" hreflang="pt-BR" class="md-select__link">
+              pt-BR - (Português Brasil)
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../zh-Hant/0x00_2025-Introduction/" hreflang="zh-Hant" class="md-select__link">
+              zh-Hant - 简体中文
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="検索" placeholder="検索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="検索">
+        
+        <button type="reset" class="md-search__icon md-icon" title="クリア" aria-label="クリア" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            検索を初期化
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/OWASP/Top10" title="リポジトリへ" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    OWASP/Top10
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="ナビゲーション" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../" title="OWASP Top 10:2025" class="md-nav__button md-logo" aria-label="OWASP Top 10:2025" data-md-component="logo">
+      
+  <img src="../../assets/OWASP_Logo_Transp.png" alt="logo">
+
+    </a>
+    OWASP Top 10:2025
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/OWASP/Top10" title="リポジトリへ" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    OWASP/Top10
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x01_2025-About_OWASP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About OWASP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x02_2025-What_are_Application_Security_Risks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    What are Application Security Risks?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x03_2025-Establishing_a_Modern_Application_Security_Program/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Establishing a Modern Application Security Program
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Top 10:2025 List
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Top 10:2025 List
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A01_2025-Broken_Access_Control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A01 Broken Access Control
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A02_2025-Security_Misconfiguration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A02 Security Misconfiguration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A03_2025-Software_Supply_Chain_Failures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A03 Software Supply Chain Failures
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A04_2025-Cryptographic_Failures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A04 Cryptographic Failures
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A05_2025-Injection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A05 Injection
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A06_2025-Insecure_Design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A06 Insecure Design
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A07_2025-Authentication_Failures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A07 Authentication Failures
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A08_2025-Software_or_Data_Integrity_Failures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A08 Software or Data Integrity Failures
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A09_2025-Security_Logging_and_Alerting_Failures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A09 Security Logging and Alerting Failures
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A10_2025-Mishandling_of_Exceptional_Conditions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A10 Mishandling of Exceptional Conditions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../X01_2025-Next_Steps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Next Steps
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<p><img alt="OWASP Logo" src="../../assets/TOP_10_logo_Final_Logo_Colour.png" /></p>
+<h1 id="10-the-ten-most-critical-web-application-security-risks">最も重大なウェブアプリケーションリスク　トップ10 (The Ten Most Critical Web Application Security Risks)</h1>
+<h1 id="introduction">イントロダクション (Introduction)</h1>
+<p>第8版となる「OWASP Top 10」へようこそ！</p>
+<p>データ提供や調査にご協力いただいた皆様に、心より感謝申し上げます。皆様の知見なしには、今回の更新は成し得ませんでした。 <strong>ありがとうございます！</strong></p>
+<h2 id="owasp-top-102025">OWASP Top 10:2025 の紹介</h2>
+<ul>
+<li><a href="../A01_2025-Broken_Access_Control/">A01:2025 - アクセス制御の不備 (Broken Access Control)</a></li>
+<li><a href="../A02_2025-Security_Misconfiguration/">A02:2025 - セキュリティ設定の不備 (Security Misconfiguration)</a></li>
+<li><a href="../A03_2025-Software_Supply_Chain_Failures/">A03:2025 - ソフトウェアサプライチェーンの不備 (Software Supply Chain Failures)</a></li>
+<li><a href="../A04_2025-Cryptographic_Failures/">A04:2025 - 暗号化の不備 (Cryptographic Failures)</a></li>
+<li><a href="../A05_2025-Injection/">A05:2025 - インジェクション (Injection)</a></li>
+<li><a href="../A06_2025-Insecure_Design/">A06:2025 - 安全性を欠いた設計 (Insecure Design)</a></li>
+<li><a href="../A07_2025-Authentication_Failures/">A07:2025 - 認証の不備 (Authentication Failures)</a></li>
+<li><a href="../A08_2025-Software_or_Data_Integrity_Failures/">A08:2025 - ソフトウェアまたはデータの完全性の不備 (Software or Data Integrity Failures)</a></li>
+<li><a href="../A09_2025-Security_Logging_and_Alerting_Failures/">A09:2025 - セキュリティログとアラートの不備 (Security Logging and Alerting Failures)</a></li>
+<li><a href="../A10_2025-Mishandling_of_Exceptional_Conditions/">A10:2025 - 例外的な状況への不適切な対応 (Mishandling of Exceptional Conditions)</a></li>
+</ul>
+<h2 id="2025">2025年版における主な変更点</h2>
+<p>2025年版では、2つのカテゴリが新設され、1つが統合されました。私たちは、表面的な「症状 (symptoms)」ではなく、可能な限り「根本原因 (root cause)」に焦点を当てるよう努めています。ソフトウェア開発とセキュリティの複雑さを考慮すると、カテゴリ間の重複を完全になくすことは事実上不可能です。</p>
+<p><img alt="Mapping" src="../../assets/2025-mappings.png" /></p>
+<ul>
+<li><strong><a href="../A01_2025-Broken_Access_Control/">A01:2025 - アクセス制御の不備</a></strong> は、最も深刻なリスクとして引き続き第1位となりました。テストされたアプリケーションの平均3.73%に、本カテゴリの40のCWE（共通弱点一覧 (Common Weakness Enumerations)）が1つ以上含まれています。上図の破線が示す通り、サーバーサイドリクエストフォージェリ (SSRF: Server-Side Request Forgery) は本カテゴリに統合されました。</li>
+<li><strong><a href="../A02_2025-Security_Misconfiguration/">A02:2025 - セキュリティ設定の不備</a></strong> は、2021年の第5位から第2位へと上昇しました。今回のデータでは設定の不備がより顕著に見られ、アプリケーションの3.00%に本カテゴリの16のCWEが含まれています。ソフトウェアエンジニアリングにおいて、アプリケーションの挙動が設定に依存する割合が増え続けている現状を反映しています。</li>
+<li><strong><a href="../A03_2025-Software_Supply_Chain_Failures/">A03:2025 - ソフトウェアサプライチェーンの不備</a></strong> は、2021年版の「<a href="https://owasp.org/Top10/A06_2021-Vulnerable_and_Outdated_Components/">脆弱で古くなったコンポーネント (A06:2021-Vulnerable and Outdated Components)</a>」を拡張したものです。依存関係、ビルドシステム、配布インフラの全体にわたる侵害を対象としています。本カテゴリはコミュニティ調査で圧倒的な票を集めました。本カテゴリは5つのCWEを含み、収集データ上の出現頻度は限定的ですが、これはテストの困難さが原因と考えられ、この分野でのテスト手法の発展を期待しています。データ上で最も出現頻度が低い一方で、CVEにおける平均的な悪用可能性 (Exploit) と影響 (Impact) のスコアは最も高くなっています。</li>
+<li><strong><a href="../A04_2025-Cryptographic_Failures/">A04:2025 - 暗号化の不備</a></strong> は、第2位から第4位へ後退しました。平均3.80%のアプリケーションに、本カテゴリの32のCWEが含まれています。本不備は、機密情報の露出 (sensitive data exposure) やシステムの侵害 (system compromise) を招く恐れがあります。</li>
+<li><strong><a href="../A05_2025-Injection/">A05:2025 - インジェクション</a></strong> は、第3位から第5位へ順位を下げましたが、暗号化の不備や安全性を欠いた設計との相対的な位置関係は維持しています。最も多くテストされているカテゴリの一つであり、38のCWEに関連するCVE数が最大です。インジェクションには、クロスサイトスクリプティング (XSS)（高頻度・低影響）からSQLインジェクション（低頻度・高影響）まで、幅広い脆弱性が含まれます。</li>
+<li><strong><a href="../A06_2025-Insecure_Design/">A06:2025 - 安全性を欠いた設計</a></strong> は、セキュリティ設定の不備とソフトウェアサプライチェーンの不備に追い越され、第4位から第6位へ順位を下げました。2021年の導入以来、脅威モデリング (threat modeling) の普及など、安全な設計への意識向上と業界の進展が見られます。</li>
+<li><strong><a href="../A07_2025-Authentication_Failures/">A07:2025 - 認証の不備</a></strong> は、第7位を維持しました。旧名称「<a href="https://owasp.org/Top10/A07_2021-Identification_and_Authentication_Failures/">識別と認証の不備 (Identification and Authentication Failures)</a>」から、本カテゴリの36のCWEをより正確に反映するため名称を変更しました。依然として重要な領域ですが、標準的な認証フレームワークの活用により、不備の発生が抑制され始めています。</li>
+<li><strong><a href="../A08_2025-Software_or_Data_Integrity_Failures/">A08:2025 - ソフトウェアまたはデータの完全性の不備</a></strong> は、引き続き第8位です。ソフトウェアサプライチェーンの不備よりも低いレベルで、信頼境界の維持や、ソフトウェア・コード・データの完全性検証の失敗に焦点を当てています。</li>
+<li><strong><a href="../A09_2025-Security_Logging_and_Alerting_Failures/">A09:2025 - セキュリティログとアラートの不備</a></strong> は、第9位を維持しました。旧名称「<a href="https://owasp.org/Top10/A09_2021-Security_Logging_and_Monitoring_Failures/">セキュリティログと監視の不備 (Security Logging and Monitoring Failures)</a>」から、適切なアクションを促す「アラート機能」を強調するため名称を変更しました。アラートを伴わないログ出力には、インシデント特定においてほとんど価値がありません。本カテゴリはデータ上で常に過小評価される傾向にあり、今回もコミュニティ調査によってリストに選出されました。</li>
+<li><strong><a href="../A10_2025-Mishandling_of_Exceptional_Conditions/">A10:2025 - 例外的な状況への不適切な対応</a></strong> は、2025年版の新カテゴリです。エラー処理の不備やロジックエラー、フェイルオープンなど、異常状態に起因する24のCWEを含みます。</li>
+</ul>
+<h2 id="methodology">手法 (Methodology)</h2>
+<p>今回の OWASP Top 10 も、データに基づいた判断 (data-informed) を行っていますが、盲目的なデータ至上主義 (data-driven) ではありません。統計データから12のカテゴリをランク付けし、そのうち2つをコミュニティ調査の結果に基づいて選出・強調しました。これには根本的な理由があります。統計データを分析することは、本質的に「過去」を見ることだからです。アプリケーションセキュリティの研究者は、新しい脆弱性の特定や新しいテスト手法の開発に時間を費やしています。これらのテストをツールやプロセスに統合するには数週間から数年かかります。大規模に脆弱性を確実にテストできるようになる頃には、何年も経過している可能性があります。また、確実にテストすることができず、データに現れることがない重要なリスクも存在します。このような観点のバランスを取るため、現場の最前線にいるアプリケーションセキュリティや開発の実務者に、テストデータでは過小評価されている可能性のある重要なリスクについて意見を求めるコミュニティ調査を実施しています。</p>
+<h2 id="_1">カテゴリの構造</h2>
+<p>前バージョンの OWASP Top 10 からいくつかのカテゴリが変更されました。以下はカテゴリ変更の概要です。</p>
+<p>今回は、2021年版のようなCWEの制限を設けずにデータを募集しました。特定の年（2021年以降）にテストされたアプリケーション数と、テストでCWEが1つ以上見つかったアプリケーション数を求めました。この形式により、アプリケーション全体におけるCWEの普及率を追跡できます。私たちの目的では頻度は無視しています。頻度は他の状況では必要かもしれませんが、アプリケーション全体における実際の普及率を隠してしまうからです。あるアプリケーションにCWEが4件あろうと4,000件あろうと、Top 10 の計算には含まれません。特に、手動テスターはアプリケーション内で何度繰り返されても脆弱性を1回だけ記載する傾向がありますが、自動テストフレームワークは脆弱性のすべてのインスタンスを個別にカウントするためです。分析対象のCWE数は、2017年の約30件から2021年の約400件、そして今回の589件へと増加しました。将来的には追加のデータ分析を補足として行う予定です。このCWE数の大幅な増加に伴い、カテゴリ構造の変更が必要となりました。</p>
+<p>CWEのグループ化と分類には数ヶ月を費やしましたが、さらに続けることもできました。どこかで区切りをつける必要がありました。CWEには「根本原因 (root cause)」タイプと「症状 (symptom)」タイプの両方があります。根本原因タイプは「暗号化の不備」や「設定の不備」などであり、症状タイプは「機密情報の露出」や「サービス拒否」などです。私たちは、特定と修正のガイダンスを提供するうえでより論理的であるため、可能な限り根本原因に焦点を当てることにしました。症状よりも根本原因に焦点を当てることは新しい概念ではありません。Top 10 はこれまでも症状と根本原因が混在していました。CWEも症状と根本原因が混在しています。私たちは単にそれをより意識的に明示しているだけです。今回のカテゴリあたりの平均CWE数は25件で、A03:2025（ソフトウェアサプライチェーンの不備）とA09:2025（セキュリティログとアラートの不備）の5件から、A01:2025（アクセス制御の不備）の40件までの範囲となっています。1カテゴリあたりのCWE数を40件に制限する決定を行いました。この更新されたカテゴリ構造は、企業が言語やフレームワークに適したCWEに集中できるため、トレーニング上の利点も提供します。</p>
+<p>MITRE Top 25 Most Dangerous Software Weaknesses のように、Top 10 を10個のCWEのリストに変更しないのかという質問を受けることがあります。カテゴリに複数のCWEを使用する主な理由は2つあります。第一に、すべてのCWEがすべてのプログラミング言語やフレームワークに存在するわけではないからです。これにより、Top 10 の一部が適用できない場合、ツールやトレーニング・啓発プログラムに問題が生じます。第二に、一般的な脆弱性には複数のCWEが存在するからです。たとえば、一般的なインジェクション、コマンドインジェクション、クロスサイトスクリプティング、ハードコードされたパスワード、検証の欠如、バッファオーバーフロー、機密情報の平文保存など、多くの脆弱性に複数のCWEがあります。組織やテスターによって、異なるCWEが使用される場合があります。複数のCWEを含むカテゴリを使用することで、共通のカテゴリ名の下で発生する可能性のある様々な弱点の種類についてベースラインと認識を高めることができます。Top 10 2025 には、10のカテゴリ内に248のCWEが含まれています。本リリース時点で、<a href="https://cwe.mitre.org">MITREからダウンロード可能な辞書</a>には合計968のCWEがあります。</p>
+<h2 id="_2">カテゴリ選定におけるデータの活用</h2>
+<p>2021年版と同様に、CVEデータを活用して「悪用可能性 (Exploitability)」と「技術面への影響 ((Technical) Impact)」を算出しました。OWASP Dependency Check をダウンロードし、CVEに記載された関連CWEごとにCVSSのExploitスコアとImpactスコアを抽出・グループ化しました。これには相当の調査と労力を要しました。すべてのCVEにはCVSSv2スコアがありますが、CVSSv2には欠陥があり、CVSSv3で対処されるべきものです。ある時点以降、すべてのCVEにはCVSSv3スコアも割り当てられています。また、CVSSv2とCVSSv3の間でスコアリング範囲と計算式が更新されました。</p>
+<p>CVSSv2では、ExploitとImpactの両方が最大10.0になる可能性がありましたが、計算式によりExploitは60%、Impactは40%に低減されていました。CVSSv3では、理論上の最大値はExploitが6.0、Impactが4.0に制限されました。重み付けを考慮すると、ImpactスコアはCVSSv3で平均約1.5ポイント高くなり、Exploitabilityは平均約0.5ポイント低くなりました。</p>
+<p>OWASP Dependency Check から抽出した National Vulnerability Database (NVD) には、CWEにマッピングされた約17万5千件（2021年の12万5千件から増加）のCVEレコードがあります。また、CVEにマッピングされたユニークなCWEは643件（2021年の241件から増加）あります。抽出された約22万件のCVEのうち、16万件がCVSS v2スコア、15万6千件がCVSS v3スコア、6千件がCVSS v4スコアを持っています。多くのCVEが複数のスコアを持つため、合計は22万件を超えます。</p>
+<p>Top 10 2025 では、以下の方法で平均ExploitスコアとImpactスコアを計算しました。CVSSスコアを持つすべてのCVEをCWEごとにグループ化し、CVSSv3を持つ母集団の割合と、残りのCVSSv2を持つ母集団でExploitスコアとImpactスコアの両方を重み付けして、全体の平均を算出しました。これらの平均をデータセット内のCWEにマッピングし、リスク方程式のもう半分としてExploitスコアと（技術面への）Impactスコアとして使用しました。</p>
+<p>CVSS v4.0 を使用しないのはなぜかと思われるかもしれません。これは、スコアリングアルゴリズムが根本的に変更され、CVSS v2やCVSSv3のように「Exploit」や「Impact」スコアを簡単に提供できなくなったためです。Top 10 の将来のバージョンでCVSS v4.0スコアを使用する方法を検討する予定ですが、2025年版では適時に対応する方法を見つけることができませんでした。</p>
+<h2 id="_3">コミュニティ調査の意義</h2>
+<p>統計データの結果は、業界が自動化された方法でテストできる範囲に大きく限定されています。経験豊富なAppSec専門家に話を聞けば、まだデータに現れていない発見やトレンドを教えてくれるでしょう。特定の脆弱性タイプのテスト手法を開発するには時間がかかり、さらにそれらのテストを自動化して大規模なアプリケーション群に対して実行するにはさらに時間がかかります。私たちが見つけるものはすべて過去を振り返っており、データに現れていない直近1年のトレンドを見逃している可能性があります。</p>
+<p>したがって、データが不完全であるため、10カテゴリのうち8つのみをデータから選出しています。残りの2つのカテゴリはTop 10コミュニティ調査から選出しています。これにより、現場の最前線にいる実務者が、データに現れていない（そして永久にデータに現れない可能性のある）最も高いリスクと考えるものに投票できます。</p>
+<h2 id="_4">データ提供者の皆様への謝辞</h2>
+<p>以下の組織（および複数の匿名提供者）から、280万件以上のアプリケーションに関する貴重なデータをご提供いただき、史上最大かつ最も包括的なアプリケーションセキュリティデータセットとなりました。皆さんのおかげです。ありがとうございました。</p>
+<ul>
+<li>Accenture (Prague)</li>
+<li>Anonymous (multiple)</li>
+<li>Bugcrowd</li>
+<li>Contrast Security</li>
+<li>CryptoNet Labs</li>
+<li>Intuitor SoftTech Services</li>
+<li>Orca Security</li>
+<li>Probely</li>
+<li>Semgrep</li>
+<li>Sonar</li>
+<li>usd AG</li>
+<li>Veracode</li>
+<li>Wallarm</li>
+</ul>
+<h2 id="lead-authors">主執筆者 (Lead Authors)</h2>
+<ul>
+<li>Andrew van der Stock - X: <a href="https://x.com/vanderaj">@vanderaj</a></li>
+<li>Brian Glas - X: <a href="https://x.com/infosecdad">@infosecdad</a></li>
+<li>Neil Smithline - X: <a href="https://x.com/appsecneil">@appsecneil</a></li>
+<li>Tanya Janca - X: <a href="https://x.com/shehackspurple">@shehackspurple</a></li>
+<li>Torsten Gigler - Mastodon: <a href="https://infosec.exchange/@torsten_gigler">@torsten_gigler@infosec.exchange</a></li>
+</ul>
+<h2 id="_5">課題の報告およびプルリクエスト</h2>
+<p>修正や課題の報告はこちらからお願いします。</p>
+<h3 id="_6">プロジェクトリンク：</h3>
+<ul>
+<li><a href="https://owasp.org/www-project-top-ten/">ホームページ</a></li>
+<li><a href="https://github.com/OWASP/Top10">GitHub リポジトリ</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © Copyright 2021-2025 - OWASP Top 10 Team - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "search.suggest"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version": "\u30d0\u30fc\u30b8\u30e7\u30f3\u5207\u308a\u66ff\u3048"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+    
+  </body>
+</html>

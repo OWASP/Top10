@@ -1,0 +1,1271 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="OWASP Top 10:2025">
+      
+      
+      
+        <link rel="canonical" href="https://owasp.org/Top10/2025/es/A03_2025-Software_Supply_Chain_Failures/">
+      
+      
+        <link rel="prev" href="../A02_2025-Security_Misconfiguration/">
+      
+      
+        <link rel="next" href="../A04_2025-Cryptographic_Failures/">
+      
+      
+        
+          <link rel="alternate" href="../../A03_2025-Software_Supply_Chain_Failures/" hreflang="en">
+        
+          <link rel="alternate" href="../../cs/" hreflang="cs  material_alternate">
+        
+          <link rel="alternate" href="./" hreflang="es">
+        
+          <link rel="alternate" href="../../it/A03_2025-Software_Supply_Chain_Failures/" hreflang="it">
+        
+          <link rel="alternate" href="../../ja/A03_2025-Software_Supply_Chain_Failures/" hreflang="ja">
+        
+          <link rel="alternate" href="../../ko/A03_2025-Software_Supply_Chain_Failures/" hreflang="ko">
+        
+          <link rel="alternate" href="../../fa/A03_2025-Software_Supply_Chain_Failures/" hreflang="fa">
+        
+          <link rel="alternate" href="../../pt-BR/A03_2025-Software_Supply_Chain_Failures/" hreflang="pt-BR">
+        
+          <link rel="alternate" href="../../zh-Hant/A03_2025-Software_Supply_Chain_Failures/" hreflang="zh-Hant">
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>A03 Fallos en la Cadena de Suministro de Software - OWASP Top 10:2025</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#a032025-fallas-en-la-cadena-de-suministro-de-software-software-supply-chain-failures" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../" title="OWASP Top 10:2025" class="md-header__button md-logo" aria-label="OWASP Top 10:2025" data-md-component="logo">
+      
+  <img src="../../assets/OWASP_Logo_Transp.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OWASP Top 10:2025
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              A03 Fallos en la Cadena de Suministro de Software
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Seleccionar idioma">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../A03_2025-Software_Supply_Chain_Failures/" hreflang="en" class="md-select__link">
+              en - English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../cs/" hreflang="cs  material_alternate" class="md-select__link">
+              cs - Česky
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="es" class="md-select__link">
+              es - Español
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../it/A03_2025-Software_Supply_Chain_Failures/" hreflang="it" class="md-select__link">
+              it - Italiano
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../ja/A03_2025-Software_Supply_Chain_Failures/" hreflang="ja" class="md-select__link">
+              ja - 日本語 (Japanese)
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../ko/A03_2025-Software_Supply_Chain_Failures/" hreflang="ko" class="md-select__link">
+              ko - 한국어 (Korean)
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../fa/A03_2025-Software_Supply_Chain_Failures/" hreflang="fa" class="md-select__link">
+              fa - فارسی (Persian/Fārsi)
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../pt-BR/A03_2025-Software_Supply_Chain_Failures/" hreflang="pt-BR" class="md-select__link">
+              pt-BR - (Português Brasil)
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../zh-Hant/A03_2025-Software_Supply_Chain_Failures/" hreflang="zh-Hant" class="md-select__link">
+              zh-Hant - 简体中文
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/OWASP/Top10" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    OWASP/Top10
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../" title="OWASP Top 10:2025" class="md-nav__button md-logo" aria-label="OWASP Top 10:2025" data-md-component="logo">
+      
+  <img src="../../assets/OWASP_Logo_Transp.png" alt="logo">
+
+    </a>
+    OWASP Top 10:2025
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/OWASP/Top10" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    OWASP/Top10
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x00_2025-Introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x01_2025-About_OWASP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Acerca de OWASP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x02_2025-What_are_Application_Security_Risks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ¿Qué son los Riesgos de Seguridad en Aplicaciones?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x03_2025-Establishing_a_Modern_Application_Security_Program/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Estableciendo un Programa Moderno de Seguridad en Aplicaciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lista Top 10:2025
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Lista Top 10:2025
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A01_2025-Broken_Access_Control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A01 Control de Acceso Roto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A02_2025-Security_Misconfiguration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A02 Configuración de Seguridad Incorrecta
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A03 Fallos en la Cadena de Suministro de Software
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A03 Fallos en la Cadena de Suministro de Software
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#antecedentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Antecedentes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tabla-de-puntuacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tabla de puntuación
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#descripcion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Descripción
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#como-prevenir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cómo prevenir
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#escenarios-de-ejemplo-de-ataque" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Escenarios de ejemplo de ataque
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Referencias
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lista-de-cwe-mapeados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lista de CWE Mapeados
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A04_2025-Cryptographic_Failures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A04 Fallos Criptográficos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A05_2025-Injection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A05 Inyección
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A06_2025-Insecure_Design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A06 Diseño Inseguro
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A07_2025-Authentication_Failures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A07 Fallos de Autenticación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A08_2025-Software_or_Data_Integrity_Failures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A08 Fallos de Integridad de Software o Datos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A09_2025-Security_Logging_and_Alerting_Failures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A09 Fallos en el Registro y Alertas de Seguridad
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A10_2025-Mishandling_of_Exceptional_Conditions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A10 Manejo Incorrecto de Condiciones Excepcionales
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../X01_2025-Next_Steps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Próximos Pasos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#antecedentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Antecedentes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tabla-de-puntuacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tabla de puntuación
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#descripcion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Descripción
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#como-prevenir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cómo prevenir
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#escenarios-de-ejemplo-de-ataque" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Escenarios de ejemplo de ataque
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Referencias
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lista-de-cwe-mapeados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lista de CWE Mapeados
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="a032025-fallas-en-la-cadena-de-suministro-de-software-software-supply-chain-failures">A03:2025 Fallas en la Cadena de Suministro de Software (Software Supply Chain Failures) <img align="right" alt="icon" src="../../assets/TOP_10_Icons_Final_Vulnerable_Outdated_Components.png" style="height:80px;width:80px" /></h1>
+<h2 id="antecedentes">Antecedentes</h2>
+<p>Este fue el primer clasificado en la encuesta comunitaria del Top 10, con exactamente el 50% de los encuestados situándolo en el #1. Desde su aparición inicial en el Top 10 de 2013 como "A9 – Uso de Componentes con Vulnerabilidades Conocidas", el riesgo ha crecido en alcance para incluir todas las fallas de la cadena de suministro, no solo los que involucran vulnerabilidades conocidas. A pesar de este mayor alcance, las fallas en la cadena de suministro siguen siendo un reto de identificar, con solo 11 CVE (Common Vulnerability and Exposures)(Vulnerabilidades y Exposiciones Comunes)  que tienen los CWE (Common Weakness Enumeration) relacionados. Sin embargo, cuando se prueban y se informan en los datos aportados, esta categoría tiene la tasa de incidencia promedio más alta, con un 5.19%. Los CWE relevantes son <em>CWE-477: Uso de Función Obsoleta</em>, <em>CWE-1104: Uso de Componentes de Terceros no Mantenidos</em>, <em>CWE-1329: Dependencia en un Componente que no es Actualizable</em>, y <em>CWE-1395: Dependencia en un Componente de Terceros Vulnerable</em>.</p>
+<h2 id="tabla-de-puntuacion">Tabla de puntuación</h2>
+<table>
+  <tr>
+   <td>CWE Mapeados
+   </td>
+   <td>Tasa de Incidencia Máx.
+   </td>
+   <td>Tasa de Incidencia Prom.
+   </td>
+   <td>Cobertura Máx.
+   </td>
+   <td>Cobertura Prom.
+   </td>
+   <td>Explotación Ponderada Prom.
+   </td>
+   <td>Impacto Ponderado Prom.
+   </td>
+   <td>Ocurrencias Totales
+   </td>
+   <td>CVE Totales
+   </td>
+  </tr>
+  <tr>
+   <td>6
+   </td>
+   <td>9.56%
+   </td>
+   <td>5.72%
+   </td>
+   <td>65.42%
+   </td>
+   <td>27.47%
+   </td>
+   <td>8.17
+   </td>
+   <td>5.23
+   </td>
+   <td>215,248
+   </td>
+   <td>11
+   </td>
+  </tr>
+</table>
+
+<h2 id="descripcion">Descripción</h2>
+<p>Las fallas en la cadena de suministro de software son rupturas u otros compromisos en el proceso de construcción, distribución o actualización del software. A menudo son causados por vulnerabilidades o cambios maliciosos en el código de terceros, herramientas u otras dependencias en las que confía el sistema.</p>
+<p>Es probable que sea vulnerable si:</p>
+<ul>
+<li>no realiza un seguimiento cuidadoso de las versiones de todos los componentes que utiliza (tanto en el lado del cliente como en el del servidor). Esto incluye los componentes que utiliza directamente, así como las dependencias anidadas (transitivas).</li>
+<li>el software es vulnerable, no tiene soporte o está desactualizado. Esto incluye el sistema operativo (SO), el servidor web/de aplicaciones, el sistema de gestión de bases de datos (DBMS), las aplicaciones, las API y todos los componentes, entornos de ejecución y bibliotecas.</li>
+<li>no escanea regularmente en busca de vulnerabilidades y no se suscribe a boletines de seguridad relacionados con los componentes que utiliza.</li>
+<li>no dispone de un proceso de gestión de cambios o de un seguimiento de los mismos dentro de su cadena de suministro, incluyendo el seguimiento de los IDE, las extensiones y actualizaciones de los IDE, los cambios en el repositorio de código de su organización, los entornos aislados (sandboxes), los repositorios de imágenes y bibliotecas, la forma en que se crean y almacenan los artefactos, etc. Cada parte de su cadena de suministro debe estar documentada, especialmente los cambios.</li>
+<li>no ha bastionado (hardenizado) cada parte de su cadena de suministro, con especial atención al control de acceso y la aplicación del mínimo privilegio.</li>
+<li>sus sistemas de cadena de suministro no tienen ninguna separación de funciones (separation of duty). Ninguna persona debería poder escribir código y desplegarlo a producción sin la supervisión de otro ser humano.</li>
+<li>se utilizan en entornos de producción, o pueden impactar en ellos, componentes de fuentes no confiables en cualquier parte de la pila (stack)tecnológica.</li>
+<li>no corrige ni actualiza la plataforma subyacente, los frameworks y las dependencias de forma oportuna y basada en el riesgo. Esto suele ocurrir en entornos donde el parcheado es una tarea mensual o trimestral bajo control de cambios, dejando a las organizaciones abiertas a días o meses de exposición innecesaria antes de corregir las vulnerabilidades.</li>
+<li>los desarrolladores de software no prueban la compatibilidad de las bibliotecas actualizadas o parcheadas.</li>
+<li>no asegura las configuraciones de cada parte de su sistema (consulte <a href="https://owasp.org/Top10/2025/A02_2025-Security_Misconfiguration/">A02:2025-Configuración de Seguridad Incorrecta</a>).</li>
+<li>su flujo de CI/CD (CI/CD pipeline) tiene una seguridad más débil que los sistemas que construye y despliega, especialmente si es complejo.</li>
+</ul>
+<h2 id="como-prevenir">Cómo prevenir</h2>
+<p>Debe existir un proceso de gestión de parches para:</p>
+<ul>
+<li>Generar y gestionar de forma centralizada la Lista de Materiales de Software (Software Bill of Materials, SBOM) (inventario de componentes de software) de todo su software.</li>
+<li>Realizar un seguimiento no solo de sus dependencias directas, sino también de sus dependencias (transitivas), y así sucesivamente.</li>
+<li>Reducir la superficie de ataque eliminando las dependencias no utilizadas, las funciones innecesarias, los componentes, los archivos y la documentación.</li>
+<li>Inventariar continuamente las versiones de los componentes tanto del lado del cliente como del servidor (por ejemplo, frameworks, bibliotecas) y sus dependencias utilizando herramientas como OWASP Dependency Track, OWASP Dependency Check, retire.js, etc.</li>
+<li>Supervisar continuamente fuentes como Common Vulnerability and Exposures (CVE), National Vulnerability Database (NVD) y <a href="https://osv.dev/">Open Source Vulnerabilities (OSV)</a> en busca de vulnerabilidades en los componentes que utiliza. Utilice herramientas de análisis de composición de software (Software Composition Analysis, SCA), de cadena de suministro de software o herramientas de SBOM centradas en la seguridad para automatizar el proceso. Suscríbase a alertas de vulnerabilidades de seguridad relacionadas con los componentes que utiliza.</li>
+<li>Obtener únicamente componentes de fuentes oficiales (confiables) a través de enlaces seguros. Prefiera los paquetes firmados para reducir la posibilidad de incluir un componente modificado y malicioso (consulte <a href="https://owasp.org/Top10/2025/A08_2025-Software_or_Data_Integrity_Failures/">A08:2025-Fallas en la Integridad del Software o de los Datos</a>).</li>
+<li>Elegir deliberadamente qué versión de una dependencia utiliza y actualizarla solo cuando sea necesario.</li>
+<li>Vigilar las bibliotecas y componentes que no reciben mantenimiento o que no crean parches de seguridad para versiones antiguas. Si no es posible parchear, considere la posibilidad de migrar a una alternativa. Si eso no es posible, considere el despliegue de un parche virtual para monitorizar, detectar o proteger contra el problema descubierto.</li>
+<li>Actualizar regularmente su CI/CD, IDE y cualquier otra herramienta de desarrollo.</li>
+<li>Evitar el despliegue de actualizaciones en todos los sistemas simultáneamente. Utilice despliegues escalonados o despliegues canario (canary deployments) para limitar la exposición en caso de que un proveedor de confianza se vea comprometido.</li>
+</ul>
+<p>Debe existir un proceso de gestión de cambios o un sistema de seguimiento para rastrear los cambios en:</p>
+<ul>
+<li>Ajustes de CI/CD (continuous integration / continuous delivery-deployment) (todas las herramientas y flujos de construcción)</li>
+<li>Repositorios de código</li>
+<li>Áreas de pruebas (sandboxes)</li>
+<li>IDE de los desarrolladores</li>
+<li>Herramientas de SBOM y artefactos creados</li>
+<li>Sistemas de registro (logging) y registros (logs)</li>
+<li>Integraciones con terceros, como SaaS</li>
+<li>Repositorios de artefactos</li>
+<li>Registros de contenedores</li>
+</ul>
+<p>Bastione (hardening) los siguientes sistemas, lo que incluye habilitar MFA (Multi-Factor Authentication) (Autenticación multifactor) y restringir el IAM (Identity and Access Management) (Gestión de Identidades y Accesos):</p>
+<ul>
+<li>Su repositorio de código (lo que incluye no subir secretos, proteger ramas, copias de seguridad)</li>
+<li>Estaciones de trabajo de los desarrolladores (parcheado regular, MFA, monitoreo y más)</li>
+<li>Tu servidor de compilación y CI/CD (separación de funciones, control de acceso, compilaciones firmadas, secretos con alcance de entorno, registros a prueba de manipulaciones, más)</li>
+<li>Sus artefactos (garantizar la integridad mediante la procedencia, la firma y la marca de tiempo (time stamp), promocionar artefactos en lugar de reconstruirlos para cada entorno, garantizar que las compilaciones sean inalterables)</li>
+<li>Infraestructura como código (gestionada como todo el código, incluyendo el uso de PRs (Pull Requests) y control de versiones)</li>
+</ul>
+<p>Cada organización debe garantizar un plan continuo para monitorear, triar y aplicar actualizaciones o cambios de configuración durante toda la vida útil de la aplicación o portafolio.</p>
+<h2 id="escenarios-de-ejemplo-de-ataque">Escenarios de ejemplo de ataque</h2>
+<p><strong>Escenario #1:</strong> Un proveedor de confianza es comprometido con malware, lo que provoca que sus sistemas informáticos sean comprometidos al actualizar. El ejemplo más famoso de esto es probablemente:</p>
+<ul>
+<li>El compromiso de SolarWinds en 2019 que llevó a que unas 18,000 organizaciones se vieran comprometidas. <a href="https://www.npr.org/2021/04/16/985439655/a-worst-nightmare-cyberattack-the-untold-story-of-the-solarwinds-hack">https://www.npr.org/2021/04/16/985439655/a-worst-nightmare-cyberattack-the-untold-story-of-the-solarwinds-hack</a></li>
+</ul>
+<p><strong>Escenario #2:</strong> Un proveedor de confianza es comprometido de tal manera que se comporta de forma maliciosa solo bajo una condición específica.</p>
+<ul>
+<li>El robo de 1,500 millones de dólares a Bybit en 2025 fue causado por <a href="https://www.sygnia.co/blog/sygnia-investigation-bybit-hack/">un ataque a la cadena de suministro en el software de la billetera (wallet)</a> que solo se ejecutaba cuando se utilizaba la billetera objetivo.</li>
+</ul>
+<p><strong>Escenario #3:</strong> El ataque a la cadena de suministro <a href="https://www.cisa.gov/news-events/alerts/2025/09/23/widespread-supply-chain-compromise-impacting-npm-ecosystem"><code>Shai-Hulud</code></a> en 2025 fue el primer gusano npm autopropagable con éxito. Los ataques sembraron versiones maliciosas de paquetes populares, que utilizaban un script de post-instalación para recolectar y exfiltrar datos sensibles a repositorios públicos de GitHub. El malware también detectaba tokens de npm en el entorno de la víctima y los utilizaba automáticamente para subir versiones maliciosas de cualquier paquete accesible. El gusano alcanzó más de 500 versiones de paquetes antes de ser interrumpido por npm. Este ataque a la cadena de suministro fue avanzado, de rápida propagación y dañino, y al dirigirse a las máquinas de los desarrolladores demostró que los propios desarrolladores son ahora objetivos principales para los ataques a la cadena de suministro.</p>
+<p><strong>Escenario #4:</strong> Los componentes suelen ejecutarse con los mismos privilegios que la propia aplicación, por lo que las fallas en cualquier componente pueden tener un impacto grave. Tales fallas pueden ser accidentales (por ejemplo, un error de progrmación) o intencionados (por ejemplo, una puerta trasera (backdoor) en un componente). Algunos ejemplos de vulnerabilidades de componentes explotables descubiertas son:</p>
+<ul>
+<li>CVE-2017-5638, una vulnerabilidad de ejecución remota de código en Struts 2 que permite la ejecución de código arbitrario en el servidor, ha sido señalada como la causa de brechas significativas.</li>
+<li>CVE-2021-44228 ("Log4Shell"), una vulnerabilidad de día cero de ejecución remota de código en Apache Log4j, ha sido señalada como la causa de campañas de ransomware, criptominería y otros ataques.</li>
+</ul>
+<h2 id="referencias">Referencias</h2>
+<ul>
+<li>[Estándar de Verificación de Seguridad en Aplicaciones de OWASP: V15 Arquitectura y Codificación Segura] (OWASP Application Security Verification Standard (ASVS)) (https://owasp.org/www-project-application-security-verification-standard/)</li>
+<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/Dependency_Graph_SBOM_Cheat_Sheet.html">Serie de guías rápidas de OWASP: SBOM de Gráfico de Dependencias</a></li>
+<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/Vulnerable_Dependency_Management_Cheat_Sheet.html">Serie de guías rápidas de OWASP: Gestión de Dependencias Vulnerables</a></li>
+<li><a href="https://owasp.org/www-project-dependency-track/">OWASP Dependency-Track</a></li>
+<li><a href="https://owasp.org/www-project-cyclonedx/">OWASP CycloneDX</a></li>
+<li><a href="https://owasp-aasvs.readthedocs.io/en/latest/v1.html">Estándar de Verificación de Seguridad en Aplicaciones de OWASP: V1 Arquitectura, diseño y modelado de amenazas</a></li>
+<li><a href="https://owasp.org/www-project-dependency-check/">OWASP Dependency Check (para bibliotecas Java y .NET)</a></li>
+<li>Guía de Pruebas de OWASP - Map Application Architecture (OTG-INFO-010)</li>
+<li><a href="https://owasp.org/www-community/Virtual_Patching_Best_Practices">Mejores Prácticas de Parcheado Virtual de OWASP</a></li>
+<li><a href="https://www.scribd.com/document/105692739/JeffWilliamsPreso-Sm">La desafortunada realidad de las bibliotecas inseguras</a></li>
+<li><a href="https://www.cve.org">Búsqueda de Vulnerabilidades y Exposiciones Comunes (CVE) de MITRE</a></li>
+<li><a href="https://nvd.nist.gov">Base de Datos Nacional de Vulnerabilidades (NVD)</a></li>
+<li><a href="https://retirejs.github.io/retire.js/">Retire.js para detectar bibliotecas JavaScript vulnerables conocidas</a></li>
+<li><a href="https://github.com/advisories">Base de datos de alertas de seguridad de GitHub</a></li>
+<li>Base de datos de avisos de seguridad y herramientas para bibliotecas Ruby</li>
+<li><a href="https://safecode.org/publication/SAFECode_Software_Integrity_Controls0610.pdf">Controles de Integridad de Software de SAFECode (PDF)</a></li>
+<li><a href="https://thehackernews.com/2025/10/self-spreading-glassworm-infects-vs.html">Ataque a la cadena de suministro Glassworm</a></li>
+<li><a href="https://thehackernews.com/2025/10/phantomraven-malware-found-in-126-npm.html">Campaña de ataque a la cadena de suministro PhantomRaven</a></li>
+</ul>
+<h2 id="lista-de-cwe-mapeados">Lista de CWE Mapeados</h2>
+<ul>
+<li>
+<p><a href="https://cwe.mitre.org/data/definitions/447.html">CWE-447 Uso de Función Obsoleta (Use of Obsolete Function)</a></p>
+</li>
+<li>
+<p><a href="https://cwe.mitre.org/data/definitions/1035.html">CWE-1035 Top 10 2017 A9: Uso de Componentes con Vulnerabilidades Conocidas (2017 Top 10 A9: Using Components with Known Vulnerabilities)</a></p>
+</li>
+<li>
+<p><a href="https://cwe.mitre.org/data/definitions/1104.html">CWE-1104 Uso de Componentes de Terceros no Mantenidos (Use of Unmaintained Third Party Components)</a></p>
+</li>
+<li>
+<p><a href="https://cwe.mitre.org/data/definitions/1329.html">CWE-1329 Dependencia en un Componente que no es Actualizable (Reliance on Component That is Not Updatable)</a></p>
+</li>
+<li>
+<p><a href="https://cwe.mitre.org/data/definitions/1357.html">CWE-1357 Dependencia en un Componente Insuficientemente Confiable (Reliance on Insufficiently Trustworthy Component)</a></p>
+</li>
+<li>
+<p><a href="https://cwe.mitre.org/data/definitions/1395.html">CWE-1395 Dependencia en un Componente de Terceros Vulnerable (Dependency on Vulnerable Third-Party Component)</a></p>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © Copyright 2021-2025 - OWASP Top 10 Team - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "search.suggest"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+    
+  </body>
+</html>

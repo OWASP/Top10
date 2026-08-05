@@ -1,0 +1,1751 @@
+
+<!doctype html>
+<html lang="cs" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="OWASP Top 10:2025">
+      
+      
+      
+        <link rel="canonical" href="https://owasp.org/Top10/2025/cs/X01_2025-Next_Steps/">
+      
+      
+        <link rel="prev" href="../A10_2025-Mishandling_of_Exceptional_Conditions/">
+      
+      
+      
+        
+          <link rel="alternate" href="../../X01_2025-Next_Steps/" hreflang="en">
+        
+          <link rel="alternate" href="../" hreflang="cs  material_alternate">
+        
+          <link rel="alternate" href="../../es/X01_2025-Next_Steps/" hreflang="es">
+        
+          <link rel="alternate" href="../../it/X01_2025-Next_Steps/" hreflang="it">
+        
+          <link rel="alternate" href="../../ja/X01_2025-Next_Steps/" hreflang="ja">
+        
+          <link rel="alternate" href="../../ko/X01_2025-Next_Steps/" hreflang="ko">
+        
+          <link rel="alternate" href="../../fa/X01_2025-Next_Steps/" hreflang="fa">
+        
+          <link rel="alternate" href="../../pt-BR/X01_2025-Next_Steps/" hreflang="pt-BR">
+        
+          <link rel="alternate" href="../../zh-Hant/X01_2025-Next_Steps/" hreflang="zh-Hant">
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Další kroky - OWASP Top 10:2025</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#dalsi-kroky" class="md-skip">
+          Přeskočit obsah
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Záhlaví">
+    <a href="../" title="OWASP Top 10:2025" class="md-header__button md-logo" aria-label="OWASP Top 10:2025" data-md-component="logo">
+      
+  <img src="../../assets/OWASP_Logo_Transp.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OWASP Top 10:2025
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Další kroky
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Zvolte jazyk">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../X01_2025-Next_Steps/" hreflang="en" class="md-select__link">
+              en - English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../" hreflang="cs  material_alternate" class="md-select__link">
+              cs - Česky
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../es/X01_2025-Next_Steps/" hreflang="es" class="md-select__link">
+              es - Español
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../it/X01_2025-Next_Steps/" hreflang="it" class="md-select__link">
+              it - Italiano
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../ja/X01_2025-Next_Steps/" hreflang="ja" class="md-select__link">
+              ja - 日本語 (Japanese)
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../ko/X01_2025-Next_Steps/" hreflang="ko" class="md-select__link">
+              ko - 한국어 (Korean)
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../fa/X01_2025-Next_Steps/" hreflang="fa" class="md-select__link">
+              fa - فارسی (Persian/Fārsi)
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../pt-BR/X01_2025-Next_Steps/" hreflang="pt-BR" class="md-select__link">
+              pt-BR - (Português Brasil)
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../zh-Hant/X01_2025-Next_Steps/" hreflang="zh-Hant" class="md-select__link">
+              zh-Hant - 简体中文
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Hledat" placeholder="Hledat" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Vyhledávání">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Vyčistit" aria-label="Vyčistit" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializace vyhledávání
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/OWASP/Top10" title="Přejít do repozitáře" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    OWASP/Top10
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigace" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../" title="OWASP Top 10:2025" class="md-nav__button md-logo" aria-label="OWASP Top 10:2025" data-md-component="logo">
+      
+  <img src="../../assets/OWASP_Logo_Transp.png" alt="logo">
+
+    </a>
+    OWASP Top 10:2025
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/OWASP/Top10" title="Přejít do repozitáře" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    OWASP/Top10
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Domů
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x00_2025-Introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Úvod
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x01_2025-About_OWASP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    O OWASP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x02_2025-What_are_Application_Security_Risks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Co jsou bezpečnostní rizika aplikací?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x03_2025-Establishing_a_Modern_Application_Security_Program/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Zavedení moderního programu bezpečnosti aplikací
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Seznam Top 10:2025
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Seznam Top 10:2025
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A01_2025-Broken_Access_Control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A01 Narušené řízení přístupu
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A02_2025-Security_Misconfiguration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A02 Chybná bezpečnostní konfigurace
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A03_2025-Software_Supply_Chain_Failures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A03 Selhání dodavatelského řetězce softwaru
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A04_2025-Cryptographic_Failures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A04 Kryptografická selhání
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A05_2025-Injection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A05 Injekce
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A06_2025-Insecure_Design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A06 Nezabezpečený návrh
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A07_2025-Authentication_Failures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A07 Selhání autentizace
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A08_2025-Software_or_Data_Integrity_Failures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A08 Selhání integrity softwaru nebo dat
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A09_2025-Security_Logging_and_Alerting_Failures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A09 Selhání bezpečnostního logování a upozorňování
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A10_2025-Mishandling_of_Exceptional_Conditions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A10 Nesprávné zpracování výjimečných stavů
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Další kroky
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Další kroky
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Obsah">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Obsah
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#x012025-nedostatecna-odolnost-aplikaci-lack-of-application-resilience" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        X01:2025 Nedostatečná odolnost aplikací (Lack of Application Resilience)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="X01:2025 Nedostatečná odolnost aplikací (Lack of Application Resilience)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pozadi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pozadí
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tabulka-skore" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tabulka skóre
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#popis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Popis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jak-tomu-zabranit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Jak tomu zabránit
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#priklady-scenaru-utoku" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Příklady scénářů útoků
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reference.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seznam-mapovanych-cwe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Seznam mapovaných CWE
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#x022025-selhani-spravy-pameti-memory-management-failures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        X02:2025 Selhání správy paměti (Memory Management Failures)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="X02:2025 Selhání správy paměti (Memory Management Failures)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pozadi_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pozadí
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tabulka-skore_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tabulka skóre
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#popis_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Popis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jak-tomu-zabranit_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Jak tomu zabránit
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#priklady-scenaru-utoku_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Příklady scénářů útoků
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reference_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reference
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seznam-mapovanych-cwe_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Seznam mapovaných CWE
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#x032025-neprimerena-duvera-v-kod-generovany-ai-inappropriate-trust-in-ai-generated-code-vibe-coding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        X03:2025 Nepřiměřená důvěra v kód generovaný AI (Inappropriate Trust in AI Generated Code („Vibe Coding“))
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="X03:2025 Nepřiměřená důvěra v kód generovaný AI (Inappropriate Trust in AI Generated Code („Vibe Coding“))">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pozadi_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pozadí
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#popis_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Popis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jak-tomu-zabranit_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Jak tomu zabránit
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reference_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reference
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seznam-mapovanych-cwe_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Seznam mapovaných CWE
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Obsah">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Obsah
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#x012025-nedostatecna-odolnost-aplikaci-lack-of-application-resilience" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        X01:2025 Nedostatečná odolnost aplikací (Lack of Application Resilience)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="X01:2025 Nedostatečná odolnost aplikací (Lack of Application Resilience)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pozadi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pozadí
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tabulka-skore" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tabulka skóre
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#popis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Popis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jak-tomu-zabranit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Jak tomu zabránit
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#priklady-scenaru-utoku" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Příklady scénářů útoků
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reference.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seznam-mapovanych-cwe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Seznam mapovaných CWE
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#x022025-selhani-spravy-pameti-memory-management-failures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        X02:2025 Selhání správy paměti (Memory Management Failures)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="X02:2025 Selhání správy paměti (Memory Management Failures)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pozadi_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pozadí
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tabulka-skore_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tabulka skóre
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#popis_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Popis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jak-tomu-zabranit_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Jak tomu zabránit
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#priklady-scenaru-utoku_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Příklady scénářů útoků
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reference_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reference
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seznam-mapovanych-cwe_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Seznam mapovaných CWE
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#x032025-neprimerena-duvera-v-kod-generovany-ai-inappropriate-trust-in-ai-generated-code-vibe-coding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        X03:2025 Nepřiměřená důvěra v kód generovaný AI (Inappropriate Trust in AI Generated Code („Vibe Coding“))
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="X03:2025 Nepřiměřená důvěra v kód generovaný AI (Inappropriate Trust in AI Generated Code („Vibe Coding“))">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pozadi_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pozadí
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#popis_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Popis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jak-tomu-zabranit_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Jak tomu zabránit
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reference_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reference
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seznam-mapovanych-cwe_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Seznam mapovaných CWE
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="dalsi-kroky">Další kroky</h1>
+<p>OWASP Top 10 je záměrně omezen na deset nejvýznamnějších rizik. V každém vydání OWASP Top 10 jsou důkladně zvažována také rizika, která byla „na hraně“ zařazení, ale nakonec se do finálního výběru nedostala. Nakonec dostala přednost rizika, která byla rozšířenější a měla větší dopad.</p>
+<p>Následující problémy rozhodně stojí za to identifikovat a odstranit, zejména pro organizace usilující o vyspělý program bezpečnosti aplikací, bezpečnostní konzultanty a dodavatele nástrojů, kteří chtějí rozšířit pokrytí svých řešení.</p>
+<h2 id="x012025-nedostatecna-odolnost-aplikaci-lack-of-application-resilience">X01:2025 Nedostatečná odolnost aplikací (Lack of Application Resilience)</h2>
+<h3 id="pozadi">Pozadí</h3>
+<p>Jde o přejmenování kategorie „Odmítnutí služby“ (Denial of Service) z roku 2021. Byla přejmenována, protože popisovala spíše důsledek než kořenovou příčinu. Tato kategorie se zaměřuje na CWE, která popisují slabiny související s problémy v oblasti odolnosti. Hodnocení této kategorie bylo velmi blízké kategorii A10:2025 Nesprávné zpracování výjimečných stavů (Mishandling of Exceptional Conditions). Mezi relevantní CWE patří: <em>CWE-400 Uncontrolled Resource Consumption, CWE-409 Improper Handling of Highly Compressed Data (Data Amplification), CWE-674 Uncontrolled Recursion</em> a <em>CWE-835 Loop with Unreachable Exit Condition („Infinite Loop“)</em>.</p>
+<h3 id="tabulka-skore">Tabulka skóre</h3>
+<table>
+  <tr>
+   <td>Počet mapovaných CWE 
+   </td>
+   <td>Max míra výskytu
+   </td>
+   <td>Průměrná míra výskytu
+   </td>
+   <td>Max pokrytí
+   </td>
+   <td>Průměrné pokrytí
+   </td>
+   <td>Průměrná vážená zneužitelnost
+   </td>
+   <td>Průměrný vážený dopad
+   </td>
+   <td>Celkový počet výskytů
+   </td>
+   <td>Celkový počet CVE
+   </td>
+  </tr>
+  <tr>
+   <td>16
+   </td>
+   <td>20,05 %
+   </td>
+   <td>4,55 %
+   </td>
+   <td>86,01 %
+   </td>
+   <td>41,47 %
+   </td>
+   <td>7,92
+   </td>
+   <td>3,49
+   </td>
+   <td>865 066
+   </td>
+   <td>4 423
+   </td>
+  </tr>
+</table>
+
+<h3 id="popis">Popis</h3>
+<p>Tato kategorie představuje systémovou slabinu v tom, jak aplikace reagují na zátěž, selhání a hraniční případy, z nichž se nedokážou zotavit. Pokud aplikace nedokáže neočekávané stavy, omezení zdrojů a další nepříznivé události řádně zvládnout, ustát je nebo se z nich zotavit, může to snadno vést k problémům s dostupností (nejčastěji), ale také k poškození dat, úniku citlivých informací, kaskádovým selháním nebo obejití bezpečnostních kontrol.</p>
+<p>Kromě toho mohou X02:2025 Selhání správy paměti <a href="#x022025-memory-management-failures">X02:2025 Selhání správy paměti (Memory Management Failures)</a> vést také k selhání aplikace nebo dokonce celého systému.</p>
+<h3 id="jak-tomu-zabranit">Jak tomu zabránit</h3>
+<p>Abyste tomuto typu zranitelnosti předešli, musíte své systémy navrhovat s ohledem na selhání a obnovu.</p>
+<ul>
+<li>Přidejte limity, kvóty a funkce pro převzetí služeb při selhání (failover) a věnujte zvláštní pozornost operacím s nejvyšší spotřebou zdrojů.</li>
+<li>Identifikujte stránky náročné na zdroje a plánujte dopředu: zmenšujte plochu útoku, zejména tím, že nebudete neznámým nebo nedůvěryhodným uživatelům zpřístupňovat nepotřebné „gadgety“ a funkce vyžadující velké množství zdrojů (např. CPU, paměť).</li>
+<li>Provádějte přísnou validaci vstupů pomocí allow-listů a omezení velikosti a poté důkladně testujte.</li>
+<li>Omezte velikost odpovědí a nikdy klientovi neposílejte nezpracované odpovědi (zpracovávejte je na straně serveru).</li>
+<li>Ve výchozím stavu používejte bezpečný uzavřený režim (nikdy otevřený&lt; fail closed, nikdy „open“), uplatňujte princip implicitního zamítnutí a při chybě proveďte rollback.</li>
+<li>Vyhněte se blokujícím synchronním voláním ve vláknech obsluhy požadavků (používejte asynchronní nebo neblokující přístup, nastavujte časové limity, omezujte souběžnost apod.).</li>
+<li>Pečlivě testujte funkcionalitu zpracování chyb.</li>
+<li>Implementujte resilience patterns (vzorce odolnosti), jako jsou circuit breakers (pojistky), bulkheads (oddělení/kompartmenty; izolace částí systému), retry logika (logika opakování / opakované pokusy) a graceful degradation (řízený přechod do omezeného režimu).</li>
+<li>Provádějte testování výkonu a zátěže (performance a load testing); pokud tomu odpovídá vaše tolerance k riziku (risk apetit), přidejte i chaos engineering (testování odolnosti řízeným vyvoláváním poruch).</li>
+<li>Tam, kde je to rozumné a cenově přijatelné, navrhujte a implementujte architekturu s redundancí.</li>
+<li>Implementujte monitoring, observability a alerting.</li>
+<li>Filtrujte neplatné zdrojové adresy v souladu s RFC 2267.</li>
+<li>Blokujte známé botnety podle fingerprintů, IP adres nebo dynamicky podle chování.</li>
+<li>Proof-of-Work: iniciujte na straně útočníka operace náročné na zdroje, které nemají velký dopad na běžné uživatele, ale mají dopad na boty snažící se odesílat obrovské množství požadavků. Pokud celkové zatížení systému roste, zvyšujte obtížnost Proof-of-Work, zejména u méně důvěryhodných subjektů nebo těch, které se jeví jako boti.</li>
+<li>Omezte dobu trvání relace na straně serveru podle nečinnosti a konečného časového limitu.</li>
+<li>Omezte ukládání informací vázaných na relaci.</li>
+</ul>
+<h3 id="priklady-scenaru-utoku">Příklady scénářů útoků</h3>
+<p><strong>Scénář #1:</strong> Útočníci záměrně spotřebovávají zdroje aplikace, aby vyvolali selhání systému, což vede k odmítnutí služby. Může jít o vyčerpání paměti, zaplnění diskového prostoru, saturaci CPU nebo navazování nekonečného množství připojení.</p>
+<p><strong>Scénář #2:</strong> Fuzzing vstupů vede ke zkonstruovaným odpovědím, které narušují aplikační byznysovou logiku.</p>
+<p><strong>Scénář #3:</strong> Útočníci se zaměřují na závislosti aplikace, vyřadí z provozu API nebo jiné externí služby a aplikace není schopna pokračovat.</p>
+<h3 id="reference">Reference.</h3>
+<ul>
+<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/Denial_of_Service_Cheat_Sheet.html">OWASP Cheat Sheet: Denial of Service</a></li>
+<li><a href="https://mas.owasp.org/MASVS/11-MASVS-RESILIENCE/">OWASP MASVS‑RESILIENCE</a></li>
+<li><a href="https://learn.microsoft.com/en-us/aspnet/core/fundamentals/best-practices?view=aspnetcore-9.0">ASP.NET Core Best Practices (Microsoft)</a></li>
+<li><a href="https://medium.com/@parserdigital/resilience-in-microservices-bulkhead-vs-circuit-breaker-54364c1f9d53">Resilience in Microservices: Bulkhead vs Circuit Breaker (Parser)</a></li>
+<li><a href="https://www.geeksforgeeks.org/system-design/bulkhead-pattern/">Bulkhead Pattern (Geeks for Geeks)</a></li>
+<li><a href="https://www.nist.gov/cyberframework">NIST Cybersecurity Framework (CSF)</a></li>
+<li><a href="https://www.devlane.com/blog/avoid-blocking-calls-go-async-in-java">Avoid Blocking Calls: Go Async in Java (Devlane)</a></li>
+</ul>
+<h3 id="seznam-mapovanych-cwe">Seznam mapovaných CWE</h3>
+<ul>
+<li><a href="https://cwe.mitre.org/data/definitions/73.html">CWE-73  External Control of File Name or Path</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/183.html">CWE-183 Permissive List of Allowed Inputs</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/256.html">CWE-256 Plaintext Storage of a Password</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/266.html">CWE-266 Incorrect Privilege Assignment</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/269.html">CWE-269 Improper Privilege Management</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/286.html">CWE-286 Incorrect User Management</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/311.html">CWE-311 Missing Encryption of Sensitive Data</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/312.html">CWE-312 Cleartext Storage of Sensitive Information</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/313.html">CWE-313 Cleartext Storage in a File or on Disk</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/316.html">CWE-316 Cleartext Storage of Sensitive Information in Memory</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/362.html">CWE-362 Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/382.html">CWE-382 J2EE Bad Practices: Use of System.exit()</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/419.html">CWE-419 Unprotected Primary Channel</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/434.html">CWE-434 Unrestricted Upload of File with Dangerous Type</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/436.html">CWE-436 Interpretation Conflict</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/444.html">CWE-444 Inconsistent Interpretation of HTTP Requests ('HTTP Request/Response Smuggling')</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/451.html">CWE-451 User Interface (UI) Misrepresentation of Critical Information</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/454.html">CWE-454 External Initialization of Trusted Variables or Data Stores</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/472.html">CWE-472 External Control of Assumed-Immutable Web Parameter</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/501.html">CWE-501 Trust Boundary Violation</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/522.html">CWE-522 Insufficiently Protected Credentials</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/525.html">CWE-525 Use of Web Browser Cache Containing Sensitive Information</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/539.html">CWE-539 Use of Persistent Cookies Containing Sensitive Information</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/598.html">CWE-598 Use of GET Request Method With Sensitive Query Strings</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/602.html">CWE-602 Client-Side Enforcement of Server-Side Security</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/628.html">CWE-628 Function Call with Incorrectly Specified Arguments</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/642.html">CWE-642 External Control of Critical State Data</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/646.html">CWE-646 Reliance on File Name or Extension of Externally-Supplied File</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/653.html">CWE-653 Improper Isolation or Compartmentalization</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/656.html">CWE-656 Reliance on Security Through Obscurity</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/657.html">CWE-657 Violation of Secure Design Principles</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/676.html">CWE-676 Use of Potentially Dangerous Function</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/693.html">CWE-693 Protection Mechanism Failure</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/799.html">CWE-799 Improper Control of Interaction Frequency</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/807.html">CWE-807 Reliance on Untrusted Inputs in a Security Decision</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/841.html">CWE-841 Improper Enforcement of Behavioral Workflow</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/1021.html">CWE-1021 Improper Restriction of Rendered UI Layers or Frames</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/1022.html">CWE-1022 Use of Web Link to Untrusted Target with window.opener Access</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/1125.html">CWE-1125 Excessive Attack Surface</a></li>
+</ul>
+<h2 id="x022025-selhani-spravy-pameti-memory-management-failures">X02:2025 Selhání správy paměti (Memory Management Failures)</h2>
+<h3 id="pozadi_1">Pozadí</h3>
+<p>Jazyky jako Java, C#, JavaScript/TypeScript (node.js), Go a „bezpečný“ Rust jsou paměťově bezpečné. Problémy se správou paměti se naopak obvykle objevují v jazycích, které paměťově bezpečné nejsou, například v C a C++. Tato kategorie získala v komunitním průzkumu nejnižší hodnocení a nízké zastoupení měla i v datech, přestože vykazuje třetí nejvyšší počet souvisejících CVE. Domníváme se, že je to dáno převahou webových aplikací nad tradičnějšími desktopovými aplikacemi. Zranitelnosti související se správou paměti často dosahují nejvyšších skóre CVSS. </p>
+<h3 id="tabulka-skore_1">Tabulka skóre</h3>
+<table>
+  <tr>
+   <td>Počet mapovaných CWE 
+   </td>
+   <td>Max míra výskytu
+   </td>
+   <td>Průměrná míra výskytu
+   </td>
+   <td>Max pokrytí
+   </td>
+   <td>Průměrné pokrytí
+   </td>
+   <td>Průměrná vážená zneužitelnost
+   </td>
+   <td>Průměrný vážený dopad
+   </td>
+   <td>Celkový počet výskytů
+   </td>
+   <td>Celkový počet CVE
+   </td>
+  </tr>
+  <tr>
+   <td>24
+   </td>
+   <td>2,96 %
+   </td>
+   <td>1,13 %
+   </td>
+   <td>55,62 %
+   </td>
+   <td>28,45 %
+   </td>
+   <td>6,75
+   </td>
+   <td>4,82
+   </td>
+   <td>220 414
+   </td>
+   <td>30 978
+   </td>
+  </tr>
+</table>
+
+<h3 id="popis_1">Popis</h3>
+<p>Když je aplikace nucena spravovat paměť sama, je velmi snadné udělat chybu. Paměťově bezpečné jazyky se používají stále častěji, ale po celém světě je stále v provozu mnoho legacy systémů, vznikají nové nízkoúrovňové systémy vyžadující použití jazyků, které nejsou paměťově bezpečné, a existují i webové aplikace, které komunikují s mainframy, zařízeními IoT, firmwarem a dalšími systémy, jež mohou být nuceny spravovat vlastní paměť. Mezi reprezentativní CWE patří <em>CWE-120 Buffer Copy without Checking Size of Input („Classic Buffer Overflow“)</em> a <em>CWE-121 Stack-based Buffer Overflow</em>.</p>
+<p>K selhání správy paměti může dojít, když:</p>
+<ul>
+<li>Proměnné nepřidělíte dostatek paměti.</li>
+<li>Nevalidujete vstup, což způsobí přetečení haldy, zásobníku nebo bufferu.</li>
+<li>Uložíte datovou hodnotu, která je větší, než dokáže pojmout datový typ proměnné.</li>
+<li>Pokusíte se použít nepřidělenou paměť nebo nepřidělený adresní prostor.</li>
+<li>Vytvoříte chybu typu off-by-one (počítání od 1 místo od nuly).</li>
+<li>Pokusíte se přistoupit k objektu poté, co byl uvolněn.</li>
+<li>Použijete neinicializované proměnné.</li>
+<li>Způsobíte únik paměti nebo jinak chybně vyčerpáte veškerou dostupnou paměť, až aplikace selže.</li>
+</ul>
+<p>Selhání správy paměti může vést k selhání aplikace nebo dokonce celého systému, viz také <a href="#x012025-lack-of-application-resilience">X01:2025 – Nedostatečná odolnost aplikací (Lack of Application Resilience)</a>.</p>
+<h3 id="jak-tomu-zabranit_1">Jak tomu zabránit</h3>
+<p>Nejlepším způsobem, jak předcházet selháním správy paměti, je používat paměťově bezpečný jazyk. Příklady zahrnují Rust, Javu, Go, C#, Python, Swift, Kotlin, JavaScript atd. Při vytváření nových aplikací se snažte svou organizaci přesvědčit, že stojí za to překonat křivku učení a přejít na paměťově bezpečný jazyk. Pokud provádíte kompletní refaktoring, prosazujte přepsání do paměťově bezpečného jazyka, kdykoli je to možné a proveditelné.</p>
+<p>Pokud nemůžete použít paměťově bezpečný jazyk, proveďte následující:</p>
+<ul>
+<li>Povolte následující serverové funkce, které ztěžují zneužití chyb správy paměti: address space layout randomization (ASLR), Data Execution Protection (DEP) a Structured Exception Handling Overwrite Protection (SEHOP).</li>
+<li>Monitorujte aplikaci z hlediska úniků paměti.</li>
+<li>Velmi pečlivě validujte všechny vstupy do systému a odmítejte všechny vstupy, které neodpovídají očekáváním.</li>
+<li>Prostudujte jazyk, který používáte, a sestavte seznam nebezpečných a bezpečnějších funkcí; poté jej sdílejte s celým týmem. Pokud je to možné, zařaďte jej do svých směrnic nebo standardu pro bezpečné kódování. Například v jazyce C upřednostňujte strncpy() před strcpy() a strncat() před strcat().</li>
+<li>Pokud váš jazyk nebo framework nabízí knihovny pro paměťovou bezpečnost, používejte je. Například safestringlib nebo SafeStr.</li>
+<li>Kdykoli je to možné, používejte spravované buffery a řetězce namísto holých polí a ukazatelů.</li>
+<li>Absolvujte školení bezpečného kódování zaměřené na problémy spojené s pamětí a/nebo na vámi používaný jazyk. Informujte školitele, že vás znepokojují selhání správy paměti.</li>
+<li>Provádějte revize kódu a/nebo statické analýzy.</li>
+<li>Používejte nástroje kompilátoru, které pomáhají se správou paměti, jako jsou StackShield, StackGuard a Libsafe.</li>
+<li>Provádějte fuzzing všech vstupů do systému.</li>
+<li>Pokud podstupujete penetrační test, informujte testera, že vás znepokojují selhání správy paměti a že chcete, aby jim při testování věnoval zvláštní pozornost.</li>
+<li>Opravte všechny chyby a varování kompilátoru. Neignorujte varování jen proto, že se program zkompiluje.</li>
+<li>Zajistěte, aby byla vaše podkladová infrastruktura pravidelně záplatována, skenována a hardenována.</li>
+<li>Monitorujte podkladovou infrastrukturu zejména z hlediska potenciálních zranitelností souvisejících s pamětí a dalších selhání.</li>
+<li>Zvažte použití <a href="https://en.wikipedia.org/wiki/Buffer_overflow_protection#Canaries">kanárků (canaries)</a> k ochraně zásobníku adres před útoky přetečením.</li>
+</ul>
+<h3 id="priklady-scenaru-utoku_1">Příklady scénářů útoků</h3>
+<p><strong>Scénář #1:</strong> Přetečení vyrovnávací paměti (buffer overflow) je nejznámější paměťovou zranitelností. Jde o situaci, kdy útočník odešle do pole více informací, než kolik může přijmout, takže dojde k přetečení bufferu vytvořeného pro příslušnou proměnnou. Při úspěšném útoku znaky přetečení přepíší ukazatel zásobníku, což útočníkovi umožní vložit do programu škodlivé instrukce.</p>
+<p><strong>Scénář #2:</strong> Use-After-Free (UAF) se vyskytuje natolik často, že jde o poměrně běžný typ hlášení v bug bounty programech zaměřených na webové prohlížeče. Představte si webový prohlížeč zpracovávající JavaScript, který manipuluje s prvky DOM. Útočník připraví JavaScriptový payload, který vytvoří objekt (například prvek DOM) a získá na něj reference. Pečlivou manipulací přiměje prohlížeč k uvolnění paměti objektu, přičemž na něj zůstane dangling pointer (visící ukazatel). Dříve než prohlížeč rozpozná, že paměť byla uvolněna, útočník alokuje nový objekt, který obsadí stejný paměťový prostor. Když se pak prohlížeč pokusí použít původní ukazatel, ukazuje tento ukazatel na data ovládaná útočníkem. Pokud šlo o ukazatel na virtuální tabulku funkcí, může útočník přesměrovat běh kódu na svůj payload. </p>
+<p><strong>Scénář #3:</strong> Síťová služba přijímá vstup od uživatele, neprovádí jeho řádnou validaci ani sanitizaci a poté jej předá přímo logovací funkci. Uživatelský vstup je logovací funkci předán jako syslog(user_input) namísto syslog("%s", user_input), tedy bez explicitního určení formátu. Útočník odešle škodlivé payloady obsahující specifikátory formátu, například %x pro čtení paměti zásobníku (únik citlivých dat) nebo %n pro zápis do paměťových adres. Řetězením více formátovacích specifikátorů může zmapovat zásobník, najít důležité adresy a následně je přepsat. Jedná se o zranitelnost typu format string (nekontrolovaný formát řetězce). </p>
+<p>Poznámka: Moderní prohlížeče používají k obraně proti takovým útokům více vrstev ochrany, včetně <a href="https://www.geeksforgeeks.org/ethical-hacking/what-is-browser-sandboxing/#types-of-browser-sandboxing">sandboxingu prohlížeče</a>, ASLR, DEP/NX, RELRO a PIE. Útok na prohlížeč využívající selhání správy paměti není snadné provést.</p>
+<h3 id="reference_1">Reference</h3>
+<ul>
+<li><a href="https://owasp.org/www-community/vulnerabilities/Memory_leak">OWASP community pages: Memory leak,</a> <a href="https://owasp.org/www-community/vulnerabilities/Doubly_freeing_memory">Doubly freeing memory,</a> <a href="https://owasp.org/www-community/vulnerabilities/Buffer_Overflow">&amp; Buffer Overflow</a></li>
+<li><a href="https://github.com/secfigo/Awesome-Fuzzing">Awesome Fuzzing: a list of fuzzing resources</a> </li>
+<li><a href="https://googleprojectzero.blogspot.com">Project Zero Blog</a></li>
+<li><a href="https://www.microsoft.com/en-us/msrc/blog">Microsoft MSRC Blog</a></li>
+</ul>
+<h3 id="seznam-mapovanych-cwe_1">Seznam mapovaných CWE</h3>
+<ul>
+<li><a href="https://cwe.mitre.org/data/definitions/14.html">CWE-14 Compiler Removal of Code to Clear Buffers</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/119.html">CWE-119 Improper Restriction of Operations within the Bounds of a Memory Buffer</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120 Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/121.html">CWE-121 Stack-based Buffer Overflow</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/122.html">CWE-122 Heap-based Buffer Overflow</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/124.html">CWE-124 Buffer Underwrite ('Buffer Underflow')</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/125.html">CWE-125 Out-of-bounds Read</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/126.html">CWE-126 Buffer Over-read</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/190.html">CWE-190 Integer Overflow or Wraparound</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/191.html">CWE-191 Integer Underflow (Wrap or Wraparound)</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/196.html">CWE-196 Unsigned to Signed Conversion Error</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/367.html">CWE-367 Time-of-check Time-of-use (TOCTOU) Race Condition</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/415.html">CWE-415 Double Free</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/416.html">CWE-416 Use After Free</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/457.html">CWE-457 Use of Uninitialized Variable</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/459.html">CWE-459 Incomplete Cleanup</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/467.html">CWE-467 Use of sizeof() on a Pointer Type</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/787.html">CWE-787 Out-of-bounds Write</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/788.html">CWE-788 Access of Memory Location After End of Buffer</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/824.html">CWE-824 Access of Uninitialized Pointer</a></li>
+</ul>
+<h2 id="x032025-neprimerena-duvera-v-kod-generovany-ai-inappropriate-trust-in-ai-generated-code-vibe-coding">X03:2025 Nepřiměřená důvěra v kód generovaný AI (Inappropriate Trust in AI Generated Code („Vibe Coding“))</h2>
+<h3 id="pozadi_2">Pozadí</h3>
+<p>V současnosti celý svět mluví o AI a používá ji, což se týká i vývojářů softwaru. Ačkoli v současnosti neexistují žádné CVE ani CWE vztahující se ke kódu generovanému AI, je dobře známo a zdokumentováno, že takový kód často obsahuje více zranitelností než kód napsaný člověkem.</p>
+<h3 id="popis_2">Popis</h3>
+<p>Pozorujeme, že se postupy vývoje softwaru mění: nejde už jen o kód psaný s pomocí AI, ale i o kód napsaný a commitnutý téměř bez lidského dohledu (často označovaný jako „vibe coding“). Stejně jako nikdy nebylo dobré bez rozmyslu kopírovat úryvky kódu z blogů nebo webových stránek, je v tomto případě problém ještě výraznější. Dobré a bezpečné ukázky kódu byly a jsou vzácné a kvůli systémovým omezením je AI nemusí při generování kódu dostatečně zohledňovat.</p>
+<h3 id="jak-tomu-zabranit_2">Jak tomu zabránit</h3>
+<p>Všem, kdo píší kód, důrazně doporučujeme, aby při používání AI zvážili následující:</p>
+<ul>
+<li>Měli byste být schopni přečíst si a plně porozumět veškerému kódu, který odevzdáváte, i když jej napsala AI nebo byl zkopírován z online fóra. Nesete odpovědnost za veškerý kód, který commitnete.</li>
+<li>Veškerý kód vytvořený s pomocí AI byste měli důkladně prověřit z hlediska zranitelností, ideálně jak vlastním posouzením, tak i pomocí bezpečnostních nástrojů určených k tomuto účelu (například statické analýzy). Zvažte použití klasických technik code review, jak jsou popsány v <a href="https://cheatsheetseries.owasp.org/cheatsheets/Secure_Code_Review_Cheat_Sheet.html">OWASP Cheat Sheet Series: Secure Code Review</a>.</li>
+<li>Ideálně pište vlastní kód, nechte AI navrhnout vylepšení, zkontrolujte kód vygenerovaný AI a nechte AI provést opravy, dokud nebudete s výsledkem spokojeni.</li>
+<li>Zvažte použití serveru pro Retrieval Augmented Generation (RAG) s vlastními shromážděnými a prověřenými vzorky bezpečného kódu a dokumentací, například s interními směrnicemi, standardy nebo politikami vaší organizace pro bezpečné kódování, a nechte RAG server vynucovat příslušné politiky nebo standardy.</li>
+<li>Zvažte pořízení nástrojů, které při práci s vámi zvolenými AI zavádějí ochranná opatření (guardrails) pro soukromí a bezpečnost.</li>
+<li>Zvažte pořízení privátní AI, ideálně se smluvním ujednáním (včetně ujednání o ochraně soukromí), že AI nebude trénována na datech, dotazech, kódu ani jiných citlivých informacích vaší organizace.</li>
+<li>Zvažte zavedení serveru Model Context Protocol (MCP) mezi vaše IDE a AI a nastavte jej tak, aby vynucoval používání vámi zvolených bezpečnostních nástrojů.</li>
+<li>Zaveďte zásady a procesy jako součást svého SDLC, aby vývojáře (a všechny zaměstnance) informovaly o tom, jak mají a nemají AI ve vaší organizaci používat.</li>
+<li>Vytvořte seznam dobrých a účinných promptů, které zohledňují osvědčené postupy IT bezpečnosti. V ideálním případě by měly zohledňovat i vaše interní směrnice pro bezpečné kódování. Vývojáři mohou tyto prompty použít jako výchozí bod pro své programy.</li>
+<li>AI se pravděpodobně stane součástí každé fáze životního cyklu vývoje vašich systémů, a to jak z hlediska jejího efektivního, tak bezpečného využití. Používejte ji uvážlivě.</li>
+<li>V současnosti se <strong>nedoporučuje</strong> používat vibe coding pro složité funkce, kritické byznysové aplikace nebo programy používané dlouhodobě.</li>
+<li>Zaveďte technické kontroly a ochranná opatření proti používání Shadow AI.</li>
+<li>Proškolte své vývojáře v oblasti vašich zásad, bezpečného používání AI a osvědčených postupů pro využití AI při vývoji softwaru.</li>
+</ul>
+<h3 id="reference_2">Reference</h3>
+<ul>
+<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/Secure_Code_Review_Cheat_Sheet.html">OWASP Cheat Sheet: Secure Code Review</a></li>
+</ul>
+<h3 id="seznam-mapovanych-cwe_2">Seznam mapovaných CWE</h3>
+<p>Žádný.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © Copyright 2021-2025 - OWASP Top 10 Team - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "search.suggest"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Zkop\u00edrov\u00e1no do schr\u00e1nky", "clipboard.copy": "Kop\u00edrovat do schr\u00e1nky", "search.result.more.one": "1 dal\u0161\u00ed na t\u00e9to str\u00e1nce", "search.result.more.other": "# v\u00edce na t\u00e9to str\u00e1nce", "search.result.none": "Nenalezeny \u017e\u00e1dn\u00e9 dokumenty", "search.result.one": "Nalezen\u00fd dokument: 1", "search.result.other": "Nalezen\u00e9 dokumenty: #", "search.result.placeholder": "Pi\u0161te co se m\u00e1 vyhledat", "search.result.term.missing": "Chyb\u011bj\u00edc\u00ed", "select.version": "Vyberte verzi"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+    
+  </body>
+</html>

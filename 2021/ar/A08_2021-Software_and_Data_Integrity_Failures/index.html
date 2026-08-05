@@ -1,0 +1,1261 @@
+
+<!doctype html>
+<html lang="ar" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="OWASP Top 10:2021">
+      
+      
+      
+        <link rel="canonical" href="https://owasp.org/Top10/2021/ar/A08_2021-Software_and_Data_Integrity_Failures/">
+      
+      
+        <link rel="prev" href="../A07_2021-Identification_and_Authentication_Failures/">
+      
+      
+        <link rel="next" href="../A09_2021-Security_Logging_and_Monitoring_Failures/">
+      
+      
+        
+          <link rel="alternate" href="../../A08_2021-Software_and_Data_Integrity_Failures/" hreflang="en">
+        
+          <link rel="alternate" href="./" hreflang="ar">
+        
+          <link rel="alternate" href="../../de/A08_2021-Software_and_Data_Integrity_Failures/" hreflang="de">
+        
+          <link rel="alternate" href="../../es/A08_2021-Software_and_Data_Integrity_Failures/" hreflang="es">
+        
+          <link rel="alternate" href="../../fr/A08_2021-Software_and_Data_Integrity_Failures/" hreflang="fr">
+        
+          <link rel="alternate" href="../../id/A08_2021-Software_and_Data_Integrity_Failures/" hreflang="id">
+        
+          <link rel="alternate" href="../../it/A08_2021-Software_and_Data_Integrity_Failures/" hreflang="it">
+        
+          <link rel="alternate" href="../../ja/A08_2021-Software_and_Data_Integrity_Failures/" hreflang="ja">
+        
+          <link rel="alternate" href="../../pt-BR/A08_2021-Software_and_Data_Integrity_Failures/" hreflang="pt-BR">
+        
+          <link rel="alternate" href="../../tr/A08_2021-Software_and_Data_Integrity_Failures/" hreflang="tr">
+        
+          <link rel="alternate" href="../../zh-Hant/A08_2021-Software_and_Data_Integrity_Failures/" hreflang="zh-Hant">
+        
+          <link rel="alternate" href="../../zh-TW/A08_2021-Software_and_Data_Integrity_Failures/" hreflang="zh-TW">
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>A08 فشل سلامة البيانات والبرمجيات - OWASP Top 10:2021</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="rtl">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#a082021" class="md-skip">
+          انتقل إلى المحتوى
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="عنوان العارضة">
+    <a href="../" title="OWASP Top 10:2021" class="md-header__button md-logo" aria-label="OWASP Top 10:2021" data-md-component="logo">
+      
+  <img src="../../assets/OWASP_Logo_Transp.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OWASP Top 10:2021
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              A08  فشل سلامة البيانات والبرمجيات
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="إختر اللغة">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../A08_2021-Software_and_Data_Integrity_Failures/" hreflang="en" class="md-select__link">
+              en - English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="ar" class="md-select__link">
+              ar - العربية
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../de/A08_2021-Software_and_Data_Integrity_Failures/" hreflang="de" class="md-select__link">
+              de - Deutsch
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../es/A08_2021-Software_and_Data_Integrity_Failures/" hreflang="es" class="md-select__link">
+              es - Español
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../fr/A08_2021-Software_and_Data_Integrity_Failures/" hreflang="fr" class="md-select__link">
+              fr - Français
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../id/A08_2021-Software_and_Data_Integrity_Failures/" hreflang="id" class="md-select__link">
+              id - Indonesian
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../it/A08_2021-Software_and_Data_Integrity_Failures/" hreflang="it" class="md-select__link">
+              it - Italiano
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../ja/A08_2021-Software_and_Data_Integrity_Failures/" hreflang="ja" class="md-select__link">
+              ja - 日本語
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../pt-BR/A08_2021-Software_and_Data_Integrity_Failures/" hreflang="pt-BR" class="md-select__link">
+              pt-BR - Português (Brasil)
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../tr/A08_2021-Software_and_Data_Integrity_Failures/" hreflang="tr" class="md-select__link">
+              tr - Türkçe
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../zh-Hant/A08_2021-Software_and_Data_Integrity_Failures/" hreflang="zh-Hant" class="md-select__link">
+              zh-Hant - 简体中文
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../zh-TW/A08_2021-Software_and_Data_Integrity_Failures/" hreflang="zh-TW" class="md-select__link">
+              zh-TW - 繁體中文
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="بحث" placeholder="بحث" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="إبحث">
+        
+        <button type="reset" class="md-search__icon md-icon" title="مسح كلي" aria-label="مسح كلي" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            بدء البحث
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/OWASP/Top10" title="اذهب إلى المصدر" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    OWASP/Top10
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="تصفح" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../" title="OWASP Top 10:2021" class="md-nav__button md-logo" aria-label="OWASP Top 10:2021" data-md-component="logo">
+      
+  <img src="../../assets/OWASP_Logo_Transp.png" alt="logo">
+
+    </a>
+    OWASP Top 10:2021
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/OWASP/Top10" title="اذهب إلى المصدر" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    OWASP/Top10
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Welcome Page
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A00_2021_Introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    المقدمة
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x00_2021-notice/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ملاحظات
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A00_2021_How_to_use_the_OWASP_Top_10_as_a_standard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    كيف تستخدم إطار أعلى عشرة مخاطر من أواسب كنموذج معياري.
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A00_2021-How_to_start_an_AppSec_program_with_the_OWASP_Top_10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    كيف تبدأ امن التطبيقات مع أعلى عشرة مخاطر من أواسب
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x01_2021-about-owasp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    عن أواسب
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    قائمة اعلى عشرة مخاطر لعام 2021
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    قائمة اعلى عشرة مخاطر لعام 2021
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A01_2021-Broken_Access_Control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A01 تخطي صلاحيات الوصول
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A02_2021-Cryptographic_Failures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A02 فشل آلية التشفير
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A03_2021-Injection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A03 الحقن
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A04_2021-Insecure_Design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A04 التصميم الغير آمن
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A05_2021-Security_Misconfiguration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A05 الإعدادات الأمنية الخاطئة
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A06_2021-Vulnerable_and_Outdated_Components/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A06 الثغرات و المكونات الغير المحدثة
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A07_2021-Identification_and_Authentication_Failures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A07 الهوية و فشل عملية التحقق
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A08  فشل سلامة البيانات والبرمجيات
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A08  فشل سلامة البيانات والبرمجيات
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="جدول المحتويات">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      جدول المحتويات
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        العوامل
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        نظرة عامة
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        الوصف
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        كيفية الحماية منها
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        أمثلة على سيناريوهات الهجوم
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        المصادر
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cwes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        قائمة الربط مع إطار CWEs
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A09_2021-Security_Logging_and_Monitoring_Failures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A09 فشل في تسجيل السجلات الأمنية والمراقبة
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A10_2021-Server-Side_Request_Forgery_%28SSRF%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A10 تزوير الطلبات من جانب الخادم SSRF
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A11_2021-Next_Steps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    الخطوات المقبلة
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="جدول المحتويات">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      جدول المحتويات
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        العوامل
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        نظرة عامة
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        الوصف
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        كيفية الحماية منها
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        أمثلة على سيناريوهات الهجوم
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        المصادر
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cwes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        قائمة الربط مع إطار CWEs
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="a082021">A08:2021 – فشل سلامة البرامج والبيانات</h1>
+<h2 id="_1">العوامل</h2>
+<table>
+<thead>
+<tr>
+<th>ربطها مع CWEs</th>
+<th>الحد الأقصى للحدوث</th>
+<th>متوسط معدل الحدوث</th>
+<th>التغطية القصوى</th>
+<th>متوسط معدل التغطية</th>
+<th>متوسط استغلال الثغرات</th>
+<th>متوسط التأثير</th>
+<th>إجمالي التكرار</th>
+<th>إجمالي نقاط الضعف CVEs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10</td>
+<td>16.67%</td>
+<td>2.05%</td>
+<td>75.04%</td>
+<td>45.35%</td>
+<td>6.94</td>
+<td>7.94</td>
+<td>47,972</td>
+<td>1,152</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_2">نظرة عامة</h2>
+<p>تمت إضافة هذا التصنيف في عام 2021 حيث يُركّز على وضع افتراضات تتعلّق بتحديثات البرامج والبيانات الحساسة أو تطبيق معايير CI/CD pipeline من دون التحقّق من سلامتها. إن أحد أكبر التأثيرات الكبيرة والموجودة في قواعد بيانات الثغرات CVE /CVSS والمرتبطة مع إطار CWEs وهم: CWE-502، CWE-829، CWE-494.</p>
+<h2 id="_3">الوصف</h2>
+<p>فشل سلامة البيانات والبرامج تتعلّق بالشّفرة المصدرية والبنية التحتيّة الغير محميّة من الانتهاكات التي تتعّلق بسلامتها. على سبيل المثال: حين يتم ترميز الكائنات أو البيانات بطريقة تُمكّن المهاجم أن يطّلع أو يقوم بإجراء التعديلات الغير مُصرّح بها. مثال آخر: عندما يعتمد التطبيق على إضافات أخرى أو مكتبات أو بعض الأنماط الغير موثوقة أو من خلال استخدام شبكات توصيل المحتوى CDNs الغير موثوق بها، ويمكن أن يؤدي CI / CIC الغير آمن إلى إمكانية الوصول الغير مُصرّح به أو تنزيل برمجية خبيثة أو اختراق النظام. أخيرًا، تتضمّن العديد من التطبيقات الآن وظيفة التحديث التلقائي، حيث يتم تنزيل التحديثات دون التحقّق من السلامة بشكل كافي وتثبيتها على التطبيقات التي تم الوثوق بها سابقًا. مما يُمكّن المهاجمين أن يقوموا بتحميل تحديثاتهم الخاصة ليتم تثبيتها وتشغيلها على جميع الأجهزة.  </p>
+<h2 id="_4">كيفية الحماية منها</h2>
+<ul>
+<li>
+<p>تأكد من عدم إرسال البيانات الغير مشفّرة أو الغير موقّعة إلى عملاء غير موثوقين بدون شكل من أشكال التحقق من سلامة أو وجود توقيع رقمي وذلك من أجل اكتشاف التلاعب بالبيانات.</p>
+</li>
+<li>
+<p>التحقّق من سلامة البرامج أو البيانات من المصادر الرسمية والمتوقعة، عبر التأكد من وجود التواقيع أو آليات مُشابهة لضمان سلامة البيانات</p>
+</li>
+<li>
+<p>تأكد من أن المكتبات والمكونات، مثل Npm أو Maven، تستخدم مصادر موثوقة.</p>
+</li>
+<li>
+<p>تأكد من استخدام أدوات الحماية عند استخدام برمجيات الطرف الثالث، مثل OWASP Dependency Check أو OWASP CycloneDX ، والتي تقوم بالتأكد من عدم وجود أي ثغرات أمنية </p>
+</li>
+<li>
+<p>تأكد من أن   CI / CD لديه الإعدادات المناسبة والتحكّم المناسب للوصول للبرامج والبيانات للتأكد من سلامتها خلال آلية الإنشاء والنشر.</p>
+</li>
+</ul>
+<h2 id="_5">أمثلة على سيناريوهات الهجوم</h2>
+<p><strong>سيناريو #1 إلغاء التسلسل الغير آمن:</strong> يستدعي تطبيق React مجموعة من الخدمات المصغّرة لـ Spring Boot. فقد حاول المبرمجين بالتأكد من أن الشّفرة المصدرية الخاصة بهم غير قابلة للتغيير. والحل الذي توصلوا إليه هو إجراء تسلسل لحالة المستخدم وتمريرها ذهابًا وإيابًا مع كل طلب. فقد لاحظ المهاجم توقيع كائن جافا R00 يمكنه من استخدام أداة Java Serial Killer للحصول على إمكانية التنفيذ عن بعد. </p>
+<p><strong>سيناريو #2 التحديث بدون التأكد من التواقيع:</strong> العديد من أجهزة الموجّهات المنزلية والبرامج الثابتة Firmware وغيرها لا تتحقّق من صحة التواقيع الرقمية عند إجراء التحديثات. حيث تُعد البرامج الثابتة الغير موقعة هدفًا سهلًا للمهاجمين. فالخطر هنا أنه لا توجد آلية لإصلاحه، بل في انتظار الإصلاح في الإصدارات القادمة</p>
+<p><strong>سيناريو #3 التحديثات التي استهدفت SolarWinds</strong>: يقوم المهاجمون المتقدمون باستهداف آلية التحديث للأنظمة. ومن خلال ملاحظة الهجمة الحديثة التي استهدفت SolarWinds Orion. حيث قامت الشركة بتطوير آلية وسياسة للتأكد من سلامة عملية التحديث وأمنها. ومع ذلك فقد يستطيع المهاجمون استغلالها، وقد حدث ذلك واستغلوا المهاجمين تلك الآلية ولمدة أشهر، حيث قاموا بحقن برمجيات التحديثات للأنظمة التي أثّرت على أكثر من 18,000 نظام لأكثر من 100 منظمة حول العالم. حيث يُعتبر هذا الهجوم من أخطر الهجمات التي حدثت حتى يومنا هذا. </p>
+<h2 id="_6">المصادر</h2>
+<ul>
+<li>
+<p><a href="Coming Soon">OWASP Cheat Sheet: Software Supply Chain Security</a></p>
+</li>
+<li>
+<p><a href="Coming Soon">OWASP Cheat Sheet: Secure build and deployment</a></p>
+</li>
+<li>
+<p><a href="https://cheatsheetseries.owasp.org/cheatsheets/Infrastructure_as_Code_Security_Cheat_Sheet.html">OWASP Cheat Sheet: Infrastructure as Code</a> </p>
+</li>
+<li>
+<p><a href="https://wiki.owasp.org/index.php/Deserialization_Cheat_Sheet">OWASP Cheat Sheet: Deserialization</a></p>
+</li>
+<li>
+<p><a href="https://safecode.org/publication/SAFECode_Software_Integrity_Controls0610.pdf">SAFECode Software Integrity Controls</a></p>
+</li>
+<li>
+<p><a href="https://www.npr.org/2021/04/16/985439655/a-worst-nightmare-cyberattack-the-untold-story-of-the-solarwinds-hack">A 'Worst Nightmare' Cyberattack: The Untold Story Of The SolarWinds Hack</a></p>
+</li>
+<li>
+<p><a href="https://about.codecov.io/security-update">CodeCov Bash Uploader Compromise</a></p>
+</li>
+<li>
+<p><a href="https://www.manning.com/books/securing-devops">Securing DevOps by Julien Vehent</a></p>
+</li>
+</ul>
+<h2 id="cwes">قائمة الربط مع إطار CWEs</h2>
+<p><a href="https://cwe.mitre.org/data/definitions/345.html">CWE-345 Insufficient Verification of Data Authenticity</a></p>
+<p><a href="https://cwe.mitre.org/data/definitions/353.html">CWE-353 Missing Support for Integrity Check</a></p>
+<p><a href="https://cwe.mitre.org/data/definitions/426.html">CWE-426 Untrusted Search Path</a></p>
+<p><a href="https://cwe.mitre.org/data/definitions/494.html">CWE-494 Download of Code Without Integrity Check</a></p>
+<p><a href="https://cwe.mitre.org/data/definitions/502.html">CWE-502 Deserialization of Untrusted Data</a></p>
+<p><a href="https://cwe.mitre.org/data/definitions/565.html">CWE-565 Reliance on Cookies without Validation and Integrity Checking</a></p>
+<p><a href="https://cwe.mitre.org/data/definitions/784.html">CWE-784 Reliance on Cookies without Validation and Integrity Checking in a Security Decision</a></p>
+<p><a href="https://cwe.mitre.org/data/definitions/829.html">CWE-829 Inclusion of Functionality from Untrusted Control Sphere</a></p>
+<p><a href="https://cwe.mitre.org/data/definitions/830.html">CWE-830 Inclusion of Web Functionality from an Untrusted Source</a></p>
+<p><a href="https://cwe.mitre.org/data/definitions/915.html">CWE-915 Improperly Controlled Modification of Dynamically-Determined Object Attributes</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © Copyright 2021-2025 - OWASP Top 10 Team - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.instant", "search.suggest"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "\u062a\u0645 \u0627\u0644\u0646\u0633\u062e \u0627\u0644\u0649 \u0627\u0644\u062d\u0627\u0641\u0638\u0629", "clipboard.copy": "\u0646\u0633\u062e \u0625\u0644\u0649 \u0627\u0644\u062d\u0627\u0641\u0638\u0629", "search.result.more.one": "\u0623\u0643\u062b\u0631 \u0645\u0646 1 \u0641\u064a \u0647\u0630\u0647 \u0627\u0644\u0635\u0641\u062d\u0629", "search.result.more.other": "\u0623\u0643\u062b\u0631 \u0645\u0646 # \u0641\u064a \u0647\u0630\u0647 \u0627\u0644\u0635\u0641\u062d\u0629", "search.result.none": "\u0644\u0627 \u062a\u0648\u062c\u062f \u0646\u062a\u0627\u0626\u062c", "search.result.one": "\u0646\u062a\u0627\u0626\u062c \u0627\u0644\u0628\u062d\u062b \u0645\u0633\u062a\u0646\u062f \u0648\u0627\u062d\u062f", "search.result.other": "\u0646\u062a\u0627\u0626\u062c \u0627\u0644\u0628\u062d\u062b # \u0645\u0633\u062a\u0646\u062f\u0627\u062a", "search.result.placeholder": "\u0627\u0643\u062a\u0628 \u0644\u0628\u062f\u0621 \u0627\u0644\u0628\u062d\u062b", "search.result.term.missing": "\u0645\u0641\u0642\u0648\u062f", "select.version": "\u0625\u062e\u062a\u0631 \u0627\u0644\u0625\u0635\u062f\u0627\u0631"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+    
+  </body>
+</html>

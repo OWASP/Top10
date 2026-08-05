@@ -1,0 +1,1489 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="OWASP Top 10:2025">
+      
+      
+      
+        <link rel="canonical" href="https://owasp.org/Top10/2025/pt-BR/0x03_2025-Establishing_a_Modern_Application_Security_Program/">
+      
+      
+        <link rel="prev" href="../0x02_2025-What_are_Application_Security_Risks/">
+      
+      
+        <link rel="next" href="../A01_2025-Broken_Access_Control/">
+      
+      
+        
+          <link rel="alternate" href="../../0x03_2025-Establishing_a_Modern_Application_Security_Program/" hreflang="en">
+        
+          <link rel="alternate" href="../../cs/" hreflang="cs  material_alternate">
+        
+          <link rel="alternate" href="../../es/0x03_2025-Establishing_a_Modern_Application_Security_Program/" hreflang="es">
+        
+          <link rel="alternate" href="../../it/0x03_2025-Establishing_a_Modern_Application_Security_Program/" hreflang="it">
+        
+          <link rel="alternate" href="../../ja/0x03_2025-Establishing_a_Modern_Application_Security_Program/" hreflang="ja">
+        
+          <link rel="alternate" href="../../ko/0x03_2025-Establishing_a_Modern_Application_Security_Program/" hreflang="ko">
+        
+          <link rel="alternate" href="../../fa/0x03_2025-Establishing_a_Modern_Application_Security_Program/" hreflang="fa">
+        
+          <link rel="alternate" href="./" hreflang="pt-BR">
+        
+          <link rel="alternate" href="../../zh-Hant/0x03_2025-Establishing_a_Modern_Application_Security_Program/" hreflang="zh-Hant">
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Estabelecendo um Programa Moderno de Segurança de Aplicações - OWASP Top 10:2025</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#estabelecendo-um-programa-moderno-de-seguranca-de-aplicacoes" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../" title="OWASP Top 10:2025" class="md-header__button md-logo" aria-label="OWASP Top 10:2025" data-md-component="logo">
+      
+  <img src="../../assets/OWASP_Logo_Transp.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OWASP Top 10:2025
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Estabelecendo um Programa Moderno de Segurança de Aplicações
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Selecione o idioma">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../0x03_2025-Establishing_a_Modern_Application_Security_Program/" hreflang="en" class="md-select__link">
+              en - English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../cs/" hreflang="cs  material_alternate" class="md-select__link">
+              cs - Česky
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../es/0x03_2025-Establishing_a_Modern_Application_Security_Program/" hreflang="es" class="md-select__link">
+              es - Español
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../it/0x03_2025-Establishing_a_Modern_Application_Security_Program/" hreflang="it" class="md-select__link">
+              it - Italiano
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../ja/0x03_2025-Establishing_a_Modern_Application_Security_Program/" hreflang="ja" class="md-select__link">
+              ja - 日本語 (Japanese)
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../ko/0x03_2025-Establishing_a_Modern_Application_Security_Program/" hreflang="ko" class="md-select__link">
+              ko - 한국어 (Korean)
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../fa/0x03_2025-Establishing_a_Modern_Application_Security_Program/" hreflang="fa" class="md-select__link">
+              fa - فارسی (Persian/Fārsi)
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="pt-BR" class="md-select__link">
+              pt-BR - (Português Brasil)
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../zh-Hant/0x03_2025-Establishing_a_Modern_Application_Security_Program/" hreflang="zh-Hant" class="md-select__link">
+              zh-Hant - 简体中文
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/OWASP/Top10" title="Ir para repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    OWASP/Top10
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../" title="OWASP Top 10:2025" class="md-nav__button md-logo" aria-label="OWASP Top 10:2025" data-md-component="logo">
+      
+  <img src="../../assets/OWASP_Logo_Transp.png" alt="logo">
+
+    </a>
+    OWASP Top 10:2025
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/OWASP/Top10" title="Ir para repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    OWASP/Top10
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Início
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x00_2025-Introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introdução
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x01_2025-About_OWASP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sobre a OWASP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x02_2025-What_are_Application_Security_Risks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    O que são Riscos de Segurança de Aplicações?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Estabelecendo um Programa Moderno de Segurança de Aplicações
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Estabelecendo um Programa Moderno de Segurança de Aplicações
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-estabeleca-uma-abordagem-de-portfolio-baseada-em-risco" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Estabeleça uma Abordagem de Portfólio Baseada em Risco:
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-viabilize-com-uma-fundacao-forte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Viabilize com uma Fundação Forte:
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-integre-a-seguranca-aos-processos-existentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Integre a Segurança aos Processos Existentes:
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-educacao-em-seguranca-de-aplicacoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Educação em Segurança de Aplicações:
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-forneca-visibilidade-para-a-gestao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Forneça Visibilidade para a Gestão:
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estabeleca-e-use-processos-de-seguranca-repetiveis-e-controles-de-seguranca-padrao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estabeleça e Use Processos de Segurança Repetíveis e Controles de Segurança Padrão
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Estabeleça e Use Processos de Segurança Repetíveis e Controles de Segurança Padrão">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fase-de-requisitos-e-gerenciamento-de-recursos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase de Requisitos e Gerenciamento de Recursos:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#solicitacao-de-propostas-rfp-e-contratacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solicitação de Propostas (RFP) e Contratação:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fase-de-planejamento-e-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase de Planejamento e Design:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ciclo-de-vida-de-desenvolvimento-seguro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ciclo de Vida de Desenvolvimento Seguro:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estabeleca-testes-continuos-de-seguranca-de-aplicacoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estabeleça Testes Contínuos de Segurança de Aplicações:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implantacao-rollout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Implantação (Rollout):
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operacoes-e-gerenciamento-de-mudancas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Operações e Gerenciamento de Mudanças:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#desativacao-de-sistemas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Desativação de Sistemas:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usando-o-owasp-top-10-como-um-padrao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Usando o OWASP Top 10 como um Padrão
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lista do Top 10:2025
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Lista do Top 10:2025
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A01_2025-Broken_Access_Control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A01 Controle de Acesso Quebrado
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A02_2025-Security_Misconfiguration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A02 Configuração Insegura
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A03_2025-Software_Supply_Chain_Failures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A03 Falhas na Cadeia de Suprimentos de Software
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A04_2025-Cryptographic_Failures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A04 Falhas Criptográficas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A05_2025-Injection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A05 Injeção
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A06_2025-Insecure_Design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A06 Design Inseguro
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A07_2025-Authentication_Failures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A07 Falhas de Autenticação
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A08_2025-Software_or_Data_Integrity_Failures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A08 Falhas de Integridade de Software ou de Dados
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A09_2025-Security_Logging_and_Alerting_Failures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A09 Falhas de Registro e Monitoramento de Segurança
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A10_2025-Mishandling_of_Exceptional_Conditions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A10 Tratamento Incorreto de Condições Excepcionais
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../X01_2025-Next_Steps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Próximos Passos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-estabeleca-uma-abordagem-de-portfolio-baseada-em-risco" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Estabeleça uma Abordagem de Portfólio Baseada em Risco:
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-viabilize-com-uma-fundacao-forte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Viabilize com uma Fundação Forte:
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-integre-a-seguranca-aos-processos-existentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Integre a Segurança aos Processos Existentes:
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-educacao-em-seguranca-de-aplicacoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Educação em Segurança de Aplicações:
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-forneca-visibilidade-para-a-gestao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Forneça Visibilidade para a Gestão:
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estabeleca-e-use-processos-de-seguranca-repetiveis-e-controles-de-seguranca-padrao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estabeleça e Use Processos de Segurança Repetíveis e Controles de Segurança Padrão
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Estabeleça e Use Processos de Segurança Repetíveis e Controles de Segurança Padrão">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fase-de-requisitos-e-gerenciamento-de-recursos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase de Requisitos e Gerenciamento de Recursos:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#solicitacao-de-propostas-rfp-e-contratacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solicitação de Propostas (RFP) e Contratação:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fase-de-planejamento-e-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase de Planejamento e Design:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ciclo-de-vida-de-desenvolvimento-seguro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ciclo de Vida de Desenvolvimento Seguro:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estabeleca-testes-continuos-de-seguranca-de-aplicacoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estabeleça Testes Contínuos de Segurança de Aplicações:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implantacao-rollout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Implantação (Rollout):
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operacoes-e-gerenciamento-de-mudancas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Operações e Gerenciamento de Mudanças:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#desativacao-de-sistemas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Desativação de Sistemas:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usando-o-owasp-top-10-como-um-padrao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Usando o OWASP Top 10 como um Padrão
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="estabelecendo-um-programa-moderno-de-seguranca-de-aplicacoes">Estabelecendo um Programa Moderno de Segurança de Aplicações</h1>
+<p>As listas OWASP Top Ten são documentos de conscientização, destinados a dar visibilidade aos riscos mais críticos de cada tópico que abordam. Elas não pretendem ser uma lista completa, mas apenas um ponto de partida. Em versões anteriores desta lista, prescrevemos o início de um programa de segurança de aplicações como a melhor forma de evitar esses riscos e muitos outros. Nesta seção, abordaremos como iniciar e construir um programa moderno de segurança de aplicações.</p>
+<p>Se você já possui um programa de segurança de aplicações, considere realizar uma avaliação de maturidade utilizando o <a href="https://owasp.org/www-project-samm/">OWASP SAMM (Software Assurance Maturity Model)</a> ou o DSOMM (DevSecOps Maturity Model). Esses modelos de maturidade são abrangentes e exaustivos, podendo ser usados para ajudá-lo a entender onde focar melhor seus esforços para expandir e amadurecer seu programa. <strong>Observação:</strong> você não precisa fazer tudo o que está no OWASP SAMM ou no DSOMM para realizar um bom trabalho; eles servem para guiá-lo e oferecer diversas opções. Não foram feitos para oferecer padrões inalcançáveis ou descrever programas inacessíveis financeiramente. Eles são amplos para oferecer a você muitas ideias e opções.</p>
+<p>Se você está começando um programa do zero, ou se considera o OWASP SAMM ou o DSOMM "demais" para o seu time no momento, revise os conselhos a seguir.</p>
+<h3 id="1-estabeleca-uma-abordagem-de-portfolio-baseada-em-risco">1. Estabeleça uma Abordagem de Portfólio Baseada em Risco:</h3>
+<ul>
+<li>Identifique as necessidades de proteção do seu portfólio de aplicações sob uma perspectiva de negócio. Isso deve ser impulsionado, em parte, por leis de privacidade e outras regulamentações relevantes para o ativo de dados que está sendo protegido.</li>
+<li>Estabeleça um <a href="https://owasp.org/www-community/OWASP_Risk_Rating_Methodology">modelo comum de classificação de risco</a> com um conjunto consistente de fatores de probabilidade e impacto que reflitam a tolerância ao risco da sua organização.</li>
+<li>Meça e priorize todas as suas aplicações e APIs adequadamente. Adicione os resultados ao seu <a href="https://de.wikipedia.org/wiki/Configuration_Management_Database">Configuration Management Database (CMDB)</a>.</li>
+<li>Estabeleça diretrizes de garantia para definir adequadamente a cobertura e o nível de rigor exigido.</li>
+</ul>
+<h3 id="2-viabilize-com-uma-fundacao-forte">2. Viabilize com uma Fundação Forte:</h3>
+<ul>
+<li>Estabeleça um conjunto de políticas e padrões focados que forneçam uma linha de base (<em>baseline</em>) de segurança de aplicações para todas as equipes de desenvolvimento seguirem.</li>
+<li>Defina um conjunto comum de controles de segurança reutilizáveis que complementem essas políticas e padrões, fornecendo orientações de design e desenvolvimento sobre seu uso.</li>
+<li>Estabeleça um currículo de treinamento em segurança de aplicações que seja obrigatório e direcionado a diferentes funções e tópicos de desenvolvimento.</li>
+</ul>
+<h3 id="3-integre-a-seguranca-aos-processos-existentes">3. Integre a Segurança aos Processos Existentes:</h3>
+<ul>
+<li>Defina e integre atividades de implementação e verificação segura aos processos operacionais e de desenvolvimento existentes.</li>
+<li>As atividades incluem modelagem de ameaças (<em>threat modeling</em>), design seguro e revisão de design, codificação segura e revisão de código, testes de intrusão (<em>penetration testing</em>) e remediação.</li>
+<li>Forneça especialistas no assunto (<em>SMEs</em>) e serviços de suporte para que as equipes de desenvolvimento e de projeto tenham sucesso.</li>
+<li>Revise seu ciclo de vida de desenvolvimento de sistemas (<em>SDLC</em>) atual e todas as atividades, ferramentas, políticas e processos de segurança de software e, em seguida, documente-os.</li>
+<li>Para novos softwares, adicione uma ou mais atividades de segurança a cada fase do <em>SDLC</em>. Abaixo, oferecemos sugestões do que pode ser feito. Garanta que essas novas atividades sejam realizadas em cada novo projeto ou iniciativa de software; dessa forma, você saberá que cada novo pedaço de software será entregue com uma postura de segurança aceitável para sua organização.</li>
+<li>Selecione suas atividades para garantir que seu produto final atenda a um nível de risco aceitável para sua organização.</li>
+<li>Para softwares existentes (às vezes chamados de legado), você desejará ter um plano de manutenção formal; procure ideias de como manter aplicações seguras na seção chamada 'Operações e Gerenciamento de Mudanças'.</li>
+</ul>
+<h3 id="4-educacao-em-seguranca-de-aplicacoes">4. Educação em Segurança de Aplicações:</h3>
+<ul>
+<li>Considere iniciar um programa de <em>security champions</em> ou um programa de educação geral em segurança para seus desenvolvedores (às vezes chamado de programa de <em>advocacy</em> ou conscientização de segurança) para ensiná-los tudo o que você gostaria que eles soubessem. Isso os manterá atualizados, ajudará a saber como realizar seu trabalho de forma segura e tornará a cultura de segurança onde você trabalha mais positiva. Frequentemente, isso também melhora a confiança entre as equipes e cria uma relação de trabalho mais feliz. A OWASP apoia você nisso com o <a href="https://securitychampions.owasp.org/">OWASP Security Champions Guide</a>, que está sendo expandido passo a passo.</li>
+<li>O Projeto de Educação da OWASP fornece materiais de treinamento para ajudar a educar desenvolvedores em segurança de aplicações web. Para aprendizado prático sobre vulnerabilidades, experimente o <a href="https://owasp.org/www-project-juice-shop/">OWASP Juice Shop Project</a> ou o <a href="https://owasp.org/www-project-webgoat/">OWASP WebGoat</a>. Para manter-se atualizado, participe de uma <a href="https://owasp.org/events/">Conferência OWASP AppSec</a>, treinamentos em conferências ou reuniões de um <a href="https://owasp.org/chapters/">Chapter OWASP</a> local.</li>
+</ul>
+<h3 id="5-forneca-visibilidade-para-a-gestao">5. Forneça Visibilidade para a Gestão:</h3>
+<ul>
+<li>Gerencie com métricas. Direcione melhorias e decisões de financiamento com base em métricas e dados de análise capturados. As métricas incluem a adesão a práticas e atividades de segurança, vulnerabilidades introduzidas, vulnerabilidades mitigadas, cobertura de aplicações, densidade de defeitos por tipo e contagem de instâncias, etc.</li>
+<li>Analise dados das atividades de implementação e verificação para procurar a causa raiz e padrões de vulnerabilidade, visando impulsionar melhorias estratégicas e sistêmicas em toda a empresa. Aprenda com os erros e ofereça incentivos positivos para promover melhorias.</li>
+</ul>
+<hr />
+<h2 id="estabeleca-e-use-processos-de-seguranca-repetiveis-e-controles-de-seguranca-padrao">Estabeleça e Use Processos de Segurança Repetíveis e Controles de Segurança Padrão</h2>
+<h3 id="fase-de-requisitos-e-gerenciamento-de-recursos">Fase de Requisitos e Gerenciamento de Recursos:</h3>
+<ul>
+<li>Colete e negocie os requisitos de negócio para uma aplicação com a área de negócios, incluindo os requisitos de proteção em relação à confidencialidade, autenticidade, integridade e disponibilidade de todos os ativos de dados, além da lógica de negócio esperada.</li>
+<li>Compile os requisitos técnicos, incluindo requisitos de segurança funcionais e não funcionais. A OWASP recomenda o uso do <a href="https://owasp.org/www-project-application-security-verification-standard/">OWASP Application Security Verification Standard (ASVS)</a> como guia para definir os requisitos de segurança de sua(s) aplicação(ões).</li>
+<li>Planeje e negocie o orçamento que cubra todos os aspectos de design, construção, testes e operação, incluindo atividades de segurança.</li>
+<li>Adicione atividades de segurança ao cronograma do seu projeto.</li>
+<li>Apresente-se como o representante de segurança no <em>kick-off</em> do projeto, para que saibam com quem falar.</li>
+</ul>
+<h3 id="solicitacao-de-propostas-rfp-e-contratacao">Solicitação de Propostas (RFP) e Contratação:</h3>
+<ul>
+<li>Negocie os requisitos com desenvolvedores internos ou externos, incluindo diretrizes e requisitos de segurança em relação ao seu programa de segurança, por exemplo: <em>SDLC</em>, melhores práticas.</li>
+<li>Avalie o cumprimento de todos os requisitos técnicos, incluindo uma fase de planejamento e design.</li>
+<li>Negocie todos os requisitos técnicos, incluindo design, segurança e acordos de nível de serviço (<em>SLA</em>).</li>
+<li>Adote modelos e checklists, como o <a href="https://owasp.org/www-community/OWASP_Secure_Software_Contract_Annex">OWASP Secure Software Contract Annex</a>.<br><strong>Nota:</strong> <em>O anexo é baseado na lei de contratos dos EUA, portanto, consulte assessoria jurídica qualificada antes de usar o modelo.</em></li>
+</ul>
+<h3 id="fase-de-planejamento-e-design">Fase de Planejamento e Design:</h3>
+<ul>
+<li>Negocie o planejamento e o design com os desenvolvedores e partes interessadas internas, como especialistas em segurança.</li>
+<li>Defina a arquitetura de segurança, controles, contramedidas e revisões de design apropriadas às necessidades de proteção e ao nível de ameaça esperado. Isso deve ser apoiado por especialistas em segurança.</li>
+<li>Em vez de adaptar a segurança em suas aplicações e APIs posteriormente, é muito mais econômico projetar a segurança desde o início. A OWASP recomenda os <a href="https://cheatsheetseries.owasp.org/index.html">OWASP Cheat Sheets</a> e os <a href="https://top10proactive.owasp.org/">OWASP Proactive Controls</a> como um bom ponto de partida para orientações sobre como projetar a segurança incluída desde o princípio.</li>
+<li>Realize modelagem de ameaças (<em>threat modeling</em>); veja <a href="https://cheatsheetseries.owasp.org/cheatsheets/Threat_Modeling_Cheat_Sheet.html">OWASP Cheat Sheet: Threat Modeling</a>.</li>
+<li>Ensine conceitos e padrões de design seguro aos seus arquitetos de software e peça que os adicionem aos seus projetos sempre que possível.</li>
+<li>Examine os fluxos de dados com seus desenvolvedores.</li>
+<li>Adicione <em>user stories</em> de segurança ao lado de todas as suas outras <em>user stories</em>.</li>
+</ul>
+<h3 id="ciclo-de-vida-de-desenvolvimento-seguro">Ciclo de Vida de Desenvolvimento Seguro:</h3>
+<ul>
+<li>Para melhorar o processo que sua organização segue ao construir aplicações e APIs, a OWASP recomenda o <a href="https://owasp.org/www-project-samm/">OWASP Software Assurance Maturity Model (SAMM)</a>. Este modelo ajuda as organizações a formular e implementar uma estratégia para segurança de software adaptada aos riscos específicos enfrentados pela organização.</li>
+<li>Forneça treinamento de codificação segura para seus desenvolvedores de software e qualquer outro treinamento que você considere útil para criar aplicações mais robustas e seguras.</li>
+<li>Revisão de código; veja <a href="https://cheatsheetseries.owasp.org/cheatsheets/Secure_Code_Review_Cheat_Sheet.html">OWASP Cheat Sheet: Secure Code Review</a>.</li>
+<li>Dê ferramentas de segurança aos seus desenvolvedores e ensine-os a usá-las, especialmente scanners de análise estática (<em>SAST</em>), análise de composição de software (<em>SCA</em>), segredos (<em>secrets</em>) e <a href="https://cheatsheetseries.owasp.org/cheatsheets/Infrastructure_as_Code_Security_Cheat_Sheet.html">Infraestrutura como Código (IaC)</a>.</li>
+<li>Crie <em>guardrails</em> para seus desenvolvedores, se possível (salvaguardas técnicas para direcioná-los a escolhas mais seguras).</li>
+<li>Construir controles de segurança fortes e utilizáveis é difícil. Ofereça padrões seguros (<em>secure defaults</em>) sempre que possível e crie "<em>paved roads</em>" (tornar o caminho mais fácil também o caminho mais seguro para fazer algo, a escolha preferencial óbvia) sempre que possível. Os <a href="https://cheatsheetseries.owasp.org/index.html">OWASP Cheat Sheets</a> são um bom ponto de partida para desenvolvedores, e muitos frameworks modernos já vêm com controles de segurança padrão e eficazes para autorização, validação, prevenção de CSRF, etc.</li>
+<li>Forneça plugins de <em>IDE</em> relacionados à segurança para seus desenvolvedores e incentive seu uso.</li>
+<li>Forneça uma ferramenta de gerenciamento de segredos (<em>secret management</em>), licenças e documentação sobre como usá-la.</li>
+<li>Forneça uma IA privada para uso, idealmente configurada com um servidor RAG repleto de documentação de segurança útil, <em>prompts</em> que sua equipe escreveu para melhores resultados e um servidor MCP que chame as ferramentas de segurança escolhidas por sua organização. Ensine-os a usar a IA de forma segura, porque eles vão usá-la de qualquer maneira.</li>
+</ul>
+<h3 id="estabeleca-testes-continuos-de-seguranca-de-aplicacoes">Estabeleça Testes Contínuos de Segurança de Aplicações:</h3>
+<ul>
+<li>Teste as funções técnicas e a integração com a arquitetura de TI e coordene os testes de negócio.</li>
+<li>Crie casos de teste de "uso" e "abuso" sob perspectivas técnicas e de negócio.</li>
+<li>Gerencie os testes de segurança de acordo com os processos internos, as necessidades de proteção e o nível de ameaça assumido pela aplicação.</li>
+<li>Forneça ferramentas de teste de segurança (<em>fuzzers</em>, <em>DAST</em>, etc.), um local seguro para testar e treinamento sobre como usá-las, OU realize os testes por eles OU contrate um testador.</li>
+<li>Se você exigir um alto nível de garantia, considere um teste de intrusão formal, bem como testes de estresse e testes de desempenho.</li>
+<li>Trabalhe com seus desenvolvedores para ajudá-los a decidir o que precisam corrigir nos relatórios de bugs e garanta que seus gestores deem tempo para que isso seja feito.</li>
+</ul>
+<h3 id="implantacao-rollout">Implantação (<em>Rollout</em>):</h3>
+<ul>
+<li>Coloque a aplicação em operação e migre de aplicações usadas anteriormente, se necessário.</li>
+<li>Finalize toda a documentação, incluindo o banco de dados de gerenciamento de mudanças (CMDB) e a arquitetura de segurança.</li>
+</ul>
+<h3 id="operacoes-e-gerenciamento-de-mudancas">Operações e Gerenciamento de Mudanças:</h3>
+<ul>
+<li>As operações devem incluir diretrizes para a gestão de segurança da aplicação (ex: gestão de patches).</li>
+<li>Aumente a conscientização de segurança dos usuários e gerencie conflitos entre usabilidade vs. segurança.</li>
+<li>Planeje e gerencie mudanças, ex: migrar para novas versões da aplicação ou outros componentes como SO, <em>middleware</em> e bibliotecas.</li>
+<li>Garanta que todas as aplicações estejam em seu inventário, com todos os detalhes importantes documentados. Atualize toda a documentação, incluindo no CMDB e na arquitetura de segurança, controles e contramedidas, incluindo quaisquer <em>runbooks</em> ou documentação de projeto.</li>
+<li>Execute registro de logs, monitoramento e alertas para todas as aplicações. Adicione se estiver faltando.</li>
+<li>Crie processos para atualizações e correções (<em>patching</em>) eficazes e eficientes.</li>
+<li>Crie cronogramas de varredura regular (idealmente dinâmica, estática, segredos, IaC e análise de composição de software).</li>
+<li><em>SLAs</em> para correção de bugs de segurança.</li>
+<li>Forneça uma maneira para funcionários (e idealmente também seus clientes) reportarem bugs.</li>
+<li>Estabeleça uma equipe treinada de resposta a incidentes que entenda como são os ataques de software e utilize ferramentas de observabilidade.</li>
+<li>Execute ferramentas de bloqueio ou blindagem para deter ataques automatizados.</li>
+<li>Endurecimento (<em>hardening</em>) anual (ou mais frequente) de configurações.</li>
+<li>Teste de intrusão pelo menos anual (dependendo do nível de garantia exigido para sua aplicação).</li>
+<li>Estabeleça processos e ferramentas para o endurecimento e proteção de sua cadeia de suprimentos de software.</li>
+<li>Estabeleça e atualize o planejamento de continuidade de negócios e recuperação de desastres que inclua suas aplicações mais importantes e as ferramentas usadas para mantê-las.</li>
+</ul>
+<h3 id="desativacao-de-sistemas">Desativação de Sistemas:</h3>
+<ul>
+<li>Quaisquer dados exigidos devem ser arquivados. Todos os outros dados devem ser apagados de forma segura.</li>
+<li>Desative a aplicação com segurança, incluindo a exclusão de contas, funções e permissões não utilizadas.</li>
+<li>Defina o estado de sua aplicação como "desativada" no CMDB.</li>
+</ul>
+<hr />
+<h2 id="usando-o-owasp-top-10-como-um-padrao">Usando o OWASP Top 10 como um Padrão</h2>
+<p>O OWASP Top 10 é prioritariamente um documento de conscientização. No entanto, isso não impediu as organizações de usá-lo como um padrão <em>de facto</em> de AppSec da indústria desde sua criação em 2003. Se você deseja usar o OWASP Top 10 como um padrão de codificação ou teste, saiba que ele é o mínimo indispensável e apenas um ponto de partida.</p>
+<p>Uma das dificuldades de usar o OWASP Top 10 como padrão é que documentamos riscos de AppSec, e não necessariamente problemas facilmente testáveis. Por exemplo, <a href="../A06_2025-Insecure_Design/">A06:2025-Design Inseguro</a> está além do escopo da maioria das formas de teste. Outro exemplo é testar se o registro de logs e o monitoramento eficazes estão implementados e em uso, o que só pode ser feito com entrevistas e solicitando uma amostragem de respostas a incidentes eficazes. Uma ferramenta de análise de código estática pode procurar pela ausência de logs, mas pode ser impossível determinar se a lógica de negócio ou o controle de acesso está registrando violações de segurança críticas. Testadores de intrusão podem apenas ser capazes de determinar que invocaram a resposta a incidentes em um ambiente de teste, o qual raramente é monitorado da mesma forma que a produção.</p>
+<p>Aqui estão nossas recomendações para quando é apropriado usar o OWASP Top 10:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Caso de Uso</th>
+<th style="text-align: left;">OWASP Top 10 2025</th>
+<th style="text-align: left;">OWASP Application Security Verification Standard</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Conscientização</td>
+<td style="text-align: left;">Sim</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Treinamento</td>
+<td style="text-align: left;">Nível de entrada</td>
+<td style="text-align: left;">Abrangente</td>
+</tr>
+<tr>
+<td style="text-align: left;">Design e arquitetura</td>
+<td style="text-align: left;">Ocasionalmente</td>
+<td style="text-align: left;">Sim</td>
+</tr>
+<tr>
+<td style="text-align: left;">Padrão de codificação</td>
+<td style="text-align: left;">Mínimo indispensável</td>
+<td style="text-align: left;">Sim</td>
+</tr>
+<tr>
+<td style="text-align: left;">Revisão de Código Seguro</td>
+<td style="text-align: left;">Mínimo indispensável</td>
+<td style="text-align: left;">Sim</td>
+</tr>
+<tr>
+<td style="text-align: left;">Checklist de revisão por pares</td>
+<td style="text-align: left;">Mínimo indispensável</td>
+<td style="text-align: left;">Sim</td>
+</tr>
+<tr>
+<td style="text-align: left;">Teste de unidade</td>
+<td style="text-align: left;">Ocasionalmente</td>
+<td style="text-align: left;">Sim</td>
+</tr>
+<tr>
+<td style="text-align: left;">Teste de integração</td>
+<td style="text-align: left;">Ocasionalmente</td>
+<td style="text-align: left;">Sim</td>
+</tr>
+<tr>
+<td style="text-align: left;">Teste de intrusão</td>
+<td style="text-align: left;">Mínimo indispensável</td>
+<td style="text-align: left;">Sim</td>
+</tr>
+<tr>
+<td style="text-align: left;">Suporte de ferramentas</td>
+<td style="text-align: left;">Mínimo indispensável</td>
+<td style="text-align: left;">Sim</td>
+</tr>
+<tr>
+<td style="text-align: left;">Cadeia de Suprimentos Segura</td>
+<td style="text-align: left;">Ocasionalmente</td>
+<td style="text-align: left;">Sim</td>
+</tr>
+</tbody>
+</table>
+<p>Encorajamos qualquer pessoa que queira adotar um padrão de segurança de aplicações a usar o <a href="https://owasp.org/www-project-application-security-verification-standard/">OWASP Application Security Verification Standard</a> (ASVS), pois ele foi projetado para ser verificável e testável, podendo ser usado em todas as partes de um ciclo de vida de desenvolvimento seguro.</p>
+<p>O ASVS é a única escolha aceitável para fornecedores de ferramentas. Ferramentas não podem detectar, testar ou proteger de forma abrangente contra o OWASP Top 10 devido à natureza de vários dos riscos presentes, com referência ao <a href="../A06_2025-Insecure_Design/">A06:2025-Design Inseguro</a>. A OWASP desestimula quaisquer alegações de cobertura total do OWASP Top 10, porque isso é simplesmente falso.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © Copyright 2021-2025 - OWASP Top 10 Team - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "search.suggest"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1535 @@
+
+<!doctype html>
+<html lang="fa" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="OWASP Top 10:2025">
+      
+      
+      
+        <link rel="canonical" href="https://owasp.org/Top10/2025/fa/0x03_2025-Establishing_a_Modern_Application_Security_Program/">
+      
+      
+        <link rel="prev" href="../0x02_2025-What_are_Application_Security_Risks/">
+      
+      
+        <link rel="next" href="../A01_2025-Broken_Access_Control/">
+      
+      
+        
+          <link rel="alternate" href="../../0x03_2025-Establishing_a_Modern_Application_Security_Program/" hreflang="en">
+        
+          <link rel="alternate" href="../../cs/" hreflang="cs  material_alternate">
+        
+          <link rel="alternate" href="../../es/0x03_2025-Establishing_a_Modern_Application_Security_Program/" hreflang="es">
+        
+          <link rel="alternate" href="../../it/0x03_2025-Establishing_a_Modern_Application_Security_Program/" hreflang="it">
+        
+          <link rel="alternate" href="../../ja/0x03_2025-Establishing_a_Modern_Application_Security_Program/" hreflang="ja">
+        
+          <link rel="alternate" href="../../ko/0x03_2025-Establishing_a_Modern_Application_Security_Program/" hreflang="ko">
+        
+          <link rel="alternate" href="./" hreflang="fa">
+        
+          <link rel="alternate" href="../../pt-BR/0x03_2025-Establishing_a_Modern_Application_Security_Program/" hreflang="pt-BR">
+        
+          <link rel="alternate" href="../../zh-Hant/0x03_2025-Establishing_a_Modern_Application_Security_Program/" hreflang="zh-Hant">
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Establishing a Modern Application Security Program - OWASP Top 10:2025</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="rtl">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#establishing-a-modern-application-security-program" class="md-skip">
+          پرش به محتویات
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="سرتیتر">
+    <a href="../" title="OWASP Top 10:2025" class="md-header__button md-logo" aria-label="OWASP Top 10:2025" data-md-component="logo">
+      
+  <img src="../../assets/OWASP_Logo_Transp.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OWASP Top 10:2025
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Establishing a Modern Application Security Program
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="انتخاب زبان">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../0x03_2025-Establishing_a_Modern_Application_Security_Program/" hreflang="en" class="md-select__link">
+              en - English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../cs/" hreflang="cs  material_alternate" class="md-select__link">
+              cs - Česky
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../es/0x03_2025-Establishing_a_Modern_Application_Security_Program/" hreflang="es" class="md-select__link">
+              es - Español
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../it/0x03_2025-Establishing_a_Modern_Application_Security_Program/" hreflang="it" class="md-select__link">
+              it - Italiano
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../ja/0x03_2025-Establishing_a_Modern_Application_Security_Program/" hreflang="ja" class="md-select__link">
+              ja - 日本語 (Japanese)
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../ko/0x03_2025-Establishing_a_Modern_Application_Security_Program/" hreflang="ko" class="md-select__link">
+              ko - 한국어 (Korean)
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="fa" class="md-select__link">
+              fa - فارسی (Persian/Fārsi)
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../pt-BR/0x03_2025-Establishing_a_Modern_Application_Security_Program/" hreflang="pt-BR" class="md-select__link">
+              pt-BR - (Português Brasil)
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../zh-Hant/0x03_2025-Establishing_a_Modern_Application_Security_Program/" hreflang="zh-Hant" class="md-select__link">
+              zh-Hant - 简体中文
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="جستجو" placeholder="جستجو" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="جستجو">
+        
+        <button type="reset" class="md-search__icon md-icon" title="بازنشانی" aria-label="بازنشانی" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            راه‌اندازی جستجو
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/OWASP/Top10" title="رفتن به مخزن" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    OWASP/Top10
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="هدایت" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../" title="OWASP Top 10:2025" class="md-nav__button md-logo" aria-label="OWASP Top 10:2025" data-md-component="logo">
+      
+  <img src="../../assets/OWASP_Logo_Transp.png" alt="logo">
+
+    </a>
+    OWASP Top 10:2025
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/OWASP/Top10" title="رفتن به مخزن" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    OWASP/Top10
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x00_2025-Introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x01_2025-About_OWASP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About OWASP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x02_2025-What_are_Application_Security_Risks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    What are Application Security Risks?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Establishing a Modern Application Security Program
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Establishing a Modern Application Security Program
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="فهرست موضوعات">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      فهرست موضوعات
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ارزیابی بلوغ موجود
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-risk-based-portfolio-approach" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. اتخاذ رویکرد مبتنی بر پرتفوی ریسک (Risk-Based Portfolio Approach)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-enable-with-a-strong-foundation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. ایجاد پایه قوی (Enable with a Strong Foundation)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-integrate-security-into-existing-processes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. ادغام امنیت در فرایندهای موجود (Integrate Security into Existing Processes)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-application-security-education" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. آموزش امنیت برنامه (Application Security Education)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-provide-management-visibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. فراهم کردن دید مدیریتی (Provide Management Visibility)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ایجاد و استفاده از فرآیندهای امنیتی تکرارشونده و کنترل‌های استاندارد
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ایجاد و استفاده از فرآیندهای امنیتی تکرارشونده و کنترل‌های استاندارد">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#requirements-and-resource-management-phase" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        مرحله مدیریت نیازمندی‌ها و منابع (Requirements and Resource Management Phase)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rfp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        درخواست پیشنهادات (RFP) و قراردادها
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#planning-and-design-phase" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        مرحله برنامه‌ریزی و طراحی (Planning and Design Phase)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#secure-development-lifecycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        چرخه توسعه امن (Secure Development Lifecycle)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#continuous-application-security-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ایجاد تست امنیتی مداوم (Continuous Application Security Testing)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rollout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        راه‌اندازی برنامه (Rollout)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operations-and-change-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        عملیات و مدیریت تغییر (Operations and Change Management)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#retiring-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        بازنشستگی سیستم‌ها (Retiring Systems)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#owasp-top-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        استفاده از OWASP Top 10 به‌عنوان استاندارد
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Top 10:2025 List
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Top 10:2025 List
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A01_2025-Broken_Access_Control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A01 Broken Access Control
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A02_2025-Security_Misconfiguration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A02 Security Misconfiguration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A03_2025-Software_Supply_Chain_Failures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A03 Software Supply Chain Failures
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A04_2025-Cryptographic_Failures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A04 Cryptographic Failures
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A05_2025-Injection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A05 Injection
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A06_2025-Insecure_Design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A06 Insecure Design
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A07_2025-Authentication_Failures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A07 Authentication Failures
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A08_2025-Software_or_Data_Integrity_Failures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A08 Software or Data Integrity Failures
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A09_2025-Security_Logging_and_Alerting_Failures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A09 Security Logging and Alerting Failures
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A10_2025-Mishandling_of_Exceptional_Conditions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A10 Mishandling of Exceptional Conditions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../X01_2025-Next_Steps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Next Steps
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="فهرست موضوعات">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      فهرست موضوعات
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ارزیابی بلوغ موجود
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-risk-based-portfolio-approach" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. اتخاذ رویکرد مبتنی بر پرتفوی ریسک (Risk-Based Portfolio Approach)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-enable-with-a-strong-foundation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. ایجاد پایه قوی (Enable with a Strong Foundation)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-integrate-security-into-existing-processes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. ادغام امنیت در فرایندهای موجود (Integrate Security into Existing Processes)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-application-security-education" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. آموزش امنیت برنامه (Application Security Education)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-provide-management-visibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. فراهم کردن دید مدیریتی (Provide Management Visibility)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ایجاد و استفاده از فرآیندهای امنیتی تکرارشونده و کنترل‌های استاندارد
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ایجاد و استفاده از فرآیندهای امنیتی تکرارشونده و کنترل‌های استاندارد">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#requirements-and-resource-management-phase" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        مرحله مدیریت نیازمندی‌ها و منابع (Requirements and Resource Management Phase)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rfp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        درخواست پیشنهادات (RFP) و قراردادها
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#planning-and-design-phase" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        مرحله برنامه‌ریزی و طراحی (Planning and Design Phase)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#secure-development-lifecycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        چرخه توسعه امن (Secure Development Lifecycle)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#continuous-application-security-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ایجاد تست امنیتی مداوم (Continuous Application Security Testing)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rollout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        راه‌اندازی برنامه (Rollout)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operations-and-change-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        عملیات و مدیریت تغییر (Operations and Change Management)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#retiring-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        بازنشستگی سیستم‌ها (Retiring Systems)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#owasp-top-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        استفاده از OWASP Top 10 به‌عنوان استاندارد
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="establishing-a-modern-application-security-program">ایجاد یک برنامه امنیت برنامه مدرن (Establishing a Modern Application Security Program)</h1>
+<p>لیست‌های OWASP Top Ten اسناد آگاهی‌بخشی هستند که هدفشان جلب توجه به مهم‌ترین ریسک‌ها در حوزه امنیت برنامه است. این لیست‌ها فهرست کامل نیستند و صرفاً نقطه شروع محسوب می‌شوند. نسخه‌های قبلی نشان داده‌اند که شروع یک برنامه امنیت برنامه بهترین راه برای کاهش این ریسک‌ها و دیگر خطرات مرتبط است.</p>
+<p>در این بخش، نحوه شروع و ساخت یک برنامه امنیت برنامه مدرن توضیح داده می‌شود.</p>
+<hr />
+<h2 id="_1">ارزیابی بلوغ موجود</h2>
+<p>اگر از قبل برنامه امنیت برنامه دارید، می‌توانید با استفاده از:</p>
+<ul>
+<li><a href="https://owasp.org/www-project-samm/">OWASP SAMM (Software Assurance Maturity Model)</a></li>
+<li><a href="https://owasp.org/www-project-devsecops-maturity-model/">DSOMM (DevSecOps Maturity Model)</a></li>
+</ul>
+<p>بلوغ برنامه خود را ارزیابی کنید. این مدل‌ها جامع هستند و به شما کمک می‌کنند تمرکز خود را برای توسعه و بلوغ برنامه مشخص کنید. توجه داشته باشید که اجرای تمام موارد SAMM یا DSOMM لازم نیست؛ این مدل‌ها صرفاً راهنما هستند و گزینه‌های متعددی ارائه می‌دهند.</p>
+<p>اگر برنامه امنیت را از صفر شروع می‌کنید یا SAMM/DSOMM فعلاً برای تیم شما سنگین هستند، توصیه‌های زیر را دنبال کنید:</p>
+<hr />
+<h2 id="1-risk-based-portfolio-approach">1. اتخاذ رویکرد مبتنی بر پرتفوی ریسک (Risk-Based Portfolio Approach)</h2>
+<ul>
+<li>شناسایی نیازهای حفاظتی برنامه‌ها از منظر کسب‌وکار، با توجه به قوانین حفظ حریم خصوصی و مقررات داده‌ها.  </li>
+<li>ایجاد مدل ارزیابی ریسک مشترک با مجموعه‌ای ثابت از عوامل احتمال و تأثیر که بازتاب‌دهنده میزان تحمل ریسک سازمان باشد.  </li>
+<li>اندازه‌گیری و اولویت‌بندی تمام برنامه‌ها و APIها و افزودن نتایج به <strong>Configuration Management Database (CMDB)</strong>.  </li>
+<li>تعیین دستورالعمل‌های اطمینان (<strong>Assurance Guidelines</strong>) برای تعریف پوشش و سطح سخت‌گیری لازم.</li>
+</ul>
+<hr />
+<h2 id="2-enable-with-a-strong-foundation">2. ایجاد پایه قوی (Enable with a Strong Foundation)</h2>
+<ul>
+<li>تدوین سیاست‌ها و استانداردهای متمرکز برای ایجاد خط پایهٔ امنیت برنامه برای تیم‌های توسعه.  </li>
+<li>تعریف کنترل‌های امنیتی قابل استفاده مجدد که این سیاست‌ها را تکمیل کرده و راهنمای طراحی و توسعه ارائه دهند.  </li>
+<li>ایجاد برنامه‌های آموزشی امنیت برنامه برای نقش‌های مختلف توسعه و موضوعات مرتبط.</li>
+</ul>
+<hr />
+<h2 id="3-integrate-security-into-existing-processes">3. ادغام امنیت در فرایندهای موجود (Integrate Security into Existing Processes)</h2>
+<ul>
+<li>تعریف و ادغام فعالیت‌های امنیتی در فرایندهای توسعه و عملیاتی موجود.  </li>
+<li>فعالیت‌ها شامل: مدل‌سازی تهدید، طراحی امن، بازبینی طراحی، برنامه‌نویسی امن، بازبینی کد، تست نفوذ و رفع آسیب‌پذیری.  </li>
+<li>ارائه کارشناسان موضوعی و خدمات پشتیبانی برای موفقیت تیم‌های توسعه و پروژه.  </li>
+<li>مرور چرخه حیات توسعه سیستم فعلی و تمام فعالیت‌ها، ابزارها، سیاست‌ها و مستندسازی آن‌ها.  </li>
+<li>برای نرم‌افزار جدید، یک یا چند فعالیت امنیتی به هر فاز <strong>SDLC</strong> اضافه کنید.  </li>
+<li>برای نرم‌افزار موجود (Legacy)، برنامه نگهداری رسمی داشته باشید.</li>
+</ul>
+<hr />
+<h2 id="4-application-security-education">4. آموزش امنیت برنامه (Application Security Education)</h2>
+<ul>
+<li>راه‌اندازی برنامه <strong>Security Champion</strong> یا آموزش عمومی امنیت برای توسعه‌دهندگان جهت آگاهی کامل از ریسک‌ها.  </li>
+<li>OWASP از طریق <a href="https://owasp.org/www-project-security-champions/">OWASP Security Champions Guide</a> پشتیبانی می‌کند.  </li>
+<li>پروژه <a href="https://owasp.org/www-project-education/">OWASP Education Project</a> منابع آموزشی ارائه می‌دهد.  </li>
+<li>پروژه‌های عملی:</li>
+<li><a href="https://owasp.org/www-project-juice-shop/">OWASP Juice Shop</a>  </li>
+<li><a href="https://owasp.org/www-project-webgoat/">OWASP WebGoat</a>  </li>
+<li>شرکت در کنفرانس‌ها و آموزش‌های OWASP:</li>
+<li><a href="https://owasp.org/events/">OWASP AppSec Conference</a>  </li>
+<li><a href="https://owasp.org/events/">OWASP Conference Training</a>  </li>
+<li><a href="https://owasp.org/chapters/">OWASP Chapter Meetings</a></li>
+</ul>
+<hr />
+<h2 id="5-provide-management-visibility">5. فراهم کردن دید مدیریتی (Provide Management Visibility)</h2>
+<ul>
+<li>ارائه <strong>Metrics</strong> برای تصمیم‌گیری‌های بهبود و تخصیص بودجه بر اساس داده‌ها و تحلیل‌ها.  </li>
+<li>معیارها شامل رعایت فرآیندهای امنیتی، آسیب‌پذیری‌های ایجاد و رفع شده، پوشش برنامه‌ها، چگالی خطاها و تعداد نمونه‌ها هستند.  </li>
+<li>تحلیل داده‌ها برای شناسایی ریشه‌های آسیب‌پذیری و بهبود راهبردی در سازمان.  </li>
+<li>یادگیری از اشتباهات و ارائه مشوق‌های مثبت برای بهبود مستمر.</li>
+</ul>
+<hr />
+<h2 id="_2">ایجاد و استفاده از فرآیندهای امنیتی تکرارشونده و کنترل‌های استاندارد</h2>
+<h3 id="requirements-and-resource-management-phase">مرحله مدیریت نیازمندی‌ها و منابع (Requirements and Resource Management Phase)</h3>
+<ul>
+<li>جمع‌آوری و مذاکره نیازمندی‌های کسب‌وکار، شامل حفاظت از حریم خصوصی، اصالت، یکپارچگی و دسترسی دارایی‌ها.  </li>
+<li>تدوین نیازمندی‌های فنی شامل امنیت عملکردی و غیرعملکردی، با استفاده از <a href="https://owasp.org/www-project-application-security-verification-standard/">OWASP ASVS</a> به‌عنوان راهنما.  </li>
+<li>برنامه‌ریزی و مذاکره بودجه که تمام مراحل طراحی، ساخت، تست و عملیات امنیتی را پوشش دهد.  </li>
+<li>افزودن فعالیت‌های امنیتی به برنامه زمانی پروژه.  </li>
+<li>معرفی خود به عنوان نماینده امنیت در آغاز پروژه.</li>
+</ul>
+<h3 id="rfp">درخواست پیشنهادات (RFP) و قراردادها</h3>
+<ul>
+<li>مذاکره نیازمندی‌ها با توسعه‌دهندگان داخلی یا خارجی، شامل SDLC و بهترین شیوه‌های امنیتی.  </li>
+<li>ارزیابی تحقق نیازمندی‌های فنی در فاز برنامه‌ریزی و طراحی.  </li>
+<li>استفاده از قالب‌ها و چک‌لیست‌ها، مانند <strong>OWASP Secure Software Contract Annex</strong>.  </li>
+<li>توجه: این پیوست براساس قوانین قرارداد آمریکا است؛ پیش از استفاده، مشاوره حقوقی دریافت کنید.</li>
+</ul>
+<h3 id="planning-and-design-phase">مرحله برنامه‌ریزی و طراحی (Planning and Design Phase)</h3>
+<ul>
+<li>مذاکره برنامه‌ریزی و طراحی با توسعه‌دهندگان و سهامداران، مانند متخصصین امنیت.  </li>
+<li>تعریف معماری امنیت، کنترل‌ها، اقدامات متقابل و بازبینی طراحی با پشتیبانی متخصصین.  </li>
+<li>طراحی امنیت از ابتدا بسیار به‌صرفه‌تر است؛ از <a href="https://cheatsheetseries.owasp.org/">OWASP Cheat Sheets</a> و <a href="https://owasp.org/www-project-proactive-controls/">OWASP Proactive Controls</a> به‌عنوان نقطه شروع استفاده کنید.  </li>
+<li>انجام <strong>مدل‌سازی تهدید (Threat Modeling)</strong>.  </li>
+<li>آموزش مفاهیم و الگوهای طراحی امن به معماران نرم‌افزار.  </li>
+<li>بررسی جریان‌های داده با توسعه‌دهندگان.  </li>
+<li>افزودن <strong>Security User Stories</strong> همراه با دیگر User Stories.</li>
+</ul>
+<h3 id="secure-development-lifecycle">چرخه توسعه امن (Secure Development Lifecycle)</h3>
+<ul>
+<li>استفاده از <a href="https://owasp.org/www-project-samm/">OWASP SAMM</a> برای بهبود فرآیند سازمان در ساخت برنامه‌ها و APIها.  </li>
+<li>آموزش کدنویسی امن و ارائه ابزارهای امنیتی به توسعه‌دهندگان:</li>
+<li>Static Analysis  </li>
+<li>Software Composition Analysis  </li>
+<li>Secret Management  </li>
+<li>IaC Scanners  </li>
+<li>ایجاد Guardrails برای تصمیم‌گیری امن، تنظیمات پیش‌فرض امن و ایجاد Paved Roads.  </li>
+<li>بهره‌گیری از OWASP Cheat Sheets و کنترل‌های امنیتی استاندارد در فریم‌ورک‌های مدرن.  </li>
+<li>ارائه پلاگین‌های امنیتی IDE و ابزارهای مدیریت Secret و مستندات.  </li>
+<li>ارائه AI خصوصی با سرور RAG برای فراخوانی ابزارهای امنیتی سازمان و آموزش استفاده ایمن از آن.</li>
+</ul>
+<h3 id="continuous-application-security-testing">ایجاد تست امنیتی مداوم (Continuous Application Security Testing)</h3>
+<ul>
+<li>تست عملکردهای فنی و یکپارچگی با معماری IT.  </li>
+<li>ایجاد <strong>test cases</strong> از دیدگاه فنی و کسب‌وکار.  </li>
+<li>مدیریت تست‌ها طبق فرآیندهای داخلی، نیازمندی‌های حفاظتی و سطح تهدید.  </li>
+<li>ارائه ابزارهای تست امنیتی (Fuzzers، DAST و غیره) و آموزش نحوه استفاده از آن‌ها.  </li>
+<li>در صورت نیاز، انجام penetration test رسمی و تست‌های استرس و عملکرد.  </li>
+<li>همکاری با توسعه‌دهندگان برای رفع مشکلات گزارش‌شده.</li>
+</ul>
+<h3 id="rollout">راه‌اندازی برنامه (Rollout)</h3>
+<ul>
+<li>قرار دادن برنامه در عملیات و مهاجرت از برنامه‌های قبلی در صورت نیاز.  </li>
+<li>نهایی‌سازی مستندات شامل CMDB و معماری امنیت.</li>
+</ul>
+<h3 id="operations-and-change-management">عملیات و مدیریت تغییر (Operations and Change Management)</h3>
+<ul>
+<li>ارائه دستورالعمل‌های مدیریت امنیت مانند Patch Management.  </li>
+<li>افزایش آگاهی امنیتی کاربران و مدیریت تضاد بین امنیت و قابلیت استفاده.  </li>
+<li>برنامه‌ریزی و مدیریت تغییرات، ثبت همه برنامه‌ها در Inventory و به‌روزرسانی مستندات.  </li>
+<li>اجرای Logging، Monitoring و Alerting برای همه برنامه‌ها.  </li>
+<li>تعریف SLA برای رفع باگ‌های امنیتی.  </li>
+<li>ایجاد تیم پاسخ به حادثه آموزش‌دیده.  </li>
+<li>اجرای ابزارهای Blocking یا Shielding، سخت‌سازی پیکربندی‌ها و تست نفوذ سالانه.  </li>
+<li>به‌روزرسانی برنامه‌های Continuity و Disaster Recovery.</li>
+</ul>
+<h3 id="retiring-systems">بازنشستگی سیستم‌ها (Retiring Systems)</h3>
+<ul>
+<li>آرشیو داده‌های ضروری و پاکسازی امن داده‌های غیرضروری.  </li>
+<li>بازنشستگی امن برنامه، شامل حذف حساب‌ها، نقش‌ها و دسترسی‌های بلااستفاده.  </li>
+<li>به‌روزرسانی وضعیت برنامه در CMDB به "بازنشسته".</li>
+</ul>
+<hr />
+<h2 id="owasp-top-10">استفاده از OWASP Top 10 به‌عنوان استاندارد</h2>
+<ul>
+<li>OWASP Top 10 عمدتاً سند آگاهی‌بخشی است، اما بسیاری از سازمان‌ها از آن به‌عنوان استاندارد عملیاتی AppSec استفاده کرده‌اند.  </li>
+<li>این سند نقطه شروع و حداقل استاندارد است. برخی ریسک‌ها (مثل <strong>A06:2025-Insecure Design</strong>) ممکن است فراتر از قابلیت تست ابزارهای استاندارد باشند.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>معیار</th>
+<th>سطح توصیه شده</th>
+<th>توضیحات</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Awareness</td>
+<td>Yes</td>
+<td>–</td>
+</tr>
+<tr>
+<td>Training</td>
+<td>Entry level</td>
+<td>Comprehensive</td>
+</tr>
+<tr>
+<td>Design &amp; architecture</td>
+<td>Occasionally</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Coding standard</td>
+<td>Bare minimum</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Secure Code review</td>
+<td>Bare minimum</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Peer review checklist</td>
+<td>Bare minimum</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Unit testing</td>
+<td>Occasionally</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Integration testing</td>
+<td>Occasionally</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Penetration testing</td>
+<td>Bare minimum</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Tool support</td>
+<td>Bare minimum</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Secure Supply Chain</td>
+<td>Occasionally</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Awareness</td>
+<td>Yes</td>
+<td>–</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>توصیه می‌شود برای استانداردسازی امنیت برنامه از <a href="https://owasp.org/www-project-application-security-verification-standard/">OWASP ASVS</a> استفاده کنید.  </li>
+<li>ASVS تنها استاندارد قابل قبول برای تولیدکنندگان ابزار است؛ ابزارها نمی‌توانند تمام OWASP Top 10 را شناسایی یا محافظت کنند. OWASP هرگونه ادعای پوشش کامل را نادرست می‌داند.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © Copyright 2021-2025 - OWASP Top 10 Team - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "search.suggest"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "\u06a9\u067e\u06cc \u0634\u062f", "clipboard.copy": "\u06a9\u067e\u06cc \u06a9\u0631\u062f\u0646", "search.result.more.one": "1 \u0645\u0648\u0631\u062f \u062f\u06cc\u06af\u0631 \u062f\u0631 \u0627\u06cc\u0646 \u0635\u0641\u062d\u0647", "search.result.more.other": "# \u0645\u0648\u0631\u062f \u062f\u06cc\u06af\u0631 \u062f\u0631 \u0627\u06cc\u0646 \u0635\u0641\u062d\u0647", "search.result.none": "\u0633\u0646\u062f\u06cc \u06cc\u0627\u0641\u062a \u0646\u0634\u062f", "search.result.one": "1 \u0633\u0646\u062f \u06cc\u0627\u0641\u062a \u0634\u062f", "search.result.other": "# \u0633\u0646\u062f \u06cc\u0627\u0641\u062a \u0634\u062f", "search.result.placeholder": "\u0628\u0631\u0627\u06cc \u0634\u0631\u0648\u0639 \u062c\u0633\u062a\u062c\u0648 \u062a\u0627\u06cc\u067e \u06a9\u0646\u06cc\u062f", "search.result.term.missing": "\u0645\u0648\u062c\u0648\u062f \u0646\u06cc\u0633\u062a", "select.version": "\u0627\u0646\u062a\u062e\u0627\u0628 \u0648\u06cc\u0631\u0627\u06cc\u0634"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+    
+  </body>
+</html>

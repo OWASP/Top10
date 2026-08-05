@@ -1,0 +1,1323 @@
+
+<!doctype html>
+<html lang="zh-Hant" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="OWASP Top 10:2025">
+      
+      
+      
+        <link rel="canonical" href="https://owasp.org/Top10/2025/zh-Hant/A06_2025-Insecure_Design/">
+      
+      
+        <link rel="prev" href="../A05_2025-Injection/">
+      
+      
+        <link rel="next" href="../A07_2025-Authentication_Failures/">
+      
+      
+        
+          <link rel="alternate" href="../../A06_2025-Insecure_Design/" hreflang="en">
+        
+          <link rel="alternate" href="../../cs/" hreflang="cs  material_alternate">
+        
+          <link rel="alternate" href="../../es/A06_2025-Insecure_Design/" hreflang="es">
+        
+          <link rel="alternate" href="../../it/A06_2025-Insecure_Design/" hreflang="it">
+        
+          <link rel="alternate" href="../../ja/A06_2025-Insecure_Design/" hreflang="ja">
+        
+          <link rel="alternate" href="../../ko/A06_2025-Insecure_Design/" hreflang="ko">
+        
+          <link rel="alternate" href="../../fa/A06_2025-Insecure_Design/" hreflang="fa">
+        
+          <link rel="alternate" href="../../pt-BR/A06_2025-Insecure_Design/" hreflang="pt-BR">
+        
+          <link rel="alternate" href="./" hreflang="zh-Hant">
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>A06 不安全设计 - OWASP Top 10:2025</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#a062025" class="md-skip">
+          跳轉至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="頁首">
+    <a href="../" title="OWASP Top 10:2025" class="md-header__button md-logo" aria-label="OWASP Top 10:2025" data-md-component="logo">
+      
+  <img src="../../assets/OWASP_Logo_Transp.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OWASP Top 10:2025
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              A06 不安全设计
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="選擇語言">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../A06_2025-Insecure_Design/" hreflang="en" class="md-select__link">
+              en - English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../cs/" hreflang="cs  material_alternate" class="md-select__link">
+              cs - Česky
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../es/A06_2025-Insecure_Design/" hreflang="es" class="md-select__link">
+              es - Español
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../it/A06_2025-Insecure_Design/" hreflang="it" class="md-select__link">
+              it - Italiano
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../ja/A06_2025-Insecure_Design/" hreflang="ja" class="md-select__link">
+              ja - 日本語 (Japanese)
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../ko/A06_2025-Insecure_Design/" hreflang="ko" class="md-select__link">
+              ko - 한국어 (Korean)
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../fa/A06_2025-Insecure_Design/" hreflang="fa" class="md-select__link">
+              fa - فارسی (Persian/Fārsi)
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../pt-BR/A06_2025-Insecure_Design/" hreflang="pt-BR" class="md-select__link">
+              pt-BR - (Português Brasil)
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="zh-Hant" class="md-select__link">
+              zh-Hant - 简体中文
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜尋" placeholder="搜尋" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="搜尋">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空" aria-label="清空" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜尋引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/OWASP/Top10" title="前往倉庫" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    OWASP/Top10
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="導航" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../" title="OWASP Top 10:2025" class="md-nav__button md-logo" aria-label="OWASP Top 10:2025" data-md-component="logo">
+      
+  <img src="../../assets/OWASP_Logo_Transp.png" alt="logo">
+
+    </a>
+    OWASP Top 10:2025
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/OWASP/Top10" title="前往倉庫" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    OWASP/Top10
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    主页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x00_2025-Introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    引言
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x01_2025-About_OWASP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    关于 OWASP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x02_2025-What_are_Application_Security_Risks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    什么是应用安全风险？
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x03_2025-Establishing_a_Modern_Application_Security_Program/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    建立现代应用安全计划
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Top 10:2025 列表
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Top 10:2025 列表
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A01_2025-Broken_Access_Control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A01 失效的访问控制
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A02_2025-Security_Misconfiguration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A02 安全配置错误
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A03_2025-Software_Supply_Chain_Failures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A03 软件供应链失效
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A04_2025-Cryptographic_Failures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A04 加密机制失效
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A05_2025-Injection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A05 注入
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A06 不安全设计
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A06 不安全设计
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目錄">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目錄
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        背景
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        评分表
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        描述
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="描述">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        需求和资源管理
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        安全设计
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        安全开发生命周期
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        如何预防
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        攻击场景示例
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        参考资料
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cwe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        映射的 CWE 列表
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A07_2025-Authentication_Failures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A07 认证失效
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A08_2025-Software_or_Data_Integrity_Failures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A08 软件或数据完整性失效
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A09_2025-Security_Logging_and_Alerting_Failures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A09 安全日志记录和告警失效
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A10_2025-Mishandling_of_Exceptional_Conditions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A10 异常条件处理不当
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../X01_2025-Next_Steps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    下一步
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目錄">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目錄
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        背景
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        评分表
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        描述
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="描述">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        需求和资源管理
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        安全设计
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        安全开发生命周期
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        如何预防
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        攻击场景示例
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        参考资料
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cwe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        映射的 CWE 列表
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="a062025">A06:2025 不安全设计 <img align="right" alt="icon" src="../../assets/TOP_10_Icons_Final_Insecure_Design.png" style="height:80px;width:80px" /></h1>
+<h2 id="_1">背景</h2>
+<p>不安全设计排名从第 4 位下滑两位到第 6 位，被 <strong><a href="../A02_2025-Security_Misconfiguration/">A02:2025-安全配置错误</a></strong> 和 <strong><a href="../A03_2025-Software_Supply_Chain_Failures/">A03:2025-软件供应链失效</a></strong> 超过。该类别于 2021 年引入，我们已经看到行业在威胁建模方面有明显改进，也更加重视安全设计。该类别关注与设计和架构缺陷相关的风险，并呼吁更多使用威胁建模、安全设计模式和参考架构。这包括应用业务逻辑中的缺陷，例如没有定义应用内部不希望发生或意外发生的状态变化。作为社区，我们需要超越编码阶段的“左移”，推进到需求编写和应用设计等编码前活动，这些活动对 Secure by Design 原则至关重要（例如参见 <strong><a href="../0x03_2025-Establishing_a_Modern_Application_Security_Program/">建立现代 AppSec 计划：规划和设计阶段</a></strong>）。值得关注的通用弱点枚举（CWE）包括 <em>CWE-256：凭据存储未受保护</em>、<em>CWE-269：权限管理不当</em>、<em>CWE-434：危险类型文件上传不受限制</em>、<em>CWE-501：信任边界违背</em> 和 <em>CWE-522：凭据保护不足</em>。</p>
+<h2 id="_2">评分表</h2>
+<table>
+  <tr>
+   <td>映射的 CWE 数量
+   </td>
+   <td>最大发生率
+   </td>
+   <td>平均发生率
+   </td>
+   <td>最大覆盖率
+   </td>
+   <td>平均覆盖率
+   </td>
+   <td>平均加权可利用性
+   </td>
+   <td>平均加权影响
+   </td>
+   <td>发生总数
+   </td>
+   <td>CVE 总数
+   </td>
+  </tr>
+  <tr>
+   <td>39
+   </td>
+   <td>22.18%
+   </td>
+   <td>1.86%
+   </td>
+   <td>88.76%
+   </td>
+   <td>35.18%
+   </td>
+   <td>6.96
+   </td>
+   <td>4.05
+   </td>
+   <td>729,882
+   </td>
+   <td>7,647
+   </td>
+  </tr>
+</table>
+
+<h2 id="_3">描述</h2>
+<p>不安全设计是一个宽泛类别，代表多种弱点，可概括为“缺失或无效的控制设计”。不安全设计不是其他所有 Top Ten 风险类别的来源。需要注意，不安全设计和不安全实现是不同的。我们区分设计缺陷和实现缺陷是有原因的：它们根因不同，发生在开发流程的不同时间点，修复方式也不同。安全设计仍可能因实现缺陷产生可被利用的漏洞。不安全设计无法通过完美实现修复，因为防御特定攻击所需的安全控制从未被创建。导致不安全设计的因素之一，是开发中的软件或系统本身缺少业务风险画像，因此无法判断需要什么级别的安全设计。</p>
+<p>安全设计包含三个关键部分：</p>
+<ul>
+<li>收集需求和资源管理</li>
+<li>创建安全设计</li>
+<li>具备安全开发生命周期</li>
+</ul>
+<h3 id="_4">需求和资源管理</h3>
+<p>与业务方收集并协商应用的业务需求，包括所有数据资产在机密性、完整性、可用性和真实性方面的保护需求，以及预期业务逻辑。考虑应用将暴露到什么程度，以及是否需要租户隔离（超出访问控制所需的隔离）。汇总技术需求，包括功能性和非功能性安全需求。规划并协商覆盖设计、构建、测试和运维的预算，其中包括安全活动。</p>
+<h3 id="_5">安全设计</h3>
+<p>安全设计是一种文化和方法论，会持续评估威胁，并确保代码经过稳健设计和测试，以防止已知攻击方法。威胁建模应集成到需求细化会（或类似活动）中；关注数据流、访问控制或其他安全控制的变化。在故事开发过程中，确定正确流程和失败状态，并确保相关责任方和受影响方都理解并达成一致。分析预期流程和失败流程中的假设及条件，确保它们仍然准确且符合预期。确定如何验证这些假设，并强制执行正确行为所需的条件。确保结果记录在故事中。从错误中学习，并提供正向激励来促进改进。安全设计既不是附加项，也不是一个可以简单加到软件上的工具。</p>
+<h3 id="_6">安全开发生命周期</h3>
+<p>安全软件需要安全开发生命周期、安全设计模式、铺好的道路方法、安全组件库、合适工具、威胁建模，以及用于改进流程的事件复盘。请在软件项目开始时、项目过程中以及持续软件维护期间联系安全专家。考虑使用 <a href="https://owaspsamm.org/">OWASP Software Assurance Maturity Model (SAMM)</a> 来组织安全软件开发工作。</p>
+<p>开发人员的自我责任常被低估。应培养安全意识、责任感和主动缓解风险的文化。围绕安全的定期交流（例如威胁建模会）可以形成一种思维方式，让安全进入所有重要设计决策。</p>
+<h2 id="_7">如何预防</h2>
+<ul>
+<li>与 AppSec 专业人员共同建立并使用安全开发生命周期，以帮助评估和设计与安全及隐私相关的控制。</li>
+<li>建立并使用安全设计模式库或铺好的道路组件库。</li>
+<li>对应用的关键部分使用威胁建模，例如认证、访问控制、业务逻辑和关键流程。</li>
+<li>将威胁建模作为教育工具，用来形成安全思维。</li>
+<li>将安全语言和控制集成到用户故事中。</li>
+<li>在应用的每一层（从前端到后端）集成合理性检查。</li>
+<li>编写单元测试和集成测试，验证所有关键流程能够抵御威胁模型。为应用每一层编写用例 <em>和</em> 滥用用例。</li>
+<li>根据暴露程度和保护需求，在系统层和网络层隔离各层。</li>
+<li>在所有层中通过设计稳健地隔离租户。</li>
+</ul>
+<h2 id="_8">攻击场景示例</h2>
+<p><strong>场景 #1：</strong> 凭据恢复流程可能包含“问题和答案”，但 NIST 800-63b、OWASP ASVS 和 OWASP Top 10 都禁止这种方式。问题和答案不能作为身份依据，因为不止一个人可能知道答案。此类功能应被移除，并替换为更安全的设计。</p>
+<p><strong>场景 #2：</strong> 某连锁影院允许团体订票折扣，并规定超过 15 人才需要支付定金。攻击者可以对该流程进行威胁建模，测试是否能在应用业务逻辑中找到攻击向量，例如通过少量请求一次性预订 600 个座位和所有影院，造成巨大收入损失。</p>
+<p><strong>场景 #3：</strong> 某零售连锁的电子商务网站没有防护黄牛机器人抢购高端显卡并转卖到拍卖网站。这会给显卡厂商和零售连锁所有者带来严重负面舆论，也会让无法以任何价格买到显卡的爱好者长期不满。周密的反机器人设计和领域逻辑规则，例如识别在开售后几秒内完成的购买，可能识别非真实购买并拒绝此类交易。</p>
+<h2 id="_9">参考资料</h2>
+<ul>
+<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/Secure_Product_Design_Cheat_Sheet.html">OWASP Cheat Sheet: Secure Design Principles</a></li>
+<li><a href="https://owaspsamm.org/model/design/secure-architecture/">OWASP SAMM: Design | Secure Architecture</a></li>
+<li><a href="https://owaspsamm.org/model/design/threat-assessment/">OWASP SAMM: Design | Threat Assessment</a></li>
+<li><a href="https://www.nist.gov/publications/guidelines-minimum-standards-developer-verification-software">NIST - Guidelines on Minimum Standards for Developer Verification of Software</a></li>
+<li><a href="https://threatmodelingmanifesto.org/">The Threat Modeling Manifesto</a></li>
+<li><a href="https://github.com/hysnsec/awesome-threat-modelling">Awesome Threat Modeling</a></li>
+</ul>
+<h2 id="cwe">映射的 CWE 列表</h2>
+<ul>
+<li><a href="https://cwe.mitre.org/data/definitions/73.html">CWE-73 文件名或路径受外部控制</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/183.html">CWE-183 允许输入列表过于宽松</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/256.html">CWE-256 凭据存储未受保护</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/266.html">CWE-266 权限分配错误</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/269.html">CWE-269 权限管理不当</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/286.html">CWE-286 用户管理错误</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/311.html">CWE-311 缺少敏感数据加密</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/312.html">CWE-312 明文存储敏感信息</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/313.html">CWE-313 在文件或磁盘上明文存储</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/316.html">CWE-316 在内存中明文存储敏感信息</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/362.html">CWE-362 使用共享资源并发执行时同步不当（竞争条件）</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/382.html">CWE-382 J2EE 不良实践：使用 <code>System.exit()</code></a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/419.html">CWE-419 主通道未受保护</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/434.html">CWE-434 危险类型文件上传不受限制</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/436.html">CWE-436 解释冲突</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/444.html">CWE-444 HTTP 请求解释不一致（HTTP 请求走私）</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/451.html">CWE-451 用户界面对关键信息表述失真</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/454.html">CWE-454 可信变量或数据存储受外部初始化</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/472.html">CWE-472 假定不可变的网站参数受外部控制</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/501.html">CWE-501 信任边界违背</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/522.html">CWE-522 凭据保护不足</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/525.html">CWE-525 使用含敏感信息的浏览器缓存</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/539.html">CWE-539 使用包含敏感信息的持久 Cookie</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/598.html">CWE-598 使用带敏感查询字符串的 <code>GET</code> 请求方法</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/602.html">CWE-602 在客户端强制执行服务端安全</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/628.html">CWE-628 函数调用参数指定错误</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/642.html">CWE-642 关键状态数据受外部控制</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/646.html">CWE-646 依赖外部提供文件的文件名或扩展名</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/653.html">CWE-653 隔离或分隔不足</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/656.html">CWE-656 依赖隐藏实现安全</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/657.html">CWE-657 违反安全设计原则</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/676.html">CWE-676 使用潜在危险函数</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/693.html">CWE-693 保护机制失效</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/799.html">CWE-799 交互频率控制不当</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/807.html">CWE-807 安全决策依赖不可信输入</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/841.html">CWE-841 行为工作流强制执行不当</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/1021.html">CWE-1021 渲染用户界面层或框架限制不当</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/1022.html">CWE-1022 使用带 <code>window.opener</code> 访问权限、指向不可信目标的网站链接</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/1125.html">CWE-1125 攻击面过大</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © Copyright 2021-2025 - OWASP Top 10 Team - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "search.suggest"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u62f7\u8c9d", "clipboard.copy": "\u62f7\u8c9d", "search.result.more.one": "\u6b64\u9801\u5c1a\u6709 1 \u500b\u7b26\u5408\u7684\u9805\u76ee", "search.result.more.other": "\u6b64\u9801\u5c1a\u6709 # \u500b\u7b26\u5408\u7684\u9805\u76ee", "search.result.none": "\u6c92\u6709\u627e\u5230\u7b26\u5408\u689d\u4ef6\u7684\u7d50\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u689d\u4ef6\u7684\u7d50\u679c", "search.result.other": "\u627e\u5230 # \u500b\u7b26\u5408\u689d\u4ef6\u7684\u7d50\u679c", "search.result.placeholder": "\u9375\u5165\u4ee5\u958b\u59cb\u6aa2\u7d22", "search.result.term.missing": "\u7f3a\u5931", "select.version": "\u9078\u64c7\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+    
+  </body>
+</html>
