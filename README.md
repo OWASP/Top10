@@ -6,12 +6,14 @@
 
 We have released the OWASP Top 10:2025 (Final):
 - [OWASP Top10:2025](https://owasp.org/Top10/2025/)
+- [OWASP Top10:2025 (English PDF)](https://owasp.org/Top10/2025/downloads/OWASP-Top-10-2025-en.pdf)
 
 Please log any [feedback, comments, or log issues](https://github.com/OWASP/Top10/issues) here.
 
 ## OWASP Top 10 2021 - SUPERSEDED
 
 - [OWASP Top10:2021](https://owasp.org/Top10/2021/)
+- [OWASP Top10:2021 (English PDF)](https://owasp.org/Top10/2021/downloads/OWASP-Top-10-2021-en.pdf)
 
 ## OWASP Top 10 2017 - HISTORIC
 

@@ -25,6 +25,9 @@ install-python-requirements:  # Install Python 3 required libraries
 	fi 
 	($(DEBUG) $(activate) && $(DEBUG) python3 -m pip install -r requirements.txt && $(DEBUG) python3 -m pip install --upgrade pip)
 
+install-pdf-requirements: install-python-requirements  # Install optional PDF build libraries (Python 3.10+)
+	($(DEBUG) $(activate) && $(DEBUG) python3 -c 'import sys; sys.exit("PDF builds require Python 3.10 or newer") if sys.version_info < (3, 10) else None' && $(DEBUG) python3 -m pip install -r requirements-pdf.txt)
+
 build-2021:  # Build 2021 site only
 	($(activate) && cd 2021 && mkdocs build --site-dir ../build/2021)
 
@@ -33,6 +36,9 @@ build-2025:  # Build 2025 site only
 
 build-all:  # Build both sites with redirects
 	./scripts/build-all.sh
+
+build-pdfs: build-all  # Build both sites and their downloadable English PDFs
+	./scripts/build-pdfs.sh
 
 build: build-all  # Alias for build-all
 
@@ -62,8 +68,9 @@ serve: build-all  # Serve both 2021 and 2025 sites from build directory
 
 generate: build-2021  # Maintain backward compatibility (keep existing)
 
-all: install-python-requirements build-all  # Install requirements and build both sites
+all: install-pdf-requirements build-pdfs  # Install requirements and build both sites with PDFs
 
-publish: build-all  # Deploy both sites to GitHub Pages
+publish: build-pdfs  # Deploy both sites and downloadable PDFs to GitHub Pages
 	($(activate) && cd build && git init -b main && git add -A && git commit -m "Deploy both 2021 and 2025 sites" && git push -f git@github.com:OWASP/Top10.git main:gh-pages)
 
+.PHONY: install-pdf-requirements build-pdfs

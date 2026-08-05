@@ -1,0 +1,21 @@
+INHERIT: mkdocs.yml
+
+# Build the English source tree without the i18n plugin. mkdocs-to-pdf and
+# mkdocs-static-i18n do not currently support generating one PDF per locale.
+docs_dir: !ENV [PDF_DOCS_DIR, docs/en]
+
+plugins:
+  - search
+  - to-pdf:
+      author: OWASP Top 10 Team
+      cover_logo: assets/OWASP_Logo_Transp.png
+      cover_subtitle: English edition
+      custom_template_path: pdf-template
+      toc_level: 2
+      ordered_chapter_level: 2
+      output_path: downloads/OWASP-Top-10-2021-en.pdf
+  - macros:
+      module_name: '../osib/osib_macro'
+      include_dir: '../osib/include'
+      verbose: false
+      on_error_fail: true

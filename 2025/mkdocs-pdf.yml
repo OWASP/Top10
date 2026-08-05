@@ -1,0 +1,20 @@
+INHERIT: mkdocs.yml
+
+# Build only the English navigation without the i18n plugin. The base 2025
+# navigation already points to files under docs/en/.
+docs_dir: !ENV [PDF_DOCS_DIR, docs]
+
+plugins:
+  - search
+  - to-pdf:
+      author: OWASP Top 10 Team
+      cover_logo: assets/OWASP_Logo_Transp.png
+      cover_subtitle: English edition
+      toc_level: 2
+      ordered_chapter_level: 2
+      output_path: downloads/OWASP-Top-10-2025-en.pdf
+  - macros:
+      module_name: '../osib/osib_macro'
+      include_dir: '../osib/include'
+      verbose: false
+      on_error_fail: true
