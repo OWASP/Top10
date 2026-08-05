@@ -33,6 +33,12 @@ make all          # Install dependencies and build both sites
 make build-all    # Just build both sites
 ```
 
+`make all` also generates downloadable English PDF editions and requires
+Python 3.10 or newer. To add PDF support to an existing virtual environment,
+run `make install-pdf-requirements`, then `make build-pdfs`. PDF rendering
+also needs WeasyPrint's system libraries (`brew install weasyprint` on macOS,
+or the WeasyPrint/Pango packages supplied by your Linux distribution).
+
 **Serve both versions together:**
 ```bash
 make serve        # Builds and serves both versions on port 8000
@@ -58,14 +64,16 @@ make build-2021  # Builds to build/2021/
 make build-2025  # Builds to build/2025/
 ```
 
-**Build both versions together:**
+**Build both versions together, including PDFs:**
 ```bash
-make build-all
+make build-pdfs
 ```
 
 This creates a combined build with:
 - `build/2021/` - Complete 2021 site
 - `build/2025/` - Complete 2025 site
+- `build/2021/downloads/OWASP-Top-10-2021-en.pdf` - 2021 English PDF
+- `build/2025/downloads/OWASP-Top-10-2025-en.pdf` - 2025 English PDF
 - `build/index.html` - Root redirect to 2021
 - `build/en/`, `build/ar/`, etc. - HTML redirects for backward compatibility
 

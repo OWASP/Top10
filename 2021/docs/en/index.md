@@ -6,6 +6,8 @@ Welcome to the OWASP Top 10:2021 documentation.
 
 The OWASP Top 10 is a standard awareness document for developers and web application security. It represents a broad consensus about the most critical security risks to web applications.
 
+<a href="downloads/OWASP-Top-10-2021-en.pdf">Download the English PDF edition</a>
+
 ## Getting Started
 
 Start with the [Introduction](A00_2021_Introduction.md) to learn about the OWASP Top 10:2021.

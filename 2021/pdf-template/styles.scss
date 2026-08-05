@@ -1,0 +1,15 @@
+.md-typeset table:not([class]) {
+  table-layout: fixed;
+  width: 100%;
+
+  th,
+  td {
+    min-width: 0;
+    overflow-wrap: normal;
+    padding: 0.35em 0.1rem;
+  }
+
+  th {
+    font-size: 6pt;
+  }
+}
