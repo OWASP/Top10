@@ -1,3 +1,10 @@
+---
+title: "A01:2025 Broken Access Control - OWASP Top 10"
+description: "When access checks are missing or bypassable, users act outside their permissions. When this happens, attackers can read, change, or delete data"
+og_type: "article"
+og_image: "assets/OG-images/A01-OG.png"
+---
+
 #  A01:2025 Broken Access Control ![icon](../assets/TOP_10_Icons_Final_Broken_Access_Control.png){: style="height:80px;width:80px" align="right"}
 
 
