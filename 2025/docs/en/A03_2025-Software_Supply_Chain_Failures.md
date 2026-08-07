@@ -79,7 +79,7 @@ There should be a patch management process in place to:
 
 
 
-* Centrally generate and manage the Software Bill of Materials (SBOM) of your entire software.
+* Centrally store and manage the Software Bill of Materials (SBOM) of your entire software.
 * Track not just your direct dependencies, but their (transitive) dependencies, and so on.
 * Reduce attack surface by removing unused dependencies, unnecessary features, components, files, and documentation.
 * Continuously inventory the versions of both client-side and server-side components (e.g., frameworks, libraries) and their dependencies using tools like OWASP Dependency Track, OWASP Dependency Check, retire.js, etc.
