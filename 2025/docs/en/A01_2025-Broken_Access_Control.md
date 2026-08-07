@@ -10,7 +10,7 @@ Maintaining its position at #1 in the Top Ten, 100% of the applications tested w
 ## Score table.
 
 
-<table>
+<table class="table-base">
   <tr>
    <td>CWEs Mapped 
    </td>

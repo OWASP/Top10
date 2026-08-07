@@ -210,6 +210,10 @@ plugins:
       include_dir: '../osib/include'
       verbose: false
       on_error_fail: true
+
+extra_css:
+  - stylesheets/extra.css
+
 extra:
   alternate:
     - name: en - English
