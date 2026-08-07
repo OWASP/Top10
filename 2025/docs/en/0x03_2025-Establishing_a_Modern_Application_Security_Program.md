@@ -42,7 +42,7 @@ If you are starting a program from scratch, or you find OWASP SAMM or DSOMM ‘t
 
 * Review your current system development life cycle and all software security activities, tooling, policies, and processes, then document them.
 
-* For new software, add one or more security activities to each phase of the system development life cycle (SDLC). Below we offer many suggestions of what you can do below. Ensure you perform these new activities on every new project or software initiative, this way you will know each new piece of software will be delivered at an acceptable security posture for your organizations.
+* For new software, add one or more security activities to each phase of the system development life cycle (SDLC). Below we offer many suggestions of what you can do. Ensure you perform these new activities on every new project or software initiative, this way you will know each new piece of software will be delivered at an acceptable security posture for your organizations.
 
 * Select your activities to ensure your final product meets an acceptable level of risk for your organization.
 
