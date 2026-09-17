@@ -2,7 +2,7 @@
 
 ## Antecedentes.
 
-La Inyección cae dos posiciones del #3 al #5 en el ranking, manteniendo su posición relativa respecto a A04:2025-Fallos Criptográficos y A06:2025-Diseño Inseguro. La inyección es una de las categorías más probadas, con el 100% de las aplicaciones evaluadas para algún tipo de inyección. Tuvo el mayor número de CVEs de cualquier categoría, con 37 CWEs en esta categoría. La inyección incluye Cross-Site Scripting (XSS) (alta frecuencia/bajo impacto) con más de 30.000 CVEs e Inyección SQL (baja frecuencia/alto impacto) con más de 14.000 CVEs. La gran cantidad de CVEs reportados para CWE-79 Neutralización Inadecuada de Entradas Durante la Generación de Páginas Web ('Cross-site Scripting') reduce el impacto ponderado promedio de esta categoría.
+La Inyección cae dos posiciones del #3 al #5 en el ranking, manteniendo su posición relativa respecto a A04:2025-Fallas Criptográficas y A06:2025-Diseño Inseguro. La inyección es una de las categorías más probadas, con el 100% de las aplicaciones evaluadas para algún tipo de inyección. Tuvo el mayor número de CVEs de cualquier categoría, con 37 CWEs en esta categoría. La inyección incluye Cross-Site Scripting (XSS) (alta frecuencia/bajo impacto) con más de 30.000 CVEs e Inyección SQL (baja frecuencia/alto impacto) con más de 14.000 CVEs. La gran cantidad de CVEs reportados para CWE-79 Neutralización Inadecuada de Entradas Durante la Generación de Páginas Web ('Cross-site Scripting') reduce el impacto ponderado promedio de esta categoría.
 
 
 ## Tabla de puntuación.
