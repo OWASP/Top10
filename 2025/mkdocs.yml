@@ -70,7 +70,28 @@ plugins:
             A08 Software or Data Integrity Failures: A08 Selhání integrity softwaru nebo dat
             A09 Security Logging and Alerting Failures: A09 Selhání bezpečnostního logování a upozorňování
             A10 Mishandling of Exceptional Conditions: A10 Nesprávné zpracování výjimečných stavů
-            Next Steps: Další kroky          
+            Next Steps: Další kroky
+        - locale: de
+          name: de - Deutsch
+          build: true
+          nav_translations:
+            Home: Startseite
+            Introduction: Einführung
+            About OWASP: Über OWASP
+            What are Application Security Risks?: Was sind Sicherheitsrisiken für die Anwendungen?
+            Establishing a Modern Application Security Program: Aufbau eines modernen Programms zur Anwendungssicherheit
+            Top 10:2025 List: Liste der Top 10:2025
+            A01 Broken Access Control: A01 Mangelhafte Zugriffskontrolle
+            A02 Security Misconfiguration: A02 Sicherheitsrelevante Fehlkonfiguration
+            A03 Software Supply Chain Failures: A03 Schwachstellen in der Software-Lieferkette
+            A04 Cryptographic Failures: A04 Fehlerhafter Einsatz von Kryptografie
+            A05 Injection: A05 Injection
+            A06 Insecure Design: A06 Unsicheres Design
+            A07 Authentication Failures: A07 Fehlerhafte Authentifizierung
+            A08 Software or Data Integrity Failures: A08 Fehler bei der Software- oder Datenintegrität
+            A09 Security Logging and Alerting Failures: A09 Unzureichendes Sicherheitslogging und Alarmierung
+            A10 Mishandling of Exceptional Conditions: A10 Fehlerhafte Behandlung von Ausnahmezuständen
+            Next Steps: Nächste Schritte
         - locale: es
           name: es - Español
           build: true
@@ -221,9 +242,9 @@ extra:
     - name: es - Español
       link: ./es/
       lang: es
-#    - name: de - Deutsch
-#      link: ./de/
-#      lang: de
+    - name: de - Deutsch
+      link: ./de/
+      lang: de
     - name: it - Italiano
       link: ./it/
       lang: it
