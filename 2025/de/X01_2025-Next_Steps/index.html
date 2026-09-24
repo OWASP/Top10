@@ -1,0 +1,1761 @@
+
+<!doctype html>
+<html lang="de" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="OWASP Top 10:2025">
+      
+      
+      
+        <link rel="canonical" href="https://owasp.org/Top10/2025/de/X01_2025-Next_Steps/">
+      
+      
+        <link rel="prev" href="../A10_2025-Mishandling_of_Exceptional_Conditions/">
+      
+      
+      
+        
+          <link rel="alternate" href="../../X01_2025-Next_Steps/" hreflang="en">
+        
+          <link rel="alternate" href="../../cs/" hreflang="cs  material_alternate">
+        
+          <link rel="alternate" href="./" hreflang="de">
+        
+          <link rel="alternate" href="../../es/X01_2025-Next_Steps/" hreflang="es">
+        
+          <link rel="alternate" href="../../it/X01_2025-Next_Steps/" hreflang="it">
+        
+          <link rel="alternate" href="../../ja/X01_2025-Next_Steps/" hreflang="ja">
+        
+          <link rel="alternate" href="../../ko/X01_2025-Next_Steps/" hreflang="ko">
+        
+          <link rel="alternate" href="../../fa/X01_2025-Next_Steps/" hreflang="fa">
+        
+          <link rel="alternate" href="../../pt-BR/X01_2025-Next_Steps/" hreflang="pt-BR">
+        
+          <link rel="alternate" href="../../zh-Hant/X01_2025-Next_Steps/" hreflang="zh-Hant">
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Nächste Schritte - OWASP Top 10:2025</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#nachste-schritte" class="md-skip">
+          Zum Inhalt
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Kopfzeile">
+    <a href="../" title="OWASP Top 10:2025" class="md-header__button md-logo" aria-label="OWASP Top 10:2025" data-md-component="logo">
+      
+  <img src="../../assets/OWASP_Logo_Transp.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OWASP Top 10:2025
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Nächste Schritte
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Sprache wechseln">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../X01_2025-Next_Steps/" hreflang="en" class="md-select__link">
+              en - English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../cs/" hreflang="cs  material_alternate" class="md-select__link">
+              cs - Česky
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="de" class="md-select__link">
+              de - Deutsch
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../es/X01_2025-Next_Steps/" hreflang="es" class="md-select__link">
+              es - Español
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../it/X01_2025-Next_Steps/" hreflang="it" class="md-select__link">
+              it - Italiano
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../ja/X01_2025-Next_Steps/" hreflang="ja" class="md-select__link">
+              ja - 日本語 (Japanese)
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../ko/X01_2025-Next_Steps/" hreflang="ko" class="md-select__link">
+              ko - 한국어 (Korean)
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../fa/X01_2025-Next_Steps/" hreflang="fa" class="md-select__link">
+              fa - فارسی (Persian/Fārsi)
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../pt-BR/X01_2025-Next_Steps/" hreflang="pt-BR" class="md-select__link">
+              pt-BR - (Português Brasil)
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../zh-Hant/X01_2025-Next_Steps/" hreflang="zh-Hant" class="md-select__link">
+              zh-Hant - 简体中文
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Suche" placeholder="Suche" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Suche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Zurücksetzen" aria-label="Zurücksetzen" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Suche wird initialisiert
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/OWASP/Top10" title="Zum Repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    OWASP/Top10
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../" title="OWASP Top 10:2025" class="md-nav__button md-logo" aria-label="OWASP Top 10:2025" data-md-component="logo">
+      
+  <img src="../../assets/OWASP_Logo_Transp.png" alt="logo">
+
+    </a>
+    OWASP Top 10:2025
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/OWASP/Top10" title="Zum Repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    OWASP/Top10
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Startseite
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x00_2025-Introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Einführung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x01_2025-About_OWASP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Über OWASP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x02_2025-What_are_Application_Security_Risks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Was sind Sicherheitsrisiken für die Anwendungen?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x03_2025-Establishing_a_Modern_Application_Security_Program/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aufbau eines modernen Programms zur Anwendungssicherheit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Liste der Top 10:2025
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Liste der Top 10:2025
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A01_2025-Broken_Access_Control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A01 Mangelhafte Zugriffskontrolle
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A02_2025-Security_Misconfiguration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A02 Sicherheitsrelevante Fehlkonfiguration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A03_2025-Software_Supply_Chain_Failures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A03 Schwachstellen in der Software-Lieferkette
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A04_2025-Cryptographic_Failures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A04 Fehlerhafter Einsatz von Kryptografie
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A05_2025-Injection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A05 Injection
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A06_2025-Insecure_Design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A06 Unsicheres Design
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A07_2025-Authentication_Failures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A07 Fehlerhafte Authentifizierung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A08_2025-Software_or_Data_Integrity_Failures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A08 Fehler bei der Software- oder Datenintegrität
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A09_2025-Security_Logging_and_Alerting_Failures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A09 Unzureichendes Sicherheitslogging und Alarmierung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A10_2025-Mishandling_of_Exceptional_Conditions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A10 Fehlerhafte Behandlung von Ausnahmezuständen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nächste Schritte
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nächste Schritte
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#x012025-mangelnde-resilienz-der-anwendung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        X01:2025 Mangelnde Resilienz der Anwendung
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="X01:2025 Mangelnde Resilienz der Anwendung">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hintergrund" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hintergrund.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#punktetabelle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Punktetabelle.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#beschreibung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Beschreibung.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pravention-und-gegenmanahmen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prävention und Gegenmaßnahmen.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#beispielhafte-angriffsszenarien" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Beispielhafte Angriffsszenarien.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#referenzen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Referenzen.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#liste-der-zugeordneten-cwes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Liste der zugeordneten CWEs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#x022025-speicherverwaltungsfehler" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        X02:2025 Speicherverwaltungsfehler
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="X02:2025 Speicherverwaltungsfehler">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hintergrund_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hintergrund.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#punktetabelle_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Punktetabelle.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#beschreibung_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Beschreibung.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pravention-und-gegenmanahmen_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prävention und Gegenmaßnahmen.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#beispielhafte-angriffsszenarien_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Beispielhafte Angriffsszenarien.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#referenzen_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Referenzen.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#liste-der-zugeordneten-cwes_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Liste der zugeordneten CWEs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#x032025-unangebrachtes-vertrauen-in-ki-generierten-code-vibe-coding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        X03:2025 Unangebrachtes Vertrauen in KI-generierten Code (‚Vibe Coding')
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="X03:2025 Unangebrachtes Vertrauen in KI-generierten Code (‚Vibe Coding&#39;)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hintergrund_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hintergrund.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#beschreibung_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Beschreibung.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pravention-und-gegenmanahmen_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prävention und Gegenmaßnahmen.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#referenzen_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Referenzen.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#liste-der-zugeordneten-cwes_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Liste der zugeordneten CWEs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#x012025-mangelnde-resilienz-der-anwendung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        X01:2025 Mangelnde Resilienz der Anwendung
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="X01:2025 Mangelnde Resilienz der Anwendung">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hintergrund" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hintergrund.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#punktetabelle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Punktetabelle.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#beschreibung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Beschreibung.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pravention-und-gegenmanahmen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prävention und Gegenmaßnahmen.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#beispielhafte-angriffsszenarien" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Beispielhafte Angriffsszenarien.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#referenzen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Referenzen.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#liste-der-zugeordneten-cwes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Liste der zugeordneten CWEs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#x022025-speicherverwaltungsfehler" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        X02:2025 Speicherverwaltungsfehler
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="X02:2025 Speicherverwaltungsfehler">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hintergrund_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hintergrund.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#punktetabelle_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Punktetabelle.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#beschreibung_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Beschreibung.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pravention-und-gegenmanahmen_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prävention und Gegenmaßnahmen.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#beispielhafte-angriffsszenarien_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Beispielhafte Angriffsszenarien.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#referenzen_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Referenzen.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#liste-der-zugeordneten-cwes_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Liste der zugeordneten CWEs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#x032025-unangebrachtes-vertrauen-in-ki-generierten-code-vibe-coding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        X03:2025 Unangebrachtes Vertrauen in KI-generierten Code (‚Vibe Coding')
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="X03:2025 Unangebrachtes Vertrauen in KI-generierten Code (‚Vibe Coding&#39;)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hintergrund_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hintergrund.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#beschreibung_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Beschreibung.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pravention-und-gegenmanahmen_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prävention und Gegenmaßnahmen.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#referenzen_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Referenzen.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#liste-der-zugeordneten-cwes_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Liste der zugeordneten CWEs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="nachste-schritte">Nächste Schritte</h1>
+<p>Die OWASP Top 10 sind von Natur aus auf die zehn bedeutendsten Risiken beschränkt. Jede OWASP Top 10 hat Risiken, die an der Schwelle zur Aufnahme in die Top 10 stehen,  es letztendlich jedoch nicht in die Liste geschafft haben. Die anderen Risiken waren weiter verbreitet und hatten größere Auswirkungen.</p>
+<p>Die folgenden drei Themen sind es wert, identifiziert und behoben zu werden – insbesondere für Organisationen, die ein ausgereiftes Anwendungssicherheitsprogramm aufbauen möchten, sowie für Sicherheitsberatungsunternehmen oder Werkzeughersteller, die 
+ihre Abdeckung erweitern möchten.</p>
+<h2 id="x012025-mangelnde-resilienz-der-anwendung">X01:2025 Mangelnde Resilienz der Anwendung</h2>
+<h3 id="hintergrund">Hintergrund.</h3>
+<p>Dies ist eine Umbenennung des Themas „Denial of Service" aus dem Jahr 2021. Die Umbenennung erfolgte, da der frühere Begriff ein Symptom beschrieb und nicht die eigentliche Ursache. Diese Kategorie konzentriert sich auf CWEs (Common Weakness Enumerations – Auflistungen häufiger Schwachstellen), die Schwächen im Zusammenhang mit Resilienzproblemen beschreiben. Die Bewertung dieser Kategorie lag sehr nahe an A10:2025 – Fehlerhafte Behandlung von Ausnahmezuständen. Relevante CWEs umfassen: <em>CWE-400 Unkontrollierter Ressourcenverbrauch, CWE-409 Unsachgemäße Behandlung von stark komprimierten Daten (Datenverstärkung), CWE-674 Unkontrollierte Rekursion</em> und <em>CWE-835 Schleife mit unerreichbarer Abbruchbedingung ('Endlosschleife')</em>.</p>
+<h3 id="punktetabelle">Punktetabelle.</h3>
+<table>
+  <tr>
+   <td>Zugeordnete CWEs 
+   </td>
+   <td>Max. Häufigkeit
+   </td>
+   <td>Durchschn. Häufigkeit
+   </td>
+   <td>Max. Abdeckung
+   </td>
+   <td>Durchschn. Abdeckung
+   </td>
+   <td>Durchschn. gewichtete Ausnutzbarkeit
+   </td>
+   <td>Durchschn. gewichtete Auswirkung
+   </td>
+   <td>Gesamtanzahl 
+   </td>
+   <td>Summe CVEs
+   </td>
+  </tr>
+  <tr>
+   <td>16
+   </td>
+   <td>20.05%
+   </td>
+   <td>4.55%
+   </td>
+   <td>86.01%
+   </td>
+   <td>41.47%
+   </td>
+   <td>7.92
+   </td>
+   <td>3.49
+   </td>
+   <td>865,066
+   </td>
+   <td>4,423
+   </td>
+  </tr>
+</table>
+
+<h3 id="beschreibung">Beschreibung.</h3>
+<p>Diese Kategorie stellt eine systemische Schwäche darin dar, wie Anwendungen auf Belastungen, Ausfälle und Grenzfälle reagieren, von denen sie sich nicht erholen können. Wenn eine Anwendung unerwartete Zustände, Ressourcenengpässe und andere ungünstige Ereignisse nicht ordnungsgemäß behandelt, übersteht oder sich davon erholt, kann dies leicht zu Verfügbarkeitsproblemen führen (tritt am häufigsten auf), aber auch zu Datenschädigung, Offenlegung sensibler Daten, Kaskadenausfällen und/oder der Umgehung von Sicherheitskontrollen.</p>
+<p>Darüber hinaus können <a href="#x022025-speicherverwaltungsfehler">X02:2025 Speicherverwaltungsfehler</a> ebenfalls zum Ausfall der Anwendung oder sogar des gesamten Systems führen.</p>
+<h3 id="pravention-und-gegenmanahmen">Prävention und Gegenmaßnahmen.</h3>
+<p>Um diese Art von Schwachstelle zu verhindern, müssen Sie Ihre Systeme auf Fehlertoleranz und Wiederherstellung auslegen.</p>
+<ul>
+<li>Fügen Sie Begrenzungen, Kontingente und Failover-Funktionalität hinzu, und achten Sie dabei besonders auf die ressourcenintensivsten Vorgänge.</li>
+<li>Identifizieren Sie ressourcenintensive Seiten und planen Sie voraus: Reduzieren Sie die Angriffsfläche, indem Sie insbesondere keine unnötigen Funktionen und Komponenten, die viele Ressourcen (z. B. Prozessor, Arbeitsspeicher) benötigen, gegenüber unbekannten oder nicht vertrauenswürdigen Benutzer:innen exponieren.</li>
+<li>Führen Sie eine strikte Eingabevalidierung mit Positivlisten und Größenbeschränkungen durch und testen Sie diese gründlich.</li>
+<li>Begrenzen Sie die Größe von Antworten und senden Sie niemals unverarbeitete Rohantworten an den Client zurück (Verarbeitung auf der Serverseite).</li>
+<li>Standardmäßig sicher/geschlossen konfigurieren (niemals offen), standardmäßig ablehnen und bei einem Fehler zurücksetzen.</li>
+<li>Vermeiden Sie blockierende synchrone Aufrufe in Anfrage-Threads (verwenden Sie asynchrone/nicht-blockierende Verarbeitung, setzen Sie Zeitüberschreitungen und Parallelitätsbeschränkungen ein usw.).</li>
+<li>Testen Sie Ihre Fehlerbehandlungsfunktionalität sorgfältig.</li>
+<li>Implementieren Sie Resilienzmuster wie Schutzschalter (Circuit Breaker), Schotten (Bulkheads), Wiederholungslogik (Retry Logic) und schrittweisen Leistungsabbau (Graceful Degradation).</li>
+<li>Führen Sie Leistungs- und Lasttests durch; setzen Sie bei ausreichender Risikobereitschaft auch Chaos-Engineering ein.</li>
+<li>Implementieren Sie Redundanz, wo dies sinnvoll und wirtschaftlich vertretbar ist, und berücksichtigen Sie diese bei der Systemarchitektur.</li>
+<li>Implementieren Sie Überwachung, Beobachtbarkeit und Alarmierung.</li>
+<li>Filtern Sie ungültige Absenderadressen gemäß RFC 2267.</li>
+<li>Blockieren Sie bekannte Botnetze anhand von Fingerabdrücken, IP-Adressen oder dynamisch anhand ihres Verhaltens.</li>
+<li>Arbeitsnachweis (Proof-of-Work): Initiieren Sie ressourcenintensive Vorgänge auf der Seite der Angreifer:innen, die normale Benutzer:innen kaum beeinträchtigen, jedoch Bots behindern, die versuchen, eine große Anzahl von Anfragen zu senden. Erhöhen Sie den Schwierigkeitsgrad des Arbeitsnachweises, wenn die allgemeine Systemlast steigt, insbesondere für Systeme, die weniger vertrauenswürdig erscheinen oder sich wie Bots verhalten.</li>
+<li>Begrenzen Sie die serverseitige Sitzungsdauer basierend auf Inaktivität und einer maximalen Gesamtdauer.</li>
+<li>Begrenzen Sie die sitzungsgebundene Informationsspeicherung.</li>
+</ul>
+<h3 id="beispielhafte-angriffsszenarien">Beispielhafte Angriffsszenarien.</h3>
+<p><strong>Szenario Nr. 1:</strong> Angreifer:innen verbrauchen gezielt Anwendungsressourcen, um Ausfälle im System auszulösen und so einen Denial-of-Service zu verursachen. Dies kann durch Arbeitsspeichererschöpfung, Auffüllen des Festplattenspeichers, Prozessorüberlastung oder das Öffnen endloser Verbindungen geschehen.</p>
+<p><strong>Szenario Nr. 2:</strong> Eingabe-Fuzzing, das zu manipulierten Antworten führt, die die Geschäftslogik der Anwendung außer Kraft setzt.</p>
+<p><strong>Szenario Nr. 3:</strong> Angreifer:innen konzentrieren sich auf die Abhängigkeiten der Anwendung, indem sie Schnittstellen (APIs) oder andere externe Dienste zum Ausfall bringen, sodass die Anwendung nicht mehr weiterarbeiten kann.</p>
+<h3 id="referenzen">Referenzen.</h3>
+<ul>
+<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/Denial_of_Service_Cheat_Sheet.html">OWASP Cheat Sheet: Denial of Service</a></li>
+<li><a href="https://mas.owasp.org/MASVS/11-MASVS-RESILIENCE/">OWASP MASVS‑RESILIENCE</a></li>
+<li><a href="https://learn.microsoft.com/en-us/aspnet/core/fundamentals/best-practices?view=aspnetcore-9.0">ASP.NET Core Best Practices (Microsoft)</a></li>
+<li><a href="https://medium.com/@parserdigital/resilience-in-microservices-bulkhead-vs-circuit-breaker-54364c1f9d53">Resilience in Microservices: Bulkhead vs Circuit Breaker (Parser)</a></li>
+<li><a href="https://www.geeksforgeeks.org/system-design/bulkhead-pattern/">Bulkhead Pattern (Geeks for Geeks)</a></li>
+<li><a href="https://www.nist.gov/cyberframework">NIST Cybersecurity Framework (CSF)</a></li>
+<li><a href="https://www.devlane.com/blog/avoid-blocking-calls-go-async-in-java">Avoid Blocking Calls: Go Async in Java (Devlane)</a></li>
+</ul>
+<h3 id="liste-der-zugeordneten-cwes">Liste der zugeordneten CWEs</h3>
+<ul>
+<li><a href="https://cwe.mitre.org/data/definitions/73.html">CWE-73  External Control of File Name or Path</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/183.html">CWE-183 Permissive List of Allowed Inputs</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/256.html">CWE-256 Plaintext Storage of a Password</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/266.html">CWE-266 Incorrect Privilege Assignment</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/269.html">CWE-269 Improper Privilege Management</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/286.html">CWE-286 Incorrect User Management</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/311.html">CWE-311 Missing Encryption of Sensitive Data</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/312.html">CWE-312 Cleartext Storage of Sensitive Information</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/313.html">CWE-313 Cleartext Storage in a File or on Disk</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/316.html">CWE-316 Cleartext Storage of Sensitive Information in Memory</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/362.html">CWE-362 Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/382.html">CWE-382 J2EE Bad Practices: Use of System.exit()</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/419.html">CWE-419 Unprotected Primary Channel</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/434.html">CWE-434 Unrestricted Upload of File with Dangerous Type</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/436.html">CWE-436 Interpretation Conflict</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/444.html">CWE-444 Inconsistent Interpretation of HTTP Requests ('HTTP Request/Response Smuggling')</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/451.html">CWE-451 User Interface (UI) Misrepresentation of Critical Information</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/454.html">CWE-454 External Initialization of Trusted Variables or Data Stores</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/472.html">CWE-472 External Control of Assumed-Immutable Web Parameter</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/501.html">CWE-501 Trust Boundary Violation</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/522.html">CWE-522 Insufficiently Protected Credentials</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/525.html">CWE-525 Use of Web Browser Cache Containing Sensitive Information</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/539.html">CWE-539 Use of Persistent Cookies Containing Sensitive Information</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/598.html">CWE-598 Use of GET Request Method With Sensitive Query Strings</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/602.html">CWE-602 Client-Side Enforcement of Server-Side Security</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/628.html">CWE-628 Function Call with Incorrectly Specified Arguments</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/642.html">CWE-642 External Control of Critical State Data</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/646.html">CWE-646 Reliance on File Name or Extension of Externally-Supplied File</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/653.html">CWE-653 Improper Isolation or Compartmentalization</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/656.html">CWE-656 Reliance on Security Through Obscurity</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/657.html">CWE-657 Violation of Secure Design Principles</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/676.html">CWE-676 Use of Potentially Dangerous Function</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/693.html">CWE-693 Protection Mechanism Failure</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/799.html">CWE-799 Improper Control of Interaction Frequency</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/807.html">CWE-807 Reliance on Untrusted Inputs in a Security Decision</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/841.html">CWE-841 Improper Enforcement of Behavioral Workflow</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/1021.html">CWE-1021 Improper Restriction of Rendered UI Layers or Frames</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/1022.html">CWE-1022 Use of Web Link to Untrusted Target with window.opener Access</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/1125.html">CWE-1125 Excessive Attack Surface</a></li>
+</ul>
+<h2 id="x022025-speicherverwaltungsfehler">X02:2025 Speicherverwaltungsfehler</h2>
+<h3 id="hintergrund_1">Hintergrund.</h3>
+<p>Sprachen wie Java, C#, JavaScript/TypeScript (node.js), Go und „sicheres" Rust sind speichersicher. Speicherverwaltungsprobleme treten typischerweise in nicht speichersicheren Sprachen wie C und C++ auf. Diese Kategorie erzielte in der Umfrage in der Gemeinschaft (Community) die niedrigste Bewertung und war auch in den Daten gering vertreten, obwohl sie die drittmeisten zugehörigen CVEs aufweist. Wir führen dies auf die Dominanz von Webanwendungen gegenüber traditionellen Desktop-Anwendungen zurück. Speicherverwaltungsschwachstellen weisen häufig die höchsten CVSS-Bewertungen auf.</p>
+<h3 id="punktetabelle_1">Punktetabelle.</h3>
+<table>
+  <tr>
+   <td>Zugeordnete CWEs 
+   </td>
+   <td>Max. Häufigkeit
+   </td>
+   <td>Durchschn. Häufigkeit
+   </td>
+   <td>Max. Abdeckung
+   </td>
+   <td>Durchschn. Abdeckung
+   </td>
+   <td>Durchschn. gewichtete Ausnutzbarkeit
+   </td>
+   <td>Durchschn. gewichtete Auswirkung
+   </td>
+   <td>Gesamtanzahl 
+   </td>
+   <td>Summe CVEs
+   </td>
+  </tr>
+  <tr>
+   <td>24
+   </td>
+   <td>2.96%
+   </td>
+   <td>1.13%
+   </td>
+   <td>55.62%
+   </td>
+   <td>28.45%
+   </td>
+   <td>6.75
+   </td>
+   <td>4.82
+   </td>
+   <td>220,414
+   </td>
+   <td>30,978
+   </td>
+  </tr>
+</table>
+
+<h3 id="beschreibung_1">Beschreibung.</h3>
+<p>Wenn eine Anwendung gezwungen ist, den Arbeitsspeicher selbst zu verwalten, können leicht Fehler entstehen. Speichersichere Sprachen werden zwar zunehmend eingesetzt, jedoch gibt es weltweit noch viele veraltete Systeme im produktiven Betrieb, neue systemnahe Anwendungen, die den Einsatz nicht speichersicherer Sprachen erfordern, sowie Webanwendungen, die mit Großrechnern, IoT-Geräten, Firmware und anderen Systemen interagieren, die möglicherweise ihren eigenen Arbeitsspeicher verwalten müssen. Repräsentative CWEs sind <em>CWE-120 Pufferkopie ohne Überprüfung der Eingabegröße (‚Klassischer Pufferüberlauf')</em> und <em>CWE-121 Stapelbasierter Pufferüberlauf. Speicherverwaltungsfehler</em> können auftreten, wenn:</p>
+<ul>
+<li>Sie nicht genügend Arbeitsspeicher für eine Variable reservieren</li>
+<li>Sie Eingaben nicht validieren und dadurch einen Überlauf des Heaps, des Stapelspeichers oder eines Puffers verursachen</li>
+<li>Sie einen Datenwert speichern, der größer ist als der Datentyp der Variable aufnehmen kann</li>
+<li>Sie versuchen, nicht reservierten Arbeitsspeicher oder Adressbereiche zu verwenden</li>
+<li>Sie Einzel-Versatz-Fehler erzeugen (Zählung ab 1 statt ab 0)</li>
+<li>Sie versuchen, auf ein Objekt zuzugreifen, nachdem dessen Speicher bereits freigegeben wurde</li>
+<li>Sie nicht initialisierte Variablen verwenden</li>
+<li>Sie Arbeitsspeicher verlieren oder anderweitig den gesamten verfügbaren Arbeitsspeicher verbrauchen, bis Ihre Anwendung abstürzt</li>
+</ul>
+<p>Speicherverwaltungsfehler können zum Ausfall der Anwendung oder sogar des gesamten Systems führen; siehe auch <a href="#x012025-mangelnde-resilienz-der-anwendung">X01:2025 Mangelnde Resilienz der Anwendung</a>.</p>
+<h3 id="pravention-und-gegenmanahmen_1">Prävention und Gegenmaßnahmen.</h3>
+<p>Der beste Weg zur Vermeidung von Speicherverwaltungsfehlern ist die Verwendung einer speichersicheren Sprache. Beispiele hierfür sind Rust, Java, Go, C#, Python, Swift, Kotlin, JavaScript usw. Versuchen Sie bei der Entwicklung neuer Anwendungen, Ihre Organisation davon zu überzeugen, dass der Aufwand für den Umstieg auf eine speichersichere Sprache gerechtfertigt ist. Wenn eine vollständige Überarbeitung durchgeführt wird, setzen Sie sich dafür ein, den Code in einer speichersicheren Sprache neu zu schreiben, sofern dies möglich und machbar ist.</p>
+<p>Falls die Verwendung einer speichersicheren Sprache nicht möglich ist, führen Sie folgende Maßnahmen durch:</p>
+<ul>
+<li>Aktivieren Sie die folgenden Serverfunktionen, die die Ausnutzung von Speicherverwaltungsfehlern erschweren: Adressraumanordnungs-Zufälligkeit (address space layout randomization / ASLR), Datenausführungsschutz (Data Execution Protection / DEP) und Strukturierter-Ausnahmebehandlungs-Überschreibungsschutz (Structured Exception Handling Overwrite Protection / SEHOP).</li>
+<li>Überwachen Sie Ihre Anwendung auf Arbeitsspeicherlecks.</li>
+<li>Validieren Sie alle Eingaben in Ihrem System sehr sorgfältig und weisen Sie alle Eingaben zurück, die nicht den Erwartungen entsprechen.</li>
+<li>Analysieren Sie die von Ihnen verwendete Programmiersprache und erstellen Sie eine Liste unsicherer und sichererer Funktionen. Teilen Sie diese Liste mit Ihrem gesamten Team. Fügen Sie sie, wenn möglich in Ihre Richtlinien oder Standards für sicheres Programmieren ein. Bevorzugen Sie beispielsweise in C die Funktion strncpy() gegenüber strcpy() und strncat() gegenüber strcat().</li>
+<li>Wenn Ihre Programmiersprache oder Ihr Framework Bibliotheken für Arbeitsspeichersicherheit anbietet, verwenden Sie diese. Beispiele hierfür sind Safestringlib oder SafeStr.</li>
+<li>Verwenden Sie nach Möglichkeit verwaltete Puffer und Zeichenketten anstelle von unbearbeiteten (raw) Feldern und Zeigern.</li>
+<li>Nehmen Sie an Schulungen für sicheres Programmieren teil, die sich auf Speicherprobleme und/oder Ihre bevorzugte Programmiersprache konzentrieren. Teilen Sie Ihrem Schulungsanbieter mit, dass Sie Speicherverwaltungsfehler als besonderes Risiko betrachten.</li>
+<li>Führen Sie Quellcode-Überprüfungen und/oder statische Analysen durch.</li>
+<li>Verwenden Sie Compiler-Werkzeuge, die bei der Speicherverwaltung helfen, wie StackShield, StackGuard und Libsafe.</li>
+<li>Führen Sie Fuzzing für alle Eingaben in Ihrem System durch.</li>
+<li>Wenn ein Penetrationstest durchgeführt wird, informieren Sie die Tester:innen, dass Sie Speicherverwaltungsfehler als besonderes Risiko betrachten und dass sie diesen Aspekt beim Testen besonders berücksichtigen soll.</li>
+<li>Beheben Sie alle Compiler-Fehler und Warnungen. Ignorieren Sie Warnungen nicht, nur weil Ihr Programm erfolgreich kompiliert.</li>
+<li>Stellen Sie sicher, dass Ihre zugrundeliegende Infrastruktur regelmäßig mit Sicherheitsaktualisierungen versorgt, überprüft und gehärtet wird.</li>
+<li>Überwachen Sie Ihre zugrundeliegende Infrastruktur gezielt auf potenzielle Speicherschwachstellen und andere Ausfälle.</li>
+<li>Erwägen Sie den Einsatz von <a href="https://en.wikipedia.org/wiki/Buffer_overflow_protection#Canaries">Canary-Werten (Prüfwerte)</a>, um Ihren Adressstapel vor Überlaufangriffen zu schützen.</li>
+</ul>
+<h3 id="beispielhafte-angriffsszenarien_1">Beispielhafte Angriffsszenarien.</h3>
+<p><strong>Szenario Nr. 1:</strong> Pufferüberläufe sind die bekannteste Speicherschwachstelle – eine Situation, in der Angreifer:innen mehr Daten in ein Eingabefeld eingeben, als dieses aufnehmen kann, sodass der für die zugrundeliegende Variable angelegte Puffer überläuft. Bei einem erfolgreichen Angriff überschreiben die überlaufenden Zeichen den Stapelzeiger, was es ihnen ermöglicht, schadhaften Programmcode in Ihre Anwendung einzuschleusen.</p>
+<p><strong>Szenario Nr. 2:</strong> Use-After-Free (UAF) – Zugriff auf bereits freigegebenen Speicher – tritt häufig genug auf, um eine gängige Einsendung in Browser-Fehlerprämienprogrammen (bug bounty) zu sein. Stellen Sie sich einen Webbrowser vor, der JavaScript verarbeitet, das DOM-Elemente manipuliert. Die/Der Angreifer:in erstellt eine JavaScript-Nutzlast, die ein Objekt (z. B. ein DOM-Element) erzeugt und Verweise darauf erhält. Durch gezielte Manipulation veranlasst sie/er den Browser, den Speicher des Objekts freizugeben, während ein hängender Zeiger darauf bestehen bleibt. Bevor der Browser erkennt, dass der Speicher freigegeben wurde, reserviert die/der Angreifer:in ein neues Objekt, das denselben Speicherbereich belegt. Wenn der Browser versucht, den ursprünglichen Zeiger zu verwenden, verweist dieser nun auf von der/dem Angreifer:in kontrollierte Daten. Falls dieser Zeiger auf eine virtuelle Funktionstabelle zeigte, kann die/der Angreifer:in die Programmausführung auf ihre/seine Nutzlast umleiten.</p>
+<p><strong>Szenario Nr. 3:</strong> Hierbei handelt es sich um einen Netzwerkdienst, der Benutzereingaben entgegennimmt, diese nicht ordnungsgemäß validiert oder bereinigt und sie dann direkt an die Protokollierungsfunktion weitergibt. Die Benutzereingabe wird als syslog(user_input) statt als syslog("%s", user_input) an die Protokollierungsfunktion übergeben, ohne dass ein Formatbezeichner angegeben wird. Angreifer:innen senden schadhafte Nutzlasten mit Formatbezeichnern wie %x, um Stapelspeicherinhalte auszulesen (Offenlegung sensibler Daten), oder %n, um in Speicheradressen zu schreiben. Durch die Verkettung mehrerer Formatbezeichner können sie den Stapelspeicher kartieren, wichtige Adressen lokalisieren und diese anschließend überschreiben. Dies wäre eine Formatzeichenketten-Schwachstelle (unkontrolliertes Zeichenkettenformat).</p>
+<p>Hinweis: Moderne Browser verwenden viele Schutzebenen, um sich gegen solche Angriffe zu verteidigen, darunter <a href="https://www.geeksforgeeks.org/ethical-hacking/what-is-browser-sandboxing/#types-of-browser-sandboxing">Browser-Sandboxing</a>, ASLR, DEP/NX, RELRO und PIE. Ein Speicherverwaltungsangriff auf einen Browser ist kein einfach durchzuführender Angriff.</p>
+<h3 id="referenzen_1">Referenzen.</h3>
+<ul>
+<li><a href="https://owasp.org/www-community/vulnerabilities/Memory_leak">OWASP community pages: Memory leak,</a> <a href="https://owasp.org/www-community/vulnerabilities/Doubly_freeing_memory">Doubly freeing memory,</a> <a href="https://owasp.org/www-community/vulnerabilities/Buffer_Overflow">&amp; Buffer Overflow</a></li>
+<li><a href="https://github.com/secfigo/Awesome-Fuzzing">Awesome Fuzzing: a list of fuzzing resources</a> </li>
+<li><a href="https://googleprojectzero.blogspot.com">Project Zero Blog</a></li>
+<li><a href="https://www.microsoft.com/en-us/msrc/blog">Microsoft MSRC Blog</a></li>
+</ul>
+<h3 id="liste-der-zugeordneten-cwes_1">Liste der zugeordneten CWEs</h3>
+<ul>
+<li><a href="https://cwe.mitre.org/data/definitions/14.html">CWE-14 Compiler Removal of Code to Clear Buffers</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/119.html">CWE-119 Improper Restriction of Operations within the Bounds of a Memory Buffer</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120 Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/121.html">CWE-121 Stack-based Buffer Overflow</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/122.html">CWE-122 Heap-based Buffer Overflow</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/124.html">CWE-124 Buffer Underwrite ('Buffer Underflow')</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/125.html">CWE-125 Out-of-bounds Read</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/126.html">CWE-126 Buffer Over-read</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/190.html">CWE-190 Integer Overflow or Wraparound</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/191.html">CWE-191 Integer Underflow (Wrap or Wraparound)</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/196.html">CWE-196 Unsigned to Signed Conversion Error</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/367.html">CWE-367 Time-of-check Time-of-use (TOCTOU) Race Condition</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/415.html">CWE-415 Double Free</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/416.html">CWE-416 Use After Free</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/457.html">CWE-457 Use of Uninitialized Variable</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/459.html">CWE-459 Incomplete Cleanup</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/467.html">CWE-467 Use of sizeof() on a Pointer Type</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/787.html">CWE-787 Out-of-bounds Write</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/788.html">CWE-788 Access of Memory Location After End of Buffer</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/824.html">CWE-824 Access of Uninitialized Pointer</a></li>
+</ul>
+<h2 id="x032025-unangebrachtes-vertrauen-in-ki-generierten-code-vibe-coding">X03:2025 Unangebrachtes Vertrauen in KI-generierten Code (‚Vibe Coding')</h2>
+<h3 id="hintergrund_2">Hintergrund.</h3>
+<p>Derzeit spricht und nutzt die gesamte Welt Künstliche Intelligenz (KI), das schließt Softwareentwickler:innen ein. Obwohl es derzeit keine CVEs oder CWEs im Zusammenhang mit KI-generiertem Code gibt, ist allgemein bekannt und dokumentiert, dass KI-generierter Code häufig mehr Schwachstellen enthält als von Menschen geschriebener Code.</p>
+<h3 id="beschreibung_2">Beschreibung.</h3>
+<p>Wir beobachten, dass sich die Softwareentwicklungspraxis dahingehend verändert, dass nicht nur Code mit Unterstützung von KI geschrieben wird, sondern Code nahezu vollständig ohne menschliche Aufsicht erstellt und eingereicht wird (oft als „Vibe Coding" bezeichnet). So wie es noch nie eine gute Idee war, Codeausschnitte aus Blogs oder Webseiten gedankenlos zu kopieren, wird das Problem in diesem Fall noch verschärft. Gute, sichere Codeausschnitte waren und sind selten und werden von KI aufgrund systemischer Einschränkungen möglicherweise statistisch vernachlässigt.</p>
+<h3 id="pravention-und-gegenmanahmen_2">Prävention und Gegenmaßnahmen.</h3>
+<p>Wir fordern alle Personen, die Code schreiben, auf, beim Einsatz von KI Folgendes zu berücksichtigen: </p>
+<ul>
+<li>Sie sollten in der Lage sein, den gesamten von Ihnen eingereichten Code zu lesen und vollständig zu verstehen, auch wenn er von einer KI geschrieben oder aus einem Online-Forum kopiert wurde. Sie sind für jeden Code verantwortlich, den Sie einreichen.</li>
+<li>Sie sollten jeden KI-unterstützten Code gründlich auf Schwachstellen überprüfen, idealerweise mit eigenen Augen und zusätzlich mit Sicherheitswerkzeugen, die für diesen Zweck entwickelt wurden (z. B. statische Analyse). Ziehen Sie klassische Quellcode-Überprüfungstechniken in Betracht, wie sie in der <a href="https://cheatsheetseries.owasp.org/cheatsheets/Secure_Code_Review_Cheat_Sheet.html">OWASP-Spickzettel-Reihe: Sichere Quellcode-Überprüfung</a> beschrieben werden.</li>
+<li>Im Idealfall schreiben Sie Ihren eigenen Code, lassen die KI Verbesserungen vorschlagen, überprüfen den KI-Code und lassen die KI Korrekturen vornehmen, bis Sie mit dem Ergebnis zufrieden sind.</li>
+<li>Erwägen Sie den Einsatz eines Retrieval Augmented Generation (RAG)-Servers mit Ihren eigenen gesammelten und geprüften sicheren Codebeispielen und Dokumentationen, wie z. B. den Richtlinien, Standards oder Vorgaben Ihrer Organisation für sicheres Programmieren, und lassen Sie den RAG-Server die Einhaltung dieser Richtlinien und Standards durchsetzen.</li>
+<li>Erwägen Sie den Erwerb von Werkzeugen, die Schutzmaßnahmen für Datenschutz und Sicherheit für die Verwendung mit Ihrer/Ihren KI-Lösung(en) implementieren.</li>
+<li>Erwägen Sie den Erwerb einer privaten KI-Lösung, idealerweise mit einer Vertragsvereinbarung (einschließlich einer Datenschutzvereinbarung), dass die KI nicht mit den Daten, Anfragen, dem Code oder anderen sensiblen Informationen Ihrer Organisation trainiert wird.</li>
+<li>Erwägen Sie die Implementierung eines Model Context Protocol (MCP)-Servers zwischen Ihrer Entwicklungsumgebung und der KI und konfigurieren Sie diesen so, dass er den Einsatz Ihrer bevorzugten Sicherheitswerkzeuge erzwingt.</li>
+<li>Implementieren Sie Richtlinien und Prozesse als Teil Ihres Softwareentwicklungslebenszyklus (SDLC), um Entwickler:innen (und alle Mitarbeiter:innen) darüber zu informieren, wie KI innerhalb Ihrer Organisation verwendet werden soll und wie nicht.</li>
+<li>Erstellen Sie eine Liste guter und wirksamer Eingabeaufforderungen (Prompts), die bewährte IT-Sicherheitspraktiken berücksichtigen. Idealerweise sollten diese auch Ihre internen Richtlinien für sicheres Programmieren einbeziehen. Entwickler:innen können diese Eingabeaufforderungen als Ausgangspunkt für ihre Programme verwenden.</li>
+<li>KI wird voraussichtlich Teil jeder Phase Ihres Softwareentwicklungslebenszyklus werden – sowohl hinsichtlich des effektiven als auch des sicheren Einsatzes. Verwenden Sie KI mit Bedacht.</li>
+<li>Es wird ausdrücklich <strong><u>nicht</u></strong> empfohlen, Vibe Coding für komplexe Funktionen, geschäftskritische Programme oder Programme, die über einen langen Zeitraum genutzt werden, einzusetzen.</li>
+<li>Implementieren Sie technische Prüfungen und Schutzmaßnahmen gegen die Verwendung von Schatten-KI (Shadow AI).</li>
+<li>Schulen Sie Ihre Entwickler:innen in Bezug auf Ihre Richtlinien sowie den sicheren KI-Einsatz und bewährte Praktiken für die Verwendung von KI in der Softwareentwicklung.</li>
+</ul>
+<h3 id="referenzen_2">Referenzen.</h3>
+<ul>
+<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/Secure_Code_Review_Cheat_Sheet.html">OWASP Cheat Sheet: Secure Code Review</a></li>
+</ul>
+<h3 id="liste-der-zugeordneten-cwes_2">Liste der zugeordneten CWEs</h3>
+<ul>
+<li>keine</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © Copyright 2021-2025 - OWASP Top 10 Team - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "search.suggest"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "In Zwischenablage kopiert", "clipboard.copy": "In Zwischenablage kopieren", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.placeholder": "Suchbegriff eingeben", "search.result.term.missing": "Es fehlt", "select.version": "Version ausw\u00e4hlen"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+    
+  </body>
+</html>

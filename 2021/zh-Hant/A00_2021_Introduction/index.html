@@ -1,0 +1,1426 @@
+
+<!doctype html>
+<html lang="zh-Hant" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="OWASP Top 10:2021">
+      
+      
+      
+        <link rel="canonical" href="https://owasp.org/Top10/2021/zh-Hant/A00_2021_Introduction/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../0x00_2021-notice/">
+      
+      
+        
+          <link rel="alternate" href="../../A00_2021_Introduction/" hreflang="en">
+        
+          <link rel="alternate" href="../../ar/A00_2021_Introduction/" hreflang="ar">
+        
+          <link rel="alternate" href="../../de/A00_2021_Introduction/" hreflang="de">
+        
+          <link rel="alternate" href="../../es/A00_2021_Introduction/" hreflang="es">
+        
+          <link rel="alternate" href="../../fr/A00_2021_Introduction/" hreflang="fr">
+        
+          <link rel="alternate" href="../../id/A00_2021_Introduction/" hreflang="id">
+        
+          <link rel="alternate" href="../../it/A00_2021_Introduction/" hreflang="it">
+        
+          <link rel="alternate" href="../../ja/A00_2021_Introduction/" hreflang="ja">
+        
+          <link rel="alternate" href="../../pt-BR/A00_2021_Introduction/" hreflang="pt-BR">
+        
+          <link rel="alternate" href="../../tr/A00_2021_Introduction/" hreflang="tr">
+        
+          <link rel="alternate" href="./" hreflang="zh-Hant">
+        
+          <link rel="alternate" href="../../zh-TW/A00_2021_Introduction/" hreflang="zh-TW">
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>OWASP 2021 介紹 - OWASP Top 10:2021</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#owasp-top-10-2021" class="md-skip">
+          跳轉至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="頁首">
+    <a href="../" title="OWASP Top 10:2021" class="md-header__button md-logo" aria-label="OWASP Top 10:2021" data-md-component="logo">
+      
+  <img src="../../assets/OWASP_Logo_Transp.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OWASP Top 10:2021
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              OWASP 2021 介紹
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="選擇語言">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../A00_2021_Introduction/" hreflang="en" class="md-select__link">
+              en - English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../ar/A00_2021_Introduction/" hreflang="ar" class="md-select__link">
+              ar - العربية
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../de/A00_2021_Introduction/" hreflang="de" class="md-select__link">
+              de - Deutsch
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../es/A00_2021_Introduction/" hreflang="es" class="md-select__link">
+              es - Español
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../fr/A00_2021_Introduction/" hreflang="fr" class="md-select__link">
+              fr - Français
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../id/A00_2021_Introduction/" hreflang="id" class="md-select__link">
+              id - Indonesian
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../it/A00_2021_Introduction/" hreflang="it" class="md-select__link">
+              it - Italiano
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../ja/A00_2021_Introduction/" hreflang="ja" class="md-select__link">
+              ja - 日本語
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../pt-BR/A00_2021_Introduction/" hreflang="pt-BR" class="md-select__link">
+              pt-BR - Português (Brasil)
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../tr/A00_2021_Introduction/" hreflang="tr" class="md-select__link">
+              tr - Türkçe
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="zh-Hant" class="md-select__link">
+              zh-Hant - 简体中文
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../zh-TW/A00_2021_Introduction/" hreflang="zh-TW" class="md-select__link">
+              zh-TW - 繁體中文
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜尋" placeholder="搜尋" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="搜尋">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空" aria-label="清空" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜尋引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/OWASP/Top10" title="前往倉庫" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    OWASP/Top10
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="導航" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../" title="OWASP Top 10:2021" class="md-nav__button md-logo" aria-label="OWASP Top 10:2021" data-md-component="logo">
+      
+  <img src="../../assets/OWASP_Logo_Transp.png" alt="logo">
+
+    </a>
+    OWASP Top 10:2021
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/OWASP/Top10" title="前往倉庫" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    OWASP/Top10
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Welcome Page
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OWASP 2021 介紹
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OWASP 2021 介紹
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目錄">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目錄
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#top-10-for-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Top 10 for 2021 有什么新的变化？
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        分析方法
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="分析方法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        如何建构风险类別
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        选择类別时资料的使用方式
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        为什么就不纯粹做统计分析？
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        为什么用事故率而不是用发生次数
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-your-data-collection-and-analysis-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is your data collection and analysis process?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-factors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Factors
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#category-relationships-from-2017" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Category Relationships from 2017
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x00_2021-notice/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    注意事项
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A00_2021_How_to_use_the_OWASP_Top_10_as_a_standard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    如何正确使用 OWASP Top 10 为标准
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A00_2021-How_to_start_an_AppSec_program_with_the_OWASP_Top_10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    如何使用 OWASP Top 10 启动 AppSec
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x01_2021-about-owasp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OWASP 相关
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Top 10:2021 名单
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Top 10:2021 名单
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A01_2021-Broken_Access_Control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A01 权限控制失效
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A02_2021-Cryptographic_Failures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A02 加密机制失效
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A03_2021-Injection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A03 注入式攻击
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A04_2021-Insecure_Design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A04 不安全设计
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A05_2021-Security_Misconfiguration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A05 安全设定缺陷
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A06_2021-Vulnerable_and_Outdated_Components/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A06 危险或过旧的组件
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A07_2021-Identification_and_Authentication_Failures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A07 认证及体验机制失效
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A08_2021-Software_and_Data_Integrity_Failures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A08 软体及资料完整性失效
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A09_2021-Security_Logging_and_Monitoring_Failures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A09 安全记录及监控失效
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A10_2021-Server-Side_Request_Forgery_%28SSRF%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A10 服务端请求伪造
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A11_2021-Next_Steps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    下一步
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目錄">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目錄
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#top-10-for-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Top 10 for 2021 有什么新的变化？
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        分析方法
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="分析方法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        如何建构风险类別
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        选择类別时资料的使用方式
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        为什么就不纯粹做统计分析？
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        为什么用事故率而不是用发生次数
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-your-data-collection-and-analysis-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is your data collection and analysis process?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-factors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Factors
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#category-relationships-from-2017" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Category Relationships from 2017
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="owasp-top-10-2021">OWASP Top 10 2021 介紹</h1>
+<p>欢迎來到最新版本的 OWASP Top 10！! OWASP Top 10 2021 是一个全新的名单，包含了你可以打印下來的新图示说明，若有需要的话，你可以从我们的网页上面下载。</p>
+<p>在此我们想对所有贡献了他们时间和资料的人給予极大的感谢。没有你们，这一个新版本不会产生。<strong>谢谢</strong>。</p>
+<h2 id="top-10-for-2021">Top 10 for 2021 有什么新的变化？</h2>
+<p>这次在 OWASP Top 10 for 2021 有三个全新的分类，有四个分类有做名称和范围的修正，并有将一些类别做合并。</p>
+<p><img src="./assets/image1.png" style="width:6.5in;height:1.78889in" alt="Mapping of the relationship between the Top 10 2017 and the new Top 10 2021" /></p>
+<p><strong>A01:2021-权限控制失效</strong> 从第五名移上來; 94% 被测试的应用程式都有验证到某种类别权限控制失效的问题。在权限控制失效这个类别中被对应到的 34 个 CWEs 在验测资料中出现的次数都高于其他的弱点类别。</p>
+<p><strong>A02:2021-加密机制失效</strong> 提升一名到第二名，在之前为 <em>敏感资料外曝</em>，在此定义下比较类似于一个广泛的问题而非根本原因。在此重新定义并将问题核心定义在加密机制的失败，并因此造成敏感性资料外泄或是系統被破坏。</p>
+<p><strong>A03:2021-注入式攻击</strong> 下滑到第三名。94% 被测试的应用程式都有验测到某种类別注入式攻击的问题。在注入式攻击这个类別中被对应到的 33 个 CWEs 在验测资料中出现的次数为弱点问题的第二高。跨站脚本攻击现在在新版本属于这个类別。</p>
+<p><strong>A04:2021-不安全设计</strong> 这是 2021 年版本的新类別，并特別聚焦在设计相关的缺陷。如果我们真的希望让整个产业"向左移动"＊注一＊，那我们必须进一步的往威胁建模，安全设计模块的观念，和安全參考架构前进。</p>
+<p>＊注一: Move Left 于英文原文中代表在软件开发及交付过程中，在早期找出及处理相关问题，同 Shift Left Testing。＊</p>
+<p><strong>A05:2021-安全设定缺陷</strong> 从上一版本的第六名移动上來。90% 被测试的应用程式都有验测到某种类別的安全设定缺陷。在更多的软件往更高度和有弹性的设定移动，我们并不意外这个类別的问题往上移动。在前版本中的 XML 外部实体注入攻击 （XML External Entities）现在属于这个类別。</p>
+<p><strong>A06:2021-危险或过旧的组件</strong> 在之前标题为 <em>使用有已知弱点的组件</em>。在本次版本中于业界问卷中排名第二，但也有足够的统计资料让它可以进入 Top 10。这个类別从 2017 版本的第九名爬升到第六，也是我们持续挣扎做测试和评估风险的类別。这也是唯一一个沒有任何 CVE 能被对应到 CWE 內的类別，所以预设的威胁及影响权重在这类別的分数上被预设为 5.0。</p>
+<p><strong>A07:2021-认证及验证机制失效</strong> 在之前标题为 <em>错误的认证机制</em>。在本次版本中由第二名下滑至此，并同时包含了将认证相关缺失的 CWE 包含在內。这个类別仍是 Top 10 不可缺少的一环，但同时也有发现现在标准化的架构有协助降低次风险发生机率。</p>
+<p><strong>A08:2021-软件及资料完整性失效</strong> 这是 2021 年版本全新的类別，并在软件更新，敏感及重要资料，和 CI/CD 管道中并沒有做完整性的确认为前提做假设并进行评估。在评估中影响权重最高分的 CVE/CVSS 资料都与这类別中的 10 个 CWE 对应到。2017 年版本中不安全的反序列化现在被合并至此类別。</p>
+<p><strong>A09:2021-安全记录及监控失效</strong> 在之前为<em>不完整的记录及监控</em>并纳入在业界问卷中在本次列名为第三名并从之前的第十名上移。这个类別将扩充去纳入更多相关的缺失，但这也是相当难去验证，并沒有相当多的 CVE/CVSS 资料可以佐证。但是在这个类別中的缺失会直接影响到整体安全的可视性，事件告警及取证。</p>
+<p><strong>A10:2021-服务器端请求伪造</strong> 这个类別是在业界问卷排名第一名，并在此版本內纳入。由资料显示此问题有较低被验测次数和范围，但有高于平均的威胁及影响权重比率。这个类別的出现也是因为业界专家重复申明这类別的问题相当重要，即使在本次资料中并沒有足够的资料去显示这个问题。</p>
+<h2 id="_1">分析方法</h2>
+<p>本次 Top 10 的选择方式比以往更重视资料分析，但并不是完全以资料分析为主。我们从资料分析中挑选了八个风险类別，然后由业界问卷中挑选两个风险类別。我们从过往的分享资料中去了解，并有我们一个基本的理由。原因是所有的资安研究人员都不断的在找新的弱点并找出方法去验证弱点，但会需要时间才能将这些验测方法纳入到既有的工具和测试流程中。当我们能有效的大量测试这个弱点时，有可能已经过了多年的时间。为了要让两者之间有平衡，我们使用业界问卷请教在前线的资安研究专家们并了解他们觉得有哪些是他们觉得严重但尚未出现在测试资料中的漏洞及问题。</p>
+<p>这是几个我们为了要让 OWASP Top 10 更加成熟的重要改变。</p>
+<h3 id="_2">如何建构风险类別</h3>
+<p>有別于上一个版本，在这次的 OWASP Top 10 有一些风险类別的修改。我们在此以比较高的角度说明一下这次的类別修改。</p>
+<p>在上一次的资料收集当中，我们将资料收集的重心放在预先定义好的约 30 个 CWEs 并纳入一个领域以求其他的发现。从这里我们看到绝大多数的组织都只会专注在这 30 个 CWEs 而不常加入其他他们可能发现的 CWEs。在这次的改版中，我们将所有的问题都以开放式的方法处理，并沒有限制在任何一个 CWEs。我们请教了从 2017 年开始所测试的网页应用程式数量，然后在这些程式中至少有一个 CWE 被发现的数量。这个格式让我们能够追踪每个 CWE 跟所有被验测及统计的应用程式的数量跟关系。我们也忽略了 CWE 出现的频率，虽然在某些状况下这也许是必须的，但这却隐藏了风险类別本身与应用程式数量整体的关系。所以一个应用程式有 4 个或是 4,000 个弱点并不是被计算在 Top 10 的基础。但同时我们也从原本的 30 多个 CWEs 增长到快 400 多个 CWEs 去进行分析。我们因此也计划未來做更多的资料分析，并在对此版本进行补充说明。而这些增加的 CWEs 也同时影响了这次风险类別的规划。</p>
+<p>我们花了好几个月将 CWEs 进行分组跟分类，而且其实可以一直花更多时间去做这件事情。但我们必须在某一个时间点停住。在 CWEs 当中，同时有 <em>根本原因</em> 以及 <em>症状</em> 的问题，而像是 "加密机制失效" 和 "设定问题" 这类型的 <em>原因</em> 与 "敏感资料外泄" 和 "阻断服务" 这类型的 <em>症状</em> 是对立的。因此我们决定在可以的时候要更专注于底层的原因，因为这是可以有效指出问题的本体跟同时提供问题的解决大方向。专注在问题核心而不将重心放在症状并不是一个新的概念 ，Top Ten 有史以來一直是症状跟问题核心的綜合体，只是这次我们更刻意的将他突显出來。在这次的新版本中，每一个类別內的平均有 19.6 个 CWE，而最低的 <em>A10:2021-服务器端请求伪造</em> 有一个 CWE 到 <em>A04:2021-不安全设计</em> 有四十个 CWE。这个新的类別架构能提供企业更多的资安训练的好处，因为在新的架构下可以更专注在某个语系或平台上的 CWE。</p>
+<h3 id="_3">选择类別时资料的使用方式</h3>
+<p>在 2017 年，我们用事件发生次数去判断可能发生的机率去选择类別，然后透过一群在业界拥有数十年经验的专家团对讨论并依照 <em>可发生性</em>，<em>可发现性（同可能性）</em>，和 <em>技术影响力</em> 去做排名。在 2021 年，我们希望如果可以的话用资料证明可发生性和技术影响性。</p>
+<p>我们下载了 OWASP Depndency Check 并取出了 CVSS 漏洞，并将相关的 CWE 用影响力分数分群。这花了一些时间和力气去研究因为所有的 CVEs 都有 CVSSv2 分数，但是在其中因为 CVSSv2 跟 CVSSv3 之间有一些缺失是必须被修正的。经过了一段时间后，所有的 CVEs 都会有对应的 CVSSv3 的分数。再者，分数的范围和计算的公式在 CVSSv2 和 CVSSv3 之间也做了更新。</p>
+<p>在 CVSSv2 中，漏洞和影响力两者都可达到 10.0 分，但是公式本身会将两者调整为漏洞占 60%，然后影响力占 40%。在 CVSSv3 中，理论上的最高值将漏洞限制在 6.0 分而影响力在 4.0 分。当考率到权重比率时，影响力的分数会偏高，在 CVSSv3 中几乎平均会多出 1.5 分，而漏洞分数却会平均少 0.5 分。</p>
+<p>从 OWASP Dependcy Check 翠取出的 NVD 资料当中有将近 12.5 万笔 CVE 资料有对应到 CWE，而有 241 笔独特的 CWEs 有对应到 CVE。6.2 万笔 CWE 有对应到 CVSSv3 分数，所以大约是整体资料中一半的部分。</p>
+<p>而在 Top Ten，我们计算漏洞和影响力的平均分数的方式如下。我们将所有有 CVSS 分数的 CVE 依照 CWE 分组，然后依照有 CVSSv3 的漏洞和影响力在所有资料中的百分比作权重，在加上资料中有 CVSSv2 的资料去做平均。我们将这些平均后的 CWEs 对应到资料中，然后将他的漏洞和引想力分数使用在另一半的风险公式中。</p>
+<h2 id="_4">为什么就不纯粹做统计分析？</h2>
+<p>这些资料的結果最主要是被限制在能使用自动工具测试出來的結果。可是当你跟一位有经验的应用程式安全专家聊的时候，他们会跟你说绝大多数他们找到的问题都不在这些资料里面。原因是一个测试要被自动化的时候，需要花时间去开发这些弱点测试的方法论，当你需要将这个测试自动化并能对大量的应用程式去验证时，又会花上更多的时间。当我们回头看去年或以前有可能沒出现的一些问题的趋势，我们发现其实都沒有在这些资料当中。</p>
+<p>因此，由于资料不完全的关系，我们只有从资料中选出 8 个类別，而并不是 10 个。剩下的两个类別是从业界问卷中所选出的。这会允许在前线的參与者去选出他们认为的高风险，而不是纯粹依据资料去判断（甚至可能资料永远都不会有出现的踪跡）。</p>
+<h2 id="_5">为什么用事故率而不是用发生次数</h2>
+<p>There are three primary sources of data. We identify them as
+Human-assisted Tooling (HaT), Tool-assisted Human (TaH), and raw
+Tooling.</p>
+<p>Tooling and HaT are high-frequency finding generators. Tools will look
+for specific vulnerabilities and tirelessly attempt to find every
+instance of that vulnerability and will generate high finding counts for
+some vulnerability types. Look at Cross-Site Scripting, which is
+typically one of two flavors: it's either a more minor, isolated mistake
+or a systemic issue. When it's a systemic issue, the finding counts can
+be in the thousands for an application. This high frequency drowns out
+most other vulnerabilities found in reports or data.</p>
+<p>TaH, on the other hand, will find a broader range of vulnerability types
+but at a much lower frequency due to time constraints. When humans test
+an application and see something like Cross-Site Scripting, they will
+typically find three or four instances and stop. They can determine a
+systemic finding and write it up with a recommendation to fix on an
+application-wide scale. There is no need (or time) to find every
+instance.</p>
+<p>Suppose we take these two distinct data sets and try to merge them on
+frequency. In that case, the Tooling and HaT data will drown the more
+accurate (but broad) TaH data and is a good part of why something like
+Cross-Site Scripting has been so highly ranked in many lists when the
+impact is generally low to moderate. It's because of the sheer volume of
+findings. (Cross-Site Scripting is also reasonably easy to test for, so
+there are many more tests for it as well).</p>
+<p>In 2017, we introduced using incidence rate instead to take a fresh look
+at the data and cleanly merge Tooling and HaT data with TaH data. The
+incidence rate asks what percentage of the application population had at
+least one instance of a vulnerability type. We don't care if it was
+one-off or systemic. That's irrelevant for our purposes; we just need to
+know how many applications had at least one instance, which helps
+provide a clearer view of the testing is findings across multiple
+testing types without drowning the data in high-frequency results.</p>
+<h2 id="what-is-your-data-collection-and-analysis-process">What is your data collection and analysis process?</h2>
+<p>We formalized the OWASP Top 10 data collection process at the Open
+Security Summit in 2017. OWASP Top 10 leaders and the community spent
+two days working out formalizing a transparent data collection process.
+The 2021 edition is the second time we have used this methodology.</p>
+<p>We publish a call for data through social media channels available to
+us, both project and OWASP. On the <a href="https://owasp.org/www-project-top-ten/#div-data_2020">OWASP Project
+page</a>, we list the
+data elements and structure we are looking for and how to submit them.
+In the <a href="https://github.com/OWASP/Top10/tree/master/2021/Data">GitHub
+project</a>, we have
+example files that serve as templates. We work with organizations as
+needed to help figure out the structure and mapping to CWEs.</p>
+<p>We get data from organizations that are testing vendors by trade, bug
+bounty vendors, and organizations that contribute internal testing data.
+Once we have the data, we load it together and run a fundamental
+analysis of what CWEs map to risk categories. There is overlap between
+some CWEs, and others are very closely related (ex. Cryptographic
+vulnerabilities). Any decisions related to the raw data submitted are
+documented and published to be open and transparent with how we
+normalized the data.</p>
+<p>We look at the eight categories with the highest incidence rates for
+inclusion in the Top 10. We also look at the industry survey results to
+see which ones may already be present in the data. The top two votes
+that aren't already present in the data will be selected for the other
+two places in the Top 10. Once all ten were selected, we applied
+generalized factors for exploitability and impact; to help rank the Top
+10 in order.</p>
+<h2 id="data-factors">Data Factors</h2>
+<p>There are data factors that are listed for each of the Top 10
+Categories, here is what they mean:</p>
+<ul>
+<li>
+<p><em>CWEs Mapped</em>: The number of CWEs mapped to a category by the Top 10
+  team.</p>
+</li>
+<li>
+<p><em>Incidence Rate</em>: Incidence rate is the percentage of applications
+  vulnerable to that CWE from the population tested by that org for
+  that year.</p>
+</li>
+<li>
+<p>(Testing) <em>Coverage</em>: The percentage of applications tested by all
+  organizations for a given CWE.</p>
+</li>
+<li>
+<p><em>Weighted Exploit</em>: The Exploit sub-score from CVSSv2 and CVSSv3
+  scores assigned to CVEs mapped to CWEs, normalized, and placed on a
+  10pt scale.</p>
+</li>
+<li>
+<p><em>Weighted Impact</em>: The Impact sub-score from CVSSv2 and CVSSv3
+  scores assigned to CVEs mapped to CWEs, normalized, and placed on a
+  10pt scale.</p>
+</li>
+<li>
+<p><em>Total Occurrences</em>: Total number of applications found to have the
+  CWEs mapped to a category.</p>
+</li>
+<li>
+<p><em>Total CVEs</em>: Total number of CVEs in the NVD DB that were mapped to
+  the CWEs mapped to a category.</p>
+</li>
+</ul>
+<h2 id="category-relationships-from-2017">Category Relationships from 2017</h2>
+<p>There has been a lot of talk about the overlap between the Top Ten
+risks. By the definition of each (list of CWEs included), there really
+isn't any overlap. However, conceptually, there can be overlap or
+interactions based on the higher-level naming. Venn diagrams are many
+times used to show overlap like this.</p>
+<p><img src="./assets/image2.png" style="width:4.31736in;height:3.71339in" alt="Diagram Description automatically generated" /></p>
+<p>The Venn diagram above represents the interactions between the Top Ten
+2017 risk categories. While doing so, a couple of essential points
+became obvious:</p>
+<ol>
+<li>
+<p>One could argue that Cross-Site Scripting ultimately belongs within
+    Injection as it's essentially Content Injection. Looking at the 2021
+    data, it became even more evident that XSS needed to move into
+    Injection.</p>
+</li>
+<li>
+<p>The overlap is only in one direction. We will often classify a
+    vulnerability by the end manifestation or "symptom," not the
+    (potentially deep) root cause. For instance, "Sensitive Data
+    Exposure" may have been the result of a "Security Misconfiguration";
+    however, you won't see it in the other direction. As a result,
+    arrows are drawn in the interaction zones to indicate which
+    direction it occurs.</p>
+</li>
+<li>
+<p>Sometimes these diagrams are drawn with everything in <em>A06:2021
+    Using Components with Known Vulnerabilities</em>. While some of these
+    risk categories may be the root cause of third-party
+    vulnerabilities, they are generally managed differently and with
+    different responsibilities. The other types are typically
+    representing first-party risks.</p>
+</li>
+</ol>
+<h1 id="thank-you-to-our-data-contributors">Thank you to our data contributors</h1>
+<p>The following organizations (along with some anonymous donors) kindly
+donated data for over 500,000 applications to make this the largest and
+most comprehensive application security data set. Without you, this
+would not be possible.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"></th>
+<th style="text-align: center;"></th>
+<th style="text-align: center;"></th>
+<th style="text-align: center;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">AppSec Labs</td>
+<td style="text-align: center;">GitLab</td>
+<td style="text-align: center;">Micro Focus</td>
+<td style="text-align: center;">Sqreen</td>
+</tr>
+<tr>
+<td style="text-align: center;">Cobalt.io</td>
+<td style="text-align: center;">HackerOne</td>
+<td style="text-align: center;">PenTest-Tools</td>
+<td style="text-align: center;">Veracode</td>
+</tr>
+<tr>
+<td style="text-align: center;">Contrast Security</td>
+<td style="text-align: center;">HCL Technologies</td>
+<td style="text-align: center;">Probely</td>
+<td style="text-align: center;">WhiteHat (NTT)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="thank-you-to-our-sponsors">Thank you to our sponsors</h2>
+<p>The OWASP Top 10 2021 team gratefully acknowledge the financial support of Secure Code Warrior and Just Eat.</p>
+<p><a href="https://securecodewarrior.com"><img alt="Secure Code Warrior" src="../../assets/securecodewarrior.png" width="256" /></a></p>
+<p><a href="https://www.just-eat.co.uk/"><img alt="Just Eats" src="../../assets/JustEat.png" width="256" /></a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © Copyright 2021-2025 - OWASP Top 10 Team - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.instant", "search.suggest"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u62f7\u8c9d", "clipboard.copy": "\u62f7\u8c9d", "search.result.more.one": "\u6b64\u9801\u5c1a\u6709 1 \u500b\u7b26\u5408\u7684\u9805\u76ee", "search.result.more.other": "\u6b64\u9801\u5c1a\u6709 # \u500b\u7b26\u5408\u7684\u9805\u76ee", "search.result.none": "\u6c92\u6709\u627e\u5230\u7b26\u5408\u689d\u4ef6\u7684\u7d50\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u689d\u4ef6\u7684\u7d50\u679c", "search.result.other": "\u627e\u5230 # \u500b\u7b26\u5408\u689d\u4ef6\u7684\u7d50\u679c", "search.result.placeholder": "\u9375\u5165\u4ee5\u958b\u59cb\u6aa2\u7d22", "search.result.term.missing": "\u7f3a\u5931", "select.version": "\u9078\u64c7\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+    
+  </body>
+</html>
