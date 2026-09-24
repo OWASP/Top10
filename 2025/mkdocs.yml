@@ -239,12 +239,12 @@ extra:
     - name: cs - Česky
       link: ./cs/
       lang: cs  material_alternate  
-    - name: es - Español
-      link: ./es/
-      lang: es
     - name: de - Deutsch
       link: ./de/
       lang: de
+    - name: es - Español
+      link: ./es/
+      lang: es
     - name: it - Italiano
       link: ./it/
       lang: it
