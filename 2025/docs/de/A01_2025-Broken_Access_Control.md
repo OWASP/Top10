@@ -1,8 +1,7 @@
-#  A01:2025 Mangelhafte Zugriffskontrolle <img src="../assets/TOP_10_Icons_Final_Broken_Access_Control.png" style="height:80px;width:80px; float:right;" alt="icon">
+#  A01:2025 Mangelhafte Zugriffskontrolle  ![icon](../assets/TOP_10_Icons_Final_Broken_Access_Control.png){: style="height:80px;width:80px" align="right"}
 
 
-
-## Hintergrund. 
+## Hintergrund.
 
 100 % der getesteten Anwendungen wiesen irgendeine Form fehlerhafter Zugriffskontrolle auf.
 An der Spitze der Top 10 verbleibend, weist diese Kategorie die höchste Anzahl an Vorkommnissen im vorliegenden Datensatz sowie die zweithöchste Anzahl zugehöriger CVEs auf.
