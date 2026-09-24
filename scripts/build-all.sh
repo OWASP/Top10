@@ -23,6 +23,10 @@ cd ..
 echo "Creating root redirect page..."
 cp scripts/index-redirect.html build/index.html
 
+# add CNAME
+echo "Creating CNAME (as hblankenship did) ..."
+echo "top10.owasp.org" > build/CNAME
+
 # Generate HTML redirects for backward compatibility
 echo "Generating HTML redirects..."
 ./scripts/generate-redirects.sh

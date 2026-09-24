@@ -1,6 +1,7 @@
 #!/bin/bash
 # Generates HTML redirect pages for backward compatibility
 # This ensures old URLs like /en/A01_2021_Introduction/ redirect to /2021/en/A01_2021_Introduction/
+# Changed URL-Base from owasp.org/Top10 to top10.owasp.org/
 
 REDIRECT_DIR="build"
 LANGUAGES=("en" "ar" "de" "es" "fr" "id" "it" "ja" "pt-BR" "tr" "zh-Hant" "zh-TW")
@@ -29,18 +30,18 @@ find "$REDIRECT_DIR/2021" -maxdepth 2 -name "*.html" -type f | while read file; 
         # Create directory structure at root
         mkdir -p "$REDIRECT_DIR/$page_dir"
 
-        # Create redirect HTML (use absolute path from /Top10/)
+        # Create redirect HTML (use absolute path from /))
         cat > "$REDIRECT_DIR/$rel_path" <<EOF
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
     <title>Redirecting...</title>
-    <meta http-equiv="refresh" content="0; url=/Top10/2021/$rel_path">
-    <link rel="canonical" href="/Top10/2021/$rel_path">
+    <meta http-equiv="refresh" content="0; url=/2021/$rel_path">
+    <link rel="canonical" href="/2021/$rel_path">
 </head>
 <body>
-    <p>Redirecting to <a href="/Top10/2021/$rel_path">OWASP Top 10:2021</a>...</p>
+    <p>Redirecting to <a href="/2021/$rel_path">OWASP Top 10:2021</a>...</p>
 </body>
 </html>
 EOF
@@ -55,9 +56,9 @@ for lang in "${LANGUAGES[@]}"; do
 
     # English is at root of 2021, other languages are in subdirectories
     if [ "$lang" = "en" ]; then
-        REDIRECT_TARGET="/Top10/2021/"
+        REDIRECT_TARGET="/2021/"
     else
-        REDIRECT_TARGET="/Top10/2021/$lang/"
+        REDIRECT_TARGET="/2021/$lang/"
     fi
 
     # Create index.html redirect in each language directory
@@ -100,11 +101,11 @@ EOF
 <head>
     <meta charset="utf-8">
     <title>Redirecting...</title>
-    <meta http-equiv="refresh" content="0; url=/Top10/2021/$rel_path">
-    <link rel="canonical" href="/Top10/2021/$rel_path">
+    <meta http-equiv="refresh" content="0; url=/2021/$rel_path">
+    <link rel="canonical" href="/2021/$rel_path">
 </head>
 <body>
-    <p>Redirecting to <a href="/Top10/2021/$rel_path">OWASP Top 10:2021</a>...</p>
+    <p>Redirecting to <a href="/2021/$rel_path">OWASP Top 10:2021</a>...</p>
 </body>
 </html>
 EOF
@@ -126,11 +127,11 @@ EOF
 <head>
     <meta charset="utf-8">
     <title>Redirecting...</title>
-    <meta http-equiv="refresh" content="0; url=/Top10/2021/$lang/$rel_path">
-    <link rel="canonical" href="/Top10/2021/$lang/$rel_path">
+    <meta http-equiv="refresh" content="0; url=/2021/$lang/$rel_path">
+    <link rel="canonical" href="/2021/$lang/$rel_path">
 </head>
 <body>
-    <p>Redirecting to <a href="/Top10/2021/$lang/$rel_path">OWASP Top 10:2021</a>...</p>
+    <p>Redirecting to <a href="/2021/$lang/$rel_path">OWASP Top 10:2021</a>...</p>
 </body>
 </html>
 EOF
@@ -158,11 +159,11 @@ find "$REDIRECT_DIR/2021" -maxdepth 2 -type d | while read dir; do
 <head>
     <meta charset="utf-8">
     <title>Redirecting...</title>
-    <meta http-equiv="refresh" content="0; url=/Top10/2021/$dirname/">
-    <link rel="canonical" href="/Top10/2021/$dirname/">
+    <meta http-equiv="refresh" content="0; url=/2021/$dirname/">
+    <link rel="canonical" href="/2021/$dirname/">
 </head>
 <body>
-    <p>Redirecting to <a href="/Top10/2021/$dirname/">OWASP Top 10:2021</a>...</p>
+    <p>Redirecting to <a href="/2021/$dirname/">OWASP Top 10:2021</a>...</p>
 </body>
 </html>
 EOF
@@ -177,11 +178,11 @@ if [ -f "$REDIRECT_DIR/2021/index.html" ]; then
 <head>
     <meta charset="utf-8">
     <title>Redirecting...</title>
-    <meta http-equiv="refresh" content="0; url=/Top10/2021/">
-    <link rel="canonical" href="/Top10/2021/">
+    <meta http-equiv="refresh" content="0; url=/2021/">
+    <link rel="canonical" href="/2021/">
 </head>
 <body>
-    <p>Redirecting to <a href="/Top10/2021/">OWASP Top 10:2021</a>...</p>
+    <p>Redirecting to <a href="/2021/">OWASP Top 10:2021</a>...</p>
 </body>
 </html>
 EOF
@@ -207,11 +208,11 @@ find "$REDIRECT_DIR/2025" -maxdepth 2 -type d | while read dir; do
 <head>
     <meta charset="utf-8">
     <title>Redirecting...</title>
-    <meta http-equiv="refresh" content="0; url=/Top10/2025/$dirname/">
-    <link rel="canonical" href="/Top10/2025/$dirname/">
+    <meta http-equiv="refresh" content="0; url=/2025/$dirname/">
+    <link rel="canonical" href="/2025/$dirname/">
 </head>
 <body>
-    <p>Redirecting to <a href="/Top10/2025/$dirname/">OWASP Top 10:2025</a>...</p>
+    <p>Redirecting to <a href="/2025/$dirname/">OWASP Top 10:2025</a>...</p>
 </body>
 </html>
 EOF
@@ -226,11 +227,11 @@ if [ -f "$REDIRECT_DIR/2025/index.html" ]; then
 <head>
     <meta charset="utf-8">
     <title>Redirecting...</title>
-    <meta http-equiv="refresh" content="0; url=/Top10/2025/">
-    <link rel="canonical" href="/Top10/2025/">
+    <meta http-equiv="refresh" content="0; url=/2025/">
+    <link rel="canonical" href="/2025/">
 </head>
 <body>
-    <p>Redirecting to <a href="/Top10/2025/">OWASP Top 10:2025</a>...</p>
+    <p>Redirecting to <a href="/2025/">OWASP Top 10:2025</a>...</p>
 </body>
 </html>
 EOF
