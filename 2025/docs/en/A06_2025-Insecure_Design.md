@@ -9,7 +9,7 @@ Insecure Design slides two spots from #4 to #6 in the ranking as **[A02:2025-Sec
 ## Score table.
 
 
-<table>
+<table class="table-base">
   <tr>
    <td>CWEs Mapped 
    </td>

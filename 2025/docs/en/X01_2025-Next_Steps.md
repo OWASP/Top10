@@ -15,7 +15,7 @@ This is a renaming of 2021’s Denial of Service. That was renamed as it describ
 ### Score table.
 
 
-<table>
+<table class="table-base">
   <tr>
    <td>CWEs Mapped 
    </td>

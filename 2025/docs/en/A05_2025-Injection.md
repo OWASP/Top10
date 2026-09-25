@@ -8,7 +8,7 @@ Injection falls two spots from #3 to #5 in the ranking, maintaining its position
 ## Score table.
 
 
-<table>
+<table class="table-base">
   <tr>
    <td>CWEs Mapped 
    </td>

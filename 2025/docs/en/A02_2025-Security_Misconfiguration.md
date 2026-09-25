@@ -9,7 +9,7 @@ Moving up from #5 in the previous edition, 100% of the applications tested were 
 ## Score table.
 
 
-<table>
+<table class="table-base">
   <tr>
    <td>CWEs Mapped 
    </td>

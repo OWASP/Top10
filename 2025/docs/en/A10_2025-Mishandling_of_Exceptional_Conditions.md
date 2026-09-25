@@ -11,7 +11,7 @@ Notable CWEs included in this category: *CWE-209 Generation of Error Message Con
 ## Score table.
 
 
-<table>
+<table >
   <tr>
    <td>CWEs Mapped 
    </td>

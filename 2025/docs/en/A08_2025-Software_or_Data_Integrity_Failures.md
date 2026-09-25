@@ -8,7 +8,7 @@ Software or Data Integrity Failures continues at #8, with a slight, clarifying n
 ## Score table.
 
 
-<table>
+<table class="table-base">
   <tr>
    <td>CWEs Mapped 
    </td>

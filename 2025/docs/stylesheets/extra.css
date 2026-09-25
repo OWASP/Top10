@@ -1,0 +1,33 @@
+.table-base {
+  text-align: center;
+  display: inline-block;
+  font-size: .64rem;
+  max-width: 100%;
+  overflow: auto;
+  touch-action: auto;
+  border-radius: .1rem;
+  border: .05rem solid var(--md-typeset-table-color);
+  border-collapse: collapse;
+}
+
+.table-base td,
+.table-base th {
+  padding: 12px;
+  border: .05rem solid var(--md-typeset-table-color);
+}
+
+.table-base tbody tr {
+  transition: background-color 125ms;
+}
+
+.table-base tbody tr:hover {
+  background-color: var(--md-typeset-table-color--light);
+  box-shadow: 0 .05rem 0 var(--md-default-bg-color) inset;
+}
+
+@media (max-width: 800px) {
+  .table-risk td,
+  .table-risk th {
+    min-width: 150px;
+  }
+}

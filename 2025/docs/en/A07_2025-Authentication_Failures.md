@@ -9,7 +9,7 @@ Authentication Failures maintains its position at #7 with a slight name change t
 ## Score table.
 
 
-<table>
+<table class="table-base">
   <tr>
    <td>CWEs Mapped 
    </td>
