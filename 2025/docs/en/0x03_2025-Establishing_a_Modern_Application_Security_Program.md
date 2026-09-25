@@ -1,3 +1,8 @@
+---
+title: "Establishing a Modern Application Security Program - OWASP Top 10:2025"
+description: "Build a comprehensive application security program. Learn best practices, tools, and processes for integrating security throughout the system's lifecycle"
+---
+
 # Establishing a Modern Application Security Program
 
 The OWASP Top Ten lists are awareness documents, meant to bring awareness to the most critical risks of whichever topic they cover. They are not meant to be a complete list, only a starting place. In previous versions of this list we have prescribed starting an application security program as the best way to avoid these risks, and more. In this section we will cover how to start and build a modern application security program.

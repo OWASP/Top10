@@ -1,3 +1,10 @@
+---
+title: "A02:2025 Security Misconfiguration - OWASP Top 10"
+description: "When systems are configured insecurely or with defaults, attackers exploit open services, weak permissions, or verbose errors to gain access or leak data"
+og_type: "article"
+og_image: "assets/OG-images/A02-OG.png"
+---
+
 # A02:2025 Security Misconfiguration ![icon](../assets/TOP_10_Icons_Final_Security_Misconfiguration.png){: style="height:80px;width:80px" align="right"}
 
 

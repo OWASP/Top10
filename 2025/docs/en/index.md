@@ -1,3 +1,8 @@
+---
+title: "OWASP Top 10:2025 - The Most Critical Web Application Security Risks"
+description: "The OWASP Top 10 is a standard awareness document for developers and web application security, representing a broad consensus about the most critical security risks."
+---
+
 # OWASP Top 10:2025
 
 Welcome to the OWASP Top 10:2025 Release.

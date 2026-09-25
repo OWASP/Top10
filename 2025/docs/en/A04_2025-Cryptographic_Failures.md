@@ -1,3 +1,10 @@
+---
+title: "A04:2025 Cryptographic Failures - OWASP Top 10"
+description: "When encryption, keys, or protocols are weak or misused, attackers can expose sensitive data in transit or at rest and bypass protections"
+og_type: "article"
+og_image: "assets/OG-images/A04-OG.png"
+---
+
 # A04:2025 Cryptographic Failures ![icon](../assets/TOP_10_Icons_Final_Crypto_Failures.png){: style="height:80px;width:80px" align="right"}
 
 

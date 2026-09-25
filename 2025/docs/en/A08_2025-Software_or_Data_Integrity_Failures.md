@@ -1,3 +1,10 @@
+---
+title: "A08:2025 Software or Data Integrity Failures - OWASP Top 10"
+description: "When integrity is not verified, untrusted code or data can be accepted as trusted, enabling supply chain attacks, tampering, or insecure deserialization"
+og_type: "article"
+og_image: "assets/OG-images/A08-OG.png"
+---
+
 # A08:2025 Software or Data Integrity Failures ![icon](../assets/TOP_10_Icons_Final_Software_and_Data_Integrity_Failures.png){: style="height:80px;width:80px" align="right"}
 
 ## Background. 

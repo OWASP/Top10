@@ -1,3 +1,8 @@
+---
+title: "What are Application Security Risks? - OWASP Top 10:2025"
+description: "Understanding application security risks is the first step to building secure software. Learn the fundamentals of risk assessment and vulnerabilities."
+---
+
 # What are Application Security Risks?
 Attackers can potentially use many different paths through your application to do harm to your business or organization. Each of these ways poses a potential risk that needs to be investigated.
 

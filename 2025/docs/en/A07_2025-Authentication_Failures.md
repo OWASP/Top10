@@ -1,3 +1,10 @@
+---
+title: "A07:2025 Authentication Failures - OWASP Top 10"
+description: "When systems accept wrong users as legitimate, enabling account takeover via credential stuffing or brute force"
+og_type: "article"
+og_image: "assets/OG-images/A07-OG.png"
+---
+
 # A07:2025 Authentication Failures ![icon](../assets/TOP_10_Icons_Final_Identification_and_Authentication_Failures.png){: style="height:80px;width:80px" align="right"}
 
 

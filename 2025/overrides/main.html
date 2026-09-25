@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+  {{ super() }}
+
+  {# Set defaults #}
+  {% set page_title = config.site_name %}
+  {% set page_description = config.site_description %}
+  {% set page_url = page.canonical_url %}
+  {% set page_type = "website" %}
+  {% set site_name = config.site_name %}
+  {% set og_image = config.site_url ~ "assets/OG-images/Global-OG.png" %}
+
+  {# Override with page-specific values from frontmatter if they exist #}
+  {% if page and page.meta %}
+    {% if page.meta.title %}
+      {% set page_title = page.meta.title %}
+    {% elif page.title and not page.is_homepage %}
+      {% set page_title = page.title | striptags %}
+    {% endif %}
+
+    {% if page.meta.description %}
+      {% set page_description = page.meta.description %}
+    {% endif %}
+
+    {% if page.meta.og_type %}
+      {% set page_type = page.meta.og_type %}
+    {% endif %}
+
+    {% if page.meta.og_image %}
+      {% set og_image = config.site_url ~ page.meta.og_image %}
+    {% endif %}
+  {% endif %}
+
+  {# Open Graph Meta Tags #}
+  <meta property="og:type" content="{{ page_type }}" />
+  <meta property="og:title" content="{{ page_title }}" />
+  <meta property="og:description" content="{{ page_description }}" />
+  <meta property="og:url" content="{{ page_url }}" />
+  <meta property="og:site_name" content="{{ site_name }}" />
+  <meta property="og:image" content="{{ og_image }}" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  {# Twitter Card Meta Tags #}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{{ page_title }}" />
+  <meta name="twitter:description" content="{{ page_description }}" />
+  <meta name="twitter:image" content="{{ og_image }}" />
+{% endblock %}
