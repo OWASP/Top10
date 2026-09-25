@@ -3,62 +3,9 @@ Attackers can potentially use many different paths through your application to d
 
 ![Calculation diagram](../assets/2025-algorithm-diagram.png)
 
-<table>
-  <tr>
-   <td>
-    <strong>Threat Agents</strong>
-   </td>
-   <td>
-    <strong>Attack \
-Vectors</strong>
-   </td>
-   <td>
-    <strong>Exploitability</strong>
-   </td>
-   <td>
-    <strong>Likelihood of Missing Security</strong>
-<p style="text-align: center">
-
-    <strong>Controls</strong>
-   </td>
-   <td>
-    <strong>Technical</strong>
-<p style="text-align: center">
-
-    <strong>Impacts</strong>
-   </td>
-   <td>
-    <strong>Business</strong>
-<p style="text-align: center">
-
-    <strong>Impacts</strong>
-   </td>
-  </tr>
-  <tr>
-   <td>
-    <strong>By environment, \
-dynamic by situation picture</strong>
-   </td>
-   <td>
-    <strong>By Application  exposure (by environment)</strong>
-   </td>
-   <td>
-    <strong>Avg Weighted Exploit</strong>
-   </td>
-   <td>
-    <strong>Missing Controls \
-by average Incidence rate \
-Weighed by coverage</strong>
-   </td>
-   <td>
-    <strong>Avg Weighted Impact</strong>
-   </td>
-   <td>
-    <strong>By Business</strong>
-   </td>
-  </tr>
-</table>
-
+| Threat Agents | Attack Vectors | Exploitability | Likelihood of Missing Security Controls | Technical Impacts | Business Impacts |
+| --- | --- | --- | --- | --- | --- |
+| Varies by environment and context | Based on application exposure | Average weighted exploitability | Weighted by incidence rate and control coverage | Average weighted impact | Based on business impact |
 
 In our Risk Rating we have taken into account the universal parameters of exploitability, average likelihood of missing security controls for a weakness and its technical impacts. 
 
