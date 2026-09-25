@@ -58,7 +58,7 @@ Moving down two positions to #4, this weakness focuses on failures related to th
 
 ## Description. 
 
-Generally speaking, all data in transit should be encrypted at the [transport layer](https://en.wikipedia.org/wiki/Transport_layer) ([OSI layer](https://en.wikipedia.org/wiki/OSI_model) 4). Previous hurdles such as CPU performance and private key/certificate management are now handled by CPUs having instructions designed to accelerate encryption (eg: [AES support](https://en.wikipedia.org/wiki/AES_instruction_set)) and private key and certificate management being simplified by services like [LetsEncrypt.org](https://LetsEncrypt.org) with major cloud vendors providing even more tightly integrated certificate management services for their specific platforms. 
+Generally speaking, all data in transit should be fully encrypted in transit using TLS. Certificate management for publicly exposed endpoints is being simplified by services like [LetsEncrypt.org](https://LetsEncrypt.org). Major cloud vendors provide tightly integrated certificate management services for their specific platforms. 
 
 Beyond securing the transport layer, it is important to determine what data needs encryption at rest as well as what data needs extra encryption in transit (at the [application layer](https://en.wikipedia.org/wiki/Application_layer), OSI layer 7). For example, passwords, credit card numbers, health records, personal information, and business secrets require extra protection, especially if that data falls under privacy laws, e.g., EU's General Data Protection Regulation (GDPR), or regulations such as PCI Data Security Standard (PCI DSS). For all such data:
 
@@ -67,8 +67,8 @@ Beyond securing the transport layer, it is important to determine what data need
 * Are any old or weak cryptographic algorithms or protocols used either by default or in older code?
 * Are default crypto keys in use, are weak crypto keys generated, are keys re-used, or is proper key management and rotation missing? 
 * Are crypto keys checked into source code repositories?
-* Is encryption not enforced, e.g., are any HTTP headers (browser) security directives or headers missing?
-* Is the received server certificate and the trust chain properly validated?
+* Is encryption not enforced, e.g., are any HTTP headers (browser) or security directives missing?
+* Can the received server certificate and the trust chain be properly validated from the client?
 * Are initialization vectors ignored, reused, or not generated sufficiently secure for the cryptographic mode of operation? Is an insecure mode of operation such as ECB in use? Is encryption used when authenticated encryption is more appropriate?
 * Are passwords being used as cryptographic keys in the absence of a password based key derivation function?
 * Is randomness used that was not designed to meet cryptographic requirements? Even if the correct function is chosen, does it need to be seeded by the developer, and if not, has the developer over-written the strong seeding functionality built into it with a seed that lacks sufficient entropy/unpredictability?
@@ -83,26 +83,23 @@ See references ASVS: Cryptography (V11), Secure Communication (V12) and Data Pro
 
 Do the following, at a minimum, and consult the references:
 
-
-
-* Classify and label data processed, stored, or transmitted by an application. Identify which data is sensitive according to privacy laws, regulatory requirements, or business needs.
+* Classify and label data processed, stored, or transmitted by an application. Identify which data is security relevant or is sensitive according to privacy laws, regulatory requirements, or business needs. Apply required security controls as per the data classification.
 * Store your most sensitive keys in a hardware or cloud-based HSM.
+* Make sure to encrypt all sensitive data at rest and store the encryption keys securely.
 * Use well-trusted implementations of cryptographic algorithms whenever possible.
 * Don't store sensitive data unnecessarily. Discard it as soon as possible or use PCI DSS compliant tokenization or even truncation. Data that is not retained cannot be stolen.
-* Make sure to encrypt all sensitive data at rest.
-* Ensure up-to-date and strong standard algorithms, protocols, and keys are in place; use proper key management.
-* Encrypt all data in transit with protocols >= TLS 1.2 only, with forward secrecy (FS) ciphers, drop support for cipher block chaining (CBC) ciphers, support quantum key change algorithms. For HTTPS enforce encryption using HTTP Strict Transport Security (HSTS). Check everything with a tool.
-* Disable caching for responses that contain sensitive data. This includes caching in your CDN, web server, and any application caching (eg: Redis).
-* Apply required security controls as per the data classification.
-* Do not use unencrypted protocols such as FTP, and STARTTLS. Avoid using SMTP for transmitting confidential data.
-* Store passwords using strong adaptive and salted hashing functions with a work factor (delay factor), such as Argon2, yescrypt, scrypt or PBKDF2-HMAC-SHA-512. For legacy systems using bcrypt, get more advice at [OWASP Cheat Sheet: Password Storage](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html)
-* Initialization vectors must be chosen appropriate for the mode of operation. This could mean using a CSPRNG (cryptographically secure pseudo random number generator). For modes that require a nonce, the initialization vector (IV) does not need a CSPRNG. In all cases, the IV should never be used twice for a fixed key.
+* Ensure always up-to-date and strong standard algorithms, protocols, and keys are in place; use proper key management.
+* Encrypt all data in transit with protocols >= TLS 1.2 only, with forward secrecy (FS) ciphers, drop support for cipher block chaining (CBC) ciphers, deprecate RSA ciphers as modern browsers don't need them anymore, support quantum key change algorithms. For HTTPS enforce encryption using HTTP Strict Transport Security (HSTS). Check everything with a tool.
 * Always use authenticated encryption instead of just encryption.
-* Keys should be generated cryptographically randomly and stored in memory as byte arrays. If a password is used, then it must be converted to a key via an appropriate password base key derivation function.
-* Ensure that cryptographic randomness is used where appropriate and that it has not been seeded in a predictable way or with low entropy. Most modern APIs do not require the developer to seed the CSPRNG to be secure.
-* Avoid deprecated cryptographic functions, block building methods and padding schemes, such as MD5, SHA1, Cipher Block Chaining Mode (CBC), PKCS number 1 v1.5.
-* Ensure settings and configurations meet security requirements by having them reviewed by security specialists, tools designed for this purpose, or both.
 * You need to prepare now for post quantum cryptography (PQC), see reference (ENISA) so that high risk systems are safe no later than the end of 2030.
+* Do not use unencrypted protocols such as FTP, and STARTTLS. Avoid using SMTP for transmitting confidential data.
+* Disable caching for responses that contain sensitive data. This includes caching in your CDN, web server, and any application caching (eg: Redis).
+* Store passwords using strong adaptive and salted hashing functions with a work factor (delay factor), such as Argon2, yescrypt, scrypt or PBKDF2-HMAC-SHA-512. For legacy systems using bcrypt, get more advice at [OWASP Cheat Sheet: Password Storage](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html)
+* Keys should be generated cryptographically randomly. If a password is used, then it must be converted to a key via an appropriate password base key derivation function.
+* Initialization vectors must be chosen appropriate for the mode of operation. This could mean using a CSPRNG (cryptographically secure pseudo random number generator). For modes that require a nonce, the initialization vector (IV) does not need a CSPRNG. In all cases, the IV should never be used twice for a fixed key.
+* Ensure that cryptographic randomness is used where appropriate and that it has not been seeded in a predictable way or with low entropy. Most modern APIs do not require the developer to seed the CSPRNG to be secure.
+* Avoid deprecated cryptographic functions, block building methods and padding schemes, such as MD5, SHA1, Cipher Block Chaining Mode (CBC), PKCS \#1 v1.5.
+* Ensure settings and configurations meet security requirements by having them reviewed by security specialists, tools designed for this purpose, or both.
 
 
 ## Example attack scenarios. 
