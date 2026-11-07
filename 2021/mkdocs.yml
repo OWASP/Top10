@@ -1,6 +1,6 @@
 site_name: OWASP Top 10:2021
 site_description: OWASP Top 10:2021
-site_url: https://owasp.org/Top10/2021/
+site_url: https://top10.owasp.org/2021/
 repo_name: OWASP/Top10
 repo_url: https://github.com/OWASP/Top10
 copyright: © Copyright 2021-2025 - OWASP Top 10 Team - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.
