@@ -130,7 +130,7 @@ Secure installation processes should be implemented, including:
 
 * [CWE-489 Active Debug Code](https://cwe.mitre.org/data/definitions/489.html)
 
-* [CWE-526 Exposure of Sensitive Information Through Environmental Variables](https://cwe.mitre.org/data/definitions/526.html)
+* [CWE-526 Cleartext Storage of Sensitive Information in an Environment Variable](https://cwe.mitre.org/data/definitions/526.html)
 
 * [CWE-547 Use of Hard-coded, Security-relevant Constants](https://cwe.mitre.org/data/definitions/547.html)
 
@@ -140,7 +140,7 @@ Secure installation processes should be implemented, including:
 
 * [CWE-776 Improper Restriction of Recursive Entity References in DTDs ('XML Entity Expansion')](https://cwe.mitre.org/data/definitions/776.html)
 
-* [CWE-942 Permissive Cross-domain Policy with Untrusted Domains](https://cwe.mitre.org/data/definitions/942.html)
+* [CWE-942 Permissive Cross-domain Security Policy with Untrusted Domains](https://cwe.mitre.org/data/definitions/942.html)
 
 * [CWE-1004 Sensitive Cookie Without 'HttpOnly' Flag](https://cwe.mitre.org/data/definitions/1004.html)
 

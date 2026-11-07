@@ -184,7 +184,7 @@ An attacker supplies `example.com; cat /etc/passwd` to execute arbitrary command
 
 * [CWE-114 Process Control](https://cwe.mitre.org/data/definitions/114.html)
 
-* [CWE-115 Misinterpretation of Output](https://cwe.mitre.org/data/definitions/115.html)
+* [CWE-115 Misinterpretation of Input](https://cwe.mitre.org/data/definitions/115.html)
 
 * [CWE-116 Improper Encoding or Escaping of Output](https://cwe.mitre.org/data/definitions/116.html)
 
@@ -198,7 +198,7 @@ An attacker supplies `example.com; cat /etc/passwd` to execute arbitrary command
 
 * [CWE-500 Public Static Field Not Marked Final](https://cwe.mitre.org/data/definitions/500.html)
 
-* [CWE-564 SQL Injection: Hibernate](https://cwe.mitre.org/data/definitions/564.html)
+* [CWE-564 Use of Hibernate with HQL/SQL Query String Containing External Input](https://cwe.mitre.org/data/definitions/564.html)
 
 * [CWE-610 Externally Controlled Reference to a Resource in Another Sphere](https://cwe.mitre.org/data/definitions/610.html)
 
