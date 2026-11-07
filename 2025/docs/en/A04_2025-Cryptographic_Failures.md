@@ -146,15 +146,15 @@ Do the following, at a minimum, and consult the references:
 
 * [CWE-324 Use of a Key Past its Expiration Date](https://cwe.mitre.org/data/definitions/324.html)
 
-* [CWE-325 Missing Required Cryptographic Step](https://cwe.mitre.org/data/definitions/325.html)
+* [CWE-325 Missing Cryptographic Step](https://cwe.mitre.org/data/definitions/325.html)
 
 * [CWE-326 Inadequate Encryption Strength](https://cwe.mitre.org/data/definitions/326.html)
 
 * [CWE-327 Use of a Broken or Risky Cryptographic Algorithm](https://cwe.mitre.org/data/definitions/327.html)
 
-* [CWE-328 Reversible One-Way Hash](https://cwe.mitre.org/data/definitions/328.html)
+* [CWE-328 Use of Weak Hash](https://cwe.mitre.org/data/definitions/328.html)
 
-* [CWE-329 Not Using a Random IV with CBC Mode](https://cwe.mitre.org/data/definitions/329.html)
+* [CWE-329 Generation of Predictable IV with CBC Mode](https://cwe.mitre.org/data/definitions/329.html)
 
 * [CWE-330 Use of Insufficiently Random Values](https://cwe.mitre.org/data/definitions/330.html)
 
@@ -164,13 +164,13 @@ Do the following, at a minimum, and consult the references:
 
 * [CWE-334 Small Space of Random Values](https://cwe.mitre.org/data/definitions/334.html)
 
-* [CWE-335 Incorrect Usage of Seeds in Pseudo-Random Number Generator(PRNG)](https://cwe.mitre.org/data/definitions/335.html)
+* [CWE-335 Incorrect Usage of Seeds in Pseudo-Random Number Generator (PRNG)](https://cwe.mitre.org/data/definitions/335.html)
 
 * [CWE-336 Same Seed in Pseudo-Random Number Generator (PRNG)](https://cwe.mitre.org/data/definitions/336.html)
 
 * [CWE-337 Predictable Seed in Pseudo-Random Number Generator (PRNG)](https://cwe.mitre.org/data/definitions/337.html)
 
-* [CWE-338 Use of Cryptographically Weak Pseudo-Random Number Generator(PRNG)](https://cwe.mitre.org/data/definitions/338.html)
+* [CWE-338 Use of Cryptographically Weak Pseudo-Random Number Generator (PRNG)](https://cwe.mitre.org/data/definitions/338.html)
 
 * [CWE-340 Generation of Predictable Numbers or Identifiers](https://cwe.mitre.org/data/definitions/340.html)
 
@@ -180,7 +180,7 @@ Do the following, at a minimum, and consult the references:
 
 * [CWE-523 Unprotected Transport of Credentials](https://cwe.mitre.org/data/definitions/523.html)
 
-* [CWE-757 Selection of Less-Secure Algorithm During Negotiation('Algorithm Downgrade')](https://cwe.mitre.org/data/definitions/757.html)
+* [CWE-757 Selection of Less-Secure Algorithm During Negotiation ('Algorithm Downgrade')](https://cwe.mitre.org/data/definitions/757.html)
 
 * [CWE-759 Use of a One-Way Hash without a Salt](https://cwe.mitre.org/data/definitions/759.html)
 

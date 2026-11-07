@@ -162,7 +162,7 @@ When an attacker is able to trick a system into recognizing an invalid or incorr
 
 * [CWE-305 Authentication Bypass by Primary Weakness](https://cwe.mitre.org/data/definitions/305.html)
 
-* [CWE-306 Missing Authentication for Critical Function](https://cwe.mitre.org/data/definitions/306.html)
+* [CWE-306 Missing Authentication for Critical Functionality](https://cwe.mitre.org/data/definitions/306.html)
 
 * [CWE-307 Improper Restriction of Excessive Authentication Attempts](https://cwe.mitre.org/data/definitions/307.html)
 

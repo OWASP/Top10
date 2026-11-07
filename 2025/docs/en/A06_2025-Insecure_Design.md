@@ -3,7 +3,7 @@
 
 ## Background. 
 
-Insecure Design slides two spots from #4 to #6 in the ranking as **[A02:2025-Security Misconfiguration](A02_2025-Security_Misconfiguration.md)** and **[A03:2025-Software Supply Chain Failures](A03_2025-Software_Supply_Chain_Failures.md)** leapfrog it. This category was introduced in 2021, and we have seen noticeable improvements in the industry related to threat modeling and a greater emphasis on secure design. This category focuses on risks related to design and architectural flaws, with a call for more use of threat modeling, secure design patterns, and reference architectures. This includes flaws in the business logic of an application, e.g. the lack of defining unwanted or unexpected state changes inside an application.  As a community, we need to move beyond "shift-left" in the coding space, to pre-code activities such as requirements writing and application design, that are critical for the principles of Secure by Design (e.g. see **[Establish a Modern AppSec Program: Planning and Design Phase](0x03_2025-Establishing_a_Modern_Application_Security_Program.md)**). Notable Common Weakness Enumerations (CWEs) include *CWE-256: Unprotected Storage of Credentials, CWE-269 Improper Privilege Management, CWE-434 Unrestricted Upload of File with Dangerous Type, CWE-501: Trust Boundary Violation, and CWE-522: Insufficiently Protected Credentials.*
+Insecure Design slides two spots from #4 to #6 in the ranking as **[A02:2025-Security Misconfiguration](A02_2025-Security_Misconfiguration.md)** and **[A03:2025-Software Supply Chain Failures](A03_2025-Software_Supply_Chain_Failures.md)** leapfrog it. This category was introduced in 2021, and we have seen noticeable improvements in the industry related to threat modeling and a greater emphasis on secure design. This category focuses on risks related to design and architectural flaws, with a call for more use of threat modeling, secure design patterns, and reference architectures. This includes flaws in the business logic of an application, e.g. the lack of defining unwanted or unexpected state changes inside an application.  As a community, we need to move beyond "shift-left" in the coding space, to pre-code activities such as requirements writing and application design, that are critical for the principles of Secure by Design (e.g. see **[Establish a Modern AppSec Program: Planning and Design Phase](0x03_2025-Establishing_a_Modern_Application_Security_Program.md)**). Notable Common Weakness Enumerations (CWEs) include *CWE-256: Plaintext Storage of a Password, CWE-269 Improper Privilege Management, CWE-434 Unrestricted Upload of File with Dangerous Type, CWE-501: Trust Boundary Violation, and CWE-522: Insufficiently Protected Credentials.*
 
 
 ## Score table.
@@ -124,7 +124,7 @@ Often self-responsibility of developers is underappreciated. Foster a culture of
 
 * [CWE-183 Permissive List of Allowed Inputs](https://cwe.mitre.org/data/definitions/183.html)
 
-* [CWE-256 Unprotected Storage of Credentials](https://cwe.mitre.org/data/definitions/256.html)
+* [CWE-256 Plaintext Storage of a Password](https://cwe.mitre.org/data/definitions/256.html)
 
 * [CWE-266 Incorrect Privilege Assignment](https://cwe.mitre.org/data/definitions/266.html)
 
@@ -150,7 +150,7 @@ Often self-responsibility of developers is underappreciated. Foster a culture of
 
 * [CWE-436 Interpretation Conflict](https://cwe.mitre.org/data/definitions/436.html)
 
-* [CWE-444 Inconsistent Interpretation of HTTP Requests ('HTTP Request Smuggling')](https://cwe.mitre.org/data/definitions/444.html)
+* [CWE-444 Inconsistent Interpretation of HTTP Requests ('HTTP Request/Response Smuggling')](https://cwe.mitre.org/data/definitions/444.html)
 
 * [CWE-451 User Interface (UI) Misrepresentation of Critical Information](https://cwe.mitre.org/data/definitions/451.html)
 
@@ -166,7 +166,7 @@ Often self-responsibility of developers is underappreciated. Foster a culture of
 
 * [CWE-539 Use of Persistent Cookies Containing Sensitive Information](https://cwe.mitre.org/data/definitions/539.html)
 
-* [CWE-598 Use of GET Request Method With Sensitive Query Strings](https://cwe.mitre.org/data/definitions/598.html)
+* [CWE-598 Use of HTTP Request With Sensitive Query String](https://cwe.mitre.org/data/definitions/598.html)
 
 * [CWE-602 Client-Side Enforcement of Server-Side Security](https://cwe.mitre.org/data/definitions/602.html)
 
@@ -176,7 +176,7 @@ Often self-responsibility of developers is underappreciated. Foster a culture of
 
 * [CWE-646 Reliance on File Name or Extension of Externally-Supplied File](https://cwe.mitre.org/data/definitions/646.html)
 
-* [CWE-653 Insufficient Compartmentalization](https://cwe.mitre.org/data/definitions/653.html)
+* [CWE-653 Improper Isolation or Compartmentalization](https://cwe.mitre.org/data/definitions/653.html)
 
 * [CWE-656 Reliance on Security Through Obscurity](https://cwe.mitre.org/data/definitions/656.html)
 
