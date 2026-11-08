@@ -144,7 +144,7 @@
 
 ## 映射的 CWE 列表
 
-* [CWE-447 使用过时函数](https://cwe.mitre.org/data/definitions/447.html)
+* [CWE-477 使用过时函数](https://cwe.mitre.org/data/definitions/477.html)
 * [CWE-1035 2017 年 OWASP 十大 A9：使用含有已知漏洞的组件](https://cwe.mitre.org/data/definitions/1035.html)
 * [CWE-1104 使用无人维护的第三方组件](https://cwe.mitre.org/data/definitions/1104.html)
 * [CWE-1329 依赖不可更新的组件](https://cwe.mitre.org/data/definitions/1329.html)

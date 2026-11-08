@@ -154,7 +154,7 @@ Ogni organizzazione deve garantire un piano continuo per il monitoraggio, il tri
 
 ## Lista delle CWE Mappate
 
-* [CWE-447 Use of Obsolete Function](https://cwe.mitre.org/data/definitions/447.html)
+* [CWE-477 Use of Obsolete Function](https://cwe.mitre.org/data/definitions/477.html)
 * [CWE-1035 2017 Top 10 A9: Using Components with Known Vulnerabilities](https://cwe.mitre.org/data/definitions/1035.html)
 * [CWE-1104 Use of Unmaintained Third Party Components](https://cwe.mitre.org/data/definitions/1104.html)
 * [CWE-1329 Reliance on Component That is Not Updateable](https://cwe.mitre.org/data/definitions/1329.html)

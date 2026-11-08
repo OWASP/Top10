@@ -162,7 +162,7 @@ Cada organización debe garantizar un plan continuo para monitorear, triar y apl
 
 ## Lista de CWE Mapeados
 
-* [CWE-447 Uso de Función Obsoleta (Use of Obsolete Function)](https://cwe.mitre.org/data/definitions/447.html)
+* [CWE-477 Uso de Función Obsoleta (Use of Obsolete Function)](https://cwe.mitre.org/data/definitions/477.html)
 
 * [CWE-1035 Top 10 2017 A9: Uso de Componentes con Vulnerabilidades Conocidas (2017 Top 10 A9: Using Components with Known Vulnerabilities)](https://cwe.mitre.org/data/definitions/1035.html)
 
