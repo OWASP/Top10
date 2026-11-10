@@ -85,6 +85,8 @@ Access control is only effective when implemented in trusted server-side code or
 * Log access control failures, alert admins when appropriate (e.g., repeated failures).
 * Implement rate limits on API and controller access to minimize the harm from automated attack tooling.
 * Stateful session identifiers should be invalidated on the server after logout. Stateless JWT tokens should be short-lived to minimize the window of opportunity for an attacker. For longer-lived JWTs, consider using refresh tokens and following OAuth standards to revoke access.
+* Where the application fetches remote resources from user-supplied URLs, enforce the URL scheme, port, and destination with a positive allow list, do not follow HTTP redirects, and do not return raw responses to the client. Run such functionality in a separate network segment with deny-by-default egress rules, so that Server-Side Request Forgery (SSRF) cannot reach internal services or cloud metadata endpoints. Do not rely on deny lists or regular expressions; see the [OWASP Cheat Sheet: Server-Side Request Forgery Prevention](https://cheatsheetseries.owasp.org/cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html).
+* Protect state-changing requests against Cross-Site Request Forgery (CSRF), for example with the framework's anti-CSRF tokens and `SameSite` cookies, and never change state on `GET` requests; see the [OWASP Cheat Sheet: Cross-Site Request Forgery Prevention](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html).
 * Use well-established toolkits or patterns that provide simple, declarative access controls.
 
 Developers and QA staff should include functional access control in their unit and integration tests.
