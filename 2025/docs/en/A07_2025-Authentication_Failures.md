@@ -94,7 +94,7 @@ When an attacker is able to trick a system into recognizing an invalid or incorr
 
 * During new account creation and password changes validate against lists of known breached credentials (eg: using [haveibeenpwned.com](https://haveibeenpwned.com)).
 
-* Align password length, complexity, and rotation policies with [National Institute of Standards and Technology (NIST) 800-63b's guidelines in section 5.1.1](https://pages.nist.gov/800-63-3/sp800-63b.html#:~:text=5.1.1%20Memorized%20Secrets) for Memorized Secrets or other modern, evidence-based password policies.
+* Align password length, complexity, and rotation policies with [National Institute of Standards and Technology (NIST) SP 800-63B-4 section 3.1.1](https://pages.nist.gov/800-63-4/sp800-63b.html#password) for Passwords or other modern, evidence-based password policies.
 
 * Do not force human beings to rotate passwords unless you suspect breach. If you suspect breach, force password resets immediately. 
 
