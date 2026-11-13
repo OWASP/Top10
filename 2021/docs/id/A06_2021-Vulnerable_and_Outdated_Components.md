@@ -42,23 +42,33 @@ Setiap organisasi harus memastikan rencana berkelanjutan untuk memantau, melakuk
 Ada alat otomatis untuk membantu penyerang menemukan sesuatu yang belum ditambal atau sistem yang salah konfigurasi. Misalnya, mesin pencari Shodan IoT dapat membantu Anda menemukan perangkat yang masih mengalami kerentanan Heartbleed yang ditambal pada April 2014.
 
 ## Referensi
+- [OWASP Application Security Verification Standard: V1 Architecture, design and threat modelling](/www-project-application-security-verification-standard)
 
--   OWASP Application Security Verification Standard: V1 Architecture, design and threat modelling
--   OWASP Dependency Check (for Java and .NET libraries)
--   OWASP Testing Guide - Map Application Architecture (OTG-INFO-010)
--   OWASP Virtual Patching Best Practices
--   The Unfortunate Reality of Insecure Libraries
--   MITRE Common Vulnerabilities and Exposures (CVE) search
--   National Vulnerability Database (NVD)
--   Retire.js for detecting known vulnerable JavaScript libraries
--   Node Libraries Security Advisories
--   [Ruby Libraries Security Advisory Database and Tools]
--   https://safecode.org/publication/SAFECode_Software_Integrity_Controls0610.pdf
+- [OWASP Dependency Check (for Java and .NET libraries)](/www-project-dependency-check)
+
+- [OWASP Testing Guide - Map Application Architecture (OTG-INFO-010)](/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/01-Information_Gathering/10-Map_Application_Architecture)
+
+- [OWASP Virtual Patching Best Practices](/www-community/Virtual_Patching_Best_Practices)
+
+- [The Unfortunate Reality of Insecure Libraries](https://cdn2.hubspot.net/hub/203759/file-1100864196-pdf/docs/Contrast_-_Insecure_Libraries_2014.pdf)
+
+- [MITRE Common Vulnerabilities and Exposures (CVE) search](https://www.cvedetails.com/version-search.php)
+
+- [National Vulnerability Database (NVD)](https://nvd.nist.gov/)
+
+- [Retire.js for detecting known vulnerable JavaScript libraries](https://github.com/retirejs/retire.js/)
+
+- [GitHub Advisory Database](https://github.com/advisories)
+
+- [Ruby Libraries Security Advisory Database and Tools](https://rubysec.com/)
+
+- [SAFECode Software Integrity Controls \[PDF\]](https://safecode.org/publication/SAFECode_Software_Integrity_Controls0610.pdf)
+
 
 ## Daftar Klasifikasi CWE
 
-CWE-937 OWASP Top 10 2013: Using Components with Known Vulnerabilities
+[CWE-937 OWASP Top 10 2013: Using Components with Known Vulnerabilities](https://cwe.mitre.org/data/definitions/937.html)
 
-CWE-1035 2017 Top 10 A9: Using Components with Known Vulnerabilities
+[CWE-1035 2017 Top 10 A9: Using Components with Known Vulnerabilities](https://cwe.mitre.org/data/definitions/1035.html)
 
-CWE-1104 Use of Unmaintained Third Party Components
+[CWE-1104 Use of Unmaintained Third Party Components](https://cwe.mitre.org/data/definitions/1104.html)
