@@ -182,6 +182,27 @@ plugins:
             A09 Security Logging and Alerting Failures: A09 Falhas de Registro e Monitoramento de Segurança
             A10 Mishandling of Exceptional Conditions: A10 Tratamento Incorreto de Condições Excepcionais
             Next Steps: Próximos Passos
+        - locale: tr
+          name: tr - Türkçe
+          build: true
+          nav_translations:
+            Home: Ana Sayfa
+            Introduction: Giriş
+            About OWASP: OWASP Hakkında
+            What are Application Security Risks?: Uygulama Güvenliği Riskleri Nelerdir?
+            Establishing a Modern Application Security Program: Modern Bir Uygulama Güvenliği Programı Oluşturmak
+            Top 10:2025 List: Top 10:2025 Listesi
+            A01 Broken Access Control: A01 Bozuk Erişim Kontrolü
+            A02 Security Misconfiguration: A02 Güvenlik Yapılandırma Hataları
+            A03 Software Supply Chain Failures: A03 Yazılım Tedarik Zinciri Hataları
+            A04 Cryptographic Failures: A04 Kriptografik Hatalar
+            A05 Injection: A05 Enjeksiyon
+            A06 Insecure Design: A06 Güvensiz Tasarım
+            A07 Authentication Failures: A07 Kimlik Doğrulama Hataları
+            A08 Software or Data Integrity Failures: A08 Yazılım veya Veri Bütünlüğü Hataları
+            A09 Security Logging and Alerting Failures: A09 Güvenlik Günlüğü Kaydı ve Uyarı Hataları
+            A10 Mishandling of Exceptional Conditions: A10 İstisnai Durumların Hatalı Ele Alınması
+            Next Steps: Sonraki Adımlar
         - locale: zh-Hant
           name: zh-Hant - 简体中文
           build: true
@@ -260,6 +281,9 @@ extra:
     - name: pt-BR - (Português Brasil)
       link: ./pt-BR/
       lang: pt-BR
+    - name: tr - Türkçe
+      link: ./tr/
+      lang: tr
     - name: zh-Hant - 简体中文
       link: ./zh-Hant/
       lang: zh-Hant
