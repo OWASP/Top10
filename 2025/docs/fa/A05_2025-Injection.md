@@ -1,4 +1,4 @@
-# [A05:2025 Injection](https://owasp.org/Top10/2025/A05_2025-Injection/)
+# [A05:2025 Injection](A05_2025-Injection.md)
 
 ## پس‌زمینه
 Injection در رتبه‌بندی سال ۲۰۲۵ دو پله سقوط کرده و از #3 به #5 رسیده است، و همچنان نسبت به A04:2025-Cryptographic Failures و A06:2025-Insecure Design در جایگاه خود باقی مانده است.  

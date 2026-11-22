@@ -63,7 +63,7 @@ Quando un attaccante riesce a ingannare un sistema facendogli riconoscere come l
 * Permette password predefinite, deboli o ben note, come "Password1" o username "admin" con password "admin".
 * Consente agli utenti di creare nuovi account con credenziali già note come violate.
 * Consente l'uso di processi di recupero credenziali e di password dimenticate deboli o inefficaci, come le "risposte alle domande di sicurezza", che non possono essere rese sicure.
-* Utilizza store di dati di password in chiaro, cifrate o con hashing debole (vedi [A04:2025-Cryptographic Failures](https://owasp.org/Top10/2025/A04_2025-Cryptographic_Failures/)).
+* Utilizza store di dati di password in chiaro, cifrate o con hashing debole (vedi [A04:2025-Cryptographic Failures](A04_2025-Cryptographic_Failures.md)).
 * Ha un'autenticazione a più fattori assente o inefficace.
 * Consente l'uso di fallback deboli o inefficaci se l'autenticazione a più fattori non è disponibile.
 * Espone l'identificatore di sessione nell'URL, in un campo nascosto o in un'altra posizione non sicura accessibile al client.

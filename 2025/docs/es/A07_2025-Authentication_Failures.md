@@ -68,7 +68,7 @@ Esta vulnerabilidad está presente cuando un atacante es capaz de engañar a un 
 
 * Permite el uso de procesos de recuperación de credenciales y de olvido de contraseña débiles o ineficaces, como las "preguntas de seguridad basadas en el conocimiento", que no pueden hacerse seguras.
 
-* Utiliza almacenes de datos de contraseñas en texto claro, cifrados o con hash débil (ver [A04:2025-Fallas Criptográficas](https://owasp.org/Top10/2025/A04_2025-Cryptographic_Failures/)).
+* Utiliza almacenes de datos de contraseñas en texto claro, cifrados o con hash débil (ver [A04:2025-Fallas Criptográficas](A04_2025-Cryptographic_Failures.md)).
 
 * Carece de autenticación de múltiples factores (MFA) o esta es ineficaz.
 

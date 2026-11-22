@@ -69,7 +69,7 @@ Es probable que sea vulnerable si:
 * se utilizan en entornos de producción, o pueden impactar en ellos, componentes de fuentes no confiables en cualquier parte de la pila (stack)tecnológica.
 * no corrige ni actualiza la plataforma subyacente, los frameworks y las dependencias de forma oportuna y basada en el riesgo. Esto suele ocurrir en entornos donde el parcheado es una tarea mensual o trimestral bajo control de cambios, dejando a las organizaciones abiertas a días o meses de exposición innecesaria antes de corregir las vulnerabilidades.
 * los desarrolladores de software no prueban la compatibilidad de las bibliotecas actualizadas o parcheadas.
-* no asegura las configuraciones de cada parte de su sistema (consulte [A02:2025-Configuración de Seguridad Incorrecta](https://owasp.org/Top10/2025/A02_2025-Security_Misconfiguration/)).
+* no asegura las configuraciones de cada parte de su sistema (consulte [A02:2025-Configuración de Seguridad Incorrecta](A02_2025-Security_Misconfiguration.md)).
 * su flujo de CI/CD (CI/CD pipeline) tiene una seguridad más débil que los sistemas que construye y despliega, especialmente si es complejo.
 
 
@@ -84,7 +84,7 @@ Debe existir un proceso de gestión de parches para:
 * Reducir la superficie de ataque eliminando las dependencias no utilizadas, las funciones innecesarias, los componentes, los archivos y la documentación.
 * Inventariar continuamente las versiones de los componentes tanto del lado del cliente como del servidor (por ejemplo, frameworks, bibliotecas) y sus dependencias utilizando herramientas como OWASP Dependency Track, OWASP Dependency Check, retire.js, etc.
 * Supervisar continuamente fuentes como Common Vulnerability and Exposures (CVE), National Vulnerability Database (NVD) y [Open Source Vulnerabilities (OSV)](https://osv.dev/) en busca de vulnerabilidades en los componentes que utiliza. Utilice herramientas de análisis de composición de software (Software Composition Analysis, SCA), de cadena de suministro de software o herramientas de SBOM centradas en la seguridad para automatizar el proceso. Suscríbase a alertas de vulnerabilidades de seguridad relacionadas con los componentes que utiliza.
-* Obtener únicamente componentes de fuentes oficiales (confiables) a través de enlaces seguros. Prefiera los paquetes firmados para reducir la posibilidad de incluir un componente modificado y malicioso (consulte [A08:2025-Fallas en la Integridad del Software o de los Datos](https://owasp.org/Top10/2025/A08_2025-Software_or_Data_Integrity_Failures/)).
+* Obtener únicamente componentes de fuentes oficiales (confiables) a través de enlaces seguros. Prefiera los paquetes firmados para reducir la posibilidad de incluir un componente modificado y malicioso (consulte [A08:2025-Fallas en la Integridad del Software o de los Datos](A08_2025-Software_or_Data_Integrity_Failures.md)).
 * Elegir deliberadamente qué versión de una dependencia utiliza y actualizarla solo cuando sea necesario.
 * Vigilar las bibliotecas y componentes que no reciben mantenimiento o que no crean parches de seguridad para versiones antiguas. Si no es posible parchear, considere la posibilidad de migrar a una alternativa. Si eso no es posible, considere el despliegue de un parche virtual para monitorizar, detectar o proteger contra el problema descubierto.
 * Actualizar regularmente su CI/CD, IDE y cualquier otra herramienta de desarrollo.

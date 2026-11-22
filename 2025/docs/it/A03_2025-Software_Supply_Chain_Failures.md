@@ -69,7 +69,7 @@ I fallimenti della supply chain del software sono interruzioni o altre compromis
 * vengono utilizzati componenti da fonti non attendibili, in qualsiasi parte dello stack tecnologico, o possono impattare gli ambienti di produzione.
 * non correggi o aggiorni la piattaforma sottostante, i framework e le dipendenze in modo tempestivo e basato sul rischio. Ciò accade comunemente in ambienti dove le patch sono un'attività mensile o trimestrale sotto controllo delle modifiche, lasciando le organizzazioni esposte per giorni o mesi prima di correggere le vulnerabilità.
 * gli sviluppatori software non testano la compatibilità delle librerie aggiornate, aggiornate o patchate.
-* non metti in sicurezza le configurazioni di ogni parte del tuo sistema (vedi [A02:2025-Security Misconfiguration](https://owasp.org/Top10/2025/A02_2025-Security_Misconfiguration/)).
+* non metti in sicurezza le configurazioni di ogni parte del tuo sistema (vedi [A02:2025-Security Misconfiguration](A02_2025-Security_Misconfiguration.md)).
 * la tua pipeline CI/CD ha una sicurezza più debole rispetto ai sistemi che costruisce e distribuisce, specialmente se è complessa.
 
 
@@ -84,7 +84,7 @@ Deve essere in atto un processo di gestione delle patch per:
 * Ridurre la superficie di attacco rimuovendo dipendenze non utilizzate, funzionalità, componenti, file e documentazione non necessari.
 * Fare un inventario continuo delle versioni dei componenti sia lato client che lato server (es. framework, librerie) e delle loro dipendenze utilizzando strumenti come OWASP Dependency Track, OWASP Dependency Check, retire.js, ecc.
 * Monitorare continuamente fonti come Common Vulnerability and Exposures (CVE), National Vulnerability Database (NVD) e [Open Source Vulnerabilities (OSV)](https://osv.dev/) per le vulnerabilità nei componenti utilizzati. Utilizzare software composition analysis, supply chain del software o strumenti SBOM orientati alla sicurezza per automatizzare il processo. Abbonarsi agli alert per le vulnerabilità di sicurezza relative ai componenti utilizzati.
-* Ottenere componenti solo da fonti ufficiali (attendibili) tramite link sicuri. Preferire pacchetti firmati per ridurre la possibilità di includere un componente modificato e malevolo (vedi [A08:2025-Software and Data Integrity Failures](https://owasp.org/Top10/2025/A08_2025-Software_or_Data_Integrity_Failures/)).
+* Ottenere componenti solo da fonti ufficiali (attendibili) tramite link sicuri. Preferire pacchetti firmati per ridurre la possibilità di includere un componente modificato e malevolo (vedi [A08:2025-Software and Data Integrity Failures](A08_2025-Software_or_Data_Integrity_Failures.md)).
 * Scegliere deliberatamente quale versione di una dipendenza utilizzare e aggiornare solo quando necessario.
 * Monitorare le librerie e i componenti non mantenuti o che non creano patch di sicurezza per le versioni più vecchie. Se le patch non sono possibili, considerare la migrazione a un'alternativa. Se non è possibile, considerare l'implementazione di una virtual patch per monitorare, rilevare o proteggere dal problema scoperto.
 * Aggiornare regolarmente CI/CD, IDE e qualsiasi altro strumento di sviluppo.

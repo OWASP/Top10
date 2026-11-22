@@ -58,7 +58,7 @@ Esta vulnerabilidade está presente quando um atacante é capaz de enganar um si
 - Permite senhas padrão, fracas ou bem conhecidas, como o nome de usuário "admin" com a senha "admin" ou a senha "Password1".
 - Permite que usuários criem novas contas com credenciais que já se sabe terem sido comprometidas em vazamentos.
 - Permite o uso de processos de recuperação de credenciais e "esqueci minha senha" fracos ou ineficazes, como "perguntas baseadas em conhecimento", que não podem ser tornadas seguras.
-- Usa repositórios de dados de senhas em texto puro, criptografados ou com _hashes_ fracos (veja [A04:2025-Falhas Criptográficas](https://owasp.org/Top10/2025/A04_2025-Cryptographic_Failures/)).
+- Usa repositórios de dados de senhas em texto puro, criptografados ou com _hashes_ fracos (veja [A04:2025-Falhas Criptográficas](A04_2025-Cryptographic_Failures.md)).
 - Possui autenticação multifator (MFA) ausente ou ineficaz.
 - Permite o uso de _fallbacks_ fracos ou ineficazes caso a autenticação multifator não esteja disponível.
 - Expõe o identificador de sessão na URL, em um campo oculto ou em outro local inseguro que seja acessível ao cliente.

@@ -54,9 +54,9 @@
 
 ## مثال‌های سناریو حمله
 
-**سناریو #1**: سایت TLS را برای همه صفحات اعمال نمی‌کند یا TLS ضعیف پیکربندی شده — مهاجم اتصال را downgrade می‌کند، درخواست‌ها را رهگیری و کوکی نشست را دزدی می‌کند ([OWASP](https://owasp.org/Top10/2025/A04_2025-Cryptographic_Failures/))  
+**سناریو #1**: سایت TLS را برای همه صفحات اعمال نمی‌کند یا TLS ضعیف پیکربندی شده — مهاجم اتصال را downgrade می‌کند، درخواست‌ها را رهگیری و کوکی نشست را دزدی می‌کند ([OWASP](A04_2025-Cryptographic_Failures.md))  
 
-**سناریو #2**: پایگاه داده رمزهای عبور هش ساده یا بدون نمک استفاده می‌کند، مهاجم دیتابیس را استخراج و هش‌ها را بازیابی می‌کند ([OWASP](https://owasp.org/Top10/2025/A04_2025-Cryptographic_Failures/))  
+**سناریو #2**: پایگاه داده رمزهای عبور هش ساده یا بدون نمک استفاده می‌کند، مهاجم دیتابیس را استخراج و هش‌ها را بازیابی می‌کند ([OWASP](A04_2025-Cryptographic_Failures.md))  
 
 ---
 
@@ -99,7 +99,7 @@
 
 ## منابع
 
-- [OWASP Top 10:2025 – A04 Cryptographic Failures](https://owasp.org/Top10/2025/A04_2025-Cryptographic_Failures/)  
+- [OWASP Top 10:2025 – A04 Cryptographic Failures](A04_2025-Cryptographic_Failures.md)  
 - [OWASP Proactive Controls: C2 – Use Cryptography to Protect Data](https://owasp.org/www-project-proactive-controls/v4/)  
 - [OWASP ASVS – Cryptography & Secure Communication & Data Protection (V11, V12, V14)](https://owasp.org/www-project-application-security-verification-standard/)  
 - [OWASP Cheat Sheet: Transport Layer Protection](https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Protection_Cheat_Sheet.html)  

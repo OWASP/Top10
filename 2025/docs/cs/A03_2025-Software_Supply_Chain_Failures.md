@@ -68,7 +68,7 @@ Pravděpodobně jste zranitelní, pokud:
 * komponenty z nedůvěryhodných zdrojů, napříč jakoukoli částí technologického stacku, jsou používány v produkčních prostředích nebo mohou mít na produkční prostředí dopad.
 * neopravujete nebo neupgradujete základní platformu, frameworky a závislosti včasným způsobem založeným na riziku. K tomu běžně dochází v prostředích, kde je záplatování měsíčním nebo čtvrtletním úkolem v rámci řízení změn, což ponechává organizace vystavené dnům nebo měsícům zbytečné expozice před opravou zranitelností.
 * vývojáři softwaru netestují kompatibilitu aktualizovaných, upgradovaných nebo záplatovaných knihoven.
-* nezabezpečujete konfigurace každé části svého systému (viz [A02:2025 - Chybná bezpečnostní konfigurace (Security Misconfiguration)](https://owasp.org/Top10/2025/A02_2025-Security_Misconfiguration/)).
+* nezabezpečujete konfigurace každé části svého systému (viz [A02:2025 - Chybná bezpečnostní konfigurace (Security Misconfiguration)](A02_2025-Security_Misconfiguration.md)).
 * vaše CI/CD pipeline má slabší zabezpečení než systémy, které sestavuje a nasazuje, zejména pokud je složitá.
 
 
@@ -81,7 +81,7 @@ Měl by být zaveden proces správy záplat za účelem:
 * Snižovat útočnou plochu odstraňováním nepoužívaných závislostí, zbytečných funkcí, komponent, souborů a dokumentace.
 * Průběžně inventarizovat verze komponent na straně klienta i na straně serveru (např. frameworků, knihoven) a jejich závislostí pomocí nástrojů, jako jsou OWASP Dependency Track, OWASP Dependency Check, retire.js atd.
 * Průběžně monitorovat zdroje, jako jsou Common Vulnerabilities and Exposures (CVE), National Vulnerability Database (NVD) a [Open Source Vulnerabilities (OSV)](https://osv.dev/), z hlediska zranitelností v komponentách, které používáte. K automatizaci procesu používat analýzu složení softwaru, nástroje pro dodavatelský řetězec softwaru nebo bezpečnostně zaměřené nástroje SBOM. Odebírat upozornění na bezpečnostní zranitelnosti související s komponentami, které používáte.
-* Získávat komponenty pouze z oficiálních (důvěryhodných) zdrojů přes zabezpečené odkazy. Upřednostňovat podepsané balíčky, aby se snížila pravděpodobnost zahrnutí pozměněné, škodlivé komponenty (viz [A08:2025-Software and Data Integrity Failures](https://owasp.org/Top10/2025/A08_2025-Software_or_Data_Integrity_Failures/)).
+* Získávat komponenty pouze z oficiálních (důvěryhodných) zdrojů přes zabezpečené odkazy. Upřednostňovat podepsané balíčky, aby se snížila pravděpodobnost zahrnutí pozměněné, škodlivé komponenty (viz [A08:2025-Software and Data Integrity Failures](A08_2025-Software_or_Data_Integrity_Failures.md)).
 * Záměrně volit, kterou verzi závislosti používáte, a upgradovat pouze tehdy, když je to potřeba.
 * Monitorovat knihovny a komponenty, které nejsou udržované nebo nevytvářejí bezpečnostní záplaty pro starší verze. Pokud záplatování není možné, zvážit migraci na alternativu. Pokud to není možné, zvážit nasazení virtuální záplaty za účelem monitorování, detekce nebo ochrany proti zjištěnému problému.
 * Pravidelně aktualizovat vaše CI/CD, IDE a jakékoli další vývojářské nástroje.

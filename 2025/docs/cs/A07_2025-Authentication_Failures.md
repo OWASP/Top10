@@ -68,7 +68,7 @@ Tato zranitelnost je přítomna, pokud útočník dokáže oklamat systém tak, 
 
 * Umožňuje používat slabé nebo neúčinné procesy obnovy přihlašovacích údajů a „zapomenutého hesla“, například „odpovědi založené na znalostech“, které nelze učinit bezpečnými.
 
-* Používá úložiště hesel v prostém textu, šifrovaná nebo slabě hashovaná (viz [A04:2025-Kryptografická selhání (Cryptographic Failures)](https://owasp.org/Top10/2025/A04_2025-Cryptographic_Failures/)).
+* Používá úložiště hesel v prostém textu, šifrovaná nebo slabě hashovaná (viz [A04:2025-Kryptografická selhání (Cryptographic Failures)](A04_2025-Cryptographic_Failures.md)).
 
 * Nemá vícefaktorové ověřování nebo je neúčinné.
 

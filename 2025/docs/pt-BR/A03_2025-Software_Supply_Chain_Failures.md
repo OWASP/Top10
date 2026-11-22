@@ -64,7 +64,7 @@ Você provavelmente está **vulnerável** se:
 - Componentes de fontes não confiáveis, em qualquer parte da stack tecnológica, são usados ou podem impactar ambientes de produção.
 - Você não corrige ou atualiza a plataforma subjacente, **frameworks** e dependências de maneira oportuna e baseada em riscos. Isso acontece comumente em ambientes onde o **patching** é uma tarefa mensal ou trimestral sob controle de mudanças, deixando as organizações expostas por dias ou meses a riscos desnecessários antes de corrigir as vulnerabilidades.
 - Os desenvolvedores de software não testam a compatibilidade de bibliotecas atualizadas ou corrigidas.
-- Você não protege as configurações de cada parte do seu sistema (consulte [A02:2025 – Configuração Insegura](https://owasp.org/Top10/2025/A02_2025-Security_Misconfiguration/)).
+- Você não protege as configurações de cada parte do seu sistema (consulte [A02:2025 – Configuração Insegura](A02_2025-Security_Misconfiguration.md)).
 - Seu **pipeline** de CI/CD possui segurança mais fraca do que os sistemas que ele constrói e implanta, especialmente se for complexo.
 
 ## Como Prevenir
@@ -76,7 +76,7 @@ Deve haver um processo de gerenciamento de **patches** para:
 - Reduzir a superfície de ataque removendo dependências não utilizadas, recursos desnecessários, componentes, arquivos e documentação.
 - Inventariar continuamente as versões de componentes tanto do lado do cliente quanto do servidor (ex: **frameworks**, bibliotecas) e suas dependências usando ferramentas como OWASP Dependency Track, OWASP Dependency Check, retire.js, etc.
 - Monitorar continuamente fontes como CVE (_Common Vulnerability and Exposures_), NVD (_National Vulnerability Database_) e [Open Source Vulnerabilities (OSV)](https://osv.dev/) em busca de vulnerabilidades nos componentes utilizados. Use ferramentas de análise de composição de software (SCA), cadeia de suprimentos ou ferramentas de **SBOM** focadas em segurança para automatizar o processo. Assine alertas de vulnerabilidades de segurança relacionadas aos componentes que você usa.
-- Obter componentes apenas de fontes oficiais (confiáveis) através de links seguros. Prefira pacotes assinados para reduzir a chance de incluir um componente modificado ou malicioso (consulte [A08:2025 – Falhas de Integridade de Software e Dados](https://owasp.org/Top10/2025/A08_2025-Software_or_Data_Integrity_Failures/)).
+- Obter componentes apenas de fontes oficiais (confiáveis) através de links seguros. Prefira pacotes assinados para reduzir a chance de incluir um componente modificado ou malicioso (consulte [A08:2025 – Falhas de Integridade de Software e Dados](A08_2025-Software_or_Data_Integrity_Failures.md)).
 - Escolher deliberadamente qual versão de uma dependência utilizar e atualizar apenas quando houver necessidade.
 - Monitorar bibliotecas e componentes que não possuem manutenção ou que não criam **patches** de segurança para versões antigas. Se a correção não for possível, considere migrar para uma alternativa. Caso não seja viável, considere implantar um **patch** virtual para monitorar, detectar ou proteger contra o problema descoberto.
 - Atualizar regularmente seu CI/CD, IDE e qualquer outra ferramenta de desenvolvimento.
