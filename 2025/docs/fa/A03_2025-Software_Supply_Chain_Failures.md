@@ -23,7 +23,7 @@
 - جداسازی وظایف (Separation of Duties) رعایت نشده باشد.
 - توسعه‌دهندگان از منابع غیرقابل اعتماد در محیط تولید استفاده کنند.
 - پلتفرم‌ها، فریم‌ورک‌ها و وابستگی‌ها به موقع و مبتنی بر ریسک به‌روزرسانی نشوند.
-- تنظیمات سیستم‌ها امن نباشند ([رجوع شود به A02:2025-Security Misconfiguration](https://owasp.org/Top10/2025/A02_2025-Security_Misconfiguration/)).
+- تنظیمات سیستم‌ها امن نباشند ([رجوع شود به A02:2025-Security Misconfiguration](A02_2025-Security_Misconfiguration.md)).
 - Pipelineهای CI/CD پیچیده بدون سخت‌سازی و پایش باشند.
 - SBOM به‌صورت متمرکز مدیریت نشود و وابستگی‌های تو در تو ردیابی نشوند.
 - اجزای غیرضروری حذف نشوند و موجودی نسخه‌ها پایش نشود.
@@ -53,7 +53,7 @@
 - [CWE-1395](https://cwe.mitre.org/data/definitions/1395.html) Dependence on Vulnerable Third-Party Component  
 
 ### منابع
-- [OWASP Top 10:2025 - A03 Software Supply Chain Failures](https://owasp.org/Top10/2025/A03_2025-Software_Supply_Chain_Failures/)  
+- [OWASP Top 10:2025 - A03 Software Supply Chain Failures](A03_2025-Software_Supply_Chain_Failures.md)  
 - [OWASP Application Security Verification Standard: V15 Secure Coding and Architecture](https://owasp.org/www-project-application-security-verification-standard/)  
 - [OWASP Cheat Sheet Series: Dependency Graph SBOM](https://cheatsheetseries.owasp.org/)  
 - [OWASP Cheat Sheet Series: Vulnerable Dependency Management](https://cheatsheetseries.owasp.org/)  

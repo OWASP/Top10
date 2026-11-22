@@ -59,7 +59,7 @@
 - [CWE-1174](https://cwe.mitre.org/data/definitions/1174.html) ASP.NET Misconfiguration: Improper Model Validation  
 
 ### منابع
-- [OWASP Top 10:2025 - A02 Security Misconfiguration](https://owasp.org/Top10/2025/A02_2025-Security_Misconfiguration/)  
+- [OWASP Top 10:2025 - A02 Security Misconfiguration](A02_2025-Security_Misconfiguration.md)  
 - [OWASP Testing Guide: Configuration Management](https://owasp.org/www-project-web-security-testing-guide/)  
 - [OWASP Testing Guide: Testing for Error Codes](https://owasp.org/www-project-web-security-testing-guide/)  
 - [Application Security Verification Standard 5.0.0](https://owasp.org/www-project-application-security-verification-standard/)  

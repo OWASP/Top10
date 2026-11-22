@@ -69,7 +69,7 @@ Sie sind wahrscheinlich verwundbar, wenn:
 * Komponenten aus nicht vertrauenswürdigen Quellen, über jeden Teil des Tech-Stacks hinweg, in Produktionsumgebungen verwendet werden oder diese beeinflussen können.
 * Sie die zugrunde liegende Plattform, Frameworks und Abhängigkeiten nicht risikobasiert und zeitnah aktualisieren oder upgraden. Dies tritt häufig in Umgebungen auf, in denen das Patchen eine monatliche oder vierteljährliche Aufgabe unter Änderungskontrolle ist, wodurch Organisationen tagelangen oder monatelangen unnötigen Risiken ausgesetzt sind, bevor Schwachstellen behoben werden.
 * Softwareentwickler:innen die Kompatibilität aktualisierter, upgegradeter oder gepatchter Bibliotheken nicht testen.
-* Sie die Konfigurationen jedes Teils Ihres Systems nicht absichern (siehe [A02:2025-Security Misconfiguration](https://owasp.org/Top10/2025/A02_2025-Security_Misconfiguration/)).
+* Sie die Konfigurationen jedes Teils Ihres Systems nicht absichern (siehe [A02:2025-Security Misconfiguration](A02_2025-Security_Misconfiguration.md)).
 * Ihre CI/CD-Pipeline eine schwächere Sicherheit aufweist als die Systeme, die sie erstellt und bereitstellt, insbesondere wenn sie komplex ist.
 
 
@@ -84,7 +84,7 @@ Es sollte ein Patch-Management-Prozess vorhanden sein, der:
 * Die Angriffsfläche durch Entfernen ungenutzter Abhängigkeiten, unnötiger Funktionen, Komponenten, Dateien und Dokumentation reduziert.
 * Die Versionen sowohl client- als auch serverseitiger Komponenten (z. B. Frameworks, Bibliotheken) und deren Abhängigkeiten kontinuierlich mit Tools wie OWASP Dependency Track, OWASP Dependency Check, retire.js usw. inventarisiert.
 * Quellen wie Common Vulnerability and Exposures (CVE), National Vulnerability Database (NVD) und [Open Source Vulnerabilities (OSV)](https://osv.dev/) kontinuierlich auf Schwachstellen in den von Ihnen verwendeten Komponenten überwacht. Nutzen Sie Software-Kompositionsanalyse, Software-Supply-Chain- oder sicherheitsorientierte SBOM-Tools, um den Prozess zu automatisieren. Abonnieren Sie Warnungen zu Sicherheitsschwachstellen in den von Ihnen verwendeten Komponenten.
-* Komponenten ausschließlich von offiziellen (vertrauenswürdigen) Quellen über sichere Verbindungen bezieht. Bevorzugen Sie signierte Pakete, um die Wahrscheinlichkeit zu verringern, eine modifizierte, bösartige Komponente einzubinden (siehe [A08:2025-Software and Data Integrity Failures](https://owasp.org/Top10/2025/A08_2025-Software_or_Data_Integrity_Failures/)).
+* Komponenten ausschließlich von offiziellen (vertrauenswürdigen) Quellen über sichere Verbindungen bezieht. Bevorzugen Sie signierte Pakete, um die Wahrscheinlichkeit zu verringern, eine modifizierte, bösartige Komponente einzubinden (siehe [A08:2025-Software and Data Integrity Failures](A08_2025-Software_or_Data_Integrity_Failures.md)).
 * Bewusst wählt, welche Version einer Abhängigkeit verwendet wird, und nur bei Bedarf aktualisiert.
 * Bibliotheken und Komponenten überwacht, die nicht mehr gewartet werden oder keine Sicherheits-Patches für ältere Versionen bereitstellen. Falls kein Patchen möglich ist, sollten Sie eine Migration zu einer Alternative in Betracht ziehen. Falls auch das nicht möglich ist, ziehen Sie den Einsatz eines virtuellen Patches in Betracht, um das entdeckte Problem zu überwachen, zu erkennen oder dagegen zu schützen.
 * Ihre CI/CD-, IDE- und anderen Entwicklungs-Tools regelmäßig aktualisiert.

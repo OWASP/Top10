@@ -89,7 +89,7 @@ CWEهای مهم در این دسته عبارتند از:
 - [CWE-1275](https://cwe.mitre.org/data/definitions/1275.html) کوکی حساس با ویژگی SameSite نادرست  
 
 ### منابع
-- [OWASP Top 10:2025 - A01 Broken Access Control](https://owasp.org/Top10/2025/A01_2025-Broken_Access_Control/)  
+- [OWASP Top 10:2025 - A01 Broken Access Control](A01_2025-Broken_Access_Control.md)  
 - [OWASP Proactive Controls: C1: Implement Access Control](https://top10proactive.owasp.org)  
 - [OWASP Application Security Verification Standard: V8 Authorization](https://github.com/OWASP/ASVS)  
 - [CWE List](https://cwe.mitre.org/data/index.html)

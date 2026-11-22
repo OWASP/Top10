@@ -68,7 +68,7 @@ Wenn ein:e Angreifer:in ein System dazu bringen kann, eine:n ungültige:n oder n
 
 * schwache oder ineffektive Verfahren zur Wiederherstellung von Zugangsdaten und Verfahren für vergessene Passwörter, wie z. B. „wissensbasierte Antworten", die nicht sicher gestaltet werden können.
 
-* Klartext-, verschlüsselte oder schwach gehashte Kennwortdatenspeicher (siehe [A04:2025 – Fehlerhafter Einsatz von Kryptographie](https://owasp.org/Top10/2025/A04_2025-Cryptographic_Failures/)) verwendet.
+* Klartext-, verschlüsselte oder schwach gehashte Kennwortdatenspeicher (siehe [A04:2025 – Fehlerhafter Einsatz von Kryptographie](A04_2025-Cryptographic_Failures.md)) verwendet.
 
 * fehlende oder unwirksame Multi-Faktor-Authentifizierung aufweist.
 
