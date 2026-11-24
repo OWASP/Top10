@@ -58,7 +58,7 @@
 
 ## 설명. 
 
-흔히 말하기를, [전송 계층]((https://en.wikipedia.org/wiki/Transport_layer)([OSI 4계층](https://en.wikipedia.org/wiki/OSI_model)) 내 모든 데이터는 암호화되어 전송되어야 한다고 한다. 이전 장벽으로 CPU 성능, 프라이빗 키/인증서 관리가 있었으나, 지금은 CPU 명령어 셋이 정확한 암호화를(예시: [AES support](https://en.wikipedia.org/wiki/AES_instruction_set)) 위해 설계되었고, 프라이빗 키와 인정서 관리는 [LetsEncrypt.org](https://LetsEncrypt.org) 같은 서비스나 큰 클라우드 벤더들이 특정 플랫폼을 위한 통합된 인증서 관리 서비스를 제공하여 관리하기 쉬워졌다.
+흔히 말하기를, [전송 계층](https://en.wikipedia.org/wiki/Transport_layer) ([OSI 4계층](https://en.wikipedia.org/wiki/OSI_model)) 내 모든 데이터는 암호화되어 전송되어야 한다고 한다. 이전 장벽으로 CPU 성능, 프라이빗 키/인증서 관리가 있었으나, 지금은 CPU 명령어 셋이 정확한 암호화를(예시: [AES support](https://en.wikipedia.org/wiki/AES_instruction_set)) 위해 설계되었고, 프라이빗 키와 인정서 관리는 [LetsEncrypt.org](https://LetsEncrypt.org) 같은 서비스나 큰 클라우드 벤더들이 특정 플랫폼을 위한 통합된 인증서 관리 서비스를 제공하여 관리하기 쉬워졌다.
 
 전송 계층 보안 외에도 어떤 저장된 데이터에 암호화가 필요한지 결정하는 것과 전송 중 ([애플리케이션 계층](https://en.wikipedia.org/wiki/Application_layer) 내, OSI 7계층)에도 추가적인 암호화가 필요한지 결정하는 것도 중요하다.  예시로, 패스워드, 신용 카드 번호, 건강 정보, 개인 정보 그리고 비즈니스 기밀 자료는 추가적 보호가 요구된다. 특히 해당 데이터가 개인정보 법률 (예시, GDPR, PCI DSS)에 명시된 경우 더욱 그렇다.
 해당 데이터들을 위해선 다음과 같은 사항들이 해당되는지 검토하여야 한다.

@@ -66,7 +66,7 @@ Die Anwendung besitzt möglicherweise Schwachstellen, wenn Folgendes zutrifft:
 * Für aktualisierte Systeme sind die neuesten Sicherheitsfeatures deaktiviert oder nicht sicher konfiguriert.
 * Die Sicherheitseinstellungen in den Anwendungsservern und -frameworks (z. B. Struts, Spring, ASP.NET), Bibliotheken, Datenbanken etc. sind nicht auf sichere Werte gesetzt.
 * Der Server sendet keine Sicherheits-Header oder -Direktiven, bzw. diese sind nicht sicher konfiguriert.
-* Die Software ist veraltet oder verwundbar (siehe [A06:2025-Unsichere oder veraltete Komponenten](A06_2025-Vulnerable_and_Outdated_Components.md)).
+* Die Software ist veraltet oder verwundbar (siehe [A03:2025-Schwachstellen in der Software-Lieferkette](A03_2025-Software_Supply_Chain_Failures.md)).
 
 Ohne einen abgestimmten und reproduzierbaren Prozess zur sicheren Konfiguration sind Systeme einem höheren Risiko ausgesetzt!
 
