@@ -162,7 +162,7 @@ Un atacante suministra `example.com; cat /etc/passwd` para ejecutar comandos arb
 
 * [CWE-114 Control de Procesos (Process Control)](https://cwe.mitre.org/data/definitions/114.html)
 
-* [CWE-115 Malinterpretación de la Salida (Misinterpretation of Output)](https://cwe.mitre.org/data/definitions/115.html)
+* [CWE-115 Malinterpretación de la Entrada (Misinterpretation of Input)](https://cwe.mitre.org/data/definitions/115.html)
 
 * [CWE-116 Codificación o Escape Inadecuado de la Salida (Improper Encoding or Escaping of Output)](https://cwe.mitre.org/data/definitions/116.html)
 

@@ -86,7 +86,7 @@ http://example.com/app/accountView?id=' UNION SELECT SLEEP(10);--
 - [CWE-112](https://cwe.mitre.org/data/definitions/112.html) Missing XML Validation  
 - [CWE-113](https://cwe.mitre.org/data/definitions/113.html) Improper Neutralization of CRLF Sequences in HTTP Headers ('HTTP Response Splitting')  
 - [CWE-114](https://cwe.mitre.org/data/definitions/114.html) Process Control  
-- [CWE-115](https://cwe.mitre.org/data/definitions/115.html) Misinterpretation of Output  
+- [CWE-115](https://cwe.mitre.org/data/definitions/115.html) Misinterpretation of Input  
 - [CWE-116](https://cwe.mitre.org/data/definitions/116.html) Improper Encoding or Escaping of Output  
 - [CWE-129](https://cwe.mitre.org/data/definitions/129.html) Improper Validation of Array Index  
 - [CWE-159](https://cwe.mitre.org/data/definitions/159.html) Improper Handling of Invalid Use of Special Elements  

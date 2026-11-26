@@ -152,7 +152,7 @@ Um atacante fornece `example.com; cat /etc/passwd` para executar comandos arbitr
 - [CWE-112 Missing XML Validation](https://cwe.mitre.org/data/definitions/112.html)
 - [CWE-113 Improper Neutralization of CRLF Sequences in HTTP Headers ('HTTP Response Splitting')](https://cwe.mitre.org/data/definitions/113.html)
 - [CWE-114 Process Control](https://cwe.mitre.org/data/definitions/114.html)
-- [CWE-115 Misinterpretation of Output](https://cwe.mitre.org/data/definitions/115.html)
+- [CWE-115 Misinterpretation of Input](https://cwe.mitre.org/data/definitions/115.html)
 - [CWE-116 Improper Encoding or Escaping of Output](https://cwe.mitre.org/data/definitions/116.html)
 - [CWE-129 Improper Validation of Array Index](https://cwe.mitre.org/data/definitions/129.html)
 - [CWE-159 Improper Handling of Invalid Use of Special Elements](https://cwe.mitre.org/data/definitions/159.html)
