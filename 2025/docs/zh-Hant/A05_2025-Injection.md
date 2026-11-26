@@ -152,7 +152,7 @@ Runtime.getRuntime().exec(cmd);
 * [CWE-112 缺少 XML 验证](https://cwe.mitre.org/data/definitions/112.html)
 * [CWE-113 HTTP 头中 CRLF 序列中和不当（HTTP 响应拆分）](https://cwe.mitre.org/data/definitions/113.html)
 * [CWE-114 进程控制](https://cwe.mitre.org/data/definitions/114.html)
-* [CWE-115 输出解释错误](https://cwe.mitre.org/data/definitions/115.html)
+* [CWE-115 输入解释错误](https://cwe.mitre.org/data/definitions/115.html)
 * [CWE-116 输出编码或转义不当](https://cwe.mitre.org/data/definitions/116.html)
 * [CWE-129 数组索引验证不当](https://cwe.mitre.org/data/definitions/129.html)
 * [CWE-159 特殊元素无效使用处理不当](https://cwe.mitre.org/data/definitions/159.html)

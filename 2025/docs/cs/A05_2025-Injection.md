@@ -184,7 +184,7 @@ Runtime.getRuntime().exec(cmd);
 
 * [CWE-114 Process Control](https://cwe.mitre.org/data/definitions/114.html)
 
-* [CWE-115 Misinterpretation of Output](https://cwe.mitre.org/data/definitions/115.html)
+* [CWE-115 Misinterpretation of Input](https://cwe.mitre.org/data/definitions/115.html)
 
 * [CWE-116 Improper Encoding or Escaping of Output](https://cwe.mitre.org/data/definitions/116.html)
 
